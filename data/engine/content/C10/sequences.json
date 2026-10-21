@@ -1,0 +1,595 @@
+{
+ "bank": "C10",
+ "kind": "sequences",
+ "version": 2,
+ "note": "Default unit order with mock tests. Dates are never stored here; sittings come from the rules base's test calendars (rule record TC_SAT) and the scheduler places weeks (spec §4.5). Each sequence carries its own status, version and verified_at: a sequence is promoted or held by itself.",
+ "serving": "Served (src/engine/schedule/steps.ts): the rounds in their order, each unit from the level its record requires. Not served yet: the full-length mock steps (opt_in: a 144-minute task needs an opt-in the design does not draw) and the order \"weakest domain first\" inside a round (no per-domain measure reaches the step reader); the sentences that describe them are shown on no screen.",
+ "source": "own",
+ "author": "agent:C10",
+ "review": {
+  "tutor": null,
+  "gate": "LG1"
+ },
+ "sequences": [
+  {
+   "id": "C10-SEQSAT",
+   "test": "SAT",
+   "status": "verified_auto",
+   "version": 2,
+   "verified_at": "2026-10-10",
+   "title": {
+    "en": "SAT study plan: 24 units and 4 practice tests",
+    "uz": "SAT oʻquv rejasi: 24 ta boʻlim va 4 ta sinov testi",
+    "ru": "План подготовки к SAT: 24 раздела и 4 пробных теста"
+   },
+   "how": {
+    "en": "Start with a full practice test to see where you stand, then work through three rounds of units, each round ending with another practice test. Reading and Writing and Math run side by side; your weakest domains go first.",
+    "uz": "Holatingizni bilish uchun toʻliq sinov testidan boshlang, keyin uch bosqichli boʻlimlarni bajaring, har bir bosqich yana bitta sinov testi bilan tugaydi. Reading and Writing va Math parallel olib boriladi; eng zaif domenlaringiz birinchi navbatda.",
+    "ru": "Начните с полного пробного теста, чтобы понять свой уровень, затем пройдите три этапа разделов, каждый из которых заканчивается пробным тестом. Reading and Writing и Math идут параллельно; самые слабые домены — первыми."
+   },
+   "steps": [
+    {
+     "kind": "mock",
+     "n": 1,
+     "role": "baseline",
+     "task": {
+      "type": "practice",
+      "verification": "self_report",
+      "ladder": "L1",
+      "long": true,
+      "minutes": 144,
+      "link": {
+       "id": "bluebook_tests",
+       "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+       "kind": "full_length_practice_test",
+       "label": {
+        "en": "Bluebook: full-length SAT practice tests",
+        "uz": "Bluebook: SAT boʻyicha toʻliq sinov testlari",
+        "ru": "Bluebook: полные пробные тесты SAT"
+       },
+       "note": {
+        "en": "Official College Board practice tests in the Bluebook app; scores and question review appear in My Practice.",
+        "uz": "College Boardʼning Bluebook ilovasidagi rasmiy sinov testlari; ballar va savollar tahlili My Practice boʻlimida chiqadi.",
+        "ru": "Официальные пробные тесты College Board в приложении Bluebook; баллы и разбор вопросов появляются в разделе My Practice."
+       },
+       "verified_at": "2026-10-10",
+       "source_url": "https://satsuite.collegeboard.org/practice/practice-tests",
+       "how": {
+        "en": "Take the next full-length practice test you have not taken yet, in one sitting, with the 10-minute break.",
+        "uz": "Hali topshirmagan navbatdagi toʻliq sinov testini bir oʻtirishda, 10 daqiqalik tanaffus bilan topshiring.",
+        "ru": "Пройдите следующий ещё не пройденный полный пробный тест за один раз, с 10-минутным перерывом."
+       }
+      },
+      "app_link": {
+       "id": "bluebook_app",
+       "url": "https://bluebook.collegeboard.org/students/download-bluebook",
+       "kind": "app_download",
+       "label": {
+        "en": "Download the Bluebook app",
+        "uz": "Bluebook ilovasini yuklab olish",
+        "ru": "Скачать приложение Bluebook"
+       },
+       "note": {
+        "en": "Runs on Windows or Mac computers, iPads and school-managed Chromebooks.",
+        "uz": "Windows yoki Mac kompyuterlarida, iPadʼlarda va maktab boshqaradigan Chromebookʼlarda ishlaydi.",
+        "ru": "Работает на компьютерах Windows и Mac, iPad и школьных Chromebook."
+       },
+       "verified_at": "2026-10-10",
+       "source_url": "https://bluebook.collegeboard.org/students/download-bluebook"
+      },
+      "fields": [
+       "rw_score",
+       "math_score"
+      ],
+      "plausibility": "200 <= rw_score <= 800 and 200 <= math_score <= 800, multiples of 10",
+      "optional_upload": {
+       "ladder": "L5",
+       "what": "the My Practice score page, with personal details covered"
+      },
+      "title": {
+       "en": "Full-length SAT practice test in Bluebook",
+       "uz": "Bluebookʼda SAT boʻyicha toʻliq sinov testi",
+       "ru": "Полный пробный тест SAT в Bluebook"
+      },
+      "instructions": {
+       "en": "About 2 hours 14 minutes of testing plus a 10-minute break. Choose a weekend or a free day; this is the one long task of that day. Then enter your two section scores from My Practice.",
+       "uz": "Taxminan 2 soat 14 daqiqa test va 10 daqiqalik tanaffus. Dam olish yoki boʻsh kunni tanlang; bu oʻsha kunning yagona uzun vazifasi. Keyin My Practice boʻlimidagi ikki boʻlim ballini kiriting.",
+       "ru": "Около 2 часов 14 минут тестирования и 10-минутный перерыв. Выберите выходной или свободный день — это единственная длинная задача дня. Затем введите баллы двух секций из My Practice."
+      },
+      "after": {
+       "en": "In My Practice, open Score Details and review every question you missed; your practice score report shows how you did in each domain. The scheduler starts the next round with your two weakest domains.",
+       "uz": "My Practice boʻlimida Score Details sahifasini oching va xato qilgan har bir savolni koʻrib chiqing; sinov testi ball hisobotingiz har bir domen boʻyicha natijangizni koʻrsatadi. Rejalashtiruvchi keyingi bosqichni eng zaif ikki domeningizdan boshlaydi.",
+       "ru": "В My Practice откройте Score Details и разберите каждый вопрос с ошибкой; отчёт о пробном тесте показывает результат по каждому домену. Планировщик начнёт следующий этап с двух самых слабых доменов."
+      },
+      "opt_in": true,
+      "facts": [
+       {
+        "claim": "The SAT takes 2 hours 14 minutes, with a 10-minute break between the sections.",
+        "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/structure",
+        "verified_at": "2026-10-10"
+       },
+       {
+        "claim": "Section scores are 200-800 and the total is 400-1600, in 10-point intervals.",
+        "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+        "verified_at": "2026-10-10"
+       },
+       {
+        "claim": "After a Bluebook practice test, scores and question review appear in My Practice.",
+        "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+        "verified_at": "2026-10-10"
+       },
+       {
+        "claim": "In My Practice, the Score Details page lists every question on the practice test with the correct answer and the answer selected; the practice score report shows performance across the content domains.",
+        "url": "https://satsuite.collegeboard.org/practice/my-practice-101",
+        "verified_at": "2026-10-10"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "round",
+     "n": 1,
+     "units": [
+      "C10-RWCS01",
+      "C10-RWII01",
+      "C10-RWSE01",
+      "C10-RWEI01",
+      "C10-MAAL01",
+      "C10-MAAM01",
+      "C10-MAPS01",
+      "C10-MAGT01"
+     ],
+     "order": "weakest domain first, one R&W and one Math unit in parallel"
+    },
+    {
+     "kind": "mock",
+     "n": 2,
+     "task": {
+      "type": "practice",
+      "verification": "self_report",
+      "ladder": "L1",
+      "long": true,
+      "minutes": 144,
+      "link": {
+       "id": "bluebook_tests",
+       "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+       "kind": "full_length_practice_test",
+       "label": {
+        "en": "Bluebook: full-length SAT practice tests",
+        "uz": "Bluebook: SAT boʻyicha toʻliq sinov testlari",
+        "ru": "Bluebook: полные пробные тесты SAT"
+       },
+       "note": {
+        "en": "Official College Board practice tests in the Bluebook app; scores and question review appear in My Practice.",
+        "uz": "College Boardʼning Bluebook ilovasidagi rasmiy sinov testlari; ballar va savollar tahlili My Practice boʻlimida chiqadi.",
+        "ru": "Официальные пробные тесты College Board в приложении Bluebook; баллы и разбор вопросов появляются в разделе My Practice."
+       },
+       "verified_at": "2026-10-10",
+       "source_url": "https://satsuite.collegeboard.org/practice/practice-tests",
+       "how": {
+        "en": "Take the next full-length practice test you have not taken yet, in one sitting, with the 10-minute break.",
+        "uz": "Hali topshirmagan navbatdagi toʻliq sinov testini bir oʻtirishda, 10 daqiqalik tanaffus bilan topshiring.",
+        "ru": "Пройдите следующий ещё не пройденный полный пробный тест за один раз, с 10-минутным перерывом."
+       }
+      },
+      "app_link": {
+       "id": "bluebook_app",
+       "url": "https://bluebook.collegeboard.org/students/download-bluebook",
+       "kind": "app_download",
+       "label": {
+        "en": "Download the Bluebook app",
+        "uz": "Bluebook ilovasini yuklab olish",
+        "ru": "Скачать приложение Bluebook"
+       },
+       "note": {
+        "en": "Runs on Windows or Mac computers, iPads and school-managed Chromebooks.",
+        "uz": "Windows yoki Mac kompyuterlarida, iPadʼlarda va maktab boshqaradigan Chromebookʼlarda ishlaydi.",
+        "ru": "Работает на компьютерах Windows и Mac, iPad и школьных Chromebook."
+       },
+       "verified_at": "2026-10-10",
+       "source_url": "https://bluebook.collegeboard.org/students/download-bluebook"
+      },
+      "fields": [
+       "rw_score",
+       "math_score"
+      ],
+      "plausibility": "200 <= rw_score <= 800 and 200 <= math_score <= 800, multiples of 10",
+      "optional_upload": {
+       "ladder": "L5",
+       "what": "the My Practice score page, with personal details covered"
+      },
+      "title": {
+       "en": "Full-length SAT practice test in Bluebook",
+       "uz": "Bluebookʼda SAT boʻyicha toʻliq sinov testi",
+       "ru": "Полный пробный тест SAT в Bluebook"
+      },
+      "instructions": {
+       "en": "About 2 hours 14 minutes of testing plus a 10-minute break. Choose a weekend or a free day; this is the one long task of that day. Then enter your two section scores from My Practice.",
+       "uz": "Taxminan 2 soat 14 daqiqa test va 10 daqiqalik tanaffus. Dam olish yoki boʻsh kunni tanlang; bu oʻsha kunning yagona uzun vazifasi. Keyin My Practice boʻlimidagi ikki boʻlim ballini kiriting.",
+       "ru": "Около 2 часов 14 минут тестирования и 10-минутный перерыв. Выберите выходной или свободный день — это единственная длинная задача дня. Затем введите баллы двух секций из My Practice."
+      },
+      "after": {
+       "en": "In My Practice, open Score Details and review every question you missed; your practice score report shows how you did in each domain. The scheduler starts the next round with your two weakest domains.",
+       "uz": "My Practice boʻlimida Score Details sahifasini oching va xato qilgan har bir savolni koʻrib chiqing; sinov testi ball hisobotingiz har bir domen boʻyicha natijangizni koʻrsatadi. Rejalashtiruvchi keyingi bosqichni eng zaif ikki domeningizdan boshlaydi.",
+       "ru": "В My Practice откройте Score Details и разберите каждый вопрос с ошибкой; отчёт о пробном тесте показывает результат по каждому домену. Планировщик начнёт следующий этап с двух самых слабых доменов."
+      },
+      "opt_in": true,
+      "facts": [
+       {
+        "claim": "The SAT takes 2 hours 14 minutes, with a 10-minute break between the sections.",
+        "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/structure",
+        "verified_at": "2026-10-10"
+       },
+       {
+        "claim": "Section scores are 200-800 and the total is 400-1600, in 10-point intervals.",
+        "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+        "verified_at": "2026-10-10"
+       },
+       {
+        "claim": "After a Bluebook practice test, scores and question review appear in My Practice.",
+        "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+        "verified_at": "2026-10-10"
+       },
+       {
+        "claim": "In My Practice, the Score Details page lists every question on the practice test with the correct answer and the answer selected; the practice score report shows performance across the content domains.",
+        "url": "https://satsuite.collegeboard.org/practice/my-practice-101",
+        "verified_at": "2026-10-10"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "round",
+     "n": 2,
+     "units": [
+      "C10-RWCS02",
+      "C10-RWII02",
+      "C10-RWSE02",
+      "C10-RWEI02",
+      "C10-MAAL02",
+      "C10-MAAM02",
+      "C10-MAPS02",
+      "C10-MAGT02"
+     ],
+     "order": "weakest domain first, one R&W and one Math unit in parallel"
+    },
+    {
+     "kind": "mock",
+     "n": 3,
+     "task": {
+      "type": "practice",
+      "verification": "self_report",
+      "ladder": "L1",
+      "long": true,
+      "minutes": 144,
+      "link": {
+       "id": "bluebook_tests",
+       "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+       "kind": "full_length_practice_test",
+       "label": {
+        "en": "Bluebook: full-length SAT practice tests",
+        "uz": "Bluebook: SAT boʻyicha toʻliq sinov testlari",
+        "ru": "Bluebook: полные пробные тесты SAT"
+       },
+       "note": {
+        "en": "Official College Board practice tests in the Bluebook app; scores and question review appear in My Practice.",
+        "uz": "College Boardʼning Bluebook ilovasidagi rasmiy sinov testlari; ballar va savollar tahlili My Practice boʻlimida chiqadi.",
+        "ru": "Официальные пробные тесты College Board в приложении Bluebook; баллы и разбор вопросов появляются в разделе My Practice."
+       },
+       "verified_at": "2026-10-10",
+       "source_url": "https://satsuite.collegeboard.org/practice/practice-tests",
+       "how": {
+        "en": "Take the next full-length practice test you have not taken yet, in one sitting, with the 10-minute break.",
+        "uz": "Hali topshirmagan navbatdagi toʻliq sinov testini bir oʻtirishda, 10 daqiqalik tanaffus bilan topshiring.",
+        "ru": "Пройдите следующий ещё не пройденный полный пробный тест за один раз, с 10-минутным перерывом."
+       }
+      },
+      "app_link": {
+       "id": "bluebook_app",
+       "url": "https://bluebook.collegeboard.org/students/download-bluebook",
+       "kind": "app_download",
+       "label": {
+        "en": "Download the Bluebook app",
+        "uz": "Bluebook ilovasini yuklab olish",
+        "ru": "Скачать приложение Bluebook"
+       },
+       "note": {
+        "en": "Runs on Windows or Mac computers, iPads and school-managed Chromebooks.",
+        "uz": "Windows yoki Mac kompyuterlarida, iPadʼlarda va maktab boshqaradigan Chromebookʼlarda ishlaydi.",
+        "ru": "Работает на компьютерах Windows и Mac, iPad и школьных Chromebook."
+       },
+       "verified_at": "2026-10-10",
+       "source_url": "https://bluebook.collegeboard.org/students/download-bluebook"
+      },
+      "fields": [
+       "rw_score",
+       "math_score"
+      ],
+      "plausibility": "200 <= rw_score <= 800 and 200 <= math_score <= 800, multiples of 10",
+      "optional_upload": {
+       "ladder": "L5",
+       "what": "the My Practice score page, with personal details covered"
+      },
+      "title": {
+       "en": "Full-length SAT practice test in Bluebook",
+       "uz": "Bluebookʼda SAT boʻyicha toʻliq sinov testi",
+       "ru": "Полный пробный тест SAT в Bluebook"
+      },
+      "instructions": {
+       "en": "About 2 hours 14 minutes of testing plus a 10-minute break. Choose a weekend or a free day; this is the one long task of that day. Then enter your two section scores from My Practice.",
+       "uz": "Taxminan 2 soat 14 daqiqa test va 10 daqiqalik tanaffus. Dam olish yoki boʻsh kunni tanlang; bu oʻsha kunning yagona uzun vazifasi. Keyin My Practice boʻlimidagi ikki boʻlim ballini kiriting.",
+       "ru": "Около 2 часов 14 минут тестирования и 10-минутный перерыв. Выберите выходной или свободный день — это единственная длинная задача дня. Затем введите баллы двух секций из My Practice."
+      },
+      "after": {
+       "en": "In My Practice, open Score Details and review every question you missed; your practice score report shows how you did in each domain. The scheduler starts the next round with your two weakest domains.",
+       "uz": "My Practice boʻlimida Score Details sahifasini oching va xato qilgan har bir savolni koʻrib chiqing; sinov testi ball hisobotingiz har bir domen boʻyicha natijangizni koʻrsatadi. Rejalashtiruvchi keyingi bosqichni eng zaif ikki domeningizdan boshlaydi.",
+       "ru": "В My Practice откройте Score Details и разберите каждый вопрос с ошибкой; отчёт о пробном тесте показывает результат по каждому домену. Планировщик начнёт следующий этап с двух самых слабых доменов."
+      },
+      "opt_in": true,
+      "facts": [
+       {
+        "claim": "The SAT takes 2 hours 14 minutes, with a 10-minute break between the sections.",
+        "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/structure",
+        "verified_at": "2026-10-10"
+       },
+       {
+        "claim": "Section scores are 200-800 and the total is 400-1600, in 10-point intervals.",
+        "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+        "verified_at": "2026-10-10"
+       },
+       {
+        "claim": "After a Bluebook practice test, scores and question review appear in My Practice.",
+        "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+        "verified_at": "2026-10-10"
+       },
+       {
+        "claim": "In My Practice, the Score Details page lists every question on the practice test with the correct answer and the answer selected; the practice score report shows performance across the content domains.",
+        "url": "https://satsuite.collegeboard.org/practice/my-practice-101",
+        "verified_at": "2026-10-10"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "round",
+     "n": 3,
+     "units": [
+      "C10-RWCS03",
+      "C10-RWII03",
+      "C10-RWSE03",
+      "C10-RWEI03",
+      "C10-MAAL03",
+      "C10-MAAM03",
+      "C10-MAPS03",
+      "C10-MAGT03"
+     ],
+     "order": "weakest domain first, one R&W and one Math unit in parallel"
+    },
+    {
+     "kind": "mock",
+     "n": 4,
+     "task": {
+      "type": "practice",
+      "verification": "self_report",
+      "ladder": "L1",
+      "long": true,
+      "minutes": 144,
+      "link": {
+       "id": "bluebook_tests",
+       "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+       "kind": "full_length_practice_test",
+       "label": {
+        "en": "Bluebook: full-length SAT practice tests",
+        "uz": "Bluebook: SAT boʻyicha toʻliq sinov testlari",
+        "ru": "Bluebook: полные пробные тесты SAT"
+       },
+       "note": {
+        "en": "Official College Board practice tests in the Bluebook app; scores and question review appear in My Practice.",
+        "uz": "College Boardʼning Bluebook ilovasidagi rasmiy sinov testlari; ballar va savollar tahlili My Practice boʻlimida chiqadi.",
+        "ru": "Официальные пробные тесты College Board в приложении Bluebook; баллы и разбор вопросов появляются в разделе My Practice."
+       },
+       "verified_at": "2026-10-10",
+       "source_url": "https://satsuite.collegeboard.org/practice/practice-tests",
+       "how": {
+        "en": "Take the next full-length practice test you have not taken yet, in one sitting, with the 10-minute break.",
+        "uz": "Hali topshirmagan navbatdagi toʻliq sinov testini bir oʻtirishda, 10 daqiqalik tanaffus bilan topshiring.",
+        "ru": "Пройдите следующий ещё не пройденный полный пробный тест за один раз, с 10-минутным перерывом."
+       }
+      },
+      "app_link": {
+       "id": "bluebook_app",
+       "url": "https://bluebook.collegeboard.org/students/download-bluebook",
+       "kind": "app_download",
+       "label": {
+        "en": "Download the Bluebook app",
+        "uz": "Bluebook ilovasini yuklab olish",
+        "ru": "Скачать приложение Bluebook"
+       },
+       "note": {
+        "en": "Runs on Windows or Mac computers, iPads and school-managed Chromebooks.",
+        "uz": "Windows yoki Mac kompyuterlarida, iPadʼlarda va maktab boshqaradigan Chromebookʼlarda ishlaydi.",
+        "ru": "Работает на компьютерах Windows и Mac, iPad и школьных Chromebook."
+       },
+       "verified_at": "2026-10-10",
+       "source_url": "https://bluebook.collegeboard.org/students/download-bluebook"
+      },
+      "fields": [
+       "rw_score",
+       "math_score"
+      ],
+      "plausibility": "200 <= rw_score <= 800 and 200 <= math_score <= 800, multiples of 10",
+      "optional_upload": {
+       "ladder": "L5",
+       "what": "the My Practice score page, with personal details covered"
+      },
+      "title": {
+       "en": "Full-length SAT practice test in Bluebook",
+       "uz": "Bluebookʼda SAT boʻyicha toʻliq sinov testi",
+       "ru": "Полный пробный тест SAT в Bluebook"
+      },
+      "instructions": {
+       "en": "About 2 hours 14 minutes of testing plus a 10-minute break. Choose a weekend or a free day; this is the one long task of that day. Then enter your two section scores from My Practice.",
+       "uz": "Taxminan 2 soat 14 daqiqa test va 10 daqiqalik tanaffus. Dam olish yoki boʻsh kunni tanlang; bu oʻsha kunning yagona uzun vazifasi. Keyin My Practice boʻlimidagi ikki boʻlim ballini kiriting.",
+       "ru": "Около 2 часов 14 минут тестирования и 10-минутный перерыв. Выберите выходной или свободный день — это единственная длинная задача дня. Затем введите баллы двух секций из My Practice."
+      },
+      "after": {
+       "en": "In My Practice, open Score Details and review every question you missed; your practice score report shows how you did in each domain. The scheduler starts the next round with your two weakest domains.",
+       "uz": "My Practice boʻlimida Score Details sahifasini oching va xato qilgan har bir savolni koʻrib chiqing; sinov testi ball hisobotingiz har bir domen boʻyicha natijangizni koʻrsatadi. Rejalashtiruvchi keyingi bosqichni eng zaif ikki domeningizdan boshlaydi.",
+       "ru": "В My Practice откройте Score Details и разберите каждый вопрос с ошибкой; отчёт о пробном тесте показывает результат по каждому домену. Планировщик начнёт следующий этап с двух самых слабых доменов."
+      },
+      "opt_in": true,
+      "facts": [
+       {
+        "claim": "The SAT takes 2 hours 14 minutes, with a 10-minute break between the sections.",
+        "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/structure",
+        "verified_at": "2026-10-10"
+       },
+       {
+        "claim": "Section scores are 200-800 and the total is 400-1600, in 10-point intervals.",
+        "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+        "verified_at": "2026-10-10"
+       },
+       {
+        "claim": "After a Bluebook practice test, scores and question review appear in My Practice.",
+        "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+        "verified_at": "2026-10-10"
+       },
+       {
+        "claim": "In My Practice, the Score Details page lists every question on the practice test with the correct answer and the answer selected; the practice score report shows performance across the content domains.",
+        "url": "https://satsuite.collegeboard.org/practice/my-practice-101",
+        "verified_at": "2026-10-10"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "maintenance",
+     "until": "the SAT sitting chosen in the roadmap (C11 rule record)",
+     "weekly": [
+      "one full-length Bluebook practice test when the student opts in",
+      "mixed C6 and C1 practice weighted by the latest misses"
+     ]
+    }
+   ],
+   "skip_rule": "a unit whose end-of-unit check is passed on the first try at the start of a round may be skipped (placement); the scheduler records it as passed_by_placement",
+   "domain_weights": {
+    "craft_structure": 0.28,
+    "information_ideas": 0.26,
+    "conventions": 0.26,
+    "expression_ideas": 0.2,
+    "algebra": 0.35,
+    "advanced_math": 0.35,
+    "psda": 0.15,
+    "geometry_trig": 0.15,
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-10",
+    "note": "approximate shares of each section's operational questions"
+   },
+   "design_basis": "a fixed backbone of units with full practice tests between them and a baseline test first (R5 §2.3, Magoosh's 3-month schedule, a secondary design reference, not an outcome claim)",
+   "design_basis_url": "https://magoosh.com/sat/three-month-sat-study-schedule/",
+   "design_basis_verified_at": "2026-10-10",
+   "facts": [
+    {
+     "claim": "College Board lists eight full-length SAT practice tests (SAT Practice Test 4 to 11) and says the same practice tests can be taken for free in Bluebook, so each of the plan's four practice tests can be one the student has not taken.",
+     "url": "https://satsuite.collegeboard.org/practice/practice-tests/paper",
+     "verified_at": "2026-10-10"
+    }
+   ]
+  },
+  {
+   "id": "C10-SEQIEL",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "status": "verified_auto",
+   "version": 2,
+   "verified_at": "2026-10-10",
+   "title": {
+    "en": "IELTS Academic study plan: 24 units in 6 rounds",
+    "uz": "IELTS Academic oʻquv rejasi: 6 bosqichda 24 ta boʻlim",
+    "ru": "План подготовки к IELTS Academic: 24 раздела в 6 этапах"
+   },
+   "how": {
+    "en": "Each round has one unit of each skill: Listening, Reading, Writing and Speaking. Round 6 is the mock week: every skill under test conditions.",
+    "uz": "Har bir bosqichda har bir koʻnikmadan bittadan boʻlim bor: Listening, Reading, Writing va Speaking. 6-bosqich — sinov haftasi: barcha koʻnikmalar test sharoitida.",
+    "ru": "В каждом этапе по одному разделу каждого навыка: Listening, Reading, Writing и Speaking. Этап 6 — пробная неделя: все навыки в условиях теста."
+   },
+   "steps": [
+    {
+     "kind": "round",
+     "n": 1,
+     "units": [
+      "C10-IELI01",
+      "C10-IERE01",
+      "C10-IEWR01",
+      "C10-IESP01"
+     ],
+     "order": "the skill with the lowest measured level first; writing and speaking long tasks on separate days"
+    },
+    {
+     "kind": "round",
+     "n": 2,
+     "units": [
+      "C10-IELI02",
+      "C10-IERE02",
+      "C10-IEWR02",
+      "C10-IESP02"
+     ],
+     "order": "the skill with the lowest measured level first; writing and speaking long tasks on separate days"
+    },
+    {
+     "kind": "round",
+     "n": 3,
+     "units": [
+      "C10-IELI03",
+      "C10-IERE03",
+      "C10-IEWR03",
+      "C10-IESP03"
+     ],
+     "order": "the skill with the lowest measured level first; writing and speaking long tasks on separate days"
+    },
+    {
+     "kind": "round",
+     "n": 4,
+     "units": [
+      "C10-IELI04",
+      "C10-IERE04",
+      "C10-IEWR04",
+      "C10-IESP04"
+     ],
+     "order": "the skill with the lowest measured level first; writing and speaking long tasks on separate days"
+    },
+    {
+     "kind": "round",
+     "n": 5,
+     "units": [
+      "C10-IELI05",
+      "C10-IERE05",
+      "C10-IEWR05",
+      "C10-IESP05"
+     ],
+     "order": "the skill with the lowest measured level first; writing and speaking long tasks on separate days"
+    },
+    {
+     "kind": "mock_week",
+     "n": 6,
+     "units": [
+      "C10-IELI06",
+      "C10-IERE06",
+      "C10-IEWR06",
+      "C10-IESP06"
+     ],
+     "note": "Listening, Reading and Writing mocks on separate days; Speaking with a partner or tutor"
+    }
+   ],
+   "skip_rule": "units 1-2 of a skill may be skipped when the student's measured English level is C1 or an official IELTS score in that skill is 7.0 or higher (design default; tune with tutors)",
+   "design_basis": "four-skill rounds with a mock week at the end; the IELTS format facts are on each unit",
+   "facts": [
+    {
+     "claim": "IELTS has four sections: Listening, Reading, Writing and Speaking. The test time is 2 hours and 45 minutes.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-10"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+  DRAFT FOR LEGAL REVIEW. m1 lane "jamol", 20 Oct 2026: the privacy notice (/privacy) and the terms of use (/terms) of the Jamals Global
+  student and parent apps, in en, uz and ru. The wording is the builder's draft until the owner's lawyer has read it; uz and ru are the
+  builder's drafts for a native reader. Every [bracketed] line is a gap a person must fill or a practice that is not in place yet: the page
+  must not be published while one is left. Served only with LEGAL_PAGES=1 (src/server/jamol/switch.ts); off, both addresses answer 404.
+  The facts it states are the code's on 20 Oct 2026 (src/server/jamol/*, public/runtime/jg-ai-notice.js version 2026-10-20).
+  A screen the design does not have, drawn in its style: the sign-in pages' tokens (web/auth/signin.html), Raleway, the bowl header.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#123a29">
+<meta name="robots" content="noindex">
+<title>Jamals Global</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runtime/jg-uz-marks.css?v=1" data-jg-uz-marks>
+<style>
+  :root {
+    --forest: #123a29; --forest-2: #19553c; --mint: #66c69a; --accent: #207251;
+    --ink: #10271e; --ink-2: #4b6559; --muted: #587066; --page: #eef4f1; --line: #e4ece7;
+    --jade-300: #91dab6; --jade-600: #2b9067; --edge: #d4e0d8; --soft: #e8f7ee; --warn-bg: #fff4e0; --warn: #8a5300;
+    --font: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --shadow: 0 16px 36px rgba(18, 58, 40, .10), 0 1px 3px rgba(18, 58, 40, .06);
+  }
+  html[lang="uz-Latn"] { --font: "JG Uz Marks", "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { min-height: 100vh; min-height: 100dvh; background: var(--page); font-family: var(--font); color: var(--ink); -webkit-font-smoothing: antialiased; font-variant-numeric: lining-nums; }
+  button { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--jade-600); outline-offset: 3px; }
+  .hero { position: relative; height: calc(196px + env(safe-area-inset-top)); color: #fff; }
+  .bowl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .hero h1 { position: absolute; left: 20px; right: 120px; top: calc(66px + env(safe-area-inset-top)); font-size: 23px; font-weight: 700; line-height: 1.22; text-wrap: balance; }
+  .mascot { position: absolute; right: 14px; bottom: 30px; width: 96px; height: 110px; }
+  .mascot img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%; filter: drop-shadow(0 4px 6px rgba(11, 40, 27, .16)); }
+  .langs { position: absolute; z-index: 5; top: calc(10px + env(safe-area-inset-top)); right: 12px; display: flex; border-radius: 999px; background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2); }
+  .langs button { min-width: 44px; height: 44px; padding: 0 10px; border: 0; border-radius: 999px; background: none; color: #d6ebe0; font-size: 12.5px; font-weight: 700; letter-spacing: .06em; cursor: pointer; }
+  .langs button[aria-pressed="true"] { background: #fff; color: var(--forest); }
+  .card { position: relative; z-index: 2; margin: -36px 16px calc(24px + env(safe-area-inset-bottom)); padding: 20px 18px 24px; background: #fff; border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow); }
+  .draft { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 18px; padding: 12px 14px; border-radius: 16px; background: var(--warn-bg); color: var(--warn); font-size: 14px; font-weight: 700; line-height: 1.45; }
+  .draft::before { content: "!"; flex: none; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--warn); color: #fff; font-size: 13px; }
+  .meta { margin-bottom: 14px; color: var(--muted); font-size: 13px; font-weight: 600; }
+  .intro { margin-bottom: 18px; color: var(--ink-2); font-size: 15.5px; font-weight: 500; line-height: 1.55; }
+  .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 18px; padding: 4px; border-radius: 16px; background: #e9efec; }
+  .tabs a { display: grid; place-items: center; min-height: 44px; border-radius: 12px; color: var(--ink-2); font-size: 14px; font-weight: 700; text-decoration: none; text-align: center; }
+  .tabs a[aria-current="page"] { background: #fff; color: var(--ink); box-shadow: 0 1px 4px rgba(16, 39, 30, .1); }
+  section.part { margin: 0 0 12px; padding: 16px; border-radius: 18px; background: #f6f9f8; box-shadow: inset 0 0 0 1px var(--line); }
+  section.part h2 { margin-bottom: 8px; color: #123a29; font-size: 16px; font-weight: 700; line-height: 1.3; }
+  section.part p, section.part li { font-size: 14.5px; font-weight: 500; line-height: 1.55; color: var(--ink); }
+  section.part p + p, section.part p + ul, section.part ul + p { margin-top: 8px; }
+  section.part ul { list-style: none; display: grid; gap: 7px; }
+  section.part li { position: relative; padding-left: 16px; }
+  section.part li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--jade-600); }
+  .gap { display: block; margin-top: 6px; padding: 8px 10px; border-radius: 10px; background: var(--warn-bg); color: var(--warn); font-size: 13px; font-weight: 700; }
+  .back { display: flex; justify-content: center; min-height: 44px; align-items: center; margin-top: 8px; color: var(--muted); font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+  @media (min-width: 768px) {
+    .hero { height: auto; padding: 72px 24px 88px; background: linear-gradient(180deg, #0f3323 0%, #19553c 100%); }
+    .bowl { display: none; }
+    .hero h1 { position: static; max-width: 760px; margin: 0 auto; padding-right: 140px; font-size: 32px; }
+    .mascot { right: max(24px, calc(50% - 380px)); bottom: 56px; width: 120px; height: 138px; }
+    .langs { position: fixed; top: 20px; right: 24px; background: #fff; box-shadow: inset 0 0 0 1px var(--edge), 0 1px 3px rgba(18, 58, 40, .06); }
+    .langs button { color: var(--ink-2); }
+    .langs button[aria-pressed="true"] { background: var(--forest); color: #fff; }
+    .card { max-width: 760px; margin: -48px auto 48px; padding: 32px 36px 36px; }
+    section.part { padding: 18px 20px; }
+  }
+</style>
+</head>
+<body data-doc="{{DOC}}">
+<div class="langs" role="group" data-t-aria="lang" aria-label="Language">
+  <button type="button" data-lang="uz" lang="uz-Latn" aria-label="Oʻzbekcha" aria-pressed="false">UZ</button>
+  <button type="button" data-lang="ru" lang="ru" aria-label="Русский" aria-pressed="false">RU</button>
+  <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+</div>
+<header class="hero">
+  <svg class="bowl" viewBox="0 0 375 260" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f3323"/><stop offset="1" stop-color="#19553c"/></linearGradient></defs>
+    <path d="M0 0H375V168Q187.5 336 0 168Z" fill="url(#g)"/>
+  </svg>
+  <div class="mascot"><img src="/d/student-mobile/media/c5b64f4480cda475.webp" width="365" height="420" alt="" draggable="false"></div>
+  <h1 id="title"></h1>
+</header>
+<main class="card">
+  <p class="draft" id="draft" role="note"></p>
+  <nav class="tabs" id="tabs" aria-label="Documents">
+    <a href="/privacy" data-doc="privacy" data-t="privacyTab">Privacy</a>
+    <a href="/terms" data-doc="terms" data-t="termsTab">Terms</a>
+  </nav>
+  <p class="meta" id="meta"></p>
+  <p class="intro" id="intro"></p>
+  <div id="parts"></div>
+  <a class="back" href="/" data-t="back">Back to the app</a>
+</main>
+<script src="/runtime/auth.js"></script>
+<script src="/runtime/jg-legal-text.js?v=1"></script>
+<script>
+(() => {
+  const T = window.JG_LEGAL, A = window.JGAuth, doc = document.body.dataset.doc === 'terms' ? 'terms' : 'privacy'
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))
+  /** A paragraph; a line that starts with "[" is a gap a person must fill before the page goes public, drawn as one. */
+  const para = s => s.startsWith('[') ? `<span class="gap">${esc(s)}</span>` : `<p>${esc(s)}</p>`
+  function paint(lang) {
+    const t = T[lang] || T.en, d = t[doc]
+    document.getElementById('title').textContent = d.title
+    document.getElementById('draft').textContent = t.draft
+    document.getElementById('meta').textContent = t.updated
+    document.getElementById('intro').textContent = d.intro
+    document.getElementById('parts').innerHTML = d.parts.map(p => `<section class="part"><h2>${esc(p.h)}</h2>${(p.p || []).map(para).join('')}${p.ul ? `<ul>${p.ul.map(i => `<li>${esc(i)}</li>`).join('')}</ul>` : ''}${(p.after || []).map(para).join('')}</section>`).join('')
+    document.querySelectorAll('#tabs a').forEach(a => { if (a.dataset.doc === doc) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current') })
+    document.title = `${d.title} · Jamals Global`
+  }
+  const STR = {}
+  for (const l of ['en', 'uz', 'ru']) STR[l] = { lang: T[l].ui.lang, privacyTab: T[l].privacy.tab, termsTab: T[l].terms.tab, back: T[l].ui.back }
+  const L = A.i18n(STR, 'student', paint)
+  paint(L.lang)
+})()
+</script>
+</body>
+</html>

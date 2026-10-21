@@ -1,0 +1,496 @@
+{
+ "bank": "C10",
+ "batch": 9,
+ "kind": "catalog",
+ "note": "AP Physics 1 units 1-8 (P15, the owner's 18 Oct 2026 \"add\": AP beyond Calculus; SPEC-lessons rev. 2 §3.2, §3.5; author ap1, agent:p15-ap1, 18 Oct 2026). Catalog records, not quiz items. The unit names are College Board's own, read on AP Students (apstudents.collegeboard.org/courses/ap-physics-1-algebra-based) and AP Central (apcentral.collegeboard.org/courses/ap-physics-1) on 18 Oct 2026; everything else is our own wording, and the split into lessons is our own outline. These units carry no practice, study_ref, end_check, stages or sessions: their C19 lessons (C19-APPH01-1 … C19-APPH08-3) name their own C1 families and C22 items. JG's own content: no AP class of the academy is implied (owner, 4 Oct 2026). Written draft: the integration's fact check makes a record verified_auto (the 7 Oct ruling).",
+ "items": [
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-APPH01",
+   "test": "AP",
+   "section": "physics_1",
+   "domain": "physics_1",
+   "domain_label": { "en": "AP Physics 1", "uz": "AP Physics 1", "ru": "AP Physics 1" },
+   "unit": 1,
+   "units_in_domain": 8,
+   "level_band": "core",
+   "skills": ["displacement_velocity", "average_acceleration", "constant_acceleration", "free_fall", "projectile_motion", "relative_velocity"],
+   "rungs": ["alg2", "precalc"],
+   "title": {
+    "en": "Kinematics",
+    "uz": "Kinematics (kinematika)",
+    "ru": "Kinematics (кинематика)"
+   },
+   "goal": {
+    "en": "Tell displacement from distance, find average velocity and acceleration, use the constant-acceleration equations and free fall, and treat a horizontal launch as two separate motions.",
+    "uz": "Koʻchishni yoʻldan farqlang, oʻrtacha tezlik va tezlanishni toping, tekis tezlanuvchan harakat tenglamalari va erkin tushishdan foydalaning, gorizontal otilgan jism harakatini ikki alohida harakat deb qarang.",
+    "ru": "Отличайте перемещение от пути, находите среднюю скорость и ускорение, применяйте уравнения равноускоренного движения и свободного падения и рассматривайте бросок горизонтально как два отдельных движения."
+   },
+   "study": [
+    {
+     "en": "Displacement is the change in position, with a sign for its direction; distance is the whole path. Average velocity = displacement ÷ time; average acceleration = change in velocity ÷ time.",
+     "uz": "Koʻchish — vaziyatning oʻzgarishi, yoʻnalishi ishora bilan beriladi; yoʻl esa butun bosib oʻtilgan masofa. Oʻrtacha tezlik = koʻchish ÷ vaqt; oʻrtacha tezlanish = tezlik oʻzgarishi ÷ vaqt.",
+     "ru": "Перемещение — изменение положения, его направление задаёт знак; путь — вся длина траектории. Средняя скорость = перемещение ÷ время; среднее ускорение = изменение скорости ÷ время."
+    },
+    {
+     "en": "With constant acceleration: v = v₀ + at, Δx = v₀t + ½at², v² = v₀² + 2aΔx. In free fall the acceleration is g = 9.8 m/s² downward, also at the top of the path.",
+     "uz": "Tezlanish oʻzgarmas boʻlsa: v = v₀ + at, Δx = v₀t + ½at², v² = v₀² + 2aΔx. Erkin tushishda tezlanish g = 9,8 m/s², pastga yoʻnalgan, trayektoriyaning eng yuqori nuqtasida ham.",
+     "ru": "При постоянном ускорении: v = v₀ + at, Δx = v₀t + ½at², v² = v₀² + 2aΔx. При свободном падении ускорение g = 9,8 м/с² направлено вниз, и в верхней точке тоже."
+    },
+    {
+     "en": "A projectile moves sideways at a constant speed while it falls with acceleration g; the time in the air comes from the vertical motion alone.",
+     "uz": "Otilgan jism yon tomonga oʻzgarmas tezlik bilan harakatlanadi, shu bilan birga g tezlanish bilan tushadi; havoda boʻlish vaqti faqat vertikal harakatdan topiladi.",
+     "ru": "Брошенное тело движется в сторону с постоянной скоростью и одновременно падает с ускорением g; время полёта находят только по вертикальному движению."
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ap_students_physics_1",
+     "kind": "course",
+     "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based",
+     "label": { "en": "AP Students: AP Physics 1 course page", "uz": "AP Students: AP Physics 1 kursi sahifasi", "ru": "AP Students: страница курса AP Physics 1" },
+     "verified_at": "2026-10-18"
+    }
+   ],
+   "facts": [
+    { "claim": "AP Physics 1 unit 1 is \"Kinematics\".", "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based", "verified_at": "2026-10-18" }
+   ],
+   "requires": {
+    "math_rung_min": "alg2",
+    "after_units": [],
+    "basis": "P15 contract (18 Oct 2026): AP Physics 1 is for an AP-bound student with the maths rung at least algebra 2 (an algebra-based course; SPEC-lessons §3.2 lists it for phase 3)"
+   },
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-APPH02",
+   "test": "AP",
+   "section": "physics_1",
+   "domain": "physics_1",
+   "domain_label": { "en": "AP Physics 1", "uz": "AP Physics 1", "ru": "AP Physics 1" },
+   "unit": 2,
+   "units_in_domain": 8,
+   "level_band": "core",
+   "skills": ["newtons_first_law", "newtons_second_law", "newtons_third_law", "free_body", "weight_normal", "friction", "spring_force", "circular_motion"],
+   "rungs": ["alg2", "precalc"],
+   "title": {
+    "en": "Force and Translational Dynamics",
+    "uz": "Force and Translational Dynamics (kuch va ilgarilanma harakat dinamikasi)",
+    "ru": "Force and Translational Dynamics (сила и динамика поступательного движения)"
+   },
+   "goal": {
+    "en": "Draw the forces on one object, find the net force and the acceleration it gives, pair the forces of Newton’s third law, and use weight, normal force, friction, spring force and the net force of circular motion.",
+    "uz": "Bitta jismga taʼsir qiluvchi kuchlarni chizing, teng taʼsir etuvchi kuchni va u beradigan tezlanishni toping, Nyutonning uchinchi qonuni boʻyicha kuchlarni juftlang hamda ogʻirlik, tayanchning reaksiya kuchi, ishqalanish, prujina kuchi va aylana boʻylab harakatdagi teng taʼsir etuvchi kuchdan foydalaning.",
+    "ru": "Изображайте силы, действующие на одно тело, находите равнодействующую и ускорение, которое она даёт, составляйте пары сил по третьему закону Ньютона и применяйте силу тяжести, силу нормальной реакции, трение, силу упругости пружины и равнодействующую при движении по окружности."
+   },
+   "study": [
+    {
+     "en": "Newton’s second law: the net force on an object equals its mass times its acceleration, ΣF = ma, and points the same way as the acceleration.",
+     "uz": "Nyutonning ikkinchi qonuni: jismga taʼsir qiluvchi teng taʼsir etuvchi kuch uning massasi bilan tezlanishining koʻpaytmasiga teng, ΣF = ma, va tezlanish bilan bir tomonga yoʻnalgan.",
+     "ru": "Второй закон Ньютона: равнодействующая сил, действующих на тело, равна произведению массы на ускорение, ΣF = ma, и направлена так же, как ускорение."
+    },
+    {
+     "en": "Third law: when A pushes on B, B pushes on A with a force of the same size in the opposite direction; the two forces act on different objects.",
+     "uz": "Uchinchi qonun: A jism B ni itarsa, B ham A ni xuddi shunday kattalikdagi, qarama-qarshi yoʻnalgan kuch bilan itaradi; bu ikki kuch turli jismlarga taʼsir qiladi.",
+     "ru": "Третий закон: если A давит на B, то B давит на A с силой той же величины в противоположную сторону; эти две силы приложены к разным телам."
+    },
+    {
+     "en": "Weight is mg; kinetic friction is μN; a spring pulls back with kx; an object moving in a circle at a steady speed needs a net force mv²/r toward the centre.",
+     "uz": "Ogʻirlik kuchi mg; sirpanish ishqalanishi μN; prujina kx kuch bilan orqaga tortadi; aylana boʻylab oʻzgarmas tezlik bilan harakatlanayotgan jismga markazga yoʻnalgan mv²/r teng taʼsir etuvchi kuch kerak.",
+     "ru": "Сила тяжести mg; сила трения скольжения μN; пружина тянет назад с силой kx; телу, которое движется по окружности с постоянной скоростью, нужна равнодействующая mv²/r, направленная к центру."
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ap_students_physics_1",
+     "kind": "course",
+     "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based",
+     "label": { "en": "AP Students: AP Physics 1 course page", "uz": "AP Students: AP Physics 1 kursi sahifasi", "ru": "AP Students: страница курса AP Physics 1" },
+     "verified_at": "2026-10-18"
+    }
+   ],
+   "facts": [
+    { "claim": "AP Physics 1 unit 2 is \"Force and Translational Dynamics\".", "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based", "verified_at": "2026-10-18" }
+   ],
+   "requires": {
+    "math_rung_min": "alg2",
+    "after_units": ["C10-APPH01"],
+    "basis": "P15 contract (18 Oct 2026): AP Physics 1 is for an AP-bound student with the maths rung at least algebra 2 (an algebra-based course; SPEC-lessons §3.2 lists it for phase 3)"
+   },
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-APPH03",
+   "test": "AP",
+   "section": "physics_1",
+   "domain": "physics_1",
+   "domain_label": { "en": "AP Physics 1", "uz": "AP Physics 1", "ru": "AP Physics 1" },
+   "unit": 3,
+   "units_in_domain": 8,
+   "level_band": "core",
+   "skills": ["kinetic_energy", "work", "work_energy", "potential_energy", "energy_conservation", "energy_friction", "power"],
+   "rungs": ["alg2", "precalc"],
+   "title": {
+    "en": "Work, Energy, and Power",
+    "uz": "Work, Energy, and Power (ish, energiya va quvvat)",
+    "ru": "Work, Energy, and Power (работа, энергия и мощность)"
+   },
+   "goal": {
+    "en": "Find kinetic energy and the work a force does, link them by the work-energy theorem, use gravitational and spring potential energy and the conservation of energy, and find power.",
+    "uz": "Kinetik energiya va kuch bajargan ishni toping, ularni ish va energiya haqidagi teorema bilan bogʻlang, ogʻirlik va prujina potensial energiyasidan hamda energiyaning saqlanishidan foydalaning, quvvatni toping.",
+    "ru": "Находите кинетическую энергию и работу силы, связывайте их теоремой о кинетической энергии, применяйте потенциальную энергию в поле тяжести и пружины и закон сохранения энергии, находите мощность."
+   },
+   "study": [
+    {
+     "en": "Kinetic energy K = ½mv². Work by a force along the motion W = Fd (negative when the force is against the motion); the net work equals the change in kinetic energy.",
+     "uz": "Kinetik energiya K = ½mv². Harakat yoʻnalishidagi kuchning ishi W = Fd (kuch harakatga qarshi boʻlsa, manfiy); teng taʼsir etuvchi kuchning ishi kinetik energiyaning oʻzgarishiga teng.",
+     "ru": "Кинетическая энергия K = ½mv². Работа силы вдоль движения W = Fd (отрицательна, если сила против движения); работа равнодействующей равна изменению кинетической энергии."
+    },
+    {
+     "en": "Gravitational potential energy U = mgh; a stretched or compressed spring stores U = ½kx². With no friction, K + U stays the same.",
+     "uz": "Ogʻirlik kuchi maydonidagi potensial energiya U = mgh; choʻzilgan yoki siqilgan prujina U = ½kx² energiya saqlaydi. Ishqalanish boʻlmasa, K + U oʻzgarmaydi.",
+     "ru": "Потенциальная энергия в поле тяжести U = mgh; растянутая или сжатая пружина запасает U = ½kx². Без трения K + U не меняется."
+    },
+    {
+     "en": "Power is the rate of doing work: P = W ÷ t, measured in watts (1 W = 1 J/s); for a steady force on a moving object P = Fv.",
+     "uz": "Quvvat — ish bajarish tezligi: P = W ÷ t, vattlarda oʻlchanadi (1 Vt = 1 J/s); harakatlanayotgan jismga oʻzgarmas kuch taʼsir qilsa, P = Fv.",
+     "ru": "Мощность — скорость совершения работы: P = W ÷ t, измеряется в ваттах (1 Вт = 1 Дж/с); для постоянной силы, действующей на движущееся тело, P = Fv."
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ap_students_physics_1",
+     "kind": "course",
+     "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based",
+     "label": { "en": "AP Students: AP Physics 1 course page", "uz": "AP Students: AP Physics 1 kursi sahifasi", "ru": "AP Students: страница курса AP Physics 1" },
+     "verified_at": "2026-10-18"
+    }
+   ],
+   "facts": [
+    { "claim": "AP Physics 1 unit 3 is \"Work, Energy, and Power\".", "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based", "verified_at": "2026-10-18" }
+   ],
+   "requires": {
+    "math_rung_min": "alg2",
+    "after_units": ["C10-APPH02"],
+    "basis": "P15 contract (18 Oct 2026): AP Physics 1 is for an AP-bound student with the maths rung at least algebra 2 (an algebra-based course; SPEC-lessons §3.2 lists it for phase 3)"
+   },
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-APPH04",
+   "test": "AP",
+   "section": "physics_1",
+   "domain": "physics_1",
+   "domain_label": { "en": "AP Physics 1", "uz": "AP Physics 1", "ru": "AP Physics 1" },
+   "unit": 4,
+   "units_in_domain": 8,
+   "level_band": "core",
+   "skills": ["momentum", "impulse", "momentum_conservation", "collisions"],
+   "rungs": ["alg2", "precalc"],
+   "title": {
+    "en": "Linear Momentum",
+    "uz": "Linear Momentum (impuls)",
+    "ru": "Linear Momentum (импульс)"
+   },
+   "goal": {
+    "en": "Find momentum and impulse, use the conservation of momentum in pushes apart and collisions, and tell an elastic collision from an inelastic one by its kinetic energy.",
+    "uz": "Impuls va kuch impulsini toping, bir-biridan itarilish va toʻqnashuvlarda impulsning saqlanishidan foydalaning, elastik toʻqnashuvni noelastik toʻqnashuvdan kinetik energiyasi orqali farqlang.",
+    "ru": "Находите импульс тела и импульс силы, применяйте закон сохранения импульса при отталкивании и столкновениях и отличайте упругое столкновение от неупругого по кинетической энергии."
+   },
+   "study": [
+    {
+     "en": "Momentum p = mv is a vector: its sign gives its direction. Impulse J = FΔt equals the change in momentum, Δp = m(v − v₀).",
+     "uz": "Impuls p = mv — vektor: ishorasi yoʻnalishini koʻrsatadi. Kuch impulsi J = FΔt impulsning oʻzgarishiga teng, Δp = m(v − v₀).",
+     "ru": "Импульс p = mv — вектор: знак показывает направление. Импульс силы J = FΔt равен изменению импульса, Δp = m(v − v₀)."
+    },
+    {
+     "en": "When no outside force acts on a system, its total momentum stays the same: before = after, for a push apart as for a collision.",
+     "uz": "Sistemaga tashqi kuch taʼsir qilmasa, uning umumiy impulsi oʻzgarmaydi: oldin = keyin, bir-biridan itarilishda ham, toʻqnashuvda ham.",
+     "ru": "Если на систему не действуют внешние силы, её полный импульс не меняется: до = после, и при отталкивании, и при столкновении."
+    },
+    {
+     "en": "Momentum is kept in every collision; kinetic energy is kept only in an elastic one. Objects that stick together lose the most kinetic energy.",
+     "uz": "Impuls har qanday toʻqnashuvda saqlanadi; kinetik energiya esa faqat elastik toʻqnashuvda saqlanadi. Bir-biriga yopishib qolgan jismlar eng koʻp kinetik energiya yoʻqotadi.",
+     "ru": "Импульс сохраняется при любом столкновении; кинетическая энергия — только при упругом. Тела, которые слипаются, теряют больше всего кинетической энергии."
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ap_students_physics_1",
+     "kind": "course",
+     "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based",
+     "label": { "en": "AP Students: AP Physics 1 course page", "uz": "AP Students: AP Physics 1 kursi sahifasi", "ru": "AP Students: страница курса AP Physics 1" },
+     "verified_at": "2026-10-18"
+    }
+   ],
+   "facts": [
+    { "claim": "AP Physics 1 unit 4 is \"Linear Momentum\".", "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based", "verified_at": "2026-10-18" }
+   ],
+   "requires": {
+    "math_rung_min": "alg2",
+    "after_units": ["C10-APPH03"],
+    "basis": "P15 contract (18 Oct 2026): AP Physics 1 is for an AP-bound student with the maths rung at least algebra 2 (an algebra-based course; SPEC-lessons §3.2 lists it for phase 3)"
+   },
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-APPH05",
+   "test": "AP",
+   "section": "physics_1",
+   "domain": "physics_1",
+   "domain_label": { "en": "AP Physics 1", "uz": "AP Physics 1", "ru": "AP Physics 1" },
+   "unit": 5,
+   "units_in_domain": 8,
+   "level_band": "core",
+   "skills": ["rotational_kinematics", "linear_rotational", "torque", "rotational_inertia", "rotational_equilibrium", "rotational_second_law"],
+   "rungs": ["alg2", "precalc"],
+   "title": {
+    "en": "Torque and Rotational Dynamics",
+    "uz": "Torque and Rotational Dynamics (kuch momenti va aylanma harakat dinamikasi)",
+    "ru": "Torque and Rotational Dynamics (момент силы и динамика вращательного движения)"
+   },
+   "goal": {
+    "en": "Describe a turning object by its angle, angular velocity and angular acceleration, link them to the motion of a point on it, find torques, and use rotational equilibrium and Newton’s second law in rotational form.",
+    "uz": "Aylanayotgan jismni burilish burchagi, burchak tezligi va burchak tezlanishi bilan tavsiflang, ularni jismdagi nuqtaning harakati bilan bogʻlang, kuch momentlarini toping, aylanma muvozanat va Nyutonning ikkinchi qonunining aylanma harakat uchun shaklidan foydalaning.",
+    "ru": "Описывайте вращающееся тело углом поворота, угловой скоростью и угловым ускорением, связывайте их с движением точки тела, находите моменты сил и применяйте условие равновесия при вращении и второй закон Ньютона для вращательного движения."
+   },
+   "study": [
+    {
+     "en": "A point at distance r from the axis moves at v = rω; the angular equations of constant angular acceleration have the same form as the linear ones.",
+     "uz": "Oʻqdan r masofadagi nuqta v = rω tezlik bilan harakatlanadi; oʻzgarmas burchak tezlanishli harakatning burchak tenglamalari chiziqli tenglamalar bilan bir xil koʻrinishda.",
+     "ru": "Точка на расстоянии r от оси движется со скоростью v = rω; уравнения вращения с постоянным угловым ускорением имеют тот же вид, что и уравнения поступательного движения."
+    },
+    {
+     "en": "Torque is the turning effect of a force: τ = rF when the force is at a right angle to the lever arm. In rotational equilibrium the torques add to zero.",
+     "uz": "Kuch momenti — kuchning burish taʼsiri: kuch yelkaga tik boʻlsa, τ = rF. Aylanma muvozanatda kuch momentlarining yigʻindisi nolga teng.",
+     "ru": "Момент силы — её вращающее действие: τ = rF, если сила перпендикулярна плечу. В равновесии при вращении сумма моментов равна нулю."
+    },
+    {
+     "en": "Rotational inertia I tells how hard an object is to spin up; the net torque gives an angular acceleration α = Στ ÷ I.",
+     "uz": "Inersiya momenti I jismni aylantirib yuborish qanchalik qiyinligini bildiradi; teng taʼsir etuvchi kuch momenti α = Στ ÷ I burchak tezlanishini beradi.",
+     "ru": "Момент инерции I показывает, насколько трудно раскрутить тело; суммарный момент сил даёт угловое ускорение α = Στ ÷ I."
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ap_students_physics_1",
+     "kind": "course",
+     "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based",
+     "label": { "en": "AP Students: AP Physics 1 course page", "uz": "AP Students: AP Physics 1 kursi sahifasi", "ru": "AP Students: страница курса AP Physics 1" },
+     "verified_at": "2026-10-18"
+    }
+   ],
+   "facts": [
+    { "claim": "AP Physics 1 unit 5 is \"Torque and Rotational Dynamics\".", "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based", "verified_at": "2026-10-18" }
+   ],
+   "requires": {
+    "math_rung_min": "alg2",
+    "after_units": ["C10-APPH04"],
+    "basis": "P15 contract (18 Oct 2026): AP Physics 1 is for an AP-bound student with the maths rung at least algebra 2 (an algebra-based course; SPEC-lessons §3.2 lists it for phase 3)"
+   },
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-APPH06",
+   "test": "AP",
+   "section": "physics_1",
+   "domain": "physics_1",
+   "domain_label": { "en": "AP Physics 1", "uz": "AP Physics 1", "ru": "AP Physics 1" },
+   "unit": 6,
+   "units_in_domain": 8,
+   "level_band": "core",
+   "skills": ["rotational_kinetic_energy", "torque_work", "angular_momentum", "angular_momentum_conservation", "rolling", "orbits"],
+   "rungs": ["alg2", "precalc"],
+   "title": {
+    "en": "Energy and Momentum of Rotating Systems",
+    "uz": "Energy and Momentum of Rotating Systems (aylanayotgan sistemalarning energiyasi va impuls momenti)",
+    "ru": "Energy and Momentum of Rotating Systems (энергия и момент импульса вращающихся систем)"
+   },
+   "goal": {
+    "en": "Find the kinetic energy of a turning object and the work a torque does, use angular momentum and its conservation, share the energy of a rolling object between moving and turning, and describe a satellite on a circular orbit.",
+    "uz": "Aylanayotgan jismning kinetik energiyasini va kuch momenti bajargan ishni toping, impuls momenti va uning saqlanishidan foydalaning, dumalayotgan jism energiyasini ilgarilanma va aylanma harakat orasida taqsimlang, aylana orbitadagi yoʻldoshni tavsiflang.",
+    "ru": "Находите кинетическую энергию вращающегося тела и работу момента силы, применяйте момент импульса и закон его сохранения, делите энергию катящегося тела между поступательным движением и вращением и описывайте спутник на круговой орбите."
+   },
+   "study": [
+    {
+     "en": "A turning object has kinetic energy ½Iω²; a torque turning it through an angle θ does work τθ.",
+     "uz": "Aylanayotgan jismning kinetik energiyasi ½Iω²; uni θ burchakka burgan kuch momenti τθ ish bajaradi.",
+     "ru": "Вращающееся тело обладает кинетической энергией ½Iω²; момент силы, повернувший его на угол θ, совершает работу τθ."
+    },
+    {
+     "en": "Angular momentum L = Iω; with no outside torque it stays the same, so an object that pulls its mass closer to the axis spins faster.",
+     "uz": "Impuls momenti L = Iω; tashqi kuch momenti boʻlmasa, u oʻzgarmaydi, shuning uchun massasini oʻqqa yaqinlashtirgan jism tezroq aylanadi.",
+     "ru": "Момент импульса L = Iω; без внешнего момента сил он не меняется, поэтому тело, приблизившее массу к оси, вращается быстрее."
+    },
+    {
+     "en": "An object rolling without slipping has v = rω, and its kinetic energy is part moving and part turning; on a circular orbit gravity is the net force toward the centre.",
+     "uz": "Sirpanmasdan dumalayotgan jism uchun v = rω, uning kinetik energiyasi qisman ilgarilanma, qisman aylanma harakatga toʻgʻri keladi; aylana orbitada tortishish kuchi markazga yoʻnalgan teng taʼsir etuvchi kuchdir.",
+     "ru": "У тела, катящегося без проскальзывания, v = rω, а его кинетическая энергия складывается из энергии поступательного движения и вращения; на круговой орбите сила тяготения — равнодействующая, направленная к центру."
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ap_students_physics_1",
+     "kind": "course",
+     "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based",
+     "label": { "en": "AP Students: AP Physics 1 course page", "uz": "AP Students: AP Physics 1 kursi sahifasi", "ru": "AP Students: страница курса AP Physics 1" },
+     "verified_at": "2026-10-18"
+    }
+   ],
+   "facts": [
+    { "claim": "AP Physics 1 unit 6 is \"Energy and Momentum of Rotating Systems\".", "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based", "verified_at": "2026-10-18" }
+   ],
+   "requires": {
+    "math_rung_min": "alg2",
+    "after_units": ["C10-APPH05"],
+    "basis": "P15 contract (18 Oct 2026): AP Physics 1 is for an AP-bound student with the maths rung at least algebra 2 (an algebra-based course; SPEC-lessons §3.2 lists it for phase 3)"
+   },
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-APPH07",
+   "test": "AP",
+   "section": "physics_1",
+   "domain": "physics_1",
+   "domain_label": { "en": "AP Physics 1", "uz": "AP Physics 1", "ru": "AP Physics 1" },
+   "unit": 7,
+   "units_in_domain": 8,
+   "level_band": "core",
+   "skills": ["simple_harmonic_motion", "period_frequency", "shm_graphs", "shm_energy"],
+   "rungs": ["alg2", "precalc"],
+   "title": {
+    "en": "Oscillations",
+    "uz": "Oscillations (tebranishlar)",
+    "ru": "Oscillations (колебания)"
+   },
+   "goal": {
+    "en": "Recognise simple harmonic motion, find the period and frequency of a mass on a spring and of a pendulum, read the motion from a graph, and follow its energy between kinetic and potential.",
+    "uz": "Garmonik tebranma harakatni taniy oling, prujinadagi yuk va mayatnikning davri hamda chastotasini toping, harakatni grafikdan oʻqing, energiyaning kinetik va potensial energiya orasida almashinishini kuzating.",
+    "ru": "Узнавайте гармонические колебания, находите период и частоту груза на пружине и маятника, читайте движение по графику и следите, как энергия переходит из кинетической в потенциальную и обратно."
+   },
+   "study": [
+    {
+     "en": "In simple harmonic motion the restoring force points back to the middle and grows with the distance from it; the period T is the time of one full cycle and f = 1 ÷ T.",
+     "uz": "Garmonik tebranishda qaytaruvchi kuch muvozanat nuqtasiga yoʻnalgan va undan uzoqlashgan sari ortadi; davr T — bitta toʻliq tebranish vaqti, f = 1 ÷ T.",
+     "ru": "При гармонических колебаниях возвращающая сила направлена к положению равновесия и растёт с удалением от него; период T — время одного полного колебания, f = 1 ÷ T."
+    },
+    {
+     "en": "A mass on a spring: T = 2π√(m/k). A simple pendulum with small swings: T = 2π√(L/g). Neither depends on how far it swings.",
+     "uz": "Prujinadagi yuk: T = 2π√(m/k). Kichik ogʻishli matematik mayatnik: T = 2π√(L/g). Ikkalasi ham tebranish kengligiga bogʻliq emas.",
+     "ru": "Груз на пружине: T = 2π√(m/k). Математический маятник при малых отклонениях: T = 2π√(L/g). Ни один период не зависит от размаха колебаний."
+    },
+    {
+     "en": "The energy of an oscillator stays the same: all potential at the ends of the swing, all kinetic in the middle, where the speed is greatest.",
+     "uz": "Tebranuvchi sistema energiyasi oʻzgarmaydi: chekka nuqtalarda hammasi potensial, oʻrtada esa hammasi kinetik energiya, u yerda tezlik eng katta.",
+     "ru": "Энергия колебательной системы не меняется: в крайних точках вся она потенциальная, в середине вся кинетическая, и там скорость наибольшая."
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ap_students_physics_1",
+     "kind": "course",
+     "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based",
+     "label": { "en": "AP Students: AP Physics 1 course page", "uz": "AP Students: AP Physics 1 kursi sahifasi", "ru": "AP Students: страница курса AP Physics 1" },
+     "verified_at": "2026-10-18"
+    }
+   ],
+   "facts": [
+    { "claim": "AP Physics 1 unit 7 is \"Oscillations\".", "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based", "verified_at": "2026-10-18" }
+   ],
+   "requires": {
+    "math_rung_min": "alg2",
+    "after_units": ["C10-APPH06"],
+    "basis": "P15 contract (18 Oct 2026): AP Physics 1 is for an AP-bound student with the maths rung at least algebra 2 (an algebra-based course; SPEC-lessons §3.2 lists it for phase 3)"
+   },
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-APPH08",
+   "test": "AP",
+   "section": "physics_1",
+   "domain": "physics_1",
+   "domain_label": { "en": "AP Physics 1", "uz": "AP Physics 1", "ru": "AP Physics 1" },
+   "unit": 8,
+   "units_in_domain": 8,
+   "level_band": "core",
+   "skills": ["density", "pressure", "buoyancy", "continuity", "bernoulli"],
+   "rungs": ["alg2", "precalc"],
+   "title": {
+    "en": "Fluids",
+    "uz": "Fluids (suyuqlik va gazlar)",
+    "ru": "Fluids (жидкости и газы)"
+   },
+   "goal": {
+    "en": "Use density and pressure, find the pressure at a depth and the buoyant force on an object, and follow a flowing fluid by the conservation of mass and of energy.",
+    "uz": "Zichlik va bosimdan foydalaning, maʼlum chuqurlikdagi bosimni va jismga taʼsir qiluvchi itarib chiqaruvchi kuchni toping, oqayotgan suyuqlikni massa va energiyaning saqlanishi orqali kuzating.",
+    "ru": "Применяйте плотность и давление, находите давление на глубине и выталкивающую силу, действующую на тело, и описывайте течение жидкости законами сохранения массы и энергии."
+   },
+   "study": [
+    {
+     "en": "Density ρ = m ÷ V; pressure P = F ÷ A. Under the surface of a fluid at rest the pressure grows with depth: P = P₀ + ρgh.",
+     "uz": "Zichlik ρ = m ÷ V; bosim P = F ÷ A. Tinch turgan suyuqlik sirtidan pastda bosim chuqurlik bilan ortadi: P = P₀ + ρgh.",
+     "ru": "Плотность ρ = m ÷ V; давление P = F ÷ A. Под поверхностью покоящейся жидкости давление растёт с глубиной: P = P₀ + ρgh."
+    },
+    {
+     "en": "A fluid pushes up on an object in it with a buoyant force equal to the weight of the fluid it pushes aside: F = ρVg.",
+     "uz": "Suyuqlik ichidagi jismni u siqib chiqargan suyuqlik ogʻirligiga teng boʻlgan itarib chiqaruvchi kuch bilan yuqoriga itaradi: F = ρVg.",
+     "ru": "Жидкость выталкивает погружённое в неё тело вверх с силой, равной весу вытесненной жидкости: F = ρVg."
+    },
+    {
+     "en": "In a steady flow the same volume passes every point each second, A₁v₁ = A₂v₂; where the pipe narrows the fluid speeds up and its pressure falls.",
+     "uz": "Barqaror oqimda har soniyada har bir nuqtadan bir xil hajm oʻtadi, A₁v₁ = A₂v₂; quvur torayganda suyuqlik tezlashadi va uning bosimi kamayadi.",
+     "ru": "При установившемся течении через каждое сечение за секунду проходит один и тот же объём, A₁v₁ = A₂v₂; там, где труба сужается, жидкость ускоряется, а её давление падает."
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ap_students_physics_1",
+     "kind": "course",
+     "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based",
+     "label": { "en": "AP Students: AP Physics 1 course page", "uz": "AP Students: AP Physics 1 kursi sahifasi", "ru": "AP Students: страница курса AP Physics 1" },
+     "verified_at": "2026-10-18"
+    }
+   ],
+   "facts": [
+    { "claim": "AP Physics 1 unit 8 is \"Fluids\".", "url": "https://apstudents.collegeboard.org/courses/ap-physics-1-algebra-based", "verified_at": "2026-10-18" }
+   ],
+   "requires": {
+    "math_rung_min": "alg2",
+    "after_units": ["C10-APPH07"],
+    "basis": "P15 contract (18 Oct 2026): AP Physics 1 is for an AP-bound student with the maths rung at least algebra 2 (an algebra-based course; SPEC-lessons §3.2 lists it for phase 3)"
+   },
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+  "_note": "Owner 4 Oct 2026 P4g M (readiness v3, 'the map'). One file for the readiness scale of every catalog university (labels.ts UNIS, catalog.ts). The owner's own numbers are tier A's: tests alone at most 20 (about SAT 1400 + IELTS 7.0 reads 2-10 %, SAT 1500+ with IELTS 7.5+ reads 10-20 %), AP, activities, volunteering, a startup, olympiads, honors and awards add up to 50 more, and nobody reads above 70. The tiers themselves and tiers B and C are the controller's delegated call (BRIEF-P4g, for his review): each university is placed by its commonly known selectivity, roughly 10 % acceptance or less for A, other highly selective foreign universities for B, the rest for C. No acceptance rate or other figure is cited or stored here: none was researched, so none is claimed. The Uzbek universities (UZ) are not on this scale: their readiness follows their sourced requirements (uz-records.ts, the verdict of unis-uz.ts).",
+  "cap": 70,
+  "bands": {
+    "A": {
+      "_note": "MIT-level: the owner's numbers exactly.",
+      "tests": 20, "profile": 50,
+      "sat": [[1200, 0], [1400, 0.3], [1500, 0.6], [1600, 1]],
+      "ielts": [[6.0, 0], [7.0, 0.3], [7.5, 0.6], [8.0, 0.8], [9.0, 1]]
+    },
+    "B": {
+      "_note": "Selective foreign universities: the same shape, each anchor one step (SAT 100, IELTS 0.5) lower.",
+      "tests": 35, "profile": 35,
+      "sat": [[1100, 0], [1300, 0.3], [1400, 0.6], [1550, 1]],
+      "ielts": [[5.5, 0], [6.5, 0.3], [7.0, 0.6], [7.5, 0.8], [8.5, 1]]
+    },
+    "C": {
+      "_note": "Other foreign universities: two steps lower; tests weigh more and the profile less.",
+      "tests": 45, "profile": 25,
+      "sat": [[1000, 0], [1200, 0.3], [1300, 0.6], [1450, 1]],
+      "ielts": [[5.0, 0], [6.0, 0.3], [6.5, 0.6], [7.0, 0.8], [8.0, 1]]
+    }
+  },
+  "_profile_note": "The share of the profile band each kind of achievement can fill: each is capped, so no one category fills the band alone. They add up to 1.",
+  "profile_shares": { "olympiads": 0.25, "activities": 0.2, "ap": 0.15, "volunteering": 0.15, "honors": 0.15, "startup": 0.1 },
+  "_uz_note": "An Uzbek university: every entry requirement code can check met (the verdict 'You can apply') reads from 60 up to 70 as the parts taken on application day (its own exam, an interview, the state test) are already shown; any requirement still missing keeps it under 60, lower for each.",
+  "uz": { "ready": 60, "top": 70 },
+  "unis": {
+    "mit": "A", "harvard": "A", "stanford": "A", "penn": "A", "oxford": "A", "cambridge": "A", "yale": "A", "princeton": "A", "dartmouth": "A", "brown": "A",
+    "cornell": "A", "caltech": "A", "jhu": "A", "nyuad": "A", "bowdoin": "A",
+    "nyu": "B", "cmu": "B", "imperial": "B", "ucl": "B", "lse": "B", "kcl": "B", "tum": "B", "kaist": "B", "snu": "B", "nus": "B", "utokyo": "B", "tsinghua": "B",
+    "georgetown": "B", "warwick": "B",
+    "boun": "C", "tudelft": "C", "utaustin": "C", "osu": "C", "purdue": "C", "bristol": "C", "durham": "C", "glasgow": "C", "nottingham": "C", "soas": "C",
+    "wiut": "UZ", "inha": "UZ", "nuu": "UZ", "cau": "UZ", "millat_umidi": "UZ", "ttpu": "UZ", "webster_tashkent": "UZ", "amity_tashkent": "UZ", "mdis": "UZ",
+    "bmu": "UZ", "kiut": "UZ", "newuu": "UZ", "tuit": "UZ", "tsue": "UZ",
+    "columbia": "A", "yonsei": "B", "metu": "C", "koc": "C", "itu": "C"
+  }
+}

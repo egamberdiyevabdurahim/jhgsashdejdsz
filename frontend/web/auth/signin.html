@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#123a29">
+<title>Sign in · Jamals Global</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runtime/jg-uz-marks.css?v=1" data-jg-uz-marks>
+<style>
+  /* A screen the design does not have, drawn in its style: JIA Jade tokens, Raleway, the student profile's
+     "bowl" header, the design's card radius and shadow, its mascot entrance (mcIn) and float (mcFloat).
+     signin.html, welcome.html, link.html and signout.html carry the same <style>; change all four together. */
+  :root {
+    --forest: #123a29; --forest-2: #19553c; --mint: #66c69a; --accent: #207251;
+    --ink: #10271e; --ink-2: #4b6559; --muted: #587066; --page: #eef4f1; --line: #e4ece7;
+    --jade-300: #91dab6; --jade-600: #2b9067;
+    --edge: #d4e0d8; --soft: #e8f7ee; --danger: #b0402f;
+    --font: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --shadow: 0 16px 36px rgba(18, 58, 40, .10), 0 1px 3px rgba(18, 58, 40, .06);
+  }
+  /* P15 fixes lane (18 Oct 2026): in Uzbek (auth.js sets <html lang="uz-Latn">) U+02BB/U+02BC are drawn with Raleway's own turned comma
+     and apostrophe ("JG Uz Marks", public/runtime/jg-uz-marks.css; Raleway's U+02BC is its acute), first in the stack, word for word after it */
+  html[lang="uz-Latn"] { --font: "JG Uz Marks", "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    min-height: 100vh; min-height: 100dvh; background: var(--page);
+    font-family: var(--font); color: var(--ink); -webkit-font-smoothing: antialiased;
+    font-feature-settings: "lnum" 1; font-variant-numeric: lining-nums;
+  }
+  button, input { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--jade-600); outline-offset: 3px; }
+
+  /* ---------- phone: the bowl header, the card overlapping its curve by 40px ---------- */
+  .frame { position: relative; }
+  .hero { position: relative; height: calc(220px + env(safe-area-inset-top)); color: #fff; }
+  .bowl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .hero h1 {
+    position: absolute; left: 24px; right: 150px; top: calc(64px + env(safe-area-inset-top));
+    font-size: 22px; font-weight: 700; line-height: 1.22; letter-spacing: .005em; text-wrap: balance;
+  }
+  .mascot {
+    position: absolute; z-index: 3; right: 18px; bottom: 32px; width: 116px; height: 134px;
+    animation: mcIn .85s cubic-bezier(.3, 1.5, .5, 1) .15s both;
+  }
+  .mascot img {
+    display: block; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%;
+    filter: drop-shadow(0 4px 6px rgba(11, 40, 27, .16)); animation: mcFloat 3.2s ease-in-out 1s infinite;
+    -webkit-user-drag: none; user-select: none;
+  }
+  .langs {
+    position: absolute; z-index: 5; top: calc(10px + env(safe-area-inset-top)); right: 12px; display: flex;
+    border-radius: 999px; background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2);
+  }
+  .langs button {
+    min-width: 44px; height: 44px; padding: 0 10px; border: 0; border-radius: 999px; background: none;
+    color: #d6ebe0; font-size: 12.5px; font-weight: 700; letter-spacing: .06em; cursor: pointer; transition: background .2s, color .2s;
+  }
+  .langs button[aria-pressed="true"] { background: #fff; color: var(--forest); }
+  .card {
+    position: relative; z-index: 2; display: grid; gap: 16px; align-content: start;
+    margin: -40px 16px calc(24px + env(safe-area-inset-bottom)); padding: 22px 18px 24px;
+    background: #fff; border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow);
+    animation: rise .9s cubic-bezier(.2, .8, .2, 1) both;
+  }
+
+  /* ---------- the card's parts ---------- */
+  .tabs { display: grid; grid-template-columns: 1fr 1fr; padding: 4px; border-radius: 16px; background: #e9efec; }
+  .tabs button {
+    min-height: 44px; padding: 6px 8px; border: 0; border-radius: 12px; background: none; line-height: 1.2;
+    color: var(--ink-2); font-size: 14px; font-weight: 700; cursor: pointer; transition: background .25s, color .25s, box-shadow .25s;
+  }
+  .tabs button[aria-selected="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 4px rgba(16, 39, 30, .1); }
+  .err { padding: 12px 14px; border-radius: 14px; background: #fbeae6; color: var(--danger); font-size: 14px; font-weight: 600; line-height: 1.4; }
+  .social { display: grid; gap: 10px; }
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; height: 52px; padding: 0 18px;
+    border: 0; border-radius: 15px; font-size: 15px; font-weight: 700; text-decoration: none; cursor: pointer;
+    transition: background .2s, transform .12s, opacity .2s;
+  }
+  .btn:active { transform: scale(.985); }
+  .btn svg { flex: none; width: 22px; height: 22px; }
+  .btn[aria-busy="true"] { opacity: .72; cursor: progress; }
+  .btn-primary { background: var(--forest); color: #fff; }
+  .btn-primary:hover { background: var(--forest-2); }
+  .btn-social { background: #fff; color: var(--ink); box-shadow: inset 0 0 0 1px var(--edge); }
+  .btn-social:hover { background: #f4f8f6; }
+  .or { display: flex; align-items: center; gap: 12px; margin-top: 4px; color: var(--muted); font-size: 13px; font-weight: 600; }
+  .or::before, .or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .form { display: grid; gap: 14px; }
+  .field { display: grid; gap: 6px; }
+  .field > span { color: var(--ink-2); font-size: 13px; font-weight: 600; }
+  .field input {
+    width: 100%; height: 52px; padding: 0 16px; border: 1px solid var(--edge); border-radius: 15px; background: #f8fbf9;
+    color: var(--ink); font-size: 16px; font-weight: 500; transition: border-color .2s, background .2s;
+  }
+  .field input:focus { border-color: #9fdcbd; background: #fff; }
+  /* the teen walk of 10 Oct 2026 (the owner's delegated call): the password field's eye (the design's own roadmap eye, student shell .eye) and the
+     password rule under the field, said before the button is pressed; .pitch: the sign-in page's one sentence about the app */
+  .pw { position: relative; display: block; }
+  .pw input { padding-right: 56px; }
+  .pw-eye {
+    position: absolute; top: 4px; right: 4px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0;
+    border: 0; border-radius: 12px; background: none; color: var(--muted); cursor: pointer; transition: color .2s, background .2s;
+  }
+  .pw-eye:hover { color: var(--ink); background: #eef4f1; }
+  .pw-eye svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .pw-eye .off, .pw-eye[aria-pressed="true"] .on { display: none; }
+  .pw-eye[aria-pressed="true"] .off { display: block; }
+  .field .hint { color: var(--muted); font-size: 13px; font-weight: 500; line-height: 1.4; }
+  .pitch { color: var(--ink-2); font-size: 15px; font-weight: 600; line-height: 1.45; text-wrap: balance; }
+  .form .btn-primary { margin-top: 4px; }
+  .roles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .role {
+    position: relative; display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 10px 12px;
+    border-radius: 15px; box-shadow: inset 0 0 0 1px var(--edge); color: var(--ink-2);
+    font-size: 14px; font-weight: 700; line-height: 1.25; cursor: pointer; transition: background .2s, box-shadow .2s, color .2s;
+  }
+  .role input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+  .role i { flex: none; width: 20px; height: 20px; border-radius: 50%; background: #fff; box-shadow: inset 0 0 0 2px var(--edge); transition: box-shadow .2s; }
+  .role:has(input:checked) { background: var(--soft); color: var(--forest); box-shadow: inset 0 0 0 1.5px var(--jade-600); }
+  .role:has(input:checked) i { box-shadow: inset 0 0 0 6px var(--jade-600); }
+  .role:has(input:focus-visible) { outline: 2px solid var(--jade-600); outline-offset: 3px; }
+  .lead { color: var(--ink-2); font-size: 15px; font-weight: 500; line-height: 1.5; }
+  .field .code-in { font-size: 18px; font-weight: 700; letter-spacing: .12em; }
+  .out {
+    display: flex; align-items: center; justify-content: center; min-height: 44px; margin-top: -4px;
+    color: var(--muted); font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px;
+  }
+  .out:hover { color: var(--ink); }
+  /* owner 5 Oct 2026: the line that opens the AI notice (/runtime/jg-ai-notice.js), under Create account */
+  .ai-link {
+    display: block; width: 100%; min-height: 44px; margin-top: -6px; padding: 12px 8px;
+    border: 0; background: none; color: var(--muted); font-size: 13.5px; font-weight: 600; line-height: 1.45; text-align: center; text-wrap: balance;
+    text-decoration: underline; text-underline-offset: 3px; cursor: pointer; transition: color .2s;
+  }
+  .ai-link::before {
+    content: ""; display: inline-block; width: 15px; height: 15px; margin-right: 6px; vertical-align: -2px; background: var(--jade-600);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9zM18.5 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z'/%3E%3C/svg%3E") center / contain no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9zM18.5 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+  .ai-link:hover { color: var(--ink); }
+
+  @keyframes rise { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+  @keyframes mcIn { 0% { opacity: 0; transform: translateY(26px) scale(.55); } 55% { opacity: 1; } 100% { opacity: 1; transform: none; } }
+  @keyframes mcFloat { 50% { transform: translateY(-3.5px); } }
+
+  /* ---------- desktop: a centred card with the forest panel on its left ---------- */
+  @media (min-width: 768px) {
+    body { display: grid; place-items: center; padding: 88px 24px 48px; }
+    .langs { position: fixed; top: 24px; right: 24px; background: #fff; box-shadow: inset 0 0 0 1px var(--edge), 0 1px 3px rgba(18, 58, 40, .06); }
+    .langs button { color: var(--ink-2); }
+    .langs button[aria-pressed="true"] { background: var(--forest); color: #fff; }
+    .frame {
+      display: grid; grid-template-columns: 9fr 11fr; width: min(800px, 100%);
+      border-radius: 28px; overflow: hidden; background: #fff; box-shadow: var(--shadow);
+      animation: rise .9s cubic-bezier(.2, .8, .2, 1) both;
+    }
+    .hero {
+      height: auto; min-height: 580px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 28px; padding: 48px 36px; background: linear-gradient(180deg, #0f3323 0%, #19553c 100%);
+    }
+    .bowl { display: none; }
+    .hero h1 { position: static; font-size: 26px; text-align: center; }
+    .mascot { position: static; width: 184px; height: 212px; }
+    .card { margin: 0; padding: 48px 40px; border: 0; border-radius: 0; box-shadow: none; align-content: center; animation: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card, .frame, .mascot, .mascot img { animation: none; }
+    .btn, .role, .tabs button, .langs button { transition: none; }
+  }
+</style>
+</head>
+<body data-next="{{NEXT}}" data-role="{{ROLE}}" data-google="{{GOOGLE}}" data-telegram="{{TELEGRAM}}">
+<!-- outside .frame: the frame's rise animation would otherwise contain the fixed desktop switch -->
+<div class="langs" role="group" data-t-aria="lang" aria-label="Language">
+  <button type="button" data-lang="uz" lang="uz-Latn" aria-label="Oʻzbekcha" aria-pressed="false">UZ</button>
+  <button type="button" data-lang="ru" lang="ru" aria-label="Русский" aria-pressed="false">RU</button>
+  <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+</div>
+<main class="frame">
+  <header class="hero">
+    <svg class="bowl" viewBox="0 0 375 260" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0f3323"/>
+          <stop offset="1" stop-color="#19553c"/>
+        </linearGradient>
+      </defs>
+      <path d="M0 0H375V168Q187.5 336 0 168Z" fill="url(#g)"/>
+    </svg>
+    <div class="mascot"><img src="/d/student-mobile/media/c5b64f4480cda475.webp" width="365" height="420" alt="" draggable="false"></div>
+    <h1 data-t="title">Welcome to Jamals Global</h1>
+  </header>
+
+  <section class="card">
+    <!-- the teen walk of 10 Oct 2026 (the owner's delegated call; all three: "nothing tells me what this app does"): one plain sentence, a student's page only -->
+    <p class="pitch" id="pitch" data-t="pitch">Your way to university: a short test, your own plan and small steps every day.</p>
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" id="tab-signin" aria-controls="f-signin" aria-selected="true" data-t="signIn">Sign in</button>
+      <button type="button" role="tab" id="tab-register" aria-controls="f-register" aria-selected="false" tabindex="-1" data-t="createAccount">Create account</button>
+    </div>
+
+    <p class="err" id="err" role="alert" hidden></p>
+
+    <div class="social" id="social" hidden>
+      <a class="btn btn-social" id="btn-telegram" href="{{TELEGRAM_URL}}" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#27a6e5"/><path fill="#fff" d="M5.4 11.8l11.1-4.3c.5-.2 1 .1.8.9l-1.9 8.9c-.1.6-.5.8-1 .5l-2.9-2.1-1.4 1.3c-.2.2-.3.3-.6.3l.2-2.9 5.3-4.8c.2-.2 0-.3-.3-.1l-6.6 4.1-2.8-.9c-.6-.2-.6-.6.1-.9z"/></svg>
+        <span data-t="telegram">Continue with Telegram</span>
+      </a>
+      <button type="button" class="btn btn-social" id="btn-google" hidden>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>
+        <span data-t="google">Continue with Google</span>
+      </button>
+      <p class="or"><span data-t="orEmail">or with email</span></p>
+    </div>
+
+    <!-- Ruling R4: the sign-in form comes first, and the create-account form is hidden while Sign in is active. -->
+    <form id="f-signin" class="form" role="tabpanel" aria-labelledby="tab-signin" method="post" action="/api/auth/callback/password">
+      <label class="field"><span data-t="email">Email</span>
+        <input type="email" name="email" autocomplete="username" autocapitalize="off" spellcheck="false" required maxlength="254"></label>
+      <!-- the teen walk of 10 Oct 2026 (the owner's delegated call): the eye shows what was typed (both forms) -->
+      <label class="field"><span data-t="password">Password</span>
+        <span class="pw"><input type="password" name="password" autocomplete="current-password" required maxlength="128"><button type="button" class="pw-eye" aria-pressed="false" aria-label="Show password">
+          <svg class="on" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.9 17.9A10.1 10.1 0 0 1 12 19C5.6 19 2 12 2 12a18.5 18.5 0 0 1 5.1-5.9M9.9 5.1A9.7 9.7 0 0 1 12 5c6.4 0 10 7 10 7a18.6 18.6 0 0 1-2.2 3.2"/><path d="M14.1 14.1a3 3 0 1 1-4.2-4.2"/><path d="M2 2l20 20"/></svg>
+        </button></span></label>
+      <button type="submit" class="btn btn-primary" data-t="signIn">Sign in</button>
+    </form>
+
+    <form id="f-register" class="form" role="tabpanel" aria-labelledby="tab-register" method="post" action="/api/v1/register" hidden>
+      <!-- the given name and the surname apart: the student designs write "Surname Given", the parent designs "Given Surname" -->
+      <label class="field"><span data-t="firstName">First name</span>
+        <input type="text" name="firstName" autocomplete="given-name" required maxlength="40"></label>
+      <label class="field"><span data-t="lastName">Last name</span>
+        <input type="text" name="lastName" autocomplete="family-name" required maxlength="40"></label>
+      <div class="roles">
+        <label class="role"><input type="radio" name="role" value="student" checked><i></i><span data-t="student">I'm a student</span></label>
+        <label class="role"><input type="radio" name="role" value="parent"><i></i><span data-t="parent">I'm a parent</span></label>
+      </div>
+      <label class="field"><span data-t="email">Email</span>
+        <input type="email" name="email" autocomplete="email" autocapitalize="off" spellcheck="false" required maxlength="254"></label>
+      <!-- the teen walk of 10 Oct 2026 (the owner's delegated call): the password rule is under the field before the button is pressed (it was told
+           only afterwards, in red), and the eye shows what was typed. The third walk: the box itself knows the rule (minlength), and what the
+           browser says about a short password is this page's own sentence in this page's language (pwWords below), never the browser's -->
+      <label class="field"><span data-t="password">Password</span>
+        <span class="pw"><input type="password" name="password" autocomplete="new-password" required minlength="8" maxlength="128" aria-describedby="pw-rule"><button type="button" class="pw-eye" aria-pressed="false" aria-label="Show password">
+          <svg class="on" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.9 17.9A10.1 10.1 0 0 1 12 19C5.6 19 2 12 2 12a18.5 18.5 0 0 1 5.1-5.9M9.9 5.1A9.7 9.7 0 0 1 12 5c6.4 0 10 7 10 7a18.6 18.6 0 0 1-2.2 3.2"/><path d="M14.1 14.1a3 3 0 1 1-4.2-4.2"/><path d="M2 2l20 20"/></svg>
+        </button></span>
+        <small class="hint" id="pw-rule" data-t="rule">At least 8 characters.</small></label>
+      <button type="submit" class="btn btn-primary" data-t="createAccount">Create account</button>
+      <!-- owner 5 Oct 2026: the AI privacy notice (P4a §12 Q19), its words in /runtime/jg-ai-notice.js, opened in this page's language -->
+      <button type="button" class="ai-link" id="ai-notice" aria-haspopup="dialog">How Jamals Global uses AI</button>
+    </form>
+  </section>
+</main>
+
+<script src="/runtime/auth.js"></script>
+<script src="/runtime/jg-ai-notice.js?v=4"></script>
+<script>
+(() => {
+  const STR = {
+    en: {
+      docTitle: 'Sign in · Jamals Global', lang: 'Language', title: 'Welcome to Jamals Global',
+      signIn: 'Sign in', createAccount: 'Create account', telegram: 'Continue with Telegram', google: 'Continue with Google',
+      orEmail: 'or with email', email: 'Email', password: 'Password', firstName: 'First name', lastName: 'Last name', student: "I'm a student", parent: "I'm a parent",
+      pitch: 'Your way to university: a short test, your own plan and small steps every day.', rule: 'At least 8 characters.', showPw: 'Show password', hidePw: 'Hide password',
+      wrong: 'Wrong email or password.', exists: 'An account with this email already exists.', short: 'Password must be at least 8 characters.',
+      isEmail: 'Choose something other than your email address.', common: 'That password is one of the first ones people try. Choose another.',
+      failed: 'Something went wrong. Please try again.', tooMany: 'Too many attempts. Please wait a few minutes and try again.', badName: 'Use letters in your name: remove emoji and the symbols < > & ".',
+    },
+    uz: {
+      docTitle: 'Kirish · Jamals Global', lang: 'Til', title: 'Jamals Globalga xush kelibsiz',
+      signIn: 'Kirish', createAccount: 'Roʻyxatdan oʻtish', telegram: 'Telegram orqali davom etish', google: 'Google orqali davom etish',
+      orEmail: 'yoki email bilan', email: 'Email', password: 'Parol', firstName: 'Ism', lastName: 'Familiya', student: 'Men oʻquvchiman', parent: 'Men ota-onaman',
+      pitch: 'Universitetga yoʻlingiz: qisqa test, shaxsiy reja va har kuni kichik qadamlar.', rule: 'Kamida 8 ta belgi.', showPw: 'Parolni koʻrsatish', hidePw: 'Parolni yashirish',
+      wrong: 'Email yoki parol notoʻgʻri.', exists: 'Bu email bilan hisob allaqachon bor.', short: 'Parol kamida 8 belgidan iborat boʻlsin.',
+      isEmail: 'Parol email manzilingizdan farq qilsin.', common: 'Bu parol juda keng tarqalgan. Boshqasini tanlang.',
+      failed: 'Nimadir xato ketdi. Qaytadan urinib koʻring.', tooMany: 'Urinishlar juda koʻp. Bir necha daqiqa kutib, qaytadan urinib koʻring.', badName: 'Ism va familiyada harflar boʻlsin: emoji va < > & " belgilarini olib tashlang.',
+    },
+    ru: {
+      docTitle: 'Вход · Jamals Global', lang: 'Язык', title: 'Добро пожаловать в Jamals Global',
+      signIn: 'Войти', createAccount: 'Регистрация', telegram: 'Продолжить через Telegram', google: 'Продолжить через Google',
+      orEmail: 'или по email', email: 'Email', password: 'Пароль', firstName: 'Имя', lastName: 'Фамилия', student: 'Я ученик', parent: 'Я родитель',
+      pitch: 'Ваш путь в университет: короткий тест, личный план и маленькие шаги каждый день.', rule: 'Не короче 8 символов.', showPw: 'Показать пароль', hidePw: 'Скрыть пароль',
+      wrong: 'Неверный email или пароль.', exists: 'Аккаунт с этим email уже существует.', short: 'Пароль должен быть не короче 8 символов.',
+      isEmail: 'Пароль не должен совпадать с email.', common: 'Этот пароль слишком распространён. Выберите другой.',
+      failed: 'Что-то пошло не так. Попробуйте ещё раз.', tooMany: 'Слишком много попыток. Подождите несколько минут и попробуйте снова.', badName: 'В имени и фамилии используйте буквы: уберите эмодзи и символы < > & ".',
+    },
+  };
+  const A = window.JGAuth, body = document.body, $ = (id) => document.getElementById(id);
+  const query = new URLSearchParams(location.search);
+  const tgReturn = /[#?&]tgAuthResult=/.test(location.hash);
+  // A failed attempt (?error=) or Telegram's return lost the query this page was opened with; what it was is kept for
+  // this tab. Read it every time, so an entry left by a sign-in that worked does not linger.
+  const kept = A.recall(), last = query.has('error') || tgReturn ? kept : {};
+  const role = body.dataset.role === 'parent' || (!query.has('role') && last.role === 'parent') ? 'parent' : 'student';
+  let next = A.safeNext(query.has('next') || !last.next ? body.dataset.next : last.next);
+  A.setContext({ role });
+
+  // Whoever sees this page is signed out: the next account's design state must not start from this one's.
+  try { localStorage.removeItem('jg.uid'); } catch (e) {}
+
+  const err = $('err');
+  let shown = '';
+  // owner 5 Oct 2026: the AI notice's line under Create account, its words (title and sheet) from /runtime/jg-ai-notice.js, in this page's language
+  const N = window.JG_AI_NOTICE, aiLink = $('ai-notice');
+  const aiWords = (lang) => { if (N) aiLink.textContent = (N.text[lang] || N.text.en).title; };
+  // the teen walk of 10 Oct 2026 (the owner's delegated call): the eye of each password field: shows or hides what was typed, named in this page's language
+  const eyes = [...document.querySelectorAll('.pw-eye')];
+  const eyeWords = (lang) => eyes.forEach((b) => b.setAttribute('aria-label', STR[lang][b.getAttribute('aria-pressed') === 'true' ? 'hidePw' : 'showPw']));
+  $('pitch').hidden = role === 'parent';   // the sentence is a student's; a parent's page says nothing it was not given
+  // the third walk: a new password shorter than 8 characters is refused by the box itself, in this page's words (code points, as the server counts)
+  const newPw = document.querySelector('#f-register input[name=password]');
+  const pwWords = (lang) => newPw.setCustomValidity([...newPw.value].length < 8 ? STR[lang].short : '');
+  const L = A.i18n(STR, role, (lang) => { if (shown) err.textContent = STR[lang][shown]; aiWords(lang); eyeWords(lang); pwWords(lang); });
+  pwWords(L.lang); newPw.addEventListener('input', () => pwWords(L.lang));
+  eyes.forEach((b) => b.addEventListener('click', () => {
+    const input = b.parentNode.querySelector('input'), on = b.getAttribute('aria-pressed') !== 'true';
+    input.type = on ? 'text' : 'password'; b.setAttribute('aria-pressed', String(on)); eyeWords(L.lang);
+    input.focus();
+  }));
+  if (N) aiLink.addEventListener('click', () => N.open(L.lang, aiLink)); else aiLink.hidden = true;
+  function show(key) { shown = key || ''; err.textContent = shown ? L.t(shown) : ''; err.hidden = !shown; }
+
+  // ── tabs ──
+  const tabs = [[$('tab-signin'), $('f-signin')], [$('tab-register'), $('f-register')]];
+  function select(i, focus) {
+    tabs.forEach(([tab, form], n) => { tab.setAttribute('aria-selected', String(n === i)); tab.tabIndex = n === i ? 0 : -1; form.hidden = n !== i; });
+    show('');
+    if (focus) tabs[i][0].focus();
+  }
+  tabs.forEach(([tab], i) => {
+    tab.addEventListener('click', () => select(i));
+    tab.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); select(1 - i, true); }
+    });
+  });
+  $('f-register').querySelector(`input[name=role][value=${role}]`).checked = true;
+
+  // ── Google and Telegram (Ruling R8: shown only when the server turned them on) ──
+  const tg = $('btn-telegram'), google = $('btn-google');
+  tg.hidden = !body.dataset.telegram;
+  google.hidden = !body.dataset.google;
+  $('social').hidden = tg.hidden && google.hidden;
+  tg.addEventListener('click', () => A.remember({ method: 'telegram', next }));
+  google.addEventListener('click', () => {
+    show(''); A.busy(google, true);
+    A.signInGoogle(next).catch(() => { A.busy(google, false); show('failed'); });
+  });
+
+  // ── back from Telegram: #tgAuthResult=<base64url JSON> ──
+  if (tgReturn) {
+    const payload = A.decodeTgAuthResult(location.hash);
+    history.replaceState(null, '', location.pathname + location.search);   // the payload leaves the address bar and this history entry
+    if (payload) { A.busy(tg, true); A.signInTelegram(payload, next).catch(() => { A.busy(tg, false); show('failed'); }); }
+    else show('failed');
+  }
+
+  // ── back from a failed attempt: Auth.js sends /signin?error=… ──
+  const error = query.get('error');
+  if (error) {
+    if (last.email) $('f-signin').querySelector('input[name=email]').value = last.email;
+    show(error === 'CredentialsSignin' ? (query.get('code') === 'rate_limited' ? 'tooMany' : last.method === 'telegram' ? 'failed' : 'wrong') : error === 'OAuthAccountNotLinked' ? 'exists' : 'failed');
+    const q = new URLSearchParams();
+    if (next !== '/') q.set('next', next);
+    if (role === 'parent') q.set('role', role);
+    history.replaceState(null, '', location.pathname + (q.toString() ? `?${q}` : ''));
+  }
+
+  // ── sign in ──
+  $('f-signin').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const d = new FormData(e.currentTarget), btn = e.currentTarget.querySelector('[type=submit]');
+    show(''); A.busy(btn, true);
+    A.signInPassword(String(d.get('email')).trim(), String(d.get('password')), next).catch(() => { A.busy(btn, false); show('failed'); });
+  });
+
+  // ── create an account, then sign in with it ──
+  const WEAK = { 'too-short': 'short', 'is-email': 'isEmail', 'too-common': 'common' };
+  $('f-register').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const d = new FormData(e.currentTarget), btn = e.currentTarget.querySelector('[type=submit]');
+    const fields = { firstName: String(d.get('firstName')).trim(), lastName: String(d.get('lastName')).trim(), role: String(d.get('role')), email: String(d.get('email')).trim(), password: String(d.get('password')) };
+    if ([...fields.password].length < 8) return show('short');
+    // the teen walk of 10 Oct 2026 (the owner's delegated call): the account starts in this page's language (auth.js carry()), so the first Home is in it
+    const carried = L.carry(); if (carried) fields.lang = carried;
+    show(''); A.busy(btn, true);
+    const r = await A.register(fields, next);
+    if (r.ok) return;
+    A.busy(btn, false);
+    if (r.error === 'created') {   // the account exists now; only the sign-in after it failed
+      select(0);
+      $('f-signin').querySelector('input[name=email]').value = fields.email;
+      return show('failed');
+    }
+    show(r.error === 'exists' ? 'exists' : r.error === 'weak' ? WEAK[r.reason] || 'failed' : r.error === 'too many' ? 'tooMany'
+      : r.error === 'invalid' && A.nameRefused(r.issues) ? 'badName' : 'failed');   // e.g. an emoji in the name (I5)
+  });
+})();
+</script>
+</body>
+</html>

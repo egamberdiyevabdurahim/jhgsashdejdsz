@@ -1,0 +1,1088 @@
+{
+ "bank": "K4x",
+ "batch": 4,
+ "items": [
+  {
+   "id": "K4x-pch01a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "radians_to_degrees",
+   "family_ref": "K4-pch001",
+   "params": {
+    "k": 7,
+    "d": 6
+   },
+   "lang": "en",
+   "stem": {
+    "en": "How many degrees is 7π/6 radians?",
+    "uz": "7π/6 radian necha gradus?",
+    "ru": "Сколько градусов составляет 7π/6 радиан?"
+   },
+   "options": [
+    {
+     "en": "210"
+    },
+    {
+     "en": "420"
+    },
+    {
+     "en": "105"
+    },
+    {
+     "en": "30"
+    }
+   ],
+   "answer_numeric": {
+    "value": 210,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "π rad = 180°, so 7π/6 = 7·180°/6 = 210°.",
+    "uz": "π radian = 180°, demak 7π/6 = 7·180°/6 = 210°.",
+    "ru": "π рад = 180°, поэтому 7π/6 = 7·180°/6 = 210°."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.85,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch01b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "radians_to_degrees",
+   "family_ref": "K4-pch001",
+   "params": {
+    "k": 3,
+    "d": 4
+   },
+   "lang": "en",
+   "stem": {
+    "en": "How many degrees is 3π/4 radians?",
+    "uz": "3π/4 radian necha gradus?",
+    "ru": "Сколько градусов составляет 3π/4 радиан?"
+   },
+   "options": [
+    {
+     "en": "135"
+    },
+    {
+     "en": "270"
+    },
+    {
+     "en": "67.5"
+    },
+    {
+     "en": "45"
+    }
+   ],
+   "answer_numeric": {
+    "value": 135,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "π rad = 180°, so 3π/4 = 3·180°/4 = 135°.",
+    "uz": "π radian = 180°, demak 3π/4 = 3·180°/4 = 135°.",
+    "ru": "π рад = 180°, поэтому 3π/4 = 3·180°/4 = 135°."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.85,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch05a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "complementary_angles",
+   "family_ref": "K4-pch005",
+   "params": {
+    "p": 3,
+    "q": 5,
+    "r": 2,
+    "s": 10
+   },
+   "lang": "en",
+   "stem": {
+    "en": "sin(3a + 5)° = cos(2a + 10)°, and both angles are between 0° and 90°. What is a?",
+    "uz": "sin(3a + 5)° = cos(2a + 10)°, ikkala burchak ham 0° va 90° orasida. a ni toping.",
+    "ru": "sin(3a + 5)° = cos(2a + 10)°, оба угла лежат между 0° и 90°. Найдите a."
+   },
+   "options": [
+    {
+     "en": "15"
+    },
+    {
+     "en": "33"
+    },
+    {
+     "en": "19"
+    },
+    {
+     "en": "18"
+    }
+   ],
+   "answer_numeric": {
+    "value": 15,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "sin x° = cos(90 − x)°, so the two angles add to 90°: 5a + 15 = 90 and a = 15.",
+    "uz": "sin x° = cos(90 − x)°, yaʼni ikki burchak yigʻindisi 90°: 5a + 15 = 90, a = 15.",
+    "ru": "sin x° = cos(90 − x)°, поэтому сумма углов равна 90°: 5a + 15 = 90, a = 15."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch05b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "complementary_angles",
+   "family_ref": "K4-pch005",
+   "params": {
+    "p": 3,
+    "q": 10,
+    "r": 2,
+    "s": 20
+   },
+   "lang": "en",
+   "stem": {
+    "en": "sin(3a + 10)° = cos(2a + 20)°, and both angles are between 0° and 90°. What is a?",
+    "uz": "sin(3a + 10)° = cos(2a + 20)°, ikkala burchak ham 0° va 90° orasida. a ni toping.",
+    "ru": "sin(3a + 10)° = cos(2a + 20)°, оба угла лежат между 0° и 90°. Найдите a."
+   },
+   "options": [
+    {
+     "en": "12"
+    },
+    {
+     "en": "30"
+    },
+    {
+     "en": "20"
+    },
+    {
+     "en": "18"
+    }
+   ],
+   "answer_numeric": {
+    "value": 12,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "sin x° = cos(90 − x)°, so the two angles add to 90°: 5a + 30 = 90 and a = 12.",
+    "uz": "sin x° = cos(90 − x)°, yaʼni ikki burchak yigʻindisi 90°: 5a + 30 = 90, a = 12.",
+    "ru": "sin x° = cos(90 − x)°, поэтому сумма углов равна 90°: 5a + 30 = 90, a = 12."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch06a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "right_triangle_trig",
+   "family_ref": "K4-pch006",
+   "params": {
+    "t": [
+     5,
+     12,
+     13
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In a right triangle, sin A = 5/13, where A is an acute angle. What is tan A?",
+    "uz": "Toʻgʻri burchakli uchburchakda sin A = 5/13 (A — oʻtkir burchak). tan A nechaga teng?",
+    "ru": "В прямоугольном треугольнике sin A = 5/13 (A — острый угол). Чему равен tan A?"
+   },
+   "options": [
+    {
+     "en": "5/12"
+    },
+    {
+     "en": "12/5"
+    },
+    {
+     "en": "12/13"
+    },
+    {
+     "en": "13/12"
+    }
+   ],
+   "why": {
+    "en": "Opposite side 5, hypotenuse 13, so the adjacent side is √(13² − 5²) = 12; tan A = 5/12.",
+    "uz": "Qarama-qarshi katet 5, gipotenuza 13, demak yopishgan katet √(13² − 5²) = 12; tan A = 5/12.",
+    "ru": "Противолежащий катет 5, гипотенуза 13, значит прилежащий катет √(13² − 5²) = 12; tan A = 5/12."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch06b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "right_triangle_trig",
+   "family_ref": "K4-pch006",
+   "params": {
+    "t": [
+     8,
+     15,
+     17
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In a right triangle, sin A = 8/17, where A is an acute angle. What is tan A?",
+    "uz": "Toʻgʻri burchakli uchburchakda sin A = 8/17 (A — oʻtkir burchak). tan A nechaga teng?",
+    "ru": "В прямоугольном треугольнике sin A = 8/17 (A — острый угол). Чему равен tan A?"
+   },
+   "options": [
+    {
+     "en": "8/15"
+    },
+    {
+     "en": "15/8"
+    },
+    {
+     "en": "15/17"
+    },
+    {
+     "en": "17/15"
+    }
+   ],
+   "why": {
+    "en": "Opposite side 8, hypotenuse 17, so the adjacent side is √(17² − 8²) = 15; tan A = 8/15.",
+    "uz": "Qarama-qarshi katet 8, gipotenuza 17, demak yopishgan katet √(17² − 8²) = 15; tan A = 8/15.",
+    "ru": "Противолежащий катет 8, гипотенуза 17, значит прилежащий катет √(17² − 8²) = 15; tan A = 8/15."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch11a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "double_angle",
+   "family_ref": "K4-pch011",
+   "params": {
+    "t": [
+     3,
+     4,
+     5
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "x is an acute angle and sin x = 3/5. What is sin 2x?",
+    "uz": "x — oʻtkir burchak va sin x = 3/5. sin 2x nechaga teng?",
+    "ru": "Угол x острый и sin x = 3/5. Найдите sin 2x."
+   },
+   "options": [
+    {
+     "en": "24/25"
+    },
+    {
+     "en": "6/5"
+    },
+    {
+     "en": "12/25"
+    },
+    {
+     "en": "7/25"
+    }
+   ],
+   "why": {
+    "en": "cos x = 4/5, so sin 2x = 2 sin x cos x = 2·3·4/25 = 24/25.",
+    "uz": "cos x = 4/5, demak sin 2x = 2 sin x cos x = 2·3·4/25 = 24/25.",
+    "ru": "cos x = 4/5, поэтому sin 2x = 2 sin x cos x = 2·3·4/25 = 24/25."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch11b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "double_angle",
+   "family_ref": "K4-pch011",
+   "params": {
+    "t": [
+     5,
+     12,
+     13
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "x is an acute angle and sin x = 5/13. What is sin 2x?",
+    "uz": "x — oʻtkir burchak va sin x = 5/13. sin 2x nechaga teng?",
+    "ru": "Угол x острый и sin x = 5/13. Найдите sin 2x."
+   },
+   "options": [
+    {
+     "en": "120/169"
+    },
+    {
+     "en": "10/13"
+    },
+    {
+     "en": "60/169"
+    },
+    {
+     "en": "119/169"
+    }
+   ],
+   "why": {
+    "en": "cos x = 12/13, so sin 2x = 2 sin x cos x = 2·5·12/169 = 120/169.",
+    "uz": "cos x = 12/13, demak sin 2x = 2 sin x cos x = 2·5·12/169 = 120/169.",
+    "ru": "cos x = 12/13, поэтому sin 2x = 2 sin x cos x = 2·5·12/169 = 120/169."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch12a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "law_of_cosines",
+   "family_ref": "K4-pch012",
+   "params": {
+    "b": 3,
+    "c": 8
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In triangle ABC, AB = 3, AC = 8 and ∠A = 60°. What is BC?",
+    "uz": "ABC uchburchakda AB = 3, AC = 8 va ∠A = 60°. BC ni toping.",
+    "ru": "В треугольнике ABC AB = 3, AC = 8, ∠A = 60°. Найдите BC."
+   },
+   "options": [
+    {
+     "en": "7"
+    },
+    {
+     "en": "√73"
+    },
+    {
+     "en": "√97"
+    },
+    {
+     "en": "5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 7,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Law of cosines: BC² = 3² + 8² − 2·3·8·cos 60° = 73 − 24 = 49, so BC = 7.",
+    "uz": "Kosinuslar teoremasi: BC² = 3² + 8² − 2·3·8·cos 60° = 73 − 24 = 49, demak BC = 7.",
+    "ru": "Теорема косинусов: BC² = 3² + 8² − 2·3·8·cos 60° = 73 − 24 = 49, значит BC = 7."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch12b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "law_of_cosines",
+   "family_ref": "K4-pch012",
+   "params": {
+    "b": 7,
+    "c": 15
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In triangle ABC, AB = 7, AC = 15 and ∠A = 60°. What is BC?",
+    "uz": "ABC uchburchakda AB = 7, AC = 15 va ∠A = 60°. BC ni toping.",
+    "ru": "В треугольнике ABC AB = 7, AC = 15, ∠A = 60°. Найдите BC."
+   },
+   "options": [
+    {
+     "en": "13"
+    },
+    {
+     "en": "√274"
+    },
+    {
+     "en": "√379"
+    },
+    {
+     "en": "8"
+    }
+   ],
+   "answer_numeric": {
+    "value": 13,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Law of cosines: BC² = 7² + 15² − 2·7·15·cos 60° = 274 − 105 = 169, so BC = 13.",
+    "uz": "Kosinuslar teoremasi: BC² = 7² + 15² − 2·7·15·cos 60° = 274 − 105 = 169, demak BC = 13.",
+    "ru": "Теорема косинусов: BC² = 7² + 15² − 2·7·15·cos 60° = 274 − 105 = 169, значит BC = 13."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch14a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "triangle_area_sine",
+   "family_ref": "K4-pch014",
+   "params": {
+    "a": 6,
+    "b": 10
+   },
+   "lang": "en",
+   "stem": {
+    "en": "Two sides of a triangle are 6 and 10, and the angle between them is 30°. What is the area of the triangle?",
+    "uz": "Uchburchakning ikki tomoni 6 va 10, ular orasidagi burchak 30°. Uchburchak yuzi nechaga teng?",
+    "ru": "Две стороны треугольника равны 6 и 10, угол между ними 30°. Найдите площадь треугольника."
+   },
+   "options": [
+    {
+     "en": "15"
+    },
+    {
+     "en": "30"
+    },
+    {
+     "en": "60"
+    },
+    {
+     "en": "7.5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 15,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "S = ½·6·10·sin 30° = ½·60·½ = 15.",
+    "uz": "S = ½·6·10·sin 30° = ½·60·½ = 15.",
+    "ru": "S = ½·6·10·sin 30° = ½·60·½ = 15."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch14b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "triangle_area_sine",
+   "family_ref": "K4-pch014",
+   "params": {
+    "a": 4,
+    "b": 9
+   },
+   "lang": "en",
+   "stem": {
+    "en": "Two sides of a triangle are 4 and 9, and the angle between them is 30°. What is the area of the triangle?",
+    "uz": "Uchburchakning ikki tomoni 4 va 9, ular orasidagi burchak 30°. Uchburchak yuzi nechaga teng?",
+    "ru": "Две стороны треугольника равны 4 и 9, угол между ними 30°. Найдите площадь треугольника."
+   },
+   "options": [
+    {
+     "en": "9"
+    },
+    {
+     "en": "18"
+    },
+    {
+     "en": "36"
+    },
+    {
+     "en": "4.5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 9,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "S = ½·4·9·sin 30° = ½·36·½ = 9.",
+    "uz": "S = ½·4·9·sin 30° = ½·36·½ = 9.",
+    "ru": "S = ½·4·9·sin 30° = ½·36·½ = 9."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch16a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "inverse_functions",
+   "family_ref": "K4-pch016",
+   "params": {
+    "k": 3,
+    "c": 2
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = x³ + 2. What is f⁻¹(29)?",
+    "uz": "f(x) = x³ + 2. f⁻¹(29) ni toping.",
+    "ru": "f(x) = x³ + 2. Найдите f⁻¹(29)."
+   },
+   "options": [
+    {
+     "en": "3"
+    },
+    {
+     "en": "27"
+    },
+    {
+     "en": "31"
+    },
+    {
+     "en": "9"
+    }
+   ],
+   "answer_numeric": {
+    "value": 3,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f⁻¹(29) is the x with x³ + 2 = 29: x³ = 27, so x = 3.",
+    "uz": "f⁻¹(29) — bu x³ + 2 = 29 boʻladigan x: x³ = 27, demak x = 3.",
+    "ru": "f⁻¹(29) — это x, для которого x³ + 2 = 29: x³ = 27, значит x = 3."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch16b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "inverse_functions",
+   "family_ref": "K4-pch016",
+   "params": {
+    "k": 2,
+    "c": 5
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = x³ + 5. What is f⁻¹(13)?",
+    "uz": "f(x) = x³ + 5. f⁻¹(13) ni toping.",
+    "ru": "f(x) = x³ + 5. Найдите f⁻¹(13)."
+   },
+   "options": [
+    {
+     "en": "2"
+    },
+    {
+     "en": "8"
+    },
+    {
+     "en": "18"
+    },
+    {
+     "en": "4"
+    }
+   ],
+   "answer_numeric": {
+    "value": 2,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f⁻¹(13) is the x with x³ + 5 = 13: x³ = 8, so x = 2.",
+    "uz": "f⁻¹(13) — bu x³ + 5 = 13 boʻladigan x: x³ = 8, demak x = 2.",
+    "ru": "f⁻¹(13) — это x, для которого x³ + 5 = 13: x³ = 8, значит x = 2."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch19a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "rational_functions",
+   "family_ref": "K4-pch019",
+   "params": {
+    "a": 3,
+    "b": 2
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The graph of y = (3x² − 1)/(2x² + x) has the horizontal asymptote y = c. What is c?",
+    "uz": "y = (3x² − 1)/(2x² + x) funksiya grafigining gorizontal asimptotasi y = c. c ni toping.",
+    "ru": "Горизонтальная асимптота графика y = (3x² − 1)/(2x² + x) — прямая y = c. Найдите c."
+   },
+   "options": [
+    {
+     "en": "1.5"
+    },
+    {
+     "en": "2/3"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "3"
+    }
+   ],
+   "answer_numeric": {
+    "value": 1.5,
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "The degrees are equal, so c is the ratio of the leading coefficients: 3/2 = 1.5.",
+    "uz": "Surat va maxraj darajalari teng, shuning uchun c bosh koeffitsiyentlar nisbati: 3/2 = 1,5.",
+    "ru": "Степени числителя и знаменателя равны, поэтому c — отношение старших коэффициентов: 3/2 = 1,5."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.05,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch19b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "rational_functions",
+   "family_ref": "K4-pch019",
+   "params": {
+    "a": 7,
+    "b": 4
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The graph of y = (7x² − 1)/(4x² + x) has the horizontal asymptote y = c. What is c?",
+    "uz": "y = (7x² − 1)/(4x² + x) funksiya grafigining gorizontal asimptotasi y = c. c ni toping.",
+    "ru": "Горизонтальная асимптота графика y = (7x² − 1)/(4x² + x) — прямая y = c. Найдите c."
+   },
+   "options": [
+    {
+     "en": "1.75"
+    },
+    {
+     "en": "4/7"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "7"
+    }
+   ],
+   "answer_numeric": {
+    "value": 1.75,
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "The degrees are equal, so c is the ratio of the leading coefficients: 7/4 = 1.75.",
+    "uz": "Surat va maxraj darajalari teng, shuning uchun c bosh koeffitsiyentlar nisbati: 7/4 = 1,75.",
+    "ru": "Степени числителя и знаменателя равны, поэтому c — отношение старших коэффициентов: 7/4 = 1,75."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.05,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch20a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "polynomial_zeros",
+   "family_ref": "K4-pch020",
+   "params": {
+    "r": 2,
+    "s": 5
+   },
+   "lang": "en",
+   "stem": {
+    "en": "p(x) = x³ − 8x² + 17x − 10, and p(1) = 0. What is the largest zero of p?",
+    "uz": "p(x) = x³ − 8x² + 17x − 10 va p(1) = 0. p ning eng katta nolini toping.",
+    "ru": "p(x) = x³ − 8x² + 17x − 10, причём p(1) = 0. Найдите наибольший нуль многочлена p."
+   },
+   "options": [
+    {
+     "en": "5"
+    },
+    {
+     "en": "2"
+    },
+    {
+     "en": "10"
+    },
+    {
+     "en": "8"
+    }
+   ],
+   "answer_numeric": {
+    "value": 5,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Divide by x − 1: p(x) = (x − 1)(x² − 7x + 10) = (x − 1)(x − 2)(x − 5); the largest zero is 5.",
+    "uz": "x − 1 ga boʻling: p(x) = (x − 1)(x² − 7x + 10) = (x − 1)(x − 2)(x − 5); eng katta nol 5.",
+    "ru": "Разделим на x − 1: p(x) = (x − 1)(x² − 7x + 10) = (x − 1)(x − 2)(x − 5); наибольший нуль 5."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch20b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "polynomial_zeros",
+   "family_ref": "K4-pch020",
+   "params": {
+    "r": 3,
+    "s": 4
+   },
+   "lang": "en",
+   "stem": {
+    "en": "p(x) = x³ − 8x² + 19x − 12, and p(1) = 0. What is the largest zero of p?",
+    "uz": "p(x) = x³ − 8x² + 19x − 12 va p(1) = 0. p ning eng katta nolini toping.",
+    "ru": "p(x) = x³ − 8x² + 19x − 12, причём p(1) = 0. Найдите наибольший нуль многочлена p."
+   },
+   "options": [
+    {
+     "en": "4"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "12"
+    },
+    {
+     "en": "8"
+    }
+   ],
+   "answer_numeric": {
+    "value": 4,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Divide by x − 1: p(x) = (x − 1)(x² − 7x + 12) = (x − 1)(x − 3)(x − 4); the largest zero is 4.",
+    "uz": "x − 1 ga boʻling: p(x) = (x − 1)(x² − 7x + 12) = (x − 1)(x − 3)(x − 4); eng katta nol 4.",
+    "ru": "Разделим на x − 1: p(x) = (x − 1)(x² − 7x + 12) = (x − 1)(x − 3)(x − 4); наибольший нуль 4."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch23a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "logarithmic_equations",
+   "family_ref": "K4-pch023",
+   "params": {
+    "b": 2,
+    "k": 2,
+    "n": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "log₂ x + log₂(x − 2) = 3. What is x?",
+    "uz": "log₂ x + log₂(x − 2) = 3. x ni toping.",
+    "ru": "log₂ x + log₂(x − 2) = 3. Найдите x."
+   },
+   "options": [
+    {
+     "en": "4"
+    },
+    {
+     "en": "−2"
+    },
+    {
+     "en": "8"
+    },
+    {
+     "en": "5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 4,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "log₂(x(x − 2)) = 3, so x² − 2x − 8 = 0 and x = 4 or x = −2; the logs need x > 2, so x = 4.",
+    "uz": "log₂(x(x − 2)) = 3, demak x² − 2x − 8 = 0, x = 4 yoki x = −2; logarifmlar uchun x > 2, shuning uchun x = 4.",
+    "ru": "log₂(x(x − 2)) = 3, значит x² − 2x − 8 = 0, x = 4 или x = −2; для логарифмов нужно x > 2, поэтому x = 4."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch23b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "logarithmic_equations",
+   "family_ref": "K4-pch023",
+   "params": {
+    "b": 2,
+    "k": 6,
+    "n": 4
+   },
+   "lang": "en",
+   "stem": {
+    "en": "log₂ x + log₂(x − 6) = 4. What is x?",
+    "uz": "log₂ x + log₂(x − 6) = 4. x ni toping.",
+    "ru": "log₂ x + log₂(x − 6) = 4. Найдите x."
+   },
+   "options": [
+    {
+     "en": "8"
+    },
+    {
+     "en": "−2"
+    },
+    {
+     "en": "16"
+    },
+    {
+     "en": "10"
+    }
+   ],
+   "answer_numeric": {
+    "value": 8,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "log₂(x(x − 6)) = 4, so x² − 6x − 16 = 0 and x = 8 or x = −2; the logs need x > 6, so x = 8.",
+    "uz": "log₂(x(x − 6)) = 4, demak x² − 6x − 16 = 0, x = 8 yoki x = −2; logarifmlar uchun x > 6, shuning uchun x = 8.",
+    "ru": "log₂(x(x − 6)) = 4, значит x² − 6x − 16 = 0, x = 8 или x = −2; для логарифмов нужно x > 6, поэтому x = 8."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

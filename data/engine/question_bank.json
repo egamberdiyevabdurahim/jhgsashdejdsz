@@ -1,0 +1,3248 @@
+{
+ "version": "0.1.0",
+ "source": "Diagnostic-to-Roadmap engine question bank",
+ "conventions": {
+  "id": "stable, never renamed; translations are labels keyed by id",
+  "core": "true = asked in the 12-minute Core flow; false = Deep, delivered as week-1 daily tasks",
+  "stages": {
+   "S1": "age 10-13 or > 4 years from graduation",
+   "S2": "14-16 / 2-4 years from application",
+   "S3": "application year (<= 14 months to first deadline)",
+   "S4": "finished school: gap year, reapplicant, transfer (18-20)"
+  },
+  "stage_rule": "stage is derived from grade + confirmed graduation date + destination deadlines; age is a fallback only",
+  "audience": "student | parent | system (computed, not asked)",
+  "types": [
+   "date",
+   "select",
+   "multi",
+   "autocomplete",
+   "repeatable",
+   "repeatable_autocomplete",
+   "checklist",
+   "number",
+   "number_currency",
+   "scale_1_5",
+   "scale_1_10",
+   "slider",
+   "rank",
+   "text",
+   "text_or_voice",
+   "upload",
+   "table",
+   "test",
+   "confirm_date",
+   "confirm_numbers",
+   "contact",
+   "form",
+   "select_plus_text",
+   "select_plus_number",
+   "select_plus_date",
+   "select_per_item",
+   "multi_plus_hours",
+   "date_or_unknown",
+   "system"
+  ],
+  "options_dynamic": "strings starting with 'dynamic:' are generated from country_profile / destination_rules / taxonomies; 'fallback:' lists apply when no profile exists",
+  "kid_text_en": "wording for S1 (reading level ~10 years); same id, same feeds",
+  "free_text": "accepted in ANY language; voice-to-text allowed; the LLM interprets, code stores raw + extracted",
+  "sensitive": "optional, consent-gated, never used in rankings, deletable on request"
+ },
+ "modules": [
+  {
+   "id": "M0",
+   "name": "Gate",
+   "purpose": "Identity, jurisdiction, consent. Drives which country profile, stage and language everything else uses.",
+   "questions": [
+    {
+     "id": "m0_roadmap_language",
+     "core": true,
+     "type": "select",
+     "text_en": "Which language should your roadmap be in?",
+     "options": [
+      "en",
+      "uz",
+      "ru"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "profile.roadmap_language"
+     ],
+     "notes": "P4b (owner 3 Oct 2026, R12): the roadmap, the reading check and (once uz/ru are enabled) the AI text use it; m0_app_language stays the app's own language; P4g (owner 4 Oct 2026, L): a live student picks it on the diagnostic's first screen, and every question, option, hint and button of the diagnostic follows it"
+    },
+    {
+     "id": "m0_dob",
+     "core": true,
+     "type": "date",
+     "text_en": "Date of birth",
+     "kid_text_en": "When is your birthday?",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "profile.dob",
+      "derived.age",
+      "derived.stage"
+     ],
+     "verify": "none",
+     "notes": "age<14 -> parent account required before continuing"
+    },
+    {
+     "id": "m0_gender",
+     "core": true,
+     "type": "select",
+     "text_en": "Gender (optional)",
+     "options": [
+      "male",
+      "female",
+      "prefer_not_to_say"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "profile.gender"
+     ],
+     "sensitive": true,
+     "notes": "only used for conscription branch (m10_military) and family-constraint wording; never for ranking"
+    },
+    {
+     "id": "m0_residence_country",
+     "core": true,
+     "type": "select",
+     "text_en": "Which country do you live in?",
+     "options": "dynamic:countries",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "profile.residence_country",
+      "derived.country_profile"
+     ]
+    },
+    {
+     "id": "m0_residence_city",
+     "core": false,
+     "type": "autocomplete",
+     "text_en": "Which city or town?",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "profile.residence_city"
+     ]
+    },
+    {
+     "id": "m0_city_type",
+     "core": false,
+     "type": "select",
+     "text_en": "What kind of place is it?",
+     "options": [
+      "capital",
+      "major_city",
+      "small_town",
+      "rural"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "profile.city_type"
+     ],
+     "notes": "resource access proxy: test centers, tutors, clubs"
+    },
+    {
+     "id": "m0_citizenship",
+     "core": true,
+     "type": "multi",
+     "text_en": "Citizenship (select all that apply)",
+     "options": "dynamic:countries",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "profile.citizenships",
+      "derived.visa_pool",
+      "derived.aid_pool"
+     ]
+    },
+    {
+     "id": "m0_app_language",
+     "core": false,
+     "type": "select",
+     "text_en": "App language",
+     "options": "dynamic:supported_languages",
+     "audience": "system",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "profile.app_language"
+     ],
+     "notes": "default from device locale; free-text answers accepted in any language"
+    },
+    {
+     "id": "m0_timezone",
+     "core": false,
+     "type": "system",
+     "text_en": "Timezone",
+     "audience": "system",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "profile.timezone"
+     ]
+    },
+    {
+     "id": "m0_parent_contact",
+     "core": false,
+     "type": "contact",
+     "text_en": "Parent or guardian contact (phone or email)",
+     "audience": "parent",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "derived.age < 14 OR m8_parent_attitude in [hesitant,against]",
+     "feeds": [
+      "family.parent_contact"
+     ],
+     "sensitive": true
+    },
+    {
+     "id": "m0_consent",
+     "core": false,
+     "type": "system",
+     "text_en": "Consent record (student + parent for minors, per jurisdiction)",
+     "audience": "system",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "profile.consent"
+     ],
+     "notes": "store consent version + timestamp; block Deep modules M7/M8 sensitive fields until consent"
+    }
+   ]
+  },
+  {
+   "id": "M1",
+   "name": "Stage & School",
+   "purpose": "Where the student is in their country's system. Country profile supplies grade names, school types, grading scale and the fork points (e.g. Uzbekistan after grade 9).",
+   "questions": [
+    {
+     "id": "m1_status",
+     "core": true,
+     "type": "select",
+     "text_en": "What best describes you right now?",
+     "options": [
+      "in_school",
+      "finished_school_gap_year",
+      "in_university",
+      "not_in_school_other"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "profile.status",
+      "derived.stage"
+     ]
+    },
+    {
+     "id": "m1_grade",
+     "core": true,
+     "type": "select",
+     "text_en": "Which grade / year are you in?",
+     "kid_text_en": "Which class are you in at school?",
+     "options": "dynamic:country_profile.grades",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "m1_status == in_school",
+     "feeds": [
+      "profile.grade",
+      "derived.years_left",
+      "derived.graduation_date"
+     ]
+    },
+    {
+     "id": "m1_graduation_confirm",
+     "core": true,
+     "type": "confirm_date",
+     "text_en": "We think you finish school in {derived.graduation_date}. Correct?",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "m1_status == in_school",
+     "feeds": [
+      "profile.graduation_date"
+     ],
+     "notes": "the application cycle is computed from this; must be confirmed, not assumed"
+    },
+    {
+     "id": "m1_school_type",
+     "core": false,
+     "type": "select",
+     "text_en": "What type of school?",
+     "options": "dynamic:country_profile.school_types|fallback:[public_state,private_national,international_ib,international_cambridge,international_ap,specialized_olympiad,lyceum_gymnasium,religious,homeschool_online,vocational,other]",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "school.type"
+     ]
+    },
+    {
+     "id": "m1_curriculum",
+     "core": false,
+     "type": "select",
+     "text_en": "Which curriculum?",
+     "options": [
+      "national",
+      "ib_myp_dp",
+      "cambridge_igcse_alevel",
+      "ap",
+      "french_bac",
+      "german_abitur",
+      "other"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "school.curriculum",
+      "derived.rigor_ceiling"
+     ]
+    },
+    {
+     "id": "m1_instruction_language",
+     "core": false,
+     "type": "multi",
+     "text_en": "Language(s) your school teaches in",
+     "options": "dynamic:languages",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "school.instruction_languages",
+      "derived.english_medium"
+     ]
+    },
+    {
+     "id": "m1_school_support",
+     "core": false,
+     "type": "multi",
+     "text_en": "Does your school have any of these?",
+     "options": [
+      "college_counselor",
+      "has_sent_students_abroad",
+      "issues_english_transcripts",
+      "teachers_can_write_recs_in_english",
+      "none_of_these",
+      "dont_know"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "school.support"
+     ],
+     "notes": "drives 'get school report / find recommender' tasks; missing support = counselor-substitute tasks in roadmap"
+    },
+    {
+     "id": "m1_grading_scale",
+     "core": false,
+     "type": "select",
+     "text_en": "Grading scale your school uses",
+     "options": "dynamic:country_profile.grading_scales|fallback:[five_point,ten_point,twelve_point,twenty_point,percent_100,letters_a_f,gpa_4,ib_1_7,uk_a_star_u]",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "school.grading_scale"
+     ],
+     "notes": "needed to normalize m3_average; P4b (R1): asked on the m3_average screen, so asked alone only when the average was skipped",
+     "branch": "m3_average == skipped"
+    },
+    {
+     "id": "m1_class_rank",
+     "core": false,
+     "type": "select",
+     "text_en": "Roughly where are you in your class?",
+     "options": [
+      "top_5pct",
+      "top_10pct",
+      "top_25pct",
+      "top_50pct",
+      "below_50pct",
+      "dont_know"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.rank_band"
+     ]
+    },
+    {
+     "id": "m1_post_grade_plan",
+     "core": false,
+     "type": "select",
+     "text_en": "After this grade, what is the plan?",
+     "options": "dynamic:country_profile.fork_options",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "country_profile.has_fork_after(m1_grade)",
+     "feeds": [
+      "school.next_path",
+      "derived.rigor_ceiling"
+     ],
+     "notes": "e.g. UZ after grade 9: stay 10-11 / academic lyceum / vocational college / international school / move abroad"
+    }
+   ]
+  },
+  {
+   "id": "M2",
+   "name": "Goal & Destination",
+   "purpose": "What they want and why. Destination choice decides the rules engine (exam-driven / holistic / hybrid) and which language and tests matter.",
+   "questions": [
+    {
+     "id": "m2_destinations",
+     "core": true,
+     "type": "multi",
+     "text_en": "Which countries are you considering for university?",
+     "kid_text_en": "Would you like to study in your own country, another country, or you don't know yet?",
+     "options": "dynamic:countries+[own_country,dont_know_yet]",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.destinations",
+      "derived.rules_set"
+     ]
+    },
+    {
+     "id": "m2_destination_rank",
+     "core": false,
+     "type": "rank",
+     "text_en": "Rank your top 3",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "len(m2_destinations) > 1",
+     "feeds": [
+      "goal.destination_rank"
+     ]
+    },
+    {
+     "id": "m2_dream_unis",
+     "core": true,
+     "type": "repeatable_autocomplete",
+     "text_en": "Which universities do you want to apply to? (up to 5)",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.dream_unis"
+     ],
+     "notes": "P4g (owner 4 Oct 2026, U): asked at every stage, gap year included; an S1 student may continue with none",
+     "kid_text_en": "Is there a university you dream about? (up to 5)",
+     "why_en": "Why we ask: your roadmap, its tests and its dates are built for these universities. You can change them anytime."
+    },
+    {
+     "id": "m2_dream_why",
+     "core": false,
+     "type": "select_per_item",
+     "text_en": "Why this one?",
+     "options": [
+      "ranking_prestige",
+      "specific_program",
+      "cost_or_scholarship",
+      "family_or_friends_there",
+      "culture_lifestyle",
+      "immigration_prospects",
+      "someone_recommended",
+      "other"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "len(m2_dream_unis) > 0",
+     "feeds": [
+      "goal.dream_why"
+     ],
+     "notes": "'ranking_prestige' only -> brand-fixation flag"
+    },
+    {
+     "id": "m2_open_unknown_scholarship",
+     "core": false,
+     "type": "scale_1_5",
+     "text_en": "Would you go to a less-known university if it gave you a full scholarship?",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.openness_unknown_uni"
+     ]
+    },
+    {
+     "id": "m2_open_other_country",
+     "core": false,
+     "type": "scale_1_5",
+     "text_en": "Would you switch country if it is cheaper or more realistic?",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.openness_other_country"
+     ]
+    },
+    {
+     "id": "m2_post_grad_intent",
+     "core": false,
+     "type": "select",
+     "text_en": "After graduating, what do you want?",
+     "options": [
+      "return_home",
+      "work_in_destination",
+      "grad_school",
+      "undecided"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.post_grad_intent",
+      "derived.visa_intent_risk"
+     ]
+    },
+    {
+     "id": "m2_degree_route",
+     "core": false,
+     "type": "select",
+     "text_en": "Which route?",
+     "options": [
+      "bachelors_direct",
+      "foundation_year",
+      "community_college_transfer",
+      "vocational",
+      "undecided"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.degree_route"
+     ]
+    },
+    {
+     "id": "m2_field",
+     "core": true,
+     "type": "select",
+     "text_en": "What do you want to study?",
+     "kid_text_en": "What do you like learning about most?",
+     "options": "dynamic:field_taxonomy",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.field"
+     ]
+    },
+    {
+     "id": "m2_uz_programmes",
+     "core": false,
+     "live": true,
+     "type": "repeatable",
+     "text_en": "Which programme and language will you apply to at each Uzbek state university?",
+     "options": {
+      "fields": [
+       "university_id",
+       "code:number",
+       "lang:[uz,ru]"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "m2_destinations includes own_country AND m0_residence_country == UZ",
+     "feeds": [
+      "goal.uz_programmes"
+     ],
+     "why_en": "Why we ask: the state test ranks students by programme and language, so your chance is read for the one you choose.",
+     "notes": "P5d review R1 (spec §3.3), 7 Oct 2026: a live student only (live: true); rows { university_id, code, lang } of src/engine/data/admission/uz_programmes_2026.json, picked from the Agency's list (public/runtime/jg-unis.js) here or on the university's page (commit uz_programme)"
+    },
+    {
+     "id": "m2_planned_round",
+     "core": false,
+     "live": true,
+     "type": "select",
+     "text_en": "Which round will you apply in to your first-choice US university?",
+     "options": [
+      "early_action",
+      "restrictive_early_action",
+      "early_decision",
+      "regular_decision",
+      "not_sure"
+     ],
+     "audience": "student",
+     "stages": [
+      "S3"
+     ],
+     "branch": "m2_destinations includes US",
+     "feeds": [
+      "goal.planned_round"
+     ],
+     "why_en": "Why we ask: your chance is read for the round you apply in.",
+     "notes": "P5d review R1 (spec §3.3), 7 Oct 2026: a live student only (live: true); the round term of spec §3.4 (inputs.ts)"
+    },
+    {
+     "id": "m2_majors",
+     "core": false,
+     "type": "multi",
+     "text_en": "Specific majors (if you know)",
+     "options": "dynamic:majors_by_field",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.majors"
+     ]
+    },
+    {
+     "id": "m2_field_certainty",
+     "core": false,
+     "type": "scale_1_10",
+     "text_en": "How sure are you about this field?",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.field_certainty"
+     ]
+    },
+    {
+     "id": "m2_field_why",
+     "core": false,
+     "type": "text_or_voice",
+     "text_en": "Why this field? (you can type or record voice, any language)",
+     "options": {
+      "max_words": 100
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.field_why_raw",
+      "llm.motivation_quality"
+     ]
+    },
+    {
+     "id": "m2_life_at_30",
+     "core": false,
+     "type": "text_or_voice",
+     "text_en": "What does your life look like at 30? Job, country, anything.",
+     "options": {
+      "max_words": 80
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.life_at_30_raw"
+     ]
+    },
+    {
+     "id": "m2_gap_year_ok",
+     "core": false,
+     "type": "select",
+     "text_en": "Is a gap year acceptable? (you / your parents)",
+     "options": [
+      "yes",
+      "no",
+      "maybe",
+      "parents_would_refuse"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.gap_year_ok"
+     ]
+    },
+    {
+     "id": "m2_instruction_language_ok",
+     "core": false,
+     "type": "multi",
+     "text_en": "Which languages could you study in?",
+     "options": "dynamic:languages",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.instruction_languages_ok",
+      "derived.language_gap"
+     ]
+    },
+    {
+     "id": "m2_location_constraints",
+     "core": false,
+     "type": "multi",
+     "text_en": "Anything that limits where you can go?",
+     "options": [
+      "near_family",
+      "religious_needs",
+      "climate",
+      "safety",
+      "big_city_only",
+      "campus_town_ok",
+      "disability_access",
+      "none"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "goal.location_constraints"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M3",
+   "name": "Academics",
+   "purpose": "Grades, rigor, math level, olympiads, national exam path. Verified with uploads and the math mini-test.",
+   "questions": [
+    {
+     "id": "m3_report_cards_upload",
+     "core": false,
+     "type": "upload",
+     "text_en": "Upload your report cards for the last 2 years (photo is fine)",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.transcripts_raw",
+      "academics.grades_by_subject"
+     ],
+     "verify": "ocr_extract -> grades_by_subject; mismatch with m3_average -> flag",
+     "branch": "derived.ocr_ready == yes",
+     "notes": "P4b (owner 3 Oct 2026, R1): out of the first run, and hidden until a route reads the files (the design only names them)"
+    },
+    {
+     "id": "m3_grades_table",
+     "core": false,
+     "type": "table",
+     "text_en": "Your grades by subject (optional)",
+     "options": {
+      "columns": [
+       "subject",
+       "grade",
+       "year"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.grades_by_subject"
+     ]
+    },
+    {
+     "id": "m3_average",
+     "core": true,
+     "type": "number",
+     "text_en": "Your overall average",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.average_raw",
+      "derived.gpa_normalized"
+     ],
+     "notes": "P4b (owner 3 Oct 2026, R1): asked with its scale (m1_grading_scale: five_point, ten_point, percent_100, gpa_4) and picked on a slider; a bare value is five_point"
+    },
+    {
+     "id": "m3_trend",
+     "core": false,
+     "type": "select",
+     "text_en": "Are your grades going up, staying flat, or going down?",
+     "options": [
+      "improving",
+      "stable",
+      "declining"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.trend"
+     ]
+    },
+    {
+     "id": "m3_strong_subjects",
+     "core": false,
+     "type": "multi",
+     "text_en": "Strongest 3 subjects",
+     "options": "dynamic:subjects",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.strong"
+     ]
+    },
+    {
+     "id": "m3_weak_subjects",
+     "core": false,
+     "type": "multi",
+     "text_en": "Weakest 3 subjects",
+     "options": "dynamic:subjects",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.weak"
+     ]
+    },
+    {
+     "id": "m3_enjoy_subjects",
+     "core": false,
+     "type": "multi",
+     "text_en": "Subjects you enjoy most, regardless of grades",
+     "kid_text_en": "Which lessons do you actually like?",
+     "options": "dynamic:subjects",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.enjoy",
+      "llm.major_fit"
+     ]
+    },
+    {
+     "id": "m3_math_level_self",
+     "core": false,
+     "type": "select",
+     "text_en": "Where are you in math?",
+     "kid_text_en": "What math are you doing now? (adding, fractions, equations...)",
+     "options": [
+      "arithmetic",
+      "pre_algebra",
+      "algebra_1",
+      "geometry",
+      "algebra_2",
+      "precalculus_trig",
+      "calculus",
+      "beyond_calculus"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.math_level_self"
+     ],
+     "branch": "m3_math_test == skipped",
+     "notes": "P4b (owner 3 Oct 2026, R2): the math check measures it; old answer sets keep it"
+    },
+    {
+     "id": "m3_math_test",
+     "core": true,
+     "type": "test",
+     "text_en": "2-minute adaptive math check",
+     "options": {
+      "engine": "math_ladder",
+      "minutes": 2,
+      "language": "native"
+     },
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.math_level_tested",
+      "verify.math_gap"
+     ],
+     "verify": "adaptive ladder; result overrides self-report"
+    },
+    {
+     "id": "m3_sciences",
+     "core": false,
+     "type": "multi",
+     "text_en": "Sciences you take, and do you have lab access?",
+     "options": [
+      "biology",
+      "chemistry",
+      "physics",
+      "computer_science",
+      "none",
+      "lab_access_yes",
+      "lab_access_no"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.sciences"
+     ]
+    },
+    {
+     "id": "m3_rigor_available",
+     "core": false,
+     "type": "multi",
+     "text_en": "Hardest courses available at your school",
+     "options": [
+      "ap",
+      "ib_hl",
+      "a_level",
+      "honors_advanced",
+      "olympiad_track",
+      "none"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.rigor_available",
+      "derived.rigor_ceiling"
+     ]
+    },
+    {
+     "id": "m3_external_courses",
+     "core": false,
+     "type": "repeatable",
+     "text_en": "Courses you did outside school (online or offline)",
+     "options": {
+      "fields": [
+       "name",
+       "provider",
+       "completed",
+       "certificate_url"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.external_courses"
+     ]
+    },
+    {
+     "id": "m3_olympiads",
+     "core": true,
+     "type": "repeatable",
+     "text_en": "Olympiads or academic competitions",
+     "kid_text_en": "Have you been in any competitions? Which ones?",
+     "options": {
+      "fields": [
+       "subject",
+       "highest_level:[school,district,regional,national,international]",
+       "medal:[gold,silver,bronze,honorable_mention,participant]",
+       "year",
+       "evidence_url"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.olympiads",
+      "derived.hook_strength"
+     ],
+     "notes": "P4g (owner 4 Oct 2026, M): the medal is picked (it was the free-text best_result), for readiness v3"
+    },
+    {
+     "id": "m3_honors",
+     "core": true,
+     "type": "repeatable",
+     "text_en": "Honors or awards you have won",
+     "options": {
+      "fields": [
+       "name",
+       "level:[school,district,regional,national,international]",
+       "year"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.honors"
+     ],
+     "why_en": "Why we ask: awards show universities what you have achieved. None yet? Continue with an empty list.",
+     "notes": "P4g (owner 4 Oct 2026, M): in the first run, after the olympiads, for readiness v3; the level is picked"
+    },
+    {
+     "id": "m3_national_exam_path",
+     "core": true,
+     "type": "select",
+     "text_en": "National exams that apply to you",
+     "options": "dynamic:country_profile.national_exams",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.national_exam"
+     ],
+     "notes": "auto-suggested from country + grade; e.g. Gaokao, JEE, EGE, DTM, CSAT, Abitur, A-levels"
+    },
+    {
+     "id": "m3_dtm_result",
+     "core": true,
+     "type": "select_plus_number",
+     "text_en": "Have you taken the DTM test? If yes, your score in points",
+     "options": [
+      "taken",
+      "not_taken"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "m3_national_exam_path == DTM",
+     "feeds": [
+      "academics.national_exam_result",
+      "tests.taken"
+     ],
+     "notes": "P4b (owner 3 Oct 2026, R6); points are bounded 0-300 until DTM's real maximum is verified"
+    },
+    {
+     "id": "m3_milliy_sertifikat",
+     "core": true,
+     "type": "repeatable",
+     "text_en": "Your Milliy sertifikat results: subject and grade",
+     "options": {
+      "fields": [
+       "subject",
+       "grade:[a_plus,a,b_plus,b,c_plus,c]"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "m3_national_exam_path == MILLIY_SERTIFIKAT",
+     "feeds": [
+      "academics.national_certificates"
+     ],
+     "notes": "P4b (owner 3 Oct 2026, R6): grades A+ to C; the subject is typed until the official subject list is confirmed"
+    },
+    {
+     "id": "m3_milliy_percent",
+     "core": false,
+     "live": true,
+     "type": "repeatable",
+     "text_en": "The percentage on each Milliy sertifikat (grades B+ to C count by it)",
+     "options": {
+      "fields": [
+       "subject",
+       "percent:number"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "m3_national_exam_path == MILLIY_SERTIFIKAT",
+     "feeds": [
+      "academics.national_certificates"
+     ],
+     "notes": "P5d review R1 (spec §3.3), 7 Oct 2026: a live student only (live: true); CM 578 cl. 45: A+ and A count as the block's maximum, B+ to C by the percentage; matched to m3_milliy_sertifikat by subject"
+    },
+    {
+     "id": "m3_dtm_blocks",
+     "core": false,
+     "live": true,
+     "type": "repeatable",
+     "text_en": "Your points in each block of your last state test (DTM), from the official result",
+     "options": {
+      "fields": [
+       "block:[native_language,mathematics,uzbekistan_history,first_subject,second_subject]",
+       "points:number"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "m3_national_exam_path == DTM OR m2_destinations includes own_country AND m0_residence_country == UZ",
+     "feeds": [
+      "academics.national_exam_result"
+     ],
+     "why_en": "Why we ask: official block points fix your state-test score, so we can show a chance instead of an estimate. Native language, maths and history count up to 11 each, the first subject up to 93, the second up to 63.",
+     "notes": "P5d review R1 (spec §3.3), 7 Oct 2026: a live student only (live: true); spec §3.7 source 2 (Order No. 105: 1.1 × 10, 3.1 × 30, 2.1 × 30)"
+    },
+    {
+     "id": "m3_history_grade",
+     "core": false,
+     "live": true,
+     "type": "select",
+     "text_en": "Your latest school grade in History of Uzbekistan",
+     "options": [
+      "5",
+      "4",
+      "3",
+      "2"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "m2_destinations includes own_country AND m0_residence_country == UZ",
+     "feeds": [
+      "academics.grades"
+     ],
+     "notes": "P5d review R1 (spec §3.3), 7 Oct 2026: a live student only (live: true); 11 points of every state test (Order No. 105); no in-app check measures it, so it is an estimate (spec §3.7 source 3)"
+    },
+    {
+     "id": "m3_native_grade",
+     "core": false,
+     "live": true,
+     "type": "select",
+     "text_en": "Your latest school grade in your native language",
+     "options": [
+      "5",
+      "4",
+      "3",
+      "2"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "m2_destinations includes own_country AND m0_residence_country == UZ",
+     "feeds": [
+      "academics.grades"
+     ],
+     "notes": "P5d review R1 (spec §3.3), 7 Oct 2026: a live student only (live: true); 11 points of every state test (Order No. 105); an estimate, as above"
+    },
+    {
+     "id": "m3_national_exam_status",
+     "core": false,
+     "type": "select_plus_number",
+     "text_en": "Status and target for that exam",
+     "options": [
+      "not_started",
+      "preparing",
+      "registered",
+      "done"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "m3_national_exam_path != none",
+     "feeds": [
+      "academics.national_exam_status",
+      "academics.national_exam_target"
+     ]
+    },
+    {
+     "id": "m3_reading_habit",
+     "core": false,
+     "type": "select",
+     "text_en": "How many books do you read per month (any language)?",
+     "kid_text_en": "How many books do you read in a month?",
+     "options": [
+      "0",
+      "1",
+      "2_3",
+      "4_plus"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.reading_habit"
+     ]
+    },
+    {
+     "id": "m3_study_hours",
+     "core": false,
+     "type": "number",
+     "text_en": "Hours per week you study outside school",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "capacity.study_hours"
+     ]
+    },
+    {
+     "id": "m3_self_study",
+     "core": false,
+     "type": "scale_1_5",
+     "text_en": "Can you learn from a book or video on your own without a teacher?",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "mindset.self_study"
+     ]
+    },
+    {
+     "id": "m3_learning_health",
+     "core": false,
+     "type": "text",
+     "text_en": "Any learning difference or health condition that affects school? Documented?",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "academics.accommodation_needs"
+     ],
+     "sensitive": true,
+     "notes": "optional; only used to plan accommodations and pacing; never shown in rankings"
+    }
+   ]
+  },
+  {
+   "id": "M4",
+   "name": "Language",
+   "purpose": "Native languages, English and any destination language. Self-report is replaced by the adaptive screener. English is only gated if a chosen destination needs it.",
+   "questions": [
+    {
+     "id": "m4_native_languages",
+     "core": false,
+     "type": "multi",
+     "text_en": "Languages you speak at home",
+     "options": "dynamic:languages",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "language.native"
+     ]
+    },
+    {
+     "id": "m4_english_self",
+     "core": true,
+     "type": "select",
+     "text_en": "Your English level (your own guess)",
+     "kid_text_en": "How much English do you know? (none / a little / I can chat / I can read books)",
+     "options": [
+      "A0_none",
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "language.english_self"
+     ]
+    },
+    {
+     "id": "m4_english_official",
+     "core": false,
+     "type": "repeatable",
+     "text_en": "Official English test scores, if any",
+     "options": {
+      "fields": [
+       "test:[ielts,toefl,duolingo,pte,cambridge,other]",
+       "score",
+       "date"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "language.english_official"
+     ]
+    },
+    {
+     "id": "m4_english_screener",
+     "core": true,
+     "type": "test",
+     "text_en": "3-minute adaptive English check",
+     "options": {
+      "engine": "english_screener",
+      "minutes": 3,
+      "starts_at": "A0",
+      "stop_rule": "a level passes with at most one miss; two misses at a level, or passing C2, end it; every question is timed and a timeout counts as \"I don't know\"; one attempt"
+     },
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "m2_destinations != own_country",
+     "feeds": [
+      "language.english_tested",
+      "verify.english_gap"
+     ],
+     "verify": "result overrides m4_english_self; if gap >= 2 CEFR levels -> honesty/overconfidence flag (soft)"
+    },
+    {
+     "id": "m4_writing_sample_en",
+     "core": false,
+     "type": "text",
+     "text_en": "Write 150 words in English: why do you want this?",
+     "options": {
+      "max_words": 150
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "language.english_tested >= A2",
+     "feeds": [
+      "language.writing_en_raw",
+      "llm.writing_level",
+      "llm.voice_baseline"
+     ]
+    },
+    {
+     "id": "m4_writing_sample_native",
+     "core": false,
+     "type": "text_or_voice",
+     "text_en": "Write or record 150 words in your own language: why do you want this?",
+     "kid_text_en": "Tell me, in your own words, why you want to study hard. You can record it.",
+     "options": {
+      "max_words": 150
+     },
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "language.english_tested < A2 OR derived.stage == S1",
+     "feeds": [
+      "language.writing_native_raw",
+      "llm.thinking_quality",
+      "llm.voice_baseline"
+     ]
+    },
+    {
+     "id": "m4_other_languages",
+     "core": false,
+     "type": "repeatable",
+     "text_en": "Other languages you know",
+     "options": {
+      "fields": [
+       "language",
+       "level:[A1,A2,B1,B2,C1,C2,native]",
+       "certificate:[none,testdaf,dsh,goethe,delf,dalf,tcf,topik,jlpt,hsk,torfl,dele,cils,other]"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "language.other"
+     ]
+    },
+    {
+     "id": "m4_exposure",
+     "core": false,
+     "type": "select",
+     "text_en": "How much English (or your target language) do you use daily?",
+     "options": [
+      "none",
+      "under_1h",
+      "1_2h",
+      "over_2h"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "language.daily_exposure"
+     ]
+    },
+    {
+     "id": "m4_language_test_plan",
+     "core": false,
+     "type": "date_or_unknown",
+     "text_en": "When do you plan to take an official language test?",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "language.test_plan"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M5",
+   "name": "Admission Tests",
+   "purpose": "Tests already taken plus the checklist the destination rules require. The list is generated by code from destination x field, never typed by the student.",
+   "questions": [
+    {
+     "id": "m5_tests_taken",
+     "core": true,
+     "type": "repeatable",
+     "text_en": "Have you taken any of these tests? Add your scores",
+     "options": {
+      "fields": [
+       "test:[sat,act,psat,mock_sat,ap,ib_exam,dtm,milliy_sertifikat,ielts,toefl,duolingo,cefr_multilevel,other]",
+       "score",
+       "date",
+       "official:bool"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "tests.taken"
+     ],
+     "verify": "link to in-app Mock SAT result when available",
+     "kid_text_en": "Have you taken any of these tests?",
+     "why_en": "Why we ask: real scores show which universities are within reach. Not taken one yet? Tap “Not yet”.",
+     "notes": "P4g (owner 4 Oct 2026, T): a live student answers SAT, IELTS, TOEFL, Duolingo, ACT and AP one by one (taken + score, or not yet; AP per subject, row.subject), then any other test; only taken tests are stored, as before"
+    },
+    {
+     "id": "m5_required_tests",
+     "core": true,
+     "type": "checklist",
+     "text_en": "Tests your destinations require, and where you are with each",
+     "options": {
+      "source": "dynamic:destination_rules.required_tests(m2_destinations, m2_field)",
+      "status": [
+       "not_started",
+       "preparing",
+       "registered",
+       "done",
+       "not_needed"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "tests.required_status"
+     ],
+     "notes": "examples by destination: SAT/ACT; UCAT, LNAT, MAT, TMUA, ESAT, STEP (UK); EJU (JP); HSK (CN); TOPIK (KR); YOS (TR); TestAS / Studienkolleg FSP (DE); IMAT (IT medicine)"
+    },
+    {
+     "id": "m5_test_center_access",
+     "core": false,
+     "type": "select",
+     "text_en": "Is there a test center you can reach, with bookable dates?",
+     "options": [
+      "yes_nearby",
+      "yes_but_far_or_full",
+      "no_center_in_country",
+      "dont_know"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "tests.center_access"
+     ],
+     "notes": "'no center' -> travel + registration lead-time tasks"
+    },
+    {
+     "id": "m5_prep_budget",
+     "core": false,
+     "type": "select",
+     "text_en": "Budget for test prep",
+     "options": [
+      "zero_self_study",
+      "small_online",
+      "can_pay_course"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "tests.prep_budget"
+     ]
+    },
+    {
+     "id": "m5_prep_hours",
+     "core": false,
+     "type": "number",
+     "text_en": "Hours per week you can give to test prep",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "capacity.test_prep_hours"
+     ]
+    },
+    {
+     "id": "m5_target_scores",
+     "core": false,
+     "type": "confirm_numbers",
+     "text_en": "Target scores (we suggest from your dream list; adjust)",
+     "options": "dynamic:destination_rules.typical_scores(m2_dream_unis)",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "tests.targets"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M6",
+   "name": "Activities & Impact",
+   "purpose": "What they do outside class, depth vs breadth, initiative, responsibilities. Weakest area for students whose schools offer nothing; the roadmap has to create lanes.",
+   "questions": [
+    {
+     "id": "m6_activities",
+     "core": true,
+     "type": "repeatable",
+     "text_en": "Everything you do outside class",
+     "kid_text_en": "What do you do after school and on weekends? Clubs, sports, games you make, helping at home...",
+     "options": {
+      "fields": [
+       "name",
+       "category:[academic_club,research,building_tech,sports,arts,community_service,work,family_responsibility,entrepreneurship,religious_cultural,leadership_student_gov,other]",
+       "role",
+       "founded_or_joined",
+       "hours_per_week",
+       "weeks_per_year",
+       "years",
+       "evidence_url"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "activities.list",
+      "derived.depth_score",
+      "derived.initiative_score"
+     ],
+     "why_en": "Why we ask: universities look at what you do outside class: volunteering, a startup, clubs, sports, a job. Add each one."
+    },
+    {
+     "id": "m6_honors",
+     "core": false,
+     "type": "repeatable",
+     "text_en": "Awards or recognition outside academics",
+     "options": {
+      "fields": [
+       "name",
+       "level",
+       "year"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "activities.honors"
+     ]
+    },
+    {
+     "id": "m6_created",
+     "core": false,
+     "type": "text",
+     "text_en": "Things you have built, published, sold, organized or taught",
+     "kid_text_en": "Have you ever made something yourself? A game, a video, a project, a small business?",
+     "options": {
+      "max_words": 150,
+      "links": true
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "activities.created",
+      "derived.initiative_score"
+     ]
+    },
+    {
+     "id": "m6_responsibilities",
+     "core": false,
+     "type": "multi_plus_hours",
+     "text_en": "Responsibilities at home or work",
+     "options": [
+      "job",
+      "family_business",
+      "caring_for_siblings",
+      "caring_for_relative",
+      "household",
+      "none"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "activities.responsibilities",
+      "context.hardship_signals"
+     ],
+     "notes": "counts as context in holistic systems; also caps available hours"
+    },
+    {
+     "id": "m6_leadership",
+     "core": false,
+     "type": "number",
+     "text_en": "Have you led people? How many?",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "activities.leadership_scale"
+     ]
+    },
+    {
+     "id": "m6_summer",
+     "core": false,
+     "type": "select_plus_number",
+     "text_en": "Summers: are you free, and is there a budget for a program?",
+     "options": [
+      "fully_free",
+      "partly_free",
+      "working",
+      "family_duties"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "capacity.summer",
+      "money.summer_budget"
+     ]
+    },
+    {
+     "id": "m6_portfolio",
+     "core": false,
+     "type": "select",
+     "text_en": "Do you have a portfolio or audition material?",
+     "options": [
+      "yes_complete",
+      "partial",
+      "no"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "m2_field in [arts,design,architecture,music,film]",
+     "feeds": [
+      "activities.portfolio_status"
+     ]
+    },
+    {
+     "id": "m6_sports",
+     "core": false,
+     "type": "repeatable",
+     "text_en": "Competitive sport details",
+     "options": {
+      "fields": [
+       "sport",
+       "level:[school,regional,national,international]",
+       "results",
+       "open_to_recruitment:bool"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "m6_activities has category sports AND level >= regional",
+     "feeds": [
+      "activities.sports_recruitable"
+     ]
+    },
+    {
+     "id": "m6_research",
+     "core": false,
+     "type": "select_plus_text",
+     "text_en": "Any research experience or a mentor?",
+     "options": [
+      "none",
+      "school_project",
+      "with_mentor",
+      "published"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "activities.research"
+     ]
+    },
+    {
+     "id": "m6_community_problem",
+     "core": false,
+     "type": "text_or_voice",
+     "text_en": "A problem in your school or community you would like to solve",
+     "kid_text_en": "What is something around you that you wish worked better?",
+     "options": {
+      "max_words": 100
+     },
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "activities.problem_seed",
+      "llm.project_seed"
+     ]
+    },
+    {
+     "id": "m6_mentors",
+     "core": false,
+     "type": "multi",
+     "text_en": "Who could help you? (select all)",
+     "options": [
+      "teacher",
+      "relative_in_profession",
+      "professional_contact",
+      "alumni_abroad",
+      "online_community",
+      "nobody_yet"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "context.mentors"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M7",
+   "name": "Money",
+   "purpose": "The single biggest filter for cross-border applicants. Parent-facing where possible, currency-normalized, and it gates the destination list.",
+   "questions": [
+    {
+     "id": "m7_respondent",
+     "core": false,
+     "type": "select",
+     "text_en": "Who is answering this section?",
+     "options": [
+      "student",
+      "parent",
+      "together"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "money.respondent"
+     ]
+    },
+    {
+     "id": "m7_annual_budget",
+     "core": true,
+     "type": "number_currency",
+     "text_en": "How much can the family pay per year for university? (your currency; we convert)",
+     "audience": "parent",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "money.annual_budget_usd"
+     ],
+     "sensitive": true,
+     "notes": "if student answers alone, mark confidence=low and request parent confirmation task"
+    },
+    {
+     "id": "m7_assets",
+     "core": false,
+     "type": "select",
+     "text_en": "Savings or assets set aside for education (optional)",
+     "options": [
+      "none",
+      "under_10k",
+      "10k_50k",
+      "50k_150k",
+      "over_150k",
+      "prefer_not_to_say"
+     ],
+     "audience": "parent",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "money.assets_band"
+     ],
+     "sensitive": true
+    },
+    {
+     "id": "m7_sponsors",
+     "core": false,
+     "type": "multi",
+     "text_en": "Any sponsor?",
+     "options": [
+      "relatives",
+      "employer",
+      "government_program",
+      "foundation",
+      "none"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "money.sponsors"
+     ]
+    },
+    {
+     "id": "m7_aid_need",
+     "core": true,
+     "type": "select",
+     "text_en": "How much financial aid would you need?",
+     "options": [
+      "none",
+      "partial",
+      "full"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "money.aid_need",
+      "derived.aid_gate"
+     ]
+    },
+    {
+     "id": "m7_income_documentable",
+     "core": false,
+     "type": "select",
+     "text_en": "Can the family document income? (tax records, bank statements, employer letter)",
+     "options": [
+      "yes",
+      "partially",
+      "no",
+      "dont_know"
+     ],
+     "audience": "parent",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "money.income_documentable",
+      "derived.visa_funds_risk",
+      "derived.aid_forms_risk"
+     ],
+     "sensitive": true
+    },
+    {
+     "id": "m7_loans",
+     "core": false,
+     "type": "select",
+     "text_en": "Would the family take an education loan? (many countries need a local cosigner)",
+     "options": [
+      "yes",
+      "maybe",
+      "no"
+     ],
+     "audience": "parent",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "money.loans_ok"
+     ]
+    },
+    {
+     "id": "m7_scholarship_interest",
+     "core": false,
+     "type": "multi",
+     "text_en": "Scholarship programs you may qualify for (select the ones to pursue)",
+     "options": "dynamic:scholarships_by(citizenship, destinations, age)",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "money.scholarship_targets"
+     ],
+     "notes": "e.g. GKS, MEXT, CSC, Turkiye Burslari, Stipendium Hungaricum, need-blind US schools, NYUAD; each with age caps from rules base"
+    },
+    {
+     "id": "m7_process_budget",
+     "core": false,
+     "type": "number_currency",
+     "text_en": "Budget for the process itself (tests, application fees, translations, visa)",
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "money.process_budget_usd"
+     ]
+    },
+    {
+     "id": "m7_prestige_vs_cost",
+     "core": false,
+     "type": "slider",
+     "text_en": "What matters more: prestige or cost?",
+     "options": {
+      "left": "prestige",
+      "right": "low_cost"
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "money.prestige_vs_cost"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M8",
+   "name": "Family",
+   "purpose": "Alignment and constraints. The gap between the student's answers and the parents' answers is itself a diagnostic signal.",
+   "questions": [
+    {
+     "id": "m8_parent_education",
+     "core": false,
+     "type": "select",
+     "text_en": "Parents' or guardians' highest education",
+     "options": [
+      "no_secondary",
+      "secondary",
+      "vocational",
+      "bachelors",
+      "masters_plus",
+      "dont_know"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "family.parent_education",
+      "context.first_gen"
+     ]
+    },
+    {
+     "id": "m8_parent_attitude",
+     "core": true,
+     "type": "select",
+     "text_en": "How do your parents feel about your plan?",
+     "kid_text_en": "Do your parents know you want this? What do they say?",
+     "options": [
+      "fully_supportive",
+      "conditional",
+      "hesitant",
+      "against",
+      "dont_know"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "family.attitude",
+      "derived.family_risk"
+     ]
+    },
+    {
+     "id": "m8_decision_maker",
+     "core": false,
+     "type": "select",
+     "text_en": "Who makes the final decision about where you study?",
+     "options": [
+      "me",
+      "parents",
+      "together"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "family.decision_maker"
+     ]
+    },
+    {
+     "id": "m8_family_major_pref",
+     "core": false,
+     "type": "select_plus_text",
+     "text_en": "Do your parents want you to study something specific? Same as you?",
+     "options": [
+      "same_as_mine",
+      "different",
+      "no_preference"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "family.major_pref",
+      "derived.major_conflict"
+     ]
+    },
+    {
+     "id": "m8_constraints",
+     "core": false,
+     "type": "multi",
+     "text_en": "Family or community expectations that could affect the plan (optional)",
+     "options": [
+      "distance_limits",
+      "gender_expectations",
+      "religious_expectations",
+      "marriage_expectations",
+      "eldest_child_duties",
+      "none",
+      "prefer_not_to_say"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "family.constraints"
+     ],
+     "sensitive": true
+    },
+    {
+     "id": "m8_family_abroad",
+     "core": false,
+     "type": "select_plus_text",
+     "text_en": "Anyone in the family who studied or lives abroad? Where?",
+     "options": [
+      "yes",
+      "no"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "family.abroad_network"
+     ]
+    },
+    {
+     "id": "m8_parent_flow",
+     "core": false,
+     "type": "system",
+     "text_en": "Send the parent questionnaire (budget confirm, attitude, constraints, consent)",
+     "audience": "system",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "family.parent_flow_status"
+     ],
+     "notes": "5 questions; link or QR; unlocks full roadmap when completed for minors"
+    }
+   ]
+  },
+  {
+   "id": "M9",
+   "name": "Mindset & Capacity",
+   "purpose": "Predicts execution. This block sets task load, cadence, format and tone of the daily tasks.",
+   "questions": [
+    {
+     "id": "m9_why",
+     "core": false,
+     "type": "text_or_voice",
+     "text_en": "The real reason you want this (type or record, any language)",
+     "kid_text_en": "Why do you want to do well in school? Say it in your own words.",
+     "options": {
+      "max_words": 100
+     },
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "mindset.why_raw",
+      "llm.intrinsic_vs_extrinsic"
+     ],
+     "why_en": "Why we ask: we show your reason back to you on hard days. It stays private: your parents and other students never see it.",
+     "retired": true,
+     "notes": "P4g (owner 4 Oct 2026, S1): removed from the diagnostic, first run and Deep alike (retired: never asked); stored answers stay valid"
+    },
+    {
+     "id": "m9_motivation_source",
+     "core": false,
+     "type": "select",
+     "text_en": "Who or what pushed you toward this?",
+     "options": [
+      "myself",
+      "parents",
+      "friends",
+      "teacher",
+      "social_media",
+      "other"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "mindset.motivation_source"
+     ],
+     "why_en": "Why we ask: to understand who is behind your goal. Private, and never used to rank you."
+    },
+    {
+     "id": "m9_streak",
+     "core": false,
+     "type": "select",
+     "text_en": "Longest time you did something every day",
+     "options": [
+      "never",
+      "1_week",
+      "1_month",
+      "3_months",
+      "6_months_plus"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "mindset.consistency_band"
+     ],
+     "why_en": "Why we ask: to understand how long you keep a habit going. Private, and never used to rank you."
+    },
+    {
+     "id": "m9_voluntary_6mo",
+     "core": false,
+     "type": "text",
+     "text_en": "Something you kept doing 6+ months with nobody forcing you",
+     "options": {
+      "max_words": 60
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "mindset.voluntary_persistence"
+     ],
+     "why_en": "Why we ask: to understand what keeps you going on your own. Private, and never used to rank you."
+    },
+    {
+     "id": "m9_failure",
+     "core": false,
+     "type": "text_or_voice",
+     "text_en": "A time you failed. What did you do next?",
+     "options": {
+      "max_words": 80
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "mindset.failure_response_raw",
+      "llm.resilience"
+     ],
+     "why_en": "Why we ask: to understand how you handle a setback. Private, and never used to rank you."
+    },
+    {
+     "id": "m9_structure_pref",
+     "core": false,
+     "type": "select",
+     "text_en": "How do you work best?",
+     "options": [
+      "strict_daily_plan",
+      "flexible_weekly_goals"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "capacity.structure_pref",
+      "tasks.cadence"
+     ],
+     "why_en": "Why we ask: to understand how you like to organise your work. Private, and never used to rank you."
+    },
+    {
+     "id": "m9_discipline",
+     "core": false,
+     "type": "scale_1_5",
+     "text_en": "How disciplined are you, honestly?",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "mindset.discipline_self"
+     ],
+     "why_en": "Why we ask: to understand how you see yourself today. Private, and never used to rank you."
+    },
+    {
+     "id": "m9_sleep",
+     "core": false,
+     "type": "number",
+     "text_en": "Hours of sleep on a normal night (optional)",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "wellbeing.sleep"
+     ],
+     "sensitive": true,
+     "why_en": "Why we ask: to understand your rest. Optional, private, and never used to rank you."
+    },
+    {
+     "id": "m9_screen",
+     "core": false,
+     "type": "number",
+     "text_en": "Hours on your phone on a normal day (optional)",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "wellbeing.screen"
+     ],
+     "sensitive": true,
+     "why_en": "Why we ask: to understand your day. Optional, private, and never used to rank you."
+    },
+    {
+     "id": "m9_stress",
+     "core": false,
+     "type": "scale_1_5",
+     "text_en": "Stress level right now",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "wellbeing.stress",
+      "tasks.load_modifier"
+     ],
+     "notes": "4-5 -> reduce load, add rest tasks, surface support; never diagnose",
+     "why_en": "Why we ask: when stress is high, we plan lighter weeks with more rest. It stays private."
+    },
+    {
+     "id": "m9_support",
+     "core": false,
+     "type": "select",
+     "text_en": "Who supports you when it gets hard?",
+     "options": [
+      "family",
+      "friends",
+      "teacher_mentor",
+      "nobody",
+      "prefer_not_to_say"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "wellbeing.support"
+     ],
+     "why_en": "Why we ask: to understand who you can lean on. Private, and never used to rank you."
+    },
+    {
+     "id": "m9_hours_per_week",
+     "core": true,
+     "type": "number",
+     "text_en": "Hours per week you can give to this roadmap",
+     "kid_text_en": "How many hours a week can you spend on extra learning?",
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "capacity.hours_per_week",
+      "tasks.budget"
+     ],
+     "why_en": "Why we ask: we size your weekly plan to these hours."
+    },
+    {
+     "id": "m9_time_of_day",
+     "core": false,
+     "type": "select",
+     "text_en": "When do you work best?",
+     "options": [
+      "early_morning",
+      "after_school",
+      "evening",
+      "night",
+      "varies"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "tasks.preferred_time"
+     ],
+     "why_en": "Why we ask: to understand when you work best. Private, and never used to rank you."
+    },
+    {
+     "id": "m9_days_off",
+     "core": false,
+     "type": "multi",
+     "text_en": "Days you cannot work on this",
+     "options": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun",
+      "none"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "tasks.days_off"
+     ],
+     "why_en": "Why we ask: these become rest days, with no tasks."
+    },
+    {
+     "id": "m9_learning_style",
+     "core": false,
+     "type": "select",
+     "text_en": "How do you like to learn?",
+     "options": [
+      "video",
+      "reading",
+      "practice_tests",
+      "live_classes",
+      "one_on_one",
+      "mixed"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "tasks.format_pref"
+     ],
+     "why_en": "Why we ask: to understand how you like to learn. Private, and never used to rank you."
+    },
+    {
+     "id": "m9_devices",
+     "core": true,
+     "type": "multi",
+     "text_en": "What do you have?",
+     "options": [
+      "laptop",
+      "tablet",
+      "phone_only",
+      "stable_internet",
+      "unstable_internet",
+      "shared_device"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "capacity.devices",
+      "tasks.format_constraints"
+     ],
+     "why_en": "Why we ask: we match tasks to what you have, such as lessons that work on a phone."
+    },
+    {
+     "id": "m9_commitments",
+     "core": false,
+     "type": "multi_plus_hours",
+     "text_en": "Other fixed commitments and hours per week",
+     "options": [
+      "national_exam_prep",
+      "sport",
+      "music_arts",
+      "job",
+      "religious",
+      "family_duties",
+      "none"
+     ],
+     "audience": "student",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "capacity.commitments",
+      "tasks.budget"
+     ],
+     "why_en": "Why we ask: to understand what else fills your week. Private, and never used to rank you."
+    },
+    {
+     "id": "m9_personality",
+     "core": false,
+     "type": "slider",
+     "text_en": "Introvert <-> extrovert",
+     "options": {
+      "left": "introvert",
+      "right": "extrovert"
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "mindset.personality_axis",
+      "tasks.interview_prep_weight"
+     ],
+     "why_en": "Why we ask: to understand you a little better. Private, and never used to rank you."
+    },
+    {
+     "id": "m9_story",
+     "core": false,
+     "type": "text_or_voice",
+     "text_en": "Tell your story in about 200 words (text or voice)",
+     "options": {
+      "max_words": 200
+     },
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "narrative.baseline_raw",
+      "llm.narrative_quality"
+     ],
+     "why_en": "Why we ask: to hear where you come from, in your own words. Private, and never used to rank you."
+    }
+   ]
+  },
+  {
+   "id": "M10",
+   "name": "Legal & Logistics",
+   "purpose": "Passport, visas, conscription, restrictions, documents, recommenders. Cheap to ask, expensive to discover in the application year.",
+   "questions": [
+    {
+     "id": "m10_passport",
+     "core": false,
+     "type": "select_plus_date",
+     "text_en": "Do you have a passport? Expiry date?",
+     "options": [
+      "yes",
+      "no",
+      "expired"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "logistics.passport"
+     ]
+    },
+    {
+     "id": "m10_visa_history",
+     "core": false,
+     "type": "select",
+     "text_en": "Any visa refusals for you or your family?",
+     "options": [
+      "none",
+      "yes_me",
+      "yes_family",
+      "dont_know"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "logistics.visa_history",
+      "derived.visa_risk"
+     ],
+     "sensitive": true
+    },
+    {
+     "id": "m10_military",
+     "core": false,
+     "type": "select",
+     "text_en": "Military service obligation and your plan for deferment",
+     "options": [
+      "not_applicable",
+      "applies_have_deferment_plan",
+      "applies_no_plan",
+      "dont_know"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "branch": "country_profile.conscription applies to profile.gender AND derived.age >= 15",
+     "feeds": [
+      "logistics.military"
+     ],
+     "notes": "countries in rules base: e.g. KR, IL, SG, TR, UZ, RU, IR, EG, TH; deferment paperwork becomes a milestone"
+    },
+    {
+     "id": "m10_travel_restrictions",
+     "core": false,
+     "type": "system",
+     "text_en": "Entry or sanction restrictions between your citizenship and destinations",
+     "audience": "system",
+     "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "derived.travel_restriction_flags"
+     ],
+     "notes": "computed from rules base; shown as a blocker in feasibility matrix with source_url"
+    },
+    {
+     "id": "m10_social_media",
+     "core": false,
+     "type": "select",
+     "text_en": "Are your social accounts public, and would you clean them up if asked?",
+     "options": [
+      "private",
+      "public_fine",
+      "public_needs_cleanup",
+      "no_accounts"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "logistics.social_media"
+     ]
+    },
+    {
+     "id": "m10_docs_ready",
+     "core": false,
+     "type": "checklist",
+     "text_en": "Documents ready?",
+     "options": [
+      "birth_certificate",
+      "transcripts_official",
+      "transcripts_translated",
+      "apostille_or_notarized",
+      "passport_copy",
+      "photos"
+     ],
+     "audience": "student",
+     "stages": [
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "logistics.docs"
+     ]
+    },
+    {
+     "id": "m10_recommenders",
+     "core": false,
+     "type": "select",
+     "text_en": "Teachers who could write you a recommendation",
+     "options": [
+      "none_yet",
+      "one",
+      "two_plus"
+     ],
+     "audience": "student",
+     "stages": [
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "logistics.recommenders"
+     ]
+    },
+    {
+     "id": "m10_accounts",
+     "core": false,
+     "type": "checklist",
+     "text_en": "Application accounts created?",
+     "options": "dynamic:destination_rules.portals(m2_destinations)",
+     "audience": "student",
+     "stages": [
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "logistics.accounts"
+     ],
+     "notes": "Common App, UCAS, Studielink, uni-assist, Campus France, OUAC, universitaly, etc."
+    }
+   ]
+  },
+  {
+   "id": "M11",
+   "name": "Stage Add-ons",
+   "purpose": "Extra questions only for application-year (S3) and gap-year / reapplicant / transfer (S4) users.",
+   "questions": [
+    {
+     "id": "m11_college_list",
+     "core": false,
+     "type": "repeatable",
+     "text_en": "Your current application list",
+     "options": {
+      "fields": [
+       "university",
+       "country",
+       "round:[early,regular,rolling]",
+       "status"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "apply.list"
+     ]
+    },
+    {
+     "id": "m11_deadlines_known",
+     "core": false,
+     "type": "select",
+     "text_en": "Do you know each deadline?",
+     "options": [
+      "yes_all",
+      "some",
+      "no"
+     ],
+     "audience": "student",
+     "stages": [
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "apply.deadline_awareness"
+     ]
+    },
+    {
+     "id": "m11_essay_status",
+     "core": false,
+     "type": "select",
+     "text_en": "Essays / personal statement status",
+     "options": [
+      "not_started",
+      "brainstorming",
+      "drafting",
+      "revising",
+      "done"
+     ],
+     "audience": "student",
+     "stages": [
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "apply.essay_status"
+     ]
+    },
+    {
+     "id": "m11_recs_status",
+     "core": false,
+     "type": "select",
+     "text_en": "Recommendation letters status",
+     "options": [
+      "not_asked",
+      "asked",
+      "confirmed",
+      "submitted"
+     ],
+     "audience": "student",
+     "stages": [
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "apply.recs_status"
+     ]
+    },
+    {
+     "id": "m11_tests_booked",
+     "core": false,
+     "type": "checklist",
+     "text_en": "Remaining test dates booked?",
+     "options": "dynamic:tests.required_status where status != done",
+     "audience": "student",
+     "stages": [
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "apply.tests_booked"
+     ]
+    },
+    {
+     "id": "m11_aid_forms_status",
+     "core": false,
+     "type": "select",
+     "text_en": "Financial aid forms status",
+     "options": [
+      "not_applicable",
+      "not_started",
+      "in_progress",
+      "submitted"
+     ],
+     "audience": "student",
+     "stages": [
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "apply.aid_forms_status"
+     ]
+    },
+    {
+     "id": "m11_interview_ready",
+     "core": false,
+     "type": "scale_1_5",
+     "text_en": "How ready are you for an interview in the destination language?",
+     "audience": "student",
+     "stages": [
+      "S3",
+      "S4"
+     ],
+     "feeds": [
+      "apply.interview_readiness"
+     ]
+    },
+    {
+     "id": "m11_last_cycle",
+     "core": false,
+     "type": "repeatable",
+     "text_en": "Where did you apply last cycle, and what happened?",
+     "options": {
+      "fields": [
+       "university",
+       "result:[admitted,waitlisted,rejected,withdrew]",
+       "aid_offered",
+       "reason_if_known"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S4"
+     ],
+     "branch": "m1_status in [finished_school_gap_year,in_university]",
+     "feeds": [
+      "reapply.last_cycle"
+     ],
+     "retired": true,
+     "notes": "P4g (owner 4 Oct 2026, S2): removed from the diagnostic, first run and Deep alike (retired: never asked); stored answers stay valid"
+    },
+    {
+     "id": "m11_what_changed",
+     "core": false,
+     "type": "text_or_voice",
+     "text_en": "What has changed since then?",
+     "options": {
+      "max_words": 120
+     },
+     "audience": "student",
+     "stages": [
+      "S4"
+     ],
+     "branch": "m11_last_cycle not empty",
+     "feeds": [
+      "reapply.delta_raw"
+     ]
+    },
+    {
+     "id": "m11_current_uni",
+     "core": false,
+     "type": "form",
+     "text_en": "Current university, GPA, credits, and why you want to transfer",
+     "options": {
+      "fields": [
+       "university",
+       "gpa",
+       "credits_completed",
+       "reason"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S4"
+     ],
+     "branch": "m1_status == in_university",
+     "feeds": [
+      "transfer.current"
+     ]
+    },
+    {
+     "id": "m11_gap_activities",
+     "core": false,
+     "type": "repeatable",
+     "text_en": "What have you done during the gap?",
+     "options": {
+      "fields": [
+       "activity",
+       "months",
+       "evidence_url"
+      ]
+     },
+     "audience": "student",
+     "stages": [
+      "S4"
+     ],
+     "branch": "m1_status == finished_school_gap_year",
+     "feeds": [
+      "reapply.gap_activities"
+     ]
+    },
+    {
+     "id": "m11_age_caps",
+     "core": false,
+     "type": "system",
+     "text_en": "Age caps on your scholarship targets",
+     "audience": "system",
+     "stages": [
+      "S4"
+     ],
+     "feeds": [
+      "derived.age_cap_flags"
+     ],
+     "notes": "computed from rules base (e.g. undergrad scholarship age limits); shown as blocker"
+    }
+   ]
+  }
+ ],
+ "consistency_checks": [
+  {
+   "id": "c_english_gap",
+   "rule": "m4_english_self - language.english_tested >= 2 CEFR levels",
+   "action": "use tested level; soft message about overconfidence; no penalty"
+  },
+  {
+   "id": "c_math_gap",
+   "rule": "m3_math_level_self - academics.math_level_tested >= 2 rungs",
+   "action": "use tested level; adjust math track"
+  },
+  {
+   "id": "c_grades_vs_average",
+   "rule": "OCR grades_by_subject mean != m3_average by > 10% of scale",
+   "action": "ask to confirm; flag transcript_confidence=low"
+  },
+  {
+   "id": "c_olympiad_vs_grades",
+   "rule": "national+ olympiad claimed but subject grade below top band",
+   "action": "request evidence_url; keep claim as unverified"
+  },
+  {
+   "id": "c_budget_vs_list",
+   "rule": "money.aid_need == full AND every dream uni is need-aware or no-aid for this citizenship",
+   "action": "reality gap = high; require parallel destinations before roadmap unlock"
+  },
+  {
+   "id": "c_hours_vs_goals",
+   "rule": "tasks.budget < minimum hours implied by milestones for stage",
+   "action": "reduce parallel tracks; show trade-off screen"
+  },
+  {
+   "id": "c_student_vs_parent",
+   "rule": "parent m7/m8 answers differ from student answers",
+   "action": "surface the gap as a family-alignment task, not as an error"
+  },
+  {
+   "id": "c_visa_intent",
+   "rule": "m2_post_grad_intent == work_in_destination AND destination rules flag strict nonimmigrant intent",
+   "action": "education screen on post-study routes; not a blocker"
+  },
+  {
+   "id": "c_stage_mismatch",
+   "rule": "derived.stage from grade/graduation differs from age-based stage",
+   "action": "grade/graduation wins; stage = closest to next application deadline"
+  }
+ ]
+}

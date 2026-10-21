@@ -1,0 +1,846 @@
+{
+ "bank": "C18",
+ "batch": 21,
+ "items": [
+  {
+   "id": "C18-otm001",
+   "skill": "dtm_native_uz",
+   "level": "easy",
+   "subskill": "fonetika.jarangsiz",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi qatorda faqat jarangsiz undoshlar berilgan?",
+    "ru": "В каком ряду даны только глухие согласные (jarangsiz undoshlar)?"
+   },
+   "options": [
+    {
+     "uz": "p, t, k, s",
+     "ru": "p, t, k, s"
+    },
+    {
+     "uz": "b, d, g, z",
+     "ru": "b, d, g, z"
+    },
+    {
+     "uz": "m, n, l, r",
+     "ru": "m, n, l, r"
+    },
+    {
+     "uz": "p, d, k, z",
+     "ru": "p, d, k, z"
+    }
+   ],
+   "why": {
+    "en": "p, t, k, s are made without voice.",
+    "uz": "p, t, k, s ovoz ishtirokisiz hosil boʻladi.",
+    "ru": "p, t, k, s произносятся без голоса."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm002",
+   "skill": "dtm_native_uz",
+   "level": "easy",
+   "subskill": "imlo.tutuq",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi soʻz toʻgʻri yozilgan?",
+    "ru": "Какое слово написано правильно?"
+   },
+   "options": [
+    {
+     "uz": "sheʼr",
+     "ru": "sheʼr"
+    },
+    {
+     "uz": "sheyr",
+     "ru": "sheyr"
+    },
+    {
+     "uz": "shehr",
+     "ru": "shehr"
+    },
+    {
+     "uz": "shiʼr",
+     "ru": "shiʼr"
+    }
+   ],
+   "why": {
+    "en": "'She'r' (poem) is written with the tutuq sign after e.",
+    "uz": "«Sheʼr» e dan keyin tutuq belgisi bilan yoziladi.",
+    "ru": "«She'r» (стихотворение) пишется со знаком тутук после e."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm003",
+   "skill": "dtm_native_uz",
+   "level": "easy",
+   "subskill": "leksika.sinonim",
+   "lang": "uz",
+   "stem": {
+    "uz": "«Botir» soʻzining sinonimini toping.",
+    "ru": "Найдите синоним к слову «botir» (смелый)."
+   },
+   "options": [
+    {
+     "uz": "jasur",
+     "ru": "jasur"
+    },
+    {
+     "uz": "qoʻrqoq",
+     "ru": "qoʻrqoq"
+    },
+    {
+     "uz": "dangasa",
+     "ru": "dangasa"
+    },
+    {
+     "uz": "aqlli",
+     "ru": "aqlli"
+    }
+   ],
+   "why": {
+    "en": "Botir and jasur both mean 'brave'.",
+    "uz": "«Botir» va «jasur» – maʼnodosh.",
+    "ru": "«Botir» и «jasur» – синонимы («смелый»)."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm004",
+   "skill": "dtm_native_uz",
+   "level": "easy",
+   "subskill": "leksika.antonim",
+   "lang": "uz",
+   "stem": {
+    "uz": "«Arzon» soʻzining antonimini toping.",
+    "ru": "Найдите антоним к слову «arzon» (дешёвый)."
+   },
+   "options": [
+    {
+     "uz": "qimmat",
+     "ru": "qimmat"
+    },
+    {
+     "uz": "yangi",
+     "ru": "yangi"
+    },
+    {
+     "uz": "katta",
+     "ru": "katta"
+    },
+    {
+     "uz": "foydali",
+     "ru": "foydali"
+    }
+   ],
+   "why": {
+    "en": "Arzon (cheap) - qimmat (expensive).",
+    "uz": "«Arzon» – «qimmat».",
+    "ru": "«Arzon» (дешёвый) – «qimmat» (дорогой)."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm005",
+   "skill": "dtm_native_uz",
+   "level": "medium",
+   "subskill": "leksika.frazeologizm",
+   "lang": "uz",
+   "stem": {
+    "uz": "«Ogʻzi qulogʻida» iborasining maʼnosi qaysi?",
+    "ru": "Что значит фразеологизм «ogʻzi qulogʻida»?"
+   },
+   "options": [
+    {
+     "uz": "juda xursand",
+     "ru": "juda xursand"
+    },
+    {
+     "uz": "juda charchagan",
+     "ru": "juda charchagan"
+    },
+    {
+     "uz": "koʻp gapiradigan",
+     "ru": "koʻp gapiradigan"
+    },
+    {
+     "uz": "ochkoʻz",
+     "ru": "ochkoʻz"
+    }
+   ],
+   "why": {
+    "en": "'Mouth up to the ears' means beaming with joy.",
+    "uz": "Ibora juda xursand holatni bildiradi.",
+    "ru": "Фразеологизм значит «очень рад»."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm006",
+   "skill": "dtm_native_uz",
+   "level": "easy",
+   "subskill": "morfologiya.ot",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi qatorda faqat otlar berilgan?",
+    "ru": "В каком ряду даны только существительные (otlar)?"
+   },
+   "options": [
+    {
+     "uz": "daftar, qalam, sinf",
+     "ru": "daftar, qalam, sinf"
+    },
+    {
+     "uz": "yozmoq, oʻqimoq, kitob",
+     "ru": "yozmoq, oʻqimoq, kitob"
+    },
+    {
+     "uz": "katta, qalam, yaxshi",
+     "ru": "katta, qalam, yaxshi"
+    },
+    {
+     "uz": "biz, ular, maktab",
+     "ru": "biz, ular, maktab"
+    }
+   ],
+   "why": {
+    "en": "Daftar, qalam and sinf all name things.",
+    "uz": "Daftar, qalam, sinf – narsa nomlari.",
+    "ru": "Daftar, qalam, sinf – названия предметов."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm007",
+   "skill": "dtm_native_uz",
+   "level": "medium",
+   "subskill": "morfologiya.son",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi soʻz jamlovchi son?",
+    "ru": "Какое слово – собирательное числительное (jamlovchi son)?"
+   },
+   "options": [
+    {
+     "uz": "uchala",
+     "ru": "uchala"
+    },
+    {
+     "uz": "uchinchi",
+     "ru": "uchinchi"
+    },
+    {
+     "uz": "uchta",
+     "ru": "uchta"
+    },
+    {
+     "uz": "uchtacha",
+     "ru": "uchtacha"
+    }
+   ],
+   "why": {
+    "en": "-ala gathers a number as a group: uchala (all three).",
+    "uz": "-ala qoʻshimchasi jamlovchi son yasaydi: uchala.",
+    "ru": "-ala образует собирательное числительное: uchala («все трое»)."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm008",
+   "skill": "dtm_native_uz",
+   "level": "medium",
+   "subskill": "morfologiya.olmosh",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi soʻz oʻzlik olmoshi?",
+    "ru": "Какое слово является возвратным местоимением (oʻzlik olmoshi)?"
+   },
+   "options": [
+    {
+     "uz": "oʻzim",
+     "ru": "oʻzim"
+    },
+    {
+     "uz": "men",
+     "ru": "men"
+    },
+    {
+     "uz": "bu",
+     "ru": "bu"
+    },
+    {
+     "uz": "kim",
+     "ru": "kim"
+    }
+   ],
+   "why": {
+    "en": "Oʻz- (oʻzim, oʻzing) is the reflexive pronoun.",
+    "uz": "Oʻz- (oʻzim, oʻzing) – oʻzlik olmoshi.",
+    "ru": "Oʻz- (oʻzim, oʻzing) – возвратное местоимение."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm009",
+   "skill": "dtm_native_uz",
+   "level": "easy",
+   "subskill": "sintaksis.kesim",
+   "lang": "uz",
+   "stem": {
+    "uz": "Gapdagi kesimni toping: «Akam universitetda oʻqiydi.»",
+    "ru": "Найдите сказуемое: «Akam universitetda oʻqiydi.»"
+   },
+   "options": [
+    {
+     "uz": "oʻqiydi",
+     "ru": "oʻqiydi"
+    },
+    {
+     "uz": "akam",
+     "ru": "akam"
+    },
+    {
+     "uz": "universitetda",
+     "ru": "universitetda"
+    },
+    {
+     "uz": "akam oʻqiydi",
+     "ru": "akam oʻqiydi"
+    }
+   ],
+   "why": {
+    "en": "The predicate says what the subject does: oʻqiydi (studies).",
+    "uz": "Kesim eganing harakatini bildiradi: oʻqiydi.",
+    "ru": "Сказуемое – действие подлежащего: oʻqiydi (учится)."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm010",
+   "skill": "dtm_native_uz",
+   "level": "medium",
+   "subskill": "punktuatsiya.uyushiq",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi gapda tinish belgilari toʻgʻri qoʻyilgan?",
+    "ru": "В каком предложении знаки препинания поставлены правильно?"
+   },
+   "options": [
+    {
+     "uz": "Bozordan olma, uzum, anor oldik.",
+     "ru": "Bozordan olma, uzum, anor oldik."
+    },
+    {
+     "uz": "Bozordan olma uzum, anor oldik.",
+     "ru": "Bozordan olma uzum, anor oldik."
+    },
+    {
+     "uz": "Bozordan, olma, uzum anor oldik.",
+     "ru": "Bozordan, olma, uzum anor oldik."
+    },
+    {
+     "uz": "Bozordan olma, uzum anor, oldik.",
+     "ru": "Bozordan olma, uzum anor, oldik."
+    }
+   ],
+   "why": {
+    "en": "Homogeneous objects without a conjunction are separated by commas.",
+    "uz": "Bogʻlovchisiz uyushiq boʻlaklar vergul bilan ajratiladi.",
+    "ru": "Однородные члены без союзов разделяются запятыми."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm011",
+   "skill": "dtm_native_uz",
+   "level": "easy",
+   "subskill": "fonetika.bogin",
+   "lang": "uz",
+   "stem": {
+    "uz": "«Kitobxonlar» soʻzi nechta boʻgʻindan iborat?",
+    "ru": "Сколько слогов в слове «kitobxonlar»?"
+   },
+   "options": [
+    {
+     "uz": "4",
+     "ru": "4"
+    },
+    {
+     "uz": "3",
+     "ru": "3"
+    },
+    {
+     "uz": "5",
+     "ru": "5"
+    },
+    {
+     "uz": "6",
+     "ru": "6"
+    }
+   ],
+   "why": {
+    "en": "Ki-tob-xon-lar: four vowels, four syllables.",
+    "uz": "Ki-tob-xon-lar: 4 unli – 4 boʻgʻin.",
+    "ru": "Ki-tob-xon-lar: 4 гласных – 4 слога."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm012",
+   "skill": "dtm_native_uz",
+   "level": "easy",
+   "subskill": "imlo.o_g",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi qatorda barcha soʻzlar toʻgʻri yozilgan?",
+    "ru": "В каком ряду все слова написаны правильно?"
+   },
+   "options": [
+    {
+     "uz": "gʻoʻza, toʻqay, oʻgʻil",
+     "ru": "gʻoʻza, toʻqay, oʻgʻil"
+    },
+    {
+     "uz": "goʻza, toʻqay, oʻgʻil",
+     "ru": "goʻza, toʻqay, oʻgʻil"
+    },
+    {
+     "uz": "gʻoʻza, toqay, oʻgʻil",
+     "ru": "gʻoʻza, toqay, oʻgʻil"
+    },
+    {
+     "uz": "gʻoʻza, toʻqay, ogʻil",
+     "ru": "gʻoʻza, toʻqay, ogʻil"
+    }
+   ],
+   "why": {
+    "en": "Each word needs its o' and g': gʻoʻza, toʻqay, oʻgʻil.",
+    "uz": "Har bir soʻzda oʻ va gʻ toʻgʻri yozilishi kerak: gʻoʻza, toʻqay, oʻgʻil.",
+    "ru": "В каждом слове нужны o' и g': gʻoʻza, toʻqay, oʻgʻil."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm013",
+   "skill": "dtm_native_uz",
+   "level": "medium",
+   "subskill": "leksika.omonim",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi gapda «yuz» soʻzi son maʼnosida qoʻllangan?",
+    "ru": "В каком предложении слово «yuz» употреблено в значении числа («сто»)?"
+   },
+   "options": [
+    {
+     "uz": "Kitob yuz sahifadan iborat.",
+     "ru": "Kitob yuz sahifadan iborat."
+    },
+    {
+     "uz": "Uning yuzi qizardi.",
+     "ru": "Uning yuzi qizardi."
+    },
+    {
+     "uz": "U yuzini yuvdi.",
+     "ru": "U yuzini yuvdi."
+    },
+    {
+     "uz": "Biz yuzma-yuz uchrashdik.",
+     "ru": "Biz yuzma-yuz uchrashdik."
+    }
+   ],
+   "why": {
+    "en": "Yuz is a homonym: 'hundred' and 'face'; here it counts pages.",
+    "uz": "«Yuz» omonim: son va aʼzo nomi; bu yerda sahifa soni.",
+    "ru": "«Yuz» – омоним: «сто» и «лицо»; здесь – число страниц."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm014",
+   "skill": "dtm_native_uz",
+   "level": "medium",
+   "subskill": "leksika.kochma_mano",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi birikmada «oltin» soʻzi koʻchma maʼnoda?",
+    "ru": "В каком сочетании слово «oltin» (золото) употреблено в переносном значении?"
+   },
+   "options": [
+    {
+     "uz": "oltin qoʻllar",
+     "ru": "oltin qoʻllar"
+    },
+    {
+     "uz": "oltin uzuk",
+     "ru": "oltin uzuk"
+    },
+    {
+     "uz": "oltin tanga",
+     "ru": "oltin tanga"
+    },
+    {
+     "uz": "oltin zanjir",
+     "ru": "oltin zanjir"
+    }
+   ],
+   "why": {
+    "en": "'Golden hands' means skilful hands, not metal.",
+    "uz": "«Oltin qoʻllar» – mohir qoʻllar, metall emas.",
+    "ru": "«Золотые руки» – умелые руки, не металл."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm015",
+   "skill": "dtm_native_uz",
+   "level": "medium",
+   "subskill": "leksika.frazeologizm",
+   "lang": "uz",
+   "stem": {
+    "uz": "«Boshi osmonga yetdi» iborasining maʼnosi qaysi?",
+    "ru": "Что значит фразеологизм «boshi osmonga yetdi»?"
+   },
+   "options": [
+    {
+     "uz": "juda xursand boʻldi",
+     "ru": "juda xursand boʻldi"
+    },
+    {
+     "uz": "boʻyi juda oʻsdi",
+     "ru": "boʻyi juda oʻsdi"
+    },
+    {
+     "uz": "kasal boʻldi",
+     "ru": "kasal boʻldi"
+    },
+    {
+     "uz": "jahli chiqdi",
+     "ru": "jahli chiqdi"
+    }
+   ],
+   "why": {
+    "en": "'His head reached the sky' means he was overjoyed.",
+    "uz": "Ibora haddan tashqari xursandlikni bildiradi.",
+    "ru": "Фразеологизм значит «был безмерно рад»."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm016",
+   "skill": "dtm_native_uz",
+   "level": "easy",
+   "subskill": "morfologiya.fel",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi qatorda faqat feʼllar berilgan?",
+    "ru": "В каком ряду даны только глаголы (fe'llar)?"
+   },
+   "options": [
+    {
+     "uz": "keldi, ketdi, oʻtirdi",
+     "ru": "keldi, ketdi, oʻtirdi"
+    },
+    {
+     "uz": "kitob, keldi, oq",
+     "ru": "kitob, keldi, oq"
+    },
+    {
+     "uz": "tez, sekin, asta",
+     "ru": "tez, sekin, asta"
+    },
+    {
+     "uz": "men, sen, u",
+     "ru": "men, sen, u"
+    }
+   ],
+   "why": {
+    "en": "All three name actions: came, left, sat.",
+    "uz": "Uchalasi harakatni bildiradi.",
+    "ru": "Все три обозначают действие."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm017",
+   "skill": "dtm_native_uz",
+   "level": "easy",
+   "subskill": "morfologiya.kelishik",
+   "lang": "uz",
+   "stem": {
+    "uz": "«Maktabdan» soʻzi qaysi kelishikda?",
+    "ru": "В каком падеже стоит слово «maktabdan»?"
+   },
+   "options": [
+    {
+     "uz": "chiqish",
+     "ru": "chiqish"
+    },
+    {
+     "uz": "joʻnalish",
+     "ru": "joʻnalish"
+    },
+    {
+     "uz": "oʻrin-payt",
+     "ru": "oʻrin-payt"
+    },
+    {
+     "uz": "tushum",
+     "ru": "tushum"
+    }
+   ],
+   "why": {
+    "en": "-dan is the ablative (chiqish) case: 'from school'.",
+    "uz": "-dan – chiqish kelishigi qoʻshimchasi.",
+    "ru": "-dan – исходный падеж (chiqish): «из школы»."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm018",
+   "skill": "dtm_native_uz",
+   "level": "medium",
+   "subskill": "morfologiya.yuklama",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi soʻz yuklama?",
+    "ru": "Какое слово является частицей (yuklama)?"
+   },
+   "options": [
+    {
+     "uz": "faqat",
+     "ru": "faqat"
+    },
+    {
+     "uz": "va",
+     "ru": "va"
+    },
+    {
+     "uz": "uchun",
+     "ru": "uchun"
+    },
+    {
+     "uz": "voy",
+     "ru": "voy"
+    }
+   ],
+   "why": {
+    "en": "Faqat (only) is a particle; va is a conjunction, uchun a postposition, voy an interjection.",
+    "uz": "«Faqat» – yuklama; «va» – bogʻlovchi, «uchun» – koʻmakchi, «voy» – undov.",
+    "ru": "«Faqat» – частица; «va» – союз, «uchun» – послелог, «voy» – междометие."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm019",
+   "skill": "dtm_native_uz",
+   "level": "medium",
+   "subskill": "sintaksis.toldiruvchi",
+   "lang": "uz",
+   "stem": {
+    "uz": "Gapdagi vositali toʻldiruvchini toping: «Men ukamga kitob berdim.»",
+    "ru": "Найдите косвенное дополнение (vositali toʻldiruvchi): «Men ukamga kitob berdim.»"
+   },
+   "options": [
+    {
+     "uz": "ukamga",
+     "ru": "ukamga"
+    },
+    {
+     "uz": "kitob",
+     "ru": "kitob"
+    },
+    {
+     "uz": "men",
+     "ru": "men"
+    },
+    {
+     "uz": "berdim",
+     "ru": "berdim"
+    }
+   ],
+   "why": {
+    "en": "Ukamga (to my brother, dative) is the indirect object; kitob is direct.",
+    "uz": "«Ukamga» – joʻnalish kelishigidagi vositali toʻldiruvchi; «kitob» – vositasiz.",
+    "ru": "«Ukamga» – косвенное дополнение в дательном падеже; «kitob» – прямое."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-otm020",
+   "skill": "dtm_native_uz",
+   "level": "easy",
+   "subskill": "sintaksis.gap_turlari",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi gap darak gap?",
+    "ru": "Какое предложение является повествовательным (darak gap)?"
+   },
+   "options": [
+    {
+     "uz": "Bugun havo issiq.",
+     "ru": "Bugun havo issiq."
+    },
+    {
+     "uz": "Bugun havo issiqmi?",
+     "ru": "Bugun havo issiqmi?"
+    },
+    {
+     "uz": "Qanday issiq kun!",
+     "ru": "Qanday issiq kun!"
+    },
+    {
+     "uz": "Derazani oching.",
+     "ru": "Derazani oching."
+    }
+   ],
+   "why": {
+    "en": "A declarative sentence states a fact.",
+    "uz": "Darak gap biror voqeani xabar qiladi.",
+    "ru": "Повествовательное предложение сообщает факт."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

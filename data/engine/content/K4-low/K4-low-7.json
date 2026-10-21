@@ -1,0 +1,1164 @@
+{
+  "bank": "K4",
+  "batch": 7,
+  "items": [
+    {
+      "id": "K4-ge0001",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "triangle_angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "Two angles of a triangle are {a}° and {b}°. What is the third angle, in degrees?",
+        "params": {
+          "a": {
+            "min": 30,
+            "max": 80,
+            "step": 5
+          },
+          "b": {
+            "min": 25,
+            "max": 70,
+            "step": 5
+          }
+        },
+        "answer": "180 - a - b",
+        "variants": 110
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Two angles of a triangle are {a}° and {b}°. What is the third angle, in degrees?",
+        "uz": "Uchburchakning ikki burchagi {a}° va {b}°. Uchinchi burchagini toping (gradusda).",
+        "ru": "Два угла треугольника равны {a}° и {b}°. Найдите третий угол (в градусах)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The angles of a triangle add up to 180°.",
+        "uz": "Uchburchak burchaklarining yigʻindisi 180°.",
+        "ru": "Сумма углов треугольника равна 180°."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 12,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0002",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "triangle_angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "In an isosceles triangle the angle between the two equal sides is {a}°. What is each of the other two angles, in degrees?",
+        "params": {
+          "a": {
+            "min": 20,
+            "max": 140,
+            "step": 10
+          }
+        },
+        "answer": "(180 - a) / 2",
+        "variants": 13
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In an isosceles triangle the angle between the two equal sides is {a}°. What is each of the other two angles, in degrees?",
+        "uz": "Teng yonli uchburchakda teng tomonlar orasidagi burchak {a}°. Qolgan ikki burchakning har biri necha gradus?",
+        "ru": "В равнобедренном треугольнике угол между равными сторонами равен {a}°. Чему равен каждый из двух других углов (в градусах)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The two base angles are equal: (180° − top angle) ÷ 2.",
+        "uz": "Asosdagi ikki burchak teng: (180° − uchidagi burchak) : 2.",
+        "ru": "Углы при основании равны: (180° − угол при вершине) : 2."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0003",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "triangle_angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "In triangle ABC, ∠A = {a}° and ∠B = {b}°. What is the exterior angle at vertex C, in degrees?",
+        "params": {
+          "a": {
+            "min": 30,
+            "max": 80,
+            "step": 5
+          },
+          "b": {
+            "min": 25,
+            "max": 75,
+            "step": 5
+          }
+        },
+        "answer": "a + b",
+        "variants": 121
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In triangle ABC, ∠A = {a}° and ∠B = {b}°. What is the exterior angle at vertex C, in degrees?",
+        "uz": "ABC uchburchakda ∠A = {a}° va ∠B = {b}°. C uchidagi tashqi burchakni toping (gradusda).",
+        "ru": "В треугольнике ABC ∠A = {a}°, ∠B = {b}°. Найдите внешний угол при вершине C (в градусах)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "An exterior angle equals the sum of the two interior angles that are not next to it.",
+        "uz": "Tashqi burchak unga qoʻshni boʻlmagan ikki ichki burchak yigʻindisiga teng.",
+        "ru": "Внешний угол равен сумме двух внутренних углов, не смежных с ним."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0004",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "polygon_angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "What is the sum of the interior angles of a convex polygon with {n} sides, in degrees?",
+        "params": {
+          "n": {
+            "min": 5,
+            "max": 16,
+            "step": 1
+          }
+        },
+        "answer": "(n - 2) * 180",
+        "variants": 12
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is the sum of the interior angles of a convex polygon with {n} sides, in degrees?",
+        "uz": "{n} ta tomoni bor qavariq koʻpburchak ichki burchaklarining yigʻindisini toping (gradusda).",
+        "ru": "Найдите сумму внутренних углов выпуклого многоугольника с {n} сторонами (в градусах)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Sum = (n − 2) × 180°, because the polygon splits into n − 2 triangles.",
+        "uz": "Yigʻindi = (n − 2) × 180°, chunki koʻpburchak n − 2 ta uchburchakka boʻlinadi.",
+        "ru": "Сумма = (n − 2) × 180°, так как многоугольник делится на n − 2 треугольника."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0005",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "polygon_angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "What is each interior angle of a regular polygon with {n} sides, in degrees?",
+        "params": {
+          "n": [
+            5,
+            6,
+            8,
+            9,
+            10,
+            12,
+            15,
+            18,
+            20,
+            24,
+            30,
+            36
+          ]
+        },
+        "answer": "180 - 360 / n",
+        "variants": 12
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is each interior angle of a regular polygon with {n} sides, in degrees?",
+        "uz": "{n} ta tomoni bor muntazam koʻpburchakning har bir ichki burchagi necha gradus?",
+        "ru": "Чему равен каждый внутренний угол правильного многоугольника с {n} сторонами (в градусах)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Each exterior angle is 360° ÷ n, and the interior angle is 180° minus that.",
+        "uz": "Har bir tashqi burchak 360° : n ga, ichki burchak esa 180° dan shuni ayirganiga teng.",
+        "ru": "Каждый внешний угол равен 360° : n, а внутренний — 180° минус внешний."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0006",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "pythagoras",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A right triangle has legs of {a} cm and {b} cm. What is the length of its hypotenuse, in cm?",
+        "params": {
+          "m": {
+            "min": 2,
+            "max": 5,
+            "step": 1
+          },
+          "n": {
+            "min": 1,
+            "max": 4,
+            "step": 1
+          },
+          "k": {
+            "min": 1,
+            "max": 2,
+            "step": 1
+          }
+        },
+        "derived": {
+          "a": "k * (m ^ 2 - n ^ 2)",
+          "b": "2 * k * m * n"
+        },
+        "constraints": [
+          "n < m"
+        ],
+        "answer": "k * (m ^ 2 + n ^ 2)",
+        "variants": 20
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A right triangle has legs of {a} cm and {b} cm. What is the length of its hypotenuse, in cm?",
+        "uz": "Toʻgʻri burchakli uchburchakning katetlari {a} sm va {b} sm. Gipotenuzasi necha sm?",
+        "ru": "Катеты прямоугольного треугольника равны {a} см и {b} см. Найдите гипотенузу (в см)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Pythagoras: hypotenuse² = leg² + leg², then take the square root.",
+        "uz": "Pifagor teoremasi: gipotenuza² = katet² + katet², soʻng kvadrat ildiz oling.",
+        "ru": "Теорема Пифагора: гипотенуза² = катет² + катет², затем извлеките корень."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0007",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "pythagoras",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A right triangle has a hypotenuse of {c} cm and one leg of {a} cm. How long is the other leg, in cm?",
+        "params": {
+          "m": {
+            "min": 2,
+            "max": 5,
+            "step": 1
+          },
+          "n": {
+            "min": 1,
+            "max": 4,
+            "step": 1
+          },
+          "k": {
+            "min": 1,
+            "max": 2,
+            "step": 1
+          }
+        },
+        "derived": {
+          "c": "k * (m ^ 2 + n ^ 2)",
+          "a": "k * (m ^ 2 - n ^ 2)"
+        },
+        "constraints": [
+          "n < m"
+        ],
+        "answer": "2 * k * m * n",
+        "variants": 20
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A right triangle has a hypotenuse of {c} cm and one leg of {a} cm. How long is the other leg, in cm?",
+        "uz": "Toʻgʻri burchakli uchburchakning gipotenuzasi {c} sm, bir kateti {a} sm. Ikkinchi kateti necha sm?",
+        "ru": "Гипотенуза прямоугольного треугольника равна {c} см, один катет — {a} см. Найдите второй катет (в см)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Other leg² = hypotenuse² − known leg², then take the square root.",
+        "uz": "Ikkinchi katet² = gipotenuza² − maʼlum katet², soʻng kvadrat ildiz oling.",
+        "ru": "Второй катет² = гипотенуза² − известный катет², затем извлеките корень."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0008",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "area_perimeter",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "A rectangle measures {a} cm by {b} cm. What is its area, in cm²?",
+        "params": {
+          "a": {
+            "min": 4,
+            "max": 15,
+            "step": 1
+          },
+          "b": {
+            "min": 3,
+            "max": 12,
+            "step": 1
+          }
+        },
+        "answer": "a * b",
+        "variants": 120
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A rectangle measures {a} cm by {b} cm. What is its area, in cm²?",
+        "uz": "Toʻgʻri toʻrtburchakning tomonlari {a} sm va {b} sm. Uning yuzi necha sm²?",
+        "ru": "Стороны прямоугольника равны {a} см и {b} см. Найдите его площадь (в см²)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Area of a rectangle = length × width.",
+        "uz": "Toʻgʻri toʻrtburchak yuzi = boʻyi × eni.",
+        "ru": "Площадь прямоугольника = длина × ширина."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 12,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0009",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "area_perimeter",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A rectangle has an area of {A} cm² and a width of {w} cm. What is its perimeter, in cm?",
+        "params": {
+          "w": {
+            "min": 3,
+            "max": 8,
+            "step": 1
+          },
+          "l": {
+            "min": 9,
+            "max": 14,
+            "step": 1
+          }
+        },
+        "derived": {
+          "A": "w * l"
+        },
+        "answer": "2 * (w + l)",
+        "variants": 36
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A rectangle has an area of {A} cm² and a width of {w} cm. What is its perimeter, in cm?",
+        "uz": "Toʻgʻri toʻrtburchakning yuzi {A} sm², eni {w} sm. Uning perimetri necha sm?",
+        "ru": "Площадь прямоугольника {A} см², ширина {w} см. Найдите его периметр (в см)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Length = area ÷ width; perimeter = 2 × (length + width).",
+        "uz": "Boʻyi = yuza : eni; perimetr = 2 × (boʻyi + eni).",
+        "ru": "Длина = площадь : ширина; периметр = 2 × (длина + ширина)."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0010",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "area_perimeter",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "A triangle has a base of {b} cm and a height of {h} cm. What is its area, in cm²?",
+        "params": {
+          "b": {
+            "min": 4,
+            "max": 20,
+            "step": 2
+          },
+          "h": {
+            "min": 3,
+            "max": 11,
+            "step": 1
+          }
+        },
+        "answer": "b * h / 2",
+        "variants": 81
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A triangle has a base of {b} cm and a height of {h} cm. What is its area, in cm²?",
+        "uz": "Uchburchakning asosi {b} sm, balandligi {h} sm. Uning yuzi necha sm²?",
+        "ru": "Основание треугольника {b} см, высота {h} см. Найдите его площадь (в см²)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Area of a triangle = base × height ÷ 2.",
+        "uz": "Uchburchak yuzi = asos × balandlik : 2.",
+        "ru": "Площадь треугольника = основание × высота : 2."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 12,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0011",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "area_perimeter",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A trapezoid has parallel sides of {a} cm and {b} cm and a height of {h} cm. What is its area, in cm²?",
+        "params": {
+          "a": {
+            "min": 4,
+            "max": 12,
+            "step": 1
+          },
+          "d": {
+            "min": 1,
+            "max": 5,
+            "step": 1
+          },
+          "h": {
+            "min": 3,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "derived": {
+          "b": "a + 2 * d"
+        },
+        "answer": "(a + d) * h",
+        "variants": 315
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A trapezoid has parallel sides of {a} cm and {b} cm and a height of {h} cm. What is its area, in cm²?",
+        "uz": "Trapetsiyaning asoslari {a} sm va {b} sm, balandligi {h} sm. Uning yuzi necha sm²?",
+        "ru": "Основания трапеции равны {a} см и {b} см, высота — {h} см. Найдите её площадь (в см²)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Area of a trapezoid = (sum of the parallel sides) ÷ 2 × height.",
+        "uz": "Trapetsiya yuzi = (asoslar yigʻindisi) : 2 × balandlik.",
+        "ru": "Площадь трапеции = (сумма оснований) : 2 × высота."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0012",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "A circle has a radius of {r} cm. Its circumference is kπ cm. What is k?",
+        "params": {
+          "r": {
+            "min": 2,
+            "max": 20,
+            "step": 1
+          }
+        },
+        "answer": "2 * r",
+        "variants": 19
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A circle has a radius of {r} cm. Its circumference is kπ cm. What is k?",
+        "uz": "Aylananing radiusi {r} sm. Uning uzunligi kπ sm ga teng. k ni toping.",
+        "ru": "Радиус окружности {r} см. Её длина равна kπ см. Найдите k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Circumference = 2πr.",
+        "uz": "Aylana uzunligi = 2πr.",
+        "ru": "Длина окружности = 2πr."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 12,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0013",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "A circle has a diameter of {d} cm. Its area is kπ cm². What is k?",
+        "params": {
+          "d": {
+            "min": 2,
+            "max": 24,
+            "step": 2
+          }
+        },
+        "answer": "(d / 2) ^ 2",
+        "variants": 12
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A circle has a diameter of {d} cm. Its area is kπ cm². What is k?",
+        "uz": "Doiraning diametri {d} sm. Uning yuzi kπ sm² ga teng. k ni toping.",
+        "ru": "Диаметр круга {d} см. Его площадь равна kπ см². Найдите k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Radius = diameter ÷ 2, and area = πr².",
+        "uz": "Radius = diametr : 2, yuza = πr².",
+        "ru": "Радиус = диаметр : 2, площадь = πr²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0014",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "A box is {a} cm long, {b} cm wide and {c} cm high. What is its volume, in cm³?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 9,
+            "step": 1
+          },
+          "b": {
+            "min": 3,
+            "max": 8,
+            "step": 1
+          },
+          "c": {
+            "min": 4,
+            "max": 10,
+            "step": 1
+          }
+        },
+        "answer": "a * b * c",
+        "variants": 336
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A box is {a} cm long, {b} cm wide and {c} cm high. What is its volume, in cm³?",
+        "uz": "Qutining uzunligi {a} sm, eni {b} sm, balandligi {c} sm. Uning hajmi necha sm³?",
+        "ru": "Длина коробки {a} см, ширина {b} см, высота {c} см. Найдите её объём (в см³)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Volume of a box = length × width × height.",
+        "uz": "Quti hajmi = uzunlik × en × balandlik.",
+        "ru": "Объём коробки = длина × ширина × высота."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0015",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "surface_area",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A cube has edges of {a} cm. What is its total surface area, in cm²?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 12,
+            "step": 1
+          }
+        },
+        "answer": "6 * a ^ 2",
+        "variants": 11
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A cube has edges of {a} cm. What is its total surface area, in cm²?",
+        "uz": "Kubning qirrasi {a} sm. Uning toʻla sirti yuzi necha sm²?",
+        "ru": "Ребро куба равно {a} см. Найдите площадь его полной поверхности (в см²)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "A cube has 6 equal square faces: 6 × edge².",
+        "uz": "Kubning 6 ta teng kvadrat yogʻi bor: 6 × qirra².",
+        "ru": "У куба 6 одинаковых квадратных граней: 6 × ребро²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0016",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "similarity",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "Triangles ABC and DEF are similar (A ↔ D, B ↔ E, C ↔ F). AB = {a}, DE = {d} and BC = {b}. What is EF?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 6,
+            "step": 1
+          },
+          "k": {
+            "min": 2,
+            "max": 4,
+            "step": 1
+          },
+          "b": {
+            "min": 3,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "derived": {
+          "d": "a * k"
+        },
+        "answer": "b * k",
+        "variants": 105
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Triangles ABC and DEF are similar (A ↔ D, B ↔ E, C ↔ F). AB = {a}, DE = {d} and BC = {b}. What is EF?",
+        "uz": "ABC va DEF uchburchaklar oʻxshash (A ↔ D, B ↔ E, C ↔ F). AB = {a}, DE = {d}, BC = {b}. EF ni toping.",
+        "ru": "Треугольники ABC и DEF подобны (A ↔ D, B ↔ E, C ↔ F). AB = {a}, DE = {d}, BC = {b}. Найдите EF."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Corresponding sides are in the same ratio: EF = BC × DE ÷ AB.",
+        "uz": "Mos tomonlar bir xil nisbatda: EF = BC × DE : AB.",
+        "ru": "Соответственные стороны пропорциональны: EF = BC × DE : AB."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0017",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "coordinate_geometry",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "What is the distance between the points ({x1}, {y1}) and ({x2}, {y2})?",
+        "params": {
+          "m": {
+            "min": 2,
+            "max": 4,
+            "step": 1
+          },
+          "n": {
+            "min": 1,
+            "max": 3,
+            "step": 1
+          },
+          "x1": {
+            "min": -3,
+            "max": 3,
+            "step": 1
+          },
+          "y1": {
+            "min": -3,
+            "max": 3,
+            "step": 1
+          }
+        },
+        "derived": {
+          "x2": "x1 + m ^ 2 - n ^ 2",
+          "y2": "y1 + 2 * m * n"
+        },
+        "constraints": [
+          "n < m"
+        ],
+        "answer": "m ^ 2 + n ^ 2",
+        "variants": 294
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is the distance between the points ({x1}, {y1}) and ({x2}, {y2})?",
+        "uz": "({x1}; {y1}) va ({x2}; {y2}) nuqtalar orasidagi masofani toping.",
+        "ru": "Найдите расстояние между точками ({x1}; {y1}) и ({x2}; {y2})."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Distance = √((x₂ − x₁)² + (y₂ − y₁)²): Pythagoras on the coordinate grid.",
+        "uz": "Masofa = √((x₂ − x₁)² + (y₂ − y₁)²): koordinatalardagi Pifagor teoremasi.",
+        "ru": "Расстояние = √((x₂ − x₁)² + (y₂ − y₁)²): теорема Пифагора на координатной плоскости."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0018",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "coordinate_geometry",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "M is the midpoint of segment AB, where A({x1}, {y1}) and B({x2}, {y2}). What is the x-coordinate of M?",
+        "params": {
+          "x1": {
+            "min": -5,
+            "max": 5,
+            "step": 1
+          },
+          "d": {
+            "min": 1,
+            "max": 6,
+            "step": 1
+          },
+          "y1": {
+            "min": -4,
+            "max": 4,
+            "step": 1
+          },
+          "e": {
+            "min": -3,
+            "max": 3,
+            "step": 1
+          }
+        },
+        "derived": {
+          "x2": "x1 + 2 * d",
+          "y2": "y1 + 2 * e"
+        },
+        "answer": "x1 + d",
+        "variants": 4158
+      },
+      "lang": "en",
+      "stem": {
+        "en": "M is the midpoint of segment AB, where A({x1}, {y1}) and B({x2}, {y2}). What is the x-coordinate of M?",
+        "uz": "M nuqta AB kesmaning oʻrtasi, bunda A({x1}; {y1}) va B({x2}; {y2}). M nuqtaning abssissasini (x koordinatasini) toping.",
+        "ru": "Точка M — середина отрезка AB, где A({x1}; {y1}) и B({x2}; {y2}). Найдите абсциссу (координату x) точки M."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The midpoint's x-coordinate is the average of the two x-coordinates.",
+        "uz": "Oʻrta nuqtaning x koordinatasi uchlar x koordinatalarining oʻrta arifmetigiga teng.",
+        "ru": "Координата x середины — среднее арифметическое координат x концов отрезка."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -0.35,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0019",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "hard"
+      },
+      "family": {
+        "template": "In a circle of radius {r} cm, an arc has a central angle of {a}°. Its length is kπ cm. What is k?",
+        "params": {
+          "a": [
+            30,
+            60,
+            90,
+            120,
+            150
+          ],
+          "r": [
+            6,
+            12,
+            18
+          ]
+        },
+        "answer": "r * a / 180",
+        "variants": 15
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In a circle of radius {r} cm, an arc has a central angle of {a}°. Its length is kπ cm. What is k?",
+        "uz": "Radiusi {r} sm boʻlgan aylanada markaziy burchagi {a}° boʻlgan yoyning uzunligi kπ sm ga teng. k ni toping.",
+        "ru": "В окружности радиуса {r} см дуга имеет центральный угол {a}°. Её длина равна kπ см. Найдите k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Arc length = (central angle ÷ 360°) × 2πr.",
+        "uz": "Yoy uzunligi = (markaziy burchak : 360°) × 2πr.",
+        "ru": "Длина дуги = (центральный угол : 360°) × 2πr."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0020",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "area_perimeter",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "A square has a perimeter of {p} cm. What is its area, in cm²?",
+        "params": {
+          "s": {
+            "min": 3,
+            "max": 15,
+            "step": 1
+          }
+        },
+        "derived": {
+          "p": "4 * s"
+        },
+        "answer": "s ^ 2",
+        "variants": 13
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A square has a perimeter of {p} cm. What is its area, in cm²?",
+        "uz": "Kvadratning perimetri {p} sm. Uning yuzi necha sm²?",
+        "ru": "Периметр квадрата {p} см. Найдите его площадь (в см²)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Side = perimeter ÷ 4, and area = side².",
+        "uz": "Tomoni = perimetr : 4, yuzi = tomon².",
+        "ru": "Сторона = периметр : 4, площадь = сторона²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

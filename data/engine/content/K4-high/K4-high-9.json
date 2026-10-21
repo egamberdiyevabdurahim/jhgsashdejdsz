@@ -1,0 +1,246 @@
+{
+ "bank": "K4",
+ "batch": 9,
+ "items": [
+  {
+   "id": "K4-sam001",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "discriminant_one_solution",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "In the equation x² − {b}x + k = 0, k is a constant. The equation has exactly one real solution. What is the value of k?",
+    "params": {
+     "b": {
+      "min": 2,
+      "max": 24,
+      "step": 2
+     }
+    },
+    "answer": "b * b / 4",
+    "integer": true,
+    "relation": "{b}^2 - 4*X = 0"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In the equation x² − {b}x + k = 0, k is a constant. The equation has exactly one real solution. What is the value of k?",
+    "uz": "x² − {b}x + k = 0 tenglamada k — oʻzgarmas son. Tenglama faqat bitta haqiqiy yechimga ega. k ning qiymati nechaga teng?",
+    "ru": "В уравнении x² − {b}x + k = 0 число k — постоянная. Уравнение имеет ровно одно действительное решение. Чему равно k?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Exactly one real solution means the discriminant is zero: b² − 4k = 0.",
+    "uz": "Faqat bitta haqiqiy yechim — diskriminant nolga teng: b² − 4k = 0.",
+    "ru": "Ровно одно действительное решение — дискриминант равен нулю: b² − 4k = 0."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.1,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sam002",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "tangent_line_parabola",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "The graph of y = x² + {b}x + {c} and the line y = {m}x + {n} have exactly one point in common. What is the x-coordinate of that point?",
+    "params": {
+     "x0": {
+      "min": -6,
+      "max": -1
+     },
+     "m": {
+      "min": 1,
+      "max": 6
+     },
+     "n": {
+      "min": 1,
+      "max": 9
+     }
+    },
+    "derived": {
+     "b": "m - 2 * x0",
+     "c": "n + x0 * x0"
+    },
+    "answer": "x0",
+    "integer": true,
+    "relation": "X^2 + {b}*X + {c} = {m}*X + {n}"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The graph of y = x² + {b}x + {c} and the line y = {m}x + {n} have exactly one point in common. What is the x-coordinate of that point?",
+    "uz": "y = x² + {b}x + {c} parabola va y = {m}x + {n} toʻgʻri chiziq faqat bitta umumiy nuqtaga ega. Shu nuqtaning abssissasi nechaga teng?",
+    "ru": "Парабола y = x² + {b}x + {c} и прямая y = {m}x + {n} имеют ровно одну общую точку. Найдите абсциссу этой точки."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Set the two expressions equal; one common point means the quadratic has a double root, x = −(b − m)/2.",
+    "uz": "Ifodalarni tenglang; bitta umumiy nuqta — kvadrat tenglamaning ildizi karrali: x = −(b − m)/2.",
+    "ru": "Приравняйте выражения; одна общая точка — у квадратного уравнения двойной корень: x = −(b − m)/2."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.1,
+   "time_s": 105,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sam003",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponential_doubling",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "The number of bacteria in a dish doubles every {d} hours. After {t} hours there are {N} bacteria. How many bacteria were in the dish at the start?",
+    "params": {
+     "d": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "k": {
+      "min": 2,
+      "max": 5
+     },
+     "P0": {
+      "min": 50,
+      "max": 900,
+      "step": 50
+     }
+    },
+    "derived": {
+     "t": "d * k",
+     "N": "P0 * 2**k"
+    },
+    "answer": "P0",
+    "integer": true,
+    "relation": "X * 2^({t}/{d}) = {N}"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The number of bacteria in a dish doubles every {d} hours. After {t} hours there are {N} bacteria. How many bacteria were in the dish at the start?",
+    "uz": "Idishdagi bakteriyalar soni har {d} soatda ikki baravar ortadi. {t} soatdan keyin bakteriyalar soni {N} ta boʻldi. Boshida idishda nechta bakteriya boʻlgan?",
+    "ru": "Число бактерий в чашке удваивается каждые {d} ч. Через {t} ч в чашке {N} бактерий. Сколько бактерий было в начале?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "In t hours the number doubles t ÷ d times, so the start = N ÷ 2^(t/d).",
+    "uz": "t soatda son t : d marta ikki baravar ortadi, demak boshlangʻich son = N : 2^(t/d).",
+    "ru": "За t ч число удваивается t : d раз, значит в начале было N : 2^(t/d)."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.1,
+   "time_s": 90,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sam004",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "remainder_theorem_coefficient",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "When p(x) = x³ + {a}x² + kx − {c} is divided by x − {r}, the remainder is {R}. What is the value of k?",
+    "params": {
+     "a": {
+      "min": 1,
+      "max": 6
+     },
+     "kk": {
+      "min": -8,
+      "max": 8
+     },
+     "c": {
+      "min": 1,
+      "max": 20
+     },
+     "r": {
+      "min": 1,
+      "max": 4
+     }
+    },
+    "derived": {
+     "R": "r**3 + a * r * r + kk * r - c"
+    },
+    "answer": "kk",
+    "integer": true,
+    "relation": "{r}^3 + {a}*{r}^2 + X*{r} - {c} = {R}"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "When p(x) = x³ + {a}x² + kx − {c} is divided by x − {r}, the remainder is {R}. What is the value of k?",
+    "uz": "p(x) = x³ + {a}x² + kx − {c} koʻphad x − {r} ga boʻlinganda qoldiq {R} ga teng. k ning qiymati nechaga teng?",
+    "ru": "При делении многочлена p(x) = x³ + {a}x² + kx − {c} на x − {r} остаток равен {R}. Найдите k."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "By the remainder theorem p(r) is the remainder: put x = r into p(x), set it equal to the remainder and solve for k.",
+    "uz": "Qoldiq haqidagi teoremaga koʻra p(r) qoldiqqa teng: p(x) ga x = r ni qoʻying, qoldiqqa tenglang va k ni toping.",
+    "ru": "По теореме о остатке p(r) равно остатку: подставьте x = r, приравняйте к остатку и найдите k."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.1,
+   "time_s": 90,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

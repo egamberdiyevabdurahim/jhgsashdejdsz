@@ -1,0 +1,579 @@
+{
+  "bank": "C19",
+  "batch": 12,
+  "kind": "lessons",
+  "note": "AP Calculus AB lesson bodies, phase 2 (SPEC-lessons rev. 2, 12 Oct 2026, §3.5, §11.1, §12.5; P7 PLAN.md §4, author a4): lessons 1-3 of the C10 units APCA03 (Differentiation: Composite, Implicit, and Inverse Functions) and APCA04 (Contextual Applications of Differentiation). `lessons` are the lesson records; `items` are their piece questions (the key is options[0]; `page` names the lesson). Template lessons: test and homework draw the C1 families each record names (C1-ap3001 … ap3010 in C1/C1-10.json, written for these lessons, and C1-clp004, clp007, clp009). Our own wording and numbers, written to the public unit list only; no College Board item or text was used. Every worked line and key is checked by sympy (.superpowers/p7/a4/sympy_check.py). JG's own content: no JIA AP class is implied (owner, 4 Oct 2026). Key check 2 by P7 blind checkers 3 and 4 (13 Oct 2026, blind:P7s3+P7s4; C19/RECONCILE-p7.md part 2): the 18 piece questions and five lessons are verified_auto; C19-APCA03-1 stays draft until its example family C1-ap3001 is served (C1/RECONCILE-p7.md part 2).",
+  "lessons": [
+    {
+      "kind": "lesson",
+      "id": "C19-APCA03-1",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA03",
+      "seq": 1,
+      "skill": "ap_calc_ab:APCA03",
+      "requires": { "math_rung_min": "precalc" },
+      "title": {
+        "en": "AP Calculus AB: The chain rule",
+        "uz": "AP Calculus AB: Murakkab funksiya hosilasi (chain rule)",
+        "ru": "AP Calculus AB: Производная сложной функции (chain rule)"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "A function inside a function needs the chain rule:\n(f(g(x)))′ = f′(g(x)) · g′(x).\nDifferentiate the outside and keep the inside as it is. Then multiply by the derivative of the inside.\n• (e^(kx))′ = k·e^(kx)\n• (sin(kx))′ = k·cos(kx)\n• (cos(kx))′ = −k·sin(kx)\n• ((g(x))ⁿ)′ = n·(g(x))ⁿ⁻¹ · g′(x)\nExample: f(x) = (x² + 1)³. Outside: u³ gives 3u². Inside: (x² + 1)′ = 2x.\nf′(x) = 3(x² + 1)² · 2x, so f′(1) = 3 · 4 · 2 = 24.",
+            "uz": "Funksiya ichida funksiya boʻlsa, zanjir qoidasi (chain rule) kerak:\n(f(g(x)))′ = f′(g(x)) · g′(x).\nTashqi funksiyani differensiallang, ichkisini oʻzgartirmang. Keyin ichki funksiyaning hosilasiga koʻpaytiring.\n• (e^(kx))′ = k·e^(kx)\n• (sin(kx))′ = k·cos(kx)\n• (cos(kx))′ = −k·sin(kx)\n• ((g(x))ⁿ)′ = n·(g(x))ⁿ⁻¹ · g′(x)\nMisol: f(x) = (x² + 1)³. Tashqi: u³ dan 3u² chiqadi. Ichki: (x² + 1)′ = 2x.\nf′(x) = 3(x² + 1)² · 2x, demak f′(1) = 3 · 4 · 2 = 24.",
+            "ru": "Для функции внутри функции нужно цепное правило (chain rule):\n(f(g(x)))′ = f′(g(x)) · g′(x).\nПродифференцируйте внешнюю функцию, не меняя внутреннюю. Затем умножьте на производную внутренней.\n• (e^(kx))′ = k·e^(kx)\n• (sin(kx))′ = k·cos(kx)\n• (cos(kx))′ = −k·sin(kx)\n• ((g(x))ⁿ)′ = n·(g(x))ⁿ⁻¹ · g′(x)\nПример: f(x) = (x² + 1)³. Внешняя: из u³ получаем 3u². Внутренняя: (x² + 1)′ = 2x.\nf′(x) = 3(x² + 1)² · 2x, значит, f′(1) = 3 · 4 · 2 = 24."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca31q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "f(x) = 2e^(3x) + 5 sin(4x). Find f′(0).\n(e^(3x))′ = 3e^(3x) and (sin(4x))′ = 4 cos(4x).\nf′(x) = 6e^(3x) + 20 cos(4x).\nAt x = 0: e⁰ = 1 and cos 0 = 1, so f′(0) = 6 + 20 = 26.\nNow you: f(x) = 7e^(2x) + 3 sin(5x).\nf′(x) = 14e^(2x) + 15 cos(5x) → f′(0) = 14 + 15 = ?",
+            "uz": "f(x) = 2e^(3x) + 5 sin(4x). f′(0) ni toping.\n(e^(3x))′ = 3e^(3x) va (sin(4x))′ = 4 cos(4x).\nf′(x) = 6e^(3x) + 20 cos(4x).\nx = 0 da: e⁰ = 1 va cos 0 = 1, demak f′(0) = 6 + 20 = 26.\nEndi siz: f(x) = 7e^(2x) + 3 sin(5x).\nf′(x) = 14e^(2x) + 15 cos(5x) → f′(0) = 14 + 15 = ?",
+            "ru": "f(x) = 2e^(3x) + 5 sin(4x). Найдите f′(0).\n(e^(3x))′ = 3e^(3x) и (sin(4x))′ = 4 cos(4x).\nf′(x) = 6e^(3x) + 20 cos(4x).\nПри x = 0: e⁰ = 1 и cos 0 = 1, значит, f′(0) = 6 + 20 = 26.\nТеперь попробуйте сами: f(x) = 7e^(2x) + 3 sin(5x).\nf′(x) = 14e^(2x) + 15 cos(5x) → f′(0) = 14 + 15 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca31q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Do not stop at the outside. The inside's derivative is part of the answer.\n(sin(x²))′ = cos(x²) · 2x.\nNot cos(x²): the inside x² has its own derivative, 2x.\nNot cos(2x): inside cos, the inside stays as it is.\nThe same with powers: ((5x − 1)³)′ = 3(5x − 1)² · 5 = 15(5x − 1)², not 3(5x − 1)².",
+            "uz": "Faqat tashqi funksiya bilan toʻxtamang. Ichki funksiyaning hosilasi ham javobning bir qismi.\n(sin(x²))′ = cos(x²) · 2x.\ncos(x²) emas: ichki x² ning ham hosilasi bor, u 2x.\ncos(2x) ham emas: cos ichida ichki funksiya oʻzgarmaydi.\nDarajalarda ham shunday: ((5x − 1)³)′ = 3(5x − 1)² · 5 = 15(5x − 1)², 3(5x − 1)² emas.",
+            "ru": "Не останавливайтесь на внешней функции. Производная внутренней — тоже часть ответа.\n(sin(x²))′ = cos(x²) · 2x.\nНе cos(x²): у внутренней x² есть своя производная, 2x.\nИ не cos(2x): внутри cos внутренняя функция не меняется.\nСо степенями так же: ((5x − 1)³)′ = 3(5x − 1)² · 5 = 15(5x − 1)², а не 3(5x − 1)²."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca31q3"
+        }
+      ],
+      "test": { "pool": "C1", "families": ["C1-ap3001", "C1-clp009"], "n": 3, "first_is_example": true, "test_out": true },
+      "homework": { "pool": "C1", "families": ["C1-ap3001", "C1-clp009", "C1-r3a004"] },
+      "reserve": null,
+      "extra_link": "C10-APCA03#official",
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s3+P7s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA03-2",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA03",
+      "seq": 2,
+      "skill": "ap_calc_ab:APCA03",
+      "requires": { "math_rung_min": "precalc" },
+      "title": {
+        "en": "AP Calculus AB: Implicit differentiation",
+        "uz": "AP Calculus AB: Oshkormas differensiallash (implicit differentiation)",
+        "ru": "AP Calculus AB: Неявное дифференцирование (implicit differentiation)"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Some curves are given by one equation in x and y, such as the circle x² + y² = 25. To find the slope dy/dx (also written y′):\n1. Differentiate both sides with respect to x.\n2. y is a function of x, so use the chain rule on y: (y²)′ = 2y·y′, (y³)′ = 3y²·y′.\n3. Solve for y′.\nx² + y² = 25 → 2x + 2y·y′ = 0 → y′ = −x/y.\nAt the point (3, 4): y′ = −3/4.",
+            "uz": "Baʼzi egri chiziqlar x va y qatnashgan bitta tenglama bilan beriladi, masalan x² + y² = 25 aylana. Urinmaning burchak koeffitsiyenti dy/dx ni (y′ deb ham yoziladi) topish uchun:\n1. Ikkala tomonni x boʻyicha differensiallang.\n2. y — x ning funksiyasi, shuning uchun y ga zanjir qoidasini qoʻllang: (y²)′ = 2y·y′, (y³)′ = 3y²·y′.\n3. y′ ni toping.\nx² + y² = 25 → 2x + 2y·y′ = 0 → y′ = −x/y.\n(3, 4) nuqtada: y′ = −3/4.",
+            "ru": "Некоторые кривые заданы одним уравнением с x и y, например окружность x² + y² = 25. Чтобы найти угловой коэффициент касательной dy/dx (его также обозначают y′):\n1. Продифференцируйте обе части по x.\n2. y — функция от x, поэтому для y применяйте цепное правило: (y²)′ = 2y·y′, (y³)′ = 3y²·y′.\n3. Выразите y′.\nx² + y² = 25 → 2x + 2y·y′ = 0 → y′ = −x/y.\nВ точке (3, 4): y′ = −3/4."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca32q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "The curve 2x² + y² = 22 passes through (3, 2). Find dy/dx there.\nDifferentiate both sides: 4x + 2y·y′ = 0.\nSo y′ = −4x/(2y) = −2x/y.\nAt (3, 2): y′ = −2 · 3/2 = −3.\nNow you: the curve 3x² + y² = 21 passes through (2, 3).\n6x + 2y·y′ = 0 → y′ = −3x/y → y′ = −3 · 2/3 = ?",
+            "uz": "2x² + y² = 22 egri chizigʻi (3, 2) nuqtadan oʻtadi. Shu nuqtada dy/dx ni toping.\nIkkala tomonni differensiallaymiz: 4x + 2y·y′ = 0.\nDemak y′ = −4x/(2y) = −2x/y.\n(3, 2) nuqtada: y′ = −2 · 3/2 = −3.\nEndi siz: 3x² + y² = 21 egri chizigʻi (2, 3) nuqtadan oʻtadi.\n6x + 2y·y′ = 0 → y′ = −3x/y → y′ = −3 · 2/3 = ?",
+            "ru": "Кривая 2x² + y² = 22 проходит через точку (3, 2). Найдите в ней dy/dx.\nДифференцируем обе части: 4x + 2y·y′ = 0.\nЗначит, y′ = −4x/(2y) = −2x/y.\nВ точке (3, 2): y′ = −2 · 3/2 = −3.\nТеперь попробуйте сами: кривая 3x² + y² = 21 проходит через точку (2, 3).\n6x + 2y·y′ = 0 → y′ = −3x/y → y′ = −3 · 2/3 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca32q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "When x and y are multiplied, use the product rule as well.\n(xy)′ = y + x·y′ and (x²y)′ = 2xy + x²·y′.\nExample: x²y = 12 at the point (2, 3).\n2xy + x²·y′ = 0 → y′ = −2xy/x² = −2y/x = −2 · 3/2 = −3.\nWatch out: (y²)′ is 2y·y′, never just 2y. Without y′ there is nothing to solve for.",
+            "uz": "x va y koʻpaytirilgan boʻlsa, koʻpaytmaning hosilasi qoidasini ham qoʻllang.\n(xy)′ = y + x·y′ va (x²y)′ = 2xy + x²·y′.\nMisol: x²y = 12, (2, 3) nuqtada.\n2xy + x²·y′ = 0 → y′ = −2xy/x² = −2y/x = −2 · 3/2 = −3.\nEhtiyot boʻling: (y²)′ = 2y·y′, hech qachon shunchaki 2y emas. y′ boʻlmasa, topadigan narsa qolmaydi.",
+            "ru": "Если x и y перемножены, примените ещё и правило произведения.\n(xy)′ = y + x·y′ и (x²y)′ = 2xy + x²·y′.\nПример: x²y = 12 в точке (2, 3).\n2xy + x²·y′ = 0 → y′ = −2xy/x² = −2y/x = −2 · 3/2 = −3.\nОсторожно: (y²)′ — это 2y·y′, а не просто 2y. Без y′ выражать будет нечего."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca32q3"
+        }
+      ],
+      "test": { "pool": "C1", "families": ["C1-ap3002", "C1-ap3003"], "n": 3, "first_is_example": true, "test_out": true },
+      "homework": { "pool": "C1", "families": ["C1-ap3002", "C1-ap3003", "C1-r3a005"] },
+      "reserve": null,
+      "extra_link": "C10-APCA03#official",
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s3+P7s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA03-3",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA03",
+      "seq": 3,
+      "skill": "ap_calc_ab:APCA03",
+      "requires": { "math_rung_min": "precalc" },
+      "title": {
+        "en": "AP Calculus AB: Inverse functions and second derivatives",
+        "uz": "AP Calculus AB: Teskari funksiya hosilasi va ikkinchi tartibli hosila",
+        "ru": "AP Calculus AB: Производная обратной функции и вторая производная"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Two new tools.\n1. Inverse functions. If g is the inverse of f and f(a) = b, then g′(b) = 1/f′(a): the derivative of the inverse at b is 1 over the derivative of f at a.\nExample: f(x) = x³ + x. f(1) = 2 and f′(x) = 3x² + 1, so f′(1) = 4. Then g′(2) = 1/4.\n2. Second derivatives. f″ is the derivative of f′.\nExample: f(x) = x⁴ → f′(x) = 4x³ → f″(x) = 12x², so f″(2) = 48.",
+            "uz": "Ikkita yangi vosita.\n1. Teskari funksiya. Agar g funksiya f ga teskari va f(a) = b boʻlsa, g′(b) = 1/f′(a): teskari funksiyaning b nuqtadagi hosilasi f ning a nuqtadagi hosilasiga teskari son.\nMisol: f(x) = x³ + x. f(1) = 2 va f′(x) = 3x² + 1, demak f′(1) = 4. Unda g′(2) = 1/4.\n2. Ikkinchi tartibli hosila. f″ — bu f′ ning hosilasi.\nMisol: f(x) = x⁴ → f′(x) = 4x³ → f″(x) = 12x², demak f″(2) = 48.",
+            "ru": "Два новых инструмента.\n1. Обратная функция. Если g — функция, обратная к f, и f(a) = b, то g′(b) = 1/f′(a): производная обратной функции в точке b равна единице, делённой на производную f в точке a.\nПример: f(x) = x³ + x. f(1) = 2 и f′(x) = 3x² + 1, значит, f′(1) = 4. Тогда g′(2) = 1/4.\n2. Вторая производная. f″ — это производная от f′.\nПример: f(x) = x⁴ → f′(x) = 4x³ → f″(x) = 12x², значит, f″(2) = 48."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca33q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "f(x) = x³ + 2x + 1, and g is the inverse of f. Find g′(4).\nFirst find a with f(a) = 4: f(1) = 1 + 2 + 1 = 4, so a = 1.\nf′(x) = 3x² + 2, so f′(1) = 5.\ng′(4) = 1/f′(1) = 1/5.\nNow you: f(x) = x³ + 4x + 10, and f(1) = 15.\nf′(x) = 3x² + 4 → f′(1) = 7 → g′(15) = 1/f′(1) = ?",
+            "uz": "f(x) = x³ + 2x + 1, g esa f ning teskari funksiyasi. g′(4) ni toping.\nAvval f(a) = 4 boʻladigan a ni topamiz: f(1) = 1 + 2 + 1 = 4, demak a = 1.\nf′(x) = 3x² + 2, demak f′(1) = 5.\ng′(4) = 1/f′(1) = 1/5.\nEndi siz: f(x) = x³ + 4x + 10 va f(1) = 15.\nf′(x) = 3x² + 4 → f′(1) = 7 → g′(15) = 1/f′(1) = ?",
+            "ru": "f(x) = x³ + 2x + 1, а g — функция, обратная к f. Найдите g′(4).\nСначала найдём a, для которого f(a) = 4: f(1) = 1 + 2 + 1 = 4, значит, a = 1.\nf′(x) = 3x² + 2, поэтому f′(1) = 5.\ng′(4) = 1/f′(1) = 1/5.\nТеперь попробуйте сами: f(x) = x³ + 4x + 10 и f(1) = 15.\nf′(x) = 3x² + 4 → f′(1) = 7 → g′(15) = 1/f′(1) = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca33q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Two traps.\n• For an inverse, take f′ at a, not at b. In the example f′(4) = 50, but 1/50 is wrong: g′(4) = 1/f′(1) = 1/5.\n• For f″, differentiate twice first, then put in the number. f(x) = x³ − 6x: f′(x) = 3x² − 6 and f″(x) = 6x, so f″(2) = 12. If you put x = 2 into f′ first, you get the number 6, and the derivative of a number is 0: wrong.",
+            "uz": "Ikki tuzoq.\n• Teskari funksiyada f′ ni a nuqtada oling, b da emas. Misolda f′(4) = 50, lekin 1/50 notoʻgʻri: g′(4) = 1/f′(1) = 1/5.\n• f″ uchun avval ikki marta differensiallang, keyin sonni qoʻying. f(x) = x³ − 6x: f′(x) = 3x² − 6 va f″(x) = 6x, demak f″(2) = 12. Agar x = 2 ni avval f′ ga qoʻysangiz, 6 soni chiqadi, sonning hosilasi esa 0: bu notoʻgʻri.",
+            "ru": "Две ловушки.\n• Для обратной функции берите f′ в точке a, а не b. В примере f′(4) = 50, но 1/50 — неверно: g′(4) = 1/f′(1) = 1/5.\n• Для f″ сначала продифференцируйте дважды, потом подставьте число. f(x) = x³ − 6x: f′(x) = 3x² − 6 и f″(x) = 6x, значит, f″(2) = 12. Если сначала подставить x = 2 в f′, получится число 6, а производная числа равна 0: это неверно."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca33q3"
+        }
+      ],
+      "test": { "pool": "C1", "families": ["C1-ap3004", "C1-ap3005"], "n": 3, "first_is_example": true, "test_out": true },
+      "homework": { "pool": "C1", "families": ["C1-ap3004", "C1-ap3005", "C1-r3a006"] },
+      "reserve": null,
+      "extra_link": "C10-APCA03#official",
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s3+P7s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA04-1",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA04",
+      "seq": 1,
+      "skill": "ap_calc_ab:APCA04",
+      "requires": { "math_rung_min": "precalc" },
+      "title": {
+        "en": "AP Calculus AB: Velocity, acceleration and units",
+        "uz": "AP Calculus AB: Tezlik, tezlanish va oʻlchov birliklari",
+        "ru": "AP Calculus AB: Скорость, ускорение и единицы измерения"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "A derivative is a rate of change. Its unit is the output's unit per the input's unit.\nIf W(t) is the water in a tank, in litres, after t minutes, then W′(5) = −3 means: at minute 5 the water goes down by 3 litres per minute.\nFor motion along a line, with position s(t) in metres and t in seconds:\n• velocity v(t) = s′(t), in m/s;\n• acceleration a(t) = v′(t) = s″(t), in m/s².\nThe average velocity from t₁ to t₂ is (s(t₂) − s(t₁))/(t₂ − t₁): the rate over a time span, not at one moment.",
+            "uz": "Hosila — oʻzgarish tezligi. Uning birligi: funksiya qiymatining birligi argument birligiga boʻlingan.\nAgar W(t) — t daqiqadan keyin idishdagi suv (litrda) boʻlsa, W′(5) = −3 shuni bildiradi: 5-daqiqada suv har daqiqada 3 litrga kamaymoqda.\nToʻgʻri chiziq boʻylab harakatda, joylashuv s(t) metrda va t soniyada boʻlsa:\n• tezlik v(t) = s′(t), m/s da;\n• tezlanish a(t) = v′(t) = s″(t), m/s² da.\nt₁ dan t₂ gacha oʻrtacha tezlik (s(t₂) − s(t₁))/(t₂ − t₁): bu bir ondagi emas, vaqt oraligʻidagi tezlik.",
+            "ru": "Производная — это скорость изменения. Её единица измерения — единица значения функции на единицу аргумента.\nЕсли W(t) — объём воды в баке (в литрах) через t минут, то W′(5) = −3 означает: на 5-й минуте воды становится меньше на 3 литра в минуту.\nДля движения по прямой, где положение s(t) в метрах, а время t в секундах:\n• скорость v(t) = s′(t), в м/с;\n• ускорение a(t) = v′(t) = s″(t), в м/с².\nСредняя скорость от t₁ до t₂ равна (s(t₂) − s(t₁))/(t₂ − t₁): это скорость за промежуток, а не в один момент."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca41q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A particle moves along a line. Its position after t seconds is s(t) = 2t³ − 9t² + 4t metres. Find its velocity at t = 4 s.\nv(t) = s′(t) = 6t² − 18t + 4.\nv(4) = 96 − 72 + 4 = 28 m/s.\nIts acceleration: a(t) = v′(t) = 12t − 18, so a(4) = 30 m/s².\nNow you: s(t) = 2t³ − 3t² + 12t metres.\nv(t) = 6t² − 6t + 12 → v(3) = 54 − 18 + 12 = ?",
+            "uz": "Zarracha toʻgʻri chiziq boʻylab harakatlanadi. t soniyadan keyin uning joylashuvi (koordinatasi) s(t) = 2t³ − 9t² + 4t metr. t = 4 s da uning tezligini toping.\nv(t) = s′(t) = 6t² − 18t + 4.\nv(4) = 96 − 72 + 4 = 28 m/s.\nTezlanishi: a(t) = v′(t) = 12t − 18, demak a(4) = 30 m/s².\nEndi siz: s(t) = 2t³ − 3t² + 12t metr.\nv(t) = 6t² − 6t + 12 → v(3) = 54 − 18 + 12 = ?",
+            "ru": "Частица движется по прямой. Её положение через t секунд равно s(t) = 2t³ − 9t² + 4t метров. Найдите её скорость при t = 4 с.\nv(t) = s′(t) = 6t² − 18t + 4.\nv(4) = 96 − 72 + 4 = 28 м/с.\nУскорение: a(t) = v′(t) = 12t − 18, значит, a(4) = 30 м/с².\nТеперь попробуйте сами: s(t) = 2t³ − 3t² + 12t метров.\nv(t) = 6t² − 6t + 12 → v(3) = 54 − 18 + 12 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca41q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Velocity at a moment is s′(t). It is not s(t) ÷ t, and it is not the average velocity over a time span.\ns(t) = t² + 4t metres. From t = 1 to t = 3:\naverage velocity = (s(3) − s(1))/(3 − 1) = (21 − 5)/2 = 8 m/s.\nThe velocity at t = 3 is s′(3) = 2 · 3 + 4 = 10 m/s.\nTwo different questions, two different numbers. Read which one is asked.",
+            "uz": "Bir ondagi tezlik — s′(t). U s(t) ÷ t ham emas, vaqt oraligʻidagi oʻrtacha tezlik ham emas.\ns(t) = t² + 4t metr. t = 1 dan t = 3 gacha:\noʻrtacha tezlik = (s(3) − s(1))/(3 − 1) = (21 − 5)/2 = 8 m/s.\nt = 3 dagi tezlik: s′(3) = 2 · 3 + 4 = 10 m/s.\nIkki xil savol, ikki xil son. Qaysi biri soʻralganini oʻqing.",
+            "ru": "Скорость в момент времени — это s′(t). Это не s(t) ÷ t и не средняя скорость за промежуток.\ns(t) = t² + 4t метров. От t = 1 до t = 3:\nсредняя скорость = (s(3) − s(1))/(3 − 1) = (21 − 5)/2 = 8 м/с.\nСкорость при t = 3: s′(3) = 2 · 3 + 4 = 10 м/с.\nДва разных вопроса — два разных числа. Внимательно читайте, о чём спрашивают."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca41q3"
+        }
+      ],
+      "test": { "pool": "C1", "families": ["C1-ap3006", "C1-ap3007", "C1-clp004"], "n": 3, "first_is_example": true, "test_out": true },
+      "homework": { "pool": "C1", "families": ["C1-ap3006", "C1-ap3007", "C1-clp004"] },
+      "reserve": null,
+      "extra_link": "C10-APCA04#official",
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s3+P7s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA04-2",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA04",
+      "seq": 2,
+      "skill": "ap_calc_ab:APCA04",
+      "requires": { "math_rung_min": "precalc" },
+      "title": {
+        "en": "AP Calculus AB: Related rates",
+        "uz": "AP Calculus AB: Bogʻliq tezliklar (related rates)",
+        "ru": "AP Calculus AB: Связанные скорости (related rates)"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "In a related-rates problem two quantities change with time, and one equation links them. So their rates are linked too.\n1. Write the equation that links the quantities.\n2. Differentiate both sides with respect to time t. Each changing quantity gets its own rate: (x²)′ = 2x · dx/dt.\n3. Only now put in the numbers of that moment.\nExample: a square's side s grows at 3 cm/s. A = s², so dA/dt = 2s · ds/dt. When s = 10 cm, dA/dt = 2 · 10 · 3 = 60 cm²/s.",
+            "uz": "Bogʻliq tezliklar masalasida ikki kattalik vaqt oʻtishi bilan oʻzgaradi va ularni bitta tenglama bogʻlaydi. Demak, ularning oʻzgarish tezliklari ham bogʻliq.\n1. Kattaliklarni bogʻlovchi tenglamani yozing.\n2. Ikkala tomonni vaqt t boʻyicha differensiallang. Har bir oʻzgaruvchi kattalik oʻz tezligini oladi: (x²)′ = 2x · dx/dt.\n3. Faqat shundan keyin oʻsha paytdagi sonlarni qoʻying.\nMisol: kvadratning tomoni s har soniyada 3 sm ga oʻsadi. A = s², demak dA/dt = 2s · ds/dt. s = 10 sm boʻlganda dA/dt = 2 · 10 · 3 = 60 sm²/s.",
+            "ru": "В задаче на связанные скорости две величины меняются со временем, и их связывает одно уравнение. Значит, связаны и их скорости.\n1. Запишите уравнение, связывающее величины.\n2. Продифференцируйте обе части по времени t. Каждая меняющаяся величина получает свою скорость: (x²)′ = 2x · dx/dt.\n3. Только теперь подставьте значения в данный момент.\nПример: сторона квадрата s растёт на 3 см/с. A = s², поэтому dA/dt = 2s · ds/dt. При s = 10 см получаем dA/dt = 2 · 10 · 3 = 60 см²/с."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca42q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A stone falls into a pond. The radius of the circular ripple grows at 3 cm per second. How fast does the area grow when the radius is 20 cm?\nA = πr², so dA/dt = 2πr · dr/dt.\ndA/dt = 2π · 20 · 3 = 120π cm²/s.\nNow you: the radius grows at 5 cm per second. When the radius is 4 cm, the area grows at kπ cm² per second.\ndA/dt = 2π · 4 · 5 = kπ → k = 2 · 4 · 5 = ?",
+            "uz": "Hovuzga tosh tushdi. Aylana shaklidagi toʻlqinning radiusi har soniyada 3 sm ga oʻsmoqda. Radius 20 sm boʻlganda yuza qanchalik tez oʻsadi?\nA = πr², demak dA/dt = 2πr · dr/dt.\ndA/dt = 2π · 20 · 3 = 120π sm²/s.\nEndi siz: radius har soniyada 5 sm ga oʻsadi. Radius 4 sm boʻlganda yuza har soniyada kπ sm² ga oʻsadi.\ndA/dt = 2π · 4 · 5 = kπ → k = 2 · 4 · 5 = ?",
+            "ru": "В пруд упал камень. Радиус круговой волны растёт на 3 см в секунду. Как быстро растёт площадь, когда радиус равен 20 см?\nA = πr², поэтому dA/dt = 2πr · dr/dt.\ndA/dt = 2π · 20 · 3 = 120π см²/с.\nТеперь попробуйте сами: радиус растёт на 5 см в секунду. Когда радиус равен 4 см, площадь растёт на kπ см² в секунду.\ndA/dt = 2π · 4 · 5 = kπ → k = 2 · 4 · 5 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca42q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Put the numbers in only after you differentiate.\nA 10 m ladder leans on a wall. Its foot slides away at 2 m/s. When the foot is 6 m from the wall, the top is 8 m high (6² + 8² = 10²).\nx² + y² = 100 → 2x · dx/dt + 2y · dy/dt = 0.\n2 · 6 · 2 + 2 · 8 · dy/dt = 0 → dy/dt = −24/16 = −1.5.\nThe top slides down at 1.5 m/s. If you put x = 6 in before differentiating, x becomes a fixed number, its rate becomes 0, and the answer is lost.",
+            "uz": "Sonlarni faqat differensiallagandan keyin qoʻying.\n10 m li narvon devorga suyalgan. Uning pastki uchi devordan 2 m/s tezlikda uzoqlashmoqda. Pastki uch devordan 6 m uzoqda boʻlganda, yuqori uch 8 m balandlikda (6² + 8² = 10²).\nx² + y² = 100 → 2x · dx/dt + 2y · dy/dt = 0.\n2 · 6 · 2 + 2 · 8 · dy/dt = 0 → dy/dt = −24/16 = −1,5.\nYuqori uch 1,5 m/s tezlikda pastga sirpanadi. Agar x = 6 ni differensiallashdan oldin qoʻysangiz, x oʻzgarmas songa aylanadi, uning tezligi 0 boʻlib qoladi va javob yoʻqoladi.",
+            "ru": "Подставляйте числа только после дифференцирования.\nЛестница длиной 10 м прислонена к стене. Её нижний конец отъезжает от стены со скоростью 2 м/с. Когда он находится в 6 м от стены, верхний конец — на высоте 8 м (6² + 8² = 10²).\nx² + y² = 100 → 2x · dx/dt + 2y · dy/dt = 0.\n2 · 6 · 2 + 2 · 8 · dy/dt = 0 → dy/dt = −24/16 = −1,5.\nВерхний конец опускается со скоростью 1,5 м/с. Если подставить x = 6 до дифференцирования, x станет постоянным числом, его скорость — нулём, и ответ потеряется."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca42q3"
+        }
+      ],
+      "test": { "pool": "C1", "families": ["C1-ap3008", "C1-clp007"], "n": 3, "first_is_example": true, "test_out": true },
+      "homework": { "pool": "C1", "families": ["C1-ap3008", "C1-clp007", "C1-r3a007"] },
+      "reserve": null,
+      "extra_link": "C10-APCA04#official",
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s3+P7s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA04-3",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA04",
+      "seq": 3,
+      "skill": "ap_calc_ab:APCA04",
+      "requires": { "math_rung_min": "precalc" },
+      "title": {
+        "en": "AP Calculus AB: Linear approximation and L'Hôpital's rule",
+        "uz": "AP Calculus AB: Chiziqli yaqinlashish va Lopital qoidasi",
+        "ru": "AP Calculus AB: Линейное приближение и правило Лопиталя"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Close to x = a, a smooth curve looks like its tangent line. So\nf(x) ≈ f(a) + f′(a)(x − a).\nThis is a local linear approximation: it is good only near a.\nExample: estimate √9.6 with the tangent line to y = √x at x = 9.\nf(9) = 3 and f′(x) = 1/(2√x), so f′(9) = 1/6.\n√9.6 ≈ 3 + (1/6) · 0.6 = 3 + 0.1 = 3.1.\nA calculator gives 3.098…, so the estimate is close.",
+            "uz": "x = a yaqinida silliq egri chiziq oʻz urinmasiga oʻxshaydi. Shuning uchun\nf(x) ≈ f(a) + f′(a)(x − a).\nBu chiziqli yaqinlashish: u faqat a ga yaqin joyda yaxshi ishlaydi.\nMisol: y = √x grafigiga x = 9 nuqtada oʻtkazilgan urinma yordamida √9,6 ni taxminan hisoblang.\nf(9) = 3 va f′(x) = 1/(2√x), demak f′(9) = 1/6.\n√9,6 ≈ 3 + (1/6) · 0,6 = 3 + 0,1 = 3,1.\nKalkulyator 3,098… beradi, demak taxmin juda yaqin.",
+            "ru": "Вблизи x = a гладкая кривая похожа на свою касательную. Поэтому\nf(x) ≈ f(a) + f′(a)(x − a).\nЭто линейное приближение: оно хорошо работает только рядом с a.\nПример: оцените √9,6 с помощью касательной к графику y = √x в точке x = 9.\nf(9) = 3 и f′(x) = 1/(2√x), поэтому f′(9) = 1/6.\n√9,6 ≈ 3 + (1/6) · 0,6 = 3 + 0,1 = 3,1.\nКалькулятор даёт 3,098…, значит, оценка очень близка."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca43q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Use the tangent line to y = √x at x = 25 to estimate √26.\nf(25) = 5 and f′(x) = 1/(2√x), so f′(25) = 1/10 = 0.1.\n√26 ≈ 5 + 0.1 · (26 − 25) = 5.1.\nNow you: estimate √66 with the tangent line at x = 64.\nf(64) = 8 and f′(64) = 1/16 = 0.0625.\n√66 ≈ 8 + 0.0625 · 2 = ?",
+            "uz": "y = √x grafigiga x = 25 nuqtada oʻtkazilgan urinmadan foydalanib, √26 ni taxminan hisoblang.\nf(25) = 5 va f′(x) = 1/(2√x), demak f′(25) = 1/10 = 0,1.\n√26 ≈ 5 + 0,1 · (26 − 25) = 5,1.\nEndi siz: √66 ni x = 64 nuqtadagi urinma yordamida taxminan hisoblang.\nf(64) = 8 va f′(64) = 1/16 = 0,0625.\n√66 ≈ 8 + 0,0625 · 2 = ?",
+            "ru": "С помощью касательной к графику y = √x в точке x = 25 оцените √26.\nf(25) = 5 и f′(x) = 1/(2√x), поэтому f′(25) = 1/10 = 0,1.\n√26 ≈ 5 + 0,1 · (26 − 25) = 5,1.\nТеперь попробуйте сами: оцените √66 с помощью касательной в точке x = 64.\nf(64) = 8 и f′(64) = 1/16 = 0,0625.\n√66 ≈ 8 + 0,0625 · 2 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca43q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out for 0/0. If putting x = a into a fraction gives 0/0, the limit is not 0 and not 1: 0/0 only says \"look closer\".\nL'Hôpital's rule: differentiate the top and the bottom separately (not with the quotient rule), then put x = a in again.\nThe limit of (e^(3x) − 1)/sin(2x) as x → 0: putting x = 0 gives 0/0.\nTop: (e^(3x) − 1)′ = 3e^(3x). Bottom: (sin(2x))′ = 2 cos(2x).\nAt x = 0: 3/2 = 1.5.",
+            "uz": "0/0 dan ehtiyot boʻling. Agar kasrga x = a ni qoʻyganda 0/0 chiqsa, limit 0 ham, 1 ham emas: 0/0 faqat «yaqinroq qarang» degani.\nLopital qoidasi: surat va maxrajni alohida differensiallang (boʻlinmaning hosilasi qoidasi bilan emas), keyin yana x = a ni qoʻying.\nx → 0 da (e^(3x) − 1)/sin(2x) ning limiti: x = 0 ni qoʻysak, 0/0 chiqadi.\nSurat: (e^(3x) − 1)′ = 3e^(3x). Maxraj: (sin(2x))′ = 2 cos(2x).\nx = 0 da: 3/2 = 1,5.",
+            "ru": "Осторожно с 0/0. Если подстановка x = a в дробь даёт 0/0, предел не равен ни 0, ни 1: 0/0 говорит только «посмотрите внимательнее».\nПравило Лопиталя: продифференцируйте числитель и знаменатель отдельно (не по формуле производной частного), затем снова подставьте x = a.\nПредел (e^(3x) − 1)/sin(2x) при x → 0: подстановка x = 0 даёт 0/0.\nЧислитель: (e^(3x) − 1)′ = 3e^(3x). Знаменатель: (sin(2x))′ = 2 cos(2x).\nПри x = 0: 3/2 = 1,5."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca43q3"
+        }
+      ],
+      "test": { "pool": "C1", "families": ["C1-ap3009", "C1-ap3010"], "n": 3, "first_is_example": true, "test_out": true },
+      "homework": { "pool": "C1", "families": ["C1-ap3009", "C1-ap3010", "C1-r3a008"] },
+      "reserve": null,
+      "extra_link": "C10-APCA04#official",
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s3+P7s4",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ],
+  "items": [
+    {
+      "id": "C19-ca31q1", "skill": "math", "rung": "calc", "subskill": "chain_rule", "page": "C19-APCA03-1", "lang": "en",
+      "stem": { "en": "f(x) = (x³ + 2)⁴. What is f′(1)?", "uz": "f(x) = (x³ + 2)⁴. f′(1) nechaga teng?", "ru": "f(x) = (x³ + 2)⁴. Найдите f′(1)." },
+      "options": [{ "en": "324" }, { "en": "108" }, { "en": "972" }, { "en": "81" }],
+      "why": {
+        "en": "f′(x) = 4(x³ + 2)³ · 3x². At x = 1: 4 · 3³ · 3 = 4 · 27 · 3 = 324.",
+        "uz": "f′(x) = 4(x³ + 2)³ · 3x². x = 1 da: 4 · 3³ · 3 = 4 · 27 · 3 = 324.",
+        "ru": "f′(x) = 4(x³ + 2)³ · 3x². При x = 1: 4 · 3³ · 3 = 4 · 27 · 3 = 324."
+      },
+      "prior_b": 1.4, "time_s": 60, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca31q2", "skill": "math", "rung": "calc", "subskill": "chain_rule", "page": "C19-APCA03-1", "lang": "en",
+      "stem": { "en": "f(x) = 7e^(2x) + 3 sin(5x). What is f′(0)?", "uz": "f(x) = 7e^(2x) + 3 sin(5x). f′(0) nechaga teng?", "ru": "f(x) = 7e^(2x) + 3 sin(5x). Найдите f′(0)." },
+      "options": [{ "en": "29" }, { "en": "10" }, { "en": "17" }, { "en": "22" }],
+      "why": {
+        "en": "f′(x) = 14e^(2x) + 15 cos(5x). At x = 0: e⁰ = 1 and cos 0 = 1, so f′(0) = 14 + 15 = 29.",
+        "uz": "f′(x) = 14e^(2x) + 15 cos(5x). x = 0 da: e⁰ = 1 va cos 0 = 1, demak f′(0) = 14 + 15 = 29.",
+        "ru": "f′(x) = 14e^(2x) + 15 cos(5x). При x = 0: e⁰ = 1 и cos 0 = 1, поэтому f′(0) = 14 + 15 = 29."
+      },
+      "prior_b": 1.3, "time_s": 45, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca31q3", "skill": "math", "rung": "calc", "subskill": "chain_rule", "page": "C19-APCA03-1", "lang": "en",
+      "stem": { "en": "f(x) = e^(x²). What is f′(x)?", "uz": "f(x) = e^(x²). f′(x) nimaga teng?", "ru": "f(x) = e^(x²). Найдите f′(x)." },
+      "options": [{ "en": "2x·e^(x²)" }, { "en": "e^(x²)" }, { "en": "e^(2x)" }, { "en": "2x·e^(2x)" }],
+      "why": {
+        "en": "The outside e^u stays e^u; the inside x² gives 2x. So f′(x) = e^(x²) · 2x = 2x·e^(x²).",
+        "uz": "Tashqi e^u oʻzgarmay qoladi, ichki x² dan 2x chiqadi. Demak f′(x) = e^(x²) · 2x = 2x·e^(x²).",
+        "ru": "Производная внешней функции e^u равна e^u, производная внутренней x² — 2x. Значит, f′(x) = e^(x²) · 2x = 2x·e^(x²)."
+      },
+      "prior_b": 1.2, "time_s": 40, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca32q1", "skill": "math", "rung": "calc", "subskill": "implicit_differentiation", "page": "C19-APCA03-2", "lang": "en",
+      "stem": { "en": "On the circle x² + y² = 100, what is dy/dx at the point (6, 8)?", "uz": "x² + y² = 100 aylanada (6, 8) nuqtada dy/dx nechaga teng?", "ru": "Чему равна производная dy/dx на окружности x² + y² = 100 в точке (6, 8)?" },
+      "options": [{ "en": "−3/4" }, { "en": "3/4" }, { "en": "−4/3" }, { "en": "4/3" }],
+      "why": {
+        "en": "2x + 2y·y′ = 0, so y′ = −x/y = −6/8 = −3/4.",
+        "uz": "2x + 2y·y′ = 0, demak y′ = −x/y = −6/8 = −3/4.",
+        "ru": "2x + 2y·y′ = 0, значит, y′ = −x/y = −6/8 = −3/4."
+      },
+      "prior_b": 1.3, "time_s": 45, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca32q2", "skill": "math", "rung": "calc", "subskill": "implicit_differentiation", "page": "C19-APCA03-2", "lang": "en",
+      "stem": { "en": "The curve 3x² + y² = 21 passes through the point (2, 3). What is dy/dx at that point?", "uz": "3x² + y² = 21 egri chizigʻi (2, 3) nuqtadan oʻtadi. Shu nuqtada dy/dx nechaga teng?", "ru": "Кривая 3x² + y² = 21 проходит через точку (2, 3). Чему равна производная dy/dx в этой точке?" },
+      "options": [{ "en": "−2" }, { "en": "2" }, { "en": "−1/2" }, { "en": "−4" }],
+      "why": {
+        "en": "6x + 2y·y′ = 0, so y′ = −3x/y = −3 · 2/3 = −2.",
+        "uz": "6x + 2y·y′ = 0, demak y′ = −3x/y = −3 · 2/3 = −2.",
+        "ru": "6x + 2y·y′ = 0, значит, y′ = −3x/y = −3 · 2/3 = −2."
+      },
+      "prior_b": 1.4, "time_s": 50, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca32q3", "skill": "math", "rung": "calc", "subskill": "implicit_differentiation", "page": "C19-APCA03-2", "lang": "en",
+      "stem": { "en": "On the curve x²y = 20, find dy/dx at the point (2, 5).", "uz": "x²y = 20 egri chizigʻida (2, 5) nuqtada dy/dx ni toping.", "ru": "На кривой x²y = 20 найдите dy/dx в точке (2, 5)." },
+      "options": [{ "en": "−5" }, { "en": "5" }, { "en": "−20" }, { "en": "−5/2" }],
+      "why": {
+        "en": "Product rule: 2xy + x²·y′ = 0, so y′ = −2y/x = −2 · 5/2 = −5.",
+        "uz": "Koʻpaytmaning hosilasi: 2xy + x²·y′ = 0, demak y′ = −2y/x = −2 · 5/2 = −5.",
+        "ru": "Производная произведения: 2xy + x²·y′ = 0, значит, y′ = −2y/x = −2 · 5/2 = −5."
+      },
+      "prior_b": 1.7, "time_s": 60, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca33q1", "skill": "math", "rung": "calc", "subskill": "inverse_derivative", "page": "C19-APCA03-3", "lang": "en",
+      "stem": { "en": "f(2) = 7 and f′(2) = 4. g is the inverse function of f. What is g′(7)?", "uz": "f(2) = 7 va f′(2) = 4. g funksiya f ga teskari. g′(7) nechaga teng?", "ru": "f(2) = 7 и f′(2) = 4. g — функция, обратная к f. Чему равно g′(7)?" },
+      "options": [{ "en": "1/4" }, { "en": "4" }, { "en": "1/7" }, { "en": "1/2" }],
+      "why": {
+        "en": "f(2) = 7, so g(7) = 2 and g′(7) = 1/f′(2) = 1/4.",
+        "uz": "f(2) = 7, demak g(7) = 2 va g′(7) = 1/f′(2) = 1/4.",
+        "ru": "f(2) = 7, поэтому g(7) = 2 и g′(7) = 1/f′(2) = 1/4."
+      },
+      "prior_b": 1.3, "time_s": 40, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca33q2", "skill": "math", "rung": "calc", "subskill": "inverse_derivative", "page": "C19-APCA03-3", "lang": "en",
+      "stem": { "en": "f(x) = x³ + 4x + 10, and g is the inverse function of f. Since f(1) = 15, what is g′(15)?", "uz": "f(x) = x³ + 4x + 10, g esa f ning teskari funksiyasi. f(1) = 15 ekanidan foydalanib, g′(15) ni toping.", "ru": "f(x) = x³ + 4x + 10, а g — функция, обратная к f. Зная, что f(1) = 15, найдите g′(15)." },
+      "options": [{ "en": "1/7" }, { "en": "7" }, { "en": "1/679" }, { "en": "1/15" }],
+      "why": {
+        "en": "f′(x) = 3x² + 4, so f′(1) = 7. Then g′(15) = 1/f′(1) = 1/7.",
+        "uz": "f′(x) = 3x² + 4, demak f′(1) = 7. Unda g′(15) = 1/f′(1) = 1/7.",
+        "ru": "f′(x) = 3x² + 4, поэтому f′(1) = 7. Тогда g′(15) = 1/f′(1) = 1/7."
+      },
+      "prior_b": 1.6, "time_s": 60, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca33q3", "skill": "math", "rung": "calc", "subskill": "second_derivative", "page": "C19-APCA03-3", "lang": "en",
+      "stem": { "en": "f(x) = 2x⁴ − 5x² + 3x. What is f″(1)?", "uz": "f(x) = 2x⁴ − 5x² + 3x. f″(1) nechaga teng?", "ru": "f(x) = 2x⁴ − 5x² + 3x. Найдите f″(1)." },
+      "options": [{ "en": "14" }, { "en": "1" }, { "en": "0" }, { "en": "24" }],
+      "why": {
+        "en": "f′(x) = 8x³ − 10x + 3 and f″(x) = 24x² − 10, so f″(1) = 24 − 10 = 14.",
+        "uz": "f′(x) = 8x³ − 10x + 3 va f″(x) = 24x² − 10, demak f″(1) = 24 − 10 = 14.",
+        "ru": "f′(x) = 8x³ − 10x + 3 и f″(x) = 24x² − 10, поэтому f″(1) = 24 − 10 = 14."
+      },
+      "prior_b": 1.3, "time_s": 50, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca41q1", "skill": "math", "rung": "calc", "subskill": "motion", "page": "C19-APCA04-1", "lang": "en",
+      "stem": { "en": "T(m) is the temperature of a cup of tea, in °C, m minutes after it is poured. What does T′(4) = −2 mean?", "uz": "T(m) — choy quyilgandan m daqiqa oʻtgach uning harorati (°C da). T′(4) = −2 nimani bildiradi?", "ru": "T(m) — температура чая (в °C) через m минут после того, как его налили. Что означает T′(4) = −2?" },
+      "options": [
+        { "en": "At minute 4 it cools 2 °C per minute", "uz": "4-daqiqada daqiqasiga 2 °C sovimoqda", "ru": "На 4-й минуте остывает на 2 °C/мин" },
+        { "en": "After 4 minutes the tea is at −2 °C", "uz": "4 daqiqadan keyin harorat −2 °C", "ru": "Через 4 минуты температура чая −2 °C" },
+        { "en": "It cooled 2 °C in the first 4 minutes", "uz": "Dastlabki 4 daqiqada 2 °C ga sovidi", "ru": "За первые 4 минуты остыл на 2 °C" },
+        { "en": "It needs 4 minutes to cool by 2 °C", "uz": "2 °C ga sovishi uchun 4 daqiqa kerak", "ru": "Чтобы остыть на 2 °C, нужно 4 минуты" }
+      ],
+      "why": {
+        "en": "T′(4) is the rate at the moment m = 4, in °C per minute. −2 means the tea is then cooling by about 2 °C each minute.",
+        "uz": "T′(4) — m = 4 paytdagi oʻzgarish tezligi, °C/daqiqa da. −2 shuni bildiradi: oʻsha paytda choy har daqiqada taxminan 2 °C ga sovimoqda.",
+        "ru": "T′(4) — скорость изменения в момент m = 4, в °C в минуту. −2 означает, что в этот момент чай остывает примерно на 2 °C в минуту."
+      },
+      "prior_b": 0.9, "time_s": 40, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca41q2", "skill": "math", "rung": "calc", "subskill": "motion", "page": "C19-APCA04-1", "lang": "en",
+      "stem": { "en": "A particle's position after t seconds is s(t) = 2t³ − 3t² + 12t metres. What is its velocity at t = 3 s, in m/s?", "uz": "Zarrachaning t soniyadan keyingi joylashuvi (koordinatasi) s(t) = 2t³ − 3t² + 12t metr. t = 3 s da uning tezligi necha m/s?", "ru": "Положение частицы через t секунд равно s(t) = 2t³ − 3t² + 12t метров. Какова её скорость (в м/с) при t = 3 с?" },
+      "options": [{ "en": "48" }, { "en": "63" }, { "en": "21" }, { "en": "30" }],
+      "why": {
+        "en": "v(t) = s′(t) = 6t² − 6t + 12, so v(3) = 54 − 18 + 12 = 48 m/s.",
+        "uz": "v(t) = s′(t) = 6t² − 6t + 12, demak v(3) = 54 − 18 + 12 = 48 m/s.",
+        "ru": "v(t) = s′(t) = 6t² − 6t + 12, поэтому v(3) = 54 − 18 + 12 = 48 м/с."
+      },
+      "prior_b": 1.1, "time_s": 45, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca41q3", "skill": "math", "rung": "calc", "subskill": "average_rate", "page": "C19-APCA04-1", "lang": "en",
+      "stem": { "en": "A ball rolls so that its distance from a wall after t seconds is s(t) = t² + 6t metres. What is its average velocity from t = 1 s to t = 3 s, in m/s?", "uz": "Toʻp shunday dumalaydiki, t soniyadan keyin uning devordan uzoqligi s(t) = t² + 6t metr. t = 1 s dan t = 3 s gacha uning oʻrtacha tezligi necha m/s?", "ru": "Мяч катится так, что через t секунд его расстояние до стены равно s(t) = t² + 6t метров. Какова его средняя скорость (в м/с) от t = 1 с до t = 3 с?" },
+      "options": [{ "en": "10" }, { "en": "12" }, { "en": "20" }, { "en": "9" }],
+      "why": {
+        "en": "Average velocity = (s(3) − s(1))/(3 − 1) = (27 − 7)/2 = 10 m/s.",
+        "uz": "Oʻrtacha tezlik = (s(3) − s(1))/(3 − 1) = (27 − 7)/2 = 10 m/s.",
+        "ru": "Средняя скорость = (s(3) − s(1))/(3 − 1) = (27 − 7)/2 = 10 м/с."
+      },
+      "prior_b": 1.0, "time_s": 50, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca42q1", "skill": "math", "rung": "calc", "subskill": "related_rates", "page": "C19-APCA04-2", "lang": "en",
+      "stem": { "en": "The edge of a cube grows at 2 cm per second. How fast, in cm³ per second, does its volume grow when the edge is 5 cm?", "uz": "Kubning qirrasi har soniyada 2 sm ga oʻsmoqda. Qirra 5 sm boʻlganda kubning hajmi har soniyada necha sm³ ga oʻsadi?", "ru": "Ребро куба растёт на 2 см в секунду. На сколько см³ в секунду растёт объём куба, когда ребро равно 5 см?" },
+      "options": [{ "en": "150" }, { "en": "75" }, { "en": "125" }, { "en": "50" }],
+      "why": {
+        "en": "V = e³, so dV/dt = 3e² · de/dt = 3 · 5² · 2 = 150 cm³ per second.",
+        "uz": "V = e³, demak dV/dt = 3e² · de/dt = 3 · 5² · 2 = 150 sm³/s.",
+        "ru": "V = e³, поэтому dV/dt = 3e² · de/dt = 3 · 5² · 2 = 150 см³ в секунду."
+      },
+      "prior_b": 1.3, "time_s": 50, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca42q2", "skill": "math", "rung": "calc", "subskill": "related_rates", "page": "C19-APCA04-2", "lang": "en",
+      "stem": { "en": "The radius of a circular ripple grows at 5 cm per second. When the radius is 4 cm, the area inside it grows at kπ cm² per second. What is k?", "uz": "Aylana shaklidagi toʻlqinning radiusi har soniyada 5 sm ga oʻsmoqda. Radius 4 sm boʻlganda uning ichidagi yuza har soniyada kπ sm² ga oʻsadi. k nechaga teng?", "ru": "Радиус круговой волны растёт на 5 см в секунду. Когда радиус равен 4 см, площадь внутри неё растёт на kπ см² в секунду. Чему равно k?" },
+      "options": [{ "en": "40" }, { "en": "20" }, { "en": "8" }, { "en": "16" }],
+      "why": {
+        "en": "A = πr², so dA/dt = 2πr · dr/dt = 2π · 4 · 5 = 40π. So k = 40.",
+        "uz": "A = πr², demak dA/dt = 2πr · dr/dt = 2π · 4 · 5 = 40π. Demak, k = 40.",
+        "ru": "A = πr², поэтому dA/dt = 2πr · dr/dt = 2π · 4 · 5 = 40π. Значит, k = 40."
+      },
+      "prior_b": 1.3, "time_s": 50, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca42q3", "skill": "math", "rung": "calc", "subskill": "related_rates", "page": "C19-APCA04-2", "lang": "en",
+      "stem": { "en": "The bottom of a 15 m ladder is pulled away from a wall at 3 m/s, and the top slides down the wall. When the bottom is 12 m from the wall, how fast, in m/s, does the top slide down?", "uz": "15 m li narvonning pastki uchi devordan 3 m/s tezlikda tortilmoqda, yuqori uchi esa devor boʻylab pastga sirpanmoqda. Pastki uch devordan 12 m uzoqda boʻlganda yuqori uch necha m/s tezlikda sirpanadi?", "ru": "Нижний конец лестницы длиной 15 м оттаскивают от стены со скоростью 3 м/с, а верхний конец скользит вниз по стене. С какой скоростью (в м/с) опускается верхний конец, когда нижний находится в 12 м от стены?" },
+      "options": [{ "en": "4" }, { "en": "2.25", "uz": "2,25", "ru": "2,25" }, { "en": "3" }, { "en": "0" }],
+      "why": {
+        "en": "x² + y² = 225, and y = 9 when x = 12. 2x · dx/dt + 2y · dy/dt = 0 → 2 · 12 · 3 + 2 · 9 · dy/dt = 0 → dy/dt = −4. The top falls at 4 m/s.",
+        "uz": "x² + y² = 225, x = 12 da y = 9. 2x · dx/dt + 2y · dy/dt = 0 → 2 · 12 · 3 + 2 · 9 · dy/dt = 0 → dy/dt = −4. Yuqori uch 4 m/s tezlikda tushadi.",
+        "ru": "x² + y² = 225, и при x = 12 получаем y = 9. 2x · dx/dt + 2y · dy/dt = 0 → 2 · 12 · 3 + 2 · 9 · dy/dt = 0 → dy/dt = −4. Верхний конец опускается со скоростью 4 м/с."
+      },
+      "prior_b": 1.8, "time_s": 75, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca43q1", "skill": "math", "rung": "calc", "subskill": "linear_approximation", "page": "C19-APCA04-3", "lang": "en",
+      "stem": { "en": "f(2) = 5 and f′(2) = 3. Use the tangent line at x = 2 to estimate f(2.1).", "uz": "f(2) = 5 va f′(2) = 3. x = 2 nuqtadagi urinma yordamida f(2,1) ni taxminan hisoblang.", "ru": "f(2) = 5 и f′(2) = 3. С помощью касательной в точке x = 2 оцените f(2,1)." },
+      "options": [{ "en": "5.3", "uz": "5,3", "ru": "5,3" }, { "en": "5.1", "uz": "5,1", "ru": "5,1" }, { "en": "11.3", "uz": "11,3", "ru": "11,3" }, { "en": "8" }],
+      "why": {
+        "en": "f(2.1) ≈ f(2) + f′(2)(2.1 − 2) = 5 + 3 · 0.1 = 5.3.",
+        "uz": "f(2,1) ≈ f(2) + f′(2)(2,1 − 2) = 5 + 3 · 0,1 = 5,3.",
+        "ru": "f(2,1) ≈ f(2) + f′(2)(2,1 − 2) = 5 + 3 · 0,1 = 5,3."
+      },
+      "prior_b": 1.0, "time_s": 40, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca43q2", "skill": "math", "rung": "calc", "subskill": "linear_approximation", "page": "C19-APCA04-3", "lang": "en",
+      "stem": { "en": "Use the tangent line to y = √x at x = 64 to estimate √66.", "uz": "y = √x grafigiga x = 64 nuqtada oʻtkazilgan urinmadan foydalanib, √66 ni taxminan hisoblang.", "ru": "С помощью касательной к графику y = √x в точке x = 64 оцените √66." },
+      "options": [{ "en": "8.125", "uz": "8,125", "ru": "8,125" }, { "en": "8.25", "uz": "8,25", "ru": "8,25" }, { "en": "10" }, { "en": "7.875", "uz": "7,875", "ru": "7,875" }],
+      "why": {
+        "en": "f(64) = 8 and f′(64) = 1/(2 · 8) = 0.0625, so √66 ≈ 8 + 0.0625 · 2 = 8.125.",
+        "uz": "f(64) = 8 va f′(64) = 1/(2 · 8) = 0,0625, demak √66 ≈ 8 + 0,0625 · 2 = 8,125.",
+        "ru": "f(64) = 8 и f′(64) = 1/(2 · 8) = 0,0625, поэтому √66 ≈ 8 + 0,0625 · 2 = 8,125."
+      },
+      "prior_b": 1.4, "time_s": 50, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca43q3", "skill": "math", "rung": "calc", "subskill": "lhopital", "page": "C19-APCA04-3", "lang": "en",
+      "stem": { "en": "What is the limit of sin(6x)/(e^(2x) − 1) as x approaches 0?", "uz": "x 0 ga intilganda sin(6x)/(e^(2x) − 1) ning limiti nechaga teng?", "ru": "Чему равен предел sin(6x)/(e^(2x) − 1) при x → 0?" },
+      "options": [{ "en": "3" }, { "en": "0" }, { "en": "1" }, { "en": "1/3" }],
+      "why": {
+        "en": "x = 0 gives 0/0. Differentiate the top and the bottom: 6 cos(6x) and 2e^(2x). At x = 0: 6/2 = 3.",
+        "uz": "x = 0 da 0/0 chiqadi. Surat va maxrajni differensiallaymiz: 6 cos(6x) va 2e^(2x). x = 0 da: 6/2 = 3.",
+        "ru": "При x = 0 получается 0/0. Дифференцируем числитель и знаменатель: 6 cos(6x) и 2e^(2x). При x = 0: 6/2 = 3."
+      },
+      "prior_b": 1.6, "time_s": 50, "source": "own", "author": "agent:p7-a4", "key_check_1": "author", "key_check_2": "blind:P7s3+P7s4", "status": "verified_auto", "version": 1, "key_check_2_version": 1
+    }
+  ]
+}

@@ -1,0 +1,791 @@
+{
+ "bank": "C18",
+ "batch": 30,
+ "items": [
+  {
+   "id": "C18-bim016",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "odam.immunitet",
+   "lang": "uz",
+   "stem": {
+    "uz": "Antitanachalarni qaysi hujayralar ishlab chiqaradi?",
+    "ru": "Какие клетки вырабатывают антитела?"
+   },
+   "options": [
+    {
+     "uz": "plazmatik hujayralar",
+     "ru": "плазматические клетки"
+    },
+    {
+     "uz": "eritrotsitlar",
+     "ru": "эритроциты"
+    },
+    {
+     "uz": "trombotsitlar",
+     "ru": "тромбоциты"
+    },
+    {
+     "uz": "nerv hujayralari",
+     "ru": "нервные клетки"
+    }
+   ],
+   "why": {
+    "en": "Plasma cells derived from B lymphocytes secrete antibodies.",
+    "uz": "Antitanachalarni B-limfotsitlardan hosil boʻlgan plazmatik hujayralar ajratadi.",
+    "ru": "Антитела выделяют плазматические клетки из B-лимфоцитов."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Antibody",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Antibodies are produced by plasma cells derived from B lymphocytes.",
+      "url": "https://en.wikipedia.org/wiki/Antibody"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:p14-content",
+   "key_check_1": "author",
+   "key_check_2": "blind:P14s1+P14s2",
+   "status": "verified_auto",
+   "version": 2,
+   "key_check_2_version": 2
+  },
+  {
+   "id": "C18-bim017",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "botanika.otkazuvchi",
+   "lang": "uz",
+   "stem": {
+    "uz": "Bargda hosil boʻlgan organik moddalar oʻsimlik boʻylab qaysi toʻqima orqali tashiladi?",
+    "ru": "По какой ткани органические вещества, образованные в листьях, передвигаются по растению?"
+   },
+   "options": [
+    {
+     "uz": "floema (lub)",
+     "ru": "по флоэме (лубу)"
+    },
+    {
+     "uz": "ksilema (yogʻochlik)",
+     "ru": "по ксилеме (древесине)"
+    },
+    {
+     "uz": "epidermis",
+     "ru": "по эпидерме"
+    },
+    {
+     "uz": "ildiz tukchalari",
+     "ru": "по корневым волоскам"
+    }
+   ],
+   "why": {
+    "en": "Phloem carries sugars; xylem carries water up.",
+    "uz": "Floema organik moddalarni, ksilema suvni tashiydi.",
+    "ru": "Флоэма несёт органические вещества, ксилема – воду."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Phloem",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Phloem transports the organic compounds made in photosynthesis (mainly sucrose) to the rest of the plant.",
+      "url": "https://en.wikipedia.org/wiki/Phloem"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim018",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "botanika.ochiq_uruglilar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi oʻsimlik ochiq urugʻlilarga kiradi?",
+    "ru": "Какое растение относится к голосеменным?"
+   },
+   "options": [
+    {
+     "uz": "qaragʻay",
+     "ru": "сосна"
+    },
+    {
+     "uz": "olma",
+     "ru": "яблоня"
+    },
+    {
+     "uz": "bugʻdoy",
+     "ru": "пшеница"
+    },
+    {
+     "uz": "lola",
+     "ru": "тюльпан"
+    }
+   ],
+   "why": {
+    "en": "Pine seeds lie open on cone scales; the others are flowering plants.",
+    "uz": "Qaragʻay urugʻi qubba tangachasida ochiq turadi; qolganlari gulli oʻsimliklar.",
+    "ru": "Семена сосны лежат открыто на чешуях шишки; остальные – цветковые."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Gymnosperm",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Gymnosperms (e.g. pines) have seeds not enclosed in an ovary.",
+      "url": "https://en.wikipedia.org/wiki/Gymnosperm"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim019",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "botanika.ildiz",
+   "lang": "uz",
+   "stem": {
+    "uz": "Tuproqdan suv va mineral moddalarni asosan ildizning qaysi qismi soʻradi?",
+    "ru": "Какая часть корня в основном всасывает воду и минеральные вещества из почвы?"
+   },
+   "options": [
+    {
+     "uz": "ildiz tukchalari",
+     "ru": "корневые волоски"
+    },
+    {
+     "uz": "ildiz qini",
+     "ru": "корневой чехлик"
+    },
+    {
+     "uz": "oʻtkazuvchi zona",
+     "ru": "зона проведения"
+    },
+    {
+     "uz": "boʻlinish zonasi",
+     "ru": "зона деления"
+    }
+   ],
+   "why": {
+    "en": "Root hairs give a large surface for absorption.",
+    "uz": "Ildiz tukchalari soʻrish yuzasini oshiradi.",
+    "ru": "Корневые волоски увеличивают поверхность всасывания."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Root_hair",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Root hairs absorb water and minerals.",
+      "url": "https://en.wikipedia.org/wiki/Root_hair"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim020",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "zoologiya.orgimchaksimonlar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Oʻrgimchakning nechta yurish oyogʻi bor?",
+    "ru": "Сколько ходильных ног у паука?"
+   },
+   "options": [
+    {
+     "uz": "8",
+     "ru": "8"
+    },
+    {
+     "uz": "6",
+     "ru": "6"
+    },
+    {
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "uz": "4",
+     "ru": "4"
+    }
+   ],
+   "why": {
+    "en": "Spiders are arachnids: eight legs; insects have six.",
+    "uz": "Oʻrgimchak oʻrgimchaksimonlarga kiradi: 8 oyoq; hasharotlarda 6.",
+    "ru": "Паук – паукообразное: 8 ног; у насекомых 6."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Arachnid",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Arachnids (e.g. spiders) have eight legs.",
+      "url": "https://en.wikipedia.org/wiki/Arachnid"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim021",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "zoologiya.qushlar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qushlar yuragi nechta kamerali?",
+    "ru": "Сколько камер в сердце птиц?"
+   },
+   "options": [
+    {
+     "uz": "4",
+     "ru": "4"
+    },
+    {
+     "uz": "3",
+     "ru": "3"
+    },
+    {
+     "uz": "2",
+     "ru": "2"
+    },
+    {
+     "uz": "5",
+     "ru": "5"
+    }
+   ],
+   "why": {
+    "en": "Birds have a four-chambered heart and are warm-blooded.",
+    "uz": "Qushlar yuragi 4 kamerali, ular issiqqonli.",
+    "ru": "У птиц четырёхкамерное сердце, они теплокровные."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bird_anatomy",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Birds have a four-chambered heart.",
+      "url": "https://en.wikipedia.org/wiki/Bird_anatomy"
+     },
+     {
+      "claim": "Birds are warm-blooded.",
+      "url": "https://en.wikipedia.org/wiki/Bird"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim022",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "zoologiya.boshliqichlilar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Gidrada oʻljani falajlovchi qanday hujayralar bor?",
+    "ru": "Какие клетки гидры парализуют добычу?"
+   },
+   "options": [
+    {
+     "uz": "otuvchi (achituvchi) hujayralar",
+     "ru": "стрекательные клетки"
+    },
+    {
+     "uz": "nerv hujayralari",
+     "ru": "нервные клетки"
+    },
+    {
+     "uz": "hazm qiluvchi hujayralar",
+     "ru": "пищеварительные клетки"
+    },
+    {
+     "uz": "oraliq hujayralar",
+     "ru": "промежуточные клетки"
+    }
+   ],
+   "why": {
+    "en": "Stinging cells (cnidocytes) shoot a thread that paralyses prey.",
+    "uz": "Otuvchi hujayralar ip otib, oʻljani falajlaydi.",
+    "ru": "Стрекательные клетки выбрасывают нить и парализуют добычу."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Hydra_(genus)",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Hydra uses stinging cells (cnidocytes with nematocysts) on its tentacles to paralyse prey.",
+      "url": "https://en.wikipedia.org/wiki/Hydra_(genus)"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim023",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "ekologiya.oziq_zanjiri",
+   "lang": "uz",
+   "stem": {
+    "uz": "Oziq zanjirida produtsentlar (hosil qiluvchilar) kimlar?",
+    "ru": "Кто является продуцентами в цепи питания?"
+   },
+   "options": [
+    {
+     "uz": "yashil oʻsimliklar",
+     "ru": "зелёные растения"
+    },
+    {
+     "uz": "yirtqich hayvonlar",
+     "ru": "хищники"
+    },
+    {
+     "uz": "zamburugʻlar",
+     "ru": "грибы"
+    },
+    {
+     "uz": "oʻtxoʻr hayvonlar",
+     "ru": "травоядные"
+    }
+   ],
+   "why": {
+    "en": "Green plants make organic matter by photosynthesis: producers.",
+    "uz": "Yashil oʻsimliklar fotosintez bilan organik modda hosil qiladi.",
+    "ru": "Зелёные растения создают органику фотосинтезом."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Autotroph",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Autotrophs such as green plants are producers in food chains.",
+      "url": "https://en.wikipedia.org/wiki/Autotroph"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim024",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "ekologiya.redutsentlar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Organik qoldiqlarni parchalovchi redutsentlarga qaysilar kiradi?",
+    "ru": "Кто относится к редуцентам, разлагающим органические остатки?"
+   },
+   "options": [
+    {
+     "uz": "bakteriyalar va zamburugʻlar",
+     "ru": "бактерии и грибы"
+    },
+    {
+     "uz": "yashil oʻsimliklar",
+     "ru": "зелёные растения"
+    },
+    {
+     "uz": "qushlar",
+     "ru": "птицы"
+    },
+    {
+     "uz": "yirtqich baliqlar",
+     "ru": "хищные рыбы"
+    }
+   ],
+   "why": {
+    "en": "Bacteria and fungi break down dead matter.",
+    "uz": "Bakteriyalar va zamburugʻlar oʻlik qoldiqlarni parchalaydi.",
+    "ru": "Бактерии и грибы разлагают мёртвую органику."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Decomposer",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Bacteria and fungi are decomposers.",
+      "url": "https://en.wikipedia.org/wiki/Decomposer"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim025",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "evolyutsiya.gomologiya",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi juftlik gomologik aʼzolarga misol boʻladi?",
+    "ru": "Какая пара – пример гомологичных органов?"
+   },
+   "options": [
+    {
+     "uz": "koʻrshapalak qanoti va odam qoʻli",
+     "ru": "крыло летучей мыши и рука человека"
+    },
+    {
+     "uz": "kapalak qanoti va qush qanoti",
+     "ru": "крыло бабочки и крыло птицы"
+    },
+    {
+     "uz": "baliq jabrasi va odam oʻpkasi",
+     "ru": "жабры рыбы и лёгкие человека"
+    },
+    {
+     "uz": "kartoshka tuganagi va sabzi ildizmevasi",
+     "ru": "клубень картофеля и корнеплод моркови"
+    }
+   ],
+   "why": {
+    "en": "Bat wing and human arm share an origin but differ in use: homologous.",
+    "uz": "Koʻrshapalak qanoti va odam qoʻli kelib chiqishi bir: gomologik.",
+    "ru": "Крыло летучей мыши и рука человека имеют общее происхождение."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Homology_(biology)",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Homologous organs (e.g. a bat wing and a human arm) share a common origin.",
+      "url": "https://en.wikipedia.org/wiki/Homology_(biology)"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim026",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "ekologiya.biosfera",
+   "lang": "uz",
+   "stem": {
+    "uz": "Biosfera haqidagi taʼlimotni XX asrning 1920-yillarida kim ishlab chiqqan?",
+    "ru": "Кто в 1920-х годах разработал учение о биосфере?"
+   },
+   "options": [
+    {
+     "uz": "V. I. Vernadskiy",
+     "ru": "В. И. Вернадский"
+    },
+    {
+     "uz": "Ch. Darvin",
+     "ru": "Ч. Дарвин"
+    },
+    {
+     "uz": "G. Mendel",
+     "ru": "Г. Мендель"
+    },
+    {
+     "uz": "K. Linney",
+     "ru": "К. Линней"
+    }
+   ],
+   "why": {
+    "en": "Vernadsky developed the ecological concept of the biosphere in the 1920s.",
+    "uz": "Biosfera taʼlimotini Vernadskiy 1920-yillarda yaratgan.",
+    "ru": "Учение о биосфере создал Вернадский в 1920-х."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Biosphere",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Vladimir Vernadsky developed the ecological concept of the biosphere in the 1920s.",
+      "url": "https://en.wikipedia.org/wiki/Biosphere"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim027",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "mikrobiologiya.bijgish",
+   "lang": "uz",
+   "stem": {
+    "uz": "Achitqi zamburugʻlari glyukozani bijgʻitganda qanday mahsulotlar hosil boʻladi?",
+    "ru": "Какие продукты образуются при спиртовом брожении глюкозы дрожжами?"
+   },
+   "options": [
+    {
+     "uz": "etil spirti va karbonat angidrid",
+     "ru": "этиловый спирт и углекислый газ"
+    },
+    {
+     "uz": "sut kislotasi va suv",
+     "ru": "молочная кислота и вода"
+    },
+    {
+     "uz": "kraxmal va kislorod",
+     "ru": "крахмал и кислород"
+    },
+    {
+     "uz": "oqsil va azot",
+     "ru": "белок и азот"
+    }
+   ],
+   "why": {
+    "en": "Yeast turns glucose into ethanol and CO2.",
+    "uz": "Achitqi glyukozani etil spirti va CO₂ ga aylantiradi.",
+    "ru": "Дрожжи превращают глюкозу в этанол и CO₂."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ethanol_fermentation",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Yeast ferments glucose into ethanol and carbon dioxide.",
+      "url": "https://en.wikipedia.org/wiki/Ethanol_fermentation"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim028",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "mikrobiologiya.vaksina",
+   "lang": "uz",
+   "stem": {
+    "uz": "1796-yilda chechakka qarshi birinchi emlashni kim oʻtkazgan?",
+    "ru": "Кто в 1796 году провёл первую прививку против оспы?"
+   },
+   "options": [
+    {
+     "uz": "Edvard Jenner",
+     "ru": "Эдвард Дженнер"
+    },
+    {
+     "uz": "Lui Paster",
+     "ru": "Луи Пастер"
+    },
+    {
+     "uz": "Aleksandr Fleming",
+     "ru": "Александр Флеминг"
+    },
+    {
+     "uz": "Robert Kox",
+     "ru": "Роберт Кох"
+    }
+   ],
+   "why": {
+    "en": "Jenner inoculated James Phipps with cowpox in 1796.",
+    "uz": "Jenner 1796-yilda Jeyms Fippsga sigir chechagini emlagan.",
+    "ru": "В 1796 году Дженнер привил Джеймсу Фиппсу коровью оспу."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Edward_Jenner",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "In 1796 Edward Jenner inoculated James Phipps with cowpox, protecting him from smallpox.",
+      "url": "https://en.wikipedia.org/wiki/Edward_Jenner"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim029",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "odam.immunitet",
+   "lang": "uz",
+   "stem": {
+    "uz": "OIV (VICH) asosan qaysi hujayralarni zararlaydi?",
+    "ru": "Какие клетки в первую очередь поражает ВИЧ?"
+   },
+   "options": [
+    {
+     "uz": "T-limfotsit-xelperlarni (CD4)",
+     "ru": "T-хелперы (CD4)"
+    },
+    {
+     "uz": "eritrotsitlarni",
+     "ru": "эритроциты"
+    },
+    {
+     "uz": "trombotsitlarni",
+     "ru": "тромбоциты"
+    },
+    {
+     "uz": "jigar hujayralarini",
+     "ru": "клетки печени"
+    }
+   ],
+   "why": {
+    "en": "HIV infects CD4+ helper T cells.",
+    "uz": "OIV CD4+ T-xelperlarni zararlaydi.",
+    "ru": "ВИЧ поражает CD4+ T-хелперы."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/HIV",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "HIV infects helper T cells (CD4+ T cells).",
+      "url": "https://en.wikipedia.org/wiki/HIV"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim030",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "molekulyar.chargaff",
+   "lang": "uz",
+   "stem": {
+    "uz": "DNK molekulasidagi nukleotidlarning 15 % i timinli. Sitozinli nukleotidlar necha foiz?",
+    "ru": "Тимидиловые нуклеотиды составляют 15 % нуклеотидов ДНК. Сколько процентов составляют цитидиловые?"
+   },
+   "options": [
+    {
+     "uz": "35",
+     "ru": "35"
+    },
+    {
+     "uz": "15",
+     "ru": "15"
+    },
+    {
+     "uz": "70",
+     "ru": "70"
+    },
+    {
+     "uz": "85",
+     "ru": "85"
+    }
+   ],
+   "why": {
+    "en": "T = A = 15 %, so C + G = 70 % and C = 35 %.",
+    "uz": "T = A = 15 %, C + G = 70 %, C = 35 %.",
+    "ru": "T = A = 15 %, C + G = 70 %, C = 35 %."
+   },
+   "prior_b": 0.0,
+   "time_s": 40,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Chargaff%27s_rules",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "In double-stranded DNA, A% = T% and G% = C%.",
+      "url": "https://en.wikipedia.org/wiki/Chargaff%27s_rules"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

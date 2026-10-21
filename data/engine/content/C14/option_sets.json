@@ -1,0 +1,588 @@
+{
+  "bank": "C14",
+  "kind": "option_sets",
+  "note": "Shared answer chips for the C14 reflection and MCII prompts (P5 spec §5.3 C14). Items reference a set by `options_ref`. Every label is uz/ru/en. `other` always opens a short text field. Answers are self-reports, never graded, and never sent to the AI (D14 (5): no free-text or family answers reach the model).",
+  "sets": {
+    "obstacle_inner": {
+      "use": "MCII step 3 for S2-S4: obstacles inside the student (a habit, feeling or thought), as the method asks, not outside circumstances.",
+      "options": [
+        {
+          "id": "phone",
+          "en": "I pick up my phone first",
+          "uz": "Avval telefonni qoʻlga olaman",
+          "ru": "Первым делом беру телефон",
+          "if_form": {
+            "en": "I pick up my phone first",
+            "uz": "avval telefonni qoʻlga olsam",
+            "ru": "я первым делом возьму телефон"
+          }
+        },
+        {
+          "id": "tired",
+          "en": "I feel too tired after school",
+          "uz": "Maktabdan keyin juda charchagan boʻlaman",
+          "ru": "После школы у меня нет сил",
+          "if_form": {
+            "en": "I feel too tired after school",
+            "uz": "maktabdan keyin juda charchasam",
+            "ru": "после школы у меня не будет сил"
+          }
+        },
+        {
+          "id": "put_off",
+          "en": "I put off the hard part",
+          "uz": "Qiyin qismini keyinga qoldiraman",
+          "ru": "Откладываю самое трудное",
+          "if_form": {
+            "en": "I start putting off the hard part",
+            "uz": "qiyin qismini keyinga qoldira boshlasam",
+            "ru": "я начну откладывать самое трудное"
+          }
+        },
+        {
+          "id": "give_up",
+          "en": "I stop when a question gets hard",
+          "uz": "Savol qiyinlashsa, toʻxtab qolaman",
+          "ru": "Бросаю, когда вопрос становится трудным",
+          "if_form": {
+            "en": "a question gets hard and I want to stop",
+            "uz": "savol qiyinlashib, toʻxtagim kelsa",
+            "ru": "вопрос станет трудным и захочется бросить"
+          }
+        },
+        {
+          "id": "no_start",
+          "en": "I don't know where to start",
+          "uz": "Nimadan boshlashni bilmayman",
+          "ru": "Не знаю, с чего начать",
+          "if_form": {
+            "en": "I don't know where to start",
+            "uz": "nimadan boshlashni bilmasam",
+            "ru": "я не буду знать, с чего начать"
+          }
+        },
+        {
+          "id": "not_good_enough",
+          "en": "I worry it won't be good enough",
+          "uz": "Yetarlicha yaxshi chiqmaydi, deb xavotir olaman",
+          "ru": "Боюсь, что получится недостаточно хорошо",
+          "if_form": {
+            "en": "I worry it won't be good enough",
+            "uz": "yetarlicha yaxshi chiqmaydi, deb xavotir olsam",
+            "ru": "я начну бояться, что получится недостаточно хорошо"
+          }
+        },
+        {
+          "id": "forget",
+          "en": "I forget until it's too late",
+          "uz": "Kech boʻlguncha esimdan chiqib qoladi",
+          "ru": "Забываю, пока не станет поздно",
+          "if_form": {
+            "en": "it is late and I haven't started",
+            "uz": "kech boʻlib, hali boshlamagan boʻlsam",
+            "ru": "уже поздно, а я ещё не начал(а)"
+          }
+        },
+        {
+          "id": "other",
+          "en": "Something else (write it)",
+          "uz": "Boshqa narsa (yozing)",
+          "ru": "Другое (напишите)"
+        }
+      ]
+    },
+    "obstacle_inner_kid": {
+      "use": "MCII step 3 for S1 (ages about 10-13): short, concrete, no school-pressure wording.",
+      "options": [
+        {
+          "id": "play_first",
+          "en": "I want to play first",
+          "uz": "Avval oʻynagim keladi",
+          "ru": "Сначала хочется поиграть",
+          "if_form": {
+            "en": "I want to play first",
+            "uz": "avval oʻynagim kelsa",
+            "ru": "мне захочется сначала поиграть"
+          }
+        },
+        {
+          "id": "tired",
+          "en": "I'm tired",
+          "uz": "Charchagan boʻlaman",
+          "ru": "Я устаю",
+          "if_form": {
+            "en": "I'm tired",
+            "uz": "charchagan boʻlsam",
+            "ru": "я устану"
+          }
+        },
+        {
+          "id": "boring",
+          "en": "It feels boring",
+          "uz": "Zerikarli tuyuladi",
+          "ru": "Кажется скучным",
+          "if_form": {
+            "en": "it feels boring",
+            "uz": "zerikarli tuyulsa",
+            "ru": "станет скучно"
+          }
+        },
+        {
+          "id": "too_hard",
+          "en": "It feels too hard",
+          "uz": "Juda qiyin tuyuladi",
+          "ru": "Кажется слишком трудным",
+          "if_form": {
+            "en": "it feels too hard",
+            "uz": "juda qiyin tuyulsa",
+            "ru": "покажется слишком трудно"
+          }
+        },
+        {
+          "id": "forget",
+          "en": "I forget",
+          "uz": "Esimdan chiqib qoladi",
+          "ru": "Забываю",
+          "if_form": {
+            "en": "it is evening and I haven't started",
+            "uz": "kech kirib, hali boshlamagan boʻlsam",
+            "ru": "уже вечер, а я ещё не начал(а)"
+          }
+        },
+        {
+          "id": "other",
+          "en": "Something else (write it)",
+          "uz": "Boshqa narsa (yozing)",
+          "ru": "Другое (напишите)"
+        }
+      ]
+    },
+    "time": {
+      "use": "When-and-where steps. Deliberately no late-night option: quiet hours and sleep come first (spec §4.5, §4.7).",
+      "options": [
+        {
+          "id": "before_school",
+          "en": "In the morning, before school",
+          "uz": "Ertalab, maktabdan oldin",
+          "ru": "Утром, до школы"
+        },
+        {
+          "id": "after_school",
+          "en": "Right after school",
+          "uz": "Maktabdan keyinoq",
+          "ru": "Сразу после школы"
+        },
+        {
+          "id": "before_dinner",
+          "en": "Before dinner",
+          "uz": "Kechki ovqatdan oldin",
+          "ru": "До ужина"
+        },
+        {
+          "id": "after_dinner",
+          "en": "After dinner",
+          "uz": "Kechki ovqatdan keyin",
+          "ru": "После ужина"
+        },
+        {
+          "id": "weekend",
+          "en": "On Saturday or Sunday",
+          "uz": "Shanba yoki yakshanba kuni",
+          "ru": "В субботу или воскресенье"
+        },
+        {
+          "id": "other",
+          "en": "Another time (write it)",
+          "uz": "Boshqa vaqt (yozing)",
+          "ru": "Другое время (напишите)"
+        }
+      ]
+    },
+    "place": {
+      "use": "When-and-where steps.",
+      "options": [
+        {
+          "id": "home_table",
+          "en": "At home, at my table",
+          "uz": "Uyda, oʻz stolimda",
+          "ru": "Дома, за своим столом"
+        },
+        {
+          "id": "home_quiet",
+          "en": "At home, in a quiet room",
+          "uz": "Uyda, tinch xonada",
+          "ru": "Дома, в тихой комнате"
+        },
+        {
+          "id": "school",
+          "en": "At school, after lessons",
+          "uz": "Maktabda, darsdan keyin",
+          "ru": "В школе, после уроков"
+        },
+        {
+          "id": "library",
+          "en": "In a library",
+          "uz": "Kutubxonada",
+          "ru": "В библиотеке"
+        },
+        {
+          "id": "on_the_way",
+          "en": "On the way (bus, metro)",
+          "uz": "Yoʻlda (avtobus, metro)",
+          "ru": "В дороге (автобус, метро)"
+        },
+        {
+          "id": "other",
+          "en": "Somewhere else (write it)",
+          "uz": "Boshqa joyda (yozing)",
+          "ru": "В другом месте (напишите)"
+        }
+      ]
+    },
+    "mistake_type": {
+      "use": "Mistake review (C14-ref-errorlog). One label per missed practice question.",
+      "options": [
+        {
+          "id": "didnt_know",
+          "en": "I didn't know the rule or idea",
+          "uz": "Qoida yoki gʻoyani bilmas edim",
+          "ru": "Не знал(а) правила или идеи"
+        },
+        {
+          "id": "misread",
+          "en": "I misread the question",
+          "uz": "Savolni notoʻgʻri oʻqidim",
+          "ru": "Неверно прочитан вопрос"
+        },
+        {
+          "id": "rushed",
+          "en": "I rushed",
+          "uz": "Shoshildim",
+          "ru": "Спешка"
+        },
+        {
+          "id": "slip",
+          "en": "A small slip (sign, copying, a sum)",
+          "uz": "Kichik xato (ishora, koʻchirish, hisob)",
+          "ru": "Мелкая ошибка (знак, переписывание, счёт)"
+        },
+        {
+          "id": "two_options",
+          "en": "I was stuck between two options",
+          "uz": "Ikki variant orasida ikkilanib qoldim",
+          "ru": "Колебание между двумя вариантами"
+        },
+        {
+          "id": "time",
+          "en": "I ran out of time",
+          "uz": "Vaqtim yetmadi",
+          "ru": "Не хватило времени"
+        }
+      ]
+    },
+    "plan_result": {
+      "use": "Plan check (C14-ref-plan-check), step 1.",
+      "options": [
+        {
+          "id": "worked",
+          "en": "Yes, I used it and it worked",
+          "uz": "Ha, qoʻlladim va u ish berdi",
+          "ru": "Да, я его применил(а), и он сработал"
+        },
+        {
+          "id": "partly",
+          "en": "Partly",
+          "uz": "Qisman",
+          "ru": "Отчасти"
+        },
+        {
+          "id": "not_used",
+          "en": "No, I didn't use it",
+          "uz": "Yoʻq, qoʻllamadim",
+          "ru": "Нет, я его не применил(а)"
+        },
+        {
+          "id": "not_needed",
+          "en": "The obstacle didn't come up",
+          "uz": "Toʻsiq umuman paydo boʻlmadi",
+          "ru": "Препятствие так и не возникло"
+        }
+      ]
+    },
+    "goal_result": {
+      "use": "Plan check, step 2.",
+      "options": [
+        {
+          "id": "done",
+          "en": "Done",
+          "uz": "Bajarildi",
+          "ru": "Сделано"
+        },
+        {
+          "id": "partly",
+          "en": "Partly done",
+          "uz": "Qisman bajarildi",
+          "ru": "Сделано частично"
+        },
+        {
+          "id": "not_yet",
+          "en": "Not yet",
+          "uz": "Hali emas",
+          "ru": "Пока нет"
+        }
+      ]
+    },
+    "deadline_status": {
+      "use": "Deadline check (C14-ref-deadline-check), one per dated item.",
+      "options": [
+        {
+          "id": "done",
+          "en": "Done",
+          "uz": "Bajarildi",
+          "ru": "Сделано"
+        },
+        {
+          "id": "on_track",
+          "en": "On track",
+          "uz": "Reja boʻyicha ketyapti",
+          "ru": "Идёт по плану"
+        },
+        {
+          "id": "not_started",
+          "en": "Not started yet",
+          "uz": "Hali boshlanmagan",
+          "ru": "Ещё не начато"
+        },
+        {
+          "id": "need_help",
+          "en": "I need help with this",
+          "uz": "Bunda yordam kerak",
+          "ru": "Нужна помощь"
+        }
+      ]
+    },
+    "energy_scale": {
+      "use": "Energy check (C14-ref-energy). Scale 1-5; labels for 1, 3 and 5 only.",
+      "labels": {
+        "1": {
+          "en": "Very low",
+          "uz": "Juda past",
+          "ru": "Очень мало"
+        },
+        "3": {
+          "en": "Okay",
+          "uz": "Oʻrtacha",
+          "ru": "Средне"
+        },
+        "5": {
+          "en": "Plenty",
+          "uz": "Juda koʻp",
+          "ru": "Очень много"
+        }
+      }
+    },
+    "sleep_hours": {
+      "use": "Energy check, step 2.",
+      "options": [
+        {
+          "id": "lt6",
+          "en": "Less than 6 hours",
+          "uz": "6 soatdan kam",
+          "ru": "Меньше 6 часов"
+        },
+        {
+          "id": "h6_7",
+          "en": "6-7 hours",
+          "uz": "6–7 soat",
+          "ru": "6–7 часов"
+        },
+        {
+          "id": "h7_8",
+          "en": "7-8 hours",
+          "uz": "7–8 soat",
+          "ru": "7–8 часов"
+        },
+        {
+          "id": "h8_10",
+          "en": "8-10 hours",
+          "uz": "8–10 soat",
+          "ru": "8–10 часов"
+        },
+        {
+          "id": "gt10",
+          "en": "More than 10 hours",
+          "uz": "10 soatdan koʻp",
+          "ru": "Больше 10 часов"
+        }
+      ]
+    },
+    "load_feel": {
+      "use": "Energy check, step 3.",
+      "options": [
+        {
+          "id": "too_little",
+          "en": "Too easy or too few",
+          "uz": "Juda oson yoki juda kam",
+          "ru": "Слишком легко или мало"
+        },
+        {
+          "id": "about_right",
+          "en": "About right",
+          "uz": "Meʼyorida",
+          "ru": "В самый раз"
+        },
+        {
+          "id": "too_much",
+          "en": "Too much",
+          "uz": "Juda koʻp",
+          "ru": "Слишком много"
+        }
+      ]
+    },
+    "recharge": {
+      "use": "Rest-day prompt C14-rest-recharge (multi-choice).",
+      "options": [
+        {
+          "id": "sleep",
+          "en": "Sleep",
+          "uz": "Uyqu",
+          "ru": "Сон"
+        },
+        {
+          "id": "sport",
+          "en": "Sport or moving",
+          "uz": "Sport yoki harakat",
+          "ru": "Спорт или движение"
+        },
+        {
+          "id": "friends",
+          "en": "Time with friends",
+          "uz": "Doʻstlar bilan vaqt",
+          "ru": "Время с друзьями"
+        },
+        {
+          "id": "family",
+          "en": "Time with family",
+          "uz": "Oila bilan vaqt",
+          "ru": "Время с семьёй"
+        },
+        {
+          "id": "outside",
+          "en": "Being outside",
+          "uz": "Ochiq havoda boʻlish",
+          "ru": "Время на улице"
+        },
+        {
+          "id": "hobby",
+          "en": "A hobby (music, drawing, games, cooking)",
+          "uz": "Sevimli mashgʻulot (musiqa, rasm, oʻyin, pazandalik)",
+          "ru": "Хобби (музыка, рисование, игры, готовка)"
+        },
+        {
+          "id": "reading",
+          "en": "Reading for fun",
+          "uz": "Zavq uchun oʻqish",
+          "ru": "Чтение для удовольствия"
+        },
+        {
+          "id": "quiet",
+          "en": "Quiet time alone",
+          "uz": "Yolgʻiz, tinch vaqt",
+          "ru": "Тихое время наедине с собой"
+        },
+        {
+          "id": "other",
+          "en": "Something else (write it)",
+          "uz": "Boshqa narsa (yozing)",
+          "ru": "Другое (напишите)"
+        }
+      ]
+    },
+    "restart_reason": {
+      "use": "Restart day (C14-evt-restart). Answering is optional.",
+      "options": [
+        {
+          "id": "school",
+          "en": "Too much schoolwork",
+          "uz": "Maktab vazifalari juda koʻp edi",
+          "ru": "Слишком много школьных заданий"
+        },
+        {
+          "id": "tired_unwell",
+          "en": "I was tired or unwell",
+          "uz": "Charchagan yoki betob edim",
+          "ru": "Не было сил или я болел(а)"
+        },
+        {
+          "id": "plans",
+          "en": "Family or other plans",
+          "uz": "Oilaviy yoki boshqa rejalar",
+          "ru": "Семейные или другие планы"
+        },
+        {
+          "id": "forgot",
+          "en": "I forgot",
+          "uz": "Esimdan chiqdi",
+          "ru": "Забыл(а)"
+        },
+        {
+          "id": "no_mood",
+          "en": "I didn't feel like it",
+          "uz": "Koʻnglim tortmadi",
+          "ru": "Не было настроения"
+        },
+        {
+          "id": "other",
+          "en": "Something else (write it)",
+          "uz": "Boshqa narsa (yozing)",
+          "ru": "Другое (напишите)"
+        }
+      ]
+    },
+    "talk_to": {
+      "use": "Setback prompt (C14-evt-setback): who to talk it through with.",
+      "options": [
+        {
+          "id": "parent",
+          "en": "A parent",
+          "uz": "Ota-onam",
+          "ru": "Родитель"
+        },
+        {
+          "id": "teacher",
+          "en": "A teacher",
+          "uz": "Oʻqituvchi",
+          "ru": "Учитель"
+        },
+        {
+          "id": "mentor",
+          "en": "My Jamals mentor",
+          "uz": "Jamals mentorim",
+          "ru": "Мой ментор Jamals"
+        },
+        {
+          "id": "friend",
+          "en": "A friend",
+          "uz": "Doʻstim",
+          "ru": "Друг или подруга"
+        },
+        {
+          "id": "not_now",
+          "en": "No one for now",
+          "uz": "Hozircha hech kim",
+          "ru": "Пока ни с кем"
+        }
+      ]
+    }
+  },
+  "if_then_render": {
+    "en": "If {if}, then I will {then}.",
+    "uz": "Agar {if}, unda men {then}.",
+    "ru": "Если {if}, то я {then}.",
+    "note": "if_form is the chip already shaped for the if-clause (lower case, conditional in uz). A typed obstacle is used as written."
+  },
+  "factcheck": {
+    "verified_at": "2026-10-07",
+    "note": "translation check of every chip: mistake_type.didnt_know ru was present tense (\"Не знаю\"), now past like en and uz (\"Не знал(а)\"); talk_to.not_now en said \"Not now\" where uz and ru say \"nobody for now\", now \"No one for now\" (the id stays not_now). No facts, dates or URLs in this file; sleep_hours bands are answer ranges, not guidance."
+  }
+}

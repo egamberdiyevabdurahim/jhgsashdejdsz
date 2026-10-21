@@ -1,0 +1,2825 @@
+{
+ "bank": "C10",
+ "batch": 3,
+ "kind": "catalog",
+ "note": "Test-prep units (P5 spec §5.3 C10). Catalog records, not quiz items: no options or keys. 'practice[].where' is a tag query against the practice pools (C1, C2, C3, C5, C6, C7); subskill values are proposed tags the integrator maps onto each stream's vocabulary, falling back to 'fallback_where'. End-of-unit checks draw only from practice pools, never from the K assessment banks. Official links are links only. Pass marks are design defaults to tune from logs (spec §4.5), not evidence-based thresholds.",
+ "items": [
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IELI01",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "listening",
+   "skill_label": {
+    "en": "Listening",
+    "uz": "Listening (tinglab tushunish)",
+    "ru": "Listening (аудирование)"
+   },
+   "unit": 1,
+   "units_in_skill": 6,
+   "level_band": "foundation",
+   "title": {
+    "en": "Test format and Part 1: forms and notes",
+    "uz": "Test tuzilishi va Part 1: anketa va qaydlar",
+    "ru": "Формат теста и Part 1: анкеты и заметки"
+   },
+   "goal": {
+    "en": "Know the shape of the Listening test (4 parts, 10 questions each, about 30 minutes, each recording heard once) and complete Part 1 forms and notes with correct spelling and numbers.",
+    "uz": "Listening testining tuzilishini biling (4 qism, har birida 10 savol, taxminan 30 daqiqa, har bir yozuv bir marta eshittiriladi) va Part 1 anketa va qaydlarini toʻgʻri imlo va raqamlar bilan toʻldiring.",
+    "ru": "Знайте устройство Listening (4 части по 10 вопросов, около 30 минут, каждая запись звучит один раз) и заполняйте анкеты и заметки Part 1 с правильным написанием и числами."
+   },
+   "study": [
+    {
+     "en": "Before each part, read the questions and predict what kind of word is missing: a name, a number, a date or a noun.",
+     "uz": "Har bir qism oldidan savollarni oʻqing va qanday soʻz tushib qolganini taxmin qiling: ism, raqam, sana yoki ot.",
+     "ru": "Перед каждой частью прочитайте вопросы и предскажите, какое слово пропущено: имя, число, дата или существительное."
+    },
+    {
+     "en": "Practise writing spelled-out names, phone numbers, dates and prices exactly as you hear them.",
+     "uz": "Harflab aytilgan ismlar, telefon raqamlari, sanalar va narxlarni eshitganingizdek aniq yozishni mashq qiling.",
+     "ru": "Тренируйтесь записывать имена по буквам, номера телефонов, даты и цены точно так, как слышите."
+    },
+    {
+     "en": "Keep to the word limit in the instructions; an answer with too many words loses the mark.",
+     "uz": "Koʻrsatmadagi soʻz chegarasiga rioya qiling; soʻzlari koʻp boʻlgan javob ball bermaydi.",
+     "ru": "Соблюдайте лимит слов из инструкции: ответ с лишними словами не засчитывается."
+    }
+   ],
+   "practice": [],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Open the Listening samples and do Note Completion and Table Completion; mark them with the answer key.",
+      "uz": "Listening namunalarini oching, Note Completion va Table Completion topshiriqlarini bajaring; javoblar kaliti bilan tekshiring.",
+      "ru": "Откройте примеры Listening и выполните Note Completion и Table Completion; проверьте по ключу."
+     },
+     "step": {
+      "minutes": 15,
+      "required": true
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "self_report",
+    "ladder": "L1",
+    "content": "official:ielts_samples",
+    "fields": [
+     "correct",
+     "total"
+    ],
+    "plausibility": "0 <= correct <= total <= 40",
+    "minutes": 10,
+    "pass": {
+     "min_share": 0.7,
+     "basis": "design default; self-reported against the official answer key, so it is a weak check"
+    },
+    "instructions": {
+     "en": "Redo Table Completion without looking at your notes, then enter your score from the answer key.",
+     "uz": "Table Completion topshirigʻini qaydlaringizga qaramasdan qayta bajaring, keyin javoblar kalitidan olingan ballni kiriting.",
+     "ru": "Повторите Table Completion, не глядя в записи, и введите балл по ключу."
+    },
+    "on_fail": {
+     "en": "Read the transcript for each miss, write down why you missed it (did not hear it, spelling, word limit, distractor), then try the task type again next week.",
+     "uz": "Har bir xato uchun matn yozuvini oʻqing, nega xato qilganingizni yozing (eshitmadingiz, imlo, soʻz chegarasi, chalgʻituvchi variant), keyin bu topshiriq turini keyingi hafta qayta bajaring.",
+     "ru": "Прочитайте расшифровку для каждой ошибки, запишите причину (не услышали, орфография, лимит слов, отвлекающий вариант) и повторите этот тип задания на следующей неделе."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 0,
+    "check": 10,
+    "official_required": 15,
+    "official_optional": 0,
+    "total": 40
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "basis": "design default: below B1 the English ladder (C3, C5) comes first"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Listening: 4 parts, 10 questions each (40), about 30 minutes; each recording is heard once.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Parts 1-2 are everyday social situations (a conversation, then a monologue); Parts 3-4 are educational or training contexts (a discussion, then a talk on an academic subject).",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Word limits apply to gap-filling tasks; going over the limit loses the mark.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "our_content_gap": {
+    "en": "Our practice pool has no audio items yet, so Listening practice uses the official IELTS sample tasks (with answer keys and transcripts); we never copy them.",
+    "uz": "Amaliy bazamizda hali audio savollar yoʻq, shuning uchun Listening mashqlari rasmiy IELTS namunaviy topshiriqlaridan (javoblar kaliti va matn yozuvi bilan) foydalanadi; ularni koʻchirmaymiz.",
+    "ru": "В нашем банке практики пока нет аудиозаданий, поэтому для Listening используются официальные примеры IELTS (с ключами и расшифровками); мы их не копируем."
+   },
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Test format and Part 1: forms and notes",
+      "uz": "Oʻrganing: Test tuzilishi va Part 1: anketa va qaydlar",
+      "ru": "Изучите: Формат теста и Part 1: анкеты и заметки"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": false,
+     "title": {
+      "en": "Official practice: Test format and Part 1: forms and notes",
+      "uz": "Rasmiy mashq: Test tuzilishi va Part 1: anketa va qaydlar",
+      "ru": "Официальная практика: Формат теста и Part 1: анкеты и заметки"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 10,
+     "title": {
+      "en": "End-of-unit check: Test format and Part 1: forms and notes",
+      "uz": "Boʻlim yakuniy tekshiruvi: Test tuzilishi va Part 1: anketa va qaydlar",
+      "ru": "Итоговая проверка раздела: Формат теста и Part 1: анкеты и заметки"
+     },
+     "end_check": true,
+     "n": 3
+    }
+   ],
+   "sessions": 3,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IELI02",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "listening",
+   "skill_label": {
+    "en": "Listening",
+    "uz": "Listening (tinglab tushunish)",
+    "ru": "Listening (аудирование)"
+   },
+   "unit": 2,
+   "units_in_skill": 6,
+   "level_band": "foundation",
+   "title": {
+    "en": "Part 2: a monologue, maps and plans",
+    "uz": "Part 2: monolog, xarita va rejalar",
+    "ru": "Part 2: монолог, карты и планы"
+   },
+   "goal": {
+    "en": "Follow a single speaker in an everyday setting and answer map, plan and matching questions.",
+    "uz": "Kundalik vaziyatda bitta soʻzlovchini kuzatib boring va xarita, reja hamda moslashtirish savollariga javob bering.",
+    "ru": "Следите за речью одного говорящего в бытовой ситуации и отвечайте на вопросы по картам, планам и на соответствие."
+   },
+   "study": [
+    {
+     "en": "For maps, find the starting point first and learn direction words: opposite, next to, on the left of, at the far end.",
+     "uz": "Xaritada avval boshlangʻich nuqtani toping va yoʻnalish soʻzlarini oʻrganing: opposite, next to, on the left of, at the far end.",
+     "ru": "На карте сначала найдите точку отсчёта и выучите слова направления: opposite, next to, on the left of, at the far end."
+    },
+    {
+     "en": "Mark the speaker's signposts (first, after that, finally) to keep your place.",
+     "uz": "Joyingizni yoʻqotmaslik uchun soʻzlovchining yoʻnaltiruvchi soʻzlarini (first, after that, finally) belgilab boring.",
+     "ru": "Отмечайте слова-ориентиры говорящего (first, after that, finally), чтобы не потерять место."
+    },
+    {
+     "en": "In matching tasks, read every option first; the list may have more options than questions.",
+     "uz": "Moslashtirish topshiriqlarida avval barcha variantlarni oʻqing; roʻyxatda savollardan koʻproq variant boʻlishi mumkin.",
+     "ru": "В заданиях на соответствие сначала прочитайте все варианты: их может быть больше, чем вопросов."
+    }
+   ],
+   "practice": [],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Do the Plan/Map/Diagram Labelling sample; mark it with the answer key, then read the transcript for each miss.",
+      "uz": "Plan/Map/Diagram Labelling namunasini bajaring; javoblar kaliti bilan tekshiring, keyin har bir xato uchun matn yozuvini oʻqing.",
+      "ru": "Выполните пример Plan/Map/Diagram Labelling, проверьте по ключу и прочитайте расшифровку для каждой ошибки."
+     },
+     "step": {
+      "minutes": 15,
+      "required": true
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "self_report",
+    "ladder": "L1",
+    "content": "official:ielts_samples",
+    "fields": [
+     "correct",
+     "total"
+    ],
+    "plausibility": "0 <= correct <= total <= 40",
+    "minutes": 10,
+    "pass": {
+     "min_share": 0.7,
+     "basis": "design default; self-reported against the official answer key, so it is a weak check"
+    },
+    "instructions": {
+     "en": "Two days later, redo the map task without the transcript and enter your score.",
+     "uz": "Ikki kundan keyin xarita topshirigʻini matn yozuvisiz qayta bajaring va ballingizni kiriting.",
+     "ru": "Через два дня повторите задание с картой без расшифровки и введите балл."
+    },
+    "on_fail": {
+     "en": "Read the transcript for each miss, write down why you missed it (did not hear it, spelling, word limit, distractor), then try the task type again next week.",
+     "uz": "Har bir xato uchun matn yozuvini oʻqing, nega xato qilganingizni yozing (eshitmadingiz, imlo, soʻz chegarasi, chalgʻituvchi variant), keyin bu topshiriq turini keyingi hafta qayta bajaring.",
+     "ru": "Прочитайте расшифровку для каждой ошибки, запишите причину (не услышали, орфография, лимит слов, отвлекающий вариант) и повторите этот тип задания на следующей неделе."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 0,
+    "check": 10,
+    "official_required": 15,
+    "official_optional": 0,
+    "total": 40
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "basis": "design default: below B1 the English ladder (C3, C5) comes first"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Listening: 4 parts, 10 questions each (40), about 30 minutes; each recording is heard once.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Parts 1-2 are everyday social situations (a conversation, then a monologue); Parts 3-4 are educational or training contexts (a discussion, then a talk on an academic subject).",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "our_content_gap": {
+    "en": "Our practice pool has no audio items yet, so Listening practice uses the official IELTS sample tasks (with answer keys and transcripts); we never copy them.",
+    "uz": "Amaliy bazamizda hali audio savollar yoʻq, shuning uchun Listening mashqlari rasmiy IELTS namunaviy topshiriqlaridan (javoblar kaliti va matn yozuvi bilan) foydalanadi; ularni koʻchirmaymiz.",
+    "ru": "В нашем банке практики пока нет аудиозаданий, поэтому для Listening используются официальные примеры IELTS (с ключами и расшифровками); мы их не копируем."
+   },
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Part 2: a monologue, maps and plans",
+      "uz": "Oʻrganing: Part 2: monolog, xarita va rejalar",
+      "ru": "Изучите: Part 2: монолог, карты и планы"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": false,
+     "title": {
+      "en": "Official practice: Part 2: a monologue, maps and plans",
+      "uz": "Rasmiy mashq: Part 2: monolog, xarita va rejalar",
+      "ru": "Официальная практика: Part 2: монолог, карты и планы"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 10,
+     "title": {
+      "en": "End-of-unit check: Part 2: a monologue, maps and plans",
+      "uz": "Boʻlim yakuniy tekshiruvi: Part 2: monolog, xarita va rejalar",
+      "ru": "Итоговая проверка раздела: Part 2: монолог, карты и планы"
+     },
+     "end_check": true,
+     "n": 3
+    }
+   ],
+   "sessions": 3,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IELI03",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "listening",
+   "skill_label": {
+    "en": "Listening",
+    "uz": "Listening (tinglab tushunish)",
+    "ru": "Listening (аудирование)"
+   },
+   "unit": 3,
+   "units_in_skill": 6,
+   "level_band": "core",
+   "title": {
+    "en": "Part 3: academic discussion and multiple choice",
+    "uz": "Part 3: oʻquv muhokamasi va bir nechta variantli savollar",
+    "ru": "Part 3: учебное обсуждение и вопросы с выбором ответа"
+   },
+   "goal": {
+    "en": "Follow two speakers discussing a study task and pick the right option even when a speaker changes their mind.",
+    "uz": "Oʻquv topshirigʻini muhokama qilayotgan ikki soʻzlovchini kuzating va soʻzlovchi fikrini oʻzgartirsa ham toʻgʻri variantni tanlang.",
+    "ru": "Следите за двумя говорящими, обсуждающими учебное задание, и выбирайте верный вариант, даже если кто-то меняет мнение."
+   },
+   "study": [
+    {
+     "en": "Listen for agreement and disagreement: 'I'm not sure about that', 'exactly', 'yes, but…'.",
+     "uz": "Rozilik va norozilik iboralariga quloq soling: 'I'm not sure about that', 'exactly', 'yes, but…'.",
+     "ru": "Слушайте выражения согласия и несогласия: 'I'm not sure about that', 'exactly', 'yes, but…'."
+    },
+    {
+     "en": "An option is often mentioned and then rejected; wait for the speakers' final decision before you choose.",
+     "uz": "Variant koʻpincha tilga olinadi, keyin rad etiladi; tanlashdan oldin soʻzlovchilarning yakuniy qarorini kuting.",
+     "ru": "Вариант часто упоминают, а потом отвергают; прежде чем выбрать, дождитесь окончательного решения говорящих."
+    },
+    {
+     "en": "Read the question stems, not only the options, and note who is talking about what.",
+     "uz": "Faqat variantlarni emas, savolning oʻzini ham oʻqing va kim nima haqida gapirayotganini belgilang.",
+     "ru": "Читайте сами вопросы, а не только варианты, и отмечайте, кто о чём говорит."
+    }
+   ],
+   "practice": [],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Do both Multiple Choice samples (one answer, and more than one answer); mark them with the answer key.",
+      "uz": "Ikkala Multiple Choice namunasini (bitta javobli va bir nechta javobli) bajaring; javoblar kaliti bilan tekshiring.",
+      "ru": "Выполните оба примера Multiple Choice (один ответ и несколько ответов) и проверьте по ключу."
+     },
+     "step": {
+      "minutes": 15,
+      "required": true
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "self_report",
+    "ladder": "L1",
+    "content": "official:ielts_samples",
+    "fields": [
+     "correct",
+     "total"
+    ],
+    "plausibility": "0 <= correct <= total <= 40",
+    "minutes": 10,
+    "pass": {
+     "min_share": 0.7,
+     "basis": "design default; self-reported against the official answer key, so it is a weak check"
+    },
+    "instructions": {
+     "en": "For each wrong answer, find in the transcript where the option was mentioned and then rejected; enter your score.",
+     "uz": "Har bir notoʻgʻri javob uchun matn yozuvida variant qayerda tilga olinib, keyin rad etilganini toping; ballingizni kiriting.",
+     "ru": "Для каждого неверного ответа найдите в расшифровке, где вариант упомянули и отвергли; введите балл."
+    },
+    "on_fail": {
+     "en": "Read the transcript for each miss, write down why you missed it (did not hear it, spelling, word limit, distractor), then try the task type again next week.",
+     "uz": "Har bir xato uchun matn yozuvini oʻqing, nega xato qilganingizni yozing (eshitmadingiz, imlo, soʻz chegarasi, chalgʻituvchi variant), keyin bu topshiriq turini keyingi hafta qayta bajaring.",
+     "ru": "Прочитайте расшифровку для каждой ошибки, запишите причину (не услышали, орфография, лимит слов, отвлекающий вариант) и повторите этот тип задания на следующей неделе."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 0,
+    "check": 10,
+    "official_required": 15,
+    "official_optional": 0,
+    "total": 40
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "basis": "design default: below B1 the English ladder (C3, C5) comes first"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Listening: 4 parts, 10 questions each (40), about 30 minutes; each recording is heard once.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Parts 1-2 are everyday social situations (a conversation, then a monologue); Parts 3-4 are educational or training contexts (a discussion, then a talk on an academic subject).",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "our_content_gap": {
+    "en": "Our practice pool has no audio items yet, so Listening practice uses the official IELTS sample tasks (with answer keys and transcripts); we never copy them.",
+    "uz": "Amaliy bazamizda hali audio savollar yoʻq, shuning uchun Listening mashqlari rasmiy IELTS namunaviy topshiriqlaridan (javoblar kaliti va matn yozuvi bilan) foydalanadi; ularni koʻchirmaymiz.",
+    "ru": "В нашем банке практики пока нет аудиозаданий, поэтому для Listening используются официальные примеры IELTS (с ключами и расшифровками); мы их не копируем."
+   },
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Part 3: academic discussion and multiple choice",
+      "uz": "Oʻrganing: Part 3: oʻquv muhokamasi va bir nechta variantli savollar",
+      "ru": "Изучите: Part 3: учебное обсуждение и вопросы с выбором ответа"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": false,
+     "title": {
+      "en": "Official practice: Part 3: academic discussion and multiple choice",
+      "uz": "Rasmiy mashq: Part 3: oʻquv muhokamasi va bir nechta variantli savollar",
+      "ru": "Официальная практика: Part 3: учебное обсуждение и вопросы с выбором ответа"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 10,
+     "title": {
+      "en": "End-of-unit check: Part 3: academic discussion and multiple choice",
+      "uz": "Boʻlim yakuniy tekshiruvi: Part 3: oʻquv muhokamasi va bir nechta variantli savollar",
+      "ru": "Итоговая проверка раздела: Part 3: учебное обсуждение и вопросы с выбором ответа"
+     },
+     "end_check": true,
+     "n": 3
+    }
+   ],
+   "sessions": 3,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IELI04",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "listening",
+   "skill_label": {
+    "en": "Listening",
+    "uz": "Listening (tinglab tushunish)",
+    "ru": "Listening (аудирование)"
+   },
+   "unit": 4,
+   "units_in_skill": 6,
+   "level_band": "core",
+   "title": {
+    "en": "Part 4: a lecture, notes and flow-charts",
+    "uz": "Part 4: maʼruza, qaydlar va blok-sxemalar",
+    "ru": "Part 4: лекция, заметки и блок-схемы"
+   },
+   "goal": {
+    "en": "Follow a talk on an academic subject and complete notes, sentences and flow-charts.",
+    "uz": "Akademik mavzudagi nutqni kuzating va qaydlar, gaplar hamda blok-sxemalarni toʻldiring.",
+    "ru": "Следите за выступлением на академическую тему и заполняйте заметки, предложения и блок-схемы."
+   },
+   "study": [
+    {
+     "en": "Lecturers signal structure ('firstly', 'my second point', 'to sum up'); use these signals to find your place in the notes.",
+     "uz": "Maʼruzachilar tuzilishni ishoralar bilan koʻrsatadi ('firstly', 'my second point', 'to sum up'); qaydlarda joyingizni topish uchun ulardan foydalaning.",
+     "ru": "Лекторы обозначают структуру ('firstly', 'my second point', 'to sum up'); по этим сигналам находите своё место в заметках."
+    },
+    {
+     "en": "Predict the grammar of each gap (a noun, a plural, an adjective) from the words around it.",
+     "uz": "Har bir boʻsh joyning grammatik shaklini (ot, koʻplik, sifat) atrofidagi soʻzlardan taxmin qiling.",
+     "ru": "По соседним словам предскажите грамматику каждого пропуска (существительное, множественное число, прилагательное)."
+    },
+    {
+     "en": "Practise with transcripts: listen once, answer, then read the transcript to find every answer you missed.",
+     "uz": "Matn yozuvi bilan mashq qiling: bir marta tinglang, javob bering, keyin oʻtkazib yuborgan har bir javobni matn yozuvidan toping.",
+     "ru": "Тренируйтесь с расшифровками: прослушайте один раз, ответьте, затем найдите в расшифровке все пропущенные ответы."
+    }
+   ],
+   "practice": [],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Do the Flow-chart Completion and Sentence Completion samples; mark them with the answer key.",
+      "uz": "Flow-chart Completion va Sentence Completion namunalarini bajaring; javoblar kaliti bilan tekshiring.",
+      "ru": "Выполните примеры Flow-chart Completion и Sentence Completion и проверьте по ключу."
+     },
+     "step": {
+      "minutes": 15,
+      "required": true
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "self_report",
+    "ladder": "L1",
+    "content": "official:ielts_samples",
+    "fields": [
+     "correct",
+     "total"
+    ],
+    "plausibility": "0 <= correct <= total <= 40",
+    "minutes": 10,
+    "pass": {
+     "min_share": 0.7,
+     "basis": "design default; self-reported against the official answer key, so it is a weak check"
+    },
+    "instructions": {
+     "en": "Redo the flow-chart task two days later without the transcript and enter your score.",
+     "uz": "Ikki kundan keyin blok-sxema topshirigʻini matn yozuvisiz qayta bajaring va ballingizni kiriting.",
+     "ru": "Через два дня повторите задание с блок-схемой без расшифровки и введите балл."
+    },
+    "on_fail": {
+     "en": "Read the transcript for each miss, write down why you missed it (did not hear it, spelling, word limit, distractor), then try the task type again next week.",
+     "uz": "Har bir xato uchun matn yozuvini oʻqing, nega xato qilganingizni yozing (eshitmadingiz, imlo, soʻz chegarasi, chalgʻituvchi variant), keyin bu topshiriq turini keyingi hafta qayta bajaring.",
+     "ru": "Прочитайте расшифровку для каждой ошибки, запишите причину (не услышали, орфография, лимит слов, отвлекающий вариант) и повторите этот тип задания на следующей неделе."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 0,
+    "check": 10,
+    "official_required": 15,
+    "official_optional": 0,
+    "total": 40
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Listening: 4 parts, 10 questions each (40), about 30 minutes; each recording is heard once.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Parts 1-2 are everyday social situations (a conversation, then a monologue); Parts 3-4 are educational or training contexts (a discussion, then a talk on an academic subject).",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "our_content_gap": {
+    "en": "Our practice pool has no audio items yet, so Listening practice uses the official IELTS sample tasks (with answer keys and transcripts); we never copy them.",
+    "uz": "Amaliy bazamizda hali audio savollar yoʻq, shuning uchun Listening mashqlari rasmiy IELTS namunaviy topshiriqlaridan (javoblar kaliti va matn yozuvi bilan) foydalanadi; ularni koʻchirmaymiz.",
+    "ru": "В нашем банке практики пока нет аудиозаданий, поэтому для Listening используются официальные примеры IELTS (с ключами и расшифровками); мы их не копируем."
+   },
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Part 4: a lecture, notes and flow-charts",
+      "uz": "Oʻrganing: Part 4: maʼruza, qaydlar va blok-sxemalar",
+      "ru": "Изучите: Part 4: лекция, заметки и блок-схемы"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": false,
+     "title": {
+      "en": "Official practice: Part 4: a lecture, notes and flow-charts",
+      "uz": "Rasmiy mashq: Part 4: maʼruza, qaydlar va blok-sxemalar",
+      "ru": "Официальная практика: Part 4: лекция, заметки и блок-схемы"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 10,
+     "title": {
+      "en": "End-of-unit check: Part 4: a lecture, notes and flow-charts",
+      "uz": "Boʻlim yakuniy tekshiruvi: Part 4: maʼruza, qaydlar va blok-sxemalar",
+      "ru": "Итоговая проверка раздела: Part 4: лекция, заметки и блок-схемы"
+     },
+     "end_check": true,
+     "n": 3
+    }
+   ],
+   "sessions": 3,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IELI05",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "listening",
+   "skill_label": {
+    "en": "Listening",
+    "uz": "Listening (tinglab tushunish)",
+    "ru": "Listening (аудирование)"
+   },
+   "unit": 5,
+   "units_in_skill": 6,
+   "level_band": "advanced",
+   "title": {
+    "en": "Paraphrase, accents and short answers",
+    "uz": "Parafraz, aksentlar va qisqa javoblar",
+    "ru": "Перефразирование, акценты и краткие ответы"
+   },
+   "goal": {
+    "en": "Recognise answers said in different words from the question, keep up with different accents, and give short answers within the word limit.",
+    "uz": "Savoldagidan boshqa soʻzlar bilan aytilgan javoblarni taniy oling, turli aksentlarga moslashing va qisqa javoblarni soʻz chegarasida bering.",
+    "ru": "Узнавайте ответы, сказанные другими словами, чем в вопросе, понимайте разные акценты и давайте краткие ответы в пределах лимита слов."
+   },
+   "study": [
+    {
+     "en": "The recording often uses different words from the question; keep a list of pairs such as cheap / not expensive and start / launch.",
+     "uz": "Yozuv koʻpincha savoldagidan boshqa soʻzlarni ishlatadi; cheap / not expensive va start / launch kabi juftliklar roʻyxatini yuriting.",
+     "ru": "В записи часто звучат не те слова, что в вопросе; ведите список пар вроде cheap / not expensive и start / launch."
+    },
+    {
+     "en": "The test uses several accents, including British, Australian, New Zealand and North American; listen to English from all of them.",
+     "uz": "Testda bir nechta aksent ishlatiladi, jumladan britan, avstraliya, yangi zelandiya va shimoliy amerika; ularning barchasidagi ingliz tilini tinglang.",
+     "ru": "В тесте звучат разные акценты, в том числе британский, австралийский, новозеландский и североамериканский; слушайте английскую речь со всеми ними."
+    },
+    {
+     "en": "When a multiple-choice question asks for two answers, choose exactly two.",
+     "uz": "Agar variantli savol ikkita javob soʻrasa, aynan ikkitasini tanlang.",
+     "ru": "Если вопрос с выбором ответа просит два ответа, выберите ровно два."
+    }
+   ],
+   "practice": [],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Do the Short Answer Questions sample, then redo the task type you scored lowest on in units 1-4.",
+      "uz": "Short Answer Questions namunasini bajaring, keyin 1-4-boʻlimlarda eng past ball olgan topshiriq turini qayta ishlang.",
+      "ru": "Выполните пример Short Answer Questions, затем повторите тип задания, по которому в разделах 1-4 был самый низкий балл."
+     },
+     "step": {
+      "minutes": 20,
+      "required": true
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "self_report",
+    "ladder": "L1",
+    "content": "official:ielts_samples",
+    "fields": [
+     "correct",
+     "total"
+    ],
+    "plausibility": "0 <= correct <= total <= 40",
+    "minutes": 10,
+    "pass": {
+     "min_share": 0.7,
+     "basis": "design default; self-reported against the official answer key, so it is a weak check"
+    },
+    "instructions": {
+     "en": "Enter your score on the Short Answer sample and list three paraphrase pairs you heard.",
+     "uz": "Short Answer namunasidagi ballingizni kiriting va eshitgan uchta parafraz juftligini yozing.",
+     "ru": "Введите балл за пример Short Answer и запишите три услышанные пары перефразирования."
+    },
+    "on_fail": {
+     "en": "Read the transcript for each miss, write down why you missed it (did not hear it, spelling, word limit, distractor), then try the task type again next week.",
+     "uz": "Har bir xato uchun matn yozuvini oʻqing, nega xato qilganingizni yozing (eshitmadingiz, imlo, soʻz chegarasi, chalgʻituvchi variant), keyin bu topshiriq turini keyingi hafta qayta bajaring.",
+     "ru": "Прочитайте расшифровку для каждой ошибки, запишите причину (не услышали, орфография, лимит слов, отвлекающий вариант) и повторите этот тип задания на следующей неделе."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 0,
+    "check": 10,
+    "official_required": 20,
+    "official_optional": 0,
+    "total": 45
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Listening: 4 parts, 10 questions each (40), about 30 minutes; each recording is heard once.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Parts 1-2 are everyday social situations (a conversation, then a monologue); Parts 3-4 are educational or training contexts (a discussion, then a talk on an academic subject).",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Different accents, including British, Australian, New Zealand and North American, are used.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "our_content_gap": {
+    "en": "Our practice pool has no audio items yet, so Listening practice uses the official IELTS sample tasks (with answer keys and transcripts); we never copy them.",
+    "uz": "Amaliy bazamizda hali audio savollar yoʻq, shuning uchun Listening mashqlari rasmiy IELTS namunaviy topshiriqlaridan (javoblar kaliti va matn yozuvi bilan) foydalanadi; ularni koʻchirmaymiz.",
+    "ru": "В нашем банке практики пока нет аудиозаданий, поэтому для Listening используются официальные примеры IELTS (с ключами и расшифровками); мы их не копируем."
+   },
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Paraphrase, accents and short answers",
+      "uz": "Oʻrganing: Parafraz, aksentlar va qisqa javoblar",
+      "ru": "Изучите: Перефразирование, акценты и краткие ответы"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 20,
+     "optional": false,
+     "title": {
+      "en": "Official practice: Paraphrase, accents and short answers",
+      "uz": "Rasmiy mashq: Parafraz, aksentlar va qisqa javoblar",
+      "ru": "Официальная практика: Перефразирование, акценты и краткие ответы"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 10,
+     "title": {
+      "en": "End-of-unit check: Paraphrase, accents and short answers",
+      "uz": "Boʻlim yakuniy tekshiruvi: Parafraz, aksentlar va qisqa javoblar",
+      "ru": "Итоговая проверка раздела: Перефразирование, акценты и краткие ответы"
+     },
+     "end_check": true,
+     "n": 3
+    }
+   ],
+   "sessions": 3,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IELI06",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "listening",
+   "skill_label": {
+    "en": "Listening",
+    "uz": "Listening (tinglab tushunish)",
+    "ru": "Listening (аудирование)"
+   },
+   "unit": 6,
+   "units_in_skill": 6,
+   "level_band": "mock",
+   "title": {
+    "en": "Listening under test conditions and the error log",
+    "uz": "Test sharoitida Listening va xatolar daftari",
+    "ru": "Listening в условиях теста и журнал ошибок"
+   },
+   "goal": {
+    "en": "Do all the official Listening sample tasks in one sitting, each recording once, and turn your mistakes into next week's plan.",
+    "uz": "Barcha rasmiy Listening namunaviy topshiriqlarini bir oʻtirishda, har bir yozuvni bir marta tinglab bajaring va xatolaringizni keyingi hafta rejasiga aylantiring.",
+    "ru": "Выполните все официальные примеры Listening за один подход, слушая каждую запись один раз, и превратите ошибки в план на следующую неделю."
+   },
+   "study": [
+    {
+     "en": "Test conditions: one sitting, no pausing, no replaying.",
+     "uz": "Test sharoiti: bir oʻtirishda, toʻxtatmasdan, qayta tinglamasdan.",
+     "ru": "Условия теста: один подход, без пауз и повторного прослушивания."
+    },
+    {
+     "en": "Sort each miss: did not hear it, heard it but misspelt it, went over the word limit, or chose a distractor.",
+     "uz": "Har bir xatoni saralang: eshitmadingiz, eshitdingiz-u notoʻgʻri yozdingiz, soʻz chegarasidan oshdingiz yoki chalgʻituvchi variantni tanladingiz.",
+     "ru": "Распределите ошибки: не услышали, услышали, но написали с ошибкой, превысили лимит слов или выбрали отвлекающий вариант."
+    },
+    {
+     "en": "Pick the two most frequent kinds of miss and build next week's practice around them.",
+     "uz": "Eng koʻp uchragan ikki xato turini tanlang va keyingi hafta mashqlarini ular atrofida quring.",
+     "ru": "Выберите два самых частых типа ошибок и постройте вокруг них практику на следующую неделю."
+    }
+   ],
+   "practice": [],
+   "official_links": [
+    {
+     "id": "ielts_trial",
+     "url": "https://ielts.org/take-a-test/preparation-resources/ielts-trial-test",
+     "kind": "trial_test",
+     "label": {
+      "en": "IELTS Trial Test (on paper, at participating centres)",
+      "uz": "IELTS Trial Test (qogʻozda, ishtirokchi markazlarda)",
+      "ru": "IELTS Trial Test (на бумаге, в участвующих центрах)"
+     },
+     "note": {
+      "en": "A free, timed familiarisation test of Listening, Reading and Writing, marked by official examiners; the scores cannot be used officially.",
+      "uz": "Listening, Reading va Writing boʻyicha bepul, vaqtli tanishuv testi, rasmiy imtihonchilar baholaydi; natijalari rasmiy maqsadlarda ishlatilmaydi.",
+      "ru": "Бесплатный пробный тест на время по Listening, Reading и Writing, проверяют официальные экзаменаторы; результаты нельзя использовать официально."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/ielts-trial-test",
+     "needs_verification": true,
+     "verify_note": "the Trial Test is offered only for IELTS on paper at participating locations (ielts.org trial page, 2026-10-07); IELTS in Uzbekistan has been computer-only since 11 July 2025 (kun.uz, 9 Jul 2025: IDP Edu-Action notice; British Council Uzbekistan says it currently offers only IELTS on Computer), so a Trial Test location in Uzbekistan is unlikely; no participating location in Uzbekistan was found. Do not show this link to students in Uzbekistan until a location is confirmed with British Council or IDP Uzbekistan"
+    }
+   ],
+   "end_check": {
+    "verification": "self_report",
+    "ladder": "L1",
+    "content": "official:ielts_samples",
+    "fields": [
+     "correct",
+     "total"
+    ],
+    "plausibility": "0 <= correct <= total <= 40",
+    "minutes": 30,
+    "pass": {
+     "min_share": 0.7,
+     "basis": "design default; self-reported against the official answer key, so it is a weak check"
+    },
+    "instructions": {
+     "en": "Do all eight Listening sample tasks back to back, mark them with the answer keys and enter your total.",
+     "uz": "Barcha sakkizta Listening namunaviy topshirigʻini ketma-ket bajaring, javoblar kalitlari bilan tekshiring va umumiy ballni kiriting.",
+     "ru": "Выполните все восемь примеров Listening подряд, проверьте по ключам и введите общий балл."
+    },
+    "on_fail": {
+     "en": "Read the transcript for each miss, write down why you missed it (did not hear it, spelling, word limit, distractor), then try the task type again next week.",
+     "uz": "Har bir xato uchun matn yozuvini oʻqing, nega xato qilganingizni yozing (eshitmadingiz, imlo, soʻz chegarasi, chalgʻituvchi variant), keyin bu topshiriq turini keyingi hafta qayta bajaring.",
+     "ru": "Прочитайте расшифровку для каждой ошибки, запишите причину (не услышали, орфография, лимит слов, отвлекающий вариант) и повторите этот тип задания на следующей неделе."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 0,
+    "check": 30,
+    "official_required": 0,
+    "official_optional": 0,
+    "total": 45
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Listening: 4 parts, 10 questions each (40), about 30 minutes; each recording is heard once.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Parts 1-2 are everyday social situations (a conversation, then a monologue); Parts 3-4 are educational or training contexts (a discussion, then a talk on an academic subject).",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "The free IELTS Trial Test covers Listening, Reading and Writing on paper, under timed conditions, at participating official locations; its results cannot be used officially.",
+     "url": "https://ielts.org/take-a-test/preparation-resources/ielts-trial-test",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "our_content_gap": {
+    "en": "Our practice pool has no audio items yet, so Listening practice uses the official IELTS sample tasks (with answer keys and transcripts); we never copy them.",
+    "uz": "Amaliy bazamizda hali audio savollar yoʻq, shuning uchun Listening mashqlari rasmiy IELTS namunaviy topshiriqlaridan (javoblar kaliti va matn yozuvi bilan) foydalanadi; ularni koʻchirmaymiz.",
+    "ru": "В нашем банке практики пока нет аудиозаданий, поэтому для Listening используются официальные примеры IELTS (с ключами и расшифровками); мы их не копируем."
+   },
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Listening under test conditions and the error log",
+      "uz": "Oʻrganing: Test sharoitida Listening va xatolar daftari",
+      "ru": "Изучите: Listening в условиях теста и журнал ошибок"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 30,
+     "title": {
+      "en": "End-of-unit check: Listening under test conditions and the error log",
+      "uz": "Boʻlim yakuniy tekshiruvi: Test sharoitida Listening va xatolar daftari",
+      "ru": "Итоговая проверка раздела: Listening в условиях теста и журнал ошибок"
+     },
+     "end_check": true,
+     "n": 2
+    }
+   ],
+   "sessions": 2,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IERE01",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "reading",
+   "skill_label": {
+    "en": "Reading",
+    "uz": "Reading (oʻqib tushunish)",
+    "ru": "Reading (чтение)"
+   },
+   "unit": 1,
+   "units_in_skill": 6,
+   "level_band": "foundation",
+   "title": {
+    "en": "Test format, skimming and scanning",
+    "uz": "Test tuzilishi, tez koʻz yugurtirish va qidirib oʻqish",
+    "ru": "Формат теста, просмотровое и поисковое чтение"
+   },
+   "goal": {
+    "en": "Know the Academic Reading test (3 passages, 2,150-2,750 words in all, 40 questions, 60 minutes) and read fast for the gist and for specific details.",
+    "uz": "Academic Reading testini biling (3 ta matn, jami 2 150-2 750 soʻz, 40 ta savol, 60 daqiqa) va umumiy mazmun hamda aniq tafsilotlar uchun tez oʻqing.",
+    "ru": "Знайте Academic Reading (3 текста, всего 2 150-2 750 слов, 40 вопросов, 60 минут) и быстро читайте для общего смысла и для конкретных деталей."
+   },
+   "study": [
+    {
+     "en": "Skim first: the title, the first sentence of each paragraph and the last paragraph, in two or three minutes.",
+     "uz": "Avval koʻz yugurtiring: sarlavha, har bir xatboshining birinchi gapi va oxirgi xatboshi — ikki-uch daqiqada.",
+     "ru": "Сначала просмотрите: заголовок, первое предложение каждого абзаца и последний абзац — за две-три минуты."
+    },
+    {
+     "en": "Scan for names, numbers and dates by looking for capital letters and digits.",
+     "uz": "Ismlar, raqamlar va sanalarni bosh harflar va raqamlarga qarab qidiring.",
+     "ru": "Ищите имена, числа и даты по заглавным буквам и цифрам."
+    },
+    {
+     "en": "Plan about 20 minutes a passage; the 60 minutes include writing your answers.",
+     "uz": "Har bir matnga taxminan 20 daqiqa rejalashtiring; 60 daqiqaga javoblarni yozish vaqti ham kiradi.",
+     "ru": "Планируйте около 20 минут на текст; в 60 минут входит и запись ответов."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C5",
+     "where": {
+      "lang": "en",
+      "level": [
+       "B2"
+      ]
+     },
+     "n_passages": 2,
+     "split": [
+      1,
+      1
+     ],
+     "minutes_each": 12,
+     "purpose": {
+      "en": "Two passages: skim in 3 minutes, then answer.",
+      "uz": "Ikki matn: 3 daqiqada koʻz yugurtiring, keyin javob bering.",
+      "ru": "Два текста: просмотрите за 3 минуты, затем отвечайте."
+     }
+    },
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_reading",
+      "question_type": [
+       "multiple_choice",
+       "short_answer"
+      ]
+     },
+     "fallback_where": {
+      "skill": "ielts_reading"
+     },
+     "n_sets": 1,
+     "split": [
+      1
+     ],
+     "minutes_each": 20,
+     "purpose": {
+      "en": "One IELTS-style set, untimed, to learn the format.",
+      "uz": "Format bilan tanishish uchun bitta IELTS uslubidagi toʻplam, vaqtsiz.",
+      "ru": "Один набор в стиле IELTS без ограничения времени, чтобы освоить формат."
+     },
+     "unit_of_n": "reading set (one passage)"
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Open the Academic Reading samples and look through the task types; do Multiple Choice (one answer).",
+      "uz": "Academic Reading namunalarini oching va topshiriq turlarini koʻrib chiqing; Multiple Choice (bitta javobli) topshirigʻini bajaring.",
+      "ru": "Откройте примеры Academic Reading, просмотрите типы заданий и выполните Multiple Choice (один ответ)."
+     },
+     "step": {
+      "minutes": 15,
+      "required": false
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_reading",
+     "question_type": [
+      "multiple_choice",
+      "short_answer",
+      "sentence_completion"
+     ]
+    },
+    "n_sets": 1,
+    "time_limit_s": 1200,
+    "minutes": 20,
+    "fresh_items": true,
+    "pass": {
+     "min_share": 0.7,
+     "basis": "design default; no official raw-score-to-band table was verified for this catalog"
+    },
+    "instructions": {
+     "en": "1 reading set(s) in 20 minutes, at the test's pace of about 20 minutes a passage (3 passages, 40 questions, 60 minutes). Pass: 70 % correct.",
+     "uz": "20 daqiqada 1 ta oʻqish toʻplami, test surʼatida — har bir matnga taxminan 20 daqiqa (3 ta matn, 40 ta savol, 60 daqiqa). Oʻtish: 70 % toʻgʻri javob.",
+     "ru": "1 набор(а) для чтения за 20 минут в темпе теста — около 20 минут на текст (3 текста, 40 вопросов, 60 минут). Зачёт: 70 % верных ответов."
+    },
+    "on_fail": {
+     "en": "Sort your misses by question type in the error log, do one more set of the weakest type, then retake the check with a new set.",
+     "uz": "Xatolarni xatolar daftarida savol turlari boʻyicha saralang, eng zaif tur boʻyicha yana bitta toʻplam bajaring, keyin tekshiruvni yangi toʻplam bilan qayta topshiring.",
+     "ru": "Распределите ошибки по типам вопросов в журнале ошибок, выполните ещё один набор по самому слабому типу и пересдайте проверку с новым набором."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 44,
+    "check": 20,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 79
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "basis": "design default: below B1 the English ladder (C3, C5) comes first"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Academic Reading: 3 passages, 2,150-2,750 words in all, 40 questions, 60 minutes.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "The 60 minutes for Academic Reading include transfer time.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading question types include multiple choice, True/False/Not Given, Yes/No/Not Given, matching information, headings, features and sentence endings, sentence, summary, note, table and flow-chart completion, diagram labels and short answers.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Test format, skimming and scanning",
+      "uz": "Oʻrganing: Test tuzilishi, tez koʻz yugurtirish va qidirib oʻqish",
+      "ru": "Изучите: Формат теста, просмотровое и поисковое чтение"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 12,
+     "title": {
+      "en": "Practice 1: Test format, skimming and scanning",
+      "uz": "Mashq 1: Test tuzilishi, tez koʻz yugurtirish va qidirib oʻqish",
+      "ru": "Практика 1: Формат теста, просмотровое и поисковое чтение"
+     },
+     "practice_ref": 0,
+     "items": 1,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 12,
+     "title": {
+      "en": "Practice 2: Test format, skimming and scanning",
+      "uz": "Mashq 2: Test tuzilishi, tez koʻz yugurtirish va qidirib oʻqish",
+      "ru": "Практика 2: Формат теста, просмотровое и поисковое чтение"
+     },
+     "practice_ref": 0,
+     "items": 1,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "Practice 3: Test format, skimming and scanning",
+      "uz": "Mashq 3: Test tuzilishi, tez koʻz yugurtirish va qidirib oʻqish",
+      "ru": "Практика 3: Формат теста, просмотровое и поисковое чтение"
+     },
+     "practice_ref": 1,
+     "items": 1,
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Test format, skimming and scanning",
+      "uz": "Rasmiy mashq: Test tuzilishi, tez koʻz yugurtirish va qidirib oʻqish",
+      "ru": "Официальная практика: Формат теста, просмотровое и поисковое чтение"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 5
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "End-of-unit check: Test format, skimming and scanning",
+      "uz": "Boʻlim yakuniy tekshiruvi: Test tuzilishi, tez koʻz yugurtirish va qidirib oʻqish",
+      "ru": "Итоговая проверка раздела: Формат теста, просмотровое и поисковое чтение"
+     },
+     "end_check": true,
+     "n": 6
+    }
+   ],
+   "sessions": 5,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IERE02",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "reading",
+   "skill_label": {
+    "en": "Reading",
+    "uz": "Reading (oʻqib tushunish)",
+    "ru": "Reading (чтение)"
+   },
+   "unit": 2,
+   "units_in_skill": 6,
+   "level_band": "core",
+   "title": {
+    "en": "True/False/Not Given and Yes/No/Not Given",
+    "uz": "True/False/Not Given va Yes/No/Not Given",
+    "ru": "True/False/Not Given и Yes/No/Not Given"
+   },
+   "goal": {
+    "en": "Decide whether a statement agrees with the passage's information (True/False/Not Given) or with the writer's views (Yes/No/Not Given).",
+    "uz": "Fikr matndagi maʼlumotga (True/False/Not Given) yoki muallif qarashlariga (Yes/No/Not Given) mos kelishini aniqlang.",
+    "ru": "Определяйте, согласуется ли утверждение с информацией текста (True/False/Not Given) или со взглядами автора (Yes/No/Not Given)."
+   },
+   "study": [
+    {
+     "en": "False means the passage says the opposite; Not Given means the passage does not say it either way.",
+     "uz": "False — matnda buning teskarisi aytilgan; Not Given — matnda bu haqda u yoki bu tarzda aytilmagan.",
+     "ru": "False — в тексте сказано обратное; Not Given — текст об этом ничего не говорит."
+    },
+    {
+     "en": "Watch small words: all or some, always or often, rise or double can turn True into False or Not Given.",
+     "uz": "Kichik soʻzlarga eʼtibor bering: all yoki some, always yoki often, rise yoki double — True ni False yoki Not Given ga aylantirishi mumkin.",
+     "ru": "Следите за мелкими словами: all или some, always или often, rise или double могут превратить True в False или Not Given."
+    },
+    {
+     "en": "Judge only what the passage states, not what you know about the topic.",
+     "uz": "Mavzu haqida nima bilishingizga emas, faqat matnda aytilganiga qarab baholang.",
+     "ru": "Оценивайте только то, что сказано в тексте, а не то, что вы знаете о теме."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_reading",
+      "question_type": [
+       "tfng",
+       "ynng"
+      ]
+     },
+     "fallback_where": {
+      "skill": "ielts_reading"
+     },
+     "n_sets": 2,
+     "split": [
+      1,
+      1
+     ],
+     "minutes_each": 20,
+     "purpose": {
+      "en": "IELTS-style sets with True/False/Not Given and Yes/No/Not Given.",
+      "uz": "True/False/Not Given va Yes/No/Not Given savolli IELTS uslubidagi toʻplamlar.",
+      "ru": "Наборы в стиле IELTS с True/False/Not Given и Yes/No/Not Given."
+     },
+     "unit_of_n": "reading set (one passage)"
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Do the Identifying Information (True/False/Not Given) sample and mark it with the answer key.",
+      "uz": "Identifying Information (True/False/Not Given) namunasini bajaring va javoblar kaliti bilan tekshiring.",
+      "ru": "Выполните пример Identifying Information (True/False/Not Given) и проверьте по ключу."
+     },
+     "step": {
+      "minutes": 15,
+      "required": false
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_reading",
+     "question_type": [
+      "tfng",
+      "ynng"
+     ]
+    },
+    "n_sets": 1,
+    "time_limit_s": 1200,
+    "minutes": 20,
+    "fresh_items": true,
+    "pass": {
+     "min_share": 0.7,
+     "basis": "design default; no official raw-score-to-band table was verified for this catalog"
+    },
+    "instructions": {
+     "en": "1 reading set(s) in 20 minutes, at the test's pace of about 20 minutes a passage (3 passages, 40 questions, 60 minutes). Pass: 70 % correct.",
+     "uz": "20 daqiqada 1 ta oʻqish toʻplami, test surʼatida — har bir matnga taxminan 20 daqiqa (3 ta matn, 40 ta savol, 60 daqiqa). Oʻtish: 70 % toʻgʻri javob.",
+     "ru": "1 набор(а) для чтения за 20 минут в темпе теста — около 20 минут на текст (3 текста, 40 вопросов, 60 минут). Зачёт: 70 % верных ответов."
+    },
+    "on_fail": {
+     "en": "Sort your misses by question type in the error log, do one more set of the weakest type, then retake the check with a new set.",
+     "uz": "Xatolarni xatolar daftarida savol turlari boʻyicha saralang, eng zaif tur boʻyicha yana bitta toʻplam bajaring, keyin tekshiruvni yangi toʻplam bilan qayta topshiring.",
+     "ru": "Распределите ошибки по типам вопросов в журнале ошибок, выполните ещё один набор по самому слабому типу и пересдайте проверку с новым набором."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 40,
+    "check": 20,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 75
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "basis": "design default: below B1 the English ladder (C3, C5) comes first"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Academic Reading: 3 passages, 2,150-2,750 words in all, 40 questions, 60 minutes.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "The 60 minutes for Academic Reading include transfer time.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading question types include multiple choice, True/False/Not Given, Yes/No/Not Given, matching information, headings, features and sentence endings, sentence, summary, note, table and flow-chart completion, diagram labels and short answers.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: True/False/Not Given and Yes/No/Not Given",
+      "uz": "Oʻrganing: True/False/Not Given va Yes/No/Not Given",
+      "ru": "Изучите: True/False/Not Given и Yes/No/Not Given"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "Practice 1: True/False/Not Given and Yes/No/Not Given",
+      "uz": "Mashq 1: True/False/Not Given va Yes/No/Not Given",
+      "ru": "Практика 1: True/False/Not Given и Yes/No/Not Given"
+     },
+     "practice_ref": 0,
+     "items": 1,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "Practice 2: True/False/Not Given and Yes/No/Not Given",
+      "uz": "Mashq 2: True/False/Not Given va Yes/No/Not Given",
+      "ru": "Практика 2: True/False/Not Given и Yes/No/Not Given"
+     },
+     "practice_ref": 0,
+     "items": 1,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: True/False/Not Given and Yes/No/Not Given",
+      "uz": "Rasmiy mashq: True/False/Not Given va Yes/No/Not Given",
+      "ru": "Официальная практика: True/False/Not Given и Yes/No/Not Given"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "End-of-unit check: True/False/Not Given and Yes/No/Not Given",
+      "uz": "Boʻlim yakuniy tekshiruvi: True/False/Not Given va Yes/No/Not Given",
+      "ru": "Итоговая проверка раздела: True/False/Not Given и Yes/No/Not Given"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IERE03",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "reading",
+   "skill_label": {
+    "en": "Reading",
+    "uz": "Reading (oʻqib tushunish)",
+    "ru": "Reading (чтение)"
+   },
+   "unit": 3,
+   "units_in_skill": 6,
+   "level_band": "core",
+   "title": {
+    "en": "Matching tasks",
+    "uz": "Moslashtirish topshiriqlari",
+    "ru": "Задания на соответствие"
+   },
+   "goal": {
+    "en": "Match headings to paragraphs, information to paragraphs, features to statements and sentence beginnings to endings.",
+    "uz": "Sarlavhalarni xatboshilarga, maʼlumotni xatboshilarga, xususiyatlarni fikrlarga va gap boshlarini oxirlariga moslashtiring.",
+    "ru": "Сопоставляйте заголовки с абзацами, информацию с абзацами, признаки с утверждениями и начала предложений с окончаниями."
+   },
+   "study": [
+    {
+     "en": "Headings: read the paragraph and sum it up in a few words, then choose; a heading fits the whole paragraph, not one detail.",
+     "uz": "Sarlavhalar: xatboshini oʻqing va bir necha soʻz bilan xulosa qiling, keyin tanlang; sarlavha bitta tafsilotga emas, butun xatboshiga mos keladi.",
+     "ru": "Заголовки: прочитайте абзац, кратко сформулируйте его суть и только потом выбирайте; заголовок подходит ко всему абзацу, а не к одной детали."
+    },
+    {
+     "en": "Check the instructions: some tasks let you use a letter more than once.",
+     "uz": "Koʻrsatmani tekshiring: baʼzi topshiriqlarda bitta harfni bir necha marta ishlatish mumkin.",
+     "ru": "Проверьте инструкцию: в некоторых заданиях одну букву можно использовать несколько раз."
+    },
+    {
+     "en": "Sentence endings: the ending must fit both the grammar and the meaning of the beginning.",
+     "uz": "Gap oxirlari: oxiri gap boshining ham grammatikasiga, ham maʼnosiga mos kelishi kerak.",
+     "ru": "Окончания предложений: окончание должно подходить к началу и по грамматике, и по смыслу."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_reading",
+      "question_type": [
+       "matching_headings",
+       "matching_information",
+       "matching_features",
+       "matching_sentence_endings"
+      ]
+     },
+     "fallback_where": {
+      "skill": "ielts_reading"
+     },
+     "n_sets": 2,
+     "split": [
+      1,
+      1
+     ],
+     "minutes_each": 20,
+     "purpose": {
+      "en": "IELTS-style sets with matching tasks.",
+      "uz": "Moslashtirish topshiriqli IELTS uslubidagi toʻplamlar.",
+      "ru": "Наборы в стиле IELTS с заданиями на соответствие."
+     },
+     "unit_of_n": "reading set (one passage)"
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Do the Matching Features and Matching Sentence Endings samples and mark them.",
+      "uz": "Matching Features va Matching Sentence Endings namunalarini bajaring va tekshiring.",
+      "ru": "Выполните примеры Matching Features и Matching Sentence Endings и проверьте их."
+     },
+     "step": {
+      "minutes": 15,
+      "required": false
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_reading",
+     "question_type": [
+      "matching_headings",
+      "matching_information",
+      "matching_features",
+      "matching_sentence_endings"
+     ]
+    },
+    "n_sets": 1,
+    "time_limit_s": 1200,
+    "minutes": 20,
+    "fresh_items": true,
+    "pass": {
+     "min_share": 0.7,
+     "basis": "design default; no official raw-score-to-band table was verified for this catalog"
+    },
+    "instructions": {
+     "en": "1 reading set(s) in 20 minutes, at the test's pace of about 20 minutes a passage (3 passages, 40 questions, 60 minutes). Pass: 70 % correct.",
+     "uz": "20 daqiqada 1 ta oʻqish toʻplami, test surʼatida — har bir matnga taxminan 20 daqiqa (3 ta matn, 40 ta savol, 60 daqiqa). Oʻtish: 70 % toʻgʻri javob.",
+     "ru": "1 набор(а) для чтения за 20 минут в темпе теста — около 20 минут на текст (3 текста, 40 вопросов, 60 минут). Зачёт: 70 % верных ответов."
+    },
+    "on_fail": {
+     "en": "Sort your misses by question type in the error log, do one more set of the weakest type, then retake the check with a new set.",
+     "uz": "Xatolarni xatolar daftarida savol turlari boʻyicha saralang, eng zaif tur boʻyicha yana bitta toʻplam bajaring, keyin tekshiruvni yangi toʻplam bilan qayta topshiring.",
+     "ru": "Распределите ошибки по типам вопросов в журнале ошибок, выполните ещё один набор по самому слабому типу и пересдайте проверку с новым набором."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 40,
+    "check": 20,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 75
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "basis": "design default: below B1 the English ladder (C3, C5) comes first"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Academic Reading: 3 passages, 2,150-2,750 words in all, 40 questions, 60 minutes.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "The 60 minutes for Academic Reading include transfer time.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading question types include multiple choice, True/False/Not Given, Yes/No/Not Given, matching information, headings, features and sentence endings, sentence, summary, note, table and flow-chart completion, diagram labels and short answers.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Matching tasks",
+      "uz": "Oʻrganing: Moslashtirish topshiriqlari",
+      "ru": "Изучите: Задания на соответствие"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "Practice 1: Matching tasks",
+      "uz": "Mashq 1: Moslashtirish topshiriqlari",
+      "ru": "Практика 1: Задания на соответствие"
+     },
+     "practice_ref": 0,
+     "items": 1,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "Practice 2: Matching tasks",
+      "uz": "Mashq 2: Moslashtirish topshiriqlari",
+      "ru": "Практика 2: Задания на соответствие"
+     },
+     "practice_ref": 0,
+     "items": 1,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Matching tasks",
+      "uz": "Rasmiy mashq: Moslashtirish topshiriqlari",
+      "ru": "Официальная практика: Задания на соответствие"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "End-of-unit check: Matching tasks",
+      "uz": "Boʻlim yakuniy tekshiruvi: Moslashtirish topshiriqlari",
+      "ru": "Итоговая проверка раздела: Задания на соответствие"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IERE04",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "reading",
+   "skill_label": {
+    "en": "Reading",
+    "uz": "Reading (oʻqib tushunish)",
+    "ru": "Reading (чтение)"
+   },
+   "unit": 4,
+   "units_in_skill": 6,
+   "level_band": "core",
+   "title": {
+    "en": "Completion tasks and diagram labels",
+    "uz": "Toʻldirish topshiriqlari va diagramma belgilari",
+    "ru": "Задания на заполнение и подписи к схемам"
+   },
+   "goal": {
+    "en": "Complete sentences, summaries, notes, tables, flow-charts and diagram labels with words from the passage, within the word limit.",
+    "uz": "Gaplar, xulosalar, qaydlar, jadvallar, blok-sxemalar va diagramma belgilarini matndagi soʻzlar bilan, soʻz chegarasida toʻldiring.",
+    "ru": "Заполняйте предложения, краткие изложения, заметки, таблицы, блок-схемы и подписи к схемам словами из текста в пределах лимита слов."
+   },
+   "study": [
+    {
+     "en": "Read the word limit in the instructions (for example, no more than two words) and keep within it.",
+     "uz": "Koʻrsatmadagi soʻz chegarasini oʻqing (masalan, ikki soʻzdan oshmasin) va unga rioya qiling.",
+     "ru": "Прочитайте лимит слов в инструкции (например, не больше двух слов) и не превышайте его."
+    },
+    {
+     "en": "Predict the part of speech, then find the right paragraph by scanning for a key word or its synonym.",
+     "uz": "Soʻz turkumini taxmin qiling, keyin kalit soʻz yoki uning sinonimini qidirib kerakli xatboshini toping.",
+     "ru": "Предскажите часть речи, затем найдите нужный абзац, ища ключевое слово или его синоним."
+    },
+    {
+     "en": "Copy each word exactly as it is spelled in the passage.",
+     "uz": "Har bir soʻzni matnda qanday yozilgan boʻlsa, xuddi shunday koʻchiring.",
+     "ru": "Переписывайте каждое слово точно так, как оно написано в тексте."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_reading",
+      "question_type": [
+       "sentence_completion",
+       "summary_completion",
+       "note_table_flowchart_completion",
+       "diagram_label"
+      ]
+     },
+     "fallback_where": {
+      "skill": "ielts_reading"
+     },
+     "n_sets": 2,
+     "split": [
+      1,
+      1
+     ],
+     "minutes_each": 20,
+     "purpose": {
+      "en": "IELTS-style sets with completion tasks.",
+      "uz": "Toʻldirish topshiriqli IELTS uslubidagi toʻplamlar.",
+      "ru": "Наборы в стиле IELTS с заданиями на заполнение."
+     },
+     "unit_of_n": "reading set (one passage)"
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Do the Summary Completion and Table Completion samples and mark them.",
+      "uz": "Summary Completion va Table Completion namunalarini bajaring va tekshiring.",
+      "ru": "Выполните примеры Summary Completion и Table Completion и проверьте их."
+     },
+     "step": {
+      "minutes": 15,
+      "required": false
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_reading",
+     "question_type": [
+      "sentence_completion",
+      "summary_completion",
+      "note_table_flowchart_completion",
+      "diagram_label"
+     ]
+    },
+    "n_sets": 1,
+    "time_limit_s": 1200,
+    "minutes": 20,
+    "fresh_items": true,
+    "pass": {
+     "min_share": 0.7,
+     "basis": "design default; no official raw-score-to-band table was verified for this catalog"
+    },
+    "instructions": {
+     "en": "1 reading set(s) in 20 minutes, at the test's pace of about 20 minutes a passage (3 passages, 40 questions, 60 minutes). Pass: 70 % correct.",
+     "uz": "20 daqiqada 1 ta oʻqish toʻplami, test surʼatida — har bir matnga taxminan 20 daqiqa (3 ta matn, 40 ta savol, 60 daqiqa). Oʻtish: 70 % toʻgʻri javob.",
+     "ru": "1 набор(а) для чтения за 20 минут в темпе теста — около 20 минут на текст (3 текста, 40 вопросов, 60 минут). Зачёт: 70 % верных ответов."
+    },
+    "on_fail": {
+     "en": "Sort your misses by question type in the error log, do one more set of the weakest type, then retake the check with a new set.",
+     "uz": "Xatolarni xatolar daftarida savol turlari boʻyicha saralang, eng zaif tur boʻyicha yana bitta toʻplam bajaring, keyin tekshiruvni yangi toʻplam bilan qayta topshiring.",
+     "ru": "Распределите ошибки по типам вопросов в журнале ошибок, выполните ещё один набор по самому слабому типу и пересдайте проверку с новым набором."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 40,
+    "check": 20,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 75
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "basis": "design default: below B1 the English ladder (C3, C5) comes first"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Academic Reading: 3 passages, 2,150-2,750 words in all, 40 questions, 60 minutes.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "The 60 minutes for Academic Reading include transfer time.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading question types include multiple choice, True/False/Not Given, Yes/No/Not Given, matching information, headings, features and sentence endings, sentence, summary, note, table and flow-chart completion, diagram labels and short answers.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Completion tasks and diagram labels",
+      "uz": "Oʻrganing: Toʻldirish topshiriqlari va diagramma belgilari",
+      "ru": "Изучите: Задания на заполнение и подписи к схемам"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "Practice 1: Completion tasks and diagram labels",
+      "uz": "Mashq 1: Toʻldirish topshiriqlari va diagramma belgilari",
+      "ru": "Практика 1: Задания на заполнение и подписи к схемам"
+     },
+     "practice_ref": 0,
+     "items": 1,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "Practice 2: Completion tasks and diagram labels",
+      "uz": "Mashq 2: Toʻldirish topshiriqlari va diagramma belgilari",
+      "ru": "Практика 2: Задания на заполнение и подписи к схемам"
+     },
+     "practice_ref": 0,
+     "items": 1,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Completion tasks and diagram labels",
+      "uz": "Rasmiy mashq: Toʻldirish topshiriqlari va diagramma belgilari",
+      "ru": "Официальная практика: Задания на заполнение и подписи к схемам"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "End-of-unit check: Completion tasks and diagram labels",
+      "uz": "Boʻlim yakuniy tekshiruvi: Toʻldirish topshiriqlari va diagramma belgilari",
+      "ru": "Итоговая проверка раздела: Задания на заполнение и подписи к схемам"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IERE05",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "reading",
+   "skill_label": {
+    "en": "Reading",
+    "uz": "Reading (oʻqib tushunish)",
+    "ru": "Reading (чтение)"
+   },
+   "unit": 5,
+   "units_in_skill": 6,
+   "level_band": "advanced",
+   "title": {
+    "en": "Multiple choice, short answers and paraphrase",
+    "uz": "Bir nechta variantli savollar, qisqa javoblar va parafraz",
+    "ru": "Выбор ответа, краткие ответы и перефразирование"
+   },
+   "goal": {
+    "en": "Answer multiple-choice and short-answer questions whose options paraphrase the passage, on harder passages.",
+    "uz": "Variantlari matnni boshqa soʻzlar bilan ifodalaydigan bir nechta variantli va qisqa javobli savollarga murakkabroq matnlarda javob bering.",
+    "ru": "Отвечайте на вопросы с выбором ответа и краткими ответами, где варианты перефразируют текст, на более сложных текстах."
+   },
+   "study": [
+    {
+     "en": "Find the part of the passage first, then compare each option with it; wrong options often reuse the passage's words with a changed meaning.",
+     "uz": "Avval matndagi kerakli qismni toping, keyin har bir variantni u bilan solishtiring; notoʻgʻri variantlar koʻpincha matn soʻzlarini oʻzgargan maʼnoda ishlatadi.",
+     "ru": "Сначала найдите нужное место в тексте, затем сравните с ним каждый вариант; неверные варианты часто повторяют слова текста с изменённым смыслом."
+    },
+    {
+     "en": "Short answers use words from the passage, within the word limit.",
+     "uz": "Qisqa javoblarda matndagi soʻzlardan, soʻz chegarasida foydalaniladi.",
+     "ru": "В кратких ответах используются слова из текста в пределах лимита."
+    },
+    {
+     "en": "Add every new paraphrase pair you meet to your paraphrase list.",
+     "uz": "Har bir yangi parafraz juftligini parafrazlar roʻyxatiga qoʻshing.",
+     "ru": "Добавляйте каждую новую пару перефразирования в свой список."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C5",
+     "where": {
+      "lang": "en",
+      "level": [
+       "C1"
+      ]
+     },
+     "n_passages": 1,
+     "split": [
+      1
+     ],
+     "minutes_each": 12,
+     "purpose": {
+      "en": "One C1 passage for paraphrase practice.",
+      "uz": "Parafraz mashqi uchun bitta C1 matni.",
+      "ru": "Один текст уровня C1 для практики перефразирования."
+     }
+    },
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_reading",
+      "question_type": [
+       "multiple_choice",
+       "short_answer"
+      ]
+     },
+     "fallback_where": {
+      "skill": "ielts_reading"
+     },
+     "n_sets": 2,
+     "split": [
+      1,
+      1
+     ],
+     "minutes_each": 20,
+     "purpose": {
+      "en": "Harder IELTS-style sets.",
+      "uz": "Murakkabroq IELTS uslubidagi toʻplamlar.",
+      "ru": "Более сложные наборы в стиле IELTS."
+     },
+     "unit_of_n": "reading set (one passage)"
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Do the Multiple Choice (more than one answer) sample and mark it.",
+      "uz": "Multiple Choice (bir nechta javobli) namunasini bajaring va tekshiring.",
+      "ru": "Выполните пример Multiple Choice (несколько ответов) и проверьте его."
+     },
+     "step": {
+      "minutes": 15,
+      "required": false
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_reading",
+     "question_type": [
+      "multiple_choice",
+      "short_answer",
+      "ynng",
+      "matching_headings"
+     ]
+    },
+    "n_sets": 1,
+    "time_limit_s": 1200,
+    "minutes": 20,
+    "fresh_items": true,
+    "pass": {
+     "min_share": 0.7,
+     "basis": "design default; no official raw-score-to-band table was verified for this catalog"
+    },
+    "instructions": {
+     "en": "1 reading set(s) in 20 minutes, at the test's pace of about 20 minutes a passage (3 passages, 40 questions, 60 minutes). Pass: 70 % correct.",
+     "uz": "20 daqiqada 1 ta oʻqish toʻplami, test surʼatida — har bir matnga taxminan 20 daqiqa (3 ta matn, 40 ta savol, 60 daqiqa). Oʻtish: 70 % toʻgʻri javob.",
+     "ru": "1 набор(а) для чтения за 20 минут в темпе теста — около 20 минут на текст (3 текста, 40 вопросов, 60 минут). Зачёт: 70 % верных ответов."
+    },
+    "on_fail": {
+     "en": "Sort your misses by question type in the error log, do one more set of the weakest type, then retake the check with a new set.",
+     "uz": "Xatolarni xatolar daftarida savol turlari boʻyicha saralang, eng zaif tur boʻyicha yana bitta toʻplam bajaring, keyin tekshiruvni yangi toʻplam bilan qayta topshiring.",
+     "ru": "Распределите ошибки по типам вопросов в журнале ошибок, выполните ещё один набор по самому слабому типу и пересдайте проверку с новым набором."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 52,
+    "check": 20,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 87
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Academic Reading: 3 passages, 2,150-2,750 words in all, 40 questions, 60 minutes.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "The 60 minutes for Academic Reading include transfer time.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading question types include multiple choice, True/False/Not Given, Yes/No/Not Given, matching information, headings, features and sentence endings, sentence, summary, note, table and flow-chart completion, diagram labels and short answers.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Multiple choice, short answers and paraphrase",
+      "uz": "Oʻrganing: Bir nechta variantli savollar, qisqa javoblar va parafraz",
+      "ru": "Изучите: Выбор ответа, краткие ответы и перефразирование"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 12,
+     "title": {
+      "en": "Practice 1: Multiple choice, short answers and paraphrase",
+      "uz": "Mashq 1: Bir nechta variantli savollar, qisqa javoblar va parafraz",
+      "ru": "Практика 1: Выбор ответа, краткие ответы и перефразирование"
+     },
+     "practice_ref": 0,
+     "items": 1,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "Practice 2: Multiple choice, short answers and paraphrase",
+      "uz": "Mashq 2: Bir nechta variantli savollar, qisqa javoblar va parafraz",
+      "ru": "Практика 2: Выбор ответа, краткие ответы и перефразирование"
+     },
+     "practice_ref": 1,
+     "items": 1,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "Practice 3: Multiple choice, short answers and paraphrase",
+      "uz": "Mashq 3: Bir nechta variantli savollar, qisqa javoblar va parafraz",
+      "ru": "Практика 3: Выбор ответа, краткие ответы и перефразирование"
+     },
+     "practice_ref": 1,
+     "items": 1,
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Multiple choice, short answers and paraphrase",
+      "uz": "Rasmiy mashq: Bir nechta variantli savollar, qisqa javoblar va parafraz",
+      "ru": "Официальная практика: Выбор ответа, краткие ответы и перефразирование"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 5
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 20,
+     "title": {
+      "en": "End-of-unit check: Multiple choice, short answers and paraphrase",
+      "uz": "Boʻlim yakuniy tekshiruvi: Bir nechta variantli savollar, qisqa javoblar va parafraz",
+      "ru": "Итоговая проверка раздела: Выбор ответа, краткие ответы и перефразирование"
+     },
+     "end_check": true,
+     "n": 6
+    }
+   ],
+   "sessions": 5,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IERE06",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "reading",
+   "skill_label": {
+    "en": "Reading",
+    "uz": "Reading (oʻqib tushunish)",
+    "ru": "Reading (чтение)"
+   },
+   "unit": 6,
+   "units_in_skill": 6,
+   "level_band": "mock",
+   "title": {
+    "en": "A full Reading test in 60 minutes and the error log",
+    "uz": "60 daqiqada toʻliq Reading testi va xatolar daftari",
+    "ru": "Полный Reading за 60 минут и журнал ошибок"
+   },
+   "goal": {
+    "en": "Do three passages in 60 minutes under test conditions and use your error log to choose next week's focus.",
+    "uz": "Test sharoitida 60 daqiqada uchta matnni bajaring va keyingi haftaning asosiy yoʻnalishini xatolar daftari asosida tanlang.",
+    "ru": "Выполните три текста за 60 минут в условиях теста и по журналу ошибок выберите фокус на следующую неделю."
+   },
+   "study": [
+    {
+     "en": "Do the passages in order and move on when 20 minutes are up; come back only if time is left.",
+     "uz": "Matnlarni tartib bilan bajaring va 20 daqiqa tugagach, keyingisiga oʻting; vaqt qolsagina qayting.",
+     "ru": "Выполняйте тексты по порядку и переходите к следующему через 20 минут; возвращайтесь, только если останется время."
+    },
+    {
+     "en": "Sort your misses by question type and by cause: wrong place in the passage, a paraphrase you missed, or the word limit.",
+     "uz": "Xatolarni savol turi va sababi boʻyicha saralang: matnning notoʻgʻri joyi, eʼtibordan chetda qolgan parafraz yoki soʻz chegarasi.",
+     "ru": "Распределите ошибки по типу вопроса и причине: не то место в тексте, пропущенное перефразирование или лимит слов."
+    },
+    {
+     "en": "Choose the two weakest question types for next week.",
+     "uz": "Keyingi hafta uchun eng zaif ikkita savol turini tanlang.",
+     "ru": "Выберите на следующую неделю два самых слабых типа вопросов."
+    }
+   ],
+   "practice": [],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Optional extra: any Reading sample task you have not done yet.",
+      "uz": "Ixtiyoriy qoʻshimcha: hali bajarmagan istalgan Reading namunaviy topshirigʻi.",
+      "ru": "Дополнительно по желанию: любой пример Reading, который вы ещё не выполняли."
+     },
+     "step": {
+      "minutes": 15,
+      "required": false
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_reading",
+     "question_type": [
+      "any"
+     ]
+    },
+    "n_sets": 3,
+    "time_limit_s": 3600,
+    "minutes": 60,
+    "fresh_items": true,
+    "pass": {
+     "min_share": 0.7,
+     "basis": "design default; no official raw-score-to-band table was verified for this catalog"
+    },
+    "instructions": {
+     "en": "3 reading set(s) in 60 minutes, at the test's pace of about 20 minutes a passage (3 passages, 40 questions, 60 minutes). Pass: 70 % correct.",
+     "uz": "60 daqiqada 3 ta oʻqish toʻplami, test surʼatida — har bir matnga taxminan 20 daqiqa (3 ta matn, 40 ta savol, 60 daqiqa). Oʻtish: 70 % toʻgʻri javob.",
+     "ru": "3 набор(а) для чтения за 60 минут в темпе теста — около 20 минут на текст (3 текста, 40 вопросов, 60 минут). Зачёт: 70 % верных ответов."
+    },
+    "on_fail": {
+     "en": "Sort your misses by question type in the error log, do one more set of the weakest type, then retake the check with a new set.",
+     "uz": "Xatolarni xatolar daftarida savol turlari boʻyicha saralang, eng zaif tur boʻyicha yana bitta toʻplam bajaring, keyin tekshiruvni yangi toʻplam bilan qayta topshiring.",
+     "ru": "Распределите ошибки по типам вопросов в журнале ошибок, выполните ещё один набор по самому слабому типу и пересдайте проверку с новым набором."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    },
+    "long": true
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 0,
+    "check": 60,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 75
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Academic Reading: 3 passages, 2,150-2,750 words in all, 40 questions, 60 minutes.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "The 60 minutes for Academic Reading include transfer time.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading question types include multiple choice, True/False/Not Given, Yes/No/Not Given, matching information, headings, features and sentence endings, sentence, summary, note, table and flow-chart completion, diagram labels and short answers.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: A full Reading test in 60 minutes and the error log",
+      "uz": "Oʻrganing: 60 daqiqada toʻliq Reading testi va xatolar daftari",
+      "ru": "Изучите: Полный Reading за 60 минут и журнал ошибок"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: A full Reading test in 60 minutes and the error log",
+      "uz": "Rasmiy mashq: 60 daqiqada toʻliq Reading testi va xatolar daftari",
+      "ru": "Официальная практика: Полный Reading за 60 минут и журнал ошибок"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 60,
+     "title": {
+      "en": "End-of-unit check: A full Reading test in 60 minutes and the error log",
+      "uz": "Boʻlim yakuniy tekshiruvi: 60 daqiqada toʻliq Reading testi va xatolar daftari",
+      "ru": "Итоговая проверка раздела: Полный Reading за 60 минут и журнал ошибок"
+     },
+     "end_check": true,
+     "long": true,
+     "n": 3
+    }
+   ],
+   "sessions": 2,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

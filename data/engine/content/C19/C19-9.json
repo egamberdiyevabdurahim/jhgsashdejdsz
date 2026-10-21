@@ -1,0 +1,2618 @@
+{
+ "bank": "C19",
+ "batch": 9,
+ "kind": "lessons",
+ "note": "SAT Math lesson bodies, phase 2 (SPEC-lessons rev. 2, §3.3, §11.1, §12.5 item 1; .superpowers/p7/PLAN.md §3, author a1, 13 Oct 2026): lessons 2 and 3 of the C10 units MAAL01-03 and MAAM01-03. `lessons` are the lesson records; `items` are their piece questions (the key is options[0]; `page` names the lesson). Our own wording; every worked line and key is checked by sympy (.superpowers/p7/a1/sympy_check.py). Key check 2 (P7, 13 Oct 2026): two blind solvers outside the author's session, P7s1 and P7s2, both chose the key on all 36 piece questions, so they are verified_auto with key_check_2 blind:P7s1+P7s2, and each lesson record with them (C19/RECONCILE-p7.md).",
+ "lessons": [
+  {
+   "kind": "lesson",
+   "id": "C19-MAAL01-2",
+   "course": "sat_m",
+   "unit": "C10-MAAL01",
+   "seq": 2,
+   "skill": "sat_m:MAAL01",
+   "requires": {
+    "math_rung_min": "alg1"
+   },
+   "title": {
+    "en": "SAT Math: Equations with fractions, and how many solutions",
+    "uz": "SAT Math: Kasrli tenglamalar va yechimlar soni",
+    "ru": "SAT Math: Уравнения с дробями и число решений"
+   },
+   "minutes": 7,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Clear the fractions: multiply every term on both sides by the least common denominator, the terms with no fraction too.\nx/4 − 2 = x/6 + 1. The least common denominator of 4 and 6 is 12.\n12 · x/4 − 12 · 2 = 12 · x/6 + 12 · 1, so 3x − 24 = 2x + 12.\nTake 2x from both sides and add 24: x = 36.\nCheck: 36/4 − 2 = 7 and 36/6 + 1 = 7.\nThe slip to avoid: multiplying only the fractions gives 3x − 2 = 2x + 1, which is wrong.",
+      "uz": "Kasrlardan qutuling: ikkala tomondagi har bir hadni eng kichik umumiy maxrajga koʻpaytiring, kasrsiz hadlarni ham.\nx/4 − 2 = x/6 + 1. 4 va 6 ning eng kichik umumiy maxraji 12.\n12 · x/4 − 12 · 2 = 12 · x/6 + 12 · 1, demak 3x − 24 = 2x + 12.\nIkkala tomondan 2x ni ayirib, 24 ni qoʻshamiz: x = 36.\nTekshirish: 36/4 − 2 = 7 va 36/6 + 1 = 7.\nBunday xatoga yoʻl qoʻymang: faqat kasrlarni koʻpaytirsangiz, 3x − 2 = 2x + 1 chiqadi, bu notoʻgʻri.",
+      "ru": "Избавьтесь от дробей: умножьте каждое слагаемое обеих частей на наименьший общий знаменатель, включая слагаемые без дроби.\nx/4 − 2 = x/6 + 1. Наименьший общий знаменатель 4 и 6 равен 12.\n12 · x/4 − 12 · 2 = 12 · x/6 + 12 · 1, значит, 3x − 24 = 2x + 12.\nВычтем 2x из обеих частей и прибавим 24: x = 36.\nПроверка: 36/4 − 2 = 7 и 36/6 + 1 = 7.\nОшибка, которой надо избежать: если умножить только дроби, получится 3x − 2 = 2x + 1, а это неверно."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al12q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "The equation 5(x − 2) + x = kx + 3 has no solution. What is k?\nOpen the bracket: 5x − 10 + x = kx + 3, so 6x − 10 = kx + 3.\nIf k = 6, take 6x from both sides: −10 = 3. That is never true, so there is no solution.\nAny other k gives exactly one solution. So k = 6.\nNow you: the equation 3(x − 4) + 4x = kx + 1 has no solution.\n3x − 12 + 4x = kx + 1 → 7x − 12 = kx + 1 → k = ?",
+      "uz": "5(x − 2) + x = kx + 3 tenglama yechimga ega emas. k nechaga teng?\nQavsni ochamiz: 5x − 10 + x = kx + 3, demak 6x − 10 = kx + 3.\nAgar k = 6 boʻlsa, ikkala tomondan 6x ni ayiramiz: −10 = 3. Bu hech qachon toʻgʻri emas, demak yechim yoʻq.\nBoshqa har qanday k da tenglama aynan bitta yechimga ega. Demak, k = 6.\nEndi siz: 3(x − 4) + 4x = kx + 1 tenglama yechimga ega emas.\n3x − 12 + 4x = kx + 1 → 7x − 12 = kx + 1 → k = ?",
+      "ru": "Уравнение 5(x − 2) + x = kx + 3 не имеет решений. Чему равно k?\nРаскроем скобки: 5x − 10 + x = kx + 3, значит, 6x − 10 = kx + 3.\nЕсли k = 6, вычтем 6x из обеих частей: −10 = 3. Это неверно ни при каком x, значит, решений нет.\nПри любом другом k решение ровно одно. Значит, k = 6.\nТеперь попробуйте сами: уравнение 3(x − 4) + 4x = kx + 1 не имеет решений.\n3x − 12 + 4x = kx + 1 → 7x − 12 = kx + 1 → k = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al12q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "When x cancels, read what is left.\nA true statement such as 4 = 4: every x works, infinitely many solutions.\nA false one such as 4 = 9: no x works, no solution.\n2(x + 2) = 2x + 4 → 2x + 4 = 2x + 4 → 4 = 4: infinitely many.\n2(x + 2) = 2x + 9 → 4 = 9: no solution.\nWatch out: x = 0 is a solution. 5x + 3 = 2x + 3 → 3x = 0 → x = 0: exactly one solution, not \"no solution\".",
+      "uz": "x qisqarib ketsa, qolganini oʻqing.\n4 = 4 kabi toʻgʻri tenglik: har qanday x mos keladi, yechimlar cheksiz koʻp.\n4 = 9 kabi notoʻgʻri tenglik: hech bir x mos kelmaydi, yechim yoʻq.\n2(x + 2) = 2x + 4 → 2x + 4 = 2x + 4 → 4 = 4: cheksiz koʻp.\n2(x + 2) = 2x + 9 → 4 = 9: yechim yoʻq.\nEhtiyot boʻling: x = 0 ham yechim. 5x + 3 = 2x + 3 → 3x = 0 → x = 0: aynan bitta yechim, «yechim yoʻq» emas.",
+      "ru": "Если x сократился, посмотрите, что осталось.\nВерное равенство, например 4 = 4: подходит любой x, решений бесконечно много.\nНеверное, например 4 = 9: не подходит ни один x, решений нет.\n2(x + 2) = 2x + 4 → 2x + 4 = 2x + 4 → 4 = 4: бесконечно много.\n2(x + 2) = 2x + 9 → 4 = 9: решений нет.\nОсторожно: x = 0 — тоже решение. 5x + 3 = 2x + 3 → 3x = 0 → x = 0: ровно одно решение, а не «решений нет»."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al12q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a001",
+     "C1-a1p001"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a001",
+     "C1-a1p001",
+     "C1-r3b004"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-MAAL01#official",
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-MAAL01-3",
+   "course": "sat_m",
+   "unit": "C10-MAAL01",
+   "seq": 3,
+   "skill": "sat_m:MAAL01",
+   "requires": {
+    "math_rung_min": "alg1"
+   },
+   "title": {
+    "en": "SAT Math: Word problems into equations and inequalities",
+    "uz": "SAT Math: Matnli masaladan tenglama va tengsizlik tuzish",
+    "ru": "SAT Math: От текстовой задачи к уравнению и неравенству"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Turn words into maths in three steps.\n1. Name the unknown: let w be the litres of water we add.\n2. Write each fact with it.\n3. Join them with = (exactly), ≤ (at most) or ≥ (at least).\n6 litres of a drink are 20% juice. How much water makes it 15% juice?\nThe juice does not change: 0.2 × 6 = 1.2 litres.\nAfter w litres of water: 1.2 = 0.15(6 + w).\n1.2 ÷ 0.15 = 8, so 6 + w = 8 and w = 2 litres.",
+      "uz": "Masala shartini uch qadamda matematika tiliga oʻtkazing.\n1. Nomaʼlumni belgilang: w — qoʻshiladigan suv, litr.\n2. Har bir faktni u orqali yozing.\n3. Ularni = (aynan), ≤ (koʻpi bilan) yoki ≥ (kamida) bilan bogʻlang.\n6 litr ichimlikning 20% i sharbat. Necha litr suv qoʻshilsa, sharbat 15% boʻladi?\nSharbat miqdori oʻzgarmaydi: 0,2 × 6 = 1,2 litr.\nw litr suv qoʻshilgandan keyin: 1,2 = 0,15(6 + w).\n1,2 ÷ 0,15 = 8, demak 6 + w = 8 va w = 2 litr.",
+      "ru": "Переведите слова на язык математики в три шага.\n1. Обозначьте неизвестное: w — сколько литров воды добавим.\n2. Запишите через него каждый факт.\n3. Соедините их знаком = (ровно), ≤ (не больше) или ≥ (не меньше).\n6 л напитка содержат 20% сока. Сколько воды добавить, чтобы сока стало 15%?\nКоличество сока не меняется: 0,2 × 6 = 1,2 л.\nПосле добавления w л воды: 1,2 = 0,15(6 + w).\n1,2 ÷ 0,15 = 8, значит, 6 + w = 8 и w = 2 л."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al13q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A lift can carry at most 600 kg. A worker who weighs 80 kg rides in it with boxes of 30 kg each. What is the greatest number of boxes he can take in one trip?\n80 + 30n ≤ 600, so 30n ≤ 520 and n ≤ 17.33…\nn counts boxes, so it is a whole number: n = 17.\nCheck: 80 + 30 × 17 = 590 ≤ 600, but 80 + 30 × 18 = 620 > 600.\nNow you: the lift carries at most 750 kg, the worker weighs 70 kg, the boxes 25 kg each.\n70 + 25n ≤ 750 → 25n ≤ 680 → n ≤ 27.2 → n = ?",
+      "uz": "Lift koʻpi bilan 600 kg yuk koʻtara oladi. Vazni 80 kg boʻlgan ishchi liftda har biri 30 kg boʻlgan qutilar bilan chiqmoqda. U bir martada eng koʻpi bilan nechta quti olib chiqa oladi?\n80 + 30n ≤ 600, demak 30n ≤ 520 va n ≤ 17,33…\nn — qutilar soni, u butun son: n = 17.\nTekshirish: 80 + 30 × 17 = 590 ≤ 600, lekin 80 + 30 × 18 = 620 > 600.\nEndi siz: lift koʻpi bilan 750 kg koʻtaradi, ishchining vazni 70 kg, har bir quti 25 kg.\n70 + 25n ≤ 750 → 25n ≤ 680 → n ≤ 27,2 → n = ?",
+      "ru": "Лифт поднимает не более 600 кг. Рабочий массой 80 кг едет в нём с ящиками по 30 кг. Какое наибольшее число ящиков он может взять за один раз?\n80 + 30n ≤ 600, значит, 30n ≤ 520 и n ≤ 17,33…\nn — число ящиков, это целое число: n = 17.\nПроверка: 80 + 30 × 17 = 590 ≤ 600, но 80 + 30 × 18 = 620 > 600.\nТеперь попробуйте сами: лифт поднимает не более 750 кг, рабочий весит 70 кг, ящики — по 25 кг.\n70 + 25n ≤ 750 → 25n ≤ 680 → n ≤ 27,2 → n = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al13q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "\"At least\" asks for the least whole number: round up, even when the decimal part is small.\nA club has 40,000 soʻm and saves 15,000 soʻm a week. A ball costs 136,000 soʻm.\n40,000 + 15,000w ≥ 136,000 → 15,000w ≥ 96,000 → w ≥ 6.4.\n6 weeks give only 130,000 soʻm, so the club needs 7 weeks.\n\"At most\" (the lift) rounds down; \"at least\" (saving up) rounds up.",
+      "uz": "«Kamida» eng kichik butun sonni soʻraydi: kasr qismi kichik boʻlsa ham, yuqoriga yaxlitlang.\nToʻgarakda 40 000 soʻm bor va u har hafta 15 000 soʻm yigʻadi. Toʻp 136 000 soʻm turadi.\n40 000 + 15 000w ≥ 136 000 → 15 000w ≥ 96 000 → w ≥ 6,4.\n6 haftada atigi 130 000 soʻm yigʻiladi, demak 7 hafta kerak.\n«Koʻpi bilan» (lift) pastga, «kamida» (pul yigʻish) yuqoriga yaxlitlanadi.",
+      "ru": "«Не меньше» означает, что нужно найти наименьшее целое: округляйте вверх, даже если дробная часть мала.\nУ кружка есть 40 000 сум, и он откладывает 15 000 сум в неделю. Мяч стоит 136 000 сум.\n40 000 + 15 000w ≥ 136 000 → 15 000w ≥ 96 000 → w ≥ 6,4.\nЗа 6 недель будет только 130 000 сум, значит, нужно 7 недель.\n«Не больше» (лифт) — округляем вниз, «не меньше» (накопить) — вверх."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al13q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-sat002",
+     "C1-sat006"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-sat002",
+     "C1-sat006",
+     "C1-a1p002"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-MAAL01#official",
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-MAAL02-2",
+   "course": "sat_m",
+   "unit": "C10-MAAL02",
+   "seq": 2,
+   "skill": "sat_m:MAAL02",
+   "requires": {
+    "math_rung_min": "alg1"
+   },
+   "title": {
+    "en": "SAT Math: Slope from two points, and parallel lines",
+    "uz": "SAT Math: Ikki nuqta boʻyicha burchak koeffitsiyenti va parallel toʻgʻri chiziqlar",
+    "ru": "SAT Math: Угловой коэффициент по двум точкам и параллельные прямые"
+   },
+   "minutes": 7,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Slope = (change in y) ÷ (change in x) = (y₂ − y₁) ÷ (x₂ − x₁).\nThrough (1, 3) and (4, 12): (12 − 3) ÷ (4 − 1) = 9 ÷ 3 = 3.\nA table works the same way: take any two rows.\nx = 2, y = 7 and x = 5, y = 1: (1 − 7) ÷ (5 − 2) = −6 ÷ 3 = −2.\nThen find b from one row: 7 = −2 × 2 + b, so b = 11 and y = −2x + 11.\nCheck with the other row: −2 × 5 + 11 = 1.",
+      "uz": "Burchak koeffitsiyenti = (y ning oʻzgarishi) ÷ (x ning oʻzgarishi) = (y₂ − y₁) ÷ (x₂ − x₁).\n(1, 3) va (4, 12) nuqtalardan: (12 − 3) ÷ (4 − 1) = 9 ÷ 3 = 3.\nJadvalda ham xuddi shunday: istalgan ikki qatorni oling.\nx = 2, y = 7 va x = 5, y = 1: (1 − 7) ÷ (5 − 2) = −6 ÷ 3 = −2.\nKeyin bitta qatordan b ni toping: 7 = −2 × 2 + b, demak b = 11 va y = −2x + 11.\nIkkinchi qator bilan tekshiring: −2 × 5 + 11 = 1.",
+      "ru": "Угловой коэффициент = (изменение y) ÷ (изменение x) = (y₂ − y₁) ÷ (x₂ − x₁).\nЧерез (1, 3) и (4, 12): (12 − 3) ÷ (4 − 1) = 9 ÷ 3 = 3.\nС таблицей так же: возьмите любые две строки.\nx = 2, y = 7 и x = 5, y = 1: (1 − 7) ÷ (5 − 2) = −6 ÷ 3 = −2.\nПотом найдите b по одной строке: 7 = −2 × 2 + b, значит, b = 11 и y = −2x + 11.\nПроверьте по второй строке: −2 × 5 + 11 = 1."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al22q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "Line k passes through the point (2, 1) and is parallel to the line through (0, 3) and (4, 11). What is the y-intercept of line k?\nSlope of the given line: (11 − 3) ÷ (4 − 0) = 8 ÷ 4 = 2.\nParallel lines have equal slopes, so line k is y = 2x + b.\nAt (2, 1): 1 = 2 × 2 + b, so b = 1 − 4 = −3.\nNow you: line k passes through (3, 4) and is parallel to the line through (1, 2) and (3, 8).\n(8 − 2) ÷ (3 − 1) = 3 → 4 = 3 × 3 + b → b = ?",
+      "uz": "k toʻgʻri chiziq (2, 1) nuqtadan oʻtadi va (0, 3) hamda (4, 11) nuqtalardan oʻtuvchi chiziqqa parallel. k chiziq y oʻqini qaysi ordinatada kesadi?\nBerilgan chiziqning burchak koeffitsiyenti: (11 − 3) ÷ (4 − 0) = 8 ÷ 4 = 2.\nParallel chiziqlarning burchak koeffitsiyentlari teng, demak k: y = 2x + b.\n(2, 1) nuqtada: 1 = 2 × 2 + b, demak b = 1 − 4 = −3.\nEndi siz: k chiziq (3, 4) nuqtadan oʻtadi va (1, 2) hamda (3, 8) nuqtalardan oʻtuvchi chiziqqa parallel.\n(8 − 2) ÷ (3 − 1) = 3 → 4 = 3 × 3 + b → b = ?",
+      "ru": "Прямая k проходит через точку (2, 1) и параллельна прямой, проходящей через (0, 3) и (4, 11). Чему равна ордината точки пересечения k с осью y?\nУгловой коэффициент данной прямой: (11 − 3) ÷ (4 − 0) = 8 ÷ 4 = 2.\nУ параллельных прямых угловые коэффициенты равны, значит, k: y = 2x + b.\nВ точке (2, 1): 1 = 2 × 2 + b, значит, b = 1 − 4 = −3.\nТеперь попробуйте сами: прямая k проходит через (3, 4) и параллельна прямой, проходящей через (1, 2) и (3, 8).\n(8 − 2) ÷ (3 − 1) = 3 → 4 = 3 × 3 + b → b = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al22q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Two slips with slope.\n1. Keep one order on top and bottom. Through (1, 5) and (3, 1): (1 − 5) ÷ (3 − 1) = −2. Writing (1 − 5) ÷ (1 − 3) gives 2, the wrong sign.\n2. Make y alone before you read the slope. 3y = 6x + 9 means y = 2x + 3: the slope is 2, not 6.\nParallel lines: the same slope, a different b. y = 2x + 3 and y = 2x − 7 never meet.",
+      "uz": "Burchak koeffitsiyentida ikki xato.\n1. Surat va maxrajda bitta tartibni saqlang. (1, 5) va (3, 1) dan: (1 − 5) ÷ (3 − 1) = −2. (1 − 5) ÷ (1 − 3) deb yozsangiz, 2 chiqadi — ishora notoʻgʻri.\n2. Koeffitsiyentni oʻqishdan oldin y ni yolgʻiz qoldiring. 3y = 6x + 9 — bu y = 2x + 3: burchak koeffitsiyenti 2, 6 emas.\nParallel chiziqlar: koeffitsiyent bir xil, b har xil. y = 2x + 3 va y = 2x − 7 hech qachon kesishmaydi.",
+      "ru": "Две ошибки с угловым коэффициентом.\n1. Соблюдайте один и тот же порядок в числителе и знаменателе. Через (1, 5) и (3, 1): (1 − 5) ÷ (3 − 1) = −2. Если написать (1 − 5) ÷ (1 − 3), получится 2 — неверный знак.\n2. Прежде чем определять коэффициент, выразите y. 3y = 6x + 9 — это y = 2x + 3: коэффициент 2, а не 6.\nПараллельные прямые: коэффициент один, b разные. y = 2x + 3 и y = 2x − 7 никогда не пересекаются."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al22q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a002",
+     "C1-a1p003"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a002",
+     "C1-a1p003",
+     "C1-r3b005"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-MAAL02#official",
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-MAAL02-3",
+   "course": "sat_m",
+   "unit": "C10-MAAL02",
+   "seq": 3,
+   "skill": "sat_m:MAAL02",
+   "requires": {
+    "math_rung_min": "alg1"
+   },
+   "title": {
+    "en": "SAT Math: Linear models: what the numbers mean",
+    "uz": "SAT Math: Chiziqli modellar: sonlar nimani bildiradi",
+    "ru": "SAT Math: Линейные модели: что означают числа"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "In a model y = mx + b:\nm is the rate: how much y changes when x grows by 1, with its unit.\nb is the start: y when x = 0.\nA taxi fare is C = 2,500d + 6,000 soʻm for d km. 6,000 soʻm is paid before the taxi moves, and each km adds 2,500 soʻm.\n8 km: C = 2,500 × 8 + 6,000 = 26,000 soʻm.\nFrom two readings: a candle is 26 cm tall after 2 hours and 20 cm after 5 hours. Rate = (20 − 26) ÷ 3 = −2 cm an hour; start = 26 + 2 × 2 = 30 cm.",
+      "uz": "y = mx + b modelida:\nm — oʻzgarish tezligi: x 1 ga oshganda y qanchaga oʻzgaradi, oʻz birligi bilan.\nb — boshlangʻich qiymat: x = 0 dagi y.\nTaksi narxi d km uchun C = 2500d + 6000 soʻm. 6000 soʻm taksi joyidan qoʻzgʻalmasdan toʻlanadi, har bir km esa 2500 soʻm qoʻshadi.\n8 km: C = 2500 × 8 + 6000 = 26 000 soʻm.\nIkki oʻlchovdan: sham 2 soatdan keyin 26 sm, 5 soatdan keyin 20 sm. Tezlik = (20 − 26) ÷ 3 = −2 sm/soat; boshida = 26 + 2 × 2 = 30 sm.",
+      "ru": "В модели y = mx + b:\nm — скорость изменения: на сколько меняется y, когда x растёт на 1 (с единицей измерения).\nb — начальное значение: y при x = 0.\nЦена такси за d км: C = 2500d + 6000 сум. 6000 сум платят, пока такси не тронулось, а каждый км добавляет 2500 сум.\n8 км: C = 2500 × 8 + 6000 = 26 000 сум.\nПо двум замерам: свеча через 2 часа — 26 см, через 5 часов — 20 см. Скорость = (20 − 26) ÷ 3 = −2 см в час; в начале = 26 + 2 × 2 = 30 см."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al23q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A tank holds W = 900 − 15t litres of water t minutes after a tap is opened.\n900 is the start: the water at t = 0. −15 is the rate: 15 litres flow out every minute.\nWhen will it hold 450 litres? 900 − 15t = 450 → 15t = 450 → t = 30 minutes.\nNow you: a tank holds W = 800 − 20t litres. When will it hold 340 litres?\n800 − 20t = 340 → 20t = 460 → t = ?",
+      "uz": "Jumrak ochilgandan t daqiqa oʻtgach idishda W = 900 − 15t litr suv boʻladi.\n900 — boshlangʻich qiymat: t = 0 dagi suv. −15 — tezlik: har daqiqada 15 litr oqib chiqadi.\nQachon 450 litr qoladi? 900 − 15t = 450 → 15t = 450 → t = 30 daqiqa.\nEndi siz: idishda W = 800 − 20t litr suv bor. Qachon 340 litr qoladi?\n800 − 20t = 340 → 20t = 460 → t = ?",
+      "ru": "Через t минут после того, как открыли кран, в баке W = 900 − 15t литров воды.\n900 — начальное значение: объём воды при t = 0. −15 — скорость: каждую минуту вытекает 15 литров.\nКогда останется 450 литров? 900 − 15t = 450 → 15t = 450 → t = 30 минут.\nТеперь попробуйте сами: в баке W = 800 − 20t литров. Когда останется 340 литров?\n800 − 20t = 340 → 20t = 460 → t = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al23q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Check the units before you put in a number.\nA pool holds V = 5,000 − 40t litres t minutes after the drain is opened. After 2 hours, t = 120 minutes, not 2:\nV = 5,000 − 40 × 120 = 200 litres.\nAnd read what is asked. In h = 3w + 12 (a plant's height in cm after w weeks), 12 is the height at the start, not after one week (that is 15), and 3 is the growth each week.",
+      "uz": "Son qoʻyishdan oldin birliklarni tekshiring.\nHovuzdan suv chiqarila boshlangandan t daqiqa oʻtgach unda V = 5000 − 40t litr suv qoladi. 2 soatdan keyin t = 120 daqiqa, 2 emas:\nV = 5000 − 40 × 120 = 200 litr.\nVa nima soʻralganini oʻqing. h = 3w + 12 da (oʻsimlikning w haftadan keyingi balandligi, sm) 12 — boshidagi balandlik, bir haftadan keyingisi emas (u 15), 3 esa har haftadagi oʻsish.",
+      "ru": "Проверьте единицы, прежде чем подставлять число.\nЧерез t минут после того, как открыли слив, в бассейне V = 5000 − 40t литров. Через 2 часа t = 120 минут, а не 2:\nV = 5000 − 40 × 120 = 200 литров.\nИ внимательно читайте, о чём спрашивают. В h = 3w + 12 (высота растения в см через w недель) 12 — высота в начале, а не через неделю (тогда 15), а 3 — рост за неделю."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al23q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a003",
+     "C1-sat004"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a003",
+     "C1-sat004",
+     "C1-r3b006"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-MAAL02#official",
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-MAAL03-2",
+   "course": "sat_m",
+   "unit": "C10-MAAL03",
+   "seq": 2,
+   "skill": "sat_m:MAAL03",
+   "requires": {
+    "math_rung_min": "alg1"
+   },
+   "title": {
+    "en": "SAT Math: Systems with no solution or infinitely many",
+    "uz": "SAT Math: Yechimi yoʻq yoki cheksiz koʻp yechimli sistemalar",
+    "ru": "SAT Math: Системы без решений или с бесконечным числом решений"
+   },
+   "minutes": 7,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Each equation of a system is a line. Write both as y = mx + b and compare.\nDifferent slopes: the lines cross once, one solution.\nSame slope, different b: parallel lines, no solution.\nSame slope and same b: one line, infinitely many solutions.\ny = 2x + 3 and 4x − 2y = 6. The second gives 2y = 4x − 6, so y = 2x − 3.\nSlope 2 in both, but b = 3 and b = −3: no solution.",
+      "uz": "Sistemaning har bir tenglamasi — toʻgʻri chiziq. Ikkalasini y = mx + b koʻrinishida yozib, solishtiring.\nBurchak koeffitsiyentlari har xil: chiziqlar bir marta kesishadi, bitta yechim.\nKoeffitsiyent bir xil, b har xil: parallel chiziqlar, yechim yoʻq.\nKoeffitsiyent ham, b ham bir xil: bitta chiziq, yechimlar cheksiz koʻp.\ny = 2x + 3 va 4x − 2y = 6. Ikkinchisidan 2y = 4x − 6, demak y = 2x − 3.\nIkkalasida ham koeffitsiyent 2, lekin b = 3 va b = −3: yechim yoʻq.",
+      "ru": "Каждое уравнение системы — прямая. Запишите оба в виде y = mx + b и сравните.\nУгловые коэффициенты разные: прямые пересекаются один раз, одно решение.\nКоэффициент одинаковый, b разные: параллельные прямые, решений нет.\nОдинаковы и коэффициент, и b: это одна прямая, решений бесконечно много.\ny = 2x + 3 и 4x − 2y = 6. Из второго 2y = 4x − 6, значит, y = 2x − 3.\nВ обоих коэффициент 2, но b = 3 и b = −3: решений нет."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al32q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "The system 3x + 2y = 7 and 6x + ky = 5 has no solution. What is k?\nNo solution means parallel lines: the x- and y-numbers must be in the same ratio.\n6 = 2 × 3, so k = 2 × 2 = 4.\nCheck: with k = 4 the second equation is 2(3x + 2y) = 5, so 3x + 2y = 2.5, but the first says 3x + 2y = 7. Both cannot be true.\nNow you: the system 2x + 5y = 4 and 6x + ky = 9 has no solution.\n6 = 3 × 2 → k = 3 × 5 = ?",
+      "uz": "3x + 2y = 7 va 6x + ky = 5 sistema yechimga ega emas. k nechaga teng?\nYechim yoʻq — chiziqlar parallel: x va y oldidagi sonlar bir xil nisbatda boʻlishi kerak.\n6 = 2 × 3, demak k = 2 × 2 = 4.\nTekshirish: k = 4 da ikkinchi tenglama 2(3x + 2y) = 5, yaʼni 3x + 2y = 2,5, birinchisi esa 3x + 2y = 7 deydi. Ikkalasi bir vaqtda toʻgʻri boʻlolmaydi.\nEndi siz: 2x + 5y = 4 va 6x + ky = 9 sistema yechimga ega emas.\n6 = 3 × 2 → k = 3 × 5 = ?",
+      "ru": "Система 3x + 2y = 7 и 6x + ky = 5 не имеет решений. Чему равно k?\nНет решений — прямые параллельны: коэффициенты при x и y должны быть пропорциональны.\n6 = 2 × 3, значит, k = 2 × 2 = 4.\nПроверка: при k = 4 второе уравнение — это 2(3x + 2y) = 5, то есть 3x + 2y = 2,5, а по первому 3x + 2y = 7. Оба равенства не могут быть верны одновременно.\nТеперь попробуйте сами: система 2x + 5y = 4 и 6x + ky = 9 не имеет решений.\n6 = 3 × 2 → k = 3 × 5 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al32q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Infinitely many needs every number in the same ratio, the right side too.\nx − 3y = 4 and 2x − 6y = k. The left side is doubled, so the same line needs k = 2 × 4 = 8.\nk = 8: infinitely many solutions. Any other k: parallel lines, no solution.\nAnd a system of two lines never has exactly two solutions: two different lines meet once or never.",
+      "uz": "Cheksiz koʻp yechim uchun hamma sonlar, oʻng tomon ham, bir xil nisbatda boʻlishi kerak.\nx − 3y = 4 va 2x − 6y = k. Chap tomon 2 baravar oshgan, demak bitta chiziq boʻlishi uchun k = 2 × 4 = 8.\nk = 8: yechimlar cheksiz koʻp. Boshqa har qanday k: parallel chiziqlar, yechim yoʻq.\nIkki toʻgʻri chiziqli sistema hech qachon aynan ikkita yechimga ega boʻlmaydi: ikki xil chiziq bir marta kesishadi yoki umuman kesishmaydi.",
+      "ru": "Для бесконечного числа решений все коэффициенты, включая правую часть, должны быть пропорциональны.\nx − 3y = 4 и 2x − 6y = k. Левая часть удвоена, значит, чтобы прямая была той же самой, нужно k = 2 × 4 = 8.\nk = 8: решений бесконечно много. Любое другое k: параллельные прямые, решений нет.\nА ровно двух решений у системы двух прямых не бывает: две разные прямые пересекаются один раз или никогда."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al32q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a004",
+     "C1-m2a005"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a004",
+     "C1-m2a005",
+     "C1-r3b008"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-MAAL03#official",
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-MAAL03-3",
+   "course": "sat_m",
+   "unit": "C10-MAAL03",
+   "seq": 3,
+   "skill": "sat_m:MAAL03",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "SAT Math: Systems from word problems, and inequalities in two variables",
+    "uz": "SAT Math: Masaladan sistema tuzish va ikki oʻzgaruvchili tengsizliklar",
+    "ru": "SAT Math: Системы из текстовых задач и неравенства с двумя переменными"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "A word problem with two unknowns needs two equations, one for each fact.\nName them: c chickens and s sheep. There are 30 heads and 80 legs.\nc + s = 30 (heads)\n2c + 4s = 80 (legs)\nTake 2 × the first from the second: 2s = 80 − 60 = 20, so s = 10 and c = 20.\nCheck: 20 + 10 = 30 heads and 2 × 20 + 4 × 10 = 80 legs.\nThen give the unknown the question asks for.",
+      "uz": "Ikki nomaʼlumli masalaga ikkita tenglama kerak: har bir fakt uchun bittadan.\nBelgilaymiz: c ta tovuq va s ta qoʻy. Jami 30 ta bosh va 80 ta oyoq.\nc + s = 30 (boshlar)\n2c + 4s = 80 (oyoqlar)\nIkkinchisidan birinchisining 2 baravarini ayiramiz: 2s = 80 − 60 = 20, demak s = 10 va c = 20.\nTekshirish: 20 + 10 = 30 ta bosh va 2 × 20 + 4 × 10 = 80 ta oyoq.\nKeyin javobga savolda soʻralgan nomaʼlumni yozing.",
+      "ru": "Для задачи с двумя неизвестными нужны два уравнения: по одному на каждый факт.\nОбозначим: c кур и s овец. Всего 30 голов и 80 ног.\nc + s = 30 (головы)\n2c + 4s = 80 (ноги)\nВычтем из второго удвоенное первое: 2s = 80 − 60 = 20, значит, s = 10 и c = 20.\nПроверка: 20 + 10 = 30 голов и 2 × 20 + 4 × 10 = 80 ног.\nПотом отвечайте про то неизвестное, о котором спрашивают."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al33q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A school sold 120 tickets: student tickets at 5,000 soʻm and adult tickets at 8,000 soʻm, for 720,000 soʻm in all. How many adult tickets did it sell?\ns + a = 120 and 5,000s + 8,000a = 720,000.\nPut s = 120 − a: 600,000 − 5,000a + 8,000a = 720,000.\n3,000a = 120,000, so a = 40 (and s = 80).\nNow you: a club sold 90 tickets: student tickets at 4,000 soʻm and adult tickets at 7,000 soʻm, for 510,000 soʻm in all.\n360,000 + 3,000a = 510,000 → 3,000a = 150,000 → a = ?",
+      "uz": "Maktab 120 ta chipta sotdi: oʻquvchi chiptasi 5000 soʻmdan va kattalar chiptasi 8000 soʻmdan, jami 720 000 soʻm. Kattalar chiptasidan nechta sotilgan?\ns + a = 120 va 5000s + 8000a = 720 000.\ns = 120 − a ni qoʻyamiz: 600 000 − 5000a + 8000a = 720 000.\n3000a = 120 000, demak a = 40 (s = 80).\nEndi siz: klub 90 ta chipta sotdi: oʻquvchi chiptasi 4000 soʻmdan va kattalar chiptasi 7000 soʻmdan, jami 510 000 soʻm.\n360 000 + 3000a = 510 000 → 3000a = 150 000 → a = ?",
+      "ru": "Школа продала билеты: всего 120, ученический стоит 5000 сум, взрослый — 8000 сум, выручка — 720 000 сум. Сколько продано взрослых билетов?\ns + a = 120 и 5000s + 8000a = 720 000.\nПодставим s = 120 − a: 600 000 − 5000a + 8000a = 720 000.\n3000a = 120 000, значит, a = 40 (и s = 80).\nТеперь попробуйте сами: клуб продал билеты: всего 90, ученический стоит 4000 сум, взрослый — 7000 сум, выручка — 510 000 сум.\n360 000 + 3000a = 510 000 → 3000a = 150 000 → a = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al33q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "An inequality in two variables, such as y > 2x − 3, is true on a whole region. To test a point, put its numbers in.\n(1, 0): 0 > 2 − 3 = −1. True, so (1, 0) is in the region.\n(3, 2): 2 > 6 − 3 = 3. False.\nWatch the line itself: (2, 1) gives 1 > 1, false. A point on the line is in y ≥ 2x − 3 but not in y > 2x − 3.\nSo for (2, k) to be in y > 2x − 3 we need k > 1: the least whole k is 2, not 1.",
+      "uz": "y > 2x − 3 kabi ikki oʻzgaruvchili tengsizlik butun bir sohada toʻgʻri. Nuqtani tekshirish uchun uning koordinatalarini qoʻying.\n(1, 0): 0 > 2 − 3 = −1. Toʻgʻri, demak (1, 0) sohada.\n(3, 2): 2 > 6 − 3 = 3. Notoʻgʻri.\nChiziqning oʻziga ehtiyot boʻling: (2, 1) da 1 > 1, notoʻgʻri. Chiziqdagi nuqta y ≥ 2x − 3 sohasida bor, y > 2x − 3 sohasida yoʻq.\nDemak (2, k) nuqta y > 2x − 3 da boʻlishi uchun k > 1 kerak: eng kichik butun k — 2, 1 emas.",
+      "ru": "Неравенство с двумя переменными, например y > 2x − 3, верно для целой области точек. Чтобы проверить точку, подставьте её координаты.\n(1, 0): 0 > 2 − 3 = −1. Верно, значит, точка (1, 0) лежит в области.\n(3, 2): 2 > 6 − 3 = 3. Неверно.\nОсторожно с самой прямой: (2, 1) даёт 1 > 1, неверно. Точка на прямой удовлетворяет неравенству y ≥ 2x − 3, но не y > 2x − 3.\nЗначит, чтобы точка (2, k) удовлетворяла неравенству y > 2x − 3, нужно k > 1: наименьшее целое k — 2, а не 1."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-al33q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a006",
+     "C1-m2a007"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a006",
+     "C1-m2a007",
+     "C1-a1p004"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-MAAL03#official",
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-MAAM01-2",
+   "course": "sat_m",
+   "unit": "C10-MAAM01",
+   "seq": 2,
+   "skill": "sat_m:MAAM01",
+   "requires": {
+    "math_rung_min": "alg1"
+   },
+   "title": {
+    "en": "SAT Math: Factoring: common factor, difference of squares, trinomials",
+    "uz": "SAT Math: Koʻpaytuvchilarga ajratish: umumiy koʻpaytuvchi, kvadratlar ayirmasi, uchhad",
+    "ru": "SAT Math: Разложение на множители: общий множитель, разность квадратов, трёхчлен"
+   },
+   "minutes": 7,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Factor in this order.\n1. Take out the common factor: 6x² + 9x = 3x(2x + 3).\n2. A difference of squares: a² − b² = (a − b)(a + b). x² − 49 = (x − 7)(x + 7).\n3. A trinomial x² + bx + c: find two numbers that multiply to c and add to b. x² − 2x − 15 = (x − 5)(x + 3), since −5 × 3 = −15 and −5 + 3 = −2.\nOften it takes two steps: 5x² − 20 = 5(x² − 4) = 5(x − 2)(x + 2).",
+      "uz": "Shu tartibda ajrating.\n1. Umumiy koʻpaytuvchini chiqaring: 6x² + 9x = 3x(2x + 3).\n2. Kvadratlar ayirmasi: a² − b² = (a − b)(a + b). x² − 49 = (x − 7)(x + 7).\n3. x² + bx + c uchhad: koʻpaytmasi c ga, yigʻindisi b ga teng ikki sonni toping. x² − 2x − 15 = (x − 5)(x + 3), chunki −5 × 3 = −15 va −5 + 3 = −2.\nKoʻpincha ikki qadam kerak: 5x² − 20 = 5(x² − 4) = 5(x − 2)(x + 2).",
+      "ru": "Раскладывайте в таком порядке.\n1. Вынесите общий множитель: 6x² + 9x = 3x(2x + 3).\n2. Разность квадратов: a² − b² = (a − b)(a + b). x² − 49 = (x − 7)(x + 7).\n3. Трёхчлен x² + bx + c: найдите два числа с произведением c и суммой b. x² − 2x − 15 = (x − 5)(x + 3), так как −5 × 3 = −15 и −5 + 3 = −2.\nЧасто нужны два шага: 5x² − 20 = 5(x² − 4) = 5(x − 2)(x + 2)."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am12q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "3x² + 27x + 42 = 3(x + m)(x + n), and m is greater than n. What is m?\nCommon factor first: 3x² + 27x + 42 = 3(x² + 9x + 14).\nTwo numbers that multiply to 14 and add to 9: 7 and 2.\nSo x² + 9x + 14 = (x + 7)(x + 2), and m = 7.\nNow you: 2x² + 26x + 60 = 2(x + m)(x + n), and m is greater than n.\n2(x² + 13x + 30) → 10 × 3 = 30 and 10 + 3 = 13 → m = ?",
+      "uz": "3x² + 27x + 42 = 3(x + m)(x + n), bunda m soni n dan katta. m nechaga teng?\nAvval umumiy koʻpaytuvchi: 3x² + 27x + 42 = 3(x² + 9x + 14).\nKoʻpaytmasi 14 ga, yigʻindisi 9 ga teng ikki son: 7 va 2.\nDemak x² + 9x + 14 = (x + 7)(x + 2), va m = 7.\nEndi siz: 2x² + 26x + 60 = 2(x + m)(x + n), bunda m soni n dan katta.\n2(x² + 13x + 30) → 10 × 3 = 30 va 10 + 3 = 13 → m = ?",
+      "ru": "3x² + 27x + 42 = 3(x + m)(x + n), причём m больше n. Чему равно m?\nСначала общий множитель: 3x² + 27x + 42 = 3(x² + 9x + 14).\nДва числа с произведением 14 и суммой 9: 7 и 2.\nЗначит, x² + 9x + 14 = (x + 7)(x + 2), и m = 7.\nТеперь попробуйте сами: 2x² + 26x + 60 = 2(x + m)(x + n), причём m больше n.\n2(x² + 13x + 30) → 10 × 3 = 30 и 10 + 3 = 13 → m = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am12q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Watch the signs.\nIn x² − x − 12 the product −12 is negative, so one number is negative: −4 × 3 = −12 and −4 + 3 = −1.\nx² − x − 12 = (x − 4)(x + 3), not (x + 4)(x − 3): that one is x² + x − 12.\nIn x² − 8x + 15 the product is positive and the sum negative, so both numbers are negative: (x − 5)(x − 3).\nAnd x² − 9 = (x − 3)(x + 3), but x² + 9 has no such factors.",
+      "uz": "Ishoralarga ehtiyot boʻling.\nx² − x − 12 da koʻpaytma −12 manfiy, demak sonlardan biri manfiy: −4 × 3 = −12 va −4 + 3 = −1.\nx² − x − 12 = (x − 4)(x + 3), (x + 4)(x − 3) emas: u x² + x − 12 ga teng.\nx² − 8x + 15 da koʻpaytma musbat, yigʻindi manfiy, demak ikkala son ham manfiy: (x − 5)(x − 3).\nx² − 9 = (x − 3)(x + 3), lekin x² + 9 bunday ajralmaydi.",
+      "ru": "Следите за знаками.\nВ x² − x − 12 произведение −12 отрицательно, значит, одно из чисел отрицательное: −4 × 3 = −12 и −4 + 3 = −1.\nx² − x − 12 = (x − 4)(x + 3), а не (x + 4)(x − 3): такое произведение равно x² + x − 12.\nВ x² − 8x + 15 произведение положительно, а сумма отрицательна, значит, оба числа отрицательны: (x − 5)(x − 3).\nА x² − 9 = (x − 3)(x + 3), но x² + 9 так не раскладывается."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am12q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-a1l061",
+     "C1-a1p006"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-a1l061",
+     "C1-a1p006",
+     "C1-r3b009"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-MAAM01#official",
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-MAAM01-3",
+   "course": "sat_m",
+   "unit": "C10-MAAM01",
+   "seq": 3,
+   "skill": "sat_m:MAAM01",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "SAT Math: Exponent rules and fractional exponents",
+    "uz": "SAT Math: Daraja qoidalari va kasr koʻrsatkichli daraja",
+    "ru": "SAT Math: Свойства степеней и дробные показатели"
+   },
+   "minutes": 7,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Three rules for powers of the same base a:\naᵐ · aⁿ = aᵐ⁺ⁿ: 2³ · 2⁴ = 2⁷.\n(aᵐ)ⁿ = aᵐⁿ: (5²)³ = 5⁶.\naᵐ ÷ aⁿ = aᵐ⁻ⁿ: 3⁹ ÷ 3⁵ = 3⁴.\nA negative power is a fraction: 2⁻³ = 1/2³ = 1/8.\nDifferent bases? Write them with one base first: 8 = 2³ and 4 = 2², so 8² · 4 = 2⁶ · 2² = 2⁸.",
+      "uz": "Bir xil a asosli darajalar uchun uchta qoida:\naᵐ · aⁿ = aᵐ⁺ⁿ: 2³ · 2⁴ = 2⁷.\n(aᵐ)ⁿ = aᵐⁿ: (5²)³ = 5⁶.\naᵐ ÷ aⁿ = aᵐ⁻ⁿ: 3⁹ ÷ 3⁵ = 3⁴.\nManfiy daraja — kasr: 2⁻³ = 1/2³ = 1/8.\nAsoslar har xilmi? Avval ularni bitta asos bilan yozing: 8 = 2³ va 4 = 2², demak 8² · 4 = 2⁶ · 2² = 2⁸.",
+      "ru": "Три правила для степеней с одинаковым основанием a:\naᵐ · aⁿ = aᵐ⁺ⁿ: 2³ · 2⁴ = 2⁷.\n(aᵐ)ⁿ = aᵐⁿ: (5²)³ = 5⁶.\naᵐ ÷ aⁿ = aᵐ⁻ⁿ: 3⁹ ÷ 3⁵ = 3⁴.\nСтепень с отрицательным показателем — это дробь: 2⁻³ = 1/2³ = 1/8.\nОснования разные? Сначала запишите их через одно основание: 8 = 2³ и 4 = 2², значит, 8² · 4 = 2⁶ · 2² = 2⁸."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am13q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A fractional power is a root: a^(1/n) is the root of degree n of a, and a^(m/n) is that root to the power m.\nWhat is the value of 27^(2/3)?\nThe 3 below means the cube root: ∛27 = 3.\nThe 2 on top means square it: 3² = 9.\nSo 27^(2/3) = 9.\nNow you: what is the value of 16^(3/4)?\n⁴√16 = 2 → 2³ = ?",
+      "uz": "Kasr daraja — bu ildiz: a^(1/n) — a ning n-darajali ildizi, a^(m/n) esa shu ildizning m-darajasi.\n27^(2/3) nechaga teng?\nPastdagi 3 — kub ildiz: ∛27 = 3.\nYuqoridagi 2 — kvadratga oshirish: 3² = 9.\nDemak 27^(2/3) = 9.\nEndi siz: 16^(3/4) nechaga teng?\n⁴√16 = 2 → 2³ = ?",
+      "ru": "Степень с дробным показателем — это корень: a^(1/n) — корень степени n из a, а a^(m/n) — этот корень в степени m.\nЧему равно 27^(2/3)?\n3 в знаменателе — это кубический корень: ∛27 = 3.\n2 в числителе — возведите в квадрат: 3² = 9.\nЗначит, 27^(2/3) = 9.\nТеперь попробуйте сами: чему равно 16^(3/4)?\n⁴√16 = 2 → 2³ = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am13q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Two slips with powers.\n1. Add the powers only when you multiply the same base: 2³ · 2⁴ = 2⁷, but 2³ + 2⁴ = 8 + 16 = 24, not 2⁷ = 128.\n2. A negative power is not a negative number: 2⁻³ = 1/8, not −8.\nAnd a fractional power is a root, not a product: 9^(1/2) = 3, not 9 × 1/2 = 4.5.",
+      "uz": "Darajalarda ikki xato.\n1. Daraja koʻrsatkichlari faqat bir xil asosli darajalar koʻpaytirilganda qoʻshiladi: 2³ · 2⁴ = 2⁷, lekin 2³ + 2⁴ = 8 + 16 = 24, 2⁷ = 128 emas.\n2. Manfiy daraja manfiy son emas: 2⁻³ = 1/8, −8 emas.\nKasr daraja esa koʻpaytma emas, ildiz: 9^(1/2) = 3, 9 × 1/2 = 4,5 emas.",
+      "ru": "Две ошибки со степенями.\n1. Показатели складываются, только когда умножают степени с одним основанием: 2³ · 2⁴ = 2⁷, но 2³ + 2⁴ = 8 + 16 = 24, а не 2⁷ = 128.\n2. Степень с отрицательным показателем — не отрицательное число: 2⁻³ = 1/8, а не −8.\nА степень с дробным показателем — это корень, а не произведение: 9^(1/2) = 3, а не 9 × 1/2 = 4,5."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am13q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a008",
+     "C1-a1p007"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a008",
+     "C1-a1p007",
+     "C1-r3b010"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-MAAM01#official",
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-MAAM02-2",
+   "course": "sat_m",
+   "unit": "C10-MAAM02",
+   "seq": 2,
+   "skill": "sat_m:MAAM02",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "SAT Math: The quadratic formula and the discriminant",
+    "uz": "SAT Math: Kvadrat tenglama formulasi va diskriminant",
+    "ru": "SAT Math: Формула корней и дискриминант"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "For ax² + bx + c = 0: x = (−b ± √(b² − 4ac)) ÷ (2a).\nThe discriminant D = b² − 4ac tells how many real solutions there are, before you solve:\nD > 0: two. D = 0: one. D < 0: none.\n2x² − 3x − 5 = 0: D = 9 + 40 = 49 and √49 = 7.\nx = (3 ± 7) ÷ 4, so x = 2.5 or x = −1.",
+      "uz": "ax² + bx + c = 0 uchun: x = (−b ± √(b² − 4ac)) ÷ (2a).\nD = b² − 4ac diskriminant yechmasdan turib nechta haqiqiy yechim borligini aytadi:\nD > 0: ikkita. D = 0: bitta. D < 0: yoʻq.\n2x² − 3x − 5 = 0: D = 9 + 40 = 49 va √49 = 7.\nx = (3 ± 7) ÷ 4, demak x = 2,5 yoki x = −1.",
+      "ru": "Для ax² + bx + c = 0: x = (−b ± √(b² − 4ac)) ÷ (2a).\nДискриминант D = b² − 4ac ещё до решения показывает, сколько у уравнения действительных решений:\nD > 0: два. D = 0: одно. D < 0: ни одного.\n2x² − 3x − 5 = 0: D = 9 + 40 = 49 и √49 = 7.\nx = (3 ± 7) ÷ 4, значит, x = 2,5 или x = −1."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am22q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "For which k does x² + 6x + k = 0 have exactly one real solution?\nOne solution means D = 0: 6² − 4 × 1 × k = 0.\n36 − 4k = 0, so k = 9.\nCheck: x² + 6x + 9 = (x + 3)², and x = −3 is its only solution.\nNow you: 2x² + 12x + k = 0 has exactly one real solution.\n12² − 4 × 2 × k = 0 → 144 − 8k = 0 → k = ?",
+      "uz": "x² + 6x + k = 0 tenglama k ning qanday qiymatida aynan bitta haqiqiy yechimga ega?\nBitta yechim — D = 0: 6² − 4 × 1 × k = 0.\n36 − 4k = 0, demak k = 9.\nTekshirish: x² + 6x + 9 = (x + 3)², uning yagona yechimi x = −3.\nEndi siz: 2x² + 12x + k = 0 tenglama aynan bitta haqiqiy yechimga ega.\n12² − 4 × 2 × k = 0 → 144 − 8k = 0 → k = ?",
+      "ru": "При каком k уравнение x² + 6x + k = 0 имеет ровно одно действительное решение?\nОдно решение означает, что D = 0: 6² − 4 × 1 × k = 0.\n36 − 4k = 0, значит, k = 9.\nПроверка: x² + 6x + 9 = (x + 3)², и x = −3 — его единственное решение.\nТеперь попробуйте сами: уравнение 2x² + 12x + k = 0 имеет ровно одно действительное решение.\n12² − 4 × 2 × k = 0 → 144 − 8k = 0 → k = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am22q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Two slips with the discriminant.\n1. Keep the signs. In x² − 6x + 9: a = 1, b = −6, c = 9, so D = (−6)² − 4 × 9 = 36 − 36 = 0, not −72.\n2. D < 0 means no real solution: x² − 4x + 7 = 0 has D = 16 − 28 = −12. The graph of y = x² − 4x + 7 never touches the x-axis.\nA positive c does not make D negative by itself: x² − 8x + 12 has D = 64 − 48 = 16.",
+      "uz": "Diskriminantda ikki xato.\n1. Ishoralarni saqlang. x² − 6x + 9 da: a = 1, b = −6, c = 9, demak D = (−6)² − 4 × 9 = 36 − 36 = 0, −72 emas.\n2. D < 0 — haqiqiy yechim yoʻq: x² − 4x + 7 = 0 da D = 16 − 28 = −12. y = x² − 4x + 7 grafigi x oʻqiga hech qachon tegmaydi.\nMusbat c oʻz-oʻzidan D ni manfiy qilmaydi: x² − 8x + 12 da D = 64 − 48 = 16.",
+      "ru": "Две ошибки с дискриминантом.\n1. Сохраняйте знаки. В x² − 6x + 9: a = 1, b = −6, c = 9, значит, D = (−6)² − 4 × 9 = 36 − 36 = 0, а не −72.\n2. D < 0 — действительных решений нет: у уравнения x² − 4x + 7 = 0 дискриминант D = 16 − 28 = −12. График y = x² − 4x + 7 никогда не касается оси x.\nПоложительное c само по себе не делает D отрицательным: у x² − 8x + 12 дискриминант D = 64 − 48 = 16."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am22q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a009",
+     "C1-a2p001"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a009",
+     "C1-a2p001",
+     "C1-a2l011"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-MAAM02#official",
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-MAAM02-3",
+   "course": "sat_m",
+   "unit": "C10-MAAM02",
+   "seq": 3,
+   "skill": "sat_m:MAAM02",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "SAT Math: Radical and rational equations, and where a line meets a parabola",
+    "uz": "SAT Math: Ildizli va kasrli tenglamalar, toʻgʻri chiziq va parabolaning kesishishi",
+    "ru": "SAT Math: Уравнения с корнем и с дробями, пересечение прямой и параболы"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "When x is in a denominator, multiply every term by the common denominator.\nTwo taps fill a tank in 3 hours and in 6 hours. Together they fill 1/3 + 1/6 of it each hour. In t hours: t/3 + t/6 = 1.\nMultiply by 6: 2t + t = 6, so t = 2 hours.\nA number that makes a denominator 0 is never a solution. x/(x − 3) = 3/(x − 3) gives x = 3 after clearing, but x = 3 makes the bottom 0. So there is no solution.",
+      "uz": "x maxrajda boʻlsa, har bir hadni umumiy maxrajga koʻpaytiring.\nIkki jumrak idishni 3 soatda va 6 soatda toʻldiradi. Birga ular har soatda idishning 1/3 + 1/6 qismini toʻldiradi. t soatda: t/3 + t/6 = 1.\n6 ga koʻpaytiramiz: 2t + t = 6, demak t = 2 soat.\nMaxrajni 0 qiladigan son hech qachon yechim boʻlmaydi. x/(x − 3) = 3/(x − 3) dan x = 3 chiqadi, lekin x = 3 da maxraj 0. Demak, yechim yoʻq.",
+      "ru": "Если x стоит в знаменателе, умножьте каждое слагаемое на общий знаменатель.\nОдин кран наполняет бак за 3 часа, другой — за 6 часов. Вместе за час они наполняют 1/3 + 1/6 бака. За t часов: t/3 + t/6 = 1.\nУмножим на 6: 2t + t = 6, значит, t = 2 часа.\nЧисло, при котором знаменатель равен 0, никогда не бывает решением. Из x/(x − 3) = 3/(x − 3) получаем x = 3, но при x = 3 знаменатель равен 0. Значит, решений нет."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am23q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "Solve √(x + 7) = x − 5.\nSquare both sides: x + 7 = x² − 10x + 25.\nSo x² − 11x + 18 = 0 and (x − 9)(x − 2) = 0: x = 9 or x = 2.\nCheck x = 9: √16 = 4 and 9 − 5 = 4. True.\nCheck x = 2: √9 = 3, but 2 − 5 = −3. False: squaring added it.\nSo x = 9 only.\nNow you: √(x + 10) = x − 2.\nx + 10 = x² − 4x + 4 → (x − 6)(x + 1) = 0 → x − 2 cannot be negative, so x = ?",
+      "uz": "√(x + 7) = x − 5 ni yeching.\nIkkala tomonni kvadratga oshiramiz: x + 7 = x² − 10x + 25.\nDemak x² − 11x + 18 = 0 va (x − 9)(x − 2) = 0: x = 9 yoki x = 2.\nx = 9 ni tekshiramiz: √16 = 4 va 9 − 5 = 4. Toʻgʻri.\nx = 2 ni tekshiramiz: √9 = 3, lekin 2 − 5 = −3. Notoʻgʻri: bu ildiz kvadratga oshirganda ortiqcha paydo boʻldi.\nDemak, faqat x = 9.\nEndi siz: √(x + 10) = x − 2.\nx + 10 = x² − 4x + 4 → (x − 6)(x + 1) = 0 → x − 2 manfiy boʻlolmaydi, demak x = ?",
+      "ru": "Решите √(x + 7) = x − 5.\nВозведём обе части в квадрат: x + 7 = x² − 10x + 25.\nЗначит, x² − 11x + 18 = 0 и (x − 9)(x − 2) = 0: x = 9 или x = 2.\nПроверим x = 9: √16 = 4 и 9 − 5 = 4. Верно.\nПроверим x = 2: √9 = 3, но 2 − 5 = −3. Неверно: это посторонний корень, он появился при возведении в квадрат.\nЗначит, только x = 9.\nТеперь попробуйте сами: √(x + 10) = x − 2.\nx + 10 = x² − 4x + 4 → (x − 6)(x + 1) = 0 → x − 2 не может быть отрицательным, значит, x = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am23q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Where do y = x² − 2x − 3 and y = x + 1 meet?\nPut the line into the parabola: x² − 2x − 3 = x + 1, so x² − 3x − 4 = 0 and (x − 4)(x + 1) = 0.\nx = 4 or x = −1. These are not the points yet: find each y from the line. The points are (4, 5) and (−1, 0).\nRead what is asked: an x, a y, or how many points. If the new quadratic has D < 0, the line misses the parabola.",
+      "uz": "y = x² − 2x − 3 va y = x + 1 qayerda kesishadi?\nChiziqni parabolaga qoʻyamiz: x² − 2x − 3 = x + 1, demak x² − 3x − 4 = 0 va (x − 4)(x + 1) = 0.\nx = 4 yoki x = −1. Bular hali nuqtalar emas: har birining y ini chiziqdan toping. Nuqtalar (4, 5) va (−1, 0).\nNima soʻralganini oʻqing: x mi, y mi yoki nechta nuqta. Yangi kvadrat tenglamada D < 0 boʻlsa, chiziq parabolani kesmaydi.",
+      "ru": "Где пересекаются y = x² − 2x − 3 и y = x + 1?\nПриравняем выражения для y: x² − 2x − 3 = x + 1, значит, x² − 3x − 4 = 0 и (x − 4)(x + 1) = 0.\nx = 4 или x = −1. Это ещё не точки: для каждого x найдите y по уравнению прямой. Точки (4, 5) и (−1, 0).\nВнимательно читайте, о чём спрашивают: x, y или сколько точек. Если у нового квадратного уравнения D < 0, прямая не пересекает параболу."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am23q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a010",
+     "C1-a2p006"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a010",
+     "C1-a2p006",
+     "C1-r3b012"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-MAAM02#official",
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-MAAM03-2",
+   "course": "sat_m",
+   "unit": "C10-MAAM03",
+   "seq": 2,
+   "skill": "sat_m:MAAM03",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "SAT Math: Growth and decay by a percent",
+    "uz": "SAT Math: Foiz boʻyicha oʻsish va kamayish",
+    "ru": "SAT Math: Рост и убывание на процент"
+   },
+   "minutes": 7,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "A change by the same percent every step multiplies by the same number b.\nGrowth by r: b = 1 + r. Up 8% a year: b = 1.08.\nDecay by r: b = 1 − r. Down 15% a year: b = 0.85.\nDoubling is growth by 100%: b = 2.\nThe model is y = a · bᵗ, where a is the start.\nA town of 40,000 people grows 5% a year: P = 40,000 · 1.05ᵗ. After 2 years: 40,000 × 1.05² = 44,100.",
+      "uz": "Har qadamda bir xil foizga oʻzgarish — har qadamda bir xil b soniga koʻpaytirish.\nr ga oʻsish: b = 1 + r. Yiliga 8% oʻsish: b = 1,08.\nr ga kamayish: b = 1 − r. Yiliga 15% kamayish: b = 0,85.\nIkki baravar oshish — 100% oʻsish: b = 2.\nModel: y = a · bᵗ, bunda a — boshlangʻich qiymat.\n40 000 kishilik shahar aholisi yiliga 5% oʻsadi: P = 40 000 · 1,05ᵗ. 2 yildan keyin: 40 000 × 1,05² = 44 100.",
+      "ru": "Изменение на один и тот же процент за каждый шаг — это умножение на одно и то же число b.\nРост на r: b = 1 + r. Рост на 8% в год: b = 1,08.\nУбывание на r: b = 1 − r. Спад на 15% в год: b = 0,85.\nУдвоение — это рост на 100%: b = 2.\nМодель: y = a · bᵗ, где a — начальное значение.\nНаселение города 40 000 человек растёт на 5% в год: P = 40 000 · 1,05ᵗ. Через 2 года: 40 000 × 1,05² = 44 100."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am32q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A car loses 20% of its value every year. After how many whole years will its value first be less than 50% of the original value?\nEach year multiplies the value by 1 − 0.2 = 0.8. Let n be the number of years.\n0.8² = 0.64 and 0.8³ = 0.512: after 3 years it is 51.2%, still not below 50%.\n0.8⁴ = 0.4096: after 4 years it is 40.96%. So n = 4.\nNow you: a car loses 10% of its value every year. When is its value first less than 60%?\n0.9⁴ = 0.6561 (65.61%) → 0.9⁵ = 0.59049 (59.049%) → n = ?",
+      "uz": "Avtomobil har yili qiymatining 20 foizini yoʻqotadi. Necha toʻliq yildan keyin uning qiymati ilk bor boshlangʻich qiymatning 50 foizidan kam boʻladi?\nHar yili qiymat 1 − 0,2 = 0,8 ga koʻpaytiriladi. n — yillar soni.\n0,8² = 0,64 va 0,8³ = 0,512: 3 yildan keyin 51,2%, hali 50% dan kam emas.\n0,8⁴ = 0,4096: 4 yildan keyin 40,96%. Demak n = 4.\nEndi siz: avtomobil har yili qiymatining 10 foizini yoʻqotadi. Qiymati qachon ilk bor 60% dan kam boʻladi?\n0,9⁴ = 0,6561 (65,61%) → 0,9⁵ = 0,59049 (59,049%) → n = ?",
+      "ru": "Автомобиль каждый год теряет 20% своей стоимости. Через сколько полных лет его стоимость впервые станет меньше 50% первоначальной?\nКаждый год стоимость умножается на 1 − 0,2 = 0,8. Пусть n — число лет.\n0,8² = 0,64 и 0,8³ = 0,512: через 3 года это 51,2%, ещё не меньше 50%.\n0,8⁴ = 0,4096: через 4 года это 40,96%. Значит, n = 4.\nТеперь попробуйте сами: автомобиль каждый год теряет 10% стоимости. Когда она впервые станет меньше 60%?\n0,9⁴ = 0,6561 (65,61%) → 0,9⁵ = 0,59049 (59,049%) → n = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am32q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Two traps with percents.\n1. b is 1 − r, not r. Losing 20% a year multiplies by 0.8, not by 0.2.\n2. Percent changes do not simply add. Up 10% and then down 10%: 1.1 × 0.9 = 0.99, so 1% less than the start, not the start.\n5% a year for 2 years: 1.05² = 1.1025, which is 10.25% more, not 10%.",
+      "uz": "Foizlarda ikki tuzoq.\n1. b — bu 1 − r, r emas. Yiliga 20% yoʻqotish 0,8 ga koʻpaytirish, 0,2 ga emas.\n2. Foiz oʻzgarishlari oddiy qoʻshilmaydi. Avval 10% oshib, keyin 10% kamaysa: 1,1 × 0,9 = 0,99, demak boshidagidan 1% kam, unga teng emas.\nYiliga 5% dan 2 yil: 1,05² = 1,1025, bu 10% emas, 10,25% koʻp.",
+      "ru": "Две ловушки с процентами.\n1. b — это 1 − r, а не r. Потеря 20% в год — это умножение на 0,8, а не на 0,2.\n2. Процентные изменения не просто складываются. Рост на 10%, потом спад на 10%: 1,1 × 0,9 = 0,99, то есть на 1% меньше начального, а не столько же.\nРост на 5% в год в течение 2 лет: 1,05² = 1,1025, это на 10,25% больше, а не на 10%."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am32q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-sat011",
+     "C1-sat012"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-sat011",
+     "C1-sat012",
+     "C1-a2p002"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-MAAM03#official",
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-MAAM03-3",
+   "course": "sat_m",
+   "unit": "C10-MAAM03",
+   "seq": 3,
+   "skill": "sat_m:MAAM03",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "SAT Math: Quadratic graphs: vertex, zeros and shifts",
+    "uz": "SAT Math: Kvadrat funksiya grafigi: uchi, nollari va siljishlar",
+    "ru": "SAT Math: График квадратичной функции: вершина, нули и сдвиги"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Two forms of a quadratic each show something at once.\nVertex form y = a(x − h)² + k: the vertex is (h, k). y = 2(x − 3)² + 5 has its vertex at (3, 5), and its least value is 5.\nFactored form y = a(x − p)(x − q): the zeros, where y = 0, are p and q. The vertex is halfway between them.\ny = (x − 1)(x − 7): zeros 1 and 7, vertex at x = (1 + 7) ÷ 2 = 4, where y = 3 × (−3) = −9. The vertex is (4, −9).",
+      "uz": "Kvadrat funksiyaning ikki koʻrinishidan har biri bir narsani darhol koʻrsatadi.\nUchini koʻrsatadigan koʻrinish y = a(x − h)² + k: uchi (h, k). y = 2(x − 3)² + 5 ning uchi (3, 5), eng kichik qiymati 5.\nKoʻpaytuvchili koʻrinish y = a(x − p)(x − q): nollari (y = 0 boʻlgan joylar) p va q. Uchi ularning qoq oʻrtasida.\ny = (x − 1)(x − 7): nollari 1 va 7, uchi x = (1 + 7) ÷ 2 = 4 da, u yerda y = 3 × (−3) = −9. Uchi (4, −9).",
+      "ru": "Каждая из двух форм квадратичной функции сразу показывает своё.\nВершинная форма y = a(x − h)² + k: вершина (h, k). У y = 2(x − 3)² + 5 вершина (3, 5), а наименьшее значение 5.\nФорма с множителями y = a(x − p)(x − q): нули (где y = 0) — это p и q. Вершина ровно посередине между ними.\ny = (x − 1)(x − 7): нули 1 и 7, вершина при x = (1 + 7) ÷ 2 = 4, там y = 3 × (−3) = −9. Вершина (4, −9)."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am33q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "y = x² − 8x + 21 can be written as y = (x − h)² + k. What is k?\nHalf of −8 is −4, and (−4)² = 16.\nx² − 8x + 21 = (x² − 8x + 16) − 16 + 21 = (x − 4)² + 5.\nSo k = 5, and the vertex is (4, 5).\nNow you: y = x² − 10x + 32 can be written as y = (x − h)² + k.\nHalf of −10 is −5 and (−5)² = 25 → (x − 5)² − 25 + 32 → k = ?",
+      "uz": "y = x² − 8x + 21 ni y = (x − h)² + k koʻrinishida yozish mumkin. k nechaga teng?\n−8 ning yarmi −4, va (−4)² = 16.\nx² − 8x + 21 = (x² − 8x + 16) − 16 + 21 = (x − 4)² + 5.\nDemak k = 5, uchi esa (4, 5).\nEndi siz: y = x² − 10x + 32 ni y = (x − h)² + k koʻrinishida yozish mumkin.\n−10 ning yarmi −5 va (−5)² = 25 → (x − 5)² − 25 + 32 → k = ?",
+      "ru": "y = x² − 8x + 21 можно записать в виде y = (x − h)² + k. Чему равно k?\nПоловина от −8 равна −4, и (−4)² = 16.\nx² − 8x + 21 = (x² − 8x + 16) − 16 + 21 = (x − 4)² + 5.\nЗначит, k = 5, а вершина (4, 5).\nТеперь попробуйте сами: y = x² − 10x + 32 можно записать в виде y = (x − h)² + k.\nПоловина от −10 равна −5 и (−5)² = 25 → (x − 5)² − 25 + 32 → k = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am33q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Shifts move the vertex, and the signs trick people.\nf(x − 3) moves the graph 3 units right, not left. f(x + 3) moves it 3 units left.\nf(x) + 2 moves it 2 units up; f(x) − 2 moves it down.\nf(x) = (x − 1)² + 4 has its vertex at (1, 4). The graph of y = f(x − 3) + 2 has its vertex at (1 + 3, 4 + 2) = (4, 6), not (−2, 6).",
+      "uz": "Siljishlar uchini koʻchiradi, ishoralar esa chalgʻitadi.\nf(x − 3) grafikni 3 birlik oʻngga suradi, chapga emas. f(x + 3) uni 3 birlik chapga suradi.\nf(x) + 2 uni 2 birlik yuqoriga, f(x) − 2 esa pastga suradi.\nf(x) = (x − 1)² + 4 ning uchi (1, 4). y = f(x − 3) + 2 grafigining uchi (1 + 3, 4 + 2) = (4, 6), (−2, 6) emas.",
+      "ru": "Сдвиги переносят вершину, а знаки сбивают с толку.\nf(x − 3) сдвигает график на 3 единицы вправо, а не влево. f(x + 3) сдвигает его на 3 единицы влево.\nf(x) + 2 поднимает его на 2 единицы, f(x) − 2 опускает.\nУ f(x) = (x − 1)² + 4 вершина (1, 4). У графика y = f(x − 3) + 2 вершина (1 + 3, 4 + 2) = (4, 6), а не (−2, 6)."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-am33q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a012",
+     "C1-m2a011"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-m2a012",
+     "C1-m2a011",
+     "C1-r3b013"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-MAAM03#official",
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ],
+ "items": [
+  {
+   "id": "C19-al12q1",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_equation",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL01-2",
+   "lang": "en",
+   "stem": {
+    "en": "Solve x/3 + 1 = x/5 + 3. What is x?",
+    "uz": "x/3 + 1 = x/5 + 3 tenglamani yeching. x nechaga teng?",
+    "ru": "Решите уравнение x/3 + 1 = x/5 + 3. Чему равен x?"
+   },
+   "options": [
+    {
+     "en": "15"
+    },
+    {
+     "en": "1"
+    },
+    {
+     "en": "30"
+    },
+    {
+     "en": "−15"
+    }
+   ],
+   "why": {
+    "en": "Multiply every term by 15: 5x + 15 = 3x + 45, so 2x = 30 and x = 15.",
+    "uz": "Har bir hadni 15 ga koʻpaytiring: 5x + 15 = 3x + 45, demak 2x = 30 va x = 15.",
+    "ru": "Умножьте каждое слагаемое на 15: 5x + 15 = 3x + 45, значит, 2x = 30 и x = 15."
+   },
+   "prior_b": -0.7,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al12q2",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_equation",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL01-2",
+   "lang": "en",
+   "stem": {
+    "en": "The equation 3(x − 4) + 4x = kx + 1 has no solution. What is k?",
+    "uz": "3(x − 4) + 4x = kx + 1 tenglama yechimga ega emas. k nechaga teng?",
+    "ru": "Уравнение 3(x − 4) + 4x = kx + 1 не имеет решений. Чему равно k?"
+   },
+   "options": [
+    {
+     "en": "7"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "12"
+    }
+   ],
+   "why": {
+    "en": "3x − 12 + 4x = 7x − 12. With k = 7 both sides have 7x, and −12 = 1 is false: no solution.",
+    "uz": "3x − 12 + 4x = 7x − 12. k = 7 boʻlsa, ikkala tomonda 7x boʻladi va −12 = 1 notoʻgʻri: yechim yoʻq.",
+    "ru": "3x − 12 + 4x = 7x − 12. При k = 7 в обеих частях 7x, а −12 = 1 неверно: решений нет."
+   },
+   "prior_b": -0.4,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al12q3",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_equation",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL01-2",
+   "lang": "en",
+   "stem": {
+    "en": "Which equation has no solution?",
+    "uz": "Qaysi tenglama yechimga ega emas?",
+    "ru": "Какое уравнение не имеет решений?"
+   },
+   "options": [
+    {
+     "en": "2(x + 3) = 2x + 5"
+    },
+    {
+     "en": "2(x + 3) = 2x + 6"
+    },
+    {
+     "en": "2(x + 3) = 3x + 6"
+    },
+    {
+     "en": "2(x + 3) = x + 5"
+    }
+   ],
+   "why": {
+    "en": "In 2(x + 3) = 2x + 5 the x-terms cancel: 2x + 6 = 2x + 5 gives 6 = 5, which is false. So it has no solution.",
+    "uz": "2(x + 3) = 2x + 5 da x li hadlar qisqaradi: 2x + 6 = 2x + 5 dan 6 = 5 chiqadi, bu notoʻgʻri. Demak, yechim yoʻq.",
+    "ru": "В 2(x + 3) = 2x + 5 слагаемые с x сокращаются: 2x + 6 = 2x + 5 даёт 6 = 5, а это неверно. Значит, решений нет."
+   },
+   "prior_b": -0.2,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al13q1",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_equation",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL01-3",
+   "lang": "en",
+   "stem": {
+    "en": "A 10-litre drink is 30% juice. How many litres of water must be added to make it 20% juice?",
+    "uz": "10 litr ichimlikning 30% i sharbat. Sharbat 20% boʻlishi uchun necha litr suv qoʻshish kerak?",
+    "ru": "10 л напитка содержат 30% сока. Сколько литров воды надо добавить, чтобы сока стало 20%?"
+   },
+   "options": [
+    {
+     "en": "5"
+    },
+    {
+     "en": "15"
+    },
+    {
+     "en": "1"
+    },
+    {
+     "en": "3"
+    }
+   ],
+   "why": {
+    "en": "The juice stays 0.3 × 10 = 3 litres. 3 = 0.2(10 + w), so 10 + w = 15 and w = 5.",
+    "uz": "Sharbat 0,3 × 10 = 3 litr boʻlib qoladi. 3 = 0,2(10 + w), demak 10 + w = 15 va w = 5.",
+    "ru": "Сока остаётся 0,3 × 10 = 3 л. 3 = 0,2(10 + w), значит, 10 + w = 15 и w = 5."
+   },
+   "prior_b": -0.3,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al13q2",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_inequalities",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL01-3",
+   "lang": "en",
+   "stem": {
+    "en": "A lift can carry at most 750 kg. A worker who weighs 70 kg rides in it with boxes of 25 kg each. What is the greatest number of boxes he can take in one trip?",
+    "uz": "Lift koʻpi bilan 750 kg yuk koʻtara oladi. Vazni 70 kg boʻlgan ishchi liftda har biri 25 kg boʻlgan qutilar bilan chiqmoqda. U bir martada eng koʻpi bilan nechta quti olib chiqa oladi?",
+    "ru": "Лифт поднимает не более 750 кг. Рабочий массой 70 кг едет в нём с ящиками по 25 кг. Какое наибольшее число ящиков он может взять за один раз?"
+   },
+   "options": [
+    {
+     "en": "27"
+    },
+    {
+     "en": "28"
+    },
+    {
+     "en": "30"
+    },
+    {
+     "en": "32"
+    }
+   ],
+   "why": {
+    "en": "70 + 25n ≤ 750 gives 25n ≤ 680 and n ≤ 27.2. The greatest whole number is 27.",
+    "uz": "70 + 25n ≤ 750 dan 25n ≤ 680 va n ≤ 27,2. Eng katta butun son — 27.",
+    "ru": "Из 70 + 25n ≤ 750 следует 25n ≤ 680 и n ≤ 27,2. Наибольшее целое — 27."
+   },
+   "prior_b": -0.4,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al13q3",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_inequalities",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "hard"
+   },
+   "page": "C19-MAAL01-3",
+   "lang": "en",
+   "stem": {
+    "en": "Dilnoza has 25,000 soʻm and saves 12,000 soʻm a week. Headphones cost 160,000 soʻm. What is the least number of whole weeks she must save to buy them?",
+    "uz": "Dilnozada 25 000 soʻm bor va u har hafta 12 000 soʻm yigʻadi. Quloqchin 160 000 soʻm turadi. Uni sotib olish uchun u kamida necha toʻliq hafta pul yigʻishi kerak?",
+    "ru": "У Дилнозы есть 25 000 сум, и она откладывает 12 000 сум в неделю. Наушники стоят 160 000 сум. Какое наименьшее число полных недель ей нужно копить, чтобы их купить?"
+   },
+   "options": [
+    {
+     "en": "12"
+    },
+    {
+     "en": "11"
+    },
+    {
+     "en": "14"
+    },
+    {
+     "en": "16"
+    }
+   ],
+   "why": {
+    "en": "25,000 + 12,000w ≥ 160,000 gives w ≥ 11.25. 11 weeks are not enough, so the least whole number is 12.",
+    "uz": "25 000 + 12 000w ≥ 160 000 dan w ≥ 11,25. 11 hafta yetmaydi, demak eng kichik butun son — 12.",
+    "ru": "Из 25 000 + 12 000w ≥ 160 000 следует w ≥ 11,25. 11 недель мало, значит, наименьшее целое — 12."
+   },
+   "prior_b": -0.2,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al22q1",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_functions",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "easy"
+   },
+   "page": "C19-MAAL02-2",
+   "lang": "en",
+   "stem": {
+    "en": "A line passes through the points (2, 5) and (6, 17). What is its slope?",
+    "uz": "Toʻgʻri chiziq (2, 5) va (6, 17) nuqtalardan oʻtadi. Uning burchak koeffitsiyenti nechaga teng?",
+    "ru": "Прямая проходит через точки (2, 5) и (6, 17). Чему равен её угловой коэффициент?"
+   },
+   "options": [
+    {
+     "en": "3"
+    },
+    {
+     "en": "1/3"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "12"
+    }
+   ],
+   "why": {
+    "en": "Slope = (17 − 5) ÷ (6 − 2) = 12 ÷ 4 = 3.",
+    "uz": "Burchak koeffitsiyenti = (17 − 5) ÷ (6 − 2) = 12 ÷ 4 = 3.",
+    "ru": "Угловой коэффициент = (17 − 5) ÷ (6 − 2) = 12 ÷ 4 = 3."
+   },
+   "prior_b": -0.9,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al22q2",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_functions",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL02-2",
+   "lang": "en",
+   "stem": {
+    "en": "Line k passes through the point (3, 4) and is parallel to the line through (1, 2) and (3, 8). What is the y-intercept of line k?",
+    "uz": "k toʻgʻri chiziq (3, 4) nuqtadan oʻtadi va (1, 2) hamda (3, 8) nuqtalardan oʻtuvchi chiziqqa parallel. k chiziq y oʻqini qaysi ordinatada kesadi?",
+    "ru": "Прямая k проходит через точку (3, 4) и параллельна прямой, проходящей через (1, 2) и (3, 8). Чему равна ордината точки пересечения k с осью y?"
+   },
+   "options": [
+    {
+     "en": "−5"
+    },
+    {
+     "en": "−1"
+    },
+    {
+     "en": "13"
+    },
+    {
+     "en": "5"
+    }
+   ],
+   "why": {
+    "en": "The slope is (8 − 2) ÷ (3 − 1) = 3. Then 4 = 3 × 3 + b, so b = −5.",
+    "uz": "Burchak koeffitsiyenti (8 − 2) ÷ (3 − 1) = 3. Keyin 4 = 3 × 3 + b, demak b = −5.",
+    "ru": "Угловой коэффициент (8 − 2) ÷ (3 − 1) = 3. Тогда 4 = 3 × 3 + b, значит, b = −5."
+   },
+   "prior_b": -0.4,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al22q3",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_functions",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL02-2",
+   "lang": "en",
+   "stem": {
+    "en": "Which line is parallel to the line 4y = 8x − 12?",
+    "uz": "Qaysi toʻgʻri chiziq 4y = 8x − 12 chiziqqa parallel?",
+    "ru": "Какая прямая параллельна прямой 4y = 8x − 12?"
+   },
+   "options": [
+    {
+     "en": "y = 2x + 5"
+    },
+    {
+     "en": "y = 8x + 5"
+    },
+    {
+     "en": "y = −x/2 + 5"
+    },
+    {
+     "en": "y = 4x + 5"
+    }
+   ],
+   "why": {
+    "en": "4y = 8x − 12 is y = 2x − 3, slope 2. A parallel line has slope 2: y = 2x + 5.",
+    "uz": "4y = 8x − 12 — bu y = 2x − 3, koeffitsiyent 2. Parallel chiziqning koeffitsiyenti ham 2: y = 2x + 5.",
+    "ru": "4y = 8x − 12 — это y = 2x − 3, коэффициент 2. У параллельной прямой тоже 2: y = 2x + 5."
+   },
+   "prior_b": -0.3,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al23q1",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_functions",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "easy"
+   },
+   "page": "C19-MAAL02-3",
+   "lang": "en",
+   "stem": {
+    "en": "A phone plan costs C = 1,500g + 20,000 soʻm a month, where g is the number of GB used. How much does a month with 12 GB cost, in soʻm?",
+    "uz": "Telefon tarifi oyiga C = 1500g + 20 000 soʻm, bunda g — ishlatilgan GB soni. 12 GB ishlatilgan oy necha soʻm turadi?",
+    "ru": "Тариф стоит C = 1500g + 20 000 сум в месяц, где g — число использованных ГБ. Сколько сумов стоит месяц, в котором использовано 12 ГБ?"
+   },
+   "options": [
+    {
+     "en": "38,000",
+     "uz": "38 000",
+     "ru": "38 000"
+    },
+    {
+     "en": "18,000",
+     "uz": "18 000",
+     "ru": "18 000"
+    },
+    {
+     "en": "21,500",
+     "uz": "21 500",
+     "ru": "21 500"
+    },
+    {
+     "en": "241,500",
+     "uz": "241 500",
+     "ru": "241 500"
+    }
+   ],
+   "why": {
+    "en": "C = 1,500 × 12 + 20,000 = 18,000 + 20,000 = 38,000 soʻm.",
+    "uz": "C = 1500 × 12 + 20 000 = 18 000 + 20 000 = 38 000 soʻm.",
+    "ru": "C = 1500 × 12 + 20 000 = 18 000 + 20 000 = 38 000 сум."
+   },
+   "prior_b": -0.8,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al23q2",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_functions",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL02-3",
+   "lang": "en",
+   "stem": {
+    "en": "A tank holds W = 800 − 20t litres of water t minutes after a tap is opened. How many minutes after the tap is opened will the tank hold 340 litres?",
+    "uz": "Jumrak ochilgandan t daqiqa oʻtgach idishda W = 800 − 20t litr suv boʻladi. Jumrak ochilgandan necha daqiqa oʻtgach idishda 340 litr suv qoladi?",
+    "ru": "Через t минут после того, как открыли кран, в баке W = 800 − 20t литров воды. Через сколько минут после открытия крана в баке останется 340 литров?"
+   },
+   "options": [
+    {
+     "en": "23"
+    },
+    {
+     "en": "17"
+    },
+    {
+     "en": "57"
+    },
+    {
+     "en": "40"
+    }
+   ],
+   "why": {
+    "en": "800 − 20t = 340 gives 20t = 460, so t = 23 minutes.",
+    "uz": "800 − 20t = 340 dan 20t = 460, demak t = 23 daqiqa.",
+    "ru": "Из 800 − 20t = 340 следует 20t = 460, значит, t = 23 минуты."
+   },
+   "prior_b": -0.5,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al23q3",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_functions",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL02-3",
+   "lang": "en",
+   "stem": {
+    "en": "A pool holds V = 6,000 − 50t litres of water t minutes after the drain is opened. How many litres are left after 1.5 hours?",
+    "uz": "Hovuzdan suv chiqarila boshlangandan t daqiqa oʻtgach unda V = 6000 − 50t litr suv qoladi. 1,5 soatdan keyin necha litr suv qoladi?",
+    "ru": "Через t минут после того, как открыли слив, в бассейне V = 6000 − 50t литров воды. Сколько литров останется через 1,5 часа?"
+   },
+   "options": [
+    {
+     "en": "1,500",
+     "uz": "1500",
+     "ru": "1500"
+    },
+    {
+     "en": "5,925",
+     "uz": "5925",
+     "ru": "5925"
+    },
+    {
+     "en": "3,000",
+     "uz": "3000",
+     "ru": "3000"
+    },
+    {
+     "en": "4,500",
+     "uz": "4500",
+     "ru": "4500"
+    }
+   ],
+   "why": {
+    "en": "1.5 hours = 90 minutes, so V = 6,000 − 50 × 90 = 6,000 − 4,500 = 1,500 litres.",
+    "uz": "1,5 soat = 90 daqiqa, demak V = 6000 − 50 × 90 = 6000 − 4500 = 1500 litr.",
+    "ru": "1,5 часа = 90 минут, значит, V = 6000 − 50 × 90 = 6000 − 4500 = 1500 литров."
+   },
+   "prior_b": -0.1,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al32q1",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "system_of_equations",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL03-2",
+   "lang": "en",
+   "stem": {
+    "en": "How many solutions does the system y = 3x − 1 and 6x − 2y = 2 have?",
+    "uz": "y = 3x − 1 va 6x − 2y = 2 sistema nechta yechimga ega?",
+    "ru": "Сколько решений имеет система y = 3x − 1 и 6x − 2y = 2?"
+   },
+   "options": [
+    {
+     "en": "Infinitely many",
+     "uz": "Cheksiz koʻp",
+     "ru": "Бесконечно много"
+    },
+    {
+     "en": "None",
+     "uz": "Yechim yoʻq",
+     "ru": "Ни одного"
+    },
+    {
+     "en": "Exactly one",
+     "uz": "Aynan bitta",
+     "ru": "Ровно одно"
+    },
+    {
+     "en": "Exactly two",
+     "uz": "Aynan ikkita",
+     "ru": "Ровно два"
+    }
+   ],
+   "why": {
+    "en": "6x − 2y = 2 gives y = 3x − 1, the same line as the first. Infinitely many solutions.",
+    "uz": "6x − 2y = 2 dan y = 3x − 1 chiqadi — birinchisi bilan bir xil chiziq. Cheksiz koʻp yechim.",
+    "ru": "Из 6x − 2y = 2 получаем y = 3x − 1 — та же прямая. Бесконечно много решений."
+   },
+   "prior_b": -0.4,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al32q2",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "system_of_equations",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL03-2",
+   "lang": "en",
+   "stem": {
+    "en": "The system 2x + 5y = 4 and 6x + ky = 9 has no solution. What is k?",
+    "uz": "2x + 5y = 4 va 6x + ky = 9 sistema yechimga ega emas. k nechaga teng?",
+    "ru": "Система 2x + 5y = 4 и 6x + ky = 9 не имеет решений. Чему равно k?"
+   },
+   "options": [
+    {
+     "en": "15"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "10"
+    }
+   ],
+   "why": {
+    "en": "6 = 3 × 2, so k = 3 × 5 = 15. Then the second equation is 2x + 5y = 3, which cannot hold with 2x + 5y = 4.",
+    "uz": "6 = 3 × 2, demak k = 3 × 5 = 15. Unda ikkinchi tenglama 2x + 5y = 3 boʻladi, u 2x + 5y = 4 bilan birga toʻgʻri boʻlolmaydi.",
+    "ru": "6 = 3 × 2, значит, k = 3 × 5 = 15. Тогда второе уравнение — 2x + 5y = 3, и одновременно с 2x + 5y = 4 оно выполняться не может."
+   },
+   "prior_b": -0.2,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al32q3",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "system_of_equations",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL03-2",
+   "lang": "en",
+   "stem": {
+    "en": "The system x − 4y = 3 and 3x − 12y = k has infinitely many solutions. What is k?",
+    "uz": "x − 4y = 3 va 3x − 12y = k sistema cheksiz koʻp yechimga ega. k nechaga teng?",
+    "ru": "Система x − 4y = 3 и 3x − 12y = k имеет бесконечно много решений. Чему равно k?"
+   },
+   "options": [
+    {
+     "en": "9"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "12"
+    },
+    {
+     "en": "−9"
+    }
+   ],
+   "why": {
+    "en": "The left side is 3 times x − 4y, so k = 3 × 3 = 9: the two equations are the same line.",
+    "uz": "Chap tomon x − 4y ning 3 baravari, demak k = 3 × 3 = 9: ikkala tenglama bitta chiziq.",
+    "ru": "Левая часть в 3 раза больше x − 4y, значит, k = 3 × 3 = 9: оба уравнения задают одну прямую."
+   },
+   "prior_b": -0.1,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al33q1",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "system_of_equations",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL03-3",
+   "lang": "en",
+   "stem": {
+    "en": "A farm has chickens and sheep: 40 heads and 110 legs in all. How many sheep are there?",
+    "uz": "Fermada tovuqlar va qoʻylar bor: jami 40 ta bosh va 110 ta oyoq. Qoʻylar nechta?",
+    "ru": "На ферме куры и овцы: всего 40 голов и 110 ног. Сколько овец?"
+   },
+   "options": [
+    {
+     "en": "15"
+    },
+    {
+     "en": "25"
+    },
+    {
+     "en": "30"
+    },
+    {
+     "en": "55"
+    }
+   ],
+   "why": {
+    "en": "c + s = 40 and 2c + 4s = 110. Take 2 × the first: 2s = 110 − 80 = 30, so s = 15 sheep.",
+    "uz": "c + s = 40 va 2c + 4s = 110. Birinchisining 2 baravarini ayiramiz: 2s = 110 − 80 = 30, demak s = 15 ta qoʻy.",
+    "ru": "c + s = 40 и 2c + 4s = 110. Вычтем удвоенное первое: 2s = 110 − 80 = 30, значит, s = 15 овец."
+   },
+   "prior_b": -0.3,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al33q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "system_of_equations",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAL03-3",
+   "lang": "en",
+   "stem": {
+    "en": "A club sold 90 tickets: student tickets at 4,000 soʻm and adult tickets at 7,000 soʻm, for 510,000 soʻm in all. How many adult tickets did it sell?",
+    "uz": "Klub 90 ta chipta sotdi: oʻquvchi chiptasi 4000 soʻmdan va kattalar chiptasi 7000 soʻmdan, jami 510 000 soʻm. Kattalar chiptasidan nechta sotilgan?",
+    "ru": "Клуб продал билеты: всего 90, ученический стоит 4000 сум, взрослый — 7000 сум, выручка — 510 000 сум. Сколько продано взрослых билетов?"
+   },
+   "options": [
+    {
+     "en": "50"
+    },
+    {
+     "en": "40"
+    },
+    {
+     "en": "72"
+    },
+    {
+     "en": "45"
+    }
+   ],
+   "why": {
+    "en": "4,000(90 − a) + 7,000a = 510,000 gives 360,000 + 3,000a = 510,000, so 3,000a = 150,000 and a = 50.",
+    "uz": "4000(90 − a) + 7000a = 510 000 dan 360 000 + 3000a = 510 000, demak 3000a = 150 000 va a = 50.",
+    "ru": "Из 4000(90 − a) + 7000a = 510 000 следует 360 000 + 3000a = 510 000, значит, 3000a = 150 000 и a = 50."
+   },
+   "prior_b": 0.0,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-al33q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "linear_inequalities",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "hard"
+   },
+   "page": "C19-MAAL03-3",
+   "lang": "en",
+   "stem": {
+    "en": "Which point is in the solution region of y > 3x − 4?",
+    "uz": "Qaysi nuqta y > 3x − 4 tengsizlikning yechimlar sohasida yotadi?",
+    "ru": "Какая точка лежит в области решений неравенства y > 3x − 4?"
+   },
+   "options": [
+    {
+     "en": "(1, 0)"
+    },
+    {
+     "en": "(2, 2)"
+    },
+    {
+     "en": "(3, 4)"
+    },
+    {
+     "en": "(0, −5)"
+    }
+   ],
+   "why": {
+    "en": "(1, 0): 0 > 3 − 4 = −1 is true. (2, 2) is on the line (2 > 2 is false), and the other two give 4 > 5 and −5 > −4.",
+    "uz": "(1, 0): 0 > 3 − 4 = −1 toʻgʻri. (2, 2) chiziqda yotadi (2 > 2 notoʻgʻri), qolgan ikkitasi 4 > 5 va −5 > −4 beradi.",
+    "ru": "(1, 0): 0 > 3 − 4 = −1 — верно. (2, 2) лежит на прямой (2 > 2 неверно), а две другие дают 4 > 5 и −5 > −4."
+   },
+   "prior_b": 0.3,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am12q1",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "factoring",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "easy"
+   },
+   "page": "C19-MAAM01-2",
+   "lang": "en",
+   "stem": {
+    "en": "3x² − 75 = 3(x − a)(x + a) for all x, and a > 0. What is a?",
+    "uz": "Barcha x uchun 3x² − 75 = 3(x − a)(x + a), bunda a > 0. a nechaga teng?",
+    "ru": "При всех x верно 3x² − 75 = 3(x − a)(x + a), где a > 0. Чему равно a?"
+   },
+   "options": [
+    {
+     "en": "5"
+    },
+    {
+     "en": "25"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "15"
+    }
+   ],
+   "why": {
+    "en": "Take out 3: 3(x² − 25) = 3(x − 5)(x + 5), so a = 5.",
+    "uz": "3 ni chiqaramiz: 3(x² − 25) = 3(x − 5)(x + 5), demak a = 5.",
+    "ru": "Выносим 3: 3(x² − 25) = 3(x − 5)(x + 5), значит, a = 5."
+   },
+   "prior_b": -0.8,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am12q2",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "factoring",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAM01-2",
+   "lang": "en",
+   "stem": {
+    "en": "2x² + 26x + 60 = 2(x + m)(x + n), and m is greater than n. What is m?",
+    "uz": "2x² + 26x + 60 = 2(x + m)(x + n), bunda m soni n dan katta. m nechaga teng?",
+    "ru": "2x² + 26x + 60 = 2(x + m)(x + n), причём m больше n. Чему равно m?"
+   },
+   "options": [
+    {
+     "en": "10"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "30"
+    },
+    {
+     "en": "13"
+    }
+   ],
+   "why": {
+    "en": "2x² + 26x + 60 = 2(x² + 13x + 30), and 10 × 3 = 30, 10 + 3 = 13. So m = 10.",
+    "uz": "2x² + 26x + 60 = 2(x² + 13x + 30), va 10 × 3 = 30, 10 + 3 = 13. Demak m = 10.",
+    "ru": "2x² + 26x + 60 = 2(x² + 13x + 30), а 10 × 3 = 30, 10 + 3 = 13. Значит, m = 10."
+   },
+   "prior_b": -0.3,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am12q3",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "factoring",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAM01-2",
+   "lang": "en",
+   "stem": {
+    "en": "x² − 3x − 28 = (x + p)(x + q) for all x, and p is less than q. What is p?",
+    "uz": "Barcha x uchun x² − 3x − 28 = (x + p)(x + q), bunda p soni q dan kichik. p nechaga teng?",
+    "ru": "При всех x верно x² − 3x − 28 = (x + p)(x + q), причём p меньше q. Чему равно p?"
+   },
+   "options": [
+    {
+     "en": "−7"
+    },
+    {
+     "en": "7"
+    },
+    {
+     "en": "−4"
+    },
+    {
+     "en": "4"
+    }
+   ],
+   "why": {
+    "en": "−7 × 4 = −28 and −7 + 4 = −3, so x² − 3x − 28 = (x − 7)(x + 4): p = −7 and q = 4.",
+    "uz": "−7 × 4 = −28 va −7 + 4 = −3, demak x² − 3x − 28 = (x − 7)(x + 4): p = −7, q = 4.",
+    "ru": "−7 × 4 = −28 и −7 + 4 = −3, значит, x² − 3x − 28 = (x − 7)(x + 4): p = −7, q = 4."
+   },
+   "prior_b": -0.1,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am13q1",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "exponent_rules",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAM01-3",
+   "lang": "en",
+   "stem": {
+    "en": "9³ · 27 = 3ⁿ. What is n?",
+    "uz": "9³ · 27 = 3ⁿ. n nechaga teng?",
+    "ru": "9³ · 27 = 3ⁿ. Чему равно n?"
+   },
+   "options": [
+    {
+     "en": "9"
+    },
+    {
+     "en": "6"
+    },
+    {
+     "en": "18"
+    },
+    {
+     "en": "5"
+    }
+   ],
+   "why": {
+    "en": "9³ = (3²)³ = 3⁶ and 27 = 3³, so 3⁶ · 3³ = 3⁹ and n = 9.",
+    "uz": "9³ = (3²)³ = 3⁶ va 27 = 3³, demak 3⁶ · 3³ = 3⁹ va n = 9.",
+    "ru": "9³ = (3²)³ = 3⁶ и 27 = 3³, значит, 3⁶ · 3³ = 3⁹ и n = 9."
+   },
+   "prior_b": -0.3,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am13q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponent_rules",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAM01-3",
+   "lang": "en",
+   "stem": {
+    "en": "What is the value of 16^(3/4)?",
+    "uz": "16^(3/4) nechaga teng?",
+    "ru": "Чему равно 16^(3/4)?"
+   },
+   "options": [
+    {
+     "en": "8"
+    },
+    {
+     "en": "12"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "2"
+    }
+   ],
+   "why": {
+    "en": "The root of degree 4 of 16 is 2, and 2³ = 8.",
+    "uz": "16 ning 4-darajali ildizi 2, va 2³ = 8.",
+    "ru": "Корень степени 4 из 16 равен 2, а 2³ = 8."
+   },
+   "prior_b": 0.1,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am13q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponent_rules",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "hard"
+   },
+   "page": "C19-MAAM01-3",
+   "lang": "en",
+   "stem": {
+    "en": "What is the value of 2⁻³ · 4^(5/2)?",
+    "uz": "2⁻³ · 4^(5/2) nechaga teng?",
+    "ru": "Чему равно 2⁻³ · 4^(5/2)?"
+   },
+   "options": [
+    {
+     "en": "4"
+    },
+    {
+     "en": "−256"
+    },
+    {
+     "en": "−80"
+    },
+    {
+     "en": "32"
+    }
+   ],
+   "why": {
+    "en": "4^(5/2) = (√4)⁵ = 2⁵ = 32 and 2⁻³ = 1/8, so the value is 32 ÷ 8 = 4.",
+    "uz": "4^(5/2) = (√4)⁵ = 2⁵ = 32 va 2⁻³ = 1/8, demak qiymati 32 ÷ 8 = 4.",
+    "ru": "4^(5/2) = (√4)⁵ = 2⁵ = 32 и 2⁻³ = 1/8, значит, значение равно 32 ÷ 8 = 4."
+   },
+   "prior_b": 0.5,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am22q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "quadratic",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAM02-2",
+   "lang": "en",
+   "stem": {
+    "en": "What is the larger solution of 2x² − 5x − 3 = 0?",
+    "uz": "2x² − 5x − 3 = 0 tenglamaning kattaroq yechimi nechaga teng?",
+    "ru": "Найдите больший корень уравнения 2x² − 5x − 3 = 0."
+   },
+   "options": [
+    {
+     "en": "3"
+    },
+    {
+     "en": "6"
+    },
+    {
+     "en": "1/2"
+    },
+    {
+     "en": "−1/2"
+    }
+   ],
+   "why": {
+    "en": "D = 25 + 24 = 49, so x = (5 ± 7) ÷ 4: x = 3 or x = −1/2. The larger is 3.",
+    "uz": "D = 25 + 24 = 49, demak x = (5 ± 7) ÷ 4: x = 3 yoki x = −1/2. Kattarogʻi — 3.",
+    "ru": "D = 25 + 24 = 49, значит, x = (5 ± 7) ÷ 4: x = 3 или x = −1/2. Больший — 3."
+   },
+   "prior_b": 0.2,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am22q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "quadratic",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAM02-2",
+   "lang": "en",
+   "stem": {
+    "en": "2x² + 12x + k = 0 has exactly one real solution. What is k?",
+    "uz": "2x² + 12x + k = 0 tenglama aynan bitta haqiqiy yechimga ega. k nechaga teng?",
+    "ru": "Уравнение 2x² + 12x + k = 0 имеет ровно одно действительное решение. Чему равно k?"
+   },
+   "options": [
+    {
+     "en": "18"
+    },
+    {
+     "en": "36"
+    },
+    {
+     "en": "72"
+    },
+    {
+     "en": "9"
+    }
+   ],
+   "why": {
+    "en": "One solution means D = 0: 12² − 4 × 2 × k = 0, so 144 = 8k and k = 18.",
+    "uz": "Bitta yechim — D = 0: 12² − 4 × 2 × k = 0, demak 144 = 8k va k = 18.",
+    "ru": "Одно решение означает, что D = 0: 12² − 4 × 2 × k = 0, значит, 144 = 8k и k = 18."
+   },
+   "prior_b": 0.3,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am22q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "quadratic",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "hard"
+   },
+   "page": "C19-MAAM02-2",
+   "lang": "en",
+   "stem": {
+    "en": "For which value of c does x² − 8x + c = 0 have no real solution?",
+    "uz": "c ning qaysi qiymatida x² − 8x + c = 0 tenglama haqiqiy yechimga ega emas?",
+    "ru": "При каком значении c уравнение x² − 8x + c = 0 не имеет действительных решений?"
+   },
+   "options": [
+    {
+     "en": "20"
+    },
+    {
+     "en": "16"
+    },
+    {
+     "en": "12"
+    },
+    {
+     "en": "−20"
+    }
+   ],
+   "why": {
+    "en": "D = 64 − 4c. For c = 20, D = 64 − 80 = −16 < 0: no real solution. c = 16 gives D = 0 (one solution).",
+    "uz": "D = 64 − 4c. c = 20 da D = 64 − 80 = −16 < 0: haqiqiy yechim yoʻq. c = 16 da D = 0 (bitta yechim).",
+    "ru": "D = 64 − 4c. При c = 20 получаем D = 64 − 80 = −16 < 0: действительных решений нет. При c = 16 получаем D = 0 (одно решение)."
+   },
+   "prior_b": 0.5,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am23q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "rational_equations",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAM02-3",
+   "lang": "en",
+   "stem": {
+    "en": "Two pumps can empty a pool in 4 hours and in 12 hours. How many hours do they take working together?",
+    "uz": "Ikki nasos hovuzni 4 soatda va 12 soatda boʻshatadi. Birga ishlasa, necha soatda boʻshatadi?",
+    "ru": "Один насос откачивает воду из бассейна за 4 часа, другой — за 12 часов. За сколько часов они откачают её вместе?"
+   },
+   "options": [
+    {
+     "en": "3"
+    },
+    {
+     "en": "8"
+    },
+    {
+     "en": "16"
+    },
+    {
+     "en": "6"
+    }
+   ],
+   "why": {
+    "en": "t/4 + t/12 = 1. Multiply by 12: 3t + t = 12, so t = 3 hours.",
+    "uz": "t/4 + t/12 = 1. 12 ga koʻpaytiramiz: 3t + t = 12, demak t = 3 soat.",
+    "ru": "t/4 + t/12 = 1 (весь бассейн). Умножим на 12: 3t + t = 12, значит, t = 3 часа."
+   },
+   "prior_b": 0.1,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am23q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "radical_functions",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAM02-3",
+   "lang": "en",
+   "stem": {
+    "en": "What value of x satisfies the equation √(x + 10) = x − 2?",
+    "uz": "√(x + 10) = x − 2 tenglamani x ning qaysi qiymati qanoatlantiradi?",
+    "ru": "Какое значение x удовлетворяет уравнению √(x + 10) = x − 2?"
+   },
+   "options": [
+    {
+     "en": "6"
+    },
+    {
+     "en": "−1"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "−6"
+    }
+   ],
+   "why": {
+    "en": "Squaring gives x² − 5x − 6 = 0, so x = 6 or x = −1. Check: √16 = 4 = 6 − 2, but √9 = 3 is not −1 − 2 = −3. So x = 6.",
+    "uz": "Kvadratga oshirsak, x² − 5x − 6 = 0, demak x = 6 yoki x = −1. Tekshirish: √16 = 4 = 6 − 2, lekin √9 = 3, −1 − 2 = −3 emas. Demak x = 6.",
+    "ru": "После возведения в квадрат x² − 5x − 6 = 0, значит, x = 6 или x = −1. Проверка: √16 = 4 = 6 − 2, но √9 = 3, а не −1 − 2 = −3. Значит, x = 6."
+   },
+   "prior_b": 0.3,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am23q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "quadratic",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "hard"
+   },
+   "page": "C19-MAAM02-3",
+   "lang": "en",
+   "stem": {
+    "en": "The line y = 2x + 3 and the parabola y = x² meet at two points. What is the greater y-coordinate of these points?",
+    "uz": "y = 2x + 3 toʻgʻri chiziq va y = x² parabola ikki nuqtada kesishadi. Bu nuqtalarning kattaroq ordinatasi nechaga teng?",
+    "ru": "Прямая y = 2x + 3 и парабола y = x² пересекаются в двух точках. Чему равна большая из ординат этих двух точек?"
+   },
+   "options": [
+    {
+     "en": "9"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "1"
+    },
+    {
+     "en": "−1"
+    }
+   ],
+   "why": {
+    "en": "x² = 2x + 3 gives (x − 3)(x + 1) = 0, so x = 3 or x = −1. Then y = 9 or y = 1. The greater y is 9.",
+    "uz": "x² = 2x + 3 dan (x − 3)(x + 1) = 0, demak x = 3 yoki x = −1. Unda y = 9 yoki y = 1. Kattarogʻi — 9.",
+    "ru": "Из x² = 2x + 3 следует (x − 3)(x + 1) = 0, значит, x = 3 или x = −1. Тогда y = 9 или y = 1. Большая из них — 9."
+   },
+   "prior_b": 0.5,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am32q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponential_decay",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAM03-2",
+   "lang": "en",
+   "stem": {
+    "en": "A laptop costs 8,000,000 soʻm and loses 25% of its value each year. What is it worth after 2 years, in soʻm?",
+    "uz": "Noutbuk 8 000 000 soʻm turadi va har yili qiymatining 25% ini yoʻqotadi. 2 yildan keyin u necha soʻm turadi?",
+    "ru": "Ноутбук стоит 8 000 000 сум и каждый год теряет 25% своей стоимости. Сколько сумов он будет стоить через 2 года?"
+   },
+   "options": [
+    {
+     "en": "4,500,000",
+     "uz": "4 500 000",
+     "ru": "4 500 000"
+    },
+    {
+     "en": "4,000,000",
+     "uz": "4 000 000",
+     "ru": "4 000 000"
+    },
+    {
+     "en": "500,000",
+     "uz": "500 000",
+     "ru": "500 000"
+    },
+    {
+     "en": "6,000,000",
+     "uz": "6 000 000",
+     "ru": "6 000 000"
+    }
+   ],
+   "why": {
+    "en": "Each year multiplies by 1 − 0.25 = 0.75. 8,000,000 × 0.75² = 8,000,000 × 0.5625 = 4,500,000 soʻm.",
+    "uz": "Har yili 1 − 0,25 = 0,75 ga koʻpaytiriladi. 8 000 000 × 0,75² = 8 000 000 × 0,5625 = 4 500 000 soʻm.",
+    "ru": "Каждый год стоимость умножается на 1 − 0,25 = 0,75. 8 000 000 × 0,75² = 8 000 000 × 0,5625 = 4 500 000 сум."
+   },
+   "prior_b": 0.0,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am32q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponential_decay",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAM03-2",
+   "lang": "en",
+   "stem": {
+    "en": "A car loses 10% of its value every year. After how many whole years will its value first be less than 60% of the original value?",
+    "uz": "Avtomobil har yili qiymatining 10 foizini yoʻqotadi. Necha toʻliq yildan keyin uning qiymati ilk bor boshlangʻich qiymatning 60 foizidan kam boʻladi?",
+    "ru": "Автомобиль каждый год теряет 10% своей стоимости. Через сколько полных лет его стоимость впервые станет меньше 60% первоначальной?"
+   },
+   "options": [
+    {
+     "en": "5"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "6"
+    },
+    {
+     "en": "3"
+    }
+   ],
+   "why": {
+    "en": "0.9⁴ = 0.6561 is still above 0.6, and 0.9⁵ = 0.59049 is below it. So 5 years.",
+    "uz": "0,9⁴ = 0,6561 hali 0,6 dan katta, 0,9⁵ = 0,59049 esa kichik. Demak 5 yil.",
+    "ru": "0,9⁴ = 0,6561 ещё больше 0,6, а 0,9⁵ = 0,59049 уже меньше. Значит, 5 лет."
+   },
+   "prior_b": 0.3,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am32q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponential_functions",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAM03-2",
+   "lang": "en",
+   "stem": {
+    "en": "A price of 50,000 soʻm goes up by 20% and then down by 20%. What is the new price, in soʻm?",
+    "uz": "50 000 soʻmlik narx avval 20% oshdi, keyin 20% kamaydi. Yangi narx necha soʻm?",
+    "ru": "Цена 50 000 сум сначала выросла на 20%, потом снизилась на 20%. Сколько сумов стоит товар теперь?"
+   },
+   "options": [
+    {
+     "en": "48,000",
+     "uz": "48 000",
+     "ru": "48 000"
+    },
+    {
+     "en": "50,000",
+     "uz": "50 000",
+     "ru": "50 000"
+    },
+    {
+     "en": "52,000",
+     "uz": "52 000",
+     "ru": "52 000"
+    },
+    {
+     "en": "40,000",
+     "uz": "40 000",
+     "ru": "40 000"
+    }
+   ],
+   "why": {
+    "en": "50,000 × 1.2 × 0.8 = 50,000 × 0.96 = 48,000 soʻm: 4% less than the start.",
+    "uz": "50 000 × 1,2 × 0,8 = 50 000 × 0,96 = 48 000 soʻm: boshidagidan 4% kam.",
+    "ru": "50 000 × 1,2 × 0,8 = 50 000 × 0,96 = 48 000 сум: на 4% меньше начальной."
+   },
+   "prior_b": 0.2,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am33q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "functions",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAM03-3",
+   "lang": "en",
+   "stem": {
+    "en": "y = (x − 2)(x − 10). What is the y-coordinate of the vertex of its graph?",
+    "uz": "y = (x − 2)(x − 10). Uning grafigi uchining ordinatasi nechaga teng?",
+    "ru": "y = (x − 2)(x − 10). Чему равна ордината вершины графика этой функции?"
+   },
+   "options": [
+    {
+     "en": "−16"
+    },
+    {
+     "en": "6"
+    },
+    {
+     "en": "20"
+    },
+    {
+     "en": "16"
+    }
+   ],
+   "why": {
+    "en": "The vertex is halfway between the zeros 2 and 10: x = 6. Then y = 4 × (−4) = −16.",
+    "uz": "Uchi 2 va 10 nollarining qoq oʻrtasida: x = 6. Unda y = 4 × (−4) = −16.",
+    "ru": "Вершина посередине между нулями 2 и 10: x = 6. Тогда y = 4 × (−4) = −16."
+   },
+   "prior_b": 0.3,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am33q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "functions",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "page": "C19-MAAM03-3",
+   "lang": "en",
+   "stem": {
+    "en": "y = x² − 10x + 32 can be written as y = (x − h)² + k. What is k?",
+    "uz": "y = x² − 10x + 32 ni y = (x − h)² + k koʻrinishida yozish mumkin. k nechaga teng?",
+    "ru": "y = x² − 10x + 32 можно записать в виде y = (x − h)² + k. Чему равно k?"
+   },
+   "options": [
+    {
+     "en": "7"
+    },
+    {
+     "en": "32"
+    },
+    {
+     "en": "57"
+    },
+    {
+     "en": "5"
+    }
+   ],
+   "why": {
+    "en": "Half of 10 is 5 and 5² = 25: x² − 10x + 32 = (x − 5)² − 25 + 32, so k = 7.",
+    "uz": "10 ning yarmi 5 va 5² = 25: x² − 10x + 32 = (x − 5)² − 25 + 32, demak k = 7.",
+    "ru": "Половина от 10 равна 5, 5² = 25: x² − 10x + 32 = (x − 5)² − 25 + 32, значит, k = 7."
+   },
+   "prior_b": 0.4,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-am33q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "functions",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "hard"
+   },
+   "page": "C19-MAAM03-3",
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = (x − 2)² − 3. The graph of y = f(x + 4) − 1 has its vertex at (p, q). What is p + q?",
+    "uz": "f(x) = (x − 2)² − 3. y = f(x + 4) − 1 grafigining uchi (p, q). p + q nechaga teng?",
+    "ru": "f(x) = (x − 2)² − 3. Вершина графика y = f(x + 4) − 1 — точка (p, q). Чему равно p + q?"
+   },
+   "options": [
+    {
+     "en": "−6"
+    },
+    {
+     "en": "2"
+    },
+    {
+     "en": "−4"
+    },
+    {
+     "en": "4"
+    }
+   ],
+   "why": {
+    "en": "f(x + 4) moves the vertex (2, −3) 4 units left, and − 1 moves it down: (−2, −4). So p + q = −6.",
+    "uz": "f(x + 4) uchini (2, −3) dan 4 birlik chapga, − 1 esa pastga suradi: (−2, −4). Demak p + q = −6.",
+    "ru": "f(x + 4) сдвигает вершину (2, −3) на 4 единицы влево, а вычитание 1 — на 1 единицу вниз: (−2, −4). Значит, p + q = −6."
+   },
+   "prior_b": 0.6,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  }
+ ]
+}

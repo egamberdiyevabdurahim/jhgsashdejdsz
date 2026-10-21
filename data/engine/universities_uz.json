@@ -1,0 +1,245 @@
+{
+ "version": 1,
+ "checked": "2026-10-04",
+ "note": "Owner 4 Oct 2026 R5 (P4d): what each of the 14 Uzbek universities of R4 asks a school leaver, one record each, every requirement from a page fetched on 2026-10-04 (its `src` is an index into `sources`). A requirement no official page could confirm is `verified: false` and reads 'Being confirmed'; nothing here is a guess. P4e (owner 4 Oct, 'you make them'): Millat Umidi, TTPU, CAU's entrance exam and MDIS's English level were researched again on 2026-10-04 from their official pages and admissions portal; every record is now sourced in full. Text in uz and ru is the controller's draft for a native reviewer. `general` holds the national rules every university here is bound by (Cabinet of Ministers Resolution No. 578 of 13 Sep 2025, Appendix 1; the Agency's 2026 test specification).",
+ "general": {
+  "sources": [
+   { "url": "https://lex.uz/uz/docs/-7726569", "checked": "2026-10-04", "says": "CM Resolution No. 578 (13 Sep 2025), Appendix 1: cl. 9 a bachelor's applicant has finished an 11-year general secondary school, or a 9+2 secondary specialised or initial vocational school; cl. 10 the state test's registration runs 5-25 June every year; cl. 36 the tests are held in July-August; cl. 12 (amended 29 Jan 2026) a B2+ national or international language certificate gives the foreign-language subject's full points, B1 gives 75 %" },
+   { "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf", "checked": "2026-10-04", "says": "Order No. 105 of the Ministry of Higher Education, Science and Innovation (13 Mar 2026), Annex 1: the state universities' bachelor test is 90 questions, 3 compulsory subjects (10 each, 1.1 points) and 2 subjects of the field (30 each, 3.1 and 2.1 points), at most 189.0 points" }
+  ],
+  "state_test_registration": { "from": "06-05", "until": "06-25", "text": { "en": "5-25 June", "uz": "5-25-iyun", "ru": "5-25 июня" }, "src": "g0", "note": "The teen walk's eighth round (12 Oct 2026): g0's cl. 10 (the state test's registration runs 5-25 June every year) as days, so the plan dates the home route's registration in the year the student sits it from this source alone; the same words as each state university's window" }
+ },
+ "universities": [
+  {
+   "id": "wiut", "city": "Tashkent", "admission": "own", "instruction": ["en"], "needs_verification": false,
+   "route_label": { "en": "through its one-year foundation (CIFS)", "uz": "bir yillik foundation dasturi (CIFS) orqali", "ru": "через годичную подготовительную программу (CIFS)" },
+   "route_note": { "en": "These are the entry requirements of WIUT's one-year foundation (CIFS), which takes the Uzbek school-leaving certificate.", "uz": "Bu WIUTning bir yillik foundation dasturi (CIFS) talablari: unga Oʻzbekiston maktab bitiruv hujjati bilan kiriladi.", "ru": "Это требования годичной подготовительной программы WIUT (CIFS), куда принимают с узбекским аттестатом." },
+   "requirements": [
+    { "kind": "school", "verified": true, "src": [0, "g0"] },
+    { "kind": "english", "verified": true, "src": [0], "options": [{ "any": [{ "test": "IELTS", "min": 6.0, "writing": 5.0 }, { "test": "TOEFL", "min": 78, "writing": 17, "no_home": true }, { "test": "IGCSE_ENGLISH", "grade": "C" }] }] },
+    { "kind": "exam", "verified": true, "src": [0, 1], "exempt_by": [{ "test": "SAT_MATH", "min": 570 }, { "test": "GCSE_MATHS", "grade": "C" }], "text": { "en": "Maths: WIUT's computer-based maths entrance exam (pass mark 50), or SAT Math 570, or GCSE Maths grade C", "uz": "Matematika: WIUTning kompyuterda olinadigan matematika kirish imtihoni (oʻtish bali 50), yoki SAT Math 570, yoki GCSE Maths C bahosi", "ru": "Математика: компьютерный вступительный экзамен WIUT по математике (проходной балл 50), или SAT Math 570, или GCSE Maths на оценку C" } },
+    { "kind": "average", "verified": true, "src": [0], "pct": 70, "normally": true },
+    { "kind": "age", "verified": true, "src": [0], "min": 17, "by": "start", "normally": true }
+   ],
+   "documents": ["photo", "passport", "school_cert"], "documents_src": [1],
+   "windows": [
+    { "label": { "en": "Online application (2026 intake)", "uz": "Onlayn ariza (2026-yil qabuli)", "ru": "Онлайн-заявка (набор 2026)" }, "until": "2026-07-15", "src": [1] },
+    { "label": { "en": "Paper documents (2026 intake)", "uz": "Hujjatlarning qogʻoz nusxalari (2026-yil qabuli)", "ru": "Бумажные документы (набор 2026)" }, "until": "2026-08-12", "src": [1] }
+   ],
+   "sources": [
+    { "url": "https://www.wiut.uz/certificate-international-foundation-studies", "checked": "2026-10-04" },
+    { "url": "https://www.wiut.uz/cifs-undergraduate-apply-faq", "checked": "2026-10-04" }
+   ]
+  },
+  {
+   "id": "inha", "city": "Tashkent", "admission": "own", "instruction": null, "needs_verification": false,
+   "requirements": [
+    { "kind": "school", "verified": true, "src": [0, "g0"] },
+    { "kind": "english", "verified": true, "src": [0], "options": [
+     { "programme": { "en": "computer and information engineering", "uz": "kompyuter va axborot muhandisligi", "ru": "компьютерная и информационная инженерия" }, "any": [{ "test": "IELTS", "min": 5.0 }, { "test": "TOEFL", "min": 50 }] },
+     { "programme": { "en": "business and logistics", "uz": "biznes va logistika", "ru": "бизнес и логистика" }, "any": [{ "test": "IELTS", "min": 5.5 }, { "test": "TOEFL", "min": 71 }] }
+    ] },
+    { "kind": "exam", "verified": true, "src": [0], "text": { "en": "Inha's own 60-minute test: 21 maths and 9 physics questions (computer and information engineering) or 30 maths questions (business and logistics)", "uz": "Inhaning 60 daqiqalik oʻz testi: 21 ta matematika va 9 ta fizika savoli (kompyuter va axborot muhandisligi) yoki 30 ta matematika savoli (biznes va logistika)", "ru": "Собственный 60-минутный тест Инха: 21 вопрос по математике и 9 по физике (компьютерная и информационная инженерия) или 30 вопросов по математике (бизнес и логистика)" } }
+   ],
+   "documents": ["passport", "school_cert", "transcript", "photo_35", "english_cert"], "documents_src": [0],
+   "windows": [
+    { "label": { "en": "Round 1: apply (2026)", "uz": "1-bosqich: ariza (2026)", "ru": "1-й этап: заявка (2026)" }, "from": "2026-03-02", "until": "2026-04-10", "src": [0] },
+    { "label": { "en": "Round 1: exam", "uz": "1-bosqich: imtihon", "ru": "1-й этап: экзамен" }, "from": "2026-04-18", "until": "2026-04-19", "src": [0] },
+    { "label": { "en": "Round 2: apply", "uz": "2-bosqich: ariza", "ru": "2-й этап: заявка" }, "from": "2026-05-08", "until": "2026-06-19", "src": [0] },
+    { "label": { "en": "Round 2: exam", "uz": "2-bosqich: imtihon", "ru": "2-й этап: экзамен" }, "from": "2026-06-27", "until": "2026-06-28", "src": [0] },
+    { "label": { "en": "Round 3: apply", "uz": "3-bosqich: ariza", "ru": "3-й этап: заявка" }, "from": "2026-07-01", "until": "2026-07-24", "src": [0] },
+    { "label": { "en": "Round 3: exam", "uz": "3-bosqich: imtihon", "ru": "3-й этап: экзамен" }, "from": "2026-08-01", "until": "2026-08-02", "src": [0] },
+    { "label": { "en": "English certificate (rounds 1-2)", "uz": "Ingliz tili sertifikati (1-2-bosqichlar)", "ru": "Сертификат по английскому (этапы 1-2)" }, "until": "2026-07-24", "src": [0] }
+   ],
+   "sources": [{ "url": "https://inha.uz/prospective-students/admissions/application-guideline/", "checked": "2026-10-04" }]
+  },
+  {
+   "id": "nuu", "city": "Tashkent", "admission": "state_test", "instruction": null, "needs_verification": false,
+   "requirements": [
+    { "kind": "school", "verified": true, "src": ["g0"] },
+    { "kind": "state_test", "verified": true, "src": ["g1", "g0"] },
+    { "kind": "language_cert", "verified": true, "src": ["g0"] }
+   ],
+   "documents": null, "documents_src": [],
+   "windows": [
+    { "label": { "en": "State test registration (every year)", "uz": "Davlat testiga roʻyxatdan oʻtish (har yili)", "ru": "Регистрация на государственный тест (ежегодно)" }, "text": { "en": "5-25 June", "uz": "5-25-iyun", "ru": "5-25 июня" }, "src": ["g0"] },
+    { "label": { "en": "State test (every year)", "uz": "Davlat testi (har yili)", "ru": "Государственный тест (ежегодно)" }, "text": { "en": "July-August", "uz": "iyul-avgust", "ru": "июль-август" }, "src": ["g0"] }
+   ],
+   "sources": [{ "url": "https://nuu.uz/en/admission/", "checked": "2026-10-04", "says": "National University of Uzbekistan named after Mirzo Ulugbek; state grant and contract places" }]
+  },
+  {
+   "id": "cau", "city": "Tashkent", "admission": "own", "instruction": null, "needs_verification": false,
+   "requirements": [
+    { "kind": "school", "verified": true, "src": [0, "g0"] },
+    { "kind": "english", "verified": true, "src": [0, 1, 2], "options": [
+     { "programme": { "en": "medicine and dentistry", "uz": "tibbiyot va stomatologiya", "ru": "медицина и стоматология" }, "any": [{ "test": "IELTS", "min": 6.0 }, { "test": "TOEFL", "min": 60 }, { "test": "SAT_ENGLISH", "min": 585 }] },
+     { "programme": { "en": "other programmes", "uz": "boshqa yoʻnalishlar", "ru": "другие направления" }, "any": [{ "test": "IELTS", "min": 5.5 }, { "test": "TOEFL", "min": 46 }, { "test": "SAT_ENGLISH", "min": 585 }] }
+    ],
+     "own_test": { "en": "or a pass in CAU's English entrance exam", "uz": "yoki CAUning ingliz tili kirish imtihonidan oʻtish", "ru": "или сданный вступительный экзамен CAU по английскому" } },
+    { "kind": "exam", "verified": true, "src": [2], "exempt_by": [{ "test": "SAT_MATH", "min": 585, "limit": {"en":"for the maths exam; programmes with chemistry and biology still take those","uz":"matematika imtihoni oʻrniga; kimyo va biologiya topshiriladigan yoʻnalishlarda ular qoladi","ru":"вместо экзамена по математике; на направлениях с химией и биологией они остаются"} }, { "test": "MILLIY_SERTIFIKAT", "grade": "C+", "subject": "math", "limit": {"en":"for the maths exam; programmes with chemistry and biology still take those","uz":"matematika imtihoni oʻrniga; kimyo va biologiya topshiriladigan yoʻnalishlarda ular qoladi","ru":"вместо экзамена по математике; на направлениях с химией и биологией они остаются"} }, { "test": "MILLIY_SERTIFIKAT", "grade": "C+", "subject": "biology", "limit": {"en":"for the biology exam in medicine and dentistry","uz":"tibbiyot va stomatologiyada biologiya imtihoni oʻrniga","ru":"вместо экзамена по биологии на медицине и стоматологии"} }, { "test": "MILLIY_SERTIFIKAT", "grade": "C+", "subject": "chemistry", "limit": {"en":"for the chemistry exam in medicine and dentistry","uz":"tibbiyot va stomatologiyada kimyo imtihoni oʻrniga","ru":"вместо экзамена по химии на медицине и стоматологии"} }], "text": { "en": "CAU's entrance exams, 50% to pass each: English (60 questions, 30 minutes) and maths, or chemistry and biology, depending on the programme (20 questions in 45 minutes each); 100,000 UZS a subject. A national certificate at C+, or SAT Math 585 for maths, exempts you", "uz": "CAU kirish imtihonlari, har biridan oʻtish uchun 50%: ingliz tili (60 ta savol, 30 daqiqa) hamda dasturga qarab matematika yoki kimyo va biologiya (har biri 20 ta savol, 45 daqiqa); har bir fan 100 000 soʻm. Kamida C+ darajali milliy sertifikat, matematika uchun esa SAT Math 585 imtihondan ozod qiladi", "ru": "Вступительные экзамены CAU, проходной балл 50% по каждому: английский (60 вопросов, 30 минут), а также, в зависимости от программы, математика или химия и биология (по 20 вопросов за 45 минут); 100 000 сумов за предмет. Национальный сертификат не ниже C+, а для математики SAT Math 585, освобождает от экзамена" } },
+    { "kind": "interview", "verified": true, "src": [2] }
+   ],
+   "documents": ["passport", "school_cert", "photo_35", "english_or_sat_if_any"], "documents_src": [0, 1],
+   "windows": [
+    { "label": { "en": "CAU International Olympiad in chemistry, maths and physics (scholarships, 2026)", "uz": "CAU xalqaro olimpiadasi: kimyo, matematika, fizika (grantlar, 2026)", "ru": "Международная олимпиада CAU по химии, математике и физике (гранты, 2026)" }, "from": "2026-06-12", "until": "2026-06-13", "src": [0, 1] }
+   ],
+   "sources": [
+    { "url": "https://centralasian.uz/university_community/e5uzgv42b1-central-asian-university-cuts-admission", "checked": "2026-10-04" },
+    { "url": "https://centralasian.uz/university_community/aybvhbrhd1-cau-admission-2026-is-now-open-fewer-sea", "checked": "2026-10-04" },
+    { "url": "https://centralasian.uz/admissionregulations", "checked": "2026-10-04", "says": "CAU's 'Admission Regulations' page: entrance exams in maths, chemistry and biology (20 questions, 45 minutes each) and English (60 questions, 30 minutes), 50 % to pass each; after passing English, a mandatory 10-minute interview with the Admissions Committee; exemption from the English exam with IELTS 6.0, TOEFL iBT 60 or SAT English 585 (medicine, dentistry) or IELTS 5.5, TOEFL iBT 46 or SAT English 585 (business, engineering, hospitality and tourism); from biology and chemistry with a national certificate at C+ (medicine, dentistry); from maths with SAT Math 585 or a national certificate at C+; 100,000 UZS a subject. It groups only the exemptions by faculty: it never says which faculty sits which subject exam, and its Architecture & Design School is not named there (so the exam text says 'depending on the programme'; a question for admission@centralasian.uz). Its scholarship exam date is for 2025-2026; its entrance exam section names no year (the 2026 news pages above confirm entrance exams and the language levels for 2026)" }
+   ]
+  },
+  {
+   "id": "millat_umidi", "city": "Tashkent", "admission": "own", "instruction": ["en", "uz"], "needs_verification": false,
+   "requirements": [
+    { "kind": "school", "verified": true, "src": [0, "g0"] },
+    { "kind": "english", "verified": true, "src": [0, 1, 2], "options": [
+     { "programme": { "en": "accounting and finance, software engineering", "uz": "buxgalteriya va moliya, dasturiy injiniring", "ru": "бухгалтерия и финансы, программная инженерия" }, "any": [{ "test": "IELTS", "min": 5.0, "or_equivalent": true }] },
+     { "programme": { "en": "English language teaching", "uz": "ingliz tili oʻqitish", "ru": "преподавание английского языка" }, "any": [{ "test": "IELTS", "min": 5.5, "or_equivalent": true }] }
+    ],
+     "note": { "en": "Its own table says IELTS 5.5, TOEFL iBT 72 or Cambridge B2 First for bachelor's, and also lists “MU exam: pass”, but its FAQ and how-to-apply page say IELTS is required for English-taught programmes: ask the admissions office which applies to your programme. Programmes taught in Uzbek list only the school certificate and the exam", "uz": "Uning jadvalida bakalavriat uchun IELTS 5.5, TOEFL iBT 72 yoki Cambridge B2 First, shuningdek “MU imtihoni: oʻtish” koʻrsatilgan, lekin FAQ va ariza topshirish sahifalarida ingliz tilida oʻqitiladigan dasturlarga IELTS talab qilinishi aytilgan: dasturingizga qaysi biri tegishli ekanini qabul boʻlimidan soʻrang. Oʻzbek tilidagi dasturlarda faqat maktab bitiruv hujjati va imtihon koʻrsatilgan", "ru": "В её же таблице для бакалавриата указаны IELTS 5.5, TOEFL iBT 72 или Cambridge B2 First, а также «Экзамен MU: зачёт», но в FAQ и на странице о подаче заявки сказано, что для программ на английском нужен IELTS: уточните в приёмной комиссии, что относится к вашей программе. Для программ на узбекском указаны только аттестат и экзамен" } },
+    { "kind": "exam", "verified": true, "src": [0, 1, 2], "text": { "en": "Millat Umidi's entrance exam, on campus every Wednesday (fee 300,000 UZS): English, maths and logic, and questions for your programme", "uz": "Millat Umidining kirish imtihoni, kampusda har chorshanba (toʻlov 300 000 soʻm): ingliz tili, matematika va mantiq hamda dasturingizga oid savollar", "ru": "Вступительный экзамен Millat Umidi, в кампусе каждую среду (сбор 300 000 сумов): английский, математика и логика, а также вопросы по вашей программе" } },
+    { "kind": "interview", "verified": true, "src": [1] }
+   ],
+   "documents": ["passport_orig", "school_cert_orig", "photos_4_34", "english_cert", "transcript"], "documents_src": [0, 1],
+   "windows": [
+    { "label": { "en": "Admissions (rolling)", "uz": "Qabul (doimiy)", "ru": "Приём (постоянный)" }, "text": { "en": "Open; entrance exams every Wednesday", "uz": "Ochiq; kirish imtihonlari har chorshanba", "ru": "Открыт; вступительные экзамены каждую среду" }, "src": [0] },
+    { "label": { "en": "Classes begin", "uz": "Darslar boshlanishi", "ru": "Начало занятий" }, "text": { "en": "15 September", "uz": "15-sentabr", "ru": "15 сентября" }, "src": [0] }
+   ],
+   "sources": [
+    { "url": "https://millatumidi.uz/admissions/entry-requirements", "checked": "2026-10-04", "says": "Millat Umidi's 'Entry requirements' page as a browser draws it (2026-10-04; a plain request answers 404, the page is drawn by the site's own script and its translations): per bachelor's programme a school certificate or equivalent, 'IELTS 5.0+ or equivalent' (Accounting and Finance, ACCA; Software Engineering, Certiport) or 'IELTS 5.5+' (English Language Teaching, CELTA), and a pass in the university's entrance exam; Uzbek-medium bachelor's: the certificate and the entrance exam; its English table: bachelor's IELTS 5.5+, TOEFL iBT 72+, Cambridge B2 First, 'MU exam: pass' (the only place the site names its own exam beside IELTS; its FAQ and how-to-apply page say IELTS is required for English-medium programmes, so the record asks IELTS and the note sends the student to the admissions office); admissions open (rolling), entrance exams every Wednesday, exam fee 300,000 UZS, classes begin 15 September; documents: passport or ID and school certificate (original and copy), 4 photos 3x4 cm, IELTS certificate (5.5 minimum for English programmes), transcript" },
+    { "url": "https://millatumidi.uz/admissions/how-to-apply", "checked": "2026-10-04", "says": "the steps: choose a programme, apply online with the documents, the entrance exam on campus (fee 300,000 UZS), a personal interview with the admissions committee, the offer, enrolment; its entrance exam section: 'IELTS Exam' ('required for all English-medium programs'; in Uzbek 'barcha ingliz tilida oʻqitiladigan dasturlar uchun talab qilinadi') and a maths and logic exam" },
+    { "url": "https://millatumidi.uz/admissions/faq", "checked": "2026-10-04", "says": "'Is IELTS required for admission?': IELTS is required for English-medium programmes, 5.0 for the Business and IT bachelor's programmes, 5.5 for ELT; the entrance exam covers English, logical reasoning and questions for the chosen programme; no strict GPA cutoff; rolling admission, exams every Wednesday" }
+   ]
+  },
+  {
+   "id": "ttpu", "city": "Tashkent", "admission": "own", "instruction": null, "needs_verification": false,
+   "requirements": [
+    { "kind": "school", "verified": true, "src": [0, "g0"] },
+    { "kind": "english", "verified": true, "src": [0], "optional": true, "options": [{ "any": [{ "test": "IELTS", "min": 5.0 }, { "test": "SAT", "min": 1100 }] }],
+     "note": { "en": "Either admits you to year 1 without the entrance exam (with IELTS, Economics, Marketing and Aviation Engineering still take a maths and logic exam); IELTS 5.0 from the last 12 months also lets you take the exam in Uzbek, except for Mechanical, Civil, Computer and Aviation Engineering", "uz": "Ularning har biri bilan 1-kursga imtihonsiz qabul qilinasiz (IELTS bilan Iqtisodiyot, Marketing va Aviatsiya muhandisligiga topshirganlar matematika va mantiqdan qoʻshimcha imtihon topshiradi); soʻnggi 12 oydagi IELTS 5.0 bilan imtihonni oʻzbek tilida ham topshirish mumkin (Mashina, Qurilish, Kompyuter va Aviatsiya muhandisligidan tashqari)", "ru": "Любой из них даёт приём на 1-й курс без вступительного экзамена (с IELTS на экономику, маркетинг и авиационную инженерию сдают дополнительный экзамен по математике и логике); с IELTS 5.0, полученным за последние 12 месяцев, экзамен можно сдать на узбекском (кроме машиностроения, строительной, компьютерной и авиационной инженерии)" } },
+    { "kind": "exam", "verified": true, "src": [0], "exempt_by": [{ "test": "SAT", "min": 1100 }, { "test": "IELTS", "min": 5, "limit": {"en":"not for Economics, Marketing and Aviation Engineering, which still take a maths and logic exam","uz":"Iqtisodiyot, Marketing va Aviatsiya muhandisligi bundan mustasno: ularda matematika va mantiq imtihoni qoladi","ru":"кроме экономики, маркетинга и авиационной инженерии, где остаётся экзамен по математике и логике"} }], "text": { "en": "TTPU's computer-based entrance exam: 30 maths and 10 logic questions in 90 minutes, in English; 30% admits you to year 1, 20% to the International Foundation Year; up to 3 attempts, registration 200,000 UZS", "uz": "TTPUning kompyuterda olinadigan kirish imtihoni: 90 daqiqada 30 ta matematika va 10 ta mantiq savoli, ingliz tilida; 30% bilan 1-kursga, 20% bilan Xalqaro tayyorlov yiliga qabul qilinasiz; 3 martagacha topshirish mumkin, roʻyxatdan oʻtish 200 000 soʻm", "ru": "Компьютерный вступительный экзамен TTPU: 30 вопросов по математике и 10 по логике за 90 минут, на английском; 30% дают приём на 1-й курс, 20% — на International Foundation Year; до 3 попыток, регистрация 200 000 сумов" } }
+   ],
+   "documents": ["passport_or_birth", "school_cert", "transcript"], "documents_src": [0],
+   "windows": [
+    { "label": { "en": "Entrance exam dates", "uz": "Kirish imtihoni sanalari", "ru": "Даты вступительных экзаменов" }, "text": { "en": "Announced at qabul.turin.uz", "uz": "qabul.turin.uz saytida eʼlon qilinadi", "ru": "Объявляются на qabul.turin.uz" }, "src": [0] }
+   ],
+   "sources": [{ "url": "https://qabul.turin.uz/regulations/bachelor", "checked": "2026-10-04", "says": "TTPU's 'Bachelor Programs - Admission Regulations 2026/2027' on its admissions portal (turin.uz links it as ADMISSION), read in English and Uzbek on 2026-10-04: register at qabul.turin.uz or in room 106 (fee 200,000 UZS), up to 3 attempts; a computer-based exam of 30 maths and 10 logic questions in 90 minutes, in English, or in Uzbek with an IELTS 5.0+ certificate issued within a year (not for Mechanical, Civil, Computer or Aviation Engineering); 30 % admits to year 1, 20 % to the International Foundation Year, below 20 % not admitted; IELTS 5.0 or SAT 1100 admits to year 1 without the exam (Economics, Marketing and Aviation Engineering applicants with IELTS take an extra maths and logic exam); originals: passport or ID with PINFL, birth certificate if under passport age, the 11-grade school certificate or a college or vocational diploma with its transcript; exam dates are announced at qabul.turin.uz" }]
+  },
+  {
+   "id": "webster_tashkent", "city": "Tashkent", "admission": "own", "instruction": ["en"], "needs_verification": false,
+   "requirements": [
+    { "kind": "school", "verified": true, "src": [0, "g0"] },
+    { "kind": "english", "verified": true, "src": [0], "options": [{ "any": [{ "test": "IELTS", "min": 6.0, "conditional": 5.5 }, { "test": "TOEFL", "min": 80, "conditional": 69 }, { "test": "PTE", "min": 53 }, { "test": "LANGUAGECERT", "level": "C1" }, { "test": "DUOLINGO", "min": 120 }] }],
+     "conditional_note": { "en": "Below the full level (IELTS 5.5 or TOEFL iBT 69-79): conditional admission, with free English classes in the first two semesters.", "uz": "Toʻliq darajadan pastroq boʻlsa (IELTS 5.5 yoki TOEFL iBT 69-79): shartli qabul, birinchi ikki semestrda bepul ingliz tili darslari bilan.", "ru": "Ниже полного уровня (IELTS 5.5 или TOEFL iBT 69-79): условный приём с бесплатными занятиями английским в первые два семестра." } },
+    { "kind": "average", "verified": true, "src": [0], "gpa": 2.5, "of": 4 }
+   ],
+   "documents": ["transcript", "english_cert", "passport"], "documents_src": [0],
+   "windows": [
+    { "label": { "en": "Three intakes a year: August, January and summer", "uz": "Yiliga uch marta qabul: avgust, yanvar va yoz", "ru": "Три набора в год: август, январь и лето" }, "src": [0] }
+   ],
+   "sources": [{ "url": "https://ciep.webster.uz/en/bachelor-degree.php", "checked": "2026-10-04" }]
+  },
+  {
+   "id": "amity_tashkent", "city": "Tashkent", "admission": "own", "instruction": null, "needs_verification": false,
+   "requirements": [
+    { "kind": "school", "verified": true, "src": [0, "g0"], "years": 12 },
+    { "kind": "english", "verified": true, "src": [0], "options": [
+     { "programme": { "en": "B.Tech CSE and B.Sc IT", "uz": "B.Tech CSE va B.Sc IT", "ru": "B.Tech CSE и B.Sc IT" }, "any": [{ "test": "IELTS", "min": 5.5, "or_equivalent": true }] },
+     { "programme": { "en": "BA and BBA", "uz": "BA va BBA", "ru": "BA и BBA" }, "any": [{ "test": "IELTS", "min": 6.0, "or_equivalent": true }] }
+    ] },
+    { "kind": "exam", "verified": true, "src": [0], "text": { "en": "Amity's entrance exams: maths, physics and chemistry (B.Tech CSE); maths and aptitude (B.Sc IT); aptitude (BA, BBA)", "uz": "Amity kirish imtihonlari: matematika, fizika va kimyo (B.Tech CSE); matematika va qobiliyat testi (B.Sc IT); qobiliyat testi (BA, BBA)", "ru": "Вступительные экзамены Amity: математика, физика и химия (B.Tech CSE); математика и тест способностей (B.Sc IT); тест способностей (BA, BBA)" } },
+    { "kind": "interview", "verified": true, "src": [0] }
+   ],
+   "documents": null, "documents_src": [], "windows": [],
+   "sources": [{ "url": "https://amity.uz/en/pages/view/entry_requirements", "checked": "2026-10-04" }]
+  },
+  {
+   "id": "mdis", "city": "Tashkent", "admission": "own", "instruction": null, "needs_verification": false,
+   "route_note": { "en": "These are the entry requirements of MDIS Tashkent's Foundation Year: a school leaver starts the first year there.", "uz": "Bu MDIS Tashkentning Foundation Year dasturi talablari: maktab bitiruvchisi birinchi kursni shu dasturdan boshlaydi.", "ru": "Это требования программы Foundation Year в MDIS Tashkent: выпускник школы начинает с неё первый курс." },
+   "requirements": [
+    { "kind": "school", "verified": true, "src": [1, "g0"] },
+    { "kind": "english", "verified": true, "src": [0, 1, 2], "options": [{ "any": [{ "test": "IELTS", "min": 5.5, "bands": 5.0 }, { "test": "TOEFL", "min": 46 }] }],
+     "own_test": { "en": "or MDIS's own English Entrance Test, 5.5 or above", "uz": "yoki MDISning oʻz ingliz tili kirish testi, 5.5 va undan yuqori", "ru": "или собственный вступительный тест MDIS по английскому, 5.5 и выше" },
+     "note": { "en": "MDIS offers places first to IELTS or its English test at 6.0 or above; at 5.5, a place is offered if one is left", "uz": "MDIS avval IELTS yoki oʻz testi boʻyicha 6.0 va undan yuqori natijaga ega nomzodlarga joy beradi; 5.5 bilan boʻsh joy qolsa taklif qilinadi", "ru": "MDIS сначала предлагает места кандидатам с IELTS или его тестом 6.0 и выше; с 5.5 место предлагается, если оно осталось" } }
+   ],
+   "documents": ["passport", "photo_35", "school_cert_transcript", "english_cert"], "documents_src": [1, 2], "windows": [],
+   "sources": [
+    { "url": "https://www.mdis.uz/en/news/apply-to-mdis-tashkent-without-ielts-register-for-eet", "checked": "2026-10-04", "says": "20 May 2025: the English Entrance Test is an alternative to IELTS for admission; fee 510,000 UZS; no pass score stated" },
+    { "url": "https://www.mdis.uz/en/menu/foundation-year", "checked": "2026-10-04", "says": "MDIS Tashkent's Foundation Year page (its registration dates are for 2025: 1 March - 15 August): applicants have finished 11 years of secondary school, an academic lyceum or a professional college; documents: passport, an IELTS certificate or MDIS English test result of 5.5 and above or TOEFL iBT 46-59 / PBT 453-496 and above, a 3.5x4.5 photo, the diploma and transcript (translated into English and notarized); places go first to IELTS or MDIS English Test 6.0 and above, to 5.5 only if any are left" },
+    { "url": "https://www.mdis.uz/ru/menu/foundation-year", "checked": "2026-10-04", "says": "the same page in Russian: admission to the first year (Foundation Year) for 2025-2026; MDIS English Test 5.5 or IELTS 5.5 or TOEFL iBT 46-59 / PBT 453-496; an IELTS certificate of 5.5 overall with no component below 5.0" }
+   ]
+  },
+  {
+   "id": "bmu", "city": "Tashkent", "admission": "own", "instruction": null, "needs_verification": false,
+   "route_note": { "en": "These are the requirements BMU's page lists for its bachelor's programme. Any one of these meets its school requirement: BMU's Foundation or an equivalent international foundation, a first year at a university, 12 years of schooling under an internationally recognised curriculum, or an equivalent such as the IB. Direct Entry to year 2 is listed separately.", "uz": "Bu BMU sahifasida bakalavriat uchun koʻrsatilgan talablar. Taʼlim talabiga ulardan biri yetarli: BMU Foundation yoki unga teng xalqaro foundation dasturi, universitetda birinchi kurs, xalqaro tan olingan dastur boʻyicha 12 yillik taʼlim yoki IB kabi teng hujjat. 2-kursga toʻgʻridan-toʻgʻri qabul alohida koʻrsatilgan.", "ru": "Это требования, которые BMU указывает для бакалавриата. Для требования к образованию достаточно одного из них: Foundation BMU или равноценная международная подготовительная программа, первый курс университета, 12 лет обучения по международно признанной программе или равноценный документ, например IB. Прямой приём на 2-й курс указан отдельно." },
+   "requirements": [
+    { "kind": "school", "verified": true, "src": [0, "g0"], "years": 12 },
+    { "kind": "english", "verified": true, "src": [0], "options": [{ "any": [{ "test": "IELTS", "min": 6.0, "bands": 5.5 }, { "test": "APTIS", "level": "C1" }] }] },
+    { "kind": "exam", "verified": true, "src": [0], "text": { "en": "Maths: GCSE Maths grade C/4 or an equivalent qualification, plus a pass in BMU's maths entrance exam or in its Foundation's Quantitative Methods I module, or an SAT Math score at BMU's threshold", "uz": "Matematika: GCSE Maths C/4 bahosi yoki unga teng hujjat, hamda BMUning matematika kirish imtihonidan yoki Foundation dasturidagi Quantitative Methods I modulidan oʻtish, yoki BMU belgilagan chegaradagi SAT Math bali", "ru": "Математика: GCSE Maths на оценку C/4 или равноценный документ, а также сданный вступительный экзамен BMU по математике или модуль Quantitative Methods I программы Foundation, либо балл SAT Math не ниже порога BMU" } },
+    { "kind": "age", "verified": true, "src": [0], "min": 17, "by": "dec31" }
+   ],
+   "documents": ["passport_or_birth", "photo_34", "school_cert_transcript", "english_cert"], "documents_src": [0], "windows": [],
+   "sources": [{ "url": "https://bmu-edu.uz/page/admission-requirements-tuition-fees", "checked": "2026-10-04" }]
+  },
+  {
+   "id": "kiut", "city": "Tashkent", "admission": "own", "instruction": ["uz", "ru", "en"], "needs_verification": false,
+   "requirements": [
+    { "kind": "school", "verified": true, "src": [0, "g0"] },
+    { "kind": "english", "verified": true, "src": [0], "optional": true, "options": [{ "any": [{ "test": "IELTS", "min": 5.5 }, { "test": "CEFR", "level": "B1" }, { "test": "DUOLINGO", "min": 85 }, { "test": "TOEFL", "min": 58 }, { "test": "TOPIK", "level": "3" }, { "test": "TOMER" }] }] },
+    { "kind": "exam", "verified": true, "src": [0], "text": { "en": "A test in the subject or an interview, by school (a creative exam for the arts)", "uz": "Maktabga qarab fan boʻyicha test yoki suhbat (sanʼat uchun ijodiy imtihon)", "ru": "Тест по предмету или собеседование, в зависимости от школы (для искусств — творческий экзамен)" } }
+   ],
+   "documents": ["passport", "school_cert", "photo_recent", "english_cert_if_any"], "documents_src": [0],
+   "windows": [
+    { "label": { "en": "Applications for 2026/2027: open until the official deadline (no date published)", "uz": "2026/2027 uchun arizalar: rasmiy muddatgacha (sana eʼlon qilinmagan)", "ru": "Заявки на 2026/2027: до официального срока (дата не опубликована)" }, "src": [0] }
+   ],
+   "sources": [{ "url": "https://kiut.uz/en/admissions/tashkent-admission/", "checked": "2026-10-04" }]
+  },
+  {
+   "id": "newuu", "city": "Tashkent", "admission": "own", "instruction": null, "needs_verification": false,
+   "requirements": [
+    { "kind": "school", "verified": true, "src": [0, "g0"] },
+    { "kind": "english", "verified": true, "src": [0], "options": [{ "any": [{ "test": "IELTS", "min": 5.5, "max_by_programme": 6.0 }, { "test": "CEFR", "level": "B2" }, { "test": "TOEFL", "min": 46, "max_by_programme": 60, "no_home": true }] }] },
+    { "kind": "exam", "verified": true, "src": [0], "exempt_by": [{ "test": "SAT_MATH", "min": 780, "limit": {"en":"the university may exempt you, with an interview in English","uz":"universitet ingliz tilidagi suhbat bilan ozod qilishi mumkin","ru":"университет может освободить, с собеседованием на английском"} }, { "test": "IB_MATHS", "grade": "5", "limit": {"en":"the university may exempt you, with an interview in English","uz":"universitet ingliz tilidagi suhbat bilan ozod qilishi mumkin","ru":"университет может освободить, с собеседованием на английском"} }, { "test": "A_LEVEL_MATHS", "grade": "B", "limit": {"en":"the university may exempt you, with an interview in English","uz":"universitet ingliz tilidagi suhbat bilan ozod qilishi mumkin","ru":"университет может освободить, с собеседованием на английском"} }], "text": { "en": "NewUU's Math & Logical Thinking exam; SAT Math 780-800, IB Maths 5-7 or A-level Maths B-A* can exempt you (with an interview in English)", "uz": "NewUUning Math & Logical Thinking imtihoni; SAT Math 780-800, IB Maths 5-7 yoki A-level Maths B-A* bilan undan ozod boʻlish mumkin (ingliz tilida suhbat bilan)", "ru": "Экзамен NewUU Math & Logical Thinking; SAT Math 780-800, IB Maths 5-7 или A-level Maths B-A* могут освободить от него (с собеседованием на английском)" } }
+   ],
+   "documents": ["school_cert_transcript", "english_cert"], "documents_src": [0],
+   "windows": [
+    { "label": { "en": "Registration (2026 intake)", "uz": "Roʻyxatdan oʻtish (2026-yil qabuli)", "ru": "Регистрация (набор 2026)" }, "from": "2026-01-30", "until": "2026-06-19", "src": [0] },
+    { "label": { "en": "Entrance exam", "uz": "Kirish imtihoni", "ru": "Вступительный экзамен" }, "until": "2026-06-27", "src": [0] },
+    { "label": { "en": "Documents and English certificate", "uz": "Hujjatlar va ingliz tili sertifikati", "ru": "Документы и сертификат по английскому" }, "until": "2026-07-13", "src": [0] }
+   ],
+   "sources": [{ "url": "https://newuu.uz/en/undergraduate-admissions", "checked": "2026-10-04" }]
+  },
+  {
+   "id": "tuit", "city": "Tashkent", "admission": "state_test", "instruction": null, "needs_verification": false,
+   "requirements": [
+    { "kind": "school", "verified": true, "src": ["g0"] },
+    { "kind": "state_test", "verified": true, "src": [1, "g1", "g0"] },
+    { "kind": "language_cert", "verified": true, "src": [1, "g0"] }
+   ],
+   "documents": null, "documents_src": [],
+   "windows": [
+    { "label": { "en": "State test registration (every year)", "uz": "Davlat testiga roʻyxatdan oʻtish (har yili)", "ru": "Регистрация на государственный тест (ежегодно)" }, "text": { "en": "5-25 June", "uz": "5-25-iyun", "ru": "5-25 июня" }, "src": ["g0"] },
+    { "label": { "en": "State test (every year)", "uz": "Davlat testi (har yili)", "ru": "Государственный тест (ежегодно)" }, "text": { "en": "July-August", "uz": "iyul-avgust", "ru": "июль-август" }, "src": ["g0"] }
+   ],
+   "sources": [
+    { "url": "https://tuit.uz/", "checked": "2026-10-04", "says": "Muhammad al-Xorazmiy nomidagi Toshkent axborot texnologiyalari universiteti; admissions at admission.tuit.uz" },
+    { "url": "https://admission.tuit.uz/", "checked": "2026-10-04", "says": "TUIT's admissions commission page for the 2026/2027 academic year: it sends applicants to the Knowledge and Skills Assessment Agency (uzbmb.uz, my.uzbmb.uz) and posts the approved list of national and international certificates in foreign languages and general subjects" }
+   ]
+  },
+  {
+   "id": "tsue", "city": "Tashkent", "admission": "state_test", "instruction": null, "needs_verification": false,
+   "requirements": [
+    { "kind": "school", "verified": true, "src": ["g0"] },
+    { "kind": "state_test", "verified": true, "src": [0, "g1", "g0"] },
+    { "kind": "language_cert", "verified": true, "src": ["g0"] }
+   ],
+   "documents": null, "documents_src": [],
+   "windows": [
+    { "label": { "en": "State test registration (every year)", "uz": "Davlat testiga roʻyxatdan oʻtish (har yili)", "ru": "Регистрация на государственный тест (ежегодно)" }, "text": { "en": "5-25 June", "uz": "5-25-iyun", "ru": "5-25 июня" }, "src": ["g0"] },
+    { "label": { "en": "State test (every year)", "uz": "Davlat testi (har yili)", "ru": "Государственный тест (ежегодно)" }, "text": { "en": "July-August", "uz": "iyul-avgust", "ru": "июль-август" }, "src": ["g0"] }
+   ],
+   "sources": [{ "url": "https://tsue.uz/page/bakalavriatga-qabul", "checked": "2026-10-04", "says": "TSUE's 'Bakalavriatga qabul' page (updated 18 Jun 2026): bachelor's registration is at my.uzbmb.uz, the Knowledge and Skills Assessment Agency's portal; its pass marks at my.uzbmb.uz/university/1; the subject sets as a PDF" }]
+  }
+ ]
+}

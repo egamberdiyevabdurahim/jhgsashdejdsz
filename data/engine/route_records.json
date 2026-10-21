@@ -1,0 +1,393 @@
+{
+ "_note": "The app's own sourced records for routes the design's SEED only names (10 Oct 2026, the teen walk): the Global Korea Scholarship and Türkiye Bursları, each fact with the address of the official page and the day it was read. Not in seed_rules.json: that file is the design's own SEED. A fact no official page gives is null, never a guess. `age_cap` and `covers` keep the SEED's own strings (the feasibility suggestions print them); the sourced rule stands beside them.",
+ "scholarship_programs": [
+  {
+   "id": "GKS",
+   "name": "Global Korea Scholarship (undergraduate)",
+   "destination": "KR",
+   "age_cap": "under 25 (verify)",
+   "citizenship_rules": "non-Korean; country quotas",
+   "covers": "tuition, stipend, language year",
+   "age_under": 25,
+   "min_percent": 80,
+   "language_year": {
+    "years": 1,
+    "language": "ko"
+   },
+   "tracks": [
+    {
+     "id": "embassy",
+     "apply_at": "https://www.studyinkorea.go.kr/",
+     "month_from": 9,
+     "month_to": 9
+    },
+    {
+     "id": "university",
+     "apply_at": null,
+     "month_from": 9,
+     "month_to": 11
+    }
+   ],
+   "window": {
+    "announce_month": 9,
+    "results_month": 12,
+    "cycles": [
+     {
+      "entry_year": 2027,
+      "notice": "2027 Global Korea Scholarship for Undergraduate Degrees",
+      "notice_posted": "2026-09-09",
+      "opens": null,
+      "closes": null,
+      "note": "The dates are in the guideline attached to the notice (a PDF); it was not read, so none is written here."
+     }
+    ]
+   },
+   "tests": [
+    {
+     "test_id": "TOPIK",
+     "valid_years": 2,
+     "parts": "TOPIK I (Listening, Reading), TOPIK II (Listening, Writing, Reading)",
+     "dates": null,
+     "source": 3
+    }
+   ],
+   "universities": [
+    {
+     "id": "snu",
+     "needs_verification": true,
+     "one_of": {
+      "topik_level": 3,
+      "toefl_ibt": 80,
+      "ielts": 6
+     },
+     "source": 4
+    },
+    {
+     "id": "yonsei",
+     "needs_verification": false,
+     "language_proof": "korean_or_english",
+     "intakes": [
+      {
+       "kind": "march",
+       "year": 2027,
+       "opens": "2026-09-01",
+       "closes": "2026-09-17",
+       "results": "2026-12-04"
+      }
+     ],
+     "source": 8
+    },
+    {
+     "id": "kaist",
+     "needs_verification": false,
+     "intakes": [
+      {
+       "kind": "early",
+       "year": 2027,
+       "opens": "2026-09-22",
+       "closes": "2026-10-22",
+       "results": "2027-01-07"
+      },
+      {
+       "kind": "regular",
+       "year": 2027,
+       "opens": "2026-11-10",
+       "closes": "2027-01-14",
+       "results": "2027-03-25"
+      }
+     ],
+     "source": 9
+    }
+   ],
+   "documents": null,
+   "steps": {
+    "call": {
+     "url": "https://www.studyinkorea.go.kr/",
+     "menu": "Scholarships Notice",
+     "host": "studyinkorea.go.kr",
+     "page": "https://www.studyinkorea.go.kr/ko/notice/scholarshipsList.do?boardSort=3",
+     "source": 1
+    },
+    "language": {
+     "url": "https://www.topik.go.kr/",
+     "host": "topik.go.kr",
+     "source": 3
+    },
+    "documents": {
+     "url": "https://www.studyinkorea.go.kr/",
+     "menu": "Scholarships Notice",
+     "host": "studyinkorea.go.kr",
+     "page": "https://www.studyinkorea.go.kr/ko/notice/scholarshipsList.do?boardSort=3",
+     "source": 2
+    },
+    "apply": {
+     "url": "https://www.studyinkorea.go.kr/",
+     "menu": "GKS Scholarship",
+     "host": "studyinkorea.go.kr",
+     "page": "https://www.studyinkorea.go.kr/ko/plan/scholarship.do?tab=gks-tab1",
+     "source": 0
+    }
+   },
+   "sources": [
+    {
+     "url": "https://www.studyinkorea.go.kr/ko/plan/scholarship.do?tab=gks-tab1",
+     "read_on": "2026-10-10",
+     "says": "GKS undergraduate degrees. Announcement: NIIED, September. Application submission: Embassy Track: September / University Track: September - November. Screening and selection: October - December. Final results: December. Embassy Track: apply online through Study in Korea; University Track: apply directly to a GKS university. Applicants and both of their parents must hold non-Korean citizenship. Applicants must be under 25 years of age as of the applicable year. A cumulative score of 80% or higher (or the class-rank or CGPA rule). Korean language training (1 year), then a bachelor's degree of 4-6 years. Benefits: airfare, Korean language training fees, tuition, and monthly allowances. On the day it was read the application button said it is not the application period."
+    },
+    {
+     "url": "https://www.studyinkorea.go.kr/ko/notice/scholarshipsList.do?boardSort=3",
+     "read_on": "2026-10-10",
+     "says": "The GKS notice board. '2027 Global Korea Scholarship for Undergraduate Degrees' was posted on 2026-09-09 and '2027 GKS Undergraduate Program - University Track' on 2026-09-23. No notice for a later year."
+    },
+    {
+     "url": "https://www.studyinkorea.go.kr/ko/plan/gksNoticeRead.do?bbsId=BBSMSTR_000000000461&nttId=4522",
+     "read_on": "2026-10-10",
+     "says": "The 2027 notice: deadlines, required documents and schedules are in the attached Application Guidelines ('2027 GKS-U Application Guidelines (English) 0914.pdf'); the universities and departments are in the University Information files. The page itself gives no date and no list of documents."
+    },
+    {
+     "url": "https://www.studyinkorea.go.kr/ko/plan/examAndKoreanStudy.do",
+     "read_on": "2026-10-10",
+     "says": "International students must submit proof of language proficiency for admission and graduation; each university or department sets the level: Korean for Korean-taught programmes (typically a TOPIK score report, PBT or IBT), English for English-taught ones. TOPIK I (Listening, Reading), TOPIK II (Listening, Writing, Reading). A TOPIK score is valid for 2 years from the date of score announcement. The schedule and registration are on topik.go.kr. The page gives no test date."
+    },
+    {
+     "url": "https://en.snu.ac.kr/admission/overview/faq/admission",
+     "read_on": "2026-10-10",
+     "says": "Seoul National University, admissions FAQ (the page says it was last updated in 2021): either proof of Korean or English proficiency is required for the application: TOPIK level 3 or higher, or TOEFL iBT 80, TEPS 551, IELTS 6.0 or higher. Standardized test results are supplementary material. The application fee is KRW 70,000 for undergraduate."
+    },
+    {
+     "url": "https://en.snu.ac.kr/admission/overview/notice?md=v&bbsidx=170606",
+     "read_on": "2026-10-10",
+     "says": "Seoul National University, '2027 Spring Undergraduate Admissions Guide for International Students': online application Monday, July 6, 2026, 10:00 to Thursday, July 9, 2026, 17:00 (already held). No later intake is announced on the page."
+    },
+    {
+     "url": "https://www.mofa.go.kr/ke-en/brd/m_10538/view.do?seq=761541",
+     "read_on": "2026-10-07",
+     "says": "Read by the content lane for C16-krprep (its fact 0), not again on 10 Oct: the 2027 GKS-U guideline: one year of Korean before the degree, every scholar must reach TOPIK level 3 within the language year to go on."
+    },
+    {
+     "url": "https://www.studyinkorea.go.kr/",
+     "read_on": "2026-10-10",
+     "says": "Study in Korea's front page: its menu links 'GKS Scholarship' (the scholarship's own page) and 'Scholarships Notice' (the GKS notice board), and 'TOPIK' (topik.go.kr). No date of a call is on the front page."
+    },
+    {
+     "url": "https://admission.yonsei.ac.kr/seoul/upload/guide/20260529144906YVFHLB.PDF",
+     "read_on": "2026-10-10",
+     "says": "Yonsei University, the admission guide for international students entering in March 2027 (Korean and English in one file; linked from admission.yonsei.ac.kr/seoul/admission/html/international/guide.asp as 'Spring 2027 International Admission - Application Guide'). Online application: 2026. 9. 1.(Tue) 10:00 ~ 9. 17.(Thu) 17:00, online only. Documents by post: by 2026. 9. 30.(Wed) 17:00. Announcement of application results: 2026. 12. 4.(Fri) 17:00. Eligibility: applicants and both of their parents must hold a non-Korean nationality; expected graduates must graduate by February 2027. Applicants must submit documents to verify Korean or English proficiency, one of: official documentation proving completion of high school courses conducted in Korean or English; a certificate of completion from a Korean language institution; a standardized test result indicating proficiency in Korean or English; a Korean or English language proficiency test score. Medicine, Dentistry, Nursing and Pharmacy: TOPIK level 5 or above. No minimum score is named for the other majors."
+    },
+    {
+     "url": "https://admission.kaist.ac.kr/intl-undergraduate/application/ApplicationGuide/ApplicationTimeline",
+     "read_on": "2026-10-10",
+     "says": "KAIST, international undergraduate, 'Application Timeline for 2027 Admissions' (one line under the heading still reads 2023). Early Admissions: online application September 22 ~ October 22, 2026, 6:00 PM (KST); results January 7, 2027, 10:00 AM (KST). Regular Admissions: November 10, 2026 ~ January 14, 2027, 6:00 PM (KST); results March 25, 2027, 10:00 AM (KST). The announcement dates are subject to change. The page states no language of instruction and no English test."
+    },
+    {
+     "url": "https://admission.kaist.ac.kr/intl-undergraduate/before/sub02",
+     "read_on": "2026-10-10",
+     "says": "KAIST, eligibility: applicants who hold Korean citizenship (dual citizenship) are not eligible to apply as foreign students. Spring Semester 2027 (Early only): graduated or will graduate from high school by February 28th, 2027. Fall Semester 2027 (Early / Regular): by August 31st, 2027. The page states no language of instruction and no English test."
+    }
+   ],
+   "not_found": [
+    "The 2027 guideline PDF (dates, the documents list, the quota for Uzbekistan) was not read; its notice is source 2. Tried again on 10 Oct 2026: the file is behind a script download.",
+    "TOPIK test dates, 2027 too: topik.go.kr serves its schedule through scripts and returned its title only (tried again on 10 Oct 2026); no date is written.",
+    "KAIST: the language it teaches in and any English test are on neither of the two pages read (sources 9 and 10); nothing is written about them.",
+    "Yonsei University: the guide names no minimum score for the proof of Korean or English outside Medicine, Dentistry, Nursing and Pharmacy.",
+    "Korea University: its admissions site (oia.korea.ac.kr) reset the connection on both tries on 10 Oct 2026; nothing is written about it."
+   ],
+   "verified_at": "2026-10-10",
+   "source_url": "https://www.studyinkorea.go.kr/ko/plan/scholarship.do?tab=gks-tab1",
+   "needs_verification": false,
+   "steps_note": "A step shows the short address a phone can hold on one line (the site's front page, source 7) and names the menu entry to open; a step's own 'page' is the exact page that was read."
+  },
+  {
+   "id": "TURKIYE_BURSLARI",
+   "name": "Turkiye Scholarships (undergraduate)",
+   "destination": "TR",
+   "age_cap": "under 21 (verify)",
+   "citizenship_rules": "non-Turkish",
+   "covers": "tuition, stipend, housing, Turkish year",
+   "age_under": 21,
+   "min_percent": 70,
+   "stipend_try_month": 6500,
+   "language_year": {
+    "years": 1,
+    "language": "tr",
+    "level_at_end": "C1"
+   },
+   "tracks": [
+    {
+     "id": "online",
+     "apply_at": "https://tbbs.turkiyeburslari.gov.tr",
+     "month_from": 1,
+     "month_to": 2
+    }
+   ],
+   "window": {
+    "from_md": "01-10",
+    "to_md": "02-20",
+    "results_month": 8,
+    "cycles": [
+     {
+      "entry_year": 2026,
+      "notice": "Türkiye Scholarships 2026 Applications",
+      "notice_posted": "2025-12-29",
+      "opens": "2026-01-10",
+      "closes": "2026-02-20",
+      "source": 1
+     }
+    ]
+   },
+   "tests": [
+    {
+     "test_id": "TR_YOS",
+     "dates": null,
+     "last_sessions": [
+      {
+       "name": "2026-TR-YÖS/1",
+       "apply_from": "2026-01-14",
+       "apply_until": "2026-02-03",
+       "test_date": "2026-04-12",
+       "results": "2026-05-07"
+      },
+      {
+       "name": "2026-TR-YÖS/2",
+       "apply_from": "2026-07-09",
+       "apply_until": "2026-08-03",
+       "test_date": "2026-10-11",
+       "results": "2026-11-05"
+      }
+     ],
+     "source": 6
+    }
+   ],
+   "universities": [
+    {
+     "id": "boun",
+     "needs_verification": false,
+     "one_of": {
+      "sat": 1300,
+      "sat_engineering": 1350,
+      "tr_yos": 450
+     },
+     "english": {
+      "toefl_ibt": 79,
+      "ielts": 6.5
+     },
+     "english_prep_year": true,
+     "source": 7
+    },
+    {
+     "id": "metu",
+     "needs_verification": true,
+     "english_medium": true,
+     "english_tests": [
+      "TOEFL",
+      "PTE Academic"
+     ],
+     "ielts_refused_from": "2022-12-24",
+     "english_prep_year": true,
+     "exams": [
+      "TR-YÖS",
+      "SAT"
+     ],
+     "exam_valid_years": 2,
+     "source": 8,
+     "exams_source": 9
+    }
+   ],
+   "documents": [
+    "id_or_passport",
+    "photo",
+    "national_exam_results",
+    "diploma",
+    "transcript",
+    "international_exam_results",
+    "language_test_results"
+   ],
+   "steps": {
+    "call": {
+     "url": "https://turkiyeburslari.gov.tr/calendar",
+     "host": "turkiyeburslari.gov.tr",
+     "source": 0
+    },
+    "language": {
+     "url": "https://www.osym.gov.tr/",
+     "host": "osym.gov.tr",
+     "source": 6
+    },
+    "documents": {
+     "url": "https://turkiyeburslari.gov.tr/applysteps",
+     "host": "turkiyeburslari.gov.tr",
+     "source": 3
+    },
+    "apply": {
+     "url": "https://tbbs.turkiyeburslari.gov.tr",
+     "host": "turkiyeburslari.gov.tr",
+     "source": 1
+    }
+   },
+   "sources": [
+    {
+     "url": "https://www.turkiyeburslari.gov.tr/calendar",
+     "read_on": "2026-10-10",
+     "says": "Application Calendar, General Application Period (the page names no year): application period January 10 - February 20; evaluation March-April; interviews April - June; announcement of results early August; initial procedures August; transfers of grantees to Türkiye September."
+    },
+    {
+     "url": "https://www.turkiyeburslari.gov.tr/announcements/turkiye-scholarships-2026-applications-121",
+     "read_on": "2026-10-10",
+     "says": "'Türkiye Scholarships 2026 Applications', posted 29 December 2025: Application Dates: 10 January - 20 February 2026, for international students from all countries, for associate, bachelor's, master's and doctoral degrees, through tbbs.turkiyeburslari.gov.tr. No announcement for 2027 was on the site."
+    },
+    {
+     "url": "https://www.turkiyeburslari.gov.tr/scholarshipsprograms",
+     "read_on": "2026-10-10",
+     "says": "Application criteria: citizens of all countries; graduates or those who will graduate at the end of the current academic year (before August); for associate and bachelor's degree programmes: under 21 years of age; minimum academic achievement for associate and bachelor's degree candidates: 70%. Turkish citizens cannot apply."
+    },
+    {
+     "url": "https://www.turkiyeburslari.gov.tr/applysteps",
+     "read_on": "2026-10-10",
+     "says": "Applications are made online through the Türkiye Scholarships Application System (TBBS). All candidates upload: a valid ID card or passport; a photograph taken within the last year; national exam results, if any; a diploma or temporary graduation certificate; a transcript; international exam results (GRE, GMAT, SAT) if the chosen programme requires them; language test results (TOEFL, DELF) if the chosen programme requires them."
+    },
+    {
+     "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms",
+     "read_on": "2026-10-10",
+     "says": "Scope of the scholarship: monthly stipend, undergraduate: 6.500 TL; tuition fee; accommodation; health insurance; Turkish language course (1 year); a once-off flight ticket at the beginning of education and when graduating."
+    },
+    {
+     "url": "https://www.turkiyeburslari.gov.tr/turkisheducation",
+     "read_on": "2026-10-10",
+     "says": "Free 1 year Turkish language education for all Türkiye Scholarship students, regardless of the language of the programme they will study, at the Turkish Language Teaching Centers (TÖMER) within universities; a Turkish Proficiency Certificate at C1 level is expected at the end."
+    },
+    {
+     "url": "https://www.osym.gov.tr/",
+     "read_on": "2026-10-10",
+     "says": "ÖSYM's calendar for 2026: 2026-TR-YÖS/1: applications 14.01.2026 - 03.02.2026, late 09.02.2026 - 11.02.2026, exam 12.04.2026, results 07.05.2026. 2026-TR-YÖS/2: applications 09.07.2026 - 03.08.2026, late 07.08.2026 - 11.08.2026, exam 11.10.2026, results 05.11.2026. No TR-YÖS session of 2027 is on the page."
+    },
+    {
+     "url": "https://intl.bogazici.edu.tr/node/100023029",
+     "read_on": "2026-10-10",
+     "says": "Boğaziçi University, 'Admission of International Students to Undergraduate Programs: Required Documents': one of SAT (at least 1300/1600; engineering 1350 with Math 700; Mathematics, Molecular Biology and Genetics, Chemistry and Physics 1300 with Math 700; Faculty of Education 1200), TR-YÖS (minimum 450) or an A grade in three relevant GCE A Level subjects; scores valid for two years. Instruction is in English: BUEPT, TOEFL iBT 79 (Writing 22) or IELTS Academic 6.5 (Writing 6.5); students not meeting the requirement attend the English Preparatory Program at YADYOK. Application fee EUR 100 per programme. The page states no application period."
+    },
+    {
+     "url": "https://iso.metu.edu.tr/en/english-proficiency",
+     "read_on": "2026-10-10",
+     "says": "Middle East Technical University (METU), International Students Office, 'English Proficiency' (the page says it was last updated 02/09/2026): 'The medium of instruction at METU is English.' Admitted students without a valid TOEFL, IELTS or PTE ACADEMIC score take the ODTÜ English Proficiency Exam; those who do not reach its minimum attend the English Preparatory Class at the Department of Basic English for one year; a valid score submitted at registration exempts from it. IELTS exams taken on or after the 24th of December 2022 are not accepted any more (University Senate decision of December 23, 2022). The minimum scores are in a linked equivalence table, not on the page."
+    },
+    {
+     "url": "https://iso.metu.edu.tr/en/application-requirements",
+     "read_on": "2026-10-10",
+     "says": "METU, 'Application Requirements' (the page says it was last updated 09/01/2024): exam results such as TR-YÖS, SAT, QUDURAT and TQDK are valid for two years; documents holding the status of a high-school diploma are valid with any date. The minimum scores are in a linked file ('ODTÜ International Students Application Criteria'), not on the page."
+    }
+   ],
+   "not_found": [
+    "The 2027 application window: not announced on 10 Oct 2026 (the 2026 one was announced on 29 December 2025).",
+    "TR-YÖS sessions of 2027: not on ÖSYM's calendar on 10 Oct 2026.",
+    "Boğaziçi's application period for the coming year: not on its page on 10 Oct 2026.",
+    "METU: the minimum scores (the exams' and the English tests') are in linked files that were not read, and its page says IELTS taken on or after 24 December 2022 is not accepted any more, so no number is written; applications for 2027-2028 are not announced.",
+    "Koç University: its international pages answered 403 on 10 Oct 2026 (two addresses, each tried); nothing is written about it.",
+    "Bilkent University: its pages that opened say only that it has 'a curriculum taught in English'; its requirement pages are on other hosts and were not read; nothing is written about it.",
+    "Istanbul Technical University: not read in this pass."
+   ],
+   "verified_at": "2026-10-10",
+   "source_url": "https://www.turkiyeburslari.gov.tr/calendar",
+   "needs_verification": false
+  }
+ ]
+}

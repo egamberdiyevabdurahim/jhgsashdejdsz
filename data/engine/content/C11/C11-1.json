@@ -1,0 +1,2441 @@
+{
+ "bank": "C11",
+ "batch": 1,
+ "kind": "admin_template",
+ "note": "Admin and registration templates (P5 spec §5.3 C11), batch 1: test registrations (SAT, IELTS, Duolingo, TOEFL, Milliy sertifikat). Catalog records, not quiz items: no options or keys. Text is code-rendered in uz/ru/en, never AI-written. Every date or fee sits in `sittings`, `sessions` or `facts` with {url, verified_at} or `needs_verification: true`; the scheduler places tasks from `lead_time` (days relative to the named anchor; negative = before) and never invents a date. Curly-brace tokens in step text ({sitting_date}, {reg_deadline}, …) are filled by code from the record's own sourced fields. `rule_ids` name the planner rules each template serves (src/engine/rules.ts PLANNER_RULES; seed destination ids). Evidence levels follow the verification ladder (spec §4.6). Lead-time numbers with basis 'inference' are design defaults (spec §4.5: register 5-10 days before a deadline, never in the last 48 h), not evidence. No upload ever asks for a passport or ID scan; where a screenshot is asked for, the student covers document numbers, PINFL, address and card details first. `read` on a fact says how it was read on verified_at: 'page' (the page itself), 'pdf', or 'search_snippet' (the official page's text as a search engine showed it).",
+ "items": [
+  {
+   "id": "C11-cbacct",
+   "template_id": "C11-cbacct",
+   "kind": "admin_template",
+   "category": "test_registration",
+   "test": "SAT",
+   "workstream_kind": "tests",
+   "task_kind": "test-registration",
+   "task_type": "book",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "UZ_HOME",
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "sat_registration_deadline",
+    "milestone_ids": [
+     "m_sat1",
+     "m_sat2"
+    ]
+   },
+   "rule_ids": [
+    "planner.tests_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 42,
+    "due_days_before": 21,
+    "basis": "inference",
+    "note": {
+     "en": "The account has to exist before the registration window the plan picked; under-13 accounts need about 7 business days more.",
+     "uz": "Reja tanlagan roʻyxatdan oʻtish muddatidan oldin akkaunt ochilgan boʻlishi kerak; 13 yoshgacha boʻlganlar uchun yana taxminan 7 ish kuni kerak.",
+     "ru": "Аккаунт должен появиться до окна регистрации, выбранного планом; для детей до 13 лет нужно ещё около 7 рабочих дней."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Create your College Board account",
+    "uz": "College Board akkauntingizni oching",
+    "ru": "Создайте аккаунт College Board"
+   },
+   "summary": {
+    "en": "One College Board account holds your SAT registrations, your scores and, later, the CSS Profile. Open it with your name written exactly as in your passport, so the admission ticket and your ID match on test day.",
+    "uz": "Bitta College Board akkauntida SAT roʻyxatlari, natijalaringiz va keyinroq CSS Profile saqlanadi. Uni ismingizni pasportdagidek aynan yozib oching: test kuni ruxsatnoma va hujjatingizdagi ism mos kelishi shart.",
+    "ru": "В одном аккаунте College Board хранятся ваши регистрации на SAT, результаты, а позже и CSS Profile. Откройте его на имя, написанное точно как в паспорте: в день теста имя в пропуске и в документе должно совпадать."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-cbacct-s1",
+     "type": "book",
+     "minutes": 15,
+     "offset_days": -42,
+     "title": {
+      "en": "Open the account",
+      "uz": "Akkauntni oching",
+      "ru": "Откройте аккаунт"
+     },
+     "instructions": {
+      "en": "On collegeboard.org, create a student account. Type your first and last name in Latin letters exactly as in your passport, use an email you check every day, and keep the password somewhere safe, never in a chat.",
+      "uz": "collegeboard.org saytida oʻquvchi akkauntini oching. Ism va familiyangizni lotin harflarida pasportdagidek aynan yozing, har kuni tekshiradigan elektron pochtangizni koʻrsating, parolni esa chatga emas, xavfsiz joyga yozib qoʻying.",
+      "ru": "Откройте ученический аккаунт на collegeboard.org. Впишите имя и фамилию латиницей точно как в паспорте, укажите почту, которую проверяете каждый день, и храните пароль в надёжном месте, а не в чате."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "account_created",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       },
+       {
+        "key": "name_as_passport",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-cbacct-s2",
+     "type": "contact",
+     "minutes": 10,
+     "offset_days": -42,
+     "when": {
+      "age_lt": 13
+     },
+     "title": {
+      "en": "Under 13: your parent sends the consent form",
+      "uz": "13 yoshgacha: ota-onangiz rozilik shaklini yuboradi",
+      "ru": "До 13 лет: родитель отправляет форму согласия"
+     },
+     "instructions": {
+      "en": "If you are under 13, your parent fills in College Board's Account Creation Consent form and emails it to College Board. A link arrives within about 7 business days; use it within 7 days or it expires.",
+      "uz": "Agar 13 yoshga toʻlmagan boʻlsangiz, ota-onangiz College Boardʼning Account Creation Consent shaklini toʻldirib, College Boardʼga elektron pochta orqali yuboradi. Taxminan 7 ish kuni ichida havola keladi; undan 7 kun ichida foydalaning, aks holda muddati tugaydi.",
+      "ru": "Если вам нет 13 лет, родитель заполняет форму College Board «Account Creation Consent» и отправляет её в College Board по почте. Примерно через 7 рабочих дней придёт ссылка; воспользуйтесь ею в течение 7 дней, иначе она перестанет работать."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "consent_sent",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "id_name_match",
+     "claim": "The test-day ID must be an original, unexpired photo ID bearing the full legal name exactly as on the admission ticket; a mismatch means no admission to the test centre.",
+     "url": "https://satsuite.collegeboard.org/digital/what-to-bring-do/id-requirements",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "under_13",
+     "claim": "Students under 13 need a parent or guardian to submit the Account Creation Consent form to accountrequest@collegeboard.org; College Board replies within 7 business days and the link must be used within 7 days.",
+     "url": "https://satsuite.collegeboard.org/sat/registration/additional-registration-options/students-under-13",
+     "verified_at": "2026-10-07",
+     "read": "search_snippet",
+     "secondary": false,
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_sat_registration",
+     "url": "https://satsuite.collegeboard.org/sat/registration",
+     "kind": "official",
+     "label": {
+      "en": "SAT registration (College Board)",
+      "uz": "SATʼga roʻyxatdan oʻtish (College Board)",
+      "ru": "Регистрация на SAT (College Board)"
+     }
+    }
+   ],
+   "needs_verification": false,
+   "verify_task": null,
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-satreg",
+   "template_id": "C11-satreg",
+   "kind": "admin_template",
+   "category": "test_registration",
+   "test": "SAT",
+   "workstream_kind": "tests",
+   "task_kind": "test-registration",
+   "task_type": "book",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "UZ_HOME",
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "sitting.registration_deadline",
+    "milestone_ids": [
+     "m_sat1",
+     "m_sat2"
+    ]
+   },
+   "rule_ids": [
+    "planner.tests_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 21,
+    "target_window_days_before": [
+     5,
+     10
+    ],
+    "never_within_hours": 48,
+    "basis": "inference",
+    "constraints": [
+     {
+      "rule": "V7",
+      "text": "the sitting is at least 42 days before the first deadline that needs the score (plan.ts rule), and its registration deadline is at least today + 3 days"
+     }
+    ],
+    "note": {
+     "en": "Register 5-10 days before the registration deadline, never in the last 48 hours. Seats at centres in Uzbekistan can run out before the deadline.",
+     "uz": "Roʻyxatdan oʻtish muddatidan 5-10 kun oldin roʻyxatdan oʻting, oxirgi 48 soatda emas. Oʻzbekistondagi markazlarda joylar muddatdan oldin tugab qolishi mumkin.",
+     "ru": "Регистрируйтесь за 5-10 дней до крайнего срока, не в последние 48 часов. Места в центрах Узбекистана могут закончиться раньше срока."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "The fee is paid online by bank card in US dollars; a parent usually pays.",
+    "uz": "Toʻlov onlayn, bank kartasi orqali AQSH dollarida qilinadi; odatda ota-ona toʻlaydi.",
+    "ru": "Оплата онлайн банковской картой в долларах США; обычно платит родитель."
+   },
+   "title": {
+    "en": "Register for the SAT on {sitting_date}",
+    "uz": "{sitting_date} kungi SATʼga roʻyxatdan oʻting",
+    "ru": "Зарегистрируйтесь на SAT {sitting_date}"
+   },
+   "summary": {
+    "en": "Registration for the {sitting_date} SAT closes on {reg_deadline} at 11:59 p.m. US Eastern time; until {late_deadline} you can still register with a late fee. Your plan picked this date so the score arrives at least 6 weeks before the first deadline that needs it.",
+    "uz": "{sitting_date} kungi SATʼga roʻyxatdan oʻtish {reg_deadline} kuni AQSH sharqiy vaqti bilan 23:59 da yopiladi; {late_deadline} gacha qoʻshimcha toʻlov bilan roʻyxatdan oʻtish mumkin. Reja bu sanani natija uni talab qiladigan birinchi muddatdan kamida 6 hafta oldin kelishi uchun tanlagan.",
+    "ru": "Регистрация на SAT {sitting_date} закрывается {reg_deadline} в 23:59 по восточному времени США; до {late_deadline} можно зарегистрироваться с доплатой за позднюю регистрацию. План выбрал эту дату, чтобы результат пришёл минимум за 6 недель до первого срока, для которого он нужен."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-satreg-s1",
+     "type": "verify",
+     "minutes": 5,
+     "offset_days": -21,
+     "title": {
+      "en": "Confirm the date",
+      "uz": "Sanani tasdiqlang",
+      "ru": "Подтвердите дату"
+     },
+     "instructions": {
+      "en": "Check that {sitting_date} does not clash with school exams or a family trip and that you can get to a test centre that morning. If it clashes, tell your mentor today: the plan will offer the next sitting.",
+      "uz": "{sitting_date} maktab imtihonlari yoki oilaviy safar bilan toʻqnashmasligini va oʻsha kuni ertalab test markaziga yetib bora olishingizni tekshiring. Toʻqnashsa, bugunoq mentoringizga ayting: reja keyingi sanani taklif qiladi.",
+      "ru": "Проверьте, что {sitting_date} не совпадает со школьными экзаменами или семейной поездкой и что в то утро вы сможете добраться до центра. Если совпадает, скажите ментору сегодня: план предложит следующую дату."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "sitting_id",
+        "type": "choice",
+        "options_from": "sittings[].sitting_id"
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-satreg-s2",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -21,
+     "title": {
+      "en": "Find a test centre",
+      "uz": "Test markazini toping",
+      "ru": "Найдите тестовый центр"
+     },
+     "instructions": {
+      "en": "Open College Board's test centre search, choose Uzbekistan and {sitting_date}, and write down two centres with their cities. The list changes from date to date; past centres have included the Agency's regional branches and New Uzbekistan University.",
+      "uz": "College Boardʼning test markazlarini qidirish sahifasini oching, Oʻzbekiston va {sitting_date} sanasini tanlang, ikkita markazni shahri bilan yozib oling. Roʻyxat har bir sana uchun oʻzgaradi; avval Agentlikning hududiy filiallari va Yangi Oʻzbekiston universiteti markaz boʻlgan.",
+      "ru": "Откройте поиск тестовых центров College Board, выберите Узбекистан и {sitting_date}, запишите два центра с городами. Список меняется от даты к дате; раньше центрами были региональные филиалы Агентства и New Uzbekistan University."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "centre_name",
+        "type": "text",
+        "max_chars": 80
+       },
+       {
+        "key": "centre_city",
+        "type": "text",
+        "max_chars": 40
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-satreg-s3",
+     "type": "book",
+     "minutes": 25,
+     "offset_days": -10,
+     "title": {
+      "en": "Register and pay",
+      "uz": "Roʻyxatdan oʻting va toʻlang",
+      "ru": "Зарегистрируйтесь и оплатите"
+     },
+     "instructions": {
+      "en": "In your College Board account, register for {sitting_date}: upload a photo that meets the photo rules, choose your centre and pay {fee_total}. Then add {late_deadline}, the last day to change or cancel, to your calendar.",
+      "uz": "College Board akkauntingizda {sitting_date} uchun roʻyxatdan oʻting: talablarga mos rasm yuklang, markazni tanlang va {fee_total} toʻlang. Soʻng oʻzgartirish yoki bekor qilishning oxirgi kuni {late_deadline} ni taqvimingizga yozib qoʻying.",
+      "ru": "В аккаунте College Board зарегистрируйтесь на {sitting_date}: загрузите фото по требованиям, выберите центр и оплатите {fee_total}. Затем внесите в календарь {late_deadline} — последний день для изменений или отмены."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the registration confirmation",
+       "uz": "roʻyxatdan oʻtish tasdigʻining skrinshoti",
+       "ru": "скриншот подтверждения регистрации"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    }
+   ],
+   "sittings": [
+    {
+     "sitting_id": "SAT-2026-11-07",
+     "test_date": "2026-11-07",
+     "registration_deadline": "2026-10-23",
+     "late_deadline": "2026-10-27",
+     "scores_to_students": "2026-11-20",
+     "free_reports_until": "2026-11-16",
+     "deadline_tashkent": "2026-10-24T08:59+05:00",
+     "needs_verification": false
+    },
+    {
+     "sitting_id": "SAT-2026-12-05",
+     "test_date": "2026-12-05",
+     "registration_deadline": "2026-11-20",
+     "late_deadline": "2026-11-24",
+     "scores_to_students": "2026-12-18",
+     "free_reports_until": "2026-12-14",
+     "deadline_tashkent": "2026-11-21T09:59+05:00",
+     "needs_verification": false
+    },
+    {
+     "sitting_id": "SAT-2027-03-06",
+     "test_date": "2027-03-06",
+     "registration_deadline": "2027-02-19",
+     "late_deadline": "2027-02-23",
+     "scores_to_students": "2027-03-19",
+     "free_reports_until": "2027-03-15",
+     "deadline_tashkent": "2027-02-20T09:59+05:00",
+     "needs_verification": false
+    },
+    {
+     "sitting_id": "SAT-2027-05-01",
+     "test_date": "2027-05-01",
+     "registration_deadline": "2027-04-16",
+     "late_deadline": "2027-04-20",
+     "scores_to_students": "2027-05-14",
+     "free_reports_until": "2027-05-10",
+     "deadline_tashkent": "2027-04-17T08:59+05:00",
+     "needs_verification": false
+    },
+    {
+     "sitting_id": "SAT-2027-06-05",
+     "test_date": "2027-06-05",
+     "registration_deadline": "2027-05-21",
+     "late_deadline": "2027-05-25",
+     "scores_to_students": "2027-06-21",
+     "free_reports_until": "2027-06-14",
+     "deadline_tashkent": "2027-05-22T08:59+05:00",
+     "needs_verification": false
+    },
+    {
+     "sitting_id": "SAT-2027-28",
+     "test_date": null,
+     "registration_deadline": null,
+     "late_deadline": null,
+     "scores_to_students": null,
+     "free_reports_until": null,
+     "deadline_tashkent": null,
+     "needs_verification": true,
+     "note": {
+      "en": "2027-28 dates are not published yet.",
+      "uz": "2027-28-yilgi sanalar hali eʼlon qilinmagan.",
+      "ru": "Даты на 2027-28 год ещё не опубликованы."
+     }
+    }
+   ],
+   "sittings_source": [
+    {
+     "claim": "SAT weekend dates 2026-27 with registration deadlines and changes/cancel/late-registration deadlines: 7 Nov 2026 (23 Oct / 27 Oct), 5 Dec (20 Nov / 24 Nov), 6 Mar 2027 (19 Feb / 23 Feb), 1 May (16 Apr / 20 Apr), 5 Jun (21 May / 25 May); deadlines expire at 11:59 p.m. ET.",
+     "url": "https://satsuite.collegeboard.org/digital/digital-testing/dates-deadlines",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false
+    },
+    {
+     "claim": "Scores available to students: 20 Nov (7 Nov test), 18 Dec (5 Dec), 19 Mar (6 Mar), 14 May (1 May), 21 Jun (5 Jun); the late fee is $38.",
+     "url": "https://international.collegeboard.org/media/pdf/2627-sat-suite-important-dates-flyer-intl.pdf",
+     "verified_at": "2026-10-07",
+     "read": "pdf",
+     "secondary": false
+    },
+    {
+     "claim": "`free_reports_until` = test date + 9 days (first 4 score reports free if ordered by 9 days after the test date). `deadline_tashkent` converts 11:59 p.m. US Eastern time to Tashkent (UTC+5): 08:59 the next morning under US daylight time, 09:59 under standard time (US daylight time ends 1 Nov 2026 and resumes 14 Mar 2027).",
+     "url": "https://satsuite.collegeboard.org/sat/registration/international-testing/international-fees",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "derived": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "fee_total",
+     "value": {
+      "usd": 111
+     },
+     "claim": "International SAT registration: $68 plus a $43 international fee ($111); some international locations add a $24 test-centre fee. Late registration $38, test-centre change $34, cancellation $34, late cancellation $44; fees apply through June 2027.",
+     "url": "https://satsuite.collegeboard.org/sat/registration/international-testing/international-fees",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "uz_centres_past",
+     "claim": "The Agency's Scientific-Educational Practical Center, in partnership with College Board, ran the digital SAT at the Agency's regional branches in Fergana and Namangan on 23 Aug 2025.",
+     "url": "https://gov.uz/en/uzbmb/news/view/80426",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "uz_centres_past_newuu",
+     "claim": "New Uzbekistan University's Continuing Education Center administered the SAT (news of 7 Nov 2023).",
+     "url": "https://www.newuu.uz/uz/news/sat-exam-has-been-conducted-67",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "uz_centres_current",
+     "claim": "Which centres in Uzbekistan offer each 2026-27 date is shown only by College Board's test centre search; not checked per date.",
+     "url": "https://satsuite.collegeboard.org/sat/test-center-search",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_dates",
+     "url": "https://satsuite.collegeboard.org/digital/digital-testing/dates-deadlines",
+     "kind": "official",
+     "label": {
+      "en": "SAT dates and deadlines",
+      "uz": "SAT sanalari va muddatlari",
+      "ru": "Даты и сроки SAT"
+     }
+    },
+    {
+     "id": "cb_centre_search",
+     "url": "https://satsuite.collegeboard.org/sat/test-center-search",
+     "kind": "official",
+     "label": {
+      "en": "SAT test centre search",
+      "uz": "SAT test markazlarini qidirish",
+      "ru": "Поиск центров SAT"
+     }
+    },
+    {
+     "id": "cb_intl_fees",
+     "url": "https://satsuite.collegeboard.org/sat/registration/international-testing/international-fees",
+     "kind": "official",
+     "label": {
+      "en": "SAT international fees",
+      "uz": "SAT xalqaro toʻlovlari",
+      "ru": "Международные сборы SAT"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Check on College Board's test centre search that a centre in Uzbekistan offers your date before you pay.",
+    "uz": "Toʻlashdan oldin College Boardʼning test markazlarini qidirish sahifasida Oʻzbekistondagi biror markaz sizning sanangizda test oʻtkazishini tekshiring.",
+    "ru": "Перед оплатой проверьте в поиске центров College Board, что какой-либо центр в Узбекистане проводит тест в вашу дату."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-satday",
+   "template_id": "C11-satday",
+   "kind": "admin_template",
+   "category": "test_day",
+   "test": "SAT",
+   "workstream_kind": "tests",
+   "task_kind": "admin",
+   "task_type": "verify",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "UZ_HOME",
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "sitting.test_date",
+    "milestone_ids": [
+     "m_sat1",
+     "m_sat2"
+    ]
+   },
+   "rule_ids": [
+    "planner.tests_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 14,
+    "due_days_before": 1,
+    "basis": "official+inference",
+    "note": {
+     "en": "Device check two weeks before (inference); Bluebook exam setup 1-5 days before (College Board).",
+     "uz": "Qurilmani ikki hafta oldin tekshirish (taxmin); Bluebookʼda imtihonni sozlash 1-5 kun oldin (College Board).",
+     "ru": "Проверка устройства за две недели (предположение); настройка экзамена в Bluebook за 1-5 дней (College Board)."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Get ready for SAT day",
+    "uz": "SAT kuniga tayyorlaning",
+    "ru": "Подготовьтесь ко дню SAT"
+   },
+   "summary": {
+    "en": "The SAT is taken in the Bluebook app on a device you bring. Three short checks keep you from being turned away: the device, the exam setup and admission ticket, and your passport.",
+    "uz": "SAT siz olib kelgan qurilmada Bluebook ilovasida topshiriladi. Uchta qisqa tekshiruv sizni markazdan qaytarib yuborilishdan saqlaydi: qurilma, imtihon sozlamasi va ruxsatnoma, hamda pasportingiz.",
+    "ru": "SAT сдают в приложении Bluebook на устройстве, которое вы приносите. Три короткие проверки защитят от отказа в допуске: устройство, настройка экзамена с пропуском и ваш паспорт."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-satday-s1",
+     "type": "verify",
+     "minutes": 15,
+     "offset_days": -14,
+     "title": {
+      "en": "Check your device",
+      "uz": "Qurilmangizni tekshiring",
+      "ru": "Проверьте устройство"
+     },
+     "instructions": {
+      "en": "Use your own Windows or Mac laptop, an iPad, a Windows tablet or a school-managed Chromebook. Install Bluebook, check that it opens, and check that the battery can last about 3 hours.",
+      "uz": "Oʻzingizning Windows yoki Mac noutbukingiz, iPad, Windows planshet yoki maktab boshqaradigan Chromebookʼdan foydalaning. Bluebookʼni oʻrnating, ochilishini va batareya taxminan 3 soatga yetishini tekshiring.",
+      "ru": "Подойдёт ваш ноутбук на Windows или Mac, iPad, планшет на Windows или школьный Chromebook. Установите Bluebook, проверьте, что он открывается, и что батареи хватает примерно на 3 часа."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "device",
+        "type": "choice",
+        "options": [
+         "windows_laptop",
+         "mac_laptop",
+         "ipad",
+         "windows_tablet",
+         "school_chromebook",
+         "none"
+        ]
+       }
+      ]
+     },
+     "on_value": {
+      "device=none": {
+       "en": "No device: tell your mentor today and contact College Board about borrowing one well before the registration deadline.",
+       "uz": "Qurilma yoʻq: bugun mentoringizga ayting va roʻyxatdan oʻtish muddatidan ancha oldin qurilma olish haqida College Board bilan bogʻlaning.",
+       "ru": "Нет устройства: скажите ментору сегодня и задолго до срока регистрации свяжитесь с College Board насчёт выдачи устройства."
+      }
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-satday-s2",
+     "type": "verify",
+     "minutes": 15,
+     "offset_days": -3,
+     "title": {
+      "en": "Exam setup and admission ticket",
+      "uz": "Imtihon sozlamasi va ruxsatnoma",
+      "ru": "Настройка экзамена и пропуск"
+     },
+     "instructions": {
+      "en": "1-5 days before the test, open Bluebook on the test device, sign in to your College Board account and complete exam setup. Then print your admission ticket or email it to yourself.",
+      "uz": "Testdan 1-5 kun oldin test qurilmasida Bluebookʼni oching, College Board akkauntingizga kiring va imtihon sozlamasini yakunlang. Soʻng ruxsatnomani chop eting yoki oʻzingizga elektron pochta orqali yuboring.",
+      "ru": "За 1-5 дней до теста откройте Bluebook на тестовом устройстве, войдите в аккаунт College Board и завершите настройку экзамена. Затем распечатайте пропуск или отправьте его себе на почту."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "exam_setup_done",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       },
+       {
+        "key": "ticket_ready",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-satday-s3",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -1,
+     "title": {
+      "en": "Pack the night before",
+      "uz": "Kechqurun yigʻib qoʻying",
+      "ru": "Соберитесь накануне"
+     },
+     "instructions": {
+      "en": "Pack your passport (the original, not expired, with your name exactly as on the ticket), the admission ticket, the charged device and its charger. Only the ticket and one testing device go on the desk.",
+      "uz": "Pasportingizni (asl nusxa, muddati oʻtmagan, ism ruxsatnomadagidek aynan), ruxsatnomani, zaryadlangan qurilmani va uning zaryadlovchisini yigʻib qoʻying. Stolda faqat ruxsatnoma va bitta test qurilmasi boʻladi.",
+      "ru": "Сложите паспорт (оригинал, не просроченный, имя точно как в пропуске), пропуск, заряженное устройство и зарядку. На столе разрешены только пропуск и одно тестовое устройство."
+     },
+     "evidence": {
+      "level": "L0",
+      "method": "self_report"
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "devices",
+     "claim": "The digital SAT can be taken on a Windows or Mac laptop, an iPad, a Windows tablet or a school-managed Chromebook; the device must connect to the centre's Wi-Fi and stay on for roughly 3 hours.",
+     "url": "https://satsuite.collegeboard.org/sat/device-readiness",
+     "verified_at": "2026-10-07",
+     "read": "search_snippet",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "exam_setup",
+     "claim": "1-5 days before test day, open Bluebook, sign in and complete exam setup; print the admission ticket or email it to yourself. Only the sign-in ticket and one testing device are allowed on desks (plus an external mouse, or a keyboard for a tablet).",
+     "url": "https://satsuite.collegeboard.org/sat/what-to-bring-do",
+     "verified_at": "2026-10-07",
+     "read": "search_snippet",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "id_rules",
+     "claim": "Acceptable IDs are original, physical, unexpired photo IDs with clearly legible English-language text and the full legal name exactly as on the admission ticket; when testing in another country, a valid passport is required.",
+     "url": "https://satsuite.collegeboard.org/digital/what-to-bring-do/id-requirements",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "device_lending",
+     "claim": "Students without a device can ask College Board to lend one at least 30 days before test day ('College Board may be able to lend you a device'); the page does not say whether this applies at centres in Uzbekistan.",
+     "url": "https://satsuite.collegeboard.org/sat/device-readiness",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_bring",
+     "url": "https://satsuite.collegeboard.org/sat/what-to-bring-do",
+     "kind": "official",
+     "label": {
+      "en": "What to bring and do on test day",
+      "uz": "Test kuni nima olib borish va nima qilish kerak",
+      "ru": "Что взять и что сделать в день теста"
+     }
+    },
+    {
+     "id": "cb_id",
+     "url": "https://satsuite.collegeboard.org/digital/what-to-bring-do/id-requirements",
+     "kind": "official",
+     "label": {
+      "en": "SAT ID requirements",
+      "uz": "SAT uchun hujjat talablari",
+      "ru": "Требования SAT к документам"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Only if you have no device: at least 30 days before the test, ask College Board whether it can lend one for a centre in Uzbekistan.",
+    "uz": "Faqat qurilmangiz boʻlmasa: testdan kamida 30 kun oldin College Boardʼdan Oʻzbekistondagi markaz uchun qurilma berishi mumkinmi, soʻrang.",
+    "ru": "Только если нет устройства: не позднее чем за 30 дней до теста спросите College Board, может ли он выдать устройство для центра в Узбекистане."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-satscores",
+   "template_id": "C11-satscores",
+   "kind": "admin_template",
+   "category": "scores",
+   "test": "SAT",
+   "workstream_kind": "tests",
+   "task_kind": "admin",
+   "task_type": "submit",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "sitting.test_date",
+    "milestone_ids": [
+     "m_sat1",
+     "m_sat2"
+    ]
+   },
+   "rule_ids": [
+    "planner.tests_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 7,
+    "due_days_after": 9,
+    "basis": "official",
+    "note": {
+     "en": "The first 4 score reports are free if ordered by 9 days after the test date.",
+     "uz": "Dastlabki 4 ta natija hisoboti test sanasidan keyin 9 kun ichida buyurtma qilinsa, bepul.",
+     "ru": "Первые 4 отчёта о баллах бесплатны, если заказать их в течение 9 дней после даты теста."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Send your SAT scores and record them",
+    "uz": "SAT natijalarini yuboring va kiriting",
+    "ru": "Отправьте баллы SAT и внесите их"
+   },
+   "summary": {
+    "en": "Choose up to 4 universities to receive your scores free, by {free_send_until}. When scores arrive on {scores_date}, enter them here so your plan and chance update.",
+    "uz": "Natijalaringizni bepul oladigan 4 tagacha universitetni {free_send_until} gacha tanlang. Natijalar {scores_date} kuni kelganda ularni shu yerga kiriting, shunda rejangiz va imkoniyatingiz yangilanadi.",
+    "ru": "Выберите до 4 университетов, которые получат ваши баллы бесплатно, до {free_send_until}. Когда {scores_date} придут баллы, внесите их сюда, чтобы обновились план и шанс."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-satscores-s1",
+     "type": "verify",
+     "minutes": 15,
+     "offset_days": -7,
+     "title": {
+      "en": "Pick up to 4 free score recipients",
+      "uz": "Natija yuboriladigan 4 tagacha bepul manzilni tanlang",
+      "ru": "Выберите до 4 бесплатных получателей"
+     },
+     "instructions": {
+      "en": "List the universities on your plan that require or recommend official SAT scores; check each on its own admissions page. Order the free reports in your College Board account by {free_send_until}; each later report costs $15.",
+      "uz": "Rejangizdagi rasmiy SAT natijasini talab qiladigan yoki tavsiya qiladigan universitetlarni roʻyxat qiling; har birini oʻzining qabul sahifasida tekshiring. Bepul hisobotlarni College Board akkauntingizda {free_send_until} gacha buyurtma qiling; keyingi har bir hisobot 15 dollar turadi.",
+      "ru": "Составьте список университетов из плана, которые требуют или рекомендуют официальные баллы SAT; проверьте каждый на его странице приёма. Закажите бесплатные отчёты в аккаунте College Board до {free_send_until}; каждый следующий стоит $15."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "collegeboard.org",
+       "university_domain"
+      ],
+      "what": {
+       "en": "the admissions-page link for each university",
+       "uz": "har bir universitetning qabul sahifasi havolasi",
+       "ru": "ссылка на страницу приёма каждого университета"
+      }
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-satscores-s2",
+     "type": "submit",
+     "minutes": 5,
+     "offset_days": 13,
+     "anchor_override": "sitting.scores_to_students",
+     "title": {
+      "en": "Enter your scores",
+      "uz": "Natijalaringizni kiriting",
+      "ru": "Внесите баллы"
+     },
+     "instructions": {
+      "en": "Scores reach your College Board account on {scores_date}. Enter the total, Reading and Writing, and Math scores, then upload the score page so we can mark them as official.",
+      "uz": "Natijalar {scores_date} kuni College Board akkauntingizga keladi. Umumiy ball, Reading and Writing va Math ballarini kiriting, soʻng natija sahifasini yuklang, shunda ularni rasmiy deb belgilaymiz.",
+      "ru": "Баллы появятся в аккаунте College Board {scores_date}. Внесите общий балл, Reading and Writing и Math, затем загрузите страницу с результатом, чтобы мы отметили его как официальный."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "fields": [
+       {
+        "key": "sat_total",
+        "type": "number",
+        "min": 400,
+        "max": 1600,
+        "step": 10
+       },
+       {
+        "key": "sat_rw",
+        "type": "number",
+        "min": 200,
+        "max": 800,
+        "step": 10
+       },
+       {
+        "key": "sat_math",
+        "type": "number",
+        "min": 200,
+        "max": 800,
+        "step": 10
+       }
+      ],
+      "plausibility": "sat_total = sat_rw + sat_math",
+      "redact": {
+       "en": "Cover your date of birth and address if they show.",
+       "uz": "Agar koʻrinib tursa, tugʻilgan sanangiz va manzilingizni yopib qoʻying.",
+       "ru": "Закройте дату рождения и адрес, если они видны."
+      }
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "free_reports",
+     "claim": "The first 4 score reports are free if ordered by 9 days after the test date; additional score reports cost $15 each.",
+     "url": "https://satsuite.collegeboard.org/sat/registration/international-testing/international-fees",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "release_dates",
+     "claim": "Score release dates per 2026-27 sitting are in C11-satreg `sittings[].scores_to_students`.",
+     "url": "https://international.collegeboard.org/media/pdf/2627-sat-suite-important-dates-flyer-intl.pdf",
+     "verified_at": "2026-10-07",
+     "read": "pdf",
+     "secondary": false,
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_scores",
+     "url": "https://studentscores.collegeboard.org",
+     "kind": "official",
+     "label": {
+      "en": "SAT scores (College Board)",
+      "uz": "SAT natijalari (College Board)",
+      "ru": "Баллы SAT (College Board)"
+     }
+    }
+   ],
+   "needs_verification": false,
+   "verify_task": null,
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-satuzgrant",
+   "template_id": "C11-satuzgrant",
+   "kind": "admin_template",
+   "category": "uz_state",
+   "test": "SAT",
+   "workstream_kind": "uz_unis",
+   "task_kind": "test-registration",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UZ_HOME"
+   ],
+   "anchor": {
+    "event": "uz.sat_to_agency_deadline",
+    "milestone_ids": [
+     "m_verify_cycle_UZ_HOME"
+    ]
+   },
+   "rule_ids": [
+    "UZ_HOME",
+    "CP_UZ",
+    "planner.verify_missing_rule"
+   ],
+   "lead_time": {
+    "start_days_before": 35,
+    "due_days_before": 21,
+    "basis": "inference",
+    "note": {
+     "en": "Standard delivery to the Agency was reported as about 10 business days; send at least 3 weeks before the deadline.",
+     "uz": "Agentlikka oddiy yetkazish taxminan 10 ish kuni deb xabar qilingan; muddatdan kamida 3 hafta oldin yuboring.",
+     "ru": "Обычная доставка в Агентство, по сообщениям, занимает около 10 рабочих дней; отправляйте минимум за 3 недели до срока."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "Sending a score report costs $15 by card unless it is one of the 4 free reports.",
+    "uz": "Natija hisobotini yuborish, agar u 4 ta bepul hisobotdan biri boʻlmasa, karta orqali 15 dollar turadi.",
+    "ru": "Отправка отчёта стоит $15 по карте, если это не один из 4 бесплатных."
+   },
+   "title": {
+    "en": "SAT 1200+: send your score to the Agency for the extra state grant",
+    "uz": "SAT 1200+: qoʻshimcha davlat granti uchun natijani Agentlikka yuboring",
+    "ru": "SAT 1200+: отправьте балл в Агентство для дополнительного госгранта"
+   },
+   "summary": {
+    "en": "With an official SAT of 1200 or more you can compete for extra state grants on full-time bachelor's programmes whose subject set is Maths + Foreign language, ranked by SAT score. In 2026 the score had to reach the Agency through College Board by 25 June; the 2027 date is not announced yet.",
+    "uz": "Rasmiy SAT natijasi 1200 va undan yuqori boʻlsa, fanlar majmuasi Matematika + Chet tili boʻlgan kunduzgi bakalavriat yoʻnalishlarida qoʻshimcha davlat granti uchun SAT bali boʻyicha tanlovda qatnasha olasiz. 2026-yilda natija College Board orqali Agentlikka 25-iyungacha yetib kelishi kerak edi; 2027-yil sanasi hali eʼlon qilinmagan.",
+    "ru": "С официальным SAT от 1200 вы можете участвовать в конкурсе на дополнительные госгранты на очных бакалаврских направлениях с набором предметов «Математика + Иностранный язык»; рейтинг идёт по баллу SAT. В 2026 году балл должен был поступить в Агентство через College Board до 25 июня; дата на 2027 год ещё не объявлена."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-satuzgrant-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -35,
+     "title": {
+      "en": "Check this year's rule",
+      "uz": "Shu yilgi qoidani tekshiring",
+      "ru": "Проверьте правило этого года"
+     },
+     "instructions": {
+      "en": "Find the Agency's or the Ministry's announcement for this year's SAT route: the minimum score, the programmes, the deadline and the code to send scores to. Paste the link.",
+      "uz": "Shu yilgi SAT yoʻli boʻyicha Agentlik yoki Vazirlik eʼlonini toping: minimal ball, yoʻnalishlar, muddat va natija yuboriladigan kod. Havolani qoʻying.",
+      "ru": "Найдите объявление Агентства или Министерства о пути через SAT в этом году: минимальный балл, направления, срок и код для отправки баллов. Вставьте ссылку."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "uzbmb.uz",
+       "gov.uz",
+       "lex.uz",
+       "uza.uz",
+       "edu.uz"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-satuzgrant-s2",
+     "type": "submit",
+     "minutes": 15,
+     "offset_days": -21,
+     "title": {
+      "en": "Send the official score to the Agency",
+      "uz": "Rasmiy natijani Agentlikka yuboring",
+      "ru": "Отправьте официальный балл в Агентство"
+     },
+     "instructions": {
+      "en": "In your College Board account, send a score report to the Agency's code from this year's announcement. Only scores sent through College Board count: a screenshot or a PDF is not accepted.",
+      "uz": "College Board akkauntingizda shu yilgi eʼlondagi Agentlik kodiga natija hisobotini yuboring. Faqat College Board orqali yuborilgan natija hisobga olinadi: skrinshot yoki PDF qabul qilinmaydi.",
+      "ru": "В аккаунте College Board отправьте отчёт о баллах на код Агентства из объявления этого года. Учитываются только баллы, отправленные через College Board: скриншот или PDF не принимаются."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the score-send order",
+       "uz": "natija yuborish buyurtmasining skrinshoti",
+       "ru": "скриншот заказа отправки баллов"
+      },
+      "redact": {
+       "en": "Cover your card details and address.",
+       "uz": "Karta maʼlumotlari va manzilingizni yopib qoʻying.",
+       "ru": "Закройте данные карты и адрес."
+      }
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-satuzgrant-s3",
+     "type": "submit",
+     "minutes": 10,
+     "anchor_override": "uz.registration_stage1",
+     "offset_days": 3,
+     "title": {
+      "en": "Enter the SAT when you register on my.uzbmb.uz",
+      "uz": "my.uzbmb.uz da roʻyxatdan oʻtayotganda SATʼni kiriting",
+      "ru": "Укажите SAT при регистрации на my.uzbmb.uz"
+     },
+     "instructions": {
+      "en": "During the June registration, enter your SAT certificate and choose the Maths + Foreign language subject set. Programmes are chosen later, in the choices window after the tests. You can still sit the state test for the ordinary competition.",
+      "uz": "Iyundagi roʻyxatdan oʻtishda SAT sertifikatingizni kiriting va Matematika + Chet tili fanlar majmuasini tanlang. Yoʻnalishlar keyinroq, testlardan keyingi tanlov oynasida tanlanadi. Oddiy tanlov uchun davlat testini ham topshirishingiz mumkin.",
+      "ru": "При июньской регистрации укажите сертификат SAT и выберите набор предметов «Математика + Иностранный язык». Направления выбираются позже, в окне выбора после тестов. Сдать госэкзамен для обычного конкурса тоже можно."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "sat_entered",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "rule",
+     "claim": "From 2026/27, applicants with an SAT of 1200 or more may be admitted on additional state grants to full-time bachelor's programmes whose subjects are Maths and Foreign language; the extra places are 50 % of the programme's admission parameter; ranking is by SAT score; holders may instead compete by test results.",
+     "url": "https://uza.uz/ar/posts/sat-sertifikatiga-ega-abituriyentlar-uchun-qoshimcha-davlat-granti-kimlar-imtiyozdan-foydalana-oladi_874799",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "UzA (national news agency), 24 Jun 2026; legal basis CM Resolution No. 578 cl. 42 (lex.uz/docs/-7726569)",
+     "needs_verification": false
+    },
+    {
+     "key": "deadline_2026",
+     "claim": "In 2026 the benefit applied to applicants whose SAT reached the Agency by DI code by 25 June 2026 inclusive; unplaced SAT applicants could re-register within one week for remaining grant places.",
+     "url": "https://talimxabarlari.uz/73937/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "Ta'lim xabarlari, 24 Jun 2026, citing the Ministry of Higher Education press service",
+     "needs_verification": false
+    },
+    {
+     "key": "di_code",
+     "value": {
+      "di_code_2026": "35787"
+     },
+     "claim": "The Agency's DI code for SAT score sends in 2026 was reported as 35787; standard delivery about 10 business days, rush about 4; screenshots and PDFs not accepted.",
+     "url": "https://oliygoh.uz/post/sat-sertifikat-imtiyozi-buyicha-malumotlar",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "Oliygoh.uz, 6 Jun 2026; the code was not found on an Agency page",
+     "needs_verification": true
+    },
+    {
+     "key": "enter_at_registration",
+     "claim": "Applicants send SAT results to the Agency by DI code through College Board and enter the certificate when registering on my.uzbmb.uz.",
+     "url": "https://talimxabarlari.uz/72885/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "Ta'lim xabarlari, 5 Jun 2026, citing the Agency",
+     "needs_verification": false
+    },
+    {
+     "key": "cycle_2027",
+     "claim": "The 2027 deadline, code and programme list are not announced.",
+     "url": null,
+     "verified_at": null,
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "my_uzbmb",
+     "url": "https://my.uzbmb.uz",
+     "kind": "official",
+     "label": {
+      "en": "Agency applicant portal (my.uzbmb.uz)",
+      "uz": "Agentlik abituriyent portali (my.uzbmb.uz)",
+      "ru": "Портал абитуриента Агентства (my.uzbmb.uz)"
+     }
+    },
+    {
+     "id": "lex_cm578",
+     "url": "https://lex.uz/uz/docs/-7726569",
+     "kind": "official",
+     "label": {
+      "en": "CM Resolution No. 578 (admission rules)",
+      "uz": "VM 578-son qarori (qabul qoidalari)",
+      "ru": "Постановление КМ № 578 (правила приёма)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Before sending, confirm this year's DI code and deadline on an Agency or Ministry page: the 2026 code came from a news site.",
+    "uz": "Yuborishdan oldin shu yilgi DI kod va muddatni Agentlik yoki Vazirlik sahifasida tasdiqlang: 2026-yilgi kod yangiliklar saytidan olingan.",
+    "ru": "Перед отправкой подтвердите код DI и срок этого года на странице Агентства или Министерства: код 2026 года взят с новостного сайта."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-entestpick",
+   "template_id": "C11-entestpick",
+   "kind": "admin_template",
+   "category": "research",
+   "test": "english",
+   "workstream_kind": "tests",
+   "task_kind": "research",
+   "task_type": "verify",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "DE",
+    "KR",
+    "TR",
+    "UZ_HOME",
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "english_test_first_booking",
+    "milestone_ids": [
+     "m_en_retake"
+    ]
+   },
+   "rule_ids": [
+    "planner.language_ladder",
+    "planner.tests_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 70,
+    "due_days_before": 56,
+    "basis": "inference",
+    "note": {
+     "en": "Decide which test before booking any; bookings need several weeks.",
+     "uz": "Biror testga yozilishdan oldin qaysi testni topshirishni hal qiling; yozilish bir necha hafta oladi.",
+     "ru": "Решите, какой тест сдавать, до записи на любой: запись занимает несколько недель."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Choose the English test your universities accept",
+    "uz": "Universitetlaringiz qabul qiladigan ingliz tili testini tanlang",
+    "ru": "Выберите тест по английскому, который принимают ваши университеты"
+   },
+   "summary": {
+    "en": "Universities do not all accept the same English tests or minimums. Check each university on your plan, then choose one test that covers all of them.",
+    "uz": "Universitetlar bir xil ingliz tili testlarini va bir xil minimal balllarni qabul qilavermaydi. Rejangizdagi har bir universitetni tekshiring, soʻng hammasiga mos keladigan bitta testni tanlang.",
+    "ru": "Не все университеты принимают одни и те же тесты и минимальные баллы. Проверьте каждый университет из плана и выберите один тест, который подходит всем."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-entestpick-s1",
+     "type": "verify",
+     "minutes": 20,
+     "offset_days": -70,
+     "title": {
+      "en": "Write down each university's English rule",
+      "uz": "Har bir universitetning ingliz tili talabini yozib oling",
+      "ru": "Выпишите требование по английскому каждого университета"
+     },
+     "instructions": {
+      "en": "For each university on your plan, open its official admissions page and note which tests it accepts (IELTS, TOEFL iBT, Duolingo, others) and the minimum overall and section scores. Paste the page links.",
+      "uz": "Rejangizdagi har bir universitetning rasmiy qabul sahifasini oching va u qaysi testlarni (IELTS, TOEFL iBT, Duolingo va boshqalar) qabul qilishini hamda umumiy va boʻlimlar boʻyicha minimal ballarni yozib oling. Sahifa havolalarini qoʻying.",
+      "ru": "Откройте официальную страницу приёма каждого университета из плана и выпишите, какие тесты он принимает (IELTS, TOEFL iBT, Duolingo и другие), и минимальные общий балл и баллы по разделам. Вставьте ссылки."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "university_domain"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-entestpick-s2",
+     "type": "verify",
+     "minutes": 5,
+     "offset_days": -56,
+     "title": {
+      "en": "Pick one test",
+      "uz": "Bitta testni tanlang",
+      "ru": "Выберите один тест"
+     },
+     "instructions": {
+      "en": "Choose the test that every university on your list accepts. If you also apply to Uzbek state universities, an English certificate at B2 or above gives the foreign-language subject's full points and B1 gives 75 %.",
+      "uz": "Roʻyxatingizdagi barcha universitetlar qabul qiladigan testni tanlang. Oʻzbekiston davlat universitetlariga ham topshirsangiz, B2 va undan yuqori darajadagi ingliz tili sertifikati chet tili fanidan toʻliq ball beradi, B1 esa 75 % beradi.",
+      "ru": "Выберите тест, который принимают все университеты из списка. Если вы поступаете и в государственные вузы Узбекистана, сертификат уровня B2 и выше даёт полный балл по иностранному языку, а B1 — 75 %."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "english_test",
+        "type": "choice",
+        "options": [
+         "IELTS",
+         "TOEFL_iBT",
+         "DUOLINGO",
+         "NATIONAL_CEFR",
+         "OTHER"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "uz_state_language_cert",
+     "claim": "CM Resolution No. 578 cl. 12 (amended 29 Jan 2026): a B2+ national or international foreign-language certificate gives the foreign-language subject's full points; B1 gives 75 %.",
+     "url": "https://lex.uz/uz/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "cl. 12 re-read on lex.uz 7 Oct 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "ielts_cefr_table",
+     "claim": "The table the Agency uses to convert IELTS or TOEFL scores to CEFR levels was not found.",
+     "url": null,
+     "verified_at": null,
+     "secondary": false,
+     "needs_verification": true
+    },
+    {
+     "key": "examples",
+     "claim": "Examples from official pages: WIUT foundation IELTS 6.0 (writing 5.0) or TOEFL 78; Webster Tashkent IELTS 6.0, TOEFL 80, PTE 53, LanguageCert C1 or Duolingo 120; KIUT (optional) IELTS 5.5, CEFR B1 or Duolingo 85; TTPU: IELTS 5.0 or SAT 1100 admits to year 1 without the entrance exam.",
+     "url": "https://www.wiut.uz/certificate-international-foundation-studies",
+     "verified_at": "2026-10-04",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json records wiut, webster_tashkent, kiut, ttpu, each from its official page, checked 4 Oct 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "common_app_tests",
+     "claim": "In the 2026-27 Common App, students can self-report Duolingo English Test, PTE Academic and TOEFL iBT results in updated testing fields.",
+     "url": "https://www.commonapp.org/files/webinar_decks/Whats-New-with-Common-App-First-Year-2026-2027.pdf",
+     "verified_at": "2026-10-07",
+     "read": "pdf",
+     "secondary": false,
+     "needs_verification": false
+    }
+   ],
+   "official_links": [],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "If an Uzbek state programme matters to you, ask the Agency which IELTS score counts as B1 and as B2.",
+    "uz": "Oʻzbekiston davlat yoʻnalishi siz uchun muhim boʻlsa, qaysi IELTS bali B1 va qaysi biri B2 hisoblanishini Agentlikdan soʻrang.",
+    "ru": "Если для вас важно государственное направление в Узбекистане, спросите Агентство, какой балл IELTS считается B1, а какой B2."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-ieltsbook",
+   "template_id": "C11-ieltsbook",
+   "kind": "admin_template",
+   "category": "test_registration",
+   "test": "IELTS",
+   "workstream_kind": "tests",
+   "task_kind": "test-registration",
+   "task_type": "book",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "DE",
+    "KR",
+    "TR",
+    "UZ_HOME",
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "english_score_needed_by",
+    "milestone_ids": [
+     "m_en_retake"
+    ]
+   },
+   "rule_ids": [
+    "planner.tests_before_deadline",
+    "planner.language_ladder"
+   ],
+   "lead_time": {
+    "start_days_before": 56,
+    "due_days_before": 42,
+    "basis": "inference",
+    "note": {
+     "en": "Book about 6-8 weeks before the date the score is needed; computer-test results take 1-5 days, which leaves time for one more attempt.",
+     "uz": "Natija kerak boʻladigan sanadan taxminan 6-8 hafta oldin yoziling; kompyuterdagi test natijasi 1-5 kunda chiqadi, bu yana bir urinishga vaqt qoldiradi.",
+     "ru": "Записывайтесь примерно за 6-8 недель до даты, когда нужен результат; результаты компьютерного теста приходят за 1-5 дней, и остаётся время на ещё одну попытку."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "The test fee is several million soʻm; agree on the date and the payment with your child.",
+    "uz": "Test toʻlovi bir necha million soʻm; sana va toʻlovni farzandingiz bilan kelishib oling.",
+    "ru": "Сбор за тест — несколько миллионов сумов; договоритесь с ребёнком о дате и оплате."
+   },
+   "title": {
+    "en": "Book your IELTS",
+    "uz": "IELTSʼga yoziling",
+    "ru": "Запишитесь на IELTS"
+   },
+   "summary": {
+    "en": "In Uzbekistan IELTS is booked with the British Council or IDP and has been held on computer since July 2025. Book a date that gives your result well before the first deadline that needs it.",
+    "uz": "Oʻzbekistonda IELTSʼga British Council yoki IDP orqali yoziladi va 2025-yil iyulidan beri kompyuterda oʻtkaziladi. Natijangiz uni talab qiladigan birinchi muddatdan ancha oldin chiqadigan sanani tanlang.",
+    "ru": "В Узбекистане на IELTS записываются через British Council или IDP; с июля 2025 года тест проводится на компьютере. Выберите дату, чтобы результат пришёл задолго до первого срока, где он нужен."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-ieltsbook-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -56,
+     "title": {
+      "en": "Choose the module, city and organiser",
+      "uz": "Modul, shahar va tashkilotchini tanlang",
+      "ru": "Выберите модуль, город и организатора"
+     },
+     "instructions": {
+      "en": "Most universities ask for IELTS Academic; take IELTS for UKVI only if your university or visa route names it. Compare the British Council and IDP dates in your city and note two options.",
+      "uz": "Aksariyat universitetlar IELTS Academicʼni soʻraydi; IELTS for UKVIʼni faqat universitetingiz yoki viza yoʻlingiz uni koʻrsatgan boʻlsa topshiring. Shahringizdagi British Council va IDP sanalarini solishtirib, ikkita variantni yozib oling.",
+      "ru": "Большинство университетов просят IELTS Academic; IELTS for UKVI сдавайте, только если его называет университет или визовый маршрут. Сравните даты British Council и IDP в вашем городе и запишите два варианта."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "module",
+        "type": "choice",
+        "options": [
+         "academic",
+         "general",
+         "ukvi_academic"
+        ]
+       },
+       {
+        "key": "organiser",
+        "type": "choice",
+        "options": [
+         "british_council",
+         "idp"
+        ]
+       },
+       {
+        "key": "city",
+        "type": "text",
+        "max_chars": 40
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-ieltsbook-s2",
+     "type": "book",
+     "minutes": 25,
+     "offset_days": -45,
+     "title": {
+      "en": "Book and pay",
+      "uz": "Yoziling va toʻlang",
+      "ru": "Запишитесь и оплатите"
+     },
+     "instructions": {
+      "en": "Book online with the ID document you will bring on test day, usually your passport; the names must match. Pay, then save the booking confirmation.",
+      "uz": "Test kuni olib boradigan hujjatingiz, odatda pasportingiz bilan onlayn yoziling; ismlar mos kelishi kerak. Toʻlang va yozilish tasdigʻini saqlab qoʻying.",
+      "ru": "Запишитесь онлайн с тем документом, который возьмёте в день теста, обычно с паспортом; имена должны совпадать. Оплатите и сохраните подтверждение записи."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the booking confirmation",
+       "uz": "yozilish tasdigʻining skrinshoti",
+       "ru": "скриншот подтверждения записи"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-ieltsbook-s3",
+     "type": "submit",
+     "minutes": 10,
+     "anchor_override": "ielts.test_date",
+     "offset_days": 5,
+     "title": {
+      "en": "Record your result and share it",
+      "uz": "Natijani kiriting va yuboring",
+      "ru": "Внесите результат и отправьте его"
+     },
+     "instructions": {
+      "en": "Enter the overall band and the four section bands. Then send the result to your universities: electronic delivery through the IELTS results service is free to as many organisations as you like.",
+      "uz": "Umumiy ball va toʻrtta boʻlim ballarini kiriting. Soʻng natijani universitetlaringizga yuboring: IELTS natijalar xizmati orqali elektron yuborish istalgancha tashkilotga bepul.",
+      "ru": "Внесите общий балл и баллы по четырём разделам. Затем отправьте результат университетам: электронная отправка через сервис результатов IELTS бесплатна для любого числа организаций."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "fields": [
+       {
+        "key": "ielts_overall",
+        "type": "number",
+        "min": 0,
+        "max": 9,
+        "step": 0.5
+       },
+       {
+        "key": "ielts_listening",
+        "type": "number",
+        "min": 0,
+        "max": 9,
+        "step": 0.5
+       },
+       {
+        "key": "ielts_reading",
+        "type": "number",
+        "min": 0,
+        "max": 9,
+        "step": 0.5
+       },
+       {
+        "key": "ielts_writing",
+        "type": "number",
+        "min": 0,
+        "max": 9,
+        "step": 0.5
+       },
+       {
+        "key": "ielts_speaking",
+        "type": "number",
+        "min": 0,
+        "max": 9,
+        "step": 0.5
+       }
+      ],
+      "redact": {
+       "en": "Cover your passport number and date of birth on the result page.",
+       "uz": "Natija sahifasidagi pasport raqami va tugʻilgan sanangizni yopib qoʻying.",
+       "ru": "Закройте номер паспорта и дату рождения на странице результата."
+      }
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "computer_only",
+     "claim": "From 11 Jul 2025 IELTS in Uzbekistan (British Council and IDP) moved to computer-delivered tests only, after paper-test answers circulated online; described as temporary.",
+     "url": "https://kun.uz/en/news/2025/07/09/ielts-in-uzbekistan-temporarily-shifts-to-computer-only-format-after-suspected-answer-leaks-in-paper-based-tests",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "Kun.uz, 9 Jul 2025",
+     "needs_verification": true
+    },
+    {
+     "key": "idp_cities",
+     "claim": "IDP lists IELTS test locations in Andijan, Bukhara, Fergana, Namangan, Navoi, Nukus, Samarkand, Tashkent, Termez and Urgench, with IELTS on computer.",
+     "url": "https://ielts.idp.com/uzbekistan",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "bc_fee",
+     "value": {
+      "uzs_academic": 2798000,
+      "uzs_ukvi_academic": 3119000
+     },
+     "claim": "British Council Uzbekistan fees for IELTS on computer: Academic or General Training UZS 2,798,000 (was 2,664,000); IELTS for UKVI UZS 3,119,000 (was 2,980,000); Life Skills UZS 2,759,000. British Council gave no start date for the new prices.",
+     "url": "https://anhor.uz/ru/news/british-council-povysil-stoimost-ielts-v-uzbekistane-pochti-do-2-8-mln-sumov",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "Anhor.uz, 4 Sep 2026, and Zamin.uz, 3 Sep 2026, both reading the BC booking page; https://www.britishcouncil.uz/en/exam/ielts/book-test timed out again on 7 Oct 2026",
+     "needs_verification": true
+    },
+    {
+     "key": "results_time",
+     "claim": "IELTS on computer results are available in 1-5 days.",
+     "url": "https://ielts.org/take-a-test/your-results/getting-and-sharing-your-results",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "sharing",
+     "claim": "Results can be shared by e-delivery with as many organisations as you like, or by post with up to five organisations free; extra Test Report Form services are available up to two years from the test date.",
+     "url": "https://ielts.org/take-a-test/your-results/getting-and-sharing-your-results",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "id_doc",
+     "claim": "British Council Uzbekistan accepts a passport or the national ID card (issued since 1 Jan 2021) for booking, with the name typed exactly as on the ID, apostrophes included; the same ID must be brought on test day; it advises booking with the passport for international university applications. IDP's rule was not checked.",
+     "url": "https://www.britishcouncil.uz/en/exam/ielts/book-test",
+     "verified_at": "2026-10-07",
+     "read": "search_snippet",
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "bc_ielts",
+     "url": "https://www.britishcouncil.uz/en/exam/ielts/book-test",
+     "kind": "official",
+     "label": {
+      "en": "British Council Uzbekistan: book IELTS",
+      "uz": "British Council Oʻzbekiston: IELTSʼga yozilish",
+      "ru": "British Council Узбекистан: запись на IELTS"
+     }
+    },
+    {
+     "id": "idp_ielts",
+     "url": "https://ielts.idp.com/uzbekistan",
+     "kind": "official",
+     "label": {
+      "en": "IDP IELTS Uzbekistan",
+      "uz": "IDP IELTS Oʻzbekiston",
+      "ru": "IDP IELTS Узбекистан"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "On the booking page, confirm the current fee and which ID document you must bring.",
+    "uz": "Yozilish sahifasida joriy toʻlov miqdori va qaysi hujjatni olib borish kerakligini tasdiqlang.",
+    "ru": "На странице записи подтвердите текущую стоимость и какой документ нужно взять."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-det",
+   "template_id": "C11-det",
+   "kind": "admin_template",
+   "category": "test_registration",
+   "test": "DUOLINGO",
+   "workstream_kind": "tests",
+   "task_kind": "test-registration",
+   "task_type": "book",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "english_score_needed_by",
+    "milestone_ids": [
+     "m_en_retake"
+    ]
+   },
+   "rule_ids": [
+    "planner.tests_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 28,
+    "due_days_before": 14,
+    "basis": "inference",
+    "note": {
+     "en": "Results come in about 2 days, but leave time for a retake or a technical problem.",
+     "uz": "Natija taxminan 2 kunda chiqadi, lekin qayta topshirish yoki texnik muammo uchun vaqt qoldiring.",
+     "ru": "Результат приходит примерно за 2 дня, но оставьте время на пересдачу или техническую проблему."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "The test costs $70, paid online by card.",
+    "uz": "Test 70 dollar turadi, onlayn karta orqali toʻlanadi.",
+    "ru": "Тест стоит $70, оплата онлайн картой."
+   },
+   "title": {
+    "en": "Take the Duolingo English Test",
+    "uz": "Duolingo English Testʼni topshiring",
+    "ru": "Сдайте Duolingo English Test"
+   },
+   "summary": {
+    "en": "The Duolingo English Test is taken online at home and costs $70; results arrive in about 2 days. Take it only if every university you need it for accepts it.",
+    "uz": "Duolingo English Test uyda onlayn topshiriladi va 70 dollar turadi; natija taxminan 2 kunda chiqadi. Uni faqat kerakli barcha universitetlaringiz qabul qilsa topshiring.",
+    "ru": "Duolingo English Test сдают онлайн из дома, он стоит $70; результат приходит примерно за 2 дня. Сдавайте его, только если его принимают все нужные вам университеты."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-det-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -28,
+     "title": {
+      "en": "Check that your universities accept it",
+      "uz": "Universitetlaringiz uni qabul qilishini tekshiring",
+      "ru": "Проверьте, что ваши университеты его принимают"
+     },
+     "instructions": {
+      "en": "On each university's admissions page, check that the Duolingo English Test is accepted and note the minimum score. Paste the links.",
+      "uz": "Har bir universitetning qabul sahifasida Duolingo English Test qabul qilinishini tekshiring va minimal ballni yozib oling. Havolalarni qoʻying.",
+      "ru": "На странице приёма каждого университета проверьте, принимается ли Duolingo English Test, и выпишите минимальный балл. Вставьте ссылки."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "university_domain"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-det-s2",
+     "type": "book",
+     "minutes": 75,
+     "offset_days": -14,
+     "title": {
+      "en": "Prepare the room and take the test",
+      "uz": "Xonani tayyorlang va testni topshiring",
+      "ru": "Подготовьте комнату и сдайте тест"
+     },
+     "instructions": {
+      "en": "You need a computer with the Duolingo English Test desktop app, a camera, a microphone and speakers; a charged smartphone that films your keyboard and screen during the test; a stable internet connection; a quiet, well-lit room where you are alone; and your passport, the only ID the test accepts for Uzbekistan. The test takes about an hour.",
+      "uz": "Sizga Duolingo English Test kompyuter ilovasi oʻrnatilgan, kamerasi, mikrofoni va karnaylari bor kompyuter; test davomida klaviatura va ekranni videoga oladigan quvvatlangan smartfon; barqaror internet; yolgʻiz oʻtiradigan tinch va yorugʻ xona hamda pasportingiz kerak: Oʻzbekiston uchun test faqat pasportni qabul qiladi. Test taxminan bir soat davom etadi.",
+      "ru": "Нужны компьютер с приложением Duolingo English Test, камерой, микрофоном и динамиками; заряженный смартфон, который во время теста снимает клавиатуру и экран; стабильный интернет; тихая светлая комната, где вы одни; и паспорт — для Узбекистана тест принимает только его. Тест длится около часа."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "det_taken",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-det-s3",
+     "type": "submit",
+     "minutes": 10,
+     "anchor_override": "det.test_date",
+     "offset_days": 3,
+     "title": {
+      "en": "Record your score and send it",
+      "uz": "Ballni kiriting va yuboring",
+      "ru": "Внесите балл и отправьте его"
+     },
+     "instructions": {
+      "en": "Enter your overall score and send it to your universities from your Duolingo account. You can select up to 40 institutions.",
+      "uz": "Umumiy ballingizni kiriting va uni Duolingo akkauntingizdan universitetlaringizga yuboring. 40 tagacha muassasani tanlashingiz mumkin.",
+      "ru": "Внесите общий балл и отправьте его университетам из аккаунта Duolingo. Можно выбрать до 40 учреждений."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "fields": [
+       {
+        "key": "det_overall",
+        "type": "number",
+        "min": 10,
+        "max": 160,
+        "step": 5
+       }
+      ],
+      "redact": {
+       "en": "Cover your date of birth and ID details if they show.",
+       "uz": "Agar koʻrinib tursa, tugʻilgan sana va hujjat maʼlumotlarini yopib qoʻying.",
+       "ru": "Закройте дату рождения и данные документа, если они видны."
+      }
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "price",
+     "value": {
+      "usd": 70
+     },
+     "claim": "The Duolingo English Test costs $70 and results arrive in 2 days.",
+     "url": "https://englishtest.duolingo.com/applicants",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "price read from the page's own configuration (test_price_cents 7000) and its description 'get results in 2 days'",
+     "needs_verification": false
+    },
+    {
+     "key": "sending_validity",
+     "claim": "Certified results are valid for two years. Results are sent from the Duolingo account; up to 40 institutions can be selected, more only on request to support (approval not guaranteed).",
+     "url": "https://testcenter.zendesk.com/hc/en-us/articles/360011075571-How-long-are-my-Duolingo-English-Test-results-valid",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "read through the help centre's article API; sending rules from article 360010869252 (How do I send my results to institutions?, updated 17 Aug 2026)",
+     "needs_verification": false
+    },
+    {
+     "key": "requirements",
+     "claim": "Test rules (updated 1 Oct 2026): take the test alone in a room, in the DET desktop app with other programs closed, no VPN or virtual machine, no headphones; use one keyboard, mouse and phone; a smartphone camera records your keyboard and screen during the test; a valid government-issued ID is required. The test needs about 1 hour.",
+     "url": "https://testcenter.zendesk.com/hc/en-us/articles/360052828331-Test-Rules-and-Requirements",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "read through the help centre's article API (articles 360052828331, 28430344013069 'Using your phone to record your computer', 39104891663245 'Test Structure')",
+     "needs_verification": false
+    },
+    {
+     "key": "id_uzbekistan",
+     "claim": "Duolingo's accepted-ID table lists only the passport for Uzbekistan (no driver's licence or other government photo ID).",
+     "url": "https://testcenter.zendesk.com/hc/en-us/articles/41633131179917",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "Accepted Identification, updated 22 Sep 2026, read through the help centre's article API",
+     "needs_verification": false
+    },
+    {
+     "key": "acceptance_examples",
+     "claim": "Webster University in Tashkent lists Duolingo 120 and KIUT lists Duolingo 85 (optional) among accepted English results.",
+     "url": "https://kiut.uz/en/admissions/tashkent-admission/",
+     "verified_at": "2026-10-04",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json records webster_tashkent and kiut, checked 4 Oct 2026",
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "det",
+     "url": "https://englishtest.duolingo.com/applicants",
+     "kind": "official",
+     "label": {
+      "en": "Duolingo English Test",
+      "uz": "Duolingo English Test",
+      "ru": "Duolingo English Test"
+     }
+    }
+   ],
+   "needs_verification": false,
+   "verify_task": null,
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-toefl",
+   "template_id": "C11-toefl",
+   "kind": "admin_template",
+   "category": "test_registration",
+   "test": "TOEFL_iBT",
+   "workstream_kind": "tests",
+   "task_kind": "test-registration",
+   "task_type": "book",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "english_score_needed_by",
+    "milestone_ids": [
+     "m_en_retake"
+    ]
+   },
+   "rule_ids": [
+    "planner.tests_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 56,
+    "due_days_before": 35,
+    "basis": "inference",
+    "note": {
+     "en": "Register at least 2 weeks before your test date and about 6-8 weeks before the score is needed.",
+     "uz": "Test sanasidan kamida 2 hafta oldin va natija kerak boʻlishidan taxminan 6-8 hafta oldin roʻyxatdan oʻting.",
+     "ru": "Регистрируйтесь минимум за 2 недели до теста и примерно за 6-8 недель до даты, когда нужен результат."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "The fee is paid online by card in US dollars.",
+    "uz": "Toʻlov onlayn, karta orqali AQSH dollarida qilinadi.",
+    "ru": "Оплата онлайн картой в долларах США."
+   },
+   "title": {
+    "en": "Register for the TOEFL iBT",
+    "uz": "TOEFL iBTʼga roʻyxatdan oʻting",
+    "ru": "Зарегистрируйтесь на TOEFL iBT"
+   },
+   "summary": {
+    "en": "Since 21 January 2026 the TOEFL iBT reports scores on a 1-6 scale, with a comparable 0-120 score during a two-year transition. You choose up to 4 free score recipients before the test.",
+    "uz": "2026-yil 21-yanvardan TOEFL iBT natijalarni 1-6 shkalada beradi, ikki yillik oʻtish davrida esa 0-120 shkaladagi mos ball ham koʻrsatiladi. Testdan oldin 4 tagacha bepul natija oluvchini tanlaysiz.",
+    "ru": "С 21 января 2026 года TOEFL iBT выдаёт баллы по шкале 1-6, а в течение двухлетнего переходного периода — ещё и сопоставимый балл по шкале 0-120. До теста вы выбираете до 4 бесплатных получателей результата."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-toefl-s1",
+     "type": "book",
+     "minutes": 25,
+     "offset_days": -56,
+     "title": {
+      "en": "Create an ETS account and register",
+      "uz": "ETS akkauntini oching va roʻyxatdan oʻting",
+      "ru": "Создайте аккаунт ETS и зарегистрируйтесь"
+     },
+     "instructions": {
+      "en": "Create an ETS account with your name exactly as in your passport, choose a test centre or the at-home test, check the ID rules for where you test, and pay.",
+      "uz": "Ismingizni pasportdagidek aynan yozib ETS akkauntini oching, test markazini yoki uyda topshiriladigan testni tanlang, test topshiradigan joyingiz uchun hujjat qoidalarini tekshiring va toʻlang.",
+      "ru": "Создайте аккаунт ETS на имя точно как в паспорте, выберите тестовый центр или тест из дома, проверьте правила о документах для места сдачи и оплатите."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the registration confirmation",
+       "uz": "roʻyxatdan oʻtish tasdigʻining skrinshoti",
+       "ru": "скриншот подтверждения регистрации"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-toefl-s2",
+     "type": "submit",
+     "minutes": 10,
+     "anchor_override": "toefl.test_date",
+     "offset_days": -2,
+     "title": {
+      "en": "Choose your 4 free score recipients",
+      "uz": "4 ta bepul natija oluvchini tanlang",
+      "ru": "Выберите 4 бесплатных получателей"
+     },
+     "instructions": {
+      "en": "In your ETS account, choose up to 4 universities by 10 p.m. local test-centre time on the day before the test. Reports ordered later are paid; check the fee in your ETS account.",
+      "uz": "ETS akkauntingizda testdan bir kun oldin, test markazi vaqti bilan soat 22:00 gacha 4 tagacha universitetni tanlang. Keyin buyurtma qilingan hisobotlar pullik; narxini ETS akkauntingizda tekshiring.",
+      "ru": "В аккаунте ETS выберите до 4 университетов до 22:00 по местному времени центра накануне теста. Отчёты, заказанные позже, платные; стоимость проверьте в аккаунте ETS."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "recipients_chosen",
+        "type": "number",
+        "min": 0,
+        "max": 4,
+        "step": 1
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-toefl-s3",
+     "type": "submit",
+     "minutes": 5,
+     "anchor_override": "toefl.test_date",
+     "offset_days": 3,
+     "title": {
+      "en": "Record your scores",
+      "uz": "Ballaringizni kiriting",
+      "ru": "Внесите баллы"
+     },
+     "instructions": {
+      "en": "Scores appear in your ETS account about 3 days after the test. Enter the overall score on the 1-6 scale and the comparable 0-120 score.",
+      "uz": "Ballar testdan taxminan 3 kun keyin ETS akkauntingizda paydo boʻladi. 1-6 shkaladagi umumiy ballni va unga mos 0-120 shkaladagi ballni kiriting.",
+      "ru": "Баллы появятся в аккаунте ETS примерно через 3 дня после теста. Внесите общий балл по шкале 1-6 и сопоставимый балл по шкале 0-120."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "fields": [
+       {
+        "key": "toefl_overall_6",
+        "type": "number",
+        "min": 1,
+        "max": 6,
+        "step": 0.5
+       },
+       {
+        "key": "toefl_comparable_120",
+        "type": "number",
+        "min": 0,
+        "max": 120,
+        "step": 1
+       }
+      ],
+      "redact": {
+       "en": "Cover your date of birth and ID number.",
+       "uz": "Tugʻilgan sanangiz va hujjat raqamini yopib qoʻying.",
+       "ru": "Закройте дату рождения и номер документа."
+      }
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "scale",
+     "claim": "As of 21 Jan 2026, TOEFL iBT score reports use a 1-6 scale in half-point steps aligned to CEFR; for a two-year transition, reports also give a comparable 0-120 overall score.",
+     "url": "https://www.ets.org/toefl/institutions/ibt/score-scale-update.html",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "free_reports",
+     "claim": "The test fee includes up to four free score reports chosen in the ETS account until 10 p.m. local test-centre time on the day before the test; scores are valid two years.",
+     "url": "https://www.ets.org/toefl/test-takers/ibt/scores/send-scores.html",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "extra_report_fee",
+     "claim": "Additional score reports cost US$25 each on ETS's send-scores page but US$29 each on ETS's fees page (both read 7 Oct 2026).",
+     "url": "https://www.ets.org/toefl/test-takers/ibt/register/fees.html",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "conflict: https://www.ets.org/toefl/test-takers/ibt/scores/send-scores.html says US$25",
+     "needs_verification": true
+    },
+    {
+     "key": "scores_timing",
+     "claim": "Scores are available in the ETS account 3 days after the test date.",
+     "url": "https://www.tr.ets.org/toefl/test-takers/ibt/faq/score-reports.html",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "reg_deadlines",
+     "claim": "ETS: regular registration closes 7 days before the test; late registration closes 2 days before, with a US$40 fee. ETS's fees page instead lists 'express registration (within 7 days of the test date)' at US$49.",
+     "url": "https://www.ets.org/toefl/teachers-advisors-agents/ibt/advising/how-to-register.html",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "replaces a Taiwan test-centre notice; the late-fee amount conflicts with https://www.ets.org/toefl/test-takers/ibt/register/fees.html",
+     "needs_verification": true
+    },
+    {
+     "key": "fee_uz",
+     "claim": "ETS's fees page shows the registration fee only after a test location is picked; the fee for Uzbekistan could not be read.",
+     "url": "https://www.ets.org/toefl/test-takers/ibt/register/fees.html",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ets_register",
+     "url": "https://www.ets.org/toefl/test-takers/ibt/register.html",
+     "kind": "official",
+     "label": {
+      "en": "Register for the TOEFL iBT (ETS)",
+      "uz": "TOEFL iBTʼga roʻyxatdan oʻtish (ETS)",
+      "ru": "Регистрация на TOEFL iBT (ETS)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "In your ETS account, check the fee for your centre and the last day to register for your date.",
+    "uz": "ETS akkauntingizda markazingiz uchun toʻlov miqdorini va sanangizga roʻyxatdan oʻtishning oxirgi kunini tekshiring.",
+    "ru": "В аккаунте ETS проверьте стоимость для вашего центра и последний день регистрации на вашу дату."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-msreg",
+   "template_id": "C11-msreg",
+   "kind": "admin_template",
+   "category": "test_registration",
+   "test": "MILLIY_SERTIFIKAT",
+   "workstream_kind": "uz_unis",
+   "task_kind": "test-registration",
+   "task_type": "book",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UZ_HOME",
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "ms_session.registration_deadline",
+    "milestone_ids": [
+     "m_verify_cycle_UZ_HOME"
+    ]
+   },
+   "rule_ids": [
+    "CP_UZ",
+    "UZ_HOME"
+   ],
+   "lead_time": {
+    "start_days_before": 14,
+    "target_days_before": 12,
+    "never_within_hours": 48,
+    "basis": "inference",
+    "note": {
+     "en": "Seats are capped per region and a region closes when full, so register in the first days of the window.",
+     "uz": "Joylar har bir hudud uchun cheklangan va toʻlgach hudud yopiladi, shuning uchun roʻyxatdan oʻtish muddatining dastlabki kunlarida yoziling.",
+     "ru": "Места ограничены по регионам, и регион закрывается, когда они заканчиваются, поэтому регистрируйтесь в первые дни окна."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "The exam fee is paid after registration, by the payment deadline of the session.",
+    "uz": "Imtihon toʻlovi roʻyxatdan oʻtgandan keyin, sessiyaning toʻlov muddatigacha amalga oshiriladi.",
+    "ru": "Сбор за экзамен оплачивается после регистрации, до срока оплаты сессии."
+   },
+   "title": {
+    "en": "Register for the Milliy sertifikat exam in {subject}",
+    "uz": "{subject} fanidan milliy sertifikat imtihoniga roʻyxatdan oʻting",
+    "ru": "Зарегистрируйтесь на экзамен Milliy sertifikat по предмету {subject}"
+   },
+   "summary": {
+    "en": "A national certificate in a state-test subject turns into points on the state test: A+ or A gives the subject's full points, B+ to C give points in proportion, and any level in a compulsory subject gives that block's full 11 points. Registration is on my.gov.uz, by region, and closes early when a region is full.",
+    "uz": "Davlat testi fanidan olingan milliy sertifikat davlat testida ballga aylanadi: A+ yoki A fanning toʻliq balini beradi, B+ dan C gacha mutanosib ball beradi, majburiy fandan esa istalgan daraja shu blokning toʻliq 11 balini beradi. Roʻyxatdan oʻtish my.gov.uz da, hudud boʻyicha amalga oshiriladi va hudud toʻlsa, muddatidan oldin yopiladi.",
+    "ru": "Национальный сертификат по предмету госэкзамена превращается в баллы на госэкзамене: A+ или A дают полный балл по предмету, от B+ до C — пропорциональный, а любой уровень по обязательному предмету даёт полные 11 баллов этого блока. Регистрация на my.gov.uz по регионам и закрывается раньше срока, если регион заполнен."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-msreg-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -14,
+     "title": {
+      "en": "Choose the subject and the session",
+      "uz": "Fan va sessiyani tanlang",
+      "ru": "Выберите предмет и сессию"
+     },
+     "instructions": {
+      "en": "Choose the subject that matters most for your programmes and the session your plan suggests. Check this session's dates on the Agency's announcement.",
+      "uz": "Yoʻnalishlaringiz uchun eng muhim fanni va rejangiz taklif qilgan sessiyani tanlang. Bu sessiya sanalarini Agentlik eʼlonida tekshiring.",
+      "ru": "Выберите предмет, самый важный для ваших направлений, и сессию, которую предлагает план. Проверьте даты этой сессии в объявлении Агентства."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "ms_subject",
+        "type": "choice",
+        "options": [
+         "math",
+         "physics",
+         "chemistry",
+         "biology",
+         "native_language",
+         "history",
+         "geography",
+         "law",
+         "other"
+        ]
+       },
+       {
+        "key": "ms_session_id",
+        "type": "choice",
+        "options_from": "sessions[].session_id"
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-msreg-s2",
+     "type": "book",
+     "minutes": 20,
+     "offset_days": -12,
+     "title": {
+      "en": "Register on my.gov.uz",
+      "uz": "my.gov.uz da roʻyxatdan oʻting",
+      "ru": "Зарегистрируйтесь на my.gov.uz"
+     },
+     "instructions": {
+      "en": "On my.gov.uz, apply for the national certificate exam: choose the subject and the region where you will sit it. Register on the first days of the window: a region closes once its seats are taken.",
+      "uz": "my.gov.uz da milliy sertifikat imtihoniga ariza bering: fanni va imtihon topshiradigan hududingizni tanlang. Muddatning dastlabki kunlarida roʻyxatdan oʻting: hududdagi joylar tugashi bilan u yopiladi.",
+      "ru": "На my.gov.uz подайте заявку на экзамен национального сертификата: выберите предмет и регион сдачи. Регистрируйтесь в первые дни окна: регион закрывается, как только места заканчиваются."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the application status",
+       "uz": "ariza holatining skrinshoti",
+       "ru": "скриншот статуса заявки"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-msreg-s3",
+     "type": "submit",
+     "minutes": 5,
+     "anchor_override": "ms_session.payment_deadline",
+     "offset_days": -1,
+     "title": {
+      "en": "Pay by the payment deadline",
+      "uz": "Toʻlov muddatigacha toʻlang",
+      "ru": "Оплатите до срока оплаты"
+     },
+     "instructions": {
+      "en": "Pay the exam fee by {payment_deadline}. A registration without payment does not keep your seat.",
+      "uz": "Imtihon toʻlovini {payment_deadline} gacha amalga oshiring. Toʻlovsiz roʻyxatdan oʻtish joyingizni saqlab qolmaydi.",
+      "ru": "Оплатите экзамен до {payment_deadline}. Регистрация без оплаты не сохраняет место."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "ms_paid",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 4,
+     "id": "C11-msreg-s4",
+     "type": "submit",
+     "minutes": 5,
+     "anchor_override": "ms_session.exam_date",
+     "offset_days": 14,
+     "title": {
+      "en": "Record your certificate level",
+      "uz": "Sertifikat darajangizni kiriting",
+      "ru": "Внесите уровень сертификата"
+     },
+     "instructions": {
+      "en": "When results are out, enter your level (A+ to C) and the percentage on the certificate, then upload the certificate page.",
+      "uz": "Natijalar chiqqach, darajangizni (A+ dan C gacha) va sertifikatdagi foizni kiriting, soʻng sertifikat sahifasini yuklang.",
+      "ru": "Когда выйдут результаты, внесите уровень (от A+ до C) и процент из сертификата, затем загрузите страницу сертификата."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "fields": [
+       {
+        "key": "ms_level",
+        "type": "choice",
+        "options": [
+         "A+",
+         "A",
+         "B+",
+         "B",
+         "C+",
+         "C",
+         "none"
+        ]
+       },
+       {
+        "key": "ms_percent",
+        "type": "number",
+        "min": 0,
+        "max": 100,
+        "step": 0.1
+       }
+      ],
+      "redact": {
+       "en": "Cover your PINFL and passport number.",
+       "uz": "JSHSHIR va pasport raqamingizni yopib qoʻying.",
+       "ru": "Закройте ПИНФЛ и номер паспорта."
+      }
+     }
+    }
+   ],
+   "sessions": [
+    {
+     "session_id": "MS-2026-11",
+     "subjects": [
+      "biology",
+      "chemistry",
+      "math",
+      "physics"
+     ],
+     "registration_from": "2026-10-16",
+     "registration_until": "2026-10-30",
+     "payment_until": "2026-10-31",
+     "exams": {
+      "biology": "2026-11-21",
+      "chemistry": "2026-11-22",
+      "math": [
+       "2026-11-23",
+       "2026-11-24"
+      ],
+      "physics": "2026-11-24"
+     },
+     "needs_verification": true
+    },
+    {
+     "session_id": "MS-2026-12",
+     "subjects": [
+      "law",
+      "geography",
+      "native_language",
+      "history"
+     ],
+     "registration_from": "2026-11-20",
+     "registration_until": "2026-12-04",
+     "payment_until": "2026-12-05",
+     "exams": {
+      "law": "2026-12-23",
+      "geography": "2026-12-25",
+      "native_language": [
+       "2026-12-26",
+       "2026-12-28"
+      ],
+      "history": "2026-12-29"
+     },
+     "needs_verification": true,
+     "note": {
+      "en": "Law registration opens earlier, on 17 Nov.",
+      "uz": "Huquqshunoslik boʻyicha roʻyxatdan oʻtish ertaroq, 17-noyabrda boshlanadi.",
+      "ru": "Регистрация по праву открывается раньше, 17 ноября."
+     }
+    },
+    {
+     "session_id": "MS-2027",
+     "subjects": [],
+     "needs_verification": true,
+     "note": {
+      "en": "2027 sessions are not announced yet.",
+      "uz": "2027-yil sessiyalari hali eʼlon qilinmagan.",
+      "ru": "Сессии 2027 года ещё не объявлены."
+     }
+    }
+   ],
+   "sessions_source": [
+    {
+     "claim": "Sept-Dec 2026 schedule: November session, biology, chemistry, maths and physics: registration 16-30 Oct, payment by 31 Oct; exams biology 21 Nov, chemistry 22 Nov, maths 23-24 Nov, physics 24 Nov (online). December session: registration 20 Nov-4 Dec (law from 17 Nov), payment by 5 Dec; exams law 23 Dec, geography 25 Dec, native language and literature 26-28 Dec, history 29 Dec. Fee 594,000 soʻm from 1 Sep 2026.",
+     "url": "https://infoedu.uz/milliy-sertifikat-imtihonlari-sentabr-dekabr-2026-sanalari",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "InfoEdu.uz, 27 Aug 2026 (updated 22 Sep), citing the Agency; the Agency's own announcement gives the schedule only as an image"
+    }
+   ],
+   "facts": [
+    {
+     "key": "register_my_gov",
+     "claim": "Candidates register online on my.gov.uz and choose a convenient region; when a region's limit is reached, registration for it closes. Sessions run September-December 2026.",
+     "url": "https://gov.uz/en/uzbmb/news/view/210873",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "Agency announcement, 26 Aug 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "seat_caps",
+     "claim": "Registration is by the seats allocated to each region and may close before the deadline; 496,303 seats for Sept-Dec 2026.",
+     "url": "https://kun.uz/news/2026/09/22/milliy-sertifikat-imtihonlariga-royxatdan-otish-tartibi-ozgardi",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "Kun.uz, 22 Sep 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "fee",
+     "value": {
+      "uzs": 594000
+     },
+     "claim": "The exam fee is 594,000 soʻm from 1 Sep 2026 (556,200 before).",
+     "url": "https://infoedu.uz/milliy-sertifikat-imtihonlari-sentabr-dekabr-2026-sanalari",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "needs_verification": true
+    },
+    {
+     "key": "points",
+     "claim": "CM Resolution No. 578 cl. 45: A+ and A give the subject's full points; B+, B, C+ and C give points in proportion and the applicant skips that subject's test (or may decline and sit it); any level in a compulsory subject gives that block's full 11 points.",
+     "url": "https://lex.uz/uz/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "via R3 §1.4 and §4 (read 7 Oct 2026)",
+     "needs_verification": false
+    },
+    {
+     "key": "validity",
+     "claim": "A national certificate is valid for 3 years.",
+     "url": "https://oliygoh.uz/post/milliy-sertifikat-natijalarjning-kirish-imtihonida-abituriyentga-beradigan-bali",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "via R3 §4; Oliygoh.uz, 30 Jun 2025, which cites no legal act",
+     "needs_verification": true
+    },
+    {
+     "key": "private_use",
+     "claim": "Central Asian University exempts from its maths exam (and, for medicine and dentistry, its biology or chemistry exam) with a national certificate at C+ or above.",
+     "url": "https://centralasian.uz/admissionregulations",
+     "verified_at": "2026-10-04",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record cau",
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "my_gov",
+     "url": "https://my.gov.uz",
+     "kind": "official",
+     "label": {
+      "en": "my.gov.uz (registration)",
+      "uz": "my.gov.uz (roʻyxatdan oʻtish)",
+      "ru": "my.gov.uz (регистрация)"
+     }
+    },
+    {
+     "id": "uzbmb_news",
+     "url": "https://gov.uz/en/uzbmb/news/view/210873",
+     "kind": "official",
+     "label": {
+      "en": "Agency announcement: national certificate exams, Sept-Dec 2026",
+      "uz": "Agentlik eʼloni: milliy sertifikat imtihonlari, 2026-yil sentabr-dekabr",
+      "ru": "Объявление Агентства: экзамены нацсертификата, сентябрь-декабрь 2026"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Confirm your subject's registration, payment and exam dates and the fee on my.gov.uz or the Agency's announcement: the dates here come from a news site that copied the Agency's schedule image.",
+    "uz": "Faningiz boʻyicha roʻyxatdan oʻtish, toʻlov va imtihon sanalarini hamda toʻlov miqdorini my.gov.uz yoki Agentlik eʼlonida tasdiqlang: bu yerdagi sanalar Agentlik jadvali rasmidan koʻchirgan yangiliklar saytidan olingan.",
+    "ru": "Подтвердите сроки регистрации, оплаты и экзамена по вашему предмету и стоимость на my.gov.uz или в объявлении Агентства: даты здесь взяты с новостного сайта, переписавшего картинку с расписанием Агентства."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

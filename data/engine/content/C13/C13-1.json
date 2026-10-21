@@ -1,0 +1,1987 @@
+{
+ "bank": "C13",
+ "batch": 1,
+ "kind": "parent_task",
+ "note": "C13 parent tasks (P5 spec §4.2 item 4, §4.7, §4.8, §5.3). Code-rendered in uz/ru/en, never AI at runtime (D14). Parent tasks are conversations and logistics, never homework checks (Hill & Tyson). Fields: trigger/conditions are proposals for the scheduler (event ids are named, not yet emitted by code); prompts are questions the parent may ask the child, written without sen/siz (uz) and without gendered verbs (ru); evidence follows the §4.6 ladder (L0/L1 here; new field types \"bool\" and \"choice\"); tokens are filled by code in the parent's language; facts carry url + verified_at or needs_verification. Batch 2 holds the parent-source diagnostic questions as parent tasks.",
+ "items": [
+  {
+   "id": "C13-wkchat",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "academic_socialisation",
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "trigger": {
+    "type": "recurring",
+    "phases": [
+     "D",
+     "X"
+    ],
+    "first_after_days": 1,
+    "every_days": 7,
+    "prefer": "weekend"
+   },
+   "minutes": 10,
+   "title": {
+    "en": "Ask what they enjoyed learning this week",
+    "uz": "Bu hafta oʻqishda nima yoqqanini soʻrang",
+    "ru": "Спросите, что понравилось в учёбе на этой неделе"
+   },
+   "instructions": {
+    "en": "Find ten calm minutes, for example at dinner or on the way somewhere. Ask about learning, not marks: what was interesting, what was hard and what your child tried. Listen more than you speak, and do not turn the talk into a homework check.",
+    "uz": "Oʻn daqiqa xotirjam vaqt toping, masalan, kechki ovqat paytida yoki birga yoʻlda ketayotganda. Baholar haqida emas, oʻqish haqida soʻrang: nima qiziq boʻldi, nima qiyin boʻldi, farzandingiz nimani sinab koʻrdi. Koʻproq tinglang va suhbatni uy vazifasini tekshirishga aylantirmang.",
+    "ru": "Найдите десять спокойных минут, например за ужином или по дороге. Спросите об учёбе, а не об оценках: что было интересно, что было трудно и что ребёнок попробовал сделать. Больше слушайте, чем говорите, и не превращайте разговор в проверку домашнего задания."
+   },
+   "prompts": [
+    {
+     "en": "What was the most interesting thing in your lessons this week?",
+     "uz": "Bu hafta darslarda eng qiziq narsa nima boʻldi?",
+     "ru": "Что было самым интересным на уроках на этой неделе?"
+    },
+    {
+     "en": "What was hard, and what helped when something did not work out?",
+     "uz": "Nima qiyin boʻldi va biror narsa chiqmay qolganda nima yordam berdi?",
+     "ru": "Что было трудным и что помогало, когда не получалось?"
+    },
+    {
+     "en": "What would be interesting to learn more about?",
+     "uz": "Yana nimani koʻproq bilish qiziq?",
+     "ru": "О чём было бы интересно узнать больше?"
+    }
+   ],
+   "avoid": [
+    {
+     "en": "Starting with marks, or comparing with other children's results.",
+     "uz": "Suhbatni baholardan boshlash yoki boshqa bolalarning natijalari bilan solishtirish.",
+     "ru": "Начинать с оценок или сравнивать с результатами других детей."
+    }
+   ],
+   "why": {
+    "en": "Studies of families and school found that talking about learning and goals is linked to better results than helping with homework.",
+    "uz": "Oila va maktab haqidagi tadqiqotlar oʻqish va maqsadlar haqida suhbatlashish uy vazifasiga yordam berishdan koʻra yaxshiroq natijalar bilan bogʻliqligini koʻrsatgan.",
+    "ru": "Исследования семьи и школы показали, что разговоры об учёбе и целях связаны с лучшими результатами, чем помощь с домашним заданием."
+   },
+   "tokens": [],
+   "evidence": {
+    "level": "L0",
+    "method": "self_report"
+   },
+   "sensitive": false,
+   "basis": [
+    {
+     "claim": "Hill & Tyson (2009), a meta-analysis of 50+ studies: academic socialisation (linking schoolwork to goals and interests) had the strongest positive link to middle-school achievement; homework help had a negative link.",
+     "url": "https://www.gse.harvard.edu/ideas/usable-knowledge/09/10/parental-involvement-puzzle",
+     "verified_at": "2026-10-07",
+     "secondary": true
+    }
+   ],
+   "facts": [],
+   "needs_verification": false,
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-future",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "academic_socialisation",
+   "stages": [
+    "S1",
+    "S2"
+   ],
+   "conditions": [],
+   "trigger": {
+    "type": "recurring",
+    "phases": [
+     "D",
+     "X"
+    ],
+    "first_after_days": 3,
+    "every_days": 60
+   },
+   "minutes": 15,
+   "title": {
+    "en": "Connect school subjects to what your child wants to do",
+    "uz": "Maktab fanlarini farzandingiz qiziqishlari bilan bogʻlang",
+    "ru": "Свяжите школьные предметы с тем, чем хочет заниматься ребёнок"
+   },
+   "instructions": {
+    "en": "Ask your child what kind of work or study interests them now, even if the answer changes later. Talk about which school subjects lead there and why they matter. Share your own experience of study and work, but leave the choice to your child.",
+    "uz": "Farzandingizdan hozir qanday ish yoki yoʻnalish qiziqtirishini soʻrang, javob keyinroq oʻzgarsa ham mayli. Qaysi maktab fanlari oʻsha yoʻnalishga olib borishi va nima uchun muhimligi haqida gaplashing. Oʻz oʻqish va ish tajribangiz bilan boʻlishing, lekin tanlovni farzandingizga qoldiring.",
+    "ru": "Спросите ребёнка, какая работа или сфера сейчас интересна, даже если ответ потом изменится. Поговорите о том, какие школьные предметы ведут туда и почему они важны. Расскажите о своём опыте учёбы и работы, но оставьте выбор ребёнку."
+   },
+   "prompts": [
+    {
+     "en": "What kind of work looks interesting to you right now?",
+     "uz": "Hozir qanday ish qiziqarli tuyuladi?",
+     "ru": "Какая работа сейчас кажется интересной?"
+    },
+    {
+     "en": "Which school subjects does that work need?",
+     "uz": "Bu ish uchun qaysi maktab fanlari kerak?",
+     "ru": "Какие школьные предметы нужны для этой работы?"
+    },
+    {
+     "en": "What could you try this year to find out more about it?",
+     "uz": "Bu haqda koʻproq bilish uchun shu yili nimani sinab koʻrish mumkin?",
+     "ru": "Что можно попробовать в этом году, чтобы узнать об этом больше?"
+    }
+   ],
+   "avoid": [
+    {
+     "en": "Choosing a profession for your child during this talk.",
+     "uz": "Bu suhbatda farzandingiz uchun kasb tanlab qoʻyish.",
+     "ru": "Выбирать профессию за ребёнка в этом разговоре."
+    }
+   ],
+   "why": {
+    "en": "In the research, linking schoolwork to a child's own goals and interests is the kind of parent involvement most strongly linked to achievement.",
+    "uz": "Tadqiqotlarda maktab ishini bolaning oʻz maqsad va qiziqishlari bilan bogʻlash ota-ona ishtirokining natijalar bilan eng kuchli bogʻlangan turi boʻlib chiqqan.",
+    "ru": "В исследованиях связь учёбы с собственными целями и интересами ребёнка оказалась видом участия родителей, сильнее всего связанным с успеваемостью."
+   },
+   "tokens": [],
+   "evidence": {
+    "level": "L0",
+    "method": "self_report"
+   },
+   "sensitive": false,
+   "basis": [
+    {
+     "claim": "Hill & Tyson (2009), a meta-analysis of 50+ studies: academic socialisation (linking schoolwork to goals and interests) had the strongest positive link to middle-school achievement; homework help had a negative link.",
+     "url": "https://www.gse.harvard.edu/ideas/usable-knowledge/09/10/parental-involvement-puzzle",
+     "verified_at": "2026-10-07",
+     "secondary": true
+    }
+   ],
+   "facts": [],
+   "needs_verification": false,
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-strtgy",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "academic_socialisation",
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "trigger": {
+    "type": "recurring",
+    "phases": [
+     "D",
+     "X"
+    ],
+    "first_after_days": 10,
+    "every_days": 21
+   },
+   "minutes": 10,
+   "title": {
+    "en": "Ask how your child studies, not how long",
+    "uz": "Farzandingiz qancha emas, qanday oʻqishini soʻrang",
+    "ru": "Спросите, как ребёнок учится, а не сколько"
+   },
+   "instructions": {
+    "en": "Ask your child to show or tell you how they prepare for a test or a lesson. Research on study methods rates testing yourself and spreading practice over several days as the most useful, and rereading as much less useful. Ask what the plan is for the next time something does not work out.",
+    "uz": "Farzandingizdan nazorat ishi yoki darsga qanday tayyorlanishini koʻrsatib yoki aytib berishini soʻrang. Oʻqish usullari boʻyicha tadqiqotlar oʻzini oʻzi sinash va mashqni bir necha kunga boʻlib bajarishni eng foydali, qayta oʻqishni esa ancha kam foydali deb baholagan. Keyingi safar biror narsa chiqmay qolsa, qanday reja borligini soʻrang.",
+    "ru": "Попросите ребёнка показать или рассказать, как проходит подготовка к контрольной или к уроку. Исследования способов учёбы оценивают самопроверку и практику, распределённую на несколько дней, как самые полезные, а перечитывание — как гораздо менее полезное. Спросите, какой план на случай, если в следующий раз что-то не получится."
+   },
+   "prompts": [
+    {
+     "en": "How do you check that you really know a topic?",
+     "uz": "Mavzu yaxshi oʻzlashtirilganini qanday bilsa boʻladi?",
+     "ru": "Как проверить, что тема действительно понятна?"
+    },
+    {
+     "en": "What helps when a task does not work out?",
+     "uz": "Masala chiqmay qolganda nima yordam beradi?",
+     "ru": "Что помогает, когда задача не получается?"
+    },
+    {
+     "en": "Which way of studying works best for you?",
+     "uz": "Oʻqishning qaysi usuli eng yaxshi natija beradi?",
+     "ru": "Какой способ учёбы работает лучше всего?"
+    }
+   ],
+   "avoid": [
+    {
+     "en": "Judging effort only by hours spent at the desk.",
+     "uz": "Mehnatni faqat stol yonida oʻtirgan soatlar bilan oʻlchash.",
+     "ru": "Оценивать старания только по часам за столом."
+    }
+   ],
+   "why": {
+    "en": "Asking about methods helps your child think about how they learn, not only how much.",
+    "uz": "Usullar haqidagi savollar farzandingizni qancha emas, qanday oʻqishi haqida oʻylashga undaydi.",
+    "ru": "Вопросы о способах помогают ребёнку думать не только о том, сколько, но и о том, как учиться."
+   },
+   "tokens": [],
+   "evidence": {
+    "level": "L0",
+    "method": "self_report"
+   },
+   "sensitive": false,
+   "basis": [
+    {
+     "claim": "Dunlosky et al. (2013) rated practice testing and distributed practice \"high utility\" and rereading and highlighting \"low utility\".",
+     "url": "https://www.psychologicalscience.org/news/releases/which-study-strategies-make-the-grade.html",
+     "verified_at": "2026-10-07",
+     "secondary": true
+    },
+    {
+     "claim": "Hill & Tyson (2009), a meta-analysis of 50+ studies: academic socialisation (linking schoolwork to goals and interests) had the strongest positive link to middle-school achievement; homework help had a negative link.",
+     "url": "https://www.gse.harvard.edu/ideas/usable-knowledge/09/10/parental-involvement-puzzle",
+     "verified_at": "2026-10-07",
+     "secondary": true
+    }
+   ],
+   "facts": [],
+   "needs_verification": false,
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-roadmp",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "academic_socialisation",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "trigger": {
+    "type": "event",
+    "events": [
+     "roadmap_ready"
+    ],
+    "then_every_days": 30
+   },
+   "minutes": 15,
+   "title": {
+    "en": "Look at your child's roadmap together",
+    "uz": "Farzandingizning yoʻl xaritasini birga koʻring",
+    "ru": "Посмотрите дорожную карту ребёнка вместе"
+   },
+   "instructions": {
+    "en": "Open the roadmap in this app and ask your child to explain one goal and the next step towards it. Ask what help they need from you: time, a quiet place, a document or a payment. Agree on one thing you will do, and leave the rest of the plan to your child.",
+    "uz": "Ilovada yoʻl xaritasini oching va farzandingizdan bitta maqsadni hamda unga qarab keyingi qadamni tushuntirib berishini soʻrang. Sizdan qanday yordam kerakligini soʻrang: vaqt, tinch joy, hujjat yoki toʻlov. Siz bajaradigan bitta ishni kelishib oling, rejaning qolgan qismini esa farzandingizga qoldiring.",
+    "ru": "Откройте дорожную карту в приложении и попросите ребёнка объяснить одну цель и следующий шаг к ней. Спросите, какая помощь нужна от вас: время, тихое место, документ или оплата. Договоритесь об одном деле, которое сделаете вы, а остальную часть плана оставьте ребёнку."
+   },
+   "prompts": [
+    {
+     "en": "Which goal on this plan matters most to you, and why?",
+     "uz": "Bu rejadagi qaysi maqsad eng muhim va nima uchun?",
+     "ru": "Какая цель в этом плане самая важная и почему?"
+    },
+    {
+     "en": "What is the next step, and when will it happen?",
+     "uz": "Keyingi qadam qaysi va u qachon bajariladi?",
+     "ru": "Какой следующий шаг и когда он будет сделан?"
+    },
+    {
+     "en": "What do you need from me for it?",
+     "uz": "Buning uchun mendan nima kerak?",
+     "ru": "Что для этого нужно от меня?"
+    }
+   ],
+   "avoid": [
+    {
+     "en": "Adding new goals on top of the plan during this talk.",
+     "uz": "Bu suhbatda rejaga yangi maqsadlar qoʻshish.",
+     "ru": "Добавлять к плану новые цели во время этого разговора."
+    }
+   ],
+   "why": {
+    "en": "When your child explains the plan in their own words, it becomes their plan, and you see where your help is needed.",
+    "uz": "Farzandingiz rejani oʻz soʻzlari bilan tushuntirganda, u uning oʻz rejasiga aylanadi, siz esa yordamingiz qayerda kerakligini koʻrasiz.",
+    "ru": "Когда ребёнок объясняет план своими словами, план становится его собственным, а вы видите, где нужна ваша помощь."
+   },
+   "tokens": [],
+   "evidence": {
+    "level": "L0",
+    "method": "self_report"
+   },
+   "sensitive": false,
+   "basis": [
+    {
+     "claim": "Hill & Tyson (2009), a meta-analysis of 50+ studies: academic socialisation (linking schoolwork to goals and interests) had the strongest positive link to middle-school achievement; homework help had a negative link.",
+     "url": "https://www.gse.harvard.edu/ideas/usable-knowledge/09/10/parental-involvement-puzzle",
+     "verified_at": "2026-10-07",
+     "secondary": true
+    }
+   ],
+   "facts": [],
+   "needs_verification": false,
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-unival",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "academic_socialisation",
+   "stages": [
+    "S2",
+    "S3"
+   ],
+   "conditions": [],
+   "trigger": {
+    "type": "once",
+    "phases": [
+     "D",
+     "X"
+    ],
+    "first_after_days": 5
+   },
+   "minutes": 20,
+   "title": {
+    "en": "Talk about what matters in a university",
+    "uz": "Universitetda nima muhimligi haqida gaplashing",
+    "ru": "Обсудите, что важно в выборе университета"
+   },
+   "instructions": {
+    "en": "Before the university list is final, talk about what matters to your child and to the family: the field of study, the language of teaching, the city or country, the cost and the distance from home. Let your child speak first. If there is a limit the plan must respect, say it now rather than at the end.",
+    "uz": "Universitetlar roʻyxati yakunlanishidan oldin farzandingiz va oila uchun nima muhimligi haqida gaplashing: yoʻnalish, oʻqitish tili, shahar yoki davlat, narx va uydan uzoqlik. Birinchi boʻlib farzandingiz gapirsin. Agar reja hisobga olishi kerak boʻlgan cheklov boʻlsa, buni oxirida emas, hozir ayting.",
+    "ru": "Пока список университетов не окончательный, обсудите, что важно ребёнку и семье: направление, язык обучения, город или страна, стоимость и расстояние от дома. Пусть ребёнок выскажется первым. Если есть ограничение, которое план должен учитывать, скажите о нём сейчас, а не в конце."
+   },
+   "prompts": [
+    {
+     "en": "What matters most to you in a university?",
+     "uz": "Universitetda eng muhim narsa nima?",
+     "ru": "Что самое важное в университете?"
+    },
+    {
+     "en": "In which cities or countries would you be happy to live?",
+     "uz": "Qaysi shahar yoki davlatlarda yashash maʼqul?",
+     "ru": "В каких городах или странах было бы комфортно жить?"
+    },
+    {
+     "en": "What worries you about studying far from home?",
+     "uz": "Uydan uzoqda oʻqishning qaysi tomoni xavotirga soladi?",
+     "ru": "Что беспокоит в учёбе далеко от дома?"
+    }
+   ],
+   "avoid": [
+    {
+     "en": "Judging universities only by fame or by where other children went.",
+     "uz": "Universitetlarni faqat mashhurligi yoki boshqa bolalar qayerga kirgani bilan baholash.",
+     "ru": "Судить об университетах только по известности или по тому, куда поступили другие дети."
+    }
+   ],
+   "why": {
+    "en": "Agreeing on these early saves months spent on places the family would not accept.",
+    "uz": "Bularni erta kelishib olish oila rozi boʻlmaydigan joylarga oylab vaqt sarflamaslikka yordam beradi.",
+    "ru": "Если договориться об этом заранее, не придётся тратить месяцы на варианты, которые семья не примет."
+   },
+   "tokens": [],
+   "evidence": {
+    "level": "L0",
+    "method": "self_report"
+   },
+   "sensitive": false,
+   "basis": [
+    {
+     "claim": "Hill & Tyson (2009), a meta-analysis of 50+ studies: academic socialisation (linking schoolwork to goals and interests) had the strongest positive link to middle-school achievement; homework help had a negative link.",
+     "url": "https://www.gse.harvard.edu/ideas/usable-knowledge/09/10/parental-involvement-puzzle",
+     "verified_at": "2026-10-07",
+     "secondary": true
+    }
+   ],
+   "facts": [],
+   "needs_verification": false,
+   "engineering_note": "If the talk surfaces a real limit, the parent can record it in C13-qlimit (m8_constraints); this task itself stores nothing.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-setbck",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "support_without_pressure",
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "trigger": {
+    "type": "event",
+    "events": [
+     "check_result_below_self_rating",
+     "official_score_below_target",
+     "decision_not_admitted"
+    ],
+    "max_once_per_days": 7
+   },
+   "minutes": 10,
+   "title": {
+    "en": "After a disappointing result: one calm talk",
+    "uz": "Koʻngildagidek boʻlmagan natijadan keyin: bitta xotirjam suhbat",
+    "ru": "После огорчительного результата: один спокойный разговор"
+   },
+   "instructions": {
+    "en": "Your child has just had a result that may feel disappointing. Before any advice, ask how it feels and listen. Then talk about what the result shows and what the next step is. Remind your child that one result is one step, not a verdict.",
+    "uz": "Farzandingiz hozirgina koʻngildagidek boʻlmagan natija oldi. Maslahat berishdan oldin oʻzini qanday his qilayotganini soʻrang va tinglang. Soʻng natija nimani koʻrsatayotgani va keyingi qadam nima ekani haqida gaplashing. Bitta natija hukm emas, balki yoʻldagi bitta qadam ekanini eslating.",
+    "ru": "Ребёнок только что получил результат, который может огорчить. Прежде чем давать советы, спросите, какое после этого настроение, и выслушайте. Затем обсудите, что показывает этот результат и какой следующий шаг. Напомните, что один результат — это один шаг, а не приговор."
+   },
+   "prompts": [
+    {
+     "en": "How do you feel about it?",
+     "uz": "Bu natija qanday taʼsir qildi?",
+     "ru": "Какое настроение после этого результата?"
+    },
+    {
+     "en": "What does this result show about what to work on?",
+     "uz": "Bu natija nimaga koʻproq eʼtibor berish kerakligini koʻrsatyapti?",
+     "ru": "Что этот результат показывает: над чем стоит поработать?"
+    },
+    {
+     "en": "What is one next step for this week?",
+     "uz": "Shu hafta uchun keyingi bitta qadam qanday?",
+     "ru": "Какой один следующий шаг на этой неделе?"
+    }
+   ],
+   "avoid": [
+    {
+     "en": "Comparisons with siblings, classmates or relatives.",
+     "uz": "Aka-uka, opa-singillar, sinfdoshlar yoki qarindoshlar bilan solishtirish.",
+     "ru": "Сравнения с братьями, сёстрами, одноклассниками или родственниками."
+    }
+   ],
+   "why": {
+    "en": "A calm talk after a setback makes the next step easier to plan.",
+    "uz": "Muvaffaqiyatsizlikdan keyingi xotirjam suhbat keyingi qadamni rejalashtirishni osonlashtiradi.",
+    "ru": "Спокойный разговор после неудачи помогает спланировать следующий шаг."
+   },
+   "tokens": [],
+   "evidence": {
+    "level": "L0",
+    "method": "self_report"
+   },
+   "sensitive": false,
+   "basis": [],
+   "facts": [],
+   "needs_verification": false,
+   "engineering_note": "The three event ids are proposals: a check level below the self-rating (§2.6), an official score below the roadmap target, and a university decision recorded as not admitted. The parent sees that a result came in, never the child's private answers.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-sleepd",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "support_without_pressure",
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "trigger": {
+    "type": "recurring",
+    "phases": [
+     "D",
+     "X"
+    ],
+    "first_after_days": 2,
+    "every_days": 60
+   },
+   "minutes": 10,
+   "title": {
+    "en": "Agree on sleep and a weekly rest day",
+    "uz": "Uyqu va haftalik dam olish kunini kelishib oling",
+    "ru": "Договоритесь о сне и одном дне отдыха в неделю"
+   },
+   "instructions": {
+    "en": "Agree with your child on a usual bedtime and one day a week without study tasks. The US Centers for Disease Control and Prevention (CDC) recommends 9 to 12 hours of sleep for children aged 6 to 12 and 8 to 10 hours for teenagers aged 13 to 17. A plan that leaves room for sleep and rest is easier to keep for months.",
+    "uz": "Farzandingiz bilan odatiy uxlash vaqti va haftada oʻqish vazifalarisiz bitta kunni kelishib oling. AQSh Kasalliklarni nazorat qilish va oldini olish markazlari (CDC) 6–12 yoshli bolalarga 9–12 soat, 13–17 yoshli oʻsmirlarga esa 8–10 soat uyquni tavsiya qiladi. Uyqu va dam olishga joy qoldirgan rejaga oylar davomida amal qilish osonroq.",
+    "ru": "Договоритесь с ребёнком о привычном времени отхода ко сну и об одном дне в неделю без учебных задач. Центры по контролю и профилактике заболеваний США (CDC) рекомендуют детям 6–12 лет спать 9–12 часов, а подросткам 13–17 лет — 8–10 часов. План, в котором есть место сну и отдыху, легче выдерживать месяцами."
+   },
+   "prompts": [
+    {
+     "en": "What time do you need to go to bed to get enough sleep?",
+     "uz": "Yaxshi uxlab olish uchun soat nechada yotish kerak?",
+     "ru": "Во сколько нужно ложиться, чтобы высыпаться?"
+    },
+    {
+     "en": "Which day of the week should be free from study?",
+     "uz": "Haftaning qaysi kuni oʻqishdan boʻsh boʻlsin?",
+     "ru": "Какой день недели оставить свободным от учёбы?"
+    },
+    {
+     "en": "What gets in the way of sleep: the phone, homework or something else?",
+     "uz": "Uyquga nima xalaqit beradi: telefonmi, uy vazifasimi yoki boshqa narsami?",
+     "ru": "Что мешает сну: телефон, домашние задания или что-то другое?"
+    }
+   ],
+   "avoid": [
+    {
+     "en": "Cutting sleep before a test to study more.",
+     "uz": "Imtihon oldidan koʻproq oʻqish uchun uyquni qisqartirish.",
+     "ru": "Сокращать сон перед экзаменом, чтобы больше заниматься."
+    }
+   ],
+   "why": {
+    "en": "Sleep is part of the plan, not a break from it.",
+    "uz": "Uyqu rejadan tanaffus emas, balki uning bir qismi.",
+    "ru": "Сон — часть плана, а не перерыв в нём."
+   },
+   "tokens": [],
+   "evidence": {
+    "level": "L0",
+    "method": "self_report"
+   },
+   "sensitive": false,
+   "basis": [],
+   "facts": [
+    {
+     "claim": "CDC \"About Sleep\": school age 6-12 years 9-12 hours of sleep; teens 13-17 years 8-10 hours. The CDC table cites the American Academy of Sleep Medicine consensus statement for children (Paruthi et al. 2016); the Sleep Research Society is co-author only of the adult statement.",
+     "url": "https://www.cdc.gov/sleep/about/index.html",
+     "verified_at": "2026-10-07",
+     "note": "Corrected 2026-10-07: the earlier claim credited the child and teen ranges to the AASM and the Sleep Research Society; the SRS statement covers adults only. The figures in the text were right."
+    }
+   ],
+   "needs_verification": false,
+   "engineering_note": "The student already sets rest days in the plan (cadence); this is a family conversation and stores nothing, so it never overrides the student's own setting.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-exmday",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "logistics_test_day",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "trigger": {
+    "type": "event",
+    "events": [
+     "test_sitting_in_days"
+    ],
+    "days_before": 3,
+    "tests": [
+     "SAT",
+     "IELTS",
+     "MS",
+     "DTM"
+    ]
+   },
+   "minutes": 15,
+   "title": {
+    "en": "{test}, {date}: check the test-day bag together",
+    "uz": "{test}, {date}: imtihon kuni uchun kerakli narsalarni birga tekshiring",
+    "ru": "{test}, {date}: проверьте вместе, всё ли готово к экзамену"
+   },
+   "instructions": {
+    "en": "{test} is on {date}. Go through the list with your child: the same ID that was used at registration, the admission ticket or pass, and everything the test's official page says to bring. Agree on the time to leave and who goes along. The evening before, keep the talk short and calm: no new topics and no warnings about what is at stake.",
+    "uz": "{test} {date} kuni boʻladi. Roʻyxatni farzandingiz bilan birga koʻrib chiqing: roʻyxatdan oʻtishda ishlatilgan hujjatning oʻzi, ruxsatnoma yoki kirish chiptasi va testning rasmiy sahifasida olib kelish kerak deb yozilgan barcha narsalar. Uydan chiqish vaqtini va kim birga borishini kelishib oling. Imtihon arafasida suhbatni qisqa va xotirjam tuting: yangi mavzular ham, natija qanchalik muhimligi haqidagi ogohlantirishlar ham kerak emas.",
+    "ru": "{test} — {date}. Пройдите список вместе с ребёнком: тот же документ, который использовался при регистрации, билет участника или пропуск и всё, что официальная страница теста просит взять с собой. Договоритесь, во сколько выходить и кто поедет вместе. Накануне вечером говорите коротко и спокойно: без новых тем и без напоминаний о том, как много поставлено на карту."
+   },
+   "per_test": {
+    "SAT": {
+     "en": "For the SAT: a fully charged device with Bluebook installed and exam setup completed, the admission ticket (a printed copy is preferred), a physical photo ID with the name exactly as on the ticket, and pencils or pens.",
+     "uz": "SAT uchun: toʻliq quvvatlangan, Bluebook oʻrnatilgan va imtihon sozlamalari bajarilgan qurilma, ruxsatnoma (admission ticket, chop etilgani maʼqul), ismi ruxsatnomadagi bilan aynan bir xil yozilgan rasmli hujjat (elektron emas, asl nusxa) va qalam yoki ruchka.",
+     "ru": "Для SAT: полностью заряженное устройство с установленным Bluebook и пройденной настройкой экзамена, admission ticket (лучше распечатанный), документ с фото в оригинале (не электронный), где имя написано точно как в билете, и карандаши или ручки."
+    },
+    "IELTS": {
+     "en": "For IELTS: the same passport or ID card that was used at booking.",
+     "uz": "IELTS uchun: roʻyxatdan oʻtishda koʻrsatilgan pasport yoki ID-kartaning oʻzi.",
+     "ru": "Для IELTS: тот же паспорт или ID-карта, что были указаны при записи."
+    }
+   },
+   "why": {
+    "en": "On test day the family's job is calm logistics; the preparation is already done.",
+    "uz": "Imtihon kuni oilaning vazifasi — xotirjam tashkiliy yordam; tayyorgarlik allaqachon bajarilgan.",
+    "ru": "В день экзамена задача семьи — спокойная организация; подготовка уже позади."
+   },
+   "tokens": [
+    "test",
+    "date"
+   ],
+   "evidence": {
+    "level": "L1",
+    "method": "self_report",
+    "fields": [
+     {
+      "key": "id_ready",
+      "type": "bool",
+      "label": {
+       "en": "The ID used at registration is ready and valid",
+       "uz": "Roʻyxatdan oʻtishda ishlatilgan hujjat tayyor va amal qiladi",
+       "ru": "Документ, указанный при регистрации, готов и действителен"
+      }
+     },
+     {
+      "key": "ticket_ready",
+      "type": "bool",
+      "label": {
+       "en": "The admission ticket or pass is printed or saved",
+       "uz": "Ruxsatnoma yoki kirish chiptasi chop etilgan yoki saqlangan",
+       "ru": "Билет участника или пропуск распечатан или сохранён"
+      }
+     },
+     {
+      "key": "items_ready",
+      "type": "bool",
+      "label": {
+       "en": "Everything on the official list is packed",
+       "uz": "Rasmiy roʻyxatdagi hamma narsa tayyorlab qoʻyilgan",
+       "ru": "Всё из официального списка собрано"
+      }
+     },
+     {
+      "key": "route_ready",
+      "type": "bool",
+      "label": {
+       "en": "We know the route and the time to leave",
+       "uz": "Yoʻnalish va uydan chiqish vaqti aniq",
+       "ru": "Маршрут и время выхода известны"
+      }
+     }
+    ]
+   },
+   "sensitive": false,
+   "basis": [],
+   "facts": [
+    {
+     "claim": "Digital SAT: bring a fully charged device with Bluebook installed and exam setup completed, the admission ticket from Bluebook (printed preferred), an acceptable physical photo ID, pencils or pens for scratch work, the College Board username and password, and an acceptable calculator if used.",
+     "url": "https://satsuite.collegeboard.org/sat/what-to-bring-do/what-to-bring",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "SAT ID: a physical photo document bearing the full legal name exactly as on the admission ticket; a student who travels to another country to test must use a valid passport. The page names special rules for some countries but none for Uzbekistan.",
+     "url": "https://satsuite.collegeboard.org/sat/what-to-bring-do/id-requirements",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "IELTS: \"Bring the same identification document that you used when you booked your test\"; with the wrong or a forgotten ID the candidate cannot take the test.",
+     "url": "https://ielts.org/take-a-test/preparation-resources/on-test-day",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "IDP: the ID on test day is the passport or national ID used at registration, and it is checked again at the Speaking test.",
+     "url": "https://ielts.idp.com/about/test-day/what-to-bring",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "needs_verification": false,
+   "engineering_note": "per_test text is shown only for the matching test; MS and DTM get the generic list (their pass and ID rules are C11 records). {date} is formatted by code in the parent's language.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-passpt",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "logistics_documents",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [
+    "destination_abroad OR test_plan includes SAT or IELTS"
+   ],
+   "trigger": {
+    "type": "once",
+    "phases": [
+     "D",
+     "X"
+    ],
+    "lead_days_before": {
+     "anchor": "first_test_registration_deadline_or_first_application_deadline",
+     "days": 60
+    }
+   },
+   "minutes": 10,
+   "title": {
+    "en": "Check your child's passport for travel abroad",
+    "uz": "Farzandingizning xorijga chiqish pasportini tekshiring",
+    "ru": "Проверьте загранпаспорт ребёнка"
+   },
+   "instructions": {
+    "en": "Studying abroad needs a biometric passport for travel abroad. Some tests ask for a passport too: the SAT requires one when your child tests in another country, and IELTS needs on test day the same document that was used at booking. Check whether your child has a travel passport and when it expires. If there is none, you can apply on my.gov.uz; your child must come in person to have biometric data taken. Do not type the passport number into this app.",
+    "uz": "Xorijda oʻqish uchun xorijga chiqish biometrik pasporti kerak. Baʼzi testlar ham pasport soʻraydi: SAT boshqa davlatda topshirilganda pasport talab qiladi, IELTS esa imtihon kuni roʻyxatdan oʻtishda koʻrsatilgan hujjatning oʻzini talab qiladi. Farzandingizda xorijga chiqish pasporti bor-yoʻqligini va uning amal qilish muddati qachon tugashini tekshiring. Agar boʻlmasa, my.gov.uz orqali ariza berishingiz mumkin; biometrik maʼlumotlarni topshirish uchun farzandingiz shaxsan borishi kerak. Pasport raqamini bu ilovaga kiritmang.",
+    "ru": "Для учёбы за рубежом нужен биометрический паспорт для выезда за границу. Паспорт требуют и некоторые тесты: SAT — если ребёнок сдаёт его в другой стране, а IELTS в день экзамена требует тот же документ, что был указан при записи. Проверьте, есть ли у ребёнка загранпаспорт и когда истекает его срок. Если паспорта нет, заявление можно подать на my.gov.uz; для сдачи биометрических данных ребёнок должен прийти лично. Не вводите номер паспорта в это приложение."
+   },
+   "why": {
+    "en": "Issuing a travel passport takes up to 10 working days, and up to a month in some cases, so it is best done well before a test or an application.",
+    "uz": "Xorijga chiqish pasportini rasmiylashtirish 10 ish kunigacha, baʼzi hollarda bir oygacha vaqt oladi, shuning uchun buni test yoki ariza muddatidan ancha oldin qilgan maʼqul.",
+    "ru": "Оформление загранпаспорта занимает до 10 рабочих дней, а в некоторых случаях до месяца, поэтому лучше заняться им задолго до теста или подачи документов."
+   },
+   "tokens": [],
+   "evidence": {
+    "level": "L1",
+    "method": "self_report",
+    "fields": [
+     {
+      "key": "has_passport",
+      "type": "choice",
+      "label": {
+       "en": "Does your child have a travel passport?",
+       "uz": "Farzandingizda xorijga chiqish pasporti bormi?",
+       "ru": "Есть ли у ребёнка загранпаспорт?"
+      },
+      "options": [
+       {
+        "value": "yes",
+        "label": {
+         "en": "Yes",
+         "uz": "Ha",
+         "ru": "Да"
+        }
+       },
+       {
+        "value": "no",
+        "label": {
+         "en": "No",
+         "uz": "Yoʻq",
+         "ru": "Нет"
+        }
+       },
+       {
+        "value": "applied",
+        "label": {
+         "en": "Applied, waiting",
+         "uz": "Ariza berilgan, kutyapmiz",
+         "ru": "Заявление подано, ждём"
+        }
+       }
+      ]
+     },
+     {
+      "key": "valid_until",
+      "type": "date",
+      "optional": true,
+      "show_if": {
+       "has_passport": "yes"
+      },
+      "label": {
+       "en": "Valid until",
+       "uz": "Amal qilish muddati",
+       "ru": "Действителен до"
+      }
+     }
+    ]
+   },
+   "sensitive": false,
+   "basis": [],
+   "facts": [
+    {
+     "claim": "Since 1 January 2021 citizens of Uzbekistan may leave the country only with the biometric travel passport (\"red passport\"), under PF-5156 (16 Aug 2017).",
+     "url": "https://kun.uz/news/2020/12/17/1-yanvardan-fuqarolar-faqat-qizil-pasport-bilan-ozbekiston-hududidan-chiqishi-mumkin",
+     "verified_at": "2026-10-07",
+     "secondary": true
+    },
+    {
+     "claim": "my.gov.uz service 418 (travel passport): online application, then a visit to a data collection point for fingerprints and a photograph; issued within 10 working days, up to one month for citizens aged 16-25 in cases needing extra review.",
+     "url": "https://my.gov.uz/uz/service/418",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "A parent may file the application for a child, but the child must be present when documents are submitted because biometric data are taken.",
+     "url": "https://kun.uz/news/2026/02/17/xorijga-chiqish-pasportini-qanday-olish-mumkin",
+     "verified_at": "2026-10-07",
+     "secondary": true
+    },
+    {
+     "claim": "The my.gov.uz page for service 418 lists, under \"Maʼlumot oʻrnida\", a notarised consent of the parents or guardians and a notarised undertaking of the accompanying person, both \"for minors\". It does not say in which cases they apply. Kun.uz (17 Feb 2026, secondary) says the other parent's consent is needed only in some cases: when one parent applies, when the parents are not married, or when a parent is absent. Not used in the parent-facing text.",
+     "url": "https://my.gov.uz/uz/service/418",
+     "verified_at": "2026-10-07",
+     "needs_verification": true,
+     "note": "Re-read from the page text on 2026-10-07 (the first pass had only a page summary). The scope is still unconfirmed by an official source."
+    },
+    {
+     "claim": "SAT ID: a physical photo document bearing the full legal name exactly as on the admission ticket; a student who travels to another country to test must use a valid passport. The page names special rules for some countries but none for Uzbekistan.",
+     "url": "https://satsuite.collegeboard.org/sat/what-to-bring-do/id-requirements",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "SAT ID page: the general list of acceptable IDs includes a \"government-issued military or national identification card\", and Uzbekistan has no country-specific rule. The checklist also requires a valid, physical, original document with the full legal name exactly as on the admission ticket and \"clearly legible English language text\". Whether the Uzbek ID card meets the English-text rule was not checked. The text therefore only says a passport is required when testing in another country.",
+     "url": "https://satsuite.collegeboard.org/sat/what-to-bring-do/id-requirements",
+     "verified_at": "2026-10-07",
+     "needs_verification": true,
+     "note": "Narrowed 2026-10-07: national ID cards are acceptable in general; only the English-text point is open."
+    },
+    {
+     "claim": "IELTS: \"Bring the same identification document that you used when you booked your test\"; with the wrong or a forgotten ID the candidate cannot take the test.",
+     "url": "https://ielts.org/take-a-test/preparation-resources/on-test-day",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "needs_verification": true,
+   "engineering_note": "valid_until is a plausibility-checked date (L1): in the future, and a warning if it ends before the last planned sitting or before the first intake. No passport number is ever collected.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true,
+   "verify_task": true
+  },
+  {
+   "id": "C13-docsch",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "logistics_documents",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "conditions": [
+    "roadmap has a university outside Uzbekistan"
+   ],
+   "trigger": {
+    "type": "once",
+    "phases": [
+     "X"
+    ],
+    "lead_days_before": {
+     "anchor": "first_application_deadline",
+     "days": 90
+    }
+   },
+   "minutes": 20,
+   "title": {
+    "en": "Ask the school for official grade records early",
+    "uz": "Maktabdan rasmiy baholar koʻchirmasini oldindan soʻrang",
+    "ru": "Заранее запросите в школе официальную выписку оценок"
+   },
+   "instructions": {
+    "en": "Universities abroad ask for school grade records, and some ask for a certified translation. With your child, ask the school administration how to get stamped and signed grade records for the years the universities ask for, and how long it takes. Each university's official page says what it accepts; the deadlines are on your child's roadmap.",
+    "uz": "Xorijiy universitetlar maktab baholari haqidagi hujjatni soʻraydi, baʼzilari esa uning tasdiqlangan tarjimasini ham talab qiladi. Farzandingiz bilan birga maktab maʼmuriyatidan universitetlar soʻragan yillar uchun muhr va imzo bilan tasdiqlangan baholar koʻchirmasini qanday olish mumkinligini va bu qancha vaqt olishini soʻrang. Har bir universitet nimani qabul qilishi uning rasmiy sahifasida yozilgan; muddatlar farzandingizning yoʻl xaritasida bor.",
+    "ru": "Зарубежные университеты запрашивают документ об оценках в школе, а некоторые — и его заверенный перевод. Вместе с ребёнком узнайте у администрации школы, как получить выписку оценок с печатью и подписью за те годы, которые просят университеты, и сколько времени это займёт. Что принимает каждый университет, написано на его официальной странице; сроки есть в дорожной карте ребёнка."
+   },
+   "why": {
+    "en": "Asking early leaves time if the school office is busy or a translation is needed.",
+    "uz": "Oldindan soʻrash maktab idorasi band boʻlsa yoki tarjima kerak boʻlsa, vaqt zaxirasini qoldiradi.",
+    "ru": "Если спросить заранее, останется запас времени на случай, если школа занята или нужен перевод."
+   },
+   "tokens": [],
+   "evidence": {
+    "level": "L1",
+    "method": "self_report",
+    "fields": [
+     {
+      "key": "asked_school",
+      "type": "bool",
+      "label": {
+       "en": "We asked the school how to get the records",
+       "uz": "Maktabdan koʻchirmani qanday olishni soʻradik",
+       "ru": "Мы узнали в школе, как получить выписку"
+      }
+     },
+     {
+      "key": "translation",
+      "type": "choice",
+      "label": {
+       "en": "Is a translation needed?",
+       "uz": "Tarjima kerakmi?",
+       "ru": "Нужен ли перевод?"
+      },
+      "options": [
+       {
+        "value": "yes",
+        "label": {
+         "en": "Yes",
+         "uz": "Ha",
+         "ru": "Да"
+        }
+       },
+       {
+        "value": "no",
+        "label": {
+         "en": "No",
+         "uz": "Yoʻq",
+         "ru": "Нет"
+        }
+       },
+       {
+        "value": "not_sure",
+        "label": {
+         "en": "Not sure yet",
+         "uz": "Hali aniq emas",
+         "ru": "Пока неясно"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "sensitive": false,
+   "basis": [],
+   "facts": [],
+   "needs_verification": false,
+   "engineering_note": "No document rule is stated as fact here: which years, translation and certification are per university (C11 transcript template and M1 records).",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-findoc",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "money",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "conditions": [
+    "m7_aid_need in [partial, full]"
+   ],
+   "trigger": {
+    "type": "once",
+    "phases": [
+     "X"
+    ],
+    "lead_days_before": {
+     "anchor": "milestone:m_aid_forms",
+     "days": 60
+    }
+   },
+   "minutes": 30,
+   "title": {
+    "en": "Gather the family's financial documents",
+    "uz": "Oilaning moliyaviy hujjatlarini yigʻing",
+    "ru": "Соберите финансовые документы семьи"
+   },
+   "instructions": {
+    "en": "Universities that give financial aid ask the family to show income and savings. Check each university's aid page, or ask the mentor, for the exact list, then start gathering: employer letters, tax records, bank statements. Some US universities use the CSS Profile form, which costs $25 for the first university and $16 for each additional one. Keep the documents yourself; this app does not need them, so do not upload them here.",
+    "uz": "Moliyaviy yordam beradigan universitetlar oiladan daromad va jamgʻarmalarni koʻrsatishni soʻraydi. Aniq roʻyxatni har bir universitetning moliyaviy yordam sahifasidan bilib oling yoki mentordan soʻrang, soʻng hujjatlarni yigʻishni boshlang: ish joyidan maʼlumotnomalar, soliq hujjatlari, bank koʻchirmalari. AQShdagi baʼzi universitetlar CSS Profile shaklidan foydalanadi: u birinchi universitet uchun 25 dollar, har bir keyingisi uchun 16 dollar turadi. Hujjatlarni oʻzingizda saqlang: bu ilovaga ular kerak emas, shuning uchun ularni bu yerga yuklamang.",
+    "ru": "Университеты, которые дают финансовую помощь, просят семью показать доходы и сбережения. Точный список узнайте на странице финансовой помощи каждого университета или у ментора, а затем начинайте собирать: справки с работы, налоговые документы, банковские выписки. Некоторые университеты США используют форму CSS Profile: она стоит 25 долларов за первый университет и 16 долларов за каждый следующий. Храните документы у себя: этому приложению они не нужны, поэтому не загружайте их сюда."
+   },
+   "why": {
+    "en": "Letters and statements are not always issued the same day, so starting early keeps you clear of the aid deadlines.",
+    "uz": "Maʼlumotnoma va koʻchirmalar har doim ham shu kuniyoq berilmaydi, shuning uchun erta boshlash moliyaviy yordam muddatlarini oʻtkazib yubormaslikka yordam beradi.",
+    "ru": "Справки и выписки не всегда выдают в тот же день, поэтому, начав заранее, вы не пропустите сроки подачи на помощь."
+   },
+   "tokens": [],
+   "evidence": {
+    "level": "L1",
+    "method": "self_report",
+    "fields": [
+     {
+      "key": "income_docs",
+      "type": "bool",
+      "label": {
+       "en": "Income documents gathered",
+       "uz": "Daromad hujjatlari yigʻildi",
+       "ru": "Документы о доходах собраны"
+      }
+     },
+     {
+      "key": "bank_docs",
+      "type": "bool",
+      "label": {
+       "en": "Bank statements requested",
+       "uz": "Bank koʻchirmalari soʻraldi",
+       "ru": "Банковские выписки запрошены"
+      }
+     },
+     {
+      "key": "list_checked",
+      "type": "bool",
+      "label": {
+       "en": "We checked which forms each university asks for",
+       "uz": "Har bir universitet qaysi shakllarni soʻrashini tekshirdik",
+       "ru": "Мы проверили, какие формы просит каждый университет"
+      }
+     }
+    ]
+   },
+   "sensitive": true,
+   "basis": [],
+   "facts": [
+    {
+     "claim": "CSS Profile: $25 for the first institution and $16 for each additional institution.",
+     "url": "https://cssprofile.collegeboard.org/help-center/what-cost-css-profile-and-what-payment-methods-are-accepted",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "needs_verification": false,
+   "engineering_note": "Sensitive (money): code-rendered only; nothing from this task reaches the AI (D14 (5)); no uploads are offered, by design.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-testbg",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "money",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "trigger": {
+    "type": "event",
+    "events": [
+     "roadmap_ready",
+     "test_plan_changed"
+    ]
+   },
+   "minutes": 20,
+   "title": {
+    "en": "Agree on the test budget and dates",
+    "uz": "Testlar uchun xarajat va sanalarni kelishib oling",
+    "ru": "Договоритесь о бюджете и датах тестов"
+   },
+   "instructions": {
+    "en": "Your child's roadmap plans these tests: {tests}. Look up the current fee of each on its official page and agree together which sittings the family will pay for, and when. Decide who registers and who pays. Registering before the regular deadline avoids late fees: for the SAT, late registration costs $38 more.",
+    "uz": "Farzandingizning yoʻl xaritasida quyidagi testlar rejalashtirilgan: {tests}. Har birining hozirgi narxini uning rasmiy sahifasidan bilib oling va oila qaysi imtihonlar uchun qachon toʻlashini birga kelishib oling. Kim roʻyxatdan oʻtkazishi va kim toʻlashini hal qiling. Oddiy muddat tugashidan oldin roʻyxatdan oʻtish kechikish toʻlovidan qutqaradi: SATda kech roʻyxatdan oʻtish 38 dollar qimmatroq.",
+    "ru": "В дорожной карте ребёнка запланированы такие тесты: {tests}. Узнайте текущую стоимость каждого на его официальной странице и вместе решите, за какие даты сдачи семья заплатит и когда. Решите, кто регистрирует и кто платит. Регистрация до обычного срока избавляет от платы за опоздание: поздняя регистрация на SAT стоит на 38 долларов дороже."
+   },
+   "prompts": [
+    {
+     "en": "Which test matters most for your plan, and why?",
+     "uz": "Reja uchun qaysi test eng muhim va nima uchun?",
+     "ru": "Какой тест важнее всего для плана и почему?"
+    },
+    {
+     "en": "How many attempts are planned, and what if the first score is lower than hoped?",
+     "uz": "Nechta urinish rejalashtirilgan va birinchi natija kutilganidan past chiqsa-chi?",
+     "ru": "Сколько попыток запланировано и что, если первый результат окажется ниже ожидаемого?"
+    },
+    {
+     "en": "Who registers, and by which date?",
+     "uz": "Kim va qaysi sanagacha roʻyxatdan oʻtkazadi?",
+     "ru": "Кто регистрирует и до какого числа?"
+    }
+   ],
+   "per_test": {
+    "SAT": {
+     "en": "SAT: $68 plus a $43 international fee (College Board prices as of October 2026). Outside the US, fee waivers are given only to eligible US citizens.",
+     "uz": "SAT: 68 dollar va 43 dollar xalqaro toʻlov (College Board narxlari, 2026-yil oktabr holatiga koʻra). AQShdan tashqarida toʻlovdan ozod qilish faqat talabga javob beradigan AQSh fuqarolariga beriladi.",
+     "ru": "SAT: 68 долларов плюс международный сбор 43 доллара (цены College Board на октябрь 2026 года). За пределами США освобождение от оплаты дают только гражданам США, которые соответствуют условиям."
+    },
+    "IELTS": {
+     "en": "IELTS: the fee depends on the test centre; check the centre's current price before booking.",
+     "uz": "IELTS: narx test markaziga bogʻliq; roʻyxatdan oʻtishdan oldin markazning hozirgi narxini tekshiring.",
+     "ru": "IELTS: стоимость зависит от центра тестирования; перед записью проверьте актуальную цену центра."
+    },
+    "MS": {
+     "en": "Milliy sertifikat: registration is on my.gov.uz; check the current fee there before registering.",
+     "uz": "Milliy sertifikat: roʻyxatdan oʻtish my.gov.uz orqali; roʻyxatdan oʻtishdan oldin hozirgi narxni oʻsha yerda tekshiring.",
+     "ru": "Milliy sertifikat: регистрация на my.gov.uz; перед регистрацией проверьте там актуальную стоимость."
+    },
+    "DTM": {
+     "en": "State entrance test: for the 2026-2027 admission the fee was 206,000 soʻm (0.5 BHM at the BHM of that time); current-year graduates and some other groups were exempt. Check the fee and the rule for your child's year on my.uzbmb.uz.",
+     "uz": "Davlat test sinovi: 2026–2027-oʻquv yili qabulida toʻlov 206 000 soʻm (oʻsha paytdagi BHMning 0,5 baravari) boʻlgan; joriy yil bitiruvchilari va baʼzi boshqa toifalar toʻlovdan ozod qilingan. Farzandingiz qabul yili uchun toʻlov va qoidani my.uzbmb.uz saytida tekshiring.",
+     "ru": "Государственный вступительный тест: при приёме на 2026–2027 учебный год плата составляла 206 000 сумов (0,5 БРВ по размеру БРВ на тот момент); выпускники текущего года и некоторые другие категории были освобождены от оплаты. Плату и правило для года поступления ребёнка проверьте на my.uzbmb.uz."
+    }
+   },
+   "why": {
+    "en": "Agreeing in advance means a registration deadline never waits on a money question.",
+    "uz": "Oldindan kelishib olsangiz, roʻyxatdan oʻtish muddati pul masalasi tufayli oʻtib ketmaydi.",
+    "ru": "Если договориться заранее, срок регистрации не сорвётся из-за денежного вопроса."
+   },
+   "tokens": [
+    "tests"
+   ],
+   "evidence": {
+    "level": "L1",
+    "method": "self_report",
+    "fields": [
+     {
+      "key": "agreed",
+      "type": "choice",
+      "label": {
+       "en": "Which sittings are agreed?",
+       "uz": "Qaysi imtihonlar kelishildi?",
+       "ru": "О каких датах сдачи договорились?"
+      },
+      "options": [
+       {
+        "value": "all",
+        "label": {
+         "en": "All of them",
+         "uz": "Hammasi",
+         "ru": "Обо всех"
+        }
+       },
+       {
+        "value": "some",
+        "label": {
+         "en": "Some of them",
+         "uz": "Baʼzilari",
+         "ru": "О некоторых"
+        }
+       },
+       {
+        "value": "not_yet",
+        "label": {
+         "en": "Not yet",
+         "uz": "Hali yoʻq",
+         "ru": "Пока ни о каких"
+        }
+       }
+      ]
+     },
+     {
+      "key": "registers",
+      "type": "choice",
+      "label": {
+       "en": "Who registers?",
+       "uz": "Kim roʻyxatdan oʻtkazadi?",
+       "ru": "Кто регистрирует?"
+      },
+      "options": [
+       {
+        "value": "child",
+        "label": {
+         "en": "My child",
+         "uz": "Farzandim",
+         "ru": "Ребёнок"
+        }
+       },
+       {
+        "value": "parent",
+        "label": {
+         "en": "I do",
+         "uz": "Men",
+         "ru": "Я"
+        }
+       },
+       {
+        "value": "together",
+        "label": {
+         "en": "Together",
+         "uz": "Birga",
+         "ru": "Вместе"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "sensitive": false,
+   "basis": [],
+   "facts": [
+    {
+     "claim": "SAT registration fee outside the US: $68 plus a $43 international fee. The page gives no end date for this amount: its caption \"Fees Through June 2027\" belongs to the table of additional fees below it.",
+     "url": "https://satsuite.collegeboard.org/sat/registration/international-testing/fees",
+     "verified_at": "2026-10-07",
+     "note": "Corrected 2026-10-07: the text had dated the $68 + $43 \"through June 2027\"; it now says \"as of October 2026\"."
+    },
+    {
+     "claim": "Test center fee of $24 at select locations only; the College Board list of centers known to charge it (August 2026-June 2027) has no center in Uzbekistan.",
+     "url": "https://satsuite.collegeboard.org/digital/help-center/does-my-test-center-charge-additional-test-center-fee",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "SAT late registration fee: $38 (registering after the regular deadline, before the late deadline), in the table \"Fees Through June 2027\"; additional fees are the same inside and outside the US.",
+     "url": "https://satsuite.collegeboard.org/sat/registration/international-testing/fees",
+     "verified_at": "2026-10-07",
+     "note": "URL changed 2026-10-07 from the US test-fees page to the international fees page, which applies to students in Uzbekistan. Both pages say $38."
+    },
+    {
+     "claim": "Outside the US, SAT fee waivers may only be granted to eligible US citizens residing outside the United States.",
+     "url": "https://satsuite.collegeboard.org/help-center/are-foreign-born-and-international-students-eligible-receive-fee-waivers",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "IDP Uzbekistan: \"For updated fees and pricing, please visit the dedicated test centres pages\" (centres in Bukhara, Tashkent, Termez and Urgench). Fees differ between centres, so no amount is stated in the text. The British Council Uzbekistan booking page (britishcouncil.uz/en/exam/ielts/book-test) did not respond on 2026-10-07.",
+     "url": "https://ielts.idp.com/uzbekistan/test-dates",
+     "verified_at": "2026-10-07",
+     "note": "Resolved 2026-10-07. The text no longer says the fee is \"shown when you book\", which no source opened here states."
+    },
+    {
+     "claim": "Milliy sertifikat exams: applicants register online on my.gov.uz (UzBMB announcement of 26 Aug 2026 for the exams of September-December 2026; the 2 Dec 2024 announcement links my.gov.uz service 891).",
+     "url": "https://gov.uz/oz/uzbmb/news/view/210873",
+     "verified_at": "2026-10-07",
+     "note": "URL changed 2026-10-07 to the current (2026) announcement; the 2024 one is at https://uzbmb.uz/post/view/milliy-sertifikat-imtihonlariga-ro-yxatga-olish-boshlandi2."
+    },
+    {
+     "claim": "my.gov.uz service 891 (Milliy sertifikat exam application): fee 594,000 soʻm (1.35 BHM) when applied through the portal, as read on 2026-10-07. Not shown to parents: the text tells them to check the current fee there.",
+     "url": "https://my.gov.uz/oz/service/891",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "State entrance test, admission for the 2026-2027 academic year (my.uzbmb.uz service 42): participation fee 206,000 soʻm (0.5 BHM); exempt: current-year graduates (\"joriy yil bitiruvchilari\"), youth in the \"Yoshlar daftari\", people in the social protection register and their children, people with disabilities, people under full state care, and applicants recommended for admission without exams.",
+     "url": "https://my.uzbmb.uz/service/42",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "The BHM is now 440,000 soʻm: my.gov.uz lists 396,000 soʻm as 0.9 BHM (service 418) and 594,000 soʻm as 1.35 BHM (service 891) on 2026-10-07. So 206,000 soʻm was 0.5 BHM at the earlier 412,000 soʻm, and the fee for the next admission cycle cannot be assumed to be 206,000 soʻm. Secondary sources (buxgalter.uz) date the rise to 1 September 2026.",
+     "url": "https://my.gov.uz/oz/service/891",
+     "verified_at": "2026-10-07",
+     "note": "Why the DTM line now says \"for the 2026-2027 admission the fee was\" instead of stating 206,000 soʻm as the current fee."
+    }
+   ],
+   "needs_verification": false,
+   "engineering_note": "{tests} is a code list of the roadmap test_plan in the parent's language (e.g. \"SAT (5 Dec), IELTS\"). per_test lines are shown only for tests in that list. Amounts are as of 2026-10-07 and must be re-checked each cycle (the DTM line names the 2026-2027 admission only). No amount is collected. Fact check 2026-10-07: SAT price dated \"as of October 2026\" (the June 2027 caption covers only the additional-fee table); the DTM line is past tense because the BHM rose to 440,000 soʻm after the 2026 admission.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-regpay",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "logistics_tests",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "trigger": {
+    "type": "event",
+    "events": [
+     "registration_window_open"
+    ],
+    "days_before_deadline": 10,
+    "never_within_hours_of_deadline": 48
+   },
+   "minutes": 15,
+   "title": {
+    "en": "{test}: register together with your child",
+    "uz": "{test}: farzandingiz bilan birga roʻyxatdan oʻting",
+    "ru": "{test}: зарегистрируйтесь вместе с ребёнком"
+   },
+   "instructions": {
+    "en": "Registration for {test} on {date} closes on {deadline}. Sit with your child while they register on the official site, and check that the name is spelt exactly as on the ID document your child will bring on test day (passport or ID card). Pay only on the official site. Never send card details or SMS codes to anyone, including people who say they are from Jamals.",
+    "uz": "{date} kuni boʻladigan {test} uchun roʻyxatdan oʻtish {deadline} kuni yopiladi. Farzandingiz rasmiy saytda roʻyxatdan oʻtayotganda yonida oʻtiring va ism-familiya imtihon kuni olib boriladigan hujjatdagidek (pasport yoki ID-karta) aynan yozilganini tekshiring. Toʻlovni faqat rasmiy saytda qiling. Karta maʼlumotlari yoki SMS kodlarini hech kimga, jumladan oʻzini Jamals xodimi deb tanishtirganlarga ham yubormang.",
+    "ru": "Регистрация на {test} ({date}) закрывается {deadline}. Посидите рядом с ребёнком, пока идёт регистрация на официальном сайте, и проверьте, что имя написано точно как в документе, который ребёнок возьмёт на экзамен (паспорт или ID-карта). Платите только на официальном сайте. Никому не отправляйте данные карты или коды из SMS, в том числе тем, кто называет себя сотрудниками Jamals."
+   },
+   "per_test": {
+    "SAT": {
+     "en": "SAT: the College Board accepts American Express, Discover, JCB, MasterCard, UnionPay and Visa cards, and PayPal.",
+     "uz": "SAT: College Board American Express, Discover, JCB, MasterCard, UnionPay va Visa kartalarini hamda PayPalni qabul qiladi.",
+     "ru": "SAT: College Board принимает карты American Express, Discover, JCB, MasterCard, UnionPay и Visa, а также PayPal."
+    },
+    "MS": {
+     "en": "Milliy sertifikat: registration is on my.gov.uz.",
+     "uz": "Milliy sertifikat: roʻyxatdan oʻtish my.gov.uz orqali.",
+     "ru": "Milliy sertifikat: регистрация на my.gov.uz."
+    }
+   },
+   "why": {
+    "en": "A name that does not match the ID can stop your child at the test door, and it takes a minute to check together.",
+    "uz": "Ism hujjatdagiga mos kelmasa, farzandingiz imtihonga kiritilmasligi mumkin, birga tekshirish esa bir daqiqa oladi.",
+    "ru": "Если имя не совпадает с документом, ребёнка могут не допустить к экзамену, а проверить это вместе — одна минута."
+   },
+   "tokens": [
+    "test",
+    "date",
+    "deadline"
+   ],
+   "evidence": {
+    "level": "L1",
+    "method": "self_report",
+    "fields": [
+     {
+      "key": "paid",
+      "type": "choice",
+      "label": {
+       "en": "Registration paid?",
+       "uz": "Roʻyxatdan oʻtish toʻlandimi?",
+       "ru": "Регистрация оплачена?"
+      },
+      "options": [
+       {
+        "value": "paid",
+        "label": {
+         "en": "Yes, paid",
+         "uz": "Ha, toʻlandi",
+         "ru": "Да, оплачено"
+        }
+       },
+       {
+        "value": "not_yet",
+        "label": {
+         "en": "Not yet",
+         "uz": "Hali yoʻq",
+         "ru": "Пока нет"
+        }
+       }
+      ]
+     },
+     {
+      "key": "name_checked",
+      "type": "bool",
+      "label": {
+       "en": "The name matches the ID document",
+       "uz": "Ism-familiya hujjatdagiga mos",
+       "ru": "Имя совпадает с документом"
+      }
+     }
+    ]
+   },
+   "pairs_with": "student registration task (C11, L5 upload of the confirmation)",
+   "sensitive": false,
+   "basis": [],
+   "facts": [
+    {
+     "claim": "SAT registration accepts American Express, Discover, JCB, MasterCard, UnionPay and Visa cards, and PayPal (not in Ghana).",
+     "url": "https://satsuite.collegeboard.org/sat/registration/fees-refunds/payment-methods",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "SAT ID: a physical photo document bearing the full legal name exactly as on the admission ticket; a student who travels to another country to test must use a valid passport. The page names special rules for some countries but none for Uzbekistan.",
+     "url": "https://satsuite.collegeboard.org/sat/what-to-bring-do/id-requirements",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Milliy sertifikat exams: applicants register online on my.gov.uz (UzBMB announcement of 26 Aug 2026 for the exams of September-December 2026; the 2 Dec 2024 announcement links my.gov.uz service 891).",
+     "url": "https://gov.uz/oz/uzbmb/news/view/210873",
+     "verified_at": "2026-10-07",
+     "note": "URL changed 2026-10-07 to the current (2026) announcement; the 2024 one is at https://uzbmb.uz/post/view/milliy-sertifikat-imtihonlariga-ro-yxatga-olish-boshlandi2."
+    }
+   ],
+   "needs_verification": false,
+   "engineering_note": "Dates come from the sitting's rule record (C11), never from this file. The window follows §4.5: register 5-10 days before the deadline, never in the last 48 h. Fact check 2026-10-07: \"as in the passport\" became \"as on the ID document your child will bring\": the SAT rule ties the name to the ID shown at the door (a passport or a national ID card), and IELTS to the ID used at booking.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-travel",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "logistics_travel",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "trigger": {
+    "type": "event",
+    "events": [
+     "test_sitting_in_days"
+    ],
+    "days_before": 14,
+    "requires": "registration_done"
+   },
+   "minutes": 15,
+   "title": {
+    "en": "{test}: plan the trip to the test centre",
+    "uz": "{test}: test markaziga borishni rejalashtiring",
+    "ru": "{test}: спланируйте дорогу до центра тестирования"
+   },
+   "instructions": {
+    "en": "Find the test centre's address in the registration confirmation or on the admission ticket. Plan the route, the travel time and the time to leave, with spare time for traffic. If the centre is in another city, decide whether to travel the day before and where your child will stay. Agree who goes with your child.",
+    "uz": "Test markazining manzilini roʻyxatdan oʻtish tasdigʻi yoki ruxsatnomadan toping. Yoʻnalish, yoʻl vaqti va uydan chiqish vaqtini tirbandlik uchun zaxira vaqt bilan rejalashtiring. Agar markaz boshqa shaharda boʻlsa, bir kun oldin yoʻlga chiqish va farzandingiz qayerda tunashini hal qiling. Farzandingiz bilan kim borishini kelishib oling.",
+    "ru": "Найдите адрес центра тестирования в подтверждении регистрации или в билете участника. Спланируйте маршрут, время в пути и время выхода с запасом на пробки. Если центр в другом городе, решите, ехать ли накануне и где ребёнок переночует. Договоритесь, кто поедет вместе с ребёнком."
+   },
+   "why": {
+    "en": "Planning the route in advance takes the rush out of the test morning.",
+    "uz": "Yoʻlni oldindan rejalashtirish imtihon kuni ertalabki shoshilishning oldini oladi.",
+    "ru": "Если спланировать дорогу заранее, утро экзамена пройдёт без спешки."
+   },
+   "tokens": [
+    "test"
+   ],
+   "evidence": {
+    "level": "L1",
+    "method": "self_report",
+    "fields": [
+     {
+      "key": "city",
+      "type": "text_short",
+      "max_chars": 40,
+      "label": {
+       "en": "City of the test centre",
+       "uz": "Test markazi joylashgan shahar",
+       "ru": "Город центра тестирования"
+      }
+     },
+     {
+      "key": "overnight",
+      "type": "choice",
+      "label": {
+       "en": "Travelling the day before?",
+       "uz": "Bir kun oldin yoʻlga chiqasizmi?",
+       "ru": "Выезжаете накануне?"
+      },
+      "options": [
+       {
+        "value": "yes",
+        "label": {
+         "en": "Yes",
+         "uz": "Ha",
+         "ru": "Да"
+        }
+       },
+       {
+        "value": "no",
+        "label": {
+         "en": "No",
+         "uz": "Yoʻq",
+         "ru": "Нет"
+        }
+       }
+      ]
+     },
+     {
+      "key": "companion",
+      "type": "choice",
+      "label": {
+       "en": "Who goes with your child?",
+       "uz": "Farzandingiz bilan kim boradi?",
+       "ru": "Кто едет с ребёнком?"
+      },
+      "options": [
+       {
+        "value": "parent",
+        "label": {
+         "en": "A parent",
+         "uz": "Ota yoki ona",
+         "ru": "Родитель"
+        }
+       },
+       {
+        "value": "relative",
+        "label": {
+         "en": "Another relative",
+         "uz": "Boshqa qarindosh",
+         "ru": "Другой родственник"
+        }
+       },
+       {
+        "value": "alone",
+        "label": {
+         "en": "Nobody, my child goes alone",
+         "uz": "Hech kim, farzandim oʻzi boradi",
+         "ru": "Никто, ребёнок едет сам"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "sensitive": false,
+   "basis": [],
+   "facts": [],
+   "needs_verification": false,
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-moneyt",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "money",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "trigger": {
+    "type": "once",
+    "phases": [
+     "D"
+    ],
+    "before": "C13-qbudgt",
+    "then_every_days": 365
+   },
+   "minutes": 20,
+   "title": {
+    "en": "Talk honestly about what the family can pay",
+    "uz": "Oila qancha toʻlay olishi haqida ochiq gaplashing",
+    "ru": "Честно обсудите, сколько семья может платить"
+   },
+   "instructions": {
+    "en": "Tell your child, in a way that suits their age, what the family can spend on study each year and what it cannot. Explain that this is a fact for planning, not a judgement of them. Then look together for routes that fit: grants and scholarships, universities with lower fees, or studying in Uzbekistan first.",
+    "uz": "Farzandingizga uning yoshiga mos tarzda oila har yili oʻqishga qancha sarflay olishi va qancha sarflay olmasligini ayting. Bu unga baho emas, balki rejalashtirish uchun kerak boʻlgan maʼlumot ekanini tushuntiring. Soʻng mos yoʻllarni birga qidiring: grant va stipendiyalar, narxi pastroq universitetlar yoki avval Oʻzbekistonda oʻqish.",
+    "ru": "Расскажите ребёнку, с учётом возраста, сколько семья может тратить на учёбу в год, а сколько не может. Объясните, что это факт для планирования, а не оценка ребёнка. Затем вместе поищите подходящие пути: гранты и стипендии, университеты с более низкой платой или учёба сначала в Узбекистане."
+   },
+   "prompts": [
+    {
+     "en": "How much did you think studying would cost?",
+     "uz": "Oʻqish narxi haqida qanday tasavvur bor edi?",
+     "ru": "Какое было представление о стоимости учёбы?"
+    },
+    {
+     "en": "Which options look possible now that you know the budget?",
+     "uz": "Byudjet maʼlum boʻlgach, qaysi variantlar mumkin koʻrinadi?",
+     "ru": "Какие варианты кажутся возможными теперь, когда бюджет известен?"
+    },
+    {
+     "en": "What could lower the cost: a scholarship, a grant, a cheaper city?",
+     "uz": "Xarajatni nima kamaytirishi mumkin: stipendiya, grant yoki arzonroq shahar?",
+     "ru": "Что может снизить расходы: стипендия, грант, более дешёвый город?"
+    }
+   ],
+   "avoid": [
+    {
+     "en": "Making your child feel guilty about the cost.",
+     "uz": "Farzandingizda xarajat uchun aybdorlik hissini uygʻotish.",
+     "ru": "Вызывать у ребёнка чувство вины из-за расходов."
+    }
+   ],
+   "why": {
+    "en": "A child who knows the real budget can build a list that works, instead of hoping for one that does not.",
+    "uz": "Haqiqiy byudjetni bilgan farzand amalga oshmaydigan roʻyxatga umid bogʻlash oʻrniga, ishlaydigan roʻyxat tuza oladi.",
+    "ru": "Ребёнок, который знает реальный бюджет, может составить работающий список, а не надеяться на несбыточный."
+   },
+   "tokens": [],
+   "evidence": {
+    "level": "L0",
+    "method": "self_report"
+   },
+   "pairs_with": "C13-qbudgt",
+   "sensitive": true,
+   "basis": [],
+   "facts": [],
+   "needs_verification": false,
+   "engineering_note": "Stores nothing; the amount is entered only in C13-qbudgt (m7_annual_budget).",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-aidtlk",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "money",
+   "stages": [
+    "S2",
+    "S3"
+   ],
+   "conditions": [
+    "m7_aid_need in [partial, full]",
+    "roadmap has a university with an aid page on record"
+   ],
+   "trigger": {
+    "type": "once",
+    "phases": [
+     "X"
+    ]
+   },
+   "minutes": 20,
+   "title": {
+    "en": "Read one university's financial aid page together",
+    "uz": "Bitta universitetning moliyaviy yordam sahifasini birga oʻqing",
+    "ru": "Прочитайте вместе страницу финансовой помощи одного университета"
+   },
+   "instructions": {
+    "en": "Open the official financial aid page of this university with your child: {uni}. Find three things: whether it gives aid to international students, whether aid depends on the family's need or on results, and which forms and deadlines it asks for. Note anything unclear to ask the mentor.",
+    "uz": "Farzandingiz bilan birga ushbu universitetning rasmiy moliyaviy yordam sahifasini oching: {uni}. Uchta narsani toping: u xalqaro talabalarga yordam beradimi, yordam oilaning ehtiyojiga yoki natijalarga bogʻliqmi, qanday shakllar va muddatlarni soʻraydi. Tushunarsiz joylarni mentordan soʻrash uchun yozib qoʻying.",
+    "ru": "Откройте вместе с ребёнком официальную страницу финансовой помощи этого университета: {uni}. Найдите три вещи: даёт ли он помощь иностранным студентам, зависит ли помощь от нужды семьи или от результатов, какие формы и сроки он требует. Запишите непонятное, чтобы спросить у ментора."
+   },
+   "why": {
+    "en": "Aid rules differ a lot between universities; reading one page together makes the others easier.",
+    "uz": "Moliyaviy yordam qoidalari universitetlarda juda farq qiladi; bitta sahifani birga oʻqish qolganlarini tushunishni osonlashtiradi.",
+    "ru": "Правила помощи сильно различаются между университетами; если разобрать одну страницу вместе, остальные читать легче."
+   },
+   "tokens": [
+    "uni"
+   ],
+   "evidence": {
+    "level": "L1",
+    "method": "self_report",
+    "fields": [
+     {
+      "key": "aid_intl",
+      "type": "choice",
+      "label": {
+       "en": "Aid for international students?",
+       "uz": "Xalqaro talabalarga yordam bormi?",
+       "ru": "Есть помощь иностранным студентам?"
+      },
+      "options": [
+       {
+        "value": "yes",
+        "label": {
+         "en": "Yes",
+         "uz": "Ha",
+         "ru": "Да"
+        }
+       },
+       {
+        "value": "no",
+        "label": {
+         "en": "No",
+         "uz": "Yoʻq",
+         "ru": "Нет"
+        }
+       },
+       {
+        "value": "unclear",
+        "label": {
+         "en": "Not clear",
+         "uz": "Aniq emas",
+         "ru": "Неясно"
+        }
+       }
+      ]
+     },
+     {
+      "key": "aid_basis",
+      "type": "choice",
+      "label": {
+       "en": "What is aid based on?",
+       "uz": "Yordam nimaga asoslanadi?",
+       "ru": "От чего зависит помощь?"
+      },
+      "options": [
+       {
+        "value": "need",
+        "label": {
+         "en": "Family need",
+         "uz": "Oilaning ehtiyoji",
+         "ru": "От нужды семьи"
+        }
+       },
+       {
+        "value": "merit",
+        "label": {
+         "en": "Results",
+         "uz": "Natijalar",
+         "ru": "От результатов"
+        }
+       },
+       {
+        "value": "both",
+        "label": {
+         "en": "Both",
+         "uz": "Ikkalasi",
+         "ru": "От того и другого"
+        }
+       },
+       {
+        "value": "unclear",
+        "label": {
+         "en": "Not clear",
+         "uz": "Aniq emas",
+         "ru": "Неясно"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "sensitive": false,
+   "basis": [],
+   "facts": [],
+   "needs_verification": false,
+   "engineering_note": "{uni} is the university name from the catalog with its official aid URL linked by code (M4 record). The parent's reading is not a verified fact and must never update M4.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-appfee",
+   "kind": "parent_task",
+   "task_kind": "parent",
+   "type": "contact",
+   "category": "money",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "trigger": {
+    "type": "event",
+    "events": [
+     "application_deadline_in_days"
+    ],
+    "days_before": 14,
+    "per": "university"
+   },
+   "minutes": 10,
+   "title": {
+    "en": "Check the application fee: {uni}",
+    "uz": "Ariza toʻlovini tekshiring: {uni}",
+    "ru": "Проверьте сбор за подачу заявления: {uni}"
+   },
+   "instructions": {
+    "en": "{uni}: the application is due on {deadline}. Check with your child whether the university charges an application fee for international applicants, whether a fee waiver applies, and who pays. On the Common App, each university's fees are listed on its College Information page; the Common App fee waiver is requested in the Profile section and confirmed by the school counselor. Since the 2026-2027 season, each college that charges a fee also shows whether it accepts the Common App fee waiver from all students, only from US students, or from no one.",
+    "uz": "{uni} — ariza topshirish muddati: {deadline}. Farzandingiz bilan universitet xalqaro abituriyentlardan ariza toʻlovi olishini, toʻlovdan ozod qilish (fee waiver) mumkinligini va kim toʻlashini tekshiring. Common App tizimida har bir universitetning toʻlovlari uning College Information sahifasida koʻrsatilgan; Common App toʻlovdan ozod qilish soʻrovi esa Profile boʻlimida yuboriladi va maktab maslahatchisi tomonidan tasdiqlanadi. 2026–2027-yilgi qabul mavsumidan boshlab toʻlov oladigan har bir universitet Common App toʻlovdan ozod qilishini barcha abituriyentlardan, faqat AQShlik abituriyentlardan qabul qilishini yoki umuman qabul qilmasligini ham koʻrsatadi.",
+    "ru": "{uni}: срок подачи заявления — {deadline}. Проверьте вместе с ребёнком, берёт ли университет сбор за заявление с иностранных абитуриентов, можно ли получить освобождение от сбора (fee waiver) и кто платит. В Common App сборы каждого университета указаны на его странице College Information, а освобождение от сбора Common App запрашивается в разделе Profile и подтверждается школьным консультантом. С сезона 2026–2027 каждый университет, который берёт сбор, также указывает, принимает ли он освобождение Common App от всех абитуриентов, только от абитуриентов из США или ни от кого."
+   },
+   "why": {
+    "en": "Checking two weeks early leaves time to pay or to ask for a waiver.",
+    "uz": "Ikki hafta oldin tekshirish toʻlash yoki ozod qilishni soʻrash uchun vaqt qoldiradi.",
+    "ru": "Если проверить за две недели, останется время оплатить или попросить освобождение."
+   },
+   "tokens": [
+    "uni",
+    "deadline"
+   ],
+   "evidence": {
+    "level": "L1",
+    "method": "self_report",
+    "fields": [
+     {
+      "key": "fee_status",
+      "type": "choice",
+      "label": {
+       "en": "Application fee",
+       "uz": "Ariza toʻlovi",
+       "ru": "Сбор за заявление"
+      },
+      "options": [
+       {
+        "value": "paid",
+        "label": {
+         "en": "Paid",
+         "uz": "Toʻlangan",
+         "ru": "Оплачен"
+        }
+       },
+       {
+        "value": "waived",
+        "label": {
+         "en": "Waived",
+         "uz": "Ozod qilingan",
+         "ru": "Освобождены"
+        }
+       },
+       {
+        "value": "no_fee",
+        "label": {
+         "en": "No fee",
+         "uz": "Toʻlov yoʻq",
+         "ru": "Сбора нет"
+        }
+       },
+       {
+        "value": "not_yet",
+        "label": {
+         "en": "Not yet",
+         "uz": "Hali yoʻq",
+         "ru": "Пока нет"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "sensitive": false,
+   "basis": [],
+   "facts": [
+    {
+     "claim": "Common App \"Understanding application fees & fee waivers\" (© 2023): each college decides its fee or none; fees for domestic and international applicants are listed on the college's College Information page; the Common App Fee Waiver is in the Profile section (answer Yes, sign); the counselor is asked to confirm eligibility; many colleges also have their own waivers.",
+     "url": "https://www.commonapp.org/static/d8d4fe3bc09d9b0a67d715d9bb6b20f9/FY-Apply-College-Application-Fees-Waivers.pdf",
+     "verified_at": "2026-10-07",
+     "note": "Document dated 2023; re-checked 2026-10-07 against the 2026-2027 \"What's new\" deck: the fee waiver question is still in Profile and the counselor still completes a fee waiver form. Re-check each cycle."
+    },
+    {
+     "claim": "Common App 2026-2027: colleges that charge an application fee clearly indicate whether they accept the Common App fee waiver for all students, U.S. students only, or no students; students see this in the fee waiver question (with a new affirmation statement), on college information pages, in the requirements grid and in Review and submit; counselors complete the students' fee waiver forms.",
+     "url": "https://www.commonapp.org/files/webinar_decks/Whats-New-with-Common-App-First-Year-2026-2027.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "needs_verification": false,
+   "engineering_note": "One instance per university with an application milestone; the Common App sentence is shown only when that university applies through the Common App (M1 record). Fact check 2026-10-07: added the 2026-2027 rule that each college shows whom it accepts the Common App fee waiver from.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  }
+ ]
+}

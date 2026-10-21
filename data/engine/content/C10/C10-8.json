@@ -1,0 +1,345 @@
+{
+  "bank": "C10",
+  "batch": 8,
+  "kind": "catalog",
+  "note": "AP Calculus AB units 5-8 (SPEC-lessons rev. 2, 12 Oct 2026, §3.5, §12.6; P8 PLAN.md §3, author a4, agent:p8-a4, 14 Oct 2026). Catalog records, not quiz items. The unit names are College Board's own, read on AP Students on 12 Oct 2026 (the spec's §3.5); everything else is our own wording, and the split into lessons is our own outline. These units carry no practice, study_ref, end_check, stages or sessions: their C19 lessons (C19-APCA05-1 … C19-APCA08-3) name their own C1 families. JG's own content: no AP class of the academy is implied (owner, 4 Oct 2026). Fact check (P8 integration, 2026-10-14, C10/FACTCHECK.md \"P8\"): the cited page opened; the records are verified_auto.",
+  "items": [
+    {
+      "kind": "test_prep_unit",
+      "id": "C10-APCA05",
+      "test": "AP",
+      "section": "calculus_ab",
+      "domain": "calculus_ab",
+      "domain_label": {
+        "en": "AP Calculus AB",
+        "uz": "AP Calculus AB",
+        "ru": "AP Calculus AB"
+      },
+      "unit": 5,
+      "units_in_domain": 8,
+      "level_band": "core",
+      "skills": [
+        "extrema",
+        "mean_value_theorem",
+        "increasing_decreasing",
+        "concavity",
+        "optimization"
+      ],
+      "rungs": [
+        "precalc",
+        "calc"
+      ],
+      "title": {
+        "en": "Analytical Applications of Differentiation",
+        "uz": "Analytical Applications of Differentiation (hosila yordamida funksiyani tahlil qilish)",
+        "ru": "Analytical Applications of Differentiation (исследование функций с помощью производной)"
+      },
+      "goal": {
+        "en": "Find absolute extreme values on a closed interval and the c of the Mean Value Theorem, tell where a function increases, decreases and how it bends from the signs of f′ and f″, and solve optimization problems.",
+        "uz": "Yopiq kesmada eng katta va eng kichik qiymatlarni hamda oʻrta qiymat teoremasidagi c ni toping, f′ va f″ ishoralaridan funksiya qayerda oʻsishi, kamayishi va qanday egilishini aniqlang, optimallashtirish masalalarini yeching.",
+        "ru": "Находите наибольшее и наименьшее значения на отрезке и c из теоремы о среднем, определяйте по знакам f′ и f″, где функция возрастает, убывает и как выпукла, решайте задачи на оптимизацию."
+      },
+      "study": [
+        {
+          "en": "Closed-interval test: compare f at the critical points inside [a, b] (where f′ = 0 or f′ does not exist) and at a and b. Mean Value Theorem: some c in (a, b) has f′(c) = (f(b) − f(a))/(b − a).",
+          "uz": "Yopiq kesma usuli: f ning [a, b] ichidagi kritik nuqtalardagi (f′ = 0 yoki f′ mavjud boʻlmagan joylardagi) hamda a va b dagi qiymatlarini solishtiring. Oʻrta qiymat teoremasi: (a, b) ichida f′(c) = (f(b) − f(a))/(b − a) boʻlgan c bor.",
+          "ru": "Проверка на отрезке: сравните значения f в критических точках внутри [a, b] (где f′ = 0 или f′ не существует) и в a и b. Теорема о среднем: внутри (a, b) есть c, для которого f′(c) = (f(b) − f(a))/(b − a)."
+        },
+        {
+          "en": "f′ > 0: f increases; f′ < 0: f decreases. A sign change of f′ from + to − is a local maximum, from − to + a local minimum. An inflection point is where f″ changes sign.",
+          "uz": "f′ > 0: f oʻsadi; f′ < 0: f kamayadi. f′ ishorasi + dan − ga oʻtsa — lokal maksimum, − dan + ga oʻtsa — lokal minimum. Burilish nuqtasi — f″ ishorasini oʻzgartiradigan joy.",
+          "ru": "f′ > 0: f возрастает; f′ < 0: f убывает. Смена знака f′ с + на − — локальный максимум, с − на + — локальный минимум. Точка перегиба — там, где f″ меняет знак."
+        },
+        {
+          "en": "Optimization: write the quantity as a function of one variable with its domain, solve f′ = 0, and compare with the ends of the domain.",
+          "uz": "Optimallashtirish: kattalikni aniqlanish sohasi bilan birga bitta oʻzgaruvchining funksiyasi sifatida yozing, f′ = 0 ni yeching va soha chetlari bilan solishtiring.",
+          "ru": "Оптимизация: запишите величину как функцию одной переменной вместе с её областью, решите f′ = 0 и сравните со значениями на концах области."
+        }
+      ],
+      "official_links": [
+        {
+          "id": "ap_students_calc_ab",
+          "kind": "course",
+          "url": "https://apstudents.collegeboard.org/courses/ap-calculus-ab",
+          "label": {
+            "en": "AP Students: AP Calculus AB course page",
+            "uz": "AP Students: AP Calculus AB kursi sahifasi",
+            "ru": "AP Students: страница курса AP Calculus AB"
+          },
+          "verified_at": "2026-10-12"
+        }
+      ],
+      "facts": [
+        {
+          "claim": "AP Calculus AB unit 5 is \"Analytical Applications of Differentiation\".",
+          "url": "https://apstudents.collegeboard.org/courses/ap-calculus-ab",
+          "verified_at": "2026-10-12"
+        }
+      ],
+      "requires": {
+        "math_rung_min": "precalc",
+        "after_units": [
+          "C10-APCA04"
+        ],
+        "basis": "SPEC-lessons §3.2: AP Calculus AB needs the maths rung at least precalculus"
+      },
+      "source": "own",
+      "author": "agent:p8-a4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "test_prep_unit",
+      "id": "C10-APCA06",
+      "test": "AP",
+      "section": "calculus_ab",
+      "domain": "calculus_ab",
+      "domain_label": {
+        "en": "AP Calculus AB",
+        "uz": "AP Calculus AB",
+        "ru": "AP Calculus AB"
+      },
+      "unit": 6,
+      "units_in_domain": 8,
+      "level_band": "core",
+      "skills": [
+        "riemann_sums",
+        "antiderivatives",
+        "definite_integral",
+        "integral",
+        "fundamental_theorem",
+        "u_substitution",
+        "integral_rules"
+      ],
+      "rungs": [
+        "precalc",
+        "calc"
+      ],
+      "title": {
+        "en": "Integration and Accumulation of Change",
+        "uz": "Integration and Accumulation of Change (integrallash va oʻzgarishning toʻplanishi)",
+        "ru": "Integration and Accumulation of Change (интегрирование и накопление изменений)"
+      },
+      "goal": {
+        "en": "Estimate an accumulated change with Riemann and trapezoidal sums from a table, find antiderivatives, evaluate definite integrals with the Fundamental Theorem of Calculus, differentiate an accumulation function, and integrate by substitution.",
+        "uz": "Jadvaldan Riman va trapetsiya yigʻindilari bilan toʻplangan oʻzgarishni taxminlang, boshlangʻich funksiyalarni toping, aniq integrallarni asosiy teorema bilan hisoblang, toʻplovchi funksiyani differensiallang va oʻrniga qoʻyish usuli bilan integrallang.",
+        "ru": "Оценивайте накопленное изменение по таблице суммами Римана и трапеций, находите первообразные, вычисляйте определённые интегралы по основной теореме, дифференцируйте функцию накопления и интегрируйте заменой переменной."
+      },
+      "study": [
+        {
+          "en": "The integral of a rate from a to b is the total change. Left and right Riemann sums take the heights at the left or right ends of the pieces; a trapezoidal sum averages the two.",
+          "uz": "Oʻzgarish tezligining a dan b gacha integrali — umumiy oʻzgarish. Chap va oʻng Riman yigʻindilari balandlikni boʻlaklarning chap yoki oʻng uchidan oladi; trapetsiya yigʻindisi ikkalasining oʻrtachasini oladi.",
+          "ru": "Интеграл скорости изменения от a до b — это полное изменение. Левая и правая суммы Римана берут высоты на левых или правых концах частей; сумма трапеций берёт их среднее."
+        },
+        {
+          "en": "Fundamental Theorem: if F′ = f, then ∫ₐᵇ f(x) dx = F(b) − F(a); and the derivative of ∫ₐˣ f(t) dt is f(x).",
+          "uz": "Asosiy teorema: agar F′ = f boʻlsa, ∫ₐᵇ f(x) dx = F(b) − F(a); ∫ₐˣ f(t) dt ning hosilasi esa f(x).",
+          "ru": "Основная теорема: если F′ = f, то ∫ₐᵇ f(x) dx = F(b) − F(a); а производная ∫ₐˣ f(t) dt равна f(x)."
+        },
+        {
+          "en": "∫ eˣ dx = eˣ + C, ∫ (1/x) dx = ln|x| + C, ∫ sin x dx = −cos x + C, ∫ cos x dx = sin x + C. Substitution: set u = g(x), du = g′(x) dx, and change the limits to u-values.",
+          "uz": "∫ eˣ dx = eˣ + C, ∫ (1/x) dx = ln|x| + C, ∫ sin x dx = −cos x + C, ∫ cos x dx = sin x + C. Oʻrniga qoʻyish: u = g(x), du = g′(x) dx deb oling va chegaralarni u qiymatlariga oʻtkazing.",
+          "ru": "∫ eˣ dx = eˣ + C, ∫ (1/x) dx = ln|x| + C, ∫ sin x dx = −cos x + C, ∫ cos x dx = sin x + C. Замена: положите u = g(x), du = g′(x) dx и переведите пределы в значения u."
+        }
+      ],
+      "official_links": [
+        {
+          "id": "ap_students_calc_ab",
+          "kind": "course",
+          "url": "https://apstudents.collegeboard.org/courses/ap-calculus-ab",
+          "label": {
+            "en": "AP Students: AP Calculus AB course page",
+            "uz": "AP Students: AP Calculus AB kursi sahifasi",
+            "ru": "AP Students: страница курса AP Calculus AB"
+          },
+          "verified_at": "2026-10-12"
+        }
+      ],
+      "facts": [
+        {
+          "claim": "AP Calculus AB unit 6 is \"Integration and Accumulation of Change\".",
+          "url": "https://apstudents.collegeboard.org/courses/ap-calculus-ab",
+          "verified_at": "2026-10-12"
+        }
+      ],
+      "requires": {
+        "math_rung_min": "precalc",
+        "after_units": [
+          "C10-APCA05"
+        ],
+        "basis": "SPEC-lessons §3.2: AP Calculus AB needs the maths rung at least precalculus"
+      },
+      "source": "own",
+      "author": "agent:p8-a4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "test_prep_unit",
+      "id": "C10-APCA07",
+      "test": "AP",
+      "section": "calculus_ab",
+      "domain": "calculus_ab",
+      "domain_label": {
+        "en": "AP Calculus AB",
+        "uz": "AP Calculus AB",
+        "ru": "AP Calculus AB"
+      },
+      "unit": 7,
+      "units_in_domain": 8,
+      "level_band": "core",
+      "skills": [
+        "differential_equations",
+        "slope_fields",
+        "separation_of_variables",
+        "exponential_models"
+      ],
+      "rungs": [
+        "precalc",
+        "calc"
+      ],
+      "title": {
+        "en": "Differential Equations",
+        "uz": "Differential Equations (differensial tenglamalar)",
+        "ru": "Differential Equations (дифференциальные уравнения)"
+      },
+      "goal": {
+        "en": "Check whether a function solves a differential equation, read slopes from the equation, solve separable equations with an initial condition, and use the model dy/dt = ky for growth and decay.",
+        "uz": "Funksiya differensial tenglamaning yechimi ekanini tekshiring, qiyaliklarni tenglamadan oʻqing, oʻzgaruvchilari ajraladigan tenglamalarni boshlangʻich shart bilan yeching va oʻsish hamda kamayish uchun dy/dt = ky modelidan foydalaning.",
+        "ru": "Проверяйте, является ли функция решением дифференциального уравнения, находите наклоны по уравнению, решайте уравнения с разделяющимися переменными при начальном условии и применяйте модель dy/dt = ky для роста и убывания."
+      },
+      "study": [
+        {
+          "en": "A solution makes the equation true for every x: find its derivatives and put them in. The equation dy/dx = F(x, y) gives the slope of the solution curve at each point; a slope field draws these slopes.",
+          "uz": "Yechim tenglamani har bir x uchun toʻgʻri qiladi: hosilalarini toping va tenglamaga qoʻying. dy/dx = F(x, y) tenglama yechim egri chizigʻining har bir nuqtadagi qiyaligini beradi; yoʻnalishlar maydoni (slope field) shu qiyaliklarni chizadi.",
+          "ru": "Решение делает уравнение верным при всех x: найдите производные и подставьте их. Уравнение dy/dx = F(x, y) даёт наклон кривой-решения в каждой точке; поле направлений (slope field) рисует эти наклоны."
+        },
+        {
+          "en": "Separation of variables: put the y-terms with dy and the x-terms with dx, integrate both sides, and use the initial condition to find the constant before solving for y.",
+          "uz": "Oʻzgaruvchilarni ajratish: y li hadlarni dy bilan, x li hadlarni dx bilan bir tomonga yigʻing, ikkala tomonni integrallang va y ni ifodalashdan oldin boshlangʻich shartdan oʻzgarmasni toping.",
+          "ru": "Разделение переменных: соберите члены с y у dy, а члены с x у dx, проинтегрируйте обе части и найдите константу по начальному условию, прежде чем выражать y."
+        },
+        {
+          "en": "If dy/dt = ky, then y = y₀e^(kt). With a doubling time D, the amount is y₀ · 2ⁿ after n·D; with a half-life h, 1/2ⁿ of it is left after n·h.",
+          "uz": "Agar dy/dt = ky boʻlsa, y = y₀e^(kt). Ikkilanish vaqti D boʻlsa, n·D dan keyin miqdor y₀ · 2ⁿ; yarim yemirilish davri h boʻlsa, n·h dan keyin uning 1/2ⁿ qismi qoladi.",
+          "ru": "Если dy/dt = ky, то y = y₀e^(kt). При времени удвоения D через n·D количество равно y₀ · 2ⁿ; при периоде полураспада h через n·h остаётся 1/2ⁿ часть."
+        }
+      ],
+      "official_links": [
+        {
+          "id": "ap_students_calc_ab",
+          "kind": "course",
+          "url": "https://apstudents.collegeboard.org/courses/ap-calculus-ab",
+          "label": {
+            "en": "AP Students: AP Calculus AB course page",
+            "uz": "AP Students: AP Calculus AB kursi sahifasi",
+            "ru": "AP Students: страница курса AP Calculus AB"
+          },
+          "verified_at": "2026-10-12"
+        }
+      ],
+      "facts": [
+        {
+          "claim": "AP Calculus AB unit 7 is \"Differential Equations\".",
+          "url": "https://apstudents.collegeboard.org/courses/ap-calculus-ab",
+          "verified_at": "2026-10-12"
+        }
+      ],
+      "requires": {
+        "math_rung_min": "precalc",
+        "after_units": [
+          "C10-APCA06"
+        ],
+        "basis": "SPEC-lessons §3.2: AP Calculus AB needs the maths rung at least precalculus"
+      },
+      "source": "own",
+      "author": "agent:p8-a4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "test_prep_unit",
+      "id": "C10-APCA08",
+      "test": "AP",
+      "section": "calculus_ab",
+      "domain": "calculus_ab",
+      "domain_label": {
+        "en": "AP Calculus AB",
+        "uz": "AP Calculus AB",
+        "ru": "AP Calculus AB"
+      },
+      "unit": 8,
+      "units_in_domain": 8,
+      "level_band": "core",
+      "skills": [
+        "average_value",
+        "distance_displacement",
+        "definite_integral",
+        "area_between_curves",
+        "volume"
+      ],
+      "rungs": [
+        "precalc",
+        "calc"
+      ],
+      "title": {
+        "en": "Applications of Integration",
+        "uz": "Applications of Integration (integralning tatbiqlari)",
+        "ru": "Applications of Integration (приложения интеграла)"
+      },
+      "goal": {
+        "en": "Find the average value of a function, tell displacement from total distance, find the area between two curves, and find volumes with square cross sections, discs and washers.",
+        "uz": "Funksiyaning oʻrtacha qiymatini toping, koʻchishni umumiy yoʻldan farqlang, ikki egri chiziq orasidagi yuzani va kvadrat kesimlar, disklar hamda shaybalar yordamida hajmlarni toping.",
+        "ru": "Находите среднее значение функции, отличайте перемещение от пройденного пути, находите площадь между двумя кривыми и объёмы по квадратным сечениям, дискам и шайбам."
+      },
+      "study": [
+        {
+          "en": "The average value of f on [a, b] is (1/(b − a)) · ∫ₐᵇ f(x) dx. ∫ v(t) dt is the displacement; the total distance is ∫ |v(t)| dt.",
+          "uz": "f ning [a, b] dagi oʻrtacha qiymati (1/(b − a)) · ∫ₐᵇ f(x) dx. ∫ v(t) dt — koʻchish; umumiy yoʻl — ∫ |v(t)| dt.",
+          "ru": "Среднее значение f на [a, b] равно (1/(b − a)) · ∫ₐᵇ f(x) dx. ∫ v(t) dt — перемещение; полный путь — ∫ |v(t)| dt."
+        },
+        {
+          "en": "Area between curves: find where they meet, then integrate top minus bottom between those x-values.",
+          "uz": "Egri chiziqlar orasidagi yuza: ular kesishadigan nuqtalarni toping, keyin shu x qiymatlar orasida yuqoridagidan pastdagini ayirib integrallang.",
+          "ru": "Площадь между кривыми: найдите точки пересечения, затем проинтегрируйте разность верхней и нижней между этими значениями x."
+        },
+        {
+          "en": "Volume = ∫ A(x) dx: a square with side s(x) has A = s(x)², a disc of radius r(x) has A = π·r(x)², and a washer has A = π(R² − r²).",
+          "uz": "Hajm = ∫ A(x) dx: tomoni s(x) boʻlgan kvadratda A = s(x)², radiusi r(x) boʻlgan diskda A = π·r(x)², shaybada esa A = π(R² − r²).",
+          "ru": "Объём = ∫ A(x) dx: у квадрата со стороной s(x) A = s(x)², у диска радиуса r(x) A = π·r(x)², у шайбы A = π(R² − r²)."
+        }
+      ],
+      "official_links": [
+        {
+          "id": "ap_students_calc_ab",
+          "kind": "course",
+          "url": "https://apstudents.collegeboard.org/courses/ap-calculus-ab",
+          "label": {
+            "en": "AP Students: AP Calculus AB course page",
+            "uz": "AP Students: AP Calculus AB kursi sahifasi",
+            "ru": "AP Students: страница курса AP Calculus AB"
+          },
+          "verified_at": "2026-10-12"
+        }
+      ],
+      "facts": [
+        {
+          "claim": "AP Calculus AB unit 8 is \"Applications of Integration\".",
+          "url": "https://apstudents.collegeboard.org/courses/ap-calculus-ab",
+          "verified_at": "2026-10-12"
+        }
+      ],
+      "requires": {
+        "math_rung_min": "precalc",
+        "after_units": [
+          "C10-APCA07"
+        ],
+        "basis": "SPEC-lessons §3.2: AP Calculus AB needs the maths rung at least precalculus"
+      },
+      "source": "own",
+      "author": "agent:p8-a4",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ]
+}

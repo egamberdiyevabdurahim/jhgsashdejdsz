@@ -1,0 +1,1038 @@
+{
+  "bank": "C19",
+  "batch": 16,
+  "kind": "lessons",
+  "note": "SAT Reading and Writing lesson bodies, phase 3a (SPEC-lessons rev. 2, 12 Oct 2026, §3.3, §4.5, §9.1, §9.4, §11.1, §12.5 item 1; .superpowers/p8/PLAN.md §1 row a2 and §2), lane p8-a2, 2026-10-14: lessons 2 and 3 of the C10 units RWII01 (Central Ideas and Details) and RWII02 (Command of Evidence). C19-RWII01-2 teaches details (find the line, match its paraphrase); C19-RWII01-3 the main idea after a turn and in a story; C19-RWII02-2 findings that support or weaken a claim about a cause, and the two-part quotation; C19-RWII02-3 tables and described graphs with two variables, accurate and completing the claim. `lessons` are fixed-text lesson records (test and homework pools null; each `reserve` its own 20 new items in C6/C6-11.json); `items` are their piece questions (the key is options[0]; `page` names the lesson; each example piece ends on its blank step, which q2 asks). Our own wording and our own everyday or plainly fictional scenes; no College Board, Khan or other test material was read, adapted or given to a model. Exam text in English (§3.9); bodies, instructions and whys in en, uz and ru. Every number in RWII02-3 checked by .superpowers/p8/author-2-sympy.py. Key check 2 (P8, 14 Oct 2026): two blind solvers outside the author's session, P8s1 and P8s2, both chose the key on all 12 piece questions, so they are verified_auto with key_check_2 blind:P8s1+P8s2, and each lesson record with them, its 20 reserve items in C6-11.json verified the same way (C19/RECONCILE-p8.md).",
+  "lessons": [
+    {
+      "kind": "lesson",
+      "id": "C19-RWII01-2",
+      "course": "sat_rw",
+      "unit": "C10-RWII01",
+      "seq": 2,
+      "skill": "sat_rw:RWII01",
+      "requires": {
+        "english_cefr_min": "B1"
+      },
+      "title": {
+        "en": "SAT R&W: Central Ideas and Details: finding the detail",
+        "uz": "SAT R&W: Central Ideas and Details — matndan tafsilotni topish",
+        "ru": "SAT R&W: Central Ideas and Details — как найти деталь в тексте"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Lesson 1 was about the main idea. This lesson is about details: what the text says about one person or one thing.\nDetail questions look like this: \"According to the text, what is true about the new library?\" or \"Based on the text, why did Kamol change his plan?\"\nFour steps:\n1. Name the person or thing the question asks about.\n2. Find the line about it in the text.\n3. Say what that line means in your own words.\n4. Choose the option that says the same thing in other words.\nThe right answer is usually a paraphrase: the same meaning in different words. An option that copies words from the text is not right for that reason; check that it keeps the meaning.",
+            "uz": "1-dars asosiy gʻoya haqida edi. Bu dars tafsilotlar haqida: matn bitta odam yoki bitta narsa haqida nima deydi.\nTafsilot savollari shunday boʻladi: «According to the text, what is true about the new library?» yoki «Based on the text, why did Kamol change his plan?»\nToʻrt qadam:\n1. Savol qaysi odam yoki narsa haqida ekanini aniqlang.\n2. Matndan u haqidagi qatorni toping.\n3. Bu qator nima demoqchi ekanini oʻz soʻzlaringiz bilan ayting.\n4. Xuddi shu maʼnoni boshqa soʻzlar bilan aytgan variantni tanlang.\nToʻgʻri javob odatda parafraz, yaʼni boshqacha aytilgan gap boʻladi: maʼno bir xil, soʻzlar boshqa. Matndagi soʻzlarni takrorlagan variant shu sababli toʻgʻri boʻlib qolmaydi; maʼno saqlanganini tekshiring.",
+            "ru": "Урок 1 был о главной мысли. Этот урок — о деталях: что текст говорит об одном человеке или одной вещи.\nВопросы о деталях выглядят так: «According to the text, what is true about the new library?» или «Based on the text, why did Kamol change his plan?»\nЧетыре шага:\n1. Назовите человека или вещь, о которых спрашивают.\n2. Найдите в тексте строку о них.\n3. Скажите своими словами, что значит эта строка.\n4. Выберите вариант, который говорит то же самое другими словами.\nВерный ответ обычно paraphrase, то есть пересказ: смысл тот же, слова другие. Вариант, который повторяет слова текста, не становится от этого верным; проверьте, сохранён ли смысл."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii12q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Worked example: \"The new school library opens at eight, an hour before lessons. Its busiest time is not the morning, though: most students come after lunch, when the reading room is quiet and the computers are free.\"\nQuestion: According to the text, when do most students use the library?\n1. About whom? Most students.\n2. The line: \"most students come after lunch\".\n3. In my words: in the afternoon.\n4. An option such as \"before lessons start\" reuses the word \"lessons\" but changes the meaning; \"in the afternoon\" is the paraphrase.\nNow you: \"Mrs. Yusupova has run the corner shop for twenty years. She knows most of her customers by name, and she keeps a notebook of what each family usually buys, so that she can order more before it runs out.\"\nQuestion: According to the text, why does Mrs. Yusupova keep a notebook?\n1. About what? Her notebook.\n2. The line: \"so that she can order more before it runs out\".\n3. In my words: ?",
+            "uz": "Namuna: «The new school library opens at eight, an hour before lessons. Its busiest time is not the morning, though: most students come after lunch, when the reading room is quiet and the computers are free.»\nSavol: According to the text, when do most students use the library?\n1. Kim haqida? Koʻpchilik oʻquvchilar haqida.\n2. Qator: «most students come after lunch».\n3. Oʻz soʻzlarim bilan: tushdan keyin.\n4. «before lessons start» kabi variant «lessons» soʻzini takrorlaydi, lekin maʼnoni oʻzgartiradi; «in the afternoon» esa parafraz.\nEndi siz: «Mrs. Yusupova has run the corner shop for twenty years. She knows most of her customers by name, and she keeps a notebook of what each family usually buys, so that she can order more before it runs out.»\nSavol: According to the text, why does Mrs. Yusupova keep a notebook?\n1. Nima haqida? Uning daftari haqida.\n2. Qator: «so that she can order more before it runs out».\n3. Oʻz soʻzlarim bilan: ?",
+            "ru": "Разбор: «The new school library opens at eight, an hour before lessons. Its busiest time is not the morning, though: most students come after lunch, when the reading room is quiet and the computers are free.»\nВопрос: According to the text, when do most students use the library?\n1. О ком? О большинстве учеников.\n2. Строка: «most students come after lunch».\n3. Своими словами: после обеда.\n4. Вариант вроде «before lessons start» повторяет слово «lessons», но меняет смысл; «in the afternoon» — это пересказ.\nТеперь попробуйте сами: «Mrs. Yusupova has run the corner shop for twenty years. She knows most of her customers by name, and she keeps a notebook of what each family usually buys, so that she can order more before it runs out.»\nВопрос: According to the text, why does Mrs. Yusupova keep a notebook?\n1. О чём? О её тетради.\n2. Строка: «so that she can order more before it runs out».\n3. Своими словами: ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii12q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out for options that copy the text's words but change the meaning.\nWrong person: the text says the aunt takes the money; the option says Odil does.\nWrong time or amount: \"most\" becomes \"all\", \"after lunch\" becomes \"before lessons\".\nReason turned round: the text says A happened because of B; the option says B happened because of A.\nNot in the text: likely in real life, but the text never says it.\nCheck each option against the line you found: who, when, how much and why must all match.",
+            "uz": "Matn soʻzlarini takrorlab, maʼnosini oʻzgartiradigan variantlardan ehtiyot boʻling.\nBoshqa odam: matnda pulni xolasi oladi deyilgan, variantda esa Odil oladi.\nBoshqa vaqt yoki miqdor: «most» «all» ga, «after lunch» «before lessons» ga aylanadi.\nTeskari sabab: matnda A B sababli boʻldi deyilgan, variantda esa B A sababli boʻldi deyiladi.\nMatnda yoʻq: hayotda boʻlishi mumkin, lekin matnda aytilmagan.\nHar bir variantni topgan qatoringiz bilan solishtiring: kim, qachon, qancha va nima uchun — hammasi mos kelishi kerak.",
+            "ru": "Осторожно: варианты, которые повторяют слова текста, но меняют смысл.\nНе тот человек: в тексте деньги берёт тётя, а в варианте — Одил.\nНе то время или количество: «most» превращается в «all», «after lunch» — в «before lessons».\nПричина наоборот: в тексте A случилось из-за B, а в варианте B случилось из-за A.\nНет в тексте: в жизни возможно, но текст этого не говорит.\nСверяйте каждый вариант с найденной строкой: кто, когда, сколько и почему — всё должно совпасть."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii12q3"
+        }
+      ],
+      "test": {
+        "pool": null,
+        "families": [],
+        "n": 3,
+        "first_is_example": false,
+        "test_out": true
+      },
+      "homework": {
+        "pool": null,
+        "families": []
+      },
+      "reserve": [
+        "C6-ii1201",
+        "C6-ii1202",
+        "C6-ii1203",
+        "C6-ii1204",
+        "C6-ii1205",
+        "C6-ii1206",
+        "C6-ii1207",
+        "C6-ii1208",
+        "C6-ii1209",
+        "C6-ii1210",
+        "C6-ii1211",
+        "C6-ii1212",
+        "C6-ii1213",
+        "C6-ii1214",
+        "C6-ii1215",
+        "C6-ii1216",
+        "C6-ii1217",
+        "C6-ii1218",
+        "C6-ii1219",
+        "C6-ii1220",
+        "C6-ii1701",
+        "C6-ii1702",
+        "C6-ii1703",
+        "C6-ii1704",
+        "C6-ii1705",
+        "C6-ii1706",
+        "C6-ii1707",
+        "C6-ii1708",
+        "C6-ii1709",
+        "C6-ii1710",
+        "C6-ii1711",
+        "C6-ii1712",
+        "C6-ii1713",
+        "C6-ii1714",
+        "C6-ii1715",
+        "C6-ii1716",
+        "C6-ii1717",
+        "C6-ii1718",
+        "C6-ii1719",
+        "C6-ii1720"
+      ],
+      "extra_link": "C10-RWII01#official",
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-RWII01-3",
+      "course": "sat_rw",
+      "unit": "C10-RWII01",
+      "seq": 3,
+      "skill": "sat_rw:RWII01",
+      "requires": {
+        "english_cefr_min": "B1"
+      },
+      "title": {
+        "en": "SAT R&W: Central Ideas and Details: the point after the turn",
+        "uz": "SAT R&W: Central Ideas and Details — burilishdan keyingi asosiy fikr",
+        "ru": "SAT R&W: Central Ideas and Details — главная мысль после поворота"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "In harder texts, the main idea is often not in the first sentence.\nMany texts open with a view and then turn against it: \"Many people think…\" or \"For years, the club believed…\", then \"however\", \"but in fact\" or \"yet\". The writer's point comes after the turn.\nThree steps:\n1. Find the turn word.\n2. Before it: which view does the text question?\n3. After it: what does the writer say instead? That is the main idea. The best option often keeps both sides: not A, but B.\nIn a passage from a story, the main idea is often a feeling or a change that is shown, not told. Look at what the character does and notices, then name it: proud, lonely, ready to forgive.",
+            "uz": "Qiyinroq matnlarda asosiy gʻoya koʻpincha birinchi gapda boʻlmaydi.\nKoʻp matnlar biror qarash bilan boshlanadi, keyin unga qarshi buriladi: «Many people think…» yoki «For years, the club believed…», soʻng «however», «but in fact» yoki «yet». Muallifning fikri burilishdan keyin keladi.\nUch qadam:\n1. Burilish soʻzini toping.\n2. Undan oldin: matn qaysi qarashga shubha bildiradi?\n3. Undan keyin: muallif uning oʻrniga nima deydi? Asosiy gʻoya — shu. Eng yaxshi variant koʻpincha ikkala tomonni saqlaydi: A emas, B.\nHikoyadan olingan parchada asosiy gʻoya koʻpincha aytilmaydi, koʻrsatiladi: bu tuygʻu yoki oʻzgarish. Qahramon nima qilayotgani va nimani payqayotganiga qarang, keyin uni nomlang: faxrlangan, yolgʻiz, kechirishga tayyor.",
+            "ru": "В трудных текстах главная мысль часто не в первом предложении.\nМногие тексты начинают с какого-то мнения, а потом поворачивают против него: «Many people think…» или «For years, the club believed…», затем «however», «but in fact» или «yet». Мысль автора идёт после поворота.\nТри шага:\n1. Найдите слово поворота.\n2. До него: какое мнение текст ставит под сомнение?\n3. После него: что автор говорит взамен? Это и есть главная мысль. Лучший вариант часто сохраняет обе стороны: не A, а B.\nВ отрывке из рассказа главная мысль часто показана, а не названа: это чувство или перемена. Посмотрите, что герой делает и замечает, и назовите это: гордится, одинок, готов простить."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii13q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Worked example: \"Most visitors think the old caravanserai on the edge of town is empty. In fact, its courtyard is busy every Thursday: weavers from nearby villages meet there to trade thread and patterns.\"\n1. The turn: \"In fact\".\n2. Before it: the place is empty.\n3. After it: it is busy every Thursday with weavers.\nMain idea: the caravanserai looks empty, but it is a busy meeting place for weavers.\nNow you: \"People often say that Davron, the quiet boy in 9B, does not care about the class play. Yet every evening after rehearsal, he stays behind to fix the painted scenery, and he has learned the lines of every part in case someone is ill.\"\n1. The turn: \"Yet\".\n2. Before it: people say Davron does not care about the play.\n3. After it: ?",
+            "uz": "Namuna: «Most visitors think the old caravanserai on the edge of town is empty. In fact, its courtyard is busy every Thursday: weavers from nearby villages meet there to trade thread and patterns.»\n1. Burilish: «In fact».\n2. Undan oldin: bu joy boʻm-boʻsh.\n3. Undan keyin: har payshanba u yer toʻquvchilar bilan gavjum.\nAsosiy gʻoya: karvonsaroy boʻsh koʻrinadi, lekin u toʻquvchilar uchrashadigan gavjum joy.\nEndi siz: «People often say that Davron, the quiet boy in 9B, does not care about the class play. Yet every evening after rehearsal, he stays behind to fix the painted scenery, and he has learned the lines of every part in case someone is ill.»\n1. Burilish: «Yet».\n2. Undan oldin: odamlar Davronni spektaklga befarq deyishadi.\n3. Undan keyin: ?",
+            "ru": "Разбор: «Most visitors think the old caravanserai on the edge of town is empty. In fact, its courtyard is busy every Thursday: weavers from nearby villages meet there to trade thread and patterns.»\n1. Поворот: «In fact».\n2. До него: место пустое.\n3. После него: по четвергам там полно ткачей.\nГлавная мысль: караван-сарай кажется пустым, но это оживлённое место встреч ткачей.\nТеперь попробуйте сами: «People often say that Davron, the quiet boy in 9B, does not care about the class play. Yet every evening after rehearsal, he stays behind to fix the painted scenery, and he has learned the lines of every part in case someone is ill.»\n1. Поворот: «Yet».\n2. До него: говорят, что Даврону всё равно, что будет со спектаклем.\n3. После него: ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii13q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out for two traps in harder texts.\nThe view before the turn: an option that repeats what \"many people think\" sounds right, because those words are in the text. But the text gives them in order to argue against them.\nThe detail, not the point: in a story, an option can describe one thing a character does (\"she folds the letter\") without saying what it shows (\"she has decided to stay\").\nSo ask of each option: is this the writer's point, or the view the writer rejects? Is it the whole change in the story, or one moment of it?",
+            "uz": "Qiyinroq matnlarda ikki tuzoqdan ehtiyot boʻling.\nBurilishdan oldingi qarash: «many people think» deganini takrorlagan variant toʻgʻri tuyuladi, chunki bu soʻzlar matnda bor. Lekin matn ularni rad etish uchun keltiradi.\nFikr emas, tafsilot: hikoyada variant qahramonning bitta harakatini tasvirlashi mumkin («she folds the letter»), lekin bu nimani koʻrsatishini aytmaydi («she has decided to stay»).\nShuning uchun har bir variantdan soʻrang: bu muallifning fikrimi yoki u rad etgan qarashmi? Bu hikoyadagi butun oʻzgarishmi yoki uning bir lahzasimi?",
+            "ru": "Осторожно: в трудных текстах две ловушки.\nМнение до поворота: вариант, который повторяет то, что «many people think», кажется верным, ведь эти слова есть в тексте. Но текст приводит их, чтобы с ними поспорить.\nДеталь, а не мысль: в рассказе вариант может описывать одно действие героя («she folds the letter») и не говорить, что оно показывает («she has decided to stay»).\nПоэтому спрашивайте о каждом варианте: это мысль автора или мнение, которое он отвергает? Это вся перемена в рассказе или один её момент?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii13q3"
+        }
+      ],
+      "test": {
+        "pool": null,
+        "families": [],
+        "n": 3,
+        "first_is_example": false,
+        "test_out": true
+      },
+      "homework": {
+        "pool": null,
+        "families": []
+      },
+      "reserve": [
+        "C6-ii1301",
+        "C6-ii1302",
+        "C6-ii1303",
+        "C6-ii1304",
+        "C6-ii1305",
+        "C6-ii1306",
+        "C6-ii1307",
+        "C6-ii1308",
+        "C6-ii1309",
+        "C6-ii1310",
+        "C6-ii1311",
+        "C6-ii1312",
+        "C6-ii1313",
+        "C6-ii1314",
+        "C6-ii1315",
+        "C6-ii1316",
+        "C6-ii1317",
+        "C6-ii1318",
+        "C6-ii1319",
+        "C6-ii1320",
+        "C6-ii1801",
+        "C6-ii1802",
+        "C6-ii1803",
+        "C6-ii1804",
+        "C6-ii1805",
+        "C6-ii1806",
+        "C6-ii1807",
+        "C6-ii1808",
+        "C6-ii1809",
+        "C6-ii1810",
+        "C6-ii1811",
+        "C6-ii1812",
+        "C6-ii1813",
+        "C6-ii1814",
+        "C6-ii1815",
+        "C6-ii1816",
+        "C6-ii1817",
+        "C6-ii1818",
+        "C6-ii1819",
+        "C6-ii1820"
+      ],
+      "extra_link": "C10-RWII01#official",
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-RWII02-2",
+      "course": "sat_rw",
+      "unit": "C10-RWII02",
+      "seq": 2,
+      "skill": "sat_rw:RWII02",
+      "requires": {
+        "english_cefr_min": "B1"
+      },
+      "title": {
+        "en": "SAT R&W: Command of Evidence: findings that support or weaken",
+        "uz": "SAT R&W: Command of Evidence — daʼvoni quvvatlaydigan yoki zaiflashtiradigan dalil",
+        "ru": "SAT R&W: Command of Evidence — доказательства «за» и «против»"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Lesson 1 matched evidence to the exact claim. This lesson goes further: claims about a cause, and findings that weaken.\nMany claims say that one thing causes another: \"Watering at night makes the plants grow taller.\"\nA finding supports such a claim when it compares: with the cause, more of the effect; without it, less. (Plants watered at night grew taller than plants of the same kind watered in the morning.)\nA finding weakens it when:\n1. the effect is the same without the cause;\n2. the effect was there before the cause; or\n3. something else explains the effect.\n\"If true\" means: do not ask whether the finding is likely. Imagine that it is true, and ask what it does to the claim.",
+            "uz": "1-darsda dalilni aniq daʼvoga moslashtirdik. Bu dars bir qadam oldinga boradi: sabab haqidagi daʼvolar va daʼvoni zaiflashtiradigan natijalar.\nKoʻp daʼvolar bir narsa boshqasiga sabab boʻladi, deydi: «Watering at night makes the plants grow taller.»\nNatija (finding) bunday daʼvoni solishtirish orqali quvvatlaydi: sabab bor boʻlsa, oqibat koʻproq; sabab yoʻq boʻlsa, kamroq. (Kechasi sugʻorilgan oʻsimliklar ertalab sugʻorilgan xuddi shunday oʻsimliklardan balandroq oʻsdi.)\nNatija daʼvoni zaiflashtiradi, agar:\n1. sabab boʻlmasa ham oqibat bir xil boʻlsa;\n2. oqibat sababdan oldin ham boʻlgan boʻlsa; yoki\n3. oqibatni boshqa narsa tushuntirsa.\n«If true» degani: natija rostdan boʻlishi mumkinmi, deb soʻramang. Uni rost deb tasavvur qiling va u daʼvoga nima qilishini soʻrang.",
+            "ru": "На уроке 1 мы подбирали доказательство к точному утверждению. Этот урок идёт дальше: утверждения о причине и результаты, которые их ослабляют.\nМногие утверждения говорят, что одно вызывает другое: «Watering at night makes the plants grow taller.»\nРезультат (finding) подтверждает такое утверждение, когда сравнивает: с причиной следствия больше, без неё — меньше. (Растения, которые поливали ночью, выросли выше таких же растений, которые поливали утром.)\nРезультат ослабляет утверждение, если:\n1. без причины следствие такое же;\n2. следствие было и до причины; или\n3. следствие объясняется чем-то другим.\n«If true» значит: не спрашивайте, вероятен ли результат. Представьте, что он верен, и спросите, что он делает с утверждением."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii22q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Worked example. Claim: \"Our class remembers new words better when we draw them than when we copy them.\" Which finding would weaken it?\n1. The cause: drawing the words. The effect: remembering them better.\n2. Look for the effect without the cause, or for another explanation.\n3. \"The students who chose to draw were the ones who already had the best marks in vocabulary tests.\" That is another explanation: they were better already. This finding weakens the claim.\nNow you. Claim: \"The new sign at the school gate made more students wear helmets when they cycle to school.\"\n1. The cause: the sign. The effect: more students in helmets.\n2. To weaken it, look for as many helmets without the sign, or another reason for more helmets.\n3. Which finding does that? ?",
+            "uz": "Namuna. Daʼvo: «Our class remembers new words better when we draw them than when we copy them.» Qaysi natija uni zaiflashtiradi?\n1. Sabab: soʻzlarni chizish. Oqibat: ularni yaxshiroq eslab qolish.\n2. Sababsiz oqibatni yoki boshqa tushuntirishni qidiring.\n3. «The students who chose to draw were the ones who already had the best marks in vocabulary tests.» Bu boshqa tushuntirish: ular oldindan ham yaxshiroq edi. Bu natija daʼvoni zaiflashtiradi.\nEndi siz. Daʼvo: «The new sign at the school gate made more students wear helmets when they cycle to school.»\n1. Sabab: belgi. Oqibat: dubulgʻa kiygan oʻquvchilar koʻpaygani.\n2. Zaiflashtirish uchun belgisiz ham shuncha dubulgʻa boʻlganini yoki dubulgʻalar koʻpayishining boshqa sababini qidiring.\n3. Qaysi natija shuni koʻrsatadi? ?",
+            "ru": "Разбор. Утверждение: «Our class remembers new words better when we draw them than when we copy them.» Какой результат его ослабит?\n1. Причина: рисовать слова. Следствие: лучше их запоминать.\n2. Ищите следствие без причины или другое объяснение.\n3. «The students who chose to draw were the ones who already had the best marks in vocabulary tests.» Это другое объяснение: они и раньше были сильнее. Такой результат ослабляет утверждение.\nТеперь попробуйте сами. Утверждение: «The new sign at the school gate made more students wear helmets when they cycle to school.»\n1. Причина: знак. Следствие: больше учеников в шлемах.\n2. Чтобы ослабить его, ищите данные, что и без знака шлемов было столько же, или другую причину роста.\n3. Какой результат это показывает? ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii22q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out for three traps.\n1. One side only: \"Students who drew the words remembered them\" says nothing about the students who copied them. A claim that compares needs evidence that compares.\n2. Support when the question says weaken: read the question twice. A strong supporting finding is the most tempting wrong answer to a weaken question.\n3. Half of a two-part claim: if the claim says a character is \"both nervous and curious\", a quotation that shows only nerves is not enough. Choose the one that shows both.",
+            "uz": "Uch tuzoqdan ehtiyot boʻling.\n1. Faqat bir tomon: «Students who drew the words remembered them» soʻzlarni koʻchirgan oʻquvchilar haqida hech narsa demaydi. Solishtiradigan daʼvoga solishtiradigan dalil kerak.\n2. Savol «weaken» deb soʻraganda quvvatlovchi natijani tanlash: savolni ikki marta oʻqing. Kuchli quvvatlovchi natija «weaken» savolidagi eng jozibali notoʻgʻri javob.\n3. Ikki qismli daʼvoning yarmi: daʼvo qahramonni «both nervous and curious» desa, faqat hayajonni koʻrsatgan iqtibos yetarli emas. Ikkalasini koʻrsatganini tanlang.",
+            "ru": "Осторожно: три ловушки.\n1. Только одна сторона: «Students who drew the words remembered them» ничего не говорит об учениках, которые слова переписывали. Утверждению-сравнению нужно доказательство-сравнение.\n2. «За», когда вопрос просит «против»: прочитайте вопрос дважды. Сильный подтверждающий результат — самый соблазнительный неверный ответ на вопрос «weaken».\n3. Половина утверждения из двух частей: если сказано, что герой «both nervous and curious», цитаты только о волнении мало. Выберите ту, что показывает оба чувства."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii22q3"
+        }
+      ],
+      "test": {
+        "pool": null,
+        "families": [],
+        "n": 3,
+        "first_is_example": false,
+        "test_out": true
+      },
+      "homework": {
+        "pool": null,
+        "families": []
+      },
+      "reserve": [
+        "C6-ii2201",
+        "C6-ii2202",
+        "C6-ii2203",
+        "C6-ii2204",
+        "C6-ii2205",
+        "C6-ii2206",
+        "C6-ii2207",
+        "C6-ii2208",
+        "C6-ii2209",
+        "C6-ii2210",
+        "C6-ii2211",
+        "C6-ii2212",
+        "C6-ii2213",
+        "C6-ii2214",
+        "C6-ii2215",
+        "C6-ii2216",
+        "C6-ii2217",
+        "C6-ii2218",
+        "C6-ii2219",
+        "C6-ii2220",
+        "C6-ii2701",
+        "C6-ii2702",
+        "C6-ii2703",
+        "C6-ii2704",
+        "C6-ii2705",
+        "C6-ii2706",
+        "C6-ii2707",
+        "C6-ii2708",
+        "C6-ii2709",
+        "C6-ii2710",
+        "C6-ii2711",
+        "C6-ii2712",
+        "C6-ii2713",
+        "C6-ii2714",
+        "C6-ii2715",
+        "C6-ii2716",
+        "C6-ii2717",
+        "C6-ii2718",
+        "C6-ii2719",
+        "C6-ii2720"
+      ],
+      "extra_link": "C10-RWII02#official",
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-RWII02-3",
+      "course": "sat_rw",
+      "unit": "C10-RWII02",
+      "seq": 3,
+      "skill": "sat_rw:RWII02",
+      "requires": {
+        "english_cefr_min": "B1"
+      },
+      "title": {
+        "en": "SAT R&W: Command of Evidence: tables and graphs with two variables",
+        "uz": "SAT R&W: Command of Evidence — ikki oʻzgaruvchili jadval va grafiklar",
+        "ru": "SAT R&W: Command of Evidence — таблицы и графики с двумя переменными"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Lesson 1 matched one number to a claim. Here the table or graph has two variables (two years, two groups or two measures), and the text often ends with a blank: \"…, while ______.\"\nTwo tests for every option:\n1. Accurate: every number, and every word such as more, fewer, doubled or highest, is true in the data. Check the row and the column.\n2. Completes the claim: it says what the sentence needs. Read the sentence up to the blank. \"Although\", \"but\" or \"while\" asks for a contrast; a claim about both groups needs both groups.\nAn option can pass test 1 and fail test 2. Only an option that passes both is right.\nWhen a graph is described in words, write its numbers as a small table first.",
+            "uz": "1-darsda bitta sonni daʼvoga moslashtirdik. Bu yerda jadval yoki grafikda ikki oʻzgaruvchi bor (ikki yil, ikki guruh yoki ikki oʻlchov), matn esa koʻpincha boʻsh joy bilan tugaydi: «…, while ______.»\nHar bir variant uchun ikki sinov:\n1. Aniq (accurate): har bir son va more, fewer, doubled yoki highest kabi har bir soʻz maʼlumotlarda rost. Qator va ustunni tekshiring.\n2. Daʼvoni toʻldiradi: gapga nima kerak boʻlsa, shuni aytadi. Gapni boʻsh joygacha oʻqing. «Although», «but» yoki «while» qarama-qarshilikni soʻraydi; ikki guruh haqidagi daʼvoga ikkala guruh kerak.\nVariant 1-sinovdan oʻtib, 2-sinovdan oʻtmasligi mumkin. Faqat ikkalasidan oʻtgan variant toʻgʻri.\nGrafik soʻz bilan tasvirlangan boʻlsa, avval uning sonlarini kichik jadvalga yozing.",
+            "ru": "На уроке 1 мы подбирали к утверждению одно число. Здесь в таблице или графике две переменные (два года, две группы или две величины), а текст часто кончается пропуском: «…, while ______.»\nДве проверки для каждого варианта:\n1. Точность (accurate): каждое число и каждое слово вроде more, fewer, doubled или highest верны по данным. Проверьте строку и столбец.\n2. Завершает утверждение: говорит то, что нужно предложению. Прочитайте предложение до пропуска. «Although», «but» или «while» требуют контраста; утверждению о двух группах нужны обе группы.\nВариант может пройти проверку 1 и не пройти проверку 2. Верен только тот, что проходит обе.\nЕсли график описан словами, сначала запишите его числа маленькой таблицей."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii23q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Worked example. A class measured the temperature of two cups of tea, one with a lid and one without.\nMinutes | With lid (°C) | Without lid (°C)\n0 | 80 | 80\n10 | 72 | 64\n20 | 66 | 52\nText: \"The tea without a lid cooled faster: ______\"\n1. The sentence needs: the cup without a lid lost more heat.\n2. The drops after 20 minutes: with a lid 80 − 66 = 14 degrees; without a lid 80 − 52 = 28 degrees.\n3. Accurate and on the claim: \"after 20 minutes it had dropped 28 degrees, twice as much as the tea with a lid (14).\"\nNow you. A club counted the visitors to its two stalls at a school fair.\nHour | Book stall | Plant stall\n10:00-11:00 | 18 | 30\n11:00-12:00 | 22 | 25\n12:00-13:00 | 35 | 15\nText: \"The book stall grew busier as the day went on, but the plant stall ______\"\n1. The sentence needs: the plant stall went the other way.\n2. The plant stall: 30, then 25, then 15.\n3. Accurate and on the claim: ?",
+            "uz": "Namuna. Sinf ikki piyola choyning haroratini oʻlchadi: biri qopqoqli, biri qopqoqsiz.\nMinutes | With lid (°C) | Without lid (°C)\n0 | 80 | 80\n10 | 72 | 64\n20 | 66 | 52\nMatn: «The tea without a lid cooled faster: ______»\n1. Gapga kerak: qopqoqsiz piyola koʻproq issiqlik yoʻqotgani.\n2. 20 daqiqadan keyingi pasayish: qopqoqli 80 − 66 = 14 daraja; qopqoqsiz 80 − 52 = 28 daraja.\n3. Aniq va daʼvoga mos: «after 20 minutes it had dropped 28 degrees, twice as much as the tea with a lid (14).»\nEndi siz. Klub maktab yarmarkasidagi ikki rastasiga kelganlarni sanadi.\nHour | Book stall | Plant stall\n10:00-11:00 | 18 | 30\n11:00-12:00 | 22 | 25\n12:00-13:00 | 35 | 15\nMatn: «The book stall grew busier as the day went on, but the plant stall ______»\n1. Gapga kerak: koʻchat rastasi teskari tomonga oʻzgargani.\n2. Koʻchat rastasi: 30, keyin 25, keyin 15.\n3. Aniq va daʼvoga mos: ?",
+            "ru": "Разбор. Класс измерял температуру двух чашек чая: одной с крышкой, другой без.\nMinutes | With lid (°C) | Without lid (°C)\n0 | 80 | 80\n10 | 72 | 64\n20 | 66 | 52\nТекст: «The tea without a lid cooled faster: ______»\n1. Предложению нужно: чашка без крышки потеряла больше тепла.\n2. Падение за 20 минут: с крышкой 80 − 66 = 14 градусов; без крышки 80 − 52 = 28 градусов.\n3. Точно и по делу: «after 20 minutes it had dropped 28 degrees, twice as much as the tea with a lid (14).»\nТеперь попробуйте сами. Клуб считал посетителей двух своих прилавков на школьной ярмарке.\nHour | Book stall | Plant stall\n10:00-11:00 | 18 | 30\n11:00-12:00 | 22 | 25\n12:00-13:00 | 35 | 15\nТекст: «The book stall grew busier as the day went on, but the plant stall ______»\n1. Предложению нужно: у прилавка с растениями всё шло в обратную сторону.\n2. Прилавок с растениями: 30, потом 25, потом 15.\n3. Точно и по делу: ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii23q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out for three traps with two variables.\n1. The right number, the wrong group: the option gives a real number from the other column. Check the label of each column.\n2. Accurate but beside the point: \"the plant stall had 30 visitors from 10:00 to 11:00\" is true, but it does not show the fall the sentence needs.\n3. Totals instead of rates: when the claim says \"per member\", \"each\" or \"an hour\", divide first. The club with the most books in total may not have the most books per member.",
+            "uz": "Ikki oʻzgaruvchili maʼlumotlarda uch tuzoqdan ehtiyot boʻling.\n1. Son toʻgʻri, guruh boshqa: variant boshqa ustundagi haqiqiy sonni beradi. Har bir ustun nomini tekshiring.\n2. Aniq, lekin gapga aloqasiz: «the plant stall had 30 visitors from 10:00 to 11:00» rost, lekin gapga kerak boʻlgan kamayishni koʻrsatmaydi.\n3. Nisbat oʻrniga jami: daʼvoda «per member», «each» yoki «an hour» boʻlsa, avval boʻling. Jami eng koʻp kitob toʻplagan klub bir aʼzoga eng koʻp kitob toʻplagan klub boʻlmasligi mumkin.",
+            "ru": "Осторожно: три ловушки с двумя переменными.\n1. Число верное, группа не та: вариант берёт настоящее число из другого столбца. Проверяйте подпись каждого столбца.\n2. Точно, но не о том: «the plant stall had 30 visitors from 10:00 to 11:00» — правда, но это не показывает спад, нужный предложению.\n3. Всего вместо «на одного»: если в утверждении «per member», «each» или «an hour», сначала разделите. Клуб, у которого больше всего книг в сумме, не обязательно первый по числу книг на одного участника."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii23q3"
+        }
+      ],
+      "test": {
+        "pool": null,
+        "families": [],
+        "n": 3,
+        "first_is_example": false,
+        "test_out": true
+      },
+      "homework": {
+        "pool": null,
+        "families": []
+      },
+      "reserve": [
+        "C6-ii2301",
+        "C6-ii2302",
+        "C6-ii2303",
+        "C6-ii2304",
+        "C6-ii2305",
+        "C6-ii2306",
+        "C6-ii2307",
+        "C6-ii2308",
+        "C6-ii2309",
+        "C6-ii2310",
+        "C6-ii2311",
+        "C6-ii2312",
+        "C6-ii2313",
+        "C6-ii2314",
+        "C6-ii2315",
+        "C6-ii2316",
+        "C6-ii2317",
+        "C6-ii2318",
+        "C6-ii2319",
+        "C6-ii2320",
+        "C6-ii2801",
+        "C6-ii2802",
+        "C6-ii2803",
+        "C6-ii2804",
+        "C6-ii2805",
+        "C6-ii2806",
+        "C6-ii2807",
+        "C6-ii2808",
+        "C6-ii2809",
+        "C6-ii2810",
+        "C6-ii2811",
+        "C6-ii2812",
+        "C6-ii2813",
+        "C6-ii2814",
+        "C6-ii2815",
+        "C6-ii2816",
+        "C6-ii2817",
+        "C6-ii2818",
+        "C6-ii2819",
+        "C6-ii2820"
+      ],
+      "extra_link": "C10-RWII02#official",
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ],
+  "items": [
+    {
+      "id": "C19-ii12q1",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "central_ideas_details",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "easy"
+      },
+      "page": "C19-RWII01-2",
+      "lang": "en",
+      "stem": {
+        "en": "Every Saturday, Odil helps at his aunt's flower stall in the market. His aunt takes the money and talks with the customers, while Odil's job is to keep the flowers fresh: each morning he cuts the ends of the stems, and he changes the water in the buckets twice a day. By closing time, only a few bunches are usually left.\n\nAccording to the text, what is Odil's job at the flower stall?"
+      },
+      "options": [
+        {
+          "en": "He looks after the flowers so that they stay fresh."
+        },
+        {
+          "en": "He takes the money and talks with the customers."
+        },
+        {
+          "en": "He brings new flowers to the market early each morning."
+        },
+        {
+          "en": "He sells the last few bunches at closing time."
+        }
+      ],
+      "why": {
+        "en": "The line 'Odil's job is to keep the flowers fresh' answers it: he looks after the flowers. The money and the customers are his aunt's job.",
+        "uz": "Matnda aytilishicha, Odilning ishi gullarni soʻlitmay saqlash: u poyalarning uchini kesadi va suvni almashtiradi. Pul va xaridorlar bilan xolasi shugʻullanadi.",
+        "ru": "В тексте сказано, что работа Одила — следить, чтобы цветы были свежими: он подрезает стебли и меняет воду. Деньги и покупатели — дело тёти."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the answer that best states its main idea or a key detail.",
+        "uz": "Matnni oʻqing. Asosiy gʻoyani yoki muhim tafsilotni eng yaxshi ifodalagan javobni tanlang.",
+        "ru": "Прочитайте текст. Выберите ответ, который лучше всего передаёт главную мысль или важную деталь."
+      },
+      "prior_b": 0,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ii12q2",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "central_ideas_details",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "easy"
+      },
+      "page": "C19-RWII01-2",
+      "lang": "en",
+      "stem": {
+        "en": "Mrs. Yusupova has run the corner shop for twenty years. She knows most of her customers by name, and she keeps a notebook of what each family usually buys, so that she can order more before it runs out.\n\nAccording to the text, why does Mrs. Yusupova keep a notebook?"
+      },
+      "options": [
+        {
+          "en": "To know what to order before the shop runs out of it"
+        },
+        {
+          "en": "To remember the names of all her customers"
+        },
+        {
+          "en": "To write down how much money each family still owes her"
+        },
+        {
+          "en": "To count the years she has run the corner shop"
+        }
+      ],
+      "why": {
+        "en": "The line 'so that she can order more before it runs out' gives the reason: to know what to order in time. She knows names without the notebook.",
+        "uz": "«so that she can order more before it runs out» qatori sababni aytadi: nimani vaqtida buyurtma qilishni bilish. Ismlarni u daftarsiz ham biladi.",
+        "ru": "Строка «so that she can order more before it runs out» называет причину: знать, что заказать вовремя. Имена она знает и без тетради."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the answer that best states its main idea or a key detail.",
+        "uz": "Matnni oʻqing. Asosiy gʻoyani yoki muhim tafsilotni eng yaxshi ifodalagan javobni tanlang.",
+        "ru": "Прочитайте текст. Выберите ответ, который лучше всего передаёт главную мысль или важную деталь."
+      },
+      "prior_b": 0,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ii12q3",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "central_ideas_details",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "page": "C19-RWII01-2",
+      "lang": "en",
+      "stem": {
+        "en": "When the river near Shirin's village flooded in April, the bridge to the school was closed for repairs. For three weeks the older students walked a longer road through the orchards, and Shirin's brother, who had a bicycle, carried the younger children's bags on its rack. The bridge opened again in May, stronger than before.\n\nAccording to the text, what did Shirin's brother do while the bridge was closed?"
+      },
+      "options": [
+        {
+          "en": "He used his bicycle to carry the younger children's bags."
+        },
+        {
+          "en": "He helped to repair the bridge so that it would be stronger."
+        },
+        {
+          "en": "He rode his bicycle across the bridge to reach the school."
+        },
+        {
+          "en": "He showed the older students a shorter road through the orchards."
+        }
+      ],
+      "why": {
+        "en": "The line says he 'carried the younger children's bags on its rack': he carried their bags by bicycle. Nothing says he repaired the bridge, and the road was longer.",
+        "uz": "Matnda u velosiped bagajida kichiklarning sumkalarini tashigani aytilgan. Koʻprikni taʼmirlagani aytilmagan, bogʻlar orqali yoʻl esa uzunroq edi.",
+        "ru": "В тексте сказано, что он возил сумки младших на багажнике велосипеда. О ремонте моста ничего нет, а дорога через сады была длиннее."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the answer that best states its main idea or a key detail.",
+        "uz": "Matnni oʻqing. Asosiy gʻoyani yoki muhim tafsilotni eng yaxshi ifodalagan javobni tanlang.",
+        "ru": "Прочитайте текст. Выберите ответ, который лучше всего передаёт главную мысль или важную деталь."
+      },
+      "prior_b": 0.9,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ii13q1",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "central_ideas_details",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "page": "C19-RWII01-3",
+      "lang": "en",
+      "stem": {
+        "en": "For years, the members of the school garden club believed that their tomatoes grew poorly because the soil was bad. They added compost every spring, with little effect. This year, however, a new member noticed that the tall wall beside the garden kept the tomato beds in shade for most of the afternoon. When the club moved the beds to the sunny side of the yard, the plants grew twice as tall.\n\nWhich choice best states the main idea of the text?"
+      },
+      "options": [
+        {
+          "en": "The tomatoes grew poorly because of the wall's shade, not because of the soil."
+        },
+        {
+          "en": "Adding compost to the soil every spring is the best way to help tomatoes grow."
+        },
+        {
+          "en": "The new member of the club knew more about gardening than the older members."
+        },
+        {
+          "en": "Tomato plants grow twice as tall as most of the other plants in a garden."
+        }
+      ],
+      "why": {
+        "en": "After 'however', the text shows the real cause: the wall's shade, not the soil. The compost belief is the view the text corrects.",
+        "uz": "«however» soʻzidan keyin matn haqiqiy sababni koʻrsatadi: tuproq emas, devor soyasi. Kompost haqidagi ishonch esa matn tuzatayotgan qarash.",
+        "ru": "После «however» текст называет настоящую причину: тень от стены, а не почва. Вера в компост — это мнение, которое текст исправляет."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the answer that best states its main idea or a key detail.",
+        "uz": "Matnni oʻqing. Asosiy gʻoyani yoki muhim tafsilotni eng yaxshi ifodalagan javobni tanlang.",
+        "ru": "Прочитайте текст. Выберите ответ, который лучше всего передаёт главную мысль или важную деталь."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ii13q2",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "central_ideas_details",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "page": "C19-RWII01-3",
+      "lang": "en",
+      "stem": {
+        "en": "People often say that Davron, the quiet boy in 9B, does not care about the class play. Yet every evening after rehearsal, he stays behind to fix the painted scenery, and he has learned the lines of every part in case someone is ill.\n\nWhich choice best states the main idea of the text?"
+      },
+      "options": [
+        {
+          "en": "Davron cares about the play much more than people think."
+        },
+        {
+          "en": "Davron is too quiet to take a part as an actor in the play."
+        },
+        {
+          "en": "The painted scenery for the class play often needs fixing."
+        },
+        {
+          "en": "Many students in 9B do not care about the class play at all."
+        }
+      ],
+      "why": {
+        "en": "After 'Yet', his staying to fix the scenery and learning every part show that he cares a lot, the opposite of what people say.",
+        "uz": "«Yet» soʻzidan keyin: u dekoratsiyani tuzatish uchun qoladi va barcha rollarni yodlagan. Demak, u odamlar aytganidek befarq emas: spektakl uchun jon kuydiradi.",
+        "ru": "После «Yet»: он остаётся чинить декорации и выучил все роли. Значит, спектакль ему важен гораздо больше, чем думают."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the answer that best states its main idea or a key detail.",
+        "uz": "Matnni oʻqing. Asosiy gʻoyani yoki muhim tafsilotni eng yaxshi ifodalagan javobni tanlang.",
+        "ru": "Прочитайте текст. Выберите ответ, который лучше всего передаёт главную мысль или важную деталь."
+      },
+      "prior_b": 0.9,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ii13q3",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "central_ideas_details",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "hard"
+      },
+      "page": "C19-RWII01-3",
+      "lang": "en",
+      "stem": {
+        "en": "The following text is from a short story.\n\nFor three summers Gulnora had begged to help in her grandfather's workshop, and for three summers he had sent her back to the house. Now she stood at his bench with a chisel in her hand while he watched. Her first cut went crooked. She waited for him to take the tool away. Instead, he pushed a second piece of walnut toward her and said nothing, and she bent over the wood again.\n\nWhich choice best states the main idea of the text?"
+      },
+      "options": [
+        {
+          "en": "After years of refusing, her grandfather now quietly lets Gulnora keep trying."
+        },
+        {
+          "en": "Her grandfather is angry with Gulnora because her first cut in the walnut went crooked."
+        },
+        {
+          "en": "Gulnora decides that woodwork is too hard for her and goes back to the house."
+        },
+        {
+          "en": "Her grandfather teaches Gulnora by explaining each step of the carving aloud."
+        }
+      ],
+      "why": {
+        "en": "He once sent her away; now, after a crooked cut, he hands her more wood and says nothing: he lets her go on. He shows no anger and explains nothing.",
+        "uz": "Avval bobosi uni qaytarib yuborardi; endi qiyshiq kesikdan keyin unga yana yongʻoq yogʻochi beradi va indamaydi: urinishda davom etishiga yoʻl qoʻyadi. U jahl qilmaydi va hech narsani tushuntirmaydi.",
+        "ru": "Раньше дед отсылал её, а теперь после кривого надреза молча даёт ей ещё один кусок орехового дерева: позволяет пробовать дальше. Он не сердится и не объясняет."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the answer that best states its main idea or a key detail.",
+        "uz": "Matnni oʻqing. Asosiy gʻoyani yoki muhim tafsilotni eng yaxshi ifodalagan javobni tanlang.",
+        "ru": "Прочитайте текст. Выберите ответ, который лучше всего передаёт главную мысль или важную деталь."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ii22q1",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "command_of_evidence_textual",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "easy"
+      },
+      "page": "C19-RWII02-2",
+      "lang": "en",
+      "stem": {
+        "en": "Sardor, a member of his school's science club, claims that bread stays fresh longer when it is kept in a cloth bag than when it is kept in a plastic bag.\n\nWhich finding, if true, would most directly support Sardor's claim?"
+      },
+      "options": [
+        {
+          "en": "Bread from the same loaf stayed fresh for four days in a cloth bag but for only two days in a plastic bag."
+        },
+        {
+          "en": "Most families in Sardor's town keep their bread in plastic bags."
+        },
+        {
+          "en": "Cloth bags can be washed and used again many times."
+        },
+        {
+          "en": "Bread from the same loaf went stale on the same day whether it was kept in a cloth bag or in a plastic bag."
+        }
+      ],
+      "why": {
+        "en": "The claim compares cloth and plastic bags. Only the finding that the same bread stayed fresh four days in cloth but two in plastic compares them and favours cloth.",
+        "uz": "Daʼvo mato va plastik xaltani solishtiradi. Faqat bir xil non matoda 4 kun, plastikda 2 kun yangi qolgani haqidagi natija ularni solishtirib, matoni yoqlaydi.",
+        "ru": "Утверждение сравнивает тканевый и пластиковый пакет. Только результат «4 дня в ткани, 2 дня в пластике» для одного хлеба сравнивает их в пользу ткани."
+      },
+      "instructions": {
+        "en": "Choose the quotation or finding that best supports the claim in the text.",
+        "uz": "Matndagi fikrni eng yaxshi tasdiqlaydigan iqtibos yoki natijani tanlang.",
+        "ru": "Выберите цитату или результат, который лучше всего подтверждает утверждение в тексте."
+      },
+      "prior_b": 0,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ii22q2",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "command_of_evidence_textual",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "page": "C19-RWII02-2",
+      "lang": "en",
+      "stem": {
+        "en": "Laylo, a member of her school's student council, claims that the new sign at the school gate has made more students wear helmets when they cycle to school.\n\nWhich finding, if true, would most directly weaken Laylo's claim?"
+      },
+      "options": [
+        {
+          "en": "As many students wore helmets in the month before the sign went up as in the month after."
+        },
+        {
+          "en": "The sign at the gate was painted in bright colors so that cyclists would notice it."
+        },
+        {
+          "en": "In the month after the sign went up, more students wore helmets than in any month before."
+        },
+        {
+          "en": "Some of the students who cycle to school live more than five kilometers away."
+        }
+      ],
+      "why": {
+        "en": "If as many students wore helmets before the sign as after it, the sign changed nothing. That weakens the claim; one choice supports it and two are off the point.",
+        "uz": "Agar belgidan oldin ham, keyin ham dubulgʻa kiyganlar soni bir xil boʻlsa, belgi hech narsani oʻzgartirmagan. Bu daʼvoni zaiflashtiradi. Bitta variant uni quvvatlaydi, ikkitasi esa gapga aloqasiz.",
+        "ru": "Если до знака шлемы носило столько же учеников, сколько после, знак ничего не изменил. Это ослабляет утверждение."
+      },
+      "instructions": {
+        "en": "Choose the finding that most weakens the claim in the text.",
+        "uz": "Matndagi daʼvoni eng koʻp zaiflashtiradigan natijani tanlang.",
+        "ru": "Выберите результат, который сильнее всего ослабляет утверждение в тексте."
+      },
+      "prior_b": 0.9,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ii22q3",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "command_of_evidence_textual",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "page": "C19-RWII02-2",
+      "lang": "en",
+      "stem": {
+        "en": "In a short story, the narrator describes her first day at a new school. A student claims that on that day the narrator feels both nervous and curious.\n\nWhich quotation from the story most effectively illustrates the student's claim?"
+      },
+      "options": [
+        {
+          "en": "\"My hands would not stop shaking, but I kept turning to read every poster on the corridor walls.\""
+        },
+        {
+          "en": "\"My hands would not stop shaking as I stood outside the classroom door and waited for the bell to ring.\""
+        },
+        {
+          "en": "\"I wanted to know who had painted the bright map of the world on the library wall.\""
+        },
+        {
+          "en": "\"The new school was much larger than my old one, with three floors and two gyms.\""
+        }
+      ],
+      "why": {
+        "en": "The claim has two parts. Shaking hands show nerves, and reading every poster shows curiosity; only the quotation with both the hands and the posters shows both.",
+        "uz": "Daʼvo ikki qismli. Qoʻllarning titrashi hayajonni, har bir plakatni oʻqishi esa qiziqishni koʻrsatadi; ikkalasi faqat shu iqtibosda bor.",
+        "ru": "В утверждении две части. Дрожащие руки — волнение, чтение каждого плаката — любопытство; обе есть только в цитате с руками и плакатами."
+      },
+      "instructions": {
+        "en": "Choose the quotation or finding that best supports the claim in the text.",
+        "uz": "Matndagi fikrni eng yaxshi tasdiqlaydigan iqtibos yoki natijani tanlang.",
+        "ru": "Выберите цитату или результат, который лучше всего подтверждает утверждение в тексте."
+      },
+      "prior_b": 0.9,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ii23q1",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "command_of_evidence_quantitative",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "page": "C19-RWII02-3",
+      "lang": "en",
+      "stem": {
+        "en": "Members of a school's running club recorded how many laps two runners completed in practice in two weeks.\n\nRunner | Week 1 laps | Week 2 laps\nMalika | 24 | 30\nTemur | 28 | 26\n\nThe coach noted that the two runners changed in different directions: Malika ran more laps in week 2 than in week 1, while ______\n\nWhich choice most effectively uses data from the table to complete the statement?"
+      },
+      "options": [
+        {
+          "en": "Temur ran fewer laps in week 2 (26) than in week 1 (28)."
+        },
+        {
+          "en": "Temur ran more laps than Malika in week 1, 28 compared with 24."
+        },
+        {
+          "en": "Temur ran more laps in week 2 (28) than in week 1 (26)."
+        },
+        {
+          "en": "Malika ran 30 laps in week 2, more than Temur did that week."
+        }
+      ],
+      "why": {
+        "en": "After 'while', the sentence needs Temur's change the other way: 26 laps in week 2, fewer than his 28 in week 1. Another choice swaps his two weeks.",
+        "uz": "«while» soʻzidan keyin Temurning teskari oʻzgarishi kerak: 2-haftada 26 aylana, 1-haftadagi 28 tadan kam. Boshqa variant uning haftalarini almashtirgan.",
+        "ru": "После «while» нужна перемена Темура в другую сторону: 26 кругов на 2-й неделе, меньше его 28 на 1-й. Другой вариант путает его недели."
+      },
+      "instructions": {
+        "en": "Read the text and the table. Choose the answer that uses the data correctly.",
+        "uz": "Matn va jadvalni oʻqing. Maʼlumotlardan toʻgʻri foydalangan javobni tanlang.",
+        "ru": "Прочитайте текст и таблицу. Выберите ответ, в котором данные использованы верно."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ii23q2",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "command_of_evidence_quantitative",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "page": "C19-RWII02-3",
+      "lang": "en",
+      "stem": {
+        "en": "At a school fair, a club counted the visitors to its two stalls each hour.\n\nHour | Book stall | Plant stall\n10:00-11:00 | 18 | 30\n11:00-12:00 | 22 | 25\n12:00-13:00 | 35 | 15\n\nA club member wrote that the book stall grew busier as the day went on, but the plant stall ______\n\nWhich choice most effectively uses data from the table to complete the statement?"
+      },
+      "options": [
+        {
+          "en": "had fewer visitors each hour, falling from 30 to 25 and then to 15."
+        },
+        {
+          "en": "had more visitors than the book stall from 10:00 to 11:00, 30 against 18."
+        },
+        {
+          "en": "had fewer visitors each hour, falling from 35 to 22 and then to 18."
+        },
+        {
+          "en": "had its busiest hour from 12:00 to 13:00, with 35 visitors."
+        }
+      ],
+      "why": {
+        "en": "'But' asks for the opposite trend: the plant stall fell from 30 to 25 to 15. One choice uses the book stall's numbers; another is true but shows no trend.",
+        "uz": "«But» qarama-qarshi yoʻnalishni soʻraydi: koʻchat rastasi 30 dan 25 ga, keyin 15 ga tushdi. Bir variant kitob rastasining sonlarini olgan, yana biri rost, lekin oʻzgarishni koʻrsatmaydi.",
+        "ru": "«But» требует обратной тенденции: у прилавка с растениями 30, потом 25, потом 15. Один вариант берёт числа книжного прилавка."
+      },
+      "instructions": {
+        "en": "Read the text and the table. Choose the answer that uses the data correctly.",
+        "uz": "Matn va jadvalni oʻqing. Maʼlumotlardan toʻgʻri foydalangan javobni tanlang.",
+        "ru": "Прочитайте текст и таблицу. Выберите ответ, в котором данные использованы верно."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ii23q3",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "command_of_evidence_quantitative",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "hard"
+      },
+      "page": "C19-RWII02-3",
+      "lang": "en",
+      "stem": {
+        "en": "Three school clubs planted trees on a town clean-up day.\n\nClub | Members who took part | Trees planted\nEcology | 16 | 48\nHiking | 10 | 40\nPhotography | 6 | 30\n\nThe photography club had the fewest members taking part, yet ______\n\nWhich choice most effectively uses data from the table to complete the statement?"
+      },
+      "options": [
+        {
+          "en": "its members planted the most trees per member: 5 each, compared with 4 for hiking and 3 for ecology."
+        },
+        {
+          "en": "it planted 30 trees, the fewest of the three clubs."
+        },
+        {
+          "en": "its members planted the most trees per member: 5 each, compared with 3 for hiking and 4 for ecology."
+        },
+        {
+          "en": "the ecology club planted the most trees of the three clubs, 48 in all."
+        }
+      ],
+      "why": {
+        "en": "'Yet' needs something the small club did best: 30 ÷ 6 = 5 trees a member, more than hiking (40 ÷ 10 = 4) and ecology (48 ÷ 16 = 3).",
+        "uz": "«yet» kichik klub eng yaxshi qilgan narsani soʻraydi: bir aʼzoga 30 ÷ 6 = 5 ta daraxt, bu hiking (40 ÷ 10 = 4) va ecology (48 ÷ 16 = 3) dan koʻp.",
+        "ru": "«Yet» требует того, в чём маленький клуб оказался лучшим: 30 ÷ 6 = 5 деревьев на человека, больше, чем у hiking (40 ÷ 10 = 4) и ecology (48 ÷ 16 = 3)."
+      },
+      "instructions": {
+        "en": "Read the text and the table. Choose the answer that uses the data correctly.",
+        "uz": "Matn va jadvalni oʻqing. Maʼlumotlardan toʻgʻri foydalangan javobni tanlang.",
+        "ru": "Прочитайте текст и таблицу. Выберите ответ, в котором данные использованы верно."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

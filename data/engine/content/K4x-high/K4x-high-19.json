@@ -1,0 +1,133 @@
+{
+  "bank": "K4x",
+  "batch": 19,
+  "items": [
+    {
+      "id": "K4x-pch19w",
+      "bank": "K4x",
+      "skill": "math",
+      "rung": "precalc",
+      "subskill": "rational_functions",
+      "family_ref": "K4-pch019",
+      "params": {
+        "a": 2,
+        "b": 5
+      },
+      "edge": true,
+      "lang": "en",
+      "stem": {
+        "en": "The graph of y = (2x² − 1)/(5x² + x) has the horizontal asymptote y = c. What is c?",
+        "uz": "y = (2x² − 1)/(5x² + x) funksiya grafigining gorizontal asimptotasi y = c. c ni toping.",
+        "ru": "Горизонтальная асимптота графика y = (2x² − 1)/(5x² + x) — прямая y = c. Найдите c."
+      },
+      "options": [
+        {
+          "en": "0.4",
+          "uz": "0,4",
+          "ru": "0,4"
+        },
+        {
+          "en": "5/2",
+          "uz": "5/2",
+          "ru": "5/2"
+        },
+        {
+          "en": "0",
+          "uz": "0",
+          "ru": "0"
+        },
+        {
+          "en": "2",
+          "uz": "2",
+          "ru": "2"
+        }
+      ],
+      "answer_numeric": {
+        "value": 0.4,
+        "tolerance": 0.001
+      },
+      "why": {
+        "en": "The degrees are equal, so c is the ratio of the leading coefficients: 3/2 = 1.5.",
+        "uz": "Surat va maxraj darajalari teng, shuning uchun c bosh koeffitsiyentlar nisbati: 3/2 = 1,5.",
+        "ru": "Степени числителя и знаменателя равны, поэтому c — отношение старших коэффициентов: 3/2 = 1,5."
+      },
+      "instructions": {
+        "en": "Type the answer as a number; a decimal is fine.",
+        "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+        "ru": "Введите ответ числом; можно десятичной дробью."
+      },
+      "prior_b": 1.05,
+      "time_s": 25,
+      "source": "own",
+      "author": "agent:p5int-edges",
+      "key_check_1": "author",
+      "key_check_2": null,
+      "status": "draft",
+      "version": 1
+    },
+    {
+      "id": "K4x-clh02w",
+      "bank": "K4x",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "limits_at_infinity",
+      "family_ref": "K4-clh002",
+      "params": {
+        "a": 2,
+        "b": 5,
+        "c": 1
+      },
+      "edge": true,
+      "lang": "en",
+      "stem": {
+        "en": "What is lim (x → ∞) √(4x² + 1)/(5x + 1)?",
+        "uz": "lim (x → ∞) √(4x² + 1)/(5x + 1) ni toping.",
+        "ru": "Найдите lim (x → ∞) √(4x² + 1)/(5x + 1)."
+      },
+      "options": [
+        {
+          "en": "0.4",
+          "uz": "0,4",
+          "ru": "0,4"
+        },
+        {
+          "en": "4/5",
+          "uz": "4/5",
+          "ru": "4/5"
+        },
+        {
+          "en": "0",
+          "uz": "0",
+          "ru": "0"
+        },
+        {
+          "en": "5/2",
+          "uz": "5/2",
+          "ru": "5/2"
+        }
+      ],
+      "answer_numeric": {
+        "value": 0.4,
+        "tolerance": 0.001
+      },
+      "why": {
+        "en": "For large x, √(9x² + 1) ≈ 3x, so the ratio tends to 3/2 = 1.5.",
+        "uz": "Katta x larda √(9x² + 1) ≈ 3x, demak nisbat 3/2 = 1,5 ga intiladi.",
+        "ru": "При больших x √(9x² + 1) ≈ 3x, поэтому отношение стремится к 3/2 = 1,5."
+      },
+      "instructions": {
+        "en": "Type the answer as a number; a decimal is fine.",
+        "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+        "ru": "Введите ответ числом; можно десятичной дробью."
+      },
+      "prior_b": 1.75,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:p5int-edges",
+      "key_check_1": "author",
+      "key_check_2": null,
+      "status": "draft",
+      "version": 1
+    }
+  ]
+}

@@ -1,0 +1,1040 @@
+{
+  "bank": "K4",
+  "batch": 6,
+  "items": [
+    {
+      "id": "K4-a10021",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_word_problems",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A rectangle's length is {k} cm more than its width. Its perimeter is {p} cm. What is its width, in cm?",
+        "params": {
+          "k": {
+            "min": 2,
+            "max": 8,
+            "step": 1
+          },
+          "w": {
+            "min": 3,
+            "max": 15,
+            "step": 1
+          }
+        },
+        "derived": {
+          "p": "4 * w + 2 * k"
+        },
+        "answer": "w",
+        "variants": 91
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A rectangle's length is {k} cm more than its width. Its perimeter is {p} cm. What is its width, in cm?",
+        "uz": "Toʻgʻri toʻrtburchakning boʻyi enidan {k} sm uzun. Uning perimetri {p} sm. Enini toping (sm da).",
+        "ru": "Длина прямоугольника на {k} см больше ширины. Его периметр {p} см. Найдите ширину (в см)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Call the width x: perimeter = 2(x + x + difference) = 4x + 2 × difference; solve for x.",
+        "uz": "Enini x desak: perimetr = 2(x + x + farq) = 4x + 2 × farq; x ni toping.",
+        "ru": "Пусть ширина x: периметр = 2(x + x + разность) = 4x + 2 × разность; найдите x."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10022",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "At what value of x does the line y = {m}x − {b} cross the x-axis?",
+        "params": {
+          "m": {
+            "min": 2,
+            "max": 6,
+            "step": 1
+          },
+          "x0": {
+            "min": 1,
+            "max": 8,
+            "step": 1
+          }
+        },
+        "derived": {
+          "b": "m * x0"
+        },
+        "answer": "x0",
+        "variants": 40
+      },
+      "lang": "en",
+      "stem": {
+        "en": "At what value of x does the line y = {m}x − {b} cross the x-axis?",
+        "uz": "y = {m}x − {b} toʻgʻri chiziq x oʻqini x ning qanday qiymatida kesib oʻtadi?",
+        "ru": "При каком значении x прямая y = {m}x − {b} пересекает ось x?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "On the x-axis y = 0: set y equal to 0 and solve for x.",
+        "uz": "x oʻqida y = 0: y ni 0 ga tenglab, x ni toping.",
+        "ru": "На оси x y = 0: приравняйте y к нулю и найдите x."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10023",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "polynomial_expansion",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Expand: 3(2x − 5)",
+        "uz": "Qavsni oching: 3(2x − 5)",
+        "ru": "Раскройте скобки: 3(2x − 5)"
+      },
+      "options": [
+        {
+          "en": "6x − 15",
+          "uz": "6x − 15",
+          "ru": "6x − 15"
+        },
+        {
+          "en": "6x − 5",
+          "uz": "6x − 5",
+          "ru": "6x − 5"
+        },
+        {
+          "en": "5x − 15",
+          "uz": "5x − 15",
+          "ru": "5x − 15"
+        },
+        {
+          "en": "6x + 15",
+          "uz": "6x + 15",
+          "ru": "6x + 15"
+        }
+      ],
+      "why": {
+        "en": "Multiply each term in the brackets by 3: 3 × 2x = 6x and 3 × (−5) = −15.",
+        "uz": "Qavs ichidagi har bir hadni 3 ga koʻpaytiring: 3 × 2x = 6x va 3 × (−5) = −15.",
+        "ru": "Умножьте каждое слагаемое в скобках на 3: 3 × 2x = 6x и 3 × (−5) = −15."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.05,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10024",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "like_terms",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Simplify: 4x + 3 − x + 5",
+        "uz": "Soddalashtiring: 4x + 3 − x + 5",
+        "ru": "Упростите: 4x + 3 − x + 5"
+      },
+      "options": [
+        {
+          "en": "3x + 8",
+          "uz": "3x + 8",
+          "ru": "3x + 8"
+        },
+        {
+          "en": "5x + 8",
+          "uz": "5x + 8",
+          "ru": "5x + 8"
+        },
+        {
+          "en": "3x + 2",
+          "uz": "3x + 2",
+          "ru": "3x + 2"
+        },
+        {
+          "en": "4x + 8",
+          "uz": "4x + 8",
+          "ru": "4x + 8"
+        }
+      ],
+      "why": {
+        "en": "Combine like terms: 4x − x = 3x and 3 + 5 = 8.",
+        "uz": "Oʻxshash hadlarni birlashtiring: 4x − x = 3x va 3 + 5 = 8.",
+        "ru": "Приведите подобные слагаемые: 4x − x = 3x и 3 + 5 = 8."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.05,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10025",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "factoring",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Factor: x² − 49",
+        "uz": "Koʻpaytuvchilarga ajrating: x² − 49",
+        "ru": "Разложите на множители: x² − 49"
+      },
+      "options": [
+        {
+          "en": "(x − 7)(x + 7)",
+          "uz": "(x − 7)(x + 7)",
+          "ru": "(x − 7)(x + 7)"
+        },
+        {
+          "en": "(x − 7)²",
+          "uz": "(x − 7)²",
+          "ru": "(x − 7)²"
+        },
+        {
+          "en": "(x + 7)²",
+          "uz": "(x + 7)²",
+          "ru": "(x + 7)²"
+        },
+        {
+          "en": "x(x − 49)",
+          "uz": "x(x − 49)",
+          "ru": "x(x − 49)"
+        }
+      ],
+      "why": {
+        "en": "Difference of squares: a² − b² = (a − b)(a + b), and 49 = 7².",
+        "uz": "Kvadratlar ayirmasi: a² − b² = (a − b)(a + b), bunda 49 = 7².",
+        "ru": "Разность квадратов: a² − b² = (a − b)(a + b), где 49 = 7²."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.05,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10026",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "factoring",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Factor: x² + 5x + 6",
+        "uz": "Koʻpaytuvchilarga ajrating: x² + 5x + 6",
+        "ru": "Разложите на множители: x² + 5x + 6"
+      },
+      "options": [
+        {
+          "en": "(x + 2)(x + 3)",
+          "uz": "(x + 2)(x + 3)",
+          "ru": "(x + 2)(x + 3)"
+        },
+        {
+          "en": "(x + 1)(x + 6)",
+          "uz": "(x + 1)(x + 6)",
+          "ru": "(x + 1)(x + 6)"
+        },
+        {
+          "en": "(x − 2)(x − 3)",
+          "uz": "(x − 2)(x − 3)",
+          "ru": "(x − 2)(x − 3)"
+        },
+        {
+          "en": "(x + 5)(x + 1)",
+          "uz": "(x + 5)(x + 1)",
+          "ru": "(x + 5)(x + 1)"
+        }
+      ],
+      "why": {
+        "en": "Find two numbers whose product is 6 and whose sum is 5: 2 and 3.",
+        "uz": "Koʻpaytmasi 6 ga, yigʻindisi 5 ga teng ikki sonni toping: 2 va 3.",
+        "ru": "Найдите два числа с произведением 6 и суммой 5: это 2 и 3."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.05,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10027",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "polynomial_expansion",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Expand: (x + 4)(x − 2)",
+        "uz": "Qavslarni oching: (x + 4)(x − 2)",
+        "ru": "Раскройте скобки: (x + 4)(x − 2)"
+      },
+      "options": [
+        {
+          "en": "x² + 2x − 8",
+          "uz": "x² + 2x − 8",
+          "ru": "x² + 2x − 8"
+        },
+        {
+          "en": "x² − 2x − 8",
+          "uz": "x² − 2x − 8",
+          "ru": "x² − 2x − 8"
+        },
+        {
+          "en": "x² + 2x + 8",
+          "uz": "x² + 2x + 8",
+          "ru": "x² + 2x + 8"
+        },
+        {
+          "en": "x² − 8",
+          "uz": "x² − 8",
+          "ru": "x² − 8"
+        }
+      ],
+      "why": {
+        "en": "x·x − 2x + 4x − 8 = x² + 2x − 8.",
+        "uz": "x·x − 2x + 4x − 8 = x² + 2x − 8.",
+        "ru": "x·x − 2x + 4x − 8 = x² + 2x − 8."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.05,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10028",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "exponent_rules",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Simplify: (2x³)²",
+        "uz": "Soddalashtiring: (2x³)²",
+        "ru": "Упростите: (2x³)²"
+      },
+      "options": [
+        {
+          "en": "4x⁶",
+          "uz": "4x⁶",
+          "ru": "4x⁶"
+        },
+        {
+          "en": "2x⁶",
+          "uz": "2x⁶",
+          "ru": "2x⁶"
+        },
+        {
+          "en": "4x⁵",
+          "uz": "4x⁵",
+          "ru": "4x⁵"
+        },
+        {
+          "en": "2x⁹",
+          "uz": "2x⁹",
+          "ru": "2x⁹"
+        }
+      ],
+      "why": {
+        "en": "Square both factors: 2² = 4 and (x³)² = x⁶ (multiply the exponents).",
+        "uz": "Ikkala koʻpaytuvchini kvadratga oshiring: 2² = 4 va (x³)² = x⁶ (daraja koʻrsatkichlari koʻpaytiriladi).",
+        "ru": "Возведите в квадрат оба множителя: 2² = 4 и (x³)² = x⁶ (показатели перемножаются)."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.05,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10029",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "number_of_solutions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "How many solutions does the equation 3(x + 2) = 3x + 5 have?",
+        "uz": "3(x + 2) = 3x + 5 tenglama nechta yechimga ega?",
+        "ru": "Сколько решений имеет уравнение 3(x + 2) = 3x + 5?"
+      },
+      "options": [
+        {
+          "en": "None",
+          "uz": "Yechimi yoʻq",
+          "ru": "Ни одного"
+        },
+        {
+          "en": "One",
+          "uz": "Bitta",
+          "ru": "Одно"
+        },
+        {
+          "en": "Two",
+          "uz": "Ikkita",
+          "ru": "Два"
+        },
+        {
+          "en": "Infinitely many",
+          "uz": "Cheksiz koʻp",
+          "ru": "Бесконечно много"
+        }
+      ],
+      "why": {
+        "en": "Expanding gives 3x + 6 = 3x + 5, that is 6 = 5, which is never true.",
+        "uz": "Qavsni ochsak, 3x + 6 = 3x + 5, yaʼni 6 = 5 — bu hech qachon toʻgʻri emas.",
+        "ru": "После раскрытия скобок 3x + 6 = 3x + 5, то есть 6 = 5 — это неверно ни при каком x."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.05,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10030",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_inequalities",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Solve the inequality: 2x − 3 > 7",
+        "uz": "Tengsizlikni yeching: 2x − 3 > 7",
+        "ru": "Решите неравенство: 2x − 3 > 7"
+      },
+      "options": [
+        {
+          "en": "x > 5",
+          "uz": "x > 5",
+          "ru": "x > 5"
+        },
+        {
+          "en": "x < 5",
+          "uz": "x < 5",
+          "ru": "x < 5"
+        },
+        {
+          "en": "x > 2",
+          "uz": "x > 2",
+          "ru": "x > 2"
+        },
+        {
+          "en": "x > 10",
+          "uz": "x > 10",
+          "ru": "x > 10"
+        }
+      ],
+      "why": {
+        "en": "Add 3: 2x > 10; divide by 2: x > 5.",
+        "uz": "3 ni qoʻshing: 2x > 10; 2 ga boʻling: x > 5.",
+        "ru": "Прибавьте 3: 2x > 10; разделите на 2: x > 5."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.05,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10031",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_inequalities",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Solve the inequality: −3x ≤ 12",
+        "uz": "Tengsizlikni yeching: −3x ≤ 12",
+        "ru": "Решите неравенство: −3x ≤ 12"
+      },
+      "options": [
+        {
+          "en": "x ≥ −4",
+          "uz": "x ≥ −4",
+          "ru": "x ≥ −4"
+        },
+        {
+          "en": "x ≤ −4",
+          "uz": "x ≤ −4",
+          "ru": "x ≤ −4"
+        },
+        {
+          "en": "x ≥ 4",
+          "uz": "x ≥ 4",
+          "ru": "x ≥ 4"
+        },
+        {
+          "en": "x ≤ 4",
+          "uz": "x ≤ 4",
+          "ru": "x ≤ 4"
+        }
+      ],
+      "why": {
+        "en": "Dividing by a negative number reverses the inequality sign: x ≥ −4.",
+        "uz": "Manfiy songa boʻlganda tengsizlik belgisi teskarisiga almashadi: x ≥ −4.",
+        "ru": "При делении на отрицательное число знак неравенства меняется на противоположный: x ≥ −4."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.05,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10032",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Which equation describes the line through the point (0, 2) with slope 3?",
+        "uz": "(0; 2) nuqtadan oʻtuvchi va burchak koeffitsienti 3 ga teng toʻgʻri chiziq tenglamasi qaysi?",
+        "ru": "Какое уравнение задаёт прямую, которая проходит через точку (0; 2) и имеет угловой коэффициент 3?"
+      },
+      "options": [
+        {
+          "en": "y = 3x + 2",
+          "uz": "y = 3x + 2",
+          "ru": "y = 3x + 2"
+        },
+        {
+          "en": "y = 2x + 3",
+          "uz": "y = 2x + 3",
+          "ru": "y = 2x + 3"
+        },
+        {
+          "en": "y = 3x − 2",
+          "uz": "y = 3x − 2",
+          "ru": "y = 3x − 2"
+        },
+        {
+          "en": "y = −3x + 2",
+          "uz": "y = −3x + 2",
+          "ru": "y = −3x + 2"
+        }
+      ],
+      "why": {
+        "en": "In y = mx + b, m is the slope (3) and b is where the line meets the y-axis (2).",
+        "uz": "y = mx + b da m — burchak koeffitsienti (3), b — chiziqning y oʻqini kesgan nuqtasi (2).",
+        "ru": "В уравнении y = mx + b m — угловой коэффициент (3), b — точка пересечения с осью y (2)."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.05,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10033",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "rearranging_formulas",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The area of a triangle is A = bh/2. Which expression gives h?",
+        "uz": "Uchburchak yuzi A = bh/2 formula bilan topiladi. h ni qaysi ifoda beradi?",
+        "ru": "Площадь треугольника находится по формуле A = bh/2. Какое выражение задаёт h?"
+      },
+      "options": [
+        {
+          "en": "h = 2A/b",
+          "uz": "h = 2A/b",
+          "ru": "h = 2A/b"
+        },
+        {
+          "en": "h = A/(2b)",
+          "uz": "h = A/(2b)",
+          "ru": "h = A/(2b)"
+        },
+        {
+          "en": "h = 2b/A",
+          "uz": "h = 2b/A",
+          "ru": "h = 2b/A"
+        },
+        {
+          "en": "h = Ab/2",
+          "uz": "h = Ab/2",
+          "ru": "h = Ab/2"
+        }
+      ],
+      "why": {
+        "en": "Multiply both sides by 2 (2A = bh), then divide by b.",
+        "uz": "Ikkala tomonni 2 ga koʻpaytiring (2A = bh), soʻng b ga boʻling.",
+        "ru": "Умножьте обе части на 2 (2A = bh), затем разделите на b."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.05,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10034",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_models",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A gym charges a one-time fee of 50,000 soʻm plus 120,000 soʻm per month. Which expression gives the total cost, in soʻm, for m months?",
+        "uz": "Sport zali bir martalik 50 000 soʻm va har oy uchun 120 000 soʻm toʻlov oladi. m oy uchun umumiy toʻlovni (soʻmda) qaysi ifoda koʻrsatadi?",
+        "ru": "Спортзал берёт разовый взнос 50 000 сум и 120 000 сум в месяц. Какое выражение показывает общую сумму (в сумах) за m месяцев?"
+      },
+      "options": [
+        {
+          "en": "50,000 + 120,000m",
+          "uz": "50 000 + 120 000m",
+          "ru": "50 000 + 120 000m"
+        },
+        {
+          "en": "120,000 + 50,000m",
+          "uz": "120 000 + 50 000m",
+          "ru": "120 000 + 50 000m"
+        },
+        {
+          "en": "170,000m",
+          "uz": "170 000m",
+          "ru": "170 000m"
+        },
+        {
+          "en": "50,000 − 120,000m",
+          "uz": "50 000 − 120 000m",
+          "ru": "50 000 − 120 000m"
+        }
+      ],
+      "why": {
+        "en": "The fee is paid once (50,000) and the monthly price is paid m times (120,000m).",
+        "uz": "Bir martalik toʻlov bir marta (50 000), oylik toʻlov esa m marta (120 000m) toʻlanadi.",
+        "ru": "Разовый взнос платится один раз (50 000), а помесячная плата — m раз (120 000m)."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.05,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10035",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Solve 5(x − 2) = 3x + 4. What is x?",
+        "uz": "5(x − 2) = 3x + 4 tenglamani yeching. x ni toping.",
+        "ru": "Решите уравнение 5(x − 2) = 3x + 4. Найдите x."
+      },
+      "answer_numeric": {
+        "value": 7,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "5x − 10 = 3x + 4, so 2x = 14 and x = 7.",
+        "uz": "5x − 10 = 3x + 4, demak, 2x = 14 va x = 7.",
+        "ru": "5x − 10 = 3x + 4, значит, 2x = 14 и x = 7."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10036",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Solve x/3 − x/4 = 2. What is x?",
+        "uz": "x/3 − x/4 = 2 tenglamani yeching. x ni toping.",
+        "ru": "Решите уравнение x/3 − x/4 = 2. Найдите x."
+      },
+      "answer_numeric": {
+        "value": 24,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Multiply both sides by 12: 4x − 3x = 24, so x = 24.",
+        "uz": "Ikkala tomonni 12 ga koʻpaytiring: 4x − 3x = 24, demak, x = 24.",
+        "ru": "Умножьте обе части на 12: 4x − 3x = 24, значит, x = 24."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10037",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "evaluating_expressions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "If 3x + 2y = 12 and x = 2, what is y?",
+        "uz": "3x + 2y = 12 va x = 2 boʻlsa, y nechaga teng?",
+        "ru": "Если 3x + 2y = 12 и x = 2, чему равен y?"
+      },
+      "answer_numeric": {
+        "value": 3,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "3 × 2 + 2y = 12, so 2y = 6 and y = 3.",
+        "uz": "3 × 2 + 2y = 12, demak, 2y = 6 va y = 3.",
+        "ru": "3 × 2 + 2y = 12, значит, 2y = 6 и y = 3."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10038",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "systems_of_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "2x + y = 7 and x − y = 2. What is y?",
+        "uz": "2x + y = 7 va x − y = 2. y ni toping.",
+        "ru": "2x + y = 7 и x − y = 2. Найдите y."
+      },
+      "answer_numeric": {
+        "value": 1,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Add the equations: 3x = 9, so x = 3, and then y = 7 − 2 × 3 = 1.",
+        "uz": "Tenglamalarni qoʻshing: 3x = 9, demak, x = 3, soʻng y = 7 − 2 × 3 = 1.",
+        "ru": "Сложите уравнения: 3x = 9, значит, x = 3, тогда y = 7 − 2 × 3 = 1."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10039",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The line y = −2x + b passes through the point (3, 1). What is b?",
+        "uz": "y = −2x + b toʻgʻri chiziq (3; 1) nuqtadan oʻtadi. b ni toping.",
+        "ru": "Прямая y = −2x + b проходит через точку (3; 1). Найдите b."
+      },
+      "answer_numeric": {
+        "value": 7,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Substitute the point: 1 = −2 × 3 + b, so b = 7.",
+        "uz": "Nuqtani qoʻying: 1 = −2 × 3 + b, demak, b = 7.",
+        "ru": "Подставьте точку: 1 = −2 × 3 + b, значит, b = 7."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.05,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10040",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "number_of_solutions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "For what value of k does the equation 2x + 3 = 2x + k have infinitely many solutions?",
+        "uz": "k ning qanday qiymatida 2x + 3 = 2x + k tenglama cheksiz koʻp yechimga ega boʻladi?",
+        "ru": "При каком значении k уравнение 2x + 3 = 2x + k имеет бесконечно много решений?"
+      },
+      "answer_numeric": {
+        "value": 3,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Both sides must be exactly the same expression, so k = 3.",
+        "uz": "Ikkala tomon aynan bir xil ifoda boʻlishi kerak, demak, k = 3.",
+        "ru": "Обе части должны совпадать полностью, значит, k = 3."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.05,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

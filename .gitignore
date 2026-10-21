@@ -1,0 +1,40 @@
+# dependencies and builds
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+out/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# environment and secrets: never committed (.env.example-style templates would be named *.example)
+.env
+.env.*
+!*.example
+*.pem
+*.key
+
+# logs, run output, scratch
+*.log
+logs/
+contract/.run/
+frontend/tests/out/
+tests/smoke/out/
+.superpowers/
+.remember/
+scratch/
+scratch-*
+*.tmp
+.pgdata/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

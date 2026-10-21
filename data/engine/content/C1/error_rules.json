@@ -1,0 +1,950 @@
+{
+  "bank": "C1",
+  "about": {
+    "en": "Coded error rules behind the distractors of the C1 practice families. families[id] lists the rule of each distractor in order (distractors or option_templates[1..3]). Practice feedback may show the rule's line when a student picks that distractor."
+  },
+  "rules": {
+    "sign_slip": {
+      "en": "A minus sign was lost or flipped.",
+      "uz": "Minus belgisi tushib qolgan yoki teskari olingan.",
+      "ru": "Потерян или перевёрнут знак минус."
+    },
+    "order_of_operations": {
+      "en": "The operations were done in the wrong order.",
+      "uz": "Amallar notoʻgʻri tartibda bajarilgan.",
+      "ru": "Действия выполнены в неправильном порядке."
+    },
+    "wrong_formula": {
+      "en": "A related but wrong formula or rule was used.",
+      "uz": "Oʻxshash, lekin notoʻgʻri formula yoki qoida ishlatilgan.",
+      "ru": "Использована похожая, но неверная формула или правило."
+    },
+    "wrong_operation": {
+      "en": "The wrong operation was used (for example, adding instead of multiplying).",
+      "uz": "Notoʻgʻri amal bajarilgan (masalan, koʻpaytirish oʻrniga qoʻshilgan).",
+      "ru": "Выбрано не то действие (например, сложение вместо умножения)."
+    },
+    "partial_answer": {
+      "en": "The work stopped early: this is an in-between value, not the answer to the question.",
+      "uz": "Yechim oxiriga yetkazilmagan: bu oraliq qiymat, savolga javob emas.",
+      "ru": "Решение не доведено до конца: это промежуточное значение, а не ответ на вопрос."
+    },
+    "inverse_slip": {
+      "en": "A ratio or a division was turned upside down.",
+      "uz": "Nisbat yoki boʻlish teskari olingan.",
+      "ru": "Отношение или деление перевёрнуто."
+    },
+    "place_value": {
+      "en": "A digit or the decimal point is in the wrong place (a factor of 10 is off).",
+      "uz": "Raqam yoki vergul notoʻgʻri xonada (10 marta farq qiladi).",
+      "ru": "Цифра или запятая стоит не в том разряде (ошибка в 10 раз)."
+    },
+    "carry_slip": {
+      "en": "A carried ten was forgotten or carried twice.",
+      "uz": "Keyingi xonaga oʻtkaziladigan oʻnlik unutilgan yoki ikki marta qoʻshilgan.",
+      "ru": "Перенос в следующий разряд забыт или сделан дважды."
+    },
+    "borrow_slip": {
+      "en": "Borrowing went wrong (for example, the smaller digit was taken from the larger one in each column).",
+      "uz": "Qarz olish xato bajarilgan (masalan, har bir xonada kichik raqam kattasidan ayirilgan).",
+      "ru": "Ошибка при заёме (например, в каждом разряде из большей цифры вычтена меньшая)."
+    },
+    "off_by_one": {
+      "en": "The count is off by one.",
+      "uz": "Sanoq bittaga xato.",
+      "ru": "Счёт сбился на единицу."
+    },
+    "unit_slip": {
+      "en": "A unit was converted wrongly or not at all.",
+      "uz": "Oʻlchov birligi notoʻgʻri oʻtkazilgan yoki umuman oʻtkazilmagan.",
+      "ru": "Единица измерения переведена неверно или не переведена."
+    },
+    "additive_reasoning": {
+      "en": "A difference was kept where a ratio should be kept (adding instead of scaling).",
+      "uz": "Nisbat oʻrniga ayirma saqlangan (koʻpaytirish oʻrniga qoʻshilgan).",
+      "ru": "Сохранена разность вместо отношения (прибавили вместо того, чтобы умножить)."
+    },
+    "square_slip": {
+      "en": "(a ± b)² was treated as a² ± b², or a² − b² as (a − b)².",
+      "uz": "(a ± b)² ni a² ± b² deb yoki a² − b² ni (a − b)² deb olingan.",
+      "ru": "(a ± b)² принято за a² ± b² или a² − b² за (a − b)²."
+    },
+    "exponent_slip": {
+      "en": "A power rule was misapplied (for example, x² read as 2x).",
+      "uz": "Daraja qoidasi notoʻgʻri qoʻllangan (masalan, x² ni 2x deb olingan).",
+      "ru": "Неверно применено правило степеней (например, x² принято за 2x)."
+    },
+    "rounding_slip": {
+      "en": "Rounded the wrong way for the question.",
+      "uz": "Savolga mos boʻlmagan tomonga yaxlitlangan.",
+      "ru": "Округлено не в ту сторону, которая нужна по условию."
+    },
+    "percent_base": {
+      "en": "The percent was taken of the wrong amount.",
+      "uz": "Foiz notoʻgʻri miqdordan olingan.",
+      "ru": "Процент взят не от той величины."
+    },
+    "diameter_radius": {
+      "en": "The diameter was used where the radius was needed.",
+      "uz": "Radius oʻrniga diametr olingan.",
+      "ru": "Вместо радиуса взят диаметр."
+    },
+    "extraneous_root": {
+      "en": "A solution that does not fit the situation was kept.",
+      "uz": "Masala shartiga mos kelmaydigan yechim olingan.",
+      "ru": "Взято решение, которое не подходит по смыслу задачи."
+    },
+    "chain_slip": {
+      "en": "The derivative of the inner function was left out.",
+      "uz": "Ichki funksiyaning hosilasi tushirib qoldirilgan.",
+      "ru": "Пропущена производная внутренней функции."
+    }
+  },
+  "families": {
+    "C1-arp001": [
+      "carry_slip",
+      "carry_slip",
+      "wrong_operation"
+    ],
+    "C1-arp002": [
+      "borrow_slip",
+      "wrong_operation",
+      "borrow_slip"
+    ],
+    "C1-arp003": [
+      "additive_reasoning",
+      "wrong_formula",
+      "sign_slip"
+    ],
+    "C1-arp004": [
+      "rounding_slip",
+      "partial_answer",
+      "off_by_one"
+    ],
+    "C1-arp005": [
+      "order_of_operations",
+      "sign_slip",
+      "partial_answer"
+    ],
+    "C1-arp006": [
+      "order_of_operations",
+      "sign_slip",
+      "partial_answer"
+    ],
+    "C1-arp007": [
+      "wrong_formula",
+      "wrong_formula",
+      "wrong_operation"
+    ],
+    "C1-arp008": [
+      "wrong_formula",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-pap001": [
+      "sign_slip",
+      "partial_answer",
+      "sign_slip"
+    ],
+    "C1-pap002": [
+      "partial_answer",
+      "wrong_formula",
+      "sign_slip"
+    ],
+    "C1-pap003": [
+      "wrong_operation",
+      "place_value",
+      "place_value"
+    ],
+    "C1-pap004": [
+      "percent_base",
+      "wrong_operation",
+      "percent_base"
+    ],
+    "C1-pap005": [
+      "inverse_slip",
+      "additive_reasoning",
+      "partial_answer"
+    ],
+    "C1-pap006": [
+      "rounding_slip",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-pap007": [
+      "sign_slip",
+      "sign_slip",
+      "exponent_slip"
+    ],
+    "C1-pap008": [
+      "wrong_formula",
+      "wrong_formula",
+      "sign_slip"
+    ],
+    "C1-a1p001": [
+      "sign_slip",
+      "sign_slip",
+      "wrong_formula"
+    ],
+    "C1-a1p002": [
+      "sign_slip",
+      "sign_slip",
+      "partial_answer"
+    ],
+    "C1-a1p003": [
+      "sign_slip",
+      "wrong_formula",
+      "sign_slip"
+    ],
+    "C1-a1p004": [
+      "wrong_formula",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-a1p005": [
+      "sign_slip",
+      "sign_slip",
+      "partial_answer"
+    ],
+    "C1-a1p006": [
+      "square_slip",
+      "partial_answer",
+      "sign_slip"
+    ],
+    "C1-a1p007": [
+      "exponent_slip",
+      "sign_slip",
+      "partial_answer"
+    ],
+    "C1-a1p008": [
+      "sign_slip",
+      "sign_slip",
+      "partial_answer"
+    ],
+    "C1-gep001": [
+      "wrong_formula",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-gep002": [
+      "partial_answer",
+      "wrong_formula",
+      "sign_slip"
+    ],
+    "C1-gep003": [
+      "wrong_formula",
+      "wrong_formula",
+      "diameter_radius"
+    ],
+    "C1-gep004": [
+      "partial_answer",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-gep005": [
+      "inverse_slip",
+      "additive_reasoning",
+      "partial_answer"
+    ],
+    "C1-gep006": [
+      "wrong_formula",
+      "partial_answer",
+      "inverse_slip"
+    ],
+    "C1-gep007": [
+      "wrong_formula",
+      "wrong_formula",
+      "exponent_slip"
+    ],
+    "C1-gep008": [
+      "sign_slip",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-gep009": [
+      "wrong_formula",
+      "off_by_one",
+      "partial_answer"
+    ],
+    "C1-gep010": [
+      "sign_slip",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-a2p001": [
+      "extraneous_root",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-a2p002": [
+      "additive_reasoning",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-a2p003": [
+      "partial_answer",
+      "exponent_slip",
+      "exponent_slip"
+    ],
+    "C1-a2p004": [
+      "off_by_one",
+      "off_by_one",
+      "partial_answer"
+    ],
+    "C1-a2p005": [
+      "sign_slip",
+      "square_slip",
+      "wrong_operation"
+    ],
+    "C1-a2p006": [
+      "wrong_formula",
+      "wrong_operation",
+      "partial_answer"
+    ],
+    "C1-a2p007": [
+      "sign_slip",
+      "inverse_slip",
+      "partial_answer"
+    ],
+    "C1-a2p008": [
+      "wrong_formula",
+      "additive_reasoning",
+      "partial_answer"
+    ],
+    "C1-a2p009": [
+      "wrong_formula",
+      "wrong_formula",
+      "off_by_one"
+    ],
+    "C1-pcp001": [
+      "wrong_formula",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-pcp002": [
+      "partial_answer",
+      "wrong_formula",
+      "wrong_operation"
+    ],
+    "C1-pcp003": [
+      "wrong_formula",
+      "wrong_operation",
+      "wrong_formula"
+    ],
+    "C1-pcp004": [
+      "wrong_formula",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-pcp005": [
+      "sign_slip",
+      "inverse_slip",
+      "partial_answer"
+    ],
+    "C1-pcp006": [
+      "partial_answer",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-pcp007": [
+      "inverse_slip",
+      "partial_answer",
+      "sign_slip"
+    ],
+    "C1-pcp008": [
+      "wrong_formula",
+      "unit_slip",
+      "unit_slip"
+    ],
+    "C1-pcp009": [
+      "wrong_formula",
+      "inverse_slip",
+      "sign_slip"
+    ],
+    "C1-pcp010": [
+      "partial_answer",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-clp001": [
+      "wrong_formula",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-clp002": [
+      "sign_slip",
+      "partial_answer",
+      "exponent_slip"
+    ],
+    "C1-clp003": [
+      "wrong_formula",
+      "partial_answer",
+      "sign_slip"
+    ],
+    "C1-clp004": [
+      "wrong_formula",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-clp005": [
+      "wrong_formula",
+      "extraneous_root",
+      "wrong_formula"
+    ],
+    "C1-clp006": [
+      "wrong_formula",
+      "partial_answer",
+      "partial_answer"
+    ],
+    "C1-clp007": [
+      "inverse_slip",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-clp008": [
+      "partial_answer",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-clp009": [
+      "chain_slip",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-clp010": [
+      "wrong_formula",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-bcp001": [
+      "wrong_formula",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-bcp002": [
+      "exponent_slip",
+      "wrong_formula",
+      "sign_slip"
+    ],
+    "C1-bcp003": [
+      "wrong_formula",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-bcp004": [
+      "wrong_formula",
+      "wrong_formula",
+      "off_by_one"
+    ],
+    "C1-bcp005": [
+      "partial_answer",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-bcp006": [
+      "wrong_formula",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-bcp007": [
+      "sign_slip",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-bcp008": [
+      "wrong_formula",
+      "wrong_operation",
+      "wrong_formula"
+    ],
+    "C1-bcp009": [
+      "wrong_formula",
+      "wrong_formula",
+      "exponent_slip"
+    ],
+    "C1-bcp010": [
+      "wrong_formula",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-bcp011": [
+      "sign_slip",
+      "partial_answer",
+      "partial_answer"
+    ],
+    "C1-sat001": [
+      "partial_answer",
+      "partial_answer",
+      "wrong_operation"
+    ],
+    "C1-sat002": [
+      "rounding_slip",
+      "partial_answer",
+      "sign_slip"
+    ],
+    "C1-sat003": [
+      "partial_answer",
+      "sign_slip",
+      "wrong_operation"
+    ],
+    "C1-sat004": [
+      "wrong_formula",
+      "sign_slip",
+      "partial_answer"
+    ],
+    "C1-sat005": [
+      "sign_slip",
+      "wrong_formula",
+      "inverse_slip"
+    ],
+    "C1-sat006": [
+      "percent_base",
+      "percent_base",
+      "partial_answer"
+    ],
+    "C1-sat007": [
+      "sign_slip",
+      "exponent_slip",
+      "sign_slip"
+    ],
+    "C1-sat008": [
+      "wrong_formula",
+      "wrong_operation",
+      "off_by_one"
+    ],
+    "C1-sat009": [
+      "sign_slip",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-sat010": [
+      "partial_answer",
+      "sign_slip",
+      "square_slip"
+    ],
+    "C1-sat011": [
+      "off_by_one",
+      "additive_reasoning",
+      "wrong_formula"
+    ],
+    "C1-sat012": [
+      "exponent_slip",
+      "partial_answer",
+      "wrong_operation"
+    ],
+    "C1-sat013": [
+      "unit_slip",
+      "unit_slip",
+      "inverse_slip"
+    ],
+    "C1-sat014": [
+      "partial_answer",
+      "percent_base",
+      "wrong_operation"
+    ],
+    "C1-sat015": [
+      "partial_answer",
+      "wrong_formula",
+      "off_by_one"
+    ],
+    "C1-sat016": [
+      "wrong_formula",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-sat017": [
+      "wrong_formula",
+      "inverse_slip",
+      "partial_answer"
+    ],
+    "C1-sat018": [
+      "unit_slip",
+      "unit_slip",
+      "inverse_slip"
+    ],
+    "C1-sat019": [
+      "wrong_formula",
+      "inverse_slip",
+      "wrong_formula"
+    ],
+    "C1-sat020": [
+      "partial_answer",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-sat021": [
+      "wrong_formula",
+      "inverse_slip",
+      "wrong_formula"
+    ],
+    "C1-sat022": [
+      "wrong_formula",
+      "square_slip",
+      "sign_slip"
+    ],
+    "C1-sat023": [
+      "wrong_formula",
+      "inverse_slip",
+      "additive_reasoning"
+    ],
+    "C1-sat024": [
+      "wrong_formula",
+      "partial_answer",
+      "exponent_slip"
+    ],
+    "C1-gel011": [
+      "wrong_operation",
+      "partial_answer",
+      "wrong_operation"
+    ],
+    "C1-gel012": [
+      "wrong_formula",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-gel021": [
+      "partial_answer",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-gel022": [
+      "partial_answer",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-gel031": [
+      "partial_answer",
+      "wrong_formula",
+      "sign_slip"
+    ],
+    "C1-gel032": [
+      "partial_answer",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-gel041": [
+      "wrong_operation",
+      "partial_answer",
+      "partial_answer"
+    ],
+    "C1-gel042": [
+      "wrong_operation",
+      "partial_answer",
+      "partial_answer"
+    ],
+    "C1-gel051": [
+      "wrong_formula",
+      "partial_answer",
+      "partial_answer"
+    ],
+    "C1-gel052": [
+      "partial_answer",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-gel061": [
+      "wrong_formula",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-gel062": [
+      "partial_answer",
+      "place_value",
+      "wrong_operation"
+    ],
+    "C1-pal011": [
+      "wrong_formula",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-pal012": [
+      "partial_answer",
+      "wrong_operation",
+      "partial_answer"
+    ],
+    "C1-pal021": [
+      "sign_slip",
+      "sign_slip",
+      "order_of_operations"
+    ],
+    "C1-pal022": [
+      "sign_slip",
+      "sign_slip",
+      "sign_slip"
+    ],
+    "C1-pal031": [
+      "partial_answer",
+      "wrong_operation",
+      "sign_slip"
+    ],
+    "C1-pal032": [
+      "partial_answer",
+      "wrong_operation",
+      "sign_slip"
+    ],
+    "C1-pal051": [
+      "sign_slip",
+      "wrong_formula",
+      "order_of_operations"
+    ],
+    "C1-pal052": [
+      "sign_slip",
+      "wrong_formula",
+      "order_of_operations"
+    ],
+    "C1-pal061": [
+      "partial_answer",
+      "partial_answer",
+      "partial_answer"
+    ],
+    "C1-pal062": [
+      "partial_answer",
+      "wrong_operation",
+      "wrong_operation"
+    ],
+    "C1-cal011": [
+      "partial_answer",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-cal012": [
+      "partial_answer",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-pal041": [
+      "place_value",
+      "place_value",
+      "wrong_operation"
+    ],
+    "C1-a2l011": [
+      "wrong_formula",
+      "partial_answer",
+      "partial_answer"
+    ],
+    "C1-a1l061": [
+      "partial_answer",
+      "wrong_operation",
+      "wrong_operation"
+    ],
+    "C1-r3a001": [
+      "wrong_formula",
+      "partial_answer",
+      "sign_slip"
+    ],
+    "C1-r3a002": [
+      "wrong_formula",
+      "partial_answer",
+      "exponent_slip"
+    ],
+    "C1-r3a003": [
+      "exponent_slip",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-r3a004": [
+      "chain_slip",
+      "wrong_formula",
+      "wrong_operation"
+    ],
+    "C1-r3a005": [
+      "sign_slip",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-r3a006": [
+      "inverse_slip",
+      "wrong_formula",
+      "sign_slip"
+    ],
+    "C1-r3a007": [
+      "chain_slip",
+      "exponent_slip",
+      "wrong_formula"
+    ],
+    "C1-r3a008": [
+      "exponent_slip",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-r3a009": [
+      "partial_answer",
+      "off_by_one",
+      "off_by_one"
+    ],
+    "C1-r3a010": [
+      "sign_slip",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-r3a011": [
+      "partial_answer",
+      "wrong_formula",
+      "exponent_slip"
+    ],
+    "C1-r3a012": [
+      "wrong_formula",
+      "partial_answer",
+      "off_by_one"
+    ],
+    "C1-r3a013": [
+      "wrong_formula",
+      "sign_slip",
+      "partial_answer"
+    ],
+    "C1-r3a014": [
+      "wrong_formula",
+      "partial_answer",
+      "sign_slip"
+    ],
+    "C1-r3a015": [
+      "exponent_slip",
+      "wrong_formula",
+      "inverse_slip"
+    ],
+    "C1-r3a016": [
+      "off_by_one",
+      "wrong_operation",
+      "partial_answer"
+    ],
+    "C1-r3a017": [
+      "partial_answer",
+      "sign_slip",
+      "wrong_formula"
+    ],
+    "C1-r3a018": [
+      "square_slip",
+      "exponent_slip",
+      "partial_answer"
+    ],
+    "C1-r3a019": [
+      "wrong_formula",
+      "off_by_one",
+      "wrong_operation"
+    ],
+    "C1-r3a020": [
+      "wrong_formula",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-r3b001": [
+      "sign_slip",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-r3b002": [
+      "partial_answer",
+      "off_by_one",
+      "wrong_formula"
+    ],
+    "C1-r3b003": [
+      "wrong_formula",
+      "sign_slip",
+      "partial_answer"
+    ],
+    "C1-r3b004": [
+      "partial_answer",
+      "partial_answer",
+      "inverse_slip"
+    ],
+    "C1-r3b005": [
+      "wrong_formula",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-r3b006": [
+      "sign_slip",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-r3b007": [
+      "partial_answer",
+      "wrong_formula",
+      "wrong_operation"
+    ],
+    "C1-r3b008": [
+      "partial_answer",
+      "inverse_slip",
+      "additive_reasoning"
+    ],
+    "C1-r3b009": [
+      "wrong_operation",
+      "sign_slip",
+      "inverse_slip"
+    ],
+    "C1-r3b010": [
+      "exponent_slip",
+      "exponent_slip",
+      "partial_answer"
+    ],
+    "C1-r3b011": [
+      "off_by_one",
+      "wrong_formula",
+      "off_by_one"
+    ],
+    "C1-r3b012": [
+      "sign_slip",
+      "wrong_operation",
+      "wrong_formula"
+    ],
+    "C1-r3b013": [
+      "partial_answer",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-r3b014": [
+      "wrong_formula",
+      "inverse_slip",
+      "wrong_formula"
+    ],
+    "C1-r3b015": [
+      "diameter_radius",
+      "wrong_formula",
+      "partial_answer"
+    ],
+    "C1-r3b016": [
+      "additive_reasoning",
+      "partial_answer",
+      "wrong_formula"
+    ],
+    "C1-r3b017": [
+      "wrong_formula",
+      "off_by_one",
+      "partial_answer"
+    ],
+    "C1-r3b018": [
+      "sign_slip",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-r3b019": [
+      "partial_answer",
+      "wrong_formula",
+      "inverse_slip"
+    ],
+    "C1-r3b020": [
+      "partial_answer",
+      "wrong_formula",
+      "sign_slip"
+    ],
+    "C1-r3b021": [
+      "wrong_formula",
+      "exponent_slip",
+      "wrong_operation"
+    ],
+    "C1-r3b022": [
+      "wrong_formula",
+      "exponent_slip",
+      "inverse_slip"
+    ],
+    "C1-r3b023": [
+      "inverse_slip",
+      "wrong_formula",
+      "wrong_formula"
+    ],
+    "C1-r3b024": [
+      "wrong_formula",
+      "wrong_formula",
+      "partial_answer"
+    ]
+  }
+}

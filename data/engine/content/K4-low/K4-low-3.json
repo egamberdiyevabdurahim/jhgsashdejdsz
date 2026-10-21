@@ -1,0 +1,1142 @@
+{
+  "bank": "K4",
+  "batch": 3,
+  "items": [
+    {
+      "id": "K4-pa0001",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "negative_numbers",
+      "family": {
+        "template": "Calculate: −{a} + {b}",
+        "params": {
+          "a": {
+            "min": 3,
+            "max": 15,
+            "step": 1
+          },
+          "b": {
+            "min": 2,
+            "max": 20,
+            "step": 1
+          }
+        },
+        "constraints": [
+          "a != b"
+        ],
+        "answer": "b - a",
+        "variants": 234
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: −{a} + {b}",
+        "uz": "Hisoblang: −{a} + {b}",
+        "ru": "Вычислите: −{a} + {b}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Signs differ: subtract the smaller absolute value from the larger and keep the sign of the number with the larger absolute value.",
+        "uz": "Ishoralar har xil: katta moduldan kichigini ayiring va moduli katta sonning ishorasini qoʻying.",
+        "ru": "Знаки разные: из большего модуля вычтите меньший и поставьте знак числа с большим модулем."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.75,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0002",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "negative_numbers",
+      "family": {
+        "template": "Calculate: (−{a}) × {b}",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 9,
+            "step": 1
+          },
+          "b": {
+            "min": 3,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "answer": "-a * b",
+        "variants": 56
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: (−{a}) × {b}",
+        "uz": "Hisoblang: (−{a}) × {b}",
+        "ru": "Вычислите: (−{a}) × {b}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "A negative number times a positive number is negative.",
+        "uz": "Manfiy sonning musbat songa koʻpaytmasi manfiy boʻladi.",
+        "ru": "Произведение отрицательного числа на положительное отрицательно."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.75,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0003",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "negative_numbers",
+      "family": {
+        "template": "Calculate: {a} − {b}",
+        "params": {
+          "a": {
+            "min": 3,
+            "max": 12,
+            "step": 1
+          },
+          "b": {
+            "min": 13,
+            "max": 25,
+            "step": 1
+          }
+        },
+        "answer": "a - b",
+        "variants": 130
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: {a} − {b}",
+        "uz": "Hisoblang: {a} − {b}",
+        "ru": "Вычислите: {a} − {b}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Subtracting a larger number from a smaller one gives a negative result: a − b = −(b − a).",
+        "uz": "Kichik sondan katta sonni ayirsangiz, natija manfiy boʻladi: a − b = −(b − a).",
+        "ru": "Если из меньшего числа вычесть большее, результат отрицателен: a − b = −(b − a)."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.75,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0004",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "negative_numbers",
+      "family": {
+        "template": "Calculate: (−{a}) × (−{b}) − {c}",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 7,
+            "step": 1
+          },
+          "b": {
+            "min": 2,
+            "max": 7,
+            "step": 1
+          },
+          "c": {
+            "min": 5,
+            "max": 30,
+            "step": 5
+          }
+        },
+        "answer": "a * b - c",
+        "variants": 216
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: (−{a}) × (−{b}) − {c}",
+        "uz": "Hisoblang: (−{a}) × (−{b}) − {c}",
+        "ru": "Вычислите: (−{a}) × (−{b}) − {c}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "A negative times a negative is positive; multiply first, then subtract.",
+        "uz": "Manfiy sonning manfiy songa koʻpaytmasi musbat; avval koʻpaytiring, soʻng ayiring.",
+        "ru": "Минус на минус даёт плюс; сначала умножьте, затем вычтите."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0005",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "What is {p}% of {n}?",
+        "params": {
+          "p": [
+            10,
+            20,
+            25,
+            30,
+            40,
+            50,
+            75
+          ],
+          "n": {
+            "min": 40,
+            "max": 400,
+            "step": 20
+          }
+        },
+        "answer": "p * n / 100",
+        "variants": 133
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is {p}% of {n}?",
+        "uz": "{n} sonining {p} foizini toping.",
+        "ru": "Найдите {p}% от {n}."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "p% of a number = the number × p ÷ 100 (for example, 25% is one quarter).",
+        "uz": "Sonning p foizi = son × p : 100 (masalan, 25 foiz — toʻrtdan bir qism).",
+        "ru": "p% от числа = число × p : 100 (например, 25% — это четверть)."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0006",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "A jacket costs {c} thousand soʻm. In a sale the price is reduced by {p}%. What is the new price, in thousands of soʻm?",
+        "params": {
+          "c": {
+            "min": 100,
+            "max": 400,
+            "step": 20
+          },
+          "p": [
+            10,
+            20,
+            25,
+            30,
+            40,
+            50
+          ]
+        },
+        "answer": "c * (100 - p) / 100",
+        "variants": 96
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A jacket costs {c} thousand soʻm. In a sale the price is reduced by {p}%. What is the new price, in thousands of soʻm?",
+        "uz": "Kurtka {c} ming soʻm turadi. Chegirmada narx {p} foizga tushirildi. Yangi narx necha ming soʻm?",
+        "ru": "Куртка стоит {c} тыс. сум. На распродаже цену снизили на {p}%. Какова новая цена (в тыс. сум)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "After a p% discount the new price is (100 − p)% of the old price.",
+        "uz": "p foizlik chegirmadan keyin yangi narx eski narxning (100 − p) foiziga teng.",
+        "ru": "После скидки p% новая цена составляет (100 − p)% от старой."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0007",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent_change",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A shop raised the price of a bag from {a} thousand soʻm to {b} thousand soʻm. By what percent did the price increase?",
+        "params": {
+          "a": [
+            200,
+            400,
+            500,
+            800
+          ],
+          "p": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            40
+          ]
+        },
+        "derived": {
+          "b": "a * (100 + p) / 100"
+        },
+        "answer": "p",
+        "variants": 28
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A shop raised the price of a bag from {a} thousand soʻm to {b} thousand soʻm. By what percent did the price increase?",
+        "uz": "Doʻkon sumka narxini {a} ming soʻmdan {b} ming soʻmga oshirdi. Narx necha foizga oshdi?",
+        "ru": "Магазин поднял цену сумки с {a} тыс. сум до {b} тыс. сум. На сколько процентов выросла цена?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Percent change = (new − old) ÷ old × 100.",
+        "uz": "Foiz oʻzgarishi = (yangi − eski) : eski × 100.",
+        "ru": "Изменение в процентах = (новое − старое) : старое × 100."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0008",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "fractions",
+      "family": {
+        "template": "What is {a}/{b} of {n}?",
+        "params": {
+          "a": [
+            1,
+            3
+          ],
+          "b": [
+            3,
+            4,
+            5,
+            8
+          ],
+          "k": {
+            "min": 3,
+            "max": 12,
+            "step": 1
+          }
+        },
+        "derived": {
+          "n": "b * k"
+        },
+        "constraints": [
+          "a < b"
+        ],
+        "answer": "a * k",
+        "variants": 70
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is {a}/{b} of {n}?",
+        "uz": "{n} sonining {a}/{b} qismini toping.",
+        "ru": "Найдите {a}/{b} от числа {n}."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Divide the number by the denominator, then multiply by the numerator.",
+        "uz": "Sonni maxrajga boʻling, soʻng suratga koʻpaytiring.",
+        "ru": "Разделите число на знаменатель и умножьте на числитель."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0009",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "exponents",
+      "family": {
+        "template": "Calculate: {a}²",
+        "params": {
+          "a": {
+            "min": 11,
+            "max": 20,
+            "step": 1
+          }
+        },
+        "answer": "a ^ 2",
+        "variants": 10
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: {a}²",
+        "uz": "Hisoblang: {a}²",
+        "ru": "Вычислите: {a}²"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "a² = a × a: multiply the number by itself.",
+        "uz": "a² = a × a: sonni oʻziga koʻpaytiring.",
+        "ru": "a² = a × a: умножьте число само на себя."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0010",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "square_roots",
+      "family": {
+        "template": "Calculate: √{s}",
+        "params": {
+          "a": {
+            "min": 4,
+            "max": 15,
+            "step": 1
+          }
+        },
+        "derived": {
+          "s": "a * a"
+        },
+        "answer": "a",
+        "variants": 12
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: √{s}",
+        "uz": "Hisoblang: √{s}",
+        "ru": "Вычислите: √{s}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Find the positive number whose square is the number under the root sign.",
+        "uz": "Kvadrati ildiz ostidagi songa teng boʻlgan musbat sonni toping.",
+        "ru": "Найдите положительное число, квадрат которого равен подкоренному числу."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0011",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "order_of_operations",
+      "family": {
+        "template": "Calculate: ({a} − {b})² + {c}",
+        "params": {
+          "a": {
+            "min": 7,
+            "max": 12,
+            "step": 1
+          },
+          "b": {
+            "min": 2,
+            "max": 5,
+            "step": 1
+          },
+          "c": {
+            "min": 1,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "answer": "(a - b) ^ 2 + c",
+        "variants": 216
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: ({a} − {b})² + {c}",
+        "uz": "Hisoblang: ({a} − {b})² + {c}",
+        "ru": "Вычислите: ({a} − {b})² + {c}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Brackets first, then the power, then the addition.",
+        "uz": "Avval qavs, keyin daraja, soʻng qoʻshish.",
+        "ru": "Сначала скобки, затем степень, потом сложение."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0012",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "ratio",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "Aziz and Dilnoza share {t} sweets in the ratio {p} : {q}. How many sweets does Aziz get?",
+        "params": {
+          "p": {
+            "min": 1,
+            "max": 4,
+            "step": 1
+          },
+          "q": {
+            "min": 2,
+            "max": 5,
+            "step": 1
+          },
+          "k": {
+            "min": 3,
+            "max": 10,
+            "step": 1
+          }
+        },
+        "derived": {
+          "t": "(p + q) * k"
+        },
+        "constraints": [
+          "p < q"
+        ],
+        "answer": "p * k",
+        "variants": 80
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Aziz and Dilnoza share {t} sweets in the ratio {p} : {q}. How many sweets does Aziz get?",
+        "uz": "Aziz va Dilnoza {t} ta konfetni {p} : {q} nisbatda boʻlishdi. Azizga nechta konfet tegdi?",
+        "ru": "Азиз и Дилноза разделили конфеты в отношении {p} : {q}. Всего было {t} шт. Сколько конфет получил Азиз?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "There are p + q equal parts; one part = total ÷ (p + q); Aziz gets p parts.",
+        "uz": "Jami p + q ta teng qism; bir qism = jami : (p + q); Azizga p ta qism tegadi.",
+        "ru": "Всего p + q равных частей; одна часть = всего : (p + q); Азиз получает p частей."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0013",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "unit_rate",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "{n} identical pens cost {c} soʻm in total. How many soʻm do {m} such pens cost?",
+        "params": {
+          "n": {
+            "min": 2,
+            "max": 6,
+            "step": 1
+          },
+          "u": [
+            1200,
+            1500,
+            2000,
+            2500,
+            3000
+          ],
+          "m": {
+            "min": 7,
+            "max": 12,
+            "step": 1
+          }
+        },
+        "derived": {
+          "c": "n * u"
+        },
+        "answer": "m * u",
+        "variants": 150
+      },
+      "lang": "en",
+      "stem": {
+        "en": "{n} identical pens cost {c} soʻm in total. How many soʻm do {m} such pens cost?",
+        "uz": "{n} ta bir xil ruchka jami {c} soʻm turadi. Shunday {m} ta ruchka necha soʻm turadi?",
+        "ru": "Набор из {n} одинаковых ручек стоит {c} сум. Сколько стоят {m} таких ручек (в сумах)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Find the price of one pen, then multiply by the new number of pens.",
+        "uz": "Avval bitta ruchkaning narxini toping, soʻng uni yangi soniga koʻpaytiring.",
+        "ru": "Найдите цену одной ручки и умножьте её на новое количество."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0014",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "one_step_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "x − {a} = {b}. Find x.",
+        "params": {
+          "a": {
+            "min": 4,
+            "max": 19,
+            "step": 1
+          },
+          "b": {
+            "min": 3,
+            "max": 25,
+            "step": 1
+          }
+        },
+        "answer": "a + b",
+        "variants": 368
+      },
+      "lang": "en",
+      "stem": {
+        "en": "x − {a} = {b}. Find x.",
+        "uz": "x − {a} = {b}. x ni toping.",
+        "ru": "x − {a} = {b}. Найдите x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Add the same number to both sides to leave x on its own.",
+        "uz": "x ni yolgʻiz qoldirish uchun tenglikning ikkala tomoniga bir xil son qoʻshing.",
+        "ru": "Чтобы x остался один, прибавьте к обеим частям одно и то же число."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0015",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "one_step_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "{a}x = {p}. Find x.",
+        "params": {
+          "a": {
+            "min": 3,
+            "max": 12,
+            "step": 1
+          },
+          "q": {
+            "min": 2,
+            "max": 15,
+            "step": 1
+          }
+        },
+        "derived": {
+          "p": "a * q"
+        },
+        "answer": "q",
+        "variants": 140
+      },
+      "lang": "en",
+      "stem": {
+        "en": "{a}x = {p}. Find x.",
+        "uz": "{a}x = {p}. x ni toping.",
+        "ru": "{a}x = {p}. Найдите x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Divide both sides by the number in front of x.",
+        "uz": "Ikkala tomonni x oldidagi songa boʻling.",
+        "ru": "Разделите обе части на число перед x."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0016",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "evaluating_expressions",
+      "family": {
+        "template": "Find the value of {a}n − {b} when n = {n}.",
+        "params": {
+          "n": {
+            "min": 2,
+            "max": 9,
+            "step": 1
+          },
+          "a": {
+            "min": 3,
+            "max": 8,
+            "step": 1
+          },
+          "b": {
+            "min": 1,
+            "max": 20,
+            "step": 1
+          }
+        },
+        "answer": "a * n - b",
+        "variants": 960
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Find the value of {a}n − {b} when n = {n}.",
+        "uz": "n = {n} boʻlganda {a}n − {b} ifodaning qiymatini toping.",
+        "ru": "Найдите значение выражения {a}n − {b} при n = {n}."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Replace n with its value, multiply, then subtract.",
+        "uz": "n oʻrniga uning qiymatini qoʻying, koʻpaytiring, soʻng ayiring.",
+        "ru": "Подставьте значение n, умножьте, затем вычтите."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0017",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "mean",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "What is the mean (average) of {x}, {y} and {z}?",
+        "params": {
+          "m": {
+            "min": 15,
+            "max": 25,
+            "step": 1
+          },
+          "x": {
+            "min": 4,
+            "max": 12,
+            "step": 1
+          },
+          "y": {
+            "min": 13,
+            "max": 20,
+            "step": 1
+          }
+        },
+        "derived": {
+          "z": "3 * m - x - y"
+        },
+        "answer": "m",
+        "variants": 792
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is the mean (average) of {x}, {y} and {z}?",
+        "uz": "{x}, {y} va {z} sonlarining oʻrta arifmetigini toping.",
+        "ru": "Найдите среднее арифметическое чисел {x}, {y} и {z}."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Mean = sum of the numbers ÷ how many numbers there are.",
+        "uz": "Oʻrta arifmetik = sonlar yigʻindisi : sonlar soni.",
+        "ru": "Среднее арифметическое = сумма чисел : их количество."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0018",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "proportion",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "{a}/{b} = x/{c}. Find x.",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 7,
+            "step": 1
+          },
+          "b": {
+            "min": 3,
+            "max": 9,
+            "step": 1
+          },
+          "k": {
+            "min": 2,
+            "max": 6,
+            "step": 1
+          }
+        },
+        "derived": {
+          "c": "b * k"
+        },
+        "constraints": [
+          "a != b"
+        ],
+        "answer": "a * k",
+        "variants": 185
+      },
+      "lang": "en",
+      "stem": {
+        "en": "{a}/{b} = x/{c}. Find x.",
+        "uz": "{a}/{b} = x/{c}. x ni toping.",
+        "ru": "{a}/{b} = x/{c}. Найдите x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Find how many times larger the second denominator is than the first, and multiply the numerator by the same number.",
+        "uz": "Ikkinchi maxraj birinchisidan necha marta katta ekanini toping va suratni ham shuncha marta oshiring.",
+        "ru": "Найдите, во сколько раз второй знаменатель больше первого, и умножьте числитель на то же число."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0019",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "rate_distance",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "A car travels at {v} km/h for {t} hours. How many kilometres does it travel?",
+        "params": {
+          "v": {
+            "min": 40,
+            "max": 90,
+            "step": 5
+          },
+          "t": {
+            "min": 2,
+            "max": 5,
+            "step": 1
+          }
+        },
+        "answer": "v * t",
+        "variants": 44
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A car travels at {v} km/h for {t} hours. How many kilometres does it travel?",
+        "uz": "Avtomobil {t} soat davomida {v} km/soat tezlik bilan yurdi. U necha kilometr yoʻl bosdi?",
+        "ru": "Автомобиль ехал {t} ч со скоростью {v} км/ч. Какое расстояние (в км) он проехал?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Distance = speed × time.",
+        "uz": "Masofa = tezlik × vaqt.",
+        "ru": "Расстояние = скорость × время."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0020",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "rate_distance",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "A cyclist rides {d} km at a steady {v} km/h. How many hours does the ride take?",
+        "params": {
+          "v": [
+            10,
+            12,
+            15,
+            16,
+            18,
+            20
+          ],
+          "t": {
+            "min": 2,
+            "max": 5,
+            "step": 1
+          }
+        },
+        "derived": {
+          "d": "v * t"
+        },
+        "answer": "t",
+        "variants": 24
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A cyclist rides {d} km at a steady {v} km/h. How many hours does the ride take?",
+        "uz": "Velosipedchi {d} km masofani {v} km/soat oʻzgarmas tezlik bilan bosib oʻtdi. Bu necha soat davom etdi?",
+        "ru": "Велосипедист проехал {d} км с постоянной скоростью {v} км/ч. Сколько часов заняла поездка?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Time = distance ÷ speed.",
+        "uz": "Vaqt = masofa : tezlik.",
+        "ru": "Время = расстояние : скорость."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

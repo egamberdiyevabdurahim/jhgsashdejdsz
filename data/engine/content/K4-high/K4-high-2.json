@@ -1,0 +1,1370 @@
+{
+ "bank": "K4",
+ "batch": 2,
+ "items": [
+  {
+   "id": "K4-a2h021",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "arithmetic_sequence",
+   "family": {
+    "template": "The sequence {a}, {a2}, {a3}, {a4}, … is arithmetic (a₁ = {a}). What is a_{n}?",
+    "params": {
+     "a": {
+      "min": 5,
+      "max": 20
+     },
+     "d": {
+      "min": 2,
+      "max": 5
+     },
+     "n": {
+      "min": 10,
+      "max": 20
+     }
+    },
+    "derived": {
+     "a2": "a - d",
+     "a3": "a - 2 * d",
+     "a4": "a - 3 * d",
+     "n1": "n - 1"
+    },
+    "answer": "a - (n - 1) * d",
+    "distractors": [
+     "a - n * d",
+     "a + (n - 1) * d",
+     "(n - 1) * d - a"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 701
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The sequence {a}, {a2}, {a3}, {a4}, … is arithmetic (a₁ = {a}). What is a_{n}?",
+    "uz": "{a}, {a2}, {a3}, {a4}, … arifmetik progressiya (a₁ = {a}). a_{n} ni toping.",
+    "ru": "{a}, {a2}, {a3}, {a4}, … — арифметическая прогрессия (a₁ = {a}). Найдите a_{n}."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "aₙ = a₁ + (n − 1)d with d = −{d}: a_{n} = {a} − {n1}·{d} = {ANS}.",
+    "uz": "aₙ = a₁ + (n − 1)d, bu yerda d = −{d}: a_{n} = {a} − {n1}·{d} = {ANS}.",
+    "ru": "aₙ = a₁ + (n − 1)d, где d = −{d}: a_{n} = {a} − {n1}·{d} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.15,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "solver:stem@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-a2h022",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "arithmetic_series",
+   "family": {
+    "template": "What is the sum of the first {n} terms of the arithmetic sequence {a}, {a2}, {a3}, {a4}, …?",
+    "params": {
+     "a": {
+      "min": 1,
+      "max": 9
+     },
+     "d": {
+      "min": 2,
+      "max": 6
+     },
+     "n": {
+      "values": [
+       10,
+       12,
+       15,
+       20,
+       25,
+       30
+      ]
+     }
+    },
+    "derived": {
+     "a2": "a + d",
+     "a3": "a + 2 * d",
+     "a4": "a + 3 * d",
+     "a2x": "2 * a",
+     "nd": "(n - 1) * d"
+    },
+    "answer": "n * (2 * a + (n - 1) * d) / 2",
+    "distractors": [
+     "a + (n - 1) * d",
+     "n * (2 * a + (n - 1) * d)",
+     "n * (2 * a + n * d) / 2"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 270
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the sum of the first {n} terms of the arithmetic sequence {a}, {a2}, {a3}, {a4}, …?",
+    "uz": "{a}, {a2}, {a3}, {a4}, … arifmetik progressiyaning dastlabki {n} ta hadi yigʻindisini toping.",
+    "ru": "Найдите сумму первых {n} членов арифметической прогрессии {a}, {a2}, {a3}, {a4}, …"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Use Sₙ = n(2a₁ + (n − 1)d)/2 = {n}·({a2x} + {nd})/2 = {ANS}.",
+    "uz": "Formula: Sₙ = n(2a₁ + (n − 1)d)/2 = {n}·({a2x} + {nd})/2 = {ANS}.",
+    "ru": "По формуле Sₙ = n(2a₁ + (n − 1)d)/2 = {n}·({a2x} + {nd})/2 = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "solver:stem@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-a2h023",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "geometric_sequence",
+   "family": {
+    "template": "The sequence {a}, {a2}, {a3}, … is geometric (a₁ = {a}). What is a_{n}?",
+    "params": {
+     "a": {
+      "min": 1,
+      "max": 5
+     },
+     "r": {
+      "values": [
+       2,
+       3
+      ]
+     },
+     "n": {
+      "min": 4,
+      "max": 7
+     }
+    },
+    "derived": {
+     "a2": "a * r",
+     "a3": "a * r * r",
+     "n1": "n - 1"
+    },
+    "answer": "a * r**(n - 1)",
+    "distractors": [
+     "a * r**n",
+     "(a * r)**(n - 1)",
+     "a * r**(n - 2)"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 32,
+    "constraints": [
+     "(a * r**(n - 1)) != (a * r**n)",
+     "(a * r**(n - 1)) != ((a * r)**(n - 1))",
+     "(a * r**(n - 1)) != (a * r**(n - 2))",
+     "(a * r**n) != ((a * r)**(n - 1))",
+     "(a * r**n) != (a * r**(n - 2))",
+     "((a * r)**(n - 1)) != (a * r**(n - 2))"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The sequence {a}, {a2}, {a3}, … is geometric (a₁ = {a}). What is a_{n}?",
+    "uz": "{a}, {a2}, {a3}, … geometrik progressiya (a₁ = {a}). a_{n} ni toping.",
+    "ru": "{a}, {a2}, {a3}, … — геометрическая прогрессия (a₁ = {a}). Найдите a_{n}."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "aₙ = a₁·qⁿ⁻¹ with q = {r}: a_{n} = {a}·{r}^{n1} = {ANS}.",
+    "uz": "aₙ = a₁·qⁿ⁻¹, bu yerda q = {r}: a_{n} = {a}·{r}^{n1} = {ANS}.",
+    "ru": "aₙ = a₁·qⁿ⁻¹, где q = {r}: a_{n} = {a}·{r}^{n1} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.15,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "solver:stem@50",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 32 | 64 | 32 | 16 (seed check:3)"
+  },
+  {
+   "id": "K4-a2h024",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "geometric_series",
+   "family": {
+    "template": "What is the sum of the first {n} terms of the geometric sequence {a}, {a2}, {a3}, …?",
+    "params": {
+     "a": {
+      "min": 1,
+      "max": 5
+     },
+     "r": {
+      "values": [
+       2,
+       3
+      ]
+     },
+     "n": {
+      "min": 4,
+      "max": 7
+     }
+    },
+    "derived": {
+     "a2": "a * r",
+     "a3": "a * r * r",
+     "r1": "r - 1"
+    },
+    "answer": "a * (r**n - 1) / (r - 1)",
+    "distractors": [
+     "a * r**(n - 1)",
+     "a * (r**(n - 1) - 1) / (r - 1)",
+     "a * r**n"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 40
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the sum of the first {n} terms of the geometric sequence {a}, {a2}, {a3}, …?",
+    "uz": "{a}, {a2}, {a3}, … geometrik progressiyaning dastlabki {n} ta hadi yigʻindisini toping.",
+    "ru": "Найдите сумму первых {n} членов геометрической прогрессии {a}, {a2}, {a3}, …"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Use Sₙ = a₁(qⁿ − 1)/(q − 1) = {a}·({r}^{n} − 1)/{r1} = {ANS}.",
+    "uz": "Formula: Sₙ = a₁(qⁿ − 1)/(q − 1) = {a}·({r}^{n} − 1)/{r1} = {ANS}.",
+    "ru": "По формуле Sₙ = a₁(qⁿ − 1)/(q − 1) = {a}·({r}^{n} − 1)/{r1} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "solver:stem@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-a2h025",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "absolute_value_equation",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "What is the sum of all solutions of |{a}x − {b}| = {c}?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 4
+     },
+     "b": {
+      "min": 1,
+      "max": 12
+     },
+     "c": {
+      "min": 1,
+      "max": 12
+     }
+    },
+    "derived": {
+     "x1": "(b + c) / a",
+     "x2": "(b - c) / a"
+    },
+    "constraints": [
+     "(b + c) % a == 0",
+     "(b - c) % a == 0",
+     "(2 * b / a) != ((b + c) / a)",
+     "(2 * b / a) != (2 * c / a)",
+     "(2 * b / a) != (-2 * b / a)",
+     "((b + c) / a) != (2 * c / a)",
+     "((b + c) / a) != (-2 * b / a)",
+     "(2 * c / a) != (-2 * b / a)"
+    ],
+    "answer": "2 * b / a",
+    "distractors": [
+     "(b + c) / a",
+     "2 * c / a",
+     "-2 * b / a"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 84
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the sum of all solutions of |{a}x − {b}| = {c}?",
+    "uz": "|{a}x − {b}| = {c} tenglamaning barcha yechimlari yigʻindisini toping.",
+    "ru": "Найдите сумму всех решений уравнения |{a}x − {b}| = {c}."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "{a}x − {b} = {c} or {a}x − {b} = −{c}, so x = {x1} or x = {x2}; the sum is {ANS}.",
+    "uz": "{a}x − {b} = {c} yoki {a}x − {b} = −{c}, demak x = {x1} yoki x = {x2}; yigʻindi {ANS}.",
+    "ru": "{a}x − {b} = {c} или {a}x − {b} = −{c}, значит x = {x1} или x = {x2}; сумма {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "solver:stem@50",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 12 | 12 | 12 | −12 (seed check:1)"
+  },
+  {
+   "id": "K4-a2h026",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "absolute_value_inequality",
+   "family": {
+    "template": "How many integers x satisfy |x − {m}| < {k}?",
+    "params": {
+     "m": {
+      "min": 1,
+      "max": 9
+     },
+     "k": {
+      "min": 2,
+      "max": 8
+     }
+    },
+    "derived": {
+     "lo": "m - k",
+     "hi": "m + k"
+    },
+    "answer": "2 * k - 1",
+    "distractors": [
+     "2 * k + 1",
+     "2 * k",
+     "k"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 63
+   },
+   "lang": "en",
+   "stem": {
+    "en": "How many integers x satisfy |x − {m}| < {k}?",
+    "uz": "|x − {m}| < {k} tengsizlikni nechta butun x qanoatlantiradi?",
+    "ru": "Сколько целых x удовлетворяют неравенству |x − {m}| < {k}?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "|x − {m}| < {k} means {lo} < x < {hi}, so there are {ANS} integers.",
+    "uz": "|x − {m}| < {k} bu {lo} < x < {hi} degani, demak {ANS} ta butun son bor.",
+    "ru": "|x − {m}| < {k} означает {lo} < x < {hi}, значит целых чисел {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "solver:stem@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-a2h027",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "linear_system_no_solution",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "The system {a}x + ky = {c} and {ma}x + {mb}y = {d} has no solution. What is the value of k?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 5
+     },
+     "b": {
+      "min": 1,
+      "max": 9
+     },
+     "m": {
+      "min": 2,
+      "max": 4
+     },
+     "c": {
+      "min": 1,
+      "max": 9
+     },
+     "d": {
+      "min": 1,
+      "max": 20
+     }
+    },
+    "derived": {
+     "ma": "m * a",
+     "mb": "m * b"
+    },
+    "constraints": [
+     "d != m * c"
+    ],
+    "answer": "b",
+    "distractors": [
+     "m * b",
+     "m * m * b",
+     "-b"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 18720
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The system {a}x + ky = {c} and {ma}x + {mb}y = {d} has no solution. What is the value of k?",
+    "uz": "{a}x + ky = {c} va {ma}x + {mb}y = {d} tenglamalar sistemasi yechimga ega emas. k ning qiymati nechaga teng?",
+    "ru": "Система {a}x + ky = {c}, {ma}x + {mb}y = {d} не имеет решений. Найдите k."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "No solution means parallel lines: {a}/{ma} = k/{mb}, so k = {ANS} (the constants are not in that ratio).",
+    "uz": "Yechim yoʻq — toʻgʻri chiziqlar parallel: {a}/{ma} = k/{mb}, demak k = {ANS} (ozod hadlar bu nisbatda emas).",
+    "ru": "Нет решений — прямые параллельны: {a}/{ma} = k/{mb}, откуда k = {ANS} (свободные члены не в этом отношении)."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.55,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "solver:stem@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-a2h028",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "linear_system_infinite",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "The system {a}x − {b}y = {c} and kx − {mb}y = {mc} has infinitely many solutions. What is the value of k?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 6
+     },
+     "b": {
+      "min": 2,
+      "max": 6
+     },
+     "c": {
+      "min": 1,
+      "max": 9
+     },
+     "m": {
+      "min": 2,
+      "max": 5
+     }
+    },
+    "derived": {
+     "mb": "m * b",
+     "mc": "m * c"
+    },
+    "answer": "m * a",
+    "distractors": [
+     "a",
+     "-m * a",
+     "m * b"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 693,
+    "constraints": [
+     "(m * a) != (a)",
+     "(m * a) != (-m * a)",
+     "(m * a) != (m * b)",
+     "(a) != (-m * a)",
+     "(a) != (m * b)",
+     "(-m * a) != (m * b)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The system {a}x − {b}y = {c} and kx − {mb}y = {mc} has infinitely many solutions. What is the value of k?",
+    "uz": "{a}x − {b}y = {c} va kx − {mb}y = {mc} sistemasi cheksiz koʻp yechimga ega. k ning qiymati nechaga teng?",
+    "ru": "Система {a}x − {b}y = {c}, kx − {mb}y = {mc} имеет бесконечно много решений. Найдите k."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "The second equation must be {m} times the first: {m}({a}x − {b}y) = {mc}, so k = {ANS}.",
+    "uz": "Ikkinchi tenglama birinchisining {m} barobari boʻlishi kerak: {m}({a}x − {b}y) = {mc}, demak k = {ANS}.",
+    "ru": "Второе уравнение должно быть первым, умноженным на {m}: {m}({a}x − {b}y) = {mc}, значит k = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.55,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "solver:stem@50",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 10 | 2 | −10 | 10 (seed check:1)"
+  },
+  {
+   "id": "K4-a2h029",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "nonlinear_system",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "The graphs of y = x² − {p}x + {q} and y = {m}x − {nn} meet at exactly one point (x, y). What is y?",
+    "params": {
+     "h": {
+      "min": 2,
+      "max": 6
+     },
+     "m": {
+      "min": 2,
+      "max": 4
+     },
+     "nn": {
+      "min": 1,
+      "max": 5
+     }
+    },
+    "derived": {
+     "p": "2 * h - m",
+     "q": "h * h - nn"
+    },
+    "constraints": [
+     "p >= 2",
+     "q > 0",
+     "(m * h - nn) != (h)",
+     "(m * h - nn) != (m * h + nn)",
+     "(m * h - nn) != (q)",
+     "(h) != (m * h + nn)",
+     "(h) != (q)",
+     "(m * h + nn) != (q)"
+    ],
+    "answer": "m * h - nn",
+    "distractors": [
+     "h",
+     "m * h + nn",
+     "q"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 45
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The graphs of y = x² − {p}x + {q} and y = {m}x − {nn} meet at exactly one point (x, y). What is y?",
+    "uz": "y = x² − {p}x + {q} va y = {m}x − {nn} grafiklari faqat bitta (x, y) nuqtada kesishadi. y nechaga teng?",
+    "ru": "Графики y = x² − {p}x + {q} и y = {m}x − {nn} имеют ровно одну общую точку (x, y). Найдите y."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "x² − {p}x + {q} = {m}x − {nn} gives (x − {h})² = 0, so x = {h} and y = {m}·{h} − {nn} = {ANS}.",
+    "uz": "x² − {p}x + {q} = {m}x − {nn} dan (x − {h})² = 0, demak x = {h} va y = {m}·{h} − {nn} = {ANS}.",
+    "ru": "Из x² − {p}x + {q} = {m}x − {nn} получаем (x − {h})² = 0, значит x = {h} и y = {m}·{h} − {nn} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.55,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "solver:stem@50",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 4 | 3 | 14 | 4 (seed check:0)"
+  },
+  {
+   "id": "K4-a2h030",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "function_composition",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "easy"
+   },
+   "family": {
+    "template": "f(x) = {a}x − {b} and g(x) = x² + {c}. What is f(g({t}))?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 5
+     },
+     "b": {
+      "min": 1,
+      "max": 5
+     },
+     "c": {
+      "min": 1,
+      "max": 6
+     },
+     "t": {
+      "min": 1,
+      "max": 4
+     }
+    },
+    "derived": {
+     "gt": "t * t + c",
+     "ft": "a * t - b"
+    },
+    "answer": "a * (t * t + c) - b",
+    "distractors": [
+     "ft * ft + c",
+     "ft * gt",
+     "ft + gt"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 427,
+    "constraints": [
+     "(a * (t * t + c) - b) != (ft * ft + c)",
+     "(a * (t * t + c) - b) != (ft * gt)",
+     "(a * (t * t + c) - b) != (ft + gt)",
+     "(ft * ft + c) != (ft * gt)",
+     "(ft * ft + c) != (ft + gt)",
+     "(ft * gt) != (ft + gt)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = {a}x − {b} and g(x) = x² + {c}. What is f(g({t}))?",
+    "uz": "f(x) = {a}x − {b} va g(x) = x² + {c}. f(g({t})) ni toping.",
+    "ru": "f(x) = {a}x − {b}, g(x) = x² + {c}. Найдите f(g({t}))."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "First g({t}) = {gt}, then f({gt}) = {a}·{gt} − {b} = {ANS}.",
+    "uz": "Avval g({t}) = {gt}, keyin f({gt}) = {a}·{gt} − {b} = {ANS}.",
+    "ru": "Сначала g({t}) = {gt}, затем f({gt}) = {a}·{gt} − {b} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.15,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "solver:stem@50",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 26 | 6 | 6 | 7 (seed check:9)"
+  },
+  {
+   "id": "K4-a2h031",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "function_transformations",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The graph of y = f(x) is shifted 3 units to the right and 2 units up. Which equation describes the new graph?",
+    "uz": "y = f(x) grafigi 3 birlik oʻngga va 2 birlik yuqoriga surildi. Yangi grafik qaysi tenglama bilan beriladi?",
+    "ru": "График y = f(x) сдвинули на 3 единицы вправо и на 2 единицы вверх. Какое уравнение задаёт новый график?"
+   },
+   "options": [
+    {
+     "en": "y = f(x − 3) + 2"
+    },
+    {
+     "en": "y = f(x + 3) + 2"
+    },
+    {
+     "en": "y = f(x − 2) + 3"
+    },
+    {
+     "en": "y = f(x − 3) − 2"
+    }
+   ],
+   "why": {
+    "en": "A shift right by 3 replaces x with x − 3; a shift up by 2 adds 2: y = f(x − 3) + 2.",
+    "uz": "3 birlik oʻngga surish x ni x − 3 ga almashtiradi, 2 birlik yuqoriga surish 2 qoʻshadi: y = f(x − 3) + 2.",
+    "ru": "Сдвиг вправо на 3 заменяет x на x − 3, сдвиг вверх на 2 добавляет 2: y = f(x − 3) + 2."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 0.35,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-a2h032",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponential_model",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "easy"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A quantity starts at 500 and increases by 8% each year. Which expression gives its value after t years?",
+    "uz": "Miqdor 500 dan boshlanadi va har yili 8% ga ortadi. t yildan keyingi qiymatini qaysi ifoda beradi?",
+    "ru": "Величина равна 500 и каждый год увеличивается на 8 %. Какое выражение даёт её значение через t лет?"
+   },
+   "options": [
+    {
+     "en": "500(1.08)ᵗ"
+    },
+    {
+     "en": "500(0.08)ᵗ"
+    },
+    {
+     "en": "500(0.92)ᵗ"
+    },
+    {
+     "en": "500 + 40t"
+    }
+   ],
+   "why": {
+    "en": "Each year the value is multiplied by 1 + 0.08 = 1.08, so after t years it is 500(1.08)ᵗ.",
+    "uz": "Har yili qiymat 1 + 0,08 = 1,08 ga koʻpaytiriladi, shuning uchun t yildan keyin u 500(1,08)ᵗ ga teng.",
+    "ru": "Каждый год значение умножается на 1 + 0,08 = 1,08, поэтому через t лет оно равно 500(1,08)ᵗ."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 0.15,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-a2h033",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponential_decay",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "The mass of a substance halves every {T} hours. At the start it is {m0} g. What is the mass, in grams, after {t} hours?",
+    "params": {
+     "m0": {
+      "values": [
+       64,
+       80,
+       96,
+       128,
+       160,
+       192,
+       240,
+       320
+      ]
+     },
+     "T": {
+      "values": [
+       2,
+       3,
+       4,
+       5,
+       6
+      ]
+     },
+     "n": {
+      "min": 2,
+      "max": 4
+     }
+    },
+    "derived": {
+     "t": "n * T"
+    },
+    "constraints": [
+     "m0 % 2**(n + 1) == 0"
+    ],
+    "answer": "m0 / 2**n",
+    "distractors": [
+     "m0 / 2**(n - 1)",
+     "m0 / 2**(n + 1)",
+     "m0 - m0 / 2**n"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 110
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The mass of a substance halves every {T} hours. At the start it is {m0} g. What is the mass, in grams, after {t} hours?",
+    "uz": "Moddaning massasi har {T} soatda ikki marta kamayadi. Boshida u {m0} g. {t} soatdan keyin massasi necha gramm boʻladi?",
+    "ru": "Масса вещества уменьшается вдвое каждые {T} ч. В начале она равна {m0} г. Какой будет масса (в граммах) через {t} ч?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "{t} hours = {n} halvings, so the mass is {m0}/2^{n} = {ANS} g.",
+    "uz": "{t} soat — bu {n} marta ikki baravar kamayish: {m0}/2^{n} = {ANS} g.",
+    "ru": "За {t} ч масса уменьшится вдвое {n} раза: {m0}/2^{n} = {ANS} г."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-a2h034",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "compound_growth",
+   "sat": {
+    "domain": "psda",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "An amount of {P} grows by {r}% each year, and each year's growth is added to the amount. What is the amount after {n} years?",
+    "params": {
+     "P": {
+      "values": [
+       1000,
+       2000,
+       5000
+      ]
+     },
+     "r": {
+      "values": [
+       10,
+       20,
+       30,
+       50
+      ]
+     },
+     "n": {
+      "values": [
+       2,
+       3
+      ]
+     }
+    },
+    "derived": {
+     "g": "(100 + r) / 100"
+    },
+    "constraints": [
+     "(P * (100 + r)**n) % (100**n) == 0"
+    ],
+    "answer": "P * (100 + r)**n / 100**n",
+    "distractors": [
+     "P * (100 + n * r) / 100",
+     "P * (100 + r)**n / 100**n - P",
+     "P * (100 + r)**(n + 1) / 100**(n + 1)"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 24
+   },
+   "lang": "en",
+   "stem": {
+    "en": "An amount of {P} grows by {r}% each year, and each year's growth is added to the amount. What is the amount after {n} years?",
+    "uz": "{P} ga teng miqdor har yili {r}% ga oshadi va har yilgi oʻsish miqdorga qoʻshib boriladi. {n} yildan keyin miqdor qancha boʻladi?",
+    "ru": "Сумма {P} каждый год увеличивается на {r} %, и прирост каждый год прибавляется к сумме. Какой будет сумма через {n} года?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Multiply by {g} each year: {P}·{g}^{n} = {ANS}.",
+    "uz": "Har yili {g} ga koʻpaytiriladi: {P}·{g}^{n} = {ANS}.",
+    "ru": "Каждый год умножаем на {g}: {P}·{g}^{n} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-a2h035",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "percent_change",
+   "sat": {
+    "domain": "psda",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "A price rises by {p}%, and then the new price falls by {q}%. By what percent is the final price lower than the original price?",
+    "params": {
+     "p": {
+      "min": 10,
+      "max": 50,
+      "step": 10
+     },
+     "q": {
+      "min": 10,
+      "max": 60,
+      "step": 10
+     }
+    },
+    "derived": {
+     "up": "(100 + p) / 100",
+     "down": "(100 - q) / 100",
+     "f": "(100 + p) * (100 - q) / 10000",
+     "fp": "(100 + p) * (100 - q) / 100"
+    },
+    "constraints": [
+     "(100 + p) * (100 - q) < 10000"
+    ],
+    "answer": "100 - (100 + p) * (100 - q) / 100",
+    "distractors": [
+     "q - p",
+     "q",
+     "p * q / 10000"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 22
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A price rises by {p}%, and then the new price falls by {q}%. By what percent is the final price lower than the original price?",
+    "uz": "Narx {p}% ga oshdi, soʻng yangi narx {q}% ga kamaydi. Oxirgi narx dastlabki narxdan necha foiz past?",
+    "ru": "Цену повысили на {p} %, а затем новую цену снизили на {q} %. На сколько процентов итоговая цена ниже исходной?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "{up} · {down} = {f}, so the final price is {fp}% of the original: {ANS}% lower.",
+    "uz": "{up} · {down} = {f}, yaʼni oxirgi narx dastlabkisining {fp}% i: {ANS}% past.",
+    "ru": "{up} · {down} = {f}, то есть итоговая цена составляет {fp} % исходной: на {ANS} % ниже."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-a2h036",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "circle_equation",
+   "sat": {
+    "domain": "geometry_trig",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "A circle has the equation x² + y² − {A}x + {B}y − {c} = 0. What is its radius?",
+    "params": {
+     "h": {
+      "min": 1,
+      "max": 6
+     },
+     "k": {
+      "min": 1,
+      "max": 6
+     },
+     "r": {
+      "min": 3,
+      "max": 10
+     }
+    },
+    "derived": {
+     "A": "2 * h",
+     "B": "2 * k",
+     "c": "r * r - h * h - k * k",
+     "h2": "h * h",
+     "k2": "k * k",
+     "r2": "r * r"
+    },
+    "constraints": [
+     "c > 0",
+     "(r) != (r * r)",
+     "(r) != (c)",
+     "(r) != (h * h + k * k)",
+     "(r * r) != (c)",
+     "(r * r) != (h * h + k * k)",
+     "(c) != (h * h + k * k)"
+    ],
+    "answer": "r",
+    "distractors": [
+     "r * r",
+     "c",
+     "h * h + k * k"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 172
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A circle has the equation x² + y² − {A}x + {B}y − {c} = 0. What is its radius?",
+    "uz": "Aylana tenglamasi x² + y² − {A}x + {B}y − {c} = 0. Uning radiusi nechaga teng?",
+    "ru": "Окружность задана уравнением x² + y² − {A}x + {B}y − {c} = 0. Найдите её радиус."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Complete the squares: (x − {h})² + (y + {k})² = {c} + {h2} + {k2} = {r2}, so r = {ANS}.",
+    "uz": "Toʻla kvadratlarni ajrating: (x − {h})² + (y + {k})² = {c} + {h2} + {k2} = {r2}, demak r = {ANS}.",
+    "ru": "Выделим полные квадраты: (x − {h})² + (y + {k})² = {c} + {h2} + {k2} = {r2}, значит r = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.55,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "solver:stem@50",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 6 | 36 | 18 | 18 (seed check:11)"
+  },
+  {
+   "id": "K4-a2h037",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "circle_equation",
+   "sat": {
+    "domain": "geometry_trig",
+    "difficulty": "medium"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the center of the circle x² + y² + 8x − 10y + 5 = 0?",
+    "uz": "x² + y² + 8x − 10y + 5 = 0 aylananing markazini toping.",
+    "ru": "Найдите центр окружности x² + y² + 8x − 10y + 5 = 0."
+   },
+   "options": [
+    {
+     "en": "(−4, 5)"
+    },
+    {
+     "en": "(4, −5)"
+    },
+    {
+     "en": "(8, −10)"
+    },
+    {
+     "en": "(−8, 10)"
+    }
+   ],
+   "why": {
+    "en": "Complete the squares: (x + 4)² + (y − 5)² = 16 + 25 − 5 = 36, so the center is (−4, 5).",
+    "uz": "Toʻla kvadratlarni ajrating: (x + 4)² + (y − 5)² = 16 + 25 − 5 = 36, demak markaz (−4, 5).",
+    "ru": "Выделим полные квадраты: (x + 4)² + (y − 5)² = 16 + 25 − 5 = 36, значит центр (−4, 5)."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 0.35,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-a2h038",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "polynomial_zeros",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "p(x) = x³ − {s}x² + {pr}x. What is the sum of all the zeros of p?",
+    "params": {
+     "a": {
+      "min": 1,
+      "max": 6
+     },
+     "b": {
+      "min": 2,
+      "max": 9
+     }
+    },
+    "derived": {
+     "s": "a + b",
+     "pr": "a * b"
+    },
+    "constraints": [
+     "a < b",
+     "a * b >= 2",
+     "(a + b) != (a * b)",
+     "(a + b) != (-(a + b))",
+     "(a + b) != (b)",
+     "(a * b) != (-(a + b))",
+     "(a * b) != (b)",
+     "(-(a + b)) != (b)"
+    ],
+    "answer": "a + b",
+    "distractors": [
+     "a * b",
+     "-(a + b)",
+     "b"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 25
+   },
+   "lang": "en",
+   "stem": {
+    "en": "p(x) = x³ − {s}x² + {pr}x. What is the sum of all the zeros of p?",
+    "uz": "p(x) = x³ − {s}x² + {pr}x. p ning barcha nollari yigʻindisini toping.",
+    "ru": "p(x) = x³ − {s}x² + {pr}x. Найдите сумму всех нулей многочлена p."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "p(x) = x(x − {a})(x − {b}), so the zeros are 0, {a} and {b}; their sum is {ANS}.",
+    "uz": "p(x) = x(x − {a})(x − {b}), demak nollari 0, {a} va {b}; yigʻindisi {ANS}.",
+    "ru": "p(x) = x(x − {a})(x − {b}), значит нули 0, {a} и {b}; их сумма {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "solver:stem@50",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 3 | 2 | −3 | 2 (seed check:0)"
+  },
+  {
+   "id": "K4-a2h039",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "polynomial_division",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "Which expression equals (2x² + 3x − 5)/(x − 1) for x ≠ 1?",
+    "uz": "x ≠ 1 boʻlganda (2x² + 3x − 5)/(x − 1) qaysi ifodaga teng?",
+    "ru": "Какому выражению равно (2x² + 3x − 5)/(x − 1) при x ≠ 1?"
+   },
+   "options": [
+    {
+     "en": "2x + 5"
+    },
+    {
+     "en": "2x − 5"
+    },
+    {
+     "en": "2x + 1"
+    },
+    {
+     "en": "x + 5"
+    }
+   ],
+   "why": {
+    "en": "2x² + 3x − 5 = (x − 1)(2x + 5), so the quotient is 2x + 5.",
+    "uz": "2x² + 3x − 5 = (x − 1)(2x + 5), demak boʻlinma 2x + 5.",
+    "ru": "2x² + 3x − 5 = (x − 1)(2x + 5), поэтому частное равно 2x + 5."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 0.35,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-a2h040",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "quadratic_formula",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What are the solutions of x² − 4x − 1 = 0?",
+    "uz": "x² − 4x − 1 = 0 tenglamaning yechimlarini toping.",
+    "ru": "Найдите корни уравнения x² − 4x − 1 = 0."
+   },
+   "options": [
+    {
+     "en": "2 ± √5"
+    },
+    {
+     "en": "−2 ± √5"
+    },
+    {
+     "en": "2 ± √3"
+    },
+    {
+     "en": "4 ± 2√5"
+    }
+   ],
+   "why": {
+    "en": "Quadratic formula: x = (4 ± √(16 + 4))/2 = (4 ± 2√5)/2 = 2 ± √5.",
+    "uz": "Kvadrat tenglama ildizlari formulasi: x = (4 ± √(16 + 4))/2 = (4 ± 2√5)/2 = 2 ± √5.",
+    "ru": "По формуле корней: x = (4 ± √(16 + 4))/2 = (4 ± 2√5)/2 = 2 ± √5."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 0.35,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  }
+ ]
+}

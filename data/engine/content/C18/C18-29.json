@@ -1,0 +1,790 @@
+{
+ "bank": "C18",
+ "batch": 29,
+ "items": [
+  {
+   "id": "C18-bim001",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "sitologiya.organoidlar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Oqsillarni oʻzgartirib, saralab, pufakchalarga joylovchi organoid qaysi?",
+    "ru": "Какой органоид модифицирует, сортирует и упаковывает белки в пузырьки?"
+   },
+   "options": [
+    {
+     "uz": "Golji apparati",
+     "ru": "аппарат Гольджи"
+    },
+    {
+     "uz": "mitoxondriya",
+     "ru": "митохондрия"
+    },
+    {
+     "uz": "xloroplast",
+     "ru": "хлоропласт"
+    },
+    {
+     "uz": "hujayra markazi",
+     "ru": "клеточный центр"
+    }
+   ],
+   "why": {
+    "en": "The Golgi apparatus modifies and packages proteins.",
+    "uz": "Golji apparati oqsillarni oʻzgartirib, joylaydi.",
+    "ru": "Аппарат Гольджи модифицирует и упаковывает белки."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Golgi_apparatus",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "The Golgi apparatus modifies, sorts and packages proteins.",
+      "url": "https://en.wikipedia.org/wiki/Golgi_apparatus"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim002",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "sitologiya.yadro",
+   "lang": "uz",
+   "stem": {
+    "uz": "Eukariot hujayrada DNKning asosiy qismi qayerda joylashgan?",
+    "ru": "Где находится основная часть ДНК в эукариотической клетке?"
+   },
+   "options": [
+    {
+     "uz": "yadroda",
+     "ru": "в ядре"
+    },
+    {
+     "uz": "ribosomada",
+     "ru": "в рибосомах"
+    },
+    {
+     "uz": "hujayra membranasida",
+     "ru": "в клеточной мембране"
+    },
+    {
+     "uz": "vakuolada",
+     "ru": "в вакуоли"
+    }
+   ],
+   "why": {
+    "en": "Chromosomes, and most DNA, are in the nucleus.",
+    "uz": "Xromosomalar va DNKning asosiy qismi yadroda.",
+    "ru": "Хромосомы и основная часть ДНК – в ядре."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Cell_nucleus",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "The nucleus holds most of the cell's DNA (chromosomes).",
+      "url": "https://en.wikipedia.org/wiki/Cell_nucleus"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim003",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "sitologiya.hujayra_devori",
+   "lang": "uz",
+   "stem": {
+    "uz": "Zamburugʻlar hujayra devori tarkibida qaysi modda bor?",
+    "ru": "Какое вещество входит в состав клеточной стенки грибов?"
+   },
+   "options": [
+    {
+     "uz": "xitin",
+     "ru": "хитин"
+    },
+    {
+     "uz": "sellyuloza",
+     "ru": "целлюлоза"
+    },
+    {
+     "uz": "kraxmal",
+     "ru": "крахмал"
+    },
+    {
+     "uz": "pektin",
+     "ru": "пектин"
+    }
+   ],
+   "why": {
+    "en": "Fungal walls contain chitin; plant walls are cellulose.",
+    "uz": "Zamburugʻ devorida xitin, oʻsimlikda sellyuloza bor.",
+    "ru": "У грибов в стенке хитин, у растений – целлюлоза."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Cell_wall",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Plant cell walls are made mainly of cellulose; fungal cell walls contain chitin.",
+      "url": "https://en.wikipedia.org/wiki/Cell_wall"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim004",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "genetika.xromosomalar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Odamning jinsiy hujayrasi (gametasi)da nechta xromosoma bor?",
+    "ru": "Сколько хромосом в половой клетке (гамете) человека?"
+   },
+   "options": [
+    {
+     "uz": "23",
+     "ru": "23"
+    },
+    {
+     "uz": "46",
+     "ru": "46"
+    },
+    {
+     "uz": "22",
+     "ru": "22"
+    },
+    {
+     "uz": "92",
+     "ru": "92"
+    }
+   ],
+   "why": {
+    "en": "Gametes are haploid: 23 chromosomes.",
+    "uz": "Gametalar gaploid: 23 ta xromosoma.",
+    "ru": "Гаметы гаплоидны: 23 хромосомы."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Karyotype",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Humans have 46 chromosomes: 22 pairs of autosomes and one pair of sex chromosomes; gametes have 23.",
+      "url": "https://en.wikipedia.org/wiki/Karyotype"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim005",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "sitologiya.mitoz",
+   "lang": "uz",
+   "stem": {
+    "uz": "Mitoz natijasida bitta hujayradan qanday hujayralar hosil boʻladi?",
+    "ru": "Какие клетки образуются из одной клетки в результате митоза?"
+   },
+   "options": [
+    {
+     "uz": "2 ta bir xil hujayra",
+     "ru": "2 одинаковые клетки"
+    },
+    {
+     "uz": "4 ta gaploid hujayra",
+     "ru": "4 гаплоидные клетки"
+    },
+    {
+     "uz": "2 ta gaploid hujayra",
+     "ru": "2 гаплоидные клетки"
+    },
+    {
+     "uz": "4 ta bir xil hujayra",
+     "ru": "4 одинаковые клетки"
+    }
+   ],
+   "why": {
+    "en": "Mitosis gives two genetically identical cells; meiosis gives four haploid ones.",
+    "uz": "Mitozdan 2 ta bir xil hujayra; meyozdan 4 ta gaploid hujayra.",
+    "ru": "Митоз – 2 одинаковые клетки; мейоз – 4 гаплоидные."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mitosis",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Mitosis produces two genetically identical daughter cells.",
+      "url": "https://en.wikipedia.org/wiki/Mitosis"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim006",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "molekulyar.dnk",
+   "lang": "uz",
+   "stem": {
+    "uz": "DNKning qoʻsh spiral modeli qaysi yili eʼlon qilingan?",
+    "ru": "В каком году была опубликована модель двойной спирали ДНК?"
+   },
+   "options": [
+    {
+     "uz": "1953-yilda",
+     "ru": "в 1953 году"
+    },
+    {
+     "uz": "1859-yilda",
+     "ru": "в 1859 году"
+    },
+    {
+     "uz": "1928-yilda",
+     "ru": "в 1928 году"
+    },
+    {
+     "uz": "1865-yilda",
+     "ru": "в 1865 году"
+    }
+   ],
+   "why": {
+    "en": "Watson and Crick published the double helix in 1953.",
+    "uz": "Uotson va Krik qoʻsh spiral modelini 1953-yilda eʼlon qilgan.",
+    "ru": "Уотсон и Крик опубликовали модель в 1953 году."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Nucleic_acid_double_helix",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Watson and Crick published the double-helix model of DNA in 1953.",
+      "url": "https://en.wikipedia.org/wiki/Nucleic_acid_double_helix"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim007",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "biokimyo.fermentlar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Fermentlar organizmda qanday vazifani bajaradi?",
+    "ru": "Какую функцию выполняют ферменты в организме?"
+   },
+   "options": [
+    {
+     "uz": "biologik katalizator vazifasini",
+     "ru": "биологических катализаторов"
+    },
+    {
+     "uz": "energiya zaxirasi vazifasini",
+     "ru": "запаса энергии"
+    },
+    {
+     "uz": "irsiy axborotni saqlash vazifasini",
+     "ru": "хранения наследственной информации"
+    },
+    {
+     "uz": "kislorod tashish vazifasini",
+     "ru": "переноса кислорода"
+    }
+   ],
+   "why": {
+    "en": "Enzymes speed up reactions; most are proteins.",
+    "uz": "Fermentlar reaksiyalarni tezlashtiradi; koʻpchiligi oqsil.",
+    "ru": "Ферменты ускоряют реакции; большинство – белки."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Enzyme",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Enzymes are biological catalysts, most of them proteins.",
+      "url": "https://en.wikipedia.org/wiki/Enzyme"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim008",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "genetika.monoduragay",
+   "lang": "uz",
+   "stem": {
+    "uz": "Aa × Aa chatishtirishda avlodda genotip boʻyicha qanday nisbat boʻladi?",
+    "ru": "Какое расщепление по генотипу даёт скрещивание Aa × Aa?"
+   },
+   "options": [
+    {
+     "uz": "1 : 2 : 1",
+     "ru": "1 : 2 : 1"
+    },
+    {
+     "uz": "3 : 1",
+     "ru": "3 : 1"
+    },
+    {
+     "uz": "1 : 1",
+     "ru": "1 : 1"
+    },
+    {
+     "uz": "9 : 3 : 3 : 1",
+     "ru": "9 : 3 : 3 : 1"
+    }
+   ],
+   "why": {
+    "en": "AA : Aa : aa = 1 : 2 : 1; 3 : 1 is the phenotype ratio.",
+    "uz": "AA : Aa : aa = 1 : 2 : 1; 3 : 1 – fenotip nisbati.",
+    "ru": "AA : Aa : aa = 1 : 2 : 1; 3 : 1 – по фенотипу."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mendelian_inheritance",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "A monohybrid cross of heterozygotes gives a 3:1 phenotype ratio; a dihybrid cross gives 9:3:3:1.",
+      "url": "https://en.wikipedia.org/wiki/Mendelian_inheritance"
+     },
+     {
+      "claim": "Independent assortment of genes into gametes; a testcross gives 1:1; monohybrid F2 genotypes are 1:2:1.",
+      "url": "https://en.wikipedia.org/wiki/Mendelian_inheritance"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim009",
+   "skill": "dtm_biology",
+   "level": "hard",
+   "subskill": "genetika.qon_guruhlari",
+   "lang": "uz",
+   "stem": {
+    "uz": "Onasi II (IᴬI⁰), otasi III (IᴮI⁰) qon guruhiga ega. Farzandda I (O) qon guruhi boʻlish ehtimoli qancha?",
+    "ru": "У матери II группа крови (IᴬI⁰), у отца III (IᴮI⁰). Какова вероятность I (O) группы у ребёнка?"
+   },
+   "options": [
+    {
+     "uz": "25 %",
+     "ru": "25 %"
+    },
+    {
+     "uz": "50 %",
+     "ru": "50 %"
+    },
+    {
+     "uz": "0 %",
+     "ru": "0 %"
+    },
+    {
+     "uz": "75 %",
+     "ru": "75 %"
+    }
+   ],
+   "why": {
+    "en": "Each parent passes i (I0) with probability 1/2: 1/2 x 1/2 = 25 %.",
+    "uz": "Har bir ota-ona I⁰ ni 1/2 ehtimol bilan beradi: 1/4 = 25 %.",
+    "ru": "Каждый родитель передаёт I⁰ с вероятностью 1/2: 1/4 = 25 %."
+   },
+   "prior_b": 0.9,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/ABO_blood_group_system",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Blood group O is genotype ii; the A and B alleles are dominant over i.",
+      "url": "https://en.wikipedia.org/wiki/ABO_blood_group_system"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim010",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "genetika.xromosomalar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Erkak kishi somatik hujayrasining xromosoma toʻplami qaysi?",
+    "ru": "Каков хромосомный набор соматической клетки мужчины?"
+   },
+   "options": [
+    {
+     "uz": "44 + XY",
+     "ru": "44 + XY"
+    },
+    {
+     "uz": "44 + XX",
+     "ru": "44 + XX"
+    },
+    {
+     "uz": "22 + Y",
+     "ru": "22 + Y"
+    },
+    {
+     "uz": "46 + XY",
+     "ru": "46 + XY"
+    }
+   ],
+   "why": {
+    "en": "22 pairs of autosomes (44) plus X and Y.",
+    "uz": "22 juft autosoma (44) va XY.",
+    "ru": "22 пары аутосом (44) и XY."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Karyotype",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Humans have 46 chromosomes: 22 pairs of autosomes and one pair of sex chromosomes; gametes have 23.",
+      "url": "https://en.wikipedia.org/wiki/Karyotype"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim011",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "odam.qon",
+   "lang": "uz",
+   "stem": {
+    "uz": "Eritrotsitlarda kislorodni tashuvchi modda qaysi?",
+    "ru": "Какое вещество эритроцитов переносит кислород?"
+   },
+   "options": [
+    {
+     "uz": "gemoglobin",
+     "ru": "гемоглобин"
+    },
+    {
+     "uz": "insulin",
+     "ru": "инсулин"
+    },
+    {
+     "uz": "fibrinogen",
+     "ru": "фибриноген"
+    },
+    {
+     "uz": "glikogen",
+     "ru": "гликоген"
+    }
+   ],
+   "why": {
+    "en": "Haemoglobin in red cells binds oxygen.",
+    "uz": "Eritrotsitdagi gemoglobin kislorodni biriktiradi.",
+    "ru": "Гемоглобин эритроцитов связывает кислород."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Red_blood_cell",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Red blood cells carry oxygen bound to haemoglobin; mature mammalian red cells lack a nucleus.",
+      "url": "https://en.wikipedia.org/wiki/Red_blood_cell"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim012",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "odam.hazm",
+   "lang": "uz",
+   "stem": {
+    "uz": "Oʻt (safro) suyuqligini qaysi aʼzo ishlab chiqaradi?",
+    "ru": "Какой орган вырабатывает желчь?"
+   },
+   "options": [
+    {
+     "uz": "jigar",
+     "ru": "печень"
+    },
+    {
+     "uz": "meʼda",
+     "ru": "желудок"
+    },
+    {
+     "uz": "buyrak",
+     "ru": "почка"
+    },
+    {
+     "uz": "taloq",
+     "ru": "селезёнка"
+    }
+   ],
+   "why": {
+    "en": "The liver makes bile; the gallbladder stores it.",
+    "uz": "Oʻtni jigar ishlab chiqaradi, oʻt pufagi saqlaydi.",
+    "ru": "Желчь вырабатывает печень, хранит желчный пузырь."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Liver",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "The liver produces bile and is the largest gland.",
+      "url": "https://en.wikipedia.org/wiki/Liver"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim013",
+   "skill": "dtm_biology",
+   "level": "easy",
+   "subskill": "odam.hazm",
+   "lang": "uz",
+   "stem": {
+    "uz": "Ogʻiz boʻshligʻida kraxmalni parchalashni qaysi ferment boshlaydi?",
+    "ru": "Какой фермент начинает расщепление крахмала в ротовой полости?"
+   },
+   "options": [
+    {
+     "uz": "amilaza",
+     "ru": "амилаза"
+    },
+    {
+     "uz": "pepsin",
+     "ru": "пепсин"
+    },
+    {
+     "uz": "lipaza",
+     "ru": "липаза"
+    },
+    {
+     "uz": "tripsin",
+     "ru": "трипсин"
+    }
+   ],
+   "why": {
+    "en": "Salivary amylase starts starch digestion.",
+    "uz": "Soʻlak amilazasi kraxmalni parchalay boshlaydi.",
+    "ru": "Амилаза слюны начинает расщеплять крахмал."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Amylase",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Salivary amylase begins starch digestion in the mouth.",
+      "url": "https://en.wikipedia.org/wiki/Amylase"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim014",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "odam.qon_aylanish",
+   "lang": "uz",
+   "stem": {
+    "uz": "Katta qon aylanish doirasi yurakning qaysi boʻlimidan boshlanadi?",
+    "ru": "Из какого отдела сердца начинается большой круг кровообращения?"
+   },
+   "options": [
+    {
+     "uz": "chap qorinchadan",
+     "ru": "из левого желудочка"
+    },
+    {
+     "uz": "oʻng qorinchadan",
+     "ru": "из правого желудочка"
+    },
+    {
+     "uz": "chap boʻlmachadan",
+     "ru": "из левого предсердия"
+    },
+    {
+     "uz": "oʻng boʻlmachadan",
+     "ru": "из правого предсердия"
+    }
+   ],
+   "why": {
+    "en": "The left ventricle pumps blood into the aorta.",
+    "uz": "Chap qorincha qonni aortaga haydaydi.",
+    "ru": "Левый желудочек выталкивает кровь в аорту."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ventricle_(heart)",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "The left ventricle pumps blood into the aorta (systemic circulation).",
+      "url": "https://en.wikipedia.org/wiki/Ventricle_(heart)"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-bim015",
+   "skill": "dtm_biology",
+   "level": "medium",
+   "subskill": "odam.endokrin",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qalqonsimon bez gormonlari tarkibiga qaysi element kiradi?",
+    "ru": "Какой элемент входит в состав гормонов щитовидной железы?"
+   },
+   "options": [
+    {
+     "uz": "yod",
+     "ru": "йод"
+    },
+    {
+     "uz": "temir",
+     "ru": "железо"
+    },
+    {
+     "uz": "kalsiy",
+     "ru": "кальций"
+    },
+    {
+     "uz": "ftor",
+     "ru": "фтор"
+    }
+   ],
+   "why": {
+    "en": "Thyroid hormones contain iodine.",
+    "uz": "Qalqonsimon bez gormonlarida yod bor.",
+    "ru": "Гормоны щитовидной железы содержат йод."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Thyroid_hormones",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Thyroid hormones contain iodine.",
+      "url": "https://en.wikipedia.org/wiki/Thyroid_hormones"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

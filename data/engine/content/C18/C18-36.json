@@ -1,0 +1,794 @@
+{
+ "bank": "C18",
+ "batch": 36,
+ "items": [
+  {
+   "id": "C18-phm001",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "kinematika.ortacha_tezlik",
+   "lang": "uz",
+   "stem": {
+    "uz": "Avtomobil 2 soat 60 km/soat, keyin 1 soat 90 km/soat tezlik bilan yurdi. Butun yoʻldagi oʻrtacha tezlik necha km/soat?",
+    "ru": "Автомобиль ехал 2 часа со скоростью 60 км/ч, затем 1 час – 90 км/ч. Какова средняя скорость на всём пути (км/ч)?"
+   },
+   "options": [
+    {
+     "uz": "70",
+     "ru": "70"
+    },
+    {
+     "uz": "75",
+     "ru": "75"
+    },
+    {
+     "uz": "65",
+     "ru": "65"
+    },
+    {
+     "uz": "80",
+     "ru": "80"
+    }
+   ],
+   "why": {
+    "en": "Total 210 km in 3 h: 70 km/h (time-weighted, not 75).",
+    "uz": "Jami 210 km, 3 soat: 70 km/soat (75 emas).",
+    "ru": "Всего 210 км за 3 ч: 70 км/ч (а не 75)."
+   },
+   "prior_b": 0.0,
+   "time_s": 45,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Speed",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Average speed is the total distance covered divided by the time interval.",
+      "url": "https://en.wikipedia.org/wiki/Speed"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm002",
+   "skill": "dtm_physics",
+   "level": "easy",
+   "subskill": "kinematika",
+   "lang": "uz",
+   "stem": {
+    "uz": "Jismning tezligi 4 s davomida 5 m/s dan 15 m/s gacha tekis ortdi. Tezlanish necha m/s²?",
+    "ru": "Скорость тела за 4 с равномерно выросла с 5 до 15 м/с. Каково ускорение (м/с²)?"
+   },
+   "options": [
+    {
+     "uz": "2,5",
+     "ru": "2,5"
+    },
+    {
+     "uz": "5",
+     "ru": "5"
+    },
+    {
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "uz": "3,75",
+     "ru": "3,75"
+    }
+   ],
+   "why": {
+    "en": "a = (15 - 5) / 4 = 2.5 m/s^2.",
+    "uz": "a = (15 − 5) : 4 = 2,5 m/s².",
+    "ru": "a = (15 − 5) : 4 = 2,5 м/с²."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Equations_of_motion",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "For constant acceleration: v = u + at, s = ut + at^2/2, v^2 = u^2 + 2as.",
+      "url": "https://en.wikipedia.org/wiki/Equations_of_motion"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm003",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "kinematika",
+   "lang": "uz",
+   "stem": {
+    "uz": "Boshlangʻich tezligi 10 m/s boʻlgan jism 2 m/s² tezlanish bilan 3 s harakatlandi. U necha metr yoʻl bosgan?",
+    "ru": "Тело с начальной скоростью 10 м/с двигалось 3 с с ускорением 2 м/с². Какой путь (м) оно прошло?"
+   },
+   "options": [
+    {
+     "uz": "39",
+     "ru": "39"
+    },
+    {
+     "uz": "30",
+     "ru": "30"
+    },
+    {
+     "uz": "36",
+     "ru": "36"
+    },
+    {
+     "uz": "48",
+     "ru": "48"
+    }
+   ],
+   "why": {
+    "en": "s = v0 t + a t^2 / 2 = 30 + 9 = 39 m.",
+    "uz": "s = v₀t + at²/2 = 30 + 9 = 39 m.",
+    "ru": "s = v₀t + at²/2 = 30 + 9 = 39 м."
+   },
+   "prior_b": 0.0,
+   "time_s": 40,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Equations_of_motion",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "For constant acceleration: v = u + at, s = ut + at^2/2, v^2 = u^2 + 2as.",
+      "url": "https://en.wikipedia.org/wiki/Equations_of_motion"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm004",
+   "skill": "dtm_physics",
+   "level": "hard",
+   "subskill": "kinematika.gorizontal_otish",
+   "lang": "uz",
+   "stem": {
+    "uz": "Jism 20 m balandlikdan gorizontal yoʻnalishda 5 m/s tezlik bilan otildi. U otilgan joyidan gorizontal boʻyicha necha metr uzoqqa tushadi? (g = 10 m/s²)",
+    "ru": "Тело брошено горизонтально со скоростью 5 м/с с высоты 20 м. На каком расстоянии (м) по горизонтали оно упадёт? (g = 10 м/с²)"
+   },
+   "options": [
+    {
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "uz": "20",
+     "ru": "20"
+    },
+    {
+     "uz": "5",
+     "ru": "5"
+    },
+    {
+     "uz": "100",
+     "ru": "100"
+    }
+   ],
+   "why": {
+    "en": "Fall time sqrt(2h/g) = 2 s; range = 5 x 2 = 10 m.",
+    "uz": "Tushish vaqti √(2h/g) = 2 s; masofa 5 · 2 = 10 m.",
+    "ru": "Время падения √(2h/g) = 2 с; дальность 5 · 2 = 10 м."
+   },
+   "prior_b": 0.9,
+   "time_s": 60,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Free_fall",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Free fall from rest near Earth: d = g t^2/2, v = g t = sqrt(2 g h); g is about 9.81 m/s^2 (the items use the school value 10 m/s^2).",
+      "url": "https://en.wikipedia.org/wiki/Free_fall"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm005",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "dinamika.nyuton2",
+   "lang": "uz",
+   "stem": {
+    "uz": "4 kg massali jismga 30 N tortish kuchi va 10 N ishqalanish kuchi taʼsir qilmoqda. Jism tezlanishi necha m/s²?",
+    "ru": "На тело массой 4 кг действуют сила тяги 30 Н и сила трения 10 Н. Каково ускорение (м/с²)?"
+   },
+   "options": [
+    {
+     "uz": "5",
+     "ru": "5"
+    },
+    {
+     "uz": "7,5",
+     "ru": "7,5"
+    },
+    {
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "uz": "2,5",
+     "ru": "2,5"
+    }
+   ],
+   "why": {
+    "en": "Net force 20 N; a = 20 / 4 = 5 m/s^2.",
+    "uz": "Teng taʼsir etuvchi 20 N; a = 20 : 4 = 5 m/s².",
+    "ru": "Равнодействующая 20 Н; a = 20 : 4 = 5 м/с²."
+   },
+   "prior_b": 0.0,
+   "time_s": 40,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Newton's second law: F = ma (net force).",
+      "url": "https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm006",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "dinamika.gravitatsiya",
+   "lang": "uz",
+   "stem": {
+    "uz": "Ikki jism orasidagi masofa 2 marta oshirilsa, ularning tortishish kuchi qanday oʻzgaradi?",
+    "ru": "Как изменится сила тяготения между двумя телами, если расстояние между ними увеличить в 2 раза?"
+   },
+   "options": [
+    {
+     "uz": "4 marta kamayadi",
+     "ru": "уменьшится в 4 раза"
+    },
+    {
+     "uz": "2 marta kamayadi",
+     "ru": "уменьшится в 2 раза"
+    },
+    {
+     "uz": "4 marta ortadi",
+     "ru": "увеличится в 4 раза"
+    },
+    {
+     "uz": "oʻzgarmaydi",
+     "ru": "не изменится"
+    }
+   ],
+   "why": {
+    "en": "F is proportional to 1/r^2: doubling r divides F by 4.",
+    "uz": "F ~ 1/r²: r 2 marta oshsa, F 4 marta kamayadi.",
+    "ru": "F ~ 1/r²: при удвоении r сила уменьшится в 4 раза."
+   },
+   "prior_b": 0.0,
+   "time_s": 60,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Gravitational force is inversely proportional to the square of the distance.",
+      "url": "https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm007",
+   "skill": "dtm_physics",
+   "level": "hard",
+   "subskill": "dinamika.lift",
+   "lang": "uz",
+   "stem": {
+    "uz": "Massasi 60 kg boʻlgan odam 2 m/s² tezlanish bilan yuqoriga koʻtarilayotgan liftda turibdi. Uning ogʻirligi necha N? (g = 10 m/s²)",
+    "ru": "Человек массой 60 кг стоит в лифте, поднимающемся вверх с ускорением 2 м/с². Каков его вес (Н)? (g = 10 м/с²)"
+   },
+   "options": [
+    {
+     "uz": "720",
+     "ru": "720"
+    },
+    {
+     "uz": "600",
+     "ru": "600"
+    },
+    {
+     "uz": "480",
+     "ru": "480"
+    },
+    {
+     "uz": "120",
+     "ru": "120"
+    }
+   ],
+   "why": {
+    "en": "P = m(g + a) = 60 x 12 = 720 N.",
+    "uz": "P = m(g + a) = 60 · 12 = 720 N.",
+    "ru": "P = m(g + a) = 60 · 12 = 720 Н."
+   },
+   "prior_b": 0.9,
+   "time_s": 45,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Weight",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "W = mg; a scale reads more than mg when the lift accelerates upward.",
+      "url": "https://en.wikipedia.org/wiki/Weight"
+     },
+     {
+      "claim": "Newton's second law: F = ma (net force).",
+      "url": "https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm008",
+   "skill": "dtm_physics",
+   "level": "easy",
+   "subskill": "saqlanish.impuls",
+   "lang": "uz",
+   "stem": {
+    "uz": "Jismga 0,2 s davomida 50 N kuch taʼsir qildi. Jism impulsi qanchaga oʻzgargan (kg·m/s)?",
+    "ru": "На тело в течение 0,2 с действовала сила 50 Н. На сколько изменился импульс тела (кг·м/с)?"
+   },
+   "options": [
+    {
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "uz": "250",
+     "ru": "250"
+    },
+    {
+     "uz": "2,5",
+     "ru": "2,5"
+    },
+    {
+     "uz": "50",
+     "ru": "50"
+    }
+   ],
+   "why": {
+    "en": "Change in momentum = F t = 50 x 0.2 = 10.",
+    "uz": "Δp = Ft = 50 · 0,2 = 10.",
+    "ru": "Δp = Ft = 50 · 0,2 = 10."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Momentum",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "p = mv; momentum is conserved in a closed system; impulse F dt = dp.",
+      "url": "https://en.wikipedia.org/wiki/Momentum"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm009",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "saqlanish.energiya",
+   "lang": "uz",
+   "stem": {
+    "uz": "Jism 5 m balandlikdan erkin tushdi. Yerga urilish oldidagi tezligi necha m/s? (havo qarshiligi hisobga olinmaydi) (g = 10 m/s²)",
+    "ru": "Тело свободно падает с высоты 5 м. Какова его скорость (м/с) перед ударом о землю? (без сопротивления воздуха) (g = 10 м/с²)"
+   },
+   "options": [
+    {
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "uz": "50",
+     "ru": "50"
+    },
+    {
+     "uz": "5",
+     "ru": "5"
+    },
+    {
+     "uz": "100",
+     "ru": "100"
+    }
+   ],
+   "why": {
+    "en": "mgh = mv^2/2, so v = sqrt(2gh) = 10 m/s.",
+    "uz": "mgh = mv²/2, v = √(2gh) = 10 m/s.",
+    "ru": "mgh = mv²/2, v = √(2gh) = 10 м/с."
+   },
+   "prior_b": 0.0,
+   "time_s": 40,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Free_fall",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Free fall from rest near Earth: d = g t^2/2, v = g t = sqrt(2 g h); g is about 9.81 m/s^2 (the items use the school value 10 m/s^2).",
+      "url": "https://en.wikipedia.org/wiki/Free_fall"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm010",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "energiya.prujina",
+   "lang": "uz",
+   "stem": {
+    "uz": "Bikrligi 400 N/m boʻlgan prujina 10 sm ga siqildi. Uning potensial energiyasi necha J?",
+    "ru": "Пружину жёсткостью 400 Н/м сжали на 10 см. Какова её потенциальная энергия (Дж)?"
+   },
+   "options": [
+    {
+     "uz": "2",
+     "ru": "2"
+    },
+    {
+     "uz": "4",
+     "ru": "4"
+    },
+    {
+     "uz": "20",
+     "ru": "20"
+    },
+    {
+     "uz": "40",
+     "ru": "40"
+    }
+   ],
+   "why": {
+    "en": "E = k x^2 / 2 = 400 x 0.01 / 2 = 2 J.",
+    "uz": "E = kx²/2 = 400 · 0,01 : 2 = 2 J.",
+    "ru": "E = kx²/2 = 400 · 0,01 : 2 = 2 Дж."
+   },
+   "prior_b": 0.0,
+   "time_s": 35,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Hooke%27s_law",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Hooke's law F = kx; elastic energy U = k x^2 / 2.",
+      "url": "https://en.wikipedia.org/wiki/Hooke%27s_law"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm011",
+   "skill": "dtm_physics",
+   "level": "easy",
+   "subskill": "energiya.fik",
+   "lang": "uz",
+   "stem": {
+    "uz": "Mexanizmning foydali ishi 600 J, toʻliq ishi 800 J. FIK necha foiz?",
+    "ru": "Полезная работа механизма 600 Дж, полная – 800 Дж. Каков КПД (%)?"
+   },
+   "options": [
+    {
+     "uz": "75",
+     "ru": "75"
+    },
+    {
+     "uz": "80",
+     "ru": "80"
+    },
+    {
+     "uz": "60",
+     "ru": "60"
+    },
+    {
+     "uz": "133",
+     "ru": "133"
+    }
+   ],
+   "why": {
+    "en": "eta = 600 / 800 = 75 %.",
+    "uz": "η = 600 : 800 = 75 %.",
+    "ru": "η = 600 : 800 = 75 %."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mechanical_efficiency",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Efficiency = output / input.",
+      "url": "https://en.wikipedia.org/wiki/Mechanical_efficiency"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm012",
+   "skill": "dtm_physics",
+   "level": "easy",
+   "subskill": "statika.richag",
+   "lang": "uz",
+   "stem": {
+    "uz": "Richagning 0,3 m li yelkasiga 20 N kuch qoʻyilgan. Muvozanat uchun 0,6 m li yelkaga qancha kuch (N) qoʻyish kerak?",
+    "ru": "К плечу рычага 0,3 м приложена сила 20 Н. Какую силу (Н) нужно приложить к плечу 0,6 м для равновесия?"
+   },
+   "options": [
+    {
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "uz": "40",
+     "ru": "40"
+    },
+    {
+     "uz": "20",
+     "ru": "20"
+    },
+    {
+     "uz": "6",
+     "ru": "6"
+    }
+   ],
+   "why": {
+    "en": "F1 l1 = F2 l2: 20 x 0.3 = F2 x 0.6, so F2 = 10 N.",
+    "uz": "F₁l₁ = F₂l₂: 6 = 0,6F₂, F₂ = 10 N.",
+    "ru": "F₁l₁ = F₂l₂: 6 = 0,6F₂, F₂ = 10 Н."
+   },
+   "prior_b": -0.8,
+   "time_s": 35,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Lever",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Law of the lever: F1 a = F2 b.",
+      "url": "https://en.wikipedia.org/wiki/Lever"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm013",
+   "skill": "dtm_physics",
+   "level": "easy",
+   "subskill": "gidrostatika",
+   "lang": "uz",
+   "stem": {
+    "uz": "Kerosinning 0,5 m chuqurlikdagi bosimi necha Pa? (ρ = 800 kg/m³, g = 10 m/s²)",
+    "ru": "Каково давление керосина на глубине 0,5 м (Па)? (ρ = 800 кг/м³, g = 10 м/с²)"
+   },
+   "options": [
+    {
+     "uz": "4000",
+     "ru": "4000"
+    },
+    {
+     "uz": "400",
+     "ru": "400"
+    },
+    {
+     "uz": "1600",
+     "ru": "1600"
+    },
+    {
+     "uz": "40 000",
+     "ru": "40 000"
+    }
+   ],
+   "why": {
+    "en": "p = rho g h = 800 x 10 x 0.5 = 4000 Pa.",
+    "uz": "p = ρgh = 4000 Pa.",
+    "ru": "p = ρgh = 4000 Па."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Pressure",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Liquid pressure p = rho g h.",
+      "url": "https://en.wikipedia.org/wiki/Pressure"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm014",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "gidrostatika.suzish",
+   "lang": "uz",
+   "stem": {
+    "uz": "Zichligi 600 kg/m³ boʻlgan yogʻoch brusok suvda suzmoqda. Uning hajmining qancha qismi suvga botgan? (ρ(suv) = 1000 kg/m³)",
+    "ru": "Брусок плотностью 600 кг/м³ плавает в воде. Какая часть его объёма погружена в воду? (ρ(воды) = 1000 кг/м³)"
+   },
+   "options": [
+    {
+     "uz": "0,6",
+     "ru": "0,6"
+    },
+    {
+     "uz": "0,4",
+     "ru": "0,4"
+    },
+    {
+     "uz": "1",
+     "ru": "1"
+    },
+    {
+     "uz": "0,5",
+     "ru": "0,5"
+    }
+   ],
+   "why": {
+    "en": "Floating: weight = buoyancy, so the submerged fraction = 600/1000 = 0.6.",
+    "uz": "Suzishda ogʻirlik = Arximed kuchi: 600/1000 = 0,6.",
+    "ru": "При плавании вес = сила Архимеда: 600/1000 = 0,6."
+   },
+   "prior_b": 0.0,
+   "time_s": 40,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Archimedes%27_principle",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Buoyant force F = rho g V; a floating body is submerged by the ratio of its density to the fluid density.",
+      "url": "https://en.wikipedia.org/wiki/Archimedes%27_principle"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm015",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "tebranishlar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Massasi 0,1 kg boʻlgan yuk bikrligi 10 N/m boʻlgan prujinada tebranmoqda. Tebranish davri necha sekund?",
+    "ru": "Груз массой 0,1 кг колеблется на пружине жёсткостью 10 Н/м. Каков период колебаний (с)?"
+   },
+   "options": [
+    {
+     "uz": "0,2π",
+     "ru": "0,2π"
+    },
+    {
+     "uz": "2π",
+     "ru": "2π"
+    },
+    {
+     "uz": "0,02π",
+     "ru": "0,02π"
+    },
+    {
+     "uz": "0,1π",
+     "ru": "0,1π"
+    }
+   ],
+   "why": {
+    "en": "T = 2 pi sqrt(m/k) = 2 pi x 0.1 = 0.2 pi s.",
+    "uz": "T = 2π√(m/k) = 2π · 0,1 = 0,2π s.",
+    "ru": "T = 2π√(m/k) = 2π · 0,1 = 0,2π с."
+   },
+   "prior_b": 0.0,
+   "time_s": 45,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Pendulum",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Simple pendulum (small swings): T = 2 pi sqrt(L/g).",
+      "url": "https://en.wikipedia.org/wiki/Pendulum"
+     },
+     {
+      "claim": "Mass on a spring: T = 2 pi sqrt(m/k); f = 1/T.",
+      "url": "https://en.wikipedia.org/wiki/Harmonic_oscillator"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

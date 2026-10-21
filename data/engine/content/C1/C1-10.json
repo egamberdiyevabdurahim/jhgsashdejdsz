@@ -1,0 +1,390 @@
+{
+  "bank": "C1",
+  "batch": 10,
+  "items": [
+    {
+      "id": "C1-ap3001",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "chain_rule",
+      "family": {
+        "template": "f(x) = {a}e^({k}x) + {b} sin({m}x). What is f′(0)?",
+        "params": { "a": { "min": 2, "max": 6 }, "k": { "min": 2, "max": 6 }, "b": { "min": 2, "max": 6 }, "m": { "min": 2, "max": 6 } },
+        "derived": { "ak": "a*k", "bm": "b*m" },
+        "constraints": ["a*k + b != a + b*m"],
+        "answer": "a*k + b*m",
+        "distractors": ["a + b", "a*k + b", "a + b*m"],
+        "integer": true,
+        "relation": "X = ({a}*exp({k}*0.000001) + {b}*sin({m}*0.000001) - {a}*exp(-{k}*0.000001) - {b}*sin(-{m}*0.000001))/0.000002"
+      },
+      "page": "C19-APCA03-1",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = {a}e^({k}x) + {b} sin({m}x). What is f′(0)?",
+        "uz": "f(x) = {a}e^({k}x) + {b} sin({m}x). f′(0) nechaga teng?",
+        "ru": "f(x) = {a}e^({k}x) + {b} sin({m}x). Найдите f′(0)."
+      },
+      "answer_numeric": { "tolerance": 0 },
+      "why": {
+        "en": "Chain rule: (e^({k}x))′ = {k}e^({k}x) and (sin({m}x))′ = {m} cos({m}x). At x = 0, e⁰ = 1 and cos 0 = 1, so f′(0) = {ak} + {bm} = {ANS}.",
+        "uz": "Murakkab funksiya hosilasi: (e^({k}x))′ = {k}e^({k}x) va (sin({m}x))′ = {m} cos({m}x). x = 0 da e⁰ = 1 va cos 0 = 1, demak f′(0) = {ak} + {bm} = {ANS}.",
+        "ru": "Производная сложной функции: (e^({k}x))′ = {k}e^({k}x) и (sin({m}x))′ = {m} cos({m}x). При x = 0: e⁰ = 1 и cos 0 = 1, поэтому f′(0) = {ak} + {bm} = {ANS}."
+      },
+      "instructions": { "en": "Type your answer as a number.", "uz": "Javobni son bilan kiriting.", "ru": "Введите ответ числом." },
+      "prior_b": 1.6,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap3002",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "implicit_differentiation",
+      "family": {
+        "template": "The curve {a}x² + y² = {c} passes through the point ({p}, {q}). What is dy/dx at that point?",
+        "params": { "a": { "values": [2, 3, 4, 5] }, "q": { "values": [-3, -2, -1, 1, 2, 3] }, "m": { "values": [-3, -2, -1, 1, 2, 3] } },
+        "derived": { "p": "m*q", "c": "a*p*p + q*q", "a2": "2*a" },
+        "answer": "-a*p/q",
+        "distractors": ["a*p/q", "-2*a*p/q", "-p/q"],
+        "integer": true,
+        "relation": "X = (({q}/abs({q}))*sqrt({c} - {a}*({p} + 0.000001)^2) - ({q}/abs({q}))*sqrt({c} - {a}*({p} - 0.000001)^2))/0.000002"
+      },
+      "page": "C19-APCA03-2",
+      "lang": "en",
+      "stem": {
+        "en": "The curve {a}x² + y² = {c} passes through the point ({p}, {q}). What is dy/dx at that point?",
+        "uz": "{a}x² + y² = {c} egri chizigʻi ({p}, {q}) nuqtadan oʻtadi. Shu nuqtada dy/dx nechaga teng?",
+        "ru": "Кривая {a}x² + y² = {c} проходит через точку ({p}, {q}). Чему равна производная dy/dx в этой точке?"
+      },
+      "answer_numeric": { "tolerance": 0 },
+      "why": {
+        "en": "Differentiate both sides: {a2}x + 2y·y′ = 0, so y′ = −{a}x/y = −{a} × ({p}) ÷ ({q}) = {ANS}.",
+        "uz": "Ikkala tomonni differensiallaymiz: {a2}x + 2y·y′ = 0, demak y′ = −{a}x/y = −{a} × ({p}) ÷ ({q}) = {ANS}.",
+        "ru": "Дифференцируем обе части: {a2}x + 2y·y′ = 0, значит, y′ = −{a}x/y = −{a} × ({p}) ÷ ({q}) = {ANS}."
+      },
+      "instructions": { "en": "Type your answer as a number (it may be negative).", "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).", "ru": "Введите ответ числом (оно может быть отрицательным)." },
+      "prior_b": 1.7,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap3003",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "implicit_differentiation",
+      "family": {
+        "template": "The point ({p}, {q}) lies on the curve x²y = {c}. Find the slope of the tangent line to the curve at this point.",
+        "params": { "p": { "values": [-3, -2, 2, 3] }, "q": { "min": -6, "max": 6, "not": [0] } },
+        "derived": { "c": "p*p*q" },
+        "constraints": ["(2*q) % p == 0"],
+        "answer": "-2*q/p",
+        "distractors": ["2*q/p", "-2*p*q", "-q/p"],
+        "integer": true,
+        "relation": "X = ({c}/({p} + 0.000001)^2 - {c}/({p} - 0.000001)^2)/0.000002"
+      },
+      "page": "C19-APCA03-2",
+      "lang": "en",
+      "stem": {
+        "en": "The point ({p}, {q}) lies on the curve x²y = {c}. Find the slope of the tangent line to the curve at this point.",
+        "uz": "({p}, {q}) nuqta x²y = {c} egri chizigʻida yotadi. Shu nuqtada egri chiziqqa oʻtkazilgan urinmaning burchak koeffitsiyentini toping.",
+        "ru": "Точка ({p}, {q}) лежит на кривой x²y = {c}. Найдите угловой коэффициент касательной к кривой в этой точке."
+      },
+      "answer_numeric": { "tolerance": 0 },
+      "why": {
+        "en": "Product rule on x²y: 2xy + x²·y′ = 0, so y′ = −2y/x = −2 × ({q}) ÷ ({p}) = {ANS}.",
+        "uz": "x²y ga koʻpaytmaning hosilasi: 2xy + x²·y′ = 0, demak y′ = −2y/x = −2 × ({q}) ÷ ({p}) = {ANS}.",
+        "ru": "Производная произведения x²y: 2xy + x²·y′ = 0, значит, y′ = −2y/x = −2 × ({q}) ÷ ({p}) = {ANS}."
+      },
+      "instructions": { "en": "Type your answer as a number (it may be negative).", "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).", "ru": "Введите ответ числом (оно может быть отрицательным)." },
+      "prior_b": 1.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap3004",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "inverse_derivative",
+      "family": {
+        "template": "f(x) = x³ + {a}x + {b}, and g is the inverse function of f. Since f({p}) = {v}, what is g′({v})?",
+        "params": { "a": { "min": 2, "max": 9 }, "b": { "min": 1, "max": 9 }, "p": { "values": [1, 2, -1] } },
+        "derived": { "v": "p^3 + a*p + b", "d": "3*p*p + a", "w": "3*v*v + a" },
+        "constraints": ["v > 0", "v != d", "v*v != p*p"],
+        "answer": "1/d",
+        "option_templates": ["1/{d}", "{d}", "1/{w}", "1/{v}"],
+        "relation": "X = 0.000002/((({p} + 0.000001)^3 + {a}*({p} + 0.000001)) - (({p} - 0.000001)^3 + {a}*({p} - 0.000001)))"
+      },
+      "page": "C19-APCA03-3",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = x³ + {a}x + {b}, and g is the inverse function of f. Since f({p}) = {v}, what is g′({v})?",
+        "uz": "f(x) = x³ + {a}x + {b}, g esa f ning teskari funksiyasi. f({p}) = {v} ekanidan foydalanib, g′({v}) ni toping.",
+        "ru": "f(x) = x³ + {a}x + {b}, а g — функция, обратная к f. Зная, что f({p}) = {v}, найдите g′({v})."
+      },
+      "why": {
+        "en": "f′(x) = 3x² + {a}, so f′({p}) = {d}. The inverse flips the slope: g′({v}) = 1/f′({p}) = 1/{d}.",
+        "uz": "f′(x) = 3x² + {a}, demak f′({p}) = {d}. Teskari funksiyaning hosilasi teskari son boʻladi: g′({v}) = 1/f′({p}) = 1/{d}.",
+        "ru": "f′(x) = 3x² + {a}, поэтому f′({p}) = {d}. У обратной функции наклон переворачивается: g′({v}) = 1/f′({p}) = 1/{d}."
+      },
+      "instructions": { "en": "Choose the correct answer.", "uz": "Toʻgʻri javobni tanlang.", "ru": "Выберите правильный ответ." },
+      "prior_b": 1.9,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap3005",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "second_derivative",
+      "family": {
+        "template": "f(x) = {a}x³ − {b}x² + {c}x. What is f″({t})?",
+        "params": { "a": { "min": 2, "max": 5 }, "b": { "min": 1, "max": 9 }, "c": { "min": 2, "max": 9 }, "t": { "values": [-2, -1, 1, 2, 3] } },
+        "derived": { "a3": "3*a", "a6": "6*a", "b2": "2*b" },
+        "constraints": ["6*a*t - 2*b != 0", "3*a*t*t - 2*b*t + c != 6*a*t - 2*b", "3*a*t*t - 2*b*t + c != 0", "3*a*t*t - 2*b*t + c != 6*a*t - 2*b + c", "6*a*t - 2*b + c != 0"],
+        "answer": "6*a*t - 2*b",
+        "distractors": ["3*a*t*t - 2*b*t + c", "0", "6*a*t - 2*b + c"],
+        "integer": true,
+        "relation": "X = ({a}*({t} + 0.001)^3 - {b}*({t} + 0.001)^2 + {c}*({t} + 0.001) - 2*({a}*{t}^3 - {b}*{t}^2 + {c}*{t}) + {a}*({t} - 0.001)^3 - {b}*({t} - 0.001)^2 + {c}*({t} - 0.001))/0.000001"
+      },
+      "page": "C19-APCA03-3",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = {a}x³ − {b}x² + {c}x. What is f″({t})?",
+        "uz": "f(x) = {a}x³ − {b}x² + {c}x. f″({t}) nechaga teng?",
+        "ru": "f(x) = {a}x³ − {b}x² + {c}x. Найдите f″({t})."
+      },
+      "answer_numeric": { "tolerance": 0 },
+      "why": {
+        "en": "f′(x) = {a3}x² − {b2}x + {c} and f″(x) = {a6}x − {b2}. Differentiate twice, then put x = {t}: f″({t}) = {a6} × ({t}) − {b2} = {ANS}.",
+        "uz": "f′(x) = {a3}x² − {b2}x + {c} va f″(x) = {a6}x − {b2}. Ikki marta differensiallab, keyin x = {t} ni qoʻying: f″({t}) = {a6} × ({t}) − {b2} = {ANS}.",
+        "ru": "f′(x) = {a3}x² − {b2}x + {c} и f″(x) = {a6}x − {b2}. Продифференцируйте дважды, затем подставьте x = {t}: f″({t}) = {a6} × ({t}) − {b2} = {ANS}."
+      },
+      "instructions": { "en": "Type your answer as a number (it may be negative).", "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).", "ru": "Введите ответ числом (оно может быть отрицательным)." },
+      "prior_b": 1.5,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap3006",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "motion",
+      "family": {
+        "template": "A particle moves along a line. Its position after t seconds is s(t) = {a}t³ − {b}t² + {c}t metres. What is its velocity at t = {T} s, in m/s?",
+        "params": { "a": { "min": 2, "max": 4 }, "b": { "min": 1, "max": 9 }, "c": { "min": 1, "max": 9 }, "T": { "min": 1, "max": 5 } },
+        "derived": { "a3": "3*a", "b2": "2*b" },
+        "constraints": ["3*a*T*T - 2*b*T + c != a*T^3 - b*T^2 + c*T", "3*a*T*T - 2*b*T + c != a*T*T - b*T + c", "3*a*T*T - 2*b*T + c != 6*a*T - 2*b", "a*T^3 - b*T^2 + c*T != a*T*T - b*T + c", "a*T^3 - b*T^2 + c*T != 6*a*T - 2*b", "a*T*T - b*T + c != 6*a*T - 2*b"],
+        "answer": "3*a*T*T - 2*b*T + c",
+        "distractors": ["a*T^3 - b*T^2 + c*T", "a*T*T - b*T + c", "6*a*T - 2*b"],
+        "integer": true,
+        "relation": "X = ({a}*({T} + 0.000001)^3 - {b}*({T} + 0.000001)^2 + {c}*({T} + 0.000001) - ({a}*({T} - 0.000001)^3 - {b}*({T} - 0.000001)^2 + {c}*({T} - 0.000001)))/0.000002"
+      },
+      "page": "C19-APCA04-1",
+      "lang": "en",
+      "stem": {
+        "en": "A particle moves along a line. Its position after t seconds is s(t) = {a}t³ − {b}t² + {c}t metres. What is its velocity at t = {T} s, in m/s?",
+        "uz": "Zarracha toʻgʻri chiziq boʻylab harakatlanadi. t soniyadan keyin uning joylashuvi (koordinatasi) s(t) = {a}t³ − {b}t² + {c}t metr. t = {T} s da uning tezligi necha m/s?",
+        "ru": "Частица движется по прямой. Её положение через t секунд равно s(t) = {a}t³ − {b}t² + {c}t метров. Какова её скорость (в м/с) при t = {T} с?"
+      },
+      "answer_numeric": { "tolerance": 0 },
+      "why": {
+        "en": "Velocity is the derivative of position: v(t) = s′(t) = {a3}t² − {b2}t + {c}, so v({T}) = {a3} × {T}² − {b2} × {T} + {c} = {ANS} m/s.",
+        "uz": "Tezlik — joylashuvning hosilasi: v(t) = s′(t) = {a3}t² − {b2}t + {c}, demak v({T}) = {a3} × {T}² − {b2} × {T} + {c} = {ANS} m/s.",
+        "ru": "Скорость — производная положения: v(t) = s′(t) = {a3}t² − {b2}t + {c}, поэтому v({T}) = {a3} × {T}² − {b2} × {T} + {c} = {ANS} м/с."
+      },
+      "instructions": { "en": "Type your answer as a number (it may be negative).", "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).", "ru": "Введите ответ числом (оно может быть отрицательным)." },
+      "prior_b": 1.3,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap3007",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "motion",
+      "family": {
+        "template": "A toy car moves along a straight track. After t seconds it is s(t) = {a}t³ − {b}t² + {c}t cm from the start. What is its acceleration at t = {T} s, in cm/s²?",
+        "params": { "a": { "min": 2, "max": 5 }, "b": { "min": 1, "max": 9 }, "c": { "min": 1, "max": 9 }, "T": { "min": 1, "max": 5 } },
+        "derived": { "a3": "3*a", "a6": "6*a", "b2": "2*b" },
+        "constraints": ["6*a*T - 2*b != 3*a*T*T - 2*b*T + c", "6*a*T - 2*b != 6*a*T - 2*b + c", "3*a*T*T - 2*b*T + c != 6*a*T", "3*a*T*T - 2*b*T + c != 6*a*T - 2*b + c", "6*a*T != 6*a*T - 2*b + c"],
+        "answer": "6*a*T - 2*b",
+        "distractors": ["3*a*T*T - 2*b*T + c", "6*a*T", "6*a*T - 2*b + c"],
+        "integer": true,
+        "relation": "X = ({a}*({T} + 0.001)^3 - {b}*({T} + 0.001)^2 + {c}*({T} + 0.001) - 2*({a}*{T}^3 - {b}*{T}^2 + {c}*{T}) + {a}*({T} - 0.001)^3 - {b}*({T} - 0.001)^2 + {c}*({T} - 0.001))/0.000001"
+      },
+      "page": "C19-APCA04-1",
+      "lang": "en",
+      "stem": {
+        "en": "A toy car moves along a straight track. After t seconds it is s(t) = {a}t³ − {b}t² + {c}t cm from the start. What is its acceleration at t = {T} s, in cm/s²?",
+        "uz": "Oʻyinchoq mashina toʻgʻri yoʻlakda harakatlanadi. t soniyadan keyin u startdan s(t) = {a}t³ − {b}t² + {c}t sm uzoqlikda boʻladi. t = {T} s da uning tezlanishi necha sm/s²?",
+        "ru": "Игрушечная машинка едет по прямой дорожке. Через t секунд она находится на расстоянии s(t) = {a}t³ − {b}t² + {c}t см от старта. Каково её ускорение (в см/с²) при t = {T} с?"
+      },
+      "answer_numeric": { "tolerance": 0 },
+      "why": {
+        "en": "v(t) = s′(t) = {a3}t² − {b2}t + {c}, and acceleration a(t) = v′(t) = {a6}t − {b2}, so a({T}) = {a6} × {T} − {b2} = {ANS} cm/s².",
+        "uz": "v(t) = s′(t) = {a3}t² − {b2}t + {c}, tezlanish esa a(t) = v′(t) = {a6}t − {b2}, demak a({T}) = {a6} × {T} − {b2} = {ANS} sm/s².",
+        "ru": "v(t) = s′(t) = {a3}t² − {b2}t + {c}, а ускорение a(t) = v′(t) = {a6}t − {b2}, поэтому a({T}) = {a6} × {T} − {b2} = {ANS} см/с²."
+      },
+      "instructions": { "en": "Type your answer as a number (it may be negative).", "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).", "ru": "Введите ответ числом (оно может быть отрицательным)." },
+      "prior_b": 1.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap3008",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "related_rates",
+      "family": {
+        "template": "A stone falls into a pond, and the radius of the circular ripple grows at {v} cm per second. At the moment the radius is {r} cm, the area inside the ripple grows at kπ cm² per second. What is k?",
+        "params": { "v": { "values": [3, 4, 5, 6] }, "r": { "min": 5, "max": 30 } },
+        "constraints": ["r != 2*v", "r != v"],
+        "answer": "2*r*v",
+        "distractors": ["r*v", "2*r", "r*r"],
+        "integer": true,
+        "relation": "X = (({r} + {v}*0.000001)^2 - ({r} - {v}*0.000001)^2)/0.000002"
+      },
+      "page": "C19-APCA04-2",
+      "lang": "en",
+      "stem": {
+        "en": "A stone falls into a pond, and the radius of the circular ripple grows at {v} cm per second. At the moment the radius is {r} cm, the area inside the ripple grows at kπ cm² per second. What is k?",
+        "uz": "Hovuzga tosh tushdi va aylana shaklidagi toʻlqinning radiusi har soniyada {v} sm ga oʻsmoqda. Radius {r} sm boʻlgan paytda toʻlqin ichidagi yuza har soniyada kπ sm² ga oʻsadi. k nechaga teng?",
+        "ru": "В пруд упал камень, и радиус круговой волны растёт на {v} см в секунду. В момент, когда радиус равен {r} см, площадь внутри волны растёт на kπ см² в секунду. Чему равно k?"
+      },
+      "answer_numeric": { "tolerance": 0 },
+      "why": {
+        "en": "A = πr², so dA/dt = 2πr · dr/dt = 2π × {r} × {v} = {ANS}π. So k = {ANS}.",
+        "uz": "A = πr², demak dA/dt = 2πr · dr/dt = 2π × {r} × {v} = {ANS}π. Demak, k = {ANS}.",
+        "ru": "A = πr², поэтому dA/dt = 2πr · dr/dt = 2π × {r} × {v} = {ANS}π. Значит, k = {ANS}."
+      },
+      "instructions": { "en": "Type your answer as a number.", "uz": "Javobni son bilan kiriting.", "ru": "Введите ответ числом." },
+      "prior_b": 1.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap3009",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "linear_approximation",
+      "family": {
+        "template": "Use the tangent line to y = √x at x = {s} to estimate √{n}.",
+        "params": { "a": { "values": [2, 4, 5, 10] }, "d": { "values": [-2, -1, 1, 2, 3, 4] } },
+        "derived": { "s": "a*a", "n": "a*a + d", "a2": "2*a" },
+        "answer": "a + d/(2*a)",
+        "distractors": ["a + d/a", "a + d", "a - d/(2*a)"],
+        "decimals": 3,
+        "relation": "X = sqrt({s}) + ({n} - {s})*(sqrt({s} + 0.000001) - sqrt({s} - 0.000001))/0.000002"
+      },
+      "page": "C19-APCA04-3",
+      "lang": "en",
+      "stem": {
+        "en": "Use the tangent line to y = √x at x = {s} to estimate √{n}.",
+        "uz": "y = √x grafigiga x = {s} nuqtada oʻtkazilgan urinmadan foydalanib, √{n} ni taxminan hisoblang.",
+        "ru": "С помощью касательной к графику y = √x в точке x = {s} оцените √{n}."
+      },
+      "answer_numeric": { "tolerance": 0 },
+      "why": {
+        "en": "f(x) = √x and f′(x) = 1/(2√x), so f({s}) = {a} and f′({s}) = 1/{a2}. Then √{n} ≈ {a} + ({d}) × 1/{a2} = {ANS}.",
+        "uz": "f(x) = √x va f′(x) = 1/(2√x), demak f({s}) = {a} va f′({s}) = 1/{a2}. Unda √{n} ≈ {a} + ({d}) × 1/{a2} = {ANS}.",
+        "ru": "f(x) = √x и f′(x) = 1/(2√x), поэтому f({s}) = {a} и f′({s}) = 1/{a2}. Тогда √{n} ≈ {a} + ({d}) × 1/{a2} = {ANS}."
+      },
+      "instructions": { "en": "Type your answer as a number.", "uz": "Javobni son bilan kiriting.", "ru": "Введите ответ числом." },
+      "prior_b": 1.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap3010",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "lhopital",
+      "family": {
+        "template": "What is the limit of (e^({a}x) − 1)/sin({b}x) as x approaches 0?",
+        "params": { "a": { "min": 2, "max": 12 }, "b": { "values": [2, 4, 5] } },
+        "constraints": ["a != b"],
+        "answer": "a/b",
+        "distractors": ["b/a", "0", "1"],
+        "decimals": 2,
+        "relation": "X = ((exp({a}*0.000001) - 1)/sin({b}*0.000001) + (exp(-{a}*0.000001) - 1)/sin(-{b}*0.000001))/2"
+      },
+      "page": "C19-APCA04-3",
+      "lang": "en",
+      "stem": {
+        "en": "What is the limit of (e^({a}x) − 1)/sin({b}x) as x approaches 0?",
+        "uz": "x 0 ga intilganda (e^({a}x) − 1)/sin({b}x) ning limiti nechaga teng?",
+        "ru": "Чему равен предел (e^({a}x) − 1)/sin({b}x) при x → 0?"
+      },
+      "answer_numeric": { "tolerance": 0 },
+      "why": {
+        "en": "x = 0 gives 0/0. L'Hôpital: differentiate the top and the bottom separately: {a}e^({a}x) and {b} cos({b}x). At x = 0 this is {a}/{b} = {ANS}.",
+        "uz": "x = 0 da 0/0 chiqadi. Lopital qoidasi: surat va maxrajni alohida differensiallaymiz: {a}e^({a}x) va {b} cos({b}x). x = 0 da {a}/{b} = {ANS}.",
+        "ru": "При x = 0 получается 0/0. Правило Лопиталя: дифференцируем числитель и знаменатель отдельно: {a}e^({a}x) и {b} cos({b}x). При x = 0 это {a}/{b} = {ANS}."
+      },
+      "instructions": { "en": "Type your answer as a number.", "uz": "Javobni son bilan kiriting.", "ru": "Введите ответ числом." },
+      "prior_b": 1.7,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

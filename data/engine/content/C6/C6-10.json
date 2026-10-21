@@ -1,0 +1,3767 @@
+{
+  "bank": "C6",
+  "batch": 10,
+  "note": "Reserve items of the SAT R&W lessons C19-RWCS01-2, C19-RWCS01-3, C19-RWCS02-2 and C19-RWCS02-3 (C19/C19-15.json): 20 per lesson, each item in exactly one lesson's reserve (SPEC-lessons §4.5, §9.4; .superpowers/p8/PLAN.md §1.2 and §2, lane p8-a1, 14 Oct 2026). Lesson 2's 20: 5 easy, 9 medium, 6 hard; lesson 3's: 2 easy, 8 medium, 10 hard; each asks its own lesson's focus. Our own texts; the key is options[0]. Key check 2 (P8, 14 Oct 2026): two blind solvers outside the author's session, P8s1 and P8s2, both chose the key on all 80, so they are verified_auto with key_check_2 blind:P8s1+P8s2 (C6/RECONCILE-p8.md). A reserve, not a practice pool: the integrator adds this file to RESERVE_FILES (src/server/content/bank.ts). P13 (15-17 Oct 2026, author fix-a, agent:p13-fix-a, after the P13 defect scan): version 2 of C6-cs2209, cs2218 and cs2220 (cue.length: 70 against 45, 80 against 52, 85 against 54) and of C6-cs2201, cs2202, cs2204, cs2207, cs2210, cs2215, cs2217, cs2219, cs2305, cs2306, cs2311, cs2312, cs2318, cs2319 and cs2320 (key.cue_batch: text_structure_purpose's key was uniquely the longest in 30 of 40; one distractor lengthened with a detail that keeps it wrong). The key is still options[0]; id, subskill, level, difficulty, prior_b, time_s and instructions are v1's. Key check 2 of version 2 (17 Oct 2026): two blind solvers outside the authors' sessions, P13s1 and P13s2, chose the key on all 18, so they are verified_auto with key_check_2 blind:P13s1+P13s2 and key_check_2_version 2 (C6/RECONCILE-p13.md); they stay where they were and no lesson is held for them. P14 (18 Oct 2026, author agent:p14-content, the open items of P13): version+1 drafts (status draft, key_check_2 null, no key_check_2_version; each needs a fresh key check 2 by two blind solvers outside this session, and while they are drafts the lessons whose reserves or pieces hold them are held): C6-cs2304, cs2206 and cs2310 (text_structure_purpose: the key uniquely the longest in 15 of 40, now 12) and C6-cs1204 and cs1203 (words_in_context: 14 of 40, now 12) (one distractor lengthened, or replaced by a longer word, that stays wrong). The key is still options[0]; id, subskill, level, difficulty, prior_b, time_s and instructions are kept.",
+  "items": [
+    {
+      "id": "C6-cs1201",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The weather report promised rain all weekend, so Timur's family planned to stay at home. On Saturday morning, though, the sky was completely ______, and they decided to go to the park after all.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "clear"
+        },
+        {
+          "en": "gray"
+        },
+        {
+          "en": "wet"
+        },
+        {
+          "en": "crowded"
+        }
+      ],
+      "why": {
+        "en": "'Though' turns against the forecast of rain, and they went to the park: the sky was 'clear'. 'Gray' and 'wet' go the way of the forecast.",
+        "uz": "«Though» yomgʻir bashoratiga zid buradi, ular bogʻga borishdi: osmon «clear» (ochiq) edi. «Gray» va «wet» bashorat tomonida.",
+        "ru": "«Though» поворачивает против прогноза дождя, и они пошли в парк: небо было «clear» (ясное). «Gray» и «wet» — в сторону прогноза."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1202",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Zarina forgot to water her tomato plants during the whole hot week she spent at her grandmother's house. Because of this, when she came home, the plants looked ______.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "dried out"
+        },
+        {
+          "en": "fresh"
+        },
+        {
+          "en": "taller"
+        },
+        {
+          "en": "colorful"
+        }
+      ],
+      "why": {
+        "en": "'Because of this' points back to a hot week without water, so the plants looked 'dried out'. 'Fresh' and 'taller' would need the opposite cause.",
+        "uz": "«Because of this» suvsiz issiq haftaga ishora qiladi, demak, oʻsimliklar «dried out» (qurigan) edi. «Fresh» va «taller» uchun teskari sabab kerak.",
+        "ru": "«Because of this» указывает на жаркую неделю без воды, значит, растения «dried out» (засохли). Для «fresh» и «taller» нужна обратная причина."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1203",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Although the new student, Ilhom, knew no one in the class on Monday, by Friday he was ______ with almost everyone, laughing with them at break and sharing his lunch.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "friendly"
+        },
+        {
+          "en": "angry"
+        },
+        {
+          "en": "bored"
+        },
+        {
+          "en": "impatient"
+        }
+      ],
+      "why": {
+        "en": "'Although' turns against 'knew no one', and he laughed and shared his lunch: he was 'friendly'. 'Angry' and 'bored' do not fit the laughing.",
+        "uz": "«Although» «knew no one» ga zid buradi, u kulgan va tushligini boʻlishgan: u «friendly» (doʻstona) edi. «Angry» va «bored» kulgiga mos emas.",
+        "ru": "«Although» поворачивает против «knew no one», он смеялся и делился обедом: он был «friendly» (дружелюбен). «Angry» и «bored» не вяжутся со смехом."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p14-content",
+      "key_check_1": "author",
+      "key_check_2": "blind:P14s1+P14s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs1204",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The school library added twenty new chairs and stayed open two hours longer, so students who once studied in the noisy canteen now find the reading room ______ for their work.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "convenient"
+        },
+        {
+          "en": "noisy"
+        },
+        {
+          "en": "uncomfortable"
+        },
+        {
+          "en": "expensive"
+        }
+      ],
+      "why": {
+        "en": "'So' gives the result of more chairs and longer hours: the room is now 'convenient'. 'Noisy' describes the canteen they left.",
+        "uz": "«So» koʻproq stul va uzoqroq ish vaqtining natijasini beradi: zal endi «convenient» (qulay). «Noisy» ular tark etgan oshxonaga tegishli.",
+        "ru": "«So» даёт следствие: больше стульев и дольше открыт, и зал теперь «convenient» (удобный). «Noisy» — про столовую, которую они оставили."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p14-content",
+      "key_check_1": "author",
+      "key_check_2": "blind:P14s1+P14s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs1205",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Sanjar's old bicycle looked rusty and ugly, but it was still ______: it carried him to school and back every day without a single problem.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "reliable"
+        },
+        {
+          "en": "fragile"
+        },
+        {
+          "en": "broken"
+        },
+        {
+          "en": "attractive"
+        }
+      ],
+      "why": {
+        "en": "'But' turns against 'rusty and ugly', and it never had a problem: it was 'reliable'. 'Attractive' fights 'ugly', and 'broken' fights the clue.",
+        "uz": "«But» «rusty and ugly» ga zid buradi, u hech buzilmagan: velosiped «reliable» (ishonchli) edi. «Attractive» «ugly» ga, «broken» esa ishoraga zid.",
+        "ru": "«But» поворачивает против «rusty and ugly», и он ни разу не подвёл: он «reliable» (надёжный). «Attractive» спорит с «ugly», «broken» — с подсказкой."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1206",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Critics expected the young director's first film to be forgettable, since she had little money and no famous actors. The film, however, proved ______: people were still discussing its final scene months later.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "memorable"
+        },
+        {
+          "en": "predictable"
+        },
+        {
+          "en": "brief"
+        },
+        {
+          "en": "costly"
+        }
+      ],
+      "why": {
+        "en": "'However' turns against 'forgettable', and people discussed it for months: the film proved 'memorable'. 'Costly' fights 'little money'.",
+        "uz": "«However» «forgettable» ga zid buradi, odamlar uni oylab muhokama qilgan: film «memorable» (esda qolarli) chiqdi. «Costly» «little money» ga zid.",
+        "ru": "«However» поворачивает против «forgettable», а фильм обсуждали месяцами: он оказался «memorable» (запоминающимся). «Costly» спорит с «little money»."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1207",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The museum guide spoke so quietly and so quickly that visitors at the back of the group could not follow her. As a result, many of them grew ______ and began wandering off to look at the paintings on their own.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "restless"
+        },
+        {
+          "en": "attentive"
+        },
+        {
+          "en": "patient"
+        },
+        {
+          "en": "grateful"
+        }
+      ],
+      "why": {
+        "en": "'As a result' follows from not being able to hear, and they wandered off: they grew 'restless'. 'Attentive' and 'patient' have the opposite charge.",
+        "uz": "«As a result» eshita olmaslik natijasi, ular tarqalib ketgan: ular «restless» (betoqat) boʻlgan. «Attentive» va «patient» teskari ohangda.",
+        "ru": "«As a result» — следствие того, что не слышно, и они разбрелись: они стали «restless» (беспокойными). «Attentive» и «patient» — обратной окраски."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1208",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The footbridge over the canal is only two meters wide and has no railings, yet the villagers consider it perfectly ______; children cross it on bicycles every morning without a second thought.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "safe"
+        },
+        {
+          "en": "dangerous"
+        },
+        {
+          "en": "narrow"
+        },
+        {
+          "en": "decorative"
+        }
+      ],
+      "why": {
+        "en": "'Yet' turns against 'no railings', and children ride across daily: the villagers think it 'safe'. 'Dangerous' goes the same way as 'no railings', not against it.",
+        "uz": "«Yet» «no railings» ga zid buradi, bolalar har kuni velosipedda oʻtadi: qishloqdoshlar uni «safe» (xavfsiz) deb biladi. «Dangerous» panjarasizlik tomonida.",
+        "ru": "«Yet» поворачивает против «no railings», дети каждый день едут по нему: жители считают его «safe» (безопасным). «Dangerous» идёт в сторону «no railings»."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1209",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Despite its ______ size, the robot that Gulnora's team built for the school competition could lift a box twice its own weight and carry it all the way across the stage.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "modest"
+        },
+        {
+          "en": "enormous"
+        },
+        {
+          "en": "standard"
+        },
+        {
+          "en": "growing"
+        }
+      ],
+      "why": {
+        "en": "'Despite' needs a contrast with lifting twice its weight, so the size is small: 'modest'. With 'enormous', such strength would be no surprise.",
+        "uz": "«Despite» oʻz ogʻirligidan ikki baravar yukni koʻtarishga zid narsani talab qiladi: oʻlcham kichik, «modest». «Enormous» boʻlsa, bu kuch ajablanarli emas.",
+        "ru": "«Despite» требует контраста с подъёмом двойного веса: размер маленький, «modest». При «enormous» такая сила не удивляла бы."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1210",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Because the club's treasurer, Davron, records every coin that comes in or goes out and shows the notebook to anyone who asks, the members regard him as completely ______.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "trustworthy"
+        },
+        {
+          "en": "careless"
+        },
+        {
+          "en": "secretive"
+        },
+        {
+          "en": "generous"
+        }
+      ],
+      "why": {
+        "en": "'Because' links the blank to recording every coin and showing the notebook: members find him 'trustworthy'. 'Secretive' and 'careless' go against it.",
+        "uz": "«Because» boʻsh joyni har bir tangani yozib, daftarni koʻrsatishiga bogʻlaydi: aʼzolar uni «trustworthy» (ishonchli) deydi. «Secretive» va «careless» bunga zid.",
+        "ru": "«Because» связывает пропуск с записью каждой монеты и открытой тетрадью: его считают «trustworthy» (надёжным). «Secretive» и «careless» — против."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1211",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While the first half of the novel moves slowly through years of quiet village life, the second half is ______: in just a few pages, the family loses its farm, moves to the city and starts over.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "fast-paced"
+        },
+        {
+          "en": "uneventful"
+        },
+        {
+          "en": "repetitive"
+        },
+        {
+          "en": "unfinished"
+        }
+      ],
+      "why": {
+        "en": "'While' sets the second half against the slow first half, and big events fill a few pages: it is 'fast-paced'. 'Uneventful' describes the first half.",
+        "uz": "«While» ikkinchi yarmini sekin birinchi yarmiga qarshi qoʻyadi, bir necha sahifada katta voqealar boʻladi: u «fast-paced» (shiddatli). «Uneventful» birinchi yarmiga mos.",
+        "ru": "«While» противопоставляет вторую половину медленной первой, за несколько страниц многое случается: она «fast-paced» (стремительная). «Uneventful» — про первую."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1212",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The instructions for the new coffee machine were printed in tiny letters and skipped several important steps, so most people in the office found them ______.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "confusing"
+        },
+        {
+          "en": "helpful"
+        },
+        {
+          "en": "colorful"
+        },
+        {
+          "en": "entertaining"
+        }
+      ],
+      "why": {
+        "en": "'So' gives the result of tiny print and missing steps: people found them 'confusing'. 'Helpful' has the opposite charge.",
+        "uz": "«So» mayda harf va tushib qolgan qadamlarning natijasi: odamlar ularni «confusing» (chalkash) deb topdi. «Helpful» teskari ohangda.",
+        "ru": "«So» — следствие мелкого шрифта и пропущенных шагов: людям они показались «confusing» (запутанными). «Helpful» — обратной окраски."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1213",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Although the team had lost its first three matches, the coach was far from ______; she pointed out that each loss had been closer than the one before.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "discouraged"
+        },
+        {
+          "en": "hopeful"
+        },
+        {
+          "en": "calm"
+        },
+        {
+          "en": "organized"
+        }
+      ],
+      "why": {
+        "en": "She saw progress, so her mood was good, and 'far from' flips the blank: she was far from 'discouraged'. Far from 'hopeful' contradicts her point.",
+        "uz": "U oʻsishni koʻrdi, kayfiyati yaxshi, «far from» esa teskari qiladi: u «discouraged» (ruhi tushgan) emas edi. «Hopeful» boʻlsa, uning gapiga zid boʻlardi.",
+        "ru": "Она видела прогресс, настрой хороший, а «far from» переворачивает пропуск: она вовсе не была «discouraged» (подавлена). «Hopeful» противоречит её словам."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1214",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The only well in the village had dried up twice in one summer. Therefore, when the new water pipe finally reached the houses, the residents' reaction was one of deep ______.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "relief"
+        },
+        {
+          "en": "disappointment"
+        },
+        {
+          "en": "suspicion"
+        },
+        {
+          "en": "boredom"
+        }
+      ],
+      "why": {
+        "en": "'Therefore' follows from a summer without water: when the pipe came, people felt 'relief'. 'Disappointment' and 'boredom' do not follow.",
+        "uz": "«Therefore» suvsiz yozdan kelib chiqadi: quvur kelganda odamlar «relief» (yengillik) his qilgan. «Disappointment» va «boredom» bundan kelib chiqmaydi.",
+        "ru": "«Therefore» вытекает из лета без воды: когда пришла труба, люди почувствовали «relief» (облегчение). «Disappointment» и «boredom» не следуют."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1215",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Some readers dismissed the poet's early collections as merely charming: pleasant verses about gardens and weather. Her later work, however, is anything but ______: it confronts loss and illness with a directness that many readers find hard to bear.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "lightweight"
+        },
+        {
+          "en": "demanding"
+        },
+        {
+          "en": "honest"
+        },
+        {
+          "en": "serious"
+        }
+      ],
+      "why": {
+        "en": "'However' turns against 'merely charming', and 'anything but' flips the blank: the later work is anything but 'lightweight'. 'Serious' and 'honest' contradict it.",
+        "uz": "«However» «merely charming» ga zid buradi, «anything but» esa teskari qiladi: keyingi sheʼrlar sira «lightweight» (yengil) emas. «Serious» va «honest» matnga zid.",
+        "ru": "«However» поворачивает против «merely charming», а «anything but» переворачивает: поздние стихи никак не «lightweight» (лёгкие). «Serious» и «honest» противоречат."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1216",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Because the letters in the archive had been stored for decades in a damp basement, historians expected most of them to be unreadable. The collection turned out to be remarkably ______, however: apart from a few stained corners, nearly every page could be read with ease.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "well preserved"
+        },
+        {
+          "en": "fragile"
+        },
+        {
+          "en": "incomplete"
+        },
+        {
+          "en": "disorganized"
+        }
+      ],
+      "why": {
+        "en": "'However' turns against 'unreadable', and nearly every page could be read: the letters were 'well preserved'. 'Fragile' goes the way of the damp, not against it.",
+        "uz": "«However» «unreadable» ga zid buradi, deyarli har bir sahifa oʻqiladi: toʻplam «well preserved» (yaxshi saqlangan). «Fragile» namlik tomonida.",
+        "ru": "«However» поворачивает против «unreadable», почти всё читается: собрание «well preserved» (хорошо сохранилось). «Fragile» — на стороне сырости."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1217",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The committee's report praised the new timetable in its opening pages, yet its conclusion was notably ______, recommending that the school test the plan for one term before adopting it.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "cautious"
+        },
+        {
+          "en": "enthusiastic"
+        },
+        {
+          "en": "hostile"
+        },
+        {
+          "en": "vague"
+        }
+      ],
+      "why": {
+        "en": "'Yet' turns against the praise, and the conclusion asks for a trial first: it was 'cautious'. A trial is not 'hostile', and it is too specific to be 'vague'.",
+        "uz": "«Yet» maqtovga zid buradi va avval sinovni taklif qiladi: xulosa «cautious» (ehtiyotkor). Sinov «hostile» emas, «vague» uchun esa juda aniq.",
+        "ru": "«Yet» поворачивает против похвалы, и вывод просит сначала проверить: он «cautious» (осторожный). Проверка — не «hostile», и это слишком конкретно для «vague»."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1218",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Since the rules of the chess club allow any member to challenge the champion at any time, the title is inherently ______: whoever holds it on Monday may well have lost it by Friday.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "precarious"
+        },
+        {
+          "en": "prestigious"
+        },
+        {
+          "en": "permanent"
+        },
+        {
+          "en": "honorary"
+        }
+      ],
+      "why": {
+        "en": "'Since' gives the cause: anyone can challenge at any time, so the title can be lost by Friday. It is 'precarious'. 'Permanent' is the opposite.",
+        "uz": "«Since» sababni beradi: istalgan payt chaqirish mumkin, unvon jumagacha yoʻqolishi mumkin. U «precarious» (beqaror). «Permanent» buning teskarisi.",
+        "ru": "«Since» даёт причину: вызвать могут в любой момент, к пятнице титул можно потерять. Он «precarious» (шаткий). «Permanent» — наоборот."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1219",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Whereas the older bakery on the corner changes its menu every week, trying out new breads and pastries, the one across the street is resolutely ______, offering the same five loaves it has sold for twenty years.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "conservative"
+        },
+        {
+          "en": "inventive"
+        },
+        {
+          "en": "seasonal"
+        },
+        {
+          "en": "careless"
+        }
+      ],
+      "why": {
+        "en": "'Whereas' sets it against weekly changes, and it sells the same five loaves: it is 'conservative'. 'Inventive' describes the other bakery.",
+        "uz": "«Whereas» uni haftalik oʻzgarishlarga qarshi qoʻyadi, u oʻsha besh xil nonni sotadi: u «conservative» (oʻzgarishni xushlamaydi). «Inventive» boshqa novvoyxonaga mos.",
+        "ru": "«Whereas» противопоставляет её еженедельным переменам, она продаёт те же пять хлебов: она «conservative» (консервативна). «Inventive» — про другую пекарню."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1220",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The volunteers who cleaned the riverbank had expected to collect a few bags of litter. Instead, they filled more than sixty bags in a single morning, and the sheer amount of waste left several of them ______.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "dismayed"
+        },
+        {
+          "en": "amused"
+        },
+        {
+          "en": "indifferent"
+        },
+        {
+          "en": "relieved"
+        }
+      ],
+      "why": {
+        "en": "'Instead' turns against 'a few bags', and so much waste is bad news: it left them 'dismayed'. 'Relieved' and 'amused' have the wrong charge.",
+        "uz": "«Instead» «a few bags» ga zid buradi, bunchalik koʻp chiqindi yomon xabar: ular «dismayed» (tushkun) boʻldi. «Relieved» va «amused» ohangi notoʻgʻri.",
+        "ru": "«Instead» поворачивает против «a few bags», столько мусора — плохая новость: они были «dismayed» (удручены). У «relieved» и «amused» не та окраска."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1301",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Light rain fell for only a few minutes on her way to school, so when Nilufar arrived, her jacket was just ______, not wet through.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "damp"
+        },
+        {
+          "en": "soaked"
+        },
+        {
+          "en": "dry"
+        },
+        {
+          "en": "frozen"
+        }
+      ],
+      "why": {
+        "en": "A few minutes of light rain and 'not wet through' take a mild word: 'damp'. 'Soaked' is too strong; 'dry' ignores the rain.",
+        "uz": "Bir necha daqiqalik yengil yomgʻir va «not wet through» yumshoq soʻzni talab qiladi: «damp» (biroz nam). «Soaked» juda kuchli, «dry» yomgʻirni hisobga olmaydi.",
+        "ru": "Несколько минут лёгкого дождя и «not wet through» требуют мягкого слова: «damp» (влажная). «Soaked» слишком сильно, «dry» не учитывает дождь."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1302",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Mr. Hamidov, who lives next door, never wastes anything: he repairs his old radio himself, grows his own vegetables and turns old boxes into shelves. Everyone on the street admires how ______ he is.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "resourceful"
+        },
+        {
+          "en": "wasteful"
+        },
+        {
+          "en": "stingy"
+        },
+        {
+          "en": "lazy"
+        }
+      ],
+      "why": {
+        "en": "He fixes, grows and builds things himself, and people admire it: he is 'resourceful'. 'Stingy' is negative, which does not fit 'admires'.",
+        "uz": "U hamma narsani oʻzi tuzatadi, yetishtiradi va yasaydi, odamlar bunga qoyil qoladi: u «resourceful» (uddaburon). «Stingy» salbiy, «admires» ga mos emas.",
+        "ru": "Он сам чинит, выращивает и мастерит, и им восхищаются: он «resourceful» (находчивый). «Stingy» — негативное слово и не подходит к «admires»."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1303",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The first reviews of Feruza's café had been mixed, so she was ______ when a food writer called her bread the best in the city: she had expected polite words at most, never such high praise.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "astonished"
+        },
+        {
+          "en": "unimpressed"
+        },
+        {
+          "en": "annoyed"
+        },
+        {
+          "en": "mildly pleased"
+        }
+      ],
+      "why": {
+        "en": "She expected 'polite words at most' and got the highest praise: a strong surprise, 'astonished'. 'Mildly pleased' is too weak.",
+        "uz": "U «polite words at most» kutgan, eng yuqori maqtovni olgan: kuchli hayrat, «astonished» (hayratda). «Mildly pleased» juda kuchsiz.",
+        "ru": "Она ждала «polite words at most», а получила высшую похвалу: сильное удивление, «astonished» (поражена). «Mildly pleased» слишком слабо."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1304",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A routine check showed that the brakes of the school bus were slightly worn. The mechanic was ______ rather than alarmed: he advised replacing the brake pads within the month, and the bus kept running in the meantime.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "concerned"
+        },
+        {
+          "en": "panicked"
+        },
+        {
+          "en": "indifferent"
+        },
+        {
+          "en": "furious"
+        }
+      ],
+      "why": {
+        "en": "Slightly worn brakes, a fix within the month: a mild worry, 'concerned'. 'Panicked' is stronger than 'alarmed'; 'indifferent' would give no advice.",
+        "uz": "Biroz yeyilgan tormoz, bir oy ichida tuzatish: yumshoq xavotir, «concerned». «Panicked» «alarmed» dan ham kuchli, «indifferent» maslahat bermasdi.",
+        "ru": "Слегка изношенные тормоза, замена в течение месяца: мягкая тревога, «concerned». «Panicked» сильнее «alarmed», а «indifferent» не дал бы совета."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1305",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Some visitors call the old market chaotic, but the guide prefers to describe it as ______: dozens of small stalls, loud bargaining and the smell of fresh bread all compete for a shopper's attention.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "lively"
+        },
+        {
+          "en": "deserted"
+        },
+        {
+          "en": "dangerous"
+        },
+        {
+          "en": "orderly"
+        }
+      ],
+      "why": {
+        "en": "'But' asks for a kinder word for the same busy scene: 'lively'. 'Deserted' and 'orderly' fight the details; 'dangerous' is negative.",
+        "uz": "«But» oʻsha gavjum manzara uchun yumshoqroq soʻz talab qiladi: «lively» (jonli). «Deserted» va «orderly» tafsilotlarga zid, «dangerous» salbiy.",
+        "ru": "«But» просит более доброе слово для той же суеты: «lively» (оживлённый). «Deserted» и «orderly» спорят с деталями, «dangerous» негативно."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1306",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The first hour of the film drew only a few polite laughs from the audience, but its final scene, in which the grandfather's old car finally starts after months of repairs, drew ______ applause that lasted almost a minute.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "thunderous"
+        },
+        {
+          "en": "scattered"
+        },
+        {
+          "en": "reluctant"
+        },
+        {
+          "en": "brief"
+        }
+      ],
+      "why": {
+        "en": "'But' turns against 'a few polite laughs', and the applause lasted a minute: it was 'thunderous'. 'Scattered' and 'brief' are too weak.",
+        "uz": "«But» «a few polite laughs» ga zid buradi, qarsaklar bir daqiqa davom etgan: ular «thunderous» (gulduros). «Scattered» va «brief» juda kuchsiz.",
+        "ru": "«But» поворачивает против «a few polite laughs», аплодисменты длились минуту: они были «thunderous» (громовые). «Scattered» и «brief» слишком слабы."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1307",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The plan to turn the empty lot into a community garden met some resistance at first: several residents worried about noise and parking. Over the following months, the objections did not disappear entirely, but they ______: by spring, even the two neighbors who still had doubts were helping to plant.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "softened"
+        },
+        {
+          "en": "vanished"
+        },
+        {
+          "en": "hardened"
+        },
+        {
+          "en": "multiplied"
+        }
+      ],
+      "why": {
+        "en": "'Did not disappear entirely' rules out 'vanished', and even the doubters helped: the objections 'softened'. 'Hardened' and 'multiplied' go the wrong way.",
+        "uz": "«Did not disappear entirely» «vanished» ni istisno qiladi, shubhalanganlar ham yordam bergan: eʼtirozlar «softened» (yumshadi). «Hardened» va «multiplied» teskari tomonga.",
+        "ru": "«Did not disappear entirely» исключает «vanished», а сомневавшиеся помогали: возражения «softened» (смягчились). «Hardened» и «multiplied» — не в ту сторону."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1308",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In his formal letter of complaint, Bobur avoided calling the service of the delivery company \"terrible.\" Instead, he wrote that it had been ______, pointing calmly to three late parcels and one that never arrived.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "unsatisfactory"
+        },
+        {
+          "en": "disastrous"
+        },
+        {
+          "en": "excellent"
+        },
+        {
+          "en": "mysterious"
+        }
+      ],
+      "why": {
+        "en": "He avoided a strong word and wrote calmly: the measured, formal 'unsatisfactory'. 'Disastrous' is as strong as 'terrible'; 'excellent' fights the complaint.",
+        "uz": "U kuchli soʻzdan qochib, xotirjam yozgan: vazmin, rasmiy «unsatisfactory» (qoniqarsiz). «Disastrous» «terrible» kabi kuchli, «excellent» shikoyatga zid.",
+        "ru": "Он избегал сильных слов и писал спокойно: сдержанное, официальное «unsatisfactory». «Disastrous» так же сильно, как «terrible», «excellent» противоречит жалобе."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1309",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Ozoda did not refuse to read her poem at the school assembly, but she was clearly ______: she waited until every other student had finished and then read it quickly, eyes fixed on the page.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "reluctant"
+        },
+        {
+          "en": "eager"
+        },
+        {
+          "en": "unable"
+        },
+        {
+          "en": "furious"
+        }
+      ],
+      "why": {
+        "en": "She read it, so she did not refuse, but she waited and hurried: she was 'reluctant'. 'Unable' fights the reading; 'eager' fights the waiting.",
+        "uz": "U oʻqidi, demak, rad etmadi, lekin kutdi va shoshildi: u «reluctant» (istamaygina) edi. «Unable» oʻqiganiga, «eager» kutganiga zid.",
+        "ru": "Она прочитала, значит, не отказалась, но тянула и спешила: она была «reluctant» (неохотна). «Unable» спорит с чтением, «eager» — с ожиданием."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1310",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The coach does not simply tell his players to work harder. He studies the recording of each match, points out exactly where a pass went wrong and shows how to fix it, so his criticism is always ______.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "constructive"
+        },
+        {
+          "en": "harsh"
+        },
+        {
+          "en": "vague"
+        },
+        {
+          "en": "rare"
+        }
+      ],
+      "why": {
+        "en": "He shows exactly what went wrong and how to fix it: criticism that helps is 'constructive'. 'Vague' fights 'exactly', and nothing says it is 'harsh'.",
+        "uz": "U nima xato ketganini va qanday tuzatishni aniq koʻrsatadi: yordam beradigan tanqid «constructive» (foydali). «Vague» «exactly» ga zid, «harsh» haqida gap yoʻq.",
+        "ru": "Он точно показывает, где ошибка и как её исправить: помогающая критика — «constructive». «Vague» спорит с «exactly», о «harsh» ничего не сказано."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1311",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The botanist's notes on the rare orchid are strikingly ______: rather than claiming that the plant needs shade, she records only that the three specimens she observed grew beneath taller trees.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "measured"
+        },
+        {
+          "en": "sweeping"
+        },
+        {
+          "en": "careless"
+        },
+        {
+          "en": "poetic"
+        }
+      ],
+      "why": {
+        "en": "She records only what she saw and makes no larger claim: her notes are 'measured'. 'Sweeping' is the opposite; 'careless' fights the exact record.",
+        "uz": "U faqat koʻrganini yozadi, kattaroq daʼvo qilmaydi: yozuvlari «measured» (vazmin). «Sweeping» buning teskarisi, «careless» aniq yozuvga zid.",
+        "ru": "Она записывает только увиденное, без широких выводов: её записи «measured» (сдержанные). «Sweeping» — наоборот, «careless» спорит с точностью."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1312",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Although the two drafts of Lola's speech make the same argument, the second is more ______: where the first draft spent a full paragraph on the history of the school, the second gives that history in one sentence and moves straight to the proposal.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "concise"
+        },
+        {
+          "en": "detailed"
+        },
+        {
+          "en": "emotional"
+        },
+        {
+          "en": "formal"
+        }
+      ],
+      "why": {
+        "en": "A paragraph cut to one sentence: the second draft is 'concise'. 'Detailed' is the opposite, and nothing in the text speaks of feeling or style.",
+        "uz": "Bir xatboshi bitta gapga qisqargan: ikkinchi qoralama «concise» (ixcham). «Detailed» buning teskarisi; matnda his yoki uslub haqida gap yoʻq.",
+        "ru": "Абзац сжат до одного предложения: второй вариант «concise» (краткий). «Detailed» — наоборот, а о чувствах и стиле в тексте ни слова."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1313",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "When the student council proposed replacing paper notices with a phone app, the head teacher was ______: she did not reject the idea, but she asked how students without phones would see the notices and wanted to see the app tested first.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "skeptical"
+        },
+        {
+          "en": "hostile"
+        },
+        {
+          "en": "enthusiastic"
+        },
+        {
+          "en": "indifferent"
+        }
+      ],
+      "why": {
+        "en": "She has doubts and asks for a test but does not reject the idea: 'skeptical'. 'Hostile' is too strong; 'indifferent' would ask nothing.",
+        "uz": "Uning shubhasi bor, sinovni soʻraydi, lekin gʻoyani rad etmaydi: «skeptical» (shubhali). «Hostile» juda kuchli, «indifferent» hech narsa soʻramasdi.",
+        "ru": "У неё есть сомнения, она просит проверки, но не отвергает идею: «skeptical». «Hostile» слишком сильно, а «indifferent» ни о чём бы не спрашивала."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1314",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The new library in the town was praised for its ______ design: built from local brick and plain wood, it has no decoration at all, yet visitors describe its reading room as calm and beautiful.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "understated"
+        },
+        {
+          "en": "extravagant"
+        },
+        {
+          "en": "careless"
+        },
+        {
+          "en": "dull"
+        }
+      ],
+      "why": {
+        "en": "No decoration, yet praised as beautiful: plain in a good way, 'understated'. 'Dull' is plain in a bad way; 'extravagant' fights 'no decoration'.",
+        "uz": "Hech qanday bezaksiz, lekin goʻzal deb maqtalgan: yaxshi maʼnoda oddiy, «understated» (vazmin). «Dull» yomon maʼnoda oddiy, «extravagant» «no decoration» ga zid.",
+        "ru": "Без украшений, но её хвалят как красивую: простая в хорошем смысле, «understated» (сдержанный). «Dull» — в плохом смысле, «extravagant» спорит с «no decoration»."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1315",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The old ferry has not been abandoned: it still makes one trip on Sundays. But compared with its busy years, when it crossed the lake every hour from dawn till dusk, its timetable today is ______.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "sparse"
+        },
+        {
+          "en": "crowded"
+        },
+        {
+          "en": "punctual"
+        },
+        {
+          "en": "dangerous"
+        }
+      ],
+      "why": {
+        "en": "One trip a week against one every hour: the timetable is now 'sparse'. 'Crowded' is the opposite, and 'punctual' says nothing about how many trips.",
+        "uz": "Haftada bitta qatnov, avval esa har soatda: jadval endi «sparse» (siyrak). «Crowded» buning teskarisi, «punctual» qatnovlar soni haqida emas.",
+        "ru": "Один рейс в неделю против рейса каждый час: расписание теперь «sparse» (редкое). «Crowded» — наоборот, а «punctual» не о числе рейсов."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1316",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A local newspaper reported that the school's nature club was \"certain\" that traffic noise had made the sparrows near the school sing louder. The club's own report is more ______: it says that the songs seem louder than last year and that noise is one possible cause among several.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "tentative"
+        },
+        {
+          "en": "confident"
+        },
+        {
+          "en": "dismissive"
+        },
+        {
+          "en": "emotional"
+        }
+      ],
+      "why": {
+        "en": "'Seem' and 'one possible cause among several' are careful words: the report is 'tentative'. 'Confident' is what the newspaper claimed.",
+        "uz": "«Seem» va «one possible cause among several» ehtiyotkor soʻzlar: hisobot «tentative» (taxminiy). «Confident» gazeta daʼvo qilgan narsa.",
+        "ru": "«Seem» и «one possible cause among several» — осторожные слова: отчёт «tentative» (предварительный). «Confident» — то, что утверждала газета."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1317",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The revised library regulations stop short of prohibiting phone calls; they merely ______ them, asking anyone who must take a call to step into the corridor and keep the conversation brief.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "discourage"
+        },
+        {
+          "en": "forbid"
+        },
+        {
+          "en": "encourage"
+        },
+        {
+          "en": "ignore"
+        }
+      ],
+      "why": {
+        "en": "They 'stop short of prohibiting' yet ask callers to step out: they 'discourage' calls. 'Forbid' is the ban they avoid; 'encourage' fights the request.",
+        "uz": "Ular «stop short of prohibiting», lekin chiqib turishni soʻraydi: qoʻngʻiroqni «discourage» qiladi (taqiqlamay cheklaydi). «Forbid» taqiq, «encourage» iltimosga zid.",
+        "ru": "Правила «stop short of prohibiting», но просят выйти: они «discourage» звонки (не одобряют). «Forbid» — запрет, которого они избегают, «encourage» спорит с просьбой."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1318",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In a normal year, the apricot trees of the village produce more fruit than the families can eat or sell. After a late frost this spring, however, the harvest was not merely smaller than usual but ______: the market sold apricots one by one rather than by the kilogram.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "meager"
+        },
+        {
+          "en": "slightly reduced"
+        },
+        {
+          "en": "plentiful"
+        },
+        {
+          "en": "average"
+        }
+      ],
+      "why": {
+        "en": "'Not merely smaller' asks for a stronger word, and apricots were sold one by one: the harvest was 'meager'. 'Slightly reduced' is too weak.",
+        "uz": "«Not merely smaller» kuchliroq soʻz talab qiladi, oʻrik donalab sotilgan: hosil «meager» (juda kam) edi. «Slightly reduced» juda kuchsiz.",
+        "ru": "«Not merely smaller» требует более сильного слова, абрикосы продавали поштучно: урожай был «meager» (скудный). «Slightly reduced» слишком слабо."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1319",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Dilshod's feedback on his classmates' essays is ______ without being unkind: he tells each writer plainly which paragraph does not work and why, but he always begins with what the essay does well.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "candid"
+        },
+        {
+          "en": "vague"
+        },
+        {
+          "en": "flattering"
+        },
+        {
+          "en": "hurtful"
+        }
+      ],
+      "why": {
+        "en": "He says plainly what does not work, yet kindly: 'candid'. 'Hurtful' is ruled out by 'without being unkind'; 'flattering' fights 'plainly'.",
+        "uz": "U nima ishlamasligini ochiq, lekin mehr bilan aytadi: «candid» (ochiq). «Hurtful» «without being unkind» bilan istisno, «flattering» «plainly» ga zid.",
+        "ru": "Он прямо говорит, что не работает, но по-доброму: «candid» (откровенный). «Hurtful» исключено словами «without being unkind», «flattering» спорит с «plainly»."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs1320",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The museum catalogue does not claim that the clay bowl was made in the village where it was found; it notes only that the shape and decoration of the bowl are ______ with the pottery produced there, leaving open the possibility that it was carried in from elsewhere.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "consistent"
+        },
+        {
+          "en": "identical"
+        },
+        {
+          "en": "unconnected"
+        },
+        {
+          "en": "unfamiliar"
+        }
+      ],
+      "why": {
+        "en": "The catalogue 'does not claim' and leaves the question open: the careful 'consistent'. 'Identical' claims too much; 'unconnected' denies the link.",
+        "uz": "Katalog «does not claim» va savolni ochiq qoldiradi: ehtiyotkor «consistent» (mos keladi). «Identical» juda koʻp daʼvo qiladi, «unconnected» aloqani inkor etadi.",
+        "ru": "Каталог «does not claim» и оставляет вопрос открытым: осторожное «consistent» (согласуется). «Identical» утверждает слишком много, «unconnected» отрицает связь."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2201",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The school chess club meets in the library every Tuesday. Most weeks, about fifteen students come. Last Tuesday, however, only three arrived, because a football final was being shown in the hall.\n\nWhich choice best describes the function of the third sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It describes an exception to the usual pattern described before it."
+        },
+        {
+          "en": "It explains why the club meets in the library."
+        },
+        {
+          "en": "It introduces the main topic of the text."
+        },
+        {
+          "en": "It gives the number of students who usually come to the chess club each week."
+        }
+      ],
+      "why": {
+        "en": "'However' marks a break: fifteen usually come, but last Tuesday only three did. The third sentence describes an exception to the usual pattern.",
+        "uz": "«However» uzilishni bildiradi: odatda oʻn besh kishi keladi, oʻtgan seshanba esa uch kishi keldi. 3-gap odatiy holatdan istisnoni tasvirlaydi.",
+        "ru": "«However» отмечает перелом: обычно приходят пятнадцать, а в прошлый вторник трое. Третье предложение описывает исключение из обычного порядка."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2202",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Laylo wanted to read more books this year. She set herself a simple rule: twenty pages every evening before bed. By the end of March, she had finished seven novels.\n\nWhich choice best describes the function of the second sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It describes the plan Laylo made to reach her goal."
+        },
+        {
+          "en": "It states the result of Laylo's plan."
+        },
+        {
+          "en": "It explains why Laylo wanted to read more books this year."
+        },
+        {
+          "en": "It describes the novels Laylo liked best."
+        }
+      ],
+      "why": {
+        "en": "Sentence 1 gives a goal, sentence 3 a result. Sentence 2, the twenty-page rule, is the plan she made to reach the goal.",
+        "uz": "1-gap maqsadni, 3-gap natijani beradi. 2-gap, yigirma sahifa qoidasi, maqsadga yetish uchun tuzilgan reja.",
+        "ru": "Предложение 1 — цель, 3 — результат. Предложение 2, правило двадцати страниц, — план, как достичь цели."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2203",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The old cinema in our town closed ten years ago. Since then, the building has stood empty, its windows covered in dust. This month, a group of young artists rented it and turned it into a place for concerts and exhibitions.\n\nWhich choice best describes the function of the last sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It describes a recent change in the building's story."
+        },
+        {
+          "en": "It explains why the cinema closed."
+        },
+        {
+          "en": "It describes the building's condition while it stood empty."
+        },
+        {
+          "en": "It argues that the town needs a new cinema."
+        }
+      ],
+      "why": {
+        "en": "Sentences 1 and 2 tell of the closing and the empty years; 'This month' brings something new. The last sentence describes a recent change.",
+        "uz": "1- va 2-gaplar yopilish va boʻsh yillar haqida; «This month» yangilik olib keladi. Oxirgi gap yaqindagi oʻzgarishni tasvirlaydi.",
+        "ru": "Предложения 1 и 2 — о закрытии и годах пустоты; «This month» приносит новое. Последнее предложение описывает недавнюю перемену."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2204",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Akmal's family adopted a puppy in the summer. At first, the puppy chewed shoes, cables and even the legs of the kitchen table. Akmal and his sister trained it with small treats every day, and by autumn it chewed only its own toys.\n\nWhich choice best describes the function of the second sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It presents the problem that the family later solved."
+        },
+        {
+          "en": "It describes how Akmal and his sister trained the puppy with small treats."
+        },
+        {
+          "en": "It explains why the family adopted a puppy."
+        },
+        {
+          "en": "It states that the puppy is now well behaved."
+        }
+      ],
+      "why": {
+        "en": "The chewing is the trouble, and the training in sentence 3 fixes it. So sentence 2 presents the problem that the family later solved.",
+        "uz": "Hamma narsani chaynash muammo, 3-gapdagi mashq esa uni hal qiladi. Demak, 2-gap keyin hal qilingan muammoni beradi.",
+        "ru": "Щенок грызёт всё подряд — это проблема, а дрессировка в предложении 3 её решает. Значит, 2-е предложение представляет проблему."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2205",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Some students think that a dictionary is only for checking spelling. In fact, a good dictionary shows much more. It gives example sentences, explains which words often go together and marks whether a word is formal or informal.\n\nWhich choice best describes the function of the third sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It gives details that support the claim made in the second sentence."
+        },
+        {
+          "en": "It repeats the view described in the first sentence."
+        },
+        {
+          "en": "It explains why students check spelling."
+        },
+        {
+          "en": "It describes the history of dictionaries."
+        }
+      ],
+      "why": {
+        "en": "Sentence 2 claims a dictionary 'shows much more'; sentence 3 lists what more it shows. It gives details that support that claim.",
+        "uz": "2-gap lugʻat «shows much more» deydi, 3-gap yana nimalarni koʻrsatishini sanaydi: bu daʼvoni qoʻllovchi tafsilotlar.",
+        "ru": "Предложение 2 утверждает, что словарь «shows much more», 3 перечисляет, что именно: детали в поддержку утверждения."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2206",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "For years, the teenagers of a small mountain village had nowhere to meet in the evening except the bus stop. Two years ago, a retired teacher opened the ground floor of her house as a reading room, with tables, a kettle and shelves of donated books. Today the room is full almost every night, and the bus stop is quiet.\n\nWhich choice best describes the function of the second sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It presents the response to the situation described in the first sentence."
+        },
+        {
+          "en": "It gives an example of the problem described in the first sentence."
+        },
+        {
+          "en": "It describes what the teenagers did at the bus stop each evening before the room opened."
+        },
+        {
+          "en": "It suggests that the reading room needs more books."
+        }
+      ],
+      "why": {
+        "en": "Sentence 1: nowhere to meet. Sentence 2: a teacher opens a reading room. Sentence 3: it is full. So sentence 2 is the response to the situation.",
+        "uz": "1-gap: uchrashadigan joy yoʻq. 2-gap: oʻqituvchi qiroatxona ochadi. 3-gap: u toʻla. Demak, 2-gap vaziyatga javob.",
+        "ru": "1: негде встречаться. 2: учительница открывает читальню. 3: она полна. Значит, 2-е предложение — ответ на ситуацию."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p14-content",
+      "key_check_1": "author",
+      "key_check_2": "blind:P14s1+P14s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2207",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Many people assume that a cactus needs almost no care. Pulat learned otherwise when his cactus, kept on a dark shelf and watered only twice a year, turned yellow and soft. A neighbor explained that his kind of cactus needs bright light and a little water every few weeks.\n\nWhich choice best describes the function of the second sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It gives an experience that challenges the assumption described in the first sentence."
+        },
+        {
+          "en": "It explains how to care for a cactus properly."
+        },
+        {
+          "en": "It gives an experience that supports the common assumption described in the first sentence."
+        },
+        {
+          "en": "It describes where Pulat bought his cactus."
+        }
+      ],
+      "why": {
+        "en": "'Learned otherwise' turns against 'needs almost no care': his cactus suffered from too little care. The sentence gives an experience that challenges the assumption.",
+        "uz": "«Learned otherwise» «needs almost no care» ga zid: kaktus parvarish yetishmasidan zarar koʻrgan. Gap taxminni rad etuvchi tajribani beradi.",
+        "ru": "«Learned otherwise» поворачивает против «needs almost no care»: кактус пострадал от недостатка ухода. Это опыт, который оспаривает мнение."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2208",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The final match of the school volleyball tournament was tied at two sets each. In the last set, Madina's team fell behind by six points. Then Madina, who had barely played all season, came on and served nine points in a row. Her team won, and her classmates carried her off the court.\n\nWhich choice best describes the function of the third sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It presents the turning point of the match."
+        },
+        {
+          "en": "It explains why Madina had barely played that season."
+        },
+        {
+          "en": "It describes how the tournament was organized."
+        },
+        {
+          "en": "It describes the celebration after the match."
+        }
+      ],
+      "why": {
+        "en": "Before it, the team is losing; after it, the team wins. The third sentence, nine points in a row, presents the turning point of the match.",
+        "uz": "Undan oldin jamoa yutqazayotgan, undan keyin yutadi. 3-gap, ketma-ket toʻqqiz ochko, oʻyindagi burilish nuqtasini beradi.",
+        "ru": "До него команда проигрывает, после — побеждает. Третье предложение, девять очков подряд, — поворотный момент матча."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2209",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The weekly market in our town has moved three times in ten years. Each move was meant to fix a problem: first a lack of parking, then noise for nearby homes, then flooding after heavy rain. Its current spot, a paved square on a hill above the river, has none of these problems, and the traders hope to stay.\n\nWhich choice best describes the function of the second sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It gives the reasons behind the moves mentioned in the first sentence."
+        },
+        {
+          "en": "It describes the market's current location, a paved square on a hill above the river."
+        },
+        {
+          "en": "It argues that the market should stop moving."
+        },
+        {
+          "en": "It lists the goods sold at the market."
+        }
+      ],
+      "why": {
+        "en": "Sentence 1 says the market moved three times; sentence 2 names the problem behind each move. It gives the reasons behind the moves.",
+        "uz": "1-gap bozor uch marta koʻchganini aytadi, 2-gap har bir koʻchish ortidagi muammoni nomlaydi: koʻchishlar sabablarini beradi.",
+        "ru": "Предложение 1: рынок переезжал трижды; 2 называет проблему за каждым переездом. Оно даёт причины переездов."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2210",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Bahodir assumed that an online language course would be easier than the evening class at the library. The course, after all, let him study at any time and in his pajamas. But without a teacher waiting for him every Thursday, he kept postponing his lessons, and after a month he had finished only two.\n\nWhich choice best describes the function of the second sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It gives a reason for the expectation stated in the first sentence."
+        },
+        {
+          "en": "It presents the problem that Bahodir later faced."
+        },
+        {
+          "en": "It describes the evening class at the library."
+        },
+        {
+          "en": "It shows that Bahodir's expectation about the online course turned out to be correct."
+        }
+      ],
+      "why": {
+        "en": "'After all' introduces a reason: the course seemed easier because he could study at any time. The problem comes only with 'But'.",
+        "uz": "«After all» sababni kiritadi: istalgan vaqtda oʻqish mumkinligi uchun kurs osonroq tuyulgan. Muammo faqat «But» bilan keladi.",
+        "ru": "«After all» вводит причину: курс казался легче, потому что учиться можно когда угодно. Проблема появляется только с «But»."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2211",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Every spring, the students of class 9B plant trees along the road to their school. They have planted more than a hundred so far. Not all of them have survived: dry summers have killed about a third. Still, the road that was once bare now has a line of young trees on both sides.\n\nWhich choice best describes the function of the third sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It adds a limitation to the achievement described in the second sentence."
+        },
+        {
+          "en": "It explains why the students plant trees."
+        },
+        {
+          "en": "It describes the road before the trees were planted."
+        },
+        {
+          "en": "It states the final result of the students' work."
+        }
+      ],
+      "why": {
+        "en": "Sentence 2 gives the achievement, over a hundred trees; sentence 3 says 'not all of them have survived'. It limits the achievement before 'Still' sums up.",
+        "uz": "2-gap yutuqni beradi, yuzdan ortiq daraxt; 3-gap «not all of them have survived» deydi: u yutuqni cheklaydi, keyin «Still» xulosa qiladi.",
+        "ru": "Предложение 2 — достижение, больше ста деревьев; 3: «not all of them have survived». Оно ограничивает успех, а «Still» подводит итог."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2212",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The new bridge across the canal was meant to shorten the walk to the bus station. In one way it has: the walk now takes eight minutes instead of fifteen. But its steep steps have made the route harder for parents with prams and for older people, many of whom still take the long way round.\n\nWhich choice best describes the function of the second sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It confirms that the bridge has achieved part of its purpose."
+        },
+        {
+          "en": "It describes the problem with the bridge's steps."
+        },
+        {
+          "en": "It explains why the bridge was built."
+        },
+        {
+          "en": "It argues that the bridge should be rebuilt."
+        }
+      ],
+      "why": {
+        "en": "Sentence 1 states the purpose, a shorter walk; sentence 2 says 'in one way it has'. It confirms part of the purpose was met before 'But' adds the cost.",
+        "uz": "1-gap maqsadni aytadi, qisqaroq yoʻl; 2-gap «in one way it has» deydi: maqsadning bir qismi bajarilganini tasdiqlaydi, keyin «But» kamchilikni qoʻshadi.",
+        "ru": "Предложение 1 — цель, путь короче; 2: «in one way it has». Оно подтверждает, что цель отчасти достигнута, а «But» добавляет минус."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2213",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "When Shirin first joined the school newspaper, she wrote only short notices about sports results. Her editor encouraged her to interview the players instead of just reporting the scores. Her first interview, with the captain of the girls' basketball team, became the most-read article of the year.\n\nWhich choice best describes the function of the second sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It describes the advice that led to the change shown in the third sentence."
+        },
+        {
+          "en": "It describes the kind of writing Shirin did at first."
+        },
+        {
+          "en": "It explains why the basketball team was successful."
+        },
+        {
+          "en": "It states the result of Shirin's first interview."
+        }
+      ],
+      "why": {
+        "en": "Sentence 1 is how she began, sentence 3 the success of her first interview. Sentence 2 is the advice from the editor that led to that change.",
+        "uz": "1-gap u qanday boshlagani, 3-gap birinchi intervyusining muvaffaqiyati. 2-gap shu oʻzgarishga olib kelgan muharrir maslahati.",
+        "ru": "Предложение 1 — как она начинала, 3 — успех первого интервью. 2 — совет редактора, который привёл к этой перемене."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2214",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Some people say that handwritten letters are old-fashioned and slow. Nigora's grandmother disagrees. Each month she writes a long letter to each of her five grandchildren, and they keep every one in a box. To them, the letters are not slow; they are something to look forward to.\n\nWhich choice best describes the function of the third sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It gives an example that supports the grandmother's view."
+        },
+        {
+          "en": "It presents the view that the grandmother disagrees with."
+        },
+        {
+          "en": "It explains why letters take a long time to arrive."
+        },
+        {
+          "en": "It concludes that letters are better than phone messages."
+        }
+      ],
+      "why": {
+        "en": "After 'disagrees', sentence 3 shows her letters and the grandchildren keeping them: an example that supports her view. The opposing view is sentence 1.",
+        "uz": "«Disagrees» dan keyin 3-gap uning xatlarini va nevaralar ularni saqlashini koʻrsatadi: uning fikrini qoʻllovchi misol. Qarshi fikr 1-gapda.",
+        "ru": "После «disagrees» 3-е предложение показывает её письма, которые внуки хранят: пример в поддержку её взгляда. Противоположный взгляд — в предложении 1."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2215",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "When the town council discussed its budget, some members called repainting the old iron bridge a waste of money, since the paint \"only makes it look nice.\" The engineer who had inspected the bridge disagreed. Where the paint had peeled, she showed them, the iron underneath had rusted deeply, while the painted sections were still sound. The council approved the repainting.\n\nWhich choice best describes the function of the third sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It provides the evidence behind the engineer's disagreement."
+        },
+        {
+          "en": "It explains why some council members wanted to save money on the old iron bridge."
+        },
+        {
+          "en": "It describes the council's final decision."
+        },
+        {
+          "en": "It shows that the paint was only decorative."
+        }
+      ],
+      "why": {
+        "en": "Sentence 2 says she disagreed; sentence 3 shows rust where the paint was gone. It is the evidence behind her view, and it rules out 'only decorative'.",
+        "uz": "2-gap u rozi emasligini aytadi; 3-gap boʻyoq yoʻq joyda zang borligini koʻrsatadi. Bu uning fikri dalili va «only decorative» ni rad etadi.",
+        "ru": "Предложение 2: она не согласна; 3 показывает ржавчину там, где нет краски. Это доказательство её мнения, и оно опровергает «only decorative»."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2216",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Most visitors to the small museum walk straight past the display of farm tools near the entrance. The tools are plain: hoes, sickles, a wooden plough. Yet the director considers this display the most important in the museum, because the tools show how the families of the valley grew their food for two hundred years. A new sign, written by local students, now explains this to visitors.\n\nWhich choice best describes the function of the second sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It suggests why visitors might overlook the display mentioned in the first sentence."
+        },
+        {
+          "en": "It presents the director's reason for valuing the display."
+        },
+        {
+          "en": "It describes the sign written by local students."
+        },
+        {
+          "en": "It contrasts the tools with modern farm machines."
+        }
+      ],
+      "why": {
+        "en": "Visitors walk past (sentence 1), and the tools are plain (sentence 2): that is why they are easy to miss. The director's reason comes later, after 'Yet'.",
+        "uz": "Tashrif buyuruvchilar oʻtib ketadi (1-gap), asboblar oddiy (2-gap): shuning uchun ularni payqamaslik oson. Direktor sababi keyin, «Yet» dan soʻng keladi.",
+        "ru": "Посетители проходят мимо (1), а орудия простые (2): поэтому их легко не заметить. Причина директора — позже, после «Yet»."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2217",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In her diary, the narrator of the novel describes her new city as grey, crowded and cold. Halfway through the book, she begins to notice the small bakery under her window and the old man who feeds pigeons in the square each morning. By the last pages, she calls the city \"home\" without a second thought.\n\nWhich choice best describes the function of the second sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It marks the start of a shift in the narrator's feelings toward the city."
+        },
+        {
+          "en": "It describes the narrator's first impression of the city as grey, crowded and cold."
+        },
+        {
+          "en": "It explains why the narrator moved to the city."
+        },
+        {
+          "en": "It shows the narrator's final attitude toward the city."
+        }
+      ],
+      "why": {
+        "en": "First the city is grey and cold; at the end it is 'home'. Sentence 2, where she notices small kind details, marks the start of that shift in feeling.",
+        "uz": "Avval shahar kulrang va sovuq, oxirida esa «home». 2-gap, u kichik iliq tafsilotlarni payqay boshlagani, his-tuygʻu oʻzgarishining boshlanishi.",
+        "ru": "Сначала город серый и холодный, в конце — «home». Предложение 2, где она замечает тёплые мелочи, — начало перемены в её чувствах."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2218",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A common piece of advice for learning new words is to write each one on a card and review the cards every day. For Murod, the cards never worked: he could recite the words at his desk but forgot them in conversation. What finally helped was using each new word in a message to a friend on the day he learned it.\n\nWhich choice best describes the function of the second sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It describes a personal experience that runs counter to a common recommendation."
+        },
+        {
+          "en": "It describes the method that finally helped Murod use new words in his conversations."
+        },
+        {
+          "en": "It explains why the common advice is popular."
+        },
+        {
+          "en": "It gives an example of how the cards should be used."
+        }
+      ],
+      "why": {
+        "en": "Sentence 1 gives common advice; sentence 2 says it 'never worked' for Murod: an experience that runs counter to it. What helped is sentence 3.",
+        "uz": "1-gap keng tarqalgan maslahatni beradi; 2-gap Murod uchun u «never worked» deydi: maslahatga zid tajriba. Yordam bergan usul 3-gapda.",
+        "ru": "Предложение 1 — распространённый совет; 2: у Мурода он «never worked». Это опыт вопреки совету; то, что помогло, — в предложении 3."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2219",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The first library in the town opened in a single room above a bakery, with two hundred books given by local families. For decades it moved from building to building as its collection grew. Its current home, a former textile factory, holds more than fifty thousand books. Yet many older residents still call it \"the bakery library,\" a name that keeps its modest beginning alive.\n\nWhich choice best describes the function of the last sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It shows that the library's origin is still remembered despite its growth."
+        },
+        {
+          "en": "It explains why the library moved so often."
+        },
+        {
+          "en": "It describes the library's current building."
+        },
+        {
+          "en": "It questions whether the library should ever have left its first room above the bakery."
+        }
+      ],
+      "why": {
+        "en": "After the growth to fifty thousand books, 'Yet' brings back the old name. The last sentence shows that the modest origin is still remembered.",
+        "uz": "Ellik ming kitobgacha oʻsgandan keyin «Yet» eski nomni qaytaradi. Oxirgi gap kamtarona ibtido hamon esda ekanini koʻrsatadi.",
+        "ru": "После роста до пятидесяти тысяч книг «Yet» возвращает старое имя. Последнее предложение показывает, что скромное начало помнят."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2220",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In debates at Kamila's school, the team that speaks first usually wins. One teacher thought the judges simply favored the opening team. Kamila suspected a different cause: the opening team was always the one that had asked for the debate, so it had chosen the topic and prepared for weeks. When the school began choosing topics by lot, the opening team won only about half the time.\n\nWhich choice best describes the function of the third sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It offers an alternative explanation for the pattern described in the first sentence."
+        },
+        {
+          "en": "It presents the explanation that the teacher proposed for why the opening team usually wins."
+        },
+        {
+          "en": "It describes the change the school made."
+        },
+        {
+          "en": "It confirms the teacher's view of the judges."
+        }
+      ],
+      "why": {
+        "en": "Sentence 2 gives the teacher's explanation; sentence 3 begins 'a different cause'. It offers an alternative explanation for why the first team wins.",
+        "uz": "2-gap oʻqituvchining izohini beradi; 3-gap «a different cause» bilan boshlanadi: birinchi jamoa nega yutishiga muqobil izoh.",
+        "ru": "Предложение 2 — объяснение учителя; 3 начинается с «a different cause»: альтернативное объяснение того, почему побеждает первая команда."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2301",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Many students in Otabek's class thought that the new rule against phones at lunch would make the breaks boring. After two weeks, most of them had changed their minds: the canteen tables were covered with board games, and the football pitch had never been so busy.\n\nWhich choice best states the main purpose of the text?"
+      },
+      "options": [
+        {
+          "en": "To show how students' expectations about a rule turned out to be wrong"
+        },
+        {
+          "en": "To explain why the school banned phones at lunch"
+        },
+        {
+          "en": "To describe the rules of the board games"
+        },
+        {
+          "en": "To argue that football is better than board games"
+        }
+      ],
+      "why": {
+        "en": "Students expected boring breaks; after two weeks they 'changed their minds'. The text shows an expectation turning out wrong; it gives no reason for the rule.",
+        "uz": "Oʻquvchilar zerikarli tanaffus kutgan; ikki haftadan soʻng «changed their minds». Matn kutish notoʻgʻri chiqqanini koʻrsatadi, qoida sababini bermaydi.",
+        "ru": "Ученики ждали скучных перемен, а через две недели «changed their minds». Текст показывает, что ожидание не оправдалось; причину правила он не даёт."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2302",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Farida always thought that she was bad at drawing, because her pictures never looked like the objects in front of her. Then an art teacher showed her a trick: draw the shapes of the shadows, not the objects themselves. Within a month, her drawings looked far more real.\n\nWhich choice best describes the overall structure of the text?"
+      },
+      "options": [
+        {
+          "en": "It describes a girl's belief about herself, then shows how a new method changed her results."
+        },
+        {
+          "en": "It explains how shadows form, then describes an art class."
+        },
+        {
+          "en": "It describes an art teacher's career, then lists her methods."
+        },
+        {
+          "en": "It presents a problem with art classes, then argues that they should be longer."
+        }
+      ],
+      "why": {
+        "en": "Part 1: Farida thinks she is bad at drawing. Part 2: a trick from a teacher, and her drawings improve. A belief, then a method that changed her results.",
+        "uz": "1-qism: Farida chizishni bilmayman deb oʻylaydi. 2-qism: oʻqituvchining usuli, rasmlari yaxshilanadi. Ishonch, keyin natijani oʻzgartirgan usul.",
+        "ru": "Часть 1: Фарида считает, что плохо рисует. Часть 2: приём учителя, и рисунки становятся лучше. Убеждение, затем метод, изменивший результат."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2303",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "For years, the football club of the town trained only in the evenings, because a school used the pitch every day until five o'clock. When the school built its own sports ground, the club suddenly had the pitch all day. Instead of adding more late sessions, the coach started afternoon practices for younger children, who until then had been too tired by evening to play well.\n\nWhich choice best describes the overall structure of the text?"
+      },
+      "options": [
+        {
+          "en": "It describes a limit on the club's training, then explains how the club used the time that became free."
+        },
+        {
+          "en": "It describes a club's success, then explains why the school built its own ground."
+        },
+        {
+          "en": "It compares two sports grounds, then recommends the newer one."
+        },
+        {
+          "en": "It presents a problem with younger players, then argues that they should not train."
+        }
+      ],
+      "why": {
+        "en": "Part 1: the club could train only in the evenings. Part 2: the pitch became free, and the coach used the time for younger children. A limit, then how the freed time was used.",
+        "uz": "1-qism: klub faqat kechqurun mashq qila olgan. 2-qism: maydon boʻshadi, murabbiy vaqtni kichik bolalarga berdi. Cheklov, keyin boʻshagan vaqtdan foydalanish.",
+        "ru": "Часть 1: клуб мог тренироваться только вечером. Часть 2: поле освободилось, и тренер отдал время младшим. Ограничение, затем как использовали свободное время."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2304",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Visitors to Shahnoza's village often ask why the houses on the main street have small windows facing the road and large ones facing the yard. The answer lies in the village's past: the road was once a busy route for carts, dusty in summer and muddy in winter, so families opened their homes toward the quiet yard instead.\n\nWhich choice best states the main purpose of the text?"
+      },
+      "options": [
+        {
+          "en": "To explain the reason for a feature of the village's houses"
+        },
+        {
+          "en": "To argue that the village's houses should be rebuilt with larger windows"
+        },
+        {
+          "en": "To describe the busiest road in the village today"
+        },
+        {
+          "en": "To challenge a common belief about the village's history"
+        }
+      ],
+      "why": {
+        "en": "Visitors ask 'why', and 'The answer lies in' gives the reason: the text explains a feature of the houses. No belief is challenged.",
+        "uz": "Mehmonlar «why» deb soʻraydi, «The answer lies in» qismi esa sababni beradi: matn uylarning bir xususiyatini tushuntiradi. Hech qanday fikr rad etilmaydi.",
+        "ru": "Гости спрашивают «why», а «The answer lies in» даёт причину: текст объясняет особенность домов. Никакое мнение не оспаривается."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p14-content",
+      "key_check_1": "author",
+      "key_check_2": "blind:P14s1+P14s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2305",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "It is often said in Laziz's family that his grandfather invented the walnut cake that the whole street now bakes for weddings. Curious, Laziz looked through his great-grandmother's old notebook and found the same recipe in her handwriting, dated years before his grandfather was born.\n\nWhich choice best states the main purpose of the text?"
+      },
+      "options": [
+        {
+          "en": "To present evidence that casts doubt on a family story"
+        },
+        {
+          "en": "To describe how the walnut cake is baked"
+        },
+        {
+          "en": "To explain why the whole street now bakes the walnut cake for weddings"
+        },
+        {
+          "en": "To praise the grandfather's skill as a cook"
+        }
+      ],
+      "why": {
+        "en": "The family says the grandfather invented the cake; the notebook shows the recipe from before he was born. The text presents evidence that casts doubt on the story.",
+        "uz": "Oila tortni bobo oʻylab topgan deydi; daftar retsept u tugʻilmasdan oldin borligini koʻrsatadi. Matn oilaviy hikoyaga shubha tugʻdiradigan dalil keltiradi.",
+        "ru": "Семья говорит, что торт придумал дед; тетрадь показывает рецепт до его рождения. Текст приводит довод, ставящий семейную историю под сомнение."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2306",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The new reading program at the school promised that every student would read twice as many books. Its first year did bring a large rise in reading among the younger students. Among the oldest students, though, the number of books read barely changed, probably because exam preparation left them little free time.\n\nWhich choice best describes the overall structure of the text?"
+      },
+      "options": [
+        {
+          "en": "It states a program's promise, then reports that the promise was met for some students but not for others."
+        },
+        {
+          "en": "It states a program's promise, then reports that the promise was met for every student, young and old alike."
+        },
+        {
+          "en": "It states a program's promise, then explains why the program was cancelled."
+        },
+        {
+          "en": "It describes how students choose books, then lists the most popular titles."
+        }
+      ],
+      "why": {
+        "en": "The promise covered 'every student'; it worked for the younger ones but not the oldest. The text reports the promise met for some students only.",
+        "uz": "Vaʼda «every student» ga berilgan; u kichiklarda ishladi, kattalarda esa yoʻq. Matn vaʼda faqat baʼzi oʻquvchilar uchun bajarilganini aytadi.",
+        "ru": "Обещание касалось «every student»; у младших сработало, у старших нет. Текст сообщает, что обещание выполнено лишь для части учеников."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2307",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "On the first Sunday of each month, the families on Navoi Street close the road to cars and carry out tables and chairs. Children chalk pictures on the asphalt, older neighbors play chess, and someone always brings a samovar of tea. By evening, the tables are folded away and the cars return.\n\nWhich choice best states the main purpose of the text?"
+      },
+      "options": [
+        {
+          "en": "To describe a monthly custom on one street"
+        },
+        {
+          "en": "To argue that all streets should be closed to cars"
+        },
+        {
+          "en": "To explain why chess is popular among older people"
+        },
+        {
+          "en": "To challenge the view that neighbors no longer know each other"
+        }
+      ],
+      "why": {
+        "en": "The text only tells what happens on that Sunday, from morning to evening, and takes no side: it describes a custom. No view is stated to be challenged.",
+        "uz": "Matn faqat oʻsha yakshanbada nima boʻlishini aytadi va hech kimni yoqlamaydi: u odatni tasvirlaydi. Rad etiladigan fikr yoʻq.",
+        "ru": "Текст лишь рассказывает, что бывает в это воскресенье, и не занимает сторону: он описывает обычай. Оспаривать нечего."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2308",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "When Tosh, the class turtle, stopped eating, the students first offered him new kinds of food, but he ignored them all. A vet then noticed that his tank was too cold and suggested a small heat lamp. Within days of the lamp's arrival, Tosh was eating again.\n\nWhich choice best describes the overall structure of the text?"
+      },
+      "options": [
+        {
+          "en": "It presents a problem, describes an attempt that failed, and then describes a solution that worked."
+        },
+        {
+          "en": "It presents a problem, then explains why it could not be solved."
+        },
+        {
+          "en": "It describes a turtle's usual diet, then compares it with the diets of other pets."
+        },
+        {
+          "en": "It presents two solutions, then argues that both were needed."
+        }
+      ],
+      "why": {
+        "en": "Problem: Tosh stops eating. Failed attempt: new food. Working solution: a lamp. The structure is a problem, a failed attempt, then a solution that worked.",
+        "uz": "Muammo: Tosh ovqat yemaydi. Muvaffaqiyatsiz urinish: yangi ovqat. Ishlagan yechim: lampa. Tuzilish: muammo, urinish, ishlagan yechim.",
+        "ru": "Проблема: Тош не ест. Неудачная попытка: новая еда. Решение: лампа. Структура: проблема, неудачная попытка, затем решение."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2309",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Our school library closes at four, two hours before the building does. It should stay open until six. Many students cannot study at home, where rooms are small and busy, and the library is the one quiet place they have. Keeping it open longer would cost little, since a teacher on duty is already in the building until six.\n\nWhich choice best states the main purpose of the text?"
+      },
+      "options": [
+        {
+          "en": "To argue for a change in the library's opening hours"
+        },
+        {
+          "en": "To describe the books in the school library"
+        },
+        {
+          "en": "To explain why homes are busy in the evening"
+        },
+        {
+          "en": "To complain that teachers leave the building too early"
+        }
+      ],
+      "why": {
+        "en": "'It should stay open until six' takes a side, and the rest gives reasons: the text argues for a change in the hours. It does not just describe.",
+        "uz": "«It should stay open until six» bir tomonni oladi, qolgani sabablar: matn ish vaqtini oʻzgartirishni yoqlaydi. U shunchaki tasvirlamaydi.",
+        "ru": "«It should stay open until six» занимает позицию, остальное — доводы: текст выступает за изменение часов работы, а не просто описывает."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2310",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Many people in Gulshan's neighborhood see the stray cats near the market as a nuisance. The fishmonger at the market sees them differently: since the cats arrived, he says, he has not seen a single mouse in his storeroom.\n\nWhich choice best describes the overall structure of the text?"
+      },
+      "options": [
+        {
+          "en": "It presents a common view of the cats, then gives one person's reason to see them more positively."
+        },
+        {
+          "en": "It presents a common view of the cats, then gives evidence that supports it."
+        },
+        {
+          "en": "It describes the market, then explains where the cats came from."
+        },
+        {
+          "en": "It describes a problem with mice in the storeroom, then argues that the cats should be removed from the market."
+        }
+      ],
+      "why": {
+        "en": "Part 1: the cats are a nuisance. Part 2: the fishmonger 'sees them differently', with no mice since. Part 2 does not support the view; it offers a more positive one.",
+        "uz": "1-qism: mushuklar bezovta qiladi. 2-qism: baliqfurush «sees them differently», sichqon yoʻq. 2-qism fikrni qoʻllamaydi, ijobiyroq qarashni beradi.",
+        "ru": "Часть 1: кошки — помеха. Часть 2: торговец рыбой «sees them differently», мышей нет. Часть 2 не поддерживает мнение, а даёт более добрый взгляд."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p14-content",
+      "key_check_1": "author",
+      "key_check_2": "blind:P14s1+P14s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2311",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The diary of a girl who lived in the village a century ago was long thought to be a simple record of weather and chores. When the village teacher read it closely, she noticed that the first letters of each month's entries, read in order, spelled out short messages to a friend. The diary, it seems, was also a hidden correspondence.\n\nWhich choice best describes the overall structure of the text?"
+      },
+      "options": [
+        {
+          "en": "It states how a document was long understood, then reports a discovery that reveals a second purpose."
+        },
+        {
+          "en": "It states how a document was long understood, then reports a teacher's close reading that confirms that view."
+        },
+        {
+          "en": "It describes a girl's daily life, then explains why she kept a diary."
+        },
+        {
+          "en": "It describes a teacher's research methods, then questions whether diaries are reliable."
+        }
+      ],
+      "why": {
+        "en": "Long thought 'a simple record', the diary turns out to be 'also a hidden correspondence': a view, then a discovery of a second purpose, not a confirmation.",
+        "uz": "Uzoq vaqt «a simple record» deb hisoblangan kundalik «also a hidden correspondence» boʻlib chiqadi: qarash, keyin ikkinchi maqsadning kashfiyoti, tasdiq emas.",
+        "ru": "Дневник долго считали «a simple record», а он оказался «also a hidden correspondence»: взгляд, затем открытие второй цели, а не подтверждение."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2312",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The report of the town council praises the new bus timetable for cutting waiting times at the central stop from twenty minutes to ten. The report is right about the central stop. What it leaves out is that two buses an hour were taken from the routes to the outer districts to make this possible, so people there now wait longer than before.\n\nWhich choice best states the main purpose of the text?"
+      },
+      "options": [
+        {
+          "en": "To point out that a report's claim, though accurate, gives an incomplete picture"
+        },
+        {
+          "en": "To argue that the report's figures for waiting times at the central stop are false"
+        },
+        {
+          "en": "To describe how the town's bus routes were first planned"
+        },
+        {
+          "en": "To praise the council for improving the bus service"
+        }
+      ],
+      "why": {
+        "en": "'The report is right', but 'what it leaves out' matters: the claim is accurate yet incomplete. Calling its figures false goes too far.",
+        "uz": "«The report is right», lekin «what it leaves out» muhim: daʼvo toʻgʻri, ammo toʻliq emas. Raqamlarni yolgʻon deyish haddan oshadi.",
+        "ru": "«The report is right», но важно «what it leaves out»: утверждение верно, но неполно. Назвать цифры ложными — слишком сильно."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2313",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "At the start of the story, Anvar refuses to help his younger brother fix an old bicycle, calling it \"a pile of rust.\" Day after day, he watches from the window as the boy works on it alone. In the final scene, Anvar comes out into the yard with his own toolbox and, without a word, kneels beside his brother.\n\nWhich choice best describes the overall structure of the text?"
+      },
+      "options": [
+        {
+          "en": "It shows a character's first refusal, then his quiet watching, and finally a change in his behavior."
+        },
+        {
+          "en": "It describes how an old bicycle is repaired, step by step."
+        },
+        {
+          "en": "It shows a quarrel between two brothers that ends in a fight."
+        },
+        {
+          "en": "It presents a character's opinion of bicycles, then explains why he holds it."
+        }
+      ],
+      "why": {
+        "en": "Anvar refuses, watches his brother work for days, and at the end kneels beside him with his toolbox: refusal, watching, then a change in behavior.",
+        "uz": "Anvar rad etadi, ukasining kunlab ishlashini kuzatadi, oxirida esa asboblari bilan yoniga choʻkkalaydi: rad, kuzatish, keyin xatti-harakat oʻzgarishi.",
+        "ru": "Анвар отказывается, днями смотрит, как работает брат, а в конце садится рядом со своими инструментами: отказ, наблюдение, затем перемена в поведении."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2314",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Mirzo's grandmother makes yogurt without a thermometer. She warms the milk until she can just keep her little finger in it for a count of ten, stirs in a spoonful of yesterday's yogurt and wraps the pot in an old coat overnight. Her method looks casual, but each step does a job that a recipe book would describe with exact numbers.\n\nWhich choice best states the main purpose of the text?"
+      },
+      "options": [
+        {
+          "en": "To show that a method that looks informal follows a careful logic"
+        },
+        {
+          "en": "To argue that recipe books are unnecessary"
+        },
+        {
+          "en": "To describe the history of yogurt in the region"
+        },
+        {
+          "en": "To explain why yogurt must be kept cold"
+        }
+      ],
+      "why": {
+        "en": "'Looks casual, but each step does a job': the text shows that an informal-looking method follows a careful logic. It never says recipe books are unnecessary.",
+        "uz": "«Looks casual, but each step does a job»: matn oddiy koʻringan usulning puxta mantigʻi borligini koʻrsatadi. Retsept kitoblari keraksiz deyilmaydi.",
+        "ru": "«Looks casual, but each step does a job»: текст показывает, что простой на вид способ подчинён логике. Что книги рецептов не нужны, не сказано."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2315",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Two members of the school photography club disagreed about where to hang the end-of-year exhibition. Ruslan wanted the main hall, where every visitor would pass. Iroda preferred the quiet library corridor, where people could look at each photo without being pushed along. The club settled the matter by hanging the large landscapes in the hall and the small portraits in the corridor.\n\nWhich choice best describes the overall structure of the text?"
+      },
+      "options": [
+        {
+          "en": "It introduces a disagreement, presents each side's view, and then describes a compromise."
+        },
+        {
+          "en": "It introduces a disagreement, presents each side's view, and then explains why one side won."
+        },
+        {
+          "en": "It describes an exhibition, then lists the most popular photos."
+        },
+        {
+          "en": "It presents a problem with the main hall, then argues that exhibitions belong in libraries."
+        }
+      ],
+      "why": {
+        "en": "Ruslan wants the hall, Iroda the corridor, and the club uses both: large photos in one, small in the other. That is a compromise; neither side simply won.",
+        "uz": "Ruslan zalni, Iroda yoʻlakni xohlaydi, klub esa ikkalasidan foydalanadi: kattalari birida, kichiklari boshqasida. Bu murosa; hech bir tomon shunchaki yutmadi.",
+        "ru": "Руслан хочет зал, Ирода — коридор, а клуб использует оба: большие фото в одном, маленькие в другом. Это компромисс; ни одна сторона не победила."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2316",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "It might seem that the fastest way to clear a crowded school corridor is to make everyone walk faster. When the student council timed the corridor after the bell, though, it found that the jams formed at one doorway, where two streams of students met head-on. Making that doorway one-way for five minutes cleared the corridor sooner than any rule about speed.\n\nWhich choice best states the main purpose of the text?"
+      },
+      "options": [
+        {
+          "en": "To show that finding a problem's real cause led to a better fix than the obvious one"
+        },
+        {
+          "en": "To argue that students should walk faster in corridors"
+        },
+        {
+          "en": "To describe the layout of the school building"
+        },
+        {
+          "en": "To report that the student council failed to solve a problem"
+        }
+      ],
+      "why": {
+        "en": "The obvious fix was walking faster; timing showed the real cause, one doorway, and a one-way rule worked better. The text shows a better fix than the obvious one.",
+        "uz": "Oddiy yechim tezroq yurish edi; vaqt oʻlchash asl sababni, bitta eshikni topdi, bir tomonlama qoida yaxshiroq ishladi. Matn oddiysidan yaxshiroq yechimni koʻrsatadi.",
+        "ru": "Очевидное решение — идти быстрее; замер нашёл настоящую причину, одну дверь, и одностороннее движение помогло лучше. Текст показывает лучшее решение."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2317",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The narrator of the play seems at first a reliable guide: he speaks directly to the audience and appears to know every character's secrets. In the second act, however, the audience learns that he was not present at the events he described so confidently, and several of his \"facts\" turn out to be false.\n\nWhich choice best describes the overall structure of the text?"
+      },
+      "options": [
+        {
+          "en": "It explains why a narrator seems trustworthy, then reveals that he is not."
+        },
+        {
+          "en": "It explains why a narrator seems trustworthy, then confirms this with an example from the second act."
+        },
+        {
+          "en": "It summarizes the first act of the play, then praises its actors."
+        },
+        {
+          "en": "It compares two narrators, then explains which one the audience prefers."
+        }
+      ],
+      "why": {
+        "en": "Part 1 gives reasons he seems reliable; 'however' turns: he was not there, and his facts are false. Trust, then the reveal that he is not trustworthy.",
+        "uz": "1-qism u nega ishonchli koʻrinishini aytadi; «however» buradi: u u yerda boʻlmagan, «faktlari» yolgʻon. Ishonch, keyin u ishonchsiz ekani ochiladi.",
+        "ru": "Часть 1: почему он кажется надёжным; «however» поворачивает: его там не было, его «факты» ложны. Доверие, затем раскрытие, что верить ему нельзя."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p8-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s1+P8s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-cs2318",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Learning to type quickly is often presented as a simple matter of hours: the more you practice, the faster you get. The typing club at Asal's school found that this was only partly true. Members who practiced in long, tiring sessions improved little after the first month, while those who practiced for fifteen focused minutes a day kept getting faster.\n\nWhich choice best states the main purpose of the text?"
+      },
+      "options": [
+        {
+          "en": "To show that a common view of practice needs a qualification"
+        },
+        {
+          "en": "To prove that practice of any kind does not improve typing speed"
+        },
+        {
+          "en": "To describe the rules of a school typing club"
+        },
+        {
+          "en": "To explain how typing was taught before computers"
+        }
+      ],
+      "why": {
+        "en": "'Only partly true': short, focused practice kept working, long tiring sessions did not. The text qualifies the view; it never says practice does not help.",
+        "uz": "«Only partly true»: qisqa, diqqatli mashq ish berdi, uzoq va charchatuvchi mashq esa yoʻq. Matn fikrni cheklaydi, mashq foydasiz demaydi.",
+        "ru": "«Only partly true»: короткие сосредоточенные занятия помогали, долгие изнурительные — нет. Текст уточняет мнение, а не отрицает пользу практики."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2319",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The drinking fountains at Bekzod's school are old, and many students now bring plastic bottles of water instead. Teachers have proposed installing a filtered water station where students could refill their own bottles. Some parents object that a single station would create long lines at break time, and they suggest smaller stations on every floor instead.\n\nWhich choice best describes the overall structure of the text?"
+      },
+      "options": [
+        {
+          "en": "It describes a situation, presents a proposal to address it, and then reports an objection along with an alternative."
+        },
+        {
+          "en": "It describes a situation, presents a proposal to address it, and then explains why the school finally adopted the proposal."
+        },
+        {
+          "en": "It explains why plastic bottles are harmful, then argues for banning them."
+        },
+        {
+          "en": "It compares two kinds of water station, then describes their prices."
+        }
+      ],
+      "why": {
+        "en": "Old fountains (situation), a refill station (proposal), parents fear lines and suggest one per floor (objection and alternative). Nothing says it was adopted.",
+        "uz": "Eski favvoralar (vaziyat), suv toʻldirish joyi (taklif), ota-onalar navbatdan xavotirda va har qavatga bittadan taklif qiladi (eʼtiroz va muqobil). Qabul qilingani aytilmaydi.",
+        "ru": "Старые фонтанчики (ситуация), станция для бутылок (предложение), родители боятся очередей и предлагают по одной на этаж (возражение и альтернатива). О принятии ни слова."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-cs2320",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In most accounts of the founding of the village, the first settlers chose the valley for its fertile soil. A song still sung at weddings there tells a different story: in it, the settlers stop in the valley only because a storm has broken a wheel of their cart, and they stay because their young driver falls in love with the daughter of the man who mends it. Whatever the truth, the song suggests that the villagers have long enjoyed a less heroic version of their past.\n\nWhich choice best states the main purpose of the text?"
+      },
+      "options": [
+        {
+          "en": "To present a folk version of a village's origin that differs from the usual account"
+        },
+        {
+          "en": "To prove, by means of an old wedding song, that the usual account of the village's founding is false"
+        },
+        {
+          "en": "To explain why the soil of the valley is fertile"
+        },
+        {
+          "en": "To describe the wedding customs of the village"
+        }
+      ],
+      "why": {
+        "en": "The song 'tells a different story', and 'Whatever the truth' means nothing is proved. The text presents a folk version that differs from the usual account.",
+        "uz": "Qoʻshiq «tells a different story», «Whatever the truth» esa hech narsa isbotlanmaganini bildiradi. Matn odatiy hikoyadan farq qiladigan xalq variantini keltiradi.",
+        "ru": "Песня «tells a different story», а «Whatever the truth» значит, что ничего не доказано. Текст приводит народную версию, отличную от обычной."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    }
+  ]
+}

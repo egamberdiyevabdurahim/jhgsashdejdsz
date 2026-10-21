@@ -1,0 +1,926 @@
+{
+ "bank": "C1",
+ "batch": 7,
+ "items": [
+  {
+   "id": "C1-m2a001",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_equation",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "The equation {a}(x − {b}) + {c}x = kx + {d} has no solution. What is k?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 6
+     },
+     "b": {
+      "min": 2,
+      "max": 6
+     },
+     "c": {
+      "min": 2,
+      "max": 5
+     },
+     "d": {
+      "min": 1,
+      "max": 9
+     }
+    },
+    "derived": {
+     "s": "a + c",
+     "ab": "a*b"
+    },
+    "constraints": [
+     "a != c",
+     "a*b != a + c",
+     "a*b != c"
+    ],
+    "answer": "a + c",
+    "distractors": [
+     "a",
+     "c",
+     "a*b"
+    ],
+    "integer": true,
+    "relation": "X = ({a}*(1 - {b}) + {c}*1) - ({a}*(0 - {b}) + {c}*0)"
+   },
+   "page": "C19-MAAL01-2",
+   "lang": "en",
+   "stem": {
+    "en": "The equation {a}(x − {b}) + {c}x = kx + {d} has no solution. What is k?",
+    "uz": "{a}(x − {b}) + {c}x = kx + {d} tenglama yechimga ega emas. k nechaga teng?",
+    "ru": "Уравнение {a}(x − {b}) + {c}x = kx + {d} не имеет решений. Чему равно k?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "{a}(x − {b}) + {c}x = {s}x − {ab}. With k = {ANS} both sides have {ANS}x, and −{ab} = {d} is false: no solution.",
+    "uz": "{a}(x − {b}) + {c}x = {s}x − {ab}. k = {ANS} boʻlsa, ikkala tomonda {ANS}x boʻladi va −{ab} = {d} notoʻgʻri: yechim yoʻq.",
+    "ru": "{a}(x − {b}) + {c}x = {s}x − {ab}. При k = {ANS} в обеих частях {ANS}x, а −{ab} = {d} неверно: решений нет."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.3,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-m2a002",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_functions",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "Line k passes through the point ({p}, {q}) and is parallel to the line through ({x1}, {y1}) and ({x2}, {y2}). What is the y-intercept of line k?",
+    "params": {
+     "m": {
+      "values": [
+       -3,
+       -2,
+       -1,
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     "x1": {
+      "min": 0,
+      "max": 4
+     },
+     "dx": {
+      "min": 1,
+      "max": 4
+     },
+     "y1": {
+      "min": -4,
+      "max": 8
+     },
+     "p": {
+      "min": 1,
+      "max": 6
+     },
+     "q": {
+      "min": -5,
+      "max": 9
+     }
+    },
+    "derived": {
+     "x2": "x1 + dx",
+     "y2": "y1 + m*dx"
+    },
+    "constraints": [
+     "y1 - m*x1 != q - m*p",
+     "y1 - m*x1 != q + m*p",
+     "m != q - m*p",
+     "m != q + m*p",
+     "m != y1 - m*x1"
+    ],
+    "answer": "q - m*p",
+    "distractors": [
+     "q + m*p",
+     "y1 - m*x1",
+     "m"
+    ],
+    "integer": true,
+    "relation": "X = {q} - (({y2} - {y1})/({x2} - {x1}))*{p}"
+   },
+   "page": "C19-MAAL02-2",
+   "lang": "en",
+   "stem": {
+    "en": "Line k passes through the point ({p}, {q}) and is parallel to the line through ({x1}, {y1}) and ({x2}, {y2}). What is the y-intercept of line k?",
+    "uz": "k toʻgʻri chiziq ({p}, {q}) nuqtadan oʻtadi va ({x1}, {y1}) hamda ({x2}, {y2}) nuqtalardan oʻtuvchi chiziqqa parallel. k chiziq y oʻqini qaysi ordinatada kesadi?",
+    "ru": "Прямая k проходит через точку ({p}, {q}) и параллельна прямой, проходящей через ({x1}, {y1}) и ({x2}, {y2}). Чему равна ордината точки пересечения k с осью y?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Parallel lines have equal slopes: the slope is {m}. Then {q} = {m} × {p} + b, so b = {ANS}.",
+    "uz": "Parallel chiziqlarning burchak koeffitsiyentlari teng: u {m}. Keyin {q} = {m} × {p} + b, demak b = {ANS}.",
+    "ru": "У параллельных прямых угловые коэффициенты равны: он равен {m}. Тогда {q} = {m} × {p} + b, значит, b = {ANS}."
+   },
+   "instructions": {
+    "en": "Type your answer as a number (it may be negative).",
+    "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+    "ru": "Введите ответ числом (оно может быть отрицательным)."
+   },
+   "prior_b": -0.3,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-m2a003",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_functions",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "A tank holds W = {b} − {r}t litres of water t minutes after a tap is opened. How many minutes after the tap is opened will the tank hold {w} litres?",
+    "params": {
+     "r": {
+      "min": 4,
+      "max": 25
+     },
+     "k": {
+      "min": 3,
+      "max": 30
+     },
+     "t0": {
+      "min": 5,
+      "max": 40
+     }
+    },
+    "derived": {
+     "w": "r*k",
+     "b": "r*(k + t0)",
+     "d": "r*t0"
+    },
+    "constraints": [
+     "k != t0"
+    ],
+    "answer": "(b - w)/r",
+    "distractors": [
+     "w/r",
+     "b/r",
+     "(b + w)/r"
+    ],
+    "integer": true,
+    "relation": "{b} - {r}*X = {w}"
+   },
+   "page": "C19-MAAL02-3",
+   "lang": "en",
+   "stem": {
+    "en": "A tank holds W = {b} − {r}t litres of water t minutes after a tap is opened. How many minutes after the tap is opened will the tank hold {w} litres?",
+    "uz": "Jumrak ochilgandan t daqiqa oʻtgach idishda W = {b} − {r}t litr suv boʻladi. Jumrak ochilgandan necha daqiqa oʻtgach idishda {w} litr suv qoladi?",
+    "ru": "Через t минут после того, как открыли кран, в баке W = {b} − {r}t литров воды. Через сколько минут после открытия крана в баке останется {w|литр|литра|литров}?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "{b} − {r}t = {w} gives {r}t = {d}, so t = {ANS}.",
+    "uz": "{b} − {r}t = {w} dan {r}t = {d}, demak t = {ANS}.",
+    "ru": "Из {b} − {r}t = {w} следует {r}t = {d}, значит, t = {ANS}."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.5,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-m2a004",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "system_of_equations",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "The system {a}x + {b}y = {c} and {d}x + ky = {e} has no solution. What is k?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 6
+     },
+     "b": {
+      "min": 2,
+      "max": 7
+     },
+     "n": {
+      "min": 2,
+      "max": 5
+     },
+     "c": {
+      "min": 1,
+      "max": 12
+     },
+     "e": {
+      "min": 1,
+      "max": 40
+     }
+    },
+    "derived": {
+     "d": "n*a"
+    },
+    "constraints": [
+     "e != n*c",
+     "b != n"
+    ],
+    "answer": "n*b",
+    "distractors": [
+     "b",
+     "n",
+     "n + b"
+    ],
+    "integer": true,
+    "relation": "{a}*X - {b}*{d} = 0"
+   },
+   "page": "C19-MAAL03-2",
+   "lang": "en",
+   "stem": {
+    "en": "The system {a}x + {b}y = {c} and {d}x + ky = {e} has no solution. What is k?",
+    "uz": "{a}x + {b}y = {c} va {d}x + ky = {e} sistema yechimga ega emas. k nechaga teng?",
+    "ru": "Система {a}x + {b}y = {c} и {d}x + ky = {e} не имеет решений. Чему равно k?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "{d} = {n} × {a}, so k = {n} × {b} = {ANS}. The lines are then parallel: no solution.",
+    "uz": "{d} = {n} × {a}, demak k = {n} × {b} = {ANS}. Shunda chiziqlar parallel: yechim yoʻq.",
+    "ru": "{d} = {n} × {a}, значит, k = {n} × {b} = {ANS}. Тогда прямые параллельны: решений нет."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.2,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-m2a005",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "system_of_equations",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "The system {a}x − {b}y = {c} and {d}x − {e}y = k has infinitely many solutions. What is k?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 6
+     },
+     "b": {
+      "min": 2,
+      "max": 7
+     },
+     "c": {
+      "min": 2,
+      "max": 12
+     },
+     "n": {
+      "min": 2,
+      "max": 5
+     }
+    },
+    "derived": {
+     "d": "n*a",
+     "e": "n*b"
+    },
+    "constraints": [
+     "c != n"
+    ],
+    "answer": "n*c",
+    "distractors": [
+     "c",
+     "n",
+     "n + c"
+    ],
+    "integer": true,
+    "relation": "{a}*X = {d}*{c}"
+   },
+   "page": "C19-MAAL03-2",
+   "lang": "en",
+   "stem": {
+    "en": "The system {a}x − {b}y = {c} and {d}x − {e}y = k has infinitely many solutions. What is k?",
+    "uz": "{a}x − {b}y = {c} va {d}x − {e}y = k sistema cheksiz koʻp yechimga ega. k nechaga teng?",
+    "ru": "Система {a}x − {b}y = {c} и {d}x − {e}y = k имеет бесконечно много решений. Чему равно k?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "{d} = {n} × {a} and {e} = {n} × {b}, so the same line needs k = {n} × {c} = {ANS}.",
+    "uz": "{d} = {n} × {a} va {e} = {n} × {b}, demak bitta chiziq uchun k = {n} × {c} = {ANS}.",
+    "ru": "{d} = {n} × {a} и {e} = {n} × {b}, значит, для одной прямой k = {n} × {c} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.1,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-m2a006",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "system_of_equations",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "A club sold {T} tickets: student tickets at {s} soʻm and adult tickets at {a} soʻm, for {R} soʻm in all. How many adult tickets did it sell?",
+    "params": {
+     "s": {
+      "values": [
+       3000,
+       4000,
+       5000,
+       6000
+      ]
+     },
+     "g": {
+      "values": [
+       1000,
+       2000,
+       3000,
+       4000
+      ]
+     },
+     "A": {
+      "min": 10,
+      "max": 60
+     },
+     "S": {
+      "min": 10,
+      "max": 80
+     }
+    },
+    "derived": {
+     "a": "s + g",
+     "T": "A + S",
+     "R": "s*S + (s + g)*A",
+     "gA": "g*A"
+    },
+    "constraints": [
+     "A != S",
+     "R // a != A",
+     "R // a != S",
+     "T // 2 != A",
+     "T // 2 != S",
+     "T // 2 != R // a"
+    ],
+    "answer": "A",
+    "distractors": [
+     "S",
+     "R // a",
+     "T // 2"
+    ],
+    "integer": true,
+    "relation": "{s}*({T} - X) + {a}*X = {R}"
+   },
+   "page": "C19-MAAL03-3",
+   "lang": "en",
+   "stem": {
+    "en": "A club sold {T} tickets: student tickets at {s} soʻm and adult tickets at {a} soʻm, for {R} soʻm in all. How many adult tickets did it sell?",
+    "uz": "Klub {T} ta chipta sotdi: oʻquvchi chiptasi {s} soʻmdan va kattalar chiptasi {a} soʻmdan, jami {R} soʻm. Kattalar chiptasidan nechta sotilgan?",
+    "ru": "Клуб продал билеты: всего {T}, ученический стоит {s} сум, взрослый — {a} сум, выручка — {R} сум. Сколько продано взрослых билетов?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Students: {T} − a. Then {s}({T} − a) + {a}a = {R}, so {g}a = {gA} and a = {ANS}.",
+    "uz": "Oʻquvchi chiptalari: {T} − a. Unda {s}({T} − a) + {a}a = {R}, demak {g}a = {gA} va a = {ANS}.",
+    "ru": "Ученических: {T} − a. Тогда {s}({T} − a) + {a}a = {R}, значит, {g}a = {gA} и a = {ANS}."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.1,
+   "time_s": 90,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-m2a007",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "linear_inequalities",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "The point ({p}, k) lies in the solution region of y > {m}x − {c}. What is the least whole-number value of k?",
+    "params": {
+     "m": {
+      "min": 2,
+      "max": 5
+     },
+     "p": {
+      "min": 1,
+      "max": 6
+     },
+     "c": {
+      "min": 1,
+      "max": 9
+     }
+    },
+    "derived": {
+     "v": "m*p - c"
+    },
+    "constraints": [],
+    "answer": "m*p - c + 1",
+    "distractors": [
+     "m*p - c",
+     "m*p + c + 1",
+     "m*p - c - 1"
+    ],
+    "integer": true,
+    "relation": "X - 1 = {m}*{p} - {c}"
+   },
+   "page": "C19-MAAL03-3",
+   "lang": "en",
+   "stem": {
+    "en": "The point ({p}, k) lies in the solution region of y > {m}x − {c}. What is the least whole-number value of k?",
+    "uz": "({p}, k) nuqta y > {m}x − {c} tengsizlikning yechimlar sohasida yotadi. k ning eng kichik butun qiymati nechaga teng?",
+    "ru": "Точка ({p}, k) лежит в области решений неравенства y > {m}x − {c}. Найдите наименьшее целое значение k."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "k > {m} × {p} − {c} = {v}. k must be greater than {v}, so the least whole k is {ANS}.",
+    "uz": "k > {m} × {p} − {c} = {v}. k soni {v} dan katta boʻlishi kerak, demak eng kichik butun k — {ANS}.",
+    "ru": "k > {m} × {p} − {c} = {v}. k должно быть больше {v}, значит, наименьшее целое k равно {ANS}."
+   },
+   "instructions": {
+    "en": "Type your answer as a number (it may be negative).",
+    "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+    "ru": "Введите ответ числом (оно может быть отрицательным)."
+   },
+   "prior_b": 0.3,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-m2a008",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponent_rules",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "What is the value of {N}^({p}/{q})?",
+    "params": {
+     "r": {
+      "values": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "q": {
+      "values": [
+       2,
+       3,
+       4
+      ]
+     },
+     "p": {
+      "min": 2,
+      "max": 5
+     }
+    },
+    "derived": {
+     "N": "r^q"
+    },
+    "constraints": [
+     "gcd(p, q) == 1",
+     "r^p <= 1000",
+     "r^p != r*p"
+    ],
+    "answer": "r^p",
+    "distractors": [
+     "r*p",
+     "r^(p + 1)",
+     "r"
+    ],
+    "integer": true,
+    "relation": "X = {N}^({p}/{q})"
+   },
+   "page": "C19-MAAM01-3",
+   "lang": "en",
+   "stem": {
+    "en": "What is the value of {N}^({p}/{q})?",
+    "uz": "{N}^({p}/{q}) nechaga teng?",
+    "ru": "Чему равно {N}^({p}/{q})?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "{N} = {r}^{q}, so {N}^({p}/{q}) = {r}^{p} = {ANS}.",
+    "uz": "{N} = {r}^{q}, demak {N}^({p}/{q}) = {r}^{p} = {ANS}.",
+    "ru": "{N} = {r}^{q}, значит, {N}^({p}/{q}) = {r}^{p} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.2,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-m2a009",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "quadratic",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "{a}x² + {b}x + k = 0 has exactly one real solution. What is k?",
+    "params": {
+     "a": {
+      "values": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "r": {
+      "min": 1,
+      "max": 6
+     }
+    },
+    "derived": {
+     "b": "2*a*r",
+     "bb": "4*a*a*r*r",
+     "fa": "4*a"
+    },
+    "constraints": [],
+    "answer": "a*r*r",
+    "distractors": [
+     "b*b/4",
+     "r*r",
+     "b*b"
+    ],
+    "integer": true,
+    "relation": "{b}^2 - 4*{a}*X = 0"
+   },
+   "page": "C19-MAAM02-2",
+   "lang": "en",
+   "stem": {
+    "en": "{a}x² + {b}x + k = 0 has exactly one real solution. What is k?",
+    "uz": "{a}x² + {b}x + k = 0 tenglama aynan bitta haqiqiy yechimga ega. k nechaga teng?",
+    "ru": "Уравнение {a}x² + {b}x + k = 0 имеет ровно одно действительное решение. Чему равно k?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "One solution means D = 0: {b}² − 4 × {a} × k = 0, so {bb} = {fa}k and k = {ANS}.",
+    "uz": "Bitta yechim — D = 0: {b}² − 4 × {a} × k = 0, demak {bb} = {fa}k va k = {ANS}.",
+    "ru": "Одно решение — D = 0: {b}² − 4 × {a} × k = 0, значит, {bb} = {fa}k и k = {ANS}."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.2,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-m2a010",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "radical_functions",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "What value of x satisfies the equation √(x + {a}) = x − {b}?",
+    "params": {
+     "b": {
+      "min": 1,
+      "max": 8
+     },
+     "s": {
+      "min": 2,
+      "max": 7
+     }
+    },
+    "derived": {
+     "a": "s*s - s - b",
+     "xf": "b + 1 - s"
+    },
+    "constraints": [
+     "s*s - s - b >= 1",
+     "2*s != b + 1",
+     "s*s != b + s",
+     "s*s != b + 1 - s"
+    ],
+    "answer": "b + s",
+    "distractors": [
+     "b + 1 - s",
+     "s",
+     "s*s"
+    ],
+    "integer": true,
+    "relation": "(X - {b})^2 = X + {a}; X > {b}"
+   },
+   "page": "C19-MAAM02-3",
+   "lang": "en",
+   "stem": {
+    "en": "What value of x satisfies the equation √(x + {a}) = x − {b}?",
+    "uz": "√(x + {a}) = x − {b} tenglamani x ning qaysi qiymati qanoatlantiradi?",
+    "ru": "Какое значение x удовлетворяет уравнению √(x + {a}) = x − {b}?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Squaring: x + {a} = (x − {b})². The roots are {ANS} and {xf}; only {ANS} keeps x − {b} ≥ 0, so x = {ANS}.",
+    "uz": "Kvadratga oshirsak: x + {a} = (x − {b})². Ildizlar {ANS} va {xf}; faqat {ANS} da x − {b} ≥ 0, demak x = {ANS}.",
+    "ru": "Возводим в квадрат: x + {a} = (x − {b})². Корни {ANS} и {xf}; только при {ANS} x − {b} ≥ 0, значит, x = {ANS}."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.4,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-m2a011",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "functions",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "f(x) = (x − {h})² + {k}. The graph of y = f(x − {r}) + {u} has its vertex at (p, q). What is p + q?",
+    "params": {
+     "h": {
+      "min": 1,
+      "max": 8
+     },
+     "k": {
+      "min": 1,
+      "max": 9
+     },
+     "r": {
+      "min": 1,
+      "max": 6
+     },
+     "u": {
+      "min": 1,
+      "max": 6
+     }
+    },
+    "derived": {
+     "vx": "h + r",
+     "vy": "k + u"
+    },
+    "constraints": [
+     "u != r"
+    ],
+    "answer": "h + r + k + u",
+    "distractors": [
+     "h - r + k + u",
+     "h + k",
+     "h + r + k - u"
+    ],
+    "integer": true,
+    "relation": "X = ({h} + {r}) + ({k} + {u})"
+   },
+   "page": "C19-MAAM03-3",
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = (x − {h})² + {k}. The graph of y = f(x − {r}) + {u} has its vertex at (p, q). What is p + q?",
+    "uz": "f(x) = (x − {h})² + {k}. y = f(x − {r}) + {u} grafigining uchi (p, q). p + q nechaga teng?",
+    "ru": "f(x) = (x − {h})² + {k}. Вершина графика y = f(x − {r}) + {u} — точка (p, q). Чему равно p + q?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f(x − {r}) moves the vertex ({h}, {k}) {r|unit|units} right and + {u} moves it {u} up: ({vx}, {vy}). So p + q = {ANS}.",
+    "uz": "f(x − {r}) uchini ({h}, {k}) dan {r} birlik oʻngga, + {u} esa {u} birlik yuqoriga suradi: ({vx}, {vy}). Demak p + q = {ANS}.",
+    "ru": "f(x − {r}) сдвигает вершину ({h}, {k}) на {r} вправо, а + {u} — на {u} вверх: ({vx}, {vy}). Значит, p + q = {ANS}."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.5,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-m2a012",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "functions",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "y = x² − {b}x + {c} can be written as y = (x − h)² + k. What is k?",
+    "params": {
+     "h": {
+      "min": 2,
+      "max": 9
+     },
+     "k": {
+      "min": -9,
+      "max": 12
+     }
+    },
+    "derived": {
+     "b": "2*h",
+     "c": "h*h + k",
+     "hh": "h*h"
+    },
+    "constraints": [
+     "h*h + k >= 1",
+     "k != h",
+     "h != h*h + k",
+     "2*h*h + k != h"
+    ],
+    "answer": "k",
+    "distractors": [
+     "c",
+     "c + h*h",
+     "h"
+    ],
+    "integer": true,
+    "relation": "X = {c} - ({b}/2)^2"
+   },
+   "page": "C19-MAAM03-3",
+   "lang": "en",
+   "stem": {
+    "en": "y = x² − {b}x + {c} can be written as y = (x − h)² + k. What is k?",
+    "uz": "y = x² − {b}x + {c} ni y = (x − h)² + k koʻrinishida yozish mumkin. k nechaga teng?",
+    "ru": "y = x² − {b}x + {c} можно записать в виде y = (x − h)² + k. Чему равно k?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Half of {b} is {h}, and {h}² = {hh}: x² − {b}x + {c} = (x − {h})² − {hh} + {c}, so k = {ANS}.",
+    "uz": "{b} ning yarmi {h}, {h}² = {hh}: x² − {b}x + {c} = (x − {h})² − {hh} + {c}, demak k = {ANS}.",
+    "ru": "Половина от {b} равна {h}, {h}² = {hh}: x² − {b}x + {c} = (x − {h})² − {hh} + {c}, значит, k = {ANS}."
+   },
+   "instructions": {
+    "en": "Type your answer as a number (it may be negative).",
+    "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+    "ru": "Введите ответ числом (оно может быть отрицательным)."
+   },
+   "prior_b": 0.3,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  }
+ ]
+}

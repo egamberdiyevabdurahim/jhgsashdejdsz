@@ -1,0 +1,4071 @@
+{
+ "bank": "C10",
+ "batch": 1,
+ "kind": "catalog",
+ "note": "Test-prep units (P5 spec §5.3 C10). Catalog records, not quiz items: no options or keys. 'practice[].where' is a tag query against the practice pools (C1, C2, C3, C5, C6, C7); subskill values are proposed tags the integrator maps onto each stream's vocabulary, falling back to 'fallback_where'. End-of-unit checks draw only from practice pools, never from the K assessment banks. Official links are links only. Pass marks are design defaults to tune from logs (spec §4.5), not evidence-based thresholds.",
+ "items": [
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-RWCS01",
+   "test": "SAT",
+   "section": "reading_writing",
+   "domain": "craft_structure",
+   "domain_label": {
+    "en": "Craft and Structure",
+    "uz": "Craft and Structure (matn uslubi va tuzilishi)",
+    "ru": "Craft and Structure (стиль и структура текста)"
+   },
+   "domain_share": {
+    "approx_pct": 28,
+    "questions": "13-15",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 1,
+   "units_in_domain": 3,
+   "level_band": "foundation",
+   "skills": [
+    "words_in_context"
+   ],
+   "title": {
+    "en": "Words in Context",
+    "uz": "Words in Context: soʻzning matndagi maʼnosi",
+    "ru": "Words in Context: значение слова в контексте"
+   },
+   "goal": {
+    "en": "Choose the word or phrase that fits a short text's meaning and tone, using clues in the text rather than a dictionary definition.",
+    "uz": "Qisqa matnning maʼnosi va ohangiga mos soʻz yoki iborani lugʻatdagi taʼrifga emas, matndagi ishoralarga tayanib tanlang.",
+    "ru": "Научитесь выбирать слово или выражение, подходящее по смыслу и тону короткого текста, опираясь на подсказки в тексте, а не на словарное определение."
+   },
+   "study": [
+    {
+     "en": "Predict first: cover the options, read the text, say the missing idea in your own words, then match it to an option.",
+     "uz": "Avval taxmin qiling: variantlarni yopib, matnni oʻqing, tushib qolgan fikrni oʻz soʻzlaringiz bilan ayting, keyin uni variantlar bilan solishtiring.",
+     "ru": "Сначала предскажите: закройте варианты, прочитайте текст, сформулируйте пропущенную мысль своими словами и только потом сравните с вариантами."
+    },
+    {
+     "en": "Use contrast and cause words (however, although, because, thus) to decide whether the blank continues or reverses the idea before it.",
+     "uz": "Qarama-qarshilik va sabab soʻzlari (however, although, because, thus) yordamida boʻsh joy oldingi fikrni davom ettiradimi yoki unga zid keladimi, aniqlang.",
+     "ru": "По словам контраста и причины (however, although, because, thus) определите, продолжает ли пропуск предыдущую мысль или противоречит ей."
+    },
+    {
+     "en": "Check tone and precision: an option can be roughly right yet too strong, too weak or in the wrong register.",
+     "uz": "Ohang va aniqlikni tekshiring: variant taxminan toʻgʻri boʻlsa ham, haddan tashqari kuchli, juda kuchsiz yoki uslubga mos boʻlmasligi mumkin.",
+     "ru": "Проверьте тон и точность: вариант может быть примерно верным, но слишком сильным, слишком слабым или не того стиля."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "craft_structure",
+      "subskill": [
+       "words_in_context"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "craft_structure"
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 13,
+     "purpose": {
+      "en": "Words in context, easy to medium.",
+      "uz": "Words in Context, oson va oʻrta.",
+      "ru": "Words in Context, лёгкие и средние."
+     },
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Reading and Writing, domain Craft and Structure, skill Words in Context; do 10 Easy questions.",
+      "uz": "Question Bankʼda SAT, keyin Reading and Writing, Craft and Structure domeni va Words in Context koʻnikmasini tanlang; Easy (oson) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Reading and Writing, домен Craft and Structure, навык Words in Context; решите 10 вопросов уровня Easy (лёгкие)."
+     },
+     "step": {
+      "minutes": 15
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Reading and Writing course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Reading and Writing kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Reading and Writing на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C6",
+    "where": {
+     "skill": "sat_rw",
+     "sat.domain": "craft_structure",
+     "subskill": [
+      "words_in_context"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 710,
+    "minutes": 15,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 71 seconds a question, the test's pace (54 questions in 64 minutes). Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 71 soniya — test surʼati (64 daqiqada 54 ta savol). Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 71 секунда на вопрос — темп теста (54 вопроса за 64 минуты). Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Review your misses in the error log, do one more practice set on the weakest skill, then retake the check with new questions.",
+     "uz": "Xatolar daftaringizdagi xatolarni koʻrib chiqing, eng zaif koʻnikma boʻyicha yana bitta mashq toʻplamini bajaring, keyin tekshiruvni yangi savollar bilan qayta topshiring.",
+     "ru": "Разберите ошибки в журнале ошибок, выполните ещё один набор по самому слабому навыку и пересдайте проверку с новыми вопросами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 26,
+    "check": 15,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 56
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "after_units": [],
+    "basis": "design default: SAT R&W texts assume at least B1"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Reading and Writing: 54 questions in 64 minutes, two 32-minute modules; Craft and Structure is about 28 % of questions (13-15).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading and Writing passages are 25 to 150 words, each with one question.",
+     "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Words in Context",
+      "uz": "Oʻrganing: Words in Context: soʻzning matndagi maʼnosi",
+      "ru": "Изучите: Words in Context: значение слова в контексте"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 1: Words in Context",
+      "uz": "Mashq 1: Words in Context: soʻzning matndagi maʼnosi",
+      "ru": "Практика 1: Words in Context: значение слова в контексте"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 2: Words in Context",
+      "uz": "Mashq 2: Words in Context: soʻzning matndagi maʼnosi",
+      "ru": "Практика 2: Words in Context: значение слова в контексте"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Words in Context",
+      "uz": "Rasmiy mashq: Words in Context: soʻzning matndagi maʼnosi",
+      "ru": "Официальная практика: Words in Context: значение слова в контексте"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "End-of-unit check: Words in Context",
+      "uz": "Boʻlim yakuniy tekshiruvi: Words in Context: soʻzning matndagi maʼnosi",
+      "ru": "Итоговая проверка раздела: Words in Context: значение слова в контексте"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-RWCS02",
+   "test": "SAT",
+   "section": "reading_writing",
+   "domain": "craft_structure",
+   "domain_label": {
+    "en": "Craft and Structure",
+    "uz": "Craft and Structure (matn uslubi va tuzilishi)",
+    "ru": "Craft and Structure (стиль и структура текста)"
+   },
+   "domain_share": {
+    "approx_pct": 28,
+    "questions": "13-15",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 2,
+   "units_in_domain": 3,
+   "level_band": "core",
+   "skills": [
+    "text_structure_purpose"
+   ],
+   "title": {
+    "en": "Text Structure and Purpose",
+    "uz": "Text Structure and Purpose: matn tuzilishi va maqsadi",
+    "ru": "Text Structure and Purpose: структура и цель текста"
+   },
+   "goal": {
+    "en": "Say what a text, or one sentence in it, is doing (a claim, an example, a contrast, a concession) and choose the option that names its main purpose or structure.",
+    "uz": "Matn yoki undagi bitta gap qanday vazifa bajarayotganini (daʼvo, misol, qarama-qarshilik, yon berish) ayting va uning asosiy maqsadi yoki tuzilishini toʻgʻri nomlagan variantni tanlang.",
+    "ru": "Определите, что делает текст или одно его предложение (утверждение, пример, контраст, уступка), и выберите вариант, который точно называет его главную цель или структуру."
+   },
+   "study": [
+    {
+     "en": "Label each sentence's job in two or three words (introduces, supports, qualifies, contrasts) before you read the question.",
+     "uz": "Savolni oʻqishdan oldin har bir gapning vazifasini ikki-uch soʻz bilan belgilang (kiritadi, qoʻllab-quvvatlaydi, cheklaydi, qarama-qarshi qoʻyadi).",
+     "ru": "Прежде чем читать вопрос, обозначьте роль каждого предложения двумя-тремя словами (вводит, подтверждает, уточняет, противопоставляет)."
+    },
+    {
+     "en": "For main-purpose questions the answer covers the whole text; an option that describes one detail is a trap.",
+     "uz": "Asosiy maqsad haqidagi savollarda javob butun matnni qamrab oladi; faqat bitta tafsilotni tasvirlagan variant — tuzoq.",
+     "ru": "В вопросах о главной цели ответ охватывает весь текст; вариант, описывающий одну деталь, — ловушка."
+    },
+    {
+     "en": "For the function of an underlined sentence, reread the sentences around it: its role depends on what comes before and after.",
+     "uz": "Tagiga chizilgan gapning vazifasini aniqlash uchun uning atrofidagi gaplarni qayta oʻqing: uning roli oldin va keyin kelgan gaplarga bogʻliq.",
+     "ru": "Чтобы понять функцию подчёркнутого предложения, перечитайте соседние: его роль зависит от того, что стоит до и после него."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "craft_structure",
+      "subskill": [
+       "text_structure_purpose"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "craft_structure"
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 13,
+     "purpose": {
+      "en": "Structure and purpose questions, all difficulties.",
+      "uz": "Tuzilish va maqsad savollari, barcha darajalar.",
+      "ru": "Вопросы о структуре и цели, все уровни."
+     },
+     "interleave_earlier": 0
+    },
+    {
+     "content": "C5",
+     "where": {
+      "lang": "en",
+      "level": [
+       "B2",
+       "C1"
+      ]
+     },
+     "n_passages": 1,
+     "split": [
+      1
+     ],
+     "minutes_each": 12,
+     "purpose": {
+      "en": "One longer passage: name each paragraph's job before answering.",
+      "uz": "Bitta uzunroq matn: javob berishdan oldin har bir xatboshining vazifasini ayting.",
+      "ru": "Один более длинный текст: перед ответами назовите роль каждого абзаца."
+     }
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Reading and Writing, domain Craft and Structure, skill Text Structure and Purpose; do 10 Medium questions.",
+      "uz": "Question Bankʼda SAT, keyin Reading and Writing, Craft and Structure domeni va Text Structure and Purpose koʻnikmasini tanlang; Medium (oʻrta) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Reading and Writing, домен Craft and Structure, навык Text Structure and Purpose; решите 10 вопросов уровня Medium (средние)."
+     },
+     "step": {
+      "minutes": 15
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Reading and Writing course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Reading and Writing kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Reading and Writing на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C6",
+    "where": {
+     "skill": "sat_rw",
+     "sat.domain": "craft_structure",
+     "subskill": [
+      "text_structure_purpose",
+      "words_in_context"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 710,
+    "minutes": 15,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 71 seconds a question, the test's pace (54 questions in 64 minutes). Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 71 soniya — test surʼati (64 daqiqada 54 ta savol). Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 71 секунда на вопрос — темп теста (54 вопроса за 64 минуты). Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Review your misses in the error log, do one more practice set on the weakest skill, then retake the check with new questions.",
+     "uz": "Xatolar daftaringizdagi xatolarni koʻrib chiqing, eng zaif koʻnikma boʻyicha yana bitta mashq toʻplamini bajaring, keyin tekshiruvni yangi savollar bilan qayta topshiring.",
+     "ru": "Разберите ошибки в журнале ошибок, выполните ещё один набор по самому слабому навыку и пересдайте проверку с новыми вопросами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 38,
+    "check": 15,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 68
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "after_units": [
+     "C10-RWCS01"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Reading and Writing: 54 questions in 64 minutes, two 32-minute modules; Craft and Structure is about 28 % of questions (13-15).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading and Writing passages are 25 to 150 words, each with one question.",
+     "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Text Structure and Purpose",
+      "uz": "Oʻrganing: Text Structure and Purpose: matn tuzilishi va maqsadi",
+      "ru": "Изучите: Text Structure and Purpose: структура и цель текста"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 1: Text Structure and Purpose",
+      "uz": "Mashq 1: Text Structure and Purpose: matn tuzilishi va maqsadi",
+      "ru": "Практика 1: Text Structure and Purpose: структура и цель текста"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 2: Text Structure and Purpose",
+      "uz": "Mashq 2: Text Structure and Purpose: matn tuzilishi va maqsadi",
+      "ru": "Практика 2: Text Structure and Purpose: структура и цель текста"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 12,
+     "title": {
+      "en": "Practice 3: Text Structure and Purpose",
+      "uz": "Mashq 3: Text Structure and Purpose: matn tuzilishi va maqsadi",
+      "ru": "Практика 3: Text Structure and Purpose: структура и цель текста"
+     },
+     "practice_ref": 1,
+     "items": 1,
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Text Structure and Purpose",
+      "uz": "Rasmiy mashq: Text Structure and Purpose: matn tuzilishi va maqsadi",
+      "ru": "Официальная практика: Text Structure and Purpose: структура и цель текста"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 5
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "End-of-unit check: Text Structure and Purpose",
+      "uz": "Boʻlim yakuniy tekshiruvi: Text Structure and Purpose: matn tuzilishi va maqsadi",
+      "ru": "Итоговая проверка раздела: Text Structure and Purpose: структура и цель текста"
+     },
+     "end_check": true,
+     "n": 6
+    }
+   ],
+   "sessions": 5,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-RWCS03",
+   "test": "SAT",
+   "section": "reading_writing",
+   "domain": "craft_structure",
+   "domain_label": {
+    "en": "Craft and Structure",
+    "uz": "Craft and Structure (matn uslubi va tuzilishi)",
+    "ru": "Craft and Structure (стиль и структура текста)"
+   },
+   "domain_share": {
+    "approx_pct": 28,
+    "questions": "13-15",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 3,
+   "units_in_domain": 3,
+   "level_band": "advanced",
+   "skills": [
+    "cross_text_connections",
+    "words_in_context",
+    "text_structure_purpose"
+   ],
+   "title": {
+    "en": "Cross-Text Connections and mixed Craft and Structure",
+    "uz": "Cross-Text Connections va aralash Craft and Structure",
+    "ru": "Cross-Text Connections и смешанный Craft and Structure"
+   },
+   "goal": {
+    "en": "Compare two short texts on one topic, state each author's position and predict how one would respond to the other; finish the domain with a mixed, timed set.",
+    "uz": "Bir mavzudagi ikki qisqa matnni solishtiring, har bir muallifning pozitsiyasini ayting va biri ikkinchisiga qanday javob berishini taxmin qiling; domenni aralash, vaqtli toʻplam bilan yakunlang.",
+    "ru": "Сравните два коротких текста на одну тему, сформулируйте позицию каждого автора и предскажите, как один ответил бы другому; завершите домен смешанным набором на время."
+   },
+   "study": [
+    {
+     "en": "Summarise each text in one line, then write how they relate: they agree, they disagree, or one qualifies the other.",
+     "uz": "Har bir matnni bir qatorda xulosa qiling, keyin ular qanday bogʻlanganini yozing: rozi, rozi emas yoki biri ikkinchisini cheklaydi.",
+     "ru": "Перескажите каждый текст в одной строке, затем запишите, как они связаны: согласны, не согласны или один уточняет другой."
+    },
+    {
+     "en": "'How would the author of Text 2 respond' needs Text 2's view applied to Text 1's claim, not a new idea.",
+     "uz": "«Text 2 muallifi qanday javob beradi» savolida Text 2 qarashini Text 1 daʼvosiga qoʻllash kerak, yangi fikr emas.",
+     "ru": "В вопросе «как ответил бы автор Text 2» нужно применить взгляд Text 2 к утверждению Text 1, а не придумать новую мысль."
+    },
+    {
+     "en": "In a timed set, keep to about 71 seconds a question; mark a hard one for review and come back to it.",
+     "uz": "Vaqtli toʻplamda har bir savolga taxminan 71 soniya sarflang; qiyin savolni belgilab, keyin unga qayting.",
+     "ru": "В наборе на время держите темп около 71 секунды на вопрос; трудный вопрос отметьте и вернитесь к нему позже."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "craft_structure",
+      "subskill": [
+       "cross_text_connections"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "craft_structure"
+     },
+     "n": 8,
+     "split": [
+      8
+     ],
+     "minutes_each": 13,
+     "purpose": {
+      "en": "Paired-text questions.",
+      "uz": "Juft matnlar boʻyicha savollar.",
+      "ru": "Вопросы по парам текстов."
+     },
+     "interleave_earlier": 0
+    },
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "craft_structure",
+      "subskill": [
+       "words_in_context",
+       "text_structure_purpose",
+       "cross_text_connections"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "craft_structure"
+     },
+     "n": 10,
+     "split": [
+      10
+     ],
+     "minutes_each": 15,
+     "purpose": {
+      "en": "Mixed and timed, with some items from earlier units.",
+      "uz": "Aralash va vaqtli, oldingi boʻlimlardan ham savollar bilan.",
+      "ru": "Смешанный набор на время, включая вопросы прошлых разделов."
+     },
+     "interleave_earlier": 0.4,
+     "time_limit_s_each": 710
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Reading and Writing, domain Craft and Structure, skill Cross-Text Connections; do 10 Hard questions.",
+      "uz": "Question Bankʼda SAT, keyin Reading and Writing, Craft and Structure domeni va Cross-Text Connections koʻnikmasini tanlang; Hard (qiyin) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Reading and Writing, домен Craft and Structure, навык Cross-Text Connections; решите 10 вопросов уровня Hard (сложные)."
+     },
+     "step": {
+      "minutes": 15
+     }
+    },
+    {
+     "id": "bluebook_tests",
+     "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+     "kind": "full_length_practice_test",
+     "label": {
+      "en": "Bluebook: full-length SAT practice tests",
+      "uz": "Bluebook: SAT boʻyicha toʻliq sinov testlari",
+      "ru": "Bluebook: полные пробные тесты SAT"
+     },
+     "note": {
+      "en": "Official College Board practice tests in the Bluebook app; scores and question review appear in My Practice.",
+      "uz": "College Boardʼning Bluebook ilovasidagi rasmiy sinov testlari; ballar va savollar tahlili My Practice boʻlimida chiqadi.",
+      "ru": "Официальные пробные тесты College Board в приложении Bluebook; баллы и разбор вопросов появляются в разделе My Practice."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/practice-tests",
+     "how": {
+      "en": "After the third unit of every domain, the plan schedules a full-length Bluebook practice test (see the sequence).",
+      "uz": "Har bir domenning uchinchi boʻlimidan keyin reja Bluebookʼda toʻliq sinov testini belgilaydi (ketma-ketlikka qarang).",
+      "ru": "После третьего раздела каждого домена план назначает полный пробный тест в Bluebook (см. последовательность)."
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Reading and Writing course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Reading and Writing kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Reading and Writing на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C6",
+    "where": {
+     "skill": "sat_rw",
+     "sat.domain": "craft_structure",
+     "subskill": [
+      "cross_text_connections",
+      "words_in_context",
+      "text_structure_purpose"
+     ],
+     "sat.difficulty": [
+      "medium",
+      "hard"
+     ]
+    },
+    "n": 12,
+    "time_limit_s": 852,
+    "minutes": 18,
+    "pass": {
+     "min_correct": 9,
+     "of": 12,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "instructions": {
+     "en": "12 questions on this unit's skills at about 71 seconds a question, the test's pace (54 questions in 64 minutes). Pass: 9 of 12.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 12 ta savol, har biriga taxminan 71 soniya — test surʼati (64 daqiqada 54 ta savol). Oʻtish: 12 tadan 9 ta.",
+     "ru": "12 вопросов по навыкам раздела, примерно 71 секунда на вопрос — темп теста (54 вопроса за 64 минуты). Зачёт: 9 из 12."
+    },
+    "on_fail": {
+     "en": "Review your misses in the error log, do one more practice set on the weakest skill, then retake the check with new questions.",
+     "uz": "Xatolar daftaringizdagi xatolarni koʻrib chiqing, eng zaif koʻnikma boʻyicha yana bitta mashq toʻplamini bajaring, keyin tekshiruvni yangi savollar bilan qayta topshiring.",
+     "ru": "Разберите ошибки в журнале ошибок, выполните ещё один набор по самому слабому навыку и пересдайте проверку с новыми вопросами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 28,
+    "check": 18,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 61
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "after_units": [
+     "C10-RWCS02"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Reading and Writing: 54 questions in 64 minutes, two 32-minute modules; Craft and Structure is about 28 % of questions (13-15).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading and Writing passages are 25 to 150 words, each with one question.",
+     "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Each Reading and Writing module begins with Craft and Structure questions, then Information and Ideas, Standard English Conventions and Expression of Ideas.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Cross-Text Connections and mixed Craft and Structure",
+      "uz": "Oʻrganing: Cross-Text Connections va aralash Craft and Structure",
+      "ru": "Изучите: Cross-Text Connections и смешанный Craft and Structure"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 1: Cross-Text Connections and mixed Craft and Structure",
+      "uz": "Mashq 1: Cross-Text Connections va aralash Craft and Structure",
+      "ru": "Практика 1: Cross-Text Connections и смешанный Craft and Structure"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Practice 2: Cross-Text Connections and mixed Craft and Structure",
+      "uz": "Mashq 2: Cross-Text Connections va aralash Craft and Structure",
+      "ru": "Практика 2: Cross-Text Connections и смешанный Craft and Structure"
+     },
+     "practice_ref": 1,
+     "items": 10,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Cross-Text Connections and mixed Craft and Structure",
+      "uz": "Rasmiy mashq: Cross-Text Connections va aralash Craft and Structure",
+      "ru": "Официальная практика: Cross-Text Connections и смешанный Craft and Structure"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 18,
+     "title": {
+      "en": "End-of-unit check: Cross-Text Connections and mixed Craft and Structure",
+      "uz": "Boʻlim yakuniy tekshiruvi: Cross-Text Connections va aralash Craft and Structure",
+      "ru": "Итоговая проверка раздела: Cross-Text Connections и смешанный Craft and Structure"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-RWII01",
+   "test": "SAT",
+   "section": "reading_writing",
+   "domain": "information_ideas",
+   "domain_label": {
+    "en": "Information and Ideas",
+    "uz": "Information and Ideas (maʼlumot va gʻoyalar)",
+    "ru": "Information and Ideas (информация и идеи)"
+   },
+   "domain_share": {
+    "approx_pct": 26,
+    "questions": "12-14",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 1,
+   "units_in_domain": 3,
+   "level_band": "foundation",
+   "skills": [
+    "central_ideas_details"
+   ],
+   "title": {
+    "en": "Central Ideas and Details",
+    "uz": "Central Ideas and Details: asosiy gʻoya va tafsilotlar",
+    "ru": "Central Ideas and Details: главная мысль и детали"
+   },
+   "goal": {
+    "en": "Find the main idea of a short text and the details that support it; reject options that are true but too narrow, too broad or not stated.",
+    "uz": "Qisqa matnning asosiy gʻoyasini va uni qoʻllab-quvvatlovchi tafsilotlarni toping; toʻgʻri boʻlsa ham juda tor, juda keng yoki matnda aytilmagan variantlarni chiqarib tashlang.",
+    "ru": "Найдите главную мысль короткого текста и подтверждающие её детали; отбрасывайте варианты, которые верны, но слишком узки, слишком широки или не сказаны в тексте."
+   },
+   "study": [
+    {
+     "en": "After reading, state the central idea in one short sentence before you look at the options.",
+     "uz": "Oʻqib boʻlgach, variantlarga qarashdan oldin asosiy gʻoyani bitta qisqa gap bilan ayting.",
+     "ru": "Прочитав текст, сформулируйте главную мысль одним коротким предложением, прежде чем смотреть на варианты."
+    },
+    {
+     "en": "For a detail question, find the line that proves the answer; if you cannot point to it, the option is not supported.",
+     "uz": "Tafsilot haqidagi savolda javobni isbotlaydigan qatorni toping; agar uni koʻrsata olmasangiz, variant matn bilan tasdiqlanmagan.",
+     "ru": "В вопросе о детали найдите строку, которая доказывает ответ; если не можете на неё указать, вариант не подтверждён."
+    },
+    {
+     "en": "In literary texts, track who acts, what they feel and what changes.",
+     "uz": "Badiiy matnlarda kim harakat qilayotganini, nimani his qilayotganini va nima oʻzgarayotganini kuzating.",
+     "ru": "В художественных текстах следите, кто действует, что чувствует и что меняется."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "information_ideas",
+      "subskill": [
+       "central_ideas_details"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "information_ideas"
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 13,
+     "purpose": {
+      "en": "Central idea and detail questions.",
+      "uz": "Asosiy gʻoya va tafsilot savollari.",
+      "ru": "Вопросы о главной мысли и деталях."
+     },
+     "interleave_earlier": 0
+    },
+    {
+     "content": "C5",
+     "where": {
+      "lang": "en",
+      "level": [
+       "B1",
+       "B2"
+      ]
+     },
+     "n_passages": 1,
+     "split": [
+      1
+     ],
+     "minutes_each": 12,
+     "purpose": {
+      "en": "One passage: write its central idea, then answer.",
+      "uz": "Bitta matn: asosiy gʻoyasini yozing, keyin javob bering.",
+      "ru": "Один текст: запишите главную мысль, затем отвечайте."
+     }
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Reading and Writing, domain Information and Ideas, skill Central Ideas and Details; do 10 Easy questions.",
+      "uz": "Question Bankʼda SAT, keyin Reading and Writing, Information and Ideas domeni va Central Ideas and Details koʻnikmasini tanlang; Easy (oson) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Reading and Writing, домен Information and Ideas, навык Central Ideas and Details; решите 10 вопросов уровня Easy (лёгкие)."
+     },
+     "step": {
+      "minutes": 15
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Reading and Writing course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Reading and Writing kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Reading and Writing на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C6",
+    "where": {
+     "skill": "sat_rw",
+     "sat.domain": "information_ideas",
+     "subskill": [
+      "central_ideas_details"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 710,
+    "minutes": 15,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 71 seconds a question, the test's pace (54 questions in 64 minutes). Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 71 soniya — test surʼati (64 daqiqada 54 ta savol). Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 71 секунда на вопрос — темп теста (54 вопроса за 64 минуты). Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Review your misses in the error log, do one more practice set on the weakest skill, then retake the check with new questions.",
+     "uz": "Xatolar daftaringizdagi xatolarni koʻrib chiqing, eng zaif koʻnikma boʻyicha yana bitta mashq toʻplamini bajaring, keyin tekshiruvni yangi savollar bilan qayta topshiring.",
+     "ru": "Разберите ошибки в журнале ошибок, выполните ещё один набор по самому слабому навыку и пересдайте проверку с новыми вопросами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 38,
+    "check": 15,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 68
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "after_units": [],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Reading and Writing: 54 questions in 64 minutes, two 32-minute modules; Information and Ideas is about 26 % of questions (12-14).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading and Writing passages are 25 to 150 words, each with one question.",
+     "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Central Ideas and Details",
+      "uz": "Oʻrganing: Central Ideas and Details: asosiy gʻoya va tafsilotlar",
+      "ru": "Изучите: Central Ideas and Details: главная мысль и детали"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 1: Central Ideas and Details",
+      "uz": "Mashq 1: Central Ideas and Details: asosiy gʻoya va tafsilotlar",
+      "ru": "Практика 1: Central Ideas and Details: главная мысль и детали"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 2: Central Ideas and Details",
+      "uz": "Mashq 2: Central Ideas and Details: asosiy gʻoya va tafsilotlar",
+      "ru": "Практика 2: Central Ideas and Details: главная мысль и детали"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 12,
+     "title": {
+      "en": "Practice 3: Central Ideas and Details",
+      "uz": "Mashq 3: Central Ideas and Details: asosiy gʻoya va tafsilotlar",
+      "ru": "Практика 3: Central Ideas and Details: главная мысль и детали"
+     },
+     "practice_ref": 1,
+     "items": 1,
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Central Ideas and Details",
+      "uz": "Rasmiy mashq: Central Ideas and Details: asosiy gʻoya va tafsilotlar",
+      "ru": "Официальная практика: Central Ideas and Details: главная мысль и детали"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 5
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "End-of-unit check: Central Ideas and Details",
+      "uz": "Boʻlim yakuniy tekshiruvi: Central Ideas and Details: asosiy gʻoya va tafsilotlar",
+      "ru": "Итоговая проверка раздела: Central Ideas and Details: главная мысль и детали"
+     },
+     "end_check": true,
+     "n": 6
+    }
+   ],
+   "sessions": 5,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-RWII02",
+   "test": "SAT",
+   "section": "reading_writing",
+   "domain": "information_ideas",
+   "domain_label": {
+    "en": "Information and Ideas",
+    "uz": "Information and Ideas (maʼlumot va gʻoyalar)",
+    "ru": "Information and Ideas (информация и идеи)"
+   },
+   "domain_share": {
+    "approx_pct": 26,
+    "questions": "12-14",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 2,
+   "units_in_domain": 3,
+   "level_band": "core",
+   "skills": [
+    "command_of_evidence_textual",
+    "command_of_evidence_quantitative"
+   ],
+   "title": {
+    "en": "Command of Evidence: textual and quantitative",
+    "uz": "Command of Evidence: matndagi va raqamli dalillar",
+    "ru": "Command of Evidence: текстовые и числовые доказательства"
+   },
+   "goal": {
+    "en": "Choose the quotation or data point that best supports or weakens a claim, and read tables, bar graphs and line graphs accurately.",
+    "uz": "Daʼvoni eng yaxshi tasdiqlaydigan yoki zaiflashtiradigan iqtibos yoki raqamni tanlang; jadval, ustunli va chiziqli grafiklarni aniq oʻqing.",
+    "ru": "Выбирайте цитату или число, которые лучше всего подтверждают или ослабляют утверждение, и точно читайте таблицы, столбчатые и линейные графики."
+   },
+   "study": [
+    {
+     "en": "Underline the exact claim first; the right evidence supports that claim, not the topic in general.",
+     "uz": "Avval aniq daʼvoning tagiga chizing; toʻgʻri dalil umuman mavzuni emas, aynan shu daʼvoni qoʻllab-quvvatlaydi.",
+     "ru": "Сначала подчеркните точное утверждение: верное доказательство подтверждает именно его, а не тему в целом."
+    },
+    {
+     "en": "For a graph or table, read the title, the axes and the units, then check every number the option states against the figure.",
+     "uz": "Grafik yoki jadvalda sarlavha, oʻqlar va oʻlchov birliklarini oʻqing, keyin variantdagi har bir raqamni rasm bilan tekshiring.",
+     "ru": "В графике или таблице прочитайте заголовок, оси и единицы, затем сверьте с рисунком каждое число из варианта."
+    },
+    {
+     "en": "An option can be true of the data yet not answer the claim; it must be both accurate and relevant.",
+     "uz": "Variant maʼlumotlarga toʻgʻri kelsa ham, daʼvoga javob bermasligi mumkin; u ham aniq, ham mos boʻlishi kerak.",
+     "ru": "Вариант может быть верным по данным, но не отвечать на утверждение; он должен быть и точным, и относящимся к делу."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "information_ideas",
+      "subskill": [
+       "command_of_evidence_textual"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "information_ideas"
+     },
+     "n": 8,
+     "split": [
+      8
+     ],
+     "minutes_each": 13,
+     "purpose": {
+      "en": "Quotation evidence.",
+      "uz": "Iqtibos orqali dalil.",
+      "ru": "Доказательство цитатой."
+     },
+     "interleave_earlier": 0
+    },
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "information_ideas",
+      "subskill": [
+       "command_of_evidence_quantitative"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "information_ideas"
+     },
+     "n": 8,
+     "split": [
+      8
+     ],
+     "minutes_each": 13,
+     "purpose": {
+      "en": "Tables and graphs.",
+      "uz": "Jadvallar va grafiklar.",
+      "ru": "Таблицы и графики."
+     },
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Reading and Writing, domain Information and Ideas, skill Command of Evidence; do 10 Medium questions.",
+      "uz": "Question Bankʼda SAT, keyin Reading and Writing, Information and Ideas domeni va Command of Evidence koʻnikmasini tanlang; Medium (oʻrta) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Reading and Writing, домен Information and Ideas, навык Command of Evidence; решите 10 вопросов уровня Medium (средние)."
+     },
+     "step": {
+      "minutes": 15
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Reading and Writing course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Reading and Writing kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Reading and Writing на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C6",
+    "where": {
+     "skill": "sat_rw",
+     "sat.domain": "information_ideas",
+     "subskill": [
+      "command_of_evidence_textual",
+      "command_of_evidence_quantitative"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 710,
+    "minutes": 15,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 71 seconds a question, the test's pace (54 questions in 64 minutes). Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 71 soniya — test surʼati (64 daqiqada 54 ta savol). Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 71 секунда на вопрос — темп теста (54 вопроса за 64 минуты). Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Review your misses in the error log, do one more practice set on the weakest skill, then retake the check with new questions.",
+     "uz": "Xatolar daftaringizdagi xatolarni koʻrib chiqing, eng zaif koʻnikma boʻyicha yana bitta mashq toʻplamini bajaring, keyin tekshiruvni yangi savollar bilan qayta topshiring.",
+     "ru": "Разберите ошибки в журнале ошибок, выполните ещё один набор по самому слабому навыку и пересдайте проверку с новыми вопросами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 26,
+    "check": 15,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 56
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "after_units": [
+     "C10-RWII01"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Reading and Writing: 54 questions in 64 minutes, two 32-minute modules; Information and Ideas is about 26 % of questions (12-14).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading and Writing passages are 25 to 150 words, each with one question.",
+     "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Information and Ideas includes informational graphics: tables, bar graphs and line graphs.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Command of Evidence: textual and quantitative",
+      "uz": "Oʻrganing: Command of Evidence: matndagi va raqamli dalillar",
+      "ru": "Изучите: Command of Evidence: текстовые и числовые доказательства"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 1: Command of Evidence: textual and quantitative",
+      "uz": "Mashq 1: Command of Evidence: matndagi va raqamli dalillar",
+      "ru": "Практика 1: Command of Evidence: текстовые и числовые доказательства"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 2: Command of Evidence: textual and quantitative",
+      "uz": "Mashq 2: Command of Evidence: matndagi va raqamli dalillar",
+      "ru": "Практика 2: Command of Evidence: текстовые и числовые доказательства"
+     },
+     "practice_ref": 1,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Command of Evidence: textual and quantitative",
+      "uz": "Rasmiy mashq: Command of Evidence: matndagi va raqamli dalillar",
+      "ru": "Официальная практика: Command of Evidence: текстовые и числовые доказательства"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "End-of-unit check: Command of Evidence: textual and quantitative",
+      "uz": "Boʻlim yakuniy tekshiruvi: Command of Evidence: matndagi va raqamli dalillar",
+      "ru": "Итоговая проверка раздела: Command of Evidence: текстовые и числовые доказательства"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-RWII03",
+   "test": "SAT",
+   "section": "reading_writing",
+   "domain": "information_ideas",
+   "domain_label": {
+    "en": "Information and Ideas",
+    "uz": "Information and Ideas (maʼlumot va gʻoyalar)",
+    "ru": "Information and Ideas (информация и идеи)"
+   },
+   "domain_share": {
+    "approx_pct": 26,
+    "questions": "12-14",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 3,
+   "units_in_domain": 3,
+   "level_band": "advanced",
+   "skills": [
+    "inferences",
+    "central_ideas_details",
+    "command_of_evidence_textual",
+    "command_of_evidence_quantitative"
+   ],
+   "title": {
+    "en": "Inferences and mixed Information and Ideas",
+    "uz": "Inferences va aralash Information and Ideas",
+    "ru": "Inferences и смешанный Information and Ideas"
+   },
+   "goal": {
+    "en": "Complete a text with its most logical conclusion, using only what the text supports; finish the domain with a mixed, timed set.",
+    "uz": "Matnni faqat matnning oʻzi asoslaydigan eng mantiqiy xulosa bilan yakunlang; domenni aralash, vaqtli toʻplam bilan tugating.",
+    "ru": "Завершайте текст самым логичным выводом, опираясь только на то, что подтверждает текст; закончите домен смешанным набором на время."
+   },
+   "study": [
+    {
+     "en": "The right inference follows from the text's own evidence; an option that needs outside knowledge is wrong.",
+     "uz": "Toʻgʻri xulosa matnning oʻz dalillaridan kelib chiqadi; tashqi bilim talab qiladigan variant notoʻgʻri.",
+     "ru": "Верный вывод следует из доказательств самого текста; вариант, требующий внешних знаний, неверен."
+    },
+    {
+     "en": "Be wary of extreme words (always, never, proves) unless the text is that strong.",
+     "uz": "Matn shunchalik qatʼiy boʻlmasa, keskin soʻzlardan (always, never, proves) ehtiyot boʻling.",
+     "ru": "Остерегайтесь крайних слов (always, never, proves), если текст не настолько категоричен."
+    },
+    {
+     "en": "Keep an error log: for each miss, write the skill, why the right answer is right and which trap you chose.",
+     "uz": "Xatolar daftarini yuriting: har bir xato uchun koʻnikmani, toʻgʻri javob nega toʻgʻriligini va qaysi tuzoqqa tushganingizni yozing.",
+     "ru": "Ведите журнал ошибок: для каждой ошибки запишите навык, почему верный ответ верен и в какую ловушку вы попали."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "information_ideas",
+      "subskill": [
+       "inferences"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "information_ideas"
+     },
+     "n": 8,
+     "split": [
+      8
+     ],
+     "minutes_each": 13,
+     "purpose": {
+      "en": "Inference questions.",
+      "uz": "Xulosa chiqarish savollari.",
+      "ru": "Вопросы на вывод."
+     },
+     "interleave_earlier": 0
+    },
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "information_ideas",
+      "subskill": [
+       "inferences",
+       "central_ideas_details",
+       "command_of_evidence_textual",
+       "command_of_evidence_quantitative"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "information_ideas"
+     },
+     "n": 10,
+     "split": [
+      10
+     ],
+     "minutes_each": 15,
+     "purpose": {
+      "en": "Mixed and timed, with earlier units mixed in.",
+      "uz": "Aralash va vaqtli, oldingi boʻlimlar ham qoʻshilgan.",
+      "ru": "Смешанный набор на время с вопросами прошлых разделов."
+     },
+     "interleave_earlier": 0.4,
+     "time_limit_s_each": 710
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Reading and Writing, domain Information and Ideas, skill Inferences; do 10 Hard questions.",
+      "uz": "Question Bankʼda SAT, keyin Reading and Writing, Information and Ideas domeni va Inferences koʻnikmasini tanlang; Hard (qiyin) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Reading and Writing, домен Information and Ideas, навык Inferences; решите 10 вопросов уровня Hard (сложные)."
+     },
+     "step": {
+      "minutes": 15
+     }
+    },
+    {
+     "id": "bluebook_tests",
+     "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+     "kind": "full_length_practice_test",
+     "label": {
+      "en": "Bluebook: full-length SAT practice tests",
+      "uz": "Bluebook: SAT boʻyicha toʻliq sinov testlari",
+      "ru": "Bluebook: полные пробные тесты SAT"
+     },
+     "note": {
+      "en": "Official College Board practice tests in the Bluebook app; scores and question review appear in My Practice.",
+      "uz": "College Boardʼning Bluebook ilovasidagi rasmiy sinov testlari; ballar va savollar tahlili My Practice boʻlimida chiqadi.",
+      "ru": "Официальные пробные тесты College Board в приложении Bluebook; баллы и разбор вопросов появляются в разделе My Practice."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/practice-tests",
+     "how": {
+      "en": "After the third unit of every domain, the plan schedules a full-length Bluebook practice test (see the sequence).",
+      "uz": "Har bir domenning uchinchi boʻlimidan keyin reja Bluebookʼda toʻliq sinov testini belgilaydi (ketma-ketlikka qarang).",
+      "ru": "После третьего раздела каждого домена план назначает полный пробный тест в Bluebook (см. последовательность)."
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Reading and Writing course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Reading and Writing kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Reading and Writing на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C6",
+    "where": {
+     "skill": "sat_rw",
+     "sat.domain": "information_ideas",
+     "subskill": [
+      "inferences",
+      "central_ideas_details",
+      "command_of_evidence_textual",
+      "command_of_evidence_quantitative"
+     ],
+     "sat.difficulty": [
+      "medium",
+      "hard"
+     ]
+    },
+    "n": 12,
+    "time_limit_s": 852,
+    "minutes": 18,
+    "pass": {
+     "min_correct": 9,
+     "of": 12,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "instructions": {
+     "en": "12 questions on this unit's skills at about 71 seconds a question, the test's pace (54 questions in 64 minutes). Pass: 9 of 12.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 12 ta savol, har biriga taxminan 71 soniya — test surʼati (64 daqiqada 54 ta savol). Oʻtish: 12 tadan 9 ta.",
+     "ru": "12 вопросов по навыкам раздела, примерно 71 секунда на вопрос — темп теста (54 вопроса за 64 минуты). Зачёт: 9 из 12."
+    },
+    "on_fail": {
+     "en": "Review your misses in the error log, do one more practice set on the weakest skill, then retake the check with new questions.",
+     "uz": "Xatolar daftaringizdagi xatolarni koʻrib chiqing, eng zaif koʻnikma boʻyicha yana bitta mashq toʻplamini bajaring, keyin tekshiruvni yangi savollar bilan qayta topshiring.",
+     "ru": "Разберите ошибки в журнале ошибок, выполните ещё один набор по самому слабому навыку и пересдайте проверку с новыми вопросами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 28,
+    "check": 18,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 61
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "after_units": [
+     "C10-RWII02"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Reading and Writing: 54 questions in 64 minutes, two 32-minute modules; Information and Ideas is about 26 % of questions (12-14).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading and Writing passages are 25 to 150 words, each with one question.",
+     "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Inferences and mixed Information and Ideas",
+      "uz": "Oʻrganing: Inferences va aralash Information and Ideas",
+      "ru": "Изучите: Inferences и смешанный Information and Ideas"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 1: Inferences and mixed Information and Ideas",
+      "uz": "Mashq 1: Inferences va aralash Information and Ideas",
+      "ru": "Практика 1: Inferences и смешанный Information and Ideas"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Practice 2: Inferences and mixed Information and Ideas",
+      "uz": "Mashq 2: Inferences va aralash Information and Ideas",
+      "ru": "Практика 2: Inferences и смешанный Information and Ideas"
+     },
+     "practice_ref": 1,
+     "items": 10,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Inferences and mixed Information and Ideas",
+      "uz": "Rasmiy mashq: Inferences va aralash Information and Ideas",
+      "ru": "Официальная практика: Inferences и смешанный Information and Ideas"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 18,
+     "title": {
+      "en": "End-of-unit check: Inferences and mixed Information and Ideas",
+      "uz": "Boʻlim yakuniy tekshiruvi: Inferences va aralash Information and Ideas",
+      "ru": "Итоговая проверка раздела: Inferences и смешанный Information and Ideas"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-RWSE01",
+   "test": "SAT",
+   "section": "reading_writing",
+   "domain": "conventions",
+   "domain_label": {
+    "en": "Standard English Conventions",
+    "uz": "Standard English Conventions (ingliz tili meʼyorlari)",
+    "ru": "Standard English Conventions (нормы английского языка)"
+   },
+   "domain_share": {
+    "approx_pct": 26,
+    "questions": "11-15",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 1,
+   "units_in_domain": 3,
+   "level_band": "foundation",
+   "skills": [
+    "boundaries"
+   ],
+   "title": {
+    "en": "Boundaries: punctuating sentences",
+    "uz": "Boundaries: gaplarda tinish belgilari",
+    "ru": "Boundaries: пунктуация в предложениях"
+   },
+   "goal": {
+    "en": "Punctuate sentence boundaries correctly: full stops, semicolons, colons, dashes and commas between and inside clauses.",
+    "uz": "Gap chegaralarida tinish belgilarini toʻgʻri qoʻying: nuqta, nuqtali vergul, ikki nuqta, tire va vergul — qismlar orasida va ichida.",
+    "ru": "Правильно ставьте знаки на границах предложений: точку, точку с запятой, двоеточие, тире и запятую между частями и внутри них."
+   },
+   "study": [
+    {
+     "en": "Find the independent clauses first: two complete clauses need a full stop, a semicolon, or a comma with and, but or so.",
+     "uz": "Avval mustaqil qismlarni toping: ikki toʻliq qism orasiga nuqta, nuqtali vergul yoki and, but, so bilan vergul kerak.",
+     "ru": "Сначала найдите независимые части: между двумя полными частями нужна точка, точка с запятой или запятая с and, but, so."
+    },
+    {
+     "en": "A colon comes after a complete clause and introduces an explanation or a list; a pair of dashes works like a pair of commas around extra information.",
+     "uz": "Ikki nuqta toʻliq qismdan keyin keladi va izoh yoki roʻyxatni boshlaydi; ikki tire qoʻshimcha maʼlumot atrofida ikki vergul kabi ishlaydi.",
+     "ru": "Двоеточие ставится после полной части и вводит пояснение или список; пара тире работает как пара запятых вокруг дополнительной информации."
+    },
+    {
+     "en": "No single comma between a subject and its verb, or between a verb and its object.",
+     "uz": "Ega va kesim orasiga yoki feʼl va toʻldiruvchi orasiga bitta vergul qoʻyilmaydi.",
+     "ru": "Одна запятая не ставится между подлежащим и сказуемым или между глаголом и дополнением."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C3",
+     "where": {
+      "skill": "en_grammar",
+      "level": [
+       "B1",
+       "B2"
+      ],
+      "subskill": [
+       "punctuation",
+       "clauses",
+       "relative_clauses"
+      ]
+     },
+     "fallback_where": {
+      "skill": "en_grammar",
+      "level": [
+       "B1",
+       "B2"
+      ]
+     },
+     "n": 12,
+     "split": [
+      12
+     ],
+     "minutes_each": 5,
+     "purpose": {
+      "en": "Grammar warm-up on clauses and punctuation.",
+      "uz": "Qismlar va tinish belgilari boʻyicha grammatik mashq.",
+      "ru": "Грамматическая разминка: части предложения и пунктуация."
+     }
+    },
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "conventions",
+      "subskill": [
+       "boundaries"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "conventions"
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 13,
+     "purpose": {
+      "en": "SAT boundary questions.",
+      "uz": "SAT boundary savollari.",
+      "ru": "Вопросы SAT на границы предложений."
+     },
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Reading and Writing, domain Standard English Conventions, skill Boundaries; do 10 Easy questions.",
+      "uz": "Question Bankʼda SAT, keyin Reading and Writing, Standard English Conventions domeni va Boundaries koʻnikmasini tanlang; Easy (oson) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Reading and Writing, домен Standard English Conventions, навык Boundaries; решите 10 вопросов уровня Easy (лёгкие)."
+     },
+     "step": {
+      "minutes": 15
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Reading and Writing course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Reading and Writing kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Reading and Writing на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C6",
+    "where": {
+     "skill": "sat_rw",
+     "sat.domain": "conventions",
+     "subskill": [
+      "boundaries"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 710,
+    "minutes": 15,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 71 seconds a question, the test's pace (54 questions in 64 minutes). Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 71 soniya — test surʼati (64 daqiqada 54 ta savol). Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 71 секунда на вопрос — темп теста (54 вопроса за 64 минуты). Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Review your misses in the error log, do one more practice set on the weakest skill, then retake the check with new questions.",
+     "uz": "Xatolar daftaringizdagi xatolarni koʻrib chiqing, eng zaif koʻnikma boʻyicha yana bitta mashq toʻplamini bajaring, keyin tekshiruvni yangi savollar bilan qayta topshiring.",
+     "ru": "Разберите ошибки в журнале ошибок, выполните ещё один набор по самому слабому навыку и пересдайте проверку с новыми вопросами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 31,
+    "check": 15,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 61
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "after_units": [],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Reading and Writing: 54 questions in 64 minutes, two 32-minute modules; Standard English Conventions is about 26 % of questions (11-15).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading and Writing passages are 25 to 150 words, each with one question.",
+     "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Boundaries: punctuating sentences",
+      "uz": "Oʻrganing: Boundaries: gaplarda tinish belgilari",
+      "ru": "Изучите: Boundaries: пунктуация в предложениях"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 5,
+     "title": {
+      "en": "Practice 1: Boundaries: punctuating sentences",
+      "uz": "Mashq 1: Boundaries: gaplarda tinish belgilari",
+      "ru": "Практика 1: Boundaries: пунктуация в предложениях"
+     },
+     "practice_ref": 0,
+     "items": 12,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 2: Boundaries: punctuating sentences",
+      "uz": "Mashq 2: Boundaries: gaplarda tinish belgilari",
+      "ru": "Практика 2: Boundaries: пунктуация в предложениях"
+     },
+     "practice_ref": 1,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 3: Boundaries: punctuating sentences",
+      "uz": "Mashq 3: Boundaries: gaplarda tinish belgilari",
+      "ru": "Практика 3: Boundaries: пунктуация в предложениях"
+     },
+     "practice_ref": 1,
+     "items": 8,
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Boundaries: punctuating sentences",
+      "uz": "Rasmiy mashq: Boundaries: gaplarda tinish belgilari",
+      "ru": "Официальная практика: Boundaries: пунктуация в предложениях"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 5
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "End-of-unit check: Boundaries: punctuating sentences",
+      "uz": "Boʻlim yakuniy tekshiruvi: Boundaries: gaplarda tinish belgilari",
+      "ru": "Итоговая проверка раздела: Boundaries: пунктуация в предложениях"
+     },
+     "end_check": true,
+     "n": 6
+    }
+   ],
+   "sessions": 5,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-RWSE02",
+   "test": "SAT",
+   "section": "reading_writing",
+   "domain": "conventions",
+   "domain_label": {
+    "en": "Standard English Conventions",
+    "uz": "Standard English Conventions (ingliz tili meʼyorlari)",
+    "ru": "Standard English Conventions (нормы английского языка)"
+   },
+   "domain_share": {
+    "approx_pct": 26,
+    "questions": "11-15",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 2,
+   "units_in_domain": 3,
+   "level_band": "core",
+   "skills": [
+    "form_structure_sense"
+   ],
+   "title": {
+    "en": "Form, Structure, and Sense",
+    "uz": "Form, Structure, and Sense: shakl va moslik",
+    "ru": "Form, Structure, and Sense: форма и согласование"
+   },
+   "goal": {
+    "en": "Edit for agreement and form: subject-verb and pronoun agreement, verb tense and form, plurals and possessives, and modifier placement.",
+    "uz": "Moslik va shaklni tahrir qiling: ega-kesim va olmosh mosligi, feʼl zamoni va shakli, koʻplik va qaratqich shakllari, aniqlovchining joyi.",
+    "ru": "Исправляйте согласование и форму: подлежащее и сказуемое, местоимения, время и форму глагола, множественное число и притяжательные формы, место определения."
+   },
+   "study": [
+    {
+     "en": "Find the true subject: skip prepositional phrases and extra information between commas before you choose the verb.",
+     "uz": "Haqiqiy egani toping: feʼlni tanlashdan oldin predlogli birikmalar va vergullar orasidagi qoʻshimcha maʼlumotni tashlab oʻting.",
+     "ru": "Найдите настоящее подлежащее: перед выбором глагола пропустите предложные обороты и дополнительную информацию между запятыми."
+    },
+    {
+     "en": "A pronoun must match its noun in number: it and its for one thing, they and their for several.",
+     "uz": "Olmosh oʻz otiga son jihatidan mos boʻlishi kerak: bitta narsa uchun it va its, bir nechtasi uchun they va their.",
+     "ru": "Местоимение согласуется с существительным в числе: it и its для одного предмета, they и their для нескольких."
+    },
+    {
+     "en": "Its means belonging to it, it's means it is; a modifier at the start of a sentence must describe the noun right after the comma.",
+     "uz": "Its — unga tegishli, it's — it is degani; gap boshidagi aniqlovchi verguldan keyin darhol keladigan otni tasvirlashi kerak.",
+     "ru": "Its — «его/её» (принадлежность), it's — it is; определение в начале предложения должно описывать существительное сразу после запятой."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C3",
+     "where": {
+      "skill": "en_grammar",
+      "level": [
+       "B1",
+       "B2",
+       "C1"
+      ],
+      "subskill": [
+       "subject_verb_agreement",
+       "pronouns",
+       "verb_tenses",
+       "possessives",
+       "modifiers"
+      ]
+     },
+     "fallback_where": {
+      "skill": "en_grammar",
+      "level": [
+       "B1",
+       "B2",
+       "C1"
+      ]
+     },
+     "n": 12,
+     "split": [
+      12
+     ],
+     "minutes_each": 5,
+     "purpose": {
+      "en": "Grammar warm-up on agreement and verb forms.",
+      "uz": "Moslik va feʼl shakllari boʻyicha grammatik mashq.",
+      "ru": "Грамматическая разминка: согласование и формы глагола."
+     }
+    },
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "conventions",
+      "subskill": [
+       "form_structure_sense"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "conventions"
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 13,
+     "purpose": {
+      "en": "SAT form, structure and sense questions.",
+      "uz": "SAT form, structure and sense savollari.",
+      "ru": "Вопросы SAT на форму, структуру и смысл."
+     },
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Reading and Writing, domain Standard English Conventions, skill Form, Structure, and Sense; do 10 Medium questions.",
+      "uz": "Question Bankʼda SAT, keyin Reading and Writing, Standard English Conventions domeni va Form, Structure, and Sense koʻnikmasini tanlang; Medium (oʻrta) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Reading and Writing, домен Standard English Conventions, навык Form, Structure, and Sense; решите 10 вопросов уровня Medium (средние)."
+     },
+     "step": {
+      "minutes": 15
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Reading and Writing course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Reading and Writing kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Reading and Writing на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C6",
+    "where": {
+     "skill": "sat_rw",
+     "sat.domain": "conventions",
+     "subskill": [
+      "form_structure_sense"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 710,
+    "minutes": 15,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 71 seconds a question, the test's pace (54 questions in 64 minutes). Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 71 soniya — test surʼati (64 daqiqada 54 ta savol). Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 71 секунда на вопрос — темп теста (54 вопроса за 64 минуты). Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Review your misses in the error log, do one more practice set on the weakest skill, then retake the check with new questions.",
+     "uz": "Xatolar daftaringizdagi xatolarni koʻrib chiqing, eng zaif koʻnikma boʻyicha yana bitta mashq toʻplamini bajaring, keyin tekshiruvni yangi savollar bilan qayta topshiring.",
+     "ru": "Разберите ошибки в журнале ошибок, выполните ещё один набор по самому слабому навыку и пересдайте проверку с новыми вопросами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 31,
+    "check": 15,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 61
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "after_units": [
+     "C10-RWSE01"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Reading and Writing: 54 questions in 64 minutes, two 32-minute modules; Standard English Conventions is about 26 % of questions (11-15).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading and Writing passages are 25 to 150 words, each with one question.",
+     "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Form, Structure, and Sense",
+      "uz": "Oʻrganing: Form, Structure, and Sense: shakl va moslik",
+      "ru": "Изучите: Form, Structure, and Sense: форма и согласование"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 5,
+     "title": {
+      "en": "Practice 1: Form, Structure, and Sense",
+      "uz": "Mashq 1: Form, Structure, and Sense: shakl va moslik",
+      "ru": "Практика 1: Form, Structure, and Sense: форма и согласование"
+     },
+     "practice_ref": 0,
+     "items": 12,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 2: Form, Structure, and Sense",
+      "uz": "Mashq 2: Form, Structure, and Sense: shakl va moslik",
+      "ru": "Практика 2: Form, Structure, and Sense: форма и согласование"
+     },
+     "practice_ref": 1,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 3: Form, Structure, and Sense",
+      "uz": "Mashq 3: Form, Structure, and Sense: shakl va moslik",
+      "ru": "Практика 3: Form, Structure, and Sense: форма и согласование"
+     },
+     "practice_ref": 1,
+     "items": 8,
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Form, Structure, and Sense",
+      "uz": "Rasmiy mashq: Form, Structure, and Sense: shakl va moslik",
+      "ru": "Официальная практика: Form, Structure, and Sense: форма и согласование"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 5
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "End-of-unit check: Form, Structure, and Sense",
+      "uz": "Boʻlim yakuniy tekshiruvi: Form, Structure, and Sense: shakl va moslik",
+      "ru": "Итоговая проверка раздела: Form, Structure, and Sense: форма и согласование"
+     },
+     "end_check": true,
+     "n": 6
+    }
+   ],
+   "sessions": 5,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-RWSE03",
+   "test": "SAT",
+   "section": "reading_writing",
+   "domain": "conventions",
+   "domain_label": {
+    "en": "Standard English Conventions",
+    "uz": "Standard English Conventions (ingliz tili meʼyorlari)",
+    "ru": "Standard English Conventions (нормы английского языка)"
+   },
+   "domain_share": {
+    "approx_pct": 26,
+    "questions": "11-15",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 3,
+   "units_in_domain": 3,
+   "level_band": "advanced",
+   "skills": [
+    "boundaries",
+    "form_structure_sense"
+   ],
+   "title": {
+    "en": "Mixed conventions under time",
+    "uz": "Vaqt bilan aralash meʼyorlar",
+    "ru": "Смешанные нормы на время"
+   },
+   "goal": {
+    "en": "Answer mixed conventions questions quickly and accurately; in the test they are ordered by difficulty, not by rule.",
+    "uz": "Aralash meʼyor savollariga tez va aniq javob bering; testda ular qoida boʻyicha emas, qiyinlik boʻyicha joylashgan.",
+    "ru": "Отвечайте на смешанные вопросы о нормах быстро и точно: в тесте они идут по сложности, а не по правилу."
+   },
+   "study": [
+    {
+     "en": "Before you choose, name the rule being tested: boundary, agreement, tense, possessive or modifier.",
+     "uz": "Tanlashdan oldin qaysi qoida tekshirilayotganini ayting: chegara, moslik, zamon, qaratqich yoki aniqlovchi.",
+     "ru": "Прежде чем выбрать, назовите проверяемое правило: граница, согласование, время, притяжательная форма или определение."
+    },
+    {
+     "en": "When two options look right, read the whole sentence: the correct one is complete and has nothing extra.",
+     "uz": "Ikki variant toʻgʻridek koʻrinsa, butun gapni oʻqing: toʻgʻrisi toʻliq va ortiqcha narsasiz boʻladi.",
+     "ru": "Если два варианта кажутся верными, прочитайте предложение целиком: правильный — полный и без лишнего."
+    },
+    {
+     "en": "Go back to your error log from units 1 and 2 and redo every type of item you missed.",
+     "uz": "1 va 2-boʻlimlardagi xatolar daftaringizga qayting va xato qilgan har bir savol turini qayta ishlang.",
+     "ru": "Вернитесь к журналу ошибок разделов 1 и 2 и заново решите все типы вопросов, где ошиблись."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "conventions",
+      "subskill": [
+       "boundaries",
+       "form_structure_sense"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "conventions"
+     },
+     "n": 20,
+     "split": [
+      10,
+      10
+     ],
+     "minutes_each": 15,
+     "purpose": {
+      "en": "Mixed and timed, earlier units mixed in.",
+      "uz": "Aralash va vaqtli, oldingi boʻlimlar ham qoʻshilgan.",
+      "ru": "Смешанный набор на время с вопросами прошлых разделов."
+     },
+     "interleave_earlier": 0.4,
+     "time_limit_s_each": 710
+    },
+    {
+     "content": "C3",
+     "where": {
+      "skill": "en_grammar",
+      "level": [
+       "C1"
+      ],
+      "subskill": [
+       "punctuation",
+       "subject_verb_agreement",
+       "modifiers"
+      ]
+     },
+     "fallback_where": {
+      "skill": "en_grammar",
+      "level": [
+       "C1"
+      ]
+     },
+     "n": 10,
+     "split": [
+      10
+     ],
+     "minutes_each": 5,
+     "purpose": {
+      "en": "Harder grammar items.",
+      "uz": "Murakkabroq grammatik savollar.",
+      "ru": "Более сложные грамматические задания."
+     }
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Reading and Writing, domain Standard English Conventions, skill Boundaries and Form, Structure, and Sense; do 10 Hard questions.",
+      "uz": "Question Bankʼda SAT, keyin Reading and Writing, Standard English Conventions domeni va Boundaries and Form, Structure, and Sense koʻnikmasini tanlang; Hard (qiyin) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Reading and Writing, домен Standard English Conventions, навык Boundaries and Form, Structure, and Sense; решите 10 вопросов уровня Hard (сложные)."
+     },
+     "step": {
+      "minutes": 15
+     }
+    },
+    {
+     "id": "bluebook_tests",
+     "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+     "kind": "full_length_practice_test",
+     "label": {
+      "en": "Bluebook: full-length SAT practice tests",
+      "uz": "Bluebook: SAT boʻyicha toʻliq sinov testlari",
+      "ru": "Bluebook: полные пробные тесты SAT"
+     },
+     "note": {
+      "en": "Official College Board practice tests in the Bluebook app; scores and question review appear in My Practice.",
+      "uz": "College Boardʼning Bluebook ilovasidagi rasmiy sinov testlari; ballar va savollar tahlili My Practice boʻlimida chiqadi.",
+      "ru": "Официальные пробные тесты College Board в приложении Bluebook; баллы и разбор вопросов появляются в разделе My Practice."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/practice-tests",
+     "how": {
+      "en": "After the third unit of every domain, the plan schedules a full-length Bluebook practice test (see the sequence).",
+      "uz": "Har bir domenning uchinchi boʻlimidan keyin reja Bluebookʼda toʻliq sinov testini belgilaydi (ketma-ketlikka qarang).",
+      "ru": "После третьего раздела каждого домена план назначает полный пробный тест в Bluebook (см. последовательность)."
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Reading and Writing course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Reading and Writing kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Reading and Writing на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C6",
+    "where": {
+     "skill": "sat_rw",
+     "sat.domain": "conventions",
+     "subskill": [
+      "boundaries",
+      "form_structure_sense"
+     ],
+     "sat.difficulty": [
+      "medium",
+      "hard"
+     ]
+    },
+    "n": 12,
+    "time_limit_s": 852,
+    "minutes": 18,
+    "pass": {
+     "min_correct": 9,
+     "of": 12,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "instructions": {
+     "en": "12 questions on this unit's skills at about 71 seconds a question, the test's pace (54 questions in 64 minutes). Pass: 9 of 12.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 12 ta savol, har biriga taxminan 71 soniya — test surʼati (64 daqiqada 54 ta savol). Oʻtish: 12 tadan 9 ta.",
+     "ru": "12 вопросов по навыкам раздела, примерно 71 секунда на вопрос — темп теста (54 вопроса за 64 минуты). Зачёт: 9 из 12."
+    },
+    "on_fail": {
+     "en": "Review your misses in the error log, do one more practice set on the weakest skill, then retake the check with new questions.",
+     "uz": "Xatolar daftaringizdagi xatolarni koʻrib chiqing, eng zaif koʻnikma boʻyicha yana bitta mashq toʻplamini bajaring, keyin tekshiruvni yangi savollar bilan qayta topshiring.",
+     "ru": "Разберите ошибки в журнале ошибок, выполните ещё один набор по самому слабому навыку и пересдайте проверку с новыми вопросами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 35,
+    "check": 18,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 68
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "after_units": [
+     "C10-RWSE02"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Reading and Writing: 54 questions in 64 minutes, two 32-minute modules; Standard English Conventions is about 26 % of questions (11-15).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading and Writing passages are 25 to 150 words, each with one question.",
+     "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Standard English Conventions questions are arranged from easiest to hardest regardless of which convention is tested.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Mixed conventions under time",
+      "uz": "Oʻrganing: Vaqt bilan aralash meʼyorlar",
+      "ru": "Изучите: Смешанные нормы на время"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Practice 1: Mixed conventions under time",
+      "uz": "Mashq 1: Vaqt bilan aralash meʼyorlar",
+      "ru": "Практика 1: Смешанные нормы на время"
+     },
+     "practice_ref": 0,
+     "items": 10,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Practice 2: Mixed conventions under time",
+      "uz": "Mashq 2: Vaqt bilan aralash meʼyorlar",
+      "ru": "Практика 2: Смешанные нормы на время"
+     },
+     "practice_ref": 0,
+     "items": 10,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 5,
+     "title": {
+      "en": "Practice 3: Mixed conventions under time",
+      "uz": "Mashq 3: Vaqt bilan aralash meʼyorlar",
+      "ru": "Практика 3: Смешанные нормы на время"
+     },
+     "practice_ref": 1,
+     "items": 10,
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Mixed conventions under time",
+      "uz": "Rasmiy mashq: Vaqt bilan aralash meʼyorlar",
+      "ru": "Официальная практика: Смешанные нормы на время"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 5
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 18,
+     "title": {
+      "en": "End-of-unit check: Mixed conventions under time",
+      "uz": "Boʻlim yakuniy tekshiruvi: Vaqt bilan aralash meʼyorlar",
+      "ru": "Итоговая проверка раздела: Смешанные нормы на время"
+     },
+     "end_check": true,
+     "n": 6
+    }
+   ],
+   "sessions": 5,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-RWEI01",
+   "test": "SAT",
+   "section": "reading_writing",
+   "domain": "expression_ideas",
+   "domain_label": {
+    "en": "Expression of Ideas",
+    "uz": "Expression of Ideas (fikrni ifodalash)",
+    "ru": "Expression of Ideas (выражение мысли)"
+   },
+   "domain_share": {
+    "approx_pct": 20,
+    "questions": "8-12",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 1,
+   "units_in_domain": 3,
+   "level_band": "foundation",
+   "skills": [
+    "transitions"
+   ],
+   "title": {
+    "en": "Transitions",
+    "uz": "Transitions: bogʻlovchi soʻzlar",
+    "ru": "Transitions: связующие слова"
+   },
+   "goal": {
+    "en": "Choose the transition that shows the logical link between two ideas: addition, contrast, cause and effect, example or sequence.",
+    "uz": "Ikki fikr orasidagi mantiqiy bogʻlanishni koʻrsatadigan bogʻlovchini tanlang: qoʻshimcha, qarama-qarshilik, sabab-oqibat, misol yoki ketma-ketlik.",
+    "ru": "Выбирайте связующее слово, которое показывает логическую связь двух мыслей: добавление, контраст, причину и следствие, пример или последовательность."
+   },
+   "study": [
+    {
+     "en": "Read the sentence before and the sentence with the blank, then name the relationship before you look at the options.",
+     "uz": "Oldingi gapni va boʻsh joyli gapni oʻqing, keyin variantlarga qarashdan oldin bogʻlanish turini ayting.",
+     "ru": "Прочитайте предыдущее предложение и предложение с пропуском и назовите тип связи, прежде чем смотреть на варианты."
+    },
+    {
+     "en": "Group the transitions you know by job: contrast (however, nevertheless), result (therefore, consequently), addition (moreover, furthermore), example (for instance).",
+     "uz": "Biladigan bogʻlovchilaringizni vazifasi boʻyicha guruhlang: qarama-qarshilik (however, nevertheless), natija (therefore, consequently), qoʻshimcha (moreover, furthermore), misol (for instance).",
+     "ru": "Разделите знакомые связующие слова по роли: контраст (however, nevertheless), результат (therefore, consequently), добавление (moreover, furthermore), пример (for instance)."
+    },
+    {
+     "en": "Two options with the same job cannot both be the single right answer, so you can drop both.",
+     "uz": "Vazifasi bir xil ikki variant bir vaqtda yagona toʻgʻri javob boʻla olmaydi, shuning uchun ikkalasini ham chiqarib tashlash mumkin.",
+     "ru": "Два варианта с одинаковой ролью не могут оба быть единственным верным ответом, поэтому можно отбросить оба."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "expression_ideas",
+      "subskill": [
+       "transitions"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "expression_ideas"
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 13,
+     "purpose": {
+      "en": "Transition questions.",
+      "uz": "Bogʻlovchi savollari.",
+      "ru": "Вопросы на связующие слова."
+     },
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Reading and Writing, domain Expression of Ideas, skill Transitions; do 10 Easy questions.",
+      "uz": "Question Bankʼda SAT, keyin Reading and Writing, Expression of Ideas domeni va Transitions koʻnikmasini tanlang; Easy (oson) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Reading and Writing, домен Expression of Ideas, навык Transitions; решите 10 вопросов уровня Easy (лёгкие)."
+     },
+     "step": {
+      "minutes": 15
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Reading and Writing course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Reading and Writing kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Reading and Writing на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C6",
+    "where": {
+     "skill": "sat_rw",
+     "sat.domain": "expression_ideas",
+     "subskill": [
+      "transitions"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 710,
+    "minutes": 15,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 71 seconds a question, the test's pace (54 questions in 64 minutes). Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 71 soniya — test surʼati (64 daqiqada 54 ta savol). Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 71 секунда на вопрос — темп теста (54 вопроса за 64 минуты). Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Review your misses in the error log, do one more practice set on the weakest skill, then retake the check with new questions.",
+     "uz": "Xatolar daftaringizdagi xatolarni koʻrib chiqing, eng zaif koʻnikma boʻyicha yana bitta mashq toʻplamini bajaring, keyin tekshiruvni yangi savollar bilan qayta topshiring.",
+     "ru": "Разберите ошибки в журнале ошибок, выполните ещё один набор по самому слабому навыку и пересдайте проверку с новыми вопросами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 26,
+    "check": 15,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 56
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "after_units": [],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Reading and Writing: 54 questions in 64 minutes, two 32-minute modules; Expression of Ideas is about 20 % of questions (8-12).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading and Writing passages are 25 to 150 words, each with one question.",
+     "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Transitions",
+      "uz": "Oʻrganing: Transitions: bogʻlovchi soʻzlar",
+      "ru": "Изучите: Transitions: связующие слова"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 1: Transitions",
+      "uz": "Mashq 1: Transitions: bogʻlovchi soʻzlar",
+      "ru": "Практика 1: Transitions: связующие слова"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 2: Transitions",
+      "uz": "Mashq 2: Transitions: bogʻlovchi soʻzlar",
+      "ru": "Практика 2: Transitions: связующие слова"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Transitions",
+      "uz": "Rasmiy mashq: Transitions: bogʻlovchi soʻzlar",
+      "ru": "Официальная практика: Transitions: связующие слова"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "End-of-unit check: Transitions",
+      "uz": "Boʻlim yakuniy tekshiruvi: Transitions: bogʻlovchi soʻzlar",
+      "ru": "Итоговая проверка раздела: Transitions: связующие слова"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-RWEI02",
+   "test": "SAT",
+   "section": "reading_writing",
+   "domain": "expression_ideas",
+   "domain_label": {
+    "en": "Expression of Ideas",
+    "uz": "Expression of Ideas (fikrni ifodalash)",
+    "ru": "Expression of Ideas (выражение мысли)"
+   },
+   "domain_share": {
+    "approx_pct": 20,
+    "questions": "8-12",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 2,
+   "units_in_domain": 3,
+   "level_band": "core",
+   "skills": [
+    "rhetorical_synthesis"
+   ],
+   "title": {
+    "en": "Rhetorical Synthesis",
+    "uz": "Rhetorical Synthesis: qaydlardan maqsadli gap",
+    "ru": "Rhetorical Synthesis: предложение по заметкам"
+   },
+   "goal": {
+    "en": "Use a student's bullet-point notes to choose the sentence that meets a stated goal, such as stressing a difference or introducing a topic to a new audience.",
+    "uz": "Oʻquvchining qisqa qaydlaridan foydalanib, berilgan maqsadga mos gapni tanlang: masalan, farqni taʼkidlash yoki mavzuni yangi auditoriyaga tanishtirish.",
+    "ru": "По пунктам заметок ученика выберите предложение, которое достигает заданной цели, например подчёркивает различие или знакомит новую аудиторию с темой."
+   },
+   "study": [
+    {
+     "en": "Read the goal in the question first: it decides the answer, and the notes only supply the facts.",
+     "uz": "Avval savoldagi maqsadni oʻqing: javobni aynan u belgilaydi, qaydlar esa faqat faktlarni beradi.",
+     "ru": "Сначала прочитайте цель в вопросе: именно она определяет ответ, а заметки только дают факты."
+    },
+    {
+     "en": "Reject options that are accurate but do a different job, for example describing when the goal says compare.",
+     "uz": "Toʻgʻri, lekin boshqa vazifani bajaradigan variantlarni chiqarib tashlang: masalan, maqsad solishtirish boʻlsa-yu, variant faqat tasvirlasa.",
+     "ru": "Отбрасывайте точные варианты, которые решают другую задачу, например описывают, когда цель — сравнить."
+    },
+    {
+     "en": "Check that every fact in the option appears in the notes; added information makes it wrong.",
+     "uz": "Variantdagi har bir fakt qaydlarda borligini tekshiring; qoʻshimcha maʼlumot uni notoʻgʻri qiladi.",
+     "ru": "Проверьте, что каждый факт варианта есть в заметках; добавленная информация делает его неверным."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "expression_ideas",
+      "subskill": [
+       "rhetorical_synthesis"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "expression_ideas"
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 13,
+     "purpose": {
+      "en": "Notes-to-sentence questions.",
+      "uz": "Qaydlardan gap tuzish savollari.",
+      "ru": "Вопросы «заметки — предложение»."
+     },
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Reading and Writing, domain Expression of Ideas, skill Rhetorical Synthesis; do 10 Medium questions.",
+      "uz": "Question Bankʼda SAT, keyin Reading and Writing, Expression of Ideas domeni va Rhetorical Synthesis koʻnikmasini tanlang; Medium (oʻrta) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Reading and Writing, домен Expression of Ideas, навык Rhetorical Synthesis; решите 10 вопросов уровня Medium (средние)."
+     },
+     "step": {
+      "minutes": 15
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Reading and Writing course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Reading and Writing kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Reading and Writing на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C6",
+    "where": {
+     "skill": "sat_rw",
+     "sat.domain": "expression_ideas",
+     "subskill": [
+      "rhetorical_synthesis"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 710,
+    "minutes": 15,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 71 seconds a question, the test's pace (54 questions in 64 minutes). Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 71 soniya — test surʼati (64 daqiqada 54 ta savol). Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 71 секунда на вопрос — темп теста (54 вопроса за 64 минуты). Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Review your misses in the error log, do one more practice set on the weakest skill, then retake the check with new questions.",
+     "uz": "Xatolar daftaringizdagi xatolarni koʻrib chiqing, eng zaif koʻnikma boʻyicha yana bitta mashq toʻplamini bajaring, keyin tekshiruvni yangi savollar bilan qayta topshiring.",
+     "ru": "Разберите ошибки в журнале ошибок, выполните ещё один набор по самому слабому навыку и пересдайте проверку с новыми вопросами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 26,
+    "check": 15,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 56
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "after_units": [
+     "C10-RWEI01"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Reading and Writing: 54 questions in 64 minutes, two 32-minute modules; Expression of Ideas is about 20 % of questions (8-12).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading and Writing passages are 25 to 150 words, each with one question.",
+     "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Rhetorical Synthesis",
+      "uz": "Oʻrganing: Rhetorical Synthesis: qaydlardan maqsadli gap",
+      "ru": "Изучите: Rhetorical Synthesis: предложение по заметкам"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 1: Rhetorical Synthesis",
+      "uz": "Mashq 1: Rhetorical Synthesis: qaydlardan maqsadli gap",
+      "ru": "Практика 1: Rhetorical Synthesis: предложение по заметкам"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 13,
+     "title": {
+      "en": "Practice 2: Rhetorical Synthesis",
+      "uz": "Mashq 2: Rhetorical Synthesis: qaydlardan maqsadli gap",
+      "ru": "Практика 2: Rhetorical Synthesis: предложение по заметкам"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Rhetorical Synthesis",
+      "uz": "Rasmiy mashq: Rhetorical Synthesis: qaydlardan maqsadli gap",
+      "ru": "Официальная практика: Rhetorical Synthesis: предложение по заметкам"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "End-of-unit check: Rhetorical Synthesis",
+      "uz": "Boʻlim yakuniy tekshiruvi: Rhetorical Synthesis: qaydlardan maqsadli gap",
+      "ru": "Итоговая проверка раздела: Rhetorical Synthesis: предложение по заметкам"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-RWEI03",
+   "test": "SAT",
+   "section": "reading_writing",
+   "domain": "expression_ideas",
+   "domain_label": {
+    "en": "Expression of Ideas",
+    "uz": "Expression of Ideas (fikrni ifodalash)",
+    "ru": "Expression of Ideas (выражение мысли)"
+   },
+   "domain_share": {
+    "approx_pct": 20,
+    "questions": "8-12",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 3,
+   "units_in_domain": 3,
+   "level_band": "advanced",
+   "skills": [
+    "transitions",
+    "rhetorical_synthesis"
+   ],
+   "title": {
+    "en": "Mixed Expression of Ideas and module pacing",
+    "uz": "Aralash Expression of Ideas va modul surʼati",
+    "ru": "Смешанный Expression of Ideas и темп модуля"
+   },
+   "goal": {
+    "en": "Combine transitions and rhetorical synthesis in harder mixed sets, and practise the pacing of a whole Reading and Writing module.",
+    "uz": "Bogʻlovchilar va rhetorical synthesis savollarini murakkabroq aralash toʻplamlarda birlashtiring va butun Reading and Writing modulining surʼatini mashq qiling.",
+    "ru": "Совмещайте связующие слова и rhetorical synthesis в более сложных смешанных наборах и отработайте темп целого модуля Reading and Writing."
+   },
+   "study": [
+    {
+     "en": "A module has 27 questions in 32 minutes; do not spend much more than 2 minutes on any one question.",
+     "uz": "Bitta modulda 32 daqiqada 27 ta savol bor; birorta savolga 2 daqiqadan ancha koʻp vaqt sarflamang.",
+     "ru": "В модуле 27 вопросов за 32 минуты; не тратьте на один вопрос намного больше 2 минут."
+    },
+    {
+     "en": "Expression of Ideas questions come last in each module, so leave time for them.",
+     "uz": "Expression of Ideas savollari har bir modulning oxirida keladi, shuning uchun ularga vaqt qoldiring.",
+     "ru": "Вопросы Expression of Ideas идут в конце каждого модуля, поэтому оставляйте на них время."
+    },
+    {
+     "en": "After each timed set, sort your misses by domain and add them to your error log.",
+     "uz": "Har bir vaqtli toʻplamdan keyin xatolaringizni domenlar boʻyicha saralang va xatolar daftariga qoʻshing.",
+     "ru": "После каждого набора на время распределите ошибки по доменам и внесите их в журнал ошибок."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.domain": "expression_ideas",
+      "subskill": [
+       "transitions",
+       "rhetorical_synthesis"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw",
+      "sat.domain": "expression_ideas"
+     },
+     "n": 10,
+     "split": [
+      10
+     ],
+     "minutes_each": 15,
+     "purpose": {
+      "en": "Mixed Expression of Ideas.",
+      "uz": "Aralash Expression of Ideas.",
+      "ru": "Смешанный Expression of Ideas."
+     },
+     "interleave_earlier": 0
+    },
+    {
+     "content": "C6",
+     "where": {
+      "skill": "sat_rw",
+      "sat.difficulty": [
+       "easy",
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "sat_rw"
+     },
+     "n": 20,
+     "split": [
+      20
+     ],
+     "minutes_each": 27,
+     "purpose": {
+      "en": "A 20-question mixed set across all four domains, in test order, timed.",
+      "uz": "Barcha toʻrt domen boʻyicha 20 ta aralash savol, test tartibida, vaqt bilan.",
+      "ru": "Смешанный набор из 20 вопросов по всем четырём доменам в порядке теста, на время."
+     },
+     "interleave_earlier": 0.4,
+     "time_limit_s_each": 1420,
+     "order": "test_order"
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Reading and Writing, domain Expression of Ideas, skill Transitions and Rhetorical Synthesis; do 10 Hard questions.",
+      "uz": "Question Bankʼda SAT, keyin Reading and Writing, Expression of Ideas domeni va Transitions and Rhetorical Synthesis koʻnikmasini tanlang; Hard (qiyin) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Reading and Writing, домен Expression of Ideas, навык Transitions and Rhetorical Synthesis; решите 10 вопросов уровня Hard (сложные)."
+     },
+     "step": {
+      "minutes": 15
+     }
+    },
+    {
+     "id": "bluebook_tests",
+     "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+     "kind": "full_length_practice_test",
+     "label": {
+      "en": "Bluebook: full-length SAT practice tests",
+      "uz": "Bluebook: SAT boʻyicha toʻliq sinov testlari",
+      "ru": "Bluebook: полные пробные тесты SAT"
+     },
+     "note": {
+      "en": "Official College Board practice tests in the Bluebook app; scores and question review appear in My Practice.",
+      "uz": "College Boardʼning Bluebook ilovasidagi rasmiy sinov testlari; ballar va savollar tahlili My Practice boʻlimida chiqadi.",
+      "ru": "Официальные пробные тесты College Board в приложении Bluebook; баллы и разбор вопросов появляются в разделе My Practice."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/practice-tests",
+     "how": {
+      "en": "After the third unit of every domain, the plan schedules a full-length Bluebook practice test (see the sequence).",
+      "uz": "Har bir domenning uchinchi boʻlimidan keyin reja Bluebookʼda toʻliq sinov testini belgilaydi (ketma-ketlikka qarang).",
+      "ru": "После третьего раздела каждого домена план назначает полный пробный тест в Bluebook (см. последовательность)."
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Reading and Writing course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Reading and Writing kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Reading and Writing на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C6",
+    "where": {
+     "skill": "sat_rw",
+     "sat.domain": "expression_ideas",
+     "subskill": [
+      "transitions",
+      "rhetorical_synthesis"
+     ],
+     "sat.difficulty": [
+      "medium",
+      "hard"
+     ]
+    },
+    "n": 12,
+    "time_limit_s": 852,
+    "minutes": 18,
+    "pass": {
+     "min_correct": 9,
+     "of": 12,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "instructions": {
+     "en": "12 questions on this unit's skills at about 71 seconds a question, the test's pace (54 questions in 64 minutes). Pass: 9 of 12.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 12 ta savol, har biriga taxminan 71 soniya — test surʼati (64 daqiqada 54 ta savol). Oʻtish: 12 tadan 9 ta.",
+     "ru": "12 вопросов по навыкам раздела, примерно 71 секунда на вопрос — темп теста (54 вопроса за 64 минуты). Зачёт: 9 из 12."
+    },
+    "on_fail": {
+     "en": "Review your misses in the error log, do one more practice set on the weakest skill, then retake the check with new questions.",
+     "uz": "Xatolar daftaringizdagi xatolarni koʻrib chiqing, eng zaif koʻnikma boʻyicha yana bitta mashq toʻplamini bajaring, keyin tekshiruvni yangi savollar bilan qayta topshiring.",
+     "ru": "Разберите ошибки в журнале ошибок, выполните ещё один набор по самому слабому навыку и пересдайте проверку с новыми вопросами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 42,
+    "check": 18,
+    "official_required": 0,
+    "official_optional": 15,
+    "total": 75
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "after_units": [
+     "C10-RWEI02"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Reading and Writing: 54 questions in 64 minutes, two 32-minute modules; Expression of Ideas is about 20 % of questions (8-12).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Reading and Writing passages are 25 to 150 words, each with one question.",
+     "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Each Reading and Writing module has 25 operational and 2 pretest questions in 32 minutes.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Each Reading and Writing module begins with Craft and Structure questions, then Information and Ideas, Standard English Conventions and Expression of Ideas.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Mixed Expression of Ideas and module pacing",
+      "uz": "Oʻrganing: Aralash Expression of Ideas va modul surʼati",
+      "ru": "Изучите: Смешанный Expression of Ideas и темп модуля"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Practice 1: Mixed Expression of Ideas and module pacing",
+      "uz": "Mashq 1: Aralash Expression of Ideas va modul surʼati",
+      "ru": "Практика 1: Смешанный Expression of Ideas и темп модуля"
+     },
+     "practice_ref": 0,
+     "items": 10,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 27,
+     "title": {
+      "en": "Practice 2: Mixed Expression of Ideas and module pacing",
+      "uz": "Mashq 2: Aralash Expression of Ideas va modul surʼati",
+      "ru": "Практика 2: Смешанный Expression of Ideas и темп модуля"
+     },
+     "practice_ref": 1,
+     "items": 20,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 15,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Mixed Expression of Ideas and module pacing",
+      "uz": "Rasmiy mashq: Aralash Expression of Ideas va modul surʼati",
+      "ru": "Официальная практика: Смешанный Expression of Ideas и темп модуля"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 18,
+     "title": {
+      "en": "End-of-unit check: Mixed Expression of Ideas and module pacing",
+      "uz": "Boʻlim yakuniy tekshiruvi: Aralash Expression of Ideas va modul surʼati",
+      "ru": "Итоговая проверка раздела: Смешанный Expression of Ideas и темп модуля"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

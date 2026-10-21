@@ -1,0 +1,1092 @@
+{
+ "bank": "K4x",
+ "batch": 8,
+ "items": [
+  {
+   "id": "K4x-clh27a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "mean_value_theorem",
+   "family_ref": "K4-clh027",
+   "params": {
+    "a": 1,
+    "b": 5
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = x² on [1, 5]. Find the number c in (1, 5) given by the mean value theorem: f′(c) = (f(5) − f(1))/(5 − 1).",
+    "uz": "[1, 5] kesmada f(x) = x². Oʻrta qiymat (Lagranj) teoremasidagi c ∈ (1, 5) sonni toping: f′(c) = (f(5) − f(1))/(5 − 1).",
+    "ru": "f(x) = x² на отрезке [1, 5]. Найдите число c ∈ (1, 5) из теоремы Лагранжа: f′(c) = (f(5) − f(1))/(5 − 1)."
+   },
+   "options": [
+    {
+     "en": "3"
+    },
+    {
+     "en": "2"
+    },
+    {
+     "en": "6"
+    },
+    {
+     "en": "5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 3,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "The average slope is (25 − 1)/4 = 6, and f′(c) = 2c = 6, so c = 3.",
+    "uz": "Oʻrtacha qiyalik (25 − 1)/4 = 6, f′(c) = 2c = 6, demak c = 3.",
+    "ru": "Средний наклон (25 − 1)/4 = 6, а f′(c) = 2c = 6, значит c = 3."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh27b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "mean_value_theorem",
+   "family_ref": "K4-clh027",
+   "params": {
+    "a": 2,
+    "b": 8
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = x² on [2, 8]. Find the number c in (2, 8) given by the mean value theorem: f′(c) = (f(8) − f(2))/(8 − 2).",
+    "uz": "[2, 8] kesmada f(x) = x². Oʻrta qiymat (Lagranj) teoremasidagi c ∈ (2, 8) sonni toping: f′(c) = (f(8) − f(2))/(8 − 2).",
+    "ru": "f(x) = x² на отрезке [2, 8]. Найдите число c ∈ (2, 8) из теоремы Лагранжа: f′(c) = (f(8) − f(2))/(8 − 2)."
+   },
+   "options": [
+    {
+     "en": "5"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "10"
+    },
+    {
+     "en": "8"
+    }
+   ],
+   "answer_numeric": {
+    "value": 5,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "The average slope is (64 − 4)/6 = 10, and f′(c) = 2c = 10, so c = 5.",
+    "uz": "Oʻrtacha qiyalik (64 − 4)/6 = 10, f′(c) = 2c = 10, demak c = 5.",
+    "ru": "Средний наклон (64 − 4)/6 = 10, а f′(c) = 2c = 10, значит c = 5."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh30a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "definite_integrals",
+   "family_ref": "K4-clh030",
+   "params": {
+    "m": 4,
+    "c": 2,
+    "a": 1,
+    "b": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫₁³ (4x + 2) dx?",
+    "uz": "∫₁³ (4x + 2) dx ni hisoblang.",
+    "ru": "Вычислите ∫₁³ (4x + 2) dx."
+   },
+   "options": [
+    {
+     "en": "20"
+    },
+    {
+     "en": "8"
+    },
+    {
+     "en": "36"
+    },
+    {
+     "en": "24"
+    }
+   ],
+   "answer_numeric": {
+    "value": 20,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "An antiderivative is 2x² + 2x; from 1 to 3: 24 − 4 = 20.",
+    "uz": "Boshlangʻich funksiya 2x² + 2x; 1 dan 3 gacha: 24 − 4 = 20.",
+    "ru": "Первообразная 2x² + 2x; от 1 до 3: 24 − 4 = 20."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh30b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "definite_integrals",
+   "family_ref": "K4-clh030",
+   "params": {
+    "m": 6,
+    "c": 3,
+    "a": 1,
+    "b": 2
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫₁² (6x + 3) dx?",
+    "uz": "∫₁² (6x + 3) dx ni hisoblang.",
+    "ru": "Вычислите ∫₁² (6x + 3) dx."
+   },
+   "options": [
+    {
+     "en": "12"
+    },
+    {
+     "en": "6"
+    },
+    {
+     "en": "21"
+    },
+    {
+     "en": "18"
+    }
+   ],
+   "answer_numeric": {
+    "value": 12,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "An antiderivative is 3x² + 3x; from 1 to 2: 18 − 6 = 12.",
+    "uz": "Boshlangʻich funksiya 3x² + 3x; 1 dan 2 gacha: 18 − 6 = 12.",
+    "ru": "Первообразная 3x² + 3x; от 1 до 2: 18 − 6 = 12."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh34a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "definite_integrals",
+   "family_ref": "K4-clh034",
+   "params": {
+    "k": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the value of ∫ (1/x) dx from x = 1 to x = e³?",
+    "uz": "x = 1 dan x = e³ gacha ∫ (1/x) dx integralning qiymatini toping.",
+    "ru": "Найдите значение ∫ (1/x) dx от x = 1 до x = e³."
+   },
+   "options": [
+    {
+     "en": "3"
+    },
+    {
+     "en": "2"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "9"
+    }
+   ],
+   "answer_numeric": {
+    "value": 3,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "∫ (1/x) dx = ln x, so the value is ln(e³) − ln 1 = 3.",
+    "uz": "∫ (1/x) dx = ln x, demak qiymat ln(e³) − ln 1 = 3.",
+    "ru": "∫ (1/x) dx = ln x, поэтому значение ln(e³) − ln 1 = 3."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh34b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "definite_integrals",
+   "family_ref": "K4-clh034",
+   "params": {
+    "k": 5
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the value of ∫ (1/x) dx from x = 1 to x = e⁵?",
+    "uz": "x = 1 dan x = e⁵ gacha ∫ (1/x) dx integralning qiymatini toping.",
+    "ru": "Найдите значение ∫ (1/x) dx от x = 1 до x = e⁵."
+   },
+   "options": [
+    {
+     "en": "5"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "6"
+    },
+    {
+     "en": "25"
+    }
+   ],
+   "answer_numeric": {
+    "value": 5,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "∫ (1/x) dx = ln x, so the value is ln(e⁵) − ln 1 = 5.",
+    "uz": "∫ (1/x) dx = ln x, demak qiymat ln(e⁵) − ln 1 = 5.",
+    "ru": "∫ (1/x) dx = ln x, поэтому значение ln(e⁵) − ln 1 = 5."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh35a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "area_between_curves",
+   "family_ref": "K4-clh035",
+   "params": {
+    "k": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the area of the region between the graphs of y = x² and y = 3x?",
+    "uz": "y = x² va y = 3x grafiklari orasidagi soha yuzini toping.",
+    "ru": "Найдите площадь области между графиками y = x² и y = 3x."
+   },
+   "options": [
+    {
+     "en": "4.5"
+    },
+    {
+     "en": "13.5"
+    },
+    {
+     "en": "9"
+    },
+    {
+     "en": "1.5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 4.5,
+    "tolerance": 0.01
+   },
+   "why": {
+    "en": "They meet at x = 0 and x = 3; area = ∫₀³ (3x − x²) dx = 3³/2 − 3³/3 = 3³/6 = 4.5.",
+    "uz": "Ular x = 0 va x = 3 da kesishadi; yuza = ∫₀³ (3x − x²) dx = 3³/2 − 3³/3 = 3³/6 = 4,5.",
+    "ru": "Графики пересекаются при x = 0 и x = 3; площадь = ∫₀³ (3x − x²) dx = 3³/2 − 3³/3 = 3³/6 = 4,5."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.95,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh35b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "area_between_curves",
+   "family_ref": "K4-clh035",
+   "params": {
+    "k": 6
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the area of the region between the graphs of y = x² and y = 6x?",
+    "uz": "y = x² va y = 6x grafiklari orasidagi soha yuzini toping.",
+    "ru": "Найдите площадь области между графиками y = x² и y = 6x."
+   },
+   "options": [
+    {
+     "en": "36"
+    },
+    {
+     "en": "108"
+    },
+    {
+     "en": "72"
+    },
+    {
+     "en": "6"
+    }
+   ],
+   "answer_numeric": {
+    "value": 36,
+    "tolerance": 0.01
+   },
+   "why": {
+    "en": "They meet at x = 0 and x = 6; area = ∫₀⁶ (6x − x²) dx = 6³/2 − 6³/3 = 6³/6 = 36.",
+    "uz": "Ular x = 0 va x = 6 da kesishadi; yuza = ∫₀⁶ (6x − x²) dx = 6³/2 − 6³/3 = 6³/6 = 36.",
+    "ru": "Графики пересекаются при x = 0 и x = 6; площадь = ∫₀⁶ (6x − x²) dx = 6³/2 − 6³/3 = 6³/6 = 36."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.95,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh36a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "fundamental_theorem",
+   "family_ref": "K4-clh036",
+   "params": {
+    "c": 1,
+    "a": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "F(x) = ∫₀ˣ (t² + 1) dt. What is F′(3)?",
+    "uz": "F(x) = ∫₀ˣ (t² + 1) dt. F′(3) ni toping.",
+    "ru": "F(x) = ∫₀ˣ (t² + 1) dt. Найдите F′(3)."
+   },
+   "options": [
+    {
+     "en": "10"
+    },
+    {
+     "en": "12"
+    },
+    {
+     "en": "6"
+    },
+    {
+     "en": "9"
+    }
+   ],
+   "answer_numeric": {
+    "value": 10,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "By the fundamental theorem of calculus F′(x) = x² + 1, so F′(3) = 10.",
+    "uz": "Integral hisobning asosiy teoremasiga koʻra F′(x) = x² + 1, demak F′(3) = 10.",
+    "ru": "По основной теореме анализа F′(x) = x² + 1, поэтому F′(3) = 10."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh36b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "fundamental_theorem",
+   "family_ref": "K4-clh036",
+   "params": {
+    "c": 5,
+    "a": 6
+   },
+   "lang": "en",
+   "stem": {
+    "en": "F(x) = ∫₀ˣ (t² + 5) dt. What is F′(6)?",
+    "uz": "F(x) = ∫₀ˣ (t² + 5) dt. F′(6) ni toping.",
+    "ru": "F(x) = ∫₀ˣ (t² + 5) dt. Найдите F′(6)."
+   },
+   "options": [
+    {
+     "en": "41"
+    },
+    {
+     "en": "102"
+    },
+    {
+     "en": "12"
+    },
+    {
+     "en": "36"
+    }
+   ],
+   "answer_numeric": {
+    "value": 41,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "By the fundamental theorem of calculus F′(x) = x² + 5, so F′(6) = 41.",
+    "uz": "Integral hisobning asosiy teoremasiga koʻra F′(x) = x² + 5, demak F′(6) = 41.",
+    "ru": "По основной теореме анализа F′(x) = x² + 5, поэтому F′(6) = 41."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh38a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "average_value",
+   "family_ref": "K4-clh038",
+   "params": {
+    "b": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the average value of f(x) = x² on the interval [0, 3]?",
+    "uz": "f(x) = x² funksiyaning [0, 3] kesmadagi oʻrtacha qiymatini toping.",
+    "ru": "Найдите среднее значение функции f(x) = x² на отрезке [0, 3]."
+   },
+   "options": [
+    {
+     "en": "3"
+    },
+    {
+     "en": "9"
+    },
+    {
+     "en": "4.5"
+    },
+    {
+     "en": "2.25"
+    }
+   ],
+   "answer_numeric": {
+    "value": 3,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Average = (1/3)·∫₀³ x² dx = (1/3)·3³/3 = 3.",
+    "uz": "Oʻrtacha qiymat = (1/3)·∫₀³ x² dx = (1/3)·3³/3 = 3.",
+    "ru": "Среднее значение = (1/3)·∫₀³ x² dx = (1/3)·3³/3 = 3."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh38b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "average_value",
+   "family_ref": "K4-clh038",
+   "params": {
+    "b": 6
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the average value of f(x) = x² on the interval [0, 6]?",
+    "uz": "f(x) = x² funksiyaning [0, 6] kesmadagi oʻrtacha qiymatini toping.",
+    "ru": "Найдите среднее значение функции f(x) = x² на отрезке [0, 6]."
+   },
+   "options": [
+    {
+     "en": "12"
+    },
+    {
+     "en": "72"
+    },
+    {
+     "en": "18"
+    },
+    {
+     "en": "9"
+    }
+   ],
+   "answer_numeric": {
+    "value": 12,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Average = (1/6)·∫₀⁶ x² dx = (1/6)·6³/3 = 12.",
+    "uz": "Oʻrtacha qiymat = (1/6)·∫₀⁶ x² dx = (1/6)·6³/3 = 12.",
+    "ru": "Среднее значение = (1/6)·∫₀⁶ x² dx = (1/6)·6³/3 = 12."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh40a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "linear_approximation",
+   "family_ref": "K4-clh040",
+   "params": {
+    "n": 5,
+    "d": 1
+   },
+   "lang": "en",
+   "stem": {
+    "en": "Use the linear approximation of f(x) = √x at x = 25 to estimate √26.",
+    "uz": "f(x) = √x funksiyaning x = 25 nuqtadagi chiziqli yaqinlashuvidan foydalanib √26 ni taxminan hisoblang.",
+    "ru": "С помощью линейного приближения функции f(x) = √x в точке x = 25 оцените √26."
+   },
+   "options": [
+    {
+     "en": "5.1"
+    },
+    {
+     "en": "5.2"
+    },
+    {
+     "en": "5.5"
+    },
+    {
+     "en": "5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 5.1,
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "√x ≈ √25 + (x − 25)/(2√25), so √26 ≈ 5 + 1/10 = 5.1.",
+    "uz": "√x ≈ √25 + (x − 25)/(2√25), demak √26 ≈ 5 + 1/10 = 5,1.",
+    "ru": "√x ≈ √25 + (x − 25)/(2√25), поэтому √26 ≈ 5 + 1/10 = 5,1."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.75,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh40b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "linear_approximation",
+   "family_ref": "K4-clh040",
+   "params": {
+    "n": 4,
+    "d": 2
+   },
+   "lang": "en",
+   "stem": {
+    "en": "Use the linear approximation of f(x) = √x at x = 16 to estimate √18.",
+    "uz": "f(x) = √x funksiyaning x = 16 nuqtadagi chiziqli yaqinlashuvidan foydalanib √18 ni taxminan hisoblang.",
+    "ru": "С помощью линейного приближения функции f(x) = √x в точке x = 16 оцените √18."
+   },
+   "options": [
+    {
+     "en": "4.25"
+    },
+    {
+     "en": "4.5"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "4"
+    }
+   ],
+   "answer_numeric": {
+    "value": 4.25,
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "√x ≈ √16 + (x − 16)/(2√16), so √18 ≈ 4 + 2/8 = 4.25.",
+    "uz": "√x ≈ √16 + (x − 16)/(2√16), demak √18 ≈ 4 + 2/8 = 4,25.",
+    "ru": "√x ≈ √16 + (x − 16)/(2√16), поэтому √18 ≈ 4 + 2/8 = 4,25."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.75,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-bch01a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "partial_derivatives",
+   "family_ref": "K4-bch001",
+   "params": {
+    "k": 4,
+    "a": 1,
+    "b": 2
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x, y) = x³y² + 4xy. What is ∂f/∂x at the point (1, 2)?",
+    "uz": "f(x, y) = x³y² + 4xy. (1, 2) nuqtada ∂f/∂x ni toping.",
+    "ru": "f(x, y) = x³y² + 4xy. Найдите ∂f/∂x в точке (1, 2)."
+   },
+   "options": [
+    {
+     "en": "20"
+    },
+    {
+     "en": "8"
+    },
+    {
+     "en": "12"
+    },
+    {
+     "en": "16"
+    }
+   ],
+   "answer_numeric": {
+    "value": 20,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "∂f/∂x = 3x²y² + 4y (y is held constant); at (1, 2): 3·1·4 + 4·2 = 20.",
+    "uz": "∂f/∂x = 3x²y² + 4y (y oʻzgarmas deb olinadi); (1, 2) da: 3·1·4 + 4·2 = 20.",
+    "ru": "∂f/∂x = 3x²y² + 4y (y считаем постоянным); в точке (1, 2): 3·1·4 + 4·2 = 20."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.25,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-bch01b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "partial_derivatives",
+   "family_ref": "K4-bch001",
+   "params": {
+    "k": 3,
+    "a": 2,
+    "b": 1
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x, y) = x³y² + 3xy. What is ∂f/∂x at the point (2, 1)?",
+    "uz": "f(x, y) = x³y² + 3xy. (2, 1) nuqtada ∂f/∂x ni toping.",
+    "ru": "f(x, y) = x³y² + 3xy. Найдите ∂f/∂x в точке (2, 1)."
+   },
+   "options": [
+    {
+     "en": "15"
+    },
+    {
+     "en": "22"
+    },
+    {
+     "en": "14"
+    },
+    {
+     "en": "18"
+    }
+   ],
+   "answer_numeric": {
+    "value": 15,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "∂f/∂x = 3x²y² + 3y (y is held constant); at (2, 1): 3·4·1 + 3·1 = 15.",
+    "uz": "∂f/∂x = 3x²y² + 3y (y oʻzgarmas deb olinadi); (2, 1) da: 3·4·1 + 3·1 = 15.",
+    "ru": "∂f/∂x = 3x²y² + 3y (y считаем постоянным); в точке (2, 1): 3·4·1 + 3·1 = 15."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.25,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-bch03a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "gradient",
+   "family_ref": "K4-bch003",
+   "params": {
+    "t": [
+     3,
+     4,
+     5
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x, y) = x² + y². What is the length of the gradient ∇f at the point (3, 4)?",
+    "uz": "f(x, y) = x² + y². (3, 4) nuqtada ∇f gradiyent vektorining uzunligini toping.",
+    "ru": "f(x, y) = x² + y². Найдите длину градиента ∇f в точке (3, 4)."
+   },
+   "options": [
+    {
+     "en": "10"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "25"
+    },
+    {
+     "en": "14"
+    }
+   ],
+   "answer_numeric": {
+    "value": 10,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "∇f = (2x, 2y) = (6, 8), whose length is √(6² + 8²) = 10.",
+    "uz": "∇f = (2x, 2y) = (6, 8), uning uzunligi √(6² + 8²) = 10.",
+    "ru": "∇f = (2x, 2y) = (6, 8), его длина √(6² + 8²) = 10."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.25,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-bch03b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "gradient",
+   "family_ref": "K4-bch003",
+   "params": {
+    "t": [
+     5,
+     12,
+     13
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x, y) = x² + y². What is the length of the gradient ∇f at the point (5, 12)?",
+    "uz": "f(x, y) = x² + y². (5, 12) nuqtada ∇f gradiyent vektorining uzunligini toping.",
+    "ru": "f(x, y) = x² + y². Найдите длину градиента ∇f в точке (5, 12)."
+   },
+   "options": [
+    {
+     "en": "26"
+    },
+    {
+     "en": "13"
+    },
+    {
+     "en": "169"
+    },
+    {
+     "en": "34"
+    }
+   ],
+   "answer_numeric": {
+    "value": 26,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "∇f = (2x, 2y) = (10, 24), whose length is √(10² + 24²) = 26.",
+    "uz": "∇f = (2x, 2y) = (10, 24), uning uzunligi √(10² + 24²) = 26.",
+    "ru": "∇f = (2x, 2y) = (10, 24), его длина √(10² + 24²) = 26."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.25,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-bch06a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "double_integrals",
+   "family_ref": "K4-bch006",
+   "params": {
+    "a": 2,
+    "b": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫₀² ∫₀³ (x + y) dy dx?",
+    "uz": "∫₀² ∫₀³ (x + y) dy dx ni hisoblang.",
+    "ru": "Вычислите ∫₀² ∫₀³ (x + y) dy dx."
+   },
+   "options": [
+    {
+     "en": "15"
+    },
+    {
+     "en": "30"
+    },
+    {
+     "en": "6"
+    },
+    {
+     "en": "2.5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 15,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Inner: ∫₀³ (x + y) dy = 3x + 4.5; outer: ∫₀² (3x + 4.5) dx = 15.",
+    "uz": "Ichki integral: ∫₀³ (x + y) dy = 3x + 4,5; tashqi: ∫₀² (3x + 4,5) dx = 15.",
+    "ru": "Внутренний интеграл: ∫₀³ (x + y) dy = 3x + 4,5; внешний: ∫₀² (3x + 4,5) dx = 15."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-bch06b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "double_integrals",
+   "family_ref": "K4-bch006",
+   "params": {
+    "a": 4,
+    "b": 2
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫₀⁴ ∫₀² (x + y) dy dx?",
+    "uz": "∫₀⁴ ∫₀² (x + y) dy dx ni hisoblang.",
+    "ru": "Вычислите ∫₀⁴ ∫₀² (x + y) dy dx."
+   },
+   "options": [
+    {
+     "en": "24"
+    },
+    {
+     "en": "48"
+    },
+    {
+     "en": "8"
+    },
+    {
+     "en": "3"
+    }
+   ],
+   "answer_numeric": {
+    "value": 24,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Inner: ∫₀² (x + y) dy = 2x + 2; outer: ∫₀⁴ (2x + 2) dx = 24.",
+    "uz": "Ichki integral: ∫₀² (x + y) dy = 2x + 2; tashqi: ∫₀⁴ (2x + 2) dx = 24.",
+    "ru": "Внутренний интеграл: ∫₀² (x + y) dy = 2x + 2; внешний: ∫₀⁴ (2x + 2) dx = 24."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

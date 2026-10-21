@@ -1,0 +1,1572 @@
+{
+  "bank": "C1",
+  "batch": 12,
+  "items": [
+    {
+      "id": "C1-r3a001",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "limits",
+      "family": {
+        "template": "g(x) = {a}x + {b} for every x ≠ {c}, but g({c}) = {d}. What is the limit of g(x) as x approaches {c}?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 7
+          },
+          "b": {
+            "min": 1,
+            "max": 9
+          },
+          "c": {
+            "min": 1,
+            "max": 6
+          },
+          "d": {
+            "min": 1,
+            "max": 30
+          }
+        },
+        "constraints": [
+          "a*c + b != d",
+          "a*c + b != a*c",
+          "a*c + b != a*c - b",
+          "d != a*c",
+          "d != a*c - b",
+          "a*c != a*c - b"
+        ],
+        "answer": "a*c + b",
+        "distractors": [
+          "d",
+          "a*c",
+          "a*c - b"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | sign_slip (C1/error_rules.json).",
+        "relation": "X = ({a}*({c} + 0.000001) + {b} + {a}*({c} - 0.000001) + {b})/2"
+      },
+      "page": "C19-APCA01-1",
+      "lang": "en",
+      "stem": {
+        "en": "g(x) = {a}x + {b} for every x ≠ {c}, but g({c}) = {d}. What is the limit of g(x) as x approaches {c}?",
+        "uz": "Har bir x ≠ {c} uchun g(x) = {a}x + {b}, lekin g({c}) = {d}. x {c} ga intilganda g(x) ning limiti nechaga teng?",
+        "ru": "g(x) = {a}x + {b} при всех x ≠ {c}, но g({c}) = {d}. Чему равен предел g(x) при x → {c}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The limit is where g(x) is heading, not the value g({c}). Near x = {c}, g(x) = {a}x + {b}, so the limit is {a} × {c} + {b} = {ANS}.",
+        "uz": "Limit — g(x) intiladigan qiymat, g({c}) emas. x = {c} atrofida g(x) = {a}x + {b}, demak limit {a} × {c} + {b} = {ANS}.",
+        "ru": "Предел — это то, к чему стремится g(x), а не значение g({c}). Вблизи x = {c} функция g(x) = {a}x + {b}, поэтому предел равен {a} × {c} + {b} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.1,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a002",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "derivative_definition",
+      "family": {
+        "template": "Water runs into a pool. After t minutes the pool holds V(t) = {a}t² + {b}t litres. How fast, in litres per minute, is the water running in at the moment t = {c}?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 5
+          },
+          "b": {
+            "min": 2,
+            "max": 9
+          },
+          "c": {
+            "min": 3,
+            "max": 6
+          }
+        },
+        "constraints": [
+          "2*a*c + b != a*c + b",
+          "2*a*c + b != a*c*c + b*c",
+          "2*a*c + b != 2*a + b",
+          "a*c + b != a*c*c + b*c",
+          "a*c + b != 2*a + b",
+          "a*c*c + b*c != 2*a + b"
+        ],
+        "answer": "2*a*c + b",
+        "distractors": [
+          "a*c + b",
+          "a*c*c + b*c",
+          "2*a + b"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | exponent_slip (C1/error_rules.json).",
+        "relation": "X = (({a}*({c} + 0.000001)^2 + {b}*({c} + 0.000001)) - ({a}*({c} - 0.000001)^2 + {b}*({c} - 0.000001)))/0.000002"
+      },
+      "page": "C19-APCA02-1",
+      "lang": "en",
+      "stem": {
+        "en": "Water runs into a pool. After t minutes the pool holds V(t) = {a}t² + {b}t litres. How fast, in litres per minute, is the water running in at the moment t = {c}?",
+        "uz": "Hovuzga suv quyilmoqda. t daqiqadan keyin hovuzda V(t) = {a}t² + {b}t litr suv boʻladi. t = {c} boʻlgan paytda suv hovuzga daqiqasiga necha litrdan quyilmoqda?",
+        "ru": "В бассейн наливают воду. Через t мин в бассейне V(t) = {a}t² + {b}t л воды. С какой скоростью (в л/мин) вода поступает в бассейн в момент t = {c}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The rate at t = {c} is V′({c}), the limit of (V({c} + h) − V({c}))/h. V({c} + h) − V({c}) = ({ANS} + {a}h)h, so the rate is {ANS} litres per minute.",
+        "uz": "t = {c} dagi tezlik V′({c}), yaʼni (V({c} + h) − V({c}))/h ning limiti. V({c} + h) − V({c}) = ({ANS} + {a}h)h, demak tezlik daqiqasiga {ANS} litr.",
+        "ru": "Скорость в момент t = {c} — это V′({c}), предел (V({c} + h) − V({c}))/h. V({c} + h) − V({c}) = ({ANS} + {a}h)h, поэтому скорость равна {ANS} л/мин."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a003",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "power_rule",
+      "family": {
+        "template": "f(x) = {a}√x + {b}x. What is f′({s})?",
+        "params": {
+          "k": {
+            "values": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "m": {
+            "min": 1,
+            "max": 6
+          },
+          "b": {
+            "min": 2,
+            "max": 9
+          }
+        },
+        "derived": {
+          "a": "2*k*m",
+          "s": "k*k",
+          "k2": "2*k"
+        },
+        "constraints": [
+          "m + b != 2*m + b",
+          "m + b != k*k*m + b",
+          "m + b != m",
+          "2*m + b != k*k*m + b",
+          "2*m + b != m",
+          "k*k*m + b != m"
+        ],
+        "answer": "m + b",
+        "distractors": [
+          "2*m + b",
+          "k*k*m + b",
+          "m"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: exponent_slip | wrong_formula | wrong_formula (C1/error_rules.json).",
+        "relation": "X = ({a}*sqrt({s} + 0.000001) + {b}*({s} + 0.000001) - {a}*sqrt({s} - 0.000001) - {b}*({s} - 0.000001))/0.000002"
+      },
+      "page": "C19-APCA02-2",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = {a}√x + {b}x. What is f′({s})?",
+        "uz": "f(x) = {a}√x + {b}x. f′({s}) nechaga teng?",
+        "ru": "f(x) = {a}√x + {b}x. Найдите f′({s})."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "√x = x^(1/2), so (√x)′ = 1/(2√x). f′(x) = {a}/(2√x) + {b}, and √{s} = {k}: f′({s}) = {a}/{k2} + {b} = {ANS}.",
+        "uz": "√x = x^(1/2), demak (√x)′ = 1/(2√x). f′(x) = {a}/(2√x) + {b} va √{s} = {k}: f′({s}) = {a}/{k2} + {b} = {ANS}.",
+        "ru": "√x = x^(1/2), поэтому (√x)′ = 1/(2√x). f′(x) = {a}/(2√x) + {b}, а √{s} = {k}: f′({s}) = {a}/{k2} + {b} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.6,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p14-content",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C1-r3a004",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "chain_rule",
+      "family": {
+        "template": "g({c}) = {a}, g′({c}) = {m}, f′({a}) = {d} and f′({c}) = {e}. h(x) = f(g(x)). What is h′({c})?",
+        "params": {
+          "c": {
+            "min": 1,
+            "max": 3
+          },
+          "a": {
+            "min": 4,
+            "max": 8
+          },
+          "m": {
+            "min": 2,
+            "max": 6
+          },
+          "d": {
+            "min": 2,
+            "max": 9
+          },
+          "e": {
+            "min": 2,
+            "max": 9
+          }
+        },
+        "constraints": [
+          "d*m != d",
+          "d*m != e*m",
+          "d*m != d + m",
+          "d != e*m",
+          "d != d + m",
+          "e*m != d + m"
+        ],
+        "answer": "d*m",
+        "distractors": [
+          "d",
+          "e*m",
+          "d + m"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: chain_slip | wrong_formula | wrong_operation (C1/error_rules.json).",
+        "relation": "X/{m} = {d}"
+      },
+      "page": "C19-APCA03-1",
+      "lang": "en",
+      "stem": {
+        "en": "g({c}) = {a}, g′({c}) = {m}, f′({a}) = {d} and f′({c}) = {e}. h(x) = f(g(x)). What is h′({c})?",
+        "uz": "g({c}) = {a}, g′({c}) = {m}, f′({a}) = {d} va f′({c}) = {e}. h(x) = f(g(x)). h′({c}) nechaga teng?",
+        "ru": "g({c}) = {a}, g′({c}) = {m}, f′({a}) = {d} и f′({c}) = {e}. h(x) = f(g(x)). Найдите h′({c})."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Chain rule: h′(x) = f′(g(x)) · g′(x). So h′({c}) = f′(g({c})) · g′({c}) = f′({a}) · {m} = {d} · {m} = {ANS}.",
+        "uz": "Murakkab funksiya hosilasi: h′(x) = f′(g(x)) · g′(x). Demak h′({c}) = f′(g({c})) · g′({c}) = f′({a}) · {m} = {d} · {m} = {ANS}.",
+        "ru": "Производная сложной функции: h′(x) = f′(g(x)) · g′(x). Значит, h′({c}) = f′(g({c})) · g′({c}) = f′({a}) · {m} = {d} · {m} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.6,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a005",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "implicit_differentiation",
+      "family": {
+        "template": "The curve x² + y² = {c} has slope dy/dx = {s} at a point where y = {q}. What is x at that point?",
+        "params": {
+          "s": {
+            "values": [
+              -4,
+              -3,
+              -2,
+              2,
+              3,
+              4
+            ]
+          },
+          "q": {
+            "values": [
+              -6,
+              -5,
+              -4,
+              -3,
+              -2,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        },
+        "derived": {
+          "c": "s*s*q*q + q*q"
+        },
+        "constraints": [
+          "-s*q != s*q",
+          "-s*q != -s",
+          "-s*q != q",
+          "s*q != -s",
+          "s*q != q",
+          "-s != q"
+        ],
+        "answer": "-s*q",
+        "distractors": [
+          "s*q",
+          "-s",
+          "q"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | partial_answer | wrong_formula (C1/error_rules.json).",
+        "relation": "X^2 + {q}^2 = {c}; -X*{s}/{q} > 0"
+      },
+      "page": "C19-APCA03-2",
+      "lang": "en",
+      "stem": {
+        "en": "The curve x² + y² = {c} has slope dy/dx = {s} at a point where y = {q}. What is x at that point?",
+        "uz": "x² + y² = {c} egri chizigʻining y = {q} boʻlgan nuqtasida qiyalik dy/dx = {s}. Shu nuqtada x nechaga teng?",
+        "ru": "Кривая x² + y² = {c} в точке, где y = {q}, имеет наклон dy/dx = {s}. Чему равен x в этой точке?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Differentiate: 2x + 2y·y′ = 0, so y′ = −x/y and x = −y·y′ = −({q}) × ({s}) = {ANS}. Check: ({ANS})² + ({q})² = {c}.",
+        "uz": "Differensiallaymiz: 2x + 2y·y′ = 0, demak y′ = −x/y va x = −y·y′ = −({q}) × ({s}) = {ANS}. Tekshiruv: ({ANS})² + ({q})² = {c}.",
+        "ru": "Дифференцируем: 2x + 2y·y′ = 0, значит, y′ = −x/y и x = −y·y′ = −({q}) × ({s}) = {ANS}. Проверка: ({ANS})² + ({q})² = {c}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a006",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "inverse_derivative",
+      "family": {
+        "template": "f is differentiable, f({a}) = {b}, f′({a}) = {d} and f′({b}) = {e}. g is the inverse function of f. What is g′({b})?",
+        "params": {
+          "a": {
+            "min": 1,
+            "max": 5
+          },
+          "b": {
+            "min": 6,
+            "max": 15
+          },
+          "d": {
+            "min": 2,
+            "max": 9
+          },
+          "e": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "constraints": [
+          "e != d"
+        ],
+        "answer": "1/d",
+        "option_templates": [
+          "1/{d}",
+          "{d}",
+          "1/{e}",
+          "−1/{d}"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: inverse_slip | wrong_formula | sign_slip (C1/error_rules.json).",
+        "relation": "X*{d} = 1"
+      },
+      "page": "C19-APCA03-3",
+      "lang": "en",
+      "stem": {
+        "en": "f is differentiable, f({a}) = {b}, f′({a}) = {d} and f′({b}) = {e}. g is the inverse function of f. What is g′({b})?",
+        "uz": "f — differensiallanuvchi funksiya, f({a}) = {b}, f′({a}) = {d} va f′({b}) = {e}. g — f ning teskari funksiyasi. g′({b}) nechaga teng?",
+        "ru": "Функция f дифференцируема, f({a}) = {b}, f′({a}) = {d} и f′({b}) = {e}. g — функция, обратная к f. Чему равно g′({b})?"
+      },
+      "why": {
+        "en": "f({a}) = {b}, so g′({b}) = 1/f′({a}) = 1/{d}. Take f′ at {a}, not at {b}: f′({b}) = {e} is not needed.",
+        "uz": "f({a}) = {b}, demak g′({b}) = 1/f′({a}) = 1/{d}. f′ ni {b} da emas, {a} da oling: f′({b}) = {e} kerak emas.",
+        "ru": "f({a}) = {b}, поэтому g′({b}) = 1/f′({a}) = 1/{d}. Производную f берите в точке {a}, а не {b}: значение f′({b}) = {e} не нужно."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 1.7,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a007",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "related_rates",
+      "family": {
+        "template": "A cube of ice is melting: its edge gets shorter by {v} mm every minute. How fast, in mm³ per minute, is its volume shrinking at the moment the edge is {s} mm?",
+        "params": {
+          "v": {
+            "values": [
+              2,
+              3
+            ]
+          },
+          "s": {
+            "min": 10,
+            "max": 40
+          }
+        },
+        "constraints": [
+          "3*s*s*v != 3*s*s",
+          "3*s*s*v != 3*s*v",
+          "3*s*s*v != s*s*s",
+          "3*s*s != 3*s*v",
+          "3*s*s != s*s*s",
+          "3*s*v != s*s*s"
+        ],
+        "answer": "3*s*s*v",
+        "distractors": [
+          "3*s*s",
+          "3*s*v",
+          "s*s*s"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: chain_slip | exponent_slip | wrong_formula (C1/error_rules.json).",
+        "relation": "X = (({s} + {v}*0.000001)^3 - ({s} - {v}*0.000001)^3)/0.000002"
+      },
+      "page": "C19-APCA04-2",
+      "lang": "en",
+      "stem": {
+        "en": "A cube of ice is melting: its edge gets shorter by {v} mm every minute. How fast, in mm³ per minute, is its volume shrinking at the moment the edge is {s} mm?",
+        "uz": "Muz kubi erimoqda: uning qirrasi har daqiqada {v} mm ga qisqaradi. Qirra {s} mm boʻlgan paytda kubning hajmi daqiqasiga necha mm³ dan kamaymoqda?",
+        "ru": "Кубик льда тает: его ребро каждую минуту укорачивается на {v} мм. С какой скоростью (в мм³/мин) уменьшается объём кубика в тот момент, когда ребро равно {s} мм?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "V = s³, so dV/dt = 3s² · ds/dt. With s = {s} mm and ds/dt = −{v}: 3 × {s}² × {v} = {ANS} mm³ a minute.",
+        "uz": "V = s³, demak dV/dt = 3s² · ds/dt. s = {s} mm va ds/dt = −{v} da: 3 × {s}² × {v} = {ANS}, yaʼni daqiqasiga {ANS} mm³.",
+        "ru": "V = s³, поэтому dV/dt = 3s² · ds/dt. При s = {s} мм и ds/dt = −{v} объём уменьшается со скоростью 3 × {s}² × {v} = {ANS} мм³/мин."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a008",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "linear_approximation",
+      "family": {
+        "template": "A cube-shaped gift box has edges of {s} cm. Use the tangent line to V(x) = x³ at x = {s} to estimate the volume, in cm³, of such a box with edges of {n} cm.",
+        "params": {
+          "s": {
+            "values": [
+              10,
+              12,
+              15,
+              20
+            ]
+          },
+          "d": {
+            "values": [
+              -0.5,
+              -0.2,
+              0.1,
+              0.2,
+              0.3,
+              0.5
+            ]
+          }
+        },
+        "derived": {
+          "n": "s + d",
+          "V0": "s^3",
+          "m": "3*s*s"
+        },
+        "constraints": [
+          "s^3 + 3*s*s*d != s^3 + 3*s*d",
+          "s^3 + 3*s*s*d != 3*s*s*d",
+          "s^3 + 3*s*s*d != s^3 + s*s*d",
+          "s^3 + 3*s*d != 3*s*s*d",
+          "s^3 + 3*s*d != s^3 + s*s*d",
+          "3*s*s*d != s^3 + s*s*d"
+        ],
+        "answer": "s^3 + 3*s*s*d",
+        "distractors": [
+          "s^3 + 3*s*d",
+          "3*s*s*d",
+          "s^3 + s*s*d"
+        ],
+        "decimals": 1,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: exponent_slip | partial_answer | wrong_formula (C1/error_rules.json).",
+        "relation": "X = {s}^3 + ({n} - {s})*(({s} + 0.000001)^3 - ({s} - 0.000001)^3)/0.000002"
+      },
+      "page": "C19-APCA04-3",
+      "lang": "en",
+      "stem": {
+        "en": "A cube-shaped gift box has edges of {s} cm. Use the tangent line to V(x) = x³ at x = {s} to estimate the volume, in cm³, of such a box with edges of {n} cm.",
+        "uz": "Kub shaklidagi sovgʻa qutisining qirrasi {s} sm. V(x) = x³ grafigiga x = {s} nuqtada oʻtkazilgan urinmadan foydalanib, qirrasi {n} sm boʻlgan shunday quti hajmini (sm³ da) taxminan toping.",
+        "ru": "Подарочная коробка в форме куба имеет ребро {s} см. С помощью касательной к графику V(x) = x³ в точке x = {s} оцените объём (в см³) такой коробки с ребром {n} см."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "V({s}) = {V0} and V′(x) = 3x², so V′({s}) = {m}. V({n}) ≈ {V0} + {m} × ({d}) = {ANS} cm³.",
+        "uz": "V({s}) = {V0} va V′(x) = 3x², demak V′({s}) = {m}. V({n}) ≈ {V0} + {m} × ({d}) = {ANS} sm³.",
+        "ru": "V({s}) = {V0} и V′(x) = 3x², поэтому V′({s}) = {m}. V({n}) ≈ {V0} + {m} × ({d}) = {ANS} см³."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a009",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "mean_value_theorem",
+      "family": {
+        "template": "A bus’s odometer shows {d1} km at {h1}:00 and {d2} km at {h2}:00. By the Mean Value Theorem, at some moment between these times its speed was exactly v km/h. What is v?",
+        "params": {
+          "h1": {
+            "values": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "T": {
+            "values": [
+              3,
+              4
+            ]
+          },
+          "v": {
+            "values": [
+              36,
+              40,
+              45,
+              48,
+              60,
+              72,
+              75,
+              80,
+              84,
+              90
+            ]
+          },
+          "d1": {
+            "min": 12000,
+            "max": 48000,
+            "step": 50
+          }
+        },
+        "derived": {
+          "h2": "h1 + T",
+          "D": "v*T",
+          "d2": "d1 + v*T"
+        },
+        "constraints": [
+          "(v*T) % (T + 1) == 0",
+          "(v*T) % (T - 1) == 0",
+          "v != v*T",
+          "v != v*T/(T + 1)",
+          "v != v*T/(T - 1)",
+          "v*T != v*T/(T + 1)",
+          "v*T != v*T/(T - 1)",
+          "v*T/(T + 1) != v*T/(T - 1)"
+        ],
+        "answer": "v",
+        "distractors": [
+          "v*T",
+          "v*T/(T + 1)",
+          "v*T/(T - 1)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | off_by_one | off_by_one (C1/error_rules.json).",
+        "relation": "X = ({d2} - {d1})/({h2} - {h1})"
+      },
+      "page": "C19-APCA05-1",
+      "lang": "en",
+      "stem": {
+        "en": "A bus’s odometer shows {d1} km at {h1}:00 and {d2} km at {h2}:00. By the Mean Value Theorem, at some moment between these times its speed was exactly v km/h. What is v?",
+        "uz": "Avtobusning odometri soat {h1}:00 da {d1} km, soat {h2}:00 da esa {d2} km ni koʻrsatdi. Oʻrta qiymat teoremasiga koʻra, shu vaqtlar orasidagi qaysidir paytda uning tezligi aynan v km/soat boʻlgan. v nechaga teng?",
+        "ru": "Одометр автобуса показывал {d1} км в {h1}:00 и {d2} км в {h2}:00. По теореме о среднем в какой-то момент этого промежутка времени скорость автобуса была ровно v км/ч. Найдите v."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "By the MVT the speed at some moment equals the average speed: ({d2} − {d1}) ÷ ({h2} − {h1}) = {D} ÷ {T} = {ANS} km/h.",
+        "uz": "Oʻrta qiymat teoremasiga koʻra, qaysidir paytdagi tezlik oʻrtacha tezlikka teng: ({d2} − {d1}) ÷ ({h2} − {h1}) = {D} ÷ {T} = {ANS} km/soat.",
+        "ru": "По теореме о среднем скорость в какой-то момент равна средней: ({d2} − {d1}) ÷ ({h2} − {h1}) = {D} ÷ {T} = {ANS} км/ч."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.2,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a010",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "increasing_decreasing",
+      "family": {
+        "template": "A toy drone takes off from a balcony. Its height t seconds later is h(t) = t³ − {s}t² + {u}t + {d} metres. How high, in metres, is the drone at its local maximum?",
+        "params": {
+          "p": {
+            "min": 1,
+            "max": 3
+          },
+          "w": {
+            "min": 1,
+            "max": 3
+          },
+          "d": {
+            "min": 5,
+            "max": 30
+          }
+        },
+        "derived": {
+          "q": "p + 2*w",
+          "s": "3*(p + w)",
+          "u": "3*p*(p + 2*w)",
+          "s2": "6*(p + w)",
+          "hp": "p^3 + 3*w*p*p + d",
+          "hq": "(p + 2*w)^3 - 3*w*(p + 2*w)^2 + d"
+        },
+        "constraints": [
+          "hq >= 2",
+          "hp != hq",
+          "hp != p",
+          "hp != d",
+          "hq != p",
+          "hq != d",
+          "p != d"
+        ],
+        "answer": "hp",
+        "distractors": [
+          "hq",
+          "p",
+          "d"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | partial_answer | wrong_formula (C1/error_rules.json).",
+        "relation": "X = (({s} - sqrt({s}^2 - 3*{u}))/3)^3 - {s}*(({s} - sqrt({s}^2 - 3*{u}))/3)^2 + {u}*(({s} - sqrt({s}^2 - 3*{u}))/3) + {d}"
+      },
+      "page": "C19-APCA05-2",
+      "lang": "en",
+      "stem": {
+        "en": "A toy drone takes off from a balcony. Its height t seconds later is h(t) = t³ − {s}t² + {u}t + {d} metres. How high, in metres, is the drone at its local maximum?",
+        "uz": "Oʻyinchoq dron balkondan havoga koʻtarildi. t soniyadan keyin uning balandligi h(t) = t³ − {s}t² + {u}t + {d} metr. Lokal maksimumda dron necha metr balandlikda boʻladi?",
+        "ru": "Игрушечный дрон взлетает с балкона. Через t секунд его высота равна h(t) = t³ − {s}t² + {u}t + {d} м. На какой высоте (в метрах) дрон находится в точке локального максимума?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "h′(t) = 3t² − {s2}t + {u} = 3(t − {p})(t − {q}). h′ goes from + to − at t = {p}: the local maximum. h({p}) = {ANS} m.",
+        "uz": "h′(t) = 3t² − {s2}t + {u} = 3(t − {p})(t − {q}). t = {p} da h′ ishorasi + dan − ga oʻtadi: bu lokal maksimum. h({p}) = {ANS} m.",
+        "ru": "h′(t) = 3t² − {s2}t + {u} = 3(t − {p})(t − {q}). При t = {p} производная h′ меняет знак с + на −: это локальный максимум. h({p}) = {ANS} м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.6,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a011",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "optimization",
+      "family": {
+        "template": "At the bazaar Dilnoza sells {n} melons a day at {p} thousand soʻm each. For every thousand soʻm she takes off the price, she sells {k} more melons a day. At what price, in thousand soʻm, is her daily revenue the greatest?",
+        "params": {
+          "p": {
+            "values": [
+              10,
+              12,
+              14,
+              16,
+              18,
+              20
+            ]
+          },
+          "k": {
+            "min": 2,
+            "max": 6
+          },
+          "c": {
+            "min": 1,
+            "max": 4
+          }
+        },
+        "derived": {
+          "n": "k*(p - 2*c)",
+          "nkp": "k*(p - 2*c) + k*p",
+          "k2": "2*k"
+        },
+        "constraints": [
+          "p - c != c",
+          "p - c != p",
+          "p - c != 2*(p - c)",
+          "c != p",
+          "c != 2*(p - c)",
+          "p != 2*(p - c)"
+        ],
+        "answer": "p - c",
+        "distractors": [
+          "c",
+          "p",
+          "2*(p - c)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | wrong_formula | exponent_slip (C1/error_rules.json).",
+        "relation": "{n} + {k}*{p} - 2*{k}*X = 0"
+      },
+      "page": "C19-APCA05-3",
+      "lang": "en",
+      "stem": {
+        "en": "At the bazaar Dilnoza sells {n} melons a day at {p} thousand soʻm each. For every thousand soʻm she takes off the price, she sells {k} more melons a day. At what price, in thousand soʻm, is her daily revenue the greatest?",
+        "uz": "Dilnoza bozorda kuniga {n} ta qovun sotadi, har birining narxi {p} ming soʻm. Narxni har ming soʻm arzonlashtirganda, u kuniga {k} ta qovun koʻproq sotadi. Qaysi narxda (ming soʻmda) uning kunlik tushumi eng katta boʻladi?",
+        "ru": "Дильноза продаёт на базаре {n|дыню|дыни|дынь} в день по {p} тыс. сум за штуку. За каждую тысячу сумов, на которую она снижает цену, она продаёт в день на {k|дыню|дыни|дынь} больше. При какой цене (в тыс. сум) её дневная выручка будет наибольшей?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "At a price of x, the revenue is R(x) = x({n} + {k}({p} − x)). R′(x) = {nkp} − {k2}x = 0, so x = {ANS} thousand soʻm.",
+        "uz": "x narxda tushum R(x) = x({n} + {k}({p} − x)). R′(x) = {nkp} − {k2}x = 0, demak x = {ANS} ming soʻm.",
+        "ru": "При цене x выручка R(x) = x({n} + {k}({p} − x)). R′(x) = {nkp} − {k2}x = 0, поэтому x = {ANS} тыс. сум."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.7,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a012",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "riemann_sums",
+      "family": {
+        "template": "A house’s power use P(t), in kilowatts, is read every {h} hours: P(0) = {p0}, P({h}) = {p1}, P({h2}) = {p2}, P({h3}) = {p3}. Use a right Riemann sum with these three intervals to estimate how many kilowatt-hours the house uses from t = 0 to t = {h3}.",
+        "params": {
+          "h": {
+            "values": [
+              2,
+              3,
+              4
+            ]
+          },
+          "p0": {
+            "min": 1,
+            "max": 9
+          },
+          "p1": {
+            "min": 1,
+            "max": 9
+          },
+          "p2": {
+            "min": 1,
+            "max": 9
+          },
+          "p3": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "derived": {
+          "h2": "2*h",
+          "h3": "3*h"
+        },
+        "constraints": [
+          "h*(p1 + p2 + p3) != h*(p0 + p1 + p2)",
+          "h*(p1 + p2 + p3) != p1 + p2 + p3",
+          "h*(p1 + p2 + p3) != h*(p0 + p1 + p2 + p3)",
+          "h*(p0 + p1 + p2) != p1 + p2 + p3",
+          "h*(p0 + p1 + p2) != h*(p0 + p1 + p2 + p3)",
+          "p1 + p2 + p3 != h*(p0 + p1 + p2 + p3)"
+        ],
+        "answer": "h*(p1 + p2 + p3)",
+        "distractors": [
+          "h*(p0 + p1 + p2)",
+          "p1 + p2 + p3",
+          "h*(p0 + p1 + p2 + p3)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | off_by_one (C1/error_rules.json).",
+        "relation": "X = {h}*{p1} + {h}*{p2} + {h}*{p3}"
+      },
+      "page": "C19-APCA06-1",
+      "lang": "en",
+      "stem": {
+        "en": "A house’s power use P(t), in kilowatts, is read every {h} hours: P(0) = {p0}, P({h}) = {p1}, P({h2}) = {p2}, P({h3}) = {p3}. Use a right Riemann sum with these three intervals to estimate how many kilowatt-hours the house uses from t = 0 to t = {h3}.",
+        "uz": "Uyning elektr isteʼmoli P(t) (kilovattda) har {h} soatda oʻlchanadi: P(0) = {p0}, P({h}) = {p1}, P({h2}) = {p2}, P({h3}) = {p3}. Shu uchta oraliq boʻyicha oʻng Riman yigʻindisi bilan uy t = 0 dan t = {h3} gacha necha kilovatt-soat sarflashini taxminan toping.",
+        "ru": "Мощность P(t), которую потребляет дом, измеряют в киловаттах каждые {h} ч: P(0) = {p0}, P({h}) = {p1}, P({h2}) = {p2}, P({h3}) = {p3}. С помощью правой суммы Римана по этим трём промежуткам оцените, сколько киловатт-часов израсходует дом от t = 0 до t = {h3}."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Right ends: P({h}), P({h2}), P({h3}). Energy ≈ {h} · ({p1} + {p2} + {p3}) = {ANS} kWh.",
+        "uz": "Oʻng uchlar: P({h}), P({h2}), P({h3}). Sarf ≈ {h} · ({p1} + {p2} + {p3}) = {ANS} kVt·soat.",
+        "ru": "Правые концы: P({h}), P({h2}), P({h3}). Расход ≈ {h} · ({p1} + {p2} + {p3}) = {ANS} кВт·ч."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a013",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "integral_rules",
+      "family": {
+        "template": "A sled slows down on flat snow. Its speed is v(t) = {k}/t metres per second for t ≥ 1 (t in seconds). How many metres does the sled travel from t = 1 to t = e^{n}?",
+        "params": {
+          "k": {
+            "min": 2,
+            "max": 9
+          },
+          "n": {
+            "min": 2,
+            "max": 5
+          }
+        },
+        "constraints": [
+          "k*n != k*(n - 1)",
+          "k*n != -k*n",
+          "k*n != n",
+          "k*(n - 1) != -k*n",
+          "k*(n - 1) != n",
+          "-k*n != n"
+        ],
+        "answer": "k*n",
+        "distractors": [
+          "k*(n - 1)",
+          "-k*n",
+          "n"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | sign_slip | partial_answer (C1/error_rules.json).",
+        "relation": "X = {k}*ln(exp({n})) - {k}*ln(1)"
+      },
+      "page": "C19-APCA06-3",
+      "lang": "en",
+      "stem": {
+        "en": "A sled slows down on flat snow. Its speed is v(t) = {k}/t metres per second for t ≥ 1 (t in seconds). How many metres does the sled travel from t = 1 to t = e^{n}?",
+        "uz": "Chana tekis qorda sekinlashmoqda. t ≥ 1 da uning tezligi v(t) = {k}/t m/s (t — soniyalarda). Chana t = 1 dan t = e^{n} gacha necha metr yoʻl bosadi?",
+        "ru": "Санки замедляются на ровном снегу. При t ≥ 1 их скорость v(t) = {k}/t м/с (t — в секундах). Сколько метров проедут санки от t = 1 до t = e^{n}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Distance = ∫ from 1 to e^{n} of {k}/t dt = {k} ln(e^{n}) − {k} ln 1 = {k} · {n} − 0 = {ANS} m.",
+        "uz": "Masofa = 1 dan e^{n} gacha ∫ {k}/t dt = {k} ln(e^{n}) − {k} ln 1 = {k} · {n} − 0 = {ANS} m.",
+        "ru": "Путь = ∫ от 1 до e^{n} ({k}/t) dt = {k} ln(e^{n}) − {k} ln 1 = {k} · {n} − 0 = {ANS} м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a014",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "differential_equations",
+      "family": {
+        "template": "A cup of tea cools in a room at {R} °C. Its temperature T, in °C, changes so that dT/dt = −(T − {R})/{m}, with t in minutes. How fast, in °C per minute, is the tea cooling at the moment it is {u} °C?",
+        "params": {
+          "R": {
+            "values": [
+              20,
+              24,
+              25
+            ]
+          },
+          "m": {
+            "values": [
+              4,
+              5,
+              8,
+              10
+            ]
+          },
+          "j": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "derived": {
+          "u": "R + m*j"
+        },
+        "constraints": [
+          "R % m == 0",
+          "R + m*j <= 95",
+          "(u - R)/m != u/m",
+          "(u - R)/m != u - R",
+          "(u - R)/m != (u + R)/m",
+          "u/m != u - R",
+          "u/m != (u + R)/m",
+          "u - R != (u + R)/m"
+        ],
+        "answer": "(u - R)/m",
+        "distractors": [
+          "u/m",
+          "u - R",
+          "(u + R)/m"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | sign_slip (C1/error_rules.json).",
+        "relation": "X + (-({u} - {R})/{m}) = 0"
+      },
+      "page": "C19-APCA07-1",
+      "lang": "en",
+      "stem": {
+        "en": "A cup of tea cools in a room at {R} °C. Its temperature T, in °C, changes so that dT/dt = −(T − {R})/{m}, with t in minutes. How fast, in °C per minute, is the tea cooling at the moment it is {u} °C?",
+        "uz": "Bir piyola choy harorati {R} °C boʻlgan xonada sovimoqda. Choyning harorati T (°C da) dT/dt = −(T − {R})/{m} qonuni boʻyicha oʻzgaradi, t — daqiqalarda. Choy {u} °C boʻlgan paytda u daqiqasiga necha gradusdan sovimoqda?",
+        "ru": "Чашка чая остывает в комнате, где температура {R} °C. Температура чая T (в °C) меняется так, что dT/dt = −(T − {R})/{m}, где t — время в минутах. С какой скоростью (в °C в минуту) остывает чай в тот момент, когда его температура {u} °C?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Put T = {u} into the equation: dT/dt = −({u} − {R})/{m} = −{ANS}. So the tea is cooling at {ANS} °C a minute.",
+        "uz": "Tenglamaga T = {u} ni qoʻyamiz: dT/dt = −({u} − {R})/{m} = −{ANS}. Demak choy daqiqasiga {ANS} °C dan sovimoqda.",
+        "ru": "Подставим T = {u} в уравнение: dT/dt = −({u} − {R})/{m} = −{ANS}. Значит, чай остывает на {ANS} °C в минуту."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.2,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a015",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "separation_of_variables",
+      "family": {
+        "template": "Water drains from a tank on the roof of a house. Its depth h, in cm, changes so that dh/dt = −{k}√h, with t in minutes. At t = 0 the depth is {h0} cm. After how many minutes is the tank empty?",
+        "params": {
+          "k": {
+            "min": 2,
+            "max": 5
+          },
+          "m": {
+            "min": 2,
+            "max": 8
+          }
+        },
+        "derived": {
+          "c": "k*m",
+          "h0": "k*k*m*m",
+          "c2": "2*k*m"
+        },
+        "constraints": [
+          "k*m <= 20",
+          "2*m != m",
+          "2*m != k*m*m",
+          "2*m != 2*k*k*m",
+          "m != k*m*m",
+          "m != 2*k*k*m",
+          "k*m*m != 2*k*k*m"
+        ],
+        "answer": "2*m",
+        "distractors": [
+          "m",
+          "k*m*m",
+          "2*k*k*m"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: exponent_slip | wrong_formula | inverse_slip (C1/error_rules.json).",
+        "relation": "2*sqrt({h0}) - {k}*X = 0"
+      },
+      "page": "C19-APCA07-2",
+      "lang": "en",
+      "stem": {
+        "en": "Water drains from a tank on the roof of a house. Its depth h, in cm, changes so that dh/dt = −{k}√h, with t in minutes. At t = 0 the depth is {h0} cm. After how many minutes is the tank empty?",
+        "uz": "Uy tomidagi bakdan suv oqib chiqmoqda. Suv chuqurligi h (sm da) dh/dt = −{k}√h qonuni boʻyicha oʻzgaradi, t — daqiqalarda. t = 0 da chuqurlik {h0} sm. Necha daqiqadan keyin bak boʻshaydi?",
+        "ru": "Из бака на крыше дома вытекает вода. Глубина воды h (в см) меняется так, что dh/dt = −{k}√h, где t — время в минутах. При t = 0 глубина равна {h0} см. Через сколько минут бак опустеет?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "dh/√h = −{k} dt, so 2√h = −{k}t + C, and h(0) = {h0} gives C = 2 × {c} = {c2}. The tank is empty when h = 0: {k}t = {c2}, t = {ANS}.",
+        "uz": "dh/√h = −{k} dt, demak 2√h = −{k}t + C, h(0) = {h0} shartidan C = 2 × {c} = {c2}. h = 0 boʻlganda bak boʻsh: {k}t = {c2}, t = {ANS}.",
+        "ru": "dh/√h = −{k} dt, поэтому 2√h = −{k}t + C, а h(0) = {h0} даёт C = 2 × {c} = {c2}. Бак пуст, когда h = 0: {k}t = {c2}, t = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.8,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a016",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "exponential_models",
+      "family": {
+        "template": "News spreads through a school so that dN/dt = kN: the number of pupils who have heard it doubles every {d} minutes. After {T} minutes, {N} pupils have heard it. How many pupils had heard it at t = 0?",
+        "params": {
+          "d": {
+            "values": [
+              5,
+              10,
+              15,
+              20
+            ]
+          },
+          "n": {
+            "min": 3,
+            "max": 5
+          },
+          "P0": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "derived": {
+          "T": "n*d",
+          "f": "2^n",
+          "N": "P0*2^n"
+        },
+        "constraints": [
+          "(P0*2^n) % n == 0",
+          "P0 != 2*P0",
+          "P0 != N/n",
+          "P0 != N/2",
+          "2*P0 != N/n",
+          "2*P0 != N/2",
+          "N/n != N/2"
+        ],
+        "answer": "P0",
+        "distractors": [
+          "2*P0",
+          "N/n",
+          "N/2"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: off_by_one | wrong_operation | partial_answer (C1/error_rules.json).",
+        "relation": "X*2^({T}/{d}) = {N}"
+      },
+      "page": "C19-APCA07-3",
+      "lang": "en",
+      "stem": {
+        "en": "News spreads through a school so that dN/dt = kN: the number of pupils who have heard it doubles every {d} minutes. After {T} minutes, {N} pupils have heard it. How many pupils had heard it at t = 0?",
+        "uz": "Maktabda yangilik dN/dt = kN qonuni boʻyicha tarqaladi: uni eshitgan oʻquvchilar soni har {d} daqiqada ikki baravar koʻpayadi. {T} daqiqadan keyin uni {N} nafar oʻquvchi eshitgan boʻladi. t = 0 da uni nechta oʻquvchi eshitgan edi?",
+        "ru": "Новость распространяется по школе так, что dN/dt = kN: число учеников, которые её слышали, удваивается каждые {d} мин. Через {T} мин её знают уже {N|ученик|ученика|учеников}. Сколько учеников знали её при t = 0?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{T} minutes are {T}/{d} = {n} doubling times, so N = N₀ · 2^{n}. N₀ = {N} ÷ {f} = {ANS}.",
+        "uz": "{T} daqiqa — bu {T}/{d} = {n} ta ikkilanish davri, demak N = N₀ · 2^{n}. N₀ = {N} ÷ {f} = {ANS}.",
+        "ru": "{T} мин — это {T}/{d} = {n|удвоение|удвоения|удвоений}, значит, N = N₀ · 2^{n}. N₀ = {N} ÷ {f} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a017",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "area_between_curves",
+      "family": {
+        "template": "On a park plan, in metres, a lawn is the region between the curves y = {a} − {k}x² and y = {k}x² − {b}. What is the area of the lawn, in m²?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                5,
+                3
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                6,
+                2
+              ]
+            ]
+          },
+          "b": {
+            "min": 1,
+            "max": 20
+          }
+        },
+        "derived": {
+          "k": "t[0]",
+          "r": "t[1]",
+          "S": "2*t[0]*t[1]*t[1]",
+          "a": "2*t[0]*t[1]*t[1] - b",
+          "r2": "t[1]*t[1]",
+          "k2": "2*t[0]"
+        },
+        "constraints": [
+          "a > 0",
+          "8*k*r^3/3 != 4*k*r^3/3",
+          "8*k*r^3/3 != -8*k*r^3/3",
+          "8*k*r^3/3 != 4*k*r^3",
+          "4*k*r^3/3 != -8*k*r^3/3",
+          "4*k*r^3/3 != 4*k*r^3",
+          "-8*k*r^3/3 != 4*k*r^3"
+        ],
+        "answer": "8*k*r^3/3",
+        "distractors": [
+          "4*k*r^3/3",
+          "-8*k*r^3/3",
+          "4*k*r^3"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | sign_slip | wrong_formula (C1/error_rules.json).",
+        "relation": "X = 2*sqrt(({a} + {b})/(2*{k}))/6*(({a} + {b} - 2*{k}*({a} + {b})/(2*{k})) + 4*({a} + {b}) + ({a} + {b} - 2*{k}*({a} + {b})/(2*{k})))"
+      },
+      "page": "C19-APCA08-2",
+      "lang": "en",
+      "stem": {
+        "en": "On a park plan, in metres, a lawn is the region between the curves y = {a} − {k}x² and y = {k}x² − {b}. What is the area of the lawn, in m²?",
+        "uz": "Bogʻ rejasida (metrlarda) maysazor y = {a} − {k}x² va y = {k}x² − {b} egri chiziqlar orasidagi sohadir. Maysazorning yuzi necha m²?",
+        "ru": "На плане парка (в метрах) газон — это область между кривыми y = {a} − {k}x² и y = {k}x² − {b}. Чему равна площадь газона в м²?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "They meet where {a} − {k}x² = {k}x² − {b}: x² = {r2}, x = ±{r}. Area = ∫ from −{r} to {r} of ({S} − {k2}x²) dx = {ANS} m².",
+        "uz": "Egri chiziqlar {a} − {k}x² = {k}x² − {b}, yaʼni x² = {r2}, x = ±{r} da kesishadi. Yuza = −{r} dan {r} gacha ∫ ({S} − {k2}x²) dx = {ANS} m².",
+        "ru": "Кривые пересекаются там, где {a} − {k}x² = {k}x² − {b}: x² = {r2}, x = ±{r}. Площадь = ∫ от −{r} до {r} ({S} − {k2}x²) dx = {ANS} м²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.7,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a018",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "volume",
+      "family": {
+        "template": "A carpenter turns a wooden lampshade on a lathe. Its wood is the region between y = {p}x and y = {q}x for 0 ≤ x ≤ {h}, turned about the x-axis (lengths in cm). The volume of the wood is kπ cm³. What is k?",
+        "params": {
+          "p": {
+            "min": 3,
+            "max": 6
+          },
+          "q": {
+            "min": 2,
+            "max": 5
+          },
+          "h": {
+            "values": [
+              3,
+              6
+            ]
+          }
+        },
+        "derived": {
+          "pq": "p*p - q*q"
+        },
+        "constraints": [
+          "q < p",
+          "(p*p - q*q)*h^3/3 != (p - q)^2*h^3/3",
+          "(p*p - q*q)*h^3/3 != (p*p - q*q)*h^3",
+          "(p*p - q*q)*h^3/3 != p*p*h^3/3",
+          "(p - q)^2*h^3/3 != (p*p - q*q)*h^3",
+          "(p - q)^2*h^3/3 != p*p*h^3/3",
+          "(p*p - q*q)*h^3 != p*p*h^3/3"
+        ],
+        "answer": "(p*p - q*q)*h^3/3",
+        "distractors": [
+          "(p - q)^2*h^3/3",
+          "(p*p - q*q)*h^3",
+          "p*p*h^3/3"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: square_slip | exponent_slip | partial_answer (C1/error_rules.json).",
+        "relation": "X = {h}/6*(0 + 4*(({p}*{h}/2)^2 - ({q}*{h}/2)^2) + (({p}*{h})^2 - ({q}*{h})^2))"
+      },
+      "page": "C19-APCA08-3",
+      "lang": "en",
+      "stem": {
+        "en": "A carpenter turns a wooden lampshade on a lathe. Its wood is the region between y = {p}x and y = {q}x for 0 ≤ x ≤ {h}, turned about the x-axis (lengths in cm). The volume of the wood is kπ cm³. What is k?",
+        "uz": "Duradgor tokarlik dastgohida yogʻochdan abajur yasaydi. Uning yogʻochi 0 ≤ x ≤ {h} da y = {p}x va y = {q}x orasidagi sohaning x oʻqi atrofida aylanishidan hosil boʻladi (uzunliklar sm da). Yogʻoch hajmi kπ sm³. k nechaga teng?",
+        "ru": "Столяр вытачивает на токарном станке деревянный абажур. Древесина абажура — это тело, полученное вращением вокруг оси x области между y = {p}x и y = {q}x при 0 ≤ x ≤ {h} (длины в см). Объём древесины равен kπ см³. Найдите k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Each slice is a washer: A(x) = π(({p}x)² − ({q}x)²) = {pq}πx². V = π∫₀^{h} {pq}x² dx = {pq}π · {h}³/3 = {ANS}π, so k = {ANS}.",
+        "uz": "Har bir qatlam — halqa: A(x) = π(({p}x)² − ({q}x)²) = {pq}πx². V = π∫₀^{h} {pq}x² dx = {pq}π · {h}³/3 = {ANS}π, demak k = {ANS}.",
+        "ru": "Каждое сечение — кольцо: A(x) = π(({p}x)² − ({q}x)²) = {pq}πx². V = π∫₀^{h} {pq}x² dx = {pq}π · {h}³/3 = {ANS}π, значит, k = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.8,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a019",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "gcd_lcm",
+      "family": {
+        "template": "Bobur has football training every {p} days and chess club every {q} days. Today he has both. In the {N} days after today, how many times will both fall on the same day again?",
+        "params": {
+          "p": {
+            "min": 2,
+            "max": 10
+          },
+          "q": {
+            "min": 3,
+            "max": 12
+          },
+          "r": {
+            "min": 2,
+            "max": 5
+          }
+        },
+        "derived": {
+          "L": "lcm(p, q)",
+          "N": "lcm(p, q)*r"
+        },
+        "constraints": [
+          "p < q",
+          "gcd(p, q) > 1",
+          "q % p != 0",
+          "N <= 200",
+          "r != floor(N/(p*q))",
+          "r != r + 1",
+          "r != N/p + N/q",
+          "floor(N/(p*q)) != r + 1",
+          "floor(N/(p*q)) != N/p + N/q",
+          "r + 1 != N/p + N/q"
+        ],
+        "answer": "r",
+        "distractors": [
+          "floor(N/(p*q))",
+          "r + 1",
+          "N/p + N/q"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | off_by_one | wrong_operation (C1/error_rules.json).",
+        "relation": "X = {N}/lcm({p}, {q})"
+      },
+      "page": "C19-DTMC05-1",
+      "lang": "en",
+      "stem": {
+        "en": "Bobur has football training every {p} days and chess club every {q} days. Today he has both. In the {N} days after today, how many times will both fall on the same day again?",
+        "uz": "Bobur har {p} kunda futbol mashgʻulotiga, har {q} kunda esa shaxmat toʻgaragiga boradi. Bugun ikkalasi ham bor. Bugundan keyingi {N} kun ichida ular yana necha marta bir kunga toʻgʻri keladi?",
+        "ru": "У Бобура футбольная тренировка каждые {p|день|дня|дней}, а шахматный кружок — каждые {q|день|дня|дней}. Сегодня у него есть и то и другое. Сколько раз за {N|день|дня|дней}, начиная с завтрашнего, оба занятия снова совпадут?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Both fall on the same day every LCM({p}, {q}) = {L} days. In {N} days: {N} ÷ {L} = {ANS}.",
+        "uz": "Ikkalasi har EKUK({p}, {q}) = {L} kunda bir kunga toʻgʻri keladi. {N} kunda: {N} ÷ {L} = {ANS}.",
+        "ru": "Занятия совпадают каждые НОК({p}, {q}) = {L|день|дня|дней}. За {N|день|дня|дней}: {N} ÷ {L} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.6,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3a020",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "system_of_equations",
+      "family": {
+        "template": "In Grandma’s yard there are only chickens and rabbits: {H} heads and {F} legs in all. How many rabbits are there?",
+        "params": {
+          "c": {
+            "values": [
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              18,
+              20
+            ]
+          },
+          "r": {
+            "min": 2,
+            "max": 15
+          }
+        },
+        "derived": {
+          "H": "c + r",
+          "F": "2*c + 4*r",
+          "H2": "2*(c + r)",
+          "D": "2*r"
+        },
+        "constraints": [
+          "r != c",
+          "r != F/4",
+          "r != F - 2*H",
+          "c != F/4",
+          "c != F - 2*H",
+          "F/4 != F - 2*H"
+        ],
+        "answer": "r",
+        "distractors": [
+          "c",
+          "F/4",
+          "F - 2*H"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | wrong_formula | partial_answer (C1/error_rules.json).",
+        "relation": "2*({H} - X) + 4*X = {F}"
+      },
+      "page": "C19-DTMC07-1",
+      "lang": "en",
+      "stem": {
+        "en": "In Grandma’s yard there are only chickens and rabbits: {H} heads and {F} legs in all. How many rabbits are there?",
+        "uz": "Buvijonning hovlisida faqat tovuqlar va quyonlar bor: jami {H} ta bosh va {F} ta oyoq. Hovlida nechta quyon bor?",
+        "ru": "Во дворе у бабушки только куры и кролики: всего {H|голова|головы|голов} и {F|нога|ноги|ног}. Сколько там кроликов?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "x + y = {H} and 2x + 4y = {F} (x chickens, y rabbits). Take 2 × the first from the second: 2y = {F} − {H2} = {D}, so y = {ANS}.",
+        "uz": "x + y = {H} va 2x + 4y = {F} (x — tovuqlar, y — quyonlar). Ikkinchisidan birinchisining 2 baravarini ayiramiz: 2y = {F} − {H2} = {D}, demak y = {ANS}.",
+        "ru": "x + y = {H} и 2x + 4y = {F} (x — число кур, y — число кроликов). Вычтем из второго уравнения удвоенное первое: 2y = {F} − {H2} = {D}, значит, y = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-a",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

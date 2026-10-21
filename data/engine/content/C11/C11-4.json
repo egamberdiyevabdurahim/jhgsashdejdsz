@@ -1,0 +1,2768 @@
+{
+ "bank": "C11",
+ "batch": 4,
+ "kind": "admin_template",
+ "note": "Admin and registration templates (P5 spec §5.3 C11), batch 4: documents and applications abroad (passport, school transcript, notarised translation, apostille, a documents folder, recommenders, the school report, Common App, UCAS, CSS Profile, ISFAA, and visa basics for the US, the UK and other destinations). Same conventions as batch 1. Money: templates name official fees as facts for the family, but no step collects income, assets or amounts (D14 (5); spec §4.4 inputs); CSS Profile and ISFAA steps record only whether a form was submitted. Visa rules change often: every visa record keeps needs_verification on its policy facts and ends in a counselor checkpoint (planner.visa_paperwork).",
+ "items": [
+  {
+   "id": "C11-passport",
+   "template_id": "C11-passport",
+   "kind": "admin_template",
+   "category": "documents",
+   "workstream_kind": "admin",
+   "task_kind": "admin",
+   "task_type": "verify",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "DE",
+    "KR",
+    "TR",
+    "any_abroad"
+   ],
+   "anchor": {
+    "event": "first_test_or_deadline_needing_passport",
+    "milestone_ids": [
+     "m_sat1",
+     "m_visa"
+    ]
+   },
+   "rule_ids": [
+    "planner.visa_paperwork",
+    "planner.tests_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 120,
+    "due_days_before": 90,
+    "basis": "inference",
+    "note": {
+     "en": "Check the passport months before the first test that needs it: a new passport takes time and the test registration name must match it.",
+     "uz": "Pasportni u kerak boʻladigan birinchi testdan bir necha oy oldin tekshiring: yangi pasport olish vaqt talab qiladi, testga roʻyxatdan oʻtishdagi ism esa unga mos kelishi kerak.",
+     "ru": "Проверьте паспорт за несколько месяцев до первого теста, где он нужен: новый паспорт делается не сразу, а имя при регистрации на тест должно с ним совпадать."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "A child under 16 applies with a parent; travel abroad without a parent needs the parents' notarised permission.",
+    "uz": "16 yoshgacha boʻlgan bola ota-onasi bilan murojaat qiladi; ota-onasiz chet elga chiqish uchun ota-onaning notarial tasdiqlangan ruxsati kerak.",
+    "ru": "Ребёнок до 16 лет оформляет паспорт с родителем; для выезда за границу без родителей нужно нотариальное согласие родителей."
+   },
+   "title": {
+    "en": "Check your passport for travel abroad",
+    "uz": "Chet elga chiqish pasportingizni tekshiring",
+    "ru": "Проверьте заграничный паспорт"
+   },
+   "summary": {
+    "en": "Since 2021 you can leave Uzbekistan only with the biometric passport for travel abroad. Tests such as the SAT ask for a passport when you test in another country, and every visa needs one. Check that you have one and when it expires.",
+    "uz": "2021-yildan beri Oʻzbekistondan faqat chet elga chiqish uchun biometrik pasport bilan chiqish mumkin. SAT kabi testlar boshqa davlatda topshirilganda pasport talab qiladi, har qanday viza uchun ham u kerak. Pasportingiz borligini va muddati qachon tugashini tekshiring.",
+    "ru": "С 2021 года выехать из Узбекистана можно только с биометрическим заграничным паспортом. Тесты вроде SAT требуют паспорт при сдаче в другой стране, и он нужен для любой визы. Проверьте, есть ли он у вас и когда истекает."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-passport-s1",
+     "type": "verify",
+     "minutes": 5,
+     "offset_days": -120,
+     "title": {
+      "en": "Enter your passport's expiry date",
+      "uz": "Pasportingiz amal qilish muddatini kiriting",
+      "ru": "Внесите срок действия паспорта"
+     },
+     "instructions": {
+      "en": "Enter only the expiry date, not the passport number. If you have no passport for travel abroad, choose 'none'.",
+      "uz": "Faqat amal qilish muddatini kiriting, pasport raqamini emas. Chet elga chiqish pasportingiz boʻlmasa, «yoʻq» ni tanlang.",
+      "ru": "Внесите только дату окончания, без номера паспорта. Если заграничного паспорта нет, выберите «нет»."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "passport_status",
+        "type": "choice",
+        "options": [
+         "have",
+         "none"
+        ]
+       },
+       {
+        "key": "passport_expiry",
+        "type": "date",
+        "optional": true,
+        "plausibility": "after today and at most 10 years ahead"
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-passport-s2",
+     "type": "book",
+     "minutes": 30,
+     "offset_days": -100,
+     "when": {
+      "passport_expiry_before": "planned_study_end_plus_6_months_or_none"
+     },
+     "title": {
+      "en": "Apply for a new passport",
+      "uz": "Yangi pasportga ariza bering",
+      "ru": "Подайте заявление на новый паспорт"
+     },
+     "instructions": {
+      "en": "If you have none, or it expires before your planned studies end plus six months, apply for a new one with your parent at a public services centre, a migration office or on my.gov.uz. It takes about 10 working days, and a passport issued before age 25 is valid for 5 years.",
+      "uz": "Pasportingiz boʻlmasa yoki u rejalashtirilgan oʻqishingiz tugashidan olti oy oldin tugasa, ota-onangiz bilan Davlat xizmatlari markazi, migratsiya boʻlimi yoki my.gov.uz orqali yangisi uchun murojaat qiling. Bu taxminan 10 ish kuni oladi, 25 yoshgacha berilgan pasport esa 5 yil amal qiladi.",
+      "ru": "Если паспорта нет или он истекает раньше, чем через полгода после планируемого окончания учёбы, оформите новый вместе с родителем в центре госуслуг, миграционном отделе или на my.gov.uz. Это занимает около 10 рабочих дней, а паспорт, выданный до 25 лет, действует 5 лет."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "passport_applied",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "compulsory",
+     "claim": "From 1 Jan 2021 citizens of Uzbekistan can leave the country only with the biometric passport for travel abroad; children under 16 apply with a birth certificate or passport copy, and travel without a parent needs a parent's notarised permission.",
+     "url": "https://kun.uz/en/news/2020/12/18/uzbekistan-makes-use-of-international-passports-compulsory-for-those-going-abroad-starting-jan-1-2021",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "Kun.uz, 18 Dec 2020",
+     "needs_verification": true
+    },
+    {
+     "key": "sat_id",
+     "claim": "When testing in another country, the SAT requires a valid passport as ID.",
+     "url": "https://satsuite.collegeboard.org/digital/what-to-bring-do/id-requirements",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "procedure",
+     "claim": "Apply at a migration and citizenship office, a public services centre or on my.gov.uz (the face photo, and fingerprints from age 16, are taken at a data collection point); state fee 1 BHM from age 16 and 80 % of BHM under 16, with a discount online; issued within 10 working days (up to a month in some cases for ages 16-25); valid 2 years under age 1, 5 years from 1 to 25, 10 years from 25; a child's passport is handed to the parent.",
+     "url": "https://advice.uz/oz/document/2563",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "advice.uz, the Ministry of Justice's legal-information portal; basis: Presidential Resolution PQ-4079 of 26 Dec 2018",
+     "needs_verification": false
+    },
+    {
+     "key": "six_months",
+     "claim": "The 'expires within 6 months of the planned end' trigger is a design default, not a rule of any one country.",
+     "url": null,
+     "verified_at": null,
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "my_gov",
+     "url": "https://my.gov.uz",
+     "kind": "official",
+     "label": {
+      "en": "my.gov.uz (state services)",
+      "uz": "my.gov.uz (davlat xizmatlari)",
+      "ru": "my.gov.uz (госуслуги)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Before applying, check on my.gov.uz or with the migration service how to apply for a passport for travel abroad, the fee and how long it takes.",
+    "uz": "Ariza berishdan oldin my.gov.uz da yoki migratsiya xizmatida chet elga chiqish pasportiga qanday murojaat qilish, toʻlov va muddatni tekshiring.",
+    "ru": "Перед подачей проверьте на my.gov.uz или в миграционной службе порядок оформления заграничного паспорта, пошлину и сроки."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-transcript",
+   "template_id": "C11-transcript",
+   "kind": "admin_template",
+   "category": "documents",
+   "workstream_kind": "admin",
+   "task_kind": "admin",
+   "task_type": "contact",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "DE",
+    "KR",
+    "TR",
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "first_deadline",
+    "milestone_ids": [
+     "m_school_report"
+    ]
+   },
+   "rule_ids": [
+    "planner.school_report_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 84,
+    "due_days_before": 56,
+    "basis": "planner_rule",
+    "note": {
+     "en": "The planner asks for the school report and transcript at least 8 weeks before the first deadline.",
+     "uz": "Reja maktab hisoboti va baholar varaqasini birinchi muddatdan kamida 8 hafta oldin soʻraydi.",
+     "ru": "План требует школьный отчёт и выписку оценок минимум за 8 недель до первого срока."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Request your school transcript",
+    "uz": "Maktabdan baholar varaqasini soʻrang",
+    "ru": "Запросите в школе выписку оценок"
+   },
+   "summary": {
+    "en": "Universities abroad and private universities in Tashkent ask for your grades from the last school years on an official school document. Ask your school early: it needs the director's signature and the school stamp, and often a translation afterwards.",
+    "uz": "Chet el universitetlari va Toshkentdagi xususiy universitetlar soʻnggi oʻquv yillaridagi baholaringizni rasmiy maktab hujjatida soʻraydi. Maktabingizdan erta soʻrang: hujjatga direktor imzosi va maktab muhri kerak, keyin koʻpincha tarjima ham.",
+    "ru": "Зарубежные университеты и частные вузы Ташкента просят оценки за последние школьные годы на официальном документе школы. Обратитесь в школу заранее: нужны подпись директора и печать школы, а потом часто и перевод."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-transcript-s1",
+     "type": "verify",
+     "minutes": 15,
+     "offset_days": -84,
+     "title": {
+      "en": "List which grades each university wants",
+      "uz": "Har bir universitet qaysi baholarni soʻrashini yozing",
+      "ru": "Выпишите, какие оценки просит каждый университет"
+     },
+     "instructions": {
+      "en": "For each university, note which school years it wants (for example grades 9-11, or the current year so far) and whether it needs an English version. Paste the page links.",
+      "uz": "Har bir universitet uchun qaysi oʻquv yillari kerakligini (masalan, 9-11-sinflar yoki joriy yilning hozirgacha boʻlgan qismi) va inglizcha varianti kerakmi, yozing. Sahifa havolalarini qoʻying.",
+      "ru": "Для каждого университета запишите, за какие годы нужны оценки (например, 9-11 классы или текущий год на данный момент) и нужна ли английская версия. Вставьте ссылки."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "university_domain",
+       "commonapp.org",
+       "ucas.com"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-transcript-s2",
+     "type": "contact",
+     "minutes": 20,
+     "offset_days": -70,
+     "title": {
+      "en": "Ask the school office in person",
+      "uz": "Maktab devonxonasidan shaxsan soʻrang",
+      "ru": "Обратитесь в канцелярию школы лично"
+     },
+     "instructions": {
+      "en": "Ask the school office or deputy director for an official list of your grades for those years, signed by the director and stamped. Agree on a date to collect it.",
+      "uz": "Maktab devonxonasi yoki direktor oʻrinbosaridan oʻsha yillar boʻyicha baholaringizning direktor imzosi va muhr bilan tasdiqlangan rasmiy roʻyxatini soʻrang. Qachon olib ketishni kelishib oling.",
+      "ru": "Попросите в канцелярии или у заместителя директора официальный список оценок за эти годы с подписью директора и печатью. Договоритесь о дате получения."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "requested",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       },
+       {
+        "key": "collect_date",
+        "type": "date",
+        "optional": true
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-transcript-s3",
+     "type": "upload",
+     "minutes": 10,
+     "offset_days": -56,
+     "title": {
+      "en": "Scan it to your documents folder",
+      "uz": "Uni hujjatlar papkangizga skanerlang",
+      "ru": "Отсканируйте в папку документов"
+     },
+     "instructions": {
+      "en": "Scan the signed transcript to a clear PDF and keep the original flat. If a university wants it in English, start the translation task.",
+      "uz": "Imzolangan baholar varaqasini aniq PDF qilib skanerlang va aslini buklamay saqlang. Universitet uni inglizcha soʻrasa, tarjima vazifasini boshlang.",
+      "ru": "Отсканируйте подписанную выписку в чёткий PDF и храните оригинал не сгибая. Если университет просит английскую версию, начните задачу о переводе."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "scanned",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     },
+     "links_to": [
+      "C11-translation",
+      "C11-docfolder"
+     ]
+    }
+   ],
+   "facts": [
+    {
+     "key": "planner",
+     "claim": "Planner rule: school report and transcript requested at least 8 weeks before the first deadline.",
+     "url": null,
+     "verified_at": null,
+     "secondary": false,
+     "rule_id": "planner.school_report_before_deadline",
+     "needs_verification": false,
+     "is_policy": true,
+     "note": "design rule in src/engine/rules.ts, not an external fact"
+    },
+    {
+     "key": "ca_transcript",
+     "claim": "In the Common App, high school officials have direct access to your final high school transcript and record and are asked to upload it.",
+     "url": "https://www.commonapp.org/static/5f74048389905bbb88b70d4f71c73c85/Resource_TR_RecProcess_ENG_2025.06.25_1.pdf",
+     "verified_at": "2026-10-07",
+     "read": "pdf",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "grading",
+     "claim": "Uzbek schools grade on a five-point scale; how each university converts it is set by the university.",
+     "url": null,
+     "verified_at": null,
+     "secondary": false,
+     "ref": "seed_rules.json CP_UZ grading_scales (itself needs_verification)",
+     "needs_verification": true
+    }
+   ],
+   "official_links": [],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Ask each university how it reads a five-point Uzbek grade scale, or check its international admissions page.",
+    "uz": "Har bir universitetdan besh ballik Oʻzbekiston baholash tizimini qanday qabul qilishini soʻrang yoki uning xalqaro qabul sahifasini tekshiring.",
+    "ru": "Спросите каждый университет, как он читает пятибалльную шкалу Узбекистана, или посмотрите его страницу для иностранных абитуриентов."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-translation",
+   "template_id": "C11-translation",
+   "kind": "admin_template",
+   "category": "documents",
+   "workstream_kind": "admin",
+   "task_kind": "admin",
+   "task_type": "contact",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "DE",
+    "KR",
+    "TR",
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "first_document_upload_deadline",
+    "milestone_ids": [
+     "m_school_report"
+    ]
+   },
+   "rule_ids": [
+    "planner.school_report_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 42,
+    "due_days_before": 21,
+    "basis": "inference",
+    "note": {
+     "en": "Allow about three weeks for translation and the notary.",
+     "uz": "Tarjima va notarius uchun taxminan uch hafta vaqt ajrating.",
+     "ru": "Заложите около трёх недель на перевод и нотариуса."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "Translation and notarisation are paid services; a parent may need to come to the notary if the child is a minor.",
+    "uz": "Tarjima va notarial tasdiqlash pullik xizmat; bola voyaga yetmagan boʻlsa, notariusga ota-ona ham borishi kerak boʻlishi mumkin.",
+    "ru": "Перевод и нотариальное заверение платные; если ребёнок несовершеннолетний, к нотариусу может понадобиться прийти родителю."
+   },
+   "title": {
+    "en": "Get your documents translated and notarised",
+    "uz": "Hujjatlaringizni tarjima qildiring va notarial tasdiqlating",
+    "ru": "Переведите и заверьте документы у нотариуса"
+   },
+   "summary": {
+    "en": "When a university asks for an English version of your school certificate or transcript, a translator translates it and a notary certifies the translation or the translator's signature. Some universities, such as MDIS Tashkent, say so explicitly.",
+    "uz": "Universitet attestat yoki baholar varaqasining inglizcha variantini soʻrasa, tarjimon uni tarjima qiladi, notarius esa tarjimani yoki tarjimon imzosini tasdiqlaydi. Baʼzi universitetlar, masalan MDIS Tashkent, buni aniq yozadi.",
+    "ru": "Когда университет просит английскую версию аттестата или выписки, переводчик переводит документ, а нотариус заверяет перевод или подпись переводчика. Некоторые университеты, например MDIS Tashkent, пишут об этом прямо."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-translation-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -42,
+     "title": {
+      "en": "Check what each university wants translated",
+      "uz": "Har bir universitet nimani tarjima qilishni soʻrashini tekshiring",
+      "ru": "Проверьте, что каждый университет просит перевести"
+     },
+     "instructions": {
+      "en": "Note which documents need an English version and whether a notarised translation is required or a school-issued English version is enough. Paste the links.",
+      "uz": "Qaysi hujjatlarning inglizcha varianti kerakligini va notarial tasdiqlangan tarjima shartmi yoki maktab bergan inglizcha variant yetarlimi, yozing. Havolalarni qoʻying.",
+      "ru": "Запишите, для каких документов нужна английская версия и требуется ли нотариальный перевод или достаточно английской версии от школы. Вставьте ссылки."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "university_domain"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-translation-s2",
+     "type": "contact",
+     "minutes": 60,
+     "offset_days": -35,
+     "title": {
+      "en": "Order the translation and go to the notary",
+      "uz": "Tarjimaga buyurtma bering va notariusga boring",
+      "ru": "Закажите перевод и сходите к нотариусу"
+     },
+     "instructions": {
+      "en": "Take the originals to a translation office that works with a notary. Check every name, date and grade in the translation against the original before the notary certifies it: names must match your passport's Latin spelling.",
+      "uz": "Asl nusxalarni notarius bilan ishlaydigan tarjima idorasiga olib boring. Notarius tasdiqlashidan oldin tarjimadagi har bir ism, sana va bahoni asl nusxa bilan solishtiring: ismlar pasportingizdagi lotin yozuviga mos boʻlishi shart.",
+      "ru": "Отнесите оригиналы в бюро переводов, работающее с нотариусом. До заверения сверьте в переводе каждое имя, дату и оценку с оригиналом: имена должны совпадать с латинским написанием в паспорте."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "translated",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       },
+       {
+        "key": "names_checked",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-translation-s3",
+     "type": "upload",
+     "minutes": 10,
+     "offset_days": -21,
+     "title": {
+      "en": "Scan the certified translation",
+      "uz": "Tasdiqlangan tarjimani skanerlang",
+      "ru": "Отсканируйте заверенный перевод"
+     },
+     "instructions": {
+      "en": "Scan the original and the certified translation together into one PDF and save it in your documents folder.",
+      "uz": "Asl nusxa va tasdiqlangan tarjimani birga bitta PDF qilib skanerlang va hujjatlar papkangizga saqlang.",
+      "ru": "Отсканируйте оригинал и заверенный перевод вместе в один PDF и сохраните в папку документов."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "pdf_saved",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     },
+     "links_to": [
+      "C11-docfolder"
+     ]
+    }
+   ],
+   "facts": [
+    {
+     "key": "notary_actions",
+     "claim": "Notaries in Uzbekistan certify the correctness of a translation from one language to another, the authenticity of a translator's signature, and the correctness of copies of documents.",
+     "url": "https://gov.uz/oz/advice/701/document/1896",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "mdis_example",
+     "claim": "MDIS Tashkent asks for the school diploma and transcript translated into English and notarised if there is no English version.",
+     "url": "https://www.mdis.uz/en/menu/foundation-year",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "fee",
+     "claim": "Translation and notary fees were not collected.",
+     "url": null,
+     "verified_at": null,
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "notary_advice",
+     "url": "https://gov.uz/oz/advice/701/document/1896",
+     "kind": "official",
+     "label": {
+      "en": "Notarial actions (gov.uz)",
+      "uz": "Notarial harakatlar (gov.uz)",
+      "ru": "Нотариальные действия (gov.uz)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Ask the translation office for the price and the time before you leave the originals.",
+    "uz": "Asl nusxalarni qoldirishdan oldin tarjima idorasidan narx va muddatni soʻrang.",
+    "ru": "Перед тем как оставить оригиналы, узнайте в бюро цену и сроки."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-apostille",
+   "template_id": "C11-apostille",
+   "kind": "admin_template",
+   "category": "documents",
+   "workstream_kind": "admin",
+   "task_kind": "admin",
+   "task_type": "book",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "DE",
+    "KR",
+    "TR",
+    "any_abroad"
+   ],
+   "optional": true,
+   "anchor": {
+    "event": "document_needed_with_apostille",
+    "milestone_ids": [
+     "m_visa"
+    ]
+   },
+   "rule_ids": [
+    "planner.visa_paperwork"
+   ],
+   "lead_time": {
+    "start_days_before": 35,
+    "due_days_before": 21,
+    "basis": "official+inference",
+    "note": {
+     "en": "The service takes about 2 business days (up to 10 if signatures must be checked); start a month ahead so a refusal can be fixed.",
+     "uz": "Xizmat taxminan 2 ish kuni oladi (imzolarni tekshirish kerak boʻlsa 10 kungacha); rad etilsa tuzatishga ulgurish uchun bir oy oldin boshlang.",
+     "ru": "Услуга занимает около 2 рабочих дней (до 10, если нужна проверка подписей); начните за месяц, чтобы успеть исправить отказ."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "The state fee is 20 % of the base calculation amount (BHM).",
+    "uz": "Davlat boji bazaviy hisoblash miqdorining 20 foizi.",
+    "ru": "Госпошлина — 20 % базовой расчётной величины (БРВ)."
+   },
+   "title": {
+    "en": "Apostille your school certificate (only if asked)",
+    "uz": "Attestatingizga apostil qoʻydiring (faqat soʻralsa)",
+    "ru": "Поставьте апостиль на аттестат (только если просят)"
+   },
+   "summary": {
+    "en": "An apostille confirms that an Uzbek official document is genuine for use in another Hague Convention country. Do it only when a university, ministry or embassy asks for it; you can apply at a public services centre or online.",
+    "uz": "Apostil Oʻzbekistonda berilgan rasmiy hujjatning Gaaga konvensiyasiga aʼzo boshqa davlatda haqiqiyligini tasdiqlaydi. Uni faqat universitet, vazirlik yoki elchixona soʻraganda qiling; Davlat xizmatlari markazida yoki onlayn murojaat qilish mumkin.",
+    "ru": "Апостиль подтверждает подлинность официального документа Узбекистана для использования в другой стране Гаагской конвенции. Делайте его, только если просит университет, министерство или посольство; подать можно в центре госуслуг или онлайн."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-apostille-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -35,
+     "title": {
+      "en": "Confirm that an apostille is required",
+      "uz": "Apostil talab qilinishini aniqlang",
+      "ru": "Убедитесь, что апостиль требуется"
+     },
+     "instructions": {
+      "en": "Find where your university, its ministry or the embassy asks for an apostille, and on which document. Paste the link. If nobody asks, skip this task.",
+      "uz": "Universitetingiz, uning vazirligi yoki elchixona qayerda va qaysi hujjatga apostil soʻrashini toping. Havolani qoʻying. Hech kim soʻramasa, bu vazifani oʻtkazib yuboring.",
+      "ru": "Найдите, где университет, его министерство или посольство просит апостиль и на какой документ. Вставьте ссылку. Если никто не просит, пропустите задачу."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "university_domain",
+       "embassy_domain",
+       "gov_domain"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-apostille-s2",
+     "type": "book",
+     "minutes": 40,
+     "offset_days": -28,
+     "title": {
+      "en": "Apply for the apostille",
+      "uz": "Apostilga ariza bering",
+      "ru": "Подайте заявление на апостиль"
+     },
+     "instructions": {
+      "en": "Apply at a public services centre or through my.gov.uz with the original document, and pay the state fee. Record the date you applied.",
+      "uz": "Davlat xizmatlari markazida yoki my.gov.uz orqali asl hujjat bilan ariza bering va davlat bojini toʻlang. Ariza bergan sanangizni kiriting.",
+      "ru": "Подайте заявление в центре госуслуг или через my.gov.uz с оригиналом документа и оплатите пошлину. Отметьте дату подачи."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "applied_on",
+        "type": "date"
+       }
+      ]
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "service",
+     "claim": "Apostilles on education documents: apply at a public services centre or electronically; state fee 20 % of the base calculation amount; issued within two business days of submission; the fee is not refunded; after a refusal the applicant has 30 calendar days to resubmit.",
+     "url": "https://gov.uz/oz/advice/72/document/2620",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "authority_school",
+     "claim": "Documents of preschool, general secondary and out-of-school institutions are apostilled by the Ministry of Preschool and School Education; up to 10 business days if signatures or seals need checking.",
+     "url": "https://www.advice.uz/oz/document/2516",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "needs_verification": true
+    },
+    {
+     "key": "authority_hcch",
+     "claim": "Uzbekistan's Hague Convention list (updated 11 Oct 2024) names the State Testing Center for documents emanating from education and science authorities, which conflicts with the item above for school certificates.",
+     "url": "https://www.hcch.net/en/instruments/conventions/authorities1/details3/?aid=909",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "apostille_advice",
+     "url": "https://gov.uz/oz/advice/72/document/2620",
+     "kind": "official",
+     "label": {
+      "en": "Apostille on official documents (gov.uz)",
+      "uz": "Rasmiy hujjatlarga apostil qoʻyish (gov.uz)",
+      "ru": "Апостиль на официальные документы (gov.uz)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "At the public services centre, confirm which body apostilles a school certificate before you pay.",
+    "uz": "Toʻlashdan oldin Davlat xizmatlari markazida attestatga qaysi idora apostil qoʻyishini aniqlang.",
+    "ru": "До оплаты уточните в центре госуслуг, какой орган ставит апостиль на школьный аттестат."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-docfolder",
+   "template_id": "C11-docfolder",
+   "kind": "admin_template",
+   "category": "documents",
+   "workstream_kind": "admin",
+   "task_kind": "admin",
+   "task_type": "create",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "anchor": {
+    "event": "first_admin_task",
+    "milestone_ids": []
+   },
+   "rule_ids": [
+    "planner.school_report_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 0,
+    "due_days_after": 7,
+    "basis": "inference",
+    "note": {
+     "en": "Set up once, early; every later document task saves into it.",
+     "uz": "Bir marta, erta tayyorlang; keyingi har bir hujjat vazifasi unga saqlanadi.",
+     "ru": "Сделайте один раз и заранее; каждая следующая задача с документами сохраняет файлы туда."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Make one safe folder for your documents",
+    "uz": "Hujjatlaringiz uchun bitta xavfsiz papka yarating",
+    "ru": "Создайте одну надёжную папку для документов"
+   },
+   "summary": {
+    "en": "Applications ask for the same documents again and again. Keep clear PDFs in one private folder, named so you can find them in a minute, and never post them in group chats.",
+    "uz": "Arizalar bir xil hujjatlarni qayta-qayta soʻraydi. Aniq PDF fayllarni bitta shaxsiy papkada, bir daqiqada topa oladigan nom bilan saqlang va ularni hech qachon guruh chatlariga tashlamang.",
+    "ru": "Заявки снова и снова просят одни и те же документы. Храните чёткие PDF в одной личной папке под понятными именами, чтобы найти их за минуту, и никогда не выкладывайте их в групповые чаты."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-docfolder-s1",
+     "type": "create",
+     "minutes": 15,
+     "offset_days": 0,
+     "title": {
+      "en": "Create the folder",
+      "uz": "Papkani yarating",
+      "ru": "Создайте папку"
+     },
+     "instructions": {
+      "en": "Create a private folder in your cloud storage that only you and your parent can open. Add sub-folders: ID, school, tests, translations, applications.",
+      "uz": "Bulutli xotirangizda faqat siz va ota-onangiz ocha oladigan shaxsiy papka yarating. Ichiga papkalar qoʻshing: hujjatlar, maktab, testlar, tarjimalar, arizalar.",
+      "ru": "Создайте в облаке личную папку, которую открываете только вы и родитель. Добавьте подпапки: документы, школа, тесты, переводы, заявки."
+     },
+     "evidence": {
+      "level": "L0",
+      "method": "self_report"
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-docfolder-s2",
+     "type": "create",
+     "minutes": 20,
+     "offset_days": 3,
+     "title": {
+      "en": "Scan what you already have",
+      "uz": "Bor hujjatlaringizni skanerlang",
+      "ru": "Отсканируйте то, что уже есть"
+     },
+     "instructions": {
+      "en": "Scan what you have to PDF in good light and name each file clearly, for example 'School-certificate_2026.pdf'. Do not upload passport scans to this app: it never asks for them.",
+      "uz": "Bor hujjatlaringizni yaxshi yorugʻlikda PDF qilib skanerlang va har bir faylga aniq nom bering, masalan «Attestat_2026.pdf». Pasport skanerini bu ilovaga yuklamang: u buni hech qachon soʻramaydi.",
+      "ru": "Отсканируйте имеющиеся документы в PDF при хорошем свете и дайте каждому файлу понятное имя, например «Attestat_2026.pdf». Не загружайте скан паспорта в это приложение: оно его никогда не просит."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "scanned",
+        "type": "multi",
+        "options": [
+         "school_certificate",
+         "transcript",
+         "test_reports",
+         "photo",
+         "translations"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "facts": [],
+   "official_links": [],
+   "needs_verification": false,
+   "verify_task": null,
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-recs",
+   "template_id": "C11-recs",
+   "kind": "admin_template",
+   "category": "recommenders",
+   "workstream_kind": "admin",
+   "task_kind": "admin",
+   "task_type": "contact",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK"
+   ],
+   "anchor": {
+    "event": "first_deadline",
+    "milestone_ids": [
+     "m_recs"
+    ]
+   },
+   "rule_ids": [
+    "planner.recommenders_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 84,
+    "due_days_before": 70,
+    "basis": "planner_rule",
+    "note": {
+     "en": "The planner asks recommenders at least 10 weeks before the first deadline; Common App's own advice is at least three weeks, so ten weeks leaves room for a teacher who says no.",
+     "uz": "Reja tavsiyanoma yozuvchilarga birinchi muddatdan kamida 10 hafta oldin murojaat qiladi; Common Appʼning oʻzi kamida uch hafta tavsiya qiladi, oʻn hafta esa rad etgan oʻqituvchi oʻrniga boshqasini topishga vaqt qoldiradi.",
+     "ru": "План обращается к рекомендателям минимум за 10 недель до первого срока; сам Common App советует минимум три недели, а десять оставляют время найти замену, если учитель откажет."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Ask two teachers for recommendations",
+    "uz": "Ikki oʻqituvchidan tavsiyanoma soʻrang",
+    "ru": "Попросите двух учителей о рекомендациях"
+   },
+   "summary": {
+    "en": "Each university decides how many teacher recommendations it wants; many US universities ask for two. Ask teachers who taught you recently in an academic subject and know your work, in person first, then send the official invitation.",
+    "uz": "Har bir universitet nechta oʻqituvchi tavsiyanomasi kerakligini oʻzi belgilaydi; koʻplab AQSH universitetlari ikkitasini soʻraydi. Sizga yaqinda asosiy fandan dars bergan va ishingizni biladigan oʻqituvchilardan avval shaxsan soʻrang, soʻng rasmiy taklif yuboring.",
+    "ru": "Каждый университет сам решает, сколько рекомендаций от учителей ему нужно; многие университеты США просят две. Сначала лично попросите учителей, которые недавно вели у вас основной предмет и знают вашу работу, затем отправьте официальное приглашение."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-recs-s1",
+     "type": "reflect",
+     "minutes": 15,
+     "offset_days": -84,
+     "title": {
+      "en": "Choose two teachers",
+      "uz": "Ikki oʻqituvchini tanlang",
+      "ru": "Выберите двух учителей"
+     },
+     "instructions": {
+      "en": "Choose two teachers from grades 10-11 in academic subjects who can describe how you think and work, not only your grades. Note one backup.",
+      "uz": "10-11-sinflarda asosiy fanlardan dars bergan, faqat baholaringizni emas, qanday fikrlashingiz va ishlashingizni tasvirlab bera oladigan ikki oʻqituvchini tanlang. Bitta zaxira oʻqituvchini ham yozib qoʻying.",
+      "ru": "Выберите двух учителей основных предметов 10-11 классов, которые могут описать, как вы думаете и работаете, а не только оценки. Запишите одного запасного."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "teacher_subjects",
+        "type": "list",
+        "max_items": 3,
+        "item_type": "text",
+        "max_chars": 40
+       }
+      ]
+     },
+     "privacy": {
+      "en": "Enter subjects only, not teachers' names.",
+      "uz": "Oʻqituvchilarning ismini emas, faqat fanlarni kiriting.",
+      "ru": "Указывайте только предметы, без имён учителей."
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-recs-s2",
+     "type": "contact",
+     "minutes": 20,
+     "offset_days": -77,
+     "title": {
+      "en": "Ask in person",
+      "uz": "Shaxsan soʻrang",
+      "ru": "Попросите лично"
+     },
+     "instructions": {
+      "en": "Ask each teacher in person whether they are willing to write a recommendation in English (or with a translation) and tell them your first deadline.",
+      "uz": "Har bir oʻqituvchidan ingliz tilida (yoki tarjimasi bilan) tavsiyanoma yozishga rozimi, shaxsan soʻrang va birinchi muddatingizni ayting.",
+      "ru": "Лично спросите каждого учителя, готов ли он написать рекомендацию на английском (или с переводом), и назовите первый срок."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "agreed",
+        "type": "number",
+        "min": 0,
+        "max": 3,
+        "step": 1
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-recs-s3",
+     "type": "create",
+     "minutes": 40,
+     "offset_days": -75,
+     "title": {
+      "en": "Give each teacher a one-page brief",
+      "uz": "Har bir oʻqituvchiga bir sahifalik maʼlumot bering",
+      "ru": "Дайте каждому учителю справку на одну страницу"
+     },
+     "instructions": {
+      "en": "Write a short brief for each teacher: what you did in their class that you are proud of, one moment they might remember, and what you plan to study. Keep it factual.",
+      "uz": "Har bir oʻqituvchi uchun qisqa maʼlumot yozing: uning darsida nimadan faxrlanasiz, u eslashi mumkin boʻlgan bitta voqea va nimani oʻqimoqchisiz. Faqat faktlarni yozing.",
+      "ru": "Напишите каждому учителю короткую справку: чем вы гордитесь на его уроках, один момент, который он может вспомнить, и что вы хотите изучать. Только факты."
+     },
+     "evidence": {
+      "level": "L3",
+      "method": "artifact",
+      "check": {
+       "min_words": 120,
+       "max_words": 400,
+       "not_prompt": true
+      }
+     }
+    },
+    {
+     "n": 4,
+     "id": "C11-recs-s4",
+     "type": "submit",
+     "minutes": 15,
+     "offset_days": -70,
+     "title": {
+      "en": "Send the official invitations",
+      "uz": "Rasmiy taklifnomalarni yuboring",
+      "ru": "Отправьте официальные приглашения"
+     },
+     "instructions": {
+      "en": "Invite each teacher through the application system (Common App or your university's portal) with the email they gave you, and tell them it was sent.",
+      "uz": "Har bir oʻqituvchini ariza tizimi (Common App yoki universitetingiz portali) orqali u bergan elektron pochtaga taklif qiling va yuborilganini ayting.",
+      "ru": "Пригласите каждого учителя через систему подачи (Common App или портал университета) на почту, которую он дал, и предупредите, что приглашение отправлено."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "invited",
+        "type": "number",
+        "min": 0,
+        "max": 3,
+        "step": 1
+       }
+      ],
+      "later": {
+       "level": "L6",
+       "event": "recommender_submitted"
+      }
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "per_college",
+     "claim": "Each Common App member decides how many teacher evaluations it requires and allows; one school counselor can be invited; other recommenders (coaches, employers, etc.) are allowed only where the college says so.",
+     "url": "https://membersupport.commonapp.org/s/article/Recommendation-Forms",
+     "verified_at": "2026-10-07",
+     "read": "search_snippet",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "ask_first",
+     "claim": "Common App advises asking a recommender in person (email is acceptable) before inviting them, at least three weeks before a deadline.",
+     "url": "https://www.commonapp.org/static/5f74048389905bbb88b70d4f71c73c85/Resource_TR_RecProcess_ENG_2025.06.25_1.pdf",
+     "verified_at": "2026-10-07",
+     "read": "pdf",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "no_rollover",
+     "claim": "Recommender invitations do not roll over between Common App seasons.",
+     "url": "https://www.commonapp.org/files/webinar_decks/Whats-New-with-Common-App-First-Year-2026-2027.pdf",
+     "verified_at": "2026-10-07",
+     "read": "pdf",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "ucas_reference",
+     "claim": "A UCAS application can be submitted only with its reference.",
+     "url": "https://www.ucas.com/applying/applying-to-university/dates-and-deadlines-for-uni-applications",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ca_recs",
+     "url": "https://www.commonapp.org/static/5f74048389905bbb88b70d4f71c73c85/Resource_TR_RecProcess_ENG_2025.06.25_1.pdf",
+     "kind": "official",
+     "label": {
+      "en": "Common App: understanding the recommendation process",
+      "uz": "Common App: tavsiyanoma jarayoni",
+      "ru": "Common App: как устроены рекомендации"
+     }
+    }
+   ],
+   "needs_verification": false,
+   "verify_task": null,
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-schoolreport",
+   "template_id": "C11-schoolreport",
+   "kind": "admin_template",
+   "category": "recommenders",
+   "workstream_kind": "admin",
+   "task_kind": "admin",
+   "task_type": "contact",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "anchor": {
+    "event": "first_deadline",
+    "milestone_ids": [
+     "m_school_report"
+    ]
+   },
+   "rule_ids": [
+    "planner.school_report_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 84,
+    "due_days_before": 56,
+    "basis": "planner_rule",
+    "note": {
+     "en": "Most Uzbek schools have no college counselor, so agreeing who will act as one takes time.",
+     "uz": "Oʻzbekistondagi aksariyat maktablarda kollej maslahatchisi yoʻq, shuning uchun uning vazifasini kim bajarishini kelishish vaqt oladi.",
+     "ru": "В большинстве школ Узбекистана нет консультанта по поступлению, поэтому договориться, кто будет им, занимает время."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Arrange your school report",
+    "uz": "Maktab hisobotini (School Report) tashkil qiling",
+    "ru": "Организуйте школьный отчёт (School Report)"
+   },
+   "summary": {
+    "en": "US universities using Common App need a School Report and your transcript from a school official. Agree with your school who will do it (often a deputy director or your class teacher), and help them through the first steps.",
+    "uz": "Common Appʼdan foydalanadigan AQSH universitetlariga maktab rasmiysi tomonidan School Report va baholar varaqangiz kerak. Buni kim qilishini maktabingiz bilan kelishib oling (koʻpincha direktor oʻrinbosari yoki sinf rahbari) va unga dastlabki qadamlarda yordam bering.",
+    "ru": "Университетам США, работающим через Common App, нужны School Report и выписка оценок от официального лица школы. Договоритесь в школе, кто это сделает (часто заместитель директора или классный руководитель), и помогите ему с первыми шагами."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-schoolreport-s1",
+     "type": "contact",
+     "minutes": 20,
+     "offset_days": -84,
+     "title": {
+      "en": "Agree who acts as your counselor",
+      "uz": "Maslahatchi vazifasini kim bajarishini kelishing",
+      "ru": "Договоритесь, кто будет вашим консультантом"
+     },
+     "instructions": {
+      "en": "Ask the director or deputy director who can sign and upload your School Report and transcript in English. Record their role, not their name.",
+      "uz": "Direktor yoki direktor oʻrinbosaridan School Report va baholar varaqangizni ingliz tilida kim imzolab, yuklay olishini soʻrang. Ismini emas, lavozimini yozing.",
+      "ru": "Спросите директора или заместителя, кто может подписать и загрузить ваш School Report и выписку на английском. Запишите должность, а не имя."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "counselor_role",
+        "type": "choice",
+        "options": [
+         "director",
+         "deputy_director",
+         "class_teacher",
+         "other"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-schoolreport-s2",
+     "type": "contact",
+     "minutes": 30,
+     "offset_days": -70,
+     "title": {
+      "en": "Invite them and share what they need",
+      "uz": "Uni taklif qiling va kerakli narsalarni bering",
+      "ru": "Пригласите его и передайте нужное"
+     },
+     "instructions": {
+      "en": "Invite them as your counselor in Common App and give them your translated transcript and a one-page description of your school (size, grading scale, subjects), so they can upload the school profile.",
+      "uz": "Uni Common Appʼda maslahatchingiz sifatida taklif qiling va unga tarjima qilingan baholar varaqangizni hamda maktabingiz haqida bir sahifalik tavsifni (hajmi, baholash tizimi, fanlar) bering, shunda u maktab profilini yuklay oladi.",
+      "ru": "Пригласите его в Common App как консультанта и передайте переведённую выписку и описание школы на одну страницу (размер, шкала оценок, предметы), чтобы он мог загрузить профиль школы."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "counselor_invited",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ],
+      "later": {
+       "level": "L6",
+       "event": "school_report_submitted"
+      }
+     },
+     "checkpoint": {
+      "level": "L7",
+      "what": {
+       "en": "a Jamals counselor checks that the School Report and transcript arrived",
+       "uz": "Jamals maslahatchisi School Report va baholar varaqasi yetib kelganini tekshiradi",
+       "ru": "консультант Jamals проверяет, что School Report и выписка дошли"
+      }
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "school_report",
+     "claim": "The School Report is a mandatory form for the counselor or person responsible for documenting a student's academic progress; only one school counselor can be invited; the school report must be submitted before the counselor recommendation.",
+     "url": "https://membersupport.commonapp.org/s/article/Recommendation-Forms",
+     "verified_at": "2026-10-07",
+     "read": "search_snippet",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "school_profile",
+     "claim": "Common App's advisor resources include guidance on developing a School Profile.",
+     "url": "https://www.commonapp.org/files/webinar_decks/Whats-New-with-Common-App-First-Year-2026-2027.pdf",
+     "verified_at": "2026-10-07",
+     "read": "pdf",
+     "secondary": false,
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ca_advisors",
+     "url": "https://www.commonapp.org/counselors-and-recommenders/recommender-system/",
+     "kind": "official",
+     "label": {
+      "en": "Common App recommender system",
+      "uz": "Common App tavsiyanoma tizimi",
+      "ru": "Система рекомендаций Common App"
+     }
+    }
+   ],
+   "needs_verification": false,
+   "verify_task": null,
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-commonapp",
+   "template_id": "C11-commonapp",
+   "kind": "admin_template",
+   "category": "application_account",
+   "workstream_kind": "admin",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "anchor": {
+    "event": "us.first_deadline",
+    "milestone_ids": [
+     "m_list",
+     "m_essays"
+    ]
+   },
+   "rule_ids": [
+    "US",
+    "planner.final_list",
+    "planner.essays_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 120,
+    "due_days_before": 56,
+    "basis": "planner_rule+inference",
+    "note": {
+     "en": "Open the account any time (answers roll over); fill the profile by August of the final year, and have the college list fixed 8 weeks before the first deadline.",
+     "uz": "Akkauntni istalgan vaqtda oching (javoblar keyingi mavsumga oʻtadi); profilni oxirgi yilning avgustigacha toʻldiring, universitetlar roʻyxatini esa birinchi muddatdan 8 hafta oldin belgilang.",
+     "ru": "Аккаунт можно открыть в любое время (ответы переносятся); заполните профиль к августу выпускного года, а список вузов зафиксируйте за 8 недель до первого срока."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Set up your Common App",
+    "uz": "Common Appʼni sozlang",
+    "ru": "Настройте Common App"
+   },
+   "summary": {
+    "en": "The Common App sends one application to many US universities. The 2026-27 season opened on 1 August; you can create an account earlier and your answers and college list roll over, but college-specific answers, the FERPA release and recommender invitations do not.",
+    "uz": "Common App bitta arizani koʻplab AQSH universitetlariga yuboradi. 2026-27-yil mavsumi 1-avgustda ochildi; akkauntni oldinroq ochish mumkin, javoblaringiz va universitetlar roʻyxati keyingi mavsumga oʻtadi, lekin universitetga xos javoblar, FERPA roziligi va tavsiyanoma takliflari oʻtmaydi.",
+    "ru": "Common App отправляет одну заявку во многие университеты США. Сезон 2026-27 открылся 1 августа; аккаунт можно создать раньше, ответы и список вузов переносятся, но ответы для конкретных вузов, согласие FERPA и приглашения рекомендателям не переносятся."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-commonapp-s1",
+     "type": "book",
+     "minutes": 15,
+     "offset_days": -120,
+     "title": {
+      "en": "Create the account and verify your email",
+      "uz": "Akkaunt oching va elektron pochtangizni tasdiqlang",
+      "ru": "Создайте аккаунт и подтвердите почту"
+     },
+     "instructions": {
+      "en": "On commonapp.org, create a first-year account with your name exactly as in your passport, then verify your email address.",
+      "uz": "commonapp.org da ismingizni pasportdagidek aynan yozib, birinchi kurs abituriyenti akkauntini oching, soʻng elektron pochtangizni tasdiqlang.",
+      "ru": "На commonapp.org создайте аккаунт абитуриента первого курса на имя точно как в паспорте и подтвердите почту."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "ca_account",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-commonapp-s2",
+     "type": "submit",
+     "minutes": 60,
+     "offset_days": -100,
+     "title": {
+      "en": "Fill in Profile, Family, Education and Testing",
+      "uz": "Profile, Family, Education va Testing boʻlimlarini toʻldiring",
+      "ru": "Заполните разделы Profile, Family, Education и Testing"
+     },
+     "instructions": {
+      "en": "Fill in the four sections. For Education, describe your school and its five-point grading honestly; for Testing, report only scores you have.",
+      "uz": "Toʻrtta boʻlimni toʻldiring. Education boʻlimida maktabingiz va uning besh ballik baholash tizimini toʻgʻri tasvirlang; Testing boʻlimida faqat bor ballaringizni kiriting.",
+      "ru": "Заполните четыре раздела. В Education честно опишите школу и пятибалльную систему оценок; в Testing указывайте только имеющиеся баллы."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "sections_done",
+        "type": "multi",
+        "options": [
+         "profile",
+         "family",
+         "education",
+         "testing"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-commonapp-s3",
+     "type": "verify",
+     "minutes": 30,
+     "offset_days": -56,
+     "title": {
+      "en": "Add your colleges and read their requirements",
+      "uz": "Universitetlaringizni qoʻshing va talablarini oʻqing",
+      "ru": "Добавьте вузы и прочитайте их требования"
+     },
+     "instructions": {
+      "en": "Add the universities on your final list and open each one's requirements: deadlines, recommenders, writing supplements and whether it accepts the fee waiver for all students, US students only or no one.",
+      "uz": "Yakuniy roʻyxatingizdagi universitetlarni qoʻshing va har birining talablarini oching: muddatlar, tavsiyanomalar, qoʻshimcha insholar va toʻlovdan ozod qilishni barcha talabalar, faqat AQSH talabalari uchun qabul qiladimi yoki hech kim uchun emasmi.",
+      "ru": "Добавьте университеты из итогового списка и откройте требования каждого: сроки, рекомендации, дополнительные эссе и принимает ли он освобождение от сбора для всех, только для студентов из США или ни для кого."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "colleges_added",
+        "type": "number",
+        "min": 0,
+        "max": 20,
+        "step": 1
+       }
+      ]
+     },
+     "checkpoint": {
+      "level": "L7",
+      "what": {
+       "en": "a counselor confirms the final list (planner.final_list)",
+       "uz": "maslahatchi yakuniy roʻyxatni tasdiqlaydi (planner.final_list)",
+       "ru": "консультант подтверждает итоговый список (planner.final_list)"
+      }
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "launch",
+     "claim": "Common App launched the 2026-27 season on 1 August; students can create accounts any time; account rollover keeps answers in My Common Application, including the personal essay.",
+     "url": "https://www.commonapp.org/blog/common-app-opens-application-launch-2026-27-season/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "rollover",
+     "claim": "Rolls over: username and password, the college list, answers in My Common Application and advisor invitations. Does not roll over: edited or removed questions, direct admissions offers and scholarship matches, and My Colleges responses (college-specific questions, the FERPA release authorization, recommender invitations). Students must verify their email address at account creation.",
+     "url": "https://www.commonapp.org/files/webinar_decks/Whats-New-with-Common-App-First-Year-2026-2027.pdf",
+     "verified_at": "2026-10-07",
+     "read": "pdf",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "fee_waiver",
+     "claim": "In 2026-27, colleges that charge a fee show whether they accept the Common App fee waiver for all students, US students only or no students.",
+     "url": "https://www.commonapp.org/files/webinar_decks/Whats-New-with-Common-App-First-Year-2026-2027.pdf",
+     "verified_at": "2026-10-07",
+     "read": "pdf",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "activities",
+     "claim": "The Activities section is renamed 'Activities and experiences'; the position/leadership field becomes optional and the character limits do not change; the essay prompts are unchanged for 2026-27.",
+     "url": "https://www.commonapp.org/files/webinar_decks/Whats-New-with-Common-App-First-Year-2026-2027.pdf",
+     "verified_at": "2026-10-07",
+     "read": "pdf",
+     "secondary": false,
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ca",
+     "url": "https://www.commonapp.org",
+     "kind": "official",
+     "label": {
+      "en": "Common App",
+      "uz": "Common App",
+      "ru": "Common App"
+     }
+    }
+   ],
+   "needs_verification": false,
+   "verify_task": null,
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-ucas",
+   "template_id": "C11-ucas",
+   "kind": "admin_template",
+   "category": "application_account",
+   "workstream_kind": "admin",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UK"
+   ],
+   "anchor": {
+    "event": "uk.ucas_deadline",
+    "milestone_ids": [
+     "m_UK_UCAS_early_deadline_Oxfo",
+     "m_UK_UCAS_main_deadline"
+    ]
+   },
+   "rule_ids": [
+    "UK",
+    "planner.essays_before_deadline",
+    "planner.recommenders_before_deadline"
+   ],
+   "lead_time": {
+    "start_days_before": 70,
+    "due_days_before": 14,
+    "never_within_hours": 48,
+    "basis": "inference",
+    "note": {
+     "en": "Submit at least two weeks before your deadline: the reference has to be added before you can send the application.",
+     "uz": "Muddatingizdan kamida ikki hafta oldin yuboring: arizani yuborishdan oldin tavsiyanoma (reference) qoʻshilishi kerak.",
+     "ru": "Отправьте минимум за две недели до срока: до отправки к заявке должен быть добавлен reference."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "The UCAS fee for 2027 entry is £34.50 for up to five choices.",
+    "uz": "2027-yil qabuli uchun UCAS toʻlovi 5 tagacha tanlov uchun 34,50 funt sterling.",
+    "ru": "Сбор UCAS для поступления в 2027 году — £34,50 за до пяти выборов."
+   },
+   "title": {
+    "en": "Apply through UCAS",
+    "uz": "UCAS orqali ariza bering",
+    "ru": "Подайте заявку через UCAS"
+   },
+   "summary": {
+    "en": "UK universities take applications through UCAS: up to five choices, a personal statement of three answers (at least 350 characters each, 4,000 in all) and one reference. For 2027 entry the deadline is 15 October 2026 at 18:00 UK time for Oxford, Cambridge, medicine, dentistry and veterinary courses, and 13 January 2027 for most others.",
+    "uz": "Buyuk Britaniya universitetlari arizalarni UCAS orqali qabul qiladi: 5 tagacha tanlov, uchta javobdan iborat shaxsiy bayonot (har biri kamida 350 belgi, jami 4 000) va bitta tavsiyanoma. 2027-yil qabuli uchun Oksford, Kembrij, tibbiyot, stomatologiya va veterinariya kurslariga muddat 2026-yil 15-oktabr, Buyuk Britaniya vaqti bilan 18:00, boshqalarining aksariyatiga 2027-yil 13-yanvar.",
+    "ru": "Университеты Великобритании принимают заявки через UCAS: до пяти выборов, личное заявление из трёх ответов (не меньше 350 знаков каждый, всего до 4 000) и одна рекомендация. Для поступления в 2027 году срок для Оксфорда, Кембриджа, медицины, стоматологии и ветеринарии — 15 октября 2026 года в 18:00 по времени Великобритании, для большинства остальных — 13 января 2027 года."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-ucas-s1",
+     "type": "book",
+     "minutes": 20,
+     "offset_days": -70,
+     "title": {
+      "en": "Register in UCAS Hub",
+      "uz": "UCAS Hubʼda roʻyxatdan oʻting",
+      "ru": "Зарегистрируйтесь в UCAS Hub"
+     },
+     "instructions": {
+      "en": "Register in UCAS Hub with your name as in your passport and start the undergraduate application for your entry year.",
+      "uz": "UCAS Hubʼda ismingizni pasportdagidek yozib roʻyxatdan oʻting va qabul yilingiz uchun bakalavriat arizasini boshlang.",
+      "ru": "Зарегистрируйтесь в UCAS Hub на имя как в паспорте и начните заявку на бакалавриат для вашего года поступления."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "ucas_registered",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-ucas-s2",
+     "type": "verify",
+     "minutes": 20,
+     "offset_days": -56,
+     "title": {
+      "en": "Choose up to five courses",
+      "uz": "5 tagacha kursni tanlang",
+      "ru": "Выберите до пяти программ"
+     },
+     "instructions": {
+      "en": "Enter up to five courses. Check each course's entry requirements for international students and whether it has the October deadline.",
+      "uz": "5 tagacha kursni kiriting. Har bir kursning xalqaro talabalar uchun talablarini va unga oktabr muddati tegishlimi, tekshiring.",
+      "ru": "Укажите до пяти программ. Проверьте требования каждой для иностранных студентов и действует ли для неё октябрьский срок."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "courses",
+        "type": "number",
+        "min": 1,
+        "max": 5,
+        "step": 1
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-ucas-s3",
+     "type": "create",
+     "minutes": 30,
+     "offset_days": -28,
+     "title": {
+      "en": "Paste in your final personal statement",
+      "uz": "Yakuniy shaxsiy bayonotingizni joylashtiring",
+      "ru": "Вставьте финальное личное заявление"
+     },
+     "instructions": {
+      "en": "Paste your final answers to the three questions here first: each needs at least 350 characters and all three together at most 4,000. The essay tasks help you write them.",
+      "uz": "Avval uchta savolga yakuniy javoblaringizni shu yerga joylashtiring: har biri kamida 350 belgi, uchalasi birgalikda koʻpi bilan 4 000 belgi boʻlishi kerak. Insho vazifalari ularni yozishga yordam beradi.",
+      "ru": "Сначала вставьте сюда финальные ответы на три вопроса: в каждом не меньше 350 знаков, во всех трёх вместе не больше 4 000. Задачи по эссе помогут их написать."
+     },
+     "evidence": {
+      "level": "L3",
+      "method": "artifact",
+      "check": {
+       "parts": 3,
+       "min_chars_each": 350,
+       "max_chars_total": 4000,
+       "count_spaces": true,
+       "language": "en",
+       "not_prompt": true
+      }
+     },
+     "links_to": [
+      "C12"
+     ]
+    },
+    {
+     "n": 4,
+     "id": "C11-ucas-s4",
+     "type": "submit",
+     "minutes": 20,
+     "offset_days": -14,
+     "title": {
+      "en": "Pay and submit",
+      "uz": "Toʻlang va yuboring",
+      "ru": "Оплатите и отправьте"
+     },
+     "instructions": {
+      "en": "When your referee has added the reference, pay £34.50 and submit. Save the confirmation.",
+      "uz": "Tavsiyanoma yozuvchingiz referensni qoʻshgach, 34,50 funt toʻlang va yuboring. Tasdiqni saqlab qoʻying.",
+      "ru": "Когда рекомендатель добавит reference, оплатите £34,50 и отправьте заявку. Сохраните подтверждение."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the submission confirmation",
+       "uz": "yuborish tasdigʻining skrinshoti",
+       "ru": "скриншот подтверждения отправки"
+      },
+      "redact": {
+       "en": "Cover your card details, home address and date of birth.",
+       "uz": "Karta maʼlumotlari, uy manzili va tugʻilgan sanangizni yopib qoʻying.",
+       "ru": "Закройте данные карты, домашний адрес и дату рождения."
+      }
+     },
+     "checkpoint": {
+      "level": "L7",
+      "what": {
+       "en": "a counselor confirms the five choices before payment",
+       "uz": "maslahatchi toʻlovdan oldin beshta tanlovni tasdiqlaydi",
+       "ru": "консультант подтверждает пять выборов до оплаты"
+      }
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "open_2027",
+     "kind": "registration",
+     "label": {
+      "en": "Applications open, 2027 entry",
+      "uz": "Arizalar ochiladi, 2027-yil qabuli",
+      "ru": "Открытие заявок, поступление 2027"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "date": "2026-05-12",
+     "source": {
+      "url": "https://www.ucas.com/applying/applying-to-university/dates-and-deadlines-for-uni-applications",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "submit_from_2027",
+     "kind": "application",
+     "label": {
+      "en": "Completed applications can be sent, 2027 entry",
+      "uz": "Tayyor arizalarni yuborish mumkin, 2027-yil qabuli",
+      "ru": "Можно отправлять готовые заявки, поступление 2027"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "date": "2026-09-01",
+     "source": {
+      "url": "https://www.ucas.com/applying/applying-to-university/dates-and-deadlines-for-uni-applications",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "oct_2027",
+     "kind": "deadline",
+     "label": {
+      "en": "Oxford, Cambridge, medicine, dentistry, veterinary: 18:00 UK time (22:00 in Tashkent)",
+      "uz": "Oksford, Kembrij, tibbiyot, stomatologiya, veterinariya: Buyuk Britaniya vaqti bilan 18:00 (Toshkentda 22:00)",
+      "ru": "Оксфорд, Кембридж, медицина, стоматология, ветеринария: 18:00 по Великобритании (22:00 в Ташкенте)"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "date": "2026-10-15",
+     "hard": true,
+     "source": {
+      "url": "https://www.ucas.com/applying/applying-to-university/dates-and-deadlines-for-uni-applications",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false,
+      "ref": "Tashkent time derived: UK on summer time (UTC+1) on 15 Oct 2026"
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "jan_2027",
+     "kind": "deadline",
+     "label": {
+      "en": "Equal consideration date for most courses: 18:00 UK time (23:00 in Tashkent)",
+      "uz": "Aksariyat kurslar uchun teng koʻrib chiqish sanasi: Buyuk Britaniya vaqti bilan 18:00 (Toshkentda 23:00)",
+      "ru": "Дата равного рассмотрения для большинства программ: 18:00 по Великобритании (23:00 в Ташкенте)"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "date": "2027-01-13",
+     "hard": true,
+     "source": {
+      "url": "https://www.ucas.com/applying/applying-to-university/dates-and-deadlines-for-uni-applications",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false,
+      "ref": "Tashkent time derived: UK on GMT in January"
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "jun_2027",
+     "kind": "deadline",
+     "label": {
+      "en": "Last date before applications go to Clearing",
+      "uz": "Arizalar Clearingʼga oʻtishidan oldingi oxirgi sana",
+      "ru": "Последний день до перехода заявок в Clearing"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "date": "2027-06-30",
+     "source": {
+      "url": "https://www.ucas.com/applying/applying-to-university/dates-and-deadlines-for-uni-applications",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "cycle_2028",
+     "kind": "deadline",
+     "label": {
+      "en": "2028 entry dates",
+      "uz": "2028-yil qabuli sanalari",
+      "ru": "Даты поступления 2028"
+     },
+     "cycle": "2028",
+     "use": "plan",
+     "date": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "fee",
+     "value": {
+      "gbp": 34.5
+     },
+     "claim": "The 2027-cycle application fee is £34.50 for up to five choices (six for conservatoires).",
+     "url": "https://www.ucas.com/faqs/what-is-the-application-fee-for-the-2027-cycle",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "statement",
+     "claim": "From 2026 entry the personal statement is three questions (why this course; how qualifications and studies prepared you; what else you have done outside education), each at least 350 characters, 4,000 characters in total including spaces.",
+     "url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-your-personal-statement-for-2026-entry-onwards",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "reference",
+     "claim": "Completed applications can be submitted from 1 September and require the reference.",
+     "url": "https://www.ucas.com/applying/applying-to-university/dates-and-deadlines-for-uni-applications",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ucas_dates",
+     "url": "https://www.ucas.com/applying/applying-to-university/dates-and-deadlines-for-uni-applications",
+     "kind": "official",
+     "label": {
+      "en": "UCAS dates and deadlines",
+      "uz": "UCAS sanalari va muddatlari",
+      "ru": "Даты и сроки UCAS"
+     }
+    },
+    {
+     "id": "ucas_ps",
+     "url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-your-personal-statement-for-2026-entry-onwards",
+     "kind": "official",
+     "label": {
+      "en": "UCAS personal statement (2026 entry onwards)",
+      "uz": "UCAS shaxsiy bayonoti (2026-yildan)",
+      "ru": "Личное заявление UCAS (с 2026 года)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "For 2028 entry, check UCAS's dates page in May 2027.",
+    "uz": "2028-yil qabuli uchun 2027-yil mayida UCAS sanalar sahifasini tekshiring.",
+    "ru": "Для поступления в 2028 году проверьте страницу дат UCAS в мае 2027 года."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-css",
+   "template_id": "C11-css",
+   "kind": "admin_template",
+   "category": "aid",
+   "workstream_kind": "admin",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "anchor": {
+    "event": "aid.earliest_priority_date",
+    "milestone_ids": [
+     "m_aid_forms"
+    ]
+   },
+   "rule_ids": [
+    "planner.aid_forms"
+   ],
+   "lead_time": {
+    "start_days_before": 42,
+    "due_days_before": 14,
+    "basis": "official+planner_rule",
+    "note": {
+     "en": "College Board advises starting at least two weeks before the earliest priority date; the planner puts aid forms 2 weeks before the first deadline with a counselor.",
+     "uz": "College Board eng erta ustuvor sanadan kamida ikki hafta oldin boshlashni tavsiya qiladi; reja yordam shakllarini maslahatchi bilan birinchi muddatdan 2 hafta oldinga qoʻyadi.",
+     "ru": "College Board советует начинать минимум за две недели до самой ранней приоритетной даты; план ставит формы помощи за 2 недели до первого срока вместе с консультантом."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "The CSS Profile asks about family income, assets and expenses; a parent fills those parts. This app never asks for the amounts.",
+    "uz": "CSS Profile oila daromadi, mol-mulki va xarajatlari haqida soʻraydi; bu qismlarni ota-ona toʻldiradi. Bu ilova hech qachon summalarni soʻramaydi.",
+    "ru": "CSS Profile спрашивает о доходах, активах и расходах семьи; эти части заполняет родитель. Это приложение никогда не спрашивает суммы."
+   },
+   "title": {
+    "en": "Submit the CSS Profile for financial aid",
+    "uz": "Moliyaviy yordam uchun CSS Profileʼni yuboring",
+    "ru": "Отправьте CSS Profile для финансовой помощи"
+   },
+   "summary": {
+    "en": "Many US universities that give aid to international students ask for the College Board's CSS Profile. It costs $25 for the first university and $16 for each one after; each university sets its own deadline.",
+    "uz": "Xalqaro talabalarga yordam beradigan koʻplab AQSH universitetlari College Boardʼning CSS Profile shaklini soʻraydi. U birinchi universitet uchun 25 dollar, keyingi har biri uchun 16 dollar turadi; har bir universitet oʻz muddatini belgilaydi.",
+    "ru": "Многие университеты США, дающие помощь иностранцам, просят CSS Profile от College Board. Он стоит $25 за первый университет и $16 за каждый следующий; сроки каждый университет устанавливает сам."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-css-s1",
+     "type": "verify",
+     "minutes": 20,
+     "offset_days": -42,
+     "title": {
+      "en": "List which universities want the CSS Profile, and when",
+      "uz": "Qaysi universitetlar CSS Profileʼni qachon soʻrashini yozing",
+      "ru": "Выпишите, какие университеты и к какому сроку просят CSS Profile"
+     },
+     "instructions": {
+      "en": "On each university's financial-aid page for international students, note whether it wants the CSS Profile, the ISFAA or its own form, and the priority date. Paste the links.",
+      "uz": "Har bir universitetning xalqaro talabalar uchun moliyaviy yordam sahifasida CSS Profile, ISFAA yoki oʻz shaklini soʻrashini va ustuvor sanani yozing. Havolalarni qoʻying.",
+      "ru": "На странице финансовой помощи для иностранцев каждого университета отметьте, нужен ли CSS Profile, ISFAA или своя форма, и приоритетную дату. Вставьте ссылки."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "university_domain"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-css-s2",
+     "type": "submit",
+     "minutes": 120,
+     "offset_days": -21,
+     "title": {
+      "en": "Complete and submit it with your parent",
+      "uz": "Uni ota-onangiz bilan toʻldiring va yuboring",
+      "ru": "Заполните и отправьте вместе с родителем"
+     },
+     "instructions": {
+      "en": "Sign in with your College Board account on cssprofile.org, complete it with your parent and submit it to the universities on your list. Record only that it was submitted.",
+      "uz": "cssprofile.org da College Board akkauntingiz bilan kiring, ota-onangiz bilan toʻldiring va roʻyxatingizdagi universitetlarga yuboring. Faqat yuborilganini belgilang.",
+      "ru": "Войдите на cssprofile.org через аккаунт College Board, заполните вместе с родителем и отправьте в университеты из списка. Отметьте только факт отправки."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "css_submitted",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       },
+       {
+        "key": "css_schools",
+        "type": "number",
+        "min": 0,
+        "max": 20,
+        "step": 1
+       }
+      ]
+     },
+     "checkpoint": {
+      "level": "L7",
+      "what": {
+       "en": "a counselor checks the aid forms are complete (planner.aid_forms)",
+       "uz": "maslahatchi yordam shakllari toʻliqligini tekshiradi (planner.aid_forms)",
+       "ru": "консультант проверяет, что формы помощи заполнены (planner.aid_forms)"
+      }
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "fee",
+     "value": {
+      "usd_first": 25,
+      "usd_each_more": 16
+     },
+     "claim": "The CSS Profile costs $25 for the first institution and $16 for each additional one; payment by credit or debit card.",
+     "url": "https://cssprofile.collegeboard.org/help-center/what-cost-css-profile-and-what-payment-methods-are-accepted",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "timing",
+     "claim": "Each institution sets its own timeline; start the CSS Profile at least two weeks before the earliest priority date you need to meet.",
+     "url": "https://bigfuture.collegeboard.org/pay-for-college/get-help-paying-for-college/how-to-complete-the-css-profile",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "opens",
+     "claim": "The CSS Profile opens on 1 October for the following school year.",
+     "url": "https://allaccess.collegeboard.org/october-1-launch-css-profile-testing-lighter-application-feature",
+     "verified_at": "2026-10-07",
+     "read": "search_snippet",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "waiver_intl",
+     "claim": "The published fee waivers (family income up to $100,000, SAT fee-waiver eligibility) are described for domestic students; whether international students can get one was not confirmed.",
+     "url": "https://bigfuture.collegeboard.org/pay-for-college/get-help-paying-for-college/how-to-complete-the-css-profile",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "css",
+     "url": "https://cssprofile.collegeboard.org",
+     "kind": "official",
+     "label": {
+      "en": "CSS Profile",
+      "uz": "CSS Profile",
+      "ru": "CSS Profile"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "If the fee is a hardship, ask each university's aid office whether it waives the CSS Profile fee or accepts the ISFAA instead.",
+    "uz": "Agar toʻlov ogʻirlik qilsa, har bir universitetning moliyaviy yordam boʻlimidan CSS Profile toʻlovidan ozod qiladimi yoki oʻrniga ISFAAʼni qabul qiladimi, soʻrang.",
+    "ru": "Если сбор — трудность, спросите в отделе помощи каждого университета, освобождают ли от сбора CSS Profile или принимают вместо него ISFAA."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-isfaa",
+   "template_id": "C11-isfaa",
+   "kind": "admin_template",
+   "category": "aid",
+   "workstream_kind": "admin",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "optional": true,
+   "anchor": {
+    "event": "aid.earliest_priority_date",
+    "milestone_ids": [
+     "m_aid_forms"
+    ]
+   },
+   "rule_ids": [
+    "planner.aid_forms"
+   ],
+   "lead_time": {
+    "start_days_before": 42,
+    "due_days_before": 14,
+    "basis": "inference",
+    "note": {
+     "en": "Same timing as the CSS Profile; only for universities that ask for or accept the ISFAA.",
+     "uz": "Muddati CSS Profile bilan bir xil; faqat ISFAAʼni soʻraydigan yoki qabul qiladigan universitetlar uchun.",
+     "ru": "Сроки те же, что у CSS Profile; только для университетов, которые просят или принимают ISFAA."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "The ISFAA asks about family finances; a parent fills those parts. This app never asks for the amounts.",
+    "uz": "ISFAA oila moliyasi haqida soʻraydi; bu qismlarni ota-ona toʻldiradi. Bu ilova hech qachon summalarni soʻramaydi.",
+    "ru": "ISFAA спрашивает о финансах семьи; эти части заполняет родитель. Это приложение никогда не спрашивает суммы."
+   },
+   "title": {
+    "en": "Submit the ISFAA where a university uses it",
+    "uz": "Universitet foydalansa, ISFAAʼni yuboring",
+    "ru": "Отправьте ISFAA, если университет её использует"
+   },
+   "summary": {
+    "en": "The International Student Financial Aid Application (ISFAA) is a free form some US universities use for international applicants, often when the CSS Profile fee would be a hardship. Not every university accepts it: Brown, for example, does not.",
+    "uz": "Xalqaro talabaning moliyaviy yordam arizasi (ISFAA) baʼzi AQSH universitetlari xalqaro abituriyentlar uchun foydalanadigan bepul shakl, koʻpincha CSS Profile toʻlovi ogʻirlik qilganda. Uni har bir universitet ham qabul qilmaydi: masalan, Brown qabul qilmaydi.",
+    "ru": "International Student Financial Aid Application (ISFAA) — бесплатная форма, которую некоторые университеты США используют для иностранных абитуриентов, часто когда сбор за CSS Profile — трудность. Её принимают не все: например, Brown не принимает."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-isfaa-s1",
+     "type": "verify",
+     "minutes": 15,
+     "offset_days": -42,
+     "title": {
+      "en": "Check which of your universities accept it",
+      "uz": "Universitetlaringizdan qaysilari uni qabul qilishini tekshiring",
+      "ru": "Проверьте, какие из ваших университетов её принимают"
+     },
+     "instructions": {
+      "en": "On each university's aid page for international students, check whether it accepts the ISFAA and where to download it. Paste the links.",
+      "uz": "Har bir universitetning xalqaro talabalar uchun yordam sahifasida ISFAA qabul qilinishini va uni qayerdan yuklab olishni tekshiring. Havolalarni qoʻying.",
+      "ru": "На странице помощи для иностранцев каждого университета проверьте, принимается ли ISFAA и где её скачать. Вставьте ссылки."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "university_domain"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-isfaa-s2",
+     "type": "submit",
+     "minutes": 90,
+     "offset_days": -21,
+     "title": {
+      "en": "Fill it in with your parent and send it",
+      "uz": "Uni ota-onangiz bilan toʻldiring va yuboring",
+      "ru": "Заполните с родителем и отправьте"
+     },
+     "instructions": {
+      "en": "Download the ISFAA from the university's site, complete it with your parent and send it the way the university says. Record only that it was sent.",
+      "uz": "ISFAAʼni universitet saytidan yuklab oling, ota-onangiz bilan toʻldiring va universitet koʻrsatgan usulda yuboring. Faqat yuborilganini belgilang.",
+      "ru": "Скачайте ISFAA с сайта университета, заполните с родителем и отправьте так, как указывает университет. Отметьте только факт отправки."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "isfaa_sent",
+        "type": "number",
+        "min": 0,
+        "max": 20,
+        "step": 1
+       }
+      ]
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "what",
+     "claim": "International applicants for whom the CSS Profile fee is a serious hardship may submit the ISFAA instead; it has no fee, is downloaded from the institution's website, and is treated as equivalent to the CSS Profile (Dartmouth).",
+     "url": "https://admissions.dartmouth.edu/glossary-term/international-student-financial-aid-application-isfaa",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "not_everywhere",
+     "claim": "Brown's financial aid office does not accept the ISFAA or a paper CSS Profile in place of the electronic CSS Profile (first-year international applicants).",
+     "url": "https://finaid.brown.edu/apply/first-year-international",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    }
+   ],
+   "official_links": [],
+   "needs_verification": false,
+   "verify_task": null,
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-visaus",
+   "template_id": "C11-visaus",
+   "kind": "admin_template",
+   "category": "visa",
+   "workstream_kind": "admin",
+   "task_kind": "admin",
+   "task_type": "book",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "anchor": {
+    "event": "us.enrolment_confirmed",
+    "milestone_ids": [
+     "m_visa"
+    ]
+   },
+   "rule_ids": [
+    "planner.visa_paperwork"
+   ],
+   "lead_time": {
+    "start_days_before": 120,
+    "due_days_before": 60,
+    "basis": "planner_rule+inference",
+    "note": {
+     "en": "The planner puts visa paperwork by May of the graduation year, with a counselor; interview slots in Tashkent can be weeks away.",
+     "uz": "Reja viza hujjatlarini bitiruv yilining mayigacha, maslahatchi bilan rejalashtiradi; Toshkentda suhbat uchun navbat bir necha hafta keyin boʻlishi mumkin.",
+     "ru": "План ставит визовые документы до мая выпускного года, вместе с консультантом; запись на собеседование в Ташкенте может быть через несколько недель."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "Official fees: the SEVIS fee is $350 and the visa application fee is $185; a $250 visa integrity fee may also be charged when the visa is issued. The university's I-20 needs proof that the studies can be paid for.",
+    "uz": "Rasmiy toʻlovlar: SEVIS toʻlovi 350 dollar, viza arizasi toʻlovi 185 dollar; viza berilganda 250 dollarlik viza yaxlitligi yigʻimi (visa integrity fee) ham olinishi mumkin. Universitet I-20 berishi uchun oʻqish xarajatlarini qoplash mumkinligini isbotlash kerak.",
+    "ru": "Официальные сборы: SEVIS — $350, визовый сбор — $185; при выдаче визы может взиматься ещё сбор за целостность визы (visa integrity fee) $250. Для I-20 университету нужно подтверждение, что учёба будет оплачена."
+   },
+   "title": {
+    "en": "US student visa (F-1): the basic steps",
+    "uz": "AQSH talaba vizasi (F-1): asosiy qadamlar",
+    "ru": "Студенческая виза США (F-1): основные шаги"
+   },
+   "summary": {
+    "en": "After you accept a place, the university issues a Form I-20. You then pay the SEVIS fee, fill in the online DS-160, pay the visa fee and have an interview at the US Embassy in Tashkent. The rules change often, so your counselor checks each step with you.",
+    "uz": "Oʻrinni qabul qilganingizdan keyin universitet I-20 shaklini beradi. Soʻng SEVIS toʻlovini toʻlaysiz, onlayn DS-160 shaklini toʻldirasiz, viza toʻlovini toʻlaysiz va Toshkentdagi AQSH elchixonasida suhbatdan oʻtasiz. Qoidalar tez-tez oʻzgaradi, shuning uchun maslahatchingiz har bir qadamni siz bilan tekshiradi.",
+    "ru": "После того как вы примете место, университет выдаёт форму I-20. Затем вы платите сбор SEVIS, заполняете онлайн-анкету DS-160, оплачиваете визовый сбор и проходите собеседование в посольстве США в Ташкенте. Правила часто меняются, поэтому консультант проверяет каждый шаг вместе с вами."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-visaus-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -120,
+     "title": {
+      "en": "Receive and check your I-20",
+      "uz": "I-20 ni oling va tekshiring",
+      "ru": "Получите и проверьте I-20"
+     },
+     "instructions": {
+      "en": "When the I-20 arrives, check that your name matches your passport and that the programme and dates are right.",
+      "uz": "I-20 kelganda ismingiz pasportingizga mos kelishini, dastur va sanalar toʻgʻriligini tekshiring.",
+      "ru": "Когда придёт I-20, проверьте, что имя совпадает с паспортом, а программа и даты верны."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "i20_received",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-visaus-s2",
+     "type": "submit",
+     "minutes": 90,
+     "offset_days": -100,
+     "title": {
+      "en": "Pay SEVIS, fill in the DS-160, pay the visa fee",
+      "uz": "SEVIS toʻlovi, DS-160 shakli, viza toʻlovi",
+      "ru": "Оплатите SEVIS, заполните DS-160, оплатите визовый сбор"
+     },
+     "instructions": {
+      "en": "Pay the SEVIS I-901 fee at fmjfee.com, complete the DS-160 truthfully and pay the visa application fee. Keep every receipt.",
+      "uz": "SEVIS I-901 toʻlovini fmjfee.com da toʻlang, DS-160 shaklini haqqoniy toʻldiring va viza arizasi toʻlovini toʻlang. Har bir kvitansiyani saqlang.",
+      "ru": "Оплатите сбор SEVIS I-901 на fmjfee.com, правдиво заполните DS-160 и оплатите визовый сбор. Сохраняйте все квитанции."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "sevis_paid",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       },
+       {
+        "key": "ds160_done",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-visaus-s3",
+     "type": "book",
+     "minutes": 30,
+     "offset_days": -80,
+     "title": {
+      "en": "Book and prepare the interview",
+      "uz": "Suhbatga yoziling va tayyorlaning",
+      "ru": "Запишитесь и подготовьтесь к собеседованию"
+     },
+     "instructions": {
+      "en": "Book the interview at the US Embassy in Tashkent. Follow the embassy's current instructions, including any rule on social-media privacy settings, and practise explaining your study plan and your plans after graduation.",
+      "uz": "Toshkentdagi AQSH elchixonasida suhbatga yoziling. Elchixonaning joriy koʻrsatmalariga, jumladan ijtimoiy tarmoq sozlamalari boʻyicha qoidaga amal qiling hamda oʻqish rejangiz va bitirgandan keyingi rejalaringizni tushuntirishni mashq qiling.",
+      "ru": "Запишитесь на собеседование в посольстве США в Ташкенте. Следуйте текущим инструкциям посольства, включая правило о настройках приватности в соцсетях, и потренируйтесь объяснять план учёбы и планы после окончания."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "interview_date",
+        "type": "date"
+       }
+      ]
+     },
+     "checkpoint": {
+      "level": "L7",
+      "what": {
+       "en": "a counselor reviews your documents before the interview",
+       "uz": "maslahatchi suhbatdan oldin hujjatlaringizni koʻrib chiqadi",
+       "ru": "консультант проверяет документы до собеседования"
+      }
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "sevis",
+     "claim": "The I-901 SEVIS fee for F and M applicants is $350, paid at FMJfee.com after receiving the Form I-20.",
+     "url": "https://www.ice.gov/sevis/i901",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "mrv",
+     "claim": "The nonimmigrant visa application fee for non-petition-based visas, including student visas, is $185.",
+     "url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html",
+     "verified_at": "2026-10-07",
+     "read": "search_snippet",
+     "secondary": false,
+     "ref": "travel.state.gov answered 403 to a direct read",
+     "needs_verification": true
+    },
+    {
+     "key": "visa_integrity_fee",
+     "claim": "A $250 visa integrity fee per visa issued applies to nearly all nonimmigrant visa applicants, F-1 included; it is paid at the embassy when the visa is issued, some posts had begun charging it by May 2026, and it is described as refundable in theory.",
+     "url": "https://www.bu.edu/isso/2026/05/19/visa-integrity-fee/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "Boston University ISSO, 19 May 2026; travel.state.gov answered 403 to a direct read",
+     "needs_verification": true
+    },
+    {
+     "key": "social_media",
+     "claim": "The US Embassy in Tashkent asked F, M and J applicants to set their social media accounts to public (reported 21 Jun 2025).",
+     "url": "https://ad.kun.uz/en/news/2025/06/21/us-embassy-tightens-visa-checks-for-students-from-uzbekistan-requires-them-to-make-their-social-media-accounts-public",
+     "verified_at": "2026-10-07",
+     "read": "search_snippet",
+     "secondary": true,
+     "needs_verification": true
+    },
+    {
+     "key": "proclamation",
+     "claim": "Uzbekistan is not on the full or partial suspension lists of Presidential Proclamation 10998 (effective 1 Jan 2026), as listed by a US university's international office in April 2026; such lists change.",
+     "url": "https://www.utmb.edu/enrollmentservices/students-international/overview/news/2026/04/02/suspension-of-visa-issuance-to-foreign-nationals-to-protect-the-security-of-the-united-states",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "state_student",
+     "url": "https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html",
+     "kind": "official",
+     "label": {
+      "en": "US student visa (travel.state.gov)",
+      "uz": "AQSH talaba vizasi (travel.state.gov)",
+      "ru": "Студенческая виза США (travel.state.gov)"
+     }
+    },
+    {
+     "id": "fmjfee",
+     "url": "https://www.fmjfee.com",
+     "kind": "official",
+     "label": {
+      "en": "SEVIS I-901 fee payment",
+      "uz": "SEVIS I-901 toʻlovi",
+      "ru": "Оплата сбора SEVIS I-901"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Before paying anything, read the US Embassy Tashkent's current student-visa page with your counselor: fees, appointment rules and entry restrictions change.",
+    "uz": "Biror toʻlov qilishdan oldin Toshkentdagi AQSH elchixonasining talaba vizasi boʻyicha joriy sahifasini maslahatchingiz bilan oʻqing: toʻlovlar, navbat qoidalari va kirish cheklovlari oʻzgaradi.",
+    "ru": "Перед любой оплатой прочитайте с консультантом актуальную страницу посольства США в Ташкенте о студенческих визах: сборы, правила записи и ограничения на въезд меняются."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-visauk",
+   "template_id": "C11-visauk",
+   "kind": "admin_template",
+   "category": "visa",
+   "workstream_kind": "admin",
+   "task_kind": "admin",
+   "task_type": "book",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UK"
+   ],
+   "anchor": {
+    "event": "uk.course_start",
+    "milestone_ids": [
+     "m_visa"
+    ]
+   },
+   "rule_ids": [
+    "planner.visa_paperwork"
+   ],
+   "lead_time": {
+    "start_days_before": 180,
+    "due_days_before": 60,
+    "basis": "official+inference",
+    "note": {
+     "en": "You can apply from 6 months before the course starts; a decision usually takes about 3 weeks; the TB certificate is valid 6 months and the money must be held 28 days first.",
+     "uz": "Kurs boshlanishidan 6 oy oldin ariza berish mumkin; qaror odatda taxminan 3 hafta oladi; sil (TB) sertifikati 6 oy amal qiladi, pul esa oldindan 28 kun hisobda turishi kerak.",
+     "ru": "Подать можно за 6 месяцев до начала курса; решение обычно занимает около 3 недель; справка о туберкулёзе действует 6 месяцев, а деньги должны пролежать на счёте 28 дней."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "Official costs: the visa fee is £558 and the health surcharge is £776 a year; the family must show living-cost money held for 28 days in a row.",
+    "uz": "Rasmiy xarajatlar: viza toʻlovi 558 funt, sogʻliqni saqlash qoʻshimcha toʻlovi yiliga 776 funt; oila yashash xarajatlari uchun pul ketma-ket 28 kun hisobda turganini koʻrsatishi kerak.",
+    "ru": "Официальные расходы: визовый сбор £558, медицинский сбор £776 в год; семья должна показать деньги на проживание, пролежавшие на счёте 28 дней подряд."
+   },
+   "title": {
+    "en": "UK Student visa: the basic steps",
+    "uz": "Buyuk Britaniya talaba vizasi: asosiy qadamlar",
+    "ru": "Студенческая виза Великобритании: основные шаги"
+   },
+   "summary": {
+    "en": "With an unconditional offer your university gives you a CAS number. You need a TB test certificate from an approved clinic (applicants from Uzbekistan need one), proof of money held for 28 days, and parental consent if you are 16 or 17. You apply online up to 6 months before the course.",
+    "uz": "Shartsiz taklif olgach, universitetingiz sizga CAS raqamini beradi. Sizga tasdiqlangan klinikadan sil (TB) testi sertifikati (Oʻzbekistondan topshiruvchilarga kerak), 28 kun hisobda turgan pul hujjati va 16-17 yoshda boʻlsangiz ota-ona roziligi kerak. Ariza kursdan 6 oy oldingacha onlayn beriladi.",
+    "ru": "С безусловным предложением университет выдаёт номер CAS. Нужны справка о тесте на туберкулёз из одобренной клиники (для заявителей из Узбекистана обязательна), подтверждение денег, пролежавших 28 дней, и согласие родителей, если вам 16 или 17. Подать онлайн можно за 6 месяцев до курса."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-visauk-s1",
+     "type": "book",
+     "minutes": 30,
+     "offset_days": -150,
+     "title": {
+      "en": "Book the TB test",
+      "uz": "Sil (TB) testiga yoziling",
+      "ru": "Запишитесь на тест на туберкулёз"
+     },
+     "instructions": {
+      "en": "Book a chest X-ray at a UK-approved clinic in Uzbekistan from the GOV.UK list. Time it so the certificate, valid 6 months, still covers your application date.",
+      "uz": "GOV.UK roʻyxatidagi Oʻzbekistonda Buyuk Britaniya tasdiqlagan klinikada koʻkrak qafasi rentgeniga yoziling. 6 oy amal qiladigan sertifikat ariza sanangizni qamrab olishi uchun vaqtni moslang.",
+      "ru": "Запишитесь на рентген грудной клетки в одобренную Великобританией клинику в Узбекистане из списка GOV.UK. Рассчитайте время так, чтобы справка (действует 6 месяцев) покрывала дату подачи."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "tb_test_date",
+        "type": "date"
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-visauk-s2",
+     "type": "verify",
+     "minutes": 30,
+     "offset_days": -120,
+     "title": {
+      "en": "Check the money evidence with your parent",
+      "uz": "Pul hujjatini ota-onangiz bilan tekshiring",
+      "ru": "Проверьте с родителем подтверждение средств"
+     },
+     "instructions": {
+      "en": "Agree with your parent how the required money will be shown and start the 28-day holding period in time. Record only that it has started.",
+      "uz": "Talab qilinadigan pul qanday koʻrsatilishini ota-onangiz bilan kelishing va 28 kunlik muddatni oʻz vaqtida boshlang. Faqat boshlanganini belgilang.",
+      "ru": "Договоритесь с родителем, как будут показаны нужные средства, и вовремя начните 28-дневный срок. Отметьте только, что он начался."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "funds_period_started",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-visauk-s3",
+     "type": "submit",
+     "minutes": 90,
+     "offset_days": -90,
+     "title": {
+      "en": "Apply online with your CAS",
+      "uz": "CAS bilan onlayn ariza bering",
+      "ru": "Подайте заявление онлайн с CAS"
+     },
+     "instructions": {
+      "en": "Apply on GOV.UK with your CAS, passport, TB certificate and money evidence (and parental consent if under 18), pay the fee and the health surcharge, and book the biometrics appointment.",
+      "uz": "GOV.UK da CAS, pasport, TB sertifikati va pul hujjati (18 yoshgacha boʻlsangiz, ota-ona roziligi) bilan ariza bering, toʻlov va sogʻliqni saqlash qoʻshimcha toʻlovini toʻlang hamda biometrik maʼlumot topshirishga yoziling.",
+      "ru": "Подайте заявление на GOV.UK с CAS, паспортом, справкой о туберкулёзе и подтверждением средств (и согласием родителей, если вам нет 18), оплатите сбор и медицинский сбор и запишитесь на сдачу биометрии."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "uk_visa_applied",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     },
+     "checkpoint": {
+      "level": "L7",
+      "what": {
+       "en": "a counselor reviews the application before you pay",
+       "uz": "maslahatchi toʻlashdan oldin arizani koʻrib chiqadi",
+       "ru": "консультант проверяет заявление до оплаты"
+      }
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "timing_fee",
+     "claim": "From outside the UK you can apply 6 months before the course starts; a decision usually comes within 3 weeks; the application fee is £558; applicants aged 16-17 need parental consent.",
+     "url": "https://www.gov.uk/student-visa/apply",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "ihs",
+     "claim": "The immigration health surcharge for students is £776 per year.",
+     "url": "https://www.gov.uk/healthcare-immigration-application/how-much-pay",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "money",
+     "claim": "Living costs: £1,529 a month in London or £1,171 a month outside London, for up to 9 months, held for 28 consecutive days ending within 31 days of the application.",
+     "url": "https://www.gov.uk/student-visa/money",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "tb",
+     "claim": "Uzbekistan is on the list of countries whose residents need a TB test when coming to the UK for 6 months or more; the certificate is valid 6 months from the X-ray; tests are at approved clinics.",
+     "url": "https://www.gov.uk/tb-test-visa/countries-where-you-need-a-tb-test-to-enter-the-uk",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "change",
+     "claim": "UK visa fees and money amounts are revised from time to time.",
+     "url": "https://www.gov.uk/student-visa",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "gov_student",
+     "url": "https://www.gov.uk/student-visa",
+     "kind": "official",
+     "label": {
+      "en": "UK Student visa (GOV.UK)",
+      "uz": "Buyuk Britaniya talaba vizasi (GOV.UK)",
+      "ru": "Студенческая виза Великобритании (GOV.UK)"
+     }
+    },
+    {
+     "id": "gov_tb",
+     "url": "https://www.gov.uk/tb-test-visa",
+     "kind": "official",
+     "label": {
+      "en": "TB test for a UK visa",
+      "uz": "Buyuk Britaniya vizasi uchun sil testi",
+      "ru": "Тест на туберкулёз для визы в Великобританию"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "In the month you apply, re-read the fee and money pages on GOV.UK.",
+    "uz": "Ariza beradigan oyingizda GOV.UK dagi toʻlov va pul sahifalarini qayta oʻqing.",
+    "ru": "В месяц подачи перечитайте страницы GOV.UK о сборах и деньгах."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-visaother",
+   "template_id": "C11-visaother",
+   "kind": "admin_template",
+   "category": "visa",
+   "workstream_kind": "admin",
+   "task_kind": "research",
+   "task_type": "verify",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "DE",
+    "KR",
+    "TR",
+    "any_abroad"
+   ],
+   "anchor": {
+    "event": "enrolment_confirmed",
+    "milestone_ids": [
+     "m_visa",
+     "m_verify_DE",
+     "m_verify_KR",
+     "m_verify_TR"
+    ]
+   },
+   "rule_ids": [
+    "planner.visa_paperwork",
+    "planner.verify_missing_rule"
+   ],
+   "lead_time": {
+    "start_days_before": 150,
+    "due_days_before": 90,
+    "basis": "inference",
+    "note": {
+     "en": "Student visas for other countries were not researched; start early and work from the embassy's own page.",
+     "uz": "Boshqa davlatlar talaba vizalari oʻrganilmagan; erta boshlang va elchixonaning oʻz sahifasiga tayaning.",
+     "ru": "Студенческие визы других стран не изучались; начните заранее и опирайтесь на страницу самого посольства."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "Visa documents often include proof of family funds and documents with apostilles or translations; plan the costs and the time together.",
+    "uz": "Viza hujjatlariga koʻpincha oila mablagʻi haqidagi hujjat va apostil yoki tarjimali hujjatlar kiradi; xarajat va vaqtni birga rejalashtiring.",
+    "ru": "В визовые документы часто входят подтверждение средств семьи и документы с апостилем или переводом; планируйте расходы и время вместе."
+   },
+   "title": {
+    "en": "Student visa for another country: find the official steps",
+    "uz": "Boshqa davlat talaba vizasi: rasmiy qadamlarni toping",
+    "ru": "Студенческая виза другой страны: найдите официальные шаги"
+   },
+   "summary": {
+    "en": "For Germany, Korea, Türkiye and other destinations, the embassy in Tashkent (or the one serving Uzbekistan) publishes the student-visa steps. Find that page, list the documents and the processing time, and plan backwards from your start date.",
+    "uz": "Germaniya, Koreya, Turkiya va boshqa yoʻnalishlar uchun Toshkentdagi (yoki Oʻzbekistonga xizmat koʻrsatadigan) elchixona talaba vizasi qadamlarini eʼlon qiladi. Oʻsha sahifani toping, hujjatlar va koʻrib chiqish muddatini yozing va oʻqish boshlanishidan orqaga qarab rejalashtiring.",
+    "ru": "Для Германии, Кореи, Турции и других стран посольство в Ташкенте (или обслуживающее Узбекистан) публикует шаги для студенческой визы. Найдите эту страницу, выпишите документы и срок рассмотрения и планируйте назад от даты начала учёбы."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-visaother-s1",
+     "type": "verify",
+     "minutes": 20,
+     "offset_days": -150,
+     "title": {
+      "en": "Find the embassy's student-visa page",
+      "uz": "Elchixonaning talaba vizasi sahifasini toping",
+      "ru": "Найдите страницу посольства о студенческой визе"
+     },
+     "instructions": {
+      "en": "Find the student-visa page of the destination country's embassy that serves Uzbekistan, on its official government domain. Paste the link.",
+      "uz": "Oʻzbekistonga xizmat koʻrsatadigan, borish davlati elchixonasining rasmiy davlat domenidagi talaba vizasi sahifasini toping. Havolani qoʻying.",
+      "ru": "Найдите страницу о студенческой визе посольства страны назначения, обслуживающего Узбекистан, на официальном государственном домене. Вставьте ссылку."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "embassy_domain",
+       "gov_domain"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-visaother-s2",
+     "type": "verify",
+     "minutes": 30,
+     "offset_days": -140,
+     "title": {
+      "en": "List the documents and the timing",
+      "uz": "Hujjatlar va muddatlarni roʻyxat qiling",
+      "ru": "Выпишите документы и сроки"
+     },
+     "instructions": {
+      "en": "List every document, which ones need translation or an apostille, the fee, how early you may apply and how long a decision takes. Your counselor turns this into dated tasks.",
+      "uz": "Har bir hujjatni, qaysilari tarjima yoki apostil talab qilishini, toʻlovni, qancha oldin ariza berish mumkinligini va qaror qancha vaqt olishini yozing. Maslahatchingiz buni sanali vazifalarga aylantiradi.",
+      "ru": "Выпишите все документы, какие требуют перевода или апостиля, сбор, как рано можно подать и сколько длится решение. Консультант превратит это в задачи с датами."
+     },
+     "evidence": {
+      "level": "L3",
+      "method": "artifact",
+      "check": {
+       "min_words": 60,
+       "max_words": 500,
+       "not_prompt": true
+      }
+     },
+     "checkpoint": {
+      "level": "L7",
+      "what": {
+       "en": "a counselor checks the list against the embassy page",
+       "uz": "maslahatchi roʻyxatni elchixona sahifasi bilan solishtiradi",
+       "ru": "консультант сверяет список со страницей посольства"
+      }
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "not_researched",
+     "claim": "Student-visa rules for Germany, Korea, Türkiye and other non-US, non-UK destinations were not collected for this template.",
+     "url": null,
+     "verified_at": null,
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Use only the embassy's or the government's own page for every visa fact; agencies' summaries are often out of date.",
+    "uz": "Har bir viza maʼlumoti uchun faqat elchixona yoki hukumatning oʻz sahifasidan foydalaning; agentliklar xulosalari koʻpincha eskirgan boʻladi.",
+    "ru": "Для каждого визового факта используйте только страницу посольства или правительства; пересказы агентств часто устаревшие."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

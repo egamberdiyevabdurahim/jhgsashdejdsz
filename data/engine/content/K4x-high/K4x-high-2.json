@@ -1,0 +1,1102 @@
+{
+ "bank": "K4x",
+ "batch": 2,
+ "items": [
+  {
+   "id": "K4x-a2h15a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponential_equation",
+   "family_ref": "K4-a2h015",
+   "params": {
+    "b": 2,
+    "e": 5,
+    "c": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "2^(x + 3) = 32. What is x?",
+    "uz": "2^(x + 3) = 32. x ni toping.",
+    "ru": "2^(x + 3) = 32. Найдите x."
+   },
+   "options": [
+    {
+     "en": "2"
+    },
+    {
+     "en": "8"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "−2"
+    }
+   ],
+   "answer_numeric": {
+    "value": 2,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "32 = 2⁵, so x + 3 = 5 and x = 2.",
+    "uz": "32 = 2⁵, demak x + 3 = 5 va x = 2.",
+    "ru": "32 = 2⁵, значит x + 3 = 5 и x = 2."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.15,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h15b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponential_equation",
+   "family_ref": "K4-a2h015",
+   "params": {
+    "b": 3,
+    "e": 4,
+    "c": 1
+   },
+   "lang": "en",
+   "stem": {
+    "en": "3^(x + 1) = 81. What is x?",
+    "uz": "3^(x + 1) = 81. x ni toping.",
+    "ru": "3^(x + 1) = 81. Найдите x."
+   },
+   "options": [
+    {
+     "en": "3"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "−3"
+    }
+   ],
+   "answer_numeric": {
+    "value": 3,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "81 = 3⁴, so x + 1 = 4 and x = 3.",
+    "uz": "81 = 3⁴, demak x + 1 = 4 va x = 3.",
+    "ru": "81 = 3⁴, значит x + 1 = 4 и x = 3."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.15,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h16a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponential_equation_bases",
+   "family_ref": "K4-a2h016",
+   "params": {
+    "a": 3,
+    "k": 1
+   },
+   "lang": "en",
+   "stem": {
+    "en": "9^x = 27^(x − 1). What is x?",
+    "uz": "9^x = 27^(x − 1). x ni toping.",
+    "ru": "9^x = 27^(x − 1). Найдите x."
+   },
+   "options": [
+    {
+     "en": "3"
+    },
+    {
+     "en": "1"
+    },
+    {
+     "en": "−3"
+    },
+    {
+     "en": "2"
+    }
+   ],
+   "answer_numeric": {
+    "value": 3,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Write both sides as powers of 3: 3^(2x) = 3^(3x − 3), so 2x = 3x − 3 and x = 3.",
+    "uz": "Ikkala tomonni 3 ning darajasi sifatida yozing: 3^(2x) = 3^(3x − 3), demak 2x = 3x − 3, x = 3.",
+    "ru": "Запишем обе части как степени 3: 3^(2x) = 3^(3x − 3), откуда 2x = 3x − 3 и x = 3."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h16b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponential_equation_bases",
+   "family_ref": "K4-a2h016",
+   "params": {
+    "a": 2,
+    "k": 2
+   },
+   "lang": "en",
+   "stem": {
+    "en": "4^x = 8^(x − 2). What is x?",
+    "uz": "4^x = 8^(x − 2). x ni toping.",
+    "ru": "4^x = 8^(x − 2). Найдите x."
+   },
+   "options": [
+    {
+     "en": "6"
+    },
+    {
+     "en": "2"
+    },
+    {
+     "en": "−6"
+    },
+    {
+     "en": "4"
+    }
+   ],
+   "answer_numeric": {
+    "value": 6,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Write both sides as powers of 2: 2^(2x) = 2^(3x − 6), so 2x = 3x − 6 and x = 6.",
+    "uz": "Ikkala tomonni 2 ning darajasi sifatida yozing: 2^(2x) = 2^(3x − 6), demak 2x = 3x − 6, x = 6.",
+    "ru": "Запишем обе части как степени 2: 2^(2x) = 2^(3x − 6), откуда 2x = 3x − 6 и x = 6."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h17a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "logarithm_value",
+   "family_ref": "K4-a2h017",
+   "params": {
+    "b": 5,
+    "e": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is log₅ 125?",
+    "uz": "log₅ 125 nechaga teng?",
+    "ru": "Чему равен log₅ 125?"
+   },
+   "options": [
+    {
+     "en": "3"
+    },
+    {
+     "en": "25"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "4"
+    }
+   ],
+   "answer_numeric": {
+    "value": 3,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "5³ = 125, so log₅ 125 = 3.",
+    "uz": "5³ = 125, demak log₅ 125 = 3.",
+    "ru": "5³ = 125, поэтому log₅ 125 = 3."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.15,
+   "time_s": 12,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h17b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "logarithm_value",
+   "family_ref": "K4-a2h017",
+   "params": {
+    "b": 10,
+    "e": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is log₁₀ 1000?",
+    "uz": "log₁₀ 1000 nechaga teng?",
+    "ru": "Чему равен log₁₀ 1000?"
+   },
+   "options": [
+    {
+     "en": "3"
+    },
+    {
+     "en": "100"
+    },
+    {
+     "en": "10"
+    },
+    {
+     "en": "4"
+    }
+   ],
+   "answer_numeric": {
+    "value": 3,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "10³ = 1000, so log₁₀ 1000 = 3.",
+    "uz": "10³ = 1000, demak log₁₀ 1000 = 3.",
+    "ru": "10³ = 1000, поэтому log₁₀ 1000 = 3."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.15,
+   "time_s": 12,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h18a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "logarithmic_equation",
+   "family_ref": "K4-a2h018",
+   "params": {
+    "b": 2,
+    "e": 4,
+    "c": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "log₂(x − 3) = 4. What is x?",
+    "uz": "log₂(x − 3) = 4. x ni toping.",
+    "ru": "log₂(x − 3) = 4. Найдите x."
+   },
+   "options": [
+    {
+     "en": "19"
+    },
+    {
+     "en": "13"
+    },
+    {
+     "en": "11"
+    },
+    {
+     "en": "7"
+    }
+   ],
+   "answer_numeric": {
+    "value": 19,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "By definition x − 3 = 2⁴ = 16, so x = 19.",
+    "uz": "Taʼrifga koʻra x − 3 = 2⁴ = 16, demak x = 19.",
+    "ru": "По определению x − 3 = 2⁴ = 16, значит x = 19."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h18b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "logarithmic_equation",
+   "family_ref": "K4-a2h018",
+   "params": {
+    "b": 3,
+    "e": 3,
+    "c": 5
+   },
+   "lang": "en",
+   "stem": {
+    "en": "log₃(x − 5) = 3. What is x?",
+    "uz": "log₃(x − 5) = 3. x ni toping.",
+    "ru": "log₃(x − 5) = 3. Найдите x."
+   },
+   "options": [
+    {
+     "en": "32"
+    },
+    {
+     "en": "22"
+    },
+    {
+     "en": "14"
+    },
+    {
+     "en": "8"
+    }
+   ],
+   "answer_numeric": {
+    "value": 32,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "By definition x − 5 = 3³ = 27, so x = 32.",
+    "uz": "Taʼrifga koʻra x − 5 = 3³ = 27, demak x = 32.",
+    "ru": "По определению x − 5 = 3³ = 27, значит x = 32."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h19a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "logarithm_rules",
+   "family_ref": "K4-a2h019",
+   "params": {
+    "b": 3,
+    "d": 2,
+    "e": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is log₃ 54 − log₃ 2?",
+    "uz": "log₃ 54 − log₃ 2 nechaga teng?",
+    "ru": "Чему равно log₃ 54 − log₃ 2?"
+   },
+   "options": [
+    {
+     "en": "3"
+    },
+    {
+     "en": "27"
+    },
+    {
+     "en": "2"
+    },
+    {
+     "en": "4"
+    }
+   ],
+   "answer_numeric": {
+    "value": 3,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "A difference of logs is the log of the quotient: log₃(54/2) = log₃ 27 = 3.",
+    "uz": "Logarifmlar ayirmasi boʻlinmaning logarifmiga teng: log₃(54/2) = log₃ 27 = 3.",
+    "ru": "Разность логарифмов равна логарифму частного: log₃(54/2) = log₃ 27 = 3."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h19b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "logarithm_rules",
+   "family_ref": "K4-a2h019",
+   "params": {
+    "b": 2,
+    "d": 5,
+    "e": 4
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is log₂ 80 − log₂ 5?",
+    "uz": "log₂ 80 − log₂ 5 nechaga teng?",
+    "ru": "Чему равно log₂ 80 − log₂ 5?"
+   },
+   "options": [
+    {
+     "en": "4"
+    },
+    {
+     "en": "16"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 4,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "A difference of logs is the log of the quotient: log₂(80/5) = log₂ 16 = 4.",
+    "uz": "Logarifmlar ayirmasi boʻlinmaning logarifmiga teng: log₂(80/5) = log₂ 16 = 4.",
+    "ru": "Разность логарифмов равна логарифму частного: log₂(80/5) = log₂ 16 = 4."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h21a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "arithmetic_sequence",
+   "family_ref": "K4-a2h021",
+   "params": {
+    "a": 7,
+    "d": 3,
+    "n": 15
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The sequence 7, 4, 1, −2, … is arithmetic (a₁ = 7). What is a₁₅?",
+    "uz": "7, 4, 1, −2, … arifmetik progressiya (a₁ = 7). a₁₅ ni toping.",
+    "ru": "7, 4, 1, −2, … — арифметическая прогрессия (a₁ = 7). Найдите a₁₅."
+   },
+   "options": [
+    {
+     "en": "−35"
+    },
+    {
+     "en": "−38"
+    },
+    {
+     "en": "49"
+    },
+    {
+     "en": "35"
+    }
+   ],
+   "answer_numeric": {
+    "value": -35,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "aₙ = a₁ + (n − 1)d with d = −3: a₁₅ = 7 − 14·3 = −35.",
+    "uz": "aₙ = a₁ + (n − 1)d, bu yerda d = −3: a₁₅ = 7 − 14·3 = −35.",
+    "ru": "aₙ = a₁ + (n − 1)d, где d = −3: a₁₅ = 7 − 14·3 = −35."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.15,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h21b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "arithmetic_sequence",
+   "family_ref": "K4-a2h021",
+   "params": {
+    "a": 12,
+    "d": 4,
+    "n": 11
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The sequence 12, 8, 4, 0, … is arithmetic (a₁ = 12). What is a₁₁?",
+    "uz": "12, 8, 4, 0, … arifmetik progressiya (a₁ = 12). a₁₁ ni toping.",
+    "ru": "12, 8, 4, 0, … — арифметическая прогрессия (a₁ = 12). Найдите a₁₁."
+   },
+   "options": [
+    {
+     "en": "−28"
+    },
+    {
+     "en": "−32"
+    },
+    {
+     "en": "52"
+    },
+    {
+     "en": "28"
+    }
+   ],
+   "answer_numeric": {
+    "value": -28,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "aₙ = a₁ + (n − 1)d with d = −4: a₁₁ = 12 − 10·4 = −28.",
+    "uz": "aₙ = a₁ + (n − 1)d, bu yerda d = −4: a₁₁ = 12 − 10·4 = −28.",
+    "ru": "aₙ = a₁ + (n − 1)d, где d = −4: a₁₁ = 12 − 10·4 = −28."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.15,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h22a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "arithmetic_series",
+   "family_ref": "K4-a2h022",
+   "params": {
+    "a": 3,
+    "d": 4,
+    "n": 20
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the sum of the first 20 terms of the arithmetic sequence 3, 7, 11, 15, …?",
+    "uz": "3, 7, 11, 15, … arifmetik progressiyaning dastlabki 20 ta hadi yigʻindisini toping.",
+    "ru": "Найдите сумму первых 20 членов арифметической прогрессии 3, 7, 11, 15, …"
+   },
+   "options": [
+    {
+     "en": "820"
+    },
+    {
+     "en": "79"
+    },
+    {
+     "en": "1640"
+    },
+    {
+     "en": "860"
+    }
+   ],
+   "answer_numeric": {
+    "value": 820,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Use Sₙ = n(2a₁ + (n − 1)d)/2 = 20·(6 + 76)/2 = 820.",
+    "uz": "Formula: Sₙ = n(2a₁ + (n − 1)d)/2 = 20·(6 + 76)/2 = 820.",
+    "ru": "По формуле Sₙ = n(2a₁ + (n − 1)d)/2 = 20·(6 + 76)/2 = 820."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h22b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "arithmetic_series",
+   "family_ref": "K4-a2h022",
+   "params": {
+    "a": 5,
+    "d": 3,
+    "n": 12
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the sum of the first 12 terms of the arithmetic sequence 5, 8, 11, 14, …?",
+    "uz": "5, 8, 11, 14, … arifmetik progressiyaning dastlabki 12 ta hadi yigʻindisini toping.",
+    "ru": "Найдите сумму первых 12 членов арифметической прогрессии 5, 8, 11, 14, …"
+   },
+   "options": [
+    {
+     "en": "258"
+    },
+    {
+     "en": "38"
+    },
+    {
+     "en": "516"
+    },
+    {
+     "en": "276"
+    }
+   ],
+   "answer_numeric": {
+    "value": 258,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Use Sₙ = n(2a₁ + (n − 1)d)/2 = 12·(10 + 33)/2 = 258.",
+    "uz": "Formula: Sₙ = n(2a₁ + (n − 1)d)/2 = 12·(10 + 33)/2 = 258.",
+    "ru": "По формуле Sₙ = n(2a₁ + (n − 1)d)/2 = 12·(10 + 33)/2 = 258."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h23a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "geometric_sequence",
+   "family_ref": "K4-a2h023",
+   "params": {
+    "a": 3,
+    "r": 2,
+    "n": 6
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The sequence 3, 6, 12, … is geometric (a₁ = 3). What is a₆?",
+    "uz": "3, 6, 12, … geometrik progressiya (a₁ = 3). a₆ ni toping.",
+    "ru": "3, 6, 12, … — геометрическая прогрессия (a₁ = 3). Найдите a₆."
+   },
+   "options": [
+    {
+     "en": "96"
+    },
+    {
+     "en": "192"
+    },
+    {
+     "en": "7776"
+    },
+    {
+     "en": "48"
+    }
+   ],
+   "answer_numeric": {
+    "value": 96,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "aₙ = a₁·qⁿ⁻¹ with q = 2: a₆ = 3·2⁵ = 96.",
+    "uz": "aₙ = a₁·qⁿ⁻¹, bu yerda q = 2: a₆ = 3·2⁵ = 96.",
+    "ru": "aₙ = a₁·qⁿ⁻¹, где q = 2: a₆ = 3·2⁵ = 96."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.15,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h23b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "geometric_sequence",
+   "family_ref": "K4-a2h023",
+   "params": {
+    "a": 2,
+    "r": 3,
+    "n": 5
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The sequence 2, 6, 18, … is geometric (a₁ = 2). What is a₅?",
+    "uz": "2, 6, 18, … geometrik progressiya (a₁ = 2). a₅ ni toping.",
+    "ru": "2, 6, 18, … — геометрическая прогрессия (a₁ = 2). Найдите a₅."
+   },
+   "options": [
+    {
+     "en": "162"
+    },
+    {
+     "en": "486"
+    },
+    {
+     "en": "1296"
+    },
+    {
+     "en": "54"
+    }
+   ],
+   "answer_numeric": {
+    "value": 162,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "aₙ = a₁·qⁿ⁻¹ with q = 3: a₅ = 2·3⁴ = 162.",
+    "uz": "aₙ = a₁·qⁿ⁻¹, bu yerda q = 3: a₅ = 2·3⁴ = 162.",
+    "ru": "aₙ = a₁·qⁿ⁻¹, где q = 3: a₅ = 2·3⁴ = 162."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.15,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h24a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "geometric_series",
+   "family_ref": "K4-a2h024",
+   "params": {
+    "a": 2,
+    "r": 3,
+    "n": 6
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the sum of the first 6 terms of the geometric sequence 2, 6, 18, …?",
+    "uz": "2, 6, 18, … geometrik progressiyaning dastlabki 6 ta hadi yigʻindisini toping.",
+    "ru": "Найдите сумму первых 6 членов геометрической прогрессии 2, 6, 18, …"
+   },
+   "options": [
+    {
+     "en": "728"
+    },
+    {
+     "en": "486"
+    },
+    {
+     "en": "242"
+    },
+    {
+     "en": "1458"
+    }
+   ],
+   "answer_numeric": {
+    "value": 728,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Use Sₙ = a₁(qⁿ − 1)/(q − 1) = 2·(3⁶ − 1)/2 = 728.",
+    "uz": "Formula: Sₙ = a₁(qⁿ − 1)/(q − 1) = 2·(3⁶ − 1)/2 = 728.",
+    "ru": "По формуле Sₙ = a₁(qⁿ − 1)/(q − 1) = 2·(3⁶ − 1)/2 = 728."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h24b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "geometric_series",
+   "family_ref": "K4-a2h024",
+   "params": {
+    "a": 3,
+    "r": 2,
+    "n": 5
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the sum of the first 5 terms of the geometric sequence 3, 6, 12, …?",
+    "uz": "3, 6, 12, … geometrik progressiyaning dastlabki 5 ta hadi yigʻindisini toping.",
+    "ru": "Найдите сумму первых 5 членов геометрической прогрессии 3, 6, 12, …"
+   },
+   "options": [
+    {
+     "en": "93"
+    },
+    {
+     "en": "48"
+    },
+    {
+     "en": "45"
+    },
+    {
+     "en": "96"
+    }
+   ],
+   "answer_numeric": {
+    "value": 93,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Use Sₙ = a₁(qⁿ − 1)/(q − 1) = 3·(2⁵ − 1)/1 = 93.",
+    "uz": "Formula: Sₙ = a₁(qⁿ − 1)/(q − 1) = 3·(2⁵ − 1)/1 = 93.",
+    "ru": "По формуле Sₙ = a₁(qⁿ − 1)/(q − 1) = 3·(2⁵ − 1)/1 = 93."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h25a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "absolute_value_equation",
+   "family_ref": "K4-a2h025",
+   "params": {
+    "a": 2,
+    "b": 5,
+    "c": 9
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the sum of all solutions of |2x − 5| = 9?",
+    "uz": "|2x − 5| = 9 tenglamaning barcha yechimlari yigʻindisini toping.",
+    "ru": "Найдите сумму всех решений уравнения |2x − 5| = 9."
+   },
+   "options": [
+    {
+     "en": "5"
+    },
+    {
+     "en": "7"
+    },
+    {
+     "en": "9"
+    },
+    {
+     "en": "−5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 5,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "2x − 5 = 9 or 2x − 5 = −9, so x = 7 or x = −2; the sum is 5.",
+    "uz": "2x − 5 = 9 yoki 2x − 5 = −9, demak x = 7 yoki x = −2; yigʻindi 5.",
+    "ru": "2x − 5 = 9 или 2x − 5 = −9, значит x = 7 или x = −2; сумма 5."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-a2h25b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "absolute_value_equation",
+   "family_ref": "K4-a2h025",
+   "params": {
+    "a": 3,
+    "b": 6,
+    "c": 9
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the sum of all solutions of |3x − 6| = 9?",
+    "uz": "|3x − 6| = 9 tenglamaning barcha yechimlari yigʻindisini toping.",
+    "ru": "Найдите сумму всех решений уравнения |3x − 6| = 9."
+   },
+   "options": [
+    {
+     "en": "4"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "6"
+    },
+    {
+     "en": "−4"
+    }
+   ],
+   "answer_numeric": {
+    "value": 4,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "3x − 6 = 9 or 3x − 6 = −9, so x = 5 or x = −1; the sum is 4.",
+    "uz": "3x − 6 = 9 yoki 3x − 6 = −9, demak x = 5 yoki x = −1; yigʻindi 4.",
+    "ru": "3x − 6 = 9 или 3x − 6 = −9, значит x = 5 или x = −1; сумма 4."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.35,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

@@ -1,0 +1,747 @@
+{
+  "bank": "C19",
+  "batch": 6,
+  "kind": "lessons",
+  "note": "IELTS Academic Reading lesson bodies, phase 1b (SPEC-lessons rev. 2, 12 Oct 2026, §3.4, §11.1, §12.3 B2), author a4 of .superpowers/p6b/PLAN.md: C19-IERE01-1 (the time plan; skimming, scanning), C19-IERE02-1 (TRUE / FALSE / NOT GIVEN) and C19-IERE02-2 (the NOT GIVEN trap). `lessons` are fixed-text lesson records: test and homework draw on `reserve` (20 items each: C7-ir1101-1120, of which 1111-1120 are a5's scanning items in C7-8.json; C7-ir2101-2120; C7-ir2201-2220, all in C7-7.json). `items` are their piece questions (the key is options[0]; `page` names the lesson). Our own wording and our own fictional texts (invented places, no real facts); test-format facts only from the C10-IERE01 record. Key check 2 by lane B3 (13 Oct 2026, blind:B3s3+B3s4; C19/RECONCILE-1b.md): C19-IERE01-1 and C19-IERE02-1 and their piece questions are verified_auto; C19-IERE02-2 stayed draft then, because two of its piece questions (C19-ie22q1, C19-ie22q2) were quarantined (answerable without the text); their version 2 (P7 a7) is verified_auto by P7 blind checkers 3 and 4 (13 Oct 2026, blind:P7s3+P7s4; C19/RECONCILE-p7.md part 2), and C19-IERE02-2 with them.",
+  "lessons": [
+    {
+      "kind": "lesson",
+      "id": "C19-IERE01-1",
+      "course": "ielts_r",
+      "unit": "C10-IERE01",
+      "seq": 1,
+      "skill": "ielts_r:IERE01",
+      "requires": {
+        "english_cefr_min": "B1"
+      },
+      "title": {
+        "en": "IELTS Reading: 3 texts, 40 questions, 60 minutes: a time plan",
+        "uz": "IELTS Reading: 3 ta matn, 40 ta savol, 60 daqiqa: vaqt rejasi",
+        "ru": "IELTS Reading: 3 текста, 40 вопросов, 60 минут: как распределить время"
+      },
+      "minutes": 6,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "IELTS Academic Reading has 3 texts (passages), 2,150-2,750 words in all, and 40 questions. You get 60 minutes, and writing your answers is part of the 60 minutes: there is no extra time at the end.\nSo plan about 20 minutes a passage:\n1. Skim the passage first (2-3 minutes): the title, the first sentence of each paragraph and the last paragraph.\n2. Answer the questions and write each answer as you go.\n3. At minute 20, move on to the next passage, even if one question is still hard. Come back to it if time is left.\nYou cannot read every word slowly. Skimming gives you a map of the text; the questions tell you where to read closely.",
+            "uz": "IELTS Academic Reading: 3 ta matn (passage), jami 2 150 dan 2 750 gacha soʻz va 40 ta savol. Sizga 60 daqiqa beriladi, javoblarni yozish ham shu 60 daqiqaga kiradi: oxirida qoʻshimcha vaqt yoʻq.\nShuning uchun har bir matnga taxminan 20 daqiqa ajrating:\n1. Avval matnga koʻz yugurtiring (skimming, 2-3 daqiqa): sarlavha, har bir xatboshining birinchi gapi va oxirgi xatboshi.\n2. Savollarga javob bering va har bir javobni shu zahoti yozing.\n3. 20-daqiqada keyingi matnga oʻting, bitta savol qiyin boʻlib qolsa ham. Vaqt qolsa, unga qaytasiz.\nHar bir soʻzni sekin oʻqishga vaqt yetmaydi. Koʻz yugurtirish matnning xaritasini beradi, savollar esa qayerni diqqat bilan oʻqishni koʻrsatadi.",
+            "ru": "IELTS Academic Reading: 3 текста (passages), всего 2 150-2 750 слов и 40 вопросов. Даётся 60 минут, и запись ответов входит в эти 60 минут: дополнительного времени в конце нет.\nПоэтому планируйте около 20 минут на текст:\n1. Сначала просмотрите текст (skimming, 2-3 минуты): заголовок, первое предложение каждого абзаца и последний абзац.\n2. Отвечайте на вопросы и сразу записывайте каждый ответ.\n3. На 20-й минуте переходите к следующему тексту, даже если какой-то вопрос ещё не решён. Останется время — вернётесь к нему.\nМедленно читать каждое слово не получится. Просмотр даёт карту текста, а вопросы показывают, где читать внимательно."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ie11q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Skim this text: “The village of Arnley had no bus to the town until last year. Then a group of parents bought an old minibus. Volunteers now drive it twice a day, so pupils no longer walk six kilometres to school. Shopkeepers say more people come to the market too.”\nFirst sentence: Arnley had no bus. Middle: parents bought a minibus; volunteers drive it. Last sentence: more people come to the market.\nGist: how a village got its own bus, and what changed.\nNow you: a text about Milford School. First sentence: the roof was empty for years. Middle: pupils planted vegetables on it, measured them and ate them. Last sentence: two more schools plan roof gardens. Gist: ?",
+            "uz": "Bu matnga koʻz yugurtiring (skimming): «The village of Arnley had no bus to the town until last year. Then a group of parents bought an old minibus. Volunteers now drive it twice a day, so pupils no longer walk six kilometres to school. Shopkeepers say more people come to the market too.»\nBirinchi gap: Arnleyda avtobus yoʻq edi. Oʻrtasi: ota-onalar mikroavtobus sotib oldi, koʻngillilar uni haydaydi. Oxirgi gap: bozorga koʻproq odam keladi.\nAsosiy fikr (gist): qishloq qanday qilib oʻz avtobusiga ega boʻldi va nima oʻzgardi.\nEndi siz: Milford maktabi haqidagi matn. Birinchi gap: tom yillar davomida boʻsh edi. Oʻrtasi: oʻquvchilar unga sabzavot ekdi, ularni oʻlchadi va yedi. Oxirgi gap: yana ikki maktab tomda bogʻ qilmoqchi. Asosiy fikr: ?",
+            "ru": "Просмотрите этот текст (skimming): «The village of Arnley had no bus to the town until last year. Then a group of parents bought an old minibus. Volunteers now drive it twice a day, so pupils no longer walk six kilometres to school. Shopkeepers say more people come to the market too.»\nПервое предложение: в Арнли не было автобуса. Середина: родители купили микроавтобус, водят его волонтёры. Последнее: на рынок приходит больше людей.\nСуть (gist): как деревня получила свой автобус и что изменилось.\nТеперь попробуйте сами: текст о школе Milford. Первое предложение: крыша много лет пустовала. Середина: ученики посадили на ней овощи, измеряли их и ели. Последнее: ещё две школы хотят устроить сады на крышах. Суть: ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ie11q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Scanning means looking fast for one detail: a name, a number, a date. The trap: the question rarely uses the words of the text. It says the same idea in other words.\nQuestion: “When did the bridge open to cars again?”\nText: “The crossing was closed for repairs in January, and traffic returned to it in early May.”\n“the bridge” = “the crossing”; “open to cars again” = “traffic returned”. Answer: early May.\nSo do not hunt for the words of the question. Hunt for the idea, or for a number, a date or a name, then read that sentence closely. Watch out: January is in the same sentence, but it is when the crossing closed.",
+            "uz": "Qidirib oʻqish (scanning) — bitta tafsilotni tez topish: ism, son, sana. Tuzoq: savol matndagi soʻzlarni kam ishlatadi. U oʻsha fikrni boshqa soʻzlar bilan aytadi.\nSavol: «When did the bridge open to cars again?»\nMatn: «The crossing was closed for repairs in January, and traffic returned to it in early May.»\n«the bridge» = «the crossing»; «open to cars again» = «traffic returned». Javob: early May.\nDemak, savoldagi soʻzni emas, fikrni yoki son, sana, ismni qidiring, keyin oʻsha gapni diqqat bilan oʻqing. Ehtiyot boʻling: January ham shu gapda, lekin bu koʻprik yopilgan oy.",
+            "ru": "Поисковое чтение (scanning) — это быстрый поиск одной детали: имя, число, дату. Ловушка: вопрос редко повторяет слова текста. Он передаёт ту же мысль другими словами.\nВопрос: «When did the bridge open to cars again?»\nТекст: «The crossing was closed for repairs in January, and traffic returned to it in early May.»\n«the bridge» = «the crossing»; «open to cars again» = «traffic returned». Ответ: early May.\nПоэтому ищите не слово из вопроса, а мысль, число, дату или имя, а потом внимательно читайте это предложение. Осторожно: January стоит в том же предложении, но это месяц, когда мост закрыли."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ie11q3"
+        }
+      ],
+      "test": {
+        "pool": null,
+        "families": [],
+        "n": 3,
+        "first_is_example": false,
+        "test_out": true
+      },
+      "homework": {
+        "pool": null,
+        "families": []
+      },
+      "reserve": [
+        "C7-ir1101",
+        "C7-ir1102",
+        "C7-ir1103",
+        "C7-ir1104",
+        "C7-ir1105",
+        "C7-ir1106",
+        "C7-ir1107",
+        "C7-ir1108",
+        "C7-ir1109",
+        "C7-ir1110",
+        "C7-ir1111",
+        "C7-ir1112",
+        "C7-ir1113",
+        "C7-ir1114",
+        "C7-ir1115",
+        "C7-ir1116",
+        "C7-ir1117",
+        "C7-ir1118",
+        "C7-ir1119",
+        "C7-ir1120",
+        "C7-ia1101",
+        "C7-ia1102",
+        "C7-ia1103",
+        "C7-ia1104",
+        "C7-ia1105",
+        "C7-ia1106",
+        "C7-ia1107",
+        "C7-ia1108",
+        "C7-ia1109",
+        "C7-ia1110",
+        "C7-ia1111",
+        "C7-ia1112",
+        "C7-ia1113",
+        "C7-ia1114",
+        "C7-ia1115",
+        "C7-ia1116",
+        "C7-ia1117",
+        "C7-ia1118",
+        "C7-ia1119",
+        "C7-ia1120"
+      ],
+      "extra_link": "C10-IERE01#official",
+      "source": "own",
+      "author": "agent:p6b-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s3+B3s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-IERE02-1",
+      "course": "ielts_r",
+      "unit": "C10-IERE02",
+      "seq": 1,
+      "skill": "ielts_r:IERE02",
+      "requires": {
+        "english_cefr_min": "B1"
+      },
+      "title": {
+        "en": "IELTS Reading: What the text says and what it doesn't",
+        "uz": "IELTS Reading: Matnda nima aytilgan va nima aytilmagan",
+        "ru": "IELTS Reading: Что сказано в тексте, а что нет"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "In a TRUE / FALSE / NOT GIVEN question you read a statement and decide:\nTRUE: the text says the same thing, often in other words.\nFALSE: the text says the opposite.\nNOT GIVEN: the text does not say it either way.\nText: “The Lindell ferry runs every hour from 7 a.m. to 7 p.m. A ticket for a bicycle costs one pound.”\n“The first ferry of the day leaves at 7 a.m.”: TRUE.\n“The ferry runs all night.”: FALSE, it stops at 7 p.m.\n“The ferry is often late.”: NOT GIVEN, the text says nothing about delays.\nFor each statement, find the place in the text first, then compare.",
+            "uz": "TRUE / FALSE / NOT GIVEN savolida siz fikrni (statement) oʻqiysiz va u qaysi turga kirishini aniqlaysiz:\nTRUE — matnda xuddi shu aytilgan, koʻpincha boshqa soʻzlar bilan.\nFALSE — matnda buning teskarisi aytilgan.\nNOT GIVEN — matn bu haqda na «ha», na «yoʻq» deydi.\nMatn: «The Lindell ferry runs every hour from 7 a.m. to 7 p.m. A ticket for a bicycle costs one pound.»\n«The first ferry of the day leaves at 7 a.m.» — TRUE.\n«The ferry runs all night.» — FALSE: parom kechki 7 da toʻxtaydi.\n«The ferry is often late.» — NOT GIVEN: kechikishlar haqida hech narsa yoʻq.\nHar bir fikr uchun avval matndan kerakli joyni toping, keyin solishtiring.",
+            "ru": "В вопросе TRUE / FALSE / NOT GIVEN вы читаете утверждение (statement) и решаете:\nTRUE — в тексте сказано то же самое, часто другими словами.\nFALSE — в тексте сказано обратное.\nNOT GIVEN — текст об этом ничего не говорит.\nТекст: «The Lindell ferry runs every hour from 7 a.m. to 7 p.m. A ticket for a bicycle costs one pound.»\n«The first ferry of the day leaves at 7 a.m.» — TRUE.\n«The ferry runs all night.» — FALSE: после 7 вечера паром не ходит.\n«The ferry is often late.» — NOT GIVEN: об опозданиях в тексте ничего нет.\nДля каждого утверждения сначала найдите нужное место в тексте, потом сравните."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ie21q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Text: “Hartwell Library lends books for three weeks, and readers can renew them online once. Since last year it has also lent board games, and it now has more than two hundred of them.”\nStatement: “The library has lent games for many years.”\n1. Find the place: “Since last year it has also lent board games.”\n2. Compare: “for many years” and “since last year” cannot both be right.\n3. Answer: FALSE.\nNow you. Statement: “Readers may borrow a book for three weeks.”\n1. Find the place: “lends books for three weeks”.\n2. Compare: “borrow for three weeks” is the same idea as “lends for three weeks”.\n3. Answer: ?",
+            "uz": "Matn: «Hartwell Library lends books for three weeks, and readers can renew them online once. Since last year it has also lent board games, and it now has more than two hundred of them.»\nFikr: «The library has lent games for many years.»\n1. Joyni toping: «Since last year it has also lent board games.»\n2. Solishtiring: «for many years» va «since last year» ikkalasi bir vaqtda toʻgʻri boʻla olmaydi.\n3. Javob: FALSE.\nEndi siz. Fikr: «Readers may borrow a book for three weeks.»\n1. Joyni toping: «lends books for three weeks».\n2. Solishtiring: «borrow for three weeks» va «lends for three weeks» — bir xil fikr.\n3. Javob: ?",
+            "ru": "Текст: «Hartwell Library lends books for three weeks, and readers can renew them online once. Since last year it has also lent board games, and it now has more than two hundred of them.»\nУтверждение: «The library has lent games for many years.»\n1. Найдите место: «Since last year it has also lent board games.»\n2. Сравните: «for many years» и «since last year» не могут быть верны одновременно.\n3. Ответ: FALSE.\nТеперь попробуйте сами. Утверждение: «Readers may borrow a book for three weeks.»\n1. Найдите место: «lends books for three weeks».\n2. Сравните: «borrow for three weeks» и «lends for three weeks» — одна и та же мысль.\n3. Ответ: ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ie21q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: judge only what the text says, not what you know or guess.\nText: “The Penrose Bridge was finished in 1931. It carries cars and walkers across the River Tey.”\n“The bridge is made of steel.” You may think that old bridges are often made of steel, but this text does not say what the bridge is made of: NOT GIVEN.\n“People can walk across the bridge.” TRUE: it carries walkers.\nA statement can use the words of the text and still be FALSE: “The bridge was finished before 1930.” It uses “finished”, but 1931 is after 1930: FALSE.\nAnd a name is not a fact: a place called Greenhill may not be green at all.",
+            "uz": "Ehtiyot boʻling: faqat matnda aytilganiga qarab baholang, oʻzingiz bilgan yoki taxmin qilganingizga emas.\nMatn: «The Penrose Bridge was finished in 1931. It carries cars and walkers across the River Tey.»\n«The bridge is made of steel.» Eski koʻpriklar koʻpincha poʻlatdan boʻladi deb oʻylashingiz mumkin, lekin matnda bu koʻprik nimadan qurilgani aytilmagan: NOT GIVEN.\n«People can walk across the bridge.» TRUE: koʻprikdan piyodalar ham oʻtadi.\nFikr matndagi soʻzni takrorlab ham FALSE boʻlishi mumkin: «The bridge was finished before 1930.» «finished» soʻzi bor, lekin 1931 — 1930 dan keyin: FALSE.\nNom ham dalil emas: Greenhill degan joy umuman yashil boʻlmasligi mumkin.",
+            "ru": "Осторожно: оценивайте только то, что сказано в тексте, а не то, что вы знаете или предполагаете.\nТекст: «The Penrose Bridge was finished in 1931. It carries cars and walkers across the River Tey.»\n«The bridge is made of steel.» Вы можете подумать, что старые мосты часто бывают стальными, но из чего этот мост, в тексте не сказано: NOT GIVEN.\n«People can walk across the bridge.» TRUE: по мосту ходят пешеходы.\nУтверждение может повторять слово из текста и всё равно быть FALSE: «The bridge was finished before 1930.» Слово «finished» есть, но 1931 — позже 1930: FALSE.\nИ название — не факт: место под названием Greenhill может быть совсем не зелёным."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ie21q3"
+        }
+      ],
+      "test": {
+        "pool": null,
+        "families": [],
+        "n": 3,
+        "first_is_example": false,
+        "test_out": true
+      },
+      "homework": {
+        "pool": null,
+        "families": []
+      },
+      "reserve": [
+        "C7-ir2101",
+        "C7-ir2102",
+        "C7-ir2103",
+        "C7-ir2104",
+        "C7-ir2105",
+        "C7-ir2106",
+        "C7-ir2107",
+        "C7-ir2108",
+        "C7-ir2109",
+        "C7-ir2110",
+        "C7-ir2111",
+        "C7-ir2112",
+        "C7-ir2113",
+        "C7-ir2114",
+        "C7-ir2115",
+        "C7-ir2116",
+        "C7-ir2117",
+        "C7-ir2118",
+        "C7-ir2119",
+        "C7-ir2120",
+        "C7-ia2101",
+        "C7-ia2102",
+        "C7-ia2103",
+        "C7-ia2104",
+        "C7-ia2105",
+        "C7-ia2106",
+        "C7-ia2107",
+        "C7-ia2108",
+        "C7-ia2109",
+        "C7-ia2110",
+        "C7-ia2111",
+        "C7-ia2112",
+        "C7-ia2113",
+        "C7-ia2114",
+        "C7-ia2115",
+        "C7-ia2116",
+        "C7-ia2117",
+        "C7-ia2118",
+        "C7-ia2119",
+        "C7-ia2120"
+      ],
+      "extra_link": "C10-IERE02#official",
+      "source": "own",
+      "author": "agent:p6b-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s3+B3s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-IERE02-2",
+      "course": "ielts_r",
+      "unit": "C10-IERE02",
+      "seq": 2,
+      "skill": "ielts_r:IERE02",
+      "requires": {
+        "english_cefr_min": "B1"
+      },
+      "title": {
+        "en": "IELTS Reading: The Not Given trap",
+        "uz": "IELTS Reading: Not Given (matnda aytilmagan) tuzogʻi",
+        "ru": "IELTS Reading: Ловушка Not Given (в тексте не сказано)"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "FALSE and NOT GIVEN are easy to mix up. Use one test: can you point to words in the text that say the opposite of the statement?\nYes: FALSE.\nNo, the text is silent on this point: NOT GIVEN.\nText: “The Selwyn Café opened in 2019 in an old bank building. It serves breakfast and lunch.”\n“The café opened before 2015.” The text says 2019, the opposite: FALSE.\n“The café owner once worked in the bank.” The text talks about the bank, but says nothing about the owner: NOT GIVEN.\nNOT GIVEN often hides on the right topic: the text talks about the bank, just not about this detail.",
+            "uz": "FALSE va NOT GIVEN ni adashtirib yuborish oson. Bitta sinovdan foydalaning: matnda fikrning teskarisini aytadigan soʻzlarni koʻrsata olasizmi?\nHa — FALSE.\nYoʻq, matn bu haqda jim — NOT GIVEN.\nMatn: «The Selwyn Café opened in 2019 in an old bank building. It serves breakfast and lunch.»\n«The café opened before 2015.» Matnda 2019 deyilgan, bu teskarisi: FALSE.\n«The café owner once worked in the bank.» Matnda bank bor, lekin kafe egasi haqida hech narsa yoʻq: NOT GIVEN.\nNOT GIVEN koʻpincha toʻgʻri mavzu ichida yashirinadi: matn bank haqida gapiradi, faqat aynan shu tafsilot haqida emas.",
+            "ru": "FALSE и NOT GIVEN легко перепутать. Используйте одну проверку: можете ли вы показать в тексте слова, которые противоречат утверждению?\nДа — FALSE.\nНет, текст об этом молчит — NOT GIVEN.\nТекст: «The Selwyn Café opened in 2019 in an old bank building. It serves breakfast and lunch.»\n«The café opened before 2015.» В тексте 2019 год — это обратное: FALSE.\n«The café owner once worked in the bank.» Банк в тексте есть, но о владельце — ни слова: NOT GIVEN.\nNOT GIVEN часто прячется в той же теме: текст говорит о банке, но не об этой детали."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ie22q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Text: “Moss Lane Park has a lake, a playground and a small café. In 2022 the council planted two hundred trees along the park paths, and last summer it added a water fountain near the playground.”\nStatement: “The trees were planted in 2020.”\n1. Find the topic: “In 2022 the council planted two hundred trees.”\n2. Look for words that say the opposite: 2022 is not 2020. Yes, there are.\n3. Answer: FALSE.\nNow you. Statement: “The café is open all year.”\n1. Find the topic: “a small café”.\n2. Look for words about when the café is open: there are none.\n3. Answer: ?",
+            "uz": "Matn: «Moss Lane Park has a lake, a playground and a small café. In 2022 the council planted two hundred trees along the park paths, and last summer it added a water fountain near the playground.»\nFikr: «The trees were planted in 2020.»\n1. Mavzuni toping: «In 2022 the council planted two hundred trees.»\n2. Teskarisini aytadigan soʻzlarni qidiring: 2022 — bu 2020 emas. Bunday soʻzlar bor.\n3. Javob: FALSE.\nEndi siz. Fikr: «The café is open all year.»\n1. Mavzuni toping: «a small café».\n2. Kafe qachon ochiqligi haqidagi soʻzlarni qidiring: ular yoʻq.\n3. Javob: ?",
+            "ru": "Текст: «Moss Lane Park has a lake, a playground and a small café. In 2022 the council planted two hundred trees along the park paths, and last summer it added a water fountain near the playground.»\nУтверждение: «The trees were planted in 2020.»\n1. Найдите тему: «In 2022 the council planted two hundred trees.»\n2. Ищите слова, которые противоречат утверждению: 2022 — не 2020. Такие слова есть.\n3. Ответ: FALSE.\nТеперь попробуйте сами. Утверждение: «The café is open all year.»\n1. Найдите тему: «a small café».\n2. Ищите слова о том, когда кафе открыто: их нет.\n3. Ответ: ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ie22q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch the small words. One word can turn TRUE into FALSE or NOT GIVEN: all or some, only, always or often, rise or double, first, most.\nText: “Some pupils walk to school, but most come by bus. Last year the number of pupils who cycle rose.”\n“All the pupils walk to school.” FALSE: most come by bus.\n“The number of pupils who cycle doubled last year.” NOT GIVEN: the text says the number rose, not by how much.\n“Most pupils come by bus.” TRUE.\nSo read the small words of the statement first, then check that the text says exactly that.",
+            "uz": "Kichik soʻzlarga eʼtibor bering. Bitta soʻz TRUE ni FALSE yoki NOT GIVEN ga aylantirishi mumkin: all yoki some, only, always yoki often, rise yoki double, first, most.\nMatn: «Some pupils walk to school, but most come by bus. Last year the number of pupils who cycle rose.»\n«All the pupils walk to school.» FALSE: koʻpchilik avtobusda keladi.\n«The number of pupils who cycle doubled last year.» NOT GIVEN: matnda son oshgani aytilgan, lekin qanchaga oshgani emas.\n«Most pupils come by bus.» TRUE.\nShuning uchun avval fikrdagi kichik soʻzlarni oʻqing, keyin matnda aynan shu aytilganini tekshiring.",
+            "ru": "Следите за мелкими словами. Одно слово может превратить TRUE в FALSE или NOT GIVEN: all или some, only, always или often, rise или double, first, most.\nТекст: «Some pupils walk to school, but most come by bus. Last year the number of pupils who cycle rose.»\n«All the pupils walk to school.» FALSE: большинство приезжает на автобусе.\n«The number of pupils who cycle doubled last year.» NOT GIVEN: в тексте сказано, что число выросло, но не насколько.\n«Most pupils come by bus.» TRUE.\nПоэтому сначала обратите внимание на мелкие слова в утверждении, потом проверьте, что текст говорит именно это."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ie22q3"
+        }
+      ],
+      "test": {
+        "pool": null,
+        "families": [],
+        "n": 3,
+        "first_is_example": false,
+        "test_out": true
+      },
+      "homework": {
+        "pool": null,
+        "families": []
+      },
+      "reserve": [
+        "C7-ir2201",
+        "C7-ir2202",
+        "C7-ir2203",
+        "C7-ir2204",
+        "C7-ir2205",
+        "C7-ir2206",
+        "C7-ir2207",
+        "C7-ir2208",
+        "C7-ir2209",
+        "C7-ir2210",
+        "C7-ir2211",
+        "C7-ir2212",
+        "C7-ir2213",
+        "C7-ir2214",
+        "C7-ir2215",
+        "C7-ir2216",
+        "C7-ir2217",
+        "C7-ir2218",
+        "C7-ir2219",
+        "C7-ir2220",
+        "C7-ia2201",
+        "C7-ia2202",
+        "C7-ia2203",
+        "C7-ia2204",
+        "C7-ia2205",
+        "C7-ia2206",
+        "C7-ia2207",
+        "C7-ia2208",
+        "C7-ia2209",
+        "C7-ia2210",
+        "C7-ia2211",
+        "C7-ia2212",
+        "C7-ia2213",
+        "C7-ia2214",
+        "C7-ia2215",
+        "C7-ia2216",
+        "C7-ia2217",
+        "C7-ia2218",
+        "C7-ia2219",
+        "C7-ia2220"
+      ],
+      "extra_link": "C10-IERE02#official",
+      "source": "own",
+      "author": "agent:p6b-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s3+P7s4",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ],
+  "items": [
+    {
+      "id": "C19-ie11q1",
+      "skill": "ielts_reading",
+      "level": "B1",
+      "subskill": "skimming",
+      "page": "C19-IERE01-1",
+      "lang": "en",
+      "stem": {
+        "en": "IELTS Academic Reading has 3 passages and 40 questions. You have 60 minutes, and writing your answers is part of the 60 minutes.\n\nWhich time plan fits the test best?"
+      },
+      "options": [
+        {
+          "en": "About 20 minutes a passage, writing each answer as you go"
+        },
+        {
+          "en": "About 20 minutes a passage, then 10 more minutes to write the answers"
+        },
+        {
+          "en": "About 30 minutes a passage, because there are only three"
+        },
+        {
+          "en": "About 15 minutes a passage, because there are four passages"
+        }
+      ],
+      "why": {
+        "en": "About 20 minutes a passage: 3 × 20 = 60. Writing your answers is inside the 60 minutes, so there are no extra 10 minutes at the end.",
+        "uz": "Har bir matnga taxminan 20 daqiqa: 3 × 20 = 60. Javob yozish ham 60 daqiqaga kiradi, oxirida qoʻshimcha 10 daqiqa yoʻq.",
+        "ru": "Около 20 минут на текст: 3 × 20 = 60. Запись ответов входит в 60 минут, поэтому дополнительных 10 минут в конце нет."
+      },
+      "instructions": {
+        "en": "Use the time plan from the lesson. Choose the plan that fits the real test.",
+        "uz": "Darsdagi vaqt rejasidan foydalaning. Haqiqiy testga mos rejani tanlang.",
+        "ru": "Используйте план времени из урока. Выберите план, который подходит к реальному экзамену."
+      },
+      "prior_b": -0.4,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p6b-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s3+B3s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ie11q2",
+      "skill": "ielts_reading",
+      "level": "B1",
+      "subskill": "skimming",
+      "page": "C19-IERE01-1",
+      "lang": "en",
+      "stem": {
+        "en": "For years, the flat roof of Milford School was empty. Last spring, a science teacher and her pupils carried soil up in buckets and planted beans, tomatoes and herbs. The pupils measure how fast each plant grows and record the rain every morning. In the autumn, the school kitchen cooked their vegetables for lunch. Next year, two more schools plan to start roof gardens of their own.\n\nWhat is the text mainly about?"
+      },
+      "options": [
+        {
+          "en": "A school roof that pupils turned into a garden"
+        },
+        {
+          "en": "The vegetables the school kitchen cooked for lunch in the autumn"
+        },
+        {
+          "en": "Why two other schools plan to build new kitchens next year"
+        },
+        {
+          "en": "How pupils record the rain on the roof every morning"
+        }
+      ],
+      "why": {
+        "en": "First: an empty roof; middle: pupils plant, measure and eat vegetables; last: more roof gardens. The gist: a roof turned into a garden. Lunch and rain are details.",
+        "uz": "Boshida: boʻsh tom; oʻrtada: oʻquvchilar sabzavot ekadi, oʻlchaydi, yeydi; oxirida: yana tom bogʻlari. Asosiy fikr: tom bogʻga aylandi. Qolgani tafsilot.",
+        "ru": "Начало: пустая крыша; середина: ученики сажают, измеряют и едят овощи; конец: новые сады на крышах. Суть: крыша стала садом. Остальное — детали."
+      },
+      "instructions": {
+        "en": "Skim the text: its first and last sentences first. Then choose what the whole text is about.",
+        "uz": "Matnga koʻz yugurtiring: avval birinchi va oxirgi gaplarni oʻqing. Keyin butun matn nima haqida ekanini tanlang.",
+        "ru": "Просмотрите текст: сначала первое и последнее предложения. Затем выберите, о чём весь текст."
+      },
+      "prior_b": -0.2,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p6b-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s3+B3s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ie11q3",
+      "skill": "ielts_reading",
+      "level": "B1",
+      "subskill": "scanning",
+      "page": "C19-IERE01-1",
+      "lang": "en",
+      "stem": {
+        "en": "The Harbour Museum in Port Ellery reopened in March after a long rebuild. Its oldest object, a fishing net from 1802, now hangs in the entrance hall. Visitors under sixteen pay nothing, and adults pay four pounds. A new café on the top floor looks out over the boats, and the shop sells maps of the old harbour drawn by local children.\n\nHow much does a 12-year-old pay to get into the museum?"
+      },
+      "options": [
+        {
+          "en": "Nothing"
+        },
+        {
+          "en": "Four pounds"
+        },
+        {
+          "en": "Two pounds"
+        },
+        {
+          "en": "One pound"
+        }
+      ],
+      "why": {
+        "en": "Nothing: “Visitors under sixteen pay nothing”, and 12 is under sixteen. Four pounds is the adult price.",
+        "uz": "Hech narsa: «Visitors under sixteen pay nothing» — 16 yoshgacha bepul, 12 esa 16 dan kichik. Toʻrt funt — kattalar narxi.",
+        "ru": "Ничего: «Visitors under sixteen pay nothing» — до 16 лет бесплатно, а 12 меньше 16. Четыре фунта — цена для взрослых."
+      },
+      "instructions": {
+        "en": "Scan the text for the detail. The question may use other words than the text.",
+        "uz": "Matndan kerakli tafsilotni qidiring. Savoldagi soʻzlar matndagidan boshqacha boʻlishi mumkin.",
+        "ru": "Найдите в тексте нужную деталь. В вопросе могут использоваться не те слова, что в тексте."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p6b-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s3+B3s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ie21q1",
+      "skill": "ielts_reading",
+      "level": "B1",
+      "subskill": "true_judgement",
+      "page": "C19-IERE02-1",
+      "lang": "en",
+      "stem": {
+        "en": "The Ashby Community Pool opened in 2015 next to the town's sports ground. It is open from Monday to Saturday, from 7 a.m. to 9 p.m. Swimming lessons for children take place on Tuesday and Thursday evenings, and there is a quiet hour for older swimmers every morning. On Sundays the pool is closed for cleaning.\n\nWhich statement is TRUE according to the text?"
+      },
+      "options": [
+        {
+          "en": "Children can have swimming lessons twice a week."
+        },
+        {
+          "en": "The pool is open every day of the week."
+        },
+        {
+          "en": "Adults can have swimming lessons on Saturdays."
+        },
+        {
+          "en": "The pool was built by the town council."
+        }
+      ],
+      "why": {
+        "en": "TRUE: lessons are on “Tuesday and Thursday evenings”, twice a week. The pool closes on Sundays (FALSE); adult lessons and who built it are NOT GIVEN.",
+        "uz": "TRUE: darslar «Tuesday and Thursday evenings» — haftada ikki marta. Yakshanba yopiq (FALSE); kattalar darslari va hovuzni kim qurgani aytilmagan.",
+        "ru": "TRUE: занятия «Tuesday and Thursday evenings» — два раза в неделю. По воскресеньям бассейн закрыт (FALSE); об уроках для взрослых и о том, кто его построил, не сказано (NOT GIVEN)."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the statement that agrees with the text (TRUE).",
+        "uz": "Matnni oʻqing. Matnda aytilganga mos keladigan fikrni tanlang (TRUE).",
+        "ru": "Прочитайте текст. Выберите утверждение, которое соответствует тексту (TRUE)."
+      },
+      "prior_b": -0.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p6b-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s3+B3s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ie21q2",
+      "skill": "ielts_reading",
+      "level": "B1",
+      "subskill": "true_judgement",
+      "page": "C19-IERE02-1",
+      "lang": "en",
+      "stem": {
+        "en": "Hartwell Library lends books for three weeks, and readers can renew them online once. Since last year it has also lent board games, and it now has more than two hundred of them. The games are popular with families, and the library holds a games evening on the first Friday of every month.\n\nStatement: Readers may borrow a book for three weeks.\n\nIs the statement TRUE, FALSE or NOT GIVEN? Choose the answer with the right reason."
+      },
+      "options": [
+        {
+          "en": "TRUE: the text says the library lends books for three weeks."
+        },
+        {
+          "en": "FALSE: the text says the library lends board games, not books."
+        },
+        {
+          "en": "NOT GIVEN: the text does not say how long a book can be kept."
+        },
+        {
+          "en": "FALSE: the text says a book can be kept for one week only."
+        }
+      ],
+      "why": {
+        "en": "TRUE: “lends books for three weeks” is the same idea as “borrow a book for three weeks”. The other reasons misread the text.",
+        "uz": "TRUE: «lends books for three weeks» va «borrow a book for three weeks» — bir xil fikr. Boshqa sabablar matnni notoʻgʻri oʻqigan.",
+        "ru": "TRUE: «lends books for three weeks» и «borrow a book for three weeks» — одна и та же мысль. Остальные причины искажают текст."
+      },
+      "instructions": {
+        "en": "Read the text and the statement. Choose the right answer with the right reason.",
+        "uz": "Matn va fikrni oʻqing. Toʻgʻri javobni toʻgʻri sababi bilan tanlang.",
+        "ru": "Прочитайте текст и утверждение. Выберите верный ответ с верным обоснованием."
+      },
+      "prior_b": -0.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p6b-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s3+B3s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ie21q3",
+      "skill": "ielts_reading",
+      "level": "B1",
+      "subskill": "not_given_judgement",
+      "page": "C19-IERE02-1",
+      "lang": "en",
+      "stem": {
+        "en": "Greystone Tower stands on a hill above the village of Marrow. It was built in 1890 as a lookout for ships, and a lamp was lit at its top on stormy nights. Today the lamp is gone, and the tower is open to visitors on summer weekends. From the top, on a clear day, you can see three islands.\n\nWhich statement is NOT GIVEN in the text?"
+      },
+      "options": [
+        {
+          "en": "The tower is built of grey stone."
+        },
+        {
+          "en": "The tower was built to watch for ships."
+        },
+        {
+          "en": "The tower is open to visitors all year."
+        },
+        {
+          "en": "A lamp still shines at the top of the tower."
+        }
+      ],
+      "why": {
+        "en": "NOT GIVEN: the name “Greystone” is not a fact; the text never says what the tower is made of. It opens on summer weekends only, and the lamp is gone.",
+        "uz": "NOT GIVEN: «Greystone» nomi dalil emas; minora nimadan qurilgani aytilmagan. U faqat yozgi dam olish kunlari ochiq, chiroq esa yoʻq.",
+        "ru": "NOT GIVEN: название «Greystone» — не факт; из чего сделана башня, не сказано. Она открыта только летом по выходным, а лампы больше нет."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the statement that the text says nothing about (NOT GIVEN).",
+        "uz": "Matnni oʻqing. Matnda bu haqda hech narsa aytilmagan fikrni tanlang (NOT GIVEN).",
+        "ru": "Прочитайте текст. Выберите утверждение, о котором в тексте ничего не сказано (NOT GIVEN)."
+      },
+      "prior_b": 0.2,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p6b-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s3+B3s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ie22q1",
+      "skill": "ielts_reading",
+      "level": "B1",
+      "subskill": "not_given_judgement",
+      "page": "C19-IERE02-2",
+      "lang": "en",
+      "stem": {
+        "en": "Danby bus station was rebuilt last year. Before the rebuild, passengers waited outside under a metal roof. Now there is a heated waiting room, a ticket machine and a small shop that sells drinks and newspapers. Buses to the city leave every thirty minutes from platform 2.\n\nStatement: The shop at the bus station opens early in the morning.\n\nIs the statement TRUE, FALSE or NOT GIVEN? Choose the answer with the right reason."
+      },
+      "options": [
+        {
+          "en": "NOT GIVEN: the text names the shop but says nothing about when it opens."
+        },
+        {
+          "en": "TRUE: the text says the shop opens at six, before the first bus."
+        },
+        {
+          "en": "FALSE: the text says the shop opens at ten, after the morning buses."
+        },
+        {
+          "en": "FALSE: the text says the shop is open only in the afternoon."
+        }
+      ],
+      "why": {
+        "en": "NOT GIVEN: the text names the shop and what it sells, but no words say when it opens. The other reasons quote times that the text never gives.",
+        "uz": "NOT GIVEN: matnda doʻkon va unda nima sotilishi bor, lekin qachon ochilishi haqida soʻz yoʻq. Boshqa sabablar matnda yoʻq vaqtlarni keltiradi.",
+        "ru": "NOT GIVEN: в тексте назван магазин и то, что он продаёт, но не сказано, когда он открывается. Другие причины приводят время, которого в тексте нет."
+      },
+      "instructions": {
+        "en": "Read the text and the statement. Choose the right answer with the right reason.",
+        "uz": "Matn va fikrni oʻqing. Toʻgʻri javobni toʻgʻri sababi bilan tanlang.",
+        "ru": "Прочитайте текст и утверждение. Выберите верный ответ с верным обоснованием."
+      },
+      "prior_b": 0,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p6b-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s3+P7s4",
+      "status": "verified_auto",
+      "version": 2,
+      "quarantine_reason": "B3s4: answerable without its passage (the NOT GIVEN option is the only one whose reason can be right whatever the text says: 'buses leave every thirty minutes' and 'sells only drinks' cannot bear on opening hours, and 'a shop at a bus station must open before the first bus' argues from outside the text. Fix: reasons only the text can refute (e.g. 'FALSE: the text says the shop opens at nine')); v2: the three wrong reasons now each claim the text gives an opening time (six, ten, the afternoon only), so only the text can rule them out",
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C19-ie22q2",
+      "skill": "ielts_reading",
+      "level": "B1",
+      "subskill": "not_given_judgement",
+      "page": "C19-IERE02-2",
+      "lang": "en",
+      "stem": {
+        "en": "Moss Lane Park has a lake, a playground and a small café. In 2022 the council planted two hundred trees along the park paths, and last summer it added a water fountain near the playground.\n\nStatement: The café is open all year.\n\nIs the statement TRUE, FALSE or NOT GIVEN? Choose the answer with the right reason."
+      },
+      "options": [
+        {
+          "en": "NOT GIVEN: the text mentions the café but not when it is open."
+        },
+        {
+          "en": "FALSE: the text says the café closes from November to March."
+        },
+        {
+          "en": "TRUE: the text says the café is open every day of the year."
+        },
+        {
+          "en": "FALSE: the text says the café opens only in the summer."
+        }
+      ],
+      "why": {
+        "en": "NOT GIVEN: the café is mentioned, but no words say when it is open. The text gives no months, seasons or days for the café.",
+        "uz": "NOT GIVEN: kafe tilga olingan, lekin qachon ochiqligi haqida soʻz yoʻq. Matnda kafe uchun oy, fasl yoki kun aytilmagan.",
+        "ru": "NOT GIVEN: кафе упомянуто, но когда оно работает, не сказано. В тексте нет ни месяцев, ни сезонов, ни дней для кафе."
+      },
+      "instructions": {
+        "en": "Read the text and the statement. Choose the right answer with the right reason.",
+        "uz": "Matn va fikrni oʻqing. Toʻgʻri javobni toʻgʻri sababi bilan tanlang.",
+        "ru": "Прочитайте текст и утверждение. Выберите верный ответ с верным обоснованием."
+      },
+      "prior_b": -0.1,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p6b-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s3+P7s4",
+      "status": "verified_auto",
+      "version": 2,
+      "quarantine_reason": "B3s4: answerable without its passage (same pattern: 'small, so it closes in winter' is an inference, and 'the park has a café' and 'added last summer' cannot decide 'open all year' whatever the text says; only the NOT GIVEN reason can be right, so the key is found without the text); v2: the three wrong reasons now each claim the text gives the café's season or days (closed November to March, every day, summer only), so only the text can rule them out; the stem, the key and the example piece are unchanged",
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C19-ie22q3",
+      "skill": "ielts_reading",
+      "level": "B1",
+      "subskill": "not_given_judgement",
+      "page": "C19-IERE02-2",
+      "lang": "en",
+      "stem": {
+        "en": "Pupils at Hilltop School can join one of three clubs after lessons: chess, drama or gardening. Some pupils join two. Last year the number of pupils in the gardening club rose, and the club now grows vegetables for the school kitchen. The chess club meets on Mondays only.\n\nWhich statement is NOT GIVEN in the text?"
+      },
+      "options": [
+        {
+          "en": "The gardening club doubled in size last year."
+        },
+        {
+          "en": "Every pupil joins exactly one club."
+        },
+        {
+          "en": "The chess club meets twice a week."
+        },
+        {
+          "en": "The gardening club grows food for the school."
+        }
+      ],
+      "why": {
+        "en": "NOT GIVEN: the gardening club “rose”, but by how much is not said. Some pupils join two clubs and chess meets on Mondays only, so those are FALSE.",
+        "uz": "NOT GIVEN: bogʻdorchilik toʻgaragi «rose» — oʻsgan, lekin qanchaga, aytilmagan. Baʼzilar ikki toʻgarakka qatnaydi, shaxmat toʻgaragi faqat dushanba kunlari boʻladi, shuning uchun bu fikrlar FALSE.",
+        "ru": "NOT GIVEN: число участников кружка садоводства выросло («rose»), но насколько — не сказано. Некоторые ученики ходят в два кружка, шахматы только по понедельникам — это FALSE."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the statement that the text says nothing about (NOT GIVEN).",
+        "uz": "Matnni oʻqing. Matnda bu haqda hech narsa aytilmagan fikrni tanlang (NOT GIVEN).",
+        "ru": "Прочитайте текст. Выберите утверждение, о котором в тексте ничего не сказано (NOT GIVEN)."
+      },
+      "prior_b": 0.3,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p6b-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s3+B3s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

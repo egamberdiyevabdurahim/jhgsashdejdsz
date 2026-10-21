@@ -1,0 +1,527 @@
+{
+  "bank": "C1",
+  "batch": 9,
+  "items": [
+    {
+      "id": "C1-ap1001",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "limits",
+      "family": {
+        "template": "What is the limit of x² + {a}x − {b} as x approaches {c}?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 9
+          },
+          "b": {
+            "min": 1,
+            "max": 12
+          },
+          "c": {
+            "values": [
+              -4,
+              -3,
+              -2,
+              -1,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        },
+        "derived": {
+          "cc": "c*c",
+          "ac": "a*c"
+        },
+        "constraints": [
+          "c*c + a*c != 0",
+          "c*c + a*c - b != 2*c + a",
+          "2*c + a != -b",
+          "c != a",
+          "2*c + a != c*c - a*c - b"
+        ],
+        "answer": "c*c + a*c - b",
+        "distractors": [
+          "-b",
+          "2*c + a",
+          "c*c - a*c - b"
+        ],
+        "integer": true,
+        "relation": "X = ((({c} + 0.000001)^2 + {a}*({c} + 0.000001) - {b}) + (({c} - 0.000001)^2 + {a}*({c} - 0.000001) - {b}))/2"
+      },
+      "page": "C19-APCA01-1",
+      "lang": "en",
+      "stem": {
+        "en": "What is the limit of x² + {a}x − {b} as x approaches {c}?",
+        "uz": "x {c} ga intilganda x² + {a}x − {b} ning limiti nechaga teng?",
+        "ru": "Чему равен предел x² + {a}x − {b} при x → {c}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "A polynomial has no gaps, so put x = {c} in: ({c})² + {a} × ({c}) − {b} = {ANS}.",
+        "uz": "Koʻphadda uzilish yoʻq, shuning uchun x = {c} ni qoʻying: ({c})² + {a} × ({c}) − {b} = {ANS}.",
+        "ru": "У многочлена нет разрывов, поэтому подставьте x = {c}: ({c})² + {a} × ({c}) − {b} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 1.0,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p7-a3",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap1002",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "limits",
+      "family": {
+        "template": "What is the limit of ({a}x² + {b}x − {c})/({d}x² + {e}) as x → ∞?",
+        "params": {
+          "d": {
+            "min": 2,
+            "max": 5
+          },
+          "k": {
+            "min": 2,
+            "max": 7
+          },
+          "b": {
+            "min": 1,
+            "max": 9
+          },
+          "e": {
+            "min": 1,
+            "max": 9
+          },
+          "j": {
+            "min": 1,
+            "max": 6
+          }
+        },
+        "derived": {
+          "a": "k*d",
+          "c": "j*e"
+        },
+        "answer": "a/d",
+        "distractors": [
+          "a",
+          "0",
+          "-c/e"
+        ],
+        "integer": true,
+        "relation": "X = ({a}*1000000000^2 + {b}*1000000000 - {c})/({d}*1000000000^2 + {e})"
+      },
+      "page": "C19-APCA01-2",
+      "lang": "en",
+      "stem": {
+        "en": "What is the limit of ({a}x² + {b}x − {c})/({d}x² + {e}) as x → ∞?",
+        "uz": "x → ∞ da ({a}x² + {b}x − {c})/({d}x² + {e}) ning limiti nechaga teng?",
+        "ru": "Чему равен предел ({a}x² + {b}x − {c})/({d}x² + {e}) при x → ∞?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Divide the top and the bottom by x²: the other terms go to 0, so the limit is {a}/{d} = {ANS}.",
+        "uz": "Surat va maxrajni x² ga boʻling: qolgan hadlar 0 ga intiladi, demak limit {a}/{d} = {ANS}.",
+        "ru": "Разделите числитель и знаменатель на x²: остальные члены стремятся к 0, значит, предел равен {a}/{d} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.3,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a3",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap1003",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "continuity",
+      "family": {
+        "template": "f(x) = x² + {a} when x < {c}, and f(x) = {m}x + k when x ≥ {c}. For which k is f continuous at x = {c}?",
+        "params": {
+          "a": {
+            "min": 1,
+            "max": 9
+          },
+          "c": {
+            "min": 1,
+            "max": 4
+          },
+          "m": {
+            "min": 2,
+            "max": 6
+          }
+        },
+        "derived": {
+          "left": "c*c + a",
+          "mc": "m*c"
+        },
+        "constraints": [
+          "c*c + a - m*c != 0",
+          "2*c*c + 2*a != m*c"
+        ],
+        "answer": "c*c + a - m*c",
+        "distractors": [
+          "c*c + a",
+          "c*c + a + m*c",
+          "m*c - c*c - a"
+        ],
+        "integer": true,
+        "relation": "{m}*{c} + X = {c}^2 + {a}"
+      },
+      "page": "C19-APCA01-3",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = x² + {a} when x < {c}, and f(x) = {m}x + k when x ≥ {c}. For which k is f continuous at x = {c}?",
+        "uz": "x < {c} boʻlganda f(x) = x² + {a}, x ≥ {c} boʻlganda esa f(x) = {m}x + k. k ning qaysi qiymatida f funksiya x = {c} nuqtada uzluksiz boʻladi?",
+        "ru": "f(x) = x² + {a} при x < {c} и f(x) = {m}x + k при x ≥ {c}. При каком k функция f непрерывна в точке x = {c}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "From the left f(x) → {left}. From the right and at {c}: {mc} + k. So {mc} + k = {left} and k = {ANS}.",
+        "uz": "Chapdan f(x) → {left}. Oʻngdan va {c} nuqtada: {mc} + k. Demak {mc} + k = {left} va k = {ANS}.",
+        "ru": "Слева f(x) → {left}. Справа и в точке {c}: {mc} + k. Значит, {mc} + k = {left} и k = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 1.4,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p7-a3",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap1004",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "derivative_definition",
+      "family": {
+        "template": "For f(x) = {a}x² + {b}x, f′({c}) is the limit of (f({c} + h) − f({c}))/h as h approaches 0. What is f′({c})?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 5
+          },
+          "b": {
+            "min": 2,
+            "max": 9
+          },
+          "c": {
+            "values": [
+              -3,
+              -2,
+              -1,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        },
+        "constraints": [
+          "2*a*c + b != a*c*c + b*c",
+          "a*c*c + b*c != 2*a*c",
+          "a*c*c + b*c != a*c + b",
+          "a*c != b"
+        ],
+        "answer": "2*a*c + b",
+        "distractors": [
+          "a*c*c + b*c",
+          "2*a*c",
+          "a*c + b"
+        ],
+        "integer": true,
+        "relation": "X = (({a}*({c} + 0.000001)^2 + {b}*({c} + 0.000001)) - ({a}*({c} - 0.000001)^2 + {b}*({c} - 0.000001)))/0.000002"
+      },
+      "page": "C19-APCA02-1",
+      "lang": "en",
+      "stem": {
+        "en": "For f(x) = {a}x² + {b}x, f′({c}) is the limit of (f({c} + h) − f({c}))/h as h approaches 0. What is f′({c})?",
+        "uz": "f(x) = {a}x² + {b}x uchun f′({c}) — bu h 0 ga intilganda (f({c} + h) − f({c}))/h ning limiti. f′({c}) nechaga teng?",
+        "ru": "Для f(x) = {a}x² + {b}x производная f′({c}) — это предел (f({c} + h) − f({c}))/h при h → 0. Чему равно f′({c})?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "f({c} + h) − f({c}) = ({ANS} + {a}h)h, so the quotient is {ANS} + {a}h, which goes to {ANS} as h → 0.",
+        "uz": "f({c} + h) − f({c}) = ({ANS} + {a}h)h, demak nisbat {ANS} + {a}h ga teng va h → 0 da {ANS} ga intiladi.",
+        "ru": "f({c} + h) − f({c}) = ({ANS} + {a}h)h, поэтому отношение равно {ANS} + {a}h и при h → 0 стремится к {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 1.4,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p7-a3",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap1005",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "tangent_line",
+      "family": {
+        "template": "The line tangent to the graph of f(x) = {a}x² + {b}x + {d} at x = {c} is y = mx + k. What is k?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 5
+          },
+          "b": {
+            "min": 2,
+            "max": 9
+          },
+          "d": {
+            "min": 1,
+            "max": 9
+          },
+          "c": {
+            "values": [
+              -2,
+              -1,
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        "derived": {
+          "fc": "a*c*c + b*c + d",
+          "mm": "2*a*c + b"
+        },
+        "constraints": [
+          "2*a*c*c + b*c != 0",
+          "d - a*c*c != 2*a*c + b",
+          "a*c*c + b*c + d != 2*a*c + b",
+          "a*c*c + b*c != 0",
+          "2*a*c + b != d"
+        ],
+        "answer": "d - a*c*c",
+        "distractors": [
+          "a*c*c + b*c + d",
+          "2*a*c + b",
+          "d"
+        ],
+        "integer": true,
+        "relation": "X = ({a}*{c}^2 + {b}*{c} + {d}) - {c}*(({a}*({c} + 0.000001)^2 + {b}*({c} + 0.000001)) - ({a}*({c} - 0.000001)^2 + {b}*({c} - 0.000001)))/0.000002"
+      },
+      "page": "C19-APCA02-2",
+      "lang": "en",
+      "stem": {
+        "en": "The line tangent to the graph of f(x) = {a}x² + {b}x + {d} at x = {c} is y = mx + k. What is k?",
+        "uz": "f(x) = {a}x² + {b}x + {d} funksiya grafigiga x = {c} nuqtada oʻtkazilgan urinma y = mx + k. k nechaga teng?",
+        "ru": "Касательная к графику f(x) = {a}x² + {b}x + {d} в точке x = {c} — это прямая y = mx + k. Чему равно k?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "f({c}) = {fc} and m = f′({c}) = {mm}. The line passes through ({c}, {fc}), so k = {fc} − {mm} × ({c}) = {ANS}.",
+        "uz": "f({c}) = {fc} va m = f′({c}) = {mm}. Urinma ({c}; {fc}) nuqtadan oʻtadi, demak k = {fc} − {mm} × ({c}) = {ANS}.",
+        "ru": "f({c}) = {fc} и m = f′({c}) = {mm}. Прямая проходит через точку ({c}; {fc}), значит, k = {fc} − {mm} × ({c}) = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 1.6,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p7-a3",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap1006",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "quotient_rule",
+      "family": {
+        "template": "f(x) = ({a}x + {b})/(x + {c}). What is f′({t})?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 6
+          },
+          "c": {
+            "min": 1,
+            "max": 4
+          },
+          "u": {
+            "values": [
+              1,
+              2
+            ]
+          },
+          "k": {
+            "values": [
+              -3,
+              -2,
+              -1,
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        "derived": {
+          "t": "u - c",
+          "b": "a*c - k*u*u",
+          "num": "k*u*u",
+          "uu": "u*u"
+        },
+        "constraints": [
+          "b >= 1",
+          "a != k",
+          "a != -k",
+          "a - k*u != k",
+          "a - k*u != -k"
+        ],
+        "answer": "(a*c - b)/((t + c)^2)",
+        "distractors": [
+          "a",
+          "(b - a*c)/((t + c)^2)",
+          "(a*t + b)/(t + c)"
+        ],
+        "integer": true,
+        "relation": "X = (({a}*({t} + 0.000001) + {b})/(({t} + 0.000001) + {c}) - ({a}*({t} - 0.000001) + {b})/(({t} - 0.000001) + {c}))/0.000002"
+      },
+      "page": "C19-APCA02-3",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = ({a}x + {b})/(x + {c}). What is f′({t})?",
+        "uz": "f(x) = ({a}x + {b})/(x + {c}). f′({t}) nechaga teng?",
+        "ru": "f(x) = ({a}x + {b})/(x + {c}). Найдите f′({t})."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Quotient rule: f′(x) = ({a}(x + {c}) − ({a}x + {b}))/(x + {c})² = {num}/(x + {c})². At x = {t} the bottom is {uu}, so f′({t}) = {ANS}.",
+        "uz": "Boʻlinma hosilasi: f′(x) = ({a}(x + {c}) − ({a}x + {b}))/(x + {c})² = {num}/(x + {c})². x = {t} da maxraj {uu}, demak f′({t}) = {ANS}.",
+        "ru": "Производная частного: f′(x) = ({a}(x + {c}) − ({a}x + {b}))/(x + {c})² = {num}/(x + {c})². При x = {t} знаменатель {uu}, значит, f′({t}) = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 1.7,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p7-a3",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap1007",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "trig_exp_derivatives",
+      "family": {
+        "template": "f(x) = {a}sin x + {b}cos x + {c}x. What is f′(π/2)?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 9
+          },
+          "b": {
+            "min": 2,
+            "max": 9
+          },
+          "c": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "constraints": [
+          "a != b"
+        ],
+        "answer": "c - b",
+        "distractors": [
+          "c + b",
+          "a + c",
+          "0 - b"
+        ],
+        "integer": true,
+        "relation": "X = (({a}*sin(pi/2 + 0.000001) + {b}*cos(pi/2 + 0.000001) + {c}*(pi/2 + 0.000001)) - ({a}*sin(pi/2 - 0.000001) + {b}*cos(pi/2 - 0.000001) + {c}*(pi/2 - 0.000001)))/0.000002"
+      },
+      "page": "C19-APCA02-3",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = {a}sin x + {b}cos x + {c}x. What is f′(π/2)?",
+        "uz": "f(x) = {a}sin x + {b}cos x + {c}x. f′(π/2) nechaga teng?",
+        "ru": "f(x) = {a}sin x + {b}cos x + {c}x. Найдите f′(π/2)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "f′(x) = {a}cos x − {b}sin x + {c}. At π/2, cos = 0 and sin = 1: {a} × 0 − {b} × 1 + {c} = {ANS}.",
+        "uz": "f′(x) = {a}cos x − {b}sin x + {c}. π/2 da cos = 0 va sin = 1: {a} × 0 − {b} × 1 + {c} = {ANS}.",
+        "ru": "f′(x) = {a}cos x − {b}sin x + {c}. В точке π/2 cos = 0 и sin = 1: {a} × 0 − {b} × 1 + {c} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 1.5,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a3",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

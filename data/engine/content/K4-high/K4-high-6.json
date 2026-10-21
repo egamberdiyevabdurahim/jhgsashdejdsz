@@ -1,0 +1,1132 @@
+{
+ "bank": "K4",
+ "batch": 6,
+ "items": [
+  {
+   "id": "K4-clh021",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "optimization",
+   "family": {
+    "template": "A rectangle has perimeter {P}. What is the largest possible area of the rectangle?",
+    "params": {
+     "P": {
+      "min": 8,
+      "max": 80,
+      "step": 4
+     }
+    },
+    "derived": {
+     "h": "P // 2",
+     "s": "P // 4"
+    },
+    "answer": "P * P / 16",
+    "distractors": [
+     "P * P / 4",
+     "P / 4",
+     "P * P / 8"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 19
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A rectangle has perimeter {P}. What is the largest possible area of the rectangle?",
+    "uz": "Toʻgʻri toʻrtburchakning perimetri {P}. Uning yuzi eng koʻpi bilan qancha boʻlishi mumkin?",
+    "ru": "Периметр прямоугольника равен {P}. Какова наибольшая возможная площадь прямоугольника?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "With sides x and {h} − x, the area x({h} − x) is largest at x = {s}: a square with area {s}² = {ANS}.",
+    "uz": "Tomonlari x va {h} − x boʻlsa, yuza x({h} − x) x = {s} da eng katta: kvadrat, yuzi {s}² = {ANS}.",
+    "ru": "При сторонах x и {h} − x площадь x({h} − x) максимальна при x = {s}: это квадрат площадью {s}² = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh022",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "optimization",
+   "family": {
+    "template": "A rectangular garden lies along a straight wall, so fencing is needed on only three sides. There are {L} m of fencing. What is the largest possible area of the garden, in m²?",
+    "params": {
+     "L": {
+      "min": 12,
+      "max": 120,
+      "step": 12
+     }
+    },
+    "derived": {
+     "q": "L // 4",
+     "h": "L // 2"
+    },
+    "answer": "L * L / 8",
+    "distractors": [
+     "L * L / 9",
+     "L * L / 16",
+     "L * L / 4"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 10
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A rectangular garden lies along a straight wall, so fencing is needed on only three sides. There are {L} m of fencing. What is the largest possible area of the garden, in m²?",
+    "uz": "Toʻgʻri toʻrtburchak shaklidagi bogʻ toʻgʻri devor yonida joylashgan, shuning uchun faqat uch tomoni oʻraladi. {L} m toʻsiq bor. Bogʻning eng katta yuzi necha m² boʻlishi mumkin?",
+    "ru": "Прямоугольный сад примыкает к прямой стене, поэтому забор нужен только с трёх сторон. Есть {L} м забора. Какова наибольшая возможная площадь сада (в м²)?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "With two sides x and the third {L} − 2x, A = x({L} − 2x) is largest at x = {q}, so A = {q}·{h} = {ANS}.",
+    "uz": "Ikki tomon x, uchinchisi {L} − 2x boʻlsa, A = x({L} − 2x) x = {q} da eng katta, demak A = {q}·{h} = {ANS}.",
+    "ru": "Если две стороны равны x, а третья {L} − 2x, то A = x({L} − 2x) максимальна при x = {q}, и A = {q}·{h} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh023",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "related_rates",
+   "family": {
+    "template": "The radius of a circle grows at {v} cm/s. How fast is the area of the circle growing, in cm²/s, when the radius is {r} cm?",
+    "params": {
+     "r": {
+      "min": 2,
+      "max": 10
+     },
+     "v": {
+      "min": 1,
+      "max": 5
+     }
+    },
+    "derived": {
+     "k": "2 * r * v",
+     "rv": "r * v",
+     "rr": "r * r",
+     "k2": "4 * r * v"
+    },
+    "answer": "2 * pi * r * v",
+    "option_templates": [
+     "{k}π",
+     "{rv}π",
+     "{rr}π",
+     "{k2}π"
+    ],
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 34,
+    "constraints": [
+     "r != v",
+     "r != 2 * v",
+     "r != 4 * v"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The radius of a circle grows at {v} cm/s. How fast is the area of the circle growing, in cm²/s, when the radius is {r} cm?",
+    "uz": "Doira radiusi {v} sm/s tezlik bilan oʻsmoqda. Radius {r} sm boʻlganda doira yuzi qanday tezlikda (sm²/s) oʻsadi?",
+    "ru": "Радиус круга растёт со скоростью {v} см/с. С какой скоростью (в см²/с) растёт площадь круга, когда радиус равен {r} см?"
+   },
+   "why": {
+    "en": "A = πr², so dA/dt = 2πr·dr/dt = 2π·{r}·{v} = {k}π.",
+    "uz": "A = πr², demak dA/dt = 2πr·dr/dt = 2π·{r}·{v} = {k}π.",
+    "ru": "A = πr², поэтому dA/dt = 2πr·dr/dt = 2π·{r}·{v} = {k}π."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.75,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 36π | 18π | 36π | 72π (seed check:0)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-clh024",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "related_rates",
+   "family": {
+    "template": "The edge of a cube grows at {v} cm/s. How fast is the volume growing, in cm³/s, when the edge is {s} cm?",
+    "params": {
+     "s": {
+      "min": 2,
+      "max": 10
+     },
+     "v": {
+      "min": 1,
+      "max": 5
+     }
+    },
+    "answer": "3 * s * s * v",
+    "distractors": [
+     "3 * s * s",
+     "s * s * v",
+     "s**3"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 20,
+    "constraints": [
+     "(3 * s * s * v) != (3 * s * s)",
+     "(3 * s * s * v) != (s * s * v)",
+     "(3 * s * s * v) != (s**3)",
+     "(3 * s * s) != (s * s * v)",
+     "(3 * s * s) != (s**3)",
+     "(s * s * v) != (s**3)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The edge of a cube grows at {v} cm/s. How fast is the volume growing, in cm³/s, when the edge is {s} cm?",
+    "uz": "Kub qirrasi {v} sm/s tezlik bilan oʻsmoqda. Qirra {s} sm boʻlganda kub hajmi qanday tezlikda (sm³/s) oʻsadi?",
+    "ru": "Ребро куба растёт со скоростью {v} см/с. С какой скоростью (в см³/с) растёт объём куба, когда ребро равно {s} см?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "V = s³, so dV/dt = 3s²·ds/dt = 3·{s}²·{v} = {ANS}.",
+    "uz": "V = s³, demak dV/dt = 3s²·ds/dt = 3·{s}²·{v} = {ANS}.",
+    "ru": "V = s³, поэтому dV/dt = 3s²·ds/dt = 3·{s}²·{v} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 729 | 243 | 243 | 729 (seed check:0)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-clh025",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "motion",
+   "lang": "en",
+   "stem": {
+    "en": "A particle's position is s(t) = t³ − 6t² + 9t. What is its acceleration at the later of the two moments when its velocity is 0?",
+    "uz": "Zarraning joylashuvi (koordinatasi) s(t) = t³ − 6t² + 9t. Tezlik 0 ga teng boʻladigan ikki paytning keyingisida tezlanish nechaga teng?",
+    "ru": "Положение частицы s(t) = t³ − 6t² + 9t. Чему равно ускорение в более поздний из двух моментов, когда скорость равна 0?"
+   },
+   "options": [
+    {
+     "en": "6"
+    },
+    {
+     "en": "−6"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "3"
+    }
+   ],
+   "answer_numeric": {
+    "value": 6,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "v = 3t² − 12t + 9 = 3(t − 1)(t − 3) is 0 at t = 1 and t = 3; a = 6t − 12, so a(3) = 6.",
+    "uz": "v = 3t² − 12t + 9 = 3(t − 1)(t − 3) ifoda t = 1 va t = 3 da 0; a = 6t − 12, demak a(3) = 6.",
+    "ru": "v = 3t² − 12t + 9 = 3(t − 1)(t − 3) равна 0 при t = 1 и t = 3; a = 6t − 12, значит a(3) = 6."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh026",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "motion",
+   "family": {
+    "template": "A particle moves along a line with velocity v(t) = {a}t² − {b}t (m/s). What is its displacement, in metres, from t = 0 to t = {T}?",
+    "params": {
+     "a": {
+      "min": 3,
+      "max": 9,
+      "step": 3
+     },
+     "b": {
+      "min": 2,
+      "max": 10,
+      "step": 2
+     },
+     "T": {
+      "min": 1,
+      "max": 5
+     }
+    },
+    "derived": {
+     "a3": "a // 3",
+     "b2": "b // 2"
+    },
+    "answer": "a * T**3 / 3 - b * T * T / 2",
+    "distractors": [
+     "a * T * T - b * T",
+     "2 * a * T - b",
+     "a * T**3 - b * T * T"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 53,
+    "constraints": [
+     "(a * T**3 / 3 - b * T * T / 2) != (a * T * T - b * T)",
+     "(a * T**3 / 3 - b * T * T / 2) != (2 * a * T - b)",
+     "(a * T**3 / 3 - b * T * T / 2) != (a * T**3 - b * T * T)",
+     "(a * T * T - b * T) != (2 * a * T - b)",
+     "(a * T * T - b * T) != (a * T**3 - b * T * T)",
+     "(2 * a * T - b) != (a * T**3 - b * T * T)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A particle moves along a line with velocity v(t) = {a}t² − {b}t (m/s). What is its displacement, in metres, from t = 0 to t = {T}?",
+    "uz": "Zarra toʻgʻri chiziq boʻylab v(t) = {a}t² − {b}t (m/s) tezlik bilan harakatlanadi. t = 0 dan t = {T} gacha uning koʻchishi necha metr?",
+    "ru": "Частица движется по прямой со скоростью v(t) = {a}t² − {b}t (м/с). Найдите её перемещение (в метрах) от t = 0 до t = {T}."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Displacement = ∫₀^{T} ({a}t² − {b}t) dt = {a}·{T}³/3 − {b}·{T}²/2 = {ANS}.",
+    "uz": "Koʻchish = ∫₀^{T} ({a}t² − {b}t) dt = {a}·{T}³/3 − {b}·{T}²/2 = {ANS}.",
+    "ru": "Перемещение = ∫₀^{T} ({a}t² − {b}t) dt = {a}·{T}³/3 − {b}·{T}²/2 = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 1 | 5 | 14 | 5 (seed check:1)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-clh027",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "mean_value_theorem",
+   "family": {
+    "template": "f(x) = x² on [{a}, {b}]. Find the number c in ({a}, {b}) given by the mean value theorem: f′(c) = (f({b}) − f({a}))/({b} − {a}).",
+    "params": {
+     "a": {
+      "min": 1,
+      "max": 8
+     },
+     "b": {
+      "min": 2,
+      "max": 12
+     }
+    },
+    "derived": {
+     "aa": "a * a",
+     "bb": "b * b",
+     "d": "b - a",
+     "s": "a + b"
+    },
+    "constraints": [
+     "b > a + 1",
+     "(a + b) % 2 == 0"
+    ],
+    "answer": "(a + b) / 2",
+    "distractors": [
+     "(b - a) / 2",
+     "a + b",
+     "b"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 28
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = x² on [{a}, {b}]. Find the number c in ({a}, {b}) given by the mean value theorem: f′(c) = (f({b}) − f({a}))/({b} − {a}).",
+    "uz": "[{a}, {b}] kesmada f(x) = x². Oʻrta qiymat (Lagranj) teoremasidagi c ∈ ({a}, {b}) sonni toping: f′(c) = (f({b}) − f({a}))/({b} − {a}).",
+    "ru": "f(x) = x² на отрезке [{a}, {b}]. Найдите число c ∈ ({a}, {b}) из теоремы Лагранжа: f′(c) = (f({b}) − f({a}))/({b} − {a})."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "The average slope is ({bb} − {aa})/{d} = {s}, and f′(c) = 2c = {s}, so c = {ANS}.",
+    "uz": "Oʻrtacha qiyalik ({bb} − {aa})/{d} = {s}, f′(c) = 2c = {s}, demak c = {ANS}.",
+    "ru": "Средний наклон ({bb} − {aa})/{d} = {s}, а f′(c) = 2c = {s}, значит c = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh028",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "lhopital",
+   "lang": "en",
+   "stem": {
+    "en": "What is lim (x → 0) (eˣ − 1 − x)/x²?",
+    "uz": "lim (x → 0) (eˣ − 1 − x)/x² ni toping.",
+    "ru": "Найдите lim (x → 0) (eˣ − 1 − x)/x²."
+   },
+   "options": [
+    {
+     "en": "0.5"
+    },
+    {
+     "en": "1"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "2"
+    }
+   ],
+   "answer_numeric": {
+    "value": 0.5,
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "Apply L'Hôpital's rule twice: (eˣ − 1)/(2x), then eˣ/2 → 1/2.",
+    "uz": "Lopital qoidasini ikki marta qoʻllang: (eˣ − 1)/(2x), keyin eˣ/2 → 1/2.",
+    "ru": "Дважды применим правило Лопиталя: (eˣ − 1)/(2x), затем eˣ/2 → 1/2."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.95,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh029",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "antiderivatives",
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫ (6x² − 4x + 3) dx?",
+    "uz": "∫ (6x² − 4x + 3) dx ni toping.",
+    "ru": "Найдите ∫ (6x² − 4x + 3) dx."
+   },
+   "options": [
+    {
+     "en": "2x³ − 2x² + 3x + C"
+    },
+    {
+     "en": "12x − 4 + C"
+    },
+    {
+     "en": "6x³ − 4x² + 3x + C"
+    },
+    {
+     "en": "2x³ − 4x² + 3x + C"
+    }
+   ],
+   "why": {
+    "en": "Integrate term by term: 6x³/3 − 4x²/2 + 3x + C = 2x³ − 2x² + 3x + C.",
+    "uz": "Har bir hadni integrallang: 6x³/3 − 4x²/2 + 3x + C = 2x³ − 2x² + 3x + C.",
+    "ru": "Интегрируем почленно: 6x³/3 − 4x²/2 + 3x + C = 2x³ − 2x² + 3x + C."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.55,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh030",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "definite_integrals",
+   "family": {
+    "template": "What is ∫_{a}^{b} ({m}x + {c}) dx?",
+    "params": {
+     "m": {
+      "min": 4,
+      "max": 8,
+      "step": 2
+     },
+     "c": {
+      "min": 2,
+      "max": 5
+     },
+     "a": {
+      "min": 1,
+      "max": 3
+     },
+     "b": {
+      "min": 2,
+      "max": 6
+     }
+    },
+    "derived": {
+     "h": "m // 2",
+     "Fb": "(m // 2) * b * b + c * b",
+     "Fa": "(m // 2) * a * a + c * a"
+    },
+    "constraints": [
+     "b > a",
+     "(m * (b * b - a * a) / 2 + c * (b - a)) != (m * b + c - (m * a + c))",
+     "(m * (b * b - a * a) / 2 + c * (b - a)) != (m * (b * b - a * a) + c * (b - a))",
+     "(m * (b * b - a * a) / 2 + c * (b - a)) != (m * b * b / 2 + c * b)",
+     "(m * b + c - (m * a + c)) != (m * (b * b - a * a) + c * (b - a))",
+     "(m * b + c - (m * a + c)) != (m * b * b / 2 + c * b)",
+     "(m * (b * b - a * a) + c * (b - a)) != (m * b * b / 2 + c * b)"
+    ],
+    "answer": "m * (b * b - a * a) / 2 + c * (b - a)",
+    "distractors": [
+     "m * b + c - (m * a + c)",
+     "m * (b * b - a * a) + c * (b - a)",
+     "m * b * b / 2 + c * b"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 142
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫_{a}^{b} ({m}x + {c}) dx?",
+    "uz": "∫_{a}^{b} ({m}x + {c}) dx ni hisoblang.",
+    "ru": "Вычислите ∫_{a}^{b} ({m}x + {c}) dx."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "An antiderivative is {h}x² + {c}x; from {a} to {b}: {Fb} − {Fa} = {ANS}.",
+    "uz": "Boshlangʻich funksiya {h}x² + {c}x; {a} dan {b} gacha: {Fb} − {Fa} = {ANS}.",
+    "ru": "Первообразная {h}x² + {c}x; от {a} до {b}: {Fb} − {Fa} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 22 | 8 | 42 | 42 (seed check:46)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-clh031",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "definite_integrals",
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫₀^π sin x dx?",
+    "uz": "∫₀^π sin x dx ni hisoblang.",
+    "ru": "Вычислите ∫₀^π sin x dx."
+   },
+   "options": [
+    {
+     "en": "2"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "1"
+    },
+    {
+     "en": "−2"
+    }
+   ],
+   "answer_numeric": {
+    "value": 2,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "An antiderivative is −cos x: −cos π − (−cos 0) = 1 + 1 = 2.",
+    "uz": "Boshlangʻich funksiya −cos x: −cos π − (−cos 0) = 1 + 1 = 2.",
+    "ru": "Первообразная −cos x: −cos π − (−cos 0) = 1 + 1 = 2."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh032",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "u_substitution",
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫ 2x(x² + 1)³ dx?",
+    "uz": "∫ 2x(x² + 1)³ dx ni toping.",
+    "ru": "Найдите ∫ 2x(x² + 1)³ dx."
+   },
+   "options": [
+    {
+     "en": "(x² + 1)⁴/4 + C"
+    },
+    {
+     "en": "(x² + 1)⁴ + C"
+    },
+    {
+     "en": "x²(x² + 1)⁴/4 + C"
+    },
+    {
+     "en": "(x² + 1)⁴/2 + C"
+    }
+   ],
+   "why": {
+    "en": "Let u = x² + 1, du = 2x dx: ∫ u³ du = u⁴/4 + C = (x² + 1)⁴/4 + C.",
+    "uz": "u = x² + 1 deb oling, du = 2x dx: ∫ u³ du = u⁴/4 + C = (x² + 1)⁴/4 + C.",
+    "ru": "Замена u = x² + 1, du = 2x dx: ∫ u³ du = u⁴/4 + C = (x² + 1)⁴/4 + C."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.75,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh033",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "definite_integrals",
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫₀¹ e^(2x) dx?",
+    "uz": "∫₀¹ e^(2x) dx ni hisoblang.",
+    "ru": "Вычислите ∫₀¹ e^(2x) dx."
+   },
+   "options": [
+    {
+     "en": "(e² − 1)/2"
+    },
+    {
+     "en": "e² − 1"
+    },
+    {
+     "en": "2(e² − 1)"
+    },
+    {
+     "en": "(e − 1)/2"
+    }
+   ],
+   "why": {
+    "en": "An antiderivative is e^(2x)/2, so the value is (e² − e⁰)/2 = (e² − 1)/2.",
+    "uz": "Boshlangʻich funksiya e^(2x)/2, demak qiymat (e² − e⁰)/2 = (e² − 1)/2.",
+    "ru": "Первообразная e^(2x)/2, поэтому значение (e² − e⁰)/2 = (e² − 1)/2."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.75,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh034",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "definite_integrals",
+   "family": {
+    "template": "What is the value of ∫ (1/x) dx from x = 1 to x = e^{k}?",
+    "params": {
+     "k": {
+      "min": 2,
+      "max": 12
+     }
+    },
+    "answer": "k",
+    "distractors": [
+     "k - 1",
+     "k + 1",
+     "k * k"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 11
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the value of ∫ (1/x) dx from x = 1 to x = e^{k}?",
+    "uz": "x = 1 dan x = e^{k} gacha ∫ (1/x) dx integralning qiymatini toping.",
+    "ru": "Найдите значение ∫ (1/x) dx от x = 1 до x = e^{k}."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "∫ (1/x) dx = ln x, so the value is ln(e^{k}) − ln 1 = {k}.",
+    "uz": "∫ (1/x) dx = ln x, demak qiymat ln(e^{k}) − ln 1 = {k}.",
+    "ru": "∫ (1/x) dx = ln x, поэтому значение ln(e^{k}) − ln 1 = {k}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh035",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "area_between_curves",
+   "family": {
+    "template": "What is the area of the region between the graphs of y = x² and y = {k}x?",
+    "params": {
+     "k": {
+      "min": 3,
+      "max": 30,
+      "step": 3
+     }
+    },
+    "answer": "k**3 / 6",
+    "distractors": [
+     "k**3 / 2",
+     "k**3 / 3",
+     "k * k / 6"
+    ],
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 10
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the area of the region between the graphs of y = x² and y = {k}x?",
+    "uz": "y = x² va y = {k}x grafiklari orasidagi soha yuzini toping.",
+    "ru": "Найдите площадь области между графиками y = x² и y = {k}x."
+   },
+   "answer_numeric": {
+    "tolerance": 0.01
+   },
+   "why": {
+    "en": "They meet at x = 0 and x = {k}; area = ∫₀^{k} ({k}x − x²) dx = {k}³/2 − {k}³/3 = {k}³/6 = {ANS}.",
+    "uz": "Ular x = 0 va x = {k} da kesishadi; yuza = ∫₀^{k} ({k}x − x²) dx = {k}³/2 − {k}³/3 = {k}³/6 = {ANS}.",
+    "ru": "Графики пересекаются при x = 0 и x = {k}; площадь = ∫₀^{k} ({k}x − x²) dx = {k}³/2 − {k}³/3 = {k}³/6 = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.95,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh036",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "fundamental_theorem",
+   "family": {
+    "template": "F(x) = ∫₀ˣ (t² + {c}) dt. What is F′({a})?",
+    "params": {
+     "c": {
+      "min": 1,
+      "max": 9
+     },
+     "a": {
+      "values": [
+       3,
+       6
+      ]
+     }
+    },
+    "answer": "a * a + c",
+    "distractors": [
+     "a**3 / 3 + c * a",
+     "2 * a",
+     "a * a"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 18
+   },
+   "lang": "en",
+   "stem": {
+    "en": "F(x) = ∫₀ˣ (t² + {c}) dt. What is F′({a})?",
+    "uz": "F(x) = ∫₀ˣ (t² + {c}) dt. F′({a}) ni toping.",
+    "ru": "F(x) = ∫₀ˣ (t² + {c}) dt. Найдите F′({a})."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "By the fundamental theorem of calculus F′(x) = x² + {c}, so F′({a}) = {ANS}.",
+    "uz": "Integral hisobning asosiy teoremasiga koʻra F′(x) = x² + {c}, demak F′({a}) = {ANS}.",
+    "ru": "По основной теореме анализа F′(x) = x² + {c}, поэтому F′({a}) = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh037",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "fundamental_theorem",
+   "lang": "en",
+   "stem": {
+    "en": "What is the derivative of ∫₀^(x²) cos t dt with respect to x?",
+    "uz": "∫₀^(x²) cos t dt ifodaning x boʻyicha hosilasini toping.",
+    "ru": "Найдите производную по x от ∫₀^(x²) cos t dt."
+   },
+   "options": [
+    {
+     "en": "2x cos(x²)"
+    },
+    {
+     "en": "cos(x²)"
+    },
+    {
+     "en": "sin(x²)"
+    },
+    {
+     "en": "2x sin(x²)"
+    }
+   ],
+   "why": {
+    "en": "Fundamental theorem with the chain rule: cos(x²)·(x²)′ = 2x cos(x²).",
+    "uz": "Asosiy teorema va murakkab funksiya hosilasi: cos(x²)·(x²)′ = 2x cos(x²).",
+    "ru": "Основная теорема анализа и правило цепочки: cos(x²)·(x²)′ = 2x cos(x²)."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.95,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh038",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "average_value",
+   "family": {
+    "template": "What is the average value of f(x) = x² on the interval [0, {b}]?",
+    "params": {
+     "b": {
+      "min": 3,
+      "max": 30,
+      "step": 3
+     }
+    },
+    "answer": "b * b / 3",
+    "distractors": [
+     "b**3 / 3",
+     "b * b / 2",
+     "b * b / 4"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 10
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the average value of f(x) = x² on the interval [0, {b}]?",
+    "uz": "f(x) = x² funksiyaning [0, {b}] kesmadagi oʻrtacha qiymatini toping.",
+    "ru": "Найдите среднее значение функции f(x) = x² на отрезке [0, {b}]."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Average = (1/{b})·∫₀^{b} x² dx = (1/{b})·{b}³/3 = {ANS}.",
+    "uz": "Oʻrtacha qiymat = (1/{b})·∫₀^{b} x² dx = (1/{b})·{b}³/3 = {ANS}.",
+    "ru": "Среднее значение = (1/{b})·∫₀^{b} x² dx = (1/{b})·{b}³/3 = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh039",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "inverse_derivatives",
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = x³ + x, so f(1) = 2. What is the derivative of f⁻¹ at 2?",
+    "uz": "f(x) = x³ + x, bunda f(1) = 2. f⁻¹ teskari funksiyaning 2 nuqtadagi hosilasini toping.",
+    "ru": "f(x) = x³ + x, при этом f(1) = 2. Найдите производную обратной функции f⁻¹ в точке 2."
+   },
+   "options": [
+    {
+     "en": "0.25"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "1/13"
+    },
+    {
+     "en": "13"
+    }
+   ],
+   "answer_numeric": {
+    "value": 0.25,
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "(f⁻¹)′(2) = 1/f′(1) = 1/(3·1² + 1) = 1/4.",
+    "uz": "(f⁻¹)′(2) = 1/f′(1) = 1/(3·1² + 1) = 1/4.",
+    "ru": "(f⁻¹)′(2) = 1/f′(1) = 1/(3·1² + 1) = 1/4."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.95,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh040",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "linear_approximation",
+   "family": {
+    "template": "Use the linear approximation of f(x) = √x at x = {nn} to estimate √{x0}.",
+    "params": {
+     "n": {
+      "min": 2,
+      "max": 10
+     },
+     "d": {
+      "min": 1,
+      "max": 4
+     }
+    },
+    "derived": {
+     "nn": "n * n",
+     "x0": "n * n + d",
+     "n2": "2 * n"
+    },
+    "constraints": [
+     "(100 * d) % (2 * n) == 0",
+     "(n + d / (2 * n)) != (n + d / n)",
+     "(n + d / (2 * n)) != (n + d / 2)",
+     "(n + d / (2 * n)) != (n)",
+     "(n + d / n) != (n + d / 2)",
+     "(n + d / n) != (n)",
+     "(n + d / 2) != (n)"
+    ],
+    "answer": "n + d / (2 * n)",
+    "distractors": [
+     "n + d / n",
+     "n + d / 2",
+     "n"
+    ],
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 13
+   },
+   "lang": "en",
+   "stem": {
+    "en": "Use the linear approximation of f(x) = √x at x = {nn} to estimate √{x0}.",
+    "uz": "f(x) = √x funksiyaning x = {nn} nuqtadagi chiziqli yaqinlashuvidan foydalanib √{x0} ni taxminan hisoblang.",
+    "ru": "С помощью линейного приближения функции f(x) = √x в точке x = {nn} оцените √{x0}."
+   },
+   "answer_numeric": {
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "√x ≈ √{nn} + (x − {nn})/(2√{nn}), so √{x0} ≈ {n} + {d}/{n2} = {ANS}.",
+    "uz": "√x ≈ √{nn} + (x − {nn})/(2√{nn}), demak √{x0} ≈ {n} + {d}/{n2} = {ANS}.",
+    "ru": "√x ≈ √{nn} + (x − {nn})/(2√{nn}), поэтому √{x0} ≈ {n} + {d}/{n2} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.75,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 2.75 | 3.5 | 3.5 | 2 (seed check:0)",
+   "key_check_2_version": 2
+  }
+ ]
+}

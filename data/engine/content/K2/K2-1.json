@@ -1,0 +1,700 @@
+{
+ "bank": "K2",
+ "batch": 1,
+ "items": [
+  {
+   "id": "K2-a2p1q1",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "literal",
+   "passage_id": "K2-P-a2p1",
+   "lang": "en",
+   "stem": {
+    "en": "Where was Malika's grandmother last Saturday?"
+   },
+   "options": [
+    {
+     "en": "Visiting Malika's aunt in another town"
+    },
+    {
+     "en": "At the market, buying flour for the bread"
+    },
+    {
+     "en": "In the kitchen, helping Malika to bake"
+    },
+    {
+     "en": "At home in bed, because she was ill"
+    }
+   ],
+   "why": {
+    "en": "The text says the grandmother 'was visiting Malika's aunt in another town'.",
+    "uz": "Matnda buvi boshqa shaharda, Malikaning xolasinikida mehmon boʻlib turgani aytilgan.",
+    "ru": "В тексте сказано, что бабушка гостила у тёти Малики в другом городе."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-a2p1q2",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "literal",
+   "passage_id": "K2-P-a2p1",
+   "lang": "en",
+   "stem": {
+    "en": "Where did Malika find her grandmother's recipe?"
+   },
+   "options": [
+    {
+     "en": "In an old notebook"
+    },
+    {
+     "en": "On a card in a kitchen drawer"
+    },
+    {
+     "en": "In a cookery book on the top shelf"
+    },
+    {
+     "en": "In a message from her grandmother"
+    }
+   ],
+   "why": {
+    "en": "The text says Malika 'found her grandmother's recipe in an old notebook'. The top shelf is where the blue cup was, and she called her grandmother only later.",
+    "uz": "Matnda Malika buvisining retseptini eski daftardan topgani aytilgan. Yuqori javonda koʻk piyola turgan edi, buvisiga esa keyinroq qoʻngʻiroq qilgan.",
+    "ru": "В тексте сказано, что Малика нашла рецепт бабушки в старой тетради. На верхней полке стояла синяя чашка, а бабушке она позвонила позже."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverC+solverD",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 2/2 on the key, but solver A flagged no_passage_needed: in v1 the stem 'What did Malika use as a cup the first time?' and q3's option 'Her mug held more water than Grandmother's cup' gave the mug away. v2 asks where she found the recipe (key 'In an old notebook'); no other item in the set names the notebook, the mug or the cup. Needs a fresh blind check."
+  },
+  {
+   "id": "K2-a2p1q3",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "inferential",
+   "passage_id": "K2-P-a2p1",
+   "lang": "en",
+   "stem": {
+    "en": "Why did Malika call her grandmother?"
+   },
+   "options": [
+    {
+     "en": "To find out what had gone wrong with the dough"
+    },
+    {
+     "en": "To ask how long the bread should stay in the oven"
+    },
+    {
+     "en": "To ask her to come home early and help her"
+    },
+    {
+     "en": "To tell her that the bread was ready for dinner"
+    }
+   ],
+   "why": {
+    "en": "The dough was wet and Malika was worried, so she called and read the recipe to her grandmother to find the mistake. The bread was not baked yet, and she did not ask her grandmother to come home.",
+    "uz": "Xamir suyuq chiqdi va Malika xavotirlandi, shuning uchun xatoni topish maqsadida buvisiga qoʻngʻiroq qilib, retseptni oʻqib berdi. Non hali pishmagan edi, buvisidan uyga qaytishni ham soʻramagan.",
+    "ru": "Тесто получилось жидким, и Малика забеспокоилась, поэтому позвонила бабушке и прочитала ей рецепт, чтобы найти ошибку. Хлеб ещё не был испечён, и вернуться домой она бабушку не просила."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverC+solverD",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 2/2 on the key, but solver A flagged no_passage_needed: in v1 ('Why was the first dough so wet?') the key was the only option about water, and 'wet dough = too much water' needs no text. v2 asks why Malika called her grandmother; every option is a reason a girl baking alone might call, and only the text (worried, read the recipe to her, bread not yet baked) decides it. Needs a fresh blind check."
+  },
+  {
+   "id": "K2-a2p1q4",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "inferential",
+   "passage_id": "K2-P-a2p1",
+   "lang": "en",
+   "stem": {
+    "en": "Why did the recipe cause a problem for Malika?"
+   },
+   "options": [
+    {
+     "en": "It said 'two cups' of water but not how big a cup was."
+    },
+    {
+     "en": "It gave the flour in grams, but she had no kitchen scale."
+    },
+    {
+     "en": "It did not say that the water had to be warm."
+    },
+    {
+     "en": "It did not have any yeast in it, so the dough did not rise."
+    }
+   ],
+   "why": {
+    "en": "The recipe asked for 'two cups of warm water'. Malika used a big tea mug, but her grandmother meant her small blue cup, so 'two cups' was not clear. Malika did weigh the flour on the scale, and the recipe does say warm water and yeast.",
+    "uz": "Retseptda 'ikki piyola iliq suv' deyilgan. Malika katta choy krujkasini ishlatdi, buvisi esa oʻzining kichkina koʻk piyolasini nazarda tutgan edi, demak 'ikki piyola' aniq emas edi. Unni Malika tarozida tortgan, retseptda iliq suv va xamirturush ham bor.",
+    "ru": "В рецепте было «две чашки тёплой воды». Малика взяла большую кружку, а бабушка имела в виду свою маленькую синюю чашку, так что «две чашки» было неточно. Муку Малика взвесила на весах, а тёплая вода и дрожжи в рецепте указаны."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverC+solverD",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 2/2 on the key, but solver A flagged no_passage_needed: v1's key 'Malika had used the wrong cup' followed from q2's stem and q3's mug option. v2 asks why the recipe caused a problem; the distractors (no scale, no 'warm', no yeast) are each ruled out only by the text, and no other item mentions cups. Needs a fresh blind check."
+  },
+  {
+   "id": "K2-a2p2q1",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "literal",
+   "passage_id": "K2-P-a2p2",
+   "lang": "en",
+   "stem": {
+    "en": "What time does Sardor's train arrive now?"
+   },
+   "options": [
+    {
+     "en": "At ten o'clock"
+    },
+    {
+     "en": "At nine o'clock"
+    },
+    {
+     "en": "At eleven o'clock"
+    },
+    {
+     "en": "At eight o'clock"
+    }
+   ],
+   "why": {
+    "en": "Timur writes that the train 'now arrives at ten o'clock, not at nine'.",
+    "uz": "Timur poyezd endi soat toʻqqizda emas, oʻnda kelishini yozgan.",
+    "ru": "Тимур пишет, что поезд теперь приходит в десять, а не в девять."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-a2p2q2",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "literal",
+   "passage_id": "K2-P-a2p2",
+   "lang": "en",
+   "stem": {
+    "en": "Who will meet Sardor at the station?"
+   },
+   "options": [
+    {
+     "en": "Timur's mum"
+    },
+    {
+     "en": "Timur"
+    },
+    {
+     "en": "Timur's dad"
+    },
+    {
+     "en": "Timur's football coach"
+    }
+   ],
+   "why": {
+    "en": "Timur has a football match, so he writes 'my mum will be there'.",
+    "uz": "Timurning futbol oʻyini bor, shuning uchun vokzalda Sardorni Timurning onasi kutib oladi.",
+    "ru": "У Тимура футбольный матч, поэтому на вокзале Сардора встретит мама Тимура."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-a2p2q3",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "inferential",
+   "passage_id": "K2-P-a2p2",
+   "lang": "en",
+   "stem": {
+    "en": "What do we learn about Sardor's visit?"
+   },
+   "options": [
+    {
+     "en": "He will stay with Timur's family for more than one day."
+    },
+    {
+     "en": "He is going to play in Timur's football match on Saturday."
+    },
+    {
+     "en": "He will travel to Timur's home by bus."
+    },
+    {
+     "en": "He has never been to the mountains before."
+    }
+   ],
+   "why": {
+    "en": "He arrives on Saturday and goes to the mountains on Sunday, so he stays more than one day.",
+    "uz": "U shanba kuni keladi, yakshanba kuni esa togʻga boradi, demak, bir kundan koʻproq qoladi.",
+    "ru": "Он приезжает в субботу, а в воскресенье едет в горы, значит, остаётся больше чем на один день."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-a2p2q4",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "inferential",
+   "passage_id": "K2-P-a2p2",
+   "lang": "en",
+   "stem": {
+    "en": "Why did Timur write this message?"
+   },
+   "options": [
+    {
+     "en": "To tell Sardor about a change to his journey and what to bring"
+    },
+    {
+     "en": "To tell Sardor that the visit has to move to another weekend"
+    },
+    {
+     "en": "To ask Sardor to buy train tickets for the trip to the mountains"
+    },
+    {
+     "en": "To tell Sardor that Timur's dad will meet him at the station"
+    }
+   ],
+   "why": {
+    "en": "Timur gives news about the journey (the train now arrives at ten, and his mum will meet Sardor) and says what to bring for the mountains. The visit is not moved, and it is his mum, not his dad, who will be at the station.",
+    "uz": "Timur safar haqidagi yangilikni aytadi (poyezd endi soat oʻnda keladi, Sardorni uning onasi kutib oladi) va togʻga nima olib kelishni yozadi. Tashrif koʻchirilmagan, vokzalda esa otasi emas, onasi boʻladi.",
+    "ru": "Тимур сообщает новости о поездке (поезд теперь приходит в десять, Сардора встретит его мама) и пишет, что взять с собой в горы. Визит не переносится, а на вокзале будет мама, а не папа."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverC+solverD",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 2/2 on the key, but solver A flagged no_passage_needed: q1's 'arrive now' signals a change, and v1's key 'To give Sardor new information about his visit' was the only generic purpose next to three clearly wrong ones. v2's distractors are also news about the visit (moved to another weekend, Dad meets him, tickets to buy), and only the text rules them out. Needs a fresh blind check."
+  },
+  {
+   "id": "K2-a2p3q1",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "literal",
+   "passage_id": "K2-P-a2p3",
+   "lang": "en",
+   "stem": {
+    "en": "What time does the library close on Fridays?"
+   },
+   "options": [
+    {
+     "en": "At 14:00"
+    },
+    {
+     "en": "At 17:00"
+    },
+    {
+     "en": "At 8:00"
+    },
+    {
+     "en": "At 15:00"
+    }
+   ],
+   "why": {
+    "en": "The notice says that on Fridays it closes early, 'at 14:00'.",
+    "uz": "Eʼlonda juma kunlari kutubxona erta, soat 14:00 da yopilishi aytilgan.",
+    "ru": "В объявлении сказано, что по пятницам библиотека закрывается раньше — в 14:00."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-a2p3q2",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "literal",
+   "passage_id": "K2-P-a2p3",
+   "lang": "en",
+   "stem": {
+    "en": "How many books can a student borrow at one time now?"
+   },
+   "options": [
+    {
+     "en": "Three"
+    },
+    {
+     "en": "Two"
+    },
+    {
+     "en": "Four"
+    },
+    {
+     "en": "One"
+    }
+   ],
+   "why": {
+    "en": "The notice says students 'can now borrow three books at a time, not two'.",
+    "uz": "Eʼlonda endi bir vaqtda ikkita emas, uchta kitob olish mumkinligi yozilgan.",
+    "ru": "В объявлении: теперь можно брать три книги сразу, а не две."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-a2p3q3",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "inferential",
+   "passage_id": "K2-P-a2p3",
+   "lang": "en",
+   "stem": {
+    "en": "Aziz and two friends want to prepare a project together in the library. Where should they work?"
+   },
+   "options": [
+    {
+     "en": "In Room 3, next to the entrance"
+    },
+    {
+     "en": "In the upstairs room"
+    },
+    {
+     "en": "In the room next to the computers"
+    },
+    {
+     "en": "At the librarian's desk"
+    }
+   ],
+   "why": {
+    "en": "The upstairs room is silent; for work with friends, the notice says to use Room 3 next to the entrance.",
+    "uz": "Yuqoridagi xona jimjit xona; doʻstlar bilan ishlash uchun kirish yonidagi 3-xonadan foydalanish kerak.",
+    "ru": "Комната наверху — для тишины; для работы с друзьями объявление предлагает комнату 3 у входа."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-a2p3q4",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "inferential",
+   "passage_id": "K2-P-a2p3",
+   "lang": "en",
+   "stem": {
+    "en": "What can we understand from the notice?"
+   },
+   "options": [
+    {
+     "en": "Before Monday, students could borrow only two books."
+    },
+    {
+     "en": "The librarian works in the library only on Fridays."
+    },
+    {
+     "en": "Students may use their phones quietly in the upstairs room."
+    },
+    {
+     "en": "Students must buy a new copy of a book if they lose one."
+    }
+   ],
+   "why": {
+    "en": "'Now three books, not two' tells us that the old rule was two books.",
+    "uz": "«Endi ikkita emas, uchta» degani avval faqat ikkita kitob berilgan degani.",
+    "ru": "«Теперь три книги, а не две» означает, что раньше давали только две."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-a2p4q1",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "literal",
+   "passage_id": "K2-P-a2p4",
+   "lang": "en",
+   "stem": {
+    "en": "Why did Bekzod take the bus on Tuesday?"
+   },
+   "options": [
+    {
+     "en": "It was raining hard."
+    },
+    {
+     "en": "His bike had a flat tyre."
+    },
+    {
+     "en": "His mother told him to."
+    },
+    {
+     "en": "His friend was on the bus."
+    }
+   ],
+   "why": {
+    "en": "The text says 'it was raining hard, so he took the bus'.",
+    "uz": "Matnda «kuchli yomgʻir yogʻayotgan edi, shuning uchun u avtobusga chiqdi» deyilgan.",
+    "ru": "В тексте: «шёл сильный дождь, поэтому он поехал на автобусе»."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-a2p4q2",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "literal",
+   "passage_id": "K2-P-a2p4",
+   "lang": "en",
+   "stem": {
+    "en": "Who showed Bekzod where to wait for the right bus?"
+   },
+   "options": [
+    {
+     "en": "An old woman at the stop"
+    },
+    {
+     "en": "The driver of the number 18 bus"
+    },
+    {
+     "en": "His teacher"
+    },
+    {
+     "en": "A boy from his class"
+    }
+   ],
+   "why": {
+    "en": "The driver only told him the number; 'an old woman at the stop showed him where to wait'.",
+    "uz": "Haydovchi faqat raqamni aytdi; qayerda kutishni bekatdagi keksa ayol koʻrsatdi.",
+    "ru": "Водитель назвал только номер, а где ждать, показала пожилая женщина на остановке."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-a2p4q3",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "inferential",
+   "passage_id": "K2-P-a2p4",
+   "lang": "en",
+   "stem": {
+    "en": "Why did Bekzod get on the wrong bus?"
+   },
+   "options": [
+    {
+     "en": "He did not know which bus went to his school."
+    },
+    {
+     "en": "The number 8 bus was too full for him to get on."
+    },
+    {
+     "en": "The driver told him that the bus went to his school."
+    },
+    {
+     "en": "He was in a hurry and did not look at the number."
+    }
+   ],
+   "why": {
+    "en": "The text says he 'did not know the buses very well', saw a bus with the number 18 and got on. He did look at the number, the driver told him it was the wrong bus only later, and no full bus is mentioned.",
+    "uz": "Matnda u avtobuslarni yaxshi bilmagani, 18-raqamli avtobusni koʻrib, unga chiqib olgani aytilgan. U raqamga qaragan, haydovchi bu notoʻgʻri avtobus ekanini keyinroq aytgan, toʻla avtobus haqida esa gap yoʻq.",
+    "ru": "В тексте сказано, что он «плохо знал автобусы», увидел автобус с номером 18 и сел в него. На номер он посмотрел, водитель сказал, что это не тот автобус, только потом, а о переполненном автобусе речи нет."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverC+solverD",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 2/2 on the key, but solver A flagged no_passage_needed: q2's stem ('the right bus') and q4's option showed he was on the wrong bus, so v1's 'Worried, because he did not know where he was' was the only fitting feeling. v2 takes the wrong bus as given and asks why it happened; each distractor is a likely reason (a full bus, the driver, not looking at the number) that only the text rules out. Needs a fresh blind check."
+  },
+  {
+   "id": "K2-a2p4q4",
+   "skill": "en_reading",
+   "level": "A2",
+   "subskill": "inferential",
+   "passage_id": "K2-P-a2p4",
+   "lang": "en",
+   "stem": {
+    "en": "How did Bekzod probably feel after he told his teacher what had happened?"
+   },
+   "options": [
+    {
+     "en": "Relieved, because she was not angry with him"
+    },
+    {
+     "en": "Embarrassed, because she laughed at him in front of the class"
+    },
+    {
+     "en": "Upset, because she gave him extra homework for being late"
+    },
+    {
+     "en": "Worried, because she said she would call his parents"
+    }
+   ],
+   "why": {
+    "en": "His teacher 'listened and smiled' and made a friendly joke about knowing two bus routes, so he was probably relieved. She did not laugh at him, give him homework or mention his parents.",
+    "uz": "Oʻqituvchi uni tinglab, jilmaydi va ikki avtobus yoʻnalishini bilish haqida mehribon hazil qildi, shuning uchun u yengil tortgan boʻlsa kerak. U bolaning ustidan kulmadi, uyga vazifa bermadi, ota-onasini ham tilga olmadi.",
+    "ru": "Учительница «выслушала и улыбнулась» и по-доброму пошутила о двух маршрутах, так что он, вероятно, почувствовал облегчение. Она не смеялась над ним, не давала домашнего задания и не говорила о родителях."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": -0.9,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverC+solverD",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 2/2 on the key, but solver A flagged no_passage_needed: q2's stem 'where to wait for the right bus' gave away v1's key 'He took the wrong bus and then waited for another'. v2 asks how he felt after telling his teacher; no other item shows her reaction, and each option is a likely feeling that only her words in the text decide. Needs a fresh blind check."
+  }
+ ]
+}

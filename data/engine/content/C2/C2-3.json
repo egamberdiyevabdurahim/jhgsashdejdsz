@@ -1,0 +1,1388 @@
+{
+ "bank": "C2",
+ "batch": 3,
+ "kind": "math_explainers",
+ "explainers": [
+  {
+   "id": "C2-a20001",
+   "type": "study",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "quadratic",
+   "title": {
+    "en": "Quadratic equations: the formula",
+    "uz": "Kvadrat tenglama: ildizlar formulasi",
+    "ru": "Квадратное уравнение: формула корней"
+   },
+   "idea": {
+    "en": "For ax² + bx + c = 0, first compute the discriminant D = b² − 4ac. If D > 0 there are two roots, if D = 0 one, if D < 0 no real roots. The roots are x = (−b ± √D)/(2a). If the equation factors easily, factoring is faster.",
+    "uz": "ax² + bx + c = 0 uchun avval diskriminantni hisoblang: D = b² − 4ac. D > 0 boʻlsa, ikkita ildiz, D = 0 boʻlsa, bitta ildiz bor, D < 0 boʻlsa, haqiqiy ildiz yoʻq. Ildizlar: x = (−b ± √D)/(2a). Agar tenglama oson koʻpaytuvchilarga ajralsa, shu yoʻl tezroq.",
+    "ru": "Для ax² + bx + c = 0 сначала вычислите дискриминант D = b² − 4ac. Если D > 0, корней два, если D = 0 — один, если D < 0 — действительных корней нет. Корни: x = (−b ± √D)/(2a). Если уравнение легко раскладывается на множители, так быстрее."
+   },
+   "example": {
+    "problem": {
+     "en": "Solve: 2x² − 3x − 5 = 0",
+     "uz": "Tenglamani yeching: 2x² − 3x − 5 = 0",
+     "ru": "Решите уравнение: 2x² − 3x − 5 = 0"
+    },
+    "steps": [
+     {
+      "en": "a = 2, b = −3, c = −5. D = (−3)² − 4 · 2 · (−5) = 9 + 40 = 49.",
+      "uz": "a = 2, b = −3, c = −5. D = (−3)² − 4 · 2 · (−5) = 9 + 40 = 49.",
+      "ru": "a = 2, b = −3, c = −5. D = (−3)² − 4 · 2 · (−5) = 9 + 40 = 49."
+     },
+     {
+      "en": "√D = 7, so x = (3 ± 7)/4.",
+      "uz": "√D = 7, demak x = (3 ± 7)/4.",
+      "ru": "√D = 7, значит, x = (3 ± 7)/4."
+     },
+     {
+      "en": "x = 10/4 = 5/2 or x = −4/4 = −1.",
+      "uz": "x = 10/4 = 5/2 yoki x = −4/4 = −1.",
+      "ru": "x = 10/4 = 5/2 или x = −4/4 = −1."
+     },
+     {
+      "en": "Check x = −1: 2 · 1 + 3 − 5 = 0.",
+      "uz": "x = −1 ni tekshiramiz: 2 · 1 + 3 − 5 = 0.",
+      "ru": "Проверка x = −1: 2 · 1 + 3 − 5 = 0."
+     }
+    ],
+    "answer": {
+     "en": "x = 5/2 or x = −1",
+     "uz": "x = 5/2 yoki x = −1",
+     "ru": "x = 5/2 или x = −1"
+    },
+    "solver": [
+     "(-3)**2 - 4*2*(-5) == 49",
+     "set(solve(2*x**2 - 3*x - 5, x)) == {Rational(5, 2), -1}",
+     "2*(-1)**2 - 3*(-1) - 5 == 0",
+     "2*Rational(5, 2)**2 - 3*Rational(5, 2) - 5 == 0"
+    ]
+   },
+   "watch_out": {
+    "en": "With b = −3, the formula starts with −b = +3. And divide by 2a = 4, not by 2.",
+    "uz": "b = −3 boʻlganda formula −b = +3 bilan boshlanadi. Shuningdek, 2 ga emas, 2a = 4 ga boʻling.",
+    "ru": "При b = −3 формула начинается с −b = +3. И делите на 2a = 4, а не на 2."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-a2l011",
+      "rung": "alg2",
+      "subskill": "quadratic"
+     },
+     "target": "the larger root of x² + bx + c = 0",
+     "probe": "sign_of_root"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "quadratic"
+     },
+     "target": "the discriminant and the number of real roots",
+     "probe": "minus_4ac_sign"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "quadratic"
+     },
+     "target": "a ≠ 1, solved with the formula",
+     "probe": "divided_by_2_not_2a"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "quadratic"
+     },
+     "target": "the sum of the roots (Vieta)",
+     "probe": "sign_of_sum"
+    }
+   ],
+   "minutes": 7,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-a20002",
+   "type": "study",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "logarithm",
+   "title": {
+    "en": "Logarithms: the exponent you need",
+    "uz": "Logarifm: kerakli daraja koʻrsatkichi",
+    "ru": "Логарифм — нужный показатель степени"
+   },
+   "idea": {
+    "en": "log_b N = k means b^k = N: a logarithm is an exponent. Three rules combine logarithms with the same base: log_b(MN) = log_b M + log_b N, log_b(M/N) = log_b M − log_b N, and p · log_b M = log_b(M^p).",
+    "uz": "log_b N = k degani b^k = N: logarifm — bu daraja koʻrsatkichi. Asoslari bir xil logarifmlar uchun uchta qoida bor: log_b(MN) = log_b M + log_b N, log_b(M/N) = log_b M − log_b N va p · log_b M = log_b(M^p).",
+    "ru": "log_b N = k означает b^k = N: логарифм — это показатель степени. Для логарифмов с одним основанием есть три правила: log_b(MN) = log_b M + log_b N, log_b(M/N) = log_b M − log_b N и p · log_b M = log_b(M^p)."
+   },
+   "example": {
+    "problem": {
+     "en": "Calculate: 2 log₆ 3 + log₆ 4",
+     "uz": "Hisoblang: 2 log₆ 3 + log₆ 4",
+     "ru": "Вычислите: 2 log₆ 3 + log₆ 4"
+    },
+    "steps": [
+     {
+      "en": "Power rule: 2 log₆ 3 = log₆ 3² = log₆ 9.",
+      "uz": "Daraja qoidasi: 2 log₆ 3 = log₆ 3² = log₆ 9.",
+      "ru": "Правило степени: 2 log₆ 3 = log₆ 3² = log₆ 9."
+     },
+     {
+      "en": "Product rule: log₆ 9 + log₆ 4 = log₆ (9 · 4) = log₆ 36.",
+      "uz": "Koʻpaytma qoidasi: log₆ 9 + log₆ 4 = log₆ (9 · 4) = log₆ 36.",
+      "ru": "Правило произведения: log₆ 9 + log₆ 4 = log₆ (9 · 4) = log₆ 36."
+     },
+     {
+      "en": "6² = 36, so log₆ 36 = 2.",
+      "uz": "6² = 36, demak log₆ 36 = 2.",
+      "ru": "6² = 36, значит, log₆ 36 = 2."
+     }
+    ],
+    "answer": {
+     "en": "2",
+     "uz": "2",
+     "ru": "2"
+    },
+    "solver": [
+     "abs(N(2*log(3, 6) + log(4, 6), 30) - 2) < 1e-25",
+     "nsimplify(N(2*log(3, 6) + log(4, 6), 30)) == 2",
+     "3**2 * 4 == 36 == 6**2"
+    ]
+   },
+   "watch_out": {
+    "en": "log₆ 9 + log₆ 4 is log₆ 36, not log₆ 13: adding logarithms multiplies the numbers inside.",
+    "uz": "log₆ 9 + log₆ 4 = log₆ 36, log₆ 13 emas: logarifmlar qoʻshilganda ichidagi sonlar koʻpaytiriladi.",
+    "ru": "log₆ 9 + log₆ 4 = log₆ 36, а не log₆ 13: при сложении логарифмов числа под ними перемножаются."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "logarithm"
+     },
+     "target": "the value of log_b N",
+     "probe": "divided_instead"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "logarithm"
+     },
+     "target": "a simple logarithmic equation log_b(x − c) = e",
+     "probe": "forgot_domain"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "logarithm"
+     },
+     "target": "the quotient rule",
+     "probe": "subtracted_inside"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "logarithm"
+     },
+     "target": "the power rule",
+     "probe": "multiplied_inside"
+    }
+   ],
+   "minutes": 7,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-a20003",
+   "type": "study",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "arithmetic_sequence",
+   "title": {
+    "en": "Arithmetic sequences",
+    "uz": "Arifmetik progressiya",
+    "ru": "Арифметическая прогрессия"
+   },
+   "idea": {
+    "en": "In an arithmetic sequence, each term is the previous one plus the same number d, the common difference. The n-th term is aₙ = a₁ + (n − 1)d: from the first term to the n-th there are n − 1 steps.",
+    "uz": "Arifmetik progressiyada har bir had oldingi hadga bir xil d sonini (progressiya ayirmasini) qoʻshishdan hosil boʻladi. n-had: aₙ = a₁ + (n − 1)d, chunki birinchi haddan n-hadgacha n − 1 ta qadam bor.",
+    "ru": "В арифметической прогрессии каждый член равен предыдущему плюс одно и то же число d — разность прогрессии. n-й член: aₙ = a₁ + (n − 1)d, ведь от первого члена до n-го n − 1 шагов."
+   },
+   "example": {
+    "problem": {
+     "en": "In an arithmetic sequence, a₃ = 14 and a₈ = 39. Find a₁ and a₂₀.",
+     "uz": "Arifmetik progressiyada a₃ = 14 va a₈ = 39. a₁ va a₂₀ ni toping.",
+     "ru": "В арифметической прогрессии a₃ = 14 и a₈ = 39. Найдите a₁ и a₂₀."
+    },
+    "steps": [
+     {
+      "en": "From a₃ to a₈ there are 5 steps: 5d = 39 − 14 = 25, so d = 5.",
+      "uz": "a₃ dan a₈ gacha 5 ta qadam: 5d = 39 − 14 = 25, demak d = 5.",
+      "ru": "От a₃ до a₈ пять шагов: 5d = 39 − 14 = 25, значит, d = 5."
+     },
+     {
+      "en": "a₁ = a₃ − 2d = 14 − 10 = 4.",
+      "uz": "a₁ = a₃ − 2d = 14 − 10 = 4.",
+      "ru": "a₁ = a₃ − 2d = 14 − 10 = 4."
+     },
+     {
+      "en": "a₂₀ = a₁ + 19d = 4 + 95 = 99.",
+      "uz": "a₂₀ = a₁ + 19d = 4 + 95 = 99.",
+      "ru": "a₂₀ = a₁ + 19d = 4 + 95 = 99."
+     }
+    ],
+    "answer": {
+     "en": "a₁ = 4, a₂₀ = 99",
+     "uz": "a₁ = 4, a₂₀ = 99",
+     "ru": "a₁ = 4, a₂₀ = 99"
+    },
+    "solver": [
+     "Rational(39 - 14, 5) == 5",
+     "14 - 2*5 == 4",
+     "4 + 19*5 == 99",
+     "4 + 2*5 == 14",
+     "4 + 7*5 == 39"
+    ]
+   },
+   "watch_out": {
+    "en": "There are 19 steps from a₁ to a₂₀, not 20: a₂₀ = a₁ + 19d.",
+    "uz": "a₁ dan a₂₀ gacha 20 emas, 19 ta qadam bor: a₂₀ = a₁ + 19d.",
+    "ru": "От a₁ до a₂₀ не 20, а 19 шагов: a₂₀ = a₁ + 19d."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "arithmetic_sequence"
+     },
+     "target": "the n-th term from the first few terms",
+     "probe": "n_steps_not_n_minus_1"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "arithmetic_sequence"
+     },
+     "target": "the common difference from two terms",
+     "probe": "divided_by_wrong_gap"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "arithmetic_sequence"
+     },
+     "target": "which term equals a given value",
+     "probe": "off_by_one"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "arithmetic_sequence"
+     },
+     "target": "a missing term between two known terms",
+     "probe": "averaged_wrong"
+    }
+   ],
+   "minutes": 7,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:5/5",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 5,
+    "passed": 5,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-a20004",
+   "type": "study",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "series",
+   "title": {
+    "en": "The sum of an arithmetic series",
+    "uz": "Arifmetik progressiya hadlarining yigʻindisi",
+    "ru": "Сумма арифметической прогрессии"
+   },
+   "idea": {
+    "en": "Pair the first and the last terms: the sum of n terms is Sₙ = n(a₁ + aₙ)/2. For 1 + 2 + … + n this gives n(n + 1)/2. Find the last term and the number of terms first.",
+    "uz": "Birinchi va oxirgi hadlarni juftlang: n ta had yigʻindisi Sₙ = n(a₁ + aₙ)/2. 1 + 2 + … + n uchun bu n(n + 1)/2 ga teng. Avval oxirgi hadni va hadlar sonini toping.",
+    "ru": "Объедините в пары первый и последний члены: сумма n членов Sₙ = n(a₁ + aₙ)/2. Для 1 + 2 + … + n это n(n + 1)/2. Сначала найдите последний член и число членов."
+   },
+   "example": {
+    "problem": {
+     "en": "A hall has 20 rows of seats. Row 1 has 15 seats, and each row has 2 more than the row before. How many seats are there in total?",
+     "uz": "Zalda 20 qator oʻrindiq bor. 1-qatorda 15 ta oʻrindiq, har bir keyingi qatorda esa oldingisidan 2 ta koʻp. Zalda jami nechta oʻrindiq bor?",
+     "ru": "В зале 20 рядов кресел. В первом ряду 15 кресел, а в каждом следующем на 2 больше, чем в предыдущем. Сколько всего кресел в зале?"
+    },
+    "steps": [
+     {
+      "en": "This is an arithmetic sequence with a₁ = 15, d = 2 and n = 20.",
+      "uz": "Bu a₁ = 15, d = 2 va n = 20 boʻlgan arifmetik progressiya.",
+      "ru": "Это арифметическая прогрессия: a₁ = 15, d = 2, n = 20."
+     },
+     {
+      "en": "The last row: a₂₀ = 15 + 19 · 2 = 53.",
+      "uz": "Oxirgi qator: a₂₀ = 15 + 19 · 2 = 53.",
+      "ru": "Последний ряд: a₂₀ = 15 + 19 · 2 = 53."
+     },
+     {
+      "en": "S₂₀ = 20 · (15 + 53)/2 = 10 · 68 = 680.",
+      "uz": "S₂₀ = 20 · (15 + 53)/2 = 10 · 68 = 680.",
+      "ru": "S₂₀ = 20 · (15 + 53)/2 = 10 · 68 = 680."
+     }
+    ],
+    "answer": {
+     "en": "680 seats.",
+     "uz": "680 ta oʻrindiq.",
+     "ru": "680 кресел."
+    },
+    "solver": [
+     "15 + 19*2 == 53",
+     "20*(15 + 53)/2 == 680",
+     "sum(15 + 2*i for i in range(20)) == 680",
+     "20*(15 + 2)/2 == 170"
+    ]
+   },
+   "watch_out": {
+    "en": "Use the last term, not the difference: 20 · (15 + 2)/2 = 170 is wrong.",
+    "uz": "Ayirmani emas, oxirgi hadni oling: 20 · (15 + 2)/2 = 170 notoʻgʻri.",
+    "ru": "Берите последний член, а не разность: 20 · (15 + 2)/2 = 170 — неверно."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "series"
+     },
+     "target": "1 + 2 + … + n",
+     "probe": "n_squared_over_2"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "series"
+     },
+     "target": "the sum of the first n terms of a given sequence",
+     "probe": "used_d_as_last"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "series"
+     },
+     "target": "the sum of all multiples of k below a bound",
+     "probe": "miscounted_terms"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "series"
+     },
+     "target": "a word problem (rows, weekly savings)",
+     "probe": "used_d_as_last"
+    }
+   ],
+   "minutes": 7,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-a20005",
+   "type": "study",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "exponential_equation",
+   "title": {
+    "en": "Exponential equations: one base",
+    "uz": "Koʻrsatkichli tenglamalar: bitta asos",
+    "ru": "Показательные уравнения: одно основание"
+   },
+   "idea": {
+    "en": "Write both sides as powers of the same base. If b^m = b^n (b > 0, b ≠ 1), then m = n. Remember the power rules: (b^m)^n = b^(mn) and b^m · b^n = b^(m+n).",
+    "uz": "Ikkala tomonni bir xil asosli daraja shaklida yozing. Agar b^m = b^n (b > 0, b ≠ 1) boʻlsa, m = n. Daraja qoidalarini eslang: (b^m)^n = b^(mn) va b^m · b^n = b^(m+n).",
+    "ru": "Запишите обе части как степени с одним основанием. Если b^m = b^n (b > 0, b ≠ 1), то m = n. Вспомните свойства степеней: (b^m)^n = b^(mn) и b^m · b^n = b^(m+n)."
+   },
+   "example": {
+    "problem": {
+     "en": "Solve: 9^x = 27 · 3^(x + 1)",
+     "uz": "Tenglamani yeching: 9^x = 27 · 3^(x + 1)",
+     "ru": "Решите уравнение: 9^x = 27 · 3^(x + 1)"
+    },
+    "steps": [
+     {
+      "en": "Base 3: 9^x = (3²)^x = 3^(2x) and 27 = 3³.",
+      "uz": "3 asosga keltiramiz: 9^x = (3²)^x = 3^(2x) va 27 = 3³.",
+      "ru": "Приводим к основанию 3: 9^x = (3²)^x = 3^(2x) и 27 = 3³."
+     },
+     {
+      "en": "Right side: 3³ · 3^(x + 1) = 3^(3 + x + 1) = 3^(x + 4).",
+      "uz": "Oʻng tomon: 3³ · 3^(x + 1) = 3^(3 + x + 1) = 3^(x + 4).",
+      "ru": "Правая часть: 3³ · 3^(x + 1) = 3^(3 + x + 1) = 3^(x + 4)."
+     },
+     {
+      "en": "3^(2x) = 3^(x + 4), so 2x = x + 4 and x = 4.",
+      "uz": "3^(2x) = 3^(x + 4), demak 2x = x + 4 va x = 4.",
+      "ru": "3^(2x) = 3^(x + 4), значит, 2x = x + 4 и x = 4."
+     },
+     {
+      "en": "Check: 9⁴ = 6561 and 27 · 3⁵ = 27 · 243 = 6561.",
+      "uz": "Tekshirish: 9⁴ = 6561 va 27 · 3⁵ = 27 · 243 = 6561.",
+      "ru": "Проверка: 9⁴ = 6561 и 27 · 3⁵ = 27 · 243 = 6561."
+     }
+    ],
+    "answer": {
+     "en": "x = 4",
+     "uz": "x = 4",
+     "ru": "x = 4"
+    },
+    "solver": [
+     "solveset(Eq(9**x, 27*3**(x + 1)), x, S.Reals) == FiniteSet(4)",
+     "9**4 == 6561",
+     "27*3**5 == 6561",
+     "27*243 == 6561"
+    ]
+   },
+   "watch_out": {
+    "en": "When powers with the same base are multiplied, add the exponents: 3³ · 3^(x + 1) = 3^(x + 4), not 3^(3x + 3).",
+    "uz": "Asoslari bir xil darajalar koʻpaytirilganda koʻrsatkichlar qoʻshiladi: 3³ · 3^(x + 1) = 3^(x + 4), 3^(3x + 3) emas.",
+    "ru": "При умножении степеней с одинаковым основанием показатели складываются: 3³ · 3^(x + 1) = 3^(x + 4), а не 3^(3x + 3)."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "exponential_equation"
+     },
+     "target": "b^(x + c) = N",
+     "probe": "exponent_not_matched"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "exponential_equation"
+     },
+     "target": "two bases that are powers of one number (e.g. 4 and 8)",
+     "probe": "multiplied_exponents_wrong"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "exponential_equation"
+     },
+     "target": "a product of powers on one side",
+     "probe": "multiplied_exponents"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "exponential_equation"
+     },
+     "target": "a negative exponent written as 1/b^k",
+     "probe": "sign_of_exponent"
+    }
+   ],
+   "minutes": 7,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-a20006",
+   "type": "study",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "rational_exponents",
+   "title": {
+    "en": "Fractional and negative exponents",
+    "uz": "Kasr va manfiy koʻrsatkichli daraja",
+    "ru": "Дробные и отрицательные показатели"
+   },
+   "idea": {
+    "en": "a^(m/n) = (ⁿ√a)^m: the denominator is the root, the numerator is the power. Take the root first, to keep the numbers small. A negative exponent means a reciprocal: a^(−k) = 1/a^k.",
+    "uz": "a^(m/n) = (ⁿ√a)^m: maxraj — ildiz koʻrsatkichi, surat — daraja. Sonlar kichik qolishi uchun avval ildizdan chiqaring. Manfiy koʻrsatkich teskari sonni bildiradi: a^(−k) = 1/a^k.",
+    "ru": "a^(m/n) = (ⁿ√a)^m: знаменатель — это корень, числитель — степень. Сначала извлекайте корень, чтобы числа оставались небольшими. Отрицательный показатель означает обратное число: a^(−k) = 1/a^k."
+   },
+   "example": {
+    "problem": {
+     "en": "Calculate: 16^(−3/4)",
+     "uz": "Hisoblang: 16^(−3/4)",
+     "ru": "Вычислите: 16^(−3/4)"
+    },
+    "steps": [
+     {
+      "en": "Negative exponent: 16^(−3/4) = 1/16^(3/4).",
+      "uz": "Manfiy koʻrsatkich: 16^(−3/4) = 1/16^(3/4).",
+      "ru": "Отрицательный показатель: 16^(−3/4) = 1/16^(3/4)."
+     },
+     {
+      "en": "Root first: ⁴√16 = 2, because 2⁴ = 16.",
+      "uz": "Avval ildiz: ⁴√16 = 2, chunki 2⁴ = 16.",
+      "ru": "Сначала корень: ⁴√16 = 2, так как 2⁴ = 16."
+     },
+     {
+      "en": "Then the power: 16^(3/4) = 2³ = 8, so 16^(−3/4) = 1/8.",
+      "uz": "Keyin daraja: 16^(3/4) = 2³ = 8, demak 16^(−3/4) = 1/8.",
+      "ru": "Затем степень: 16^(3/4) = 2³ = 8, значит, 16^(−3/4) = 1/8."
+     }
+    ],
+    "answer": {
+     "en": "1/8",
+     "uz": "1/8",
+     "ru": "1/8"
+    },
+    "solver": [
+     "Integer(16)**Rational(-3, 4) == Rational(1, 8)",
+     "root(16, 4) == 2",
+     "2**4 == 16",
+     "2**3 == 8"
+    ]
+   },
+   "watch_out": {
+    "en": "The minus in the exponent gives a reciprocal, not a negative number: 16^(−3/4) = 1/8, not −8.",
+    "uz": "Koʻrsatkichdagi minus manfiy sonni emas, teskari sonni beradi: 16^(−3/4) = 1/8, −8 emas.",
+    "ru": "Минус в показателе даёт обратное число, а не отрицательное: 16^(−3/4) = 1/8, а не −8."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "rational_exponents"
+     },
+     "target": "a^(1/n)",
+     "probe": "divided_by_n"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "rational_exponents"
+     },
+     "target": "a^(m/n)",
+     "probe": "power_and_root_swapped"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "rational_exponents"
+     },
+     "target": "a negative exponent",
+     "probe": "negative_result"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg2",
+      "subskill": "rational_exponents"
+     },
+     "target": "a radical written as a power",
+     "probe": "inverted_fraction"
+    }
+   ],
+   "minutes": 7,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-pc0001",
+   "type": "study",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "unit_circle",
+   "title": {
+    "en": "The unit circle: cosine is x, sine is y",
+    "uz": "Birlik aylana: kosinus — x, sinus — y",
+    "ru": "Единичная окружность: косинус — x, синус — y"
+   },
+   "idea": {
+    "en": "The point of the unit circle at angle θ has coordinates (cos θ, sin θ). Learn the values for 30°, 45° and 60°. For any other angle, find its reference angle (the acute angle to the x-axis) and take the signs of x and y in that quadrant.",
+    "uz": "Birlik aylanada θ burchakka mos nuqtaning koordinatalari (cos θ, sin θ). 30°, 45° va 60° uchun qiymatlarni yod oling. Boshqa burchaklar uchun keltirilgan burchakni (Ox oʻqi bilan hosil boʻlgan oʻtkir burchakni) toping va shu chorakdagi x va y ishoralarini oling.",
+    "ru": "Точка единичной окружности, соответствующая углу θ, имеет координаты (cos θ, sin θ). Выучите значения для 30°, 45° и 60°. Для любого другого угла найдите опорный угол (острый угол с осью Ox) и возьмите знаки x и y в этой четверти."
+   },
+   "example": {
+    "problem": {
+     "en": "Find sin 240°.",
+     "uz": "sin 240° ni toping.",
+     "ru": "Найдите sin 240°."
+    },
+    "steps": [
+     {
+      "en": "240° is between 180° and 270°: the third quadrant, where x < 0 and y < 0.",
+      "uz": "240° burchak 180° va 270° orasida: bu uchinchi chorak, unda x < 0 va y < 0.",
+      "ru": "240° лежит между 180° и 270°: это третья четверть, где x < 0 и y < 0."
+     },
+     {
+      "en": "Reference angle: 240° − 180° = 60°, and sin 60° = √3/2.",
+      "uz": "Keltirilgan burchak: 240° − 180° = 60°, sin 60° = √3/2.",
+      "ru": "Опорный угол: 240° − 180° = 60°, sin 60° = √3/2."
+     },
+     {
+      "en": "Sine is the y-coordinate, which is negative here: sin 240° = −√3/2.",
+      "uz": "Sinus — bu y koordinata, u bu yerda manfiy: sin 240° = −√3/2.",
+      "ru": "Синус — это координата y, здесь она отрицательна: sin 240° = −√3/2."
+     }
+    ],
+    "answer": {
+     "en": "−√3/2",
+     "uz": "−√3/2",
+     "ru": "−√3/2"
+    },
+    "solver": [
+     "sin(240*pi/180) == -sqrt(3)/2",
+     "sin(pi/3) == sqrt(3)/2",
+     "cos(240*pi/180) < 0"
+    ]
+   },
+   "watch_out": {
+    "en": "In the third quadrant both sine and cosine are negative; only tangent is positive there.",
+    "uz": "Uchinchi chorakda sinus ham, kosinus ham manfiy; u yerda faqat tangens musbat.",
+    "ru": "В третьей четверти и синус, и косинус отрицательны; положителен там только тангенс."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "unit_circle"
+     },
+     "target": "sin or cos of a special angle",
+     "probe": "swapped_sin_cos"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "unit_circle"
+     },
+     "target": "the sign of sin or cos in a given quadrant",
+     "probe": "wrong_sign"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "unit_circle"
+     },
+     "target": "tan of a special angle",
+     "probe": "inverted_ratio"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "unit_circle"
+     },
+     "target": "an angle over 360° or a negative angle",
+     "probe": "did_not_reduce"
+    }
+   ],
+   "minutes": 7,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-pc0002",
+   "type": "study",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "radians",
+   "title": {
+    "en": "Radians and degrees",
+    "uz": "Radian va gradus",
+    "ru": "Радианы и градусы"
+   },
+   "idea": {
+    "en": "A full turn is 360° = 2π radians, so 180° = π. Degrees to radians: multiply by π/180. Radians to degrees: multiply by 180/π. An arc of radius r and angle θ in radians has length s = rθ.",
+    "uz": "Toʻliq aylanish 360° = 2π radian, demak 180° = π. Gradusdan radianga oʻtish: π/180 ga koʻpaytiring. Radiandan gradusga oʻtish: 180/π ga koʻpaytiring. Radiusi r va burchagi radianda θ boʻlgan yoyning uzunligi s = rθ.",
+    "ru": "Полный оборот — 360° = 2π радиан, значит, 180° = π. Из градусов в радианы: умножьте на π/180. Из радиан в градусы: умножьте на 180/π. Длина дуги радиуса r с углом θ в радианах равна s = rθ."
+   },
+   "example": {
+    "problem": {
+     "en": "Convert 300° to radians. Then find the length of an arc with this angle in a circle of radius 6 cm.",
+     "uz": "300° ni radianga oʻtkazing. Keyin radiusi 6 sm boʻlgan aylanada shu burchakka mos yoy uzunligini toping.",
+     "ru": "Переведите 300° в радианы. Затем найдите длину дуги с этим углом в окружности радиуса 6 см."
+    },
+    "steps": [
+     {
+      "en": "300° × π/180 = 300π/180 = 5π/3.",
+      "uz": "300° × π/180 = 300π/180 = 5π/3.",
+      "ru": "300° × π/180 = 300π/180 = 5π/3."
+     },
+     {
+      "en": "Check back: 5π/3 × 180/π = 300°.",
+      "uz": "Teskari tekshiramiz: 5π/3 × 180/π = 300°.",
+      "ru": "Обратная проверка: 5π/3 × 180/π = 300°."
+     },
+     {
+      "en": "Arc length: s = rθ = 6 · 5π/3 = 10π ≈ 31.4 cm.",
+      "uz": "Yoy uzunligi: s = rθ = 6 · 5π/3 = 10π ≈ 31,4 sm.",
+      "ru": "Длина дуги: s = rθ = 6 · 5π/3 = 10π ≈ 31,4 см."
+     }
+    ],
+    "answer": {
+     "en": "300° = 5π/3; the arc is 10π cm ≈ 31.4 cm.",
+     "uz": "300° = 5π/3; yoy uzunligi 10π sm ≈ 31,4 sm.",
+     "ru": "300° = 5π/3; длина дуги 10π см ≈ 31,4 см."
+    },
+    "solver": [
+     "Rational(300, 180)*pi == 5*pi/3",
+     "5*pi/3*180/pi == 300",
+     "6*5*pi/3 == 10*pi",
+     "abs(N(10*pi) - Rational(314, 10)) < Rational(5, 100)"
+    ]
+   },
+   "watch_out": {
+    "en": "s = rθ works only with θ in radians: 6 · 300 = 1800 cm is clearly wrong.",
+    "uz": "s = rθ formulasi faqat θ radianda boʻlganda ishlaydi: 6 · 300 = 1800 sm aniq notoʻgʻri.",
+    "ru": "Формула s = rθ работает, только если θ в радианах: 6 · 300 = 1800 см — явно неверно."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "radians"
+     },
+     "target": "degrees → radians",
+     "probe": "inverted_factor"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "radians"
+     },
+     "target": "radians → degrees",
+     "probe": "inverted_factor"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "radians"
+     },
+     "target": "arc length s = rθ",
+     "probe": "used_degrees"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "radians"
+     },
+     "target": "the quadrant of an angle given in radians",
+     "probe": "misread_pi_fraction"
+    }
+   ],
+   "minutes": 7,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-pc0003",
+   "type": "study",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "trig_identity",
+   "title": {
+    "en": "The Pythagorean identity",
+    "uz": "Asosiy trigonometrik ayniyat",
+    "ru": "Основное тригонометрическое тождество"
+   },
+   "idea": {
+    "en": "For every angle x, sin²x + cos²x = 1: this is Pythagoras on the unit circle. Dividing by cos²x gives 1 + tan²x = 1/cos²x. To find one ratio from another, take the square root and let the quadrant choose the sign.",
+    "uz": "Har qanday x burchak uchun sin²x + cos²x = 1: bu birlik aylanadagi Pifagor teoremasi. Uni cos²x ga boʻlsak, 1 + tan²x = 1/cos²x hosil boʻladi. Bir funksiya orqali boshqasini topishda kvadrat ildiz oling, ishorani esa chorak boʻyicha aniqlang.",
+    "ru": "Для любого угла x sin²x + cos²x = 1: это теорема Пифагора на единичной окружности. Разделив на cos²x, получим 1 + tan²x = 1/cos²x. Чтобы найти одну функцию через другую, извлеките квадратный корень, а знак определите по четверти."
+   },
+   "example": {
+    "problem": {
+     "en": "sin x = 3/5 and 90° < x < 180°. Find cos x and tan x.",
+     "uz": "sin x = 3/5 va 90° < x < 180°. cos x va tan x ni toping.",
+     "ru": "sin x = 3/5 и 90° < x < 180°. Найдите cos x и tan x."
+    },
+    "steps": [
+     {
+      "en": "cos²x = 1 − sin²x = 1 − 9/25 = 16/25, so cos x = ±4/5.",
+      "uz": "cos²x = 1 − sin²x = 1 − 9/25 = 16/25, demak cos x = ±4/5.",
+      "ru": "cos²x = 1 − sin²x = 1 − 9/25 = 16/25, значит, cos x = ±4/5."
+     },
+     {
+      "en": "In the second quadrant cosine is negative, so cos x = −4/5.",
+      "uz": "Ikkinchi chorakda kosinus manfiy, demak cos x = −4/5.",
+      "ru": "Во второй четверти косинус отрицателен, значит, cos x = −4/5."
+     },
+     {
+      "en": "tan x = sin x / cos x = (3/5) ÷ (−4/5) = −3/4.",
+      "uz": "tan x = sin x / cos x = (3/5) ÷ (−4/5) = −3/4.",
+      "ru": "tan x = sin x / cos x = (3/5) ÷ (−4/5) = −3/4."
+     }
+    ],
+    "answer": {
+     "en": "cos x = −4/5, tan x = −3/4",
+     "uz": "cos x = −4/5, tan x = −3/4",
+     "ru": "cos x = −4/5, tan x = −3/4"
+    },
+    "solver": [
+     "1 - Rational(9, 25) == Rational(16, 25)",
+     "sqrt(Rational(16, 25)) == Rational(4, 5)",
+     "Rational(3, 5)/Rational(-4, 5) == Rational(-3, 4)",
+     "simplify(sin(x)**2 + cos(x)**2) == 1",
+     "simplify(cos(pi - asin(Rational(3, 5)))) == Rational(-4, 5)",
+     "simplify(tan(pi - asin(Rational(3, 5)))) == Rational(-3, 4)"
+    ]
+   },
+   "watch_out": {
+    "en": "√(16/25) gives ±4/5. Skipping the sign check gives cos x = 4/5, which is wrong in the second quadrant.",
+    "uz": "√(16/25) dan ±4/5 chiqadi. Ishorani tekshirmasangiz, cos x = 4/5 boʻlib qoladi, bu esa ikkinchi chorakda notoʻgʻri.",
+    "ru": "√(16/25) даёт ±4/5. Если не проверить знак, получится cos x = 4/5, а во второй четверти это неверно."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "trig_identity"
+     },
+     "target": "cos x from sin x in a given quadrant",
+     "probe": "ignored_sign"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "trig_identity"
+     },
+     "target": "simplify an expression with sin²x + cos²x = 1",
+     "probe": "wrong_identity"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "trig_identity"
+     },
+     "target": "1 + tan²x = 1/cos²x",
+     "probe": "wrong_identity"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "trig_identity"
+     },
+     "target": "tan x from sin x and cos x",
+     "probe": "inverted_ratio"
+    }
+   ],
+   "minutes": 7,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:6/6",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 6,
+    "passed": 6,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-pc0004",
+   "type": "study",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "inverse_function",
+   "title": {
+    "en": "Inverse functions: swap and solve",
+    "uz": "Teskari funksiya: almashtiring va yeching",
+    "ru": "Обратная функция: поменяйте местами и решите"
+   },
+   "idea": {
+    "en": "The inverse function f⁻¹ undoes f: if f(a) = b, then f⁻¹(b) = a. To find its formula, write y = f(x), solve for x, then swap the letters x and y.",
+    "uz": "Teskari funksiya f⁻¹ f ning taʼsirini bekor qiladi: agar f(a) = b boʻlsa, f⁻¹(b) = a. Uning formulasini topish uchun y = f(x) deb yozing, x ni y orqali ifodalang, keyin x va y harflarining oʻrnini almashtiring.",
+    "ru": "Обратная функция f⁻¹ отменяет действие f: если f(a) = b, то f⁻¹(b) = a. Чтобы найти её формулу, запишите y = f(x), выразите x через y, затем поменяйте буквы x и y местами."
+   },
+   "example": {
+    "problem": {
+     "en": "f(x) = (3x + 2)/5. Find f⁻¹(x).",
+     "uz": "f(x) = (3x + 2)/5. f⁻¹(x) ni toping.",
+     "ru": "f(x) = (3x + 2)/5. Найдите f⁻¹(x)."
+    },
+    "steps": [
+     {
+      "en": "y = (3x + 2)/5, so 5y = 3x + 2.",
+      "uz": "y = (3x + 2)/5, demak 5y = 3x + 2.",
+      "ru": "y = (3x + 2)/5, значит, 5y = 3x + 2."
+     },
+     {
+      "en": "3x = 5y − 2, so x = (5y − 2)/3.",
+      "uz": "3x = 5y − 2, demak x = (5y − 2)/3.",
+      "ru": "3x = 5y − 2, значит, x = (5y − 2)/3."
+     },
+     {
+      "en": "Swap the letters: f⁻¹(x) = (5x − 2)/3.",
+      "uz": "Harflarni almashtiramiz: f⁻¹(x) = (5x − 2)/3.",
+      "ru": "Меняем буквы местами: f⁻¹(x) = (5x − 2)/3."
+     },
+     {
+      "en": "Check: f(4) = 14/5, and f⁻¹(14/5) = (14 − 2)/3 = 4.",
+      "uz": "Tekshirish: f(4) = 14/5 va f⁻¹(14/5) = (14 − 2)/3 = 4.",
+      "ru": "Проверка: f(4) = 14/5, а f⁻¹(14/5) = (14 − 2)/3 = 4."
+     }
+    ],
+    "answer": {
+     "en": "f⁻¹(x) = (5x − 2)/3",
+     "uz": "f⁻¹(x) = (5x − 2)/3",
+     "ru": "f⁻¹(x) = (5x − 2)/3"
+    },
+    "solver": [
+     "simplify((5*((3*x + 2)/5) - 2)/3 - x) == 0",
+     "simplify((3*((5*x - 2)/3) + 2)/5 - x) == 0",
+     "Rational(3*4 + 2, 5) == Rational(14, 5)",
+     "(5*Rational(14, 5) - 2)/3 == 4"
+    ]
+   },
+   "watch_out": {
+    "en": "f⁻¹(x) is not 1/f(x). Here −1 means \"inverse function\", not a power.",
+    "uz": "f⁻¹(x) bu 1/f(x) emas. Bu yerda −1 daraja emas, «teskari funksiya» degani.",
+    "ru": "f⁻¹(x) — это не 1/f(x). Здесь −1 означает «обратная функция», а не степень."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "inverse_function"
+     },
+     "target": "f⁻¹(value) for a linear function",
+     "probe": "computed_f_not_inverse"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "inverse_function"
+     },
+     "target": "the formula of the inverse of a linear function",
+     "probe": "inverted_operations_order"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "inverse_function"
+     },
+     "target": "the inverse of x³ + c at a value",
+     "probe": "computed_f_not_inverse"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "inverse_function"
+     },
+     "target": "f⁻¹(x) versus 1/f(x)",
+     "probe": "reciprocal_not_inverse"
+    }
+   ],
+   "minutes": 7,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-pc0005",
+   "type": "study",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "function_composition",
+   "title": {
+    "en": "Composition of functions: inside first",
+    "uz": "Murakkab funksiya: avval ichkisi",
+    "ru": "Композиция функций: сначала внутренняя"
+   },
+   "idea": {
+    "en": "f(g(x)) means: compute g(x) first, then put the result into f. The order matters: f(g(x)) and g(f(x)) are usually different.",
+    "uz": "f(g(x)) degani: avval g(x) ni hisoblang, keyin natijani f ga qoʻying. Tartib muhim: f(g(x)) va g(f(x)) odatda har xil boʻladi.",
+    "ru": "f(g(x)) означает: сначала вычислите g(x), затем подставьте результат в f. Порядок важен: f(g(x)) и g(f(x)) обычно различны."
+   },
+   "example": {
+    "problem": {
+     "en": "f(x) = 2^x and g(x) = x − 3. Find f(g(5)), g(f(5)) and a formula for f(g(x)).",
+     "uz": "f(x) = 2^x va g(x) = x − 3. f(g(5)), g(f(5)) va f(g(x)) formulasini toping.",
+     "ru": "f(x) = 2^x и g(x) = x − 3. Найдите f(g(5)), g(f(5)) и формулу f(g(x))."
+    },
+    "steps": [
+     {
+      "en": "g(5) = 5 − 3 = 2, so f(g(5)) = f(2) = 2² = 4.",
+      "uz": "g(5) = 5 − 3 = 2, demak f(g(5)) = f(2) = 2² = 4.",
+      "ru": "g(5) = 5 − 3 = 2, значит, f(g(5)) = f(2) = 2² = 4."
+     },
+     {
+      "en": "f(5) = 2⁵ = 32, so g(f(5)) = g(32) = 32 − 3 = 29.",
+      "uz": "f(5) = 2⁵ = 32, demak g(f(5)) = g(32) = 32 − 3 = 29.",
+      "ru": "f(5) = 2⁵ = 32, значит, g(f(5)) = g(32) = 32 − 3 = 29."
+     },
+     {
+      "en": "In general, put x − 3 in place of x in f: f(g(x)) = 2^(x − 3).",
+      "uz": "Umumiy holda f dagi x oʻrniga x − 3 ni qoʻyamiz: f(g(x)) = 2^(x − 3).",
+      "ru": "В общем виде подставляем x − 3 вместо x в f: f(g(x)) = 2^(x − 3)."
+     }
+    ],
+    "answer": {
+     "en": "f(g(5)) = 4, g(f(5)) = 29, f(g(x)) = 2^(x − 3)",
+     "uz": "f(g(5)) = 4, g(f(5)) = 29, f(g(x)) = 2^(x − 3)",
+     "ru": "f(g(5)) = 4, g(f(5)) = 29, f(g(x)) = 2^(x − 3)"
+    },
+    "solver": [
+     "2**(5 - 3) == 4",
+     "2**5 - 3 == 29",
+     "2**5 * (5 - 3) == 64"
+    ]
+   },
+   "watch_out": {
+    "en": "f(g(5)) is not f(5) · g(5) = 64, and not g(f(5)) = 29: work from the inside out.",
+    "uz": "f(g(5)) — bu f(5) · g(5) = 64 ham, g(f(5)) = 29 ham emas: ichkaridan tashqariga qarab hisoblang.",
+    "ru": "f(g(5)) — это не f(5) · g(5) = 64 и не g(f(5)) = 29: вычисляйте изнутри наружу."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "function_composition"
+     },
+     "target": "f(g(a)) for a number a",
+     "probe": "wrong_order"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "function_composition"
+     },
+     "target": "a formula for f(g(x))",
+     "probe": "wrong_order"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "function_composition"
+     },
+     "target": "compare f(g(x)) with g(f(x))",
+     "probe": "assumed_commutative"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "function_composition"
+     },
+     "target": "composition versus product of two functions",
+     "probe": "multiplied_functions"
+    }
+   ],
+   "minutes": 7,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-pc0006",
+   "type": "study",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "trig_equations",
+   "title": {
+    "en": "Trigonometric equations: find every angle",
+    "uz": "Trigonometrik tenglamalar: barcha burchaklarni toping",
+    "ru": "Тригонометрические уравнения: найдите все углы"
+   },
+   "idea": {
+    "en": "Isolate sin x or cos x. Find the reference angle from the value without its sign. Then list every angle in the given interval where the function has the needed sign: sine is positive in quadrants I and II, cosine in quadrants I and IV.",
+    "uz": "sin x yoki cos x ni alohida qoldiring. Ishorasiz qiymat boʻyicha keltirilgan burchakni toping. Keyin berilgan oraliqda funksiya kerakli ishoraga ega boʻlgan barcha burchaklarni yozing: sinus I va II choraklarda, kosinus I va IV choraklarda musbat.",
+    "ru": "Выразите sin x или cos x. По значению без знака найдите опорный угол. Затем выпишите все углы из данного промежутка, где функция имеет нужный знак: синус положителен в I и II четвертях, косинус — в I и IV."
+   },
+   "example": {
+    "problem": {
+     "en": "Solve 2 cos x + √3 = 0 for 0 ≤ x < 2π.",
+     "uz": "2 cos x + √3 = 0 tenglamani 0 ≤ x < 2π oraliqda yeching.",
+     "ru": "Решите уравнение 2 cos x + √3 = 0 на промежутке 0 ≤ x < 2π."
+    },
+    "steps": [
+     {
+      "en": "cos x = −√3/2.",
+      "uz": "cos x = −√3/2.",
+      "ru": "cos x = −√3/2."
+     },
+     {
+      "en": "Reference angle: cos(π/6) = √3/2, so it is π/6.",
+      "uz": "Keltirilgan burchak: cos(π/6) = √3/2, demak u π/6.",
+      "ru": "Опорный угол: cos(π/6) = √3/2, значит, это π/6."
+     },
+     {
+      "en": "Cosine is negative in quadrants II and III: x = π − π/6 = 5π/6 and x = π + π/6 = 7π/6.",
+      "uz": "Kosinus II va III choraklarda manfiy: x = π − π/6 = 5π/6 va x = π + π/6 = 7π/6.",
+      "ru": "Косинус отрицателен во II и III четвертях: x = π − π/6 = 5π/6 и x = π + π/6 = 7π/6."
+     }
+    ],
+    "answer": {
+     "en": "x = 5π/6 or x = 7π/6",
+     "uz": "x = 5π/6 yoki x = 7π/6",
+     "ru": "x = 5π/6 или x = 7π/6"
+    },
+    "solver": [
+     "solveset(Eq(2*cos(x) + sqrt(3), 0), x, Interval.Ropen(0, 2*pi)) == FiniteSet(5*pi/6, 7*pi/6)",
+     "cos(pi/6) == sqrt(3)/2"
+    ]
+   },
+   "watch_out": {
+    "en": "There are usually two answers in [0, 2π). Stopping at 5π/6 loses 7π/6.",
+    "uz": "[0, 2π) oraliqda odatda ikkita javob boʻladi. 5π/6 da toʻxtab qolsangiz, 7π/6 yoʻqoladi.",
+    "ru": "На [0, 2π) обычно два ответа. Если остановиться на 5π/6, потеряется 7π/6."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "trig_equations"
+     },
+     "target": "sin x = k on [0, 2π)",
+     "probe": "missed_second_solution"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "trig_equations"
+     },
+     "target": "cos x = −k on [0, 2π)",
+     "probe": "wrong_quadrants"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "trig_equations"
+     },
+     "target": "tan x = k on [0, 2π)",
+     "probe": "period_pi_missed"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "precalc",
+      "subskill": "trig_equations"
+     },
+     "target": "a factored equation such as sin x (2 cos x − 1) = 0",
+     "probe": "missed_factor"
+    }
+   ],
+   "minutes": 7,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:2/2",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 2,
+    "passed": 2,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

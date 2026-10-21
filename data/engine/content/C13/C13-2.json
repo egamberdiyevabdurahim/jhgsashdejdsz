@@ -1,0 +1,1295 @@
+{
+ "bank": "C13",
+ "batch": 2,
+ "kind": "parent_question_task",
+ "note": "C13 batch 2: the parent-source diagnostic questions as parent tasks (P5 spec §4.2 items 2 and 4, §4.3, §4.8 item 4): the 5 parent-audience ids of question_bank.json (m0_parent_contact, m7_annual_budget, m7_assets, m7_income_documentable, m7_loans), the family form's m8_parent_attitude, the M8 family questions (m8_decision_maker, m8_family_major_pref, m8_constraints, m8_parent_education, m8_family_abroad) and the under-14 consent. Option values are the bank's own (labels are the parent's point of view; value_note says where they differ). \"order\" is the per-stage sequence inside the parent app (null = not shown at that stage). Completion is L6 auto_event when the answers are saved; a parent who fills the existing family form completes every task whose keys it covers. Code-rendered in uz/ru/en, never AI (D14).",
+ "items": [
+  {
+   "id": "C13-qconsn",
+   "kind": "parent_question_task",
+   "task_kind": "parent",
+   "type": "reflect",
+   "category": "diagnostic_question",
+   "stages": [
+    "S1",
+    "S2"
+   ],
+   "conditions": [
+    "derived.age < 14",
+    "parentConsentAt is null"
+   ],
+   "order": {
+    "S1": 1,
+    "S2": 1,
+    "S3": null,
+    "S4": null
+   },
+   "trigger": {
+    "type": "phase_d",
+    "phases": [
+     "D"
+    ],
+    "after": "parent_joined",
+    "first_screen": true
+   },
+   "minutes": 3,
+   "title": {
+    "en": "Permission for the detailed questions",
+    "uz": "Batafsil savollar uchun ruxsat",
+    "ru": "Согласие на подробные вопросы"
+   },
+   "instructions": {
+    "en": "Your child is under 14. Before Jamals Global asks the detailed questions about school, activities, goals and plans, a parent has to agree. Read the list of topics on this screen, then choose. If you do not agree, your child still gets the skill checks, practice and the steps meant for parents.",
+    "uz": "Farzandingiz 14 yoshga toʻlmagan. Jamals Global maktab, mashgʻulotlar, maqsad va rejalar haqida batafsil savollar berishidan oldin ota-onadan biri rozilik berishi kerak. Ushbu ekrandagi mavzular roʻyxatini oʻqing, soʻng tanlang. Rozilik bermasangiz ham, farzandingiz bilim tekshiruvlari, mashqlar va ota-onalar uchun moʻljallangan qadamlarni olaveradi.",
+    "ru": "Ребёнку ещё нет 14 лет. Прежде чем Jamals Global задаст подробные вопросы о школе, занятиях, целях и планах, нужно согласие одного из родителей. Прочитайте список тем на этом экране и сделайте выбор. Если вы не дадите согласия, ребёнок всё равно будет получать проверки знаний, практику и шаги для родителей."
+   },
+   "why": {
+    "en": "Under 14, the detailed profile questions wait for a parent's permission.",
+    "uz": "14 yoshgacha boʻlgan bolalar uchun batafsil savollar ota-ona ruxsatini kutadi.",
+    "ru": "Детям до 14 лет подробные вопросы задаются только с разрешения родителя."
+   },
+   "questions": [
+    {
+     "id": "consent",
+     "bank_type": "select",
+     "required": true,
+     "text": {
+      "en": "Do you agree to the detailed questions?",
+      "uz": "Batafsil savollarga rozimisiz?",
+      "ru": "Вы согласны на подробные вопросы?"
+     },
+     "options": [
+      {
+       "value": "yes",
+       "label": {
+        "en": "I agree",
+        "uz": "Rozilik beraman",
+        "ru": "Даю согласие"
+       }
+      },
+      {
+       "value": "not_now",
+       "label": {
+        "en": "Not now",
+        "uz": "Hozircha yoʻq",
+        "ru": "Пока нет"
+       }
+      }
+     ]
+    }
+   ],
+   "answers_into": [
+    "consent"
+   ],
+   "submit": {
+    "via": "parent_flow_done.consent",
+    "keys": [
+     "consent"
+    ]
+   },
+   "evidence": {
+    "level": "L6",
+    "method": "auto_event",
+    "event": "parent_consent_recorded",
+    "keys": [
+     "consent"
+    ]
+   },
+   "fallback": null,
+   "tokens": [],
+   "sensitive": false,
+   "basis": [],
+   "facts": [],
+   "needs_verification": false,
+   "engineering_note": "Not a bank id: \"yes\" posts parent_flow_done with consent: true (sets parentConsentAt, commit.ts applyParentFlow); \"not_now\" completes the task with no consent and Phase D keeps checks, practice and the parent step only (§4.2 item 2). The topic list is the existing consent screen (§4.2 item 2: the parent app's first screen). No student fallback: consent can only come from a parent. Re-offering after a \"not now\" is an owner decision, not set here. The task is shown while the child is under 14, so a stage-S2 child of 13 sees it too.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-qattit",
+   "kind": "parent_question_task",
+   "task_kind": "parent",
+   "type": "reflect",
+   "category": "diagnostic_question",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "order": {
+    "S1": null,
+    "S2": 1,
+    "S3": 1,
+    "S4": 1
+   },
+   "trigger": {
+    "type": "phase_d",
+    "phases": [
+     "D"
+    ],
+    "after": "parent_joined"
+   },
+   "minutes": 2,
+   "title": {
+    "en": "Your view of your child's plan",
+    "uz": "Farzandingiz rejasiga munosabatingiz",
+    "ru": "Ваше отношение к плану ребёнка"
+   },
+   "instructions": {
+    "en": "Three short questions about how you see your child's plan. There are no right answers. If your answers differ from your child's, the app suggests a short talk together, not a decision.",
+    "uz": "Farzandingiz rejasiga qanday qarashingiz haqida uchta qisqa savol. Toʻgʻri yoki notoʻgʻri javob yoʻq. Agar javoblaringiz farzandingiznikidan farq qilsa, ilova qaror emas, balki birga qisqa suhbatni taklif qiladi.",
+    "ru": "Три коротких вопроса о том, как вы видите план ребёнка. Правильных ответов нет. Если ваши ответы отличаются от ответов ребёнка, приложение предложит короткий разговор вдвоём, а не решение."
+   },
+   "why": {
+    "en": "The plan works better when the family's expectations are known early.",
+    "uz": "Oilaning kutganlari erta maʼlum boʻlsa, reja yaxshiroq ishlaydi.",
+    "ru": "План работает лучше, когда ожидания семьи известны заранее."
+   },
+   "questions": [
+    {
+     "id": "m8_parent_attitude",
+     "bank_type": "select",
+     "required": true,
+     "text": {
+      "en": "How do you feel about your child's plan?",
+      "uz": "Farzandingiz rejasiga qanday qaraysiz?",
+      "ru": "Как вы относитесь к плану ребёнка?"
+     },
+     "options": [
+      {
+       "value": "fully_supportive",
+       "label": {
+        "en": "Fully supportive",
+        "uz": "Toʻliq qoʻllab-quvvatlayman",
+        "ru": "Полностью поддерживаю"
+       }
+      },
+      {
+       "value": "conditional",
+       "label": {
+        "en": "Supportive, with conditions",
+        "uz": "Shartlar bilan qoʻllab-quvvatlayman",
+        "ru": "Поддерживаю, с условиями"
+       }
+      },
+      {
+       "value": "hesitant",
+       "label": {
+        "en": "Hesitant",
+        "uz": "Ikkilanaman",
+        "ru": "Сомневаюсь"
+       }
+      },
+      {
+       "value": "against",
+       "label": {
+        "en": "Against it",
+        "uz": "Qarshiman",
+        "ru": "Против"
+       }
+      }
+     ]
+    },
+    {
+     "id": "m8_decision_maker",
+     "bank_type": "select",
+     "required": false,
+     "text": {
+      "en": "Who will make the final decision about where your child studies?",
+      "uz": "Farzandingiz qayerda oʻqishi haqidagi yakuniy qarorni kim qabul qiladi?",
+      "ru": "Кто примет окончательное решение о том, где будет учиться ребёнок?"
+     },
+     "options": [
+      {
+       "value": "me",
+       "label": {
+        "en": "My child",
+        "uz": "Farzandim",
+        "ru": "Ребёнок"
+       }
+      },
+      {
+       "value": "parents",
+       "label": {
+        "en": "We, the parents",
+        "uz": "Biz, ota-onalar",
+        "ru": "Мы, родители"
+       }
+      },
+      {
+       "value": "together",
+       "label": {
+        "en": "We decide together",
+        "uz": "Birgalikda hal qilamiz",
+        "ru": "Решаем вместе"
+       }
+      }
+     ],
+     "value_note": "Bank values are the student's point of view: \"me\" means the student, so the parent's \"My child\" maps to \"me\"."
+    },
+    {
+     "id": "m8_family_major_pref",
+     "bank_type": "select_plus_text",
+     "required": false,
+     "text": {
+      "en": "Would you like your child to study a particular field?",
+      "uz": "Farzandingiz muayyan yoʻnalishda oʻqishini xohlaysizmi?",
+      "ru": "Хотели бы вы, чтобы ребёнок учился по определённому направлению?"
+     },
+     "options": [
+      {
+       "value": "same_as_mine",
+       "label": {
+        "en": "The field my child wants",
+        "uz": "Farzandim xohlagan yoʻnalish",
+        "ru": "То направление, которое хочет ребёнок"
+       }
+      },
+      {
+       "value": "different",
+       "label": {
+        "en": "A different field",
+        "uz": "Boshqa yoʻnalish",
+        "ru": "Другое направление"
+       }
+      },
+      {
+       "value": "no_preference",
+       "label": {
+        "en": "No preference",
+        "uz": "Farqi yoʻq",
+        "ru": "Нет предпочтений"
+       }
+      }
+     ],
+     "parts": [
+      {
+       "key": "text",
+       "type": "text_short",
+       "max_chars": 60,
+       "optional": true,
+       "show_if": "different",
+       "label": {
+        "en": "Which field? (optional)",
+        "uz": "Qaysi yoʻnalish? (ixtiyoriy)",
+        "ru": "Какое направление? (необязательно)"
+       }
+      }
+     ],
+     "value_note": "\"same_as_mine\" is the student's wording (\"same as mine\"); for the parent it means \"the field my child wants\"."
+    }
+   ],
+   "answers_into": [
+    "m8_parent_attitude",
+    "m8_decision_maker",
+    "m8_family_major_pref"
+   ],
+   "submit": {
+    "via": "parent_flow_done",
+    "keys": [
+     "m8_parent_attitude",
+     "m8_decision_maker",
+     "m8_family_major_pref"
+    ]
+   },
+   "evidence": {
+    "level": "L6",
+    "method": "auto_event",
+    "event": "parent_answered",
+    "keys": [
+     "m8_parent_attitude",
+     "m8_decision_maker",
+     "m8_family_major_pref"
+    ]
+   },
+   "fallback": {
+    "after_days": 7,
+    "mode": "student_answer_stands",
+    "unknown": "parent_view",
+    "note": "The student already answers this id; if the parent has not answered in 7 days, the student's answer stays in effect and the parent view is listed as unknown (§4.3)."
+   },
+   "tokens": [],
+   "sensitive": false,
+   "basis": [],
+   "facts": [],
+   "needs_verification": false,
+   "engineering_note": "m8_parent_attitude is already in the family form (FAM_MAP.attitude, view.ts); the other two are new for the parent. Parent answers to m8_* outrank the student's (PARENT_OUTRANKS, score.ts:64) and a difference raises c_student_vs_parent, which gives the student the family_talk task (flags.ts:19, tasks.ts:175): that is the \"short talk\" the text promises. The free text is stored raw and never sent to the AI (D14 (5)).",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-qbudgt",
+   "kind": "parent_question_task",
+   "task_kind": "parent",
+   "type": "reflect",
+   "category": "diagnostic_question",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "order": {
+    "S1": null,
+    "S2": 2,
+    "S3": 2,
+    "S4": 2
+   },
+   "trigger": {
+    "type": "phase_d",
+    "phases": [
+     "D"
+    ],
+    "after": "parent_joined",
+    "after_task": "C13-moneyt"
+   },
+   "minutes": 2,
+   "title": {
+    "en": "How much can the family pay per year for university?",
+    "uz": "Oila universitet uchun yiliga qancha toʻlay oladi?",
+    "ru": "Сколько семья может платить за университет в год?"
+   },
+   "instructions": {
+    "en": "A rough figure is enough, in the currency you use; the app converts it. It decides which universities and routes the plan treats as affordable and where it looks for grants. You can change it later in this app. The app never sends this amount to the AI.",
+    "uz": "Taxminiy summa yetarli, oʻzingiz ishlatadigan valyutada yozing; ilova uni oʻzi qayta hisoblaydi. Bu summa reja qaysi universitet va yoʻllarni oila uchun mos deb hisoblashini va grantlarni qayerdan qidirishini belgilaydi. Keyinroq uni shu ilovada oʻzgartirishingiz mumkin. Ilova bu summani hech qachon sunʼiy intellektga yubormaydi.",
+    "ru": "Достаточно примерной суммы в привычной вам валюте, приложение само её пересчитает. От неё зависит, какие университеты и пути план считает посильными и где ищет гранты. Позже сумму можно изменить в этом приложении. Приложение никогда не передаёт эту сумму искусственному интеллекту."
+   },
+   "why": {
+    "en": "Without it the plan cannot match universities to the family's budget; a skipped answer stays unknown, never zero.",
+    "uz": "Busiz reja universitetlarni oila byudjetiga moslay olmaydi; javob berilmasa, summa nomaʼlum deb qoladi, hech qachon nol deb olinmaydi.",
+    "ru": "Без этой суммы план не может подобрать университеты под бюджет семьи; если не ответить, сумма останется неизвестной, а не нулевой."
+   },
+   "questions": [
+    {
+     "id": "m7_annual_budget",
+     "bank_type": "number_currency",
+     "required": false,
+     "text": {
+      "en": "How much can the family pay per year for university?",
+      "uz": "Oila universitet uchun yiliga qancha toʻlay oladi?",
+      "ru": "Сколько семья может платить за университет в год?"
+     },
+     "parts": [
+      {
+       "key": "amount",
+       "type": "int",
+       "min": 0,
+       "label": {
+        "en": "Amount per year",
+        "uz": "Yillik summa",
+        "ru": "Сумма в год"
+       }
+      },
+      {
+       "key": "currency",
+       "type": "choice",
+       "label": {
+        "en": "Currency",
+        "uz": "Valyuta",
+        "ru": "Валюта"
+       },
+       "options": [
+        {
+         "value": "UZS",
+         "label": {
+          "en": "Soʻm",
+          "uz": "Soʻm",
+          "ru": "Сум"
+         }
+        },
+        {
+         "value": "USD",
+         "label": {
+          "en": "US dollars",
+          "uz": "AQSh dollari",
+          "ru": "Доллары США"
+         }
+        },
+        {
+         "value": "EUR",
+         "label": {
+          "en": "Euros",
+          "uz": "Yevro",
+          "ru": "Евро"
+         }
+        }
+       ]
+      }
+     ],
+     "skip": {
+      "en": "Prefer not to say",
+      "uz": "Aytmayman",
+      "ru": "Предпочитаю не говорить"
+     }
+    }
+   ],
+   "answers_into": [
+    "m7_annual_budget"
+   ],
+   "submit": {
+    "via": "parent_flow_done",
+    "keys": [
+     "m7_annual_budget"
+    ]
+   },
+   "evidence": {
+    "level": "L6",
+    "method": "auto_event",
+    "event": "parent_answered",
+    "keys": [
+     "m7_annual_budget"
+    ]
+   },
+   "fallback": {
+    "after_days": 7,
+    "mode": "student_side_path",
+    "flag": "answered_by_student",
+    "confidence": "low",
+    "note": "Spec §4.2 item 4: after 7 days without a parent answer, the student may answer on the existing student-side path, flagged \"answered by the student\"."
+   },
+   "tokens": [],
+   "sensitive": true,
+   "basis": [],
+   "facts": [],
+   "needs_verification": false,
+   "engineering_note": "Shape {amount, currency, usd, confidence} as the family form saves it (view.ts:158, FAM_RATE USD/UZS/EUR); a skip stores nothing and the budget stays unknown, never $0 (score.ts:44). The \"never sent to the AI\" sentence rests on D14 (5) and R6 §3.2 (money reaches the model only as code-derived blocker codes): if that ever changes, this sentence must change with it. The student fallback stores confidence \"low\" (bank note on m7_annual_budget).",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-qsavln",
+   "kind": "parent_question_task",
+   "task_kind": "parent",
+   "type": "reflect",
+   "category": "diagnostic_question",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "order": {
+    "S1": null,
+    "S2": 4,
+    "S3": 3,
+    "S4": 3
+   },
+   "trigger": {
+    "type": "phase_d",
+    "phases": [
+     "D"
+    ],
+    "after": "parent_joined"
+   },
+   "minutes": 1,
+   "title": {
+    "en": "Savings and education loans",
+    "uz": "Jamgʻarma va taʼlim krediti",
+    "ru": "Сбережения и кредит на обучение"
+   },
+   "instructions": {
+    "en": "Two optional questions. Choose a range, not an exact amount, or choose not to say. They help the plan see which ways of paying are open to the family.",
+    "uz": "Ikkita ixtiyoriy savol. Aniq summa emas, oraliqni tanlang yoki aytmaslikni tanlang. Ular rejaga oila uchun qaysi toʻlov yoʻllari ochiq ekanini koʻrishga yordam beradi.",
+    "ru": "Два необязательных вопроса. Выберите диапазон, а не точную сумму, или не отвечайте. Они помогают плану понять, какие способы оплаты доступны семье."
+   },
+   "why": {
+    "en": "A range is enough for planning; the app does not ask for account numbers or exact sums here.",
+    "uz": "Rejalashtirish uchun oraliq yetarli; ilova bu yerda hisob raqami yoki aniq summani soʻramaydi.",
+    "ru": "Для планирования достаточно диапазона; номера счетов и точные суммы здесь не нужны."
+   },
+   "questions": [
+    {
+     "id": "m7_assets",
+     "bank_type": "select",
+     "required": false,
+     "text": {
+      "en": "Savings set aside for your child's education",
+      "uz": "Farzandingiz taʼlimi uchun jamgʻarma",
+      "ru": "Сбережения на образование ребёнка"
+     },
+     "options": [
+      {
+       "value": "none",
+       "label": {
+        "en": "None",
+        "uz": "Yoʻq",
+        "ru": "Нет"
+       }
+      },
+      {
+       "value": "under_10k",
+       "label": {
+        "en": "Under $10,000",
+        "uz": "10 000 dollardan kam",
+        "ru": "Меньше 10 000 долларов"
+       }
+      },
+      {
+       "value": "10k_50k",
+       "label": {
+        "en": "$10,000 to $50,000",
+        "uz": "10 000 – 50 000 dollar",
+        "ru": "От 10 000 до 50 000 долларов"
+       }
+      },
+      {
+       "value": "50k_150k",
+       "label": {
+        "en": "$50,000 to $150,000",
+        "uz": "50 000 – 150 000 dollar",
+        "ru": "От 50 000 до 150 000 долларов"
+       }
+      },
+      {
+       "value": "over_150k",
+       "label": {
+        "en": "Over $150,000",
+        "uz": "150 000 dollardan koʻp",
+        "ru": "Больше 150 000 долларов"
+       }
+      },
+      {
+       "value": "prefer_not_to_say",
+       "label": {
+        "en": "Prefer not to say",
+        "uz": "Aytmayman",
+        "ru": "Предпочитаю не говорить"
+       }
+      }
+     ]
+    },
+    {
+     "id": "m7_loans",
+     "bank_type": "select",
+     "required": false,
+     "text": {
+      "en": "Would the family consider an education loan?",
+      "uz": "Oila taʼlim krediti olishni koʻrib chiqadimi?",
+      "ru": "Рассмотрит ли семья кредит на обучение?"
+     },
+     "options": [
+      {
+       "value": "yes",
+       "label": {
+        "en": "Yes",
+        "uz": "Ha",
+        "ru": "Да"
+       }
+      },
+      {
+       "value": "maybe",
+       "label": {
+        "en": "Maybe",
+        "uz": "Balki",
+        "ru": "Возможно"
+       }
+      },
+      {
+       "value": "no",
+       "label": {
+        "en": "No",
+        "uz": "Yoʻq",
+        "ru": "Нет"
+       }
+      }
+     ]
+    }
+   ],
+   "answers_into": [
+    "m7_assets",
+    "m7_loans"
+   ],
+   "submit": {
+    "via": "parent_flow_done",
+    "keys": [
+     "m7_assets",
+     "m7_loans"
+    ]
+   },
+   "evidence": {
+    "level": "L6",
+    "method": "auto_event",
+    "event": "parent_answered",
+    "keys": [
+     "m7_assets",
+     "m7_loans"
+    ]
+   },
+   "fallback": {
+    "after_days": 7,
+    "mode": "student_side_path",
+    "flag": "answered_by_student",
+    "confidence": "low",
+    "note": "Spec §4.2 item 4: after 7 days without a parent answer, the student may answer on the existing student-side path, flagged \"answered by the student\"."
+   },
+   "tokens": [],
+   "sensitive": true,
+   "basis": [],
+   "facts": [],
+   "needs_verification": false,
+   "engineering_note": "Same ids and values as the family form (FAM_MAP.savings, FAM_MAP.loan). The bank text of m7_loans adds \"(many countries need a local cosigner)\"; that clause is left out here because it is an unsourced claim.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-qincom",
+   "kind": "parent_question_task",
+   "task_kind": "parent",
+   "type": "reflect",
+   "category": "diagnostic_question",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "order": {
+    "S1": null,
+    "S2": 5,
+    "S3": 4,
+    "S4": 4
+   },
+   "trigger": {
+    "type": "phase_d",
+    "phases": [
+     "D"
+    ],
+    "after": "parent_joined"
+   },
+   "minutes": 1,
+   "title": {
+    "en": "Can the family document its income?",
+    "uz": "Oila daromadini hujjat bilan tasdiqlay oladimi?",
+    "ru": "Может ли семья подтвердить доход документами?"
+   },
+   "instructions": {
+    "en": "One question. Universities that give financial aid, and visa offices, may ask for proof of income. If that could be hard, the plan adds the paperwork steps early. Do not upload any documents here.",
+    "uz": "Bitta savol. Moliyaviy yordam beradigan universitetlar va viza idoralari daromadni tasdiqlovchi hujjatlarni soʻrashi mumkin. Agar bu qiyin boʻlsa, reja hujjat bilan bogʻliq qadamlarni ertaroq qoʻshadi. Bu yerga hech qanday hujjat yuklamang.",
+    "ru": "Один вопрос. Университеты, которые дают финансовую помощь, и визовые службы могут попросить подтвердить доход. Если это может быть трудно, план заранее добавит шаги по документам. Не загружайте сюда никаких документов."
+   },
+   "why": {
+    "en": "Knowing this early leaves time to prepare documents before aid and visa deadlines.",
+    "uz": "Buni erta bilish moliyaviy yordam va viza muddatlaridan oldin hujjatlarni tayyorlashga vaqt qoldiradi.",
+    "ru": "Если знать это заранее, останется время подготовить документы до сроков подачи на помощь и визу."
+   },
+   "questions": [
+    {
+     "id": "m7_income_documentable",
+     "bank_type": "select",
+     "required": false,
+     "text": {
+      "en": "Can the family show its income with documents (tax records, bank statements, an employer letter)?",
+      "uz": "Oila daromadini hujjatlar (soliq hujjatlari, bank koʻchirmalari, ish joyidan maʼlumotnoma) bilan koʻrsata oladimi?",
+      "ru": "Может ли семья подтвердить доход документами (налоговые документы, банковские выписки, справка с работы)?"
+     },
+     "options": [
+      {
+       "value": "yes",
+       "label": {
+        "en": "Yes",
+        "uz": "Ha",
+        "ru": "Да"
+       }
+      },
+      {
+       "value": "partially",
+       "label": {
+        "en": "Partly",
+        "uz": "Qisman",
+        "ru": "Частично"
+       }
+      },
+      {
+       "value": "no",
+       "label": {
+        "en": "No",
+        "uz": "Yoʻq",
+        "ru": "Нет"
+       }
+      },
+      {
+       "value": "dont_know",
+       "label": {
+        "en": "Not sure",
+        "uz": "Bilmayman",
+        "ru": "Не знаю"
+       }
+      }
+     ]
+    }
+   ],
+   "answers_into": [
+    "m7_income_documentable"
+   ],
+   "submit": {
+    "via": "parent_flow_done",
+    "keys": [
+     "m7_income_documentable"
+    ]
+   },
+   "evidence": {
+    "level": "L6",
+    "method": "auto_event",
+    "event": "parent_answered",
+    "keys": [
+     "m7_income_documentable"
+    ]
+   },
+   "fallback": {
+    "after_days": 7,
+    "mode": "student_side_path",
+    "flag": "answered_by_student",
+    "confidence": "low",
+    "note": "Spec §4.2 item 4: after 7 days without a parent answer, the student may answer on the existing student-side path, flagged \"answered by the student\"."
+   },
+   "tokens": [],
+   "sensitive": true,
+   "basis": [],
+   "facts": [],
+   "needs_verification": false,
+   "engineering_note": "Same id and values as the family form (FAM_MAP.income). \"The plan adds the paperwork steps early\" relies on derived.aid_forms_risk / derived.visa_funds_risk (bank feeds) and C13-findoc; if the planner does not act on them, reword to \"the mentor can plan the paperwork early\".",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-qlimit",
+   "kind": "parent_question_task",
+   "task_kind": "parent",
+   "type": "reflect",
+   "category": "diagnostic_question",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "order": {
+    "S1": null,
+    "S2": 6,
+    "S3": 5,
+    "S4": 5
+   },
+   "trigger": {
+    "type": "phase_d",
+    "phases": [
+     "D"
+    ],
+    "after": "parent_joined"
+   },
+   "minutes": 2,
+   "title": {
+    "en": "Family expectations the plan should respect (optional)",
+    "uz": "Reja hisobga olishi kerak boʻlgan oilaviy kutilmalar (ixtiyoriy)",
+    "ru": "Ожидания семьи, которые план должен учитывать (необязательно)"
+   },
+   "instructions": {
+    "en": "If the family or community has expectations that could affect where or how your child studies, you can mark them here so the plan does not suggest routes the family would not accept. This is optional and is never used to rank your child. You can also choose not to say.",
+    "uz": "Agar oila yoki jamiyatda farzandingiz qayerda yoki qanday oʻqishiga taʼsir qilishi mumkin boʻlgan kutilmalar boʻlsa, ularni shu yerda belgilashingiz mumkin, shunda reja oila qabul qilmaydigan yoʻllarni taklif qilmaydi. Bu ixtiyoriy va hech qachon farzandingizni reytingda baholash uchun ishlatilmaydi. Aytmaslikni tanlashingiz ham mumkin.",
+    "ru": "Если у семьи или окружения есть ожидания, которые могут повлиять на то, где и как будет учиться ребёнок, отметьте их здесь, чтобы план не предлагал пути, которые семья не примет. Это необязательно и никогда не используется для оценки ребёнка в рейтингах. Можно и не отвечать."
+   },
+   "why": {
+    "en": "The plan can only respect limits it knows about.",
+    "uz": "Reja faqat oʻzi bilgan cheklovlarni hisobga ola oladi.",
+    "ru": "План может учитывать только те ограничения, о которых знает."
+   },
+   "questions": [
+    {
+     "id": "m8_constraints",
+     "bank_type": "multi",
+     "required": false,
+     "exclusive": [
+      "none",
+      "prefer_not_to_say"
+     ],
+     "text": {
+      "en": "Which of these apply to your family?",
+      "uz": "Bulardan qaysilari oilangizga toʻgʻri keladi?",
+      "ru": "Что из этого относится к вашей семье?"
+     },
+     "options": [
+      {
+       "value": "distance_limits",
+       "label": {
+        "en": "Limits on how far from home",
+        "uz": "Uydan qanchalik uzoqda oʻqishga cheklov",
+        "ru": "Ограничения на то, как далеко от дома"
+       }
+      },
+      {
+       "value": "gender_expectations",
+       "label": {
+        "en": "Expectations linked to being a girl or a boy",
+        "uz": "Qiz yoki oʻgʻil bola ekaniga bogʻliq kutilmalar",
+        "ru": "Ожидания, связанные с тем, девочка это или мальчик"
+       }
+      },
+      {
+       "value": "religious_expectations",
+       "label": {
+        "en": "Religious expectations",
+        "uz": "Diniy kutilmalar",
+        "ru": "Религиозные ожидания"
+       }
+      },
+      {
+       "value": "marriage_expectations",
+       "label": {
+        "en": "Expectations about marriage",
+        "uz": "Turmush qurish bilan bogʻliq kutilmalar",
+        "ru": "Ожидания, связанные с браком"
+       }
+      },
+      {
+       "value": "eldest_child_duties",
+       "label": {
+        "en": "Duties of the eldest child in the family",
+        "uz": "Oiladagi katta farzandning majburiyatlari",
+        "ru": "Обязанности старшего ребёнка в семье"
+       }
+      },
+      {
+       "value": "none",
+       "label": {
+        "en": "None of these",
+        "uz": "Bularning hech biri",
+        "ru": "Ничего из этого"
+       }
+      },
+      {
+       "value": "prefer_not_to_say",
+       "label": {
+        "en": "Prefer not to say",
+        "uz": "Aytmayman",
+        "ru": "Предпочитаю не говорить"
+       }
+      }
+     ]
+    }
+   ],
+   "answers_into": [
+    "m8_constraints"
+   ],
+   "submit": {
+    "via": "parent_flow_done",
+    "keys": [
+     "m8_constraints"
+    ]
+   },
+   "evidence": {
+    "level": "L6",
+    "method": "auto_event",
+    "event": "parent_answered",
+    "keys": [
+     "m8_constraints"
+    ]
+   },
+   "fallback": {
+    "after_days": 7,
+    "mode": "student_answer_stands",
+    "unknown": "parent_view",
+    "note": "The student already answers this id; if the parent has not answered in 7 days, the student's answer stays in effect and the parent view is listed as unknown (§4.3)."
+   },
+   "tokens": [],
+   "sensitive": true,
+   "basis": [],
+   "facts": [],
+   "needs_verification": false,
+   "engineering_note": "Bank: sensitive, optional, consent-gated, never used in rankings (question_bank.json conventions.sensitive), which is what the text promises. Part of the parent flow's \"constraints\" (m8_parent_flow notes). A parent answer outranks the student's (PARENT_OUTRANKS) and a difference triggers the family_talk task; the student never sees which items the parent ticked from this task.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-qfamly",
+   "kind": "parent_question_task",
+   "task_kind": "parent",
+   "type": "reflect",
+   "category": "diagnostic_question",
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [],
+   "order": {
+    "S1": 3,
+    "S2": 7,
+    "S3": 6,
+    "S4": 6
+   },
+   "trigger": {
+    "type": "phase_d",
+    "phases": [
+     "D"
+    ],
+    "after": "parent_joined"
+   },
+   "minutes": 1,
+   "title": {
+    "en": "About the family's own study experience",
+    "uz": "Oilaning oʻqish tajribasi haqida",
+    "ru": "Об опыте учёбы в семье"
+   },
+   "instructions": {
+    "en": "Two short questions. They help the plan understand your family's own experience of university and of applying.",
+    "uz": "Ikkita qisqa savol. Ular rejaga oilangizning oliy taʼlim va qabul jarayonidagi tajribasini tushunishga yordam beradi.",
+    "ru": "Два коротких вопроса. Они помогают плану понять, какой опыт учёбы в вузе и поступления есть у вашей семьи."
+   },
+   "why": {
+    "en": "Applying is easier to plan when we know what the family has already been through.",
+    "uz": "Oila nimalarni boshdan kechirganini bilsak, qabulni rejalashtirish osonroq.",
+    "ru": "Поступление легче планировать, когда известен опыт семьи."
+   },
+   "questions": [
+    {
+     "id": "m8_parent_education",
+     "bank_type": "select",
+     "required": false,
+     "text": {
+      "en": "The highest education of either parent or guardian",
+      "uz": "Ota-ona yoki vasiylardan birining eng yuqori maʼlumot darajasi",
+      "ru": "Самое высокое образование у одного из родителей или опекунов"
+     },
+     "options": [
+      {
+       "value": "no_secondary",
+       "label": {
+        "en": "Did not finish secondary school",
+        "uz": "Oʻrta maktabni tugatmagan",
+        "ru": "Школа не окончена"
+       }
+      },
+      {
+       "value": "secondary",
+       "label": {
+        "en": "Secondary school",
+        "uz": "Oʻrta maʼlumot",
+        "ru": "Среднее (школа)"
+       }
+      },
+      {
+       "value": "vocational",
+       "label": {
+        "en": "College or vocational education",
+        "uz": "Oʻrta maxsus yoki kasb-hunar maʼlumoti",
+        "ru": "Среднее специальное или профессиональное"
+       }
+      },
+      {
+       "value": "bachelors",
+       "label": {
+        "en": "Bachelor's degree",
+        "uz": "Bakalavr",
+        "ru": "Бакалавриат"
+       }
+      },
+      {
+       "value": "masters_plus",
+       "label": {
+        "en": "Master's degree or higher",
+        "uz": "Magistratura yoki undan yuqori",
+        "ru": "Магистратура или выше"
+       }
+      }
+     ],
+     "value_note": "The bank also has \"dont_know\" (the student may not know); a parent is not offered it."
+    },
+    {
+     "id": "m8_family_abroad",
+     "bank_type": "select_plus_text",
+     "required": false,
+     "text": {
+      "en": "Has anyone in the family studied or lived abroad?",
+      "uz": "Oilada kimdir xorijda oʻqigan yoki yashaganmi?",
+      "ru": "Кто-нибудь в семье учился или жил за границей?"
+     },
+     "options": [
+      {
+       "value": "yes",
+       "label": {
+        "en": "Yes",
+        "uz": "Ha",
+        "ru": "Да"
+       }
+      },
+      {
+       "value": "no",
+       "label": {
+        "en": "No",
+        "uz": "Yoʻq",
+        "ru": "Нет"
+       }
+      }
+     ],
+     "parts": [
+      {
+       "key": "text",
+       "type": "text_short",
+       "max_chars": 40,
+       "optional": true,
+       "show_if": "yes",
+       "label": {
+        "en": "Where? (country, optional)",
+        "uz": "Qayerda? (davlat, ixtiyoriy)",
+        "ru": "Где? (страна, необязательно)"
+       }
+      }
+     ]
+    }
+   ],
+   "answers_into": [
+    "m8_parent_education",
+    "m8_family_abroad"
+   ],
+   "submit": {
+    "via": "parent_flow_done",
+    "keys": [
+     "m8_parent_education",
+     "m8_family_abroad"
+    ]
+   },
+   "evidence": {
+    "level": "L6",
+    "method": "auto_event",
+    "event": "parent_answered",
+    "keys": [
+     "m8_parent_education",
+     "m8_family_abroad"
+    ]
+   },
+   "fallback": {
+    "after_days": 7,
+    "mode": "student_answer_stands",
+    "unknown": "parent_view",
+    "note": "The student already answers this id; if the parent has not answered in 7 days, the student's answer stays in effect and the parent view is listed as unknown (§4.3)."
+   },
+   "tokens": [],
+   "sensitive": false,
+   "basis": [],
+   "facts": [],
+   "needs_verification": false,
+   "engineering_note": "Both ids are student-audience in the bank (stages S1-S4); the parent is the better source, and PARENT_OUTRANKS lets the parent's answer stand. No claim is made about how first_gen is used (context.first_gen feeds the model, §3.4).",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C13-qcontc",
+   "kind": "parent_question_task",
+   "task_kind": "parent",
+   "type": "reflect",
+   "category": "diagnostic_question",
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "conditions": [
+    "derived.age < 14 OR m8_parent_attitude in [hesitant, against]"
+   ],
+   "order": {
+    "S1": 2,
+    "S2": 8,
+    "S3": 7,
+    "S4": 7
+   },
+   "trigger": {
+    "type": "phase_d",
+    "phases": [
+     "D"
+    ],
+    "after": "parent_joined"
+   },
+   "minutes": 1,
+   "title": {
+    "en": "How should we reach you?",
+    "uz": "Siz bilan qanday bogʻlanaylik?",
+    "ru": "Как с вами связаться?"
+   },
+   "instructions": {
+    "en": "Choose how Jamals Global may contact you about your child's plan, for example before an important step.",
+    "uz": "Jamals Global farzandingiz rejasi boʻyicha siz bilan qanday bogʻlanishi mumkinligini tanlang, masalan, muhim qadamdan oldin.",
+    "ru": "Выберите, как Jamals Global может связаться с вами по поводу плана ребёнка, например перед важным шагом."
+   },
+   "why": {
+    "en": "Some steps, such as consent for a child under 14, need a parent who can be reached.",
+    "uz": "14 yoshgacha boʻlgan bola uchun rozilik kabi baʼzi qadamlar ota-ona bilan bogʻlana olishni talab qiladi.",
+    "ru": "Для некоторых шагов, например согласия за ребёнка младше 14 лет, нужен родитель, с которым можно связаться."
+   },
+   "questions": [
+    {
+     "id": "m0_parent_contact",
+     "bank_type": "contact",
+     "required": false,
+     "text": {
+      "en": "How should we reach you?",
+      "uz": "Siz bilan qanday bogʻlanaylik?",
+      "ru": "Как с вами связаться?"
+     },
+     "parts": [
+      {
+       "key": "channel",
+       "type": "choice",
+       "label": {
+        "en": "Contact by",
+        "uz": "Bogʻlanish usuli",
+        "ru": "Способ связи"
+       },
+       "options": [
+        {
+         "value": "telegram",
+         "label": {
+          "en": "Telegram",
+          "uz": "Telegram",
+          "ru": "Telegram"
+         }
+        },
+        {
+         "value": "phone",
+         "label": {
+          "en": "Phone call",
+          "uz": "Telefon qoʻngʻirogʻi",
+          "ru": "Звонок"
+         }
+        },
+        {
+         "value": "email",
+         "label": {
+          "en": "Email",
+          "uz": "Elektron pochta",
+          "ru": "Электронная почта"
+         }
+        }
+       ]
+      },
+      {
+       "key": "value",
+       "type": "text_short",
+       "max_chars": 60,
+       "label": {
+        "en": "Number or address",
+        "uz": "Raqam yoki manzil",
+        "ru": "Номер или адрес"
+       }
+      }
+     ]
+    }
+   ],
+   "answers_into": [
+    "m0_parent_contact"
+   ],
+   "submit": {
+    "via": "parent_contact (new path, see note)",
+    "keys": [
+     "m0_parent_contact"
+    ]
+   },
+   "evidence": {
+    "level": "L6",
+    "method": "auto_event",
+    "event": "parent_answered",
+    "keys": [
+     "m0_parent_contact"
+    ]
+   },
+   "fallback": null,
+   "tokens": [],
+   "sensitive": true,
+   "basis": [],
+   "facts": [],
+   "needs_verification": false,
+   "engineering_note": "BLOCKER for the integrator: applyParentFlow refuses any key outside /^m[78]_/ (PARENT_OUTRANKS, score.ts:64; commit.ts:193), so m0_parent_contact cannot be saved through parent_flow_done today. Either a separate parent-contact path or a widened pattern is needed (decision for the integrator/owner). Identifying data: listed in IDENTIFYING (ailayer/inputs.ts:30), never sent to the AI. No student fallback: the student already enters a parent contact on the existing path when the bank branch applies.",
+   "audience": "parent",
+   "surface": "parent_app",
+   "generated_by": "code",
+   "ai": false,
+   "source": "own",
+   "author": "agent:p5-C13",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "owner",
+    "gate": "LG1"
+   },
+   "test_content": true
+  }
+ ]
+}

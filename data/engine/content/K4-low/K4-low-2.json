@@ -1,0 +1,801 @@
+{
+  "bank": "K4",
+  "batch": 2,
+  "items": [
+    {
+      "id": "K4-ar0021",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "patterns",
+      "family": {
+        "template": "What number comes next?   {a}, {t2}, {t3}, {t4}, …",
+        "params": {
+          "a": {
+            "min": 3,
+            "max": 20,
+            "step": 1
+          },
+          "d": {
+            "min": 3,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "derived": {
+          "t2": "a + d",
+          "t3": "a + 2 * d",
+          "t4": "a + 3 * d"
+        },
+        "answer": "a + 4 * d",
+        "variants": 126
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What number comes next?   {a}, {t2}, {t3}, {t4}, …",
+        "uz": "Keyingi son qaysi?   {a}, {t2}, {t3}, {t4}, …",
+        "ru": "Какое число следующее?   {a}, {t2}, {t3}, {t4}, …"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Find the constant difference between neighbouring numbers and add it once more.",
+        "uz": "Qoʻshni sonlar orasidagi oʻzgarmas farqni toping va uni yana bir marta qoʻshing.",
+        "ru": "Найдите постоянную разность соседних чисел и прибавьте её ещё раз."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0022",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "multi_step_word_problem",
+      "family": {
+        "template": "A hall has {r} rows with {c} chairs in each row. {e} chairs are empty. How many chairs are taken?",
+        "params": {
+          "r": {
+            "min": 6,
+            "max": 12,
+            "step": 1
+          },
+          "c": {
+            "min": 8,
+            "max": 15,
+            "step": 1
+          },
+          "e": {
+            "min": 5,
+            "max": 30,
+            "step": 5
+          }
+        },
+        "answer": "r * c - e",
+        "variants": 336
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A hall has {r} rows with {c} chairs in each row. {e} chairs are empty. How many chairs are taken?",
+        "uz": "Zalda {r} qator bor, har bir qatorda {c} ta stul. {e} ta stul boʻsh. Nechta stul band?",
+        "ru": "В зале {r} рядов, в каждом ряду по {c} стульев. Свободных стульев {e}. Сколько стульев занято?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Total chairs = rows × chairs per row; then subtract the empty ones.",
+        "uz": "Jami stullar = qatorlar soni × bir qatordagi stullar; soʻng boʻshlarini ayiring.",
+        "ru": "Всего стульев = число рядов × стульев в ряду; затем вычтите свободные."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0023",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "order_of_operations",
+      "lang": "en",
+      "stem": {
+        "en": "Which expression has the value 20?",
+        "uz": "Qaysi ifodaning qiymati 20 ga teng?",
+        "ru": "Значение какого выражения равно 20?"
+      },
+      "options": [
+        {
+          "en": "4 × (3 + 2)",
+          "uz": "4 × (3 + 2)",
+          "ru": "4 × (3 + 2)"
+        },
+        {
+          "en": "4 × 3 + 2",
+          "uz": "4 × 3 + 2",
+          "ru": "4 × 3 + 2"
+        },
+        {
+          "en": "4 + 3 × 2",
+          "uz": "4 + 3 × 2",
+          "ru": "4 + 3 × 2"
+        },
+        {
+          "en": "4 × 2 + 3",
+          "uz": "4 × 2 + 3",
+          "ru": "4 × 2 + 3"
+        }
+      ],
+      "why": {
+        "en": "Brackets first: 3 + 2 = 5 and 4 × 5 = 20; the other expressions give 14, 10 and 11.",
+        "uz": "Avval qavs: 3 + 2 = 5 va 4 × 5 = 20; qolgan ifodalar 14, 10 va 11 ga teng.",
+        "ru": "Сначала скобки: 3 + 2 = 5 и 4 × 5 = 20; остальные выражения дают 14, 10 и 11."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0024",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "divisibility",
+      "lang": "en",
+      "stem": {
+        "en": "Which number is divisible by both 3 and 4?",
+        "uz": "Qaysi son ham 3 ga, ham 4 ga qoldiqsiz boʻlinadi?",
+        "ru": "Какое число делится без остатка и на 3, и на 4?"
+      },
+      "options": [
+        {
+          "en": "84",
+          "uz": "84",
+          "ru": "84"
+        },
+        {
+          "en": "66",
+          "uz": "66",
+          "ru": "66"
+        },
+        {
+          "en": "52",
+          "uz": "52",
+          "ru": "52"
+        },
+        {
+          "en": "90",
+          "uz": "90",
+          "ru": "90"
+        }
+      ],
+      "why": {
+        "en": "Divisible by 3 and by 4 means divisible by 12, and 84 = 12 × 7.",
+        "uz": "Ham 3 ga, ham 4 ga boʻlinish 12 ga boʻlinishni bildiradi: 84 = 12 × 7.",
+        "ru": "Делиться и на 3, и на 4 — значит делиться на 12, а 84 = 12 × 7."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -2.45,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0025",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "order_of_operations",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: 48 ÷ 4 × 3",
+        "uz": "Hisoblang: 48 : 4 × 3",
+        "ru": "Вычислите: 48 : 4 × 3"
+      },
+      "answer_numeric": {
+        "value": 36,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Division and multiplication are done from left to right: 48 ÷ 4 = 12, then 12 × 3 = 36.",
+        "uz": "Boʻlish va koʻpaytirish chapdan oʻngga bajariladi: 48 : 4 = 12, soʻng 12 × 3 = 36.",
+        "ru": "Деление и умножение выполняются слева направо: 48 : 4 = 12, затем 12 × 3 = 36."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0026",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "whole_number_multiplication",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: 125 × 8",
+        "uz": "Hisoblang: 125 × 8",
+        "ru": "Вычислите: 125 × 8"
+      },
+      "answer_numeric": {
+        "value": 1000,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Double three times: 125 → 250 → 500 → 1000.",
+        "uz": "Uch marta ikki baravar oshiring: 125 → 250 → 500 → 1000.",
+        "ru": "Удвойте три раза: 125 → 250 → 500 → 1000."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0027",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "whole_number_subtraction",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: 1001 − 457",
+        "uz": "Hisoblang: 1001 − 457",
+        "ru": "Вычислите: 1001 − 457"
+      },
+      "answer_numeric": {
+        "value": 544,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "1001 − 457 = (1000 − 457) + 1 = 543 + 1 = 544.",
+        "uz": "1001 − 457 = (1000 − 457) + 1 = 543 + 1 = 544.",
+        "ru": "1001 − 457 = (1000 − 457) + 1 = 543 + 1 = 544."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0028",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "order_of_operations",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: 6 × 7 − 4 × 5",
+        "uz": "Hisoblang: 6 × 7 − 4 × 5",
+        "ru": "Вычислите: 6 × 7 − 4 × 5"
+      },
+      "answer_numeric": {
+        "value": 22,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Do both multiplications first: 42 − 20 = 22.",
+        "uz": "Avval ikkala koʻpaytirishni bajaring: 42 − 20 = 22.",
+        "ru": "Сначала выполните оба умножения: 42 − 20 = 22."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0029",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "divisibility",
+      "lang": "en",
+      "stem": {
+        "en": "What is the smallest three-digit number that is divisible by 7?",
+        "uz": "7 ga qoldiqsiz boʻlinadigan eng kichik uch xonali son qaysi?",
+        "ru": "Какое наименьшее трёхзначное число делится на 7 без остатка?"
+      },
+      "answer_numeric": {
+        "value": 105,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "100 = 7 × 14 + 2, so the next multiple of 7 is 7 × 15 = 105.",
+        "uz": "100 = 7 × 14 + 2, demak, 7 ning keyingi karralisi 7 × 15 = 105.",
+        "ru": "100 = 7 × 14 + 2, значит, следующее кратное 7 — это 7 × 15 = 105."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0030",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "units_time",
+      "lang": "en",
+      "stem": {
+        "en": "How many seconds are there in one hour?",
+        "uz": "Bir soatda necha soniya bor?",
+        "ru": "Сколько секунд в одном часе?"
+      },
+      "answer_numeric": {
+        "value": 3600,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "1 hour = 60 minutes and 1 minute = 60 seconds, so 60 × 60 = 3600.",
+        "uz": "1 soat = 60 daqiqa, 1 daqiqa = 60 soniya, demak, 60 × 60 = 3600.",
+        "ru": "1 час = 60 минут, 1 минута = 60 секунд, значит, 60 × 60 = 3600."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0031",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "gcd_lcm",
+      "lang": "en",
+      "stem": {
+        "en": "What is the greatest common divisor of 24 and 36?",
+        "uz": "24 va 36 sonlarining eng katta umumiy boʻluvchisini toping.",
+        "ru": "Найдите наибольший общий делитель чисел 24 и 36."
+      },
+      "answer_numeric": {
+        "value": 12,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "24 = 12 × 2 and 36 = 12 × 3, and no larger number divides both.",
+        "uz": "24 = 12 × 2 va 36 = 12 × 3; ikkalasini boʻladigan bundan katta son yoʻq.",
+        "ru": "24 = 12 × 2 и 36 = 12 × 3, а большего общего делителя нет."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0032",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "gcd_lcm",
+      "lang": "en",
+      "stem": {
+        "en": "What is the least common multiple of 6 and 8?",
+        "uz": "6 va 8 sonlarining eng kichik umumiy karralisini toping.",
+        "ru": "Найдите наименьшее общее кратное чисел 6 и 8."
+      },
+      "answer_numeric": {
+        "value": 24,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Multiples of 8 are 8, 16, 24, …; 24 is the first one that 6 also divides.",
+        "uz": "8 ning karralilari: 8, 16, 24, …; 6 ga ham boʻlinadigan birinchisi 24.",
+        "ru": "Кратные 8: 8, 16, 24, …; первое из них, которое делится и на 6, — 24."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0033",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "multi_step_word_problem",
+      "lang": "en",
+      "stem": {
+        "en": "Timur has 3 boxes with 24 pencils in each. He gives away 15 pencils. How many pencils does he have left?",
+        "uz": "Temurda 3 ta quti bor, har birida 24 tadan qalam. U 15 ta qalamni sovgʻa qildi. Unda nechta qalam qoldi?",
+        "ru": "У Тимура 3 коробки, в каждой по 24 карандаша. Он подарил 15 карандашей. Сколько карандашей у него осталось?"
+      },
+      "answer_numeric": {
+        "value": 57,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "3 × 24 = 72 pencils, then 72 − 15 = 57.",
+        "uz": "3 × 24 = 72 ta qalam, soʻng 72 − 15 = 57.",
+        "ru": "3 × 24 = 72 карандаша, затем 72 − 15 = 57."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0034",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "units_time",
+      "lang": "en",
+      "stem": {
+        "en": "A bus leaves at 08:45 and arrives at 10:10. How many minutes does the trip take?",
+        "uz": "Avtobus soat 08:45 da joʻnab ketib, 10:10 da yetib keldi. Yoʻl necha daqiqa davom etdi?",
+        "ru": "Автобус отправился в 08:45 и прибыл в 10:10. Сколько минут длилась поездка?"
+      },
+      "answer_numeric": {
+        "value": 85,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "08:45 → 09:00 is 15 min, 09:00 → 10:00 is 60 min, 10:00 → 10:10 is 10 min: 85 min.",
+        "uz": "08:45 → 09:00 — 15 daqiqa, 09:00 → 10:00 — 60 daqiqa, 10:00 → 10:10 — 10 daqiqa: jami 85 daqiqa.",
+        "ru": "08:45 → 09:00 — 15 мин, 09:00 → 10:00 — 60 мин, 10:00 → 10:10 — 10 мин: всего 85 мин."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0035",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "whole_number_multiplication",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: 9 × 99",
+        "uz": "Hisoblang: 9 × 99",
+        "ru": "Вычислите: 9 × 99"
+      },
+      "answer_numeric": {
+        "value": 891,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "9 × 99 = 9 × 100 − 9 = 900 − 9 = 891.",
+        "uz": "9 × 99 = 9 × 100 − 9 = 900 − 9 = 891.",
+        "ru": "9 × 99 = 9 × 100 − 9 = 900 − 9 = 891."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0036",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "order_of_operations",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: 2 + 3 × (8 − 5)",
+        "uz": "Hisoblang: 2 + 3 × (8 − 5)",
+        "ru": "Вычислите: 2 + 3 × (8 − 5)"
+      },
+      "answer_numeric": {
+        "value": 11,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Brackets: 8 − 5 = 3; multiply: 3 × 3 = 9; add: 2 + 9 = 11.",
+        "uz": "Qavs: 8 − 5 = 3; koʻpaytirish: 3 × 3 = 9; qoʻshish: 2 + 9 = 11.",
+        "ru": "Скобки: 8 − 5 = 3; умножение: 3 × 3 = 9; сложение: 2 + 9 = 11."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0037",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "place_value",
+      "lang": "en",
+      "stem": {
+        "en": "Which digit is in the hundreds place in 47,382?",
+        "uz": "47 382 sonida yuzlar xonasida qaysi raqam turibdi?",
+        "ru": "Какая цифра стоит в разряде сотен в числе 47 382?"
+      },
+      "answer_numeric": {
+        "value": 3,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "From the right: 2 ones, 8 tens, 3 hundreds.",
+        "uz": "Oʻngdan: 2 — birlar, 8 — oʻnlar, 3 — yuzlar.",
+        "ru": "Справа налево: 2 — единицы, 8 — десятки, 3 — сотни."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0038",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "word_problem_division",
+      "lang": "en",
+      "stem": {
+        "en": "Malika has 5,000 soʻm. One ice cream costs 1,200 soʻm. What is the greatest number of ice creams she can buy?",
+        "uz": "Malikada 5000 soʻm bor. Bitta muzqaymoq 1200 soʻm turadi. U koʻpi bilan nechta muzqaymoq sotib ola oladi?",
+        "ru": "У Малики 5000 сум. Одно мороженое стоит 1200 сум. Какое наибольшее количество порций мороженого она может купить?"
+      },
+      "answer_numeric": {
+        "value": 4,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "5000 ÷ 1200 is 4 with 200 left over, so she can buy 4.",
+        "uz": "5000 : 1200 = 4 (qoldiq 200), demak, 4 ta.",
+        "ru": "5000 : 1200 = 4 (остаток 200), значит, 4 порции."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0039",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "whole_number_division",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: 3600 ÷ 40",
+        "uz": "Hisoblang: 3600 : 40",
+        "ru": "Вычислите: 3600 : 40"
+      },
+      "answer_numeric": {
+        "value": 90,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Remove one zero from both numbers: 360 ÷ 4 = 90.",
+        "uz": "Ikkala sondan bittadan nolni olib tashlang: 360 : 4 = 90.",
+        "ru": "Отбросьте по одному нулю у обоих чисел: 360 : 4 = 90."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0040",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "expressions",
+      "lang": "en",
+      "stem": {
+        "en": "Which expression means “subtract 5 from the product of 4 and 7”?",
+        "uz": "Qaysi ifoda «4 va 7 ning koʻpaytmasidan 5 ni ayiring» degan maʼnoni bildiradi?",
+        "ru": "Какое выражение означает «из произведения 4 и 7 вычесть 5»?"
+      },
+      "options": [
+        {
+          "en": "4 × 7 − 5",
+          "uz": "4 × 7 − 5",
+          "ru": "4 × 7 − 5"
+        },
+        {
+          "en": "5 − 4 × 7",
+          "uz": "5 − 4 × 7",
+          "ru": "5 − 4 × 7"
+        },
+        {
+          "en": "4 × (7 − 5)",
+          "uz": "4 × (7 − 5)",
+          "ru": "4 × (7 − 5)"
+        },
+        {
+          "en": "4 + 7 − 5",
+          "uz": "4 + 7 − 5",
+          "ru": "4 + 7 − 5"
+        }
+      ],
+      "why": {
+        "en": "The product of 4 and 7 is 4 × 7; subtracting 5 from it gives 4 × 7 − 5.",
+        "uz": "4 va 7 ning koʻpaytmasi — 4 × 7; undan 5 ni ayirsak, 4 × 7 − 5 hosil boʻladi.",
+        "ru": "Произведение 4 и 7 — это 4 × 7; вычитая из него 5, получаем 4 × 7 − 5."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

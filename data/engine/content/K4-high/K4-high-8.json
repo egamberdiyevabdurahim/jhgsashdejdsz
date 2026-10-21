@@ -1,0 +1,1056 @@
+{
+ "bank": "K4",
+ "batch": 8,
+ "items": [
+  {
+   "id": "K4-bch021",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "integration_by_parts",
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫ ln x dx?",
+    "uz": "∫ ln x dx ni toping.",
+    "ru": "Найдите ∫ ln x dx."
+   },
+   "options": [
+    {
+     "en": "x ln x − x + C"
+    },
+    {
+     "en": "1/x + C"
+    },
+    {
+     "en": "x ln x + C"
+    },
+    {
+     "en": "(ln x)²/2 + C"
+    }
+   ],
+   "why": {
+    "en": "By parts with u = ln x and dv = dx: x ln x − ∫ x·(1/x) dx = x ln x − x + C.",
+    "uz": "Boʻlaklab integrallash, u = ln x, dv = dx: x ln x − ∫ x·(1/x) dx = x ln x − x + C.",
+    "ru": "По частям, u = ln x, dv = dx: x ln x − ∫ x·(1/x) dx = x ln x − x + C."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.45,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch022",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "partial_fractions",
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫ 1/(x² − 1) dx?",
+    "uz": "∫ 1/(x² − 1) dx ni toping.",
+    "ru": "Найдите ∫ 1/(x² − 1) dx."
+   },
+   "options": [
+    {
+     "en": "½ ln|(x − 1)/(x + 1)| + C"
+    },
+    {
+     "en": "ln|x² − 1| + C"
+    },
+    {
+     "en": "½ ln|(x + 1)/(x − 1)| + C"
+    },
+    {
+     "en": "arctan x + C"
+    }
+   ],
+   "why": {
+    "en": "1/(x² − 1) = ½(1/(x − 1) − 1/(x + 1)), so the integral is ½(ln|x − 1| − ln|x + 1|) + C.",
+    "uz": "1/(x² − 1) = ½(1/(x − 1) − 1/(x + 1)), demak integral ½(ln|x − 1| − ln|x + 1|) + C.",
+    "ru": "1/(x² − 1) = ½(1/(x − 1) − 1/(x + 1)), поэтому интеграл равен ½(ln|x − 1| − ln|x + 1|) + C."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.65,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch023",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "improper_integrals",
+   "family": {
+    "template": "What is ∫₁^∞ ({k}/x^{p}) dx?",
+    "params": {
+     "p": {
+      "min": 3,
+      "max": 6
+     },
+     "m": {
+      "min": 1,
+      "max": 4
+     }
+    },
+    "derived": {
+     "p1": "p - 1",
+     "k": "m * (p - 1)"
+    },
+    "answer": "m",
+    "option_templates": [
+     "{ANS}",
+     "−{m}",
+     "{k}",
+     "{k}/{p}"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 16
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫₁^∞ ({k}/x^{p}) dx?",
+    "uz": "∫₁^∞ ({k}/x^{p}) dx ni hisoblang.",
+    "ru": "Вычислите ∫₁^∞ ({k}/x^{p}) dx."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "∫₁^∞ {k}x^(−{p}) dx = {k}·[x^(−{p1})/(−{p1})] from 1 to ∞ = {k}/{p1} = {ANS}.",
+    "uz": "∫₁^∞ {k}x^(−{p}) dx = {k}·[x^(−{p1})/(−{p1})] (1 dan ∞ gacha) = {k}/{p1} = {ANS}.",
+    "ru": "∫₁^∞ {k}x^(−{p}) dx = {k}·[x^(−{p1})/(−{p1})] от 1 до ∞ = {k}/{p1} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch024",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "improper_integrals",
+   "lang": "en",
+   "stem": {
+    "en": "Which improper integral converges?",
+    "uz": "Qaysi xosmas integral yaqinlashadi?",
+    "ru": "Какой несобственный интеграл сходится?"
+   },
+   "options": [
+    {
+     "en": "∫₁^∞ dx/x^(3/2)"
+    },
+    {
+     "en": "∫₁^∞ dx/x"
+    },
+    {
+     "en": "∫₁^∞ dx/√x"
+    },
+    {
+     "en": "∫₀¹ dx/x"
+    }
+   ],
+   "why": {
+    "en": "∫₁^∞ dx/xᵖ converges only for p > 1, so p = 3/2 works; ∫₀¹ dx/x diverges at 0.",
+    "uz": "∫₁^∞ dx/xᵖ faqat p > 1 da yaqinlashadi, p = 3/2 mos keladi; ∫₀¹ dx/x esa 0 atrofida uzoqlashadi.",
+    "ru": "∫₁^∞ dx/xᵖ сходится только при p > 1, поэтому подходит p = 3/2; ∫₀¹ dx/x расходится в нуле."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.45,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch025",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "series_convergence",
+   "lang": "en",
+   "stem": {
+    "en": "Which series converges? (Each sum runs from n = 1 to ∞.)",
+    "uz": "Qaysi qator yaqinlashadi? (Har bir yigʻindi n = 1 dan ∞ gacha.)",
+    "ru": "Какой ряд сходится? (Каждая сумма берётся по n от 1 до ∞.)"
+   },
+   "options": [
+    {
+     "en": "Σ n/(n³ + 1)"
+    },
+    {
+     "en": "Σ 1/√n"
+    },
+    {
+     "en": "Σ n/(n + 1)"
+    },
+    {
+     "en": "Σ 1/(2n)"
+    }
+   ],
+   "why": {
+    "en": "n/(n³ + 1) behaves like 1/n², a convergent p-series; 1/√n and 1/(2n) diverge, and n/(n + 1) does not tend to 0.",
+    "uz": "n/(n³ + 1) oʻzini 1/n² kabi tutadi — yaqinlashuvchi qator; 1/√n va 1/(2n) uzoqlashadi, n/(n + 1) esa 0 ga intilmaydi.",
+    "ru": "n/(n³ + 1) ведёт себя как 1/n² — сходящийся ряд; ряды 1/√n и 1/(2n) расходятся, а n/(n + 1) не стремится к 0."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.65,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch026",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "geometric_series",
+   "family": {
+    "template": "What is the sum of ({k1}/{k})ⁿ for n = 0 to ∞?",
+    "params": {
+     "k": {
+      "min": 2,
+      "max": 12
+     }
+    },
+    "derived": {
+     "k1": "k - 1",
+     "kk": "k * k"
+    },
+    "answer": "k",
+    "option_templates": [
+     "{k}",
+     "{k1}",
+     "{k1}/{k}",
+     "{kk}"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 11
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the sum of ({k1}/{k})ⁿ for n = 0 to ∞?",
+    "uz": "n = 0 dan ∞ gacha ({k1}/{k})ⁿ yigʻindini toping.",
+    "ru": "Найдите сумму ({k1}/{k})ⁿ по n от 0 до ∞."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "A geometric series with first term 1 and ratio q = {k1}/{k}: S = 1/(1 − q) = {ANS}.",
+    "uz": "Birinchi hadi 1, maxraji q = {k1}/{k} boʻlgan geometrik qator: S = 1/(1 − q) = {ANS}.",
+    "ru": "Геометрический ряд с первым членом 1 и знаменателем q = {k1}/{k}: S = 1/(1 − q) = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.25,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch027",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "telescoping_series",
+   "lang": "en",
+   "stem": {
+    "en": "What is the sum of 1/(n(n + 1)) for n = 1 to ∞?",
+    "uz": "n = 1 dan ∞ gacha 1/(n(n + 1)) yigʻindini toping.",
+    "ru": "Найдите сумму 1/(n(n + 1)) по n от 1 до ∞."
+   },
+   "options": [
+    {
+     "en": "1"
+    },
+    {
+     "en": "0.5"
+    },
+    {
+     "en": "2"
+    },
+    {
+     "en": "0"
+    }
+   ],
+   "answer_numeric": {
+    "value": 1,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "1/(n(n + 1)) = 1/n − 1/(n + 1), so the partial sums are 1 − 1/(N + 1), which tend to 1.",
+    "uz": "1/(n(n + 1)) = 1/n − 1/(n + 1), xususiy yigʻindilar 1 − 1/(N + 1) ga teng va 1 ga intiladi.",
+    "ru": "1/(n(n + 1)) = 1/n − 1/(n + 1), частичные суммы равны 1 − 1/(N + 1) и стремятся к 1."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch028",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "taylor_series",
+   "family": {
+    "template": "What is the coefficient of x² in the Maclaurin series of e^({k}x)?",
+    "params": {
+     "k": {
+      "min": 2,
+      "max": 12
+     }
+    },
+    "derived": {
+     "kk": "k * k"
+    },
+    "answer": "k * k / 2",
+    "option_templates": [
+     "{ANS}",
+     "{kk}",
+     "{k}/2",
+     "{kk}/6"
+    ],
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 10
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the coefficient of x² in the Maclaurin series of e^({k}x)?",
+    "uz": "e^({k}x) funksiyaning Makloren qatorida x² oldidagi koeffitsiyentni toping.",
+    "ru": "Найдите коэффициент при x² в ряде Маклорена функции e^({k}x)."
+   },
+   "answer_numeric": {
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "eᵘ = 1 + u + u²/2 + … with u = {k}x, so the x² term is ({k}x)²/2 = {ANS}x².",
+    "uz": "eᵘ = 1 + u + u²/2 + …, bu yerda u = {k}x, demak x² li had ({k}x)²/2 = {ANS}x².",
+    "ru": "eᵘ = 1 + u + u²/2 + …, где u = {k}x, поэтому член с x² равен ({k}x)²/2 = {ANS}x²."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 2.45,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch029",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "taylor_series",
+   "lang": "en",
+   "stem": {
+    "en": "Which is the Maclaurin series of sin x?",
+    "uz": "sin x ning Makloren qatori qaysi?",
+    "ru": "Какой ряд является рядом Маклорена для sin x?"
+   },
+   "options": [
+    {
+     "en": "x − x³/6 + x⁵/120 − …"
+    },
+    {
+     "en": "x + x³/6 + x⁵/120 + …"
+    },
+    {
+     "en": "1 − x²/2 + x⁴/24 − …"
+    },
+    {
+     "en": "x − x³/3 + x⁵/5 − …"
+    }
+   ],
+   "why": {
+    "en": "sin x = x − x³/3! + x⁵/5! − … = x − x³/6 + x⁵/120 − …; 1 − x²/2 + … is cos x, and x − x³/3 + … is arctan x.",
+    "uz": "sin x = x − x³/3! + x⁵/5! − … = x − x³/6 + x⁵/120 − …; 1 − x²/2 + … — bu cos x, x − x³/3 + … esa arctan x qatori.",
+    "ru": "sin x = x − x³/3! + x⁵/5! − … = x − x³/6 + x⁵/120 − …; 1 − x²/2 + … — это cos x, а x − x³/3 + … — arctan x."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.25,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch030",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "power_series",
+   "family": {
+    "template": "What is the radius of convergence of the series Σ (x − {c})ⁿ/(n·{k}ⁿ), n = 1 to ∞?",
+    "params": {
+     "k": {
+      "min": 2,
+      "max": 9
+     },
+     "c": {
+      "min": 1,
+      "max": 5
+     }
+    },
+    "derived": {
+     "kc": "k + c"
+    },
+    "answer": "k",
+    "option_templates": [
+     "{k}",
+     "1/{k}",
+     "{c}",
+     "{kc}"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 36,
+    "constraints": [
+     "c != k"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the radius of convergence of the series Σ (x − {c})ⁿ/(n·{k}ⁿ), n = 1 to ∞?",
+    "uz": "Σ (x − {c})ⁿ/(n·{k}ⁿ) (n = 1 dan ∞ gacha) qatorning yaqinlashish radiusini toping.",
+    "ru": "Найдите радиус сходимости ряда Σ (x − {c})ⁿ/(n·{k}ⁿ), n от 1 до ∞."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Ratio test: |aₙ₊₁/aₙ| → |x − {c}|/{k}, which is < 1 exactly when |x − {c}| < {k}, so R = {ANS}.",
+    "uz": "Dalamber alomati: |aₙ₊₁/aₙ| → |x − {c}|/{k}; bu 1 dan kichik boʻlishi uchun |x − {c}| < {k}, demak R = {ANS}.",
+    "ru": "Признак Даламбера: |aₙ₊₁/aₙ| → |x − {c}|/{k}; это меньше 1 при |x − {c}| < {k}, поэтому R = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 4 | 1/4 | 4 | 8 (seed check:25)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-bch031",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "taylor_series",
+   "lang": "en",
+   "stem": {
+    "en": "What is lim (x → 0) (sin x − x)/x³?",
+    "uz": "lim (x → 0) (sin x − x)/x³ ni toping.",
+    "ru": "Найдите lim (x → 0) (sin x − x)/x³."
+   },
+   "options": [
+    {
+     "en": "−1/6"
+    },
+    {
+     "en": "1/6"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "−1/3"
+    }
+   ],
+   "why": {
+    "en": "sin x = x − x³/6 + …, so (sin x − x)/x³ → −1/6.",
+    "uz": "sin x = x − x³/6 + …, demak (sin x − x)/x³ → −1/6.",
+    "ru": "sin x = x − x³/6 + …, поэтому (sin x − x)/x³ → −1/6."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.65,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch032",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "parametric_curves",
+   "family": {
+    "template": "A curve is given by x = t², y = t³. What is dy/dx at t = {a}?",
+    "params": {
+     "a": {
+      "min": 1,
+      "max": 12
+     }
+    },
+    "derived": {
+     "a2": "2 * a",
+     "a3": "3 * a * a"
+    },
+    "answer": "3 * a / 2",
+    "option_templates": [
+     "{ANS}",
+     "{a2}/3",
+     "{a3}",
+     "{a2}"
+    ],
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 12
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A curve is given by x = t², y = t³. What is dy/dx at t = {a}?",
+    "uz": "Egri chiziq x = t², y = t³ koʻrinishda berilgan. t = {a} da dy/dx ni toping.",
+    "ru": "Кривая задана параметрически: x = t², y = t³. Найдите dy/dx при t = {a}."
+   },
+   "answer_numeric": {
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "dy/dx = (dy/dt)/(dx/dt) = 3t²/(2t) = 3t/2, which is {ANS} at t = {a}.",
+    "uz": "dy/dx = (dy/dt)/(dx/dt) = 3t²/(2t) = 3t/2; t = {a} da bu {ANS}.",
+    "ru": "dy/dx = (dy/dt)/(dx/dt) = 3t²/(2t) = 3t/2; при t = {a} это {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 2.25,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch033",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "arc_length",
+   "lang": "en",
+   "stem": {
+    "en": "What is the length of the curve y = (2/3)x^(3/2) from x = 0 to x = 3?",
+    "uz": "y = (2/3)x^(3/2) egri chiziqning x = 0 dan x = 3 gacha boʻlgan uzunligini toping.",
+    "ru": "Найдите длину кривой y = (2/3)x^(3/2) от x = 0 до x = 3."
+   },
+   "options": [
+    {
+     "en": "14/3"
+    },
+    {
+     "en": "16/3"
+    },
+    {
+     "en": "2√3"
+    },
+    {
+     "en": "7/3"
+    }
+   ],
+   "why": {
+    "en": "y′ = √x, so L = ∫₀³ √(1 + x) dx = (2/3)(4^(3/2) − 1) = (2/3)·7 = 14/3.",
+    "uz": "y′ = √x, demak L = ∫₀³ √(1 + x) dx = (2/3)(4^(3/2) − 1) = (2/3)·7 = 14/3.",
+    "ru": "y′ = √x, поэтому L = ∫₀³ √(1 + x) dx = (2/3)(4^(3/2) − 1) = (2/3)·7 = 14/3."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.65,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch034",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "polar_area",
+   "lang": "en",
+   "stem": {
+    "en": "What is the area enclosed by the polar curve r = 4 sin θ, 0 ≤ θ ≤ π?",
+    "uz": "r = 4 sin θ (0 ≤ θ ≤ π) qutb egri chizigʻi bilan chegaralangan yuzani toping.",
+    "ru": "Найдите площадь, ограниченную кривой r = 4 sin θ (0 ≤ θ ≤ π) в полярных координатах."
+   },
+   "options": [
+    {
+     "en": "4π"
+    },
+    {
+     "en": "8π"
+    },
+    {
+     "en": "16π"
+    },
+    {
+     "en": "2π"
+    }
+   ],
+   "why": {
+    "en": "A = ½∫₀^π 16 sin²θ dθ = 8·(π/2) = 4π (the curve is a circle of radius 2).",
+    "uz": "A = ½∫₀^π 16 sin²θ dθ = 8·(π/2) = 4π (egri chiziq radiusi 2 boʻlgan aylana).",
+    "ru": "A = ½∫₀^π 16 sin²θ dθ = 8·(π/2) = 4π (кривая — окружность радиуса 2)."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.45,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch035",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "complex_numbers",
+   "lang": "en",
+   "stem": {
+    "en": "What is (1 + i)⁸, where i² = −1?",
+    "uz": "(1 + i)⁸ nechaga teng (i² = −1)?",
+    "ru": "Чему равно (1 + i)⁸ (i² = −1)?"
+   },
+   "options": [
+    {
+     "en": "16"
+    },
+    {
+     "en": "−16"
+    },
+    {
+     "en": "2"
+    },
+    {
+     "en": "256"
+    }
+   ],
+   "answer_numeric": {
+    "value": 16,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "(1 + i)² = 2i, so (1 + i)⁸ = (2i)⁴ = 16i⁴ = 16.",
+    "uz": "(1 + i)² = 2i, demak (1 + i)⁸ = (2i)⁴ = 16i⁴ = 16.",
+    "ru": "(1 + i)² = 2i, поэтому (1 + i)⁸ = (2i)⁴ = 16i⁴ = 16."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch036",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "probability_distributions",
+   "lang": "en",
+   "stem": {
+    "en": "A random variable X takes the values 0, 1 and 2 with probabilities 0.5, 0.3 and 0.2. What is the variance of X?",
+    "uz": "X tasodifiy miqdor 0, 1 va 2 qiymatlarni mos ravishda 0,5; 0,3 va 0,2 ehtimollik bilan qabul qiladi. X ning dispersiyasini toping.",
+    "ru": "Случайная величина X принимает значения 0, 1 и 2 с вероятностями 0,5, 0,3 и 0,2. Найдите дисперсию X."
+   },
+   "options": [
+    {
+     "en": "0.61"
+    },
+    {
+     "en": "1.1"
+    },
+    {
+     "en": "0.7"
+    },
+    {
+     "en": "0.49"
+    }
+   ],
+   "answer_numeric": {
+    "value": 0.61,
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "E[X] = 0.3 + 0.4 = 0.7 and E[X²] = 0.3 + 0.8 = 1.1, so Var(X) = 1.1 − 0.7² = 0.61.",
+    "uz": "E[X] = 0,3 + 0,4 = 0,7, E[X²] = 0,3 + 0,8 = 1,1, demak D(X) = 1,1 − 0,7² = 0,61.",
+    "ru": "E[X] = 0,3 + 0,4 = 0,7, E[X²] = 0,3 + 0,8 = 1,1, поэтому D(X) = 1,1 − 0,7² = 0,61."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 2.45,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch037",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "binomial_probability",
+   "family": {
+    "template": "A fair coin is tossed {n} times. What is the probability that the number of heads is exactly {k}?",
+    "params": {
+     "n": {
+      "min": 3,
+      "max": 8
+     },
+     "k": {
+      "min": 1,
+      "max": 7
+     }
+    },
+    "derived": {
+     "cn": "comb(n, k)",
+     "p2": "2**n",
+     "p1": "2**(n - 1)"
+    },
+    "constraints": [
+     "k < n",
+     "(comb(n, k) / 2**n) != (k / n)",
+     "(comb(n, k) / 2**n) != (1 / 2**n)",
+     "(comb(n, k) / 2**n) != (comb(n, k) / 2**(n - 1))",
+     "(k / n) != (1 / 2**n)",
+     "(k / n) != (comb(n, k) / 2**(n - 1))",
+     "(1 / 2**n) != (comb(n, k) / 2**(n - 1))"
+    ],
+    "answer": "comb(n, k) / 2**n",
+    "option_templates": [
+     "{ANS}",
+     "{k}/{n}",
+     "1/{p2}",
+     "{cn}/{p1}"
+    ],
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 26
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A fair coin is tossed {n} times. What is the probability that the number of heads is exactly {k}?",
+    "uz": "Tanga {n} marta tashlandi. Gerb tomoni roppa-rosa {k} marta tushish ehtimolligi qancha?",
+    "ru": "Правильную монету бросают {n} раз. Какова вероятность того, что число выпавших орлов равно {k}?"
+   },
+   "answer_numeric": {
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "C({n}, {k}) = {cn} of the 2^{n} = {p2} equally likely sequences work, so P = {cn}/{p2} = {ANS}.",
+    "uz": "2^{n} = {p2} ta teng imkoniyatli natijadan C({n}, {k}) = {cn} tasi mos keladi, demak P = {cn}/{p2} = {ANS}.",
+    "ru": "Из 2^{n} = {p2} равновозможных исходов подходят C({n}, {k}) = {cn}, поэтому P = {cn}/{p2} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 2.45,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.distractor: a distractor equals the key 0.25: {__ANS} | 1/4 | 1/16 | 4/8 (seed check:4)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-bch038",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "recurrences",
+   "family": {
+    "template": "a₁ = 1 and aₙ₊₁ = 2aₙ + 1 for n ≥ 1. What is a_{m}?",
+    "params": {
+     "m": {
+      "min": 5,
+      "max": 14
+     }
+    },
+    "answer": "2**m - 1",
+    "distractors": [
+     "2**m",
+     "2**(m - 1) - 1",
+     "2 * m - 1"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 10
+   },
+   "lang": "en",
+   "stem": {
+    "en": "a₁ = 1 and aₙ₊₁ = 2aₙ + 1 for n ≥ 1. What is a_{m}?",
+    "uz": "a₁ = 1 va n ≥ 1 uchun aₙ₊₁ = 2aₙ + 1. a_{m} ni toping.",
+    "ru": "a₁ = 1 и aₙ₊₁ = 2aₙ + 1 при n ≥ 1. Найдите a_{m}."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "aₙ + 1 doubles at each step, so aₙ + 1 = 2ⁿ and a_{m} = 2^{m} − 1 = {ANS}.",
+    "uz": "aₙ + 1 har qadamda ikki barobar ortadi, demak aₙ + 1 = 2ⁿ va a_{m} = 2^{m} − 1 = {ANS}.",
+    "ru": "aₙ + 1 удваивается на каждом шаге, поэтому aₙ + 1 = 2ⁿ и a_{m} = 2^{m} − 1 = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch039",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "modular_arithmetic",
+   "family": {
+    "template": "What is the remainder when {a}^{N} is divided by 5?",
+    "params": {
+     "a": {
+      "values": [
+       2,
+       3,
+       7,
+       8
+      ]
+     },
+     "N": {
+      "min": 20,
+      "max": 99
+     }
+    },
+    "derived": {
+     "q": "N // 4",
+     "r": "N % 4"
+    },
+    "answer": "(a ** (N % 4 + 4)) % 5",
+    "distractors": [
+     "(a ** (N % 5)) % 5",
+     "a ** (N % 4)",
+     "0"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 144,
+    "constraints": [
+     "((a ** (N % 4 + 4)) % 5) != ((a ** (N % 5)) % 5)",
+     "((a ** (N % 4 + 4)) % 5) != (a ** (N % 4))",
+     "((a ** (N % 4 + 4)) % 5) != (0)",
+     "((a ** (N % 5)) % 5) != (a ** (N % 4))",
+     "((a ** (N % 5)) % 5) != (0)",
+     "(a ** (N % 4)) != (0)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the remainder when {a}^{N} is divided by 5?",
+    "uz": "{a}^{N} ni 5 ga boʻlganda qoldiq nechaga teng?",
+    "ru": "Найдите остаток от деления {a}^{N} на 5."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Remainders of powers of {a} modulo 5 repeat with period 4: {N} = 4·{q} + {r}, so the remainder is that of {a}^{r}, which is {ANS}.",
+    "uz": "{a} ning darajalarini 5 ga boʻlgandagi qoldiqlar 4 davr bilan takrorlanadi: {N} = 4·{q} + {r}, demak qoldiq {a}^{r} niki bilan bir xil, yaʼni {ANS}.",
+    "ru": "Остатки степеней {a} при делении на 5 повторяются с периодом 4: {N} = 4·{q} + {r}, поэтому остаток такой же, как у {a}^{r}, т. е. {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p5int-rewrite",
+   "key_check_1": "author",
+   "key_check_2": null,
+   "status": "draft",
+   "version": 2,
+   "quarantine_reason": "family.formula: unknown function pow() in \"pow(a, N, 5)\""
+  },
+  {
+   "id": "K4-bch040",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "sums_of_powers",
+   "family": {
+    "template": "What is 1³ + 2³ + 3³ + … + {n}³?",
+    "params": {
+     "n": {
+      "min": 5,
+      "max": 20
+     }
+    },
+    "derived": {
+     "tri": "n * (n + 1) // 2"
+    },
+    "answer": "(n * (n + 1) // 2)**2",
+    "distractors": [
+     "n * (n + 1) / 2",
+     "n * (n + 1) * (2 * n + 1) / 6",
+     "n**3"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 16
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is 1³ + 2³ + 3³ + … + {n}³?",
+    "uz": "1³ + 2³ + 3³ + … + {n}³ yigʻindini toping.",
+    "ru": "Найдите сумму 1³ + 2³ + 3³ + … + {n}³."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = {tri}² = {ANS}.",
+    "uz": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = {tri}² = {ANS}.",
+    "ru": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = {tri}² = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  }
+ ]
+}

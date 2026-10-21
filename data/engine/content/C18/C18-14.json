@@ -1,0 +1,846 @@
+{
+ "bank": "C18",
+ "batch": 14,
+ "items": [
+  {
+   "id": "C18-msp021",
+   "skill": "dtm_math",
+   "level": "easy",
+   "subskill": "kombinatorika",
+   "lang": "uz",
+   "stem": {
+    "uz": "5 ta turli kitobni tokchaga necha xil tartibda terish mumkin?",
+    "ru": "Сколькими способами можно расставить на полке 5 разных книг?"
+   },
+   "options": [
+    {
+     "uz": "120",
+     "ru": "120"
+    },
+    {
+     "uz": "25",
+     "ru": "25"
+    },
+    {
+     "uz": "60",
+     "ru": "60"
+    },
+    {
+     "uz": "720",
+     "ru": "720"
+    }
+   ],
+   "why": {
+    "en": "5! = 120 orderings.",
+    "uz": "5! = 120.",
+    "ru": "5! = 120."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp022",
+   "skill": "dtm_math",
+   "level": "hard",
+   "subskill": "ehtimollik",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qutida 4 ta qizil va 6 ta koʻk shar bor. Tavakkaliga 2 ta shar olinadi. Ikkalasi ham qizil boʻlish ehtimolini toping.",
+    "ru": "В коробке 4 красных и 6 синих шаров. Наугад берут 2 шара. Найдите вероятность того, что оба красные."
+   },
+   "options": [
+    {
+     "uz": "2/15",
+     "ru": "2/15"
+    },
+    {
+     "uz": "4/25",
+     "ru": "4/25"
+    },
+    {
+     "uz": "1/5",
+     "ru": "1/5"
+    },
+    {
+     "uz": "3/10",
+     "ru": "3/10"
+    }
+   ],
+   "why": {
+    "en": "C(4,2) / C(10,2) = 6/45 = 2/15.",
+    "uz": "C₄² / C₁₀² = 6/45 = 2/15.",
+    "ru": "C₄² / C₁₀² = 6/45 = 2/15."
+   },
+   "prior_b": 0.9,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp023",
+   "skill": "dtm_math",
+   "level": "easy",
+   "subskill": "vektorlar",
+   "lang": "uz",
+   "stem": {
+    "uz": "a(3; 4) vektorning uzunligini toping.",
+    "ru": "Найдите длину вектора a(3; 4)."
+   },
+   "options": [
+    {
+     "uz": "5",
+     "ru": "5"
+    },
+    {
+     "uz": "7",
+     "ru": "7"
+    },
+    {
+     "uz": "25",
+     "ru": "25"
+    },
+    {
+     "uz": "1",
+     "ru": "1"
+    }
+   ],
+   "why": {
+    "en": "|a| = sqrt(9 + 16) = 5.",
+    "uz": "a vektorning uzunligi: √(3² + 4²) = √(9 + 16) = 5.",
+    "ru": "Длина вектора a: √(3² + 4²) = √(9 + 16) = 5."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp024",
+   "skill": "dtm_math",
+   "level": "easy",
+   "subskill": "vektorlar",
+   "lang": "uz",
+   "stem": {
+    "uz": "a(2; −1) va b(3; 4) vektorlarning skalyar koʻpaytmasini toping.",
+    "ru": "Найдите скалярное произведение векторов a(2; −1) и b(3; 4)."
+   },
+   "options": [
+    {
+     "uz": "2",
+     "ru": "2"
+    },
+    {
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "uz": "6",
+     "ru": "6"
+    },
+    {
+     "uz": "−2",
+     "ru": "−2"
+    }
+   ],
+   "why": {
+    "en": "2 x 3 + (-1) x 4 = 6 - 4 = 2.",
+    "uz": "2 · 3 + (−1) · 4 = 2.",
+    "ru": "2 · 3 + (−1) · 4 = 2."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp025",
+   "skill": "dtm_math",
+   "level": "easy",
+   "subskill": "stereometriya.silindr",
+   "lang": "uz",
+   "stem": {
+    "uz": "Silindrning asos radiusi 3, balandligi 5. Silindr hajmini toping.",
+    "ru": "Радиус основания цилиндра 3, высота 5. Найдите объём цилиндра."
+   },
+   "options": [
+    {
+     "uz": "45π",
+     "ru": "45π"
+    },
+    {
+     "uz": "15π",
+     "ru": "15π"
+    },
+    {
+     "uz": "30π",
+     "ru": "30π"
+    },
+    {
+     "uz": "75π",
+     "ru": "75π"
+    }
+   ],
+   "why": {
+    "en": "V = pi r^2 h = pi x 9 x 5 = 45 pi.",
+    "uz": "V = πr²h = 45π.",
+    "ru": "V = πr²h = 45π."
+   },
+   "prior_b": -0.8,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp026",
+   "skill": "dtm_math",
+   "level": "medium",
+   "subskill": "stereometriya.konus",
+   "lang": "uz",
+   "stem": {
+    "uz": "Konusning asos radiusi 3, balandligi 4. Konus hajmini toping.",
+    "ru": "Радиус основания конуса 3, высота 4. Найдите объём конуса."
+   },
+   "options": [
+    {
+     "uz": "12π",
+     "ru": "12π"
+    },
+    {
+     "uz": "36π",
+     "ru": "36π"
+    },
+    {
+     "uz": "15π",
+     "ru": "15π"
+    },
+    {
+     "uz": "48π",
+     "ru": "48π"
+    }
+   ],
+   "why": {
+    "en": "V = (1/3) pi r^2 h = (1/3) x 9 x 4 x pi = 12 pi.",
+    "uz": "V = ⅓πr²h = 12π.",
+    "ru": "V = ⅓πr²h = 12π."
+   },
+   "prior_b": 0.0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp027",
+   "skill": "dtm_math",
+   "level": "easy",
+   "subskill": "stereometriya.shar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Radiusi 3 ga teng sharning sirt yuzini toping.",
+    "ru": "Найдите площадь поверхности шара радиуса 3."
+   },
+   "options": [
+    {
+     "uz": "36π",
+     "ru": "36π"
+    },
+    {
+     "uz": "12π",
+     "ru": "12π"
+    },
+    {
+     "uz": "9π",
+     "ru": "9π"
+    },
+    {
+     "uz": "27π",
+     "ru": "27π"
+    }
+   ],
+   "why": {
+    "en": "S = 4 pi r^2 = 36 pi.",
+    "uz": "S = 4πr² = 36π.",
+    "ru": "S = 4πr² = 36π."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp028",
+   "skill": "dtm_math",
+   "level": "easy",
+   "subskill": "planimetriya.uchburchak",
+   "lang": "uz",
+   "stem": {
+    "uz": "Uchburchakning ikki tomoni 5 va 6, ular orasidagi burchak 30°. Uchburchak yuzini toping.",
+    "ru": "Две стороны треугольника 5 и 6, угол между ними 30°. Найдите площадь треугольника."
+   },
+   "options": [
+    {
+     "uz": "7,5",
+     "ru": "7,5"
+    },
+    {
+     "uz": "15",
+     "ru": "15"
+    },
+    {
+     "uz": "30",
+     "ru": "30"
+    },
+    {
+     "uz": "12,5",
+     "ru": "12,5"
+    }
+   ],
+   "why": {
+    "en": "S = (1/2) ab sin C = (1/2) x 5 x 6 x 0.5 = 7.5.",
+    "uz": "S = ½ab sin C = 7,5.",
+    "ru": "S = ½ab sin C = 7,5."
+   },
+   "prior_b": -0.8,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp029",
+   "skill": "dtm_math",
+   "level": "hard",
+   "subskill": "planimetriya.geron",
+   "lang": "uz",
+   "stem": {
+    "uz": "Tomonlari 13, 14 va 15 boʻlgan uchburchakning yuzini toping.",
+    "ru": "Найдите площадь треугольника со сторонами 13, 14 и 15."
+   },
+   "options": [
+    {
+     "uz": "84",
+     "ru": "84"
+    },
+    {
+     "uz": "91",
+     "ru": "91"
+    },
+    {
+     "uz": "105",
+     "ru": "105"
+    },
+    {
+     "uz": "42",
+     "ru": "42"
+    }
+   ],
+   "why": {
+    "en": "Heron: p = 21, S = sqrt(21 x 8 x 7 x 6) = 84.",
+    "uz": "Geron: p = 21, S = √(21·8·7·6) = 84.",
+    "ru": "Формула Герона: p = 21, S = √(21·8·7·6) = 84."
+   },
+   "prior_b": 0.9,
+   "time_s": 90,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp030",
+   "skill": "dtm_math",
+   "level": "easy",
+   "subskill": "planimetriya.aylana",
+   "lang": "uz",
+   "stem": {
+    "uz": "Tomoni 10 ga teng kvadratga ichki chizilgan doiraning yuzini toping.",
+    "ru": "Найдите площадь круга, вписанного в квадрат со стороной 10."
+   },
+   "options": [
+    {
+     "uz": "25π",
+     "ru": "25π"
+    },
+    {
+     "uz": "100π",
+     "ru": "100π"
+    },
+    {
+     "uz": "50π",
+     "ru": "50π"
+    },
+    {
+     "uz": "10π",
+     "ru": "10π"
+    }
+   ],
+   "why": {
+    "en": "The radius is half the side, 5; S = 25 pi.",
+    "uz": "Radius tomonning yarmi, 5; S = 25π.",
+    "ru": "Радиус – половина стороны, 5; S = 25π."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp031",
+   "skill": "dtm_math",
+   "level": "medium",
+   "subskill": "planimetriya.aylana",
+   "lang": "uz",
+   "stem": {
+    "uz": "Katetlari 5 va 12 boʻlgan toʻgʻri burchakli uchburchakka tashqi chizilgan aylana radiusini toping.",
+    "ru": "Найдите радиус окружности, описанной около прямоугольного треугольника с катетами 5 и 12."
+   },
+   "options": [
+    {
+     "uz": "6,5",
+     "ru": "6,5"
+    },
+    {
+     "uz": "13",
+     "ru": "13"
+    },
+    {
+     "uz": "6",
+     "ru": "6"
+    },
+    {
+     "uz": "8,5",
+     "ru": "8,5"
+    }
+   ],
+   "why": {
+    "en": "The hypotenuse is 13 and is a diameter: R = 6.5.",
+    "uz": "Gipotenuza 13 – diametr: R = 6,5.",
+    "ru": "Гипотенуза 13 – диаметр: R = 6,5."
+   },
+   "prior_b": 0.0,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp032",
+   "skill": "dtm_math",
+   "level": "medium",
+   "subskill": "planimetriya.kopburchak",
+   "lang": "uz",
+   "stem": {
+    "uz": "Tomoni 4 ga teng muntazam oltiburchakning yuzini toping.",
+    "ru": "Найдите площадь правильного шестиугольника со стороной 4."
+   },
+   "options": [
+    {
+     "uz": "24√3",
+     "ru": "24√3"
+    },
+    {
+     "uz": "16√3",
+     "ru": "16√3"
+    },
+    {
+     "uz": "48√3",
+     "ru": "48√3"
+    },
+    {
+     "uz": "12√3",
+     "ru": "12√3"
+    }
+   ],
+   "why": {
+    "en": "Six equilateral triangles: 6 x (sqrt3/4) x 16 = 24 sqrt3.",
+    "uz": "6 ta teng tomonli uchburchak: 6 · (√3/4) · 16 = 24√3.",
+    "ru": "Шесть правильных треугольников: 6 · (√3/4) · 16 = 24√3."
+   },
+   "prior_b": 0.0,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp033",
+   "skill": "dtm_math",
+   "level": "hard",
+   "subskill": "irratsional_tenglama",
+   "lang": "uz",
+   "stem": {
+    "uz": "Tenglamani yeching: √(x + 7) = x + 1.",
+    "ru": "Решите уравнение: √(x + 7) = x + 1."
+   },
+   "options": [
+    {
+     "uz": "2",
+     "ru": "2"
+    },
+    {
+     "uz": "−3",
+     "ru": "−3"
+    },
+    {
+     "uz": "−3 va 2",
+     "ru": "−3 и 2"
+    },
+    {
+     "uz": "6",
+     "ru": "6"
+    }
+   ],
+   "why": {
+    "en": "Squaring gives x^2 + x - 6 = 0, roots 2 and -3; -3 makes x + 1 negative, so only 2.",
+    "uz": "Kvadratga koʻtarsak x² + x − 6 = 0: 2 va −3; −3 da x + 1 < 0, faqat 2.",
+    "ru": "После возведения: x² + x − 6 = 0, корни 2 и −3; при −3 правая часть < 0, ответ 2."
+   },
+   "prior_b": 0.9,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp034",
+   "skill": "dtm_math",
+   "level": "medium",
+   "subskill": "modulli_tengsizlik",
+   "lang": "uz",
+   "stem": {
+    "uz": "|2x − 1| ≤ 5 tengsizlikning nechta butun yechimi bor?",
+    "ru": "Сколько целых решений у неравенства |2x − 1| ≤ 5?"
+   },
+   "options": [
+    {
+     "uz": "6",
+     "ru": "6"
+    },
+    {
+     "uz": "5",
+     "ru": "5"
+    },
+    {
+     "uz": "7",
+     "ru": "7"
+    },
+    {
+     "uz": "11",
+     "ru": "11"
+    }
+   ],
+   "why": {
+    "en": "-5 <= 2x - 1 <= 5 gives -2 <= x <= 3: six integers.",
+    "uz": "−5 ≤ 2x − 1 ≤ 5 → −2 ≤ x ≤ 3: 6 ta butun son.",
+    "ru": "−5 ≤ 2x − 1 ≤ 5 → −2 ≤ x ≤ 3: 6 целых чисел."
+   },
+   "prior_b": 0.0,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp035",
+   "skill": "dtm_math",
+   "level": "medium",
+   "subskill": "tenglamalar_sistemasi",
+   "lang": "uz",
+   "stem": {
+    "uz": "x² + y² = 25 va x + y = 7 boʻlsa, xy ni toping.",
+    "ru": "Найдите xy, если x² + y² = 25 и x + y = 7."
+   },
+   "options": [
+    {
+     "uz": "12",
+     "ru": "12"
+    },
+    {
+     "uz": "24",
+     "ru": "24"
+    },
+    {
+     "uz": "18",
+     "ru": "18"
+    },
+    {
+     "uz": "6",
+     "ru": "6"
+    }
+   ],
+   "why": {
+    "en": "(x + y)^2 = x^2 + y^2 + 2xy: 49 = 25 + 2xy, xy = 12.",
+    "uz": "(x + y)² = x² + y² + 2xy: 49 = 25 + 2xy, xy = 12.",
+    "ru": "(x + y)² = x² + y² + 2xy: 49 = 25 + 2xy, xy = 12."
+   },
+   "prior_b": 0.0,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp036",
+   "skill": "dtm_math",
+   "level": "medium",
+   "subskill": "murakkab_foiz",
+   "lang": "uz",
+   "stem": {
+    "uz": "Bankka 1 000 000 soʻm yillik 10 % murakkab foiz bilan qoʻyildi. 2 yildan keyin hisobda qancha boʻladi?",
+    "ru": "В банк положили 1 000 000 сумов под 10 % годовых (сложные проценты). Сколько будет на счёте через 2 года?"
+   },
+   "options": [
+    {
+     "uz": "1 210 000",
+     "ru": "1 210 000"
+    },
+    {
+     "uz": "1 200 000",
+     "ru": "1 200 000"
+    },
+    {
+     "uz": "1 100 000",
+     "ru": "1 100 000"
+    },
+    {
+     "uz": "1 220 000",
+     "ru": "1 220 000"
+    }
+   ],
+   "why": {
+    "en": "1,000,000 x 1.1^2 = 1,210,000; interest earns interest.",
+    "uz": "1 000 000 · 1,1² = 1 210 000.",
+    "ru": "1 000 000 · 1,1² = 1 210 000."
+   },
+   "prior_b": 0.0,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp037",
+   "skill": "dtm_math",
+   "level": "easy",
+   "subskill": "teskari_funksiya",
+   "lang": "uz",
+   "stem": {
+    "uz": "f(x) = 2x + 3 boʻlsa, f⁻¹(11) ni toping.",
+    "ru": "Найдите f⁻¹(11), если f(x) = 2x + 3."
+   },
+   "options": [
+    {
+     "uz": "4",
+     "ru": "4"
+    },
+    {
+     "uz": "25",
+     "ru": "25"
+    },
+    {
+     "uz": "7",
+     "ru": "7"
+    },
+    {
+     "uz": "1/25",
+     "ru": "1/25"
+    }
+   ],
+   "why": {
+    "en": "Solve 2x + 3 = 11: x = 4.",
+    "uz": "2x + 3 = 11 dan x = 4.",
+    "ru": "Из 2x + 3 = 11 получаем x = 4."
+   },
+   "prior_b": -0.8,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp038",
+   "skill": "dtm_math",
+   "level": "medium",
+   "subskill": "viyet",
+   "lang": "uz",
+   "stem": {
+    "uz": "x² + px + 12 = 0 tenglamaning bir ildizi 3 ga teng. p ni toping.",
+    "ru": "Один из корней уравнения x² + px + 12 = 0 равен 3. Найдите p."
+   },
+   "options": [
+    {
+     "uz": "−7",
+     "ru": "−7"
+    },
+    {
+     "uz": "7",
+     "ru": "7"
+    },
+    {
+     "uz": "−4",
+     "ru": "−4"
+    },
+    {
+     "uz": "4",
+     "ru": "4"
+    }
+   ],
+   "why": {
+    "en": "The product of roots is 12, so the other root is 4; p = -(3 + 4) = -7.",
+    "uz": "Ildizlar koʻpaytmasi 12, ikkinchisi 4; p = −(3 + 4) = −7.",
+    "ru": "Произведение корней 12, второй корень 4; p = −(3 + 4) = −7."
+   },
+   "prior_b": 0.0,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp039",
+   "skill": "dtm_math",
+   "level": "medium",
+   "subskill": "funksiya_xossalari",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi funksiya juft funksiya?",
+    "ru": "Какая функция является чётной?"
+   },
+   "options": [
+    {
+     "uz": "y = x² + cos x",
+     "ru": "y = x² + cos x"
+    },
+    {
+     "uz": "y = x³",
+     "ru": "y = x³"
+    },
+    {
+     "uz": "y = sin x",
+     "ru": "y = sin x"
+    },
+    {
+     "uz": "y = x + 1",
+     "ru": "y = x + 1"
+    }
+   ],
+   "why": {
+    "en": "f(-x) = f(x) for x^2 + cos x; x^3 and sin x are odd.",
+    "uz": "x² + cos x uchun f(−x) = f(x); x³ va sin x – toq.",
+    "ru": "Для x² + cos x f(−x) = f(x); x³ и sin x – нечётные."
+   },
+   "prior_b": 0.0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-msp040",
+   "skill": "dtm_math",
+   "level": "easy",
+   "subskill": "planimetriya.kopburchak",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qavariq oltiburchak ichki burchaklarining yigʻindisini toping (gradusda).",
+    "ru": "Найдите сумму внутренних углов выпуклого шестиугольника (в градусах)."
+   },
+   "options": [
+    {
+     "uz": "720",
+     "ru": "720"
+    },
+    {
+     "uz": "540",
+     "ru": "540"
+    },
+    {
+     "uz": "1080",
+     "ru": "1080"
+    },
+    {
+     "uz": "360",
+     "ru": "360"
+    }
+   ],
+   "why": {
+    "en": "(n - 2) x 180 = 4 x 180 = 720.",
+    "uz": "(n − 2) · 180° = 720°.",
+    "ru": "(n − 2) · 180° = 720°."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

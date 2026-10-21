@@ -1,0 +1,1246 @@
+{
+  "bank": "K4",
+  "batch": 5,
+  "items": [
+    {
+      "id": "K4-a10001",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "{a}x + {b} = {c}. Find x.",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 9,
+            "step": 1
+          },
+          "x0": {
+            "min": 1,
+            "max": 12,
+            "step": 1
+          },
+          "b": {
+            "min": 1,
+            "max": 20,
+            "step": 1
+          }
+        },
+        "derived": {
+          "c": "a * x0 + b"
+        },
+        "answer": "x0",
+        "variants": 1920
+      },
+      "lang": "en",
+      "stem": {
+        "en": "{a}x + {b} = {c}. Find x.",
+        "uz": "{a}x + {b} = {c}. x ni toping.",
+        "ru": "{a}x + {b} = {c}. Найдите x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Subtract the constant from both sides, then divide by the coefficient of x.",
+        "uz": "Ikkala tomondan ozod hadni ayiring, soʻng x oldidagi koeffitsientga boʻling.",
+        "ru": "Вычтите свободный член из обеих частей, затем разделите на коэффициент при x."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-a10002",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "{a}x − {b} = {c}. Find x.",
+        "params": {
+          "a": {
+            "min": 3,
+            "max": 8,
+            "step": 1
+          },
+          "x0": [
+            -4,
+            -3,
+            -2,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "b": {
+            "min": 2,
+            "max": 15,
+            "step": 1
+          }
+        },
+        "derived": {
+          "c": "a * x0 - b"
+        },
+        "answer": "x0",
+        "variants": 756
+      },
+      "lang": "en",
+      "stem": {
+        "en": "{a}x − {b} = {c}. Find x.",
+        "uz": "{a}x − {b} = {c}. x ni toping.",
+        "ru": "{a}x − {b} = {c}. Найдите x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Add the constant to both sides, then divide by the coefficient of x.",
+        "uz": "Ikkala tomonga ozod hadni qoʻshing, soʻng x oldidagi koeffitsientga boʻling.",
+        "ru": "Прибавьте свободный член к обеим частям, затем разделите на коэффициент при x."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.05,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-a10003",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "{a}x + {b} = {c}x + {d}. Find x.",
+        "params": {
+          "a": {
+            "min": 5,
+            "max": 9,
+            "step": 1
+          },
+          "c": {
+            "min": 2,
+            "max": 4,
+            "step": 1
+          },
+          "x0": {
+            "min": 2,
+            "max": 8,
+            "step": 1
+          },
+          "b": {
+            "min": 1,
+            "max": 12,
+            "step": 1
+          }
+        },
+        "derived": {
+          "d": "(a - c) * x0 + b"
+        },
+        "answer": "x0",
+        "variants": 1260
+      },
+      "lang": "en",
+      "stem": {
+        "en": "{a}x + {b} = {c}x + {d}. Find x.",
+        "uz": "{a}x + {b} = {c}x + {d}. x ni toping.",
+        "ru": "{a}x + {b} = {c}x + {d}. Найдите x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Collect the x terms on one side and the numbers on the other, then divide.",
+        "uz": "x li hadlarni bir tomonga, sonlarni ikkinchi tomonga oʻtkazing, soʻng boʻling.",
+        "ru": "Перенесите слагаемые с x в одну часть, а числа — в другую, затем разделите."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-a10004",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "{a}(x + {b}) = {c}. Find x.",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 6,
+            "step": 1
+          },
+          "b": {
+            "min": 1,
+            "max": 7,
+            "step": 1
+          },
+          "x0": {
+            "min": 1,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "derived": {
+          "c": "a * (x0 + b)"
+        },
+        "answer": "x0",
+        "variants": 315
+      },
+      "lang": "en",
+      "stem": {
+        "en": "{a}(x + {b}) = {c}. Find x.",
+        "uz": "{a}(x + {b}) = {c}. x ni toping.",
+        "ru": "{a}(x + {b}) = {c}. Найдите x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Divide both sides by the number in front of the brackets, then subtract.",
+        "uz": "Ikkala tomonni qavs oldidagi songa boʻling, soʻng ayiring.",
+        "ru": "Разделите обе части на число перед скобкой, затем вычтите."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-a10005",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "x/{a} + {b} = {c}. Find x.",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 6,
+            "step": 1
+          },
+          "k": {
+            "min": 1,
+            "max": 9,
+            "step": 1
+          },
+          "b": {
+            "min": 1,
+            "max": 10,
+            "step": 1
+          }
+        },
+        "derived": {
+          "c": "k + b"
+        },
+        "answer": "a * k",
+        "variants": 450
+      },
+      "lang": "en",
+      "stem": {
+        "en": "x/{a} + {b} = {c}. Find x.",
+        "uz": "x/{a} + {b} = {c}. x ni toping.",
+        "ru": "x/{a} + {b} = {c}. Найдите x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Subtract first, then multiply both sides by the denominator.",
+        "uz": "Avval ayiring, soʻng ikkala tomonni maxrajga koʻpaytiring.",
+        "ru": "Сначала вычтите, затем умножьте обе части на знаменатель."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-a10006",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "systems_of_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "x + y = {s} and x − y = {d}. Find x.",
+        "params": {
+          "x0": {
+            "min": 6,
+            "max": 15,
+            "step": 1
+          },
+          "y0": {
+            "min": 1,
+            "max": 5,
+            "step": 1
+          }
+        },
+        "derived": {
+          "s": "x0 + y0",
+          "d": "x0 - y0"
+        },
+        "answer": "x0",
+        "variants": 50
+      },
+      "lang": "en",
+      "stem": {
+        "en": "x + y = {s} and x − y = {d}. Find x.",
+        "uz": "x + y = {s} va x − y = {d}. x ni toping.",
+        "ru": "x + y = {s} и x − y = {d}. Найдите x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Add the two equations: 2x equals the sum of the right-hand sides.",
+        "uz": "Ikki tenglamani qoʻshing: 2x oʻng tomonlar yigʻindisiga teng boʻladi.",
+        "ru": "Сложите уравнения: 2x равно сумме правых частей."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-a10007",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "systems_of_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "y = {m}x + {b} and {p}x + y = {q}. Find x.",
+        "params": {
+          "x0": {
+            "min": 1,
+            "max": 6,
+            "step": 1
+          },
+          "m": {
+            "min": 2,
+            "max": 5,
+            "step": 1
+          },
+          "b": {
+            "min": 1,
+            "max": 9,
+            "step": 1
+          },
+          "p": {
+            "min": 2,
+            "max": 4,
+            "step": 1
+          }
+        },
+        "derived": {
+          "q": "p * x0 + m * x0 + b"
+        },
+        "answer": "x0",
+        "variants": 648
+      },
+      "lang": "en",
+      "stem": {
+        "en": "y = {m}x + {b} and {p}x + y = {q}. Find x.",
+        "uz": "y = {m}x + {b} va {p}x + y = {q}. x ni toping.",
+        "ru": "y = {m}x + {b} и {p}x + y = {q}. Найдите x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Substitute y from the first equation into the second, then solve for x.",
+        "uz": "Birinchi tenglamadagi y ni ikkinchisiga qoʻying, soʻng x ni toping.",
+        "ru": "Подставьте y из первого уравнения во второе и найдите x."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-a10008",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "slope",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A line passes through the points ({x1}, {y1}) and ({x2}, {y2}). What is its slope?",
+        "params": {
+          "x1": {
+            "min": -3,
+            "max": 4,
+            "step": 1
+          },
+          "dx": {
+            "min": 1,
+            "max": 4,
+            "step": 1
+          },
+          "y1": {
+            "min": -2,
+            "max": 5,
+            "step": 1
+          },
+          "m": [
+            -3,
+            -2,
+            2,
+            3,
+            4
+          ]
+        },
+        "derived": {
+          "x2": "x1 + dx",
+          "y2": "y1 + m * dx"
+        },
+        "answer": "m",
+        "variants": 1280
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A line passes through the points ({x1}, {y1}) and ({x2}, {y2}). What is its slope?",
+        "uz": "Toʻgʻri chiziq ({x1}; {y1}) va ({x2}; {y2}) nuqtalardan oʻtadi. Uning burchak koeffitsientini toping.",
+        "ru": "Прямая проходит через точки ({x1}; {y1}) и ({x2}; {y2}). Найдите её угловой коэффициент."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Slope = change in y ÷ change in x.",
+        "uz": "Burchak koeffitsienti = y ning oʻzgarishi : x ning oʻzgarishi.",
+        "ru": "Угловой коэффициент = изменение y : изменение x."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.05,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-a10009",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "f(x) = {a}x − {b}. Find f({c}).",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 9,
+            "step": 1
+          },
+          "b": {
+            "min": 1,
+            "max": 15,
+            "step": 1
+          },
+          "c": {
+            "min": -3,
+            "max": 6,
+            "step": 1
+          }
+        },
+        "answer": "a * c - b",
+        "variants": 1200
+      },
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = {a}x − {b}. Find f({c}).",
+        "uz": "f(x) = {a}x − {b}. f({c}) ni toping.",
+        "ru": "f(x) = {a}x − {b}. Найдите f({c})."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Replace x with the given number and calculate.",
+        "uz": "x oʻrniga berilgan sonni qoʻyib hisoblang.",
+        "ru": "Подставьте вместо x данное число и вычислите."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.05,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-a10010",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_inequalities",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "What is the greatest integer x for which {a}x + {b} < {c}?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 6,
+            "step": 1
+          },
+          "t": {
+            "min": 2,
+            "max": 9,
+            "step": 1
+          },
+          "b": {
+            "min": 1,
+            "max": 10,
+            "step": 1
+          }
+        },
+        "derived": {
+          "c": "a * t + b + 1"
+        },
+        "answer": "t",
+        "variants": 400
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is the greatest integer x for which {a}x + {b} < {c}?",
+        "uz": "{a}x + {b} < {c} tengsizlikni qanoatlantiradigan eng katta butun x ni toping.",
+        "ru": "Найдите наибольшее целое x, при котором {a}x + {b} < {c}."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Solve it like an equation to get x < some number, then take the greatest integer below that number.",
+        "uz": "Tenglama kabi yechib, x < qandaydir son koʻrinishiga keltiring, soʻng undan kichik eng katta butun sonni oling.",
+        "ru": "Решите как уравнение, получите x < некоторого числа и возьмите наибольшее целое, которое меньше его."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-a10011",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "polynomial_expansion",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "(x + {a})(x + {b}) = x² + px + q. Find p.",
+        "params": {
+          "a": {
+            "min": 1,
+            "max": 9,
+            "step": 1
+          },
+          "b": {
+            "min": 1,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "answer": "a + b",
+        "variants": 81
+      },
+      "lang": "en",
+      "stem": {
+        "en": "(x + {a})(x + {b}) = x² + px + q. Find p.",
+        "uz": "(x + {a})(x + {b}) = x² + px + q. p ni toping.",
+        "ru": "(x + {a})(x + {b}) = x² + px + q. Найдите p."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Expanding gives x² + (a + b)x + ab, so p is the sum of the two numbers in the brackets.",
+        "uz": "Qavslarni ochsak, x² + (a + b)x + ab hosil boʻladi, demak, p — qavslardagi ikki sonning yigʻindisi.",
+        "ru": "После раскрытия скобок получаем x² + (a + b)x + ab, значит, p — сумма двух чисел в скобках."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-a10012",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "factoring",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "x² + {s}x + {p} = (x + {a})(x + b). Find b.",
+        "params": {
+          "a": {
+            "min": 1,
+            "max": 9,
+            "step": 1
+          },
+          "b0": {
+            "min": 1,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "derived": {
+          "s": "a + b0",
+          "p": "a * b0"
+        },
+        "answer": "b0",
+        "variants": 81
+      },
+      "lang": "en",
+      "stem": {
+        "en": "x² + {s}x + {p} = (x + {a})(x + b). Find b.",
+        "uz": "x² + {s}x + {p} = (x + {a})(x + b). b ni toping.",
+        "ru": "x² + {s}x + {p} = (x + {a})(x + b). Найдите b."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The two numbers in the brackets multiply to the constant term and add up to the coefficient of x.",
+        "uz": "Qavslardagi ikki sonning koʻpaytmasi ozod hadga, yigʻindisi esa x oldidagi koeffitsientga teng.",
+        "ru": "Произведение чисел в скобках равно свободному члену, а их сумма — коэффициенту при x."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-a10013",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_word_problems",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "Bekzod's mother is {k} times as old as Bekzod. Together they are {s} years old. How old is Bekzod?",
+        "params": {
+          "k": [
+            3,
+            4
+          ],
+          "a0": {
+            "min": 8,
+            "max": 14,
+            "step": 1
+          }
+        },
+        "derived": {
+          "s": "(k + 1) * a0"
+        },
+        "answer": "a0",
+        "variants": 14
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Bekzod's mother is {k} times as old as Bekzod. Together they are {s} years old. How old is Bekzod?",
+        "uz": "Bekzodning onasi undan {k} marta katta. Ikkalasining yoshlari yigʻindisi {s} yil. Bekzod necha yoshda?",
+        "ru": "Мама Бекзода старше него в {k} раза. Сумма их возрастов равна {s}. Сколько лет Бекзоду?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Let Bekzod be x years old: x + kx = total, so x = total ÷ (k + 1).",
+        "uz": "Bekzodning yoshini x desak: x + kx = yigʻindi, demak, x = yigʻindi : (k + 1).",
+        "ru": "Пусть Бекзоду x лет: x + kx = сумма, значит, x = сумма : (k + 1)."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10014",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_word_problems",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "The sum of three consecutive integers is {s}. What is the largest of them?",
+        "params": {
+          "n": {
+            "min": 5,
+            "max": 40,
+            "step": 1
+          }
+        },
+        "derived": {
+          "s": "3 * n + 3"
+        },
+        "answer": "n + 2",
+        "variants": 36
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The sum of three consecutive integers is {s}. What is the largest of them?",
+        "uz": "Ketma-ket kelgan uchta butun sonning yigʻindisi {s} ga teng. Ularning eng kattasini toping.",
+        "ru": "Сумма трёх последовательных целых чисел равна {s}. Найдите наибольшее из них."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The middle number is the sum ÷ 3; the largest is one more than that.",
+        "uz": "Oʻrtadagi son = yigʻindi : 3; eng kattasi undan 1 ga ortiq.",
+        "ru": "Среднее число = сумма : 3; наибольшее на 1 больше его."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10015",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_word_problems",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "Adult tickets cost {a} thousand soʻm and child tickets cost {c} thousand soʻm. A group of {n} people paid {t} thousand soʻm in total. How many adults were in the group?",
+        "params": {
+          "a": [
+            30,
+            40,
+            50
+          ],
+          "c": [
+            15,
+            20,
+            25
+          ],
+          "n": {
+            "min": 6,
+            "max": 12,
+            "step": 1
+          },
+          "x": {
+            "min": 2,
+            "max": 5,
+            "step": 1
+          }
+        },
+        "derived": {
+          "t": "a * x + c * (n - x)"
+        },
+        "answer": "x",
+        "variants": 252
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Adult tickets cost {a} thousand soʻm and child tickets cost {c} thousand soʻm. A group of {n} people paid {t} thousand soʻm in total. How many adults were in the group?",
+        "uz": "Kattalar chiptasi {a} ming soʻm, bolalar chiptasi {c} ming soʻm turadi. {n} kishilik guruh jami {t} ming soʻm toʻladi. Guruhda nechta katta yoshli bor edi?",
+        "ru": "Взрослый билет стоит {a} тыс. сум, детский — {c} тыс. сум. Группа из {n} человек заплатила всего {t} тыс. сум. Сколько взрослых было в группе?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Let x be the number of adults; the rest are children. Write adult cost + child cost = total and solve for x.",
+        "uz": "Kattalar sonini x deb oling, qolganlari bolalar. «Kattalar toʻlovi + bolalar toʻlovi = jami» tenglamasini tuzib, x ni toping.",
+        "ru": "Пусть взрослых x, остальные — дети. Составьте уравнение «стоимость взрослых + стоимость детских = итог» и найдите x."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10016",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_models",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "A taxi ride costs {f} soʻm to start plus {r} soʻm for each kilometre. A ride cost {t} soʻm. How many kilometres long was it?",
+        "params": {
+          "f": [
+            5000,
+            6000,
+            7000,
+            8000
+          ],
+          "r": [
+            2000,
+            2500,
+            3000
+          ],
+          "k": {
+            "min": 3,
+            "max": 12,
+            "step": 1
+          }
+        },
+        "derived": {
+          "t": "f + r * k"
+        },
+        "answer": "k",
+        "variants": 120
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A taxi ride costs {f} soʻm to start plus {r} soʻm for each kilometre. A ride cost {t} soʻm. How many kilometres long was it?",
+        "uz": "Taksi narxi: {f} soʻm boshlangʻich toʻlov va har bir kilometr uchun {r} soʻm. Yoʻlkira {t} soʻm boʻldi. Necha kilometr yurilgan?",
+        "ru": "Поездка на такси стоит {f} сум за посадку плюс {r} сум за каждый километр. Поездка обошлась в {t} сум. Сколько километров проехали?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Subtract the starting fee, then divide by the price per kilometre.",
+        "uz": "Boshlangʻich toʻlovni ayiring, soʻng bir kilometr narxiga boʻling.",
+        "ru": "Вычтите плату за посадку и разделите на цену одного километра."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10017",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A linear function has f(1) = {p}, f(2) = {q} and f(3) = {r}. What is f(10)?",
+        "params": {
+          "m": {
+            "min": 2,
+            "max": 7,
+            "step": 1
+          },
+          "b": {
+            "min": -3,
+            "max": 5,
+            "step": 1
+          }
+        },
+        "derived": {
+          "p": "m + b",
+          "q": "2 * m + b",
+          "r": "3 * m + b"
+        },
+        "answer": "10 * m + b",
+        "variants": 54
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A linear function has f(1) = {p}, f(2) = {q} and f(3) = {r}. What is f(10)?",
+        "uz": "Chiziqli funksiya uchun f(1) = {p}, f(2) = {q} va f(3) = {r}. f(10) ni toping.",
+        "ru": "Для линейной функции f(1) = {p}, f(2) = {q} и f(3) = {r}. Найдите f(10)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Each increase of x by 1 adds the same amount; f(10) = f(1) + 9 × that amount.",
+        "uz": "x 1 ga oshganda f(x) bir xil songa oshadi; f(10) = f(1) + 9 × shu son.",
+        "ru": "При увеличении x на 1 значение растёт на одно и то же число; f(10) = f(1) + 9 × это число."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.05,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10018",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "systems_of_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "{a}x + {b}y = {c} and {a}x − {b}y = {d}. Find x.",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 5,
+            "step": 1
+          },
+          "b": {
+            "min": 2,
+            "max": 5,
+            "step": 1
+          },
+          "x0": {
+            "min": 1,
+            "max": 6,
+            "step": 1
+          },
+          "y0": {
+            "min": 1,
+            "max": 6,
+            "step": 1
+          }
+        },
+        "derived": {
+          "c": "a * x0 + b * y0",
+          "d": "a * x0 - b * y0"
+        },
+        "answer": "x0",
+        "variants": 576
+      },
+      "lang": "en",
+      "stem": {
+        "en": "{a}x + {b}y = {c} and {a}x − {b}y = {d}. Find x.",
+        "uz": "{a}x + {b}y = {c} va {a}x − {b}y = {d}. x ni toping.",
+        "ru": "{a}x + {b}y = {c} и {a}x − {b}y = {d}. Найдите x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Add the two equations: the y terms cancel and only x is left.",
+        "uz": "Tenglamalarni qoʻshing: y li hadlar yoʻqoladi va faqat x qoladi.",
+        "ru": "Сложите уравнения: слагаемые с y сократятся, останется только x."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-a10019",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_word_problems",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "Two cyclists start from the same place at the same time and ride in opposite directions at {v1} km/h and {v2} km/h. After how many hours will they be {d} km apart?",
+        "params": {
+          "v1": {
+            "min": 10,
+            "max": 18,
+            "step": 2
+          },
+          "v2": {
+            "min": 12,
+            "max": 20,
+            "step": 2
+          },
+          "t": {
+            "min": 2,
+            "max": 6,
+            "step": 1
+          }
+        },
+        "derived": {
+          "d": "(v1 + v2) * t"
+        },
+        "answer": "t",
+        "variants": 125
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Two cyclists start from the same place at the same time and ride in opposite directions at {v1} km/h and {v2} km/h. After how many hours will they be {d} km apart?",
+        "uz": "Ikki velosipedchi bir joydan bir vaqtda qarama-qarshi yoʻnalishda {v1} km/soat va {v2} km/soat tezlik bilan yoʻlga chiqdi. Necha soatdan keyin ular orasidagi masofa {d} km boʻladi?",
+        "ru": "Два велосипедиста одновременно выехали из одного места в противоположных направлениях со скоростями {v1} км/ч и {v2} км/ч. Через сколько часов расстояние между ними будет {d} км?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Moving apart, their speeds add up: time = distance ÷ (sum of the speeds).",
+        "uz": "Qarama-qarshi tomonga harakatda tezliklar qoʻshiladi: vaqt = masofa : tezliklar yigʻindisi.",
+        "ru": "При движении в противоположных направлениях скорости складываются: время = расстояние : сумма скоростей."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-a10020",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_word_problems",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "One number is {d} more than another. Their sum is {s}. What is the smaller number?",
+        "params": {
+          "d": {
+            "min": 3,
+            "max": 15,
+            "step": 1
+          },
+          "n": {
+            "min": 5,
+            "max": 30,
+            "step": 1
+          }
+        },
+        "derived": {
+          "s": "2 * n + d"
+        },
+        "answer": "n",
+        "variants": 338
+      },
+      "lang": "en",
+      "stem": {
+        "en": "One number is {d} more than another. Their sum is {s}. What is the smaller number?",
+        "uz": "Bir son ikkinchisidan {d} ga katta. Ularning yigʻindisi {s} ga teng. Kichik sonni toping.",
+        "ru": "Одно число на {d} больше другого. Их сумма равна {s}. Найдите меньшее число."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Take the difference away from the sum, then halve: (sum − difference) ÷ 2.",
+        "uz": "Yigʻindidan farqni ayiring va ikkiga boʻling: (yigʻindi − farq) : 2.",
+        "ru": "Вычтите разность из суммы и разделите пополам: (сумма − разность) : 2."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.05,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

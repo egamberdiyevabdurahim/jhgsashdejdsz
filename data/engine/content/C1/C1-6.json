@@ -1,0 +1,2069 @@
+{
+  "bank": "C1",
+  "batch": 6,
+  "items": [
+    {
+      "id": "C1-gel011",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "pythagoras",
+      "family": {
+        "template": "An isosceles triangle has sides of {s} cm, {s} cm and {g} cm. How long is its height to the base, in cm?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                4,
+                3,
+                5
+              ],
+              [
+                8,
+                6,
+                10
+              ],
+              [
+                5,
+                12,
+                13
+              ],
+              [
+                12,
+                5,
+                13
+              ],
+              [
+                9,
+                12,
+                15
+              ],
+              [
+                12,
+                9,
+                15
+              ],
+              [
+                8,
+                15,
+                17
+              ],
+              [
+                15,
+                8,
+                17
+              ],
+              [
+                12,
+                16,
+                20
+              ],
+              [
+                16,
+                12,
+                20
+              ],
+              [
+                7,
+                24,
+                25
+              ],
+              [
+                10,
+                24,
+                26
+              ],
+              [
+                15,
+                20,
+                25
+              ],
+              [
+                20,
+                15,
+                25
+              ]
+            ]
+          }
+        },
+        "derived": {
+          "k": "t[0]",
+          "h": "t[1]",
+          "s": "t[2]",
+          "g": "2*t[0]",
+          "ss": "s*s",
+          "kk": "k*k",
+          "d": "ss - kk"
+        },
+        "answer": "sqrt(s^2 - (g/2)^2)",
+        "distractors": [
+          "s - g/2",
+          "g/2",
+          "s + g/2"
+        ],
+        "integer": true,
+        "relation": "X^2 + ({g}/2)^2 = {s}^2; X > 0"
+      },
+      "page": "C2-ge0001",
+      "lang": "en",
+      "stem": {
+        "en": "An isosceles triangle has sides of {s} cm, {s} cm and {g} cm. How long is its height to the base, in cm?",
+        "uz": "Teng yonli uchburchakning tomonlari {s} sm, {s} sm va {g} sm. Uning asosiga tushirilgan balandligi necha sm?",
+        "ru": "Стороны равнобедренного треугольника равны {s} см, {s} см и {g} см. Чему равна его высота, проведённая к основанию, в см?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The height cuts the base in half: {g} ÷ 2 = {k} cm. Then h² = {s}² − {k}² = {ss} − {kk} = {d}, so h = {ANS} cm.",
+        "uz": "Balandlik asosni teng ikkiga boʻladi: {g} ÷ 2 = {k} sm. Keyin h² = {s}² − {k}² = {ss} − {kk} = {d}, demak h = {ANS} sm.",
+        "ru": "Высота делит основание пополам: {g} ÷ 2 = {k} см. Тогда h² = {s}² − {k}² = {ss} − {kk} = {d}, значит, h = {ANS} см."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.7,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-gel012",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "pythagoras",
+      "family": {
+        "template": "An isosceles triangle has sides of {s} cm, {s} cm and {g} cm. What is its area, in cm²?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                4,
+                3,
+                5
+              ],
+              [
+                8,
+                6,
+                10
+              ],
+              [
+                5,
+                12,
+                13
+              ],
+              [
+                12,
+                5,
+                13
+              ],
+              [
+                9,
+                12,
+                15
+              ],
+              [
+                12,
+                9,
+                15
+              ],
+              [
+                8,
+                15,
+                17
+              ],
+              [
+                15,
+                8,
+                17
+              ],
+              [
+                12,
+                16,
+                20
+              ],
+              [
+                16,
+                12,
+                20
+              ],
+              [
+                7,
+                24,
+                25
+              ],
+              [
+                10,
+                24,
+                26
+              ],
+              [
+                15,
+                20,
+                25
+              ],
+              [
+                20,
+                15,
+                25
+              ]
+            ]
+          }
+        },
+        "derived": {
+          "k": "t[0]",
+          "h": "t[1]",
+          "s": "t[2]",
+          "g": "2*t[0]",
+          "ss": "s*s",
+          "kk": "k*k",
+          "d": "ss - kk"
+        },
+        "answer": "g/2*sqrt(s^2 - (g/2)^2)",
+        "distractors": [
+          "g*sqrt(s^2 - (g/2)^2)",
+          "s*g/2",
+          "sqrt(s^2 - (g/2)^2)"
+        ],
+        "integer": true,
+        "relation": "X = {g}*sqrt({s}^2 - ({g}/2)^2)/2"
+      },
+      "page": "C2-ge0001",
+      "lang": "en",
+      "stem": {
+        "en": "An isosceles triangle has sides of {s} cm, {s} cm and {g} cm. What is its area, in cm²?",
+        "uz": "Teng yonli uchburchakning tomonlari {s} sm, {s} sm va {g} sm. Uning yuzi necha sm²?",
+        "ru": "Стороны равнобедренного треугольника равны {s} см, {s} см и {g} см. Чему равна его площадь, в см²?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Height to the base: h² = {s}² − {k}² = {d}, so h = {h} cm. Area: {g} × {h} ÷ 2 = {ANS} cm².",
+        "uz": "Asosga tushirilgan balandlik: h² = {s}² − {k}² = {d}, demak h = {h} sm. Yuzi: {g} × {h} ÷ 2 = {ANS} sm².",
+        "ru": "Высота к основанию: h² = {s}² − {k}² = {d}, значит, h = {h} см. Площадь: {g} × {h} ÷ 2 = {ANS} см²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-gel021",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "polygon_angles",
+      "family": {
+        "template": "Each interior angle of a regular polygon is {i}°. How many sides does it have?",
+        "params": {
+          "n": {
+            "values": [
+              5,
+              6,
+              8,
+              10,
+              12,
+              15,
+              18
+            ]
+          }
+        },
+        "derived": {
+          "i": "180 - 360/n",
+          "x": "360/n"
+        },
+        "answer": "360/(180 - i)",
+        "distractors": [
+          "180 - i",
+          "360/(180 - i) - 2",
+          "2*360/(180 - i)"
+        ],
+        "integer": true,
+        "relation": "(180 - {i})*X = 360"
+      },
+      "page": "C2-ge0002",
+      "lang": "en",
+      "stem": {
+        "en": "Each interior angle of a regular polygon is {i}°. How many sides does it have?",
+        "uz": "Muntazam koʻpburchakning har bir ichki burchagi {i}°. Uning nechta tomoni bor?",
+        "ru": "Каждый внутренний угол правильного многоугольника равен {i}°. Сколько у него сторон?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Each exterior angle is 180° − {i}° = {x}°. The exterior angles add up to 360°, so n = 360° ÷ {x}° = {ANS}.",
+        "uz": "Har bir tashqi burchak 180° − {i}° = {x}°. Tashqi burchaklar yigʻindisi 360°, demak n = 360° ÷ {x}° = {ANS}.",
+        "ru": "Каждый внешний угол равен 180° − {i}° = {x}°. Сумма внешних углов 360°, значит, n = 360° ÷ {x}° = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.7,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-gel022",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "polygon_angles",
+      "family": {
+        "template": "A regular polygon has {n} sides. How many degrees is each of its interior angles?",
+        "params": {
+          "n": {
+            "values": [
+              5,
+              6,
+              8,
+              10,
+              12,
+              15,
+              18,
+              20
+            ]
+          }
+        },
+        "derived": {
+          "x": "360/n"
+        },
+        "answer": "(n - 2)*180/n",
+        "distractors": [
+          "360/n",
+          "180",
+          "(n - 2)*180"
+        ],
+        "integer": true,
+        "relation": "X = 180 - 360/{n}"
+      },
+      "page": "C2-ge0002",
+      "lang": "en",
+      "stem": {
+        "en": "A regular polygon has {n} sides. How many degrees is each of its interior angles?",
+        "uz": "Muntazam koʻpburchakning {n} ta tomoni bor. Uning har bir ichki burchagi necha gradus?",
+        "ru": "У правильного многоугольника {n} сторон. Сколько градусов составляет каждый его внутренний угол?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Each exterior angle is 360° ÷ {n} = {x}°. Interior and exterior add up to 180°, so the interior angle is 180° − {x}° = {ANS}°.",
+        "uz": "Har bir tashqi burchak 360° ÷ {n} = {x}°. Ichki va tashqi burchak yigʻindisi 180°, demak ichki burchak 180° − {x}° = {ANS}°.",
+        "ru": "Каждый внешний угол равен 360° ÷ {n} = {x}°. Внутренний и внешний в сумме дают 180°, значит, внутренний угол 180° − {x}° = {ANS}°."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.6,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-gel031",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "isosceles_triangle",
+      "family": {
+        "template": "In an isosceles triangle, the angle between the equal sides is {d}° more than each base angle. How many degrees is each base angle?",
+        "params": {
+          "d": {
+            "min": 12,
+            "max": 120,
+            "step": 6,
+            "not": [
+              30,
+              36
+            ]
+          }
+        },
+        "derived": {
+          "r": "180 - d"
+        },
+        "answer": "(180 - d)/3",
+        "distractors": [
+          "(180 - d)/3 + d",
+          "(180 - d)/2",
+          "(180 + d)/3"
+        ],
+        "integer": true,
+        "relation": "X + X + (X + {d}) = 180"
+      },
+      "page": "C2-ge0003",
+      "lang": "en",
+      "stem": {
+        "en": "In an isosceles triangle, the angle between the equal sides is {d}° more than each base angle. How many degrees is each base angle?",
+        "uz": "Teng yonli uchburchakda teng tomonlar orasidagi burchak asosdagi har bir burchakdan {d}° katta. Asosdagi har bir burchak necha gradus?",
+        "ru": "В равнобедренном треугольнике угол между равными сторонами на {d}° больше каждого угла при основании. Сколько градусов составляет каждый угол при основании?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Let each base angle be x. Then x + x + (x + {d}°) = 180°, so 3x = {r}° and x = {ANS}°.",
+        "uz": "Asosdagi har bir burchak x boʻlsin. Unda x + x + (x + {d}°) = 180°, demak 3x = {r}° va x = {ANS}°.",
+        "ru": "Пусть каждый угол при основании равен x. Тогда x + x + (x + {d}°) = 180°, значит, 3x = {r}° и x = {ANS}°."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.6,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-gel032",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "isosceles_triangle",
+      "family": {
+        "template": "In an isosceles triangle, the angle between the equal sides is {d}° more than each base angle. How many degrees is the angle between the equal sides?",
+        "params": {
+          "d": {
+            "min": 12,
+            "max": 120,
+            "step": 6,
+            "not": [
+              30,
+              72
+            ]
+          }
+        },
+        "derived": {
+          "r": "180 - d",
+          "x": "(180 - d)/3"
+        },
+        "answer": "(180 - d)/3 + d",
+        "distractors": [
+          "(180 - d)/3",
+          "180 - d",
+          "2*(180 - d)/3"
+        ],
+        "integer": true,
+        "relation": "(X - {d}) + (X - {d}) + X = 180"
+      },
+      "page": "C2-ge0003",
+      "lang": "en",
+      "stem": {
+        "en": "In an isosceles triangle, the angle between the equal sides is {d}° more than each base angle. How many degrees is the angle between the equal sides?",
+        "uz": "Teng yonli uchburchakda teng tomonlar orasidagi burchak asosdagi har bir burchakdan {d}° katta. Teng tomonlar orasidagi burchak necha gradus?",
+        "ru": "В равнобедренном треугольнике угол между равными сторонами на {d}° больше каждого угла при основании. Сколько градусов составляет угол между равными сторонами?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Each base angle x: 3x + {d}° = 180°, so 3x = {r}° and x = {x}°. The third angle is {x}° + {d}° = {ANS}°.",
+        "uz": "Asosdagi har bir burchak x: 3x + {d}° = 180°, demak 3x = {r}° va x = {x}°. Uchinchi burchak {x}° + {d}° = {ANS}°.",
+        "ru": "Каждый угол при основании x: 3x + {d}° = 180°, значит, 3x = {r}° и x = {x}°. Третий угол равен {x}° + {d}° = {ANS}°."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.5,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-gel041",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "similarity",
+      "family": {
+        "template": "A {p} m pole casts a {q} m shadow. At the same moment a tree casts a {T} m shadow. How tall is the tree, in metres?",
+        "params": {
+          "p": {
+            "values": [
+              2,
+              3,
+              4
+            ]
+          },
+          "q": {
+            "values": [
+              2,
+              3,
+              5
+            ]
+          },
+          "k": {
+            "min": 2,
+            "max": 8
+          }
+        },
+        "derived": {
+          "T": "q*k"
+        },
+        "constraints": [
+          "p != q"
+        ],
+        "answer": "p*T/q",
+        "distractors": [
+          "T - q + p",
+          "T/q",
+          "p*T"
+        ],
+        "integer": true,
+        "relation": "X/{T} = {p}/{q}"
+      },
+      "page": "C2-ge0004",
+      "lang": "en",
+      "stem": {
+        "en": "A {p} m pole casts a {q} m shadow. At the same moment a tree casts a {T} m shadow. How tall is the tree, in metres?",
+        "uz": "Balandligi {p} m boʻlgan ustunning soyasi {q} m. Xuddi shu paytda daraxtning soyasi {T} m. Daraxtning balandligi necha metr?",
+        "ru": "Столб высотой {p} м отбрасывает тень длиной {q} м. В тот же момент тень дерева равна {T} м. Какова высота дерева, в метрах?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The triangles are similar. Match shadow with shadow: k = {T} ÷ {q} = {k}. The tree is {p} × {k} = {ANS} m tall.",
+        "uz": "Uchburchaklar oʻxshash. Soyani soya bilan solishtiring: k = {T} ÷ {q} = {k}. Daraxt balandligi {p} × {k} = {ANS} m.",
+        "ru": "Треугольники подобны. Сравните тень с тенью: k = {T} ÷ {q} = {k}. Высота дерева {p} × {k} = {ANS} м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.7,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-gel042",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "similarity",
+      "family": {
+        "template": "A {p} m pole casts a {q} m shadow. At the same moment, how long is the shadow of a building {H} m tall, in metres?",
+        "params": {
+          "p": {
+            "values": [
+              2,
+              3,
+              4
+            ]
+          },
+          "q": {
+            "values": [
+              2,
+              3,
+              5
+            ]
+          },
+          "k": {
+            "min": 2,
+            "max": 8
+          }
+        },
+        "derived": {
+          "H": "p*k"
+        },
+        "constraints": [
+          "p != q"
+        ],
+        "answer": "q*H/p",
+        "distractors": [
+          "H - p + q",
+          "H/p",
+          "q*H"
+        ],
+        "integer": true,
+        "relation": "X/{H} = {q}/{p}"
+      },
+      "page": "C2-ge0004",
+      "lang": "en",
+      "stem": {
+        "en": "A {p} m pole casts a {q} m shadow. At the same moment, how long is the shadow of a building {H} m tall, in metres?",
+        "uz": "Balandligi {p} m boʻlgan ustunning soyasi {q} m. Xuddi shu paytda balandligi {H} m boʻlgan binoning soyasi necha metr?",
+        "ru": "Столб высотой {p} м отбрасывает тень длиной {q} м. Какой длины в тот же момент тень здания высотой {H} м, в метрах?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The triangles are similar. Match height with height: k = {H} ÷ {p} = {k}. The shadow is {q} × {k} = {ANS} m long.",
+        "uz": "Uchburchaklar oʻxshash. Balandlikni balandlik bilan solishtiring: k = {H} ÷ {p} = {k}. Soya uzunligi {q} × {k} = {ANS} m.",
+        "ru": "Треугольники подобны. Сравните высоту с высотой: k = {H} ÷ {p} = {k}. Длина тени {q} × {k} = {ANS} м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.6,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-gel051",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circle_area",
+      "family": {
+        "template": "A round flowerbed has a radius of {r} m. Around it there is a path {w} m wide. The area of the path is kπ m². What is k?",
+        "params": {
+          "r": {
+            "min": 3,
+            "max": 12
+          },
+          "w": {
+            "min": 1,
+            "max": 3
+          }
+        },
+        "derived": {
+          "R": "r + w",
+          "RR": "R*R",
+          "rr": "r*r"
+        },
+        "constraints": [
+          "r != 6 || w != 1"
+        ],
+        "answer": "(r + w)^2 - r^2",
+        "distractors": [
+          "w^2",
+          "(r + w)^2",
+          "2*r*w"
+        ],
+        "integer": true,
+        "relation": "pi*X = pi*({r} + {w})^2 - pi*{r}^2"
+      },
+      "page": "C2-ge0005",
+      "lang": "en",
+      "stem": {
+        "en": "A round flowerbed has a radius of {r} m. Around it there is a path {w} m wide. The area of the path is kπ m². What is k?",
+        "uz": "Dumaloq gulzorning radiusi {r} m. Uning atrofida eni {w} m boʻlgan yoʻlak bor. Yoʻlakning yuzi kπ m². k nechaga teng?",
+        "ru": "Радиус круглой клумбы равен {r} м. Вокруг неё идёт дорожка шириной {w} м. Площадь дорожки равна kπ м². Чему равно k?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Flowerbed and path together: a circle of radius {r} + {w} = {R} m, area {RR}π. Flowerbed: {rr}π. Path: {RR}π − {rr}π = {ANS}π m².",
+        "uz": "Gulzor va yoʻlak birga: radiusi {r} + {w} = {R} m boʻlgan doira, yuzi {RR}π. Gulzor: {rr}π. Yoʻlak: {RR}π − {rr}π = {ANS}π m².",
+        "ru": "Клумба вместе с дорожкой: круг радиуса {r} + {w} = {R} м, площадь {RR}π. Клумба: {rr}π. Дорожка: {RR}π − {rr}π = {ANS}π м²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-gel052",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circle_area",
+      "family": {
+        "template": "A round flowerbed has a radius of {r} m. Around it there is a path {w} m wide. The outer edge of the path is a circle. Its length is kπ m. What is k?",
+        "params": {
+          "r": {
+            "min": 4,
+            "max": 12
+          },
+          "w": {
+            "min": 1,
+            "max": 3
+          }
+        },
+        "derived": {
+          "R": "r + w"
+        },
+        "constraints": [
+          "r != 6 || w != 1"
+        ],
+        "answer": "2*(r + w)",
+        "distractors": [
+          "2*r",
+          "(r + w)^2",
+          "r + w"
+        ],
+        "integer": true,
+        "relation": "pi*X = 2*pi*({r} + {w})"
+      },
+      "page": "C2-ge0005",
+      "lang": "en",
+      "stem": {
+        "en": "A round flowerbed has a radius of {r} m. Around it there is a path {w} m wide. The outer edge of the path is a circle. Its length is kπ m. What is k?",
+        "uz": "Dumaloq gulzorning radiusi {r} m. Uning atrofida eni {w} m boʻlgan yoʻlak bor. Yoʻlakning tashqi cheti aylana. Uning uzunligi kπ m. k nechaga teng?",
+        "ru": "Радиус круглой клумбы равен {r} м. Вокруг неё идёт дорожка шириной {w} м. Внешний край дорожки — окружность. Её длина равна kπ м. Чему равно k?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The outer circle has radius {r} + {w} = {R} m. Its length is 2π · {R} = {ANS}π m.",
+        "uz": "Tashqi aylananing radiusi {r} + {w} = {R} m. Uning uzunligi 2π · {R} = {ANS}π m.",
+        "ru": "Радиус внешней окружности {r} + {w} = {R} м. Её длина 2π · {R} = {ANS}π м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.7,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-gel061",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "family": {
+        "template": "A cylindrical water tank has a radius of {r} m and a height of {h} m. Its volume is kπ m³. What is k?",
+        "params": {
+          "r": {
+            "min": 3,
+            "max": 6
+          },
+          "h": {
+            "min": 2,
+            "max": 9
+          }
+        },
+        "derived": {
+          "rr": "r*r"
+        },
+        "constraints": [
+          "r != h",
+          "r != 2*h"
+        ],
+        "answer": "r^2*h",
+        "distractors": [
+          "r*h",
+          "2*r*h",
+          "r^2"
+        ],
+        "integer": true,
+        "relation": "pi*X = pi*{r}^2*{h}"
+      },
+      "page": "C2-ge0006",
+      "lang": "en",
+      "stem": {
+        "en": "A cylindrical water tank has a radius of {r} m and a height of {h} m. Its volume is kπ m³. What is k?",
+        "uz": "Silindr shaklidagi suv idishining radiusi {r} m, balandligi {h} m. Uning hajmi kπ m³. k nechaga teng?",
+        "ru": "Цилиндрический бак для воды имеет радиус {r} м и высоту {h} м. Его объём равен kπ м³. Чему равно k?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Base area: π · {r}² = {rr}π m². Volume = base area × height: {rr}π · {h} = {ANS}π m³.",
+        "uz": "Asos yuzi: π · {r}² = {rr}π m². Hajm = asos yuzi × balandlik: {rr}π · {h} = {ANS}π m³.",
+        "ru": "Площадь основания: π · {r}² = {rr}π м². Объём = площадь основания × высота: {rr}π · {h} = {ANS}π м³."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.7,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-gel062",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "family": {
+        "template": "A water tank has a base area of {S} m² and a height of {h} m. How many litres of water does it hold? (1 m³ = 1000 litres)",
+        "params": {
+          "S": {
+            "min": 2,
+            "max": 6
+          },
+          "h": {
+            "min": 2,
+            "max": 6
+          }
+        },
+        "derived": {
+          "v": "S*h"
+        },
+        "constraints": [
+          "S*h != S + h"
+        ],
+        "answer": "S*h*1000",
+        "distractors": [
+          "S*h",
+          "S*h*100",
+          "(S + h)*1000"
+        ],
+        "integer": true,
+        "relation": "X = {S}*{h}*1000"
+      },
+      "page": "C2-ge0006",
+      "lang": "en",
+      "stem": {
+        "en": "A water tank has a base area of {S} m² and a height of {h} m. How many litres of water does it hold? (1 m³ = 1000 litres)",
+        "uz": "Suv idishining asos yuzi {S} m², balandligi {h} m. Unga necha litr suv sigʻadi? (1 m³ = 1000 litr)",
+        "ru": "Площадь основания бака для воды равна {S} м², высота {h} м. Сколько литров воды в него помещается? (1 м³ = 1000 литров)"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Volume = base area × height: {S} × {h} = {v} m³. In litres: {v} × 1000 = {ANS} L.",
+        "uz": "Hajm = asos yuzi × balandlik: {S} × {h} = {v} m³. Litrda: {v} × 1000 = {ANS} L.",
+        "ru": "Объём = площадь основания × высота: {S} × {h} = {v} м³. В литрах: {v} × 1000 = {ANS} л."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.8,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-pal011",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "fraction",
+      "family": {
+        "template": "{a}/{b} + {c}/{d} = N/{L}, where {L} is the least common denominator of {b} and {d}. What is N?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                6,
+                8
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                6,
+                9
+              ],
+              [
+                8,
+                12
+              ],
+              [
+                4,
+                10
+              ],
+              [
+                6,
+                10
+              ],
+              [
+                9,
+                12
+              ],
+              [
+                10,
+                15
+              ],
+              [
+                6,
+                15
+              ],
+              [
+                8,
+                10
+              ]
+            ]
+          },
+          "a": {
+            "min": 1,
+            "max": 9
+          },
+          "c": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "derived": {
+          "b": "t[0]",
+          "d": "t[1]",
+          "L": "lcm(b, d)",
+          "m": "L/b",
+          "n": "L/d",
+          "am": "a*m",
+          "cn": "c*n"
+        },
+        "constraints": [
+          "a < b",
+          "c < d",
+          "gcd(a, b) == 1",
+          "gcd(c, d) == 1",
+          "a != 5 || b != 6 || c != 3"
+        ],
+        "answer": "a*L/b + c*L/d",
+        "distractors": [
+          "a + c",
+          "a*d + c*b",
+          "a*L/b + c"
+        ],
+        "integer": true,
+        "relation": "X/{L} = {a}/{b} + {c}/{d}"
+      },
+      "page": "C2-pa0001",
+      "lang": "en",
+      "stem": {
+        "en": "{a}/{b} + {c}/{d} = N/{L}, where {L} is the least common denominator of {b} and {d}. What is N?",
+        "uz": "{a}/{b} + {c}/{d} = N/{L}, bu yerda {L} — {b} va {d} ning eng kichik umumiy maxraji. N nechaga teng?",
+        "ru": "{a}/{b} + {c}/{d} = N/{L}, где {L} — наименьший общий знаменатель чисел {b} и {d}. Чему равно N?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Make the denominators equal: {a}/{b} = {am}/{L} (top and bottom × {m}) and {c}/{d} = {cn}/{L} (× {n}). Add the tops: {am} + {cn} = {ANS}.",
+        "uz": "Maxrajlarni tenglang: {a}/{b} = {am}/{L} (surat va maxraj × {m}) va {c}/{d} = {cn}/{L} (× {n}). Suratlarni qoʻshing: {am} + {cn} = {ANS}.",
+        "ru": "Приведите к общему знаменателю: {a}/{b} = {am}/{L} (числитель и знаменатель × {m}) и {c}/{d} = {cn}/{L} (× {n}). Сложите числители: {am} + {cn} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-pal012",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "fraction",
+      "family": {
+        "template": "To add {a}/{b} and {c}/{d}, both fractions are written with the denominator {L}. {a}/{b} = N/{L}. What is N?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                6,
+                8
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                6,
+                9
+              ],
+              [
+                8,
+                12
+              ],
+              [
+                4,
+                10
+              ],
+              [
+                6,
+                10
+              ],
+              [
+                9,
+                12
+              ],
+              [
+                10,
+                15
+              ],
+              [
+                6,
+                15
+              ],
+              [
+                8,
+                10
+              ]
+            ]
+          },
+          "a": {
+            "min": 2,
+            "max": 9
+          },
+          "c": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "derived": {
+          "b": "t[0]",
+          "d": "t[1]",
+          "L": "lcm(b, d)",
+          "m": "L/b"
+        },
+        "constraints": [
+          "a < b",
+          "c < d",
+          "gcd(a, b) == 1",
+          "gcd(c, d) == 1",
+          "a != L/b",
+          "a*L/b != a + L/b",
+          "a != 5 || b != 6 || c != 3"
+        ],
+        "answer": "a*L/b",
+        "distractors": [
+          "a",
+          "a + L/b",
+          "L/b"
+        ],
+        "integer": true,
+        "relation": "X/{L} = {a}/{b}"
+      },
+      "page": "C2-pa0001",
+      "lang": "en",
+      "stem": {
+        "en": "To add {a}/{b} and {c}/{d}, both fractions are written with the denominator {L}. {a}/{b} = N/{L}. What is N?",
+        "uz": "{a}/{b} va {c}/{d} ni qoʻshish uchun ikkala kasr {L} maxraj bilan yoziladi. {a}/{b} = N/{L}. N nechaga teng?",
+        "ru": "Чтобы сложить {a}/{b} и {c}/{d}, обе дроби записывают со знаменателем {L}. {a}/{b} = N/{L}. Чему равно N?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{L} ÷ {b} = {m}, so multiply the top and the bottom by {m}: {a} × {m} = {ANS}.",
+        "uz": "{L} ÷ {b} = {m}, demak surat va maxrajni {m} ga koʻpaytiring: {a} × {m} = {ANS}.",
+        "ru": "{L} ÷ {b} = {m}, значит, числитель и знаменатель умножаем на {m}: {a} × {m} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.1,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-pal021",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "negative_numbers",
+      "family": {
+        "template": "Calculate: −{a} − (−{b}) + (−{c}) × {d}",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 9
+          },
+          "b": {
+            "min": 2,
+            "max": 9
+          },
+          "c": {
+            "min": 2,
+            "max": 5
+          },
+          "d": {
+            "min": 2,
+            "max": 5
+          }
+        },
+        "derived": {
+          "cd": "c*d",
+          "s": "b - a"
+        },
+        "constraints": [
+          "a != b",
+          "(-a - b - c*d) != (b - a - c)*d",
+          "(b - a + c*d) != (b - a - c)*d",
+          "a != 6 || b != 9 || c != 2 || d != 4"
+        ],
+        "answer": "-a + b - c*d",
+        "distractors": [
+          "-a - b - c*d",
+          "-a + b + c*d",
+          "(-a + b - c)*d"
+        ],
+        "integer": true,
+        "relation": "X = -{a} - (-{b}) + (-{c})*{d}"
+      },
+      "page": "C2-pa0002",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: −{a} − (−{b}) + (−{c}) × {d}",
+        "uz": "Hisoblang: −{a} − (−{b}) + (−{c}) × {d}",
+        "ru": "Вычислите: −{a} − (−{b}) + (−{c}) × {d}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Multiplication first: (−{c}) × {d} = −{cd}. Then −{a} − (−{b}) = −{a} + {b} = {s}. Last: {s} − {cd} = {ANS}.",
+        "uz": "Avval koʻpaytirish: (−{c}) × {d} = −{cd}. Keyin −{a} − (−{b}) = −{a} + {b} = {s}. Oxirida: {s} − {cd} = {ANS}.",
+        "ru": "Сначала умножение: (−{c}) × {d} = −{cd}. Затем −{a} − (−{b}) = −{a} + {b} = {s}. В конце: {s} − {cd} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -1.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-pal022",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "negative_numbers",
+      "family": {
+        "template": "Calculate: (−{c}) × {d} − (−{b})",
+        "params": {
+          "b": {
+            "min": 2,
+            "max": 12
+          },
+          "c": {
+            "min": 2,
+            "max": 6
+          },
+          "d": {
+            "min": 2,
+            "max": 6
+          }
+        },
+        "derived": {
+          "cd": "c*d"
+        },
+        "constraints": [
+          "c*d != b"
+        ],
+        "answer": "b - c*d",
+        "distractors": [
+          "-c*d - b",
+          "c*d + b",
+          "c*d - b"
+        ],
+        "integer": true,
+        "relation": "X = (-{c})*{d} - (-{b})"
+      },
+      "page": "C2-pa0002",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: (−{c}) × {d} − (−{b})",
+        "uz": "Hisoblang: (−{c}) × {d} − (−{b})",
+        "ru": "Вычислите: (−{c}) × {d} − (−{b})"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Multiplication first: (−{c}) × {d} = −{cd} (different signs give a negative). Subtracting a negative number is adding: −{cd} + {b} = {ANS}.",
+        "uz": "Avval koʻpaytirish: (−{c}) × {d} = −{cd} (ishoralar har xil boʻlsa, natija manfiy). Manfiy sonni ayirish qoʻshish demak: −{cd} + {b} = {ANS}.",
+        "ru": "Сначала умножение: (−{c}) × {d} = −{cd} (разные знаки дают минус). Вычесть отрицательное число значит прибавить: −{cd} + {b} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -2.1,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-pal031",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "family": {
+        "template": "A phone costs {P} soʻm. Its price goes up by {r}%. What is the new price, in soʻm?",
+        "params": {
+          "k": {
+            "min": 8,
+            "max": 40,
+            "step": 2
+          },
+          "r": {
+            "values": [
+              5,
+              10,
+              15,
+              20,
+              25
+            ]
+          }
+        },
+        "derived": {
+          "P": "k*100000",
+          "up": "P*r/100"
+        },
+        "constraints": [
+          "k != 24 || r != 5"
+        ],
+        "answer": "P + P*r/100",
+        "distractors": [
+          "P*r/100",
+          "P + r",
+          "P - P*r/100"
+        ],
+        "integer": true,
+        "relation": "X = {P} + {P}*{r}/100"
+      },
+      "page": "C2-pa0003",
+      "lang": "en",
+      "stem": {
+        "en": "A phone costs {P} soʻm. Its price goes up by {r}%. What is the new price, in soʻm?",
+        "uz": "Telefon {P} soʻm turadi. Uning narxi {r}% ga oshdi. Yangi narx necha soʻm?",
+        "ru": "Телефон стоит {P} сум. Его цена выросла на {r}%. Какова новая цена, в сумах?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{r}% of {P} is {P} × {r} ÷ 100 = {up}. New price: {P} + {up} = {ANS} soʻm.",
+        "uz": "{P} ning {r}% i: {P} × {r} ÷ 100 = {up}. Yangi narx: {P} + {up} = {ANS} soʻm.",
+        "ru": "{r}% от {P} — это {P} × {r} ÷ 100 = {up}. Новая цена: {P} + {up} = {ANS} сум."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.8,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-pal032",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "family": {
+        "template": "A jacket costs {P} soʻm. In a sale its price goes down by {r}%. What is the new price, in soʻm?",
+        "params": {
+          "k": {
+            "min": 10,
+            "max": 60,
+            "step": 5
+          },
+          "r": {
+            "values": [
+              10,
+              20,
+              25,
+              30,
+              40
+            ]
+          }
+        },
+        "derived": {
+          "P": "k*10000",
+          "dn": "P*r/100"
+        },
+        "answer": "P - P*r/100",
+        "distractors": [
+          "P*r/100",
+          "P - r",
+          "P + P*r/100"
+        ],
+        "integer": true,
+        "relation": "X = {P} - {P}*{r}/100"
+      },
+      "page": "C2-pa0003",
+      "lang": "en",
+      "stem": {
+        "en": "A jacket costs {P} soʻm. In a sale its price goes down by {r}%. What is the new price, in soʻm?",
+        "uz": "Kurtka {P} soʻm turadi. Chegirmada uning narxi {r}% ga tushdi. Yangi narx necha soʻm?",
+        "ru": "Куртка стоит {P} сум. На распродаже её цена снизилась на {r}%. Какова новая цена, в сумах?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{r}% of {P} is {P} × {r} ÷ 100 = {dn}. The price went down, so subtract: {P} − {dn} = {ANS} soʻm.",
+        "uz": "{P} ning {r}% i: {P} × {r} ÷ 100 = {dn}. Narx tushdi, demak ayiramiz: {P} − {dn} = {ANS} soʻm.",
+        "ru": "{r}% от {P} — это {P} × {r} ÷ 100 = {dn}. Цена снизилась, значит, вычитаем: {P} − {dn} = {ANS} сум."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.7,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-pal051",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "exponents",
+      "family": {
+        "template": "Calculate: {a}^{n} − (−{b})² + {c} × {d}²",
+        "params": {
+          "a": {
+            "values": [
+              2,
+              3
+            ]
+          },
+          "n": {
+            "values": [
+              3,
+              4
+            ]
+          },
+          "b": {
+            "min": 2,
+            "max": 5
+          },
+          "c": {
+            "min": 2,
+            "max": 5
+          },
+          "d": {
+            "values": [
+              2,
+              3
+            ]
+          }
+        },
+        "derived": {
+          "p": "a^n",
+          "q": "b^2",
+          "r": "d^2",
+          "s": "c*r"
+        },
+        "constraints": [
+          "a != 2 || n != 4 || b != 3 || c != 5 || d != 2",
+          "(a^n - b^2 + c)*d^2 != a^n - b^2 + c*d^2",
+          "a*n - 2*b + 2*c*d != a^n - b^2 + c*d^2",
+          "a*n - 2*b + 2*c*d != a^n + b^2 + c*d^2",
+          "(a^n - b^2 + c)*d^2 != a^n + b^2 + c*d^2",
+          "(a^n - b^2 + c)*d^2 != a*n - 2*b + 2*c*d"
+        ],
+        "answer": "a^n - b^2 + c*d^2",
+        "distractors": [
+          "a^n + b^2 + c*d^2",
+          "a*n - 2*b + 2*c*d",
+          "(a^n - b^2 + c)*d^2"
+        ],
+        "integer": true,
+        "relation": "X = {a}^{n} - (-{b})^2 + {c}*{d}^2"
+      },
+      "page": "C2-pa0005",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: {a}^{n} − (−{b})² + {c} × {d}²",
+        "uz": "Hisoblang: {a}^{n} − (−{b})² + {c} × {d}²",
+        "ru": "Вычислите: {a}^{n} − (−{b})² + {c} × {d}²"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Powers first: {a}^{n} = {p}, (−{b})² = {q}, {d}² = {r}. Then multiplication: {c} × {r} = {s}. Last, left to right: {p} − {q} + {s} = {ANS}.",
+        "uz": "Avval darajalar: {a}^{n} = {p}, (−{b})² = {q}, {d}² = {r}. Keyin koʻpaytirish: {c} × {r} = {s}. Oxirida chapdan oʻngga: {p} − {q} + {s} = {ANS}.",
+        "ru": "Сначала степени: {a}^{n} = {p}, (−{b})² = {q}, {d}² = {r}. Затем умножение: {c} × {r} = {s}. В конце слева направо: {p} − {q} + {s} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -1.7,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-pal052",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "exponents",
+      "family": {
+        "template": "Calculate: (−{b})² + {c} × {d}²",
+        "params": {
+          "b": {
+            "min": 2,
+            "max": 6
+          },
+          "c": {
+            "min": 2,
+            "max": 5
+          },
+          "d": {
+            "values": [
+              2,
+              3
+            ]
+          }
+        },
+        "derived": {
+          "q": "b^2",
+          "r": "d^2",
+          "s": "c*r"
+        },
+        "constraints": [
+          "b != 3 || c != 5 || d != 2",
+          "2*b + 2*c*d != b^2 + c*d^2",
+          "2*b + 2*c*d != c*d^2 - b^2",
+          "2*b + 2*c*d != (b^2 + c)*d^2"
+        ],
+        "answer": "b^2 + c*d^2",
+        "distractors": [
+          "-b^2 + c*d^2",
+          "2*b + 2*c*d",
+          "(b^2 + c)*d^2"
+        ],
+        "integer": true,
+        "relation": "X = (-{b})^2 + {c}*{d}^2"
+      },
+      "page": "C2-pa0005",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: (−{b})² + {c} × {d}²",
+        "uz": "Hisoblang: (−{b})² + {c} × {d}²",
+        "ru": "Вычислите: (−{b})² + {c} × {d}²"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Powers first: (−{b})² = {q} (a negative number squared is positive) and {d}² = {r}. Then {c} × {r} = {s}. Last: {q} + {s} = {ANS}.",
+        "uz": "Avval darajalar: (−{b})² = {q} (manfiy sonning kvadrati musbat) va {d}² = {r}. Keyin {c} × {r} = {s}. Oxirida: {q} + {s} = {ANS}.",
+        "ru": "Сначала степени: (−{b})² = {q} (квадрат отрицательного числа положителен) и {d}² = {r}. Затем {c} × {r} = {s}. В конце: {q} + {s} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -1.9,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-pal061",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "proportion",
+      "family": {
+        "template": "{a} kg of apples cost {P} soʻm. How much do {b} kg cost, in soʻm?",
+        "params": {
+          "a": {
+            "values": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "u": {
+            "values": [
+              6,
+              7,
+              8,
+              9,
+              12,
+              15
+            ]
+          },
+          "b": {
+            "min": 6,
+            "max": 12
+          }
+        },
+        "derived": {
+          "P": "a*u*1000",
+          "Pb": "P*b",
+          "u1": "P/a"
+        },
+        "constraints": [
+          "b - a != 1",
+          "a != 4 || u != 9 || b != 7"
+        ],
+        "answer": "P*b/a",
+        "distractors": [
+          "P/a",
+          "P*b",
+          "P/a*(b - a)"
+        ],
+        "integer": true,
+        "relation": "{a}*X = {P}*{b}"
+      },
+      "page": "C2-pa0006",
+      "lang": "en",
+      "stem": {
+        "en": "{a} kg of apples cost {P} soʻm. How much do {b} kg cost, in soʻm?",
+        "uz": "{a} kg olma {P} soʻm turadi. {b} kg olma necha soʻm turadi?",
+        "ru": "{a} кг яблок стоят {P} сум. Сколько стоят {b} кг, в сумах?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Cross-multiply: {a} × x = {P} × {b} = {Pb}, so x = {Pb} ÷ {a} = {ANS} soʻm. Check: 1 kg costs {u1} soʻm.",
+        "uz": "Proporsiya: {a} × x = {P} × {b} = {Pb}, demak x = {Pb} ÷ {a} = {ANS} soʻm. Tekshirish: 1 kg {u1} soʻm turadi.",
+        "ru": "Перемножаем крест-накрест: {a} × x = {P} × {b} = {Pb}, значит, x = {Pb} ÷ {a} = {ANS} сум. Проверка: 1 кг стоит {u1} сум."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.8,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-pal062",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "proportion",
+      "family": {
+        "template": "{a} notebooks cost {P} soʻm. How many of these notebooks can you buy for {Q} soʻm?",
+        "params": {
+          "a": {
+            "values": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "u": {
+            "values": [
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "n": {
+            "min": 6,
+            "max": 12
+          }
+        },
+        "derived": {
+          "P": "a*u*1000",
+          "Q": "n*u*1000",
+          "u1": "P/a"
+        },
+        "answer": "Q*a/P",
+        "distractors": [
+          "Q*a/P - a",
+          "Q*a/P + a",
+          "a*Q*a/P"
+        ],
+        "integer": true,
+        "relation": "{a}/{P} = X/{Q}"
+      },
+      "page": "C2-pa0006",
+      "lang": "en",
+      "stem": {
+        "en": "{a} notebooks cost {P} soʻm. How many of these notebooks can you buy for {Q} soʻm?",
+        "uz": "{a} ta daftar {P} soʻm turadi. {Q} soʻmga shunday daftardan nechta olish mumkin?",
+        "ru": "{a|тетрадь стоит|тетради стоят|тетрадей стоят} {P} сум. Сколько таких тетрадей можно купить на {Q} сум?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Keep the same units in the same places: notebooks over soʻm. One notebook costs {P} ÷ {a} = {u1} soʻm, so x = {Q} ÷ {u1} = {ANS}.",
+        "uz": "Bir xil birliklarni bir xil oʻrinda yozing: daftarlar soʻmga. Bitta daftar {P} ÷ {a} = {u1} soʻm, demak x = {Q} ÷ {u1} = {ANS}.",
+        "ru": "Одинаковые единицы ставим на одинаковые места: тетради к сумам. Одна тетрадь стоит {P} ÷ {a} = {u1} сум, значит, x = {Q} ÷ {u1} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.7,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-cal011",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "limits",
+      "family": {
+        "template": "What is the limit of (x² − {s})/(x − {a}) as x approaches {a}?",
+        "params": {
+          "a": {
+            "min": 3,
+            "max": 12
+          }
+        },
+        "derived": {
+          "s": "a*a"
+        },
+        "answer": "2*a",
+        "distractors": [
+          "0",
+          "a",
+          "a*a"
+        ],
+        "integer": true,
+        "relation": "X = (({a} + 0.000001)^2 - {s})/0.000001"
+      },
+      "page": "C2-ca0001",
+      "lang": "en",
+      "stem": {
+        "en": "What is the limit of (x² − {s})/(x − {a}) as x approaches {a}?",
+        "uz": "x {a} ga intilganda (x² − {s})/(x − {a}) ning limiti nechaga teng?",
+        "ru": "Чему равен предел (x² − {s})/(x − {a}) при x → {a}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Putting x = {a} gives 0/0, so factor first: x² − {s} = (x − {a})(x + {a}). Cancel (x − {a}), then put x = {a}: {a} + {a} = {ANS}.",
+        "uz": "x = {a} ni qoʻysak, 0/0 chiqadi, shuning uchun avval koʻpaytuvchilarga ajratamiz: x² − {s} = (x − {a})(x + {a}). (x − {a}) ni qisqartiramiz, keyin x = {a} ni qoʻyamiz: {a} + {a} = {ANS}.",
+        "ru": "Подстановка x = {a} даёт 0/0, поэтому сначала раскладываем: x² − {s} = (x − {a})(x + {a}). Сокращаем (x − {a}), затем подставляем x = {a}: {a} + {a} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.2,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-cal012",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "limits",
+      "family": {
+        "template": "What is the limit of (x² + {p}x − {q})/(x − {a}) as x approaches {a}?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 6
+          },
+          "m": {
+            "min": 4,
+            "max": 15
+          }
+        },
+        "derived": {
+          "p": "m - a",
+          "q": "a*m"
+        },
+        "constraints": [
+          "m - a >= 2"
+        ],
+        "answer": "a + m",
+        "distractors": [
+          "0",
+          "m",
+          "a*m"
+        ],
+        "integer": true,
+        "relation": "X = (({a} + 0.000001)^2 + {p}*({a} + 0.000001) - {q})/0.000001"
+      },
+      "page": "C2-ca0001",
+      "lang": "en",
+      "stem": {
+        "en": "What is the limit of (x² + {p}x − {q})/(x − {a}) as x approaches {a}?",
+        "uz": "x {a} ga intilganda (x² + {p}x − {q})/(x − {a}) ning limiti nechaga teng?",
+        "ru": "Чему равен предел (x² + {p}x − {q})/(x − {a}) при x → {a}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Putting x = {a} gives 0/0. Factor the top: x² + {p}x − {q} = (x − {a})(x + {m}). Cancel (x − {a}), then put x = {a}: {a} + {m} = {ANS}.",
+        "uz": "x = {a} ni qoʻysak, 0/0 chiqadi. Suratni koʻpaytuvchilarga ajratamiz: x² + {p}x − {q} = (x − {a})(x + {m}). (x − {a}) ni qisqartiramiz, keyin x = {a} ni qoʻyamiz: {a} + {m} = {ANS}.",
+        "ru": "Подстановка x = {a} даёт 0/0. Раскладываем числитель: x² + {p}x − {q} = (x − {a})(x + {m}). Сокращаем (x − {a}), затем подставляем x = {a}: {a} + {m} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.4,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-pal041",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "decimals",
+      "family": {
+        "template": "One metre of fabric weighs {w} kg. How many kilograms do {L} m of this fabric weigh?",
+        "params": {
+          "w": {
+            "values": [
+              0.15,
+              0.25,
+              0.35,
+              0.45,
+              0.65,
+              0.75,
+              0.85
+            ]
+          },
+          "L": {
+            "values": [
+              1.2,
+              1.4,
+              1.6,
+              2.4,
+              2.6,
+              3.2,
+              3.4,
+              4.6
+            ]
+          }
+        },
+        "derived": {
+          "wi": "round(w*100)",
+          "Li": "round(L*10)",
+          "pi": "wi*Li"
+        },
+        "answer": "w*L",
+        "distractors": [
+          "10*w*L",
+          "w*L/10",
+          "w + L"
+        ],
+        "integer": false,
+        "relation": "X/{L} = {w}",
+        "decimals": 3
+      },
+      "page": "C2-pa0004",
+      "lang": "en",
+      "stem": {
+        "en": "One metre of fabric weighs {w} kg. How many kilograms do {L} m of this fabric weigh?",
+        "uz": "Bir metr matoning ogʻirligi {w} kg. Shu matoning {L} metri necha kilogramm boʻladi?",
+        "ru": "Один метр ткани весит {w} кг. Сколько килограммов весят {L} м этой ткани?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Multiply without the points: {wi} × {Li} = {pi}. Digits after the point: 2 in {w} and 1 in {L}, 3 in all, so {w} × {L} = {ANS} kg.",
+        "uz": "Vergulsiz koʻpaytiramiz: {wi} × {Li} = {pi}. Verguldan keyingi raqamlar: {w} da 2 ta, {L} da 1 ta, jami 3 ta, demak {w} × {L} = {ANS} kg.",
+        "ru": "Умножаем без запятых: {wi} × {Li} = {pi}. Знаков после запятой: 2 в {w} и 1 в {L}, всего 3, значит, {w} × {L} = {ANS} кг."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.5,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-a2l011",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "quadratic",
+      "family": {
+        "template": "Solve {a}x² − {k}x − {c} = 0. What is its larger root?",
+        "params": {
+          "a": {
+            "values": [
+              3,
+              4,
+              5
+            ]
+          },
+          "r": {
+            "min": 2,
+            "max": 6
+          },
+          "s": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "derived": {
+          "k": "a*r - s",
+          "c": "s*r",
+          "D": "(a*r + s)^2",
+          "sq": "a*r + s"
+        },
+        "constraints": [
+          "a*r - s >= 1"
+        ],
+        "answer": "r",
+        "distractors": [
+          "2*r",
+          "a*r + s",
+          "(a*r + s)^2"
+        ],
+        "integer": true,
+        "relation": "{a}*X^2 - {k}*X - {c} = 0; X > 0"
+      },
+      "page": "C2-a20001",
+      "lang": "en",
+      "stem": {
+        "en": "Solve {a}x² − {k}x − {c} = 0. What is its larger root?",
+        "uz": "{a}x² − {k}x − {c} = 0 tenglamani yeching. Uning katta ildizi nechaga teng?",
+        "ru": "Решите уравнение {a}x² − {k}x − {c} = 0. Чему равен его больший корень?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "D = b² − 4ac = {k}² + 4 × {a} × {c} = {D}, so √D = {sq}. The larger root: x = ({k} + {sq}) ÷ (2 × {a}) = {ANS}.",
+        "uz": "D = b² − 4ac = {k}² + 4 × {a} × {c} = {D}, demak √D = {sq}. Katta ildiz: x = ({k} + {sq}) ÷ (2 × {a}) = {ANS}.",
+        "ru": "D = b² − 4ac = {k}² + 4 × {a} × {c} = {D}, значит, √D = {sq}. Больший корень: x = ({k} + {sq}) ÷ (2 × {a}) = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.3,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-a1l061",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "factoring",
+      "family": {
+        "template": "x² + {bb}x + {c} = (x + m)(x + n), and m is greater than n. What is m?",
+        "params": {
+          "m": {
+            "min": 3,
+            "max": 12
+          },
+          "n": {
+            "min": 2,
+            "max": 9
+          }
+        },
+        "derived": {
+          "bb": "m + n",
+          "c": "m*n"
+        },
+        "constraints": [
+          "m - n >= 1"
+        ],
+        "answer": "m",
+        "distractors": [
+          "n",
+          "m*n",
+          "m + n"
+        ],
+        "integer": true,
+        "relation": "X^2 - {bb}*X + {c} = 0; X > {bb}/2"
+      },
+      "page": "C2-a10006",
+      "lang": "en",
+      "stem": {
+        "en": "x² + {bb}x + {c} = (x + m)(x + n), and m is greater than n. What is m?",
+        "uz": "x² + {bb}x + {c} = (x + m)(x + n), bunda m soni n dan katta. m nechaga teng?",
+        "ru": "x² + {bb}x + {c} = (x + m)(x + n), причём m больше n. Чему равно m?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Look for two numbers whose product is {c} and whose sum is {bb}: {m} × {n} = {c} and {m} + {n} = {bb}. So x² + {bb}x + {c} = (x + {m})(x + {n}), and m = {ANS}.",
+        "uz": "Koʻpaytmasi {c} ga, yigʻindisi {bb} ga teng ikki son izlaymiz: {m} × {n} = {c} va {m} + {n} = {bb}. Demak x² + {bb}x + {c} = (x + {m})(x + {n}), m = {ANS}.",
+        "ru": "Ищем два числа с произведением {c} и суммой {bb}: {m} × {n} = {c} и {m} + {n} = {bb}. Значит, x² + {bb}x + {c} = (x + {m})(x + {n}), m = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.4,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p5s-lessons",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

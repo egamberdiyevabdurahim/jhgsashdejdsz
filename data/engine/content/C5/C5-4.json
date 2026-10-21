@@ -1,0 +1,914 @@
+{
+ "bank": "C5",
+ "batch": 4,
+ "items": [
+  {
+   "id": "C5-c1p1q1",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "literal",
+   "passage_id": "C5-P-c1p1",
+   "lang": "en",
+   "stem": {
+    "en": "Which of these does the text mention?"
+   },
+   "options": [
+    {
+     "en": "The weekday that followed Thursday 4 October 1582"
+    },
+    {
+     "en": "Why a week has seven days"
+    },
+    {
+     "en": "How the ancient Egyptians counted the days of the year"
+    },
+    {
+     "en": "Why the year begins in January"
+    }
+   ],
+   "why": {
+    "en": "The last sentence says Thursday 4 October 1582 was followed by Friday 15 October. The text does not explain the seven-day week, the Egyptian year or why the year begins in January.",
+    "uz": "Oxirgi gapda 1582-yil 4-oktabr, payshanbadan keyin darhol 15-oktabr, juma kelgani aytilgan. Haftaning yetti kunligi, qadimgi misrliklar yilni qanday hisoblagani yoki yil nega yanvardan boshlanishi matnda tushuntirilmagan.",
+    "ru": "В последнем предложении сказано, что за четвергом 4 октября 1582 года сразу последовала пятница 15 октября. Почему в неделе семь дней, как считали год древние египтяне и почему год начинается в январе, в тексте не объясняется."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 1.5,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Gregorian_calendar",
+    "licence": "text is our own; only facts are taken, each checked against the cited page"
+   },
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-c5",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 1 (2026-10-07): both solvers flagged no_passage_needed (that Easter is computed from the March equinox is general knowledge). v2: which topic the text covers; all four are things a calendar text could cover, so only the text decides.",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "C5-c1p1q2",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "literal",
+   "passage_id": "C5-P-c1p1",
+   "lang": "en",
+   "stem": {
+    "en": "Which of these statements does the text NOT make?"
+   },
+   "options": [
+    {
+     "en": "The month of July is named after Julius Caesar"
+    },
+    {
+     "en": "The Julian calendar added a leap day every fourth year"
+    },
+    {
+     "en": "Ten days were removed from the calendar in October 1582"
+    },
+    {
+     "en": "The Gregorian rule brings the average year to 365.2425 days"
+    }
+   ],
+   "why": {
+    "en": "All four statements are true, but the text never says where the name July comes from. It does say that the Julian calendar added a leap day every fourth year, that ten days were removed in October 1582 and that the Gregorian average year is 365.2425 days.",
+    "uz": "Toʻrtala fikr ham toʻgʻri, lekin matnda iyul oyining nomi qayerdan kelgani aytilmagan. Yuliy kalendari har toʻrtinchi yilga bir kabisa kun qoʻshgani, 1582-yil oktabrida oʻn kun olib tashlangani va Grigoriy qoidasida yilning oʻrtacha uzunligi 365,2425 kun ekani esa matnda bor.",
+    "ru": "Все четыре утверждения верны, но откуда название июля, в тексте не сказано. Зато там есть, что юлианский календарь добавлял високосный день раз в четыре года, что в октябре 1582 года убрали десять дней и что средний григорианский год равен 365,2425 суток."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 1.5,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Gregorian_calendar",
+    "licence": "text is our own; only facts are taken, each checked against the cited page"
+   },
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-c5",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 1 (2026-10-07): both solvers flagged no_passage_needed (the Gregorian century rule is general knowledge, and 1600 was the odd one out). v2: which statement the text does not make; all four are true in the world and three are in the text, so only the text decides.",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "C5-c1p1q3",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "inferential",
+   "passage_id": "C5-P-c1p1",
+   "lang": "en",
+   "stem": {
+    "en": "Which question does the text leave unanswered?"
+   },
+   "options": [
+    {
+     "en": "When did Britain change to the Gregorian calendar?"
+    },
+    {
+     "en": "How long does the solar year last?"
+    },
+    {
+     "en": "Which century years are leap years under the Gregorian rule?"
+    },
+    {
+     "en": "Why did the date of the March equinox matter to the churches?"
+    }
+   ],
+   "why": {
+    "en": "The text gives the length of the solar year (about 365.2422 days), the century rule (divisible by 400) and why the equinox mattered (it is used to calculate Easter). It does not mention Britain or any other country changing its calendar.",
+    "uz": "Matnda quyosh yilining uzunligi (taxminan 365,2422 kun), asr yillari haqidagi qoida (400 ga boʻlinsa) va bahorgi tengkunlik cherkovlar uchun nega muhim boʻlgani (u bilan Pasxa sanasi hisoblanadi) aytilgan. Britaniya yoki boshqa biror mamlakat kalendarni qachon almashtirgani haqida esa gap yoʻq.",
+    "ru": "В тексте названы длина солнечного года (около 365,2422 суток), правило для вековых лет (делится на 400) и причина, по которой равноденствие было важно для церквей (по нему вычисляют дату Пасхи). О том, когда Британия или другие страны перешли на новый календарь, не говорится."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 2.1,
+   "time_s": 40,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Gregorian_calendar",
+    "licence": "text is our own; only facts are taken, each checked against the cited page"
+   },
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-c5",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 1 (2026-10-07): both solvers flagged no_passage_needed (that 365.25 is more than 365.2422 is general knowledge, and the key carried both numbers). v2: which question the text leaves unanswered; all four are questions a calendar text could answer, so only the text decides.",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "C5-c1p1q4",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "inferential",
+   "passage_id": "C5-P-c1p1",
+   "lang": "en",
+   "stem": {
+    "en": "How is the text organised?"
+   },
+   "options": [
+    {
+     "en": "A problem, a first fix that was slightly off, then a better fix and a repair"
+    },
+    {
+     "en": "A common belief, the evidence against it, then the true explanation"
+    },
+    {
+     "en": "Two rival proposals, the arguments for each, then the writer's own choice"
+    },
+    {
+     "en": "A famous mistake, the people who made it, then the trouble it still causes today"
+    }
+   ],
+   "why": {
+    "en": "The first paragraph states the problem (a year is not a whole number of days). The second gives the Julian fix, which was “slightly too long”. The third gives the Gregorian rule and the ten days removed “to repair the damage already done”. The text does not argue against a belief, weigh rival proposals or say the error still causes trouble.",
+    "uz": "Birinchi xatboshida muammo aytiladi: yil butun sondagi kunlardan iborat emas. Ikkinchisida Yuliy kalendari yechimi beriladi, u «biroz uzun» chiqqan. Uchinchisida Grigoriy qoidasi va «yetkazilgan zararni tuzatish» uchun olib tashlangan oʻn kun haqida gap boradi. Matn biror qarashni rad etmaydi, raqobatdosh takliflarni solishtirmaydi va xato hozir ham muammo tugʻdirayotganini aytmaydi.",
+    "ru": "В первом абзаце названа проблема: год не равен целому числу суток. Во втором — решение юлианского календаря, которое оказалось «немного слишком длинным». В третьем — григорианское правило и десять дней, убранных, чтобы «исправить уже нанесённый ущерб». Текст не опровергает распространённое мнение, не сравнивает соперничающие предложения и не говорит, что ошибка мешает до сих пор."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 2.1,
+   "time_s": 40,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Gregorian_calendar",
+    "licence": "text is our own; only facts are taken, each checked against the cited page"
+   },
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": null,
+   "status": "quarantine",
+   "version": 2,
+   "quarantine_reason": "solverNP found the key without the passage"
+  },
+  {
+   "id": "C5-c1p1q5",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "vocab_in_context",
+   "passage_id": "C5-P-c1p1",
+   "lang": "en",
+   "stem": {
+    "en": "In the first paragraph, what does “wander” mean?"
+   },
+   "options": [
+    {
+     "en": "Move slowly away from their usual place"
+    },
+    {
+     "en": "Walk around without any particular plan"
+    },
+    {
+     "en": "Stop paying attention to what is happening"
+    },
+    {
+     "en": "Get lost and be unable to find the way back"
+    }
+   ],
+   "why": {
+    "en": "“Over the centuries the seasons would wander through the months” means the seasons would gradually shift away from their usual months. Seasons do not walk about, stop paying attention or get lost.",
+    "uz": "«Asrlar davomida fasllar oylar boʻylab siljib ketardi»: fasllar asta-sekin oʻzining odatiy oylaridan uzoqlashardi. Fasllar sayr qilmaydi, eʼtiborini yoʻqotmaydi va adashib qolmaydi.",
+    "ru": "«Over the centuries the seasons would wander through the months» значит, что времена года постепенно смещались бы со своих обычных месяцев. Времена года не гуляют, не отвлекаются и не теряются."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 1.8,
+   "time_s": 20,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Gregorian_calendar",
+    "licence": "text is our own; only facts are taken, each checked against the cited page"
+   },
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": null,
+   "status": "quarantine",
+   "version": 2,
+   "quarantine_reason": "solverNP found the key without the passage"
+  },
+  {
+   "id": "C5-c1p2q1",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "literal",
+   "passage_id": "C5-P-c1p2",
+   "lang": "en",
+   "stem": {
+    "en": "When does Gulnora come home from work?"
+   },
+   "options": [
+    {
+     "en": "At six in the morning"
+    },
+    {
+     "en": "At ten at night"
+    },
+    {
+     "en": "Just after midnight"
+    },
+    {
+     "en": "At six in the evening"
+    }
+   ],
+   "why": {
+    "en": "She comes back “at six in the morning … just as my alarm goes off”.",
+    "uz": "U ertalab soat oltida, hikoyachining budilnigi jiringlaganda qaytadi.",
+    "ru": "Она возвращается в шесть утра, как раз когда звонит будильник рассказчика."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 1.5,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C5-c1p2q2",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "literal",
+   "passage_id": "C5-P-c1p2",
+   "lang": "en",
+   "stem": {
+    "en": "Who finally told the narrator why Gulnora worked at night?"
+   },
+   "options": [
+    {
+     "en": "Their grandmother"
+    },
+    {
+     "en": "Gulnora herself"
+    },
+    {
+     "en": "Their father"
+    },
+    {
+     "en": "A baker from the shop"
+    }
+   ],
+   "why": {
+    "en": "“It was our grandmother who told me, in the end, almost by accident.”",
+    "uz": "Matnda: oxir-oqibat buvimiz deyarli tasodifan aytib qoʻydi, deyilgan.",
+    "ru": "В тексте сказано: в конце концов, почти случайно, рассказала бабушка."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 1.5,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C5-c1p2q3",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "inferential",
+   "passage_id": "C5-P-c1p2",
+   "lang": "en",
+   "stem": {
+    "en": "Why had the narrator believed that Gulnora liked working at night?"
+   },
+   "options": [
+    {
+     "en": "She had always seemed to enjoy the night-time hours"
+    },
+    {
+     "en": "Gulnora had told the narrator so many times"
+    },
+    {
+     "en": "The bakery offered no other kind of work"
+    },
+    {
+     "en": "Their grandmother had said that she loved it"
+    }
+   ],
+   "why": {
+    "en": "Gulnora read with a torch and said the city sounded more honest after midnight; the narrator never asked.",
+    "uz": "Gulnora tunda fonar bilan kitob oʻqirdi va yarim tundan keyin shahar samimiyroq eshitiladi derdi; hikoyachi esa hech soʻramagan.",
+    "ru": "Гульнора читала с фонариком и говорила, что после полуночи город звучит честнее; рассказчик ни разу не спросил."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 2.1,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C5-c1p2q4",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "inferential",
+   "passage_id": "C5-P-c1p2",
+   "lang": "en",
+   "stem": {
+    "en": "What can we infer about why Gulnora asked for the night shift?"
+   },
+   "options": [
+    {
+     "en": "Partly to help pay for the narrator's extra lessons"
+    },
+    {
+     "en": "To avoid spending time with her family"
+    },
+    {
+     "en": "Because she wanted to train as a pilot"
+    },
+    {
+     "en": "Because the day shift was too tiring for her"
+    }
+   ],
+   "why": {
+    "en": "The night shift paid more, and she asked for it the week the father's hours were cut and the narrator began paid lessons.",
+    "uz": "Tungi smena koʻproq toʻlanardi va u buni otasining ish soatlari qisqargan, hikoyachi esa pullik darslarni boshlagan haftada soʻragan.",
+    "ru": "Ночная смена оплачивалась лучше, и она попросила её в ту неделю, когда отцу сократили часы, а рассказчик начал платные занятия."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 2.1,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C5-c1p2q5",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "vocab_in_context",
+   "passage_id": "C5-P-c1p2",
+   "lang": "en",
+   "stem": {
+    "en": "In the third paragraph, what does “cut” mean?"
+   },
+   "options": [
+    {
+     "en": "Made shorter or smaller"
+    },
+    {
+     "en": "Divided into pieces with a knife"
+    },
+    {
+     "en": "Hurt with something sharp"
+    },
+    {
+     "en": "Left out of a team or group"
+    }
+   ],
+   "why": {
+    "en": "“The same week our father's working hours were cut” explains why money was short: he was given fewer hours, which is why the better-paid night shift mattered. Hours cannot be sliced with a knife, hurt or left out of a team.",
+    "uz": "«Oʻsha hafta dadamning ish soatlari qisqartirildi» gapi pul nega yetishmay qolganini tushuntiradi: unga kamroq soat ish berilgan, shuning uchun koʻproq haq toʻlanadigan tungi smena muhim boʻlgan. Soatlarni pichoq bilan boʻlib, jarohatlab yoki jamoadan chiqarib boʻlmaydi.",
+    "ru": "Фраза «our father's working hours were cut» объясняет, почему не хватало денег: отцу сократили рабочие часы, поэтому и понадобилась лучше оплачиваемая ночная смена. Часы нельзя разрезать ножом, поранить или исключить из команды."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 1.8,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-c5",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 1 (2026-10-07): both solvers flagged no_passage_needed (the stem quoted “working hours were cut”, which fixes the sense). v2: the stem names only the word and the paragraph; all four options are real senses of “cut”.",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "C5-c1p3q1",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "literal",
+   "passage_id": "C5-P-c1p3",
+   "lang": "en",
+   "stem": {
+    "en": "Which of these does the writer say a bored child might do?"
+   },
+   "options": [
+    {
+     "en": "Take apart an old clock"
+    },
+    {
+     "en": "Read a book under a blanket"
+    },
+    {
+     "en": "Phone a friend for ideas"
+    },
+    {
+     "en": "Bake something in the kitchen"
+    }
+   ],
+   "why": {
+    "en": "The writer lists building a den, inventing a game and taking apart the old clock in the cupboard.",
+    "uz": "Muallif stullardan uycha qurish, oʻyin oʻylab topish va javondagi eski soatni sochib koʻrishni sanaydi.",
+    "ru": "Автор перечисляет: построить шалаш из стульев, придумать игру и разобрать старые часы из шкафа."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 1.5,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C5-c1p3q2",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "literal",
+   "passage_id": "C5-P-c1p3",
+   "lang": "en",
+   "stem": {
+    "en": "According to the writer, what is the real trouble with filling every gap instantly?"
+   },
+   "options": [
+    {
+     "en": "It answers the signal of boredom before it can do its work"
+    },
+    {
+     "en": "Phones damage children's eyes and sleep"
+    },
+    {
+     "en": "It makes queues and lessons feel as if they move more slowly"
+    },
+    {
+     "en": "It makes people feel hungry more often"
+    }
+   ],
+   "why": {
+    "en": "The writer says phones “answer the signal before it has had a chance to work”.",
+    "uz": "Muallif telefonlar zerikish signaliga u oʻz ishini qilib ulgurmasidan oldin javob berib qoʻyishini aytadi.",
+    "ru": "Автор говорит, что телефон «отвечает на сигнал раньше, чем тот успевает сработать»."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 1.5,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C5-c1p3q3",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "inferential",
+   "passage_id": "C5-P-c1p3",
+   "lang": "en",
+   "stem": {
+    "en": "Why does the writer compare boredom to hunger?"
+   },
+   "options": [
+    {
+     "en": "To show that an unpleasant feeling can still be useful"
+    },
+    {
+     "en": "To show that people who are bored tend to eat more than others"
+    },
+    {
+     "en": "To argue that boredom can be dangerous"
+    },
+    {
+     "en": "To explain why children like eating sweets"
+    }
+   ],
+   "why": {
+    "en": "Right after “unpleasant is not the same as useless”, hunger is given as an unpleasant but necessary feeling.",
+    "uz": "«Yoqimsiz degani foydasiz degani emas» degan gapdan soʻng ochlik yoqimsiz, lekin zarur tuygʻu sifatida keltiriladi.",
+    "ru": "Сразу после слов «неприятное не значит бесполезное» голод приводится как неприятное, но нужное чувство."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 2.1,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C5-c1p3q4",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "inferential",
+   "passage_id": "C5-P-c1p3",
+   "lang": "en",
+   "stem": {
+    "en": "Which best describes the writer's position in the last paragraph?"
+   },
+   "options": [
+    {
+     "en": "We might sometimes let boredom last longer, but not go looking for it"
+    },
+    {
+     "en": "We should set aside some time to be bored every day"
+    },
+    {
+     "en": "Most dull hours turn out to be valuable if only we are patient enough with them"
+    },
+    {
+     "en": "Boredom is useful for children, but adults should avoid it"
+    }
+   ],
+   "why": {
+    "en": "The writer says “we might occasionally let it run a little longer than is comfortable”, but also that this does not mean we should “seek boredom out” or that “every dull hour is secretly valuable”. Nothing limits the advice to children: “we” includes adults.",
+    "uz": "Muallif zerikishni «baʼzan odatdagidan biroz uzoqroq davom ettirishimiz mumkin», deydi, lekin bu zerikishni ataylab «izlash» kerak degani emasligini va «har bir zerikarli soat yashirin qimmatga ega» emasligini ham aytadi. Maslahat faqat bolalarga tegishli emas: «biz» kattalarni ham oʻz ichiga oladi.",
+    "ru": "Автор пишет, что «иногда можно дать скуке продлиться чуть дольше, чем удобно», но оговаривается: это не значит, что скуку надо «искать» или что «каждый скучный час втайне ценен». Совет не ограничен детьми: «мы» — это и взрослые."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 2.1,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-c5",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 1 (2026-10-07): solver B flagged no_passage_needed (the options were labelled Moderate / Extreme / Doubtful / Neutral, and only the moderate one was sensible). v2: all four are moderate positions on boredom; each distractor is ruled out by a sentence of the last paragraph.",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "C5-c1p3q5",
+   "skill": "en_reading",
+   "level": "C1",
+   "subskill": "vocab_in_context",
+   "passage_id": "C5-P-c1p3",
+   "lang": "en",
+   "stem": {
+    "en": "In the first paragraph, what does “drifts” mean?"
+   },
+   "options": [
+    {
+     "en": "Slowly loses focus and direction"
+    },
+    {
+     "en": "Is carried along by water or air"
+    },
+    {
+     "en": "Piles up in a heap, as snow does in the wind"
+    },
+    {
+     "en": "Moves from one job or place to another without a plan"
+    }
+   ],
+   "why": {
+    "en": "“The moment a queue slows down or a lesson drifts” describes the moment something stops holding our interest: the lesson loses focus. A lesson is not carried by water, does not pile up like snow and does not move between jobs.",
+    "uz": "«Navbat sekinlashib qolsa yoki dars maqsadidan chalgʻib ketsa» — bu narsa qiziqishni yoʻqotgan paytni tasvirlaydi: dars asta-sekin oʻz yoʻnalishini yoʻqotadi. Darsni suv oqizib ketmaydi, u qor kabi uyilib ham qolmaydi, bir ishdan boshqasiga ham koʻchib yurmaydi.",
+    "ru": "«The moment a queue slows down or a lesson drifts» описывает момент, когда что-то перестаёт нас занимать: урок теряет направление и становится вялым. Урок не плывёт по воде, не наметается, как снег, и не переходит с работы на работу."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 1.8,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-c5",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 1 (2026-10-07): both solvers flagged no_passage_needed (the stem quoted the phrase, which alone fixes the sense). v2: the stem names only the word and the paragraph; all four options are real senses of “drift”.",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "C5-c2p1q1",
+   "skill": "en_reading",
+   "level": "C2",
+   "subskill": "literal",
+   "passage_id": "C5-P-c2p1",
+   "lang": "en",
+   "stem": {
+    "en": "Which of these details about the manuscript does the text give?"
+   },
+   "options": [
+    {
+     "en": "Roughly how many pages it has"
+    },
+    {
+     "en": "Who owned it before Voynich bought it"
+    },
+    {
+     "en": "How much Voynich paid for it"
+    },
+    {
+     "en": "Where Voynich found it"
+    }
+   ],
+   "why": {
+    "en": "The text says the manuscript “consists of around 240 pages”. About the purchase it says only that Voynich bought it in 1912; it names no earlier owner, no price and no place where he found it.",
+    "uz": "Matnda qoʻlyozma «taxminan 240 sahifadan iborat» ekani aytilgan. Xarid haqida faqat Voynich uni 1912-yilda sotib olgani aytiladi; avvalgi egasi, narxi va u qayerdan topilgani haqida maʼlumot yoʻq.",
+    "ru": "В тексте сказано, что рукопись «состоит примерно из 240 страниц». О покупке сказано лишь, что Войнич купил её в 1912 году; ни прежнего владельца, ни цены, ни места, где он её нашёл, текст не называет."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 2.4,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Voynich_manuscript",
+    "licence": "text is our own; only facts are taken, each checked against the cited page"
+   },
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-c5",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 1 (2026-10-07): both solvers flagged no_passage_needed (that carbon dating dates the material, not the writing, is general knowledge). v2: which detail the text gives; all four are facts a text on the manuscript could give, so only the text decides.",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "C5-c2p1q2",
+   "skill": "en_reading",
+   "level": "C2",
+   "subskill": "literal",
+   "passage_id": "C5-P-c2p1",
+   "lang": "en",
+   "stem": {
+    "en": "Which of these is NOT one of the three families of proposals described in the text?"
+   },
+   "options": [
+    {
+     "en": "That it is a later copy of an older printed book"
+    },
+    {
+     "en": "That it records a language in an unfamiliar script"
+    },
+    {
+     "en": "That it is a cipher hiding a known language"
+    },
+    {
+     "en": "That it is a hoax with no meaning at all"
+    }
+   ],
+   "why": {
+    "en": "The three families are: a language in an unfamiliar script, a cipher, or a hoax. A copy of a printed book is not mentioned.",
+    "uz": "Uch guruh: notanish yozuvdagi til, shifr yoki aldov. Bosma kitob nusxasi haqida gap yoʻq.",
+    "ru": "Три группы версий: язык в незнакомом письме, шифр или мистификация. О копии печатной книги речи нет."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 2.4,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Voynich_manuscript",
+    "licence": "text is our own; only facts are taken, each checked against the cited page"
+   },
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C5-c2p1q3",
+   "skill": "en_reading",
+   "level": "C2",
+   "subskill": "inferential",
+   "passage_id": "C5-P-c2p1",
+   "lang": "en",
+   "stem": {
+    "en": "Why does the writer say the Zipf's law finding is “not decisive”?"
+   },
+   "options": [
+    {
+     "en": "A language-like pattern does not prove that the text actually means anything"
+    },
+    {
+     "en": "Zipf's law has since been shown to be false"
+    },
+    {
+     "en": "The analysis looked at only a few pages"
+    },
+    {
+     "en": "Fifteenth-century hoaxers are known to have used Zipf's law to fool their readers"
+    }
+   ],
+   "why": {
+    "en": "The writer explains: “a pattern in the shape of a text is not the same thing as a meaning”.",
+    "uz": "Muallif tushuntiradi: matn shaklidagi qonuniyat hali maʼno degani emas.",
+    "ru": "Автор поясняет: закономерность в форме текста ещё не означает, что у него есть смысл."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 3,
+   "time_s": 40,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Voynich_manuscript",
+    "licence": "text is our own; only facts are taken, each checked against the cited page"
+   },
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C5-c2p1q4",
+   "skill": "en_reading",
+   "level": "C2",
+   "subskill": "inferential",
+   "passage_id": "C5-P-c2p1",
+   "lang": "en",
+   "stem": {
+    "en": "What is the main effect of the last paragraph?"
+   },
+   "options": [
+    {
+     "en": "It stresses the difficulty of the puzzle by naming skilled people who failed"
+    },
+    {
+     "en": "It suggests that the Friedmans finally solved the puzzle after many years of trying"
+    },
+    {
+     "en": "It criticises codebreakers for giving up too early"
+    },
+    {
+     "en": "It explains how the manuscript came to Yale"
+    }
+   ],
+   "why": {
+    "en": "Calling the list of failures “humbling” and naming expert codebreakers shows how hard the problem is.",
+    "uz": "Muvaffaqiyatsizliklar roʻyxatini «kamtarlikka undovchi» deb atash va mohir shifrshunoslarni sanash jumboq qanchalik qiyinligini koʻrsatadi.",
+    "ru": "Назвав список неудач «отрезвляющим» и упомянув опытных дешифровщиков, автор подчёркивает сложность загадки."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 3,
+   "time_s": 40,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Voynich_manuscript",
+    "licence": "text is our own; only facts are taken, each checked against the cited page"
+   },
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C5-c2p1q5",
+   "skill": "en_reading",
+   "level": "C2",
+   "subskill": "vocab_in_context",
+   "passage_id": "C5-P-c2p1",
+   "lang": "en",
+   "stem": {
+    "en": "In the second paragraph, what does “settled” mean?"
+   },
+   "options": [
+    {
+     "en": "Answered so that little doubt remains"
+    },
+    {
+     "en": "Made calm and quiet"
+    },
+    {
+     "en": "Gone to live in a new place and made a home there"
+    },
+    {
+     "en": "Paid in full"
+    }
+   ],
+   "why": {
+    "en": "“That question, at least, has been settled” refers to the manuscript's age, which carbon dating has fixed at 1404–1438: the question now has an answer. A question cannot be calmed, move house or be paid.",
+    "uz": "«Hech boʻlmaganda bu savol hal boʻldi» gapi qoʻlyozmaning yoshi haqida: radiouglerod tahlili uni 1404–1438-yillarga tegishli deb koʻrsatgan, yaʼni savolga javob topilgan. Savolni tinchlantirib, boshqa joyga koʻchirib yoki toʻlab boʻlmaydi.",
+    "ru": "«That question, at least, has been settled» относится к возрасту рукописи: радиоуглеродный анализ отнёс её к 1404–1438 годам, то есть на вопрос получен ответ. Вопрос нельзя успокоить, переселить или оплатить."
+   },
+   "instructions": {
+    "en": "Read the text. Choose the answer that the text supports best.",
+    "uz": "Matnni oʻqing va matnga tayanib eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст и выберите ответ, который лучше всего подтверждается текстом."
+   },
+   "prior_b": 2.7,
+   "time_s": 20,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Voynich_manuscript",
+    "licence": "text is our own; only facts are taken, each checked against the cited page"
+   },
+   "author": "agent:c5-reading",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-c5",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 1 (2026-10-07): both solvers flagged no_passage_needed (the stem quoted the sentence, which alone fixes the sense). v2: the stem names only the word and the paragraph; all four options are real senses of “settle”.",
+   "key_check_2_version": 2
+  }
+ ]
+}

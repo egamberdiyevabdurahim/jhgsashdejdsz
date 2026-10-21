@@ -1,0 +1,1793 @@
+{
+ "bank": "C12",
+ "batch": 2,
+ "note": "C12 essay-stage tasks, batch 2: the Common App personal-essay pipeline (choose, outline, draft, six revision passes with self-scored rubrics, a second reader, the clean version, Additional information, the counselor checkpoint) and two 5-minute variants. AI feedback on essays stays off (DC7): code checks length and language; a counselor reads at L7.",
+ "items": [
+  {
+   "id": "C12-cachoo",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "stage_step": "plan",
+   "type": "create",
+   "minutes": 20,
+   "essay_lang": "any",
+   "title": {
+    "en": "Choose your prompt and your story",
+    "uz": "Savolingizni va hikoyangizni tanlang",
+    "ru": "Выберите тему и историю"
+   },
+   "instructions": {
+    "en": "Choose one prompt and one story for your personal essay. Then write two sentences: 1) “I want the reader to know that I …” (one quality, belief or way of thinking, in your own words); 2) why this story shows it better than your other stories. If two stories compete, pick the one where you acted and changed, not the one with the biggest event.",
+    "uz": "Shaxsiy inshoingiz uchun bitta savol va bitta hikoyani tanlang. Soʻng ikkita gap yozing: 1) “Oʻquvchi mening … ekanimni bilishini istayman” (bitta fazilat, eʼtiqod yoki fikrlash usuli, oʻz soʻzlaringiz bilan); 2) nega bu hikoya buni boshqa hikoyalaringizdan yaxshiroq koʻrsatadi. Agar ikki hikoya teng kelsa, eng katta voqeali hikoyani emas, siz harakat qilgan va oʻzgargan hikoyani tanlang.",
+    "ru": "Выберите одну тему и одну историю для личного эссе. Затем напишите два предложения: 1) «Я хочу, чтобы читатель знал, что я …» (одно качество, убеждение или способ мышления, своими словами); 2) почему эта история показывает это лучше других ваших историй. Если две истории равны, выберите ту, где вы действовали и изменились, а не ту, где событие крупнее."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 20,
+     "max_words": 150,
+     "not_prompt": true
+    },
+    "fields": [
+     {
+      "key": "prompt_n",
+      "type": "choice",
+      "options": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      "label": {
+       "en": "Your prompt",
+       "uz": "Tanlagan savolingiz",
+       "ru": "Ваша тема"
+      }
+     }
+    ]
+   },
+   "facts": [
+    {
+     "claim": "Common App first-year essay prompts for 2026-2027: seven prompts, quoted verbatim in this item from the official page.",
+     "url": "https://www.commonapp.org/apply/essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-caoutl",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "stage_step": "plan",
+   "type": "create",
+   "minutes": 30,
+   "essay_lang": "any",
+   "title": {
+    "en": "Outline your essay in 5-7 points",
+    "uz": "Inshoingiz rejasini 5-7 bandda tuzing",
+    "ru": "Составьте план эссе из 5-7 пунктов"
+   },
+   "instructions": {
+    "en": "Plan the essay before you write it: one line per point. One plan you can use: 1) a specific moment to open with; 2) the background the reader needs, kept short; 3) the problem or question; 4) what you did; 5) what you understood; 6) where you are now, or what you do differently. Change the order if your story needs it. You may write the outline in any language; the essay will be in English.",
+    "uz": "Yozishdan oldin inshoni rejalashtiring: har bir bandga bitta qator. Foydalanish mumkin boʻlgan reja: 1) boshlash uchun aniq bir lahza; 2) oʻquvchiga kerakli qisqa maʼlumot; 3) muammo yoki savol; 4) siz nima qildingiz; 5) nimani tushundingiz; 6) hozir qayerdasiz yoki nimani boshqacha qilasiz. Hikoyangiz talab qilsa, tartibni oʻzgartiring. Rejani istalgan tilda yozishingiz mumkin; insho ingliz tilida boʻladi.",
+    "ru": "Спланируйте эссе до того, как писать: по одной строке на пункт. Вот план, который можно взять: 1) конкретный момент для начала; 2) предыстория, нужная читателю, коротко; 3) проблема или вопрос; 4) что вы сделали; 5) что вы поняли; 6) где вы сейчас или что делаете иначе. Меняйте порядок, если этого требует история. План можно писать на любом языке; эссе будет на английском."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 40,
+     "max_words": 300,
+     "not_prompt": true
+    }
+   },
+   "variant_5min": "C12-v5writ",
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-cadrf1",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "stage_step": "draft",
+   "type": "create",
+   "minutes": 60,
+   "essay_lang": "en",
+   "title": {
+    "en": "Write the first full draft",
+    "uz": "Birinchi toʻliq qoralamani yozing",
+    "ru": "Напишите первый полный черновик"
+   },
+   "instructions": {
+    "en": "Write the whole first draft in English, following your outline. Write fast and do not edit yet: a messy complete draft is more useful than one perfect paragraph. Any length from 250 words is fine for now; you will cut to 650 or fewer later. Use “I” and real details: what you saw, said and did.",
+    "uz": "Rejangizga tayanib, birinchi qoralamani toʻliq ingliz tilida yozing. Tez yozing va hozircha tahrir qilmang: tartibsiz, lekin toʻliq qoralama bitta mukammal xatboshidan foydaliroq. Hozircha 250 soʻzdan boshlab istalgan uzunlik boʻlaveradi; keyinroq uni 650 soʻz yoki undan kamga qisqartirasiz. “I” (men) deb yozing va haqiqiy tafsilotlardan foydalaning: nimani koʻrdingiz, nima dedingiz va nima qildingiz.",
+    "ru": "Напишите весь первый черновик на английском по своему плану. Пишите быстро и пока не редактируйте: неаккуратный, но полный черновик полезнее одного идеального абзаца. Пока подойдёт любая длина от 250 слов; потом вы сократите до 650 или меньше. Пишите от первого лица («I») и с реальными деталями: что вы видели, говорили и делали."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "en",
+     "min_words": 250,
+     "max_words": 1000,
+     "not_prompt": true
+    }
+   },
+   "variant_5min": "C12-v5writ",
+   "facts": [
+    {
+     "claim": "The Common App personal essay is limited to 650 words, with a minimum of 250 words.",
+     "url": "https://www.collegetransitions.com/blog/common-app-essay-prompts/",
+     "verified_at": "2026-10-07",
+     "secondary": true,
+     "needs_verification": true,
+     "note": "Re-checked 2026-10-07. No commonapp.org page that opens without signing in states the limit: the essay-prompts page, the 2026-2027 announcement and the 2026-2027 'What's new' deck give no word count, and the help-centre article 'are-there-word-limits-kudeoeos' is about the UChicago supplement, not the personal essay. College Transitions (published 5 Mar 2026, 2026-27 cycle) says the limit 'remains at 650 words' with 'a minimum floor of 250 words'. The application enforces the limit itself; confirm in its Writing section."
+    }
+   ],
+   "needs_verification": true,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true,
+   "verify_task": true
+  },
+  {
+   "id": "C12-rvsowh",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "stage_step": "revise",
+   "pass_n": 1,
+   "type": "create",
+   "minutes": 30,
+   "essay_lang": "en",
+   "title": {
+    "en": "Revision pass 1: the “so what”",
+    "uz": "Tahrir 1-bosqich: “Xoʻsh, nima boʻpti?”",
+    "ru": "Правка, проход 1: «И что из этого?»"
+   },
+   "instructions": {
+    "en": "This pass checks that the essay says something about you, not only about what happened. Read your latest draft once without changing anything. Then score it on each question below: 0 = not yet, 1 = partly, 2 = yes. Fix every point you scored 0 or 1, using the hint under it. Paste the revised essay.",
+    "uz": "Bu bosqich insho faqat nima boʻlgani haqida emas, siz haqingizda ham nimadir aytishini tekshiradi. Oxirgi qoralamangizni hech narsani oʻzgartirmasdan bir marta oʻqing. Soʻng uni quyidagi har bir savol boʻyicha baholang: 0 = hali yoʻq, 1 = qisman, 2 = ha. 0 yoki 1 qoʻygan har bir bandni uning ostidagi maslahat yordamida tuzating. Tuzatilgan inshoni joylang.",
+    "ru": "Этот проход проверяет, что эссе говорит что-то о вас, а не только о том, что произошло. Прочитайте последний черновик один раз, ничего не меняя. Затем оцените его по каждому вопросу ниже: 0 = пока нет, 1 = частично, 2 = да. Исправьте каждый пункт, где поставили 0 или 1, по подсказке под ним. Вставьте исправленное эссе."
+   },
+   "rubric": {
+    "scale": {
+     "0": {
+      "en": "not yet",
+      "uz": "hali yoʻq",
+      "ru": "пока нет"
+     },
+     "1": {
+      "en": "partly",
+      "uz": "qisman",
+      "ru": "частично"
+     },
+     "2": {
+      "en": "yes",
+      "uz": "ha",
+      "ru": "да"
+     }
+    },
+    "criteria": [
+     {
+      "key": "one_line",
+      "check": {
+       "en": "Can a reader say in one sentence what this essay shows about you?",
+       "uz": "Oʻquvchi bu insho siz haqingizda nimani koʻrsatishini bitta gap bilan ayta oladimi?",
+       "ru": "Может ли читатель одним предложением сказать, что это эссе показывает о вас?"
+      },
+      "fix": {
+       "en": "Write that sentence at the top of your notes. Cut or change any paragraph that does not support it.",
+       "uz": "Oʻsha gapni qaydlaringiz tepasiga yozing. Uni qoʻllab-quvvatlamaydigan har bir xatboshini qisqartiring yoki oʻzgartiring.",
+       "ru": "Запишите это предложение вверху заметок. Сократите или измените каждый абзац, который его не поддерживает."
+      }
+     },
+     {
+      "key": "share",
+      "check": {
+       "en": "Is at least a third of the essay about what you thought, learned or changed, not only about what happened?",
+       "uz": "Inshoning kamida uchdan bir qismi faqat nima boʻlgani haqida emas, nima deb oʻylaganingiz, nimani oʻrganganingiz yoki qanday oʻzgarganingiz haqidami?",
+       "ru": "Хотя бы треть эссе о том, что вы думали, чему научились или как изменились, а не только о том, что произошло?"
+      },
+      "fix": {
+       "en": "Shorten the description of events and add a paragraph on what you understood and how you act now.",
+       "uz": "Voqealar tasvirini qisqartiring va nimani tushunganingiz hamda hozir qanday harakat qilishingiz haqida xatboshi qoʻshing.",
+       "ru": "Сократите описание событий и добавьте абзац о том, что вы поняли и как действуете теперь."
+      }
+     },
+     {
+      "key": "specific",
+      "check": {
+       "en": "Is the lesson specific to you, not a general moral such as “hard work pays off”?",
+       "uz": "Saboq umumiy hikmat emas (masalan, “mehnat qilsang, natija boʻladi”), aynan sizga xosmi?",
+       "ru": "Вывод именно ваш, а не общая мораль вроде «труд всегда окупается»?"
+      },
+      "fix": {
+       "en": "Replace the general moral with what you, specifically, now do or believe differently.",
+       "uz": "Umumiy hikmatni aynan siz endi nimani boshqacha qilishingiz yoki nimaga boshqacha ishonishingiz bilan almashtiring.",
+       "ru": "Замените общую мораль тем, что именно вы теперь делаете или во что верите иначе."
+      }
+     },
+     {
+      "key": "ending",
+      "check": {
+       "en": "Does the ending show who you are now or what comes next, rather than repeat the story?",
+       "uz": "Yakun hikoyani takrorlash oʻrniga hozir kim ekaningizni yoki keyin nima boʻlishini koʻrsatadimi?",
+       "ru": "Показывает ли концовка, кто вы сейчас или что будет дальше, а не пересказывает историю?"
+      },
+      "fix": {
+       "en": "End with a present-day action, decision or question that grew out of the story.",
+       "uz": "Inshoni hikoyadan kelib chiqqan bugungi harakat, qaror yoki savol bilan yakunlang.",
+       "ru": "Закончите действием, решением или вопросом из сегодняшнего дня, которые выросли из этой истории."
+      }
+     }
+    ],
+    "scored_by": "student",
+    "counselor_uses_same": true
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "en",
+     "min_words": 250,
+     "max_words": 1000,
+     "not_prompt": true,
+     "differs_from_previous": true
+    },
+    "fields": [
+     {
+      "key": "score_one_line",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Can a reader say in one sentence what this essay shows about you?",
+       "uz": "Oʻquvchi bu insho siz haqingizda nimani koʻrsatishini bitta gap bilan ayta oladimi?",
+       "ru": "Может ли читатель одним предложением сказать, что это эссе показывает о вас?"
+      }
+     },
+     {
+      "key": "score_share",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Is at least a third of the essay about what you thought, learned or changed, not only about what happened?",
+       "uz": "Inshoning kamida uchdan bir qismi faqat nima boʻlgani haqida emas, nima deb oʻylaganingiz, nimani oʻrganganingiz yoki qanday oʻzgarganingiz haqidami?",
+       "ru": "Хотя бы треть эссе о том, что вы думали, чему научились или как изменились, а не только о том, что произошло?"
+      }
+     },
+     {
+      "key": "score_specific",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Is the lesson specific to you, not a general moral such as “hard work pays off”?",
+       "uz": "Saboq umumiy hikmat emas (masalan, “mehnat qilsang, natija boʻladi”), aynan sizga xosmi?",
+       "ru": "Вывод именно ваш, а не общая мораль вроде «труд всегда окупается»?"
+      }
+     },
+     {
+      "key": "score_ending",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Does the ending show who you are now or what comes next, rather than repeat the story?",
+       "uz": "Yakun hikoyani takrorlash oʻrniga hozir kim ekaningizni yoki keyin nima boʻlishini koʻrsatadimi?",
+       "ru": "Показывает ли концовка, кто вы сейчас или что будет дальше, а не пересказывает историю?"
+      }
+     }
+    ]
+   },
+   "variant_5min": "C12-v5revi",
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-rvstru",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "stage_step": "revise",
+   "pass_n": 2,
+   "type": "create",
+   "minutes": 30,
+   "essay_lang": "en",
+   "title": {
+    "en": "Revision pass 2: structure and flow",
+    "uz": "Tahrir 2-bosqich: tuzilish va izchillik",
+    "ru": "Правка, проход 2: структура и связность"
+   },
+   "instructions": {
+    "en": "This pass checks the order and the shape of the essay. Read your latest draft once without changing anything. Then score it on each question below: 0 = not yet, 1 = partly, 2 = yes. Fix every point you scored 0 or 1, using the hint under it. Paste the revised essay.",
+    "uz": "Bu bosqich inshoning tartibi va tuzilishini tekshiradi. Oxirgi qoralamangizni hech narsani oʻzgartirmasdan bir marta oʻqing. Soʻng uni quyidagi har bir savol boʻyicha baholang: 0 = hali yoʻq, 1 = qisman, 2 = ha. 0 yoki 1 qoʻygan har bir bandni uning ostidagi maslahat yordamida tuzating. Tuzatilgan inshoni joylang.",
+    "ru": "Этот проход проверяет порядок и форму эссе. Прочитайте последний черновик один раз, ничего не меняя. Затем оцените его по каждому вопросу ниже: 0 = пока нет, 1 = частично, 2 = да. Исправьте каждый пункт, где поставили 0 или 1, по подсказке под ним. Вставьте исправленное эссе."
+   },
+   "rubric": {
+    "scale": {
+     "0": {
+      "en": "not yet",
+      "uz": "hali yoʻq",
+      "ru": "пока нет"
+     },
+     "1": {
+      "en": "partly",
+      "uz": "qisman",
+      "ru": "частично"
+     },
+     "2": {
+      "en": "yes",
+      "uz": "ha",
+      "ru": "да"
+     }
+    },
+    "criteria": [
+     {
+      "key": "opening",
+      "check": {
+       "en": "Does the first paragraph start inside a moment or with a clear question, not with a famous quotation or a dictionary definition?",
+       "uz": "Birinchi xatboshi mashhur iqtibos yoki lugʻatdagi taʼrif bilan emas, biror lahzaning ichidan yoki aniq savol bilan boshlanadimi?",
+       "ru": "Начинается ли первый абзац внутри момента или с ясного вопроса, а не со знаменитой цитаты или словарного определения?"
+      },
+      "fix": {
+       "en": "Start with the moment the story turns: a place, an action or words someone said.",
+       "uz": "Hikoya burilgan lahzadan boshlang: joy, harakat yoki kimdir aytgan soʻzlar.",
+       "ru": "Начните с момента, где история поворачивает: место, действие или чьи-то слова."
+      }
+     },
+     {
+      "key": "one_job",
+      "check": {
+       "en": "Does every paragraph do one job (a scene, background, the turning point, reflection)?",
+       "uz": "Har bir xatboshi bitta vazifani bajaradimi (sahna, kerakli maʼlumot, burilish nuqtasi, mulohaza)?",
+       "ru": "Выполняет ли каждый абзац одну задачу (сцена, предыстория, поворот, размышление)?"
+      },
+      "fix": {
+       "en": "Write the job of each paragraph in the margin. Split paragraphs that do two jobs; merge or cut the ones that do none.",
+       "uz": "Har bir xatboshining vazifasini chetiga yozing. Ikki vazifani bajarayotgan xatboshilarni ajrating; hech qanday vazifa bajarmaydiganlarini birlashtiring yoki olib tashlang.",
+       "ru": "Подпишите на полях задачу каждого абзаца. Абзацы с двумя задачами разделите; абзацы без задачи объедините или удалите."
+      }
+     },
+     {
+      "key": "order",
+      "check": {
+       "en": "Can a reader follow the order of events without going back?",
+       "uz": "Oʻquvchi voqealar ketma-ketligini orqaga qaytmasdan kuzata oladimi?",
+       "ru": "Может ли читатель следить за порядком событий, не возвращаясь назад?"
+      },
+      "fix": {
+       "en": "Add a short time marker where time jumps (“Two months later…”), or put the events in order.",
+       "uz": "Vaqt sakragan joyga qisqa vaqt belgisini qoʻshing (“Ikki oydan keyin…”) yoki voqealarni tartib bilan joylashtiring.",
+       "ru": "Добавьте короткую отметку времени там, где время прыгает («Через два месяца…»), или расставьте события по порядку."
+      }
+     },
+     {
+      "key": "links",
+      "check": {
+       "en": "Does each paragraph connect to the next through an idea, a word or a time link?",
+       "uz": "Har bir xatboshi keyingisi bilan gʻoya, soʻz yoki vaqt orqali bogʻlanadimi?",
+       "ru": "Связан ли каждый абзац со следующим через мысль, слово или время?"
+      },
+      "fix": {
+       "en": "Make the first sentence of each paragraph pick up something from the end of the one before.",
+       "uz": "Har bir xatboshining birinchi gapi oldingi xatboshining oxiridagi biror narsani davom ettirsin.",
+       "ru": "Пусть первое предложение каждого абзаца подхватывает что-то из конца предыдущего."
+      }
+     }
+    ],
+    "scored_by": "student",
+    "counselor_uses_same": true
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "en",
+     "min_words": 250,
+     "max_words": 1000,
+     "not_prompt": true,
+     "differs_from_previous": true
+    },
+    "fields": [
+     {
+      "key": "score_opening",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Does the first paragraph start inside a moment or with a clear question, not with a famous quotation or a dictionary definition?",
+       "uz": "Birinchi xatboshi mashhur iqtibos yoki lugʻatdagi taʼrif bilan emas, biror lahzaning ichidan yoki aniq savol bilan boshlanadimi?",
+       "ru": "Начинается ли первый абзац внутри момента или с ясного вопроса, а не со знаменитой цитаты или словарного определения?"
+      }
+     },
+     {
+      "key": "score_one_job",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Does every paragraph do one job (a scene, background, the turning point, reflection)?",
+       "uz": "Har bir xatboshi bitta vazifani bajaradimi (sahna, kerakli maʼlumot, burilish nuqtasi, mulohaza)?",
+       "ru": "Выполняет ли каждый абзац одну задачу (сцена, предыстория, поворот, размышление)?"
+      }
+     },
+     {
+      "key": "score_order",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Can a reader follow the order of events without going back?",
+       "uz": "Oʻquvchi voqealar ketma-ketligini orqaga qaytmasdan kuzata oladimi?",
+       "ru": "Может ли читатель следить за порядком событий, не возвращаясь назад?"
+      }
+     },
+     {
+      "key": "score_links",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Does each paragraph connect to the next through an idea, a word or a time link?",
+       "uz": "Har bir xatboshi keyingisi bilan gʻoya, soʻz yoki vaqt orqali bogʻlanadimi?",
+       "ru": "Связан ли каждый абзац со следующим через мысль, слово или время?"
+      }
+     }
+    ]
+   },
+   "variant_5min": "C12-v5revi",
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-rvdeta",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "stage_step": "revise",
+   "pass_n": 3,
+   "type": "create",
+   "minutes": 30,
+   "essay_lang": "en",
+   "title": {
+    "en": "Revision pass 3: specific details",
+    "uz": "Tahrir 3-bosqich: aniq tafsilotlar",
+    "ru": "Правка, проход 3: конкретные детали"
+   },
+   "instructions": {
+    "en": "This pass makes the essay specific, so that only you could have written it. Read your latest draft once without changing anything. Then score it on each question below: 0 = not yet, 1 = partly, 2 = yes. Fix every point you scored 0 or 1, using the hint under it. Paste the revised essay.",
+    "uz": "Bu bosqich inshoni aniq qiladi: uni faqat siz yoza oladigan boʻlsin. Oxirgi qoralamangizni hech narsani oʻzgartirmasdan bir marta oʻqing. Soʻng uni quyidagi har bir savol boʻyicha baholang: 0 = hali yoʻq, 1 = qisman, 2 = ha. 0 yoki 1 qoʻygan har bir bandni uning ostidagi maslahat yordamida tuzating. Tuzatilgan inshoni joylang.",
+    "ru": "Этот проход делает эссе конкретным, чтобы его могли написать только вы. Прочитайте последний черновик один раз, ничего не меняя. Затем оцените его по каждому вопросу ниже: 0 = пока нет, 1 = частично, 2 = да. Исправьте каждый пункт, где поставили 0 или 1, по подсказке под ним. Вставьте исправленное эссе."
+   },
+   "rubric": {
+    "scale": {
+     "0": {
+      "en": "not yet",
+      "uz": "hali yoʻq",
+      "ru": "пока нет"
+     },
+     "1": {
+      "en": "partly",
+      "uz": "qisman",
+      "ru": "частично"
+     },
+     "2": {
+      "en": "yes",
+      "uz": "ha",
+      "ru": "да"
+     }
+    },
+    "criteria": [
+     {
+      "key": "concrete",
+      "check": {
+       "en": "Does the essay contain at least three concrete details: a sound, an object, a place, or words someone said?",
+       "uz": "Inshoda kamida uchta aniq tafsilot bormi: tovush, buyum, joy yoki kimdir aytgan soʻzlar?",
+       "ru": "Есть ли в эссе хотя бы три конкретные детали: звук, предмет, место или чьи-то слова?"
+      },
+      "fix": {
+       "en": "Close your eyes, return to the moment and write down what you saw and heard. Add the best two details.",
+       "uz": "Koʻzingizni yuming, oʻsha lahzaga qayting va nimani koʻrganingiz va eshitganingizni yozib oling. Eng yaxshi ikkita tafsilotni qoʻshing.",
+       "ru": "Закройте глаза, вернитесь в тот момент и запишите, что видели и слышали. Добавьте две лучшие детали."
+      }
+     },
+     {
+      "key": "show",
+      "check": {
+       "en": "Is a feeling shown at least once through an action or a detail, not only named (“I was nervous”)?",
+       "uz": "Hech boʻlmaganda bitta his-tuygʻu faqat nomlanmay (“Men hayajonlandim”), harakat yoki tafsilot orqali koʻrsatilganmi?",
+       "ru": "Показано ли хотя бы одно чувство через действие или деталь, а не только названо («я волновался»)?"
+      },
+      "fix": {
+       "en": "Replace one named feeling with what your body or hands did at that moment.",
+       "uz": "Nomlangan bitta his-tuygʻuni oʻsha lahzada tanangiz yoki qoʻllaringiz nima qilgani bilan almashtiring.",
+       "ru": "Замените одно названное чувство тем, что в тот момент делали ваше тело или руки."
+      }
+     },
+     {
+      "key": "cliche",
+      "check": {
+       "en": "Have you removed sentences anyone could write, such as “Since childhood I have always…” or “This experience changed my life”?",
+       "uz": "Har kim yoza oladigan gaplarni, masalan, “Bolaligimdan beri men doim…” yoki “Bu tajriba hayotimni oʻzgartirdi” kabilarni olib tashladingizmi?",
+       "ru": "Убрали ли вы фразы, которые мог бы написать кто угодно, например «С детства я всегда…» или «Этот опыт изменил мою жизнь»?"
+      },
+      "fix": {
+       "en": "Replace each one with a fact about you: what exactly changed, and how you know.",
+       "uz": "Ularning har birini siz haqingizdagi fakt bilan almashtiring: aynan nima oʻzgardi va buni qayerdan bilasiz.",
+       "ru": "Замените каждую фактом о вас: что именно изменилось и откуда вы это знаете."
+      }
+     },
+     {
+      "key": "precise",
+      "check": {
+       "en": "Are things named precisely (“my grandmother’s sewing machine”, not “an old object”)?",
+       "uz": "Narsalar aniq nomlanganmi (“eski buyum” emas, “buvimning tikuv mashinasi”)?",
+       "ru": "Точно ли названы вещи («бабушкина швейная машинка», а не «старый предмет»)?"
+      },
+      "fix": {
+       "en": "Find three general words (thing, place, people) and replace each with the exact name.",
+       "uz": "Uchta umumiy soʻzni (narsa, joy, odamlar) toping va har birini aniq nomi bilan almashtiring.",
+       "ru": "Найдите три общих слова (вещь, место, люди) и замените каждое точным названием."
+      }
+     }
+    ],
+    "scored_by": "student",
+    "counselor_uses_same": true
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "en",
+     "min_words": 250,
+     "max_words": 1000,
+     "not_prompt": true,
+     "differs_from_previous": true
+    },
+    "fields": [
+     {
+      "key": "score_concrete",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Does the essay contain at least three concrete details: a sound, an object, a place, or words someone said?",
+       "uz": "Inshoda kamida uchta aniq tafsilot bormi: tovush, buyum, joy yoki kimdir aytgan soʻzlar?",
+       "ru": "Есть ли в эссе хотя бы три конкретные детали: звук, предмет, место или чьи-то слова?"
+      }
+     },
+     {
+      "key": "score_show",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Is a feeling shown at least once through an action or a detail, not only named (“I was nervous”)?",
+       "uz": "Hech boʻlmaganda bitta his-tuygʻu faqat nomlanmay (“Men hayajonlandim”), harakat yoki tafsilot orqali koʻrsatilganmi?",
+       "ru": "Показано ли хотя бы одно чувство через действие или деталь, а не только названо («я волновался»)?"
+      }
+     },
+     {
+      "key": "score_cliche",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Have you removed sentences anyone could write, such as “Since childhood I have always…” or “This experience changed my life”?",
+       "uz": "Har kim yoza oladigan gaplarni, masalan, “Bolaligimdan beri men doim…” yoki “Bu tajriba hayotimni oʻzgartirdi” kabilarni olib tashladingizmi?",
+       "ru": "Убрали ли вы фразы, которые мог бы написать кто угодно, например «С детства я всегда…» или «Этот опыт изменил мою жизнь»?"
+      }
+     },
+     {
+      "key": "score_precise",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Are things named precisely (“my grandmother’s sewing machine”, not “an old object”)?",
+       "uz": "Narsalar aniq nomlanganmi (“eski buyum” emas, “buvimning tikuv mashinasi”)?",
+       "ru": "Точно ли названы вещи («бабушкина швейная машинка», а не «старый предмет»)?"
+      }
+     }
+    ]
+   },
+   "variant_5min": "C12-v5revi",
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-rvvoic",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "stage_step": "revise",
+   "pass_n": 4,
+   "type": "create",
+   "minutes": 30,
+   "essay_lang": "en",
+   "title": {
+    "en": "Revision pass 4: your voice, your words",
+    "uz": "Tahrir 4-bosqich: sizning ovozingiz, sizning soʻzlaringiz",
+    "ru": "Правка, проход 4: ваш голос, ваши слова"
+   },
+   "instructions": {
+    "en": "This pass checks that the essay sounds like you and is entirely your own work. Read your latest draft once without changing anything. Then score it on each question below: 0 = not yet, 1 = partly, 2 = yes. Fix every point you scored 0 or 1, using the hint under it. Paste the revised essay.",
+    "uz": "Bu bosqich insho sizning ovozingizda yozilganini va butunlay oʻz ishingiz ekanini tekshiradi. Oxirgi qoralamangizni hech narsani oʻzgartirmasdan bir marta oʻqing. Soʻng uni quyidagi har bir savol boʻyicha baholang: 0 = hali yoʻq, 1 = qisman, 2 = ha. 0 yoki 1 qoʻygan har bir bandni uning ostidagi maslahat yordamida tuzating. Tuzatilgan inshoni joylang.",
+    "ru": "Этот проход проверяет, что эссе звучит как вы и полностью является вашей работой. Прочитайте последний черновик один раз, ничего не меняя. Затем оцените его по каждому вопросу ниже: 0 = пока нет, 1 = частично, 2 = да. Исправьте каждый пункт, где поставили 0 или 1, по подсказке под ним. Вставьте исправленное эссе."
+   },
+   "rubric": {
+    "scale": {
+     "0": {
+      "en": "not yet",
+      "uz": "hali yoʻq",
+      "ru": "пока нет"
+     },
+     "1": {
+      "en": "partly",
+      "uz": "qisman",
+      "ru": "частично"
+     },
+     "2": {
+      "en": "yes",
+      "uz": "ha",
+      "ru": "да"
+     }
+    },
+    "criteria": [
+     {
+      "key": "sounds",
+      "check": {
+       "en": "Read it aloud: does it sound like you talking carefully, not like a textbook?",
+       "uz": "Ovoz chiqarib oʻqing: u darslikdagidek emas, oʻylab gapirayotgan oʻzingizdek eshitiladimi?",
+       "ru": "Прочитайте вслух: звучит ли это как вы, когда говорите вдумчиво, а не как учебник?"
+      },
+      "fix": {
+       "en": "Mark every sentence you stumbled on while reading aloud, and rewrite it the way you would say it.",
+       "uz": "Ovoz chiqarib oʻqiyotganda qoqilgan har bir gapni belgilang va uni oʻzingiz qanday aytsangiz, shunday qayta yozing.",
+       "ru": "Отметьте каждое предложение, на котором споткнулись при чтении вслух, и перепишите его так, как сказали бы сами."
+      }
+     },
+     {
+      "key": "own",
+      "check": {
+       "en": "Is every sentence written by you? Helpers may ask questions and point out problems; they do not write sentences.",
+       "uz": "Har bir gapni oʻzingiz yozganmisiz? Yordamchilar savol berishi va kamchiliklarni koʻrsatishi mumkin; ular gap yozib bermaydi.",
+       "ru": "Каждое ли предложение написано вами? Помощники могут задавать вопросы и указывать на проблемы, но не пишут предложения."
+      },
+      "fix": {
+       "en": "Delete any sentence that another person or a tool wrote, and write the idea again in your own words.",
+       "uz": "Boshqa odam yoki biror vosita yozgan har qanday gapni oʻchiring va oʻsha fikrni oʻz soʻzlaringiz bilan qayta yozing.",
+       "ru": "Удалите любое предложение, написанное другим человеком или инструментом, и запишите мысль своими словами."
+      }
+     },
+     {
+      "key": "words",
+      "check": {
+       "en": "Have you replaced words you would never use in real life with your own simpler ones?",
+       "uz": "Hayotda hech qachon ishlatmaydigan soʻzlarni oʻzingizning oddiyroq soʻzlaringiz bilan almashtirdingizmi?",
+       "ru": "Заменили ли вы слова, которые никогда не используете в жизни, на свои, более простые?"
+      },
+      "fix": {
+       "en": "Circle every word you looked up to sound impressive; keep it only if it is the most exact word.",
+       "uz": "Taʼsirli eshitilishi uchun lugʻatdan topgan har bir soʻzni belgilang; uni faqat eng aniq soʻz boʻlsagina qoldiring.",
+       "ru": "Обведите каждое слово, которое искали в словаре ради впечатления; оставьте его, только если оно самое точное."
+      }
+     },
+     {
+      "key": "true",
+      "check": {
+       "en": "Is everything in the essay true, as it happened?",
+       "uz": "Inshodagi hamma narsa rostmi, qanday boʻlgan boʻlsa, shundaymi?",
+       "ru": "Всё ли в эссе правда, так, как было?"
+      },
+      "fix": {
+       "en": "Change any part you made bigger or invented. A small true story is stronger than an exaggerated one.",
+       "uz": "Boʻrttirgan yoki oʻylab topgan har qanday qismni oʻzgartiring. Kichik, lekin rost hikoya boʻrttirilganidan kuchliroq.",
+       "ru": "Измените любую часть, которую вы преувеличили или придумали. Небольшая правдивая история сильнее преувеличенной."
+      }
+     }
+    ],
+    "scored_by": "student",
+    "counselor_uses_same": true
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "en",
+     "min_words": 250,
+     "max_words": 1000,
+     "not_prompt": true,
+     "differs_from_previous": true
+    },
+    "fields": [
+     {
+      "key": "score_sounds",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Read it aloud: does it sound like you talking carefully, not like a textbook?",
+       "uz": "Ovoz chiqarib oʻqing: u darslikdagidek emas, oʻylab gapirayotgan oʻzingizdek eshitiladimi?",
+       "ru": "Прочитайте вслух: звучит ли это как вы, когда говорите вдумчиво, а не как учебник?"
+      }
+     },
+     {
+      "key": "score_own",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Is every sentence written by you? Helpers may ask questions and point out problems; they do not write sentences.",
+       "uz": "Har bir gapni oʻzingiz yozganmisiz? Yordamchilar savol berishi va kamchiliklarni koʻrsatishi mumkin; ular gap yozib bermaydi.",
+       "ru": "Каждое ли предложение написано вами? Помощники могут задавать вопросы и указывать на проблемы, но не пишут предложения."
+      }
+     },
+     {
+      "key": "score_words",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Have you replaced words you would never use in real life with your own simpler ones?",
+       "uz": "Hayotda hech qachon ishlatmaydigan soʻzlarni oʻzingizning oddiyroq soʻzlaringiz bilan almashtirdingizmi?",
+       "ru": "Заменили ли вы слова, которые никогда не используете в жизни, на свои, более простые?"
+      }
+     },
+     {
+      "key": "score_true",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Is everything in the essay true, as it happened?",
+       "uz": "Inshodagi hamma narsa rostmi, qanday boʻlgan boʻlsa, shundaymi?",
+       "ru": "Всё ли в эссе правда, так, как было?"
+      }
+     }
+    ]
+   },
+   "variant_5min": "C12-v5revi",
+   "facts": [
+    {
+     "claim": "Common App's fraud policy lists as fraud: submitting plagiarized essays, or intentionally misrepresenting as one's own original work another person's thoughts, language, ideas, expressions or experiences, or the substantive content or output of an artificial intelligence platform, technology or algorithm.",
+     "url": "https://www.commonapp.org/fraud-policy",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "UCAS: generating and submitting all or a large part of a personal statement from an AI tool and presenting it as your own words could be considered cheating; applicants declare that the statement has not been copied or provided from another source, including artificial intelligence software.",
+     "url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/a-guide-to-using-ai-and-chatgpt-with-your-personal-statement",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-rvcut6",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "stage_step": "revise",
+   "pass_n": 5,
+   "type": "create",
+   "minutes": 30,
+   "essay_lang": "en",
+   "title": {
+    "en": "Revision pass 5: cut to 650 words",
+    "uz": "Tahrir 5-bosqich: 650 soʻzgacha qisqartiring",
+    "ru": "Правка, проход 5: сократите до 650 слов"
+   },
+   "instructions": {
+    "en": "This pass brings the essay within the Common App limit of 650 words without losing the reflection. Read your latest draft once without changing anything. Then score it on each question below: 0 = not yet, 1 = partly, 2 = yes. Fix every point you scored 0 or 1, using the hint under it. Paste the revised essay.",
+    "uz": "Bu bosqich mulohaza qismini yoʻqotmasdan inshoni Common App chegarasi boʻlgan 650 soʻzga sigʻdiradi. Oxirgi qoralamangizni hech narsani oʻzgartirmasdan bir marta oʻqing. Soʻng uni quyidagi har bir savol boʻyicha baholang: 0 = hali yoʻq, 1 = qisman, 2 = ha. 0 yoki 1 qoʻygan har bir bandni uning ostidagi maslahat yordamida tuzating. Tuzatilgan inshoni joylang.",
+    "ru": "Этот проход укладывает эссе в лимит Common App в 650 слов, не теряя размышления. Прочитайте последний черновик один раз, ничего не меняя. Затем оцените его по каждому вопросу ниже: 0 = пока нет, 1 = частично, 2 = да. Исправьте каждый пункт, где поставили 0 или 1, по подсказке под ним. Вставьте исправленное эссе."
+   },
+   "rubric": {
+    "scale": {
+     "0": {
+      "en": "not yet",
+      "uz": "hali yoʻq",
+      "ru": "пока нет"
+     },
+     "1": {
+      "en": "partly",
+      "uz": "qisman",
+      "ru": "частично"
+     },
+     "2": {
+      "en": "yes",
+      "uz": "ha",
+      "ru": "да"
+     }
+    },
+    "criteria": [
+     {
+      "key": "limit",
+      "check": {
+       "en": "Is the essay 650 words or fewer? (The app counts.)",
+       "uz": "Insho 650 soʻz yoki undan kammi? (Ilova sanaydi.)",
+       "ru": "В эссе 650 слов или меньше? (Приложение считает.)"
+      },
+      "fix": {
+       "en": "Cut the longest description of events first; keep the reflection.",
+       "uz": "Avval voqealarning eng uzun tasvirini qisqartiring; mulohazani saqlab qoling.",
+       "ru": "Сначала сократите самое длинное описание событий; размышление оставьте."
+      },
+      "code_check": {
+       "max_words": 650
+      }
+     },
+     {
+      "key": "repeat",
+      "check": {
+       "en": "Have you removed sentences that repeat an idea already said?",
+       "uz": "Avval aytilgan fikrni takrorlaydigan gaplarni olib tashladingizmi?",
+       "ru": "Убрали ли вы предложения, повторяющие уже сказанную мысль?"
+      },
+      "fix": {
+       "en": "For each sentence, ask: does the essay lose anything without it? If not, cut it.",
+       "uz": "Har bir gap uchun soʻrang: usiz insho biror narsa yoʻqotadimi? Yoʻqotmasa, olib tashlang.",
+       "ru": "Для каждого предложения спросите: потеряет ли эссе что-то без него? Если нет, удалите его."
+      }
+     },
+     {
+      "key": "filler",
+      "check": {
+       "en": "Have you cut filler words such as very, really, actually, in order to, I think that?",
+       "uz": "“very”, “really”, “actually”, “in order to”, “I think that” kabi ortiqcha soʻzlarni olib tashladingizmi?",
+       "ru": "Убрали ли вы лишние слова вроде very, really, actually, in order to, I think that?"
+      },
+      "fix": {
+       "en": "Search the draft for each of these words and delete it wherever the sentence still works without it.",
+       "uz": "Qoralamadan bu soʻzlarning har birini qidiring va gap ularsiz ham ishlaydigan joylarda oʻchiring.",
+       "ru": "Найдите в черновике каждое из этих слов и удалите его везде, где предложение работает и без него."
+      }
+     },
+     {
+      "key": "room",
+      "check": {
+       "en": "After cutting, is at least a third of the essay still reflection?",
+       "uz": "Qisqartirgandan keyin ham inshoning kamida uchdan bir qismi mulohazami?",
+       "ru": "После сокращения хотя бы треть эссе всё ещё размышление?"
+      },
+      "fix": {
+       "en": "If the reflection shrank, cut more from the events and give those words back to what you learned.",
+       "uz": "Agar mulohaza qisqarib ketgan boʻlsa, voqealardan yana qisqartiring va boʻshagan soʻzlarni oʻrganganlaringizga bering.",
+       "ru": "Если размышление сократилось, урежьте ещё события и отдайте эти слова тому, чему вы научились."
+      }
+     }
+    ],
+    "scored_by": "student",
+    "counselor_uses_same": true
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "en",
+     "min_words": 250,
+     "max_words": 650,
+     "not_prompt": true,
+     "differs_from_previous": true
+    },
+    "fields": [
+     {
+      "key": "score_limit",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Is the essay 650 words or fewer? (The app counts.)",
+       "uz": "Insho 650 soʻz yoki undan kammi? (Ilova sanaydi.)",
+       "ru": "В эссе 650 слов или меньше? (Приложение считает.)"
+      }
+     },
+     {
+      "key": "score_repeat",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Have you removed sentences that repeat an idea already said?",
+       "uz": "Avval aytilgan fikrni takrorlaydigan gaplarni olib tashladingizmi?",
+       "ru": "Убрали ли вы предложения, повторяющие уже сказанную мысль?"
+      }
+     },
+     {
+      "key": "score_filler",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Have you cut filler words such as very, really, actually, in order to, I think that?",
+       "uz": "“very”, “really”, “actually”, “in order to”, “I think that” kabi ortiqcha soʻzlarni olib tashladingizmi?",
+       "ru": "Убрали ли вы лишние слова вроде very, really, actually, in order to, I think that?"
+      }
+     },
+     {
+      "key": "score_room",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "After cutting, is at least a third of the essay still reflection?",
+       "uz": "Qisqartirgandan keyin ham inshoning kamida uchdan bir qismi mulohazami?",
+       "ru": "После сокращения хотя бы треть эссе всё ещё размышление?"
+      }
+     }
+    ]
+   },
+   "variant_5min": "C12-v5revi",
+   "facts": [
+    {
+     "claim": "The Common App personal essay is limited to 650 words, with a minimum of 250 words.",
+     "url": "https://www.collegetransitions.com/blog/common-app-essay-prompts/",
+     "verified_at": "2026-10-07",
+     "secondary": true,
+     "needs_verification": true,
+     "note": "Re-checked 2026-10-07. No commonapp.org page that opens without signing in states the limit: the essay-prompts page, the 2026-2027 announcement and the 2026-2027 'What's new' deck give no word count, and the help-centre article 'are-there-word-limits-kudeoeos' is about the UChicago supplement, not the personal essay. College Transitions (published 5 Mar 2026, 2026-27 cycle) says the limit 'remains at 650 words' with 'a minimum floor of 250 words'. The application enforces the limit itself; confirm in its Writing section."
+    }
+   ],
+   "needs_verification": true,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true,
+   "verify_task": true
+  },
+  {
+   "id": "C12-rvlang",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "stage_step": "revise",
+   "pass_n": 6,
+   "type": "create",
+   "minutes": 25,
+   "essay_lang": "en",
+   "title": {
+    "en": "Revision pass 6: language and proofreading",
+    "uz": "Tahrir 6-bosqich: til va xatolarni tekshirish",
+    "ru": "Правка, проход 6: язык и вычитка"
+   },
+   "instructions": {
+    "en": "This pass checks the English: tenses, spelling and punctuation. Read your latest draft once without changing anything. Then score it on each question below: 0 = not yet, 1 = partly, 2 = yes. Fix every point you scored 0 or 1, using the hint under it. Paste the revised essay.",
+    "uz": "Bu bosqich ingliz tilini tekshiradi: zamonlar, imlo va tinish belgilari. Oxirgi qoralamangizni hech narsani oʻzgartirmasdan bir marta oʻqing. Soʻng uni quyidagi har bir savol boʻyicha baholang: 0 = hali yoʻq, 1 = qisman, 2 = ha. 0 yoki 1 qoʻygan har bir bandni uning ostidagi maslahat yordamida tuzating. Tuzatilgan inshoni joylang.",
+    "ru": "Этот проход проверяет английский: времена, орфографию и пунктуацию. Прочитайте последний черновик один раз, ничего не меняя. Затем оцените его по каждому вопросу ниже: 0 = пока нет, 1 = частично, 2 = да. Исправьте каждый пункт, где поставили 0 или 1, по подсказке под ним. Вставьте исправленное эссе."
+   },
+   "rubric": {
+    "scale": {
+     "0": {
+      "en": "not yet",
+      "uz": "hali yoʻq",
+      "ru": "пока нет"
+     },
+     "1": {
+      "en": "partly",
+      "uz": "qisman",
+      "ru": "частично"
+     },
+     "2": {
+      "en": "yes",
+      "uz": "ha",
+      "ru": "да"
+     }
+    },
+    "criteria": [
+     {
+      "key": "tense",
+      "check": {
+       "en": "Are the tenses consistent: past for the story, present for who you are now?",
+       "uz": "Zamonlar izchilmi: hikoya uchun oʻtgan zamon, hozir kim ekaningiz uchun hozirgi zamon?",
+       "ru": "Последовательны ли времена: прошедшее для истории, настоящее для того, кто вы сейчас?"
+      },
+      "fix": {
+       "en": "Underline every verb in two paragraphs and check its tense against the time it describes.",
+       "uz": "Ikki xatboshidagi har bir feʼlning tagiga chizing va uning zamonini u tasvirlayotgan vaqt bilan solishtiring.",
+       "ru": "Подчеркните все глаголы в двух абзацах и сверьте их время с тем временем, которое они описывают."
+      }
+     },
+     {
+      "key": "spelling",
+      "check": {
+       "en": "Did you check spelling and punctuation with a spell-checker and one slow read?",
+       "uz": "Imlo va tinish belgilarini imlo tekshirgich va bir marta sekin oʻqish orqali tekshirdingizmi?",
+       "ru": "Проверили ли вы орфографию и пунктуацию с помощью проверки правописания и одного медленного прочтения?"
+      },
+      "fix": {
+       "en": "Read the essay from the last sentence to the first: mistakes are easier to see out of order.",
+       "uz": "Inshoni oxirgi gapdan birinchisiga qarab oʻqing: tartibsiz oʻqiganda xatolar osonroq koʻrinadi.",
+       "ru": "Прочитайте эссе с последнего предложения к первому: вне порядка ошибки заметнее."
+      }
+     },
+     {
+      "key": "long",
+      "check": {
+       "en": "Are sentences longer than about 30 words split where they confuse?",
+       "uz": "Taxminan 30 soʻzdan uzun, chalkashtiradigan gaplar boʻlinganmi?",
+       "ru": "Разделены ли предложения длиннее примерно 30 слов там, где они запутывают?"
+      },
+      "fix": {
+       "en": "Split each long sentence at the point where it starts to say a second thing.",
+       "uz": "Har bir uzun gapni u ikkinchi narsani ayta boshlagan joyidan boʻling.",
+       "ru": "Разделите каждое длинное предложение там, где оно начинает говорить о втором."
+      }
+     },
+     {
+      "key": "plain",
+      "check": {
+       "en": "Is the text plain, with paragraph breaks where you want them, so that it pastes cleanly into a text box?",
+       "uz": "Matn oddiymi va xatboshilar siz istagan joyda boʻlinganmi, toki u matn maydoniga toza joylansin?",
+       "ru": "Текст простой, с абзацами там, где нужно, чтобы он чисто вставился в текстовое поле?"
+      },
+      "fix": {
+       "en": "Remove bold, italics and special symbols; leave one empty line between paragraphs.",
+       "uz": "Qalin va kursiv shriftni hamda maxsus belgilarni olib tashlang; xatboshilar orasida bitta boʻsh qator qoldiring.",
+       "ru": "Уберите жирный шрифт, курсив и специальные символы; оставьте одну пустую строку между абзацами."
+      }
+     }
+    ],
+    "scored_by": "student",
+    "counselor_uses_same": true
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "en",
+     "min_words": 250,
+     "max_words": 650,
+     "not_prompt": true,
+     "differs_from_previous": true
+    },
+    "fields": [
+     {
+      "key": "score_tense",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Are the tenses consistent: past for the story, present for who you are now?",
+       "uz": "Zamonlar izchilmi: hikoya uchun oʻtgan zamon, hozir kim ekaningiz uchun hozirgi zamon?",
+       "ru": "Последовательны ли времена: прошедшее для истории, настоящее для того, кто вы сейчас?"
+      }
+     },
+     {
+      "key": "score_spelling",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Did you check spelling and punctuation with a spell-checker and one slow read?",
+       "uz": "Imlo va tinish belgilarini imlo tekshirgich va bir marta sekin oʻqish orqali tekshirdingizmi?",
+       "ru": "Проверили ли вы орфографию и пунктуацию с помощью проверки правописания и одного медленного прочтения?"
+      }
+     },
+     {
+      "key": "score_long",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Are sentences longer than about 30 words split where they confuse?",
+       "uz": "Taxminan 30 soʻzdan uzun, chalkashtiradigan gaplar boʻlinganmi?",
+       "ru": "Разделены ли предложения длиннее примерно 30 слов там, где они запутывают?"
+      }
+     },
+     {
+      "key": "score_plain",
+      "type": "choice",
+      "options": [
+       0,
+       1,
+       2
+      ],
+      "label": {
+       "en": "Is the text plain, with paragraph breaks where you want them, so that it pastes cleanly into a text box?",
+       "uz": "Matn oddiymi va xatboshilar siz istagan joyda boʻlinganmi, toki u matn maydoniga toza joylansin?",
+       "ru": "Текст простой, с абзацами там, где нужно, чтобы он чисто вставился в текстовое поле?"
+      }
+     }
+    ]
+   },
+   "variant_5min": "C12-v5revi",
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-rdalou",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "any"
+   ],
+   "stage_step": "feedback",
+   "type": "contact",
+   "minutes": 20,
+   "essay_lang": "en",
+   "title": {
+    "en": "Read your essay aloud to one person",
+    "uz": "Inshoingizni bir kishiga ovoz chiqarib oʻqib bering",
+    "ru": "Прочитайте эссе вслух одному человеку"
+   },
+   "instructions": {
+    "en": "Read your essay aloud to one person you trust: a teacher, a parent, an older sibling or a friend. Do not explain it first. Afterwards ask only two questions: “What do you now know about me?” and “Where did you lose interest?” Write down their answers. They may point out problems; the changes are yours to make. If they do not read English, read it anyway and ask the same questions: they will still hear where it drags.",
+    "uz": "Inshoingizni ishongan bir kishiga ovoz chiqarib oʻqib bering: oʻqituvchi, ota-ona, katta aka-opa yoki doʻstingizga. Oldindan tushuntirmang. Keyin faqat ikkita savol bering: “Endi men haqimda nimani bilib oldingiz?” va “Qayerda zerikib qoldingiz?” Javoblarini yozib oling. Ular kamchiliklarni koʻrsatishi mumkin; oʻzgartirishlarni esa oʻzingiz kiritasiz. Agar ular ingliz tilini bilmasa ham, baribir oʻqib bering va oʻsha savollarni bering: qayerda zerikarli boʻlib qolganini baribir sezishadi.",
+    "ru": "Прочитайте эссе вслух одному человеку, которому доверяете: учителю, родителю, старшему брату или сестре, другу. Ничего не объясняйте заранее. Потом задайте только два вопроса: «Что вы теперь знаете обо мне?» и «Где вам стало неинтересно?» Запишите ответы. Они могут указать на проблемы; изменения вносите вы сами. Если человек не знает английского, всё равно прочитайте и задайте те же вопросы: он всё равно услышит, где текст затянут."
+   },
+   "evidence": {
+    "level": "L1",
+    "method": "self_report",
+    "fields": [
+     {
+      "key": "listener",
+      "type": "choice",
+      "options": [
+       "teacher",
+       "parent",
+       "sibling",
+       "friend",
+       "other"
+      ],
+      "option_labels": {
+       "teacher": {
+        "en": "Teacher",
+        "uz": "Oʻqituvchi",
+        "ru": "Учитель"
+       },
+       "parent": {
+        "en": "Parent",
+        "uz": "Ota-ona",
+        "ru": "Родитель"
+       },
+       "sibling": {
+        "en": "Brother or sister",
+        "uz": "Aka-uka yoki opa-singil",
+        "ru": "Брат или сестра"
+       },
+       "friend": {
+        "en": "Friend",
+        "uz": "Doʻst",
+        "ru": "Друг"
+       },
+       "other": {
+        "en": "Someone else",
+        "uz": "Boshqa odam",
+        "ru": "Другой человек"
+       }
+      },
+      "label": {
+       "en": "Who listened",
+       "uz": "Kim tingladi",
+       "ru": "Кто слушал"
+      }
+     },
+     {
+      "key": "knows_now",
+      "type": "text_long",
+      "max_chars": 400,
+      "label": {
+       "en": "What they now know about you",
+       "uz": "Ular endi siz haqingizda nimani bilib oldi",
+       "ru": "Что они теперь знают о вас"
+      }
+     },
+     {
+      "key": "lost_interest",
+      "type": "text_long",
+      "max_chars": 400,
+      "label": {
+       "en": "Where they lost interest",
+       "uz": "Qayerda zerikib qoldi",
+       "ru": "Где им стало неинтересно"
+      }
+     }
+    ]
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-cadrf2",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "stage_step": "draft",
+   "type": "create",
+   "minutes": 30,
+   "essay_lang": "en",
+   "title": {
+    "en": "Put together the clean version",
+    "uz": "Toza nusxani tayyorlang",
+    "ru": "Соберите чистовой вариант"
+   },
+   "instructions": {
+    "en": "Apply the notes from your second reader that you agree with, then read the essay once more from start to end. Paste the full essay: 250-650 words in English. This is the version a Jamals counselor will read.",
+    "uz": "Ikkinchi oʻquvchingizning siz rozi boʻlgan izohlarini kiriting, soʻng inshoni boshidan oxirigacha yana bir bor oʻqing. Inshoni toʻliq joylang: ingliz tilida 250-650 soʻz. Jamals maslahatchisi aynan shu nusxani oʻqiydi.",
+    "ru": "Внесите замечания второго читателя, с которыми вы согласны, и ещё раз прочитайте эссе от начала до конца. Вставьте эссе целиком: 250-650 слов на английском. Именно этот вариант прочитает консультант Jamals."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "en",
+     "min_words": 250,
+     "max_words": 650,
+     "not_prompt": true,
+     "differs_from_previous": true
+    }
+   },
+   "variant_5min": "C12-v5revi",
+   "facts": [
+    {
+     "claim": "The Common App personal essay is limited to 650 words, with a minimum of 250 words.",
+     "url": "https://www.collegetransitions.com/blog/common-app-essay-prompts/",
+     "verified_at": "2026-10-07",
+     "secondary": true,
+     "needs_verification": true,
+     "note": "Re-checked 2026-10-07. No commonapp.org page that opens without signing in states the limit: the essay-prompts page, the 2026-2027 announcement and the 2026-2027 'What's new' deck give no word count, and the help-centre article 'are-there-word-limits-kudeoeos' is about the UChicago supplement, not the personal essay. College Transitions (published 5 Mar 2026, 2026-27 cycle) says the limit 'remains at 650 words' with 'a minimum floor of 250 words'. The application enforces the limit itself; confirm in its Writing section."
+    }
+   ],
+   "needs_verification": true,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true,
+   "verify_task": true
+  },
+  {
+   "id": "C12-caaddi",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "stage_step": "plan",
+   "type": "reflect",
+   "minutes": 15,
+   "optional": true,
+   "essay_lang": "en",
+   "title": {
+    "en": "Decide whether you need “Additional information”",
+    "uz": "“Additional information” boʻlimi kerakmi, hal qiling",
+    "ru": "Решите, нужен ли раздел «Additional information»"
+   },
+   "instructions": {
+    "en": "The Common App has an optional “Additional information” section for facts that the rest of the application does not explain. It is not a second essay. Write a few plain sentences only if you have something to explain, for example a change of school or a gap in your studies. A family or health circumstance that affected your studies belongs in the separate optional “Challenges and circumstances” question instead. If you have nothing like this, choose “Not needed”: leaving it empty is normal.",
+    "uz": "Common App platformasida ixtiyoriy “Additional information” boʻlimi bor: u arizaning boshqa qismlari tushuntirmaydigan faktlar uchun. Bu ikkinchi insho emas. Faqat tushuntiradigan narsangiz boʻlsa, bir necha oddiy gap yozing, masalan: maktab almashtirganingiz yoki oʻqishdagi tanaffus. Oʻqishingizga taʼsir qilgan oilaviy yoxud sogʻliq bilan bogʻliq holat esa alohida, ixtiyoriy “Challenges and circumstances” savoliga yoziladi. Bunday narsa boʻlmasa, “Kerak emas”ni tanlang: uni boʻsh qoldirish odatiy holat.",
+    "ru": "В Common App есть необязательный раздел «Additional information» для фактов, которые не объясняет остальная заявка. Это не второе эссе. Пишите несколько простых предложений, только если вам есть что объяснить, например смену школы или перерыв в учёбе. Семейные обстоятельства или здоровье, повлиявшие на учёбу, описывают в отдельном необязательном вопросе «Challenges and circumstances». Если ничего такого нет, выберите «Не нужен»: оставить раздел пустым нормально."
+   },
+   "evidence": {
+    "level": "L1",
+    "method": "self_report",
+    "fields": [
+     {
+      "key": "needed",
+      "type": "choice",
+      "options": [
+       "needed",
+       "not_needed"
+      ],
+      "option_labels": {
+       "needed": {
+        "en": "Needed",
+        "uz": "Kerak",
+        "ru": "Нужен"
+       },
+       "not_needed": {
+        "en": "Not needed",
+        "uz": "Kerak emas",
+        "ru": "Не нужен"
+       }
+      },
+      "label": {
+       "en": "Do you need it?",
+       "uz": "Sizga kerakmi?",
+       "ru": "Он вам нужен?"
+      }
+     }
+    ],
+    "then_if": {
+     "field": "needed",
+     "equals": "needed",
+     "level": "L3",
+     "method": "artifact",
+     "check": {
+      "lang": "en",
+      "min_words": 20,
+      "max_words": 300,
+      "not_prompt": true
+     }
+    }
+   },
+   "facts": [
+    {
+     "claim": "From 1 Aug 2025 the first-year 'Additional information' question was reduced from 650 to 300 words max; the 'Challenges and circumstances' question stays at 250 words max.",
+     "url": "https://www.commonapp.org/blog/announcing-2025-2026-common-app-essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false,
+     "needs_verification": true,
+     "note": "Re-checked 2026-10-07 on the 2025-2026 announcement (27 Feb 2025): the first-year limit was 'reduced from 650 to 300 words max' and Challenges and circumstances stays at 'first-year app 250 words max'. The 2026-2027 announcement and the 2026-2027 'What's new' deck announce no change to either limit, but neither restates them. Confirm in the 2026-2027 application."
+    },
+    {
+     "claim": "Since 1 Aug 2025 the first-year application has a separate optional 'Challenges and circumstances' question (Yes/No, then 'Please describe the challenges or circumstances and how they have impacted you'). Its listed examples include family disruptions (divorce, incarceration, job loss, health, loss of a family member, addiction), physical health and mental well-being, housing instability, and war or conflict.",
+     "url": "https://www.commonapp.org/blog/announcing-2025-2026-common-app-essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "The 2026-2027 first-year application keeps the 'Challenges and circumstances' question; the only change Common App lists for it is 'care-taking' renamed 'caregiving'.",
+     "url": "https://www.commonapp.org/files/webinar_decks/Whats-New-with-Common-App-First-Year-2026-2027.pdf",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": true,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true,
+   "factcheck": {
+    "verified_at": "2026-10-07",
+    "note": "Corrected: the example 'a family or health circumstance that affected your grades' was sent to Additional information; since 1 Aug 2025 that belongs in the separate Challenges and circumstances question (official 2025-2026 announcement; still present in 2026-2027 per Common App's deck). Two facts added. The ru instruction now says «Не нужен», matching the option label. The 300-word limit stays needs_verification for 2026-2027."
+   },
+   "verify_task": true
+  },
+  {
+   "id": "C12-cafinl",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "stage_step": "final",
+   "type": "submit",
+   "minutes": 20,
+   "essay_lang": "en",
+   "title": {
+    "en": "Final read by a Jamals counselor, then paste it into the Common App",
+    "uz": "Jamals maslahatchisining yakuniy oʻqishi, soʻng Common App platformasiga joylash",
+    "ru": "Финальное прочтение консультантом Jamals, затем вставка в Common App"
+   },
+   "instructions": {
+    "en": "Send your clean version to a Jamals counselor for the final read. The counselor reads it and may ask questions; they do not rewrite it. When the counselor confirms, paste the essay into the personal essay box in your Common App account, check that the paragraph breaks are still there, and read it once more inside the application.",
+    "uz": "Toza nusxangizni yakuniy oʻqish uchun Jamals maslahatchisiga yuboring. Maslahatchi uni oʻqiydi va savol berishi mumkin; u inshoni qayta yozmaydi. Maslahatchi tasdiqlagach, inshoni Common App hisobingizdagi shaxsiy insho maydoniga joylang, xatboshilar saqlanib qolganini tekshiring va uni ariza ichida yana bir bor oʻqing.",
+    "ru": "Отправьте чистовой вариант консультанту Jamals на финальное прочтение. Консультант читает и может задать вопросы, но не переписывает текст. Когда консультант подтвердит, вставьте эссе в поле личного эссе в своём аккаунте Common App, проверьте, что абзацы сохранились, и ещё раз прочитайте его внутри заявки."
+   },
+   "evidence": {
+    "level": "L7",
+    "method": "checkpoint",
+    "queue": "essay_final",
+    "rubric_ref": [
+     "C12-rvsowh",
+     "C12-rvstru",
+     "C12-rvdeta",
+     "C12-rvvoic",
+     "C12-rvcut6",
+     "C12-rvlang"
+    ],
+    "then": {
+     "level": "L1",
+     "method": "self_report",
+     "fields": [
+      {
+       "key": "pasted",
+       "type": "bool",
+       "label": {
+        "en": "Pasted into the Common App and read there",
+        "uz": "Common App platformasiga joylandi va oʻsha yerda oʻqildi",
+        "ru": "Вставлено в Common App и прочитано там"
+       }
+      }
+     ]
+    }
+   },
+   "facts": [
+    {
+     "claim": "The Common App personal essay is limited to 650 words, with a minimum of 250 words.",
+     "url": "https://www.collegetransitions.com/blog/common-app-essay-prompts/",
+     "verified_at": "2026-10-07",
+     "secondary": true,
+     "needs_verification": true,
+     "note": "Re-checked 2026-10-07. No commonapp.org page that opens without signing in states the limit: the essay-prompts page, the 2026-2027 announcement and the 2026-2027 'What's new' deck give no word count, and the help-centre article 'are-there-word-limits-kudeoeos' is about the UChicago supplement, not the personal essay. College Transitions (published 5 Mar 2026, 2026-27 cycle) says the limit 'remains at 650 words' with 'a minimum floor of 250 words'. The application enforces the limit itself; confirm in its Writing section."
+    }
+   ],
+   "needs_verification": true,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true,
+   "verify_task": true
+  },
+  {
+   "id": "C12-v5writ",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "any"
+   ],
+   "stage_step": "variant",
+   "type": "create",
+   "minutes": 5,
+   "is_variant_of": [
+    "C12-caoutl",
+    "C12-cadrf1",
+    "C12-ucq1dr",
+    "C12-ucq2dr",
+    "C12-ucq3dr",
+    "C12-supwhy",
+    "C12-motdrf",
+    "C12-redo4s"
+   ],
+   "essay_lang": "application",
+   "title": {
+    "en": "5 minutes: write the next few sentences",
+    "uz": "5 daqiqa: keyingi bir necha gapni yozing",
+    "ru": "5 минут: напишите следующие несколько предложений"
+   },
+   "instructions": {
+    "en": "Only 5 minutes today. Open your draft and write the next 60-100 words, in the language of the essay. Do not edit what is already there. Paste only the new words.",
+    "uz": "Bugun atigi 5 daqiqa. Qoralamangizni oching va insho tilida keyingi 60-100 soʻzni yozing. Avval yozilganini tahrir qilmang. Faqat yangi soʻzlarni joylang.",
+    "ru": "Сегодня только 5 минут. Откройте черновик и напишите следующие 60-100 слов на языке эссе. Не редактируйте то, что уже есть. Вставьте только новые слова."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "application",
+     "min_words": 40,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-v5revi",
+   "kind": "essay_task",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "any"
+   ],
+   "stage_step": "variant",
+   "type": "create",
+   "minutes": 5,
+   "is_variant_of": [
+    "C12-rvsowh",
+    "C12-rvstru",
+    "C12-rvdeta",
+    "C12-rvvoic",
+    "C12-rvcut6",
+    "C12-rvlang",
+    "C12-cadrf2",
+    "C12-ucrevi"
+   ],
+   "essay_lang": "application",
+   "title": {
+    "en": "5 minutes: fix one paragraph",
+    "uz": "5 daqiqa: bitta xatboshini tuzating",
+    "ru": "5 минут: исправьте один абзац"
+   },
+   "instructions": {
+    "en": "Only 5 minutes today. Pick one paragraph of your draft and one question from the last revision checklist. Fix that paragraph so the answer becomes “yes”, and paste the new paragraph.",
+    "uz": "Bugun atigi 5 daqiqa. Qoralamangizdan bitta xatboshini va oxirgi tahrir roʻyxatidan bitta savolni tanlang. Javob “ha” boʻladigan qilib oʻsha xatboshini tuzating va yangi xatboshini joylang.",
+    "ru": "Сегодня только 5 минут. Выберите один абзац черновика и один вопрос из последнего списка правки. Исправьте абзац так, чтобы ответ стал «да», и вставьте новый абзац."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "application",
+     "min_words": 30,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  }
+ ]
+}

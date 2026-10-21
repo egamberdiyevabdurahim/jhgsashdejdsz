@@ -1,0 +1,3445 @@
+{
+  "bank": "C21",
+  "batch": 2,
+  "note": "SAT practice test form 1 (form-1.json), the Math section: 66 items, module 1 (ma1a01-22), module 2 easier (ma2e01-22) and harder (ma2h01-22); our own items (agent:p15-sat-math, 18 Oct 2026); never in a lesson or a practice pool; key at options[0] or answer_numeric.",
+  "items": [
+    {
+      "id": "C21-ma1a01",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equation",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "If 3x + 7 = 22, what is the value of x?",
+        "uz": "Agar 3x + 7 = 22 boʻlsa, x ning qiymati nechaga teng?",
+        "ru": "Если 3x + 7 = 22, чему равно значение x?"
+      },
+      "options": [
+        {
+          "en": "5",
+          "uz": "5",
+          "ru": "5"
+        },
+        {
+          "en": "15",
+          "uz": "15",
+          "ru": "15"
+        },
+        {
+          "en": "29",
+          "uz": "29",
+          "ru": "29"
+        },
+        {
+          "en": "3",
+          "uz": "3",
+          "ru": "3"
+        }
+      ],
+      "why": {
+        "en": "Subtract 7 from both sides: 3x = 15. Divide by 3: x = 5.",
+        "uz": "Ikkala tomondan 7 ni ayiring: 3x = 15. 3 ga boʻling: x = 5.",
+        "ru": "Вычтем 7 из обеих частей: 3x = 15. Разделим на 3: x = 5."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a02",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "equivalent_expressions",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Which expression is equivalent to 4(x + 3) − 2x?",
+        "uz": "Qaysi ifoda 4(x + 3) − 2x ifodaga aynan teng?",
+        "ru": "Какое выражение тождественно равно 4(x + 3) − 2x?"
+      },
+      "options": [
+        {
+          "en": "2x + 12",
+          "uz": "2x + 12",
+          "ru": "2x + 12"
+        },
+        {
+          "en": "2x + 3",
+          "uz": "2x + 3",
+          "ru": "2x + 3"
+        },
+        {
+          "en": "6x + 12",
+          "uz": "6x + 12",
+          "ru": "6x + 12"
+        },
+        {
+          "en": "4x + 12",
+          "uz": "4x + 12",
+          "ru": "4x + 12"
+        }
+      ],
+      "why": {
+        "en": "4(x + 3) = 4x + 12, and 4x + 12 − 2x = 2x + 12.",
+        "uz": "4(x + 3) = 4x + 12, keyin 4x + 12 − 2x = 2x + 12.",
+        "ru": "4(x + 3) = 4x + 12, затем 4x + 12 − 2x = 2x + 12."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a03",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The price of a jacket is 250 thousand soʻm. In a sale the price is reduced by 20%. What is the sale price, in thousands of soʻm?",
+        "uz": "Kurtkaning narxi 250 ming soʻm. Chegirmada narx 20% ga kamaytirildi. Chegirmadagi narx necha ming soʻm?",
+        "ru": "Куртка стоит 250 тыс. сум. На распродаже цену снизили на 20%. Сколько стоит куртка на распродаже (в тыс. сум)?"
+      },
+      "answer_numeric": {
+        "value": 200,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "20% of 250 is 50, so the sale price is 250 − 50 = 200 (or 0.8 × 250 = 200).",
+        "uz": "250 ning 20 foizi 50 ga teng, demak, chegirmadagi narx 250 − 50 = 200 (yoki 0,8 × 250 = 200).",
+        "ru": "20% от 250 — это 50, значит, цена на распродаже 250 − 50 = 200 (или 0,8 × 250 = 200)."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": -2.2,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a04",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The function f is defined by f(x) = 5x − 3. What is the value of f(4)?",
+        "uz": "f funksiya f(x) = 5x − 3 formula bilan berilgan. f(4) ning qiymati nechaga teng?",
+        "ru": "Функция f задана формулой f(x) = 5x − 3. Чему равно f(4)?"
+      },
+      "options": [
+        {
+          "en": "17",
+          "uz": "17",
+          "ru": "17"
+        },
+        {
+          "en": "23",
+          "uz": "23",
+          "ru": "23"
+        },
+        {
+          "en": "12",
+          "uz": "12",
+          "ru": "12"
+        },
+        {
+          "en": "20",
+          "uz": "20",
+          "ru": "20"
+        }
+      ],
+      "why": {
+        "en": "f(4) = 5 · 4 − 3 = 20 − 3 = 17.",
+        "uz": "f(4) = 5 · 4 − 3 = 20 − 3 = 17.",
+        "ru": "f(4) = 5 · 4 − 3 = 20 − 3 = 17."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a05",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "triangle_angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In triangle ABC, angle A measures 48° and angle B measures 67°. What is the measure of angle C?",
+        "uz": "ABC uchburchakda A burchak 48°, B burchak 67°. C burchak necha gradus?",
+        "ru": "В треугольнике ABC угол A равен 48°, угол B равен 67°. Чему равен угол C?"
+      },
+      "options": [
+        {
+          "en": "65°",
+          "uz": "65°",
+          "ru": "65°"
+        },
+        {
+          "en": "115°",
+          "uz": "115°",
+          "ru": "115°"
+        },
+        {
+          "en": "75°",
+          "uz": "75°",
+          "ru": "75°"
+        },
+        {
+          "en": "55°",
+          "uz": "55°",
+          "ru": "55°"
+        }
+      ],
+      "why": {
+        "en": "The angles of a triangle add up to 180°: 180° − 48° − 67° = 65°.",
+        "uz": "Uchburchak burchaklarining yigʻindisi 180°: 180° − 48° − 67° = 65°.",
+        "ru": "Сумма углов треугольника 180°: 180° − 48° − 67° = 65°."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.1,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a06",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A school club sells pens for 3 thousand soʻm each and notebooks for 5 thousand soʻm each. One day it sold 12 pens and some notebooks for 61 thousand soʻm in all. How many notebooks did it sell?",
+        "uz": "Maktab toʻgaragi ruchkani donasi 3 ming soʻmdan, daftarni donasi 5 ming soʻmdan sotadi. Bir kuni u 12 ta ruchka va bir nechta daftarni jami 61 ming soʻmga sotdi. U nechta daftar sotgan?",
+        "ru": "Школьный кружок продаёт ручки по 3 тыс. сум и тетради по 5 тыс. сум за штуку. За один день он продал 12 ручек и несколько тетрадей, всего на 61 тыс. сум. Сколько тетрадей он продал?"
+      },
+      "answer_numeric": {
+        "value": 5,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Pens: 12 × 3 = 36. Notebooks: 61 − 36 = 25, and 25 ÷ 5 = 5.",
+        "uz": "Ruchkalar: 12 × 3 = 36. Daftarlar: 61 − 36 = 25, 25 : 5 = 5.",
+        "ru": "Ручки: 12 × 3 = 36. Тетради: 61 − 36 = 25, 25 : 5 = 5."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": -1.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a07",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "functions",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "If g(x) = x² − 4x, what is the value of g(−3)?",
+        "uz": "Agar g(x) = x² − 4x boʻlsa, g(−3) ning qiymati nechaga teng?",
+        "ru": "Если g(x) = x² − 4x, чему равно g(−3)?"
+      },
+      "options": [
+        {
+          "en": "21",
+          "uz": "21",
+          "ru": "21"
+        },
+        {
+          "en": "−3",
+          "uz": "−3",
+          "ru": "−3"
+        },
+        {
+          "en": "−21",
+          "uz": "−21",
+          "ru": "−21"
+        },
+        {
+          "en": "3",
+          "uz": "3",
+          "ru": "3"
+        }
+      ],
+      "why": {
+        "en": "g(−3) = (−3)² − 4(−3) = 9 + 12 = 21.",
+        "uz": "g(−3) = (−3)² − 4(−3) = 9 + 12 = 21.",
+        "ru": "g(−3) = (−3)² − 4(−3) = 9 + 12 = 21."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a08",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "unit_rate",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A car uses 7 liters of fuel to travel 75 kilometers. At this rate, how many liters of fuel does it use to travel 200 kilometers?",
+        "uz": "Avtomobil 75 kilometr yoʻl bosish uchun 7 litr yoqilgʻi sarflaydi. Shu sarf bilan 200 kilometr yoʻl bosish uchun necha litr yoqilgʻi kerak boʻladi?",
+        "ru": "Автомобиль расходует 7 литров топлива на 75 километров. Сколько литров топлива он израсходует на 200 километров при таком же расходе?"
+      },
+      "answer_numeric": {
+        "value": 18.666666666666668,
+        "tolerance": 0.01
+      },
+      "why": {
+        "en": "7/75 = x/200, so x = 7 × 200 ÷ 75 = 56/3 ≈ 18.67. Accepted: 56/3, 18.66, 18.67 or 18.667.",
+        "uz": "7/75 = x/200, demak, x = 7 × 200 : 75 = 56/3 ≈ 18,67. Qabul qilinadi: 56/3, 18,66, 18,67 yoki 18,667.",
+        "ru": "7/75 = x/200, значит, x = 7 × 200 : 75 = 56/3 ≈ 18,67. Принимается 56/3, 18,66, 18,67 или 18,667."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": -1.6,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a09",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "systems_of_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "If x + 2y = 11 and x − y = 2, what is the value of y?",
+        "uz": "Agar x + 2y = 11 va x − y = 2 boʻlsa, y ning qiymati nechaga teng?",
+        "ru": "Если x + 2y = 11 и x − y = 2, чему равно значение y?"
+      },
+      "options": [
+        {
+          "en": "3",
+          "uz": "3",
+          "ru": "3"
+        },
+        {
+          "en": "5",
+          "uz": "5",
+          "ru": "5"
+        },
+        {
+          "en": "9",
+          "uz": "9",
+          "ru": "9"
+        },
+        {
+          "en": "−3",
+          "uz": "−3",
+          "ru": "−3"
+        }
+      ],
+      "why": {
+        "en": "Subtract the second equation from the first: 3y = 9, so y = 3 (then x = 5).",
+        "uz": "Birinchi tenglamadan ikkinchisini ayiring: 3y = 9, demak, y = 3 (u holda x = 5).",
+        "ru": "Вычтем второе уравнение из первого: 3y = 9, значит, y = 3 (тогда x = 5)."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a10",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "quadratic",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What are the solutions of the equation x² − 5x − 14 = 0?",
+        "uz": "x² − 5x − 14 = 0 tenglamaning yechimlari qaysilar?",
+        "ru": "Какие числа являются решениями уравнения x² − 5x − 14 = 0?"
+      },
+      "options": [
+        {
+          "en": "7 and −2",
+          "uz": "7 va −2",
+          "ru": "7 и −2"
+        },
+        {
+          "en": "−7 and 2",
+          "uz": "−7 va 2",
+          "ru": "−7 и 2"
+        },
+        {
+          "en": "7 and 2",
+          "uz": "7 va 2",
+          "ru": "7 и 2"
+        },
+        {
+          "en": "−7 and −2",
+          "uz": "−7 va −2",
+          "ru": "−7 и −2"
+        }
+      ],
+      "why": {
+        "en": "x² − 5x − 14 = (x − 7)(x + 2), so x = 7 or x = −2.",
+        "uz": "x² − 5x − 14 = (x − 7)(x + 2), demak, x = 7 yoki x = −2.",
+        "ru": "x² − 5x − 14 = (x − 7)(x + 2), значит, x = 7 или x = −2."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 0.3,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a11",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A rectangular box has a length of 9 cm, a width of 4 cm and a volume of 360 cm³. What is the height of the box?",
+        "uz": "Toʻgʻri burchakli parallelepiped shaklidagi qutining uzunligi 9 sm, eni 4 sm, hajmi 360 sm³. Qutining balandligi qancha?",
+        "ru": "Коробка в форме прямоугольного параллелепипеда имеет длину 9 см, ширину 4 см и объём 360 см³. Чему равна высота коробки?"
+      },
+      "options": [
+        {
+          "en": "10 cm",
+          "uz": "10 sm",
+          "ru": "10 см"
+        },
+        {
+          "en": "40 cm",
+          "uz": "40 sm",
+          "ru": "40 см"
+        },
+        {
+          "en": "90 cm",
+          "uz": "90 sm",
+          "ru": "90 см"
+        },
+        {
+          "en": "20 cm",
+          "uz": "20 sm",
+          "ru": "20 см"
+        }
+      ],
+      "why": {
+        "en": "Volume = length × width × height, so 360 = 9 × 4 × h = 36h and h = 10 cm.",
+        "uz": "Hajm = uzunlik × en × balandlik: 360 = 9 × 4 × h = 36h, demak, h = 10 sm.",
+        "ru": "Объём = длина × ширина × высота: 360 = 9 × 4 × h = 36h, значит, h = 10 см."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.4,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a12",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_inequalities",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Which value of x satisfies the inequality 7 − 2x < −5?",
+        "uz": "x ning qaysi qiymati 7 − 2x < −5 tengsizlikni qanoatlantiradi?",
+        "ru": "Какое значение x удовлетворяет неравенству 7 − 2x < −5?"
+      },
+      "options": [
+        {
+          "en": "7",
+          "uz": "7",
+          "ru": "7"
+        },
+        {
+          "en": "6",
+          "uz": "6",
+          "ru": "6"
+        },
+        {
+          "en": "0",
+          "uz": "0",
+          "ru": "0"
+        },
+        {
+          "en": "−7",
+          "uz": "−7",
+          "ru": "−7"
+        }
+      ],
+      "why": {
+        "en": "7 − 2x < −5 gives −2x < −12, so x > 6. Only 7 is greater than 6 (x = 6 gives −5, which is not less than −5).",
+        "uz": "7 − 2x < −5 dan −2x < −12, demak, x > 6. Faqat 7 soni 6 dan katta (x = 6 da −5 chiqadi, u −5 dan kichik emas).",
+        "ru": "Из 7 − 2x < −5 получаем −2x < −12, то есть x > 6. Больше 6 только 7 (при x = 6 получается −5, а это не меньше −5)."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a13",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "polynomial_expansion",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "For all values of x, (2x + 5)(x − 3) = 2x² + bx − 15, where b is a constant. What is the value of b?",
+        "uz": "x ning barcha qiymatlarida (2x + 5)(x − 3) = 2x² + bx − 15, bu yerda b — oʻzgarmas son. b ning qiymati nechaga teng?",
+        "ru": "При всех значениях x верно (2x + 5)(x − 3) = 2x² + bx − 15, где b — постоянная. Чему равно b?"
+      },
+      "answer_numeric": {
+        "value": -1,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "(2x + 5)(x − 3) = 2x² − 6x + 5x − 15 = 2x² − x − 15, so b = −1.",
+        "uz": "(2x + 5)(x − 3) = 2x² − 6x + 5x − 15 = 2x² − x − 15, demak, b = −1.",
+        "ru": "(2x + 5)(x − 3) = 2x² − 6x + 5x − 15 = 2x² − x − 15, значит, b = −1."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": 0.3,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a14",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "statistics",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The data set 4, 7, 7, 9, 13, x has a mean of 9. What is the median of the data set?",
+        "uz": "4, 7, 7, 9, 13, x sonlar toʻplamining oʻrta arifmetigi 9 ga teng. Shu toʻplamning medianasi nechaga teng?",
+        "ru": "Среднее арифметическое набора чисел 4, 7, 7, 9, 13, x равно 9. Чему равна медиана этого набора?"
+      },
+      "options": [
+        {
+          "en": "8",
+          "uz": "8",
+          "ru": "8"
+        },
+        {
+          "en": "9",
+          "uz": "9",
+          "ru": "9"
+        },
+        {
+          "en": "7",
+          "uz": "7",
+          "ru": "7"
+        },
+        {
+          "en": "11",
+          "uz": "11",
+          "ru": "11"
+        }
+      ],
+      "why": {
+        "en": "The sum is 6 × 9 = 54, so x = 54 − 40 = 14. In order: 4, 7, 7, 9, 13, 14; the median is (7 + 9) ÷ 2 = 8.",
+        "uz": "Yigʻindi 6 × 9 = 54, demak, x = 54 − 40 = 14. Tartib bilan: 4, 7, 7, 9, 13, 14; mediana (7 + 9) : 2 = 8.",
+        "ru": "Сумма 6 × 9 = 54, значит, x = 54 − 40 = 14. По порядку: 4, 7, 7, 9, 13, 14; медиана (7 + 9) : 2 = 8."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a15",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_models",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A plumber charges a fixed fee plus the same amount for each hour of work. A 2-hour job costs 190 thousand soʻm and a 5-hour job costs 370 thousand soʻm. What is the fixed fee, in thousands of soʻm?",
+        "uz": "Santexnik qatʼiy toʻlov va har bir ish soati uchun bir xil haq oladi. 2 soatlik ish 190 ming soʻm, 5 soatlik ish 370 ming soʻm turadi. Qatʼiy toʻlov necha ming soʻm?",
+        "ru": "Сантехник берёт фиксированную плату и одинаковую сумму за каждый час работы. Работа на 2 часа стоит 190 тыс. сум, на 5 часов — 370 тыс. сум. Какова фиксированная плата (в тыс. сум)?"
+      },
+      "options": [
+        {
+          "en": "70",
+          "uz": "70",
+          "ru": "70"
+        },
+        {
+          "en": "60",
+          "uz": "60",
+          "ru": "60"
+        },
+        {
+          "en": "95",
+          "uz": "95",
+          "ru": "95"
+        },
+        {
+          "en": "130",
+          "uz": "130",
+          "ru": "130"
+        }
+      ],
+      "why": {
+        "en": "Each hour costs (370 − 190) ÷ 3 = 60. The fee is 190 − 2 × 60 = 70.",
+        "uz": "Bir soat (370 − 190) : 3 = 60 turadi. Qatʼiy toʻlov 190 − 2 × 60 = 70.",
+        "ru": "Час работы стоит (370 − 190) : 3 = 60. Фиксированная плата 190 − 2 × 60 = 70."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a16",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "exponential_functions",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The function h is defined by h(x) = a · 2^x + b, where a and b are constants. If h(0) = 5 and h(3) = 33, what is the value of h(2)?",
+        "uz": "h funksiya h(x) = a · 2^x + b formula bilan berilgan, bu yerda a va b — oʻzgarmas sonlar. Agar h(0) = 5 va h(3) = 33 boʻlsa, h(2) ning qiymati nechaga teng?",
+        "ru": "Функция h задана формулой h(x) = a · 2^x + b, где a и b — постоянные. Если h(0) = 5 и h(3) = 33, чему равно h(2)?"
+      },
+      "options": [
+        {
+          "en": "17",
+          "uz": "17",
+          "ru": "17"
+        },
+        {
+          "en": "16",
+          "uz": "16",
+          "ru": "16"
+        },
+        {
+          "en": "13",
+          "uz": "13",
+          "ru": "13"
+        },
+        {
+          "en": "9",
+          "uz": "9",
+          "ru": "9"
+        }
+      ],
+      "why": {
+        "en": "h(0) = a + b = 5 and h(3) = 8a + b = 33, so 7a = 28: a = 4, b = 1. h(2) = 4 · 4 + 1 = 17.",
+        "uz": "h(0) = a + b = 5 va h(3) = 8a + b = 33, demak, 7a = 28: a = 4, b = 1. h(2) = 4 · 4 + 1 = 17.",
+        "ru": "h(0) = a + b = 5 и h(3) = 8a + b = 33, значит, 7a = 28: a = 4, b = 1. h(2) = 4 · 4 + 1 = 17."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 1,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a17",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_system_no_solution",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In the system of equations 3x − ky = 8 and 6x − 10y = 5, k is a constant. For what value of k does the system have no solution?",
+        "uz": "3x − ky = 8 va 6x − 10y = 5 tenglamalar sistemasida k — oʻzgarmas son. k ning qanday qiymatida sistema yechimga ega boʻlmaydi?",
+        "ru": "В системе уравнений 3x − ky = 8 и 6x − 10y = 5 число k постоянное. При каком значении k система не имеет решений?"
+      },
+      "answer_numeric": {
+        "value": 5,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Doubling the first equation gives 6x − 2ky = 16. The lines are parallel when 2k = 10, so k = 5; then 16 ≠ 5, so there is no solution.",
+        "uz": "Birinchi tenglamani 2 ga koʻpaytirsak, 6x − 2ky = 16. 2k = 10 da toʻgʻri chiziqlar parallel: k = 5; 16 ≠ 5, demak, yechim yoʻq.",
+        "ru": "Умножим первое уравнение на 2: 6x − 2ky = 16. Прямые параллельны при 2k = 10, то есть k = 5; 16 ≠ 5, решений нет."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": -0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a18",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "right_triangle_trig",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In right triangle PQR, the right angle is at Q and sin P = 5/13. What is the value of tan R?",
+        "uz": "PQR toʻgʻri burchakli uchburchakda toʻgʻri burchak Q uchida va sin P = 5/13. tan R ning qiymati nechaga teng?",
+        "ru": "В прямоугольном треугольнике PQR прямой угол при вершине Q и sin P = 5/13. Чему равен tan R?"
+      },
+      "options": [
+        {
+          "en": "12/5",
+          "uz": "12/5",
+          "ru": "12/5"
+        },
+        {
+          "en": "5/12",
+          "uz": "5/12",
+          "ru": "5/12"
+        },
+        {
+          "en": "12/13",
+          "uz": "12/13",
+          "ru": "12/13"
+        },
+        {
+          "en": "13/12",
+          "uz": "13/12",
+          "ru": "13/12"
+        }
+      ],
+      "why": {
+        "en": "The side opposite P is QR: let QR = 5 and PR = 13. Then PQ = √(13² − 5²) = 12 and tan R = PQ/QR = 12/5.",
+        "uz": "P qarshisidagi tomon QR: QR = 5, PR = 13 deylik. U holda PQ = √(13² − 5²) = 12 va tan R = PQ/QR = 12/5.",
+        "ru": "Против угла P лежит QR: пусть QR = 5 и PR = 13. Тогда PQ = √(13² − 5²) = 12 и tan R = PQ/QR = 12/5."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a19",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "conditional_probability",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Of 200 students surveyed, 120 play a sport. 45 of the sport players and 30 of the other students play a musical instrument. If a student who plays an instrument is chosen at random, what is the probability that the student plays a sport?",
+        "uz": "Soʻrovda qatnashgan 200 oʻquvchidan 120 tasi sport bilan shugʻullanadi. Sportchilardan 45 tasi va qolganlardan 30 tasi cholgʻu chaladi. Cholgʻu chaladiganlardan biri tasodifan tanlansa, uning sportchi boʻlish ehtimolligi qancha?",
+        "ru": "Из 200 опрошенных учеников 120 занимаются спортом. На музыкальном инструменте играют 45 спортсменов и 30 остальных учеников. Случайно выбирают ученика, играющего на инструменте. Какова вероятность, что он занимается спортом?"
+      },
+      "options": [
+        {
+          "en": "3/5",
+          "uz": "3/5",
+          "ru": "3/5"
+        },
+        {
+          "en": "3/8",
+          "uz": "3/8",
+          "ru": "3/8"
+        },
+        {
+          "en": "9/40",
+          "uz": "9/40",
+          "ru": "9/40"
+        },
+        {
+          "en": "2/5",
+          "uz": "2/5",
+          "ru": "2/5"
+        }
+      ],
+      "why": {
+        "en": "45 + 30 = 75 students play an instrument, and 45 of them play a sport: 45/75 = 3/5.",
+        "uz": "Cholgʻu chaladiganlar 45 + 30 = 75 ta, ulardan 45 tasi sportchi: 45/75 = 3/5.",
+        "ru": "На инструменте играют 45 + 30 = 75 учеников, из них 45 спортсменов: 45/75 = 3/5."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a20",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "tangent_line_parabola",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In the xy-plane, the graphs of y = x² − 6x + 11 and y = 2x − 5 have exactly one point in common, (a, b). What is the value of b?",
+        "uz": "xy koordinatalar tekisligida y = x² − 6x + 11 va y = 2x − 5 grafiklari faqat bitta (a, b) umumiy nuqtaga ega. b ning qiymati nechaga teng?",
+        "ru": "На координатной плоскости xy графики y = x² − 6x + 11 и y = 2x − 5 имеют ровно одну общую точку (a, b). Чему равно b?"
+      },
+      "answer_numeric": {
+        "value": 3,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "x² − 6x + 11 = 2x − 5 gives x² − 8x + 16 = 0, so (x − 4)² = 0: a = 4 and b = 2 · 4 − 5 = 3.",
+        "uz": "x² − 6x + 11 = 2x − 5 dan x² − 8x + 16 = 0, yaʼni (x − 4)² = 0: a = 4 va b = 2 · 4 − 5 = 3.",
+        "ru": "Из x² − 6x + 11 = 2x − 5 получаем x² − 8x + 16 = 0, то есть (x − 4)² = 0: a = 4 и b = 2 · 4 − 5 = 3."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": 1,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a21",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "quadratic",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The function f is defined by f(x) = 3(x − 4)² − 27. For how many integer values of x is f(x) < 0?",
+        "uz": "f funksiya f(x) = 3(x − 4)² − 27 formula bilan berilgan. x ning nechta butun qiymatida f(x) < 0 boʻladi?",
+        "ru": "Функция f задана формулой f(x) = 3(x − 4)² − 27. При скольких целых значениях x выполняется f(x) < 0?"
+      },
+      "options": [
+        {
+          "en": "5",
+          "uz": "5",
+          "ru": "5"
+        },
+        {
+          "en": "7",
+          "uz": "7",
+          "ru": "7"
+        },
+        {
+          "en": "6",
+          "uz": "6",
+          "ru": "6"
+        },
+        {
+          "en": "9",
+          "uz": "9",
+          "ru": "9"
+        }
+      ],
+      "why": {
+        "en": "f(x) < 0 means (x − 4)² < 9, so −3 < x − 4 < 3 and 1 < x < 7: x = 2, 3, 4, 5 or 6, which is 5 values.",
+        "uz": "f(x) < 0 shartidan (x − 4)² < 9, yaʼni −3 < x − 4 < 3 va 1 < x < 7: x = 2, 3, 4, 5, 6 — jami 5 ta qiymat.",
+        "ru": "f(x) < 0 значит (x − 4)² < 9, то есть −3 < x − 4 < 3 и 1 < x < 7: x = 2, 3, 4, 5, 6 — всего 5 значений."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 1,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma1a22",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "infinitely_many_solutions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In the equation a(x + 4) − 2x = 3x + 20, a is a constant. If the equation has infinitely many solutions, what is the value of a?",
+        "uz": "a(x + 4) − 2x = 3x + 20 tenglamada a — oʻzgarmas son. Agar tenglama cheksiz koʻp yechimga ega boʻlsa, a ning qiymati nechaga teng?",
+        "ru": "В уравнении a(x + 4) − 2x = 3x + 20 число a постоянное. Чему равно a, если уравнение имеет бесконечно много решений?"
+      },
+      "options": [
+        {
+          "en": "5",
+          "uz": "5",
+          "ru": "5"
+        },
+        {
+          "en": "3",
+          "uz": "3",
+          "ru": "3"
+        },
+        {
+          "en": "1",
+          "uz": "1",
+          "ru": "1"
+        },
+        {
+          "en": "2",
+          "uz": "2",
+          "ru": "2"
+        }
+      ],
+      "why": {
+        "en": "The left side is (a − 2)x + 4a. It equals 3x + 20 for every x when a − 2 = 3 and 4a = 20: a = 5.",
+        "uz": "Chap tomon (a − 2)x + 4a. U har qanday x da 3x + 20 ga teng boʻlishi uchun a − 2 = 3 va 4a = 20: a = 5.",
+        "ru": "Левая часть равна (a − 2)x + 4a. Она равна 3x + 20 при всех x, если a − 2 = 3 и 4a = 20: a = 5."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e01",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equation",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "If x/4 + 3 = 8, what is the value of x?",
+        "uz": "Agar x/4 + 3 = 8 boʻlsa, x ning qiymati nechaga teng?",
+        "ru": "Если x/4 + 3 = 8, чему равно значение x?"
+      },
+      "options": [
+        {
+          "en": "20",
+          "uz": "20",
+          "ru": "20"
+        },
+        {
+          "en": "32",
+          "uz": "32",
+          "ru": "32"
+        },
+        {
+          "en": "44",
+          "uz": "44",
+          "ru": "44"
+        },
+        {
+          "en": "11",
+          "uz": "11",
+          "ru": "11"
+        }
+      ],
+      "why": {
+        "en": "x/4 = 8 − 3 = 5, so x = 5 × 4 = 20.",
+        "uz": "x/4 = 8 − 3 = 5, demak, x = 5 × 4 = 20.",
+        "ru": "x/4 = 8 − 3 = 5, значит, x = 5 × 4 = 20."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e02",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "exponent_rules",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Which expression is equivalent to x² · x⁵?",
+        "uz": "Qaysi ifoda x² · x⁵ ifodaga aynan teng?",
+        "ru": "Какое выражение тождественно равно x² · x⁵?"
+      },
+      "options": [
+        {
+          "en": "x⁷",
+          "uz": "x⁷",
+          "ru": "x⁷"
+        },
+        {
+          "en": "x¹⁰",
+          "uz": "x¹⁰",
+          "ru": "x¹⁰"
+        },
+        {
+          "en": "2x⁷",
+          "uz": "2x⁷",
+          "ru": "2x⁷"
+        },
+        {
+          "en": "x³",
+          "uz": "x³",
+          "ru": "x³"
+        }
+      ],
+      "why": {
+        "en": "When powers of the same base are multiplied, the exponents add: x² · x⁵ = x^(2 + 5) = x⁷.",
+        "uz": "Asoslari bir xil darajalar koʻpaytirilganda koʻrsatkichlar qoʻshiladi: x² · x⁵ = x^(2 + 5) = x⁷.",
+        "ru": "При умножении степеней с одинаковым основанием показатели складываются: x² · x⁵ = x^(2 + 5) = x⁷."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e03",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "proportion",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A recipe uses 3 cups of flour for every 2 cups of milk. How many cups of flour are needed for 8 cups of milk?",
+        "uz": "Retseptda har 2 stakan sutga 3 stakan un ishlatiladi. 8 stakan sutga necha stakan un kerak?",
+        "ru": "По рецепту на каждые 2 стакана молока берут 3 стакана муки. Сколько стаканов муки нужно на 8 стаканов молока?"
+      },
+      "options": [
+        {
+          "en": "12",
+          "uz": "12",
+          "ru": "12"
+        },
+        {
+          "en": "16",
+          "uz": "16",
+          "ru": "16"
+        },
+        {
+          "en": "9",
+          "uz": "9",
+          "ru": "9"
+        },
+        {
+          "en": "24",
+          "uz": "24",
+          "ru": "24"
+        }
+      ],
+      "why": {
+        "en": "8 cups of milk is 4 times 2 cups, so the flour is 4 × 3 = 12 cups.",
+        "uz": "8 stakan sut 2 stakandan 4 marta koʻp, demak, un 4 × 3 = 12 stakan.",
+        "ru": "8 стаканов молока — это в 4 раза больше, чем 2, значит, муки 4 × 3 = 12 стаканов."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -2.2,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e04",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "slope",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is the slope of the line with equation y = 4 − 3x?",
+        "uz": "y = 4 − 3x tenglama bilan berilgan toʻgʻri chiziqning burchak koeffitsiyenti nechaga teng?",
+        "ru": "Чему равен угловой коэффициент прямой y = 4 − 3x?"
+      },
+      "options": [
+        {
+          "en": "−3",
+          "uz": "−3",
+          "ru": "−3"
+        },
+        {
+          "en": "4",
+          "uz": "4",
+          "ru": "4"
+        },
+        {
+          "en": "3",
+          "uz": "3",
+          "ru": "3"
+        },
+        {
+          "en": "4/3",
+          "uz": "4/3",
+          "ru": "4/3"
+        }
+      ],
+      "why": {
+        "en": "Written as y = −3x + 4, the slope is the coefficient of x: −3.",
+        "uz": "y = −3x + 4 koʻrinishida burchak koeffitsiyenti x oldidagi son: −3.",
+        "ru": "В виде y = −3x + 4 угловой коэффициент — это коэффициент при x: −3."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e05",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Two lines intersect, and one of the four angles they form measures 35°. What is the measure, in degrees, of an angle next to it (one that shares a side with it)?",
+        "uz": "Ikki toʻgʻri chiziq kesishadi va hosil boʻlgan toʻrt burchakdan biri 35°. Unga qoʻshni (u bilan umumiy tomonga ega) burchak necha gradus?",
+        "ru": "Две прямые пересекаются, и один из четырёх образованных углов равен 35°. Сколько градусов составляет смежный с ним угол (имеющий с ним общую сторону)?"
+      },
+      "answer_numeric": {
+        "value": 145,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Adjacent angles on a line add up to 180°: 180° − 35° = 145°.",
+        "uz": "Qoʻshni burchaklar yigʻindisi 180°: 180° − 35° = 145°.",
+        "ru": "Сумма смежных углов 180°: 180° − 35° = 145°."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": -1.1,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e06",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "functions",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "If f(x) = 2x² + 1, what is the value of f(3)?",
+        "uz": "Agar f(x) = 2x² + 1 boʻlsa, f(3) ning qiymati nechaga teng?",
+        "ru": "Если f(x) = 2x² + 1, чему равно f(3)?"
+      },
+      "options": [
+        {
+          "en": "19",
+          "uz": "19",
+          "ru": "19"
+        },
+        {
+          "en": "37",
+          "uz": "37",
+          "ru": "37"
+        },
+        {
+          "en": "13",
+          "uz": "13",
+          "ru": "13"
+        },
+        {
+          "en": "7",
+          "uz": "7",
+          "ru": "7"
+        }
+      ],
+      "why": {
+        "en": "f(3) = 2 · 3² + 1 = 2 · 9 + 1 = 19.",
+        "uz": "f(3) = 2 · 3² + 1 = 2 · 9 + 1 = 19.",
+        "ru": "f(3) = 2 · 3² + 1 = 2 · 9 + 1 = 19."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e07",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Which point lies on the line 2x + y = 9?",
+        "uz": "Qaysi nuqta 2x + y = 9 toʻgʻri chiziqda yotadi?",
+        "ru": "Какая точка лежит на прямой 2x + y = 9?"
+      },
+      "options": [
+        {
+          "en": "(3, 3)",
+          "uz": "(3, 3)",
+          "ru": "(3, 3)"
+        },
+        {
+          "en": "(2, 4)",
+          "uz": "(2, 4)",
+          "ru": "(2, 4)"
+        },
+        {
+          "en": "(4, 2)",
+          "uz": "(4, 2)",
+          "ru": "(4, 2)"
+        },
+        {
+          "en": "(1, 6)",
+          "uz": "(1, 6)",
+          "ru": "(1, 6)"
+        }
+      ],
+      "why": {
+        "en": "2 · 3 + 3 = 9. The others give 2 · 2 + 4 = 8, 2 · 4 + 2 = 10 and 2 · 1 + 6 = 8.",
+        "uz": "2 · 3 + 3 = 9. Qolganlarida 2 · 2 + 4 = 8, 2 · 4 + 2 = 10 va 2 · 1 + 6 = 8 chiqadi.",
+        "ru": "2 · 3 + 3 = 9. Остальные дают 2 · 2 + 4 = 8, 2 · 4 + 2 = 10 и 2 · 1 + 6 = 8."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e08",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is 15% of 270?",
+        "uz": "270 ning 15 foizi nechaga teng?",
+        "ru": "Чему равны 15% от 270?"
+      },
+      "answer_numeric": {
+        "value": 40.5,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "15% of 270 = 0.15 × 270 = 40.5 (81/2 is accepted too).",
+        "uz": "270 ning 15 foizi = 0,15 × 270 = 40,5 (81/2 ham qabul qilinadi).",
+        "ru": "15% от 270 = 0,15 × 270 = 40,5 (принимается и 81/2)."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": -2.2,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e09",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "quadratic",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "If x² = 49 and x < 0, what is the value of x?",
+        "uz": "Agar x² = 49 va x < 0 boʻlsa, x ning qiymati nechaga teng?",
+        "ru": "Если x² = 49 и x < 0, чему равно значение x?"
+      },
+      "options": [
+        {
+          "en": "−7",
+          "uz": "−7",
+          "ru": "−7"
+        },
+        {
+          "en": "7",
+          "uz": "7",
+          "ru": "7"
+        },
+        {
+          "en": "−49",
+          "uz": "−49",
+          "ru": "−49"
+        },
+        {
+          "en": "49",
+          "uz": "49",
+          "ru": "49"
+        }
+      ],
+      "why": {
+        "en": "x² = 49 gives x = 7 or x = −7; since x < 0, x = −7.",
+        "uz": "x² = 49 dan x = 7 yoki x = −7; x < 0 boʻlgani uchun x = −7.",
+        "ru": "Из x² = 49 следует x = 7 или x = −7; так как x < 0, x = −7."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e10",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "area_perimeter",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A square has a perimeter of 36 centimeters. What is its area, in square centimeters?",
+        "uz": "Kvadratning perimetri 36 santimetr. Uning yuzi necha kvadrat santimetr?",
+        "ru": "Периметр квадрата равен 36 сантиметрам. Чему равна его площадь в квадратных сантиметрах?"
+      },
+      "options": [
+        {
+          "en": "81",
+          "uz": "81",
+          "ru": "81"
+        },
+        {
+          "en": "36",
+          "uz": "36",
+          "ru": "36"
+        },
+        {
+          "en": "144",
+          "uz": "144",
+          "ru": "144"
+        },
+        {
+          "en": "9",
+          "uz": "9",
+          "ru": "9"
+        }
+      ],
+      "why": {
+        "en": "Each side is 36 ÷ 4 = 9 cm, so the area is 9 × 9 = 81 square centimeters.",
+        "uz": "Har bir tomon 36 : 4 = 9 sm, demak, yuzi 9 × 9 = 81 kvadrat santimetr.",
+        "ru": "Сторона равна 36 : 4 = 9 см, значит, площадь 9 × 9 = 81 квадратный сантиметр."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.1,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e11",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_inequalities",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A phone plan costs 40 thousand soʻm a month plus 2 thousand soʻm for each gigabyte of data. Kamola wants to pay at most 70 thousand soʻm this month. Which inequality describes the numbers of gigabytes, g, she can use?",
+        "uz": "Telefon tarifi oyiga 40 ming soʻm va har bir gigabayt internet uchun 2 ming soʻm turadi. Kamola bu oy koʻpi bilan 70 ming soʻm toʻlamoqchi. U ishlata oladigan gigabaytlar soni g ni qaysi tengsizlik ifodalaydi?",
+        "ru": "Тариф стоит 40 тыс. сум в месяц плюс 2 тыс. сум за каждый гигабайт интернета. Камола хочет заплатить в этом месяце не больше 70 тыс. сум. Какое неравенство описывает число гигабайт g, которое она может использовать?"
+      },
+      "options": [
+        {
+          "en": "40 + 2g ≤ 70",
+          "uz": "40 + 2g ≤ 70",
+          "ru": "40 + 2g ≤ 70"
+        },
+        {
+          "en": "40 + 2g ≥ 70",
+          "uz": "40 + 2g ≥ 70",
+          "ru": "40 + 2g ≥ 70"
+        },
+        {
+          "en": "2 + 40g ≤ 70",
+          "uz": "2 + 40g ≤ 70",
+          "ru": "2 + 40g ≤ 70"
+        },
+        {
+          "en": "40g + 2 ≥ 70",
+          "uz": "40g + 2 ≥ 70",
+          "ru": "40g + 2 ≥ 70"
+        }
+      ],
+      "why": {
+        "en": "The bill is 40 + 2g thousand soʻm, and “at most 70” means ≤ 70: 40 + 2g ≤ 70.",
+        "uz": "Toʻlov 40 + 2g ming soʻm, «koʻpi bilan 70» esa ≤ 70 degani: 40 + 2g ≤ 70.",
+        "ru": "Плата равна 40 + 2g тыс. сум, а «не больше 70» значит ≤ 70: 40 + 2g ≤ 70."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e12",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "factoring",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Which of the following is a factor of x² + 2x − 15?",
+        "uz": "Quyidagilardan qaysi biri x² + 2x − 15 ifodaning koʻpaytuvchisi?",
+        "ru": "Какое из следующих выражений является множителем многочлена x² + 2x − 15?"
+      },
+      "options": [
+        {
+          "en": "x + 5",
+          "uz": "x + 5",
+          "ru": "x + 5"
+        },
+        {
+          "en": "x − 5",
+          "uz": "x − 5",
+          "ru": "x − 5"
+        },
+        {
+          "en": "x + 3",
+          "uz": "x + 3",
+          "ru": "x + 3"
+        },
+        {
+          "en": "x + 15",
+          "uz": "x + 15",
+          "ru": "x + 15"
+        }
+      ],
+      "why": {
+        "en": "x² + 2x − 15 = (x + 5)(x − 3), so x + 5 is a factor; x − 5 and x + 3 are not.",
+        "uz": "x² + 2x − 15 = (x + 5)(x − 3), demak, x + 5 koʻpaytuvchi; x − 5 va x + 3 emas.",
+        "ru": "x² + 2x − 15 = (x + 5)(x − 3), значит, x + 5 — множитель, а x − 5 и x + 3 — нет."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 0.3,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e13",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "systems_of_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "At a fair, an adult ticket costs 30 thousand soʻm and a child ticket costs 20 thousand soʻm. A group bought 9 tickets for 220 thousand soʻm in all. How many adult tickets did the group buy?",
+        "uz": "Yarmarkada kattalar chiptasi 30 ming soʻm, bolalar chiptasi 20 ming soʻm turadi. Bir guruh jami 220 ming soʻmga 9 ta chipta oldi. Guruh nechta kattalar chiptasini olgan?",
+        "ru": "На ярмарке взрослый билет стоит 30 тыс. сум, детский — 20 тыс. сум. Группа купила 9 билетов, всего на 220 тыс. сум. Сколько взрослых билетов купила группа?"
+      },
+      "answer_numeric": {
+        "value": 4,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "a + c = 9 and 30a + 20c = 220. Then 30a + 20(9 − a) = 220, 10a = 40, a = 4.",
+        "uz": "a + c = 9 va 30a + 20c = 220. U holda 30a + 20(9 − a) = 220, 10a = 40, a = 4.",
+        "ru": "a + c = 9 и 30a + 20c = 220. Тогда 30a + 20(9 − a) = 220, 10a = 40, a = 4."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": -1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e14",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "scatterplot_model",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "For 20 students, the line of best fit for hours studied, x, and test score, y, is y = 4.5x + 52. What score does the line predict for a student who studied 6 hours?",
+        "uz": "20 oʻquvchining oʻqishga sarflagan soatlari x va test balli y uchun eng mos keladigan toʻgʻri chiziq y = 4,5x + 52. Bu toʻgʻri chiziq 6 soat oʻqigan oʻquvchiga qanday ball bashorat qiladi?",
+        "ru": "Для 20 учеников прямая наилучшего приближения для числа часов подготовки x и балла за тест y: y = 4,5x + 52. Какой балл эта прямая предсказывает ученику, который готовился 6 часов?"
+      },
+      "options": [
+        {
+          "en": "79",
+          "uz": "79",
+          "ru": "79"
+        },
+        {
+          "en": "27",
+          "uz": "27",
+          "ru": "27"
+        },
+        {
+          "en": "58",
+          "uz": "58",
+          "ru": "58"
+        },
+        {
+          "en": "56.5",
+          "uz": "56,5",
+          "ru": "56,5"
+        }
+      ],
+      "why": {
+        "en": "y = 4.5 × 6 + 52 = 27 + 52 = 79.",
+        "uz": "y = 4,5 × 6 + 52 = 27 + 52 = 79.",
+        "ru": "y = 4,5 × 6 + 52 = 27 + 52 = 79."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e15",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "exponential_decay",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A machine is worth 12 million soʻm now, and its value falls by 25% each year. Which function gives its value V, in millions of soʻm, t years from now?",
+        "uz": "Dastgohning hozirgi qiymati 12 million soʻm va u har yili 25% ga kamayadi. Qaysi funksiya t yildan keyingi V qiymatini (million soʻmda) ifodalaydi?",
+        "ru": "Станок сейчас стоит 12 млн сум, и каждый год его стоимость уменьшается на 25%. Какая функция задаёт его стоимость V (в млн сум) через t лет?"
+      },
+      "options": [
+        {
+          "en": "V = 12(0.75)^t",
+          "uz": "V = 12(0,75)^t",
+          "ru": "V = 12(0,75)^t"
+        },
+        {
+          "en": "V = 12(0.25)^t",
+          "uz": "V = 12(0,25)^t",
+          "ru": "V = 12(0,25)^t"
+        },
+        {
+          "en": "V = 12(1.25)^t",
+          "uz": "V = 12(1,25)^t",
+          "ru": "V = 12(1,25)^t"
+        },
+        {
+          "en": "V = 12 − 0.25t",
+          "uz": "V = 12 − 0,25t",
+          "ru": "V = 12 − 0,25t"
+        }
+      ],
+      "why": {
+        "en": "Losing 25% leaves 75%, so each year the value is multiplied by 0.75: V = 12(0.75)^t.",
+        "uz": "25% kamaysa, 75% qoladi, yaʼni har yili qiymat 0,75 ga koʻpaytiriladi: V = 12(0,75)^t.",
+        "ru": "Если теряется 25%, остаётся 75%, то есть каждый год стоимость умножается на 0,75: V = 12(0,75)^t."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 0.3,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e16",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A circle has a circumference of 18π centimeters. What is the area of the circle, in square centimeters?",
+        "uz": "Aylananing uzunligi 18π santimetr. Shu aylana bilan chegaralangan doiraning yuzi necha kvadrat santimetr?",
+        "ru": "Длина окружности равна 18π сантиметрам. Чему равна площадь круга, ограниченного этой окружностью, в квадратных сантиметрах?"
+      },
+      "options": [
+        {
+          "en": "81π",
+          "uz": "81π",
+          "ru": "81π"
+        },
+        {
+          "en": "18π",
+          "uz": "18π",
+          "ru": "18π"
+        },
+        {
+          "en": "36π",
+          "uz": "36π",
+          "ru": "36π"
+        },
+        {
+          "en": "324π",
+          "uz": "324π",
+          "ru": "324π"
+        }
+      ],
+      "why": {
+        "en": "2πr = 18π gives r = 9, so the area is π · 9² = 81π.",
+        "uz": "2πr = 18π dan r = 9, demak, yuzi π · 9² = 81π.",
+        "ru": "Из 2πr = 18π получаем r = 9, значит, площадь π · 9² = 81π."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.4,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e17",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A line in the xy-plane passes through the points (2, 5) and (6, 17). What is the y-coordinate of the point where the line crosses the y-axis?",
+        "uz": "xy koordinatalar tekisligidagi toʻgʻri chiziq (2, 5) va (6, 17) nuqtalardan oʻtadi. Toʻgʻri chiziq y oʻqini kesib oʻtadigan nuqtaning y koordinatasi nechaga teng?",
+        "ru": "Прямая на координатной плоскости xy проходит через точки (2, 5) и (6, 17). Чему равна ордината точки пересечения прямой с осью y?"
+      },
+      "answer_numeric": {
+        "value": -1,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The slope is (17 − 5) ÷ (6 − 2) = 3. From 5 = 3 · 2 + b, b = −1.",
+        "uz": "Burchak koeffitsiyenti (17 − 5) : (6 − 2) = 3. 5 = 3 · 2 + b dan b = −1.",
+        "ru": "Угловой коэффициент (17 − 5) : (6 − 2) = 3. Из 5 = 3 · 2 + b получаем b = −1."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": -1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e18",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "quadratic",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is the positive solution of the equation x² + 3x = 28?",
+        "uz": "x² + 3x = 28 tenglamaning musbat yechimi nechaga teng?",
+        "ru": "Чему равен положительный корень уравнения x² + 3x = 28?"
+      },
+      "options": [
+        {
+          "en": "4",
+          "uz": "4",
+          "ru": "4"
+        },
+        {
+          "en": "−7",
+          "uz": "−7",
+          "ru": "−7"
+        },
+        {
+          "en": "28",
+          "uz": "28",
+          "ru": "28"
+        },
+        {
+          "en": "14",
+          "uz": "14",
+          "ru": "14"
+        }
+      ],
+      "why": {
+        "en": "x² + 3x − 28 = 0 factors as (x + 7)(x − 4) = 0, so x = 4 or x = −7; the positive one is 4.",
+        "uz": "x² + 3x − 28 = 0 tenglama (x + 7)(x − 4) = 0 koʻrinishiga keladi: x = 4 yoki x = −7; musbati 4.",
+        "ru": "x² + 3x − 28 = 0 раскладывается как (x + 7)(x − 4) = 0: x = 4 или x = −7; положительный корень 4."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 0.3,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e19",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "polynomial_expansion",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The expression (x + 6)² − (x − 6)² is equivalent to kx, where k is a constant. What is the value of k?",
+        "uz": "(x + 6)² − (x − 6)² ifoda kx ga aynan teng, bu yerda k — oʻzgarmas son. k ning qiymati nechaga teng?",
+        "ru": "Выражение (x + 6)² − (x − 6)² тождественно равно kx, где k — постоянная. Чему равно k?"
+      },
+      "answer_numeric": {
+        "value": 24,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "(x² + 12x + 36) − (x² − 12x + 36) = 24x, so k = 24.",
+        "uz": "(x² + 12x + 36) − (x² − 12x + 36) = 24x, demak, k = 24.",
+        "ru": "(x² + 12x + 36) − (x² − 12x + 36) = 24x, значит, k = 24."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": 0.3,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e20",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "right_triangle_trig",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In triangle ABC, angle C is a right angle, cos A = 0.6 and AB = 15. What is the length of BC?",
+        "uz": "ABC uchburchakda C burchak toʻgʻri burchak, cos A = 0,6 va AB = 15. BC tomonning uzunligi nechaga teng?",
+        "ru": "В треугольнике ABC угол C прямой, cos A = 0,6 и AB = 15. Чему равна длина BC?"
+      },
+      "options": [
+        {
+          "en": "12",
+          "uz": "12",
+          "ru": "12"
+        },
+        {
+          "en": "9",
+          "uz": "9",
+          "ru": "9"
+        },
+        {
+          "en": "25",
+          "uz": "25",
+          "ru": "25"
+        },
+        {
+          "en": "15",
+          "uz": "15",
+          "ru": "15"
+        }
+      ],
+      "why": {
+        "en": "cos A = AC/AB, so AC = 0.6 × 15 = 9. Then BC = √(15² − 9²) = √144 = 12.",
+        "uz": "cos A = AC/AB, demak, AC = 0,6 × 15 = 9. U holda BC = √(15² − 9²) = √144 = 12.",
+        "ru": "cos A = AC/AB, значит, AC = 0,6 × 15 = 9. Тогда BC = √(15² − 9²) = √144 = 12."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e21",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In the xy-plane, the line 4x + 3y = 24 crosses the x-axis at P and the y-axis at Q. If O is the origin, what is the area of triangle OPQ?",
+        "uz": "xy koordinatalar tekisligida 4x + 3y = 24 toʻgʻri chiziq x oʻqini P nuqtada, y oʻqini Q nuqtada kesib oʻtadi. O — koordinatalar boshi. OPQ uchburchakning yuzi nechaga teng?",
+        "ru": "На координатной плоскости xy прямая 4x + 3y = 24 пересекает ось x в точке P, а ось y — в точке Q. O — начало координат. Чему равна площадь треугольника OPQ?"
+      },
+      "answer_numeric": {
+        "value": 24,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "y = 0 gives x = 6, so P = (6, 0); x = 0 gives y = 8, so Q = (0, 8). The area is 6 × 8 ÷ 2 = 24.",
+        "uz": "y = 0 da x = 6, yaʼni P = (6, 0); x = 0 da y = 8, yaʼni Q = (0, 8). Yuzi 6 × 8 : 2 = 24.",
+        "ru": "При y = 0 x = 6, то есть P = (6, 0); при x = 0 y = 8, то есть Q = (0, 8). Площадь 6 × 8 : 2 = 24."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": -0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2e22",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "vertex_form",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The function f is defined by f(x) = x² − 10x + c, where c is a constant. The minimum value of f is 4. What is the value of c?",
+        "uz": "f funksiya f(x) = x² − 10x + c formula bilan berilgan, bu yerda c — oʻzgarmas son. f ning eng kichik qiymati 4 ga teng. c ning qiymati nechaga teng?",
+        "ru": "Функция f задана формулой f(x) = x² − 10x + c, где c — постоянная. Наименьшее значение f равно 4. Чему равно c?"
+      },
+      "options": [
+        {
+          "en": "29",
+          "uz": "29",
+          "ru": "29"
+        },
+        {
+          "en": "21",
+          "uz": "21",
+          "ru": "21"
+        },
+        {
+          "en": "4",
+          "uz": "4",
+          "ru": "4"
+        },
+        {
+          "en": "−21",
+          "uz": "−21",
+          "ru": "−21"
+        }
+      ],
+      "why": {
+        "en": "The minimum is at x = 10 ÷ 2 = 5: f(5) = 25 − 50 + c = c − 25. So c − 25 = 4 and c = 29.",
+        "uz": "Eng kichik qiymat x = 10 : 2 = 5 da: f(5) = 25 − 50 + c = c − 25. Demak, c − 25 = 4 va c = 29.",
+        "ru": "Минимум при x = 10 : 2 = 5: f(5) = 25 − 50 + c = c − 25. Значит, c − 25 = 4 и c = 29."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 1,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h01",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equation",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "If 5(x − 2) = 3x + 8, what is the value of x?",
+        "uz": "Agar 5(x − 2) = 3x + 8 boʻlsa, x ning qiymati nechaga teng?",
+        "ru": "Если 5(x − 2) = 3x + 8, чему равно значение x?"
+      },
+      "options": [
+        {
+          "en": "9",
+          "uz": "9",
+          "ru": "9"
+        },
+        {
+          "en": "5",
+          "uz": "5",
+          "ru": "5"
+        },
+        {
+          "en": "−1",
+          "uz": "−1",
+          "ru": "−1"
+        },
+        {
+          "en": "18",
+          "uz": "18",
+          "ru": "18"
+        }
+      ],
+      "why": {
+        "en": "5x − 10 = 3x + 8, so 2x = 18 and x = 9.",
+        "uz": "5x − 10 = 3x + 8, demak, 2x = 18 va x = 9.",
+        "ru": "5x − 10 = 3x + 8, значит, 2x = 18 и x = 9."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h02",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "polynomial_expansion",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Which expression is equivalent to 3x(x − 4)?",
+        "uz": "Qaysi ifoda 3x(x − 4) ifodaga aynan teng?",
+        "ru": "Какое выражение тождественно равно 3x(x − 4)?"
+      },
+      "options": [
+        {
+          "en": "3x² − 12x",
+          "uz": "3x² − 12x",
+          "ru": "3x² − 12x"
+        },
+        {
+          "en": "3x² − 4x",
+          "uz": "3x² − 4x",
+          "ru": "3x² − 4x"
+        },
+        {
+          "en": "3x² − 12",
+          "uz": "3x² − 12",
+          "ru": "3x² − 12"
+        },
+        {
+          "en": "x² − 12x",
+          "uz": "x² − 12x",
+          "ru": "x² − 12x"
+        }
+      ],
+      "why": {
+        "en": "3x · x = 3x² and 3x · (−4) = −12x, so 3x(x − 4) = 3x² − 12x.",
+        "uz": "3x · x = 3x² va 3x · (−4) = −12x, demak, 3x(x − 4) = 3x² − 12x.",
+        "ru": "3x · x = 3x² и 3x · (−4) = −12x, значит, 3x(x − 4) = 3x² − 12x."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h03",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "factoring",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Which expression is equivalent to 9x² − 25y²?",
+        "uz": "Qaysi ifoda 9x² − 25y² ifodaga aynan teng?",
+        "ru": "Какое выражение тождественно равно 9x² − 25y²?"
+      },
+      "options": [
+        {
+          "en": "(3x − 5y)(3x + 5y)",
+          "uz": "(3x − 5y)(3x + 5y)",
+          "ru": "(3x − 5y)(3x + 5y)"
+        },
+        {
+          "en": "(3x − 5y)²",
+          "uz": "(3x − 5y)²",
+          "ru": "(3x − 5y)²"
+        },
+        {
+          "en": "(3x + 5y)²",
+          "uz": "(3x + 5y)²",
+          "ru": "(3x + 5y)²"
+        },
+        {
+          "en": "(9x − 5y)(x + 5y)",
+          "uz": "(9x − 5y)(x + 5y)",
+          "ru": "(9x − 5y)(x + 5y)"
+        }
+      ],
+      "why": {
+        "en": "It is a difference of squares: (3x)² − (5y)² = (3x − 5y)(3x + 5y).",
+        "uz": "Bu kvadratlar ayirmasi: (3x)² − (5y)² = (3x − 5y)(3x + 5y).",
+        "ru": "Это разность квадратов: (3x)² − (5y)² = (3x − 5y)(3x + 5y)."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 0.3,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h04",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A tank holds 500 liters of water. Water drains from it at a constant rate, and after 8 minutes the tank holds 340 liters. How many minutes after the draining starts will the tank be empty?",
+        "uz": "Bakda 500 litr suv bor. Undan suv bir xil tezlikda oqib chiqadi va 8 daqiqadan keyin bakda 340 litr qoladi. Suv oqa boshlaganidan necha daqiqa oʻtib bak boʻshaydi?",
+        "ru": "В баке 500 литров воды. Вода вытекает с постоянной скоростью, и через 8 минут в баке остаётся 340 литров. Через сколько минут после начала бак опустеет?"
+      },
+      "answer_numeric": {
+        "value": 25,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The tank loses (500 − 340) ÷ 8 = 20 liters a minute, so it is empty after 500 ÷ 20 = 25 minutes.",
+        "uz": "Bak har daqiqada (500 − 340) : 8 = 20 litr yoʻqotadi, demak, 500 : 20 = 25 daqiqada boʻshaydi.",
+        "ru": "Бак теряет (500 − 340) : 8 = 20 литров в минуту, значит, опустеет через 500 : 20 = 25 минут."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": -1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h05",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circle_equation",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A circle in the xy-plane has the equation x² + y² − 6x + 8y = 0. What is the radius of the circle?",
+        "uz": "xy koordinatalar tekisligidagi aylana x² + y² − 6x + 8y = 0 tenglama bilan berilgan. Aylananing radiusi nechaga teng?",
+        "ru": "Окружность на координатной плоскости xy задана уравнением x² + y² − 6x + 8y = 0. Чему равен радиус окружности?"
+      },
+      "options": [
+        {
+          "en": "5",
+          "uz": "5",
+          "ru": "5"
+        },
+        {
+          "en": "25",
+          "uz": "25",
+          "ru": "25"
+        },
+        {
+          "en": "10",
+          "uz": "10",
+          "ru": "10"
+        },
+        {
+          "en": "7",
+          "uz": "7",
+          "ru": "7"
+        }
+      ],
+      "why": {
+        "en": "Complete the squares: (x − 3)² + (y + 4)² = 9 + 16 = 25, so the radius is √25 = 5.",
+        "uz": "Toʻla kvadrat ajratamiz: (x − 3)² + (y + 4)² = 9 + 16 = 25, demak, radius √25 = 5.",
+        "ru": "Выделим полные квадраты: (x − 3)² + (y + 4)² = 9 + 16 = 25, значит, радиус √25 = 5."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.4,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h06",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "margin_of_error",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In a random sample of 500 residents of a town, 62% said they use the town library, with a margin of error of 4 percentage points. Which is a plausible percent of all the town’s residents who use the library?",
+        "uz": "Shahar aholisidan tasodifan tanlangan 500 kishining 62 foizi shahar kutubxonasidan foydalanishini aytdi, xatolik chegarasi 4 foiz punkti. Kutubxonadan foydalanadigan butun aholi ulushi uchun qaysi qiymat mumkin?",
+        "ru": "В случайной выборке из 500 жителей города 62% сказали, что пользуются городской библиотекой; погрешность — 4 процентных пункта. Какое значение правдоподобно для доли всех жителей города, пользующихся библиотекой?"
+      },
+      "options": [
+        {
+          "en": "60%",
+          "uz": "60%",
+          "ru": "60%"
+        },
+        {
+          "en": "55%",
+          "uz": "55%",
+          "ru": "55%"
+        },
+        {
+          "en": "68%",
+          "uz": "68%",
+          "ru": "68%"
+        },
+        {
+          "en": "71%",
+          "uz": "71%",
+          "ru": "71%"
+        }
+      ],
+      "why": {
+        "en": "The plausible values are 62% ± 4%, from 58% to 66%. Only 60% is in that range.",
+        "uz": "Mumkin boʻlgan qiymatlar 62% ± 4%, yaʼni 58% dan 66% gacha. Bu oraliqda faqat 60% bor.",
+        "ru": "Правдоподобные значения — 62% ± 4%, то есть от 58% до 66%. В этот промежуток попадает только 60%."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h07",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "quadratic",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The function f is defined by f(x) = (x − 2)(x + 6). For what value of x does f(x) reach its minimum?",
+        "uz": "f funksiya f(x) = (x − 2)(x + 6) formula bilan berilgan. x ning qanday qiymatida f(x) eng kichik qiymatga erishadi?",
+        "ru": "Функция f задана формулой f(x) = (x − 2)(x + 6). При каком значении x функция f принимает наименьшее значение?"
+      },
+      "options": [
+        {
+          "en": "−2",
+          "uz": "−2",
+          "ru": "−2"
+        },
+        {
+          "en": "2",
+          "uz": "2",
+          "ru": "2"
+        },
+        {
+          "en": "−6",
+          "uz": "−6",
+          "ru": "−6"
+        },
+        {
+          "en": "4",
+          "uz": "4",
+          "ru": "4"
+        }
+      ],
+      "why": {
+        "en": "The zeros are 2 and −6, and the vertex is halfway between them: x = (2 + (−6)) ÷ 2 = −2.",
+        "uz": "Nollari 2 va −6, parabola uchi esa ularning oʻrtasida: x = (2 + (−6)) : 2 = −2.",
+        "ru": "Нули функции 2 и −6, а вершина посередине между ними: x = (2 + (−6)) : 2 = −2."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 0.3,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h08",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "systems_of_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "If y = 3x − 4 and 2x + y = 11, what is the value of x + y?",
+        "uz": "Agar y = 3x − 4 va 2x + y = 11 boʻlsa, x + y ning qiymati nechaga teng?",
+        "ru": "Если y = 3x − 4 и 2x + y = 11, чему равно x + y?"
+      },
+      "options": [
+        {
+          "en": "8",
+          "uz": "8",
+          "ru": "8"
+        },
+        {
+          "en": "3",
+          "uz": "3",
+          "ru": "3"
+        },
+        {
+          "en": "5",
+          "uz": "5",
+          "ru": "5"
+        },
+        {
+          "en": "15",
+          "uz": "15",
+          "ru": "15"
+        }
+      ],
+      "why": {
+        "en": "2x + 3x − 4 = 11, so 5x = 15, x = 3 and y = 5. Then x + y = 8.",
+        "uz": "2x + 3x − 4 = 11, demak, 5x = 15, x = 3 va y = 5. U holda x + y = 8.",
+        "ru": "2x + 3x − 4 = 11, значит, 5x = 15, x = 3 и y = 5. Тогда x + y = 8."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h09",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "radical_equation",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is the solution of the equation √(2x + 9) = x − 3?",
+        "uz": "√(2x + 9) = x − 3 tenglamaning yechimi nechaga teng?",
+        "ru": "Чему равно решение уравнения √(2x + 9) = x − 3?"
+      },
+      "answer_numeric": {
+        "value": 8,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Squaring: 2x + 9 = x² − 6x + 9, so x² − 8x = 0 and x = 0 or 8. x = 0 gives √9 = 3 ≠ −3, so only x = 8 works.",
+        "uz": "Kvadratga oshirsak: 2x + 9 = x² − 6x + 9, yaʼni x² − 8x = 0, x = 0 yoki 8. x = 0 da √9 = 3 ≠ −3, demak, faqat x = 8.",
+        "ru": "Возведём в квадрат: 2x + 9 = x² − 6x + 9, то есть x² − 8x = 0, x = 0 или 8. При x = 0 √9 = 3 ≠ −3, подходит только x = 8."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": 0.3,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h10",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "isosceles_triangle",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In triangle DEF, DE = DF and angle E measures 38°. What is the measure, in degrees, of angle D?",
+        "uz": "DEF uchburchakda DE = DF va E burchak 38°. D burchak necha gradus?",
+        "ru": "В треугольнике DEF стороны DE и DF равны, угол E равен 38°. Сколько градусов составляет угол D?"
+      },
+      "answer_numeric": {
+        "value": 104,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "DE = DF, so the angles at E and F are equal: 38° each. Angle D = 180° − 2 × 38° = 104°.",
+        "uz": "DE = DF boʻlgani uchun E va F burchaklar teng: har biri 38°. D burchak = 180° − 2 × 38° = 104°.",
+        "ru": "Так как DE = DF, углы при вершинах E и F равны: по 38°. Угол D = 180° − 2 × 38° = 104°."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": -0.4,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h11",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_inequalities",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The system of inequalities y ≤ −x + 10 and y ≥ 2x − 5 is graphed in the xy-plane. What is the greatest possible value of x for a point (x, y) in the solution region?",
+        "uz": "y ≤ −x + 10 va y ≥ 2x − 5 tengsizliklar sistemasi xy koordinatalar tekisligida tasvirlangan. Yechimlar sohasidagi (x, y) nuqta uchun x ning eng katta qiymati nechaga teng?",
+        "ru": "Система неравенств y ≤ −x + 10 и y ≥ 2x − 5 изображена на координатной плоскости xy. Какое наибольшее значение может принимать x у точки (x, y) из области решений?"
+      },
+      "options": [
+        {
+          "en": "5",
+          "uz": "5",
+          "ru": "5"
+        },
+        {
+          "en": "10",
+          "uz": "10",
+          "ru": "10"
+        },
+        {
+          "en": "15",
+          "uz": "15",
+          "ru": "15"
+        },
+        {
+          "en": "2.5",
+          "uz": "2,5",
+          "ru": "2,5"
+        }
+      ],
+      "why": {
+        "en": "A point exists only where 2x − 5 ≤ −x + 10, that is 3x ≤ 15 and x ≤ 5. At x = 5, y = 5 works, so the greatest x is 5.",
+        "uz": "Nuqta faqat 2x − 5 ≤ −x + 10, yaʼni 3x ≤ 15 va x ≤ 5 boʻlganda bor. x = 5 da y = 5 mos keladi, demak, eng katta x = 5.",
+        "ru": "Точка есть только при 2x − 5 ≤ −x + 10, то есть 3x ≤ 15 и x ≤ 5. При x = 5 подходит y = 5, значит, наибольшее x = 5."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h12",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "exponential_growth",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The number of bacteria in a culture is multiplied by 3 every 4 hours. At the start there are 500 bacteria. After how many hours will there be 40,500 bacteria?",
+        "uz": "Bakteriyalar soni har 4 soatda 3 baravar ortadi. Boshida 500 ta bakteriya bor. Necha soatdan keyin bakteriyalar soni 40 500 ta boʻladi?",
+        "ru": "Число бактерий в культуре каждые 4 часа увеличивается в 3 раза. В начале бактерий 500. Через сколько часов их станет 40 500?"
+      },
+      "options": [
+        {
+          "en": "16",
+          "uz": "16",
+          "ru": "16"
+        },
+        {
+          "en": "12",
+          "uz": "12",
+          "ru": "12"
+        },
+        {
+          "en": "20",
+          "uz": "20",
+          "ru": "20"
+        },
+        {
+          "en": "81",
+          "uz": "81",
+          "ru": "81"
+        }
+      ],
+      "why": {
+        "en": "40,500 ÷ 500 = 81 = 3⁴, so the number was multiplied by 3 four times: 4 × 4 = 16 hours.",
+        "uz": "40 500 : 500 = 81 = 3⁴, yaʼni son 4 marta 3 baravar ortgan: 4 × 4 = 16 soat.",
+        "ru": "40 500 : 500 = 81 = 3⁴, то есть число 4 раза умножилось на 3: 4 × 4 = 16 часов."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 1,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h13",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "scatterplot_model",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The line of best fit for a scatterplot passes through (2, 41) and (10, 9). One data point is (6, 37). What is the actual y-value minus the y-value the line predicts at x = 6?",
+        "uz": "Nuqtali diagramma uchun eng mos keladigan toʻgʻri chiziq (2, 41) va (10, 9) nuqtalardan oʻtadi. Maʼlumotlardan biri (6, 37) nuqta. x = 6 da haqiqiy y qiymatidan toʻgʻri chiziq bashorat qilgan y qiymati ayirilsa, nima chiqadi?",
+        "ru": "Прямая наилучшего приближения для диаграммы рассеяния проходит через точки (2, 41) и (10, 9). Одна из точек данных — (6, 37). Чему равна разность фактического значения y и значения y, предсказанного прямой при x = 6?"
+      },
+      "options": [
+        {
+          "en": "12",
+          "uz": "12",
+          "ru": "12"
+        },
+        {
+          "en": "−12",
+          "uz": "−12",
+          "ru": "−12"
+        },
+        {
+          "en": "25",
+          "uz": "25",
+          "ru": "25"
+        },
+        {
+          "en": "37",
+          "uz": "37",
+          "ru": "37"
+        }
+      ],
+      "why": {
+        "en": "Slope = (9 − 41) ÷ (10 − 2) = −4. At x = 6 the line gives 41 − 4 × 4 = 25, and 37 − 25 = 12.",
+        "uz": "Burchak koeffitsiyenti (9 − 41) : (10 − 2) = −4. x = 6 da toʻgʻri chiziq 41 − 4 × 4 = 25 beradi, 37 − 25 = 12.",
+        "ru": "Угловой коэффициент (9 − 41) : (10 − 2) = −4. При x = 6 прямая даёт 41 − 4 × 4 = 25, а 37 − 25 = 12."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h14",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_word_problems",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A buyer spends exactly 360 thousand soʻm on b kg of black tea at 18 thousand soʻm per kg and g kg of green tea at 24 thousand soʻm per kg. If b increases by 4 and the total stays 360 thousand soʻm, by how much does g decrease?",
+        "uz": "Xaridor kilogrami 18 ming soʻmdan b kg qora choy va kilogrami 24 ming soʻmdan g kg koʻk choyga roppa-rosa 360 ming soʻm sarflaydi. b 4 ga oshsa va jami 360 ming soʻm boʻlib qolsa, g qanchaga kamayadi?",
+        "ru": "Покупатель тратит ровно 360 тыс. сум на b кг чёрного чая по 18 тыс. сум за кг и g кг зелёного чая по 24 тыс. сум за кг. Если b увеличится на 4, а сумма останется 360 тыс. сум, на сколько уменьшится g?"
+      },
+      "options": [
+        {
+          "en": "3",
+          "uz": "3",
+          "ru": "3"
+        },
+        {
+          "en": "16/3",
+          "uz": "16/3",
+          "ru": "16/3"
+        },
+        {
+          "en": "72",
+          "uz": "72",
+          "ru": "72"
+        },
+        {
+          "en": "0.75",
+          "uz": "0,75",
+          "ru": "0,75"
+        }
+      ],
+      "why": {
+        "en": "4 more kg of black tea cost 4 × 18 = 72 thousand soʻm, which buys 72 ÷ 24 = 3 kg of green tea: g decreases by 3.",
+        "uz": "4 kg koʻp qora choy 4 × 18 = 72 ming soʻm turadi, bu 72 : 24 = 3 kg koʻk choy narxi: g 3 ga kamayadi.",
+        "ru": "Ещё 4 кг чёрного чая стоят 4 × 18 = 72 тыс. сум, а это 72 : 24 = 3 кг зелёного чая: g уменьшится на 3."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h15",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rational_expression",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "For x ≠ 2 and x ≠ −2, which expression is equivalent to 1/(x − 2) − 1/(x + 2)?",
+        "uz": "x ≠ 2 va x ≠ −2 boʻlganda qaysi ifoda 1/(x − 2) − 1/(x + 2) ifodaga aynan teng?",
+        "ru": "Какое выражение при x ≠ 2 и x ≠ −2 тождественно равно 1/(x − 2) − 1/(x + 2)?"
+      },
+      "options": [
+        {
+          "en": "4/(x² − 4)",
+          "uz": "4/(x² − 4)",
+          "ru": "4/(x² − 4)"
+        },
+        {
+          "en": "2x/(x² − 4)",
+          "uz": "2x/(x² − 4)",
+          "ru": "2x/(x² − 4)"
+        },
+        {
+          "en": "−4/(x² − 4)",
+          "uz": "−4/(x² − 4)",
+          "ru": "−4/(x² − 4)"
+        },
+        {
+          "en": "4/(x − 2)²",
+          "uz": "4/(x − 2)²",
+          "ru": "4/(x − 2)²"
+        }
+      ],
+      "why": {
+        "en": "Over the common denominator (x − 2)(x + 2) = x² − 4: ((x + 2) − (x − 2))/(x² − 4) = 4/(x² − 4).",
+        "uz": "Umumiy maxraj (x − 2)(x + 2) = x² − 4: ((x + 2) − (x − 2))/(x² − 4) = 4/(x² − 4).",
+        "ru": "Общий знаменатель (x − 2)(x + 2) = x² − 4: ((x + 2) − (x − 2))/(x² − 4) = 4/(x² − 4)."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 1,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h16",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A cylinder has a volume of 72π cubic centimeters and a height of 8 centimeters. A cone has the same radius as the cylinder and a height of 12 centimeters. The volume of the cone is kπ cubic centimeters. What is the value of k?",
+        "uz": "Silindrning hajmi 72π kub santimetr, balandligi 8 santimetr. Konusning radiusi silindrnikiga teng, balandligi 12 santimetr. Konusning hajmi kπ kub santimetr. k ning qiymati nechaga teng?",
+        "ru": "Объём цилиндра 72π кубических сантиметров, высота 8 сантиметров. Конус имеет тот же радиус и высоту 12 сантиметров. Объём конуса равен kπ кубических сантиметров. Чему равно k?"
+      },
+      "answer_numeric": {
+        "value": 36,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "πr² · 8 = 72π gives r² = 9. The cone’s volume is (1/3)π · 9 · 12 = 36π, so k = 36.",
+        "uz": "πr² · 8 = 72π dan r² = 9. Konus hajmi (1/3)π · 9 · 12 = 36π, demak, k = 36.",
+        "ru": "Из πr² · 8 = 72π получаем r² = 9. Объём конуса (1/3)π · 9 · 12 = 36π, значит, k = 36."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": 0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h17",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "complementary_angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "If 0 < x < 90, 0 < y < 90 and sin(x°) = cos(y°), where x = 2k + 10 and y = 3k − 5, what is the value of k?",
+        "uz": "Agar 0 < x < 90, 0 < y < 90 va sin(x°) = cos(y°) boʻlsa, bu yerda x = 2k + 10 va y = 3k − 5, k ning qiymati nechaga teng?",
+        "ru": "Если 0 < x < 90, 0 < y < 90 и sin(x°) = cos(y°), где x = 2k + 10 и y = 3k − 5, чему равно k?"
+      },
+      "options": [
+        {
+          "en": "17",
+          "uz": "17",
+          "ru": "17"
+        },
+        {
+          "en": "19",
+          "uz": "19",
+          "ru": "19"
+        },
+        {
+          "en": "15",
+          "uz": "15",
+          "ru": "15"
+        },
+        {
+          "en": "35",
+          "uz": "35",
+          "ru": "35"
+        }
+      ],
+      "why": {
+        "en": "For acute angles, sin(x°) = cos(y°) means x + y = 90: 2k + 10 + 3k − 5 = 90, so 5k = 85 and k = 17.",
+        "uz": "Oʻtkir burchaklar uchun sin(x°) = cos(y°) dan x + y = 90: 2k + 10 + 3k − 5 = 90, demak, 5k = 85 va k = 17.",
+        "ru": "Для острых углов из sin(x°) = cos(y°) следует x + y = 90: 2k + 10 + 3k − 5 = 90, значит, 5k = 85 и k = 17."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h18",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Line p is perpendicular to the line 2x − 5y = 10 and passes through the point (4, 1). What is the y-coordinate of the point where line p crosses the y-axis?",
+        "uz": "p toʻgʻri chiziq 2x − 5y = 10 toʻgʻri chiziqqa perpendikulyar va (4, 1) nuqtadan oʻtadi. p toʻgʻri chiziq y oʻqini kesib oʻtadigan nuqtaning y koordinatasi nechaga teng?",
+        "ru": "Прямая p перпендикулярна прямой 2x − 5y = 10 и проходит через точку (4, 1). Чему равна ордината точки пересечения прямой p с осью y?"
+      },
+      "options": [
+        {
+          "en": "11",
+          "uz": "11",
+          "ru": "11"
+        },
+        {
+          "en": "−9",
+          "uz": "−9",
+          "ru": "−9"
+        },
+        {
+          "en": "13/5",
+          "uz": "13/5",
+          "ru": "13/5"
+        },
+        {
+          "en": "−3/5",
+          "uz": "−3/5",
+          "ru": "−3/5"
+        }
+      ],
+      "why": {
+        "en": "2x − 5y = 10 has slope 2/5, so line p has slope −5/2: y − 1 = −5/2 · (x − 4). At x = 0, y = 1 + 10 = 11.",
+        "uz": "2x − 5y = 10 ning burchak koeffitsiyenti 2/5, demak, p niki −5/2: y − 1 = −5/2 · (x − 4). x = 0 da y = 1 + 10 = 11.",
+        "ru": "У прямой 2x − 5y = 10 угловой коэффициент 2/5, значит, у p он −5/2: y − 1 = −5/2 · (x − 4). При x = 0 y = 1 + 10 = 11."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h19",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "nonlinear_system",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In the xy-plane, the graphs of y = x² + 2 and y = kx, where k is a positive constant, have exactly one point in common. What is the value of k?",
+        "uz": "xy koordinatalar tekisligida y = x² + 2 va y = kx grafiklari (k — musbat oʻzgarmas son) faqat bitta umumiy nuqtaga ega. k ning qiymati nechaga teng?",
+        "ru": "На координатной плоскости xy графики y = x² + 2 и y = kx, где k — положительная постоянная, имеют ровно одну общую точку. Чему равно k?"
+      },
+      "options": [
+        {
+          "en": "2√2",
+          "uz": "2√2",
+          "ru": "2√2"
+        },
+        {
+          "en": "√2",
+          "uz": "√2",
+          "ru": "√2"
+        },
+        {
+          "en": "8",
+          "uz": "8",
+          "ru": "8"
+        },
+        {
+          "en": "2√8",
+          "uz": "2√8",
+          "ru": "2√8"
+        }
+      ],
+      "why": {
+        "en": "x² + 2 = kx gives x² − kx + 2 = 0. One solution means k² − 4 · 2 = 0, so k² = 8 and k = 2√2.",
+        "uz": "x² + 2 = kx dan x² − kx + 2 = 0. Bitta yechim uchun k² − 4 · 2 = 0, demak, k² = 8 va k = 2√2.",
+        "ru": "Из x² + 2 = kx получаем x² − kx + 2 = 0. Одно решение: k² − 4 · 2 = 0, значит, k² = 8 и k = 2√2."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 1,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h20",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "study_design",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A researcher randomly chose 300 adults in one city and randomly assigned half of them to drink green tea daily. After 6 months the tea group had lower average blood pressure. What is the largest group this result can be generalized to?",
+        "uz": "Tadqiqotchi bir shahardan tasodifan 300 kattani tanlab, yarmiga tasodifiy tartibda har kuni koʻk choy ichishni belgiladi. 6 oydan keyin choy guruhida qon bosimi oʻrtacha pastroq boʻldi. Natijani eng keng qaysi guruhga umumlashtirish mumkin?",
+        "ru": "Исследователь случайно выбрал 300 взрослых в одном городе и случайно назначил половине из них пить зелёный чай каждый день. Через 6 месяцев давление в группе чая было в среднем ниже. На какую самую широкую группу можно распространить вывод?"
+      },
+      "options": [
+        {
+          "en": "All adults in that city",
+          "uz": "Shu shahardagi barcha kattalar",
+          "ru": "Все взрослые этого города"
+        },
+        {
+          "en": "All adults in any city",
+          "uz": "Har qaysi shahardagi kattalar",
+          "ru": "Взрослые любого города"
+        },
+        {
+          "en": "Only the tea drinkers",
+          "uz": "Faqat choy ichganlar",
+          "ru": "Только пившие чай"
+        },
+        {
+          "en": "No one: no cause shown",
+          "uz": "Hech kim: sabab koʻrsatilmagan",
+          "ru": "Никто: причины нет"
+        }
+      ],
+      "why": {
+        "en": "The adults were chosen at random from that city and the tea was assigned at random, so the cause-and-effect result can be generalized to all adults in that city, but no further.",
+        "uz": "Kattalar shu shahardan tasodifan tanlangan va choy tasodifiy belgilangan, shuning uchun sabab-oqibat natijasini shu shahardagi barcha kattalarga umumlashtirish mumkin, undan kengiga emas.",
+        "ru": "Взрослые выбраны случайно из этого города, а чай назначен случайно, поэтому причинный вывод можно распространить на всех взрослых этого города, но не шире."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h21",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "quadratic",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The function f is defined by f(x) = a(x − 1)(x − 7), where a is a constant. The graph of y = f(x) passes through the point (3, 24). What is the maximum value of f?",
+        "uz": "f funksiya f(x) = a(x − 1)(x − 7) formula bilan berilgan, bu yerda a — oʻzgarmas son. y = f(x) grafigi (3, 24) nuqtadan oʻtadi. f ning eng katta qiymati nechaga teng?",
+        "ru": "Функция f задана формулой f(x) = a(x − 1)(x − 7), где a — постоянная. График y = f(x) проходит через точку (3, 24). Чему равно наибольшее значение f?"
+      },
+      "answer_numeric": {
+        "value": 27,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "f(3) = a · 2 · (−4) = −8a = 24, so a = −3. The vertex is at x = 4: f(4) = −3 · 3 · (−3) = 27.",
+        "uz": "f(3) = a · 2 · (−4) = −8a = 24, demak, a = −3. Parabola uchi x = 4 da: f(4) = −3 · 3 · (−3) = 27.",
+        "ru": "f(3) = a · 2 · (−4) = −8a = 24, значит, a = −3. Вершина при x = 4: f(4) = −3 · 3 · (−3) = 27."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": 1,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-ma2h22",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "systems_of_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "If 3x + 4y = 10 and 6x − 4y = 1, what is the value of x + y?",
+        "uz": "Agar 3x + 4y = 10 va 6x − 4y = 1 boʻlsa, x + y ning qiymati nechaga teng?",
+        "ru": "Если 3x + 4y = 10 и 6x − 4y = 1, чему равно x + y?"
+      },
+      "answer_numeric": {
+        "value": 2.8055555555555554,
+        "tolerance": 0.001
+      },
+      "why": {
+        "en": "Adding gives 9x = 11, x = 11/9. Then 4y = 10 − 11/3 = 19/3, y = 19/12. x + y = 101/36 ≈ 2.806 (2.805 is accepted too).",
+        "uz": "Qoʻshsak, 9x = 11, x = 11/9. U holda 4y = 10 − 11/3 = 19/3, y = 19/12. x + y = 101/36 ≈ 2,806 (2,805 ham qabul qilinadi).",
+        "ru": "Сложив, получим 9x = 11, x = 11/9. Тогда 4y = 10 − 11/3 = 19/3, y = 19/12. x + y = 101/36 ≈ 2,806 (принимается и 2,805)."
+      },
+      "instructions": {
+        "en": "Type a number or a fraction (2/3). As on the SAT, use at most 5 characters: cut off or round a long decimal to fit.",
+        "uz": "Son yoki kasr kiriting (2/3). SATdagidek, koʻpi bilan 5 ta belgi: uzun oʻnli kasrni kesing yoki yaxlitlang.",
+        "ru": "Введите число или дробь (2/3). Как на SAT, не больше 5 символов: длинную десятичную дробь обрежьте или округлите."
+      },
+      "prior_b": -0.4,
+      "time_s": 120,
+      "source": "own",
+      "author": "agent:p15-sat-math",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15maths1+P15maths2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

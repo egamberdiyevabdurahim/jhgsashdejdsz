@@ -1,0 +1,800 @@
+{
+ "bank": "C10",
+ "batch": 7,
+ "kind": "catalog",
+ "note": "DTM units (SPEC-lessons §3.6, §12.5 item 3; .superpowers/p7/PLAN.md §6): the ten topics of the state test's compulsory mathematics block (Order No. 105: 10 questions × 1.1 points, C18/README.md), one C19 lesson each (C19-13.json), tested from C1 templates. No official practice page was checked, so official_links is empty and extra_link null. The facts are the two C18 carries with the Agency's URL; the 180-minute test duration is needs_verification in C18 and is not stated. `after_units` keeps the plan's order; it orders, it never locks (C-22). Fact check (P7 integration, 2026-10-13, C10/FACTCHECK.md \"P7\"): every cited page opened; the records are verified_auto; the 4-options claim is flagged needs_verification (its cited PDF does not hold it).",
+ "items": [
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-DTMC01",
+   "test": "DTM",
+   "section": "math_core",
+   "domain": "math_core",
+   "domain_label": {
+    "en": "Mathematics (compulsory block)",
+    "uz": "Matematika (majburiy blok)",
+    "ru": "Математика (обязательный блок)"
+   },
+   "unit": 1,
+   "units_in_domain": 10,
+   "level_band": "foundation",
+   "skills": [
+    "percent"
+   ],
+   "rungs": [
+    "prealg"
+   ],
+   "title": {
+    "en": "Percentages",
+    "uz": "Foizlar",
+    "ru": "Проценты"
+   },
+   "goal": {
+    "en": "Find a percent of a number, the amount after a percent increase or decrease, and the whole from its part.",
+    "uz": "Sonning foizini, foizga oshgan yoki kamaygan miqdorni va qismi boʻyicha butunni toping.",
+    "ru": "Находите процент от числа, величину после увеличения или уменьшения на процент и целое по его части."
+   },
+   "study": [
+    {
+     "en": "p% of a number is the number × p/100; if p% of a group did something, the rest is (100 − p)%.",
+     "uz": "Sonning p% i = son × p/100; guruhning p% i biror ishni qilgan boʻlsa, qolgani (100 − p)%.",
+     "ru": "p% от числа = число × p/100; если p% группы что-то сделали, остальные — это (100 − p)%."
+    },
+    {
+     "en": "An increase of p% multiplies by (100 + p)/100 and a decrease by (100 − p)/100: × 1.05, not × 0.05.",
+     "uz": "p% ga oshish (100 + p)/100 ga, kamayish esa (100 − p)/100 ga koʻpaytiradi: × 1,05, × 0,05 emas.",
+     "ru": "Увеличение на p% — это умножение на (100 + p)/100, уменьшение — на (100 − p)/100: × 1,05, а не × 0,05."
+    },
+    {
+     "en": "In the compulsory mathematics block each of the 10 questions has 4 options, one of them right, and is worth 1.1 points.",
+     "uz": "Matematikadan majburiy blokda 10 ta savolning har birida 4 ta variant bor, ulardan bittasi toʻgʻri, va har biri 1,1 ball.",
+     "ru": "В обязательном блоке по математике в каждом из 10 вопросов 4 варианта, верный один, и каждый вопрос стоит 1,1 балла."
+    }
+   ],
+   "explainer": "C2-pa0003",
+   "official_links": [],
+   "extra_link": null,
+   "facts": [
+    {
+     "claim": "The compulsory mathematics block of the state test has 10 questions, each worth 1.1 points (Order No. 105, Annex 1).",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/README.md and C18/mocks.json format.source: R3 section 1.2, text extracted from the official PDF on 2026-10-07"
+    },
+    {
+     "claim": "Each question has 4 options and one correct answer.",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/mocks.json format (options_per_question 4) and its instructions, from the same source",
+     "needs_verification": true,
+     "check": "P7 integration fact check, 2026-10-13: the cited PDF (Order No. 105, Annex 1) gives each block's questions and points only; it says nothing of options. C18/mocks.json carries options_per_question 4 with no source of its own. Not confirmed on an official page."
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": true,
+   "requires": {
+    "math_rung_min": "prealg",
+    "after_units": []
+   },
+   "source": "own",
+   "author": "agent:p7-a6",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-DTMC02",
+   "test": "DTM",
+   "section": "math_core",
+   "domain": "math_core",
+   "domain_label": {
+    "en": "Mathematics (compulsory block)",
+    "uz": "Matematika (majburiy blok)",
+    "ru": "Математика (обязательный блок)"
+   },
+   "unit": 2,
+   "units_in_domain": 10,
+   "level_band": "foundation",
+   "skills": [
+    "fraction",
+    "decimals"
+   ],
+   "rungs": [
+    "prealg"
+   ],
+   "title": {
+    "en": "Fractions and decimals",
+    "uz": "Kasrlar va oʻnli kasrlar",
+    "ru": "Обыкновенные и десятичные дроби"
+   },
+   "goal": {
+    "en": "Add fractions with unlike denominators and multiply decimals with the point in the right place.",
+    "uz": "Maxrajlari har xil kasrlarni qoʻshing va oʻnli kasrlarni vergulni toʻgʻri joyga qoʻyib koʻpaytiring.",
+    "ru": "Складывайте дроби с разными знаменателями и умножайте десятичные дроби, ставя запятую на верное место."
+   },
+   "study": [
+    {
+     "en": "Bring fractions to the least common denominator, add the numerators, keep the denominator, then simplify.",
+     "uz": "Kasrlarni eng kichik umumiy maxrajga keltiring, suratlarni qoʻshing, maxrajni oʻzgartirmang, soʻng qisqartiring.",
+     "ru": "Приведите дроби к наименьшему общему знаменателю, сложите числители, знаменатель оставьте, затем сократите."
+    },
+    {
+     "en": "Multiply decimals without the points, then give the answer as many digits after the point as both numbers have together; estimate first.",
+     "uz": "Oʻnli kasrlarni vergulsiz koʻpaytiring, javobda verguldan keyin ikkala sondagi raqamlar soni qadar raqam qoldiring; avval taxminiy hisoblang.",
+     "ru": "Умножайте десятичные дроби без запятых, затем оставьте в ответе столько цифр после запятой, сколько их в обоих множителях вместе; сначала прикиньте."
+    },
+    {
+     "en": "In the compulsory mathematics block each of the 10 questions has 4 options, one of them right, and is worth 1.1 points.",
+     "uz": "Matematikadan majburiy blokda 10 ta savolning har birida 4 ta variant bor, ulardan bittasi toʻgʻri, va har biri 1,1 ball.",
+     "ru": "В обязательном блоке по математике в каждом из 10 вопросов 4 варианта, верный один, и каждый вопрос стоит 1,1 балла."
+    }
+   ],
+   "explainer": "C2-pa0001",
+   "official_links": [],
+   "extra_link": null,
+   "facts": [
+    {
+     "claim": "The compulsory mathematics block of the state test has 10 questions, each worth 1.1 points (Order No. 105, Annex 1).",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/README.md and C18/mocks.json format.source: R3 section 1.2, text extracted from the official PDF on 2026-10-07"
+    },
+    {
+     "claim": "Each question has 4 options and one correct answer.",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/mocks.json format (options_per_question 4) and its instructions, from the same source",
+     "needs_verification": true,
+     "check": "P7 integration fact check, 2026-10-13: the cited PDF (Order No. 105, Annex 1) gives each block's questions and points only; it says nothing of options. C18/mocks.json carries options_per_question 4 with no source of its own. Not confirmed on an official page."
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": true,
+   "requires": {
+    "math_rung_min": "prealg",
+    "after_units": [
+     "C10-DTMC01"
+    ]
+   },
+   "source": "own",
+   "author": "agent:p7-a6",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-DTMC03",
+   "test": "DTM",
+   "section": "math_core",
+   "domain": "math_core",
+   "domain_label": {
+    "en": "Mathematics (compulsory block)",
+    "uz": "Matematika (majburiy blok)",
+    "ru": "Математика (обязательный блок)"
+   },
+   "unit": 3,
+   "units_in_domain": 10,
+   "level_band": "foundation",
+   "skills": [
+    "proportion"
+   ],
+   "rungs": [
+    "prealg"
+   ],
+   "title": {
+    "en": "Ratio and proportion",
+    "uz": "Nisbat va proporsiya",
+    "ru": "Отношения и пропорции"
+   },
+   "goal": {
+    "en": "Set up a proportion with the same units in the same places and find the missing number by cross-multiplying.",
+    "uz": "Bir xil birliklarni bir xil oʻringa qoʻyib proporsiya tuzing va nomaʼlum sonni proporsiyaning asosiy xossasi bilan toping.",
+    "ru": "Составляйте пропорцию, ставя одинаковые единицы на одинаковые места, и находите неизвестное умножением крест-накрест."
+   },
+   "study": [
+    {
+     "en": "If a/b = c/d, then a × d = b × c: the missing number is found from this.",
+     "uz": "Agar a/b = c/d boʻlsa, a × d = b × c: nomaʼlum son shundan topiladi.",
+     "ru": "Если a/b = c/d, то a × d = b × c: из этого находится неизвестное число."
+    },
+    {
+     "en": "Keep kilograms with kilograms and soʻm with soʻm, and check with the price of one.",
+     "uz": "Kilogrammni kilogramm bilan, soʻmni soʻm bilan bir xil oʻrinda saqlang va bittasining narxi bilan tekshiring.",
+     "ru": "Держите килограммы с килограммами, а сумы с сумами и проверяйте через цену одной единицы."
+    },
+    {
+     "en": "In the compulsory mathematics block each of the 10 questions has 4 options, one of them right, and is worth 1.1 points.",
+     "uz": "Matematikadan majburiy blokda 10 ta savolning har birida 4 ta variant bor, ulardan bittasi toʻgʻri, va har biri 1,1 ball.",
+     "ru": "В обязательном блоке по математике в каждом из 10 вопросов 4 варианта, верный один, и каждый вопрос стоит 1,1 балла."
+    }
+   ],
+   "explainer": "C2-pa0006",
+   "official_links": [],
+   "extra_link": null,
+   "facts": [
+    {
+     "claim": "The compulsory mathematics block of the state test has 10 questions, each worth 1.1 points (Order No. 105, Annex 1).",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/README.md and C18/mocks.json format.source: R3 section 1.2, text extracted from the official PDF on 2026-10-07"
+    },
+    {
+     "claim": "Each question has 4 options and one correct answer.",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/mocks.json format (options_per_question 4) and its instructions, from the same source",
+     "needs_verification": true,
+     "check": "P7 integration fact check, 2026-10-13: the cited PDF (Order No. 105, Annex 1) gives each block's questions and points only; it says nothing of options. C18/mocks.json carries options_per_question 4 with no source of its own. Not confirmed on an official page."
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": true,
+   "requires": {
+    "math_rung_min": "prealg",
+    "after_units": [
+     "C10-DTMC02"
+    ]
+   },
+   "source": "own",
+   "author": "agent:p7-a6",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-DTMC04",
+   "test": "DTM",
+   "section": "math_core",
+   "domain": "math_core",
+   "domain_label": {
+    "en": "Mathematics (compulsory block)",
+    "uz": "Matematika (majburiy blok)",
+    "ru": "Математика (обязательный блок)"
+   },
+   "unit": 4,
+   "units_in_domain": 10,
+   "level_band": "foundation",
+   "skills": [
+    "exponents",
+    "square_roots"
+   ],
+   "rungs": [
+    "prealg"
+   ],
+   "title": {
+    "en": "Powers and roots",
+    "uz": "Daraja va ildiz",
+    "ru": "Степени и корни"
+   },
+   "goal": {
+    "en": "Work out powers before other operations, keep track of the minus sign, and place a square root between two whole numbers.",
+    "uz": "Darajani boshqa amallardan oldin hisoblang, minus belgisiga eʼtibor bering va kvadrat ildizni ikki butun son orasiga joylang.",
+    "ru": "Вычисляйте степени раньше других действий, следите за знаком минус и находите, между какими целыми числами лежит корень."
+   },
+   "study": [
+    {
+     "en": "A power applies only to what it touches: (−4)² = 16, but −4² = −16.",
+     "uz": "Daraja faqat oʻzi yozilgan songa tegishli: (−4)² = 16, lekin −4² = −16.",
+     "ru": "Степень относится только к тому, к чему приписана: (−4)² = 16, но −4² = −16."
+    },
+    {
+     "en": "Powers first, then multiplication, then addition and subtraction from left to right.",
+     "uz": "Avval darajalar, keyin koʻpaytirish, soʻng chapdan oʻngga qoʻshish va ayirish.",
+     "ru": "Сначала степени, затем умножение, потом сложение и вычитание слева направо."
+    },
+    {
+     "en": "In the compulsory mathematics block each of the 10 questions has 4 options, one of them right, and is worth 1.1 points.",
+     "uz": "Matematikadan majburiy blokda 10 ta savolning har birida 4 ta variant bor, ulardan bittasi toʻgʻri, va har biri 1,1 ball.",
+     "ru": "В обязательном блоке по математике в каждом из 10 вопросов 4 варианта, верный один, и каждый вопрос стоит 1,1 балла."
+    }
+   ],
+   "explainer": "C2-pa0005",
+   "official_links": [],
+   "extra_link": null,
+   "facts": [
+    {
+     "claim": "The compulsory mathematics block of the state test has 10 questions, each worth 1.1 points (Order No. 105, Annex 1).",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/README.md and C18/mocks.json format.source: R3 section 1.2, text extracted from the official PDF on 2026-10-07"
+    },
+    {
+     "claim": "Each question has 4 options and one correct answer.",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/mocks.json format (options_per_question 4) and its instructions, from the same source",
+     "needs_verification": true,
+     "check": "P7 integration fact check, 2026-10-13: the cited PDF (Order No. 105, Annex 1) gives each block's questions and points only; it says nothing of options. C18/mocks.json carries options_per_question 4 with no source of its own. Not confirmed on an official page."
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": true,
+   "requires": {
+    "math_rung_min": "prealg",
+    "after_units": [
+     "C10-DTMC03"
+    ]
+   },
+   "source": "own",
+   "author": "agent:p7-a6",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-DTMC05",
+   "test": "DTM",
+   "section": "math_core",
+   "domain": "math_core",
+   "domain_label": {
+    "en": "Mathematics (compulsory block)",
+    "uz": "Matematika (majburiy blok)",
+    "ru": "Математика (обязательный блок)"
+   },
+   "unit": 5,
+   "units_in_domain": 10,
+   "level_band": "foundation",
+   "skills": [
+    "gcd_lcm"
+   ],
+   "rungs": [
+    "arith"
+   ],
+   "title": {
+    "en": "GCD and LCM",
+    "uz": "EKUB va EKUK",
+    "ru": "НОД и НОК"
+   },
+   "goal": {
+    "en": "Find the GCD and the LCM through prime factors, and tell which one a word problem asks for.",
+    "uz": "EKUB va EKUKni tub koʻpaytuvchilar orqali toping va masala qaysi birini soʻrayotganini aniqlang.",
+    "ru": "Находите НОД и НОК через простые множители и понимайте, что из них спрашивает задача."
+   },
+   "study": [
+    {
+     "en": "GCD: the shared primes with the smaller powers; LCM: every prime with the larger power; GCD × LCM = the product.",
+     "uz": "EKUB: umumiy tub koʻpaytuvchilar kichik darajasi bilan; EKUK: barcha tub koʻpaytuvchilar katta darajasi bilan; EKUB × EKUK = koʻpaytma.",
+     "ru": "НОД: общие простые множители в меньшей степени; НОК: все множители в большей степени; НОД × НОК = произведение."
+    },
+    {
+     "en": "Things that repeat and meet again ask for the LCM; the largest equal groups ask for the GCD.",
+     "uz": "Takrorlanib, yana uchrashadigan narsalar EKUKni, eng katta teng guruhlar EKUBni soʻraydi.",
+     "ru": "То, что повторяется и снова совпадает, — это НОК; самые большие равные группы — это НОД."
+    },
+    {
+     "en": "In the compulsory mathematics block each of the 10 questions has 4 options, one of them right, and is worth 1.1 points.",
+     "uz": "Matematikadan majburiy blokda 10 ta savolning har birida 4 ta variant bor, ulardan bittasi toʻgʻri, va har biri 1,1 ball.",
+     "ru": "В обязательном блоке по математике в каждом из 10 вопросов 4 варианта, верный один, и каждый вопрос стоит 1,1 балла."
+    }
+   ],
+   "explainer": "C2-ar0006",
+   "official_links": [],
+   "extra_link": null,
+   "facts": [
+    {
+     "claim": "The compulsory mathematics block of the state test has 10 questions, each worth 1.1 points (Order No. 105, Annex 1).",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/README.md and C18/mocks.json format.source: R3 section 1.2, text extracted from the official PDF on 2026-10-07"
+    },
+    {
+     "claim": "Each question has 4 options and one correct answer.",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/mocks.json format (options_per_question 4) and its instructions, from the same source",
+     "needs_verification": true,
+     "check": "P7 integration fact check, 2026-10-13: the cited PDF (Order No. 105, Annex 1) gives each block's questions and points only; it says nothing of options. C18/mocks.json carries options_per_question 4 with no source of its own. Not confirmed on an official page."
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": true,
+   "requires": {
+    "math_rung_min": "arith",
+    "after_units": [
+     "C10-DTMC04"
+    ]
+   },
+   "source": "own",
+   "author": "agent:p7-a6",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-DTMC06",
+   "test": "DTM",
+   "section": "math_core",
+   "domain": "math_core",
+   "domain_label": {
+    "en": "Mathematics (compulsory block)",
+    "uz": "Matematika (majburiy blok)",
+    "ru": "Математика (обязательный блок)"
+   },
+   "unit": 6,
+   "units_in_domain": 10,
+   "level_band": "foundation",
+   "skills": [
+    "linear_equation",
+    "linear_inequalities"
+   ],
+   "rungs": [
+    "alg1"
+   ],
+   "title": {
+    "en": "Linear equations and inequalities",
+    "uz": "Chiziqli tenglama va tengsizlik",
+    "ru": "Линейные уравнения и неравенства"
+   },
+   "goal": {
+    "en": "Solve linear equations with brackets and fractions, and linear inequalities with the sign turned when you divide by a negative number.",
+    "uz": "Qavsli va kasrli chiziqli tenglamalarni hamda manfiy songa boʻlganda belgisi almashadigan chiziqli tengsizliklarni yeching.",
+    "ru": "Решайте линейные уравнения со скобками и дробями и линейные неравенства, меняя знак при делении на отрицательное число."
+   },
+   "study": [
+    {
+     "en": "Clear fractions, open brackets, collect x on one side, divide, and check by substituting.",
+     "uz": "Kasrlardan qutuling, qavslarni oching, x ni bir tomonga yigʻing, boʻling va qoʻyib tekshiring.",
+     "ru": "Избавьтесь от дробей, раскройте скобки, соберите x в одной части, разделите и проверьте подстановкой."
+    },
+    {
+     "en": "Multiplying or dividing an inequality by a negative number turns its sign around.",
+     "uz": "Tengsizlikni manfiy songa koʻpaytirish yoki boʻlish uning belgisini teskarisiga almashtiradi.",
+     "ru": "При умножении или делении неравенства на отрицательное число его знак меняется на противоположный."
+    },
+    {
+     "en": "In the compulsory mathematics block each of the 10 questions has 4 options, one of them right, and is worth 1.1 points.",
+     "uz": "Matematikadan majburiy blokda 10 ta savolning har birida 4 ta variant bor, ulardan bittasi toʻgʻri, va har biri 1,1 ball.",
+     "ru": "В обязательном блоке по математике в каждом из 10 вопросов 4 варианта, верный один, и каждый вопрос стоит 1,1 балла."
+    }
+   ],
+   "explainer": "C2-a10001",
+   "official_links": [],
+   "extra_link": null,
+   "facts": [
+    {
+     "claim": "The compulsory mathematics block of the state test has 10 questions, each worth 1.1 points (Order No. 105, Annex 1).",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/README.md and C18/mocks.json format.source: R3 section 1.2, text extracted from the official PDF on 2026-10-07"
+    },
+    {
+     "claim": "Each question has 4 options and one correct answer.",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/mocks.json format (options_per_question 4) and its instructions, from the same source",
+     "needs_verification": true,
+     "check": "P7 integration fact check, 2026-10-13: the cited PDF (Order No. 105, Annex 1) gives each block's questions and points only; it says nothing of options. C18/mocks.json carries options_per_question 4 with no source of its own. Not confirmed on an official page."
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": true,
+   "requires": {
+    "math_rung_min": "alg1",
+    "after_units": [
+     "C10-DTMC05"
+    ]
+   },
+   "source": "own",
+   "author": "agent:p7-a6",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-DTMC07",
+   "test": "DTM",
+   "section": "math_core",
+   "domain": "math_core",
+   "domain_label": {
+    "en": "Mathematics (compulsory block)",
+    "uz": "Matematika (majburiy blok)",
+    "ru": "Математика (обязательный блок)"
+   },
+   "unit": 7,
+   "units_in_domain": 10,
+   "level_band": "foundation",
+   "skills": [
+    "system_of_equations"
+   ],
+   "rungs": [
+    "alg1"
+   ],
+   "title": {
+    "en": "Systems of equations",
+    "uz": "Tenglamalar sistemasi",
+    "ru": "Системы уравнений"
+   },
+   "goal": {
+    "en": "Solve a system of two linear equations by eliminating a variable, and write a word problem as a system.",
+    "uz": "Ikki chiziqli tenglama sistemasini bitta oʻzgaruvchini yoʻqotib yeching va masalani sistema shaklida yozing.",
+    "ru": "Решайте систему двух линейных уравнений исключением переменной и записывайте задачу в виде системы."
+   },
+   "study": [
+    {
+     "en": "Multiply so that one variable gets opposite coefficients, add the equations, then substitute back.",
+     "uz": "Bitta oʻzgaruvchining koeffitsiyentlari qarama-qarshi boʻlsin deb koʻpaytiring, tenglamalarni qoʻshing, soʻng qoʻying.",
+     "ru": "Умножьте так, чтобы коэффициенты при одной переменной стали противоположными, сложите уравнения и подставьте."
+    },
+    {
+     "en": "Multiply every term, the right side too: 4x − y = 3 times 2 is 8x − 2y = 6.",
+     "uz": "Har bir hadni, oʻng tomonni ham koʻpaytiring: 4x − y = 3 ni 2 ga koʻpaytirsak, 8x − 2y = 6.",
+     "ru": "Умножайте каждое слагаемое, и правую часть тоже: 4x − y = 3, умноженное на 2, — это 8x − 2y = 6."
+    },
+    {
+     "en": "In the compulsory mathematics block each of the 10 questions has 4 options, one of them right, and is worth 1.1 points.",
+     "uz": "Matematikadan majburiy blokda 10 ta savolning har birida 4 ta variant bor, ulardan bittasi toʻgʻri, va har biri 1,1 ball.",
+     "ru": "В обязательном блоке по математике в каждом из 10 вопросов 4 варианта, верный один, и каждый вопрос стоит 1,1 балла."
+    }
+   ],
+   "explainer": "C2-a10003",
+   "official_links": [],
+   "extra_link": null,
+   "facts": [
+    {
+     "claim": "The compulsory mathematics block of the state test has 10 questions, each worth 1.1 points (Order No. 105, Annex 1).",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/README.md and C18/mocks.json format.source: R3 section 1.2, text extracted from the official PDF on 2026-10-07"
+    },
+    {
+     "claim": "Each question has 4 options and one correct answer.",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/mocks.json format (options_per_question 4) and its instructions, from the same source",
+     "needs_verification": true,
+     "check": "P7 integration fact check, 2026-10-13: the cited PDF (Order No. 105, Annex 1) gives each block's questions and points only; it says nothing of options. C18/mocks.json carries options_per_question 4 with no source of its own. Not confirmed on an official page."
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": true,
+   "requires": {
+    "math_rung_min": "alg1",
+    "after_units": [
+     "C10-DTMC06"
+    ]
+   },
+   "source": "own",
+   "author": "agent:p7-a6",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-DTMC08",
+   "test": "DTM",
+   "section": "math_core",
+   "domain": "math_core",
+   "domain_label": {
+    "en": "Mathematics (compulsory block)",
+    "uz": "Matematika (majburiy blok)",
+    "ru": "Математика (обязательный блок)"
+   },
+   "unit": 8,
+   "units_in_domain": 10,
+   "level_band": "foundation",
+   "skills": [
+    "quadratic"
+   ],
+   "rungs": [
+    "alg2"
+   ],
+   "title": {
+    "en": "Quadratic equations",
+    "uz": "Kvadrat tenglama",
+    "ru": "Квадратные уравнения"
+   },
+   "goal": {
+    "en": "Solve a quadratic equation with the discriminant and the root formula, and keep only the roots that make sense.",
+    "uz": "Kvadrat tenglamani diskriminant va ildizlar formulasi bilan yeching va faqat maʼnoli ildizlarni qoldiring.",
+    "ru": "Решайте квадратное уравнение через дискриминант и формулу корней и оставляйте только корни, имеющие смысл."
+   },
+   "study": [
+    {
+     "en": "D = b² − 4ac: two roots if D > 0, one if D = 0, none if D < 0; x = (−b ± √D)/(2a).",
+     "uz": "D = b² − 4ac: D > 0 boʻlsa ikkita, D = 0 boʻlsa bitta ildiz, D < 0 boʻlsa ildiz yoʻq; x = (−b ± √D)/(2a).",
+     "ru": "D = b² − 4ac: два корня при D > 0, один при D = 0, нет при D < 0; x = (−b ± √D)/(2a)."
+    },
+    {
+     "en": "With b negative the formula starts with a plus; divide by 2a, not by 2.",
+     "uz": "b manfiy boʻlsa, formula plyus bilan boshlanadi; 2 ga emas, 2a ga boʻling.",
+     "ru": "При отрицательном b формула начинается с плюса; делите на 2a, а не на 2."
+    },
+    {
+     "en": "In the compulsory mathematics block each of the 10 questions has 4 options, one of them right, and is worth 1.1 points.",
+     "uz": "Matematikadan majburiy blokda 10 ta savolning har birida 4 ta variant bor, ulardan bittasi toʻgʻri, va har biri 1,1 ball.",
+     "ru": "В обязательном блоке по математике в каждом из 10 вопросов 4 варианта, верный один, и каждый вопрос стоит 1,1 балла."
+    }
+   ],
+   "explainer": "C2-a20001",
+   "official_links": [],
+   "extra_link": null,
+   "facts": [
+    {
+     "claim": "The compulsory mathematics block of the state test has 10 questions, each worth 1.1 points (Order No. 105, Annex 1).",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/README.md and C18/mocks.json format.source: R3 section 1.2, text extracted from the official PDF on 2026-10-07"
+    },
+    {
+     "claim": "Each question has 4 options and one correct answer.",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/mocks.json format (options_per_question 4) and its instructions, from the same source",
+     "needs_verification": true,
+     "check": "P7 integration fact check, 2026-10-13: the cited PDF (Order No. 105, Annex 1) gives each block's questions and points only; it says nothing of options. C18/mocks.json carries options_per_question 4 with no source of its own. Not confirmed on an official page."
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": true,
+   "requires": {
+    "math_rung_min": "alg2",
+    "after_units": [
+     "C10-DTMC07"
+    ]
+   },
+   "source": "own",
+   "author": "agent:p7-a6",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-DTMC09",
+   "test": "DTM",
+   "section": "math_core",
+   "domain": "math_core",
+   "domain_label": {
+    "en": "Mathematics (compulsory block)",
+    "uz": "Matematika (majburiy blok)",
+    "ru": "Математика (обязательный блок)"
+   },
+   "unit": 9,
+   "units_in_domain": 10,
+   "level_band": "foundation",
+   "skills": [
+    "arithmetic_sequence",
+    "series"
+   ],
+   "rungs": [
+    "alg2"
+   ],
+   "title": {
+    "en": "Arithmetic progression",
+    "uz": "Arifmetik progressiya",
+    "ru": "Арифметическая прогрессия"
+   },
+   "goal": {
+    "en": "Find any term of an arithmetic progression, the place of a given term, and the sum of its first n terms.",
+    "uz": "Arifmetik progressiyaning istalgan hadini, berilgan hadning oʻrnini va dastlabki n ta had yigʻindisini toping.",
+    "ru": "Находите любой член арифметической прогрессии, номер данного члена и сумму первых n членов."
+   },
+   "study": [
+    {
+     "en": "aₙ = a₁ + (n − 1)d: from a₁ to aₙ there are n − 1 steps.",
+     "uz": "aₙ = a₁ + (n − 1)d: a₁ dan aₙ gacha n − 1 ta qadam bor.",
+     "ru": "aₙ = a₁ + (n − 1)d: от a₁ до aₙ n − 1 шагов."
+    },
+    {
+     "en": "Sₙ = n(a₁ + aₙ)/2, and 1 + 2 + … + n = n(n + 1)/2.",
+     "uz": "Sₙ = n(a₁ + aₙ)/2, 1 + 2 + … + n = n(n + 1)/2.",
+     "ru": "Sₙ = n(a₁ + aₙ)/2, а 1 + 2 + … + n = n(n + 1)/2."
+    },
+    {
+     "en": "In the compulsory mathematics block each of the 10 questions has 4 options, one of them right, and is worth 1.1 points.",
+     "uz": "Matematikadan majburiy blokda 10 ta savolning har birida 4 ta variant bor, ulardan bittasi toʻgʻri, va har biri 1,1 ball.",
+     "ru": "В обязательном блоке по математике в каждом из 10 вопросов 4 варианта, верный один, и каждый вопрос стоит 1,1 балла."
+    }
+   ],
+   "explainer": "C2-a20003",
+   "official_links": [],
+   "extra_link": null,
+   "facts": [
+    {
+     "claim": "The compulsory mathematics block of the state test has 10 questions, each worth 1.1 points (Order No. 105, Annex 1).",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/README.md and C18/mocks.json format.source: R3 section 1.2, text extracted from the official PDF on 2026-10-07"
+    },
+    {
+     "claim": "Each question has 4 options and one correct answer.",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/mocks.json format (options_per_question 4) and its instructions, from the same source",
+     "needs_verification": true,
+     "check": "P7 integration fact check, 2026-10-13: the cited PDF (Order No. 105, Annex 1) gives each block's questions and points only; it says nothing of options. C18/mocks.json carries options_per_question 4 with no source of its own. Not confirmed on an official page."
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": true,
+   "requires": {
+    "math_rung_min": "alg2",
+    "after_units": [
+     "C10-DTMC08"
+    ]
+   },
+   "source": "own",
+   "author": "agent:p7-a6",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-DTMC10",
+   "test": "DTM",
+   "section": "math_core",
+   "domain": "math_core",
+   "domain_label": {
+    "en": "Mathematics (compulsory block)",
+    "uz": "Matematika (majburiy blok)",
+    "ru": "Математика (обязательный блок)"
+   },
+   "unit": 10,
+   "units_in_domain": 10,
+   "level_band": "foundation",
+   "skills": [
+    "pythagoras"
+   ],
+   "rungs": [
+    "geom"
+   ],
+   "title": {
+    "en": "Triangles and the Pythagorean theorem",
+    "uz": "Uchburchak va Pifagor teoremasi",
+    "ru": "Треугольник и теорема Пифагора"
+   },
+   "goal": {
+    "en": "Find a side of a right triangle from the other two, and the height and area of an isosceles triangle.",
+    "uz": "Toʻgʻri burchakli uchburchakning tomonini qolgan ikkitasi orqali, teng yonli uchburchakning balandligi va yuzini toping.",
+    "ru": "Находите сторону прямоугольного треугольника по двум другим, а также высоту и площадь равнобедренного треугольника."
+   },
+   "study": [
+    {
+     "en": "a² + b² = c², where c is the hypotenuse, the longest side; to find a leg, subtract: b² = c² − a².",
+     "uz": "a² + b² = c², bu yerda c — gipotenuza, eng uzun tomon; katetni topish uchun ayiring: b² = c² − a².",
+     "ru": "a² + b² = c², где c — гипотенуза, самая длинная сторона; чтобы найти катет, вычитайте: b² = c² − a²."
+    },
+    {
+     "en": "The height of an isosceles triangle cuts the base in half and makes two right triangles.",
+     "uz": "Teng yonli uchburchakning balandligi asosni teng ikkiga boʻladi va ikkita toʻgʻri burchakli uchburchak hosil qiladi.",
+     "ru": "Высота равнобедренного треугольника делит основание пополам и даёт два прямоугольных треугольника."
+    },
+    {
+     "en": "In the compulsory mathematics block each of the 10 questions has 4 options, one of them right, and is worth 1.1 points.",
+     "uz": "Matematikadan majburiy blokda 10 ta savolning har birida 4 ta variant bor, ulardan bittasi toʻgʻri, va har biri 1,1 ball.",
+     "ru": "В обязательном блоке по математике в каждом из 10 вопросов 4 варианта, верный один, и каждый вопрос стоит 1,1 балла."
+    }
+   ],
+   "explainer": "C2-ge0001",
+   "official_links": [],
+   "extra_link": null,
+   "facts": [
+    {
+     "claim": "The compulsory mathematics block of the state test has 10 questions, each worth 1.1 points (Order No. 105, Annex 1).",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/README.md and C18/mocks.json format.source: R3 section 1.2, text extracted from the official PDF on 2026-10-07"
+    },
+    {
+     "claim": "Each question has 4 options and one correct answer.",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "via": "C18/mocks.json format (options_per_question 4) and its instructions, from the same source",
+     "needs_verification": true,
+     "check": "P7 integration fact check, 2026-10-13: the cited PDF (Order No. 105, Annex 1) gives each block's questions and points only; it says nothing of options. C18/mocks.json carries options_per_question 4 with no source of its own. Not confirmed on an official page."
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": true,
+   "requires": {
+    "math_rung_min": "geom",
+    "after_units": [
+     "C10-DTMC09"
+    ]
+   },
+   "source": "own",
+   "author": "agent:p7-a6",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

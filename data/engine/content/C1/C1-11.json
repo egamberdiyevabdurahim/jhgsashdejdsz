@@ -1,0 +1,1917 @@
+{
+  "bank": "C1",
+  "batch": 11,
+  "items": [
+    {
+      "id": "C1-ap5001",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "extrema",
+      "family": {
+        "template": "f(x) = x³ − {q}x on the closed interval [−{A}, {B}]. What is the absolute maximum value of f on this interval?",
+        "params": {
+          "m": {
+            "values": [
+              1,
+              2,
+              3
+            ]
+          },
+          "dA": {
+            "min": 1,
+            "max": 3
+          },
+          "B": {
+            "min": 1,
+            "max": 8
+          }
+        },
+        "derived": {
+          "q": "3*m*m",
+          "A": "m + dA",
+          "top": "2*m^3",
+          "fB": "B^3 - q*B",
+          "fA": "q*A - A^3"
+        },
+        "constraints": [
+          "B != 2*m",
+          "max(top, fB) != min(top, fB)",
+          "max(top, fB) != fA",
+          "max(top, fB) != (fB > top)*B - (fB < top)*m",
+          "min(top, fB) != fA",
+          "min(top, fB) != (fB > top)*B - (fB < top)*m",
+          "fA != (fB > top)*B - (fB < top)*m"
+        ],
+        "answer": "max(top, fB)",
+        "distractors": [
+          "min(top, fB)",
+          "fA",
+          "(fB > top)*B - (fB < top)*m"
+        ],
+        "integer": true,
+        "relation": "X = max(({A}*(-1))^3 - {q}*({A}*(-1)), -(sqrt({q}/3))^3 + {q}*sqrt({q}/3), (sqrt({q}/3))^3 - {q}*sqrt({q}/3), {B}^3 - {q}*{B})"
+      },
+      "page": "C19-APCA05-1",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = x³ − {q}x on the closed interval [−{A}, {B}]. What is the absolute maximum value of f on this interval?",
+        "uz": "f(x) = x³ − {q}x, yopiq [−{A}, {B}] kesmada. f ning bu kesmadagi eng katta qiymati nechaga teng?",
+        "ru": "f(x) = x³ − {q}x на отрезке [−{A}, {B}]. Найдите наибольшее значение f на этом отрезке."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "f′(x) = 3x² − {q} = 0 at x = ±{m}. Compare f(−{A}) = {fA}, f(−{m}) = {top}, f({B}) = {fB}: the largest is {ANS}.",
+        "uz": "f′(x) = 3x² − {q} = 0, x = ±{m} da. f(−{A}) = {fA}, f(−{m}) = {top}, f({B}) = {fB} ni solishtiring: eng kattasi {ANS}.",
+        "ru": "f′(x) = 3x² − {q} = 0 при x = ±{m}. Сравните f(−{A}) = {fA}, f(−{m}) = {top}, f({B}) = {fB}: наибольшее {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.6,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5002",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "mean_value_theorem",
+      "family": {
+        "template": "f(x) = {a}x² + {b}x on [{p}, {q}]. By the Mean Value Theorem, at what c in ({p}, {q}) does f′(c) equal the slope of the secant line from x = {p} to x = {q}?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 5
+          },
+          "b": {
+            "min": 1,
+            "max": 9
+          },
+          "p": {
+            "min": 1,
+            "max": 5
+          },
+          "w": {
+            "values": [
+              2,
+              4,
+              6
+            ]
+          }
+        },
+        "derived": {
+          "q": "p + w",
+          "cc": "p + w/2",
+          "s": "a*(p + q) + b",
+          "a2": "2*a"
+        },
+        "constraints": [
+          "p + w/2 != a*(p + q) + b",
+          "p + w/2 != w/2",
+          "p + w/2 != a*cc*cc + b*cc",
+          "a*(p + q) + b != w/2",
+          "a*(p + q) + b != a*cc*cc + b*cc",
+          "w/2 != a*cc*cc + b*cc"
+        ],
+        "answer": "p + w/2",
+        "distractors": [
+          "a*(p + q) + b",
+          "w/2",
+          "a*cc*cc + b*cc"
+        ],
+        "integer": true,
+        "relation": "2*{a}*X + {b} = (({a}*{q}^2 + {b}*{q}) - ({a}*{p}^2 + {b}*{p}))/({q} - {p})"
+      },
+      "page": "C19-APCA05-1",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = {a}x² + {b}x on [{p}, {q}]. By the Mean Value Theorem, at what c in ({p}, {q}) does f′(c) equal the slope of the secant line from x = {p} to x = {q}?",
+        "uz": "f(x) = {a}x² + {b}x, [{p}, {q}] da. Oʻrta qiymat teoremasiga koʻra, ({p}, {q}) oraligʻidagi qaysi c da f′(c) x = {p} va x = {q} nuqtalardan oʻtuvchi kesuvchining qiyaligiga teng?",
+        "ru": "f(x) = {a}x² + {b}x на [{p}, {q}]. По теореме о среднем при каком c из ({p}, {q}) значение f′(c) равно наклону секущей от x = {p} до x = {q}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Secant slope = (f({q}) − f({p}))/({q} − {p}) = {s}. f′(c) = {a2}c + {b} = {s} gives c = {ANS}.",
+        "uz": "Kesuvchining qiyaligi = (f({q}) − f({p}))/({q} − {p}) = {s}. f′(c) = {a2}c + {b} = {s} dan c = {ANS}.",
+        "ru": "Наклон секущей = (f({q}) − f({p}))/({q} − {p}) = {s}. Из f′(c) = {a2}c + {b} = {s} получаем c = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.5,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5003",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "increasing_decreasing",
+      "family": {
+        "template": "f(x) = x³ − {s}x² + {t}x + {d}. At what x does f have a local minimum?",
+        "params": {
+          "p": {
+            "min": 1,
+            "max": 5
+          },
+          "w": {
+            "min": 1,
+            "max": 3
+          },
+          "d": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "derived": {
+          "q": "p + 2*w",
+          "s": "3*(p + w)",
+          "t": "3*p*q",
+          "s2": "6*(p + w)"
+        },
+        "constraints": [
+          "q != p",
+          "q != p + w",
+          "q != p + q",
+          "p != p + w",
+          "p != p + q",
+          "p + w != p + q"
+        ],
+        "answer": "q",
+        "distractors": [
+          "p",
+          "p + w",
+          "p + q"
+        ],
+        "integer": true,
+        "relation": "3*X^2 - 2*{s}*X + {t} = 0; 6*X - 2*{s} > 0"
+      },
+      "page": "C19-APCA05-2",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = x³ − {s}x² + {t}x + {d}. At what x does f have a local minimum?",
+        "uz": "f(x) = x³ − {s}x² + {t}x + {d}. f qaysi x da lokal minimumga ega?",
+        "ru": "f(x) = x³ − {s}x² + {t}x + {d}. При каком x у f локальный минимум?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "f′(x) = 3x² − {s2}x + {t} = 3(x − {p})(x − {q}). f′ goes from − to + at x = {ANS}: the local minimum.",
+        "uz": "f′(x) = 3x² − {s2}x + {t} = 3(x − {p})(x − {q}). x = {ANS} da f′ − dan + ga oʻtadi: bu lokal minimum.",
+        "ru": "f′(x) = 3x² − {s2}x + {t} = 3(x − {p})(x − {q}). При x = {ANS} f′ меняет знак с − на +: это локальный минимум."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.5,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5004",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "concavity",
+      "family": {
+        "template": "f(x) = {a}x³ − {b}x² + {c}x + {d}. At what x does the graph of f have its point of inflection?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 4
+          },
+          "k": {
+            "min": 1,
+            "max": 6
+          },
+          "c": {
+            "min": 1,
+            "max": 9
+          },
+          "d": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "derived": {
+          "b": "3*a*k",
+          "a6": "6*a",
+          "b2": "6*a*k"
+        },
+        "constraints": [
+          "k != 2*k",
+          "k != 3*k",
+          "k != -2*a*k^3 + c*k + d",
+          "2*k != 3*k",
+          "2*k != -2*a*k^3 + c*k + d",
+          "3*k != -2*a*k^3 + c*k + d"
+        ],
+        "answer": "k",
+        "distractors": [
+          "2*k",
+          "3*k",
+          "-2*a*k^3 + c*k + d"
+        ],
+        "integer": true,
+        "relation": "6*{a}*X - 2*{b} = 0"
+      },
+      "page": "C19-APCA05-2",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = {a}x³ − {b}x² + {c}x + {d}. At what x does the graph of f have its point of inflection?",
+        "uz": "f(x) = {a}x³ − {b}x² + {c}x + {d}. f grafigining burilish nuqtasi qaysi x da?",
+        "ru": "f(x) = {a}x³ − {b}x² + {c}x + {d}. При каком x у графика f точка перегиба?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "f″(x) = {a6}x − {b2}. It is 0 and changes sign at x = {b2}/{a6} = {ANS}.",
+        "uz": "f″(x) = {a6}x − {b2}. U x = {b2}/{a6} = {ANS} da 0 ga teng va ishorasini oʻzgartiradi.",
+        "ru": "f″(x) = {a6}x − {b2}. Она равна 0 и меняет знак при x = {b2}/{a6} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.4,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5005",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "optimization",
+      "family": {
+        "template": "A rectangular pen is built along a straight wall, so the fence covers only three sides. There are {L} m of fence. What is the largest area, in m², the pen can have?",
+        "params": {
+          "k": {
+            "min": 3,
+            "max": 15
+          }
+        },
+        "derived": {
+          "L": "4*k",
+          "w": "2*k"
+        },
+        "constraints": [
+          "2*k*k != k*k",
+          "2*k*k != 3*k*k",
+          "2*k*k != 2*k",
+          "k*k != 3*k*k",
+          "k*k != 2*k",
+          "3*k*k != 2*k"
+        ],
+        "answer": "2*k*k",
+        "distractors": [
+          "k*k",
+          "3*k*k",
+          "2*k"
+        ],
+        "integer": true,
+        "relation": "{L}^2 - 8*X = 0"
+      },
+      "page": "C19-APCA05-3",
+      "lang": "en",
+      "stem": {
+        "en": "A rectangular pen is built along a straight wall, so the fence covers only three sides. There are {L} m of fence. What is the largest area, in m², the pen can have?",
+        "uz": "Toʻgʻri devor boʻylab toʻgʻri toʻrtburchak shaklidagi qoʻra quriladi, shuning uchun panjara faqat uch tomonni oʻraydi. {L} m panjara bor. Qoʻraning yuzi eng koʻpi bilan necha m² boʻlishi mumkin?",
+        "ru": "Вдоль прямой стены строят прямоугольный загон, поэтому забор ставят только с трёх сторон. Всего есть {L} м забора. Какую наибольшую площадь (в м²) может иметь загон?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "A(x) = x({L} − 2x), A′(x) = {L} − 4x = 0 → x = {k}. The side along the wall is {w}, so A = {k} · {w} = {ANS} m².",
+        "uz": "A(x) = x({L} − 2x), A′(x) = {L} − 4x = 0 → x = {k}. Devor boʻylab tomon {w}, demak A = {k} · {w} = {ANS} m².",
+        "ru": "A(x) = x({L} − 2x), A′(x) = {L} − 4x = 0 → x = {k}. Сторона вдоль стены {w}, значит, A = {k} · {w} = {ANS} м²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.5,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5006",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "riemann_sums",
+      "family": {
+        "template": "A runner's speed v(t), in metres per second, is measured every {h} seconds: v(0) = {v0}, v({h}) = {v1}, v({h2}) = {v2}, v({h3}) = {v3}. Use a left Riemann sum with these three intervals to estimate how many metres the runner covers from t = 0 to t = {h3}.",
+        "params": {
+          "h": {
+            "values": [
+              2,
+              3,
+              4
+            ]
+          },
+          "v0": {
+            "min": 1,
+            "max": 9
+          },
+          "v1": {
+            "min": 1,
+            "max": 9
+          },
+          "v2": {
+            "min": 1,
+            "max": 9
+          },
+          "v3": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "derived": {
+          "h2": "2*h",
+          "h3": "3*h"
+        },
+        "constraints": [
+          "h*(v0 + v1 + v2) != h*(v1 + v2 + v3)",
+          "h*(v0 + v1 + v2) != v0 + v1 + v2",
+          "h*(v0 + v1 + v2) != h*(v0 + v1 + v2 + v3)",
+          "h*(v1 + v2 + v3) != v0 + v1 + v2",
+          "h*(v1 + v2 + v3) != h*(v0 + v1 + v2 + v3)",
+          "v0 + v1 + v2 != h*(v0 + v1 + v2 + v3)"
+        ],
+        "answer": "h*(v0 + v1 + v2)",
+        "distractors": [
+          "h*(v1 + v2 + v3)",
+          "v0 + v1 + v2",
+          "h*(v0 + v1 + v2 + v3)"
+        ],
+        "integer": true,
+        "relation": "X = {h}*{v0} + {h}*{v1} + {h}*{v2}"
+      },
+      "page": "C19-APCA06-1",
+      "lang": "en",
+      "stem": {
+        "en": "A runner's speed v(t), in metres per second, is measured every {h} seconds: v(0) = {v0}, v({h}) = {v1}, v({h2}) = {v2}, v({h3}) = {v3}. Use a left Riemann sum with these three intervals to estimate how many metres the runner covers from t = 0 to t = {h3}.",
+        "uz": "Yuguruvchining tezligi v(t) (m/s) har {h} soniyada oʻlchanadi: v(0) = {v0}, v({h}) = {v1}, v({h2}) = {v2}, v({h3}) = {v3}. Shu uchta oraliq boʻyicha chap Riman yigʻindisi bilan yuguruvchi t = 0 dan t = {h3} gacha necha metr yugurganini taxminan toping.",
+        "ru": "Скорость бегуна v(t) в м/с измеряют каждые {h} секунды: v(0) = {v0}, v({h}) = {v1}, v({h2}) = {v2}, v({h3}) = {v3}. С помощью левой суммы Римана по этим трём промежуткам оцените, сколько метров пробегает бегун от t = 0 до t = {h3}."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Left ends: v(0), v({h}), v({h2}). Distance ≈ {h} · ({v0} + {v1} + {v2}) = {ANS} m.",
+        "uz": "Chap uchlar: v(0), v({h}), v({h2}). Masofa ≈ {h} · ({v0} + {v1} + {v2}) = {ANS} m.",
+        "ru": "Левые концы: v(0), v({h}), v({h2}). Путь ≈ {h} · ({v0} + {v1} + {v2}) = {ANS} м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.2,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5007",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "riemann_sums",
+      "family": {
+        "template": "Rain runs into a barrel at a rate R(t) litres per hour, measured every {h} hours: R(0) = {r0}, R({h}) = {r1}, R({h2}) = {r2}, R({h3}) = {r3}. Use a trapezoidal sum with these three intervals to estimate how many litres run in from t = 0 to t = {h3}.",
+        "params": {
+          "h": {
+            "values": [
+              2,
+              3,
+              4
+            ]
+          },
+          "r0": {
+            "min": 1,
+            "max": 9
+          },
+          "r1": {
+            "min": 1,
+            "max": 9
+          },
+          "r2": {
+            "min": 1,
+            "max": 9
+          },
+          "r3": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "derived": {
+          "h2": "2*h",
+          "h3": "3*h"
+        },
+        "constraints": [
+          "(h*(r0 + 2*r1 + 2*r2 + r3)) % 2 == 0",
+          "h*(r0 + 2*r1 + 2*r2 + r3)/2 != h*(r0 + r1 + r2)",
+          "h*(r0 + 2*r1 + 2*r2 + r3)/2 != h*(r1 + r2 + r3)",
+          "h*(r0 + 2*r1 + 2*r2 + r3)/2 != h*(r0 + 2*r1 + 2*r2 + r3)",
+          "h*(r0 + r1 + r2) != h*(r1 + r2 + r3)",
+          "h*(r0 + r1 + r2) != h*(r0 + 2*r1 + 2*r2 + r3)",
+          "h*(r1 + r2 + r3) != h*(r0 + 2*r1 + 2*r2 + r3)"
+        ],
+        "answer": "h*(r0 + 2*r1 + 2*r2 + r3)/2",
+        "distractors": [
+          "h*(r0 + r1 + r2)",
+          "h*(r1 + r2 + r3)",
+          "h*(r0 + 2*r1 + 2*r2 + r3)"
+        ],
+        "integer": true,
+        "relation": "X = ({r0} + {r1})/2*{h} + ({r1} + {r2})/2*{h} + ({r2} + {r3})/2*{h}"
+      },
+      "page": "C19-APCA06-1",
+      "lang": "en",
+      "stem": {
+        "en": "Rain runs into a barrel at a rate R(t) litres per hour, measured every {h} hours: R(0) = {r0}, R({h}) = {r1}, R({h2}) = {r2}, R({h3}) = {r3}. Use a trapezoidal sum with these three intervals to estimate how many litres run in from t = 0 to t = {h3}.",
+        "uz": "Bochkaga yomgʻir suvi R(t) litr/soat tezlikda oqib tushadi; u har {h} soatda oʻlchanadi: R(0) = {r0}, R({h}) = {r1}, R({h2}) = {r2}, R({h3}) = {r3}. Shu uchta oraliq boʻyicha trapetsiya yigʻindisi bilan t = 0 dan t = {h3} gacha necha litr suv tushganini taxminan toping.",
+        "ru": "Дождевая вода стекает в бочку со скоростью R(t) литров в час; её измеряют каждые {h} часа: R(0) = {r0}, R({h}) = {r1}, R({h2}) = {r2}, R({h3}) = {r3}. С помощью суммы трапеций по этим трём промежуткам оцените, сколько литров натечёт от t = 0 до t = {h3}."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "T = ({h}/2) · ({r0} + 2 · {r1} + 2 · {r2} + {r3}) = {ANS} litres.",
+        "uz": "T = ({h}/2) · ({r0} + 2 · {r1} + 2 · {r2} + {r3}) = {ANS} litr.",
+        "ru": "T = ({h}/2) · ({r0} + 2 · {r1} + 2 · {r2} + {r3}) = {ANS} л."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.4,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5008",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "definite_integral",
+      "family": {
+        "template": "What is the value of ∫_{a}^{b} ({c3}x² + {c2}x) dx?",
+        "params": {
+          "m": {
+            "min": 2,
+            "max": 3
+          },
+          "n": {
+            "min": 2,
+            "max": 4
+          },
+          "a": {
+            "min": 1,
+            "max": 3
+          },
+          "w": {
+            "min": 1,
+            "max": 3
+          }
+        },
+        "derived": {
+          "c3": "3*m",
+          "c2": "2*n",
+          "b": "a + w",
+          "Fb": "m*b^3 + n*b^2",
+          "Fa": "m*a^3 + n*a^2"
+        },
+        "constraints": [
+          "Fb - Fa != Fb",
+          "Fb - Fa != Fb + Fa",
+          "Fb - Fa != c3*(b*b - a*a) + c2*(b - a)",
+          "Fb != Fb + Fa",
+          "Fb != c3*(b*b - a*a) + c2*(b - a)",
+          "Fb + Fa != c3*(b*b - a*a) + c2*(b - a)"
+        ],
+        "answer": "Fb - Fa",
+        "distractors": [
+          "Fb",
+          "Fb + Fa",
+          "c3*(b*b - a*a) + c2*(b - a)"
+        ],
+        "integer": true,
+        "relation": "X = ({b} - {a})/6*(({c3}*{a}^2 + {c2}*{a}) + 4*({c3}*(({a} + {b})/2)^2 + {c2}*(({a} + {b})/2)) + ({c3}*{b}^2 + {c2}*{b}))"
+      },
+      "page": "C19-APCA06-2",
+      "lang": "en",
+      "stem": {
+        "en": "What is the value of ∫_{a}^{b} ({c3}x² + {c2}x) dx?",
+        "uz": "∫_{a}^{b} ({c3}x² + {c2}x) dx ning qiymati nechaga teng?",
+        "ru": "Найдите значение ∫_{a}^{b} ({c3}x² + {c2}x) dx."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "An antiderivative is F(x) = {m}x³ + {n}x². F({b}) − F({a}) = {Fb} − {Fa} = {ANS}.",
+        "uz": "Boshlangʻich funksiya F(x) = {m}x³ + {n}x². F({b}) − F({a}) = {Fb} − {Fa} = {ANS}.",
+        "ru": "Первообразная F(x) = {m}x³ + {n}x². F({b}) − F({a}) = {Fb} − {Fa} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.4,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5009",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "fundamental_theorem",
+      "family": {
+        "template": "g(x) = ∫_{a}ˣ ({p}t² − {q}t + {r}) dt. What is g′({c})?",
+        "params": {
+          "a": {
+            "values": [
+              0,
+              1,
+              2
+            ]
+          },
+          "p": {
+            "min": 2,
+            "max": 5
+          },
+          "q": {
+            "min": 2,
+            "max": 9
+          },
+          "r": {
+            "min": 1,
+            "max": 9
+          },
+          "c": {
+            "min": 3,
+            "max": 6
+          }
+        },
+        "constraints": [
+          "p*c*c - q*c + r != 2*p*c - q",
+          "p*c*c - q*c + r != p*c*c - q*c - p*a*a + q*a",
+          "p*c*c - q*c + r != p*a*a - q*a + r",
+          "2*p*c - q != p*c*c - q*c - p*a*a + q*a",
+          "2*p*c - q != p*a*a - q*a + r",
+          "p*c*c - q*c - p*a*a + q*a != p*a*a - q*a + r"
+        ],
+        "answer": "p*c*c - q*c + r",
+        "distractors": [
+          "2*p*c - q",
+          "p*c*c - q*c - p*a*a + q*a",
+          "p*a*a - q*a + r"
+        ],
+        "integer": true,
+        "relation": "X = (({p}*({c} - 0.000001)^2 - {q}*({c} - 0.000001) + {r}) + 4*({p}*{c}^2 - {q}*{c} + {r}) + ({p}*({c} + 0.000001)^2 - {q}*({c} + 0.000001) + {r}))/6"
+      },
+      "page": "C19-APCA06-2",
+      "lang": "en",
+      "stem": {
+        "en": "g(x) = ∫_{a}ˣ ({p}t² − {q}t + {r}) dt. What is g′({c})?",
+        "uz": "g(x) = ∫_{a}ˣ ({p}t² − {q}t + {r}) dt. g′({c}) nechaga teng?",
+        "ru": "g(x) = ∫_{a}ˣ ({p}t² − {q}t + {r}) dt. Найдите g′({c})."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "By the Fundamental Theorem, g′(x) = {p}x² − {q}x + {r}. So g′({c}) = {p} · {c}² − {q} · {c} + {r} = {ANS}.",
+        "uz": "Asosiy teoremaga koʻra g′(x) = {p}x² − {q}x + {r}. Demak g′({c}) = {p} · {c}² − {q} · {c} + {r} = {ANS}.",
+        "ru": "По основной теореме g′(x) = {p}x² − {q}x + {r}. Значит, g′({c}) = {p} · {c}² − {q} · {c} + {r} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 1.5,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5010",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "u_substitution",
+      "family": {
+        "template": "What is the value of ∫₀^{b} 6x(x² + {c})² dx?",
+        "params": {
+          "b": {
+            "values": [
+              1,
+              2
+            ]
+          },
+          "c": {
+            "min": 1,
+            "max": 7
+          }
+        },
+        "derived": {
+          "u1": "b*b + c"
+        },
+        "constraints": [
+          "(b*b + c)^3 - c^3 != (b*b + c)^3",
+          "(b*b + c)^3 - c^3 != b^3",
+          "(b*b + c)^3 - c^3 != 2*((b*b + c)^3 - c^3)",
+          "(b*b + c)^3 != b^3",
+          "(b*b + c)^3 != 2*((b*b + c)^3 - c^3)",
+          "b^3 != 2*((b*b + c)^3 - c^3)"
+        ],
+        "answer": "(b*b + c)^3 - c^3",
+        "distractors": [
+          "(b*b + c)^3",
+          "b^3",
+          "2*((b*b + c)^3 - c^3)"
+        ],
+        "integer": true,
+        "relation": "X = {b}/2*(5/9*(6*({b}/2 - {b}/2*sqrt(3/5))*(({b}/2 - {b}/2*sqrt(3/5))^2 + {c})^2) + 8/9*(6*({b}/2)*(({b}/2)^2 + {c})^2) + 5/9*(6*({b}/2 + {b}/2*sqrt(3/5))*(({b}/2 + {b}/2*sqrt(3/5))^2 + {c})^2))"
+      },
+      "page": "C19-APCA06-3",
+      "lang": "en",
+      "stem": {
+        "en": "What is the value of ∫₀^{b} 6x(x² + {c})² dx?",
+        "uz": "∫₀^{b} 6x(x² + {c})² dx ning qiymati nechaga teng?",
+        "ru": "Найдите значение ∫₀^{b} 6x(x² + {c})² dx."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "u = x² + {c}, du = 2x dx, so 6x dx = 3 du; u runs from {c} to {u1}. ∫ 3u² du = u³, so {u1}³ − {c}³ = {ANS}.",
+        "uz": "u = x² + {c}, du = 2x dx, demak 6x dx = 3 du; u {c} dan {u1} gacha oʻzgaradi. ∫ 3u² du = u³, demak {u1}³ − {c}³ = {ANS}.",
+        "ru": "u = x² + {c}, du = 2x dx, значит, 6x dx = 3 du; u меняется от {c} до {u1}. ∫ 3u² du = u³, поэтому {u1}³ − {c}³ = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.7,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5011",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "integral_rules",
+      "family": {
+        "template": "What is the value of the integral of {k}eˣ from x = 0 to x = ln {n}?",
+        "params": {
+          "k": {
+            "min": 2,
+            "max": 9
+          },
+          "n": {
+            "min": 2,
+            "max": 9
+          }
+        },
+        "constraints": [
+          "k*(n - 1) != k*n",
+          "k*(n - 1) != n - 1",
+          "k*(n - 1) != k*(n + 1)",
+          "k*n != n - 1",
+          "k*n != k*(n + 1)",
+          "n - 1 != k*(n + 1)"
+        ],
+        "answer": "k*(n - 1)",
+        "distractors": [
+          "k*n",
+          "n - 1",
+          "k*(n + 1)"
+        ],
+        "integer": true,
+        "relation": "X = {k}*exp(ln({n})) - {k}*exp(0)"
+      },
+      "page": "C19-APCA06-3",
+      "lang": "en",
+      "stem": {
+        "en": "What is the value of the integral of {k}eˣ from x = 0 to x = ln {n}?",
+        "uz": "{k}eˣ ning x = 0 dan x = ln {n} gacha integrali nechaga teng?",
+        "ru": "Чему равен интеграл от {k}eˣ от x = 0 до x = ln {n}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "∫ {k}eˣ dx = {k}eˣ. From 0 to ln {n}: {k}e^(ln {n}) − {k}e⁰ = {k} · {n} − {k} = {ANS}.",
+        "uz": "∫ {k}eˣ dx = {k}eˣ. 0 dan ln {n} gacha: {k}e^(ln {n}) − {k}e⁰ = {k} · {n} − {k} = {ANS}.",
+        "ru": "∫ {k}eˣ dx = {k}eˣ. От 0 до ln {n}: {k}e^(ln {n}) − {k}e⁰ = {k} · {n} − {k} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.3,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5012",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "slope_fields",
+      "family": {
+        "template": "A solution curve of dy/dx = {a}x² − {b}y passes through the point ({p}, {q}). What is the slope of the curve at that point?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 5
+          },
+          "b": {
+            "min": 2,
+            "max": 5
+          },
+          "p": {
+            "min": 1,
+            "max": 4
+          },
+          "q": {
+            "min": 1,
+            "max": 6
+          }
+        },
+        "constraints": [
+          "a*p*p - b*q != a*q*q - b*p",
+          "a*p*p - b*q != a*p - b*q",
+          "a*p*p - b*q != a*p*p + b*q",
+          "a*q*q - b*p != a*p - b*q",
+          "a*q*q - b*p != a*p*p + b*q",
+          "a*p - b*q != a*p*p + b*q"
+        ],
+        "answer": "a*p*p - b*q",
+        "distractors": [
+          "a*q*q - b*p",
+          "a*p - b*q",
+          "a*p*p + b*q"
+        ],
+        "integer": true,
+        "relation": "X = {a}*{p}^2 - {b}*{q}"
+      },
+      "page": "C19-APCA07-1",
+      "lang": "en",
+      "stem": {
+        "en": "A solution curve of dy/dx = {a}x² − {b}y passes through the point ({p}, {q}). What is the slope of the curve at that point?",
+        "uz": "dy/dx = {a}x² − {b}y tenglamaning yechim egri chizigʻi ({p}, {q}) nuqtadan oʻtadi. Egri chiziqning shu nuqtadagi qiyaligi nechaga teng?",
+        "ru": "Кривая-решение уравнения dy/dx = {a}x² − {b}y проходит через точку ({p}, {q}). Чему равен наклон кривой в этой точке?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Put x = {p} and y = {q} into the equation: dy/dx = {a} · {p}² − {b} · {q} = {ANS}.",
+        "uz": "Tenglamaga x = {p} va y = {q} ni qoʻying: dy/dx = {a} · {p}² − {b} · {q} = {ANS}.",
+        "ru": "Подставьте x = {p} и y = {q}: dy/dx = {a} · {p}² − {b} · {q} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 1.2,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5013",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "differential_equations",
+      "family": {
+        "template": "y = e^(kx) is a solution of y″ + {B}y′ = {C}y. What is the positive value of k?",
+        "params": {
+          "r": {
+            "min": 1,
+            "max": 5
+          },
+          "s": {
+            "min": 2,
+            "max": 9
+          }
+        },
+        "derived": {
+          "B": "s - r",
+          "C": "r*s"
+        },
+        "constraints": [
+          "s - r >= 2",
+          "s != 2*r",
+          "r != -s",
+          "r != s",
+          "r != B",
+          "-s != s",
+          "-s != B",
+          "s != B"
+        ],
+        "answer": "r",
+        "distractors": [
+          "-s",
+          "s",
+          "B"
+        ],
+        "integer": true,
+        "relation": "X^2 + {B}*X - {C} = 0; X > 0"
+      },
+      "page": "C19-APCA07-1",
+      "lang": "en",
+      "stem": {
+        "en": "y = e^(kx) is a solution of y″ + {B}y′ = {C}y. What is the positive value of k?",
+        "uz": "y = e^(kx) funksiya y″ + {B}y′ = {C}y ning yechimi. k ning musbat qiymati nechaga teng?",
+        "ru": "y = e^(kx) — решение уравнения y″ + {B}y′ = {C}y. Найдите положительное значение k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Put y = e^(kx) in: k² + {B}k = {C}, so k² + {B}k − {C} = (k − {r})(k + {s}) = 0. The positive root is k = {ANS}.",
+        "uz": "y = e^(kx) ni qoʻying: k² + {B}k = {C}, demak k² + {B}k − {C} = (k − {r})(k + {s}) = 0. Musbat ildiz k = {ANS}.",
+        "ru": "Подставьте y = e^(kx): k² + {B}k = {C}, то есть k² + {B}k − {C} = (k − {r})(k + {s}) = 0. Положительный корень k = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.7,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5014",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "separation_of_variables",
+      "family": {
+        "template": "dy/dt = {k}√y and y(0) = {y0}. Solve by separating the variables. What is y({T})?",
+        "params": {
+          "k": {
+            "values": [
+              2,
+              4,
+              6
+            ]
+          },
+          "c": {
+            "min": 1,
+            "max": 6
+          },
+          "T": {
+            "min": 1,
+            "max": 4
+          }
+        },
+        "derived": {
+          "y0": "c*c",
+          "c2": "2*c",
+          "top": "c + k*T/2"
+        },
+        "constraints": [
+          "(c + k*T/2)^2 != (c + k*T)^2",
+          "(c + k*T/2)^2 != c*c + k*c*T",
+          "(c + k*T/2)^2 != c + k*T/2",
+          "(c + k*T)^2 != c*c + k*c*T",
+          "(c + k*T)^2 != c + k*T/2",
+          "c*c + k*c*T != c + k*T/2"
+        ],
+        "answer": "(c + k*T/2)^2",
+        "distractors": [
+          "(c + k*T)^2",
+          "c*c + k*c*T",
+          "c + k*T/2"
+        ],
+        "integer": true,
+        "relation": "2*sqrt(X) - 2*sqrt({y0}) = {k}*{T}; X > 0"
+      },
+      "page": "C19-APCA07-2",
+      "lang": "en",
+      "stem": {
+        "en": "dy/dt = {k}√y and y(0) = {y0}. Solve by separating the variables. What is y({T})?",
+        "uz": "dy/dt = {k}√y va y(0) = {y0}. Oʻzgaruvchilarni ajratib yeching. y({T}) nechaga teng?",
+        "ru": "dy/dt = {k}√y и y(0) = {y0}. Решите, разделив переменные. Найдите y({T})."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "dy/√y = {k} dt → 2√y = {k}t + C, and y(0) = {y0} gives C = {c2}. So √y = {c} + {k}t/2 and y({T}) = {top}² = {ANS}.",
+        "uz": "dy/√y = {k} dt → 2√y = {k}t + C, y(0) = {y0} dan C = {c2}. Demak √y = {c} + {k}t/2 va y({T}) = {top}² = {ANS}.",
+        "ru": "dy/√y = {k} dt → 2√y = {k}t + C, а y(0) = {y0} даёт C = {c2}. Значит, √y = {c} + {k}t/2 и y({T}) = {top}² = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5015",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "separation_of_variables",
+      "family": {
+        "template": "dy/dx = x/y, y(0) = {c} and y > 0. What is y({p})?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                5,
+                12,
+                13
+              ],
+              [
+                6,
+                8,
+                10
+              ],
+              [
+                8,
+                6,
+                10
+              ],
+              [
+                8,
+                15,
+                17
+              ],
+              [
+                7,
+                24,
+                25
+              ],
+              [
+                24,
+                7,
+                25
+              ],
+              [
+                9,
+                12,
+                15
+              ],
+              [
+                12,
+                9,
+                15
+              ],
+              [
+                20,
+                21,
+                29
+              ],
+              [
+                21,
+                20,
+                29
+              ],
+              [
+                10,
+                24,
+                26
+              ],
+              [
+                24,
+                10,
+                26
+              ],
+              [
+                15,
+                20,
+                25
+              ],
+              [
+                20,
+                15,
+                25
+              ],
+              [
+                12,
+                16,
+                20
+              ]
+            ]
+          }
+        },
+        "derived": {
+          "p": "t[0]",
+          "c": "t[1]",
+          "h": "t[2]",
+          "cc": "t[1]*t[1]"
+        },
+        "constraints": [
+          "h != p + c",
+          "h != h*h",
+          "h != c",
+          "p + c != h*h",
+          "p + c != c",
+          "h*h != c"
+        ],
+        "answer": "h",
+        "distractors": [
+          "p + c",
+          "h*h",
+          "c"
+        ],
+        "integer": true,
+        "relation": "X^2 = {p}^2 + {c}^2; X > 0"
+      },
+      "page": "C19-APCA07-2",
+      "lang": "en",
+      "stem": {
+        "en": "dy/dx = x/y, y(0) = {c} and y > 0. What is y({p})?",
+        "uz": "dy/dx = x/y, y(0) = {c} va y > 0. y({p}) nechaga teng?",
+        "ru": "dy/dx = x/y, y(0) = {c} и y > 0. Найдите y({p})."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "y dy = x dx → y² = x² + C, and y(0) = {c} gives C = {cc}. So y({p}) = √({p}² + {cc}) = {ANS}.",
+        "uz": "y dy = x dx → y² = x² + C, y(0) = {c} dan C = {cc}. Demak y({p}) = √({p}² + {cc}) = {ANS}.",
+        "ru": "y dy = x dx → y² = x² + C, а y(0) = {c} даёт C = {cc}. Значит, y({p}) = √({p}² + {cc}) = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.6,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5016",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "exponential_models",
+      "family": {
+        "template": "A colony of bacteria grows so that dP/dt = kP, and it doubles every {d} hours. P(0) = {P0}. How many bacteria are there after {T} hours?",
+        "params": {
+          "P0": {
+            "min": 10,
+            "max": 90,
+            "step": 10
+          },
+          "d": {
+            "min": 2,
+            "max": 4
+          },
+          "n": {
+            "min": 3,
+            "max": 6
+          }
+        },
+        "derived": {
+          "T": "n*d"
+        },
+        "constraints": [
+          "P0*2^n != 2*n*P0",
+          "P0*2^n != (n + 1)*P0",
+          "P0*2^n != P0*2^(n + 1)",
+          "2*n*P0 != (n + 1)*P0",
+          "2*n*P0 != P0*2^(n + 1)",
+          "(n + 1)*P0 != P0*2^(n + 1)"
+        ],
+        "answer": "P0*2^n",
+        "distractors": [
+          "2*n*P0",
+          "(n + 1)*P0",
+          "P0*2^(n + 1)"
+        ],
+        "integer": true,
+        "relation": "X = {P0}*exp(ln(2)/{d}*{T})"
+      },
+      "page": "C19-APCA07-3",
+      "lang": "en",
+      "stem": {
+        "en": "A colony of bacteria grows so that dP/dt = kP, and it doubles every {d} hours. P(0) = {P0}. How many bacteria are there after {T} hours?",
+        "uz": "Bakteriyalar koloniyasi dP/dt = kP qonuni boʻyicha oʻsadi va har {d} soatda ikki baravar koʻpayadi. P(0) = {P0}. {T} soatdan keyin nechta bakteriya boʻladi?",
+        "ru": "Колония бактерий растёт по закону dP/dt = kP и удваивается каждые {d} ч. P(0) = {P0}. Сколько бактерий будет через {T} ч?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Number of doublings: {T}/{d} = {n}, so P = {P0} · 2^{n} = {ANS}.",
+        "uz": "Ikkilanishlar soni: {T}/{d} = {n}, demak P = {P0} · 2^{n} = {ANS}.",
+        "ru": "Число удвоений: {T}/{d} = {n}, значит, P = {P0} · 2^{n} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.4,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5017",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "exponential_models",
+      "family": {
+        "template": "A substance decays so that dy/dt = ky, and its half-life is {h} years. After how many years does 1/{f} of it remain?",
+        "params": {
+          "h": {
+            "values": [
+              5,
+              6,
+              8,
+              10,
+              12,
+              15,
+              20,
+              25,
+              30
+            ]
+          },
+          "n": {
+            "min": 2,
+            "max": 5
+          }
+        },
+        "derived": {
+          "f": "2^n"
+        },
+        "constraints": [
+          "n*h != f*h",
+          "n*h != (n - 1)*h",
+          "n*h != (n + 1)*h",
+          "f*h != (n - 1)*h",
+          "f*h != (n + 1)*h",
+          "(n - 1)*h != (n + 1)*h"
+        ],
+        "answer": "n*h",
+        "distractors": [
+          "f*h",
+          "(n - 1)*h",
+          "(n + 1)*h"
+        ],
+        "integer": true,
+        "relation": "X = {h}*ln({f})/ln(2)"
+      },
+      "page": "C19-APCA07-3",
+      "lang": "en",
+      "stem": {
+        "en": "A substance decays so that dy/dt = ky, and its half-life is {h} years. After how many years does 1/{f} of it remain?",
+        "uz": "Modda dy/dt = ky qonuni boʻyicha yemiriladi, yarim yemirilish davri {h} yil. Necha yildan keyin uning 1/{f} qismi qoladi?",
+        "ru": "Вещество распадается по закону dy/dt = ky, период полураспада {h} лет. Через сколько лет останется 1/{f} вещества?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "1/{f} = 1/2^{n}, so {n} half-lives pass: {n} · {h} = {ANS} years.",
+        "uz": "1/{f} = 1/2^{n}, demak {n} ta yarim yemirilish davri oʻtadi: {n} · {h} = {ANS} yil.",
+        "ru": "1/{f} = 1/2^{n}: число периодов полураспада {n}, время {n} · {h} = {ANS} (в годах)."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5018",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "average_value",
+      "family": {
+        "template": "What is the average value of f(x) = {a}x² + {b} on the interval [0, {c}]?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 9
+          },
+          "b": {
+            "min": 1,
+            "max": 9
+          },
+          "c": {
+            "min": 2,
+            "max": 6
+          }
+        },
+        "derived": {
+          "I": "a*c^3/3 + b*c"
+        },
+        "constraints": [
+          "(a*c*c) % 6 == 0",
+          "a*c*c/3 + b != a*c^3/3 + b*c",
+          "a*c*c/3 + b != a*c*c/2 + b",
+          "a*c*c/3 + b != a*c*c + b",
+          "a*c^3/3 + b*c != a*c*c/2 + b",
+          "a*c^3/3 + b*c != a*c*c + b",
+          "a*c*c/2 + b != a*c*c + b"
+        ],
+        "answer": "a*c*c/3 + b",
+        "distractors": [
+          "a*c^3/3 + b*c",
+          "a*c*c/2 + b",
+          "a*c*c + b"
+        ],
+        "integer": true,
+        "relation": "X = (({b}) + 4*({a}*({c}/2)^2 + {b}) + ({a}*{c}^2 + {b}))/6"
+      },
+      "page": "C19-APCA08-1",
+      "lang": "en",
+      "stem": {
+        "en": "What is the average value of f(x) = {a}x² + {b} on the interval [0, {c}]?",
+        "uz": "f(x) = {a}x² + {b} funksiyaning [0, {c}] oraliqdagi oʻrtacha qiymati nechaga teng?",
+        "ru": "Найдите среднее значение f(x) = {a}x² + {b} на отрезке [0, {c}]."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "∫₀^{c} ({a}x² + {b}) dx = {I}. Divide by the width {c}: {I}/{c} = {ANS}.",
+        "uz": "∫₀^{c} ({a}x² + {b}) dx = {I}. Oraliq eni {c} ga boʻling: {I}/{c} = {ANS}.",
+        "ru": "∫₀^{c} ({a}x² + {b}) dx = {I}. Разделите на длину {c}: {I}/{c} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.4,
+      "time_s": 65,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5019",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "distance_displacement",
+      "family": {
+        "template": "A toy car on a straight track has velocity v(t) = {a}t − {b} metres per second for 0 ≤ t ≤ {T}. How many metres does it travel in total, forwards and backwards?",
+        "params": {
+          "a": {
+            "values": [
+              2,
+              4,
+              6
+            ]
+          },
+          "t0": {
+            "min": 1,
+            "max": 4
+          },
+          "e": {
+            "min": 1,
+            "max": 5
+          }
+        },
+        "derived": {
+          "b": "a*t0",
+          "T": "t0 + e",
+          "back": "a*t0*t0/2",
+          "fwd": "a*e*e/2"
+        },
+        "constraints": [
+          "a*t0*t0/2 + a*e*e/2 != a*e*e/2 - a*t0*t0/2",
+          "a*t0*t0/2 + a*e*e/2 != a*e*e/2",
+          "a*t0*t0/2 + a*e*e/2 != a*t0*t0/2",
+          "a*e*e/2 - a*t0*t0/2 != a*e*e/2",
+          "a*e*e/2 - a*t0*t0/2 != a*t0*t0/2",
+          "a*e*e/2 != a*t0*t0/2"
+        ],
+        "answer": "a*t0*t0/2 + a*e*e/2",
+        "distractors": [
+          "a*e*e/2 - a*t0*t0/2",
+          "a*e*e/2",
+          "a*t0*t0/2"
+        ],
+        "integer": true,
+        "relation": "X = abs(({b}/{a})*(0 - {b})/2) + abs(({T} - {b}/{a})*({a}*{T} - {b})/2)"
+      },
+      "page": "C19-APCA08-1",
+      "lang": "en",
+      "stem": {
+        "en": "A toy car on a straight track has velocity v(t) = {a}t − {b} metres per second for 0 ≤ t ≤ {T}. How many metres does it travel in total, forwards and backwards?",
+        "uz": "Toʻgʻri yoʻldagi oʻyinchoq mashinaning tezligi 0 ≤ t ≤ {T} da v(t) = {a}t − {b} metr/soniya. U jami (oldinga va orqaga) necha metr yoʻl bosadi?",
+        "ru": "Игрушечная машинка на прямой дорожке движется со скоростью v(t) = {a}t − {b} м/с при 0 ≤ t ≤ {T}. Какой путь (в метрах) она проходит всего, вперёд и назад?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "v < 0 until t = {t0}. Distance = |∫₀^{t0} v dt| + ∫_{t0}^{T} v dt = {back} + {fwd} = {ANS} m.",
+        "uz": "t = {t0} gacha v < 0. Yoʻl = |∫₀^{t0} v dt| + ∫_{t0}^{T} v dt = {back} + {fwd} = {ANS} m.",
+        "ru": "До t = {t0} v < 0. Путь = |∫₀^{t0} v dt| + ∫_{t0}^{T} v dt = {back} + {fwd} = {ANS} м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.7,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5020",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "area_between_curves",
+      "family": {
+        "template": "What is the area of the region between y = {a} − {k}x² and y = {b}?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                6,
+                2
+              ]
+            ]
+          },
+          "b": {
+            "min": 1,
+            "max": 6
+          }
+        },
+        "derived": {
+          "k": "t[0]",
+          "r": "t[1]",
+          "a": "b + t[0]*t[1]*t[1]",
+          "ab": "t[0]*t[1]*t[1]"
+        },
+        "constraints": [
+          "4*k*r^3/3 != 2*k*r^3/3",
+          "4*k*r^3/3 != 2*k*r^3",
+          "4*k*r^3/3 != 4*k*r^3/3 + 2*b*r",
+          "2*k*r^3/3 != 2*k*r^3",
+          "2*k*r^3/3 != 4*k*r^3/3 + 2*b*r",
+          "2*k*r^3 != 4*k*r^3/3 + 2*b*r"
+        ],
+        "answer": "4*k*r^3/3",
+        "distractors": [
+          "2*k*r^3/3",
+          "2*k*r^3",
+          "4*k*r^3/3 + 2*b*r"
+        ],
+        "integer": true,
+        "relation": "X = 2*sqrt(({a} - {b})/{k})/6*(({a} - {k}*(({a} - {b})/{k}) - {b}) + 4*({a} - {b}) + ({a} - {k}*(({a} - {b})/{k}) - {b}))"
+      },
+      "page": "C19-APCA08-2",
+      "lang": "en",
+      "stem": {
+        "en": "What is the area of the region between y = {a} − {k}x² and y = {b}?",
+        "uz": "y = {a} − {k}x² va y = {b} orasidagi soha yuzi nechaga teng?",
+        "ru": "Найдите площадь области между y = {a} − {k}x² и y = {b}."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "They meet where {a} − {k}x² = {b}, at x = ±{r}. Area = ∫ from −{r} to {r} of ({ab} − {k}x²) dx = {ANS}.",
+        "uz": "{a} − {k}x² = {b} da, yaʼni x = ±{r} da kesishadi. Yuza = −{r} dan {r} gacha ∫ ({ab} − {k}x²) dx = {ANS}.",
+        "ru": "Они пересекаются, где {a} − {k}x² = {b}, то есть при x = ±{r}. Площадь = ∫ от −{r} до {r} ({ab} − {k}x²) dx = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.6,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5021",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "area_between_curves",
+      "family": {
+        "template": "The curves y = {m}x² and y = {n}x enclose a region. What is the area of this region?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                6,
+                2
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                6,
+                4
+              ],
+              [
+                6,
+                5
+              ]
+            ]
+          }
+        },
+        "derived": {
+          "m": "t[0]",
+          "c": "t[1]",
+          "n": "t[0]*t[1]"
+        },
+        "constraints": [
+          "m*c^3/6 != m*c^3/2",
+          "m*c^3/6 != m*c^3/3",
+          "m*c^3/6 != -m*c^3/6",
+          "m*c^3/2 != m*c^3/3",
+          "m*c^3/2 != -m*c^3/6",
+          "m*c^3/3 != -m*c^3/6"
+        ],
+        "answer": "m*c^3/6",
+        "distractors": [
+          "m*c^3/2",
+          "m*c^3/3",
+          "-m*c^3/6"
+        ],
+        "integer": true,
+        "relation": "X = ({n}/{m})/6*(0 + 4*({n}*({n}/{m})/2 - {m}*(({n}/{m})/2)^2) + ({n}*({n}/{m}) - {m}*({n}/{m})^2))"
+      },
+      "page": "C19-APCA08-2",
+      "lang": "en",
+      "stem": {
+        "en": "The curves y = {m}x² and y = {n}x enclose a region. What is the area of this region?",
+        "uz": "y = {m}x² va y = {n}x egri chiziqlari soha hosil qiladi. Bu soha yuzi nechaga teng?",
+        "ru": "Кривые y = {m}x² и y = {n}x ограничивают область. Найдите площадь этой области."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "They meet at x = 0 and x = {c}, and {n}x is on top. Area = ∫₀^{c} ({n}x − {m}x²) dx = {ANS}.",
+        "uz": "Ular x = 0 va x = {c} da kesishadi, {n}x yuqorida. Yuza = ∫₀^{c} ({n}x − {m}x²) dx = {ANS}.",
+        "ru": "Они пересекаются при x = 0 и x = {c}, выше {n}x. Площадь = ∫₀^{c} ({n}x − {m}x²) dx = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.5,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5022",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "volume",
+      "family": {
+        "template": "The region under y = {m}x from x = 0 to x = {h} turns about the x-axis. The volume of the solid is kπ. What is k?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                6,
+                2
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                6,
+                4
+              ]
+            ]
+          }
+        },
+        "derived": {
+          "m": "t[0]",
+          "h": "t[1]",
+          "mm": "t[0]*t[0]"
+        },
+        "constraints": [
+          "m*m*h^3/3 != m*m*h^3",
+          "m*m*h^3/3 != m*h*h/2",
+          "m*m*h^3/3 != m*h^3/3",
+          "m*m*h^3 != m*h*h/2",
+          "m*m*h^3 != m*h^3/3",
+          "m*h*h/2 != m*h^3/3"
+        ],
+        "answer": "m*m*h^3/3",
+        "distractors": [
+          "m*m*h^3",
+          "m*h*h/2",
+          "m*h^3/3"
+        ],
+        "integer": true,
+        "relation": "X = {h}/6*(0 + 4*({m}*{h}/2)^2 + ({m}*{h})^2)"
+      },
+      "page": "C19-APCA08-3",
+      "lang": "en",
+      "stem": {
+        "en": "The region under y = {m}x from x = 0 to x = {h} turns about the x-axis. The volume of the solid is kπ. What is k?",
+        "uz": "x = 0 dan x = {h} gacha y = {m}x ostidagi soha x oʻqi atrofida aylanadi. Hosil boʻlgan jismning hajmi kπ. k nechaga teng?",
+        "ru": "Область под y = {m}x от x = 0 до x = {h} вращается вокруг оси x. Объём тела равен kπ. Найдите k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Each slice is a disc of radius {m}x: V = π∫₀^{h} {mm}x² dx = π · {mm} · {h}³/3 = {ANS}π, so k = {ANS}.",
+        "uz": "Har bir qatlam — radiusi {m}x boʻlgan disk: V = π∫₀^{h} {mm}x² dx = π · {mm} · {h}³/3 = {ANS}π, demak k = {ANS}.",
+        "ru": "Каждый слой — диск радиуса {m}x: V = π∫₀^{h} {mm}x² dx = π · {mm} · {h}³/3 = {ANS}π, значит, k = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.6,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ap5023",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "volume",
+      "family": {
+        "template": "The base of a solid is the triangle bounded by y = {a} − {b}x and the two axes. Each cross section perpendicular to the x-axis is a square. What is the volume of the solid?",
+        "params": {
+          "u": {
+            "values": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                6,
+                2
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                6,
+                4
+              ]
+            ]
+          }
+        },
+        "derived": {
+          "b": "u[0]",
+          "t": "u[1]",
+          "a": "u[0]*u[1]"
+        },
+        "constraints": [
+          "b*b*t^3/3 != b*t*t/2",
+          "b*b*t^3/3 != b*b*t^3",
+          "b*b*t^3/3 != 2*b*b*t^3/3",
+          "b*t*t/2 != b*b*t^3",
+          "b*t*t/2 != 2*b*b*t^3/3",
+          "b*b*t^3 != 2*b*b*t^3/3"
+        ],
+        "answer": "b*b*t^3/3",
+        "distractors": [
+          "b*t*t/2",
+          "b*b*t^3",
+          "2*b*b*t^3/3"
+        ],
+        "integer": true,
+        "relation": "X = ({a}/{b})/6*({a}^2 + 4*({a} - {b}*({a}/{b})/2)^2 + 0)"
+      },
+      "page": "C19-APCA08-3",
+      "lang": "en",
+      "stem": {
+        "en": "The base of a solid is the triangle bounded by y = {a} − {b}x and the two axes. Each cross section perpendicular to the x-axis is a square. What is the volume of the solid?",
+        "uz": "Jismning asosi — y = {a} − {b}x toʻgʻri chizigʻi va ikki koordinata oʻqi bilan chegaralangan uchburchak. x oʻqiga perpendikulyar har bir kesim — kvadrat. Jismning hajmi nechaga teng?",
+        "ru": "Основание тела — треугольник, ограниченный прямой y = {a} − {b}x и осями координат. Каждое сечение, перпендикулярное оси x, — квадрат. Найдите объём тела."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The side at x is {a} − {b}x, so A(x) = ({a} − {b}x)². V = ∫₀^{t} ({a} − {b}x)² dx = {ANS}.",
+        "uz": "x dagi tomon {a} − {b}x, demak A(x) = ({a} − {b}x)². V = ∫₀^{t} ({a} − {b}x)² dx = {ANS}.",
+        "ru": "Сторона в точке x равна {a} − {b}x, значит, A(x) = ({a} − {b}x)². V = ∫₀^{t} ({a} − {b}x)² dx = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.7,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

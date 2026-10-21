@@ -1,0 +1,3148 @@
+{
+  "bank": "C14",
+  "batch": 1,
+  "kind": "catalog",
+  "note": "Reflection and MCII prompts (P5 spec §5.3 C14; §4.5 floor 4 \"the weekly MCII plan\"; R5 §5.2 reflect row). Catalog records, not quiz items: no options-as-keys, nothing is graded. Every student-facing string is uz/ru/en; uz uses U+02BB for oʻ/gʻ and U+02BC for the tutuq belgisi. Tokens in {braces} are filled by code (dates and titles from rule records, never AI). Chips live in option_sets.json (`options_ref`). Answers never reach the AI (D14 (5)). `engine_hints` are proposals for the integrator, not built behaviour. No statistics, studies or results appear in student-facing text; the evidence behind the design is listed in `sources` (each with url + verified_at). Status draft; counselor review is launch gate LG1.",
+  "sources": [
+    {
+      "id": "DUCK2011",
+      "url": "https://kops.uni-konstanz.de/entities/publication/b80e704b-09c4-4e23-a3d5-e9c731be2f7b",
+      "title": "Duckworth, Grant, Loew, Oettingen & Gollwitzer (2011), Self-regulation strategies improve self-discipline in adolescents: benefits of mental contrasting and implementation intentions, Educational Psychology 31(1), 17-26",
+      "used_for": "why the weekly plan is an MCII prompt: 66 second-year high-school students preparing for a high-stakes exam; the abstract says the intervention group completed more than 60 % more practice questions than the control group",
+      "verified_at": "2026-10-07",
+      "doi": "10.1080/01443410.2010.506003"
+    },
+    {
+      "id": "GOLL2006",
+      "url": "https://kops.uni-konstanz.de/entities/publication/2e749bfb-8533-437c-8203-7e788c910c5f",
+      "title": "Gollwitzer & Sheeran (2006), Implementation intentions and goal achievement: a meta-analysis of effects and processes, Advances in Experimental Social Psychology 38, 69-119",
+      "used_for": "the if-then plan format",
+      "note": "url moved to the Konstanz repository record, which shows the abstract (the socmot page in alt_url lists the paper without one). The abstract confirms 94 independent tests and d = .65 on goal attainment, and describes plans that say when, where and how; the effect size is not used in any student-facing text",
+      "verified_at": "2026-10-07",
+      "alt_url": "https://www.socmot.uni-konstanz.de/publications/implementation-intentions-and-goal-achievement-meta-analysis-effects-and-processes",
+      "doi": "10.1016/S0065-2601(06)38002-1"
+    },
+    {
+      "id": "WOOP-PRACTICE",
+      "url": "https://woopmylife.org/en/practice",
+      "title": "WOOP my life: practice page (Oettingen)",
+      "used_for": "step order (wish, outcome, obstacle, plan); name an inner obstacle (habit, feeling, belief) rather than an outside barrier; a wish that is somewhat challenging but feasible; a short, concrete if-then action",
+      "note": "the WOOP name is not used in student-facing text; the steps are written in our own words",
+      "verified_at": "2026-10-07"
+    },
+    {
+      "id": "CDC-SLEEP",
+      "url": "https://www.cdc.gov/sleep/about/index.html",
+      "title": "CDC, About Sleep: recommended daily sleep by age (page last reviewed 15 May 2024)",
+      "used_for": "the sleep line in C14-ref-energy and C14-mcii-final-weeks: school age 6-12 years 9-12 hours; teen 13-17 years 8-10 hours; adult 18-60 years 7 or more hours",
+      "verified_at": "2026-10-07"
+    },
+    {
+      "id": "ICO13",
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/childrens-information/childrens-code-guidance-and-resources/age-appropriate-design-a-code-of-practice-for-online-services/13-nudge-techniques/",
+      "title": "ICO, Age appropriate design: a code of practice for online services, Standard 13 \"Nudge techniques\" (UK)",
+      "used_for": "the C14-ref-energy basis note: the code says to \"nudge towards wellbeing enhancing behaviours (such as taking breaks)\"; UK law, not Uzbek, used as a design bar only",
+      "verified_at": "2026-10-07"
+    },
+    {
+      "id": "SPEC",
+      "url": null,
+      "title": "P5 spec v2 (7 Oct 2026) §4.5 floor 4 (weekly MCII plan, ≤ 5 min), rest days 0 required tasks, \"never miss twice\", load changes offered not forced; §4.6 verification ladder; §4.7 streak repair, no streak pressure, quiet hours; R5 §5.2 reflect row and §5.7",
+      "used_for": "slots, cadence, verification levels, the restart day and the wellbeing rules",
+      "verified_at": "2026-10-07",
+      "path": "C:/Users/PC/jg-p4d/.superpowers/sdd/2026-10-07-p5/P5-spec.md and R5-daily-tasks-ai.md (internal design documents, no public URL)",
+      "note": "internal source: every section cited in C14 (§2.6, §4.1, §4.4, §4.5 floor 4 and the adaptation table, §4.6, §4.7, §5.3 C14, D14 (5); R5 §3 rows, §5.2 reflect row, §5.7) was re-read in the local files on 2026-10-07 and matches"
+    }
+  ],
+  "items": [
+    {
+      "id": "C14-mcii-core",
+      "kind": "reflection_prompt",
+      "prompt_type": "mcii_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:mcii-core",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "first scheduled day of the week",
+        "default_for": [
+          "S2",
+          "S3",
+          "S4"
+        ]
+      },
+      "stages": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 5,
+      "optional": false,
+      "title": {
+        "en": "Plan your week: one goal, one obstacle, one if-then",
+        "uz": "Haftani rejalashtiring: bitta maqsad, bitta toʻsiq, bitta «agar–unda»",
+        "ru": "План недели: одна цель, одно препятствие, одно «если — то»"
+      },
+      "intro": {
+        "en": "Five minutes. Picture the goal, then the thing inside you that could stop it, then plan for that moment. There are no wrong answers; write in any language.",
+        "uz": "Besh daqiqa. Avval maqsadni, soʻng unga xalaqit berishi mumkin boʻlgan oʻzingizdagi narsani koʻz oldingizga keltiring, keyin oʻsha lahza uchun reja tuzing. Notoʻgʻri javob yoʻq; istalgan tilda yozing.",
+        "ru": "Пять минут. Представьте цель, затем то, что внутри вас может ей помешать, и составьте план на этот момент. Неправильных ответов нет; пишите на любом языке."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "wish",
+          "prompt": {
+            "en": "What do you most want to get done this week?",
+            "uz": "Bu hafta eng koʻp nimani bajarishni xohlaysiz?",
+            "ru": "Что вы больше всего хотите сделать на этой неделе?"
+          },
+          "hint": {
+            "en": "Pick one thing that is a bit hard but doable in seven days. You can take one of this week's tasks listed below.",
+            "uz": "Biroz qiyin, lekin yetti kunda bajarsa boʻladigan bitta narsani tanlang. Quyidagi haftalik vazifalaringizdan birini olishingiz mumkin.",
+            "ru": "Выберите одно дело: немного трудное, но выполнимое за семь дней. Можно взять одну из задач недели ниже."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 120,
+            "required": true,
+            "suggest_from": "week_workstreams"
+          }
+        },
+        {
+          "n": 2,
+          "key": "outcome",
+          "prompt": {
+            "en": "Imagine it is done. What is the best thing about that for you?",
+            "uz": "Tasavvur qiling: ish bajarildi. Siz uchun buning eng yaxshi tomoni nima?",
+            "ru": "Представьте, что дело сделано. Что в этом для вас самое приятное?"
+          },
+          "hint": {
+            "en": "Take a moment to really picture it: how you feel and what becomes easier.",
+            "uz": "Bir lahza buni chindan koʻz oldingizga keltiring: oʻzingizni qanday his qilasiz, nima osonlashadi.",
+            "ru": "Задержитесь на минуту и по-настоящему представьте это: что вы чувствуете, что становится легче."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": false
+          }
+        },
+        {
+          "n": 3,
+          "key": "obstacle",
+          "prompt": {
+            "en": "What inside you is most likely to get in the way?",
+            "uz": "Sizdagi qaysi narsa bunga eng koʻp xalaqit berishi mumkin?",
+            "ru": "Что в вас самих скорее всего помешает?"
+          },
+          "hint": {
+            "en": "Look for a habit, feeling or thought of your own, not something outside you like the weather. Pick one or write your own.",
+            "uz": "Tashqi narsani (masalan, ob-havoni) emas, oʻzingizdagi odat, his yoki fikrni toping. Bittasini tanlang yoki oʻzingiz yozing.",
+            "ru": "Ищите свою привычку, чувство или мысль, а не внешнее обстоятельство вроде погоды. Выберите вариант или напишите свой."
+          },
+          "input": {
+            "type": "choice",
+            "options_ref": "obstacle_inner",
+            "other_text_max": 120,
+            "required": true
+          }
+        },
+        {
+          "n": 4,
+          "key": "plan",
+          "prompt": {
+            "en": "Finish the plan: If ___, then I will ___.",
+            "uz": "Rejani yakunlang: Agar ___, unda men ___.",
+            "ru": "Закончите план: Если ___, то я ___."
+          },
+          "hint": {
+            "en": "Make the \"then\" part small and concrete, something you can start in under two minutes. Example: If I pick up my phone first, then I will put it in another room and open today's first task.",
+            "uz": "«Unda» qismi kichik va aniq boʻlsin: ikki daqiqadan kam vaqtda boshlasa boʻladigan ish. Misol: Agar avval telefonni qoʻlga olsam, unda men uni boshqa xonaga qoʻyaman va bugungi birinchi vazifani ochaman.",
+            "ru": "Часть «то» должна быть маленькой и конкретной: тем, что можно начать меньше чем за две минуты. Пример: Если я первым делом возьму телефон, то я отнесу его в другую комнату и открою первую задачу дня."
+          },
+          "input": {
+            "type": "if_then",
+            "render_ref": "option_sets.if_then_render",
+            "fields": {
+              "if": {
+                "label": {
+                  "en": "If…",
+                  "uz": "Agar…",
+                  "ru": "Если…"
+                },
+                "max_chars": 100,
+                "prefill_from": "obstacle",
+                "required": true
+              },
+              "then": {
+                "label": {
+                  "en": "…then I will",
+                  "uz": "…unda men",
+                  "ru": "…то я"
+                },
+                "max_chars": 120,
+                "required": true
+              }
+            }
+          }
+        },
+        {
+          "n": 5,
+          "key": "when_where",
+          "prompt": {
+            "en": "When and where will you do most of this week's work?",
+            "uz": "Bu haftaning asosiy ishini qachon va qayerda qilasiz?",
+            "ru": "Когда и где вы будете делать основную работу на этой неделе?"
+          },
+          "input": {
+            "type": "time_place",
+            "time_ref": "time",
+            "place_ref": "place",
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. At the end of the week we will show you this plan and ask how it went.",
+        "uz": "Saqlandi. Hafta oxirida bu rejani sizga koʻrsatamiz va qanday oʻtganini soʻraymiz.",
+        "ru": "Сохранено. В конце недели мы покажем вам этот план и спросим, как всё прошло."
+      },
+      "followed_by": "C14-ref-plan-check",
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "wish",
+            "obstacle",
+            "plan"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        },
+        "note": "a self-report with fields; never graded for quality"
+      },
+      "basis": [
+        "DUCK2011",
+        "GOLL2006",
+        "WOOP-PRACTICE",
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-mcii-kid",
+      "kind": "reflection_prompt",
+      "prompt_type": "mcii_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:mcii-kid",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "first scheduled day of the week",
+        "default_for": [
+          "S1"
+        ]
+      },
+      "stages": [
+        "S1"
+      ],
+      "age_note": "written for ages about 10-13: short words, a game-like \"trick\", no university or exam pressure",
+      "minutes": 3,
+      "optional": false,
+      "title": {
+        "en": "My week plan: a goal, what might stop me, my trick",
+        "uz": "Mening haftalik rejam: maqsad, nima xalaqit berishi mumkin, mening usulim",
+        "ru": "Мой план на неделю: цель, что может помешать, мой приём"
+      },
+      "intro": {
+        "en": "Three minutes. Answer in a few words, in any language.",
+        "uz": "Uch daqiqa. Bir necha soʻz bilan, istalgan tilda javob bering.",
+        "ru": "Три минуты. Ответьте в нескольких словах, на любом языке."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "wish",
+          "prompt": {
+            "en": "What do you want to do this week?",
+            "uz": "Bu hafta nima qilmoqchisiz?",
+            "ru": "Что вы хотите сделать на этой неделе?"
+          },
+          "hint": {
+            "en": "Something small you can really do, like \"learn 10 new English words\" or \"finish my maths tasks\".",
+            "uz": "Chindan bajara oladigan kichik bir narsa, masalan: «10 ta yangi inglizcha soʻz oʻrganish» yoki «matematika vazifalarimni tugatish».",
+            "ru": "Что-то небольшое и реальное, например: «выучить 10 новых английских слов» или «доделать задания по математике»."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 80,
+            "required": true,
+            "suggest_from": "week_workstreams"
+          }
+        },
+        {
+          "n": 2,
+          "key": "outcome",
+          "prompt": {
+            "en": "When it is done, how will you feel?",
+            "uz": "Bajarib boʻlgach, oʻzingizni qanday his qilasiz?",
+            "ru": "Когда сделаете, что вы почувствуете?"
+          },
+          "input": {
+            "type": "choice",
+            "required": false,
+            "other_text_max": 80,
+            "options": [
+              {
+                "id": "proud",
+                "en": "Proud",
+                "uz": "Faxrlanaman",
+                "ru": "Гордость"
+              },
+              {
+                "id": "happy",
+                "en": "Happy",
+                "uz": "Xursand boʻlaman",
+                "ru": "Радость"
+              },
+              {
+                "id": "calm",
+                "en": "Calm: nothing left to worry about",
+                "uz": "Xotirjam: tashvishlanadigan narsa qolmaydi",
+                "ru": "Спокойствие: ничего не висит над душой"
+              },
+              {
+                "id": "other",
+                "en": "Something else (write it)",
+                "uz": "Boshqa narsa (yozing)",
+                "ru": "Другое (напишите)"
+              }
+            ]
+          }
+        },
+        {
+          "n": 3,
+          "key": "obstacle",
+          "prompt": {
+            "en": "What might stop you?",
+            "uz": "Sizga nima xalaqit berishi mumkin?",
+            "ru": "Что может вам помешать?"
+          },
+          "input": {
+            "type": "choice",
+            "options_ref": "obstacle_inner_kid",
+            "other_text_max": 80,
+            "required": true
+          }
+        },
+        {
+          "n": 4,
+          "key": "plan",
+          "prompt": {
+            "en": "Your trick: If ___, then I will ___.",
+            "uz": "Sizning usulingiz: Agar ___, unda men ___.",
+            "ru": "Ваш приём: Если ___, то я ___."
+          },
+          "hint": {
+            "en": "Example: If I want to play first, then I will do 10 minutes of my task and play after.",
+            "uz": "Misol: Agar avval oʻynagim kelsa, unda men 10 daqiqa vazifamni qilaman, keyin oʻynayman.",
+            "ru": "Пример: Если мне захочется сначала поиграть, то я 10 минут позанимаюсь, а потом поиграю."
+          },
+          "input": {
+            "type": "if_then",
+            "render_ref": "option_sets.if_then_render",
+            "fields": {
+              "if": {
+                "label": {
+                  "en": "If…",
+                  "uz": "Agar…",
+                  "ru": "Если…"
+                },
+                "max_chars": 100,
+                "prefill_from": "obstacle",
+                "required": true
+              },
+              "then": {
+                "label": {
+                  "en": "…then I will",
+                  "uz": "…unda men",
+                  "ru": "…то я"
+                },
+                "max_chars": 100,
+                "required": true
+              }
+            }
+          }
+        }
+      ],
+      "closing": {
+        "en": "Great plan. At the end of the week you can check how it went.",
+        "uz": "Ajoyib reja. Hafta oxirida qanday oʻtganini tekshirib koʻrasiz.",
+        "ru": "Отличный план. В конце недели можно будет проверить, как всё прошло."
+      },
+      "followed_by": "C14-ref-plan-check",
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "wish",
+            "obstacle",
+            "plan"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        },
+        "note": "a self-report with fields; never graded for quality"
+      },
+      "basis": [
+        "DUCK2011",
+        "GOLL2006",
+        "WOOP-PRACTICE",
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-mcii-test",
+      "kind": "reflection_prompt",
+      "prompt_type": "mcii_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:mcii-test",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "first scheduled day of the week",
+        "if": "a tests, english or math workstream is the week's largest"
+      },
+      "stages": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 5,
+      "optional": false,
+      "title": {
+        "en": "Practice-week plan: a goal for your test prep",
+        "uz": "Mashq haftasi rejasi: test tayyorgarligi uchun maqsad",
+        "ru": "План недели практики: цель для подготовки к экзамену"
+      },
+      "intro": {
+        "en": "Five minutes. Set a goal you control, such as practice sessions done, not a score.",
+        "uz": "Besh daqiqa. Ballga emas, oʻzingiz boshqara oladigan narsaga maqsad qoʻying: masalan, bajarilgan mashq mashgʻulotlari soni.",
+        "ru": "Пять минут. Поставьте цель, которая зависит от вас, например число проведённых занятий, а не балл."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "wish",
+          "prompt": {
+            "en": "How many practice sessions will you finish this week, and in which skill?",
+            "uz": "Bu hafta nechta mashq mashgʻulotini va qaysi koʻnikma boʻyicha bajarasiz?",
+            "ru": "Сколько занятий практики вы проведёте на этой неделе и по какому навыку?"
+          },
+          "hint": {
+            "en": "A session is one practice task from your list. Choose a number you can reach even in a busy week.",
+            "uz": "Mashgʻulot — roʻyxatingizdagi bitta mashq vazifasi. Band hafta boʻlsa ham erisha oladigan sonni tanlang.",
+            "ru": "Занятие — это одна практическая задача из вашего списка. Выберите число, реальное даже для загруженной недели."
+          },
+          "input": {
+            "type": "fields",
+            "required": true,
+            "fields": {
+              "sessions": {
+                "type": "number",
+                "min": 1,
+                "max": 14,
+                "label": {
+                  "en": "Sessions",
+                  "uz": "Mashgʻulotlar",
+                  "ru": "Занятия"
+                }
+              },
+              "skill": {
+                "type": "text",
+                "max_chars": 60,
+                "suggest_from": "week_practice_skills",
+                "label": {
+                  "en": "Skill",
+                  "uz": "Koʻnikma",
+                  "ru": "Навык"
+                }
+              }
+            }
+          }
+        },
+        {
+          "n": 2,
+          "key": "outcome",
+          "prompt": {
+            "en": "Picture the end of the week with that done. What feels different?",
+            "uz": "Hafta oxirini shu ish bajarilgan holda tasavvur qiling. Nima boshqacha his qilinadi?",
+            "ru": "Представьте конец недели, когда это сделано. Что ощущается иначе?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": false
+          }
+        },
+        {
+          "n": 3,
+          "key": "obstacle",
+          "prompt": {
+            "en": "What in you usually stops a practice session?",
+            "uz": "Odatda sizdagi qaysi narsa mashgʻulotni toʻxtatib qoʻyadi?",
+            "ru": "Что в вас обычно прерывает занятие?"
+          },
+          "hint": {
+            "en": "Common ones: stopping at the first hard question, checking the phone between questions, starting too late in the evening.",
+            "uz": "Koʻp uchraydiganlari: birinchi qiyin savolda toʻxtab qolish, savollar orasida telefonga qarash, kechqurun juda kech boshlash.",
+            "ru": "Часто это остановка на первом трудном вопросе, телефон между вопросами или слишком поздний вечерний старт."
+          },
+          "input": {
+            "type": "choice",
+            "options_ref": "obstacle_inner",
+            "other_text_max": 120,
+            "required": true
+          }
+        },
+        {
+          "n": 4,
+          "key": "plan",
+          "prompt": {
+            "en": "Finish the plan: If ___, then I will ___.",
+            "uz": "Rejani yakunlang: Agar ___, unda men ___.",
+            "ru": "Закончите план: Если ___, то я ___."
+          },
+          "hint": {
+            "en": "Example: If a question takes me more than two minutes, then I will mark it, move on and come back at the end.",
+            "uz": "Misol: Agar bitta savol ikki daqiqadan koʻp vaqt olsa, unda men uni belgilab, keyingisiga oʻtaman va oxirida qaytaman.",
+            "ru": "Пример: Если вопрос займёт больше двух минут, то я отмечу его, перейду дальше и вернусь к нему в конце."
+          },
+          "input": {
+            "type": "if_then",
+            "render_ref": "option_sets.if_then_render",
+            "fields": {
+              "if": {
+                "label": {
+                  "en": "If…",
+                  "uz": "Agar…",
+                  "ru": "Если…"
+                },
+                "max_chars": 100,
+                "prefill_from": "obstacle",
+                "required": true
+              },
+              "then": {
+                "label": {
+                  "en": "…then I will",
+                  "uz": "…unda men",
+                  "ru": "…то я"
+                },
+                "max_chars": 120,
+                "required": true
+              }
+            }
+          }
+        },
+        {
+          "n": 5,
+          "key": "when_where",
+          "prompt": {
+            "en": "When and where will you practise?",
+            "uz": "Qachon va qayerda mashq qilasiz?",
+            "ru": "Когда и где вы будете заниматься?"
+          },
+          "input": {
+            "type": "time_place",
+            "time_ref": "time",
+            "place_ref": "place",
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. At the end of the week we will ask how it went.",
+        "uz": "Saqlandi. Hafta oxirida qanday oʻtganini soʻraymiz.",
+        "ru": "Сохранено. В конце недели мы спросим, как всё прошло."
+      },
+      "followed_by": "C14-ref-plan-check",
+      "engine_hints": [
+        "needs the count of practice tasks completed this week for the plan check (proposed; integrator decides)"
+      ],
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "wish",
+            "obstacle",
+            "plan"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        },
+        "note": "a self-report with fields; never graded for quality"
+      },
+      "basis": [
+        "DUCK2011",
+        "GOLL2006",
+        "WOOP-PRACTICE",
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-mcii-deadline",
+      "kind": "reflection_prompt",
+      "prompt_type": "mcii_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:mcii-deadline",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "first scheduled day of the week",
+        "if": "a dated step (floor 1) falls due within 7 days"
+      },
+      "stages": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 5,
+      "optional": false,
+      "tokens": {
+        "title": "the dated step's title in the student's language (code)",
+        "due": "its due date, formatted by code from the rule record; never written by AI"
+      },
+      "title": {
+        "en": "A dated step is due: plan how you will finish it",
+        "uz": "Muddatli qadam yaqinlashdi: uni qanday tugatishni rejalashtiring",
+        "ru": "Скоро срок важного шага: спланируйте, как его завершить"
+      },
+      "intro": {
+        "en": "This week has a step with a fixed date: {title} (due {due}). Five minutes to make sure it does not slip.",
+        "uz": "Bu haftada sanasi belgilangan qadam bor: {title} (muddati: {due}). U qoʻldan chiqib ketmasligi uchun besh daqiqa ajrating.",
+        "ru": "На этой неделе есть шаг с фиксированной датой: {title} (срок: {due}). Пять минут, чтобы он не сорвался."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "wish",
+          "prompt": {
+            "en": "Which day will you finish it, at least two days before the deadline?",
+            "uz": "Uni qaysi kuni, muddatdan kamida ikki kun oldin tugatasiz?",
+            "ru": "В какой день вы это закончите, хотя бы за два дня до срока?"
+          },
+          "hint": {
+            "en": "Finishing early leaves room for a slow website, a missing document or a question you need to ask.",
+            "uz": "Erta tugatsangiz, sayt sekin ishlashi, hujjat yetishmasligi yoki kimgadir savol berish kerak boʻlib qolishiga vaqt qoladi.",
+            "ru": "Если закончить раньше, останется время на медленный сайт, недостающий документ или вопрос, который придётся задать."
+          },
+          "input": {
+            "type": "day_pick",
+            "latest": "{due} minus 2 days",
+            "required": true
+          }
+        },
+        {
+          "n": 2,
+          "key": "outcome",
+          "prompt": {
+            "en": "When this step is done, what does it open up for you?",
+            "uz": "Bu qadam bajarilgach, oldingizda qanday imkoniyat ochiladi?",
+            "ru": "Что откроется для вас, когда этот шаг будет сделан?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": false
+          }
+        },
+        {
+          "n": 3,
+          "key": "obstacle",
+          "prompt": {
+            "en": "What could make you leave it to the last day?",
+            "uz": "Nima sababdan uni oxirgi kunga qoldirib qoʻyishingiz mumkin?",
+            "ru": "Из-за чего вы можете отложить это на последний день?"
+          },
+          "input": {
+            "type": "choice",
+            "other_text_max": 120,
+            "required": true,
+            "options": [
+              {
+                "id": "unsure_how",
+                "en": "I am not sure how to do it",
+                "uz": "Qanday qilishni aniq bilmayman",
+                "ru": "Не совсем понимаю, как это сделать",
+                "if_form": {
+                  "en": "I am not sure how to do it",
+                  "uz": "qanday qilishni aniq bilmasam",
+                  "ru": "я не пойму, как это сделать"
+                }
+              },
+              {
+                "id": "need_someone",
+                "en": "I need something from someone else",
+                "uz": "Kimdandir biror narsa kerak",
+                "ru": "Нужно что-то от другого человека",
+                "if_form": {
+                  "en": "I am still waiting for something from someone else",
+                  "uz": "kimdandir kerakli narsani hali olmagan boʻlsam",
+                  "ru": "я всё ещё буду ждать что-то от другого человека"
+                }
+              },
+              {
+                "id": "boring",
+                "en": "It feels boring",
+                "uz": "Zerikarli tuyuladi",
+                "ru": "Кажется скучным",
+                "if_form": {
+                  "en": "it feels boring",
+                  "uz": "zerikarli tuyulsa",
+                  "ru": "это покажется скучным"
+                }
+              },
+              {
+                "id": "worry",
+                "en": "I am nervous about getting it wrong",
+                "uz": "Xato qilib qoʻyishdan xavotirdaman",
+                "ru": "Боюсь сделать что-то не так",
+                "if_form": {
+                  "en": "I get nervous about getting it wrong",
+                  "uz": "xato qilib qoʻyishdan xavotirga tushsam",
+                  "ru": "я начну бояться сделать что-то не так"
+                }
+              },
+              {
+                "id": "other",
+                "en": "Something else (write it)",
+                "uz": "Boshqa narsa (yozing)",
+                "ru": "Другое (напишите)"
+              }
+            ]
+          }
+        },
+        {
+          "n": 4,
+          "key": "plan",
+          "prompt": {
+            "en": "Finish the plan: If ___, then I will ___.",
+            "uz": "Rejani yakunlang: Agar ___, unda men ___.",
+            "ru": "Закончите план: Если ___, то я ___."
+          },
+          "hint": {
+            "en": "Example: If I am not sure how to do it, then I will send my Jamals mentor one clear question today.",
+            "uz": "Misol: Agar qanday qilishni aniq bilmasam, unda men bugunoq Jamals mentorimga bitta aniq savol yozaman.",
+            "ru": "Пример: Если я не пойму, как это сделать, то я сегодня же отправлю ментору Jamals один чёткий вопрос."
+          },
+          "input": {
+            "type": "if_then",
+            "render_ref": "option_sets.if_then_render",
+            "fields": {
+              "if": {
+                "label": {
+                  "en": "If…",
+                  "uz": "Agar…",
+                  "ru": "Если…"
+                },
+                "max_chars": 100,
+                "prefill_from": "obstacle",
+                "required": true
+              },
+              "then": {
+                "label": {
+                  "en": "…then I will",
+                  "uz": "…unda men",
+                  "ru": "…то я"
+                },
+                "max_chars": 120,
+                "required": true
+              }
+            }
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. Good luck with this step.",
+        "uz": "Saqlandi. Bu qadamda omad tilaymiz.",
+        "ru": "Сохранено. Удачи с этим шагом."
+      },
+      "followed_by": "C14-ref-plan-check",
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "wish",
+            "obstacle",
+            "plan"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        },
+        "note": "a self-report with fields; never graded for quality"
+      },
+      "basis": [
+        "GOLL2006",
+        "WOOP-PRACTICE",
+        "SPEC"
+      ],
+      "basis_note": "the \"at least two days before\" default follows the spec's inference \"never in the last 48 h\" (§4.5 weekly allocation); a design default, not evidence",
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-mcii-essay",
+      "kind": "reflection_prompt",
+      "prompt_type": "mcii_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:mcii-essay",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "first scheduled day of the week",
+        "if": "an essays workstream has a step this week"
+      },
+      "stages": [
+        "S3",
+        "S4"
+      ],
+      "minutes": 5,
+      "optional": false,
+      "title": {
+        "en": "Essay week: plan for the hard part",
+        "uz": "Insho haftasi: eng qiyin joy uchun reja",
+        "ru": "Неделя эссе: план на самый трудный момент"
+      },
+      "intro": {
+        "en": "Writing often gets stuck at the same point each time. Find yours and plan for it.",
+        "uz": "Yozish koʻpincha har safar bir xil joyda toʻxtab qoladi. Oʻzingiznikini toping va unga reja tuzing.",
+        "ru": "Письмо часто застревает каждый раз в одном и том же месте. Найдите своё и составьте на него план."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "wish",
+          "prompt": {
+            "en": "What will exist by the end of this week? Say it as something you can show.",
+            "uz": "Hafta oxirigacha nima tayyor boʻladi? Uni koʻrsatsa boʻladigan narsa sifatida ayting.",
+            "ru": "Что будет готово к концу недели? Сформулируйте это как то, что можно показать."
+          },
+          "hint": {
+            "en": "For example: a story-bank list of five moments, a 300-word rough draft, or an outline in three parts.",
+            "uz": "Masalan: beshta voqeadan iborat hikoyalar roʻyxati, 300 soʻzli qoralama yoki uch qismli reja.",
+            "ru": "Например: список из пяти историй для банка историй, черновик на 300 слов или план из трёх частей."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 120,
+            "required": true,
+            "suggest_from": "week_workstreams"
+          }
+        },
+        {
+          "n": 2,
+          "key": "outcome",
+          "prompt": {
+            "en": "Picture reading it at the end of the week. What do you hope a reader will learn about you?",
+            "uz": "Hafta oxirida uni oʻqiyotganingizni tasavvur qiling. Oʻquvchi siz haqingizda nimani bilib olishini istaysiz?",
+            "ru": "Представьте, что вы перечитываете это в конце недели. Что, как вы надеетесь, читатель узнает о вас?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": false
+          }
+        },
+        {
+          "n": 3,
+          "key": "obstacle",
+          "prompt": {
+            "en": "Where does your writing usually get stuck?",
+            "uz": "Yozishingiz odatda qayerda toʻxtab qoladi?",
+            "ru": "Где обычно застревает ваше письмо?"
+          },
+          "input": {
+            "type": "choice",
+            "other_text_max": 120,
+            "required": true,
+            "options": [
+              {
+                "id": "first_line",
+                "en": "I keep rewriting the first sentence",
+                "uz": "Birinchi gapni qayta-qayta yozaman",
+                "ru": "Снова и снова переписываю первое предложение",
+                "if_form": {
+                  "en": "I start rewriting the first sentence again",
+                  "uz": "birinchi gapni yana qayta yoza boshlasam",
+                  "ru": "я опять начну переписывать первое предложение"
+                }
+              },
+              {
+                "id": "not_interesting",
+                "en": "I think my stories are not interesting enough",
+                "uz": "Hikoyalarim yetarlicha qiziq emas, deb oʻylayman",
+                "ru": "Мне кажется, мои истории недостаточно интересны",
+                "if_form": {
+                  "en": "I think my story is not interesting enough",
+                  "uz": "hikoyam yetarlicha qiziq emas, deb oʻylasam",
+                  "ru": "мне покажется, что моя история недостаточно интересна"
+                }
+              },
+              {
+                "id": "blank_page",
+                "en": "I open the page and don't know what to write",
+                "uz": "Sahifani ochaman-u, nima yozishni bilmayman",
+                "ru": "Открываю страницу и не знаю, что писать",
+                "if_form": {
+                  "en": "I open the page and don't know what to write",
+                  "uz": "sahifani ochib, nima yozishni bilmasam",
+                  "ru": "я открою страницу и не буду знать, что писать"
+                }
+              },
+              {
+                "id": "language",
+                "en": "I think in my own language and get stuck in English",
+                "uz": "Oʻz tilimda oʻylayman va inglizchada qotib qolaman",
+                "ru": "Думаю на родном языке и застреваю на английском",
+                "if_form": {
+                  "en": "I get stuck turning my thoughts into English",
+                  "uz": "fikrlarimni inglizchaga oʻgirishda qotib qolsam",
+                  "ru": "я застряну, переводя мысли на английский"
+                }
+              },
+              {
+                "id": "put_off",
+                "en": "I put off starting",
+                "uz": "Boshlashni keyinga suraman",
+                "ru": "Откладываю начало",
+                "if_form": {
+                  "en": "I start putting it off",
+                  "uz": "boshlashni keyinga sura boshlasam",
+                  "ru": "я начну откладывать"
+                }
+              },
+              {
+                "id": "other",
+                "en": "Something else (write it)",
+                "uz": "Boshqa narsa (yozing)",
+                "ru": "Другое (напишите)"
+              }
+            ]
+          }
+        },
+        {
+          "n": 4,
+          "key": "plan",
+          "prompt": {
+            "en": "Finish the plan: If ___, then I will ___.",
+            "uz": "Rejani yakunlang: Agar ___, unda men ___.",
+            "ru": "Закончите план: Если ___, то я ___."
+          },
+          "hint": {
+            "en": "Example: If I start rewriting the first sentence again, then I will write the middle first and come back to the start last.",
+            "uz": "Misol: Agar birinchi gapni yana qayta yoza boshlasam, unda men avval oʻrta qismini yozaman va boshiga eng oxirida qaytaman.",
+            "ru": "Пример: Если я опять начну переписывать первое предложение, то я сначала напишу середину, а к началу вернусь в самом конце."
+          },
+          "input": {
+            "type": "if_then",
+            "render_ref": "option_sets.if_then_render",
+            "fields": {
+              "if": {
+                "label": {
+                  "en": "If…",
+                  "uz": "Agar…",
+                  "ru": "Если…"
+                },
+                "max_chars": 100,
+                "prefill_from": "obstacle",
+                "required": true
+              },
+              "then": {
+                "label": {
+                  "en": "…then I will",
+                  "uz": "…unda men",
+                  "ru": "…то я"
+                },
+                "max_chars": 120,
+                "required": true
+              }
+            }
+          }
+        },
+        {
+          "n": 5,
+          "key": "when_where",
+          "prompt": {
+            "en": "When and where will you write?",
+            "uz": "Qachon va qayerda yozasiz?",
+            "ru": "Когда и где вы будете писать?"
+          },
+          "input": {
+            "type": "time_place",
+            "time_ref": "time",
+            "place_ref": "place",
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. A rough draft is supposed to be rough; you will improve it later.",
+        "uz": "Saqlandi. Qoralama xomaki boʻlishi tabiiy — keyin uni yaxshilaysiz.",
+        "ru": "Сохранено. Черновик и должен быть черновым: доработаете его позже."
+      },
+      "followed_by": "C14-ref-plan-check",
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "wish",
+            "obstacle",
+            "plan"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        },
+        "note": "a self-report with fields; never graded for quality"
+      },
+      "basis": [
+        "GOLL2006",
+        "WOOP-PRACTICE",
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-mcii-busy",
+      "kind": "reflection_prompt",
+      "prompt_type": "mcii_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:mcii-busy",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "first scheduled day of the week",
+        "if": "the student marks the week as busy, or 7-day completion c7 < 0.6 (spec §4.5)"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 3,
+      "optional": false,
+      "title": {
+        "en": "A busy week: keep one small step a day",
+        "uz": "Band hafta: har kuni bitta kichik qadam",
+        "ru": "Загруженная неделя: один маленький шаг в день"
+      },
+      "intro": {
+        "en": "School is heavy this week. A small daily step is enough; you can do more next week.",
+        "uz": "Bu hafta maktab ishlari koʻp. Har kuni kichik qadam qoʻyishning oʻzi yetarli; keyingi hafta koʻproq qilasiz.",
+        "ru": "На этой неделе много школьных дел. Достаточно маленького шага каждый день; больше сделаете на следующей неделе."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "wish",
+          "prompt": {
+            "en": "What is the smallest step you can still take each day? (5-10 minutes)",
+            "uz": "Har kuni baribir qoʻya oladigan eng kichik qadamingiz qaysi? (5–10 daqiqa)",
+            "ru": "Какой самый маленький шаг вы всё равно сможете делать каждый день? (5–10 минут)"
+          },
+          "hint": {
+            "en": "For example: 10 vocabulary cards, a few practice questions, or one page of reading.",
+            "uz": "Masalan: 10 ta lugʻat kartasi, bir nechta mashq savoli yoki bir sahifa oʻqish.",
+            "ru": "Например: 10 карточек со словами, несколько тренировочных вопросов или одна страница чтения."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 100,
+            "required": true
+          }
+        },
+        {
+          "n": 2,
+          "key": "outcome",
+          "prompt": {
+            "en": "How will it feel at the end of the week to have kept going?",
+            "uz": "Hafta oxirida toʻxtamay davom etganingizni bilish qanday boʻladi?",
+            "ru": "Каково будет в конце недели знать, что вы не остановились?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 120,
+            "required": false
+          }
+        },
+        {
+          "n": 3,
+          "key": "obstacle",
+          "prompt": {
+            "en": "What might make you skip even the small step?",
+            "uz": "Hatto kichik qadamni ham tashlab ketishingizga nima sabab boʻlishi mumkin?",
+            "ru": "Что может заставить вас пропустить даже маленький шаг?"
+          },
+          "input": {
+            "type": "choice",
+            "options_ref": "obstacle_inner",
+            "options_ref_by_stage": {
+              "S1": "obstacle_inner_kid"
+            },
+            "other_text_max": 120,
+            "required": true
+          }
+        },
+        {
+          "n": 4,
+          "key": "plan",
+          "prompt": {
+            "en": "Finish the plan: If ___, then I will ___.",
+            "uz": "Rejani yakunlang: Agar ___, unda men ___.",
+            "ru": "Закончите план: Если ___, то я ___."
+          },
+          "hint": {
+            "en": "Example: If I feel too tired after school, then I will do my five minutes before dinner, not after.",
+            "uz": "Misol: Agar maktabdan keyin juda charchasam, unda men besh daqiqamni kechki ovqatdan keyin emas, oldin qilaman.",
+            "ru": "Пример: Если после школы у меня не будет сил, то я сделаю свои пять минут до ужина, а не после."
+          },
+          "input": {
+            "type": "if_then",
+            "render_ref": "option_sets.if_then_render",
+            "fields": {
+              "if": {
+                "label": {
+                  "en": "If…",
+                  "uz": "Agar…",
+                  "ru": "Если…"
+                },
+                "max_chars": 100,
+                "prefill_from": "obstacle",
+                "required": true
+              },
+              "then": {
+                "label": {
+                  "en": "…then I will",
+                  "uz": "…unda men",
+                  "ru": "…то я"
+                },
+                "max_chars": 100,
+                "required": true
+              }
+            }
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. A small step every day keeps the habit going.",
+        "uz": "Saqlandi. Har kungi kichik qadam odatni saqlab qoladi.",
+        "ru": "Сохранено. Маленький шаг каждый день сохраняет привычку."
+      },
+      "followed_by": "C14-ref-plan-check",
+      "engine_hints": [
+        "choosing this plan may come with an OFFER of a lighter week; load changes are offered, never forced (spec §4.5); integrator decides"
+      ],
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "wish",
+            "obstacle",
+            "plan"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        },
+        "note": "a self-report with fields; never graded for quality"
+      },
+      "basis": [
+        "GOLL2006",
+        "WOOP-PRACTICE",
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-mcii-final-weeks",
+      "kind": "reflection_prompt",
+      "prompt_type": "mcii_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:mcii-final-weeks",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "first scheduled day of the week",
+        "if": "the cadence exam block: the last 4 weeks before a hard test date (tasks.ts cadence, S2+)"
+      },
+      "stages": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 5,
+      "optional": false,
+      "tokens": {
+        "test": "the test name from the sitting record (SAT, IELTS, Milliy sertifikat, DTM…)",
+        "due": "the test date from the rule record (code)"
+      },
+      "title": {
+        "en": "The last weeks before {test}: plan your practice and your sleep",
+        "uz": "{test} oldidan soʻnggi haftalar: mashq va uyquni rejalashtiring",
+        "ru": "Последние недели перед {test}: план практики и сна"
+      },
+      "intro": {
+        "en": "Your test is on {due}. In these weeks, plan steady timed practice and protect your sleep.",
+        "uz": "Testingiz {due} kuni. Shu haftalarda vaqt bilan ishlanadigan mashqlarni bir maromda rejalashtiring va uyqungizni asrang.",
+        "ru": "Ваш экзамен — {due}. В эти недели запланируйте регулярную практику на время и берегите сон."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "wish",
+          "prompt": {
+            "en": "What will you finish this week?",
+            "uz": "Bu hafta nimani tugatasiz?",
+            "ru": "Что вы закончите на этой неделе?"
+          },
+          "hint": {
+            "en": "For example: one timed practice section and a review of its mistakes.",
+            "uz": "Masalan: vaqt bilan bitta mashq boʻlimi va undagi xatolar tahlili.",
+            "ru": "Например: одну секцию практики на время и разбор её ошибок."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 120,
+            "required": true,
+            "suggest_from": "week_workstreams"
+          }
+        },
+        {
+          "n": 2,
+          "key": "outcome",
+          "prompt": {
+            "en": "Picture walking into the test room on the day. How would you like to feel?",
+            "uz": "Test kuni imtihon xonasiga kirib kelayotganingizni tasavvur qiling. Oʻzingizni qanday his qilishni xohlaysiz?",
+            "ru": "Представьте, как в день экзамена входите в аудиторию. Что вы хотели бы чувствовать?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": false
+          }
+        },
+        {
+          "n": 3,
+          "key": "obstacle",
+          "prompt": {
+            "en": "What in you could get in the way in these weeks?",
+            "uz": "Shu haftalarda sizdagi qaysi narsa xalaqit berishi mumkin?",
+            "ru": "Что в вас может помешать в эти недели?"
+          },
+          "input": {
+            "type": "choice",
+            "other_text_max": 120,
+            "required": true,
+            "options": [
+              {
+                "id": "late_nights",
+                "en": "I study late at night and sleep less",
+                "uz": "Kechasi kech oʻqib, kam uxlayman",
+                "ru": "Занимаюсь поздно ночью и мало сплю",
+                "if_form": {
+                  "en": "it is past my bedtime and I am still studying",
+                  "uz": "uxlash vaqtim oʻtib, hali ham oʻqiyotgan boʻlsam",
+                  "ru": "время сна уже прошло, а я всё ещё занимаюсь"
+                }
+              },
+              {
+                "id": "avoid_timed",
+                "en": "I avoid timed practice because it makes me nervous",
+                "uz": "Vaqtli mashqdan qochaman, chunki u meni hayajonga soladi",
+                "ru": "Избегаю практики на время, потому что она меня нервирует",
+                "if_form": {
+                  "en": "I want to skip the timed practice",
+                  "uz": "vaqtli mashqni oʻtkazib yuborgim kelsa",
+                  "ru": "мне захочется пропустить практику на время"
+                }
+              },
+              {
+                "id": "skip_review",
+                "en": "I check the score but don't review the mistakes",
+                "uz": "Ballni koʻraman, lekin xatolarni tahlil qilmayman",
+                "ru": "Смотрю балл, но не разбираю ошибки",
+                "if_form": {
+                  "en": "I see my score and want to close the page",
+                  "uz": "ballimni koʻrib, sahifani yopgim kelsa",
+                  "ru": "я увижу балл и захочу закрыть страницу"
+                }
+              },
+              {
+                "id": "compare",
+                "en": "I compare myself with others and lose focus",
+                "uz": "Oʻzimni boshqalar bilan solishtirib, diqqatimni yoʻqotaman",
+                "ru": "Сравниваю себя с другими и теряю фокус",
+                "if_form": {
+                  "en": "I start comparing myself with others",
+                  "uz": "oʻzimni boshqalar bilan solishtira boshlasam",
+                  "ru": "я начну сравнивать себя с другими"
+                }
+              },
+              {
+                "id": "other",
+                "en": "Something else (write it)",
+                "uz": "Boshqa narsa (yozing)",
+                "ru": "Другое (напишите)"
+              }
+            ]
+          }
+        },
+        {
+          "n": 4,
+          "key": "plan",
+          "prompt": {
+            "en": "Finish the plan: If ___, then I will ___.",
+            "uz": "Rejani yakunlang: Agar ___, unda men ___.",
+            "ru": "Закончите план: Если ___, то я ___."
+          },
+          "hint": {
+            "en": "Example: If it is past my bedtime and I am still studying, then I will write tomorrow's first question on a note and go to sleep.",
+            "uz": "Misol: Agar uxlash vaqtim oʻtib, hali ham oʻqiyotgan boʻlsam, unda men ertangi birinchi savolni qogʻozga yozib qoʻyaman va uxlashga yotaman.",
+            "ru": "Пример: Если время сна уже прошло, а я всё ещё занимаюсь, то я запишу на листке первый вопрос на завтра и лягу спать."
+          },
+          "input": {
+            "type": "if_then",
+            "render_ref": "option_sets.if_then_render",
+            "fields": {
+              "if": {
+                "label": {
+                  "en": "If…",
+                  "uz": "Agar…",
+                  "ru": "Если…"
+                },
+                "max_chars": 100,
+                "prefill_from": "obstacle",
+                "required": true
+              },
+              "then": {
+                "label": {
+                  "en": "…then I will",
+                  "uz": "…unda men",
+                  "ru": "…то я"
+                },
+                "max_chars": 120,
+                "required": true
+              }
+            }
+          }
+        },
+        {
+          "n": 5,
+          "key": "bedtime",
+          "prompt": {
+            "en": "What time will you go to bed on school nights this week?",
+            "uz": "Bu hafta maktab kunlari kechasi soat nechada uxlashga yotasiz?",
+            "ru": "Во сколько вы будете ложиться спать в учебные дни на этой неделе?"
+          },
+          "hint": {
+            "en": "Health guidance (CDC): 8-10 hours of sleep a day at ages 13-17, and 7 hours or more from age 18.",
+            "uz": "Sogʻliq boʻyicha tavsiya (CDC): 13–17 yoshda kuniga 8–10 soat, 18 yoshdan esa 7 soat va undan koʻp uyqu.",
+            "ru": "Рекомендация по здоровью (CDC): в 13–17 лет — 8–10 часов сна в сутки, с 18 лет — 7 часов и больше."
+          },
+          "input": {
+            "type": "time",
+            "min": "20:00",
+            "max": "23:30",
+            "step_min": 15,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. Sleep is part of your preparation, not time taken from it.",
+        "uz": "Saqlandi. Uyqu tayyorgarlikdan olingan vaqt emas, uning bir qismi.",
+        "ru": "Сохранено. Сон — часть подготовки, а не время, отнятое у неё."
+      },
+      "followed_by": "C14-ref-plan-check",
+      "facts": [
+        {
+          "claim": "recommended daily sleep: 13-17 years 8-10 hours; 18-60 years 7 or more hours",
+          "url": "https://www.cdc.gov/sleep/about/index.html",
+          "verified_at": "2026-10-07",
+          "page_last_reviewed": "2024-05-15"
+        }
+      ],
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "wish",
+            "obstacle",
+            "plan"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        },
+        "note": "a self-report with fields; never graded for quality"
+      },
+      "basis": [
+        "GOLL2006",
+        "WOOP-PRACTICE",
+        "CDC-SLEEP",
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true,
+      "factcheck": {
+        "verified_at": "2026-10-07",
+        "note": "CDC sleep line re-read on cdc.gov/sleep/about (last reviewed 15 May 2024): 13-17 years 8-10 hours, 18-60 years 7 or more; matches in en, uz and ru"
+      }
+    },
+    {
+      "id": "C14-mcii-habit",
+      "kind": "reflection_prompt",
+      "prompt_type": "mcii_habit",
+      "task": {
+        "type": "reflect",
+        "template": "c14:mcii-habit",
+        "slot": "floor4"
+      },
+      "cadence": "event",
+      "trigger": {
+        "when": "the first week of daily tasks, and again on request or after two weeks with c7 < 0.6"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 3,
+      "optional": false,
+      "title": {
+        "en": "Build a habit: same time, same place",
+        "uz": "Odat shakllantiring: bir xil vaqt, bir xil joy",
+        "ru": "Формируем привычку: одно время, одно место"
+      },
+      "intro": {
+        "en": "A small step tied to something you already do every day is easier to keep. Choose yours.",
+        "uz": "Har kuni qiladigan ishingizga bogʻlangan kichik qadamni saqlab qolish osonroq. Oʻzingiznikini tanlang.",
+        "ru": "Маленький шаг, привязанный к тому, что вы и так делаете каждый день, легче сохранить. Выберите свой."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "anchor",
+          "prompt": {
+            "en": "What do you already do every day at about the same time?",
+            "uz": "Har kuni taxminan bir xil vaqtda nima qilasiz?",
+            "ru": "Что вы и так делаете каждый день примерно в одно и то же время?"
+          },
+          "input": {
+            "type": "choice",
+            "other_text_max": 80,
+            "required": true,
+            "options": [
+              {
+                "id": "wake",
+                "en": "Wake up and have breakfast",
+                "uz": "Uygʻonib, nonushta qilaman",
+                "ru": "Просыпаюсь и завтракаю"
+              },
+              {
+                "id": "home",
+                "en": "Come home from school",
+                "uz": "Maktabdan uyga kelaman",
+                "ru": "Прихожу домой из школы"
+              },
+              {
+                "id": "lunch",
+                "en": "Have lunch",
+                "uz": "Tushlik qilaman",
+                "ru": "Обедаю"
+              },
+              {
+                "id": "tea",
+                "en": "Drink tea in the afternoon",
+                "uz": "Tushdan keyin choy ichaman",
+                "ru": "Пью чай днём"
+              },
+              {
+                "id": "dinner",
+                "en": "Finish dinner",
+                "uz": "Kechki ovqatni tugataman",
+                "ru": "Заканчиваю ужинать"
+              },
+              {
+                "id": "other",
+                "en": "Something else (write it)",
+                "uz": "Boshqa narsa (yozing)",
+                "ru": "Другое (напишите)"
+              }
+            ]
+          }
+        },
+        {
+          "n": 2,
+          "key": "action",
+          "prompt": {
+            "en": "Right after that, what will you do for 10 minutes?",
+            "uz": "Shundan keyinoq 10 daqiqa nima qilasiz?",
+            "ru": "Что вы будете делать 10 минут сразу после этого?"
+          },
+          "hint": {
+            "en": "Pick one of your daily tasks, for example vocabulary cards or a few practice questions.",
+            "uz": "Kundalik vazifalaringizdan birini tanlang, masalan, lugʻat kartalari yoki bir nechta mashq savoli.",
+            "ru": "Выберите одну из ежедневных задач, например карточки со словами или несколько тренировочных вопросов."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 100,
+            "required": true,
+            "suggest_from": "daily_task_kinds"
+          },
+          "render": {
+            "en": "{anchor}, then: {action}",
+            "uz": "{anchor}, soʻng: {action}",
+            "ru": "{anchor}, затем: {action}"
+          }
+        },
+        {
+          "n": 3,
+          "key": "place",
+          "prompt": {
+            "en": "Where will you do it?",
+            "uz": "Buni qayerda qilasiz?",
+            "ru": "Где вы будете это делать?"
+          },
+          "input": {
+            "type": "choice",
+            "options_ref": "place",
+            "other_text_max": 60,
+            "required": false
+          }
+        },
+        {
+          "n": 4,
+          "key": "backup",
+          "prompt": {
+            "en": "If you miss it one day, what will you do the next day?",
+            "uz": "Agar bir kun qoldirib ketsangiz, ertasi kuni nima qilasiz?",
+            "ru": "Если однажды пропустите, что сделаете на следующий день?"
+          },
+          "hint": {
+            "en": "Missing one day is normal. The plan is simply not to miss two days in a row.",
+            "uz": "Bir kun qoldirib ketish tabiiy. Reja oddiy: ketma-ket ikki kun qoldirmaslik.",
+            "ru": "Пропустить один день — нормально. План простой: не пропускать два дня подряд."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 100,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. Give it a few weeks; it gets easier.",
+        "uz": "Saqlandi. Bir necha hafta sabr qiling — keyin osonlashadi.",
+        "ru": "Сохранено. Дайте этому несколько недель: станет легче."
+      },
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "anchor",
+            "action"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        },
+        "note": "a self-report with fields; never graded for quality"
+      },
+      "basis": [
+        "GOLL2006",
+        "SPEC"
+      ],
+      "basis_note": "\"never miss twice\" is spec §4.5 (adaptation table); the stable time-and-place advice follows R5 §3 (habit formation row)",
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-mcii-activity",
+      "kind": "reflection_prompt",
+      "prompt_type": "mcii_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:mcii-activity",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "first scheduled day of the week",
+        "if": "an activity playbook (C8) or a kid project has a step this week"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 4,
+      "optional": false,
+      "title": {
+        "en": "Project week: plan the step that needs courage",
+        "uz": "Loyiha haftasi: jurʼat talab qiladigan qadamni rejalashtiring",
+        "ru": "Неделя проекта: план для шага, на который нужна смелость"
+      },
+      "intro": {
+        "en": "Projects often stall at the steps that involve other people: asking, inviting, presenting. Plan for that step.",
+        "uz": "Loyihalar koʻpincha boshqa odamlar bilan bogʻliq qadamlarda toʻxtab qoladi: soʻrash, taklif qilish, taqdim etish. Shu qadam uchun reja tuzing.",
+        "ru": "Проекты часто стопорятся на шагах, где нужны другие люди: попросить, пригласить, выступить. Спланируйте этот шаг."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "wish",
+          "prompt": {
+            "en": "Which step of your project will you finish this week?",
+            "uz": "Bu hafta loyihangizning qaysi qadamini tugatasiz?",
+            "ru": "Какой шаг проекта вы закончите на этой неделе?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 120,
+            "required": true,
+            "suggest_from": "current_playbook_step"
+          }
+        },
+        {
+          "n": 2,
+          "key": "outcome",
+          "prompt": {
+            "en": "When it is done, who benefits, and how?",
+            "uz": "Bajarilgach, bundan kim va qanday foyda koʻradi?",
+            "ru": "Когда это будет сделано, кому и чем это поможет?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": false
+          }
+        },
+        {
+          "n": 3,
+          "key": "obstacle",
+          "prompt": {
+            "en": "What in you could hold this step back?",
+            "uz": "Sizdagi qaysi narsa bu qadamni ortga surishi mumkin?",
+            "ru": "Что в вас может задержать этот шаг?"
+          },
+          "input": {
+            "type": "choice",
+            "other_text_max": 120,
+            "required": true,
+            "options": [
+              {
+                "id": "shy",
+                "en": "I feel shy about asking people",
+                "uz": "Odamlardan soʻrashga tortinaman",
+                "ru": "Стесняюсь просить людей",
+                "if_form": {
+                  "en": "I feel shy about asking",
+                  "uz": "soʻrashga tortinsam",
+                  "ru": "мне будет неловко просить"
+                }
+              },
+              {
+                "id": "refusal",
+                "en": "I worry they will say no",
+                "uz": "Rad etishlaridan xavotirdaman",
+                "ru": "Боюсь, что мне откажут",
+                "if_form": {
+                  "en": "I start worrying they will say no",
+                  "uz": "rad etishlaridan xavotirlana boshlasam",
+                  "ru": "я начну бояться отказа"
+                }
+              },
+              {
+                "id": "unsure_next",
+                "en": "I am not sure what to do next",
+                "uz": "Keyin nima qilishni aniq bilmayman",
+                "ru": "Не понимаю, что делать дальше",
+                "if_form": {
+                  "en": "I am not sure what to do next",
+                  "uz": "keyin nima qilishni bilmay qolsam",
+                  "ru": "я не пойму, что делать дальше"
+                }
+              },
+              {
+                "id": "put_off",
+                "en": "I put it off",
+                "uz": "Keyinga qoldiraman",
+                "ru": "Откладываю",
+                "if_form": {
+                  "en": "I start putting it off",
+                  "uz": "keyinga qoldira boshlasam",
+                  "ru": "я начну откладывать"
+                }
+              },
+              {
+                "id": "other",
+                "en": "Something else (write it)",
+                "uz": "Boshqa narsa (yozing)",
+                "ru": "Другое (напишите)"
+              }
+            ]
+          }
+        },
+        {
+          "n": 4,
+          "key": "plan",
+          "prompt": {
+            "en": "Finish the plan: If ___, then I will ___.",
+            "uz": "Rejani yakunlang: Agar ___, unda men ___.",
+            "ru": "Закончите план: Если ___, то я ___."
+          },
+          "hint": {
+            "en": "Example: If I feel shy about asking, then I will write the message first and send it right away, without rereading it ten times.",
+            "uz": "Misol: Agar soʻrashga tortinsam, unda men avval xabarni yozib qoʻyaman va uni oʻn marta qayta oʻqimasdan darhol yuboraman.",
+            "ru": "Пример: Если мне будет неловко просить, то я сначала напишу сообщение и сразу отправлю его, не перечитывая десять раз."
+          },
+          "input": {
+            "type": "if_then",
+            "render_ref": "option_sets.if_then_render",
+            "fields": {
+              "if": {
+                "label": {
+                  "en": "If…",
+                  "uz": "Agar…",
+                  "ru": "Если…"
+                },
+                "max_chars": 100,
+                "prefill_from": "obstacle",
+                "required": true
+              },
+              "then": {
+                "label": {
+                  "en": "…then I will",
+                  "uz": "…unda men",
+                  "ru": "…то я"
+                },
+                "max_chars": 120,
+                "required": true
+              }
+            }
+          }
+        },
+        {
+          "n": 5,
+          "key": "when_where",
+          "prompt": {
+            "en": "When and where will you do it?",
+            "uz": "Buni qachon va qayerda qilasiz?",
+            "ru": "Когда и где вы это сделаете?"
+          },
+          "input": {
+            "type": "time_place",
+            "time_ref": "time",
+            "place_ref": "place",
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. Asking is a skill; it gets easier each time.",
+        "uz": "Saqlandi. Soʻray olish ham koʻnikma — har safar osonlashib boradi.",
+        "ru": "Сохранено. Просить — это навык, и с каждым разом это проще."
+      },
+      "followed_by": "C14-ref-plan-check",
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "wish",
+            "obstacle",
+            "plan"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        },
+        "note": "a self-report with fields; never graded for quality"
+      },
+      "basis": [
+        "GOLL2006",
+        "WOOP-PRACTICE",
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-mcii-olympiad",
+      "kind": "reflection_prompt",
+      "prompt_type": "mcii_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:mcii-olympiad",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "first scheduled day of the week",
+        "if": "an olympiad workstream (C9) has prep this week"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "minutes": 4,
+      "optional": false,
+      "title": {
+        "en": "Olympiad prep week: plan for the hard problems",
+        "uz": "Olimpiadaga tayyorgarlik haftasi: qiyin masalalar uchun reja",
+        "ru": "Неделя подготовки к олимпиаде: план для трудных задач"
+      },
+      "intro": {
+        "en": "Olympiad problems are meant to be hard. Plan what you will do when you are stuck, not only how much you will solve.",
+        "uz": "Olimpiada masalalari ataylab qiyin tuziladi. Faqat qancha yechishni emas, qotib qolganingizda nima qilishni ham rejalashtiring.",
+        "ru": "Олимпиадные задачи специально делают трудными. Спланируйте не только сколько решить, но и что делать, если застряли."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "wish",
+          "prompt": {
+            "en": "How many problems will you work on this week, and in which topic?",
+            "uz": "Bu hafta nechta masala ustida ishlaysiz va qaysi mavzuda?",
+            "ru": "Над сколькими задачами вы поработаете на этой неделе и по какой теме?"
+          },
+          "input": {
+            "type": "fields",
+            "required": true,
+            "fields": {
+              "problems": {
+                "type": "number",
+                "min": 1,
+                "max": 30,
+                "label": {
+                  "en": "Problems",
+                  "uz": "Masalalar",
+                  "ru": "Задачи"
+                }
+              },
+              "topic": {
+                "type": "text",
+                "max_chars": 60,
+                "label": {
+                  "en": "Topic",
+                  "uz": "Mavzu",
+                  "ru": "Тема"
+                }
+              }
+            }
+          }
+        },
+        {
+          "n": 2,
+          "key": "outcome",
+          "prompt": {
+            "en": "What would you like to be able to do by the end of the week that you cannot do yet?",
+            "uz": "Hafta oxirigacha hozircha qila olmaydigan qaysi ishni uddalashni istaysiz?",
+            "ru": "Чему вы хотите научиться к концу недели, чего пока не умеете?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": false
+          }
+        },
+        {
+          "n": 3,
+          "key": "obstacle",
+          "prompt": {
+            "en": "What do you usually do when a problem gets hard?",
+            "uz": "Masala qiyinlashganda odatda nima qilasiz?",
+            "ru": "Что вы обычно делаете, когда задача становится трудной?"
+          },
+          "input": {
+            "type": "choice",
+            "other_text_max": 120,
+            "required": true,
+            "options": [
+              {
+                "id": "give_up",
+                "en": "I give up quickly",
+                "uz": "Tez taslim boʻlaman",
+                "ru": "Быстро сдаюсь",
+                "if_form": {
+                  "en": "I want to give up on a problem",
+                  "uz": "masalani tashlab ketgim kelsa",
+                  "ru": "мне захочется бросить задачу"
+                }
+              },
+              {
+                "id": "peek",
+                "en": "I look at the solution too soon",
+                "uz": "Yechimga juda erta qarayman",
+                "ru": "Слишком рано смотрю решение",
+                "if_form": {
+                  "en": "I want to look at the solution",
+                  "uz": "yechimga qaragim kelsa",
+                  "ru": "мне захочется посмотреть решение"
+                }
+              },
+              {
+                "id": "only_easy",
+                "en": "I pick only problems I already know how to solve",
+                "uz": "Faqat yechishni biladigan masalalarimni tanlayman",
+                "ru": "Выбираю только задачи, которые уже умею решать",
+                "if_form": {
+                  "en": "I catch myself picking only easy problems",
+                  "uz": "faqat oson masalalarni tanlayotganimni sezsam",
+                  "ru": "я замечу, что выбираю только лёгкие задачи"
+                }
+              },
+              {
+                "id": "put_off",
+                "en": "I put off starting",
+                "uz": "Boshlashni keyinga suraman",
+                "ru": "Откладываю начало",
+                "if_form": {
+                  "en": "I start putting it off",
+                  "uz": "boshlashni keyinga sura boshlasam",
+                  "ru": "я начну откладывать"
+                }
+              },
+              {
+                "id": "other",
+                "en": "Something else (write it)",
+                "uz": "Boshqa narsa (yozing)",
+                "ru": "Другое (напишите)"
+              }
+            ]
+          }
+        },
+        {
+          "n": 4,
+          "key": "plan",
+          "prompt": {
+            "en": "Finish the plan: If ___, then I will ___.",
+            "uz": "Rejani yakunlang: Agar ___, unda men ___.",
+            "ru": "Закончите план: Если ___, то я ___."
+          },
+          "hint": {
+            "en": "Example: If I want to look at the solution, then I will first write down what I have tried and look at only the first hint.",
+            "uz": "Misol: Agar yechimga qaragim kelsa, unda men avval nimalarni sinab koʻrganimni yozaman va faqat birinchi maslahatga qarayman.",
+            "ru": "Пример: Если мне захочется посмотреть решение, то я сначала запишу всё, что уже попробовано, и посмотрю только первую подсказку."
+          },
+          "input": {
+            "type": "if_then",
+            "render_ref": "option_sets.if_then_render",
+            "fields": {
+              "if": {
+                "label": {
+                  "en": "If…",
+                  "uz": "Agar…",
+                  "ru": "Если…"
+                },
+                "max_chars": 100,
+                "prefill_from": "obstacle",
+                "required": true
+              },
+              "then": {
+                "label": {
+                  "en": "…then I will",
+                  "uz": "…unda men",
+                  "ru": "…то я"
+                },
+                "max_chars": 120,
+                "required": true
+              }
+            }
+          }
+        },
+        {
+          "n": 5,
+          "key": "when_where",
+          "prompt": {
+            "en": "When and where will you practise?",
+            "uz": "Qachon va qayerda shugʻullanasiz?",
+            "ru": "Когда и где вы будете заниматься?"
+          },
+          "input": {
+            "type": "time_place",
+            "time_ref": "time",
+            "place_ref": "place",
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. Being stuck is part of olympiad practice.",
+        "uz": "Saqlandi. Qotib qolish ham olimpiada mashqining bir qismi.",
+        "ru": "Сохранено. Застревать — это часть олимпиадной подготовки."
+      },
+      "followed_by": "C14-ref-plan-check",
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "wish",
+            "obstacle",
+            "plan"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        },
+        "note": "a self-report with fields; never graded for quality"
+      },
+      "basis": [
+        "GOLL2006",
+        "WOOP-PRACTICE",
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-mcii-gap",
+      "kind": "reflection_prompt",
+      "prompt_type": "mcii_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:mcii-gap",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "first scheduled day of the week",
+        "default_for": [
+          "S4"
+        ],
+        "if": "S4 student who has finished school (gap year or reapplicant)"
+      },
+      "stages": [
+        "S4"
+      ],
+      "minutes": 5,
+      "optional": false,
+      "title": {
+        "en": "Gap-year week: give your week a shape",
+        "uz": "Tanaffus yili haftasi: haftangizga tartib bering",
+        "ru": "Неделя года паузы: задайте неделе форму"
+      },
+      "intro": {
+        "en": "Without school timetables, weeks can lose their shape. Set this week's main goal and your fixed hours.",
+        "uz": "Maktab dars jadvalisiz haftalar oʻz tartibini yoʻqotishi mumkin. Bu haftaning asosiy maqsadi va doimiy soatlaringizni belgilang.",
+        "ru": "Без школьного расписания недели легко теряют форму. Задайте главную цель недели и постоянные часы."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "wish",
+          "prompt": {
+            "en": "What is this week's main goal?",
+            "uz": "Bu haftaning asosiy maqsadi nima?",
+            "ru": "Какая главная цель этой недели?"
+          },
+          "hint": {
+            "en": "Choose the area, then write the goal in a few words.",
+            "uz": "Yoʻnalishni tanlang, soʻng maqsadni bir necha soʻz bilan yozing.",
+            "ru": "Выберите направление, затем опишите цель в нескольких словах."
+          },
+          "input": {
+            "type": "fields",
+            "required": true,
+            "fields": {
+              "area": {
+                "type": "choice",
+                "options": [
+                  {
+                    "id": "study",
+                    "en": "Study and test prep",
+                    "uz": "Oʻqish va testga tayyorgarlik",
+                    "ru": "Учёба и подготовка к экзаменам"
+                  },
+                  {
+                    "id": "work_volunteer",
+                    "en": "Work or volunteering",
+                    "uz": "Ish yoki koʻngillilik",
+                    "ru": "Работа или волонтёрство"
+                  },
+                  {
+                    "id": "applications",
+                    "en": "Applications",
+                    "uz": "Arizalar",
+                    "ru": "Заявки"
+                  }
+                ],
+                "label": {
+                  "en": "Area",
+                  "uz": "Yoʻnalish",
+                  "ru": "Направление"
+                }
+              },
+              "goal": {
+                "type": "text",
+                "max_chars": 120,
+                "suggest_from": "week_workstreams",
+                "label": {
+                  "en": "Goal",
+                  "uz": "Maqsad",
+                  "ru": "Цель"
+                }
+              }
+            }
+          }
+        },
+        {
+          "n": 2,
+          "key": "outcome",
+          "prompt": {
+            "en": "Picture the end of the week with that done. What is different?",
+            "uz": "Hafta oxirini shu ish bajarilgan holda tasavvur qiling. Nima oʻzgaradi?",
+            "ru": "Представьте конец недели, когда это сделано. Что изменилось?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": false
+          }
+        },
+        {
+          "n": 3,
+          "key": "obstacle",
+          "prompt": {
+            "en": "What in you could get in the way this week?",
+            "uz": "Bu hafta sizdagi qaysi narsa xalaqit berishi mumkin?",
+            "ru": "Что в вас может помешать на этой неделе?"
+          },
+          "input": {
+            "type": "choice",
+            "other_text_max": 120,
+            "required": true,
+            "options": [
+              {
+                "id": "no_structure",
+                "en": "My days have no fixed plan",
+                "uz": "Kunlarimda aniq reja yoʻq",
+                "ru": "В моих днях нет чёткого плана",
+                "if_form": {
+                  "en": "it is mid-morning and I have no plan for the day",
+                  "uz": "ertalab ancha vaqt oʻtib, hali kunlik rejam boʻlmasa",
+                  "ru": "уже середина утра, а у меня нет плана на день"
+                }
+              },
+              {
+                "id": "compare",
+                "en": "I compare myself with friends who are already at university",
+                "uz": "Oʻzimni allaqachon oliygohda oʻqiyotgan doʻstlarim bilan solishtiraman",
+                "ru": "Сравниваю себя с друзьями, которые уже учатся в вузе",
+                "if_form": {
+                  "en": "I start comparing myself with friends at university",
+                  "uz": "oʻzimni oliygohdagi doʻstlarim bilan solishtira boshlasam",
+                  "ru": "я начну сравнивать себя с друзьями в вузе"
+                }
+              },
+              {
+                "id": "late_start",
+                "en": "I start the day late",
+                "uz": "Kunni kech boshlayman",
+                "ru": "Поздно начинаю день",
+                "if_form": {
+                  "en": "I wake up late",
+                  "uz": "kech uygʻonsam",
+                  "ru": "я проснусь поздно"
+                }
+              },
+              {
+                "id": "phone",
+                "en": "I pick up my phone first",
+                "uz": "Avval telefonni qoʻlga olaman",
+                "ru": "Первым делом беру телефон",
+                "if_form": {
+                  "en": "I pick up my phone first",
+                  "uz": "avval telefonni qoʻlga olsam",
+                  "ru": "я первым делом возьму телефон"
+                }
+              },
+              {
+                "id": "other",
+                "en": "Something else (write it)",
+                "uz": "Boshqa narsa (yozing)",
+                "ru": "Другое (напишите)"
+              }
+            ]
+          }
+        },
+        {
+          "n": 4,
+          "key": "plan",
+          "prompt": {
+            "en": "Finish the plan: If ___, then I will ___.",
+            "uz": "Rejani yakunlang: Agar ___, unda men ___.",
+            "ru": "Закончите план: Если ___, то я ___."
+          },
+          "hint": {
+            "en": "Example: If I start comparing myself with friends at university, then I will open my own plan and do its next step.",
+            "uz": "Misol: Agar oʻzimni oliygohdagi doʻstlarim bilan solishtira boshlasam, unda men oʻz rejamni ochaman va uning keyingi qadamini bajaraman.",
+            "ru": "Пример: Если я начну сравнивать себя с друзьями в вузе, то я открою свой план и сделаю его следующий шаг."
+          },
+          "input": {
+            "type": "if_then",
+            "render_ref": "option_sets.if_then_render",
+            "fields": {
+              "if": {
+                "label": {
+                  "en": "If…",
+                  "uz": "Agar…",
+                  "ru": "Если…"
+                },
+                "max_chars": 100,
+                "prefill_from": "obstacle",
+                "required": true
+              },
+              "then": {
+                "label": {
+                  "en": "…then I will",
+                  "uz": "…unda men",
+                  "ru": "…то я"
+                },
+                "max_chars": 120,
+                "required": true
+              }
+            }
+          }
+        },
+        {
+          "n": 5,
+          "key": "fixed_hours",
+          "prompt": {
+            "en": "Which hours will be your fixed study hours this week?",
+            "uz": "Bu hafta qaysi soatlar doimiy oʻqish soatlaringiz boʻladi?",
+            "ru": "Какие часы будут вашими постоянными часами учёбы на этой неделе?"
+          },
+          "input": {
+            "type": "time_range",
+            "min": "07:00",
+            "max": "22:00",
+            "step_min": 30,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. A gap year is a plan with its own steps.",
+        "uz": "Saqlandi. Tanaffus yili ham oʻz qadamlariga ega reja.",
+        "ru": "Сохранено. Год паузы — это тоже план со своими шагами."
+      },
+      "followed_by": "C14-ref-plan-check",
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "wish",
+            "obstacle",
+            "plan"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        },
+        "note": "a self-report with fields; never graded for quality"
+      },
+      "basis": [
+        "GOLL2006",
+        "WOOP-PRACTICE",
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true,
+      "factcheck": {
+        "verified_at": "2026-10-07",
+        "note": "uz if_form of no_structure said \"kun yarmi\" (midday); en and ru say mid-morning; uz now \"ertalab ancha vaqt oʻtib\""
+      }
+    },
+    {
+      "id": "C14-ref-week-core",
+      "kind": "reflection_prompt",
+      "prompt_type": "reflect_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:ref-week-core",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "last scheduled day of the week",
+        "default_for": [
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "replaces": "reflect_week (tasks.ts) when C14 content is on"
+      },
+      "stages": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 5,
+      "optional": false,
+      "title": {
+        "en": "Look back at your week",
+        "uz": "Haftangizga nazar tashlang",
+        "ru": "Оглянитесь на свою неделю"
+      },
+      "intro": {
+        "en": "Five minutes, any language. This is for you, not for a grade.",
+        "uz": "Besh daqiqa, istalgan tilda. Bu baho uchun emas, oʻzingiz uchun.",
+        "ru": "Пять минут, на любом языке. Это для вас, а не для оценки."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "went_well",
+          "prompt": {
+            "en": "What went well this week, and what did you do to make it happen?",
+            "uz": "Bu hafta nima yaxshi oʻtdi va bunga erishish uchun nima qildingiz?",
+            "ru": "Что на этой неделе получилось и что вы для этого сделали?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 200,
+            "required": true
+          }
+        },
+        {
+          "n": 2,
+          "key": "hard",
+          "prompt": {
+            "en": "What was hard?",
+            "uz": "Nima qiyin boʻldi?",
+            "ru": "Что было трудно?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 200,
+            "required": false
+          }
+        },
+        {
+          "n": 3,
+          "key": "learned",
+          "prompt": {
+            "en": "Name one thing you understand now that you did not understand a week ago.",
+            "uz": "Bir hafta oldin tushunmagan, hozir esa tushunadigan bitta narsani ayting.",
+            "ru": "Назовите одну вещь, которую вы понимаете сейчас, но не понимали неделю назад."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": false
+          }
+        },
+        {
+          "n": 4,
+          "key": "keep_change",
+          "prompt": {
+            "en": "Next week, what will you keep doing, and what will you change?",
+            "uz": "Keyingi hafta nimani davom ettirasiz va nimani oʻzgartirasiz?",
+            "ru": "Что на следующей неделе вы продолжите делать, а что измените?"
+          },
+          "input": {
+            "type": "fields",
+            "required": false,
+            "fields": {
+              "keep": {
+                "type": "text",
+                "max_chars": 100,
+                "label": {
+                  "en": "Keep",
+                  "uz": "Davom ettiraman",
+                  "ru": "Продолжу"
+                }
+              },
+              "change": {
+                "type": "text",
+                "max_chars": 100,
+                "label": {
+                  "en": "Change",
+                  "uz": "Oʻzgartiraman",
+                  "ru": "Изменю"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. Next week's plan starts from here.",
+        "uz": "Saqlandi. Keyingi hafta rejasi shu yerdan boshlanadi.",
+        "ru": "Сохранено. План на следующую неделю начнётся отсюда."
+      },
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "went_well"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        },
+        "note": "a self-report; never graded for quality"
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-ref-week-kid",
+      "kind": "reflection_prompt",
+      "prompt_type": "reflect_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:ref-week-kid",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "last scheduled day of the week",
+        "default_for": [
+          "S1"
+        ]
+      },
+      "stages": [
+        "S1"
+      ],
+      "age_note": "ages about 10-13: three quick answers, a 3-point face scale, no grades or comparisons",
+      "minutes": 2,
+      "optional": false,
+      "title": {
+        "en": "My week in three answers",
+        "uz": "Mening haftam: uchta javob",
+        "ru": "Моя неделя в трёх ответах"
+      },
+      "intro": {
+        "en": "Two minutes, any language.",
+        "uz": "Ikki daqiqa, istalgan tilda.",
+        "ru": "Две минуты, на любом языке."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "mood",
+          "prompt": {
+            "en": "How was your week?",
+            "uz": "Haftangiz qanday oʻtdi?",
+            "ru": "Как прошла ваша неделя?"
+          },
+          "input": {
+            "type": "scale",
+            "min": 1,
+            "max": 3,
+            "display": "faces",
+            "required": true,
+            "labels": {
+              "1": {
+                "en": "Hard",
+                "uz": "Qiyin",
+                "ru": "Трудно"
+              },
+              "2": {
+                "en": "Okay",
+                "uz": "Yomon emas",
+                "ru": "Нормально"
+              },
+              "3": {
+                "en": "Great",
+                "uz": "Ajoyib",
+                "ru": "Отлично"
+              }
+            }
+          }
+        },
+        {
+          "n": 2,
+          "key": "best",
+          "prompt": {
+            "en": "What was the best thing you learned or made?",
+            "uz": "Oʻrgangan yoki yasagan eng yaxshi narsangiz nima boʻldi?",
+            "ru": "Что было лучшим из того, что вы узнали или сделали?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 80,
+            "required": false
+          }
+        },
+        {
+          "n": 3,
+          "key": "tricky",
+          "prompt": {
+            "en": "What was tricky? It is fine to say.",
+            "uz": "Nima qiyin boʻldi? Buni aytsangiz boʻladi.",
+            "ru": "Что было непросто? Об этом можно сказать."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 80,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Thank you! See you next week.",
+        "uz": "Rahmat! Keyingi haftagacha.",
+        "ru": "Спасибо! До следующей недели."
+      },
+      "evidence": {
+        "level": "L0",
+        "method": "self_report",
+        "check": null,
+        "note": "a tick is enough for a child; the answers are optional"
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true,
+      "factcheck": {
+        "verified_at": "2026-10-07",
+        "note": "face-scale label 2: uz said \"Yaxshi\" (good) where en \"Okay\" and ru \"Нормально\"; now \"Yomon emas\". Step 2 ru asked for the \"most interesting\" thing; now \"the best\", as en and uz"
+      }
+    },
+    {
+      "id": "C14-ref-errorlog",
+      "kind": "reflection_prompt",
+      "prompt_type": "reflect_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:ref-errorlog",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "second half of the week",
+        "if": "the student missed at least 2 practice items this week; not issued when the list is empty"
+      },
+      "stages": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 8,
+      "optional": false,
+      "data": {
+        "source": "missed_practice_items_this_week",
+        "pool": "practice only (C1, C3, C5, C6, C7, C18); never K assessment items",
+        "note": "the server shows each item with its practice \"why\" line after grading, as practice tasks already do (A4: the key never reaches the page before an answer)"
+      },
+      "title": {
+        "en": "Mistake review: what this week's mistakes are telling you",
+        "uz": "Xatolar tahlili: bu haftadagi xatolar nimani aytmoqda",
+        "ru": "Разбор ошибок: о чём говорят ошибки этой недели"
+      },
+      "intro": {
+        "en": "Here are practice questions you missed this week. Pick up to three and sort them.",
+        "uz": "Mana, bu hafta mashqlarda xato qilgan savollaringiz. Ulardan uchtagachasini tanlang va saralang.",
+        "ru": "Вот вопросы из практики, в которых вы ошиблись на этой неделе. Выберите до трёх и разберите их."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "pick",
+          "prompt": {
+            "en": "Choose up to three missed questions.",
+            "uz": "Xato qilingan savollardan uchtagachasini tanlang.",
+            "ru": "Выберите до трёх вопросов с ошибками."
+          },
+          "input": {
+            "type": "pick_items",
+            "source": "missed_practice_items_this_week",
+            "min": 1,
+            "max": 3,
+            "required": true
+          }
+        },
+        {
+          "n": 2,
+          "key": "type",
+          "prompt": {
+            "en": "For each one: what went wrong?",
+            "uz": "Har biri uchun: nima notoʻgʻri ketdi?",
+            "ru": "Для каждого: что пошло не так?"
+          },
+          "input": {
+            "type": "per_item_choice",
+            "of": "pick",
+            "options_ref": "mistake_type",
+            "required": true
+          }
+        },
+        {
+          "n": 3,
+          "key": "fix",
+          "prompt": {
+            "en": "For the type that came up most, what will you do differently next time?",
+            "uz": "Eng koʻp uchragan xato turi uchun keyingi safar nimani boshqacha qilasiz?",
+            "ru": "Что вы сделаете иначе в следующий раз для самого частого типа ошибки?"
+          },
+          "hint": {
+            "en": "Example, for \"I rushed\": read the last line of the question twice before answering.",
+            "uz": "Misol, «Shoshildim» uchun: javob berishdan oldin savolning oxirgi qatorini ikki marta oʻqish.",
+            "ru": "Пример для «Спешки»: перед ответом дважды прочитать последнюю строку вопроса."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 140,
+            "required": true
+          }
+        },
+        {
+          "n": 4,
+          "key": "again",
+          "prompt": {
+            "en": "Would you like these questions again in a few days?",
+            "uz": "Bu savollarni bir necha kundan keyin yana ishlashni xohlaysizmi?",
+            "ru": "Хотите через несколько дней получить эти вопросы снова?"
+          },
+          "input": {
+            "type": "choice",
+            "required": false,
+            "options": [
+              {
+                "id": "yes",
+                "en": "Yes",
+                "uz": "Ha",
+                "ru": "Да"
+              },
+              {
+                "id": "no",
+                "en": "No, thanks",
+                "uz": "Yoʻq, rahmat",
+                "ru": "Нет, спасибо"
+              }
+            ]
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. Knowing why you got a question wrong is the first step to fixing it.",
+        "uz": "Saqlandi. Savolda nega xato qilganingizni bilish — uni tuzatishning birinchi qadami.",
+        "ru": "Сохранено. Понять, почему ошибся в вопросе, — первый шаг к исправлению."
+      },
+      "engine_hints": [
+        "\"yes\" in step 4 may queue the picked items for a spaced retry inside the practice pool (FSRS/Elo, spec §4.5); proposed, integrator decides"
+      ],
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "pick",
+            "type",
+            "fix"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        },
+        "note": "a self-report with fields; never graded"
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "basis_note": "R5 §5.2 reflect row: \"same, plus an error-log review\" for grade 10 and up",
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-ref-deadline-check",
+      "kind": "reflection_prompt",
+      "prompt_type": "reflect_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:ref-deadline-check",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "last scheduled day of the week",
+        "if": "at least one dated item in the next 14 days"
+      },
+      "stages": [
+        "S3",
+        "S4"
+      ],
+      "minutes": 4,
+      "optional": false,
+      "data": {
+        "source": "dated_items_next_14_days",
+        "note": "titles and dates from the roadmap's rule records (code), never from AI (D14, spec §4.4)"
+      },
+      "title": {
+        "en": "Deadline check: the next two weeks",
+        "uz": "Muddatlar tekshiruvi: keyingi ikki hafta",
+        "ru": "Проверка сроков: следующие две недели"
+      },
+      "intro": {
+        "en": "Here are the dated steps in your roadmap for the next 14 days. Mark each one.",
+        "uz": "Mana, yoʻl xaritangizdagi keyingi 14 kunlik muddatli qadamlar. Har birini belgilang.",
+        "ru": "Вот шаги с датами из вашей дорожной карты на ближайшие 14 дней. Отметьте каждый."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "status",
+          "prompt": {
+            "en": "Where is each step now?",
+            "uz": "Har bir qadam hozir qay holatda?",
+            "ru": "На каком этапе сейчас каждый шаг?"
+          },
+          "input": {
+            "type": "per_item_choice",
+            "of": "dated_items_next_14_days",
+            "options_ref": "deadline_status",
+            "required": true
+          }
+        },
+        {
+          "n": 2,
+          "key": "help",
+          "show_if": "any status = need_help",
+          "prompt": {
+            "en": "Who will you ask, and what exactly will you ask?",
+            "uz": "Kimdan soʻraysiz va aynan nimani soʻraysiz?",
+            "ru": "Кого вы спросите и о чём именно?"
+          },
+          "hint": {
+            "en": "Your Jamals mentor, a teacher or a parent. One clear question gets a faster answer.",
+            "uz": "Jamals mentoringiz, oʻqituvchingiz yoki ota-onangiz. Aniq bitta savolga tezroq javob olasiz.",
+            "ru": "Ваш ментор Jamals, учитель или родитель. На один чёткий вопрос ответят быстрее."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": true
+          }
+        },
+        {
+          "n": 3,
+          "key": "first",
+          "prompt": {
+            "en": "Which one will you do first?",
+            "uz": "Qaysi birini birinchi bajarasiz?",
+            "ru": "Какой шаг вы сделаете первым?"
+          },
+          "input": {
+            "type": "pick_items",
+            "source": "dated_items_next_14_days",
+            "where": "status != done",
+            "min": 1,
+            "max": 1,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. These dates come from your roadmap. If one looks wrong, tell your mentor.",
+        "uz": "Saqlandi. Bu sanalar yoʻl xaritangizdan olingan. Agar biror sana notoʻgʻri koʻrinsa, mentoringizga ayting.",
+        "ru": "Сохранено. Эти даты взяты из вашей дорожной карты. Если какая-то кажется неверной, сообщите ментору."
+      },
+      "engine_hints": [
+        "a need_help answer could open a counselor checkpoint for S3 (spec §4.4 re-plans, §4.6 L7); proposed, integrator decides"
+      ],
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "status"
+          ],
+          "not_blank": true
+        }
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "basis_note": "R5 §5.2 reflect row for grade 11: \"plus this week's deadline check\"",
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-ref-plan-check",
+      "kind": "reflection_prompt",
+      "prompt_type": "reflect_week",
+      "task": {
+        "type": "reflect",
+        "template": "c14:ref-plan-check",
+        "slot": "floor4"
+      },
+      "cadence": "weekly",
+      "trigger": {
+        "when": "last scheduled day of the week",
+        "if": "a C14 MCII plan was saved this week; merges into C14-ref-week-core / C14-ref-week-kid as their first steps when both fall on one day"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 2,
+      "optional": false,
+      "tokens": {
+        "goal": "the saved wish",
+        "plan_if": "the saved if-clause (if_form or typed text)",
+        "plan_then": "the saved then-clause"
+      },
+      "title": {
+        "en": "How did your if-then plan go?",
+        "uz": "«Agar–unda» rejangiz qanday oʻtdi?",
+        "ru": "Как сработал ваш план «если — то»?"
+      },
+      "intro": {
+        "en": "Your plan this week: If {plan_if}, then I will {plan_then}.",
+        "uz": "Bu haftalik rejangiz: Agar {plan_if}, unda men {plan_then}.",
+        "ru": "Ваш план на эту неделю: Если {plan_if}, то я {plan_then}."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "result",
+          "prompt": {
+            "en": "Did you use it?",
+            "uz": "Uni qoʻlladingizmi?",
+            "ru": "Вы его применили?"
+          },
+          "input": {
+            "type": "choice",
+            "options_ref": "plan_result",
+            "required": true
+          }
+        },
+        {
+          "n": 2,
+          "key": "goal",
+          "prompt": {
+            "en": "And your goal: {goal}?",
+            "uz": "Maqsadingiz-chi: {goal}?",
+            "ru": "А ваша цель: {goal}?"
+          },
+          "input": {
+            "type": "choice",
+            "options_ref": "goal_result",
+            "required": true
+          }
+        },
+        {
+          "n": 3,
+          "key": "adjust",
+          "show_if": "result in (partly, not_used) or goal in (partly, not_yet)",
+          "prompt": {
+            "en": "What would help the plan work next week?",
+            "uz": "Keyingi hafta reja ish berishi uchun nima yordam beradi?",
+            "ru": "Что поможет плану сработать на следующей неделе?"
+          },
+          "input": {
+            "type": "choice",
+            "required": false,
+            "options": [
+              {
+                "id": "smaller",
+                "en": "Make the step smaller",
+                "uz": "Qadamni kichikroq qilaman",
+                "ru": "Сделать шаг меньше"
+              },
+              {
+                "id": "time_place",
+                "en": "Change the time or place",
+                "uz": "Vaqt yoki joyni oʻzgartiraman",
+                "ru": "Сменить время или место"
+              },
+              {
+                "id": "other_obstacle",
+                "en": "Plan for a different obstacle",
+                "uz": "Boshqa toʻsiq uchun reja tuzaman",
+                "ru": "Спланировать другое препятствие"
+              },
+              {
+                "id": "keep",
+                "en": "Keep the same plan",
+                "uz": "Shu rejani qoldiraman",
+                "ru": "Оставить тот же план"
+              }
+            ]
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. Plans often need a tweak or two before they work.",
+        "uz": "Saqlandi. Rejalar koʻpincha ish berishidan oldin bir-ikki marta tuzatishni talab qiladi.",
+        "ru": "Сохранено. Планам часто нужна пара доработок, прежде чем они заработают."
+      },
+      "engine_hints": [
+        "the \"adjust\" answer pre-selects next week's MCII variant: smaller → C14-mcii-busy; other_obstacle → the obstacle step opens first (proposed; integrator decides)"
+      ],
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "result",
+            "goal"
+          ]
+        }
+      },
+      "basis": [
+        "WOOP-PRACTICE",
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    }
+  ]
+}

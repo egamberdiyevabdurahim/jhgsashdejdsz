@@ -1,0 +1,1182 @@
+{
+ "bank": "C22",
+ "batch": 1,
+ "items": [
+  {
+   "id": "C22-ph11c1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "average_acceleration",
+   "page": "C19-APPH01-1",
+   "lang": "en",
+   "stem": {
+    "en": "A car moves in the negative direction and is slowing down. What is the sign of its acceleration?",
+    "uz": "Avtomobil manfiy yoʻnalishda harakatlanmoqda va sekinlashmoqda. Uning tezlanishi qanday ishorali?",
+    "ru": "Автомобиль движется в отрицательном направлении и тормозит. Какой знак у его ускорения?"
+   },
+   "options": [
+    {
+     "en": "Positive",
+     "uz": "Musbat",
+     "ru": "Положительный"
+    },
+    {
+     "en": "Negative",
+     "uz": "Manfiy",
+     "ru": "Отрицательный"
+    },
+    {
+     "en": "Zero",
+     "uz": "Nol",
+     "ru": "Ноль"
+    },
+    {
+     "en": "It has no sign",
+     "uz": "Ishorasi yoʻq",
+     "ru": "Знака нет"
+    }
+   ],
+   "why": {
+    "en": "Slowing down means the acceleration points against the velocity. The velocity is negative, so the acceleration is positive.",
+    "uz": "Sekinlashish — tezlanish tezlikka qarama-qarshi yoʻnalgan degani. Tezlik manfiy, demak tezlanish musbat.",
+    "ru": "Торможение значит, что ускорение направлено против скорости. Скорость отрицательна, значит, ускорение положительно."
+   },
+   "prior_b": 0.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph11c2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "displacement_velocity",
+   "page": "C19-APPH01-1",
+   "lang": "en",
+   "stem": {
+    "en": "A ball rolls along a straight line from x = 7 m to x = −5 m in 4 s. What is its average velocity?",
+    "uz": "Koptok toʻgʻri chiziq boʻylab 4 s da x = 7 m dan x = −5 m gacha dumalaydi. Uning oʻrtacha tezligi qancha?",
+    "ru": "Мяч катится по прямой из точки x = 7 м в точку x = −5 м за 4 с. Какова его средняя скорость?"
+   },
+   "options": [
+    {
+     "en": "−3 m/s",
+     "uz": "−3 m/s",
+     "ru": "−3 м/с"
+    },
+    {
+     "en": "3 m/s",
+     "uz": "3 m/s",
+     "ru": "3 м/с"
+    },
+    {
+     "en": "0.5 m/s",
+     "uz": "0,5 m/s",
+     "ru": "0,5 м/с"
+    },
+    {
+     "en": "−0.5 m/s",
+     "uz": "−0,5 m/s",
+     "ru": "−0,5 м/с"
+    }
+   ],
+   "why": {
+    "en": "Δx = −5 − 7 = −12 m, so v = −12 ÷ 4 = −3 m/s: 3 m/s in the negative direction.",
+    "uz": "Δx = −5 − 7 = −12 m, demak v = −12 ÷ 4 = −3 m/s: manfiy yoʻnalishda 3 m/s.",
+    "ru": "Δx = −5 − 7 = −12 м, значит, v = −12 ÷ 4 = −3 м/с: 3 м/с в отрицательном направлении."
+   },
+   "prior_b": 0.4,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph12c1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "free_fall",
+   "page": "C19-APPH01-2",
+   "lang": "en",
+   "stem": {
+    "en": "A ball is thrown straight down at 5 m/s from a bridge. What is its speed 2 s later? Use g = 9.8 m/s² and ignore air resistance.",
+    "uz": "Koʻprikdan koptok tik pastga 5 m/s tezlik bilan otiladi. 2 s dan keyin uning tezligi qancha boʻladi? g = 9,8 m/s² deb oling, havoning qarshiligini hisobga olmang.",
+    "ru": "С моста мяч бросают вертикально вниз со скоростью 5 м/с. Какой будет его скорость через 2 с? Примите g = 9,8 м/с², сопротивлением воздуха пренебрегите."
+   },
+   "options": [
+    {
+     "en": "24.6 m/s",
+     "uz": "24,6 m/s",
+     "ru": "24,6 м/с"
+    },
+    {
+     "en": "19.6 m/s",
+     "uz": "19,6 m/s",
+     "ru": "19,6 м/с"
+    },
+    {
+     "en": "14.6 m/s",
+     "uz": "14,6 m/s",
+     "ru": "14,6 м/с"
+    },
+    {
+     "en": "44.2 m/s",
+     "uz": "44,2 m/s",
+     "ru": "44,2 м/с"
+    }
+   ],
+   "why": {
+    "en": "v = v₀ + gt = 5 + 9.8 × 2 = 24.6 m/s. The starting 5 m/s is added, since it points down too.",
+    "uz": "v = v₀ + gt = 5 + 9,8 × 2 = 24,6 m/s. Boshlangʻich 5 m/s qoʻshiladi, chunki u ham pastga yoʻnalgan.",
+    "ru": "v = v₀ + gt = 5 + 9,8 × 2 = 24,6 м/с. Начальные 5 м/с прибавляются, так как они тоже направлены вниз."
+   },
+   "prior_b": 0.5,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph12c2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "constant_acceleration",
+   "page": "C19-APPH01-2",
+   "lang": "en",
+   "stem": {
+    "en": "A cart’s velocity–time graph is a straight line rising from 2 m/s at t = 0 to 10 m/s at t = 4 s. What does the slope of this graph equal?",
+    "uz": "Aravacha tezligining vaqtga bogʻliqlik grafigi t = 0 da 2 m/s dan t = 4 s da 10 m/s gacha koʻtariluvchi toʻgʻri chiziq. Bu grafikning qiyaligi nimaga teng?",
+    "ru": "График зависимости скорости тележки от времени — прямая, идущая вверх от 2 м/с при t = 0 до 10 м/с при t = 4 с. Чему равен наклон этого графика?"
+   },
+   "options": [
+    {
+     "en": "a = 2 m/s²",
+     "uz": "a = 2 m/s²",
+     "ru": "a = 2 м/с²"
+    },
+    {
+     "en": "Δx = 24 m",
+     "uz": "Δx = 24 m",
+     "ru": "Δx = 24 м"
+    },
+    {
+     "en": "v = 2.5 m/s",
+     "uz": "v = 2,5 m/s",
+     "ru": "v = 2,5 м/с"
+    },
+    {
+     "en": "Δx = 40 m",
+     "uz": "Δx = 40 m",
+     "ru": "Δx = 40 м"
+    }
+   ],
+   "why": {
+    "en": "The slope of a v–t graph is the acceleration: (10 − 2) ÷ 4 = 2 m/s². The area under it, 24 m, is the displacement.",
+    "uz": "v–t grafigining qiyaligi — tezlanish: (10 − 2) ÷ 4 = 2 m/s². Uning ostidagi yuza, 24 m, — koʻchish.",
+    "ru": "Наклон графика v–t — это ускорение: (10 − 2) ÷ 4 = 2 м/с². Площадь под ним, 24 м, — перемещение."
+   },
+   "prior_b": 0.7,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph13c1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "projectile_motion",
+   "page": "C19-APPH01-3",
+   "lang": "en",
+   "stem": {
+    "en": "A ball is launched horizontally from a cliff, with no air resistance. Which of these stays the same during its flight?",
+    "uz": "Koptok jardan gorizontal otiladi, havoning qarshiligi yoʻq. Uchish davomida quyidagilardan qaysi biri oʻzgarmaydi?",
+    "ru": "Мяч бросают горизонтально с обрыва, сопротивления воздуха нет. Что из перечисленного не меняется во время полёта?"
+   },
+   "options": [
+    {
+     "en": "Its horizontal velocity",
+     "uz": "Gorizontal tezligi",
+     "ru": "Горизонтальная скорость"
+    },
+    {
+     "en": "Its vertical velocity",
+     "uz": "Vertikal tezligi",
+     "ru": "Вертикальная скорость"
+    },
+    {
+     "en": "Its speed",
+     "uz": "Tezlik moduli",
+     "ru": "Модуль скорости"
+    },
+    {
+     "en": "Its height above the ground",
+     "uz": "Yerdan balandligi",
+     "ru": "Высота над землёй"
+    }
+   ],
+   "why": {
+    "en": "No force acts sideways, so the horizontal velocity stays the same; gravity changes only the vertical velocity, and with it the speed.",
+    "uz": "Yon tomonga hech qanday kuch taʼsir qilmaydi, shuning uchun gorizontal tezlik oʻzgarmaydi; ogʻirlik kuchi faqat vertikal tezlikni, u bilan birga tezlik modulini oʻzgartiradi.",
+    "ru": "В сторону не действует никакая сила, поэтому горизонтальная скорость не меняется; сила тяжести меняет только вертикальную скорость, а с ней и модуль скорости."
+   },
+   "prior_b": 0.4,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph13c2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "relative_velocity",
+   "page": "C19-APPH01-3",
+   "lang": "en",
+   "stem": {
+    "en": "A train moves east at 20 m/s. A passenger walks toward the back of the train at 2 m/s relative to the train. What is the passenger’s velocity relative to the ground?",
+    "uz": "Poyezd sharqqa 20 m/s tezlik bilan harakatlanmoqda. Yoʻlovchi poyezdga nisbatan 2 m/s tezlik bilan poyezdning orqa tomoniga qarab yuradi. Yoʻlovchining yerga nisbatan tezligi qanday?",
+    "ru": "Поезд едет на восток со скоростью 20 м/с. Пассажир идёт к хвосту поезда со скоростью 2 м/с относительно поезда. Какова скорость пассажира относительно земли?"
+   },
+   "options": [
+    {
+     "en": "18 m/s east",
+     "uz": "18 m/s, sharqqa",
+     "ru": "18 м/с на восток"
+    },
+    {
+     "en": "22 m/s east",
+     "uz": "22 m/s, sharqqa",
+     "ru": "22 м/с на восток"
+    },
+    {
+     "en": "2 m/s west",
+     "uz": "2 m/s, gʻarbga",
+     "ru": "2 м/с на запад"
+    },
+    {
+     "en": "18 m/s west",
+     "uz": "18 m/s, gʻarbga",
+     "ru": "18 м/с на запад"
+    }
+   ],
+   "why": {
+    "en": "Take east as +: 20 + (−2) = 18 m/s, so 18 m/s east. Walking backward only slows the passenger a little relative to the ground.",
+    "uz": "Sharqni + deb olamiz: 20 + (−2) = 18 m/s, demak sharqqa 18 m/s. Orqaga yurish yoʻlovchini yerga nisbatan biroz sekinlashtiradi, xolos.",
+    "ru": "Примем восток за +: 20 + (−2) = 18 м/с, то есть 18 м/с на восток. Ходьба назад лишь немного замедляет пассажира относительно земли."
+   },
+   "prior_b": 0.5,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph21c1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "newtons_first_law",
+   "page": "C19-APPH02-1",
+   "lang": "en",
+   "stem": {
+    "en": "A 0.2 kg puck slides across frictionless ice at a steady 5 m/s. What is the net force on it?",
+    "uz": "0,2 kg massali shayba ishqalanishsiz muz ustida oʻzgarmas 5 m/s tezlik bilan sirpanmoqda. Unga taʼsir qiluvchi teng taʼsir etuvchi kuch qancha?",
+    "ru": "Шайба массой 0,2 кг скользит по льду без трения с постоянной скоростью 5 м/с. Чему равна равнодействующая сил, действующих на неё?"
+   },
+   "options": [
+    {
+     "en": "0 N",
+     "uz": "0 N",
+     "ru": "0 Н"
+    },
+    {
+     "en": "1 N",
+     "uz": "1 N",
+     "ru": "1 Н"
+    },
+    {
+     "en": "5 N",
+     "uz": "5 N",
+     "ru": "5 Н"
+    },
+    {
+     "en": "1.96 N",
+     "uz": "1,96 N",
+     "ru": "1,96 Н"
+    }
+   ],
+   "why": {
+    "en": "Its velocity does not change, so a = 0 and ΣF = 0 (Newton’s first law). The weight 1.96 N is balanced by the ice’s normal force.",
+    "uz": "Tezligi oʻzgarmaydi, demak a = 0 va ΣF = 0 (Nyutonning birinchi qonuni). 1,96 N ogʻirlik kuchini muzning reaksiya kuchi muvozanatlaydi.",
+    "ru": "Скорость не меняется, значит, a = 0 и ΣF = 0 (первый закон Ньютона). Силу тяжести 1,96 Н уравновешивает сила реакции льда."
+   },
+   "prior_b": 0.3,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph21c2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "newtons_third_law",
+   "page": "C19-APPH02-1",
+   "lang": "en",
+   "stem": {
+    "en": "A lamp hangs at rest from a cord. Its weight is the Earth’s pull on the lamp. Which force is the Newton’s third law partner of that weight?",
+    "uz": "Lampa shnurga osilgan va tinch turibdi. Uning ogʻirlik kuchi — Yerning lampani tortishi. Nyutonning uchinchi qonuni boʻyicha bu kuchning jufti qaysi kuch?",
+    "ru": "Лампа неподвижно висит на шнуре. Её сила тяжести — это притяжение лампы Землёй. Какая сила образует с ней пару по третьему закону Ньютона?"
+   },
+   "options": [
+    {
+     "en": "The lamp’s pull on the Earth",
+     "uz": "Lampaning Yerni tortishi",
+     "ru": "Сила, с которой лампа тянет Землю"
+    },
+    {
+     "en": "The cord’s pull on the lamp",
+     "uz": "Shnurning lampani tortishi",
+     "ru": "Сила, с которой шнур тянет лампу"
+    },
+    {
+     "en": "The lamp’s pull on the cord",
+     "uz": "Lampaning shnurni tortishi",
+     "ru": "Сила, с которой лампа тянет шнур"
+    },
+    {
+     "en": "The ceiling’s pull on the cord",
+     "uz": "Shiftning shnurni tortishi",
+     "ru": "Сила, с которой потолок тянет шнур"
+    }
+   ],
+   "why": {
+    "en": "A third-law pair swaps the two objects: the Earth pulls the lamp, so the lamp pulls the Earth. The cord’s pull balances the weight but acts on the same lamp.",
+    "uz": "Uchinchi qonun juftida ikki jism oʻrin almashadi: Yer lampani tortadi, demak lampa Yerni tortadi. Shnurning tortishi ogʻirlikni muvozanatlaydi, lekin u ham lampaga qoʻyilgan.",
+    "ru": "В паре по третьему закону тела меняются местами: Земля тянет лампу, значит, лампа тянет Землю. Натяжение шнура уравновешивает силу тяжести, но приложено к той же лампе."
+   },
+   "prior_b": 0.8,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph22c1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "weight_normal",
+   "page": "C19-APPH02-2",
+   "lang": "en",
+   "stem": {
+    "en": "You stand on a scale in a lift that moves upward at a steady speed. What does the scale read?",
+    "uz": "Siz yuqoriga oʻzgarmas tezlik bilan harakatlanayotgan liftdagi tarozida turibsiz. Tarozi nimani koʻrsatadi?",
+    "ru": "Вы стоите на весах в лифте, который движется вверх с постоянной скоростью. Что показывают весы?"
+   },
+   "options": [
+    {
+     "en": "Your weight",
+     "uz": "Ogʻirlik kuchingizni",
+     "ru": "Силу тяжести mg"
+    },
+    {
+     "en": "More than your weight",
+     "uz": "Ogʻirlik kuchingizdan koʻpini",
+     "ru": "Больше, чем mg"
+    },
+    {
+     "en": "Less than your weight",
+     "uz": "Ogʻirlik kuchingizdan kamini",
+     "ru": "Меньше, чем mg"
+    },
+    {
+     "en": "Zero",
+     "uz": "Nolni",
+     "ru": "Ноль"
+    }
+   ],
+   "why": {
+    "en": "A steady speed means a = 0, so the scale’s push N equals mg. Only a speeding up or slowing down lift changes the reading.",
+    "uz": "Tezlik oʻzgarmas — demak a = 0, shuning uchun tarozining itarish kuchi N mg ga teng. Faqat tezlashayotgan yoki sekinlashayotgan lift koʻrsatkichni oʻzgartiradi.",
+    "ru": "Постоянная скорость значит a = 0, поэтому сила реакции весов N равна mg. Показание меняется, только когда лифт разгоняется или тормозит."
+   },
+   "prior_b": 0.5,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph22c2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "friction",
+   "page": "C19-APPH02-2",
+   "lang": "en",
+   "stem": {
+    "en": "A book is pressed against a wall by a horizontal push and does not slide down. Which force holds it up?",
+    "uz": "Kitob devorga gorizontal kuch bilan bosib turilibdi va pastga sirpanmaydi. Uni qaysi kuch yuqorida ushlab turadi?",
+    "ru": "Книгу прижимают к стене горизонтальной силой, и она не сползает вниз. Какая сила удерживает её?"
+   },
+   "options": [
+    {
+     "en": "Static friction from the wall",
+     "uz": "Devorning tinchlikdagi ishqalanishi",
+     "ru": "Трение покоя со стороны стены"
+    },
+    {
+     "en": "The horizontal push",
+     "uz": "Gorizontal itarish kuchi",
+     "ru": "Горизонтальная сила толчка"
+    },
+    {
+     "en": "The normal force from the wall",
+     "uz": "Devorning reaksiya kuchi",
+     "ru": "Сила нормальной реакции стены"
+    },
+    {
+     "en": "Air pressure on the book",
+     "uz": "Havoning kitobga bosimi",
+     "ru": "Давление воздуха на книгу"
+    }
+   ],
+   "why": {
+    "en": "The push and the wall’s normal force are horizontal and balance each other; only static friction from the wall points up, against the weight.",
+    "uz": "Itarish kuchi va devorning reaksiya kuchi gorizontal va bir-birini muvozanatlaydi; ogʻirlikka qarshi yuqoriga faqat devorning tinchlikdagi ishqalanishi yoʻnalgan.",
+    "ru": "Толчок и сила реакции стены горизонтальны и уравновешивают друг друга; вверх, против силы тяжести, направлено только трение покоя со стороны стены."
+   },
+   "prior_b": 0.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph23c1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "circular_motion",
+   "page": "C19-APPH02-3",
+   "lang": "en",
+   "stem": {
+    "en": "A car goes around a circular track at a constant speed. Which statement is true?",
+    "uz": "Avtomobil aylana shaklidagi trek boʻylab oʻzgarmas tezlik bilan harakatlanmoqda. Qaysi gap toʻgʻri?",
+    "ru": "Автомобиль едет по круговой трассе с постоянной по модулю скоростью. Какое утверждение верно?"
+   },
+   "options": [
+    {
+     "en": "Its acceleration points inward",
+     "uz": "Tezlanishi markazga yoʻnalgan",
+     "ru": "Его ускорение направлено к центру"
+    },
+    {
+     "en": "Its velocity does not change",
+     "uz": "Tezligi (vektor) oʻzgarmaydi",
+     "ru": "Его скорость (вектор) не меняется"
+    },
+    {
+     "en": "The net force on it is zero",
+     "uz": "Teng taʼsir etuvchi kuch nolga teng",
+     "ru": "Равнодействующая сил равна нулю"
+    },
+    {
+     "en": "Its acceleration points outward",
+     "uz": "Tezlanishi tashqariga yoʻnalgan",
+     "ru": "Его ускорение направлено наружу"
+    }
+   ],
+   "why": {
+    "en": "The speed stays the same but the direction keeps turning, so the velocity changes: the car accelerates toward the centre, a = v² ÷ r.",
+    "uz": "Tezlik moduli oʻzgarmaydi, lekin yoʻnalishi doim burilib turadi, demak tezlik oʻzgaradi: avtomobil markazga yoʻnalgan a = v² ÷ r tezlanish oladi.",
+    "ru": "Модуль скорости постоянен, но направление всё время поворачивается, значит, скорость меняется: автомобиль ускоряется к центру, a = v² ÷ r."
+   },
+   "prior_b": 0.5,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph23c2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "spring_force",
+   "page": "C19-APPH02-3",
+   "lang": "en",
+   "stem": {
+    "en": "Spring A has k = 100 N/m and spring B has k = 300 N/m. Each holds the same mass at rest. How do their stretches compare?",
+    "uz": "A prujinaning bikrligi k = 100 N/m, B prujinaniki k = 300 N/m. Ikkalasiga bir xil yuk osilgan va tinch turibdi. Ularning choʻzilishlarini solishtiring.",
+    "ru": "Жёсткость пружины A k = 100 Н/м, пружины B k = 300 Н/м. На каждой неподвижно висит одинаковый груз. Сравните их растяжения."
+   },
+   "options": [
+    {
+     "en": "A stretches 3 times as far as B",
+     "uz": "A prujina B dan 3 marta koʻp choʻziladi",
+     "ru": "A растянута в 3 раза больше, чем B"
+    },
+    {
+     "en": "B stretches 3 times as far as A",
+     "uz": "B prujina A dan 3 marta koʻp choʻziladi",
+     "ru": "B растянута в 3 раза больше, чем A"
+    },
+    {
+     "en": "They stretch the same",
+     "uz": "Ikkalasi bir xil choʻziladi",
+     "ru": "Растяжения одинаковы"
+    },
+    {
+     "en": "A stretches 9 times as far as B",
+     "uz": "A prujina B dan 9 marta koʻp choʻziladi",
+     "ru": "A растянута в 9 раз больше, чем B"
+    }
+   ],
+   "why": {
+    "en": "Both pull up with the same mg: kx = mg, so x = mg ÷ k. A’s k is 3 times smaller, so A stretches 3 times as far.",
+    "uz": "Ikkalasi ham bir xil mg kuch bilan yuqoriga tortadi: kx = mg, demak x = mg ÷ k. A ning k si 3 marta kichik, shuning uchun A 3 marta koʻp choʻziladi.",
+    "ru": "Обе тянут вверх с одной и той же силой mg: kx = mg, значит, x = mg ÷ k. У A жёсткость в 3 раза меньше, поэтому A растянута в 3 раза больше."
+   },
+   "prior_b": 0.6,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph31c1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "work",
+   "page": "C19-APPH03-1",
+   "lang": "en",
+   "stem": {
+    "en": "You carry a 2 kg box 3 m across a level room at a steady speed and height. How much work does the upward force of your arms do on the box?",
+    "uz": "Siz 2 kg massali qutini gorizontal xona boʻylab oʻzgarmas tezlik bilan va bir xil balandlikda 3 m olib oʻtasiz. Qoʻllaringizning yuqoriga yoʻnalgan kuchi quti ustida qancha ish bajaradi?",
+    "ru": "Вы несёте ящик массой 2 кг через горизонтальную комнату на 3 м с постоянной скоростью на одной высоте. Какую работу совершает над ящиком сила ваших рук, направленная вверх?"
+   },
+   "options": [
+    {
+     "en": "0 J",
+     "uz": "0 J",
+     "ru": "0 Дж"
+    },
+    {
+     "en": "6 J",
+     "uz": "6 J",
+     "ru": "6 Дж"
+    },
+    {
+     "en": "58.8 J",
+     "uz": "58,8 J",
+     "ru": "58,8 Дж"
+    },
+    {
+     "en": "19.6 J",
+     "uz": "19,6 J",
+     "ru": "19,6 Дж"
+    }
+   ],
+   "why": {
+    "en": "The force is up and the motion is sideways: a force at a right angle to the motion does no work. 58.8 J is mgd; it would be the work only if the box rose 3 m.",
+    "uz": "Kuch yuqoriga, harakat esa yon tomonga yoʻnalgan: harakatga tik kuch ish bajarmaydi. 58,8 J — bu mgd; quti 3 m koʻtarilgandagina shuncha ish bajarilardi.",
+    "ru": "Сила направлена вверх, а движение — вбок: сила, перпендикулярная движению, работы не совершает. 58,8 Дж — это mgd; такой была бы работа, если бы ящик поднялся на 3 м."
+   },
+   "prior_b": 0.6,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph31c2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "work",
+   "page": "C19-APPH03-1",
+   "lang": "en",
+   "stem": {
+    "en": "A sled slides to a stop on a rough surface. What is the sign of the work done by friction on the sled?",
+    "uz": "Chana gʻadir-budur sirtda sirpanib, toʻxtaydi. Ishqalanish kuchining chana ustida bajargan ishi qanday ishorali?",
+    "ru": "Санки скользят по шероховатой поверхности и останавливаются. Какой знак у работы силы трения над санками?"
+   },
+   "options": [
+    {
+     "en": "Negative",
+     "uz": "Manfiy",
+     "ru": "Отрицательный"
+    },
+    {
+     "en": "Positive",
+     "uz": "Musbat",
+     "ru": "Положительный"
+    },
+    {
+     "en": "Zero",
+     "uz": "Nol",
+     "ru": "Нулевой"
+    },
+    {
+     "en": "It depends on the mass",
+     "uz": "Massaga bogʻliq",
+     "ru": "Зависит от массы"
+    }
+   ],
+   "why": {
+    "en": "Friction points against the motion, so its work is negative; it takes the sled’s kinetic energy away.",
+    "uz": "Ishqalanish harakatga qarshi yoʻnalgan, shuning uchun uning ishi manfiy; u chananing kinetik energiyasini olib ketadi.",
+    "ru": "Трение направлено против движения, поэтому его работа отрицательна; оно забирает кинетическую энергию санок."
+   },
+   "prior_b": 0.3,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph32c1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "energy_conservation",
+   "page": "C19-APPH03-2",
+   "lang": "en",
+   "stem": {
+    "en": "A pendulum bob is released from rest and swings with no air resistance. Where is its kinetic energy greatest?",
+    "uz": "Mayatnik yuki tinch holatdan qoʻyib yuboriladi va havoning qarshiligisiz tebranadi. Uning kinetik energiyasi qayerda eng katta?",
+    "ru": "Груз маятника отпускают из состояния покоя, и он качается без сопротивления воздуха. Где его кинетическая энергия наибольшая?"
+   },
+   "options": [
+    {
+     "en": "At the lowest point",
+     "uz": "Eng pastki nuqtada",
+     "ru": "В нижней точке"
+    },
+    {
+     "en": "At the release point",
+     "uz": "Qoʻyib yuborilgan nuqtada",
+     "ru": "В точке, где его отпустили"
+    },
+    {
+     "en": "Halfway down",
+     "uz": "Yoʻlning yarmida",
+     "ru": "На полпути вниз"
+    },
+    {
+     "en": "The same everywhere",
+     "uz": "Hamma joyda bir xil",
+     "ru": "Везде одинакова"
+    }
+   ],
+   "why": {
+    "en": "K + U stays the same, so K is greatest where U = mgh is least: at the lowest point.",
+    "uz": "K + U oʻzgarmaydi, shuning uchun K U = mgh eng kichik boʻlgan joyda — eng pastki nuqtada — eng katta.",
+    "ru": "K + U не меняется, поэтому K наибольшая там, где U = mgh наименьшая, — в нижней точке."
+   },
+   "prior_b": 0.2,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph32c2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "potential_energy",
+   "page": "C19-APPH03-2",
+   "lang": "en",
+   "stem": {
+    "en": "A spring stretched by x stores 8 J. How much energy does it store when stretched by 2x?",
+    "uz": "x ga choʻzilgan prujina 8 J energiya saqlaydi. 2x ga choʻzilganda u qancha energiya saqlaydi?",
+    "ru": "Пружина, растянутая на x, запасает 8 Дж. Сколько энергии она запасёт, если растянуть её на 2x?"
+   },
+   "options": [
+    {
+     "en": "32 J",
+     "uz": "32 J",
+     "ru": "32 Дж"
+    },
+    {
+     "en": "16 J",
+     "uz": "16 J",
+     "ru": "16 Дж"
+    },
+    {
+     "en": "8 J",
+     "uz": "8 J",
+     "ru": "8 Дж"
+    },
+    {
+     "en": "64 J",
+     "uz": "64 J",
+     "ru": "64 Дж"
+    }
+   ],
+   "why": {
+    "en": "U = ½kx² grows as x²: twice the stretch gives 2² = 4 times the energy, 4 × 8 = 32 J.",
+    "uz": "U = ½kx² x² ga proporsional: choʻzilish 2 marta ortsa, energiya 2² = 4 marta ortadi, 4 × 8 = 32 J.",
+    "ru": "U = ½kx² растёт как x²: при вдвое большем растяжении энергия в 2² = 4 раза больше, 4 × 8 = 32 Дж."
+   },
+   "prior_b": 0.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph33c1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "power",
+   "page": "C19-APPH03-3",
+   "lang": "en",
+   "stem": {
+    "en": "Which unit is the same as a watt?",
+    "uz": "Qaysi birlik vattga teng?",
+    "ru": "Какая единица равна ватту?"
+   },
+   "options": [
+    {
+     "en": "J/s",
+     "uz": "J/s",
+     "ru": "Дж/с"
+    },
+    {
+     "en": "N·m",
+     "uz": "N·m",
+     "ru": "Н·м"
+    },
+    {
+     "en": "J·s",
+     "uz": "J·s",
+     "ru": "Дж·с"
+    },
+    {
+     "en": "kg·m/s",
+     "uz": "kg·m/s",
+     "ru": "кг·м/с"
+    }
+   ],
+   "why": {
+    "en": "Power is work per time, so 1 W = 1 J/s. N·m is a joule, and kg·m/s is a unit of momentum.",
+    "uz": "Quvvat — vaqt birligidagi ish, demak 1 Vt = 1 J/s. N·m — bu joul, kg·m/s esa impuls birligi.",
+    "ru": "Мощность — работа в единицу времени, значит, 1 Вт = 1 Дж/с. Н·м — это джоуль, а кг·м/с — единица импульса."
+   },
+   "prior_b": 0.0,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph33c2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "energy_friction",
+   "page": "C19-APPH03-3",
+   "lang": "en",
+   "stem": {
+    "en": "A box slides down a rough ramp at a steady speed. What happens to its mechanical energy K + U?",
+    "uz": "Quti gʻadir-budur qiya tekislik boʻylab oʻzgarmas tezlik bilan pastga sirpanmoqda. Uning mexanik energiyasi K + U bilan nima boʻladi?",
+    "ru": "Ящик съезжает по шероховатому наклонному пандусу с постоянной скоростью. Что происходит с его механической энергией K + U?"
+   },
+   "options": [
+    {
+     "en": "It decreases",
+     "uz": "Kamayadi",
+     "ru": "Уменьшается"
+    },
+    {
+     "en": "It increases",
+     "uz": "Ortadi",
+     "ru": "Увеличивается"
+    },
+    {
+     "en": "It stays the same",
+     "uz": "Oʻzgarmaydi",
+     "ru": "Не меняется"
+    },
+    {
+     "en": "It becomes zero",
+     "uz": "Nolga aylanadi",
+     "ru": "Становится нулевой"
+    }
+   ],
+   "why": {
+    "en": "K stays the same while U = mgh falls, so K + U decreases: friction turns that energy into heat.",
+    "uz": "K oʻzgarmaydi, U = mgh esa kamayadi, demak K + U kamayadi: ishqalanish bu energiyani issiqlikka aylantiradi.",
+    "ru": "K не меняется, а U = mgh уменьшается, значит, K + U уменьшается: трение превращает эту энергию в тепло."
+   },
+   "prior_b": 0.7,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph41c1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "impulse",
+   "page": "C19-APPH04-1",
+   "lang": "en",
+   "stem": {
+    "en": "In a crash, an airbag lowers the force on a driver. Why?",
+    "uz": "Avariyada xavfsizlik yostigʻi haydovchiga taʼsir qiluvchi kuchni kamaytiradi. Nima uchun?",
+    "ru": "При аварии подушка безопасности уменьшает силу, действующую на водителя. Почему?"
+   },
+   "options": [
+    {
+     "en": "It makes the stop last longer",
+     "uz": "Toʻxtash vaqtini uzaytiradi",
+     "ru": "Она удлиняет время остановки"
+    },
+    {
+     "en": "It reduces the change in momentum",
+     "uz": "Impuls oʻzgarishini kamaytiradi",
+     "ru": "Она уменьшает изменение импульса"
+    },
+    {
+     "en": "It reduces the driver’s mass",
+     "uz": "Haydovchining massasini kamaytiradi",
+     "ru": "Она уменьшает массу водителя"
+    },
+    {
+     "en": "It makes the impulse larger",
+     "uz": "Kuch impulsini oshiradi",
+     "ru": "Она увеличивает импульс силы"
+    }
+   ],
+   "why": {
+    "en": "The driver’s change in momentum is the same either way; FΔt = Δp, so a longer stopping time Δt means a smaller force F.",
+    "uz": "Haydovchi impulsining oʻzgarishi baribir bir xil; FΔt = Δp, demak toʻxtash vaqti Δt uzoqroq boʻlsa, F kuch kichikroq boʻladi.",
+    "ru": "Изменение импульса водителя в любом случае одно и то же; FΔt = Δp, поэтому чем дольше остановка Δt, тем меньше сила F."
+   },
+   "prior_b": 0.4,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph41c2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "momentum",
+   "page": "C19-APPH04-1",
+   "lang": "en",
+   "stem": {
+    "en": "A 2 kg cart moves at 3 m/s and a 3 kg cart moves at 2 m/s in the same direction. Compare their momenta.",
+    "uz": "2 kg massali aravacha 3 m/s tezlik bilan, 3 kg massali aravacha esa 2 m/s tezlik bilan bir yoʻnalishda harakatlanmoqda. Ularning impulslarini solishtiring.",
+    "ru": "Тележка массой 2 кг движется со скоростью 3 м/с, а тележка массой 3 кг — со скоростью 2 м/с в ту же сторону. Сравните их импульсы."
+   },
+   "options": [
+    {
+     "en": "Equal: 6 kg·m/s each",
+     "uz": "Teng: har biri 6 kg·m/s",
+     "ru": "Равны: по 6 кг·м/с"
+    },
+    {
+     "en": "The 2 kg cart’s is larger",
+     "uz": "2 kg lik aravachaniki katta",
+     "ru": "У тележки 2 кг больше"
+    },
+    {
+     "en": "The 3 kg cart’s is larger",
+     "uz": "3 kg lik aravachaniki katta",
+     "ru": "У тележки 3 кг больше"
+    },
+    {
+     "en": "Equal: 5 kg·m/s each",
+     "uz": "Teng: har biri 5 kg·m/s",
+     "ru": "Равны: по 5 кг·м/с"
+    }
+   ],
+   "why": {
+    "en": "p = mv: 2 × 3 = 6 kg·m/s and 3 × 2 = 6 kg·m/s, the same.",
+    "uz": "p = mv: 2 × 3 = 6 kg·m/s va 3 × 2 = 6 kg·m/s, bir xil.",
+    "ru": "p = mv: 2 × 3 = 6 кг·м/с и 3 × 2 = 6 кг·м/с, одинаково."
+   },
+   "prior_b": 0.2,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph42c1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "momentum_conservation",
+   "page": "C19-APPH04-2",
+   "lang": "en",
+   "stem": {
+    "en": "A person stands at rest on a light boat and throws a heavy bag forward off the boat. What happens to the boat?",
+    "uz": "Yengil qayiqda tinch turgan odam ogʻir xaltani oldinga, qayiqdan tashqariga otadi. Qayiq bilan nima boʻladi?",
+    "ru": "Человек стоит в лёгкой неподвижной лодке и бросает тяжёлый мешок вперёд, за борт. Что происходит с лодкой?"
+   },
+   "options": [
+    {
+     "en": "It moves backward",
+     "uz": "Orqaga suriladi",
+     "ru": "Она движется назад"
+    },
+    {
+     "en": "It moves forward",
+     "uz": "Oldinga suriladi",
+     "ru": "Она движется вперёд"
+    },
+    {
+     "en": "It stays at rest",
+     "uz": "Joyida qoladi",
+     "ru": "Она остаётся на месте"
+    },
+    {
+     "en": "It spins in place",
+     "uz": "Joyida aylanadi",
+     "ru": "Она вращается на месте"
+    }
+   ],
+   "why": {
+    "en": "The total momentum was 0 and stays 0: the bag gets forward momentum, so the person and boat get the same amount backward.",
+    "uz": "Umumiy impuls 0 edi va 0 boʻlib qoladi: xalta oldinga impuls oladi, demak odam va qayiq orqaga xuddi shuncha impuls oladi.",
+    "ru": "Полный импульс был 0 и остаётся 0: мешок получает импульс вперёд, значит, человек с лодкой получают такой же импульс назад."
+   },
+   "prior_b": 0.3,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph42c2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "momentum_conservation",
+   "page": "C19-APPH04-2",
+   "lang": "en",
+   "stem": {
+    "en": "When is the total momentum of a system conserved?",
+    "uz": "Sistemaning umumiy impulsi qachon saqlanadi?",
+    "ru": "Когда полный импульс системы сохраняется?"
+   },
+   "options": [
+    {
+     "en": "When no net outside force acts",
+     "uz": "Teng taʼsir etuvchi tashqi kuch boʻlmasa",
+     "ru": "Когда внешние силы скомпенсированы"
+    },
+    {
+     "en": "When kinetic energy is not lost",
+     "uz": "Kinetik energiya yoʻqolmasa",
+     "ru": "Когда кинетическая энергия не теряется"
+    },
+    {
+     "en": "When all parts move the same way",
+     "uz": "Barcha qismlar bir tomonga harakatlansa",
+     "ru": "Когда все части движутся в одну сторону"
+    },
+    {
+     "en": "Only when nothing collides",
+     "uz": "Faqat hech narsa toʻqnashmasa",
+     "ru": "Только когда нет столкновений"
+    }
+   ],
+   "why": {
+    "en": "Only an outside net force changes a system’s total momentum; inside pushes, collisions and lost kinetic energy do not.",
+    "uz": "Sistemaning umumiy impulsini faqat teng taʼsir etuvchi tashqi kuch oʻzgartiradi; ichki itarishlar, toʻqnashuvlar va yoʻqolgan kinetik energiya uni oʻzgartirmaydi.",
+    "ru": "Полный импульс системы меняет только равнодействующая внешних сил; внутренние толчки, столкновения и потеря кинетической энергии его не меняют."
+   },
+   "prior_b": 0.5,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph43c1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "collisions",
+   "page": "C19-APPH04-3",
+   "lang": "en",
+   "stem": {
+    "en": "Two identical carts move toward each other at the same speed and collide. In which case is the most kinetic energy lost?",
+    "uz": "Ikki bir xil aravacha bir-biriga qarab bir xil tezlik bilan harakatlanib, toʻqnashadi. Qaysi holda eng koʻp kinetik energiya yoʻqoladi?",
+    "ru": "Две одинаковые тележки едут навстречу друг другу с одинаковой скоростью и сталкиваются. В каком случае теряется больше всего кинетической энергии?"
+   },
+   "options": [
+    {
+     "en": "They stick together and both stop",
+     "uz": "Yopishib qoladi va ikkalasi toʻxtaydi",
+     "ru": "Слипаются и обе останавливаются"
+    },
+    {
+     "en": "They bounce apart elastically",
+     "uz": "Elastik toʻqnashib, qaytadi",
+     "ru": "Упруго отскакивают друг от друга"
+    },
+    {
+     "en": "They bounce apart, slower than before",
+     "uz": "Qaytadi, lekin avvalgidan sekinroq",
+     "ru": "Отскакивают медленнее, чем ехали"
+    },
+    {
+     "en": "The same in every case",
+     "uz": "Hamma holatda bir xil",
+     "ru": "Во всех случаях одинаково"
+    }
+   ],
+   "why": {
+    "en": "The total momentum is 0, so if they stick they must stop: all the kinetic energy is lost. Any bounce keeps some of it, so the loss is not the same.",
+    "uz": "Umumiy impuls 0, shuning uchun yopishsa, ular toʻxtashi kerak: butun kinetik energiya yoʻqoladi. Qaytishda uning bir qismi saqlanadi, yoʻqotish bir xil emas.",
+    "ru": "Полный импульс равен 0, поэтому, слипшись, тележки остановятся: теряется вся кинетическая энергия. При отскоке часть её остаётся, так что потери разные."
+   },
+   "prior_b": 0.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C22-ph43c2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "collisions",
+   "page": "C19-APPH04-3",
+   "lang": "en",
+   "stem": {
+    "en": "A moving ball hits an identical ball at rest head-on, and the collision is elastic. What happens?",
+    "uz": "Harakatlanayotgan shar xuddi shunday tinch turgan sharga markaziy uriladi, toʻqnashuv elastik. Nima sodir boʻladi?",
+    "ru": "Движущийся шар налетает на такой же покоящийся шар (центральный удар), столкновение упругое. Что происходит?"
+   },
+   "options": [
+    {
+     "en": "The first stops; the second moves on",
+     "uz": "Birinchisi toʻxtaydi, ikkinchisi ketadi",
+     "ru": "Первый останавливается, второй катится"
+    },
+    {
+     "en": "Both move on at half the speed",
+     "uz": "Ikkalasi yarim tezlikda ketadi",
+     "ru": "Оба катятся с половинной скоростью"
+    },
+    {
+     "en": "The first bounces back at the same speed",
+     "uz": "Birinchisi oʻsha tezlikda qaytadi",
+     "ru": "Первый отскакивает с той же скоростью"
+    },
+    {
+     "en": "Both stop",
+     "uz": "Ikkalasi toʻxtaydi",
+     "ru": "Оба останавливаются"
+    }
+   ],
+   "why": {
+    "en": "Only this keeps both p and K: m × v = m × v and ½mv² = ½mv². Half speed each keeps p but loses half the K.",
+    "uz": "Faqat shunda p ham, K ham saqlanadi: m × v = m × v va ½mv² = ½mv². Har biri yarim tezlikda ketsa, p saqlanadi, lekin K ning yarmi yoʻqoladi.",
+    "ru": "Только так сохраняются и p, и K: m × v = m × v и ½mv² = ½mv². Если оба катятся с половинной скоростью, p сохраняется, но теряется половина K."
+   },
+   "prior_b": 0.8,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  }
+ ]
+}

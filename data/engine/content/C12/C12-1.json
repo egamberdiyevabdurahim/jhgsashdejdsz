@@ -1,0 +1,1171 @@
+{
+ "bank": "C12",
+ "batch": 1,
+ "note": "C12 essay-stage tasks, batch 1: orientation, the story-bank builder and one exploration task per Common App prompt. Prompt texts are quoted verbatim from commonapp.org with attribution; the uz/ru glosses are our unofficial translations.",
+ "items": [
+  {
+   "id": "C12-rd7prm",
+   "kind": "essay_task",
+   "stage_step": "orient",
+   "type": "study",
+   "minutes": 10,
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "essay_lang": "en",
+   "title": {
+    "en": "Read the 7 Common App essay prompts",
+    "uz": "Common App platformasining 7 ta insho savolini oʻqing",
+    "ru": "Прочитайте 7 тем эссе Common App"
+   },
+   "instructions": {
+    "en": "For the Common App personal essay you choose one of seven prompts and write one essay in English. Read all seven prompts (quoted in English as the application shows them, with an unofficial translation). Then pick the two prompts that fit stories you already have: you will explore them in the next tasks. Nothing is final yet.",
+    "uz": "Common App shaxsiy inshosi uchun yettita savoldan bittasini tanlaysiz va ingliz tilida bitta insho yozasiz. Yettala savolni ham oʻqing (ular arizada qanday boʻlsa, shunday inglizcha keltirilgan, yonida norasmiy tarjimasi bor). Soʻng hikoyalaringizga eng mos keladigan ikkita savolni tanlang: keyingi vazifalarda ularni chuqurroq koʻrib chiqasiz. Hali hech narsa yakuniy emas.",
+    "ru": "Для личного эссе Common App вы выбираете одну из семи тем и пишете одно эссе на английском. Прочитайте все семь тем (они приведены по-английски, как в заявке, с неофициальным переводом). Затем выберите две темы, к которым подходят ваши истории: в следующих заданиях вы разберёте их подробнее. Пока ничего не окончательно."
+   },
+   "shows": [
+    "C12-capr01",
+    "C12-capr02",
+    "C12-capr03",
+    "C12-capr04",
+    "C12-capr05",
+    "C12-capr06",
+    "C12-capr07"
+   ],
+   "evidence": {
+    "level": "L1",
+    "method": "self_report",
+    "fields": [
+     {
+      "key": "pick_1",
+      "type": "choice",
+      "options": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      "label": {
+       "en": "First prompt to explore",
+       "uz": "Birinchi tanlagan savolingiz",
+       "ru": "Первая тема"
+      }
+     },
+     {
+      "key": "pick_2",
+      "type": "choice",
+      "options": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      "label": {
+       "en": "Second prompt to explore",
+       "uz": "Ikkinchi tanlagan savolingiz",
+       "ru": "Вторая тема"
+      }
+     }
+    ],
+    "check": {
+     "distinct": [
+      "pick_1",
+      "pick_2"
+     ]
+    }
+   },
+   "facts": [
+    {
+     "claim": "Common App first-year essay prompts for 2026-2027: seven prompts, quoted verbatim in this item from the official page.",
+     "url": "https://www.commonapp.org/apply/essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "Common App announced that the essay prompts remain unchanged for 2026-2027 (post dated 27 Feb 2026).",
+     "url": "https://www.commonapp.org/blog/announcing-2026-2027-common-app-essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "The Common App personal essay is limited to 650 words, with a minimum of 250 words.",
+     "url": "https://www.collegetransitions.com/blog/common-app-essay-prompts/",
+     "verified_at": "2026-10-07",
+     "secondary": true,
+     "needs_verification": true,
+     "note": "Re-checked 2026-10-07. No commonapp.org page that opens without signing in states the limit: the essay-prompts page, the 2026-2027 announcement and the 2026-2027 'What's new' deck give no word count, and the help-centre article 'are-there-word-limits-kudeoeos' is about the UChicago supplement, not the personal essay. College Transitions (published 5 Mar 2026, 2026-27 cycle) says the limit 'remains at 650 words' with 'a minimum floor of 250 words'. The application enforces the limit itself; confirm in its Writing section."
+    }
+   ],
+   "needs_verification": true,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true,
+   "verify_task": true
+  },
+  {
+   "id": "C12-ownwrd",
+   "kind": "essay_task",
+   "stage_step": "orient",
+   "type": "study",
+   "minutes": 8,
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Your story, your words: the rules on help and AI",
+    "uz": "Hikoya sizniki, soʻzlar ham sizniki: yordam va AI qoidalari",
+    "ru": "Ваша история, ваши слова: правила о помощи и ИИ"
+   },
+   "instructions": {
+    "en": "An application essay must be your own work. The Common App’s fraud policy counts as fraud presenting as your own another person’s language or ideas, or the substantive content or output of an AI tool. UCAS asks you to declare that your personal statement was not copied or provided from another source, including AI software. Help that is fine: a teacher, parent or friend asking you questions, saying where they got lost or bored, and pointing out spelling mistakes. Help that is not fine: anyone, a person or an AI, writing sentences or paragraphs for you. In this app, code checks your essay only for length and language; a Jamals counselor reads it at the final step. Tick when you have read this.",
+    "uz": "Ariza inshosi faqat sizning ishingiz boʻlishi kerak. Common App platformasining firibgarlik qoidasiga koʻra, boshqa odamning soʻzlari yoki gʻoyalarini, yoki AI vositasi yozib bergan asosiy mazmunni oʻzingizniki qilib koʻrsatish firibgarlik hisoblanadi. UCAS esa shaxsiy bayonotingiz boshqa manbadan, jumladan AI dasturidan koʻchirilmagani yoki olinmaganini tasdiqlashingizni soʻraydi. Ruxsat etilgan yordam: oʻqituvchi, ota-ona yoki doʻstingiz sizga savol berishi, qayerda tushunmay qolgani yoki zerikkanini aytishi, imlo xatolarini koʻrsatishi. Ruxsat etilmagan yordam: kimdir, odam yoki AI, siz uchun gap yoki xatboshi yozib berishi. Bu ilovada kod inshoingizni faqat uzunligi va tili boʻyicha tekshiradi; oxirgi bosqichda uni Jamals maslahatchisi oʻqiydi. Oʻqib chiqqach, belgi qoʻying.",
+    "ru": "Эссе для поступления должно быть вашей собственной работой. Политика Common App о мошенничестве считает мошенничеством выдачу за своё чужих слов или идей, а также содержательного текста, созданного ИИ. UCAS просит подтвердить, что ваше мотивационное письмо не скопировано и не получено из другого источника, включая программы ИИ. Допустимая помощь: учитель, родитель или друг задаёт вам вопросы, говорит, где запутался или заскучал, и указывает на орфографические ошибки. Недопустимая помощь: кто угодно, человек или ИИ, пишет за вас предложения или абзацы. В этом приложении код проверяет эссе только на длину и язык; на последнем шаге его читает консультант Jamals. Отметьте, когда прочитаете."
+   },
+   "evidence": {
+    "level": "L0",
+    "method": "self_report"
+   },
+   "facts": [
+    {
+     "claim": "Common App's fraud policy lists as fraud: submitting plagiarized essays, or intentionally misrepresenting as one's own original work another person's thoughts, language, ideas, expressions or experiences, or the substantive content or output of an artificial intelligence platform, technology or algorithm.",
+     "url": "https://www.commonapp.org/fraud-policy",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "UCAS: generating and submitting all or a large part of a personal statement from an AI tool and presenting it as your own words could be considered cheating; applicants declare that the statement has not been copied or provided from another source, including artificial intelligence software.",
+     "url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/a-guide-to-using-ai-and-chatgpt-with-your-personal-statement",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-sbank1",
+   "kind": "essay_task",
+   "stage_step": "story_bank",
+   "type": "create",
+   "minutes": 15,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Story bank: 3 moments you are proud of",
+    "uz": "Hikoyalar banki: oʻzingiz faxrlanadigan 3 ta lahza",
+    "ru": "Банк историй: 3 момента, которыми вы гордитесь"
+   },
+   "instructions": {
+    "en": "Start your story bank: a private list of real moments from your life that can become essays later. Write 3 moments you are proud of, about 3 lines each: what happened, what you did, and why it still matters to you. Small moments count: helping a younger sibling with homework, fixing something at home, finishing a hard book. Write in whichever language you think in.",
+    "uz": "Hikoyalar bankingizni boshlang: hayotingizdagi haqiqiy lahzalarning shaxsiy roʻyxati, keyinchalik ular inshoga aylanishi mumkin. Oʻzingiz faxrlanadigan 3 ta lahzani yozing, har biriga taxminan 3 qator: nima boʻldi, siz nima qildingiz va bu nega hali ham siz uchun muhim. Kichik lahzalar ham hisobga olinadi: ukangizga uy vazifasida yordam berganingiz, uyda biror narsani tuzatganingiz, qiyin kitobni oxirigacha oʻqiganingiz. Qaysi tilda fikrlasangiz, shu tilda yozing.",
+    "ru": "Начните свой банк историй: личный список реальных моментов из вашей жизни, которые потом могут стать эссе. Опишите 3 момента, которыми вы гордитесь, примерно по 3 строки: что произошло, что сделали вы и почему это до сих пор для вас важно. Маленькие моменты тоже считаются: помогли младшему брату или сестре с уроками, что-то починили дома, дочитали трудную книгу. Пишите на том языке, на котором думаете."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 30,
+     "max_words": 400,
+     "not_prompt": true
+    }
+   },
+   "adds_to": "story_bank",
+   "variant_5min": "brainstorm_micro",
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-sbank2",
+   "kind": "essay_task",
+   "stage_step": "story_bank",
+   "type": "create",
+   "minutes": 20,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Story bank: add 5 moments from different parts of your life",
+    "uz": "Hikoyalar banki: hayotingizning turli tomonlaridan 5 ta lahza qoʻshing",
+    "ru": "Банк историй: добавьте 5 моментов из разных сторон жизни"
+   },
+   "instructions": {
+    "en": "Add 5 moments to your story bank, one from each of these: 1) your family or home; 2) school or one class; 3) a place you know well (a street, a market, a relative’s village); 4) something that went wrong; 5) something you are curious about. For each, write 2-3 lines: what happened, and one detail you can still see or hear.",
+    "uz": "Hikoyalar bankingizga 5 ta lahza qoʻshing, quyidagilarning har biridan bittadan: 1) oilangiz yoki uyingiz; 2) maktab yoki bitta dars; 3) yaxshi biladigan joyingiz (koʻcha, bozor, qarindoshlaringiz yashaydigan qishloq); 4) kutilganidek boʻlmagan voqea; 5) sizni qiziqtiradigan narsa. Har biri uchun 2-3 qator yozing: nima boʻldi va hali ham koʻz oldingizda turgan yoki qulogʻingizda qolgan bitta tafsilot.",
+    "ru": "Добавьте в банк историй 5 моментов, по одному из каждой области: 1) семья или дом; 2) школа или один урок; 3) место, которое вы хорошо знаете (улица, базар, кишлак родственников); 4) что-то, что пошло не так; 5) то, что вам интересно. Для каждого напишите 2-3 строки: что произошло и одну деталь, которую вы до сих пор видите или слышите."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 50,
+     "max_words": 600,
+     "not_prompt": true
+    }
+   },
+   "adds_to": "story_bank",
+   "variant_5min": "brainstorm_micro",
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-sbank3",
+   "kind": "essay_task",
+   "stage_step": "story_bank",
+   "type": "create",
+   "minutes": 15,
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US",
+    "UK",
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Story bank: tag your stories and pick the strongest 3",
+    "uz": "Hikoyalar banki: hikoyalarni belgilang va eng kuchli 3 tasini tanlang",
+    "ru": "Банк историй: разметьте истории и выберите 3 самые сильные"
+   },
+   "instructions": {
+    "en": "Read every story in your bank. Next to each one, write which Common App prompts (1-7) it could answer, or which UCAS question (1-3) if you apply to the UK. Then choose your 3 strongest stories: the ones where you did something and changed because of it, not the ones with the biggest event. Write a short name for each below.",
+    "uz": "Bankingizdagi har bir hikoyani oʻqing. Har birining yoniga u qaysi Common App savollariga (1-7) javob boʻla olishini, Buyuk Britaniyaga topshirsangiz, qaysi UCAS savoliga (1-3) mos kelishini yozing. Soʻng eng kuchli 3 ta hikoyani tanlang: eng katta voqea emas, balki siz biror ish qilgan va shu tufayli oʻzgargan hikoyalarni. Quyida har biriga qisqa nom yozing.",
+    "ru": "Перечитайте все истории в банке. Рядом с каждой напишите, на какие темы Common App (1-7) она может ответить, или на какой вопрос UCAS (1-3), если вы поступаете в Великобританию. Затем выберите 3 самые сильные истории: те, где вы что-то сделали и изменились благодаря этому, а не те, где событие самое крупное. Ниже дайте каждой короткое название."
+   },
+   "evidence": {
+    "level": "L1",
+    "method": "self_report",
+    "fields": [
+     {
+      "key": "strong_1",
+      "type": "text_short",
+      "max_chars": 60,
+      "label": {
+       "en": "Strongest story 1",
+       "uz": "Eng kuchli hikoya 1",
+       "ru": "Самая сильная история 1"
+      }
+     },
+     {
+      "key": "strong_2",
+      "type": "text_short",
+      "max_chars": 60,
+      "label": {
+       "en": "Strongest story 2",
+       "uz": "Eng kuchli hikoya 2",
+       "ru": "Самая сильная история 2"
+      }
+     },
+     {
+      "key": "strong_3",
+      "type": "text_short",
+      "max_chars": 60,
+      "label": {
+       "en": "Strongest story 3",
+       "uz": "Eng kuchli hikoya 3",
+       "ru": "Самая сильная история 3"
+      }
+     }
+    ]
+   },
+   "facts": [
+    {
+     "claim": "Common App first-year essay prompts for 2026-2027: seven prompts, quoted verbatim in this item from the official page.",
+     "url": "https://www.commonapp.org/apply/essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "UCAS personal statement: three questions (quoted verbatim in this item); each answer has a minimum of 350 characters; 4,000 characters overall including spaces; the 4,000 may be shared across the answers in any way; admissions staff review the statement as a whole, so information should not be repeated.",
+     "url": "https://www.ucas.com/personal-statement",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-sbankr",
+   "kind": "essay_task",
+   "stage_step": "story_bank",
+   "type": "create",
+   "minutes": 10,
+   "repeat_every_weeks": 8,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Story bank refresh: 2 new moments",
+    "uz": "Hikoyalar bankini yangilang: 2 ta yangi lahza",
+    "ru": "Обновите банк историй: 2 новых момента"
+   },
+   "instructions": {
+    "en": "Add 2 moments from the last two months to your story bank, 2-3 lines each. Then read your older stories once: is there one you now see differently? If so, add one line about what changed.",
+    "uz": "Soʻnggi ikki oydagi 2 ta lahzani hikoyalar bankingizga qoʻshing, har biriga 2-3 qator. Soʻng eski hikoyalaringizni bir marta oʻqib chiqing: endi boshqacha koʻrayotgan hikoya bormi? Boʻlsa, nima oʻzgarganini bir qatorda yozing.",
+    "ru": "Добавьте в банк историй 2 момента за последние два месяца, по 2-3 строки. Затем один раз перечитайте старые истории: есть ли та, которую вы теперь видите иначе? Если да, допишите одну строку о том, что изменилось."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 20,
+     "max_words": 400,
+     "not_prompt": true
+    }
+   },
+   "adds_to": "story_bank",
+   "variant_5min": "brainstorm_micro",
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-capr01",
+   "kind": "essay_task",
+   "stage_step": "explore",
+   "type": "create",
+   "minutes": 20,
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "essay_lang": "any",
+   "prompt_n": 1,
+   "prompt_quote": {
+    "text": "Some students have a background, identity, interest, or talent that is so meaningful they believe their application would be incomplete without it. If this sounds like you, then please share your story.",
+    "lang": "en",
+    "attribution": "Common App, first-year essay prompts 2026-2027, prompt 1",
+    "url": "https://www.commonapp.org/apply/essay-prompts",
+    "verified_at": "2026-10-07"
+   },
+   "prompt_gloss": {
+    "en": null,
+    "uz": "Baʼzi oʻquvchilarning kelib chiqishi, oʻziga xosligi, qiziqishi yoki isteʼdodi shunchalik muhimki, ular usiz arizasi toʻliq boʻlmaydi deb hisoblaydi. Agar bu siz haqingizda boʻlsa, oʻz hikoyangizni aytib bering.",
+    "ru": "У некоторых учеников есть происхождение, идентичность, интерес или талант, настолько значимые, что без них, по их мнению, заявка была бы неполной. Если это про вас, расскажите свою историю.",
+    "note": {
+     "en": "Unofficial translation, to help you understand. Write to the English wording.",
+     "uz": "Norasmiy tarjima, tushunishingiz uchun. Inshoni inglizcha matnga javoban yozing.",
+     "ru": "Неофициальный перевод, чтобы было понятнее. Пишите ответ на английскую формулировку."
+    }
+   },
+   "title": {
+    "en": "Explore prompt 1: background, identity, interest or talent",
+    "uz": "1-savolni oʻrganing: kelib chiqish, oʻziga xoslik, qiziqish yoki isteʼdod",
+    "ru": "Разберите тему 1: происхождение, идентичность, интерес или талант"
+   },
+   "what_it_asks": {
+    "en": "It asks for the part of you that grades and the activity list cannot show: where you come from, who you are, or something you care about deeply, and how it shapes what you do.",
+    "uz": "U baholar va faoliyatlar roʻyxati koʻrsata olmaydigan tomoningizni soʻraydi: qayerdan ekaningiz, kim ekaningiz yoki chuqur qadrlaydigan narsangiz va bu qilayotgan ishlaringizga qanday taʼsir qilishi.",
+    "ru": "Она спрашивает о той части вас, которую не покажут оценки и список занятий: откуда вы, кто вы или что вам глубоко дорого, и как это влияет на то, что вы делаете."
+   },
+   "think_about": [
+    {
+     "en": "What would a reader miss about you if they saw only your grades and activities?",
+     "uz": "Faqat baholaringiz va faoliyatlaringizni koʻrgan odam siz haqingizda nimani bilmay qoladi?",
+     "ru": "Чего читатель не узнает о вас, если увидит только оценки и занятия?"
+    },
+    {
+     "en": "Which part of your everyday life would surprise someone from another country?",
+     "uz": "Kundalik hayotingizning qaysi tomoni boshqa mamlakatdan kelgan odamni hayron qoldiradi?",
+     "ru": "Какая часть вашей повседневной жизни удивила бы человека из другой страны?"
+    },
+    {
+     "en": "What do you do differently because of this background or interest?",
+     "uz": "Shu kelib chiqish yoki qiziqish tufayli nimani boshqacha qilasiz?",
+     "ru": "Что вы делаете иначе благодаря этому происхождению или интересу?"
+    }
+   ],
+   "watch_out": {
+    "en": "Do not write a list of facts about your culture or city. Write about you inside it: one scene, then what it means for you.",
+    "uz": "Madaniyatingiz yoki shahringiz haqida faktlar roʻyxatini yozmang. Uning ichidagi oʻzingiz haqingizda yozing: bitta sahna, soʻng uning siz uchun maʼnosi.",
+    "ru": "Не пишите список фактов о своей культуре или городе. Пишите о себе внутри неё: одна сцена, потом что она значит для вас."
+   },
+   "instructions": {
+    "en": "Read the prompt and the three questions under it. Then, from your story bank, write 2 or 3 stories that could answer this prompt, 2-3 sentences each. After each one, write one line: what this story would show a reader about you. You may write in any language; the essay itself will be in English.",
+    "uz": "Savolni va uning ostidagi uchta savolni oʻqing. Soʻng hikoyalar bankingizdan shu savolga javob boʻla oladigan 2 yoki 3 ta hikoyani yozing, har biriga 2-3 gap. Har biridan keyin bitta qator yozing: bu hikoya oʻquvchiga siz haqingizda nimani koʻrsatadi. Istalgan tilda yozishingiz mumkin; inshoning oʻzi ingliz tilida boʻladi.",
+    "ru": "Прочитайте тему и три вопроса под ней. Затем из банка историй выпишите 2 или 3 истории, которые могут ответить на эту тему, по 2-3 предложения. После каждой напишите одну строку: что эта история покажет читателю о вас. Можно писать на любом языке; само эссе будет на английском."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 40,
+     "max_words": 400,
+     "not_prompt": true
+    }
+   },
+   "variant_5min": "brainstorm_micro",
+   "facts": [
+    {
+     "claim": "Common App first-year essay prompts for 2026-2027: seven prompts, quoted verbatim in this item from the official page.",
+     "url": "https://www.commonapp.org/apply/essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "Common App announced that the essay prompts remain unchanged for 2026-2027 (post dated 27 Feb 2026).",
+     "url": "https://www.commonapp.org/blog/announcing-2026-2027-common-app-essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-capr02",
+   "kind": "essay_task",
+   "stage_step": "explore",
+   "type": "create",
+   "minutes": 20,
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "essay_lang": "any",
+   "prompt_n": 2,
+   "prompt_quote": {
+    "text": "The lessons we take from obstacles we encounter can be fundamental to later success. Recount a time when you faced a challenge, setback, or failure. How did it affect you, and what did you learn from the experience?",
+    "lang": "en",
+    "attribution": "Common App, first-year essay prompts 2026-2027, prompt 2",
+    "url": "https://www.commonapp.org/apply/essay-prompts",
+    "verified_at": "2026-10-07"
+   },
+   "prompt_gloss": {
+    "en": null,
+    "uz": "Duch kelgan toʻsiqlardan olgan saboqlarimiz keyingi muvaffaqiyat uchun asos boʻlishi mumkin. Qiyinchilik, omadsizlik yoki muvaffaqiyatsizlikka duch kelgan bir paytingizni hikoya qiling. Bu sizga qanday taʼsir qildi va bu tajribadan nimani oʻrgandingiz?",
+    "ru": "Уроки, которые мы извлекаем из препятствий, могут стать основой будущего успеха. Расскажите о случае, когда вы столкнулись с трудностью, неудачей или провалом. Как это на вас повлияло и чему вы научились?",
+    "note": {
+     "en": "Unofficial translation, to help you understand. Write to the English wording.",
+     "uz": "Norasmiy tarjima, tushunishingiz uchun. Inshoni inglizcha matnga javoban yozing.",
+     "ru": "Неофициальный перевод, чтобы было понятнее. Пишите ответ на английскую формулировку."
+    }
+   },
+   "title": {
+    "en": "Explore prompt 2: a challenge, setback or failure",
+    "uz": "2-savolni oʻrganing: qiyinchilik, omadsizlik yoki muvaffaqiyatsizlik",
+    "ru": "Разберите тему 2: трудность, неудача или провал"
+   },
+   "what_it_asks": {
+    "en": "It is less about the problem than about what you did next and what changed in you. The challenge can be small; what you learned matters more than its size.",
+    "uz": "Bu savol muammoning oʻzidan koʻra, keyin nima qilganingiz va sizda nima oʻzgargani haqida. Qiyinchilik kichik boʻlishi mumkin; uning kattaligidan koʻra nimani oʻrganganingiz muhimroq.",
+    "ru": "Она не столько о проблеме, сколько о том, что вы сделали дальше и что в вас изменилось. Трудность может быть небольшой: важнее не её размер, а то, чему вы научились."
+   },
+   "think_about": [
+    {
+     "en": "What was the moment you knew it was going wrong?",
+     "uz": "Ish notoʻgʻri ketayotganini qaysi lahzada angladingiz?",
+     "ru": "В какой момент вы поняли, что что-то идёт не так?"
+    },
+    {
+     "en": "What did you try first, and what did you try after that failed?",
+     "uz": "Avval nimani sinab koʻrdingiz, u ish bermagach, nimani sinadingiz?",
+     "ru": "Что вы попробовали сначала и что потом, когда это не сработало?"
+    },
+    {
+     "en": "What do you do differently today because of it?",
+     "uz": "Shu voqea tufayli bugun nimani boshqacha qilasiz?",
+     "ru": "Что вы сегодня делаете иначе из-за этого?"
+    }
+   ],
+   "watch_out": {
+    "en": "Keep the hardship short and give most of the words to your response and what you learned. Share only what you are comfortable sharing.",
+    "uz": "Qiyinchilikni qisqa yozing, soʻzlarning koʻp qismini nima qilganingiz va nimani oʻrganganingizga bering. Faqat aytishga oʻzingiz rozi boʻlgan narsalarni yozing.",
+    "ru": "Опишите трудность коротко, а большую часть слов отдайте своим действиям и тому, чему научились. Делитесь только тем, чем вам комфортно делиться."
+   },
+   "instructions": {
+    "en": "Read the prompt and the three questions under it. Then, from your story bank, write 2 or 3 stories that could answer this prompt, 2-3 sentences each. After each one, write one line: what this story would show a reader about you. You may write in any language; the essay itself will be in English.",
+    "uz": "Savolni va uning ostidagi uchta savolni oʻqing. Soʻng hikoyalar bankingizdan shu savolga javob boʻla oladigan 2 yoki 3 ta hikoyani yozing, har biriga 2-3 gap. Har biridan keyin bitta qator yozing: bu hikoya oʻquvchiga siz haqingizda nimani koʻrsatadi. Istalgan tilda yozishingiz mumkin; inshoning oʻzi ingliz tilida boʻladi.",
+    "ru": "Прочитайте тему и три вопроса под ней. Затем из банка историй выпишите 2 или 3 истории, которые могут ответить на эту тему, по 2-3 предложения. После каждой напишите одну строку: что эта история покажет читателю о вас. Можно писать на любом языке; само эссе будет на английском."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 40,
+     "max_words": 400,
+     "not_prompt": true
+    }
+   },
+   "variant_5min": "brainstorm_micro",
+   "facts": [
+    {
+     "claim": "Common App first-year essay prompts for 2026-2027: seven prompts, quoted verbatim in this item from the official page.",
+     "url": "https://www.commonapp.org/apply/essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "Common App announced that the essay prompts remain unchanged for 2026-2027 (post dated 27 Feb 2026).",
+     "url": "https://www.commonapp.org/blog/announcing-2026-2027-common-app-essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-capr03",
+   "kind": "essay_task",
+   "stage_step": "explore",
+   "type": "create",
+   "minutes": 20,
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "essay_lang": "any",
+   "prompt_n": 3,
+   "prompt_quote": {
+    "text": "Reflect on a time when you questioned or challenged a belief or idea. What prompted your thinking? What was the outcome?",
+    "lang": "en",
+    "attribution": "Common App, first-year essay prompts 2026-2027, prompt 3",
+    "url": "https://www.commonapp.org/apply/essay-prompts",
+    "verified_at": "2026-10-07"
+   },
+   "prompt_gloss": {
+    "en": null,
+    "uz": "Biror eʼtiqod yoki gʻoyaga shubha bilan qaragan yoki unga eʼtiroz bildirgan paytingiz haqida mulohaza yuriting. Sizni bu haqda oʻylashga nima undadi? Natijasi nima boʻldi?",
+    "ru": "Поразмышляйте о случае, когда вы усомнились в каком-то убеждении или идее или оспорили их. Что заставило вас задуматься? Чем всё закончилось?",
+    "note": {
+     "en": "Unofficial translation, to help you understand. Write to the English wording.",
+     "uz": "Norasmiy tarjima, tushunishingiz uchun. Inshoni inglizcha matnga javoban yozing.",
+     "ru": "Неофициальный перевод, чтобы было понятнее. Пишите ответ на английскую формулировку."
+    }
+   },
+   "title": {
+    "en": "Explore prompt 3: questioning a belief or idea",
+    "uz": "3-savolni oʻrganing: eʼtiqod yoki gʻoyaga shubha bilan qarash",
+    "ru": "Разберите тему 3: когда вы усомнились в убеждении или идее"
+   },
+   "what_it_asks": {
+    "en": "It asks how you think: a moment you looked again at an idea, your own or one around you, and what came of it. A changed mind and a respectful disagreement both count.",
+    "uz": "U qanday fikrlashingizni soʻraydi: oʻzingizning yoki atrofingizdagi gʻoyaga qaytadan nazar tashlagan lahzangiz va undan nima chiqqani. Fikringizni oʻzgartirganingiz ham, hurmat bilan bahslashganingiz ham hisobga olinadi.",
+    "ru": "Она спрашивает, как вы думаете: момент, когда вы заново посмотрели на идею, свою или окружающих, и что из этого вышло. Подходит и изменённое мнение, и уважительное несогласие."
+   },
+   "think_about": [
+    {
+     "en": "What did you believe for a long time without checking it?",
+     "uz": "Uzoq vaqt tekshirmasdan nimaga ishongansiz?",
+     "ru": "Во что вы долго верили, не проверяя?"
+    },
+    {
+     "en": "What fact, person or event made you ask a question?",
+     "uz": "Qaysi fakt, odam yoki voqea sizni savol berishga undadi?",
+     "ru": "Какой факт, человек или событие заставили вас задать вопрос?"
+    },
+    {
+     "en": "What did you do with your new view: act, talk to someone, or keep thinking?",
+     "uz": "Yangi fikringiz bilan nima qildingiz: harakat qildingiz, kimdir bilan gaplashdingiz yoki oʻylashda davom etdingizmi?",
+     "ru": "Что вы сделали с новым взглядом: действовали, поговорили с кем-то или продолжили думать?"
+    }
+   ],
+   "watch_out": {
+    "en": "Do not write to win an argument or to criticise people. The reader wants to see your thinking, not a debate speech.",
+    "uz": "Bahsda yutish yoki odamlarni tanqid qilish uchun yozmang. Oʻquvchi munozara nutqini emas, fikrlash jarayoningizni koʻrmoqchi.",
+    "ru": "Не пишите, чтобы выиграть спор или раскритиковать людей. Читатель хочет увидеть ход ваших мыслей, а не речь на дебатах."
+   },
+   "instructions": {
+    "en": "Read the prompt and the three questions under it. Then, from your story bank, write 2 or 3 stories that could answer this prompt, 2-3 sentences each. After each one, write one line: what this story would show a reader about you. You may write in any language; the essay itself will be in English.",
+    "uz": "Savolni va uning ostidagi uchta savolni oʻqing. Soʻng hikoyalar bankingizdan shu savolga javob boʻla oladigan 2 yoki 3 ta hikoyani yozing, har biriga 2-3 gap. Har biridan keyin bitta qator yozing: bu hikoya oʻquvchiga siz haqingizda nimani koʻrsatadi. Istalgan tilda yozishingiz mumkin; inshoning oʻzi ingliz tilida boʻladi.",
+    "ru": "Прочитайте тему и три вопроса под ней. Затем из банка историй выпишите 2 или 3 истории, которые могут ответить на эту тему, по 2-3 предложения. После каждой напишите одну строку: что эта история покажет читателю о вас. Можно писать на любом языке; само эссе будет на английском."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 40,
+     "max_words": 400,
+     "not_prompt": true
+    }
+   },
+   "variant_5min": "brainstorm_micro",
+   "facts": [
+    {
+     "claim": "Common App first-year essay prompts for 2026-2027: seven prompts, quoted verbatim in this item from the official page.",
+     "url": "https://www.commonapp.org/apply/essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "Common App announced that the essay prompts remain unchanged for 2026-2027 (post dated 27 Feb 2026).",
+     "url": "https://www.commonapp.org/blog/announcing-2026-2027-common-app-essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-capr04",
+   "kind": "essay_task",
+   "stage_step": "explore",
+   "type": "create",
+   "minutes": 20,
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "essay_lang": "any",
+   "prompt_n": 4,
+   "prompt_quote": {
+    "text": "Reflect on something that someone has done for you that has made you happy or thankful in a surprising way. How has this gratitude affected or motivated you?",
+    "lang": "en",
+    "attribution": "Common App, first-year essay prompts 2026-2027, prompt 4",
+    "url": "https://www.commonapp.org/apply/essay-prompts",
+    "verified_at": "2026-10-07"
+   },
+   "prompt_gloss": {
+    "en": null,
+    "uz": "Kimdir siz uchun qilgan va sizni kutilmagan tarzda xursand qilgan yoki minnatdor etgan ish haqida mulohaza yuriting. Bu minnatdorlik sizga qanday taʼsir qildi yoki sizni nimaga undadi?",
+    "ru": "Поразмышляйте о том, что кто-то сделал для вас и что неожиданно вас обрадовало или вызвало благодарность. Как эта благодарность повлияла на вас или мотивировала вас?",
+    "note": {
+     "en": "Unofficial translation, to help you understand. Write to the English wording.",
+     "uz": "Norasmiy tarjima, tushunishingiz uchun. Inshoni inglizcha matnga javoban yozing.",
+     "ru": "Неофициальный перевод, чтобы было понятнее. Пишите ответ на английскую формулировку."
+    }
+   },
+   "title": {
+    "en": "Explore prompt 4: a surprising kindness",
+    "uz": "4-savolni oʻrganing: kutilmagan yaxshilik",
+    "ru": "Разберите тему 4: неожиданная доброта"
+   },
+   "what_it_asks": {
+    "en": "It asks about something someone did for you that surprised you, and what you have done since because of it. The focus is its effect on you, not only the other person.",
+    "uz": "U kimdir siz uchun qilgan va sizni hayron qoldirgan ish hamda shundan keyin siz nima qilganingiz haqida soʻraydi. Asosiy eʼtibor faqat boshqa odamga emas, uning sizga taʼsiriga qaratiladi.",
+    "ru": "Она спрашивает о поступке другого человека, который вас удивил, и о том, что вы сделали с тех пор благодаря ему. Главное здесь его влияние на вас, а не только сам другой человек."
+   },
+   "think_about": [
+    {
+     "en": "Which small act of help do you still remember years later?",
+     "uz": "Qaysi kichik yordamni yillar oʻtsa ham eslaysiz?",
+     "ru": "Какую маленькую помощь вы помните спустя годы?"
+    },
+    {
+     "en": "Why was it surprising: who did it, when, or how?",
+     "uz": "U nimasi bilan kutilmagan edi: kim qilgani, qachon yoki qanday qilgani?",
+     "ru": "Чем она была неожиданной: кто помог, когда или как?"
+    },
+    {
+     "en": "What do you now do for others because of it?",
+     "uz": "Shu tufayli endi boshqalar uchun nima qilasiz?",
+     "ru": "Что вы теперь делаете для других благодаря этому?"
+    }
+   ],
+   "watch_out": {
+    "en": "Do not turn the essay into a thank-you letter or a portrait of the other person. At least half of it should be about you.",
+    "uz": "Inshoni minnatdorchilik maktubiga yoki boshqa odamning tasviriga aylantirib yubormang. Uning kamida yarmi siz haqingizda boʻlsin.",
+    "ru": "Не превращайте эссе в благодарственное письмо или портрет другого человека. Хотя бы половина должна быть о вас."
+   },
+   "instructions": {
+    "en": "Read the prompt and the three questions under it. Then, from your story bank, write 2 or 3 stories that could answer this prompt, 2-3 sentences each. After each one, write one line: what this story would show a reader about you. You may write in any language; the essay itself will be in English.",
+    "uz": "Savolni va uning ostidagi uchta savolni oʻqing. Soʻng hikoyalar bankingizdan shu savolga javob boʻla oladigan 2 yoki 3 ta hikoyani yozing, har biriga 2-3 gap. Har biridan keyin bitta qator yozing: bu hikoya oʻquvchiga siz haqingizda nimani koʻrsatadi. Istalgan tilda yozishingiz mumkin; inshoning oʻzi ingliz tilida boʻladi.",
+    "ru": "Прочитайте тему и три вопроса под ней. Затем из банка историй выпишите 2 или 3 истории, которые могут ответить на эту тему, по 2-3 предложения. После каждой напишите одну строку: что эта история покажет читателю о вас. Можно писать на любом языке; само эссе будет на английском."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 40,
+     "max_words": 400,
+     "not_prompt": true
+    }
+   },
+   "variant_5min": "brainstorm_micro",
+   "facts": [
+    {
+     "claim": "Common App first-year essay prompts for 2026-2027: seven prompts, quoted verbatim in this item from the official page.",
+     "url": "https://www.commonapp.org/apply/essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "Common App announced that the essay prompts remain unchanged for 2026-2027 (post dated 27 Feb 2026).",
+     "url": "https://www.commonapp.org/blog/announcing-2026-2027-common-app-essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-capr05",
+   "kind": "essay_task",
+   "stage_step": "explore",
+   "type": "create",
+   "minutes": 20,
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "essay_lang": "any",
+   "prompt_n": 5,
+   "prompt_quote": {
+    "text": "Discuss an accomplishment, event, or realization that sparked a period of personal growth and a new understanding of yourself or others.",
+    "lang": "en",
+    "attribution": "Common App, first-year essay prompts 2026-2027, prompt 5",
+    "url": "https://www.commonapp.org/apply/essay-prompts",
+    "verified_at": "2026-10-07"
+   },
+   "prompt_gloss": {
+    "en": null,
+    "uz": "Shaxsiy oʻsish davrini boshlab bergan va oʻzingizni yoki boshqalarni yangicha tushunishga olib kelgan yutuq, voqea yoki anglash haqida yozing.",
+    "ru": "Расскажите о достижении, событии или осознании, которое дало начало периоду личного роста и новому пониманию себя или других.",
+    "note": {
+     "en": "Unofficial translation, to help you understand. Write to the English wording.",
+     "uz": "Norasmiy tarjima, tushunishingiz uchun. Inshoni inglizcha matnga javoban yozing.",
+     "ru": "Неофициальный перевод, чтобы было понятнее. Пишите ответ на английскую формулировку."
+    }
+   },
+   "title": {
+    "en": "Explore prompt 5: a turning point and personal growth",
+    "uz": "5-savolni oʻrganing: burilish nuqtasi va shaxsiy oʻsish",
+    "ru": "Разберите тему 5: поворотный момент и личный рост"
+   },
+   "what_it_asks": {
+    "en": "It asks about a turning point (an achievement, an event or a quiet realisation) and how you understood yourself or others differently afterwards.",
+    "uz": "U burilish nuqtasi (yutuq, voqea yoki jimgina anglash) va shundan keyin oʻzingizni yoki boshqalarni qanday boshqacha tushunganingiz haqida soʻraydi.",
+    "ru": "Она спрашивает о поворотном моменте (достижении, событии или тихом осознании) и о том, как после него вы иначе поняли себя или других."
+   },
+   "think_about": [
+    {
+     "en": "When did you first notice that you had changed?",
+     "uz": "Oʻzgarganingizni birinchi marta qachon sezdingiz?",
+     "ru": "Когда вы впервые заметили, что изменились?"
+    },
+    {
+     "en": "What did you understand about other people that you did not see before?",
+     "uz": "Boshqa odamlar haqida ilgari koʻrmagan qaysi narsani tushundingiz?",
+     "ru": "Что вы поняли о других людях, чего раньше не видели?"
+    },
+    {
+     "en": "Which everyday moment taught you more than a prize did?",
+     "uz": "Qaysi oddiy kundalik lahza sizga mukofotdan koʻproq narsa oʻrgatdi?",
+     "ru": "Какой обычный момент научил вас большему, чем награда?"
+    }
+   ],
+   "watch_out": {
+    "en": "An award on its own is not the story. Show what changed in your thinking or behaviour, with one example from after the turning point.",
+    "uz": "Mukofotning oʻzi hikoya emas. Fikrlashingiz yoki xulqingizda nima oʻzgarganini burilish nuqtasidan keyingi bitta misol bilan koʻrsating.",
+    "ru": "Награда сама по себе не история. Покажите, что изменилось в ваших мыслях или поведении, на одном примере после поворотного момента."
+   },
+   "instructions": {
+    "en": "Read the prompt and the three questions under it. Then, from your story bank, write 2 or 3 stories that could answer this prompt, 2-3 sentences each. After each one, write one line: what this story would show a reader about you. You may write in any language; the essay itself will be in English.",
+    "uz": "Savolni va uning ostidagi uchta savolni oʻqing. Soʻng hikoyalar bankingizdan shu savolga javob boʻla oladigan 2 yoki 3 ta hikoyani yozing, har biriga 2-3 gap. Har biridan keyin bitta qator yozing: bu hikoya oʻquvchiga siz haqingizda nimani koʻrsatadi. Istalgan tilda yozishingiz mumkin; inshoning oʻzi ingliz tilida boʻladi.",
+    "ru": "Прочитайте тему и три вопроса под ней. Затем из банка историй выпишите 2 или 3 истории, которые могут ответить на эту тему, по 2-3 предложения. После каждой напишите одну строку: что эта история покажет читателю о вас. Можно писать на любом языке; само эссе будет на английском."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 40,
+     "max_words": 400,
+     "not_prompt": true
+    }
+   },
+   "variant_5min": "brainstorm_micro",
+   "facts": [
+    {
+     "claim": "Common App first-year essay prompts for 2026-2027: seven prompts, quoted verbatim in this item from the official page.",
+     "url": "https://www.commonapp.org/apply/essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "Common App announced that the essay prompts remain unchanged for 2026-2027 (post dated 27 Feb 2026).",
+     "url": "https://www.commonapp.org/blog/announcing-2026-2027-common-app-essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-capr06",
+   "kind": "essay_task",
+   "stage_step": "explore",
+   "type": "create",
+   "minutes": 20,
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "essay_lang": "any",
+   "prompt_n": 6,
+   "prompt_quote": {
+    "text": "Describe a topic, idea, or concept you find so engaging that it makes you lose all track of time. Why does it captivate you? What or who do you turn to when you want to learn more?",
+    "lang": "en",
+    "attribution": "Common App, first-year essay prompts 2026-2027, prompt 6",
+    "url": "https://www.commonapp.org/apply/essay-prompts",
+    "verified_at": "2026-10-07"
+   },
+   "prompt_gloss": {
+    "en": null,
+    "uz": "Sizni shunchalik qiziqtiradigan mavzu, gʻoya yoki tushunchani tasvirlab beringki, u bilan band boʻlganingizda vaqtni butunlay unutasiz. U sizni nimasi bilan oʻziga tortadi? Koʻproq bilmoqchi boʻlganingizda nimaga yoki kimga murojaat qilasiz?",
+    "ru": "Опишите тему, идею или понятие, которые увлекают вас настолько, что вы теряете счёт времени. Чем они вас захватывают? К чему или к кому вы обращаетесь, когда хотите узнать больше?",
+    "note": {
+     "en": "Unofficial translation, to help you understand. Write to the English wording.",
+     "uz": "Norasmiy tarjima, tushunishingiz uchun. Inshoni inglizcha matnga javoban yozing.",
+     "ru": "Неофициальный перевод, чтобы было понятнее. Пишите ответ на английскую формулировку."
+    }
+   },
+   "title": {
+    "en": "Explore prompt 6: a topic that makes you lose track of time",
+    "uz": "6-savolni oʻrganing: vaqtni unuttiradigan mavzu",
+    "ru": "Разберите тему 6: тема, за которой вы теряете счёт времени"
+   },
+   "what_it_asks": {
+    "en": "It asks about your curiosity: a topic you return to by choice, and how you go about learning more.",
+    "uz": "U qiziquvchanligingiz haqida soʻraydi: oʻz xohishingiz bilan qayta-qayta qaytadigan mavzu va u haqda koʻproq bilish uchun nima qilishingiz.",
+    "ru": "Она спрашивает о вашем любопытстве: о теме, к которой вы возвращаетесь по своей воле, и о том, как вы узнаёте о ней больше."
+   },
+   "think_about": [
+    {
+     "en": "What do you read about or watch when no one asks you to?",
+     "uz": "Hech kim soʻramasa ham nimalar haqida oʻqiysiz yoki koʻrasiz?",
+     "ru": "О чём вы читаете или что смотрите, когда никто не просит?"
+    },
+    {
+     "en": "What question in this topic do you still want answered?",
+     "uz": "Shu mavzudagi qaysi savolga hali ham javob izlayapsiz?",
+     "ru": "На какой вопрос в этой теме вы всё ещё хотите найти ответ?"
+    },
+    {
+     "en": "Where do you go to learn more: books, a teacher, online courses, your own experiments?",
+     "uz": "Koʻproq bilish uchun qayerga murojaat qilasiz: kitoblar, oʻqituvchi, onlayn kurslar, oʻzingizning tajribalaringiz?",
+     "ru": "Куда вы идёте, чтобы узнать больше: книги, учитель, онлайн-курсы, собственные опыты?"
+    }
+   ],
+   "watch_out": {
+    "en": "Do not explain the topic like a textbook. Show your curiosity: what you did, asked, built or tried because of it.",
+    "uz": "Mavzuni darslikdagidek tushuntirmang. Qiziquvchanligingizni koʻrsating: shu tufayli nima qildingiz, nima soʻradingiz, nima yasadingiz yoki sinab koʻrdingiz.",
+    "ru": "Не объясняйте тему как учебник. Покажите своё любопытство: что вы сделали, спросили, построили или попробовали благодаря ей."
+   },
+   "instructions": {
+    "en": "Read the prompt and the three questions under it. Then, from your story bank, write 2 or 3 stories that could answer this prompt, 2-3 sentences each. After each one, write one line: what this story would show a reader about you. You may write in any language; the essay itself will be in English.",
+    "uz": "Savolni va uning ostidagi uchta savolni oʻqing. Soʻng hikoyalar bankingizdan shu savolga javob boʻla oladigan 2 yoki 3 ta hikoyani yozing, har biriga 2-3 gap. Har biridan keyin bitta qator yozing: bu hikoya oʻquvchiga siz haqingizda nimani koʻrsatadi. Istalgan tilda yozishingiz mumkin; inshoning oʻzi ingliz tilida boʻladi.",
+    "ru": "Прочитайте тему и три вопроса под ней. Затем из банка историй выпишите 2 или 3 истории, которые могут ответить на эту тему, по 2-3 предложения. После каждой напишите одну строку: что эта история покажет читателю о вас. Можно писать на любом языке; само эссе будет на английском."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 40,
+     "max_words": 400,
+     "not_prompt": true
+    }
+   },
+   "variant_5min": "brainstorm_micro",
+   "facts": [
+    {
+     "claim": "Common App first-year essay prompts for 2026-2027: seven prompts, quoted verbatim in this item from the official page.",
+     "url": "https://www.commonapp.org/apply/essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "Common App announced that the essay prompts remain unchanged for 2026-2027 (post dated 27 Feb 2026).",
+     "url": "https://www.commonapp.org/blog/announcing-2026-2027-common-app-essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-capr07",
+   "kind": "essay_task",
+   "stage_step": "explore",
+   "type": "create",
+   "minutes": 20,
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "essay_lang": "any",
+   "prompt_n": 7,
+   "prompt_quote": {
+    "text": "Share an essay on any topic of your choice. It can be one you've already written, one that responds to a different prompt, or one of your own design.",
+    "lang": "en",
+    "attribution": "Common App, first-year essay prompts 2026-2027, prompt 7",
+    "url": "https://www.commonapp.org/apply/essay-prompts",
+    "verified_at": "2026-10-07"
+   },
+   "prompt_gloss": {
+    "en": null,
+    "uz": "Oʻzingiz tanlagan istalgan mavzuda insho yozing. Bu avval yozgan inshoingiz, boshqa savolga javob boʻlgan insho yoki oʻzingiz oʻylab topgan mavzudagi insho boʻlishi mumkin.",
+    "ru": "Напишите эссе на любую тему по вашему выбору. Это может быть эссе, которое вы уже написали, ответ на другой вопрос или эссе на тему вашего собственного замысла.",
+    "note": {
+     "en": "Unofficial translation, to help you understand. Write to the English wording.",
+     "uz": "Norasmiy tarjima, tushunishingiz uchun. Inshoni inglizcha matnga javoban yozing.",
+     "ru": "Неофициальный перевод, чтобы было понятнее. Пишите ответ на английскую формулировку."
+    }
+   },
+   "title": {
+    "en": "Explore prompt 7: a topic of your choice",
+    "uz": "7-savolni oʻrganing: oʻzingiz tanlagan mavzu",
+    "ru": "Разберите тему 7: тема на ваш выбор"
+   },
+   "what_it_asks": {
+    "en": "It lets you write about anything. It is a good choice when your best story does not fit the other six, or when you already have a strong essay.",
+    "uz": "U istalgan narsa haqida yozishga imkon beradi. Eng yaxshi hikoyangiz qolgan oltitaga mos kelmasa yoki sizda allaqachon kuchli insho boʻlsa, bu yaxshi tanlov.",
+    "ru": "Она позволяет писать о чём угодно. Это хороший выбор, если ваша лучшая история не подходит к остальным шести или у вас уже есть сильное эссе."
+   },
+   "think_about": [
+    {
+     "en": "Which story in your bank says the most about you, even if it fits no prompt?",
+     "uz": "Bankingizdagi qaysi hikoya, hech bir savolga mos kelmasa ham, siz haqingizda eng koʻp narsani aytadi?",
+     "ru": "Какая история в вашем банке больше всего говорит о вас, даже если не подходит ни к одной теме?"
+    },
+    {
+     "en": "What do you want a reader to remember about you after one reading?",
+     "uz": "Bir marta oʻqigan odam siz haqingizda nimani eslab qolishini xohlaysiz?",
+     "ru": "Что вы хотите, чтобы читатель запомнил о вас после одного прочтения?"
+    },
+    {
+     "en": "Does this essay add something that the rest of your application does not show?",
+     "uz": "Bu insho arizangizning boshqa qismlari koʻrsatmaydigan biror narsani qoʻshadimi?",
+     "ru": "Добавляет ли это эссе то, чего не показывает остальная заявка?"
+    }
+   ],
+   "watch_out": {
+    "en": "Freedom is not a reason to drift. Choose one clear idea about yourself and keep every paragraph tied to it.",
+    "uz": "Erkinlik mavzudan chetga chiqish uchun sabab emas. Oʻzingiz haqingizda bitta aniq gʻoyani tanlang va har bir xatboshini unga bogʻlang.",
+    "ru": "Свобода не повод отвлекаться. Выберите одну ясную мысль о себе и привяжите к ней каждый абзац."
+   },
+   "instructions": {
+    "en": "Read the prompt and the three questions under it. Then, from your story bank, write 2 or 3 stories that could answer this prompt, 2-3 sentences each. After each one, write one line: what this story would show a reader about you. You may write in any language; the essay itself will be in English.",
+    "uz": "Savolni va uning ostidagi uchta savolni oʻqing. Soʻng hikoyalar bankingizdan shu savolga javob boʻla oladigan 2 yoki 3 ta hikoyani yozing, har biriga 2-3 gap. Har biridan keyin bitta qator yozing: bu hikoya oʻquvchiga siz haqingizda nimani koʻrsatadi. Istalgan tilda yozishingiz mumkin; inshoning oʻzi ingliz tilida boʻladi.",
+    "ru": "Прочитайте тему и три вопроса под ней. Затем из банка историй выпишите 2 или 3 истории, которые могут ответить на эту тему, по 2-3 предложения. После каждой напишите одну строку: что эта история покажет читателю о вас. Можно писать на любом языке; само эссе будет на английском."
+   },
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 40,
+     "max_words": 400,
+     "not_prompt": true
+    }
+   },
+   "variant_5min": "brainstorm_micro",
+   "facts": [
+    {
+     "claim": "Common App first-year essay prompts for 2026-2027: seven prompts, quoted verbatim in this item from the official page.",
+     "url": "https://www.commonapp.org/apply/essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "Common App announced that the essay prompts remain unchanged for 2026-2027 (post dated 27 Feb 2026).",
+     "url": "https://www.commonapp.org/blog/announcing-2026-2027-common-app-essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  }
+ ]
+}

@@ -1,0 +1,921 @@
+{
+  "bank": "K4",
+  "batch": 8,
+  "items": [
+    {
+      "id": "K4-ge0021",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A cylinder has a radius of {r} cm and a height of {h} cm. Its volume is kπ cm³. What is k?",
+        "params": {
+          "r": {
+            "min": 2,
+            "max": 6,
+            "step": 1
+          },
+          "h": {
+            "min": 3,
+            "max": 10,
+            "step": 1
+          }
+        },
+        "answer": "r ^ 2 * h",
+        "variants": 40
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A cylinder has a radius of {r} cm and a height of {h} cm. Its volume is kπ cm³. What is k?",
+        "uz": "Silindrning radiusi {r} sm, balandligi {h} sm. Uning hajmi kπ sm³ ga teng. k ni toping.",
+        "ru": "Радиус цилиндра {r} см, высота {h} см. Его объём равен kπ см³. Найдите k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Volume of a cylinder = πr²h.",
+        "uz": "Silindr hajmi = πr²h.",
+        "ru": "Объём цилиндра = πr²h."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0022",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "right_triangle_trig",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "In a right triangle one acute angle is 30° and the hypotenuse is {c} cm. How long is the side opposite the 30° angle, in cm?",
+        "params": {
+          "c": {
+            "min": 4,
+            "max": 30,
+            "step": 2
+          }
+        },
+        "answer": "c / 2",
+        "variants": 14
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In a right triangle one acute angle is 30° and the hypotenuse is {c} cm. How long is the side opposite the 30° angle, in cm?",
+        "uz": "Toʻgʻri burchakli uchburchakda oʻtkir burchaklardan biri 30°, gipotenuzasi {c} sm. 30° li burchak qarshisidagi katet necha sm?",
+        "ru": "В прямоугольном треугольнике один из острых углов равен 30°, гипотенуза — {c} см. Найдите катет, лежащий против угла 30° (в см)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The side opposite 30° is half the hypotenuse (sin 30° = 1/2).",
+        "uz": "30° qarshisidagi katet gipotenuzaning yarmiga teng (sin 30° = 1/2).",
+        "ru": "Катет против угла 30° равен половине гипотенузы (sin 30° = 1/2)."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0023",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Four angles meet at a point: 110°, 95°, 70° and x. What is x, in degrees?",
+        "uz": "Bir nuqta atrofida toʻrtta burchak bor: 110°, 95°, 70° va x. x necha gradus?",
+        "ru": "Вокруг точки расположены четыре угла: 110°, 95°, 70° и x. Найдите x (в градусах)."
+      },
+      "answer_numeric": {
+        "value": 85,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Angles around a point add up to 360°: 360 − 275 = 85.",
+        "uz": "Nuqta atrofidagi burchaklar yigʻindisi 360°: 360 − 275 = 85.",
+        "ru": "Сумма углов вокруг точки равна 360°: 360 − 275 = 85."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0024",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "An angle is 4 times as large as its complement. How many degrees is the angle?",
+        "uz": "Burchak uni 90° gacha toʻldiruvchi burchakdan 4 marta katta. Bu burchak necha gradus?",
+        "ru": "Угол в 4 раза больше угла, дополняющего его до 90°. Найдите этот угол (в градусах)."
+      },
+      "answer_numeric": {
+        "value": 72,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "x = 4(90° − x), so 5x = 360° and x = 72°.",
+        "uz": "x = 4(90° − x), demak, 5x = 360° va x = 72°.",
+        "ru": "x = 4(90° − x), значит, 5x = 360° и x = 72°."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0025",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "triangle_angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The angles of a triangle are in the ratio 2 : 3 : 4. What is the largest angle, in degrees?",
+        "uz": "Uchburchak burchaklari 2 : 3 : 4 nisbatda. Eng katta burchagi necha gradus?",
+        "ru": "Углы треугольника относятся как 2 : 3 : 4. Найдите наибольший угол (в градусах)."
+      },
+      "answer_numeric": {
+        "value": 80,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "9 parts make 180°, so one part is 20° and 4 parts are 80°.",
+        "uz": "9 qism 180° ni tashkil etadi, bir qism 20°, 4 qism 80°.",
+        "ru": "9 частей составляют 180°, одна часть — 20°, четыре части — 80°."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0026",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "pythagoras",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A rectangle measures 9 cm by 12 cm. How long is its diagonal, in cm?",
+        "uz": "Toʻgʻri toʻrtburchakning tomonlari 9 sm va 12 sm. Uning diagonali necha sm?",
+        "ru": "Стороны прямоугольника 9 см и 12 см. Найдите его диагональ (в см)."
+      },
+      "answer_numeric": {
+        "value": 15,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The diagonal is the hypotenuse: √(9² + 12²) = √225 = 15.",
+        "uz": "Diagonal — gipotenuza: √(9² + 12²) = √225 = 15.",
+        "ru": "Диагональ — это гипотенуза: √(9² + 12²) = √225 = 15."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0027",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A circle has a circumference of 18π cm. What is its area?",
+        "uz": "Aylananing uzunligi 18π sm. Doiraning yuzi qancha?",
+        "ru": "Длина окружности 18π см. Найдите площадь круга."
+      },
+      "options": [
+        {
+          "en": "81π cm²",
+          "uz": "81π sm²",
+          "ru": "81π см²"
+        },
+        {
+          "en": "324π cm²",
+          "uz": "324π sm²",
+          "ru": "324π см²"
+        },
+        {
+          "en": "36π cm²",
+          "uz": "36π sm²",
+          "ru": "36π см²"
+        },
+        {
+          "en": "18π cm²",
+          "uz": "18π sm²",
+          "ru": "18π см²"
+        }
+      ],
+      "why": {
+        "en": "2πr = 18π gives r = 9, so the area is π × 9² = 81π cm².",
+        "uz": "2πr = 18π dan r = 9, demak, yuza π × 9² = 81π sm².",
+        "ru": "Из 2πr = 18π получаем r = 9, значит, площадь π × 9² = 81π см²."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.35,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0028",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "area_perimeter",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A square has a diagonal of 8 cm. What is its area, in cm²?",
+        "uz": "Kvadratning diagonali 8 sm. Uning yuzi necha sm²?",
+        "ru": "Диагональ квадрата 8 см. Найдите его площадь (в см²)."
+      },
+      "answer_numeric": {
+        "value": 32,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Side² + side² = 8² = 64, so side² (the area) = 32.",
+        "uz": "Tomon² + tomon² = 8² = 64, demak, tomon² (yuza) = 32.",
+        "ru": "Сторона² + сторона² = 8² = 64, значит, сторона² (площадь) = 32."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0029",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A wheel has a radius of 35 cm. Taking π as 22/7, how many centimetres does it roll in one full turn?",
+        "uz": "Gʻildirakning radiusi 35 sm. π ≈ 22/7 deb olib, gʻildirak bir marta toʻliq aylanganda necha sm yoʻl bosishini toping.",
+        "ru": "Радиус колеса 35 см. Считая π ≈ 22/7, найдите, сколько сантиметров колесо проедет за один полный оборот."
+      },
+      "answer_numeric": {
+        "value": 220,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "One turn equals the circumference: 2 × 22/7 × 35 = 220 cm.",
+        "uz": "Bir aylanish aylana uzunligiga teng: 2 × 22/7 × 35 = 220 sm.",
+        "ru": "Один оборот равен длине окружности: 2 × 22/7 × 35 = 220 см."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0030",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "transformations",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The point (3, −2) is reflected in the x-axis. What are the coordinates of its image?",
+        "uz": "(3; −2) nuqta x oʻqiga nisbatan simmetrik akslantirildi. Hosil boʻlgan nuqtaning koordinatalari qanday?",
+        "ru": "Точку (3; −2) отразили симметрично относительно оси x. Каковы координаты полученной точки?"
+      },
+      "options": [
+        {
+          "en": "(3, 2)",
+          "uz": "(3; 2)",
+          "ru": "(3; 2)"
+        },
+        {
+          "en": "(−3, −2)",
+          "uz": "(−3; −2)",
+          "ru": "(−3; −2)"
+        },
+        {
+          "en": "(−3, 2)",
+          "uz": "(−3; 2)",
+          "ru": "(−3; 2)"
+        },
+        {
+          "en": "(−2, 3)",
+          "uz": "(−2; 3)",
+          "ru": "(−2; 3)"
+        }
+      ],
+      "why": {
+        "en": "Reflecting in the x-axis keeps x and changes the sign of y.",
+        "uz": "x oʻqiga nisbatan simmetriyada x oʻzgarmaydi, y ning ishorasi esa almashadi.",
+        "ru": "При симметрии относительно оси x координата x сохраняется, а y меняет знак."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.35,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0031",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "transformations",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The point (2, 5) is moved 4 units to the left and 3 units down. Where does it end up?",
+        "uz": "(2; 5) nuqta 4 birlik chapga va 3 birlik pastga surildi. U qaysi nuqtaga keldi?",
+        "ru": "Точку (2; 5) сдвинули на 4 единицы влево и на 3 единицы вниз. Где она оказалась?"
+      },
+      "options": [
+        {
+          "en": "(−2, 2)",
+          "uz": "(−2; 2)",
+          "ru": "(−2; 2)"
+        },
+        {
+          "en": "(6, 8)",
+          "uz": "(6; 8)",
+          "ru": "(6; 8)"
+        },
+        {
+          "en": "(6, 2)",
+          "uz": "(6; 2)",
+          "ru": "(6; 2)"
+        },
+        {
+          "en": "(−2, 8)",
+          "uz": "(−2; 8)",
+          "ru": "(−2; 8)"
+        }
+      ],
+      "why": {
+        "en": "Left subtracts from x (2 − 4 = −2); down subtracts from y (5 − 3 = 2).",
+        "uz": "Chapga surish x dan ayiradi (2 − 4 = −2), pastga surish y dan ayiradi (5 − 3 = 2).",
+        "ru": "Сдвиг влево уменьшает x (2 − 4 = −2), сдвиг вниз уменьшает y (5 − 3 = 2)."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.35,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0032",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "right_triangle_trig",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In right triangle ABC, ∠C = 90°, AC = 3 and BC = 4. What is sin A?",
+        "uz": "ABC toʻgʻri burchakli uchburchakda ∠C = 90°, AC = 3, BC = 4. sin A ni toping.",
+        "ru": "В прямоугольном треугольнике ABC ∠C = 90°, AC = 3, BC = 4. Найдите sin A."
+      },
+      "options": [
+        {
+          "en": "4/5",
+          "uz": "4/5",
+          "ru": "4/5"
+        },
+        {
+          "en": "3/5",
+          "uz": "3/5",
+          "ru": "3/5"
+        },
+        {
+          "en": "3/4",
+          "uz": "3/4",
+          "ru": "3/4"
+        },
+        {
+          "en": "4/3",
+          "uz": "4/3",
+          "ru": "4/3"
+        }
+      ],
+      "why": {
+        "en": "AB = 5; sin A = opposite side ÷ hypotenuse = BC ÷ AB = 4/5.",
+        "uz": "AB = 5; sin A = qarshidagi katet : gipotenuza = BC : AB = 4/5.",
+        "ru": "AB = 5; sin A = противолежащий катет : гипотенуза = BC : AB = 4/5."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.35,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0033",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "solids",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "How many edges does a cube have?",
+        "uz": "Kubning nechta qirrasi bor?",
+        "ru": "Сколько рёбер у куба?"
+      },
+      "answer_numeric": {
+        "value": 12,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "4 edges on the top face, 4 on the bottom face and 4 vertical edges: 12.",
+        "uz": "Yuqori yoqda 4 ta, pastki yoqda 4 ta va 4 ta tik qirra: jami 12.",
+        "ru": "4 ребра у верхней грани, 4 у нижней и 4 вертикальных: всего 12."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 12,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0034",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "triangle_inequality",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A triangle has sides of 7 cm, 10 cm and x cm. Which value of x is possible?",
+        "uz": "Uchburchakning tomonlari 7 sm, 10 sm va x sm. x ning qaysi qiymati boʻlishi mumkin?",
+        "ru": "Стороны треугольника равны 7 см, 10 см и x см. Какое значение x возможно?"
+      },
+      "options": [
+        {
+          "en": "12",
+          "uz": "12",
+          "ru": "12"
+        },
+        {
+          "en": "2",
+          "uz": "2",
+          "ru": "2"
+        },
+        {
+          "en": "17",
+          "uz": "17",
+          "ru": "17"
+        },
+        {
+          "en": "20",
+          "uz": "20",
+          "ru": "20"
+        }
+      ],
+      "why": {
+        "en": "Each side must be shorter than the sum of the other two, so 3 < x < 17.",
+        "uz": "Har bir tomon qolgan ikkitasining yigʻindisidan kichik boʻlishi kerak, demak, 3 < x < 17.",
+        "ru": "Каждая сторона меньше суммы двух других, поэтому 3 < x < 17."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.35,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0035",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "pythagoras",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Which three lengths can be the sides of a right triangle?",
+        "uz": "Qaysi uchta kesmadan toʻgʻri burchakli uchburchak yasash mumkin?",
+        "ru": "Из каких трёх отрезков можно составить прямоугольный треугольник?"
+      },
+      "options": [
+        {
+          "en": "7, 24, 25",
+          "uz": "7, 24, 25",
+          "ru": "7, 24, 25"
+        },
+        {
+          "en": "6, 8, 12",
+          "uz": "6, 8, 12",
+          "ru": "6, 8, 12"
+        },
+        {
+          "en": "5, 11, 12",
+          "uz": "5, 11, 12",
+          "ru": "5, 11, 12"
+        },
+        {
+          "en": "4, 6, 8",
+          "uz": "4, 6, 8",
+          "ru": "4, 6, 8"
+        }
+      ],
+      "why": {
+        "en": "7² + 24² = 49 + 576 = 625 = 25²; the other sets fail this test.",
+        "uz": "7² + 24² = 49 + 576 = 625 = 25²; qolgan toʻplamlar bu shartni bajarmaydi.",
+        "ru": "7² + 24² = 49 + 576 = 625 = 25²; остальные наборы этому условию не удовлетворяют."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.35,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0036",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The radius of a cylinder is doubled and its height stays the same. How many times larger does its volume become?",
+        "uz": "Silindrning radiusi 2 marta oshirildi, balandligi esa oʻzgarmadi. Uning hajmi necha marta ortadi?",
+        "ru": "Радиус цилиндра увеличили в 2 раза, а высоту оставили прежней. Во сколько раз увеличится его объём?"
+      },
+      "answer_numeric": {
+        "value": 4,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Volume is πr²h, so doubling r multiplies it by 2² = 4.",
+        "uz": "Hajm = πr²h, shuning uchun r ni 2 marta oshirsak, hajm 2² = 4 marta ortadi.",
+        "ru": "Объём равен πr²h, поэтому при увеличении r в 2 раза объём растёт в 2² = 4 раза."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0037",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A cube has a volume of 64 cm³. How long is each edge, in cm?",
+        "uz": "Kubning hajmi 64 sm³. Uning qirrasi necha sm?",
+        "ru": "Объём куба 64 см³. Найдите длину его ребра (в см)."
+      },
+      "answer_numeric": {
+        "value": 4,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "4 × 4 × 4 = 64.",
+        "uz": "4 × 4 × 4 = 64.",
+        "ru": "4 × 4 × 4 = 64."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 12,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0038",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "polygon_angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is the sum of the exterior angles of any convex polygon, one at each vertex, in degrees?",
+        "uz": "Har qanday qavariq koʻpburchakning tashqi burchaklari yigʻindisi (har bir uchida bittadan) necha gradus?",
+        "ru": "Чему равна сумма внешних углов любого выпуклого многоугольника, взятых по одному при каждой вершине (в градусах)?"
+      },
+      "answer_numeric": {
+        "value": 360,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Going once around the polygon you turn through one full turn: 360°.",
+        "uz": "Koʻpburchakni bir marta aylanib chiqqanda roppa-rosa bir toʻliq aylanishga, yaʼni 360° ga burilasiz.",
+        "ru": "Обходя многоугольник один раз, вы поворачиваетесь на полный оборот: 360°."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 12,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0039",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "pythagoras",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A 13 m ladder leans against a wall. Its foot is 5 m from the wall. How high up the wall does the top of the ladder reach, in metres?",
+        "uz": "Uzunligi 13 m boʻlgan narvon devorga suyab qoʻyilgan. Uning pastki uchi devordan 5 m uzoqlikda. Narvonning yuqori uchi devorning qanday balandligiga yetadi (metrda)?",
+        "ru": "Лестница длиной 13 м приставлена к стене. Её нижний конец находится в 5 м от стены. На какой высоте (в метрах) верхний конец касается стены?"
+      },
+      "answer_numeric": {
+        "value": 12,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The ladder is the hypotenuse: √(13² − 5²) = √144 = 12.",
+        "uz": "Narvon — gipotenuza: √(13² − 5²) = √144 = 12.",
+        "ru": "Лестница — гипотенуза: √(13² − 5²) = √144 = 12."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ge0040",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "similarity",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Two similar rectangles have widths of 3 cm and 6 cm. The smaller one has an area of 10 cm². What is the area of the larger one, in cm²?",
+        "uz": "Ikki oʻxshash toʻgʻri toʻrtburchakning enlari 3 sm va 6 sm. Kichigining yuzi 10 sm². Kattasining yuzi necha sm²?",
+        "ru": "Два подобных прямоугольника имеют ширину 3 см и 6 см. Площадь меньшего — 10 см². Найдите площадь большего (в см²)."
+      },
+      "answer_numeric": {
+        "value": 40,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "All lengths double, so the area grows by 2² = 4: 10 × 4 = 40.",
+        "uz": "Barcha uzunliklar 2 marta oshadi, demak, yuza 2² = 4 marta oshadi: 10 × 4 = 40.",
+        "ru": "Все длины увеличиваются в 2 раза, значит, площадь — в 2² = 4 раза: 10 × 4 = 40."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.35,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

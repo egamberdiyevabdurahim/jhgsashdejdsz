@@ -1,0 +1,1232 @@
+{
+ "bank": "C19",
+ "batch": 11,
+ "kind": "lessons",
+ "note": "AP Calculus AB lesson bodies, phase 2 (SPEC-lessons rev. 2, 12 Oct 2026, §3.5, §11.1, §12.5 item 3; .superpowers/p7/PLAN.md author a3): lessons 1-3 of the C10 units APCA01 (Limits and Continuity) and APCA02 (Differentiation: Definition and Fundamental Properties). `lessons` are template lessons (test and homework draw on the C1 families they name; C1-ap1001 … ap1007 are in C1-9.json); `items` are their piece questions (the key is options[0]; `page` names the lesson). Our own wording; no College Board item or text was used or adapted. Every worked line and key is checked by sympy (.superpowers/p7/a3/sympy_check.py). JG's own content: it never says or implies that JIA teaches AP. Key check 2 by P7 blind checkers 3 and 4 (13 Oct 2026, blind:P7s3+P7s4; C19/RECONCILE-p7.md part 2): the 18 piece questions and the six lessons are verified_auto.",
+ "lessons": [
+  {
+   "kind": "lesson",
+   "id": "C19-APCA01-1",
+   "course": "ap_calc_ab",
+   "unit": "C10-APCA01",
+   "seq": 1,
+   "skill": "ap_calc_ab:APCA01",
+   "requires": {
+    "math_rung_min": "precalc"
+   },
+   "title": {
+    "en": "AP Calculus AB: What a limit is",
+    "uz": "AP Calculus AB: Limit nima",
+    "ru": "AP Calculus AB: Что такое предел"
+   },
+   "minutes": 7,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "The limit of f(x) as x approaches c is the value f(x) gets close to when x gets close to c, from both sides.\nA table shows it. g(x) = (x² − 4)/(x − 2) is not defined at x = 2, yet g(1.9) = 3.9, g(1.99) = 3.99, g(2.01) = 4.01, g(2.1) = 4.1.\nSo the limit of g(x) as x approaches 2 is 4.\nOne-sided limits: from the left x < c, from the right x > c. The limit exists only when the two agree.\nFor a polynomial you can simply put x = c in.",
+      "uz": "x c ga intilganda f(x) ning limiti — bu x ikki tomondan c ga yaqinlashganda f(x) yaqinlashadigan qiymat.\nJadval buni koʻrsatadi. g(x) = (x² − 4)/(x − 2) funksiya x = 2 da aniqlanmagan, lekin g(1,9) = 3,9, g(1,99) = 3,99, g(2,01) = 4,01, g(2,1) = 4,1.\nDemak x 2 ga intilganda g(x) ning limiti 4 ga teng.\nBir tomonli limitlar: chapdan x < c, oʻngdan x > c. Limit faqat ikkalasi teng boʻlganda mavjud.\nKoʻphad uchun shunchaki x = c ni qoʻyish mumkin.",
+      "ru": "Предел f(x) при x → c — это значение, к которому приближается f(x), когда x приближается к c с обеих сторон.\nЭто видно по таблице. g(x) = (x² − 4)/(x − 2) не определена при x = 2, но g(1,9) = 3,9, g(1,99) = 3,99, g(2,01) = 4,01, g(2,1) = 4,1.\nЗначит, предел g(x) при x → 2 равен 4.\nОдносторонние пределы: слева x < c, справа x > c. Предел существует, только если они совпадают.\nДля многочлена можно просто подставить x = c."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca11q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "What is the limit of x² + 4x − 5 as x approaches 2?\nA polynomial has no gaps, so put x = 2 in: 2² + 4 × 2 − 5 = 4 + 8 − 5 = 7.\nThe limit is 7.\nNow you: what is the limit of x² + 3x − 6 as x approaches 3?\n3² + 3 × 3 − 6 = 9 + 9 − 6 = ?",
+      "uz": "x 2 ga intilganda x² + 4x − 5 ning limiti nechaga teng?\nKoʻphadda uzilish yoʻq, shuning uchun x = 2 ni qoʻyamiz: 2² + 4 × 2 − 5 = 4 + 8 − 5 = 7.\nLimit 7 ga teng.\nEndi siz: x 3 ga intilganda x² + 3x − 6 ning limiti nechaga teng?\n3² + 3 × 3 − 6 = 9 + 9 − 6 = ?",
+      "ru": "Чему равен предел x² + 4x − 5 при x → 2?\nУ многочлена нет разрывов, поэтому подставляем x = 2: 2² + 4 × 2 − 5 = 4 + 8 − 5 = 7.\nПредел равен 7.\nТеперь попробуйте сами: чему равен предел x² + 3x − 6 при x → 3?\n3² + 3 × 3 − 6 = 9 + 9 − 6 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca11q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "The limit is where f(x) is heading, not the value f(c).\nIf g(x) = 2x + 1 for x ≠ 2 and g(2) = 9, the limit at 2 is 5, not 9.\nAnd the two sides must agree. f(x) = x + 4 when x < 3 and f(x) = 2x when x ≥ 3:\nfrom the left f(x) → 3 + 4 = 7, from the right f(x) → 2 × 3 = 6.\n7 ≠ 6, so the limit of f(x) as x approaches 3 does not exist.",
+      "uz": "Limit — f(x) qayerga intilayotgani, f(c) qiymati emas.\nAgar x ≠ 2 da g(x) = 2x + 1 va g(2) = 9 boʻlsa, 2 dagi limit 9 emas, 5 ga teng.\nIkki tomon ham mos kelishi kerak. x < 3 da f(x) = x + 4, x ≥ 3 da f(x) = 2x:\nchapdan f(x) → 3 + 4 = 7, oʻngdan f(x) → 2 × 3 = 6.\n7 ≠ 6, demak x 3 ga intilganda f(x) ning limiti mavjud emas.",
+      "ru": "Предел — это то, куда стремится f(x), а не значение f(c).\nЕсли g(x) = 2x + 1 при x ≠ 2 и g(2) = 9, то предел в точке 2 равен 5, а не 9.\nИ пределы с обеих сторон должны совпадать. f(x) = x + 4 при x < 3 и f(x) = 2x при x ≥ 3:\nслева f(x) → 3 + 4 = 7, справа f(x) → 2 × 3 = 6.\n7 ≠ 6, значит, предела f(x) при x → 3 не существует."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca11q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ap1001",
+     "C1-clp001"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ap1001",
+     "C1-clp001",
+     "C1-r3a001"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APCA01#official",
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APCA01-2",
+   "course": "ap_calc_ab",
+   "unit": "C10-APCA01",
+   "seq": 2,
+   "skill": "ap_calc_ab:APCA01",
+   "requires": {
+    "math_rung_min": "precalc"
+   },
+   "title": {
+    "en": "AP Calculus AB: Limits of the form 0/0 and limits at infinity",
+    "uz": "AP Calculus AB: 0/0 koʻrinishidagi limitlar va cheksizlikdagi limitlar",
+    "ru": "AP Calculus AB: Пределы вида 0/0 и пределы на бесконечности"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "If putting x = c in gives 0/0, you are not done: the top and the bottom share a factor.\nFactor and cancel: (x² − 9)/(x − 3) = (x − 3)(x + 3)/(x − 3) = x + 3, so the limit as x → 3 is 3 + 3 = 6.\nWith a square root, multiply the top and the bottom by the conjugate:\n(√(x + 9) − 3)/x = (x + 9 − 9)/(x(√(x + 9) + 3)) = 1/(√(x + 9) + 3), so the limit as x → 0 is 1/(3 + 3) = 1/6.",
+      "uz": "Agar x = c ni qoʻyganda 0/0 chiqsa, ish tugamagan: surat va maxrajda umumiy koʻpaytuvchi bor.\nKoʻpaytuvchilarga ajrating va qisqartiring: (x² − 9)/(x − 3) = (x − 3)(x + 3)/(x − 3) = x + 3, demak x → 3 da limit 3 + 3 = 6.\nIldiz boʻlsa, surat va maxrajni qoʻshma ifodaga koʻpaytiring:\n(√(x + 9) − 3)/x = (x + 9 − 9)/(x(√(x + 9) + 3)) = 1/(√(x + 9) + 3), demak x → 0 da limit 1/(3 + 3) = 1/6.",
+      "ru": "Если подстановка x = c даёт 0/0, это ещё не ответ: у числителя и знаменателя есть общий множитель.\nРазложите на множители и сократите: (x² − 9)/(x − 3) = (x − 3)(x + 3)/(x − 3) = x + 3, значит, предел при x → 3 равен 3 + 3 = 6.\nЕсли есть корень, умножьте числитель и знаменатель на сопряжённое выражение:\n(√(x + 9) − 3)/x = (x + 9 − 9)/(x(√(x + 9) + 3)) = 1/(√(x + 9) + 3), значит, предел при x → 0 равен 1/(3 + 3) = 1/6."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca12q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "What is the limit of (x² + 2x − 15)/(x − 3) as x approaches 3?\nx = 3 gives (9 + 6 − 15)/0 = 0/0, so factor the top: x² + 2x − 15 = (x − 3)(x + 5).\nCancel (x − 3) and put x = 3: 3 + 5 = 8.\nNow you: what is the limit of (x² + 3x − 10)/(x − 2) as x approaches 2?\nx² + 3x − 10 = (x − 2)(x + 5) → 2 + 5 = ?",
+      "uz": "x 3 ga intilganda (x² + 2x − 15)/(x − 3) ning limiti nechaga teng?\nx = 3 da (9 + 6 − 15)/0 = 0/0 chiqadi, shuning uchun suratni ajratamiz: x² + 2x − 15 = (x − 3)(x + 5).\n(x − 3) ni qisqartirib, x = 3 ni qoʻyamiz: 3 + 5 = 8.\nEndi siz: x 2 ga intilganda (x² + 3x − 10)/(x − 2) ning limiti nechaga teng?\nx² + 3x − 10 = (x − 2)(x + 5) → 2 + 5 = ?",
+      "ru": "Чему равен предел (x² + 2x − 15)/(x − 3) при x → 3?\nПри x = 3 получаем (9 + 6 − 15)/0 = 0/0, поэтому раскладываем числитель: x² + 2x − 15 = (x − 3)(x + 5).\nСокращаем (x − 3) и подставляем x = 3: 3 + 5 = 8.\nТеперь попробуйте сами: чему равен предел (x² + 3x − 10)/(x − 2) при x → 2?\nx² + 3x − 10 = (x − 2)(x + 5) → 2 + 5 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca12q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "As x → ∞ you cannot put a number in, and the constant terms decide nothing.\nDivide the top and the bottom by the highest power of x:\n(6x² + x)/(2x² − 5) → 6/2 = 3, because x/x² and 5/x² go to 0.\nThe same highest power on top and bottom: the ratio of the leading coefficients. A higher power on the bottom: the limit is 0.",
+      "uz": "x → ∞ da son qoʻyib boʻlmaydi, ozod hadlar esa hech narsani hal qilmaydi.\nSurat va maxrajni x ning eng katta darajasiga boʻling:\n(6x² + x)/(2x² − 5) → 6/2 = 3, chunki x/x² va 5/x² 0 ga intiladi.\nSurat va maxrajda eng katta daraja bir xil boʻlsa, limit bosh koeffitsiyentlar nisbati. Maxrajdagi daraja kattaroq boʻlsa, limit 0.",
+      "ru": "При x → ∞ число не подставишь, а свободные члены ничего не решают.\nРазделите числитель и знаменатель на старшую степень x:\n(6x² + x)/(2x² − 5) → 6/2 = 3, потому что x/x² и 5/x² стремятся к 0.\nСтаршая степень в числителе и знаменателе одна и та же: предел равен отношению старших коэффициентов. Старшая степень в знаменателе больше: предел равен 0."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca12q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-cal012",
+     "C1-cal011",
+     "C1-ap1002"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-cal012",
+     "C1-cal011",
+     "C1-ap1002"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APCA01#official",
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APCA01-3",
+   "course": "ap_calc_ab",
+   "unit": "C10-APCA01",
+   "seq": 3,
+   "skill": "ap_calc_ab:APCA01",
+   "requires": {
+    "math_rung_min": "precalc"
+   },
+   "title": {
+    "en": "AP Calculus AB: Continuity and the Intermediate Value Theorem",
+    "uz": "AP Calculus AB: Uzluksizlik va oraliq qiymat teoremasi",
+    "ru": "AP Calculus AB: Непрерывность и теорема о промежуточном значении"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "f is continuous at x = c when three things hold: f(c) exists, the limit of f(x) as x → c exists, and the two are equal. On a graph: no hole, no jump, no break.\nA hole is a removable discontinuity. g(x) = (x² − 9)/(x − 3) is not defined at 3, but its limit there is 3 + 3 = 6. Define g(3) = 6 and the hole is filled.\nA jump, where the left and the right limits differ, cannot be removed.",
+      "uz": "f funksiya x = c nuqtada uzluksiz, agar uch shart bajarilsa: f(c) mavjud, x → c da f(x) ning limiti mavjud va ular teng. Grafikda: teshik yoʻq, sakrash yoʻq, uzilish yoʻq.\nTeshik — bartaraf qilinadigan uzilish. g(x) = (x² − 9)/(x − 3) funksiya 3 da aniqlanmagan, lekin u yerdagi limiti 3 + 3 = 6. g(3) = 6 deb olsak, teshik yopiladi.\nSakrashni, yaʼni chap va oʻng limitlar har xil boʻlgan holatni, bartaraf qilib boʻlmaydi.",
+      "ru": "f непрерывна в точке x = c, если выполнены три условия: f(c) существует, предел f(x) при x → c существует и они равны. На графике: ни «дырки» (выколотой точки), ни скачка, ни разрыва.\nДырка — устранимый разрыв. g(x) = (x² − 9)/(x − 3) не определена в точке 3, но её предел там равен 3 + 3 = 6. Положим g(3) = 6, и дырка закроется.\nСкачок, когда пределы слева и справа различны, устранить нельзя."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca13q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "f(x) = x² + 3 when x < 2, and f(x) = 4x + k when x ≥ 2. For which k is f continuous at x = 2?\nFrom the left: 2² + 3 = 7. From the right and at 2: 4 × 2 + k = 8 + k.\nThey must be equal: 8 + k = 7, so k = −1.\nNow you: f(x) = x² + 5 when x < 3, and f(x) = 2x + k when x ≥ 3.\n3² + 5 = 14 and 2 × 3 + k = 6 + k → 6 + k = 14 → k = ?",
+      "uz": "x < 2 boʻlganda f(x) = x² + 3, x ≥ 2 boʻlganda esa f(x) = 4x + k. k ning qaysi qiymatida f funksiya x = 2 nuqtada uzluksiz boʻladi?\nChapdan: 2² + 3 = 7. Oʻngdan va 2 nuqtada: 4 × 2 + k = 8 + k.\nUlar teng boʻlishi kerak: 8 + k = 7, demak k = −1.\nEndi siz: x < 3 boʻlganda f(x) = x² + 5, x ≥ 3 boʻlganda esa f(x) = 2x + k.\n3² + 5 = 14 va 2 × 3 + k = 6 + k → 6 + k = 14 → k = ?",
+      "ru": "f(x) = x² + 3 при x < 2 и f(x) = 4x + k при x ≥ 2. При каком k функция f непрерывна в точке x = 2?\nСлева: 2² + 3 = 7. Справа и в точке 2: 4 × 2 + k = 8 + k.\nОни должны быть равны: 8 + k = 7, значит, k = −1.\nТеперь попробуйте сами: f(x) = x² + 5 при x < 3 и f(x) = 2x + k при x ≥ 3.\n3² + 5 = 14 и 2 × 3 + k = 6 + k → 6 + k = 14 → k = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca13q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "The Intermediate Value Theorem: if f is continuous on [a, b], it takes every value between f(a) and f(b) somewhere in [a, b].\nIf f(1) = −2 and f(4) = 5, then f(x) = 0 has a solution between 1 and 4.\nWithout continuity there is no promise: 1/x is −1 at x = −1 and 1 at x = 1, but it is never 0.\nAnd the theorem says that a solution exists, not where it is.",
+      "uz": "Oraliq qiymat teoremasi (Intermediate Value Theorem): f funksiya [a; b] da uzluksiz boʻlsa, u [a; b] ning qayeridadir f(a) va f(b) orasidagi har bir qiymatni qabul qiladi.\nAgar f(1) = −2 va f(4) = 5 boʻlsa, f(x) = 0 tenglama 1 va 4 orasida yechimga ega.\nUzluksizlik boʻlmasa, kafolat yoʻq: 1/x funksiya x = −1 da −1, x = 1 da 1 ga teng, lekin hech qachon 0 boʻlmaydi.\nTeorema yechim borligini aytadi, uning qayerdaligini emas.",
+      "ru": "Теорема о промежуточном значении (Intermediate Value Theorem): если f непрерывна на [a; b], то где-то на [a; b] она принимает каждое значение между f(a) и f(b).\nЕсли f(1) = −2 и f(4) = 5, то уравнение f(x) = 0 имеет решение между 1 и 4.\nБез непрерывности гарантии нет: 1/x равна −1 при x = −1 и 1 при x = 1, но никогда не равна 0.\nИ теорема говорит лишь о том, что решение есть, но не о том, где оно."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca13q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ap1003",
+     "C1-clp001"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ap1003",
+     "C1-clp001",
+     "C1-cal011"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APCA01#official",
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APCA02-1",
+   "course": "ap_calc_ab",
+   "unit": "C10-APCA02",
+   "seq": 1,
+   "skill": "ap_calc_ab:APCA02",
+   "requires": {
+    "math_rung_min": "precalc"
+   },
+   "title": {
+    "en": "AP Calculus AB: The derivative as a limit",
+    "uz": "AP Calculus AB: Hosila limit sifatida",
+    "ru": "AP Calculus AB: Производная как предел"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "The average rate of change of f from x = a to x = b is (f(b) − f(a))/(b − a): the slope of the line through the two points.\nMake the gap h tiny and you get the rate at one point, the derivative:\nf′(a) = the limit of (f(a + h) − f(a))/h as h → 0.\nFor a position s(t), the average rate is the average velocity, and s′(t) is the velocity at the moment t.",
+      "uz": "x = a dan x = b gacha f ning oʻrtacha oʻzgarish tezligi (f(b) − f(a))/(b − a): ikki nuqtadan oʻtgan toʻgʻri chiziqning burchak koeffitsiyenti.\nh oraliqni juda kichik qiling, shunda bitta nuqtadagi tezlik — hosila chiqadi:\nf′(a) = h → 0 da (f(a + h) − f(a))/h ning limiti.\ns(t) — jismning joylashuvi (koordinatasi) boʻlsa, oʻrtacha oʻzgarish tezligi — oʻrtacha tezlik, s′(t) esa t paytdagi tezlik.",
+      "ru": "Средняя скорость изменения f от x = a до x = b равна (f(b) − f(a))/(b − a): это угловой коэффициент прямой через две точки.\nСделайте шаг h совсем малым, и получится скорость изменения в одной точке — производная:\nf′(a) = предел (f(a + h) − f(a))/h при h → 0.\nЕсли s(t) — положение тела, то средняя скорость изменения — это средняя скорость, а s′(t) — скорость в момент t."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca21q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "For f(x) = 2x² + 3x, f′(1) is the limit of (f(1 + h) − f(1))/h as h approaches 0. What is f′(1)?\nf(1 + h) = 2(1 + h)² + 3(1 + h) = 5 + 7h + 2h², and f(1) = 5.\n(f(1 + h) − f(1))/h = (7h + 2h²)/h = 7 + 2h → 7. So f′(1) = 7.\nNow you: f(x) = 3x² + 2x at x = 2.\nf(2 + h) = 16 + 14h + 3h² and f(2) = 16, so (14h + 3h²)/h = 14 + 3h. As h → 0: f′(2) = 14 + 3 × 0 = ?",
+      "uz": "f(x) = 2x² + 3x uchun f′(1) — bu h 0 ga intilganda (f(1 + h) − f(1))/h ning limiti. f′(1) nechaga teng?\nf(1 + h) = 2(1 + h)² + 3(1 + h) = 5 + 7h + 2h², f(1) = 5.\n(f(1 + h) − f(1))/h = (7h + 2h²)/h = 7 + 2h → 7. Demak f′(1) = 7.\nEndi siz: f(x) = 3x² + 2x, x = 2 da.\nf(2 + h) = 16 + 14h + 3h² va f(2) = 16, demak (14h + 3h²)/h = 14 + 3h. h → 0 da: f′(2) = 14 + 3 × 0 = ?",
+      "ru": "Для f(x) = 2x² + 3x производная f′(1) — это предел (f(1 + h) − f(1))/h при h → 0. Чему равно f′(1)?\nf(1 + h) = 2(1 + h)² + 3(1 + h) = 5 + 7h + 2h², а f(1) = 5.\n(f(1 + h) − f(1))/h = (7h + 2h²)/h = 7 + 2h → 7. Значит, f′(1) = 7.\nТеперь попробуйте сами: f(x) = 3x² + 2x в точке x = 2.\nf(2 + h) = 16 + 14h + 3h² и f(2) = 16, значит, (14h + 3h²)/h = 14 + 3h. При h → 0: f′(2) = 14 + 3 × 0 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca21q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Do not put h = 0 into (f(a + h) − f(a))/h straight away: that gives 0/0. Expand, cancel h first, and only then let h → 0.\nAnd the average rate over an interval is not the rate at a point. For s(t) = t² metres, the average velocity from t = 0 to t = 4 is 16/4 = 4 m/s,\nbut the velocity at t = 4 is the limit of ((4 + h)² − 16)/h = 8 + h, which is 8 m/s.",
+      "uz": "(f(a + h) − f(a))/h ga darhol h = 0 ni qoʻymang: 0/0 chiqadi. Avval qavslarni oching, h ni qisqartiring, shundan keyingina h ni 0 ga intiltiring.\nOraliqdagi oʻrtacha tezlik nuqtadagi tezlik emas. s(t) = t² metr boʻlsa, t = 0 dan t = 4 gacha oʻrtacha tezlik 16/4 = 4 m/s,\nlekin t = 4 dagi tezlik ((4 + h)² − 16)/h = 8 + h ning limiti, yaʼni 8 m/s.",
+      "ru": "Не подставляйте h = 0 в (f(a + h) − f(a))/h сразу: получится 0/0. Сначала раскройте скобки и сократите h, и только потом переходите к пределу при h → 0.\nИ средняя скорость на отрезке — не скорость в точке. Для s(t) = t² метров средняя скорость от t = 0 до t = 4 равна 16/4 = 4 м/с,\nа скорость при t = 4 — это предел ((4 + h)² − 16)/h = 8 + h, то есть 8 м/с."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca21q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ap1004",
+     "C1-clp004"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ap1004",
+     "C1-clp004",
+     "C1-r3a002"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APCA02#official",
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APCA02-2",
+   "course": "ap_calc_ab",
+   "unit": "C10-APCA02",
+   "seq": 2,
+   "skill": "ap_calc_ab:APCA02",
+   "requires": {
+    "math_rung_min": "precalc"
+   },
+   "title": {
+    "en": "AP Calculus AB: The power rule and the tangent line",
+    "uz": "AP Calculus AB: Daraja qoidasi va urinma",
+    "ru": "AP Calculus AB: Производная степени и касательная"
+   },
+   "minutes": 7,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Rules that save the limit work:\n(xⁿ)′ = n·xⁿ⁻¹; a constant times f gives the constant times f′; a sum is differentiated term by term; a constant alone gives 0.\nf(x) = 4x³ − 5x² + 7 → f′(x) = 12x² − 10x.\nWrite roots and fractions as powers first: √x = x^(1/2), so (√x)′ = 1/(2√x); 1/x² = x⁻², so (1/x²)′ = −2x⁻³.",
+      "uz": "Limit hisobini tejaydigan qoidalar:\n(xⁿ)′ = n·xⁿ⁻¹; oʻzgarmas son bilan f koʻpaytmasining hosilasi — oʻsha son bilan f′ koʻpaytmasi; yigʻindi had-had differensiallanadi; oʻzgarmas sonning hosilasi 0 ga teng.\nf(x) = 4x³ − 5x² + 7 → f′(x) = 12x² − 10x.\nIldiz va kasrlarni avval daraja shaklida yozing: √x = x^(1/2), demak (√x)′ = 1/(2√x); 1/x² = x⁻², demak (1/x²)′ = −2x⁻³.",
+      "ru": "Правила, которые избавляют от подсчёта пределов:\n(xⁿ)′ = n·xⁿ⁻¹; константа, умноженная на f, даёт ту же константу, умноженную на f′; сумма дифференцируется почленно; отдельная константа даёт 0.\nf(x) = 4x³ − 5x² + 7 → f′(x) = 12x² − 10x.\nКорни и дроби сначала запишите как степени: √x = x^(1/2), значит, (√x)′ = 1/(2√x); 1/x² = x⁻², значит, (1/x²)′ = −2x⁻³."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca22q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "The line tangent to the graph of f(x) = 2x² + 3x + 1 at x = 1 is y = mx + k. What is k?\nThe point: f(1) = 2 + 3 + 1 = 6. The slope: f′(x) = 4x + 3, so m = f′(1) = 7.\nThe line passes through (1, 6): 6 = 7 × 1 + k, so k = −1.\nNow you: f(x) = 3x² + 2x + 4 at x = 2.\nf(2) = 20, f′(x) = 6x + 2, m = 14 → 20 = 14 × 2 + k → k = ?",
+      "uz": "f(x) = 2x² + 3x + 1 funksiya grafigiga x = 1 nuqtada oʻtkazilgan urinma y = mx + k. k nechaga teng?\nNuqta: f(1) = 2 + 3 + 1 = 6. Burchak koeffitsiyenti: f′(x) = 4x + 3, demak m = f′(1) = 7.\nUrinma (1; 6) nuqtadan oʻtadi: 6 = 7 × 1 + k, demak k = −1.\nEndi siz: f(x) = 3x² + 2x + 4, x = 2 da.\nf(2) = 20, f′(x) = 6x + 2, m = 14 → 20 = 14 × 2 + k → k = ?",
+      "ru": "Касательная к графику f(x) = 2x² + 3x + 1 в точке x = 1 — это прямая y = mx + k. Чему равно k?\nТочка: f(1) = 2 + 3 + 1 = 6. Угловой коэффициент: f′(x) = 4x + 3, значит, m = f′(1) = 7.\nПрямая проходит через точку (1; 6): 6 = 7 × 1 + k, значит, k = −1.\nТеперь попробуйте сами: f(x) = 3x² + 2x + 4 в точке x = 2.\nf(2) = 20, f′(x) = 6x + 2, m = 14 → 20 = 14 × 2 + k → k = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca22q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Two slips to avoid.\n1. f′(c) is the slope, not a point: the tangent line goes through (c, f(c)) with slope f′(c).\n2. A power in the denominator is a negative power: 6/x² = 6x⁻², so its derivative is −12x⁻³ = −12/x³, not 6/(2x) and not 12/x³.",
+      "uz": "Ikki xatodan saqlaning.\n1. f′(c) — burchak koeffitsiyenti, nuqta emas: urinma (c; f(c)) nuqtadan f′(c) burchak koeffitsiyenti bilan oʻtadi.\n2. Maxrajdagi daraja — manfiy daraja: 6/x² = 6x⁻², demak uning hosilasi −12x⁻³ = −12/x³, 6/(2x) ham emas, 12/x³ ham emas.",
+      "ru": "Две ошибки, которых стоит избегать.\n1. f′(c) — угловой коэффициент, а не точка: касательная проходит через (c; f(c)) с угловым коэффициентом f′(c).\n2. Степень в знаменателе — это степень с отрицательным показателем: 6/x² = 6x⁻², поэтому производная равна −12x⁻³ = −12/x³, а не 6/(2x) и не 12/x³."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca22q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ap1005",
+     "C1-clp002"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ap1005",
+     "C1-clp002",
+     "C1-r3a003"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APCA02#official",
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APCA02-3",
+   "course": "ap_calc_ab",
+   "unit": "C10-APCA02",
+   "seq": 3,
+   "skill": "ap_calc_ab:APCA02",
+   "requires": {
+    "math_rung_min": "precalc"
+   },
+   "title": {
+    "en": "AP Calculus AB: Product and quotient rules; sin x, cos x and eˣ",
+    "uz": "AP Calculus AB: Koʻpaytma va boʻlinma hosilasi; sin x, cos x va eˣ",
+    "ru": "AP Calculus AB: Производная произведения и частного; sin x, cos x и eˣ"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Product rule: (uv)′ = u′v + uv′. Quotient rule: (u/v)′ = (u′v − uv′)/v².\nThree derivatives to know by heart: (sin x)′ = cos x, (cos x)′ = −sin x, (eˣ)′ = eˣ.\nExample: (x² sin x)′ = 2x sin x + x² cos x.\nAnd (x eˣ)′ = 1 · eˣ + x eˣ = (x + 1)eˣ.",
+      "uz": "Koʻpaytma hosilasi: (uv)′ = u′v + uv′. Boʻlinma hosilasi: (u/v)′ = (u′v − uv′)/v².\nYoddan bilish kerak boʻlgan uchta hosila: (sin x)′ = cos x, (cos x)′ = −sin x, (eˣ)′ = eˣ.\nMisol: (x² sin x)′ = 2x sin x + x² cos x.\nYana: (x eˣ)′ = 1 · eˣ + x eˣ = (x + 1)eˣ.",
+      "ru": "Производная произведения: (uv)′ = u′v + uv′. Производная частного: (u/v)′ = (u′v − uv′)/v².\nТри производные, которые нужно знать наизусть: (sin x)′ = cos x, (cos x)′ = −sin x, (eˣ)′ = eˣ.\nПример: (x² sin x)′ = 2x sin x + x² cos x.\nИ (x eˣ)′ = 1 · eˣ + x eˣ = (x + 1)eˣ."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca23q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "f(x) = (3x + 1)/(x + 2). What is f′(−1)?\nu = 3x + 1, v = x + 2, u′ = 3, v′ = 1.\nf′(x) = (3(x + 2) − (3x + 1) × 1)/(x + 2)² = 5/(x + 2)², so f′(−1) = 5/1² = 5.\nNow you: f(x) = (4x + 2)/(x + 3) at x = −2.\nf′(x) = (4(x + 3) − (4x + 2))/(x + 3)² = 10/(x + 3)² → f′(−2) = 10/1² = ?",
+      "uz": "f(x) = (3x + 1)/(x + 2). f′(−1) nechaga teng?\nu = 3x + 1, v = x + 2, u′ = 3, v′ = 1.\nf′(x) = (3(x + 2) − (3x + 1) × 1)/(x + 2)² = 5/(x + 2)², demak f′(−1) = 5/1² = 5.\nEndi siz: f(x) = (4x + 2)/(x + 3), x = −2 da.\nf′(x) = (4(x + 3) − (4x + 2))/(x + 3)² = 10/(x + 3)² → f′(−2) = 10/1² = ?",
+      "ru": "f(x) = (3x + 1)/(x + 2). Найдите f′(−1).\nu = 3x + 1, v = x + 2, u′ = 3, v′ = 1.\nf′(x) = (3(x + 2) − (3x + 1) × 1)/(x + 2)² = 5/(x + 2)², значит, f′(−1) = 5/1² = 5.\nТеперь попробуйте сами: f(x) = (4x + 2)/(x + 3) в точке x = −2.\nf′(x) = (4(x + 3) − (4x + 2))/(x + 3)² = 10/(x + 3)² → f′(−2) = 10/1² = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca23q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "The derivative of a quotient is not the quotient of the derivatives: for (3x + 1)/(x + 2), u′/v′ = 3/1 = 3, but f′(−1) = 5.\nKeep the order u′v − uv′: swapping it flips the sign.\nAnd keep the minus in (cos x)′ = −sin x. At x = π/2: sin(π/2) = 1 and cos(π/2) = 0.",
+      "uz": "Boʻlinmaning hosilasi hosilalarning boʻlinmasi emas: (3x + 1)/(x + 2) uchun u′/v′ = 3/1 = 3, lekin f′(−1) = 5.\nu′v − uv′ tartibini saqlang: almashtirsangiz, ishora oʻzgaradi.\n(cos x)′ = −sin x dagi minusni ham unutmang. x = π/2 da: sin(π/2) = 1 va cos(π/2) = 0.",
+      "ru": "Производная частного — не частное производных: для (3x + 1)/(x + 2) имеем u′/v′ = 3/1 = 3, но f′(−1) = 5.\nСохраняйте порядок u′v − uv′: если поменять его, знак изменится.\nИ не теряйте минус в (cos x)′ = −sin x. При x = π/2: sin(π/2) = 1 и cos(π/2) = 0."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ca23q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ap1006",
+     "C1-clp003",
+     "C1-ap1007"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ap1006",
+     "C1-clp003",
+     "C1-ap1007"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APCA02#official",
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ],
+ "items": [
+  {
+   "id": "C19-ca11q1",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits",
+   "page": "C19-APCA01-1",
+   "lang": "en",
+   "stem": {
+    "en": "The table shows values of h(x) near x = 3; h(3) is not defined. h(2.9) = 7.8, h(2.99) = 7.98, h(3.01) = 8.02, h(3.1) = 8.2. What does the limit of h(x) as x approaches 3 appear to be?",
+    "uz": "Jadvalda x = 3 atrofida h(x) ning qiymatlari berilgan; h(3) aniqlanmagan. h(2,9) = 7,8, h(2,99) = 7,98, h(3,01) = 8,02, h(3,1) = 8,2. x 3 ga intilganda h(x) ning limiti nechaga teng boʻlsa kerak?",
+    "ru": "В таблице даны значения h(x) около x = 3; h(3) не определено. h(2,9) = 7,8, h(2,99) = 7,98, h(3,01) = 8,02, h(3,1) = 8,2. Чему, судя по таблице, равен предел h(x) при x → 3?"
+   },
+   "options": [
+    {
+     "en": "8"
+    },
+    {
+     "en": "7.98",
+     "uz": "7,98",
+     "ru": "7,98"
+    },
+    {
+     "en": "8.02",
+     "uz": "8,02",
+     "ru": "8,02"
+    },
+    {
+     "en": "8.2",
+     "uz": "8,2",
+     "ru": "8,2"
+    }
+   ],
+   "why": {
+    "en": "From both sides h(x) gets close to 8 (7.98 from the left, 8.02 from the right), so the limit is 8. h(3) is not needed.",
+    "uz": "Ikki tomondan ham h(x) 8 ga yaqinlashadi (chapdan 7,98, oʻngdan 8,02), demak limit 8. h(3) kerak emas.",
+    "ru": "С обеих сторон h(x) приближается к 8 (слева 7,98, справа 8,02), значит, предел равен 8. Значение h(3) для этого не нужно."
+   },
+   "prior_b": 0.9,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca11q2",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits",
+   "page": "C19-APCA01-1",
+   "lang": "en",
+   "stem": {
+    "en": "What is the limit of x² + 3x − 6 as x approaches 3?",
+    "uz": "x 3 ga intilganda x² + 3x − 6 ning limiti nechaga teng?",
+    "ru": "Чему равен предел x² + 3x − 6 при x → 3?"
+   },
+   "options": [
+    {
+     "en": "12"
+    },
+    {
+     "en": "−6"
+    },
+    {
+     "en": "9"
+    },
+    {
+     "en": "24"
+    }
+   ],
+   "why": {
+    "en": "A polynomial has no gaps, so put x = 3 in: 9 + 9 − 6 = 12.",
+    "uz": "Koʻphadda uzilish yoʻq, shuning uchun x = 3 ni qoʻying: 9 + 9 − 6 = 12.",
+    "ru": "У многочлена нет разрывов, поэтому подставьте x = 3: 9 + 9 − 6 = 12."
+   },
+   "prior_b": 0.8,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca11q3",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits",
+   "page": "C19-APCA01-1",
+   "lang": "en",
+   "stem": {
+    "en": "For x < 2, g(x) = x + 5. For x ≥ 2, g(x) = 3x + 4. What is the one-sided limit of g(x) as x → 2 from the right?",
+    "uz": "x < 2 da g(x) = x + 5. x ≥ 2 da g(x) = 3x + 4. x oʻngdan 2 ga intilganda g(x) ning bir tomonli limiti nechaga teng?",
+    "ru": "Если x < 2, то g(x) = x + 5. Если x ≥ 2, то g(x) = 3x + 4. Чему равен односторонний предел g(x) при x → 2 справа?"
+   },
+   "options": [
+    {
+     "en": "10"
+    },
+    {
+     "en": "7"
+    },
+    {
+     "en": "8.5",
+     "uz": "8,5",
+     "ru": "8,5"
+    },
+    {
+     "en": "17"
+    }
+   ],
+   "why": {
+    "en": "From the right x ≥ 2, so use 3x + 4: 3 × 2 + 4 = 10. The left side's 7 does not count here.",
+    "uz": "Oʻngdan x ≥ 2, shuning uchun 3x + 4 ni oling: 3 × 2 + 4 = 10. Chap tomondagi 7 bu yerda hisobga olinmaydi.",
+    "ru": "Справа x ≥ 2, поэтому берём 3x + 4: 3 × 2 + 4 = 10. Значение слева, 7, здесь не учитывается."
+   },
+   "prior_b": 1.0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca12q1",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits",
+   "page": "C19-APCA01-2",
+   "lang": "en",
+   "stem": {
+    "en": "What is the limit of (√(x + 16) − 4)/x as x approaches 0?",
+    "uz": "x 0 ga intilganda (√(x + 16) − 4)/x ning limiti nechaga teng?",
+    "ru": "Чему равен предел (√(x + 16) − 4)/x при x → 0?"
+   },
+   "options": [
+    {
+     "en": "1/8"
+    },
+    {
+     "en": "1/4"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "8"
+    }
+   ],
+   "why": {
+    "en": "Multiply the top and the bottom by √(x + 16) + 4: the top becomes x, so the limit is 1/(√16 + 4) = 1/(4 + 4) = 1/8.",
+    "uz": "Surat va maxrajni √(x + 16) + 4 ga koʻpaytiring: surat x boʻladi, demak limit 1/(√16 + 4) = 1/(4 + 4) = 1/8.",
+    "ru": "Умножьте числитель и знаменатель на √(x + 16) + 4: в числителе останется x, значит, предел равен 1/(√16 + 4) = 1/(4 + 4) = 1/8."
+   },
+   "prior_b": 1.4,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca12q2",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits",
+   "page": "C19-APCA01-2",
+   "lang": "en",
+   "stem": {
+    "en": "What is the limit of (x² + 3x − 10)/(x − 2) as x approaches 2?",
+    "uz": "x 2 ga intilganda (x² + 3x − 10)/(x − 2) ning limiti nechaga teng?",
+    "ru": "Чему равен предел (x² + 3x − 10)/(x − 2) при x → 2?"
+   },
+   "options": [
+    {
+     "en": "7"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "10"
+    }
+   ],
+   "why": {
+    "en": "x² + 3x − 10 = (x − 2)(x + 5). Cancel (x − 2), then put x = 2: 2 + 5 = 7.",
+    "uz": "x² + 3x − 10 = (x − 2)(x + 5). (x − 2) ni qisqartiring, keyin x = 2 ni qoʻying: 2 + 5 = 7.",
+    "ru": "x² + 3x − 10 = (x − 2)(x + 5). Сократите (x − 2), затем подставьте x = 2: 2 + 5 = 7."
+   },
+   "prior_b": 1.1,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca12q3",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits",
+   "page": "C19-APCA01-2",
+   "lang": "en",
+   "stem": {
+    "en": "What is the limit of (8x² − 3x + 1)/(2x² + 5) as x → ∞?",
+    "uz": "x → ∞ da (8x² − 3x + 1)/(2x² + 5) ning limiti nechaga teng?",
+    "ru": "Чему равен предел (8x² − 3x + 1)/(2x² + 5) при x → ∞?"
+   },
+   "options": [
+    {
+     "en": "4"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "8"
+    },
+    {
+     "en": "1/5"
+    }
+   ],
+   "why": {
+    "en": "The top and the bottom both have x², so the limit is 8/2 = 4. The 1 and the 5 do not matter as x grows.",
+    "uz": "Suratda ham, maxrajda ham x² bor, demak limit 8/2 = 4. x oʻsganda 1 va 5 ahamiyatsiz.",
+    "ru": "И в числителе, и в знаменателе старшая степень x², значит, предел равен 8/2 = 4. При больших x слагаемые 1 и 5 не важны."
+   },
+   "prior_b": 1.2,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca13q1",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "continuity",
+   "page": "C19-APCA01-3",
+   "lang": "en",
+   "stem": {
+    "en": "g(x) = (x² − 16)/(x − 4) for x ≠ 4. Which value of g(4) makes g continuous at x = 4?",
+    "uz": "x ≠ 4 da g(x) = (x² − 16)/(x − 4). g(4) qanday boʻlsa, g funksiya x = 4 nuqtada uzluksiz boʻladi?",
+    "ru": "g(x) = (x² − 16)/(x − 4) при x ≠ 4. При каком значении g(4) функция g непрерывна в точке x = 4?"
+   },
+   "options": [
+    {
+     "en": "8"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "16"
+    }
+   ],
+   "why": {
+    "en": "x² − 16 = (x − 4)(x + 4), so g(x) → 4 + 4 = 8. Setting g(4) = 8 fills the hole.",
+    "uz": "x² − 16 = (x − 4)(x + 4), demak g(x) → 4 + 4 = 8. g(4) = 8 deb olsak, teshik yopiladi.",
+    "ru": "x² − 16 = (x − 4)(x + 4), значит, g(x) → 4 + 4 = 8. Если положить g(4) = 8, дырка закроется."
+   },
+   "prior_b": 1.2,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca13q2",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "continuity",
+   "page": "C19-APCA01-3",
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = x² + 5 when x < 3, and f(x) = 2x + k when x ≥ 3. For which k is f continuous at x = 3?",
+    "uz": "x < 3 boʻlganda f(x) = x² + 5, x ≥ 3 boʻlganda esa f(x) = 2x + k. k ning qaysi qiymatida f funksiya x = 3 nuqtada uzluksiz boʻladi?",
+    "ru": "f(x) = x² + 5 при x < 3 и f(x) = 2x + k при x ≥ 3. При каком k функция f непрерывна в точке x = 3?"
+   },
+   "options": [
+    {
+     "en": "8"
+    },
+    {
+     "en": "14"
+    },
+    {
+     "en": "20"
+    },
+    {
+     "en": "−8"
+    }
+   ],
+   "why": {
+    "en": "Left: 9 + 5 = 14. Right: 6 + k. 6 + k = 14, so k = 8.",
+    "uz": "Chapdan: 9 + 5 = 14. Oʻngdan: 6 + k. 6 + k = 14, demak k = 8.",
+    "ru": "Слева: 9 + 5 = 14. Справа: 6 + k. 6 + k = 14, значит, k = 8."
+   },
+   "prior_b": 1.3,
+   "time_s": 55,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca13q3",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "continuity",
+   "page": "C19-APCA01-3",
+   "lang": "en",
+   "stem": {
+    "en": "f is continuous on [0, 5], f(0) = 3 and f(5) = −4. For which k must the equation f(x) = k have a solution in [0, 5]?",
+    "uz": "f funksiya [0; 5] da uzluksiz, f(0) = 3 va f(5) = −4. k ning qaysi qiymatida f(x) = k tenglama [0; 5] da albatta yechimga ega?",
+    "ru": "Функция f непрерывна на [0; 5], f(0) = 3 и f(5) = −4. При каком k уравнение f(x) = k обязательно имеет решение на [0; 5]?"
+   },
+   "options": [
+    {
+     "en": "2"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "−5"
+    },
+    {
+     "en": "7"
+    }
+   ],
+   "why": {
+    "en": "The theorem promises every value between −4 and 3. Of the four, only 2 lies between them.",
+    "uz": "Teorema −4 va 3 orasidagi har bir qiymatni kafolatlaydi. Toʻrtta variantdan faqat 2 shu oraliqda yotadi.",
+    "ru": "Теорема гарантирует каждое значение между −4 и 3. Из четырёх чисел между ними лежит только 2."
+   },
+   "prior_b": 1.1,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca21q1",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "average_rate",
+   "page": "C19-APCA02-1",
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = x² + 4. What is the average rate of change of f from x = 1 to x = 5?",
+    "uz": "f(x) = x² + 4. x = 1 dan x = 5 gacha f ning oʻrtacha oʻzgarish tezligi nechaga teng?",
+    "ru": "f(x) = x² + 4. Чему равна средняя скорость изменения f от x = 1 до x = 5?"
+   },
+   "options": [
+    {
+     "en": "6"
+    },
+    {
+     "en": "24"
+    },
+    {
+     "en": "10"
+    },
+    {
+     "en": "4"
+    }
+   ],
+   "why": {
+    "en": "f(5) = 29 and f(1) = 5, so (29 − 5)/(5 − 1) = 24/4 = 6.",
+    "uz": "f(5) = 29 va f(1) = 5, demak (29 − 5)/(5 − 1) = 24/4 = 6.",
+    "ru": "f(5) = 29 и f(1) = 5, значит, (29 − 5)/(5 − 1) = 24/4 = 6."
+   },
+   "prior_b": 0.9,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca21q2",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "derivative_definition",
+   "page": "C19-APCA02-1",
+   "lang": "en",
+   "stem": {
+    "en": "For f(x) = 3x² + 2x, f′(2) is the limit of (f(2 + h) − f(2))/h as h approaches 0. What is f′(2)?",
+    "uz": "f(x) = 3x² + 2x uchun f′(2) — bu h 0 ga intilganda (f(2 + h) − f(2))/h ning limiti. f′(2) nechaga teng?",
+    "ru": "Для f(x) = 3x² + 2x производная f′(2) — это предел (f(2 + h) − f(2))/h при h → 0. Чему равно f′(2)?"
+   },
+   "options": [
+    {
+     "en": "14"
+    },
+    {
+     "en": "16"
+    },
+    {
+     "en": "12"
+    },
+    {
+     "en": "8"
+    }
+   ],
+   "why": {
+    "en": "(f(2 + h) − f(2))/h = (14h + 3h²)/h = 14 + 3h, which goes to 14 as h → 0.",
+    "uz": "(f(2 + h) − f(2))/h = (14h + 3h²)/h = 14 + 3h, bu h → 0 da 14 ga intiladi.",
+    "ru": "(f(2 + h) − f(2))/h = (14h + 3h²)/h = 14 + 3h, и при h → 0 это стремится к 14."
+   },
+   "prior_b": 1.3,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca21q3",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "derivative_definition",
+   "page": "C19-APCA02-1",
+   "lang": "en",
+   "stem": {
+    "en": "A ball rolls so that s(t) = t² + 2t metres after t seconds. What is its velocity at t = 3, in m/s?",
+    "uz": "Toʻp shunday dumalaydiki, t soniyadan keyin s(t) = t² + 2t metr. t = 3 da uning tezligi necha m/s?",
+    "ru": "Мяч катится так, что через t секунд он проходит s(t) = t² + 2t метров. Какова его скорость при t = 3 (в м/с)?"
+   },
+   "options": [
+    {
+     "en": "8"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "15"
+    },
+    {
+     "en": "6"
+    }
+   ],
+   "why": {
+    "en": "((3 + h)² + 2(3 + h) − 15)/h = 8 + h → 8 m/s. The average from 0 to 3, 15/3 = 5 m/s, is a different thing.",
+    "uz": "((3 + h)² + 2(3 + h) − 15)/h = 8 + h → 8 m/s. 0 dan 3 gacha oʻrtacha tezlik, 15/3 = 5 m/s, boshqa narsa.",
+    "ru": "((3 + h)² + 2(3 + h) − 15)/h = 8 + h → 8 м/с. Средняя скорость от 0 до 3, 15/3 = 5 м/с, — это другое."
+   },
+   "prior_b": 1.3,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca22q1",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "power_rule",
+   "page": "C19-APCA02-2",
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = 2x⁴ − 3x² + 6. What is f′(2)?",
+    "uz": "f(x) = 2x⁴ − 3x² + 6. f′(2) nechaga teng?",
+    "ru": "f(x) = 2x⁴ − 3x² + 6. Найдите f′(2)."
+   },
+   "options": [
+    {
+     "en": "52"
+    },
+    {
+     "en": "26"
+    },
+    {
+     "en": "64"
+    },
+    {
+     "en": "58"
+    }
+   ],
+   "why": {
+    "en": "f′(x) = 8x³ − 6x and the 6 gives 0, so f′(2) = 64 − 12 = 52.",
+    "uz": "f′(x) = 8x³ − 6x, 6 esa 0 beradi, demak f′(2) = 64 − 12 = 52.",
+    "ru": "f′(x) = 8x³ − 6x (производная константы 6 равна 0), значит, f′(2) = 64 − 12 = 52."
+   },
+   "prior_b": 1.0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca22q2",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "tangent_line",
+   "page": "C19-APCA02-2",
+   "lang": "en",
+   "stem": {
+    "en": "The line tangent to the graph of f(x) = 3x² + 2x + 4 at x = 2 is y = mx + k. What is k?",
+    "uz": "f(x) = 3x² + 2x + 4 funksiya grafigiga x = 2 nuqtada oʻtkazilgan urinma y = mx + k. k nechaga teng?",
+    "ru": "Касательная к графику f(x) = 3x² + 2x + 4 в точке x = 2 — это прямая y = mx + k. Чему равно k?"
+   },
+   "options": [
+    {
+     "en": "−8"
+    },
+    {
+     "en": "20"
+    },
+    {
+     "en": "14"
+    },
+    {
+     "en": "4"
+    }
+   ],
+   "why": {
+    "en": "f(2) = 20 and m = f′(2) = 14. 20 = 14 × 2 + k, so k = 20 − 28 = −8.",
+    "uz": "f(2) = 20 va m = f′(2) = 14. 20 = 14 × 2 + k, demak k = 20 − 28 = −8.",
+    "ru": "f(2) = 20 и m = f′(2) = 14. 20 = 14 × 2 + k, значит, k = 20 − 28 = −8."
+   },
+   "prior_b": 1.5,
+   "time_s": 70,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca22q3",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "power_rule",
+   "page": "C19-APCA02-2",
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = 6/x². What is f′(1)?",
+    "uz": "f(x) = 6/x². f′(1) nechaga teng?",
+    "ru": "f(x) = 6/x². Найдите f′(1)."
+   },
+   "options": [
+    {
+     "en": "−12"
+    },
+    {
+     "en": "12"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "6"
+    }
+   ],
+   "why": {
+    "en": "6/x² = 6x⁻², so f′(x) = −12x⁻³ and f′(1) = −12.",
+    "uz": "6/x² = 6x⁻², demak f′(x) = −12x⁻³ va f′(1) = −12.",
+    "ru": "6/x² = 6x⁻², значит, f′(x) = −12x⁻³ и f′(1) = −12."
+   },
+   "prior_b": 1.3,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca23q1",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "product_rule",
+   "page": "C19-APCA02-3",
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = (x + 3)eˣ. What is f′(0)?",
+    "uz": "f(x) = (x + 3)eˣ. f′(0) nechaga teng?",
+    "ru": "f(x) = (x + 3)eˣ. Найдите f′(0)."
+   },
+   "options": [
+    {
+     "en": "4"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "1"
+    },
+    {
+     "en": "0"
+    }
+   ],
+   "why": {
+    "en": "f′(x) = 1 · eˣ + (x + 3)eˣ and e⁰ = 1, so f′(0) = 1 + 3 = 4.",
+    "uz": "f′(x) = 1 · eˣ + (x + 3)eˣ va e⁰ = 1, demak f′(0) = 1 + 3 = 4.",
+    "ru": "f′(x) = 1 · eˣ + (x + 3)eˣ и e⁰ = 1, значит, f′(0) = 1 + 3 = 4."
+   },
+   "prior_b": 1.3,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca23q2",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "quotient_rule",
+   "page": "C19-APCA02-3",
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = (4x + 2)/(x + 3). What is f′(−2)?",
+    "uz": "f(x) = (4x + 2)/(x + 3). f′(−2) nechaga teng?",
+    "ru": "f(x) = (4x + 2)/(x + 3). Найдите f′(−2)."
+   },
+   "options": [
+    {
+     "en": "10"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "−10"
+    },
+    {
+     "en": "−6"
+    }
+   ],
+   "why": {
+    "en": "f′(x) = (4(x + 3) − (4x + 2))/(x + 3)² = 10/(x + 3)², and (−2 + 3)² = 1, so f′(−2) = 10.",
+    "uz": "f′(x) = (4(x + 3) − (4x + 2))/(x + 3)² = 10/(x + 3)², (−2 + 3)² = 1, demak f′(−2) = 10.",
+    "ru": "f′(x) = (4(x + 3) − (4x + 2))/(x + 3)² = 10/(x + 3)², а (−2 + 3)² = 1, значит, f′(−2) = 10."
+   },
+   "prior_b": 1.5,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ca23q3",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "trig_exp_derivatives",
+   "page": "C19-APCA02-3",
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = 5sin x + 2cos x + 3x. What is f′(π/2)?",
+    "uz": "f(x) = 5sin x + 2cos x + 3x. f′(π/2) nechaga teng?",
+    "ru": "f(x) = 5sin x + 2cos x + 3x. Найдите f′(π/2)."
+   },
+   "options": [
+    {
+     "en": "1"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "8"
+    },
+    {
+     "en": "−2"
+    }
+   ],
+   "why": {
+    "en": "f′(x) = 5cos x − 2sin x + 3. At π/2: 5 × 0 − 2 × 1 + 3 = 1.",
+    "uz": "f′(x) = 5cos x − 2sin x + 3. π/2 da: 5 × 0 − 2 × 1 + 3 = 1.",
+    "ru": "f′(x) = 5cos x − 2sin x + 3. В точке π/2: 5 × 0 − 2 × 1 + 3 = 1."
+   },
+   "prior_b": 1.5,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p7-a3",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s3+P7s4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  }
+ ]
+}

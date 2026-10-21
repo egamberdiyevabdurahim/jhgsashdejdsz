@@ -1,0 +1,1402 @@
+{
+ "bank": "C2",
+ "batch": 4,
+ "kind": "math_explainers",
+ "explainers": [
+  {
+   "id": "C2-ca0001",
+   "type": "study",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits",
+   "title": {
+    "en": "Limits: factor and cancel",
+    "uz": "Limitlar: koʻpaytuvchilarga ajrating va qisqartiring",
+    "ru": "Пределы: разложите и сократите"
+   },
+   "idea": {
+    "en": "First try substituting. If a fraction of two polynomials gives 0/0, the numerator and the denominator share a factor (x − a). Factor both, cancel that factor (allowed, because x ≠ a while x approaches a), then substitute again.",
+    "uz": "Avval qiymatni qoʻyib koʻring. Agar ikki koʻphadning nisbati 0/0 ni bersa, surat va maxrajda umumiy (x − a) koʻpaytuvchi bor. Ikkalasini koʻpaytuvchilarga ajrating va shu koʻpaytuvchini qisqartiring (bunga ruxsat bor, chunki x a ga intilayotganda x ≠ a), keyin yana qoʻying.",
+    "ru": "Сначала попробуйте подставить. Если дробь из двух многочленов даёт 0/0, у числителя и знаменателя есть общий множитель (x − a). Разложите оба на множители и сократите этот множитель (это можно, ведь при x → a x ≠ a), затем снова подставьте."
+   },
+   "example": {
+    "problem": {
+     "en": "Find lim (x → 2) (x² + x − 6)/(x² − 4).",
+     "uz": "lim (x → 2) (x² + x − 6)/(x² − 4) ni toping.",
+     "ru": "Найдите lim (x → 2) (x² + x − 6)/(x² − 4)."
+    },
+    "steps": [
+     {
+      "en": "Substituting x = 2 gives (4 + 2 − 6)/(4 − 4) = 0/0.",
+      "uz": "x = 2 ni qoʻysak, (4 + 2 − 6)/(4 − 4) = 0/0 chiqadi.",
+      "ru": "Подстановка x = 2 даёт (4 + 2 − 6)/(4 − 4) = 0/0."
+     },
+     {
+      "en": "Factor: x² + x − 6 = (x − 2)(x + 3) and x² − 4 = (x − 2)(x + 2).",
+      "uz": "Koʻpaytuvchilarga ajratamiz: x² + x − 6 = (x − 2)(x + 3) va x² − 4 = (x − 2)(x + 2).",
+      "ru": "Раскладываем: x² + x − 6 = (x − 2)(x + 3) и x² − 4 = (x − 2)(x + 2)."
+     },
+     {
+      "en": "Cancel (x − 2): the expression becomes (x + 3)/(x + 2).",
+      "uz": "(x − 2) ni qisqartiramiz: ifoda (x + 3)/(x + 2) ga aylanadi.",
+      "ru": "Сокращаем (x − 2): выражение становится (x + 3)/(x + 2)."
+     },
+     {
+      "en": "Substitute: (2 + 3)/(2 + 2) = 5/4.",
+      "uz": "Qoʻyamiz: (2 + 3)/(2 + 2) = 5/4.",
+      "ru": "Подставляем: (2 + 3)/(2 + 2) = 5/4."
+     }
+    ],
+    "answer": {
+     "en": "5/4",
+     "uz": "5/4",
+     "ru": "5/4"
+    },
+    "solver": [
+     "limit((x**2 + x - 6)/(x**2 - 4), x, 2) == Rational(5, 4)",
+     "factor(x**2 + x - 6) == (x - 2)*(x + 3)",
+     "factor(x**2 - 4) == (x - 2)*(x + 2)",
+     "(2**2 + 2 - 6, 2**2 - 4) == (0, 0)"
+    ]
+   },
+   "watch_out": {
+    "en": "0/0 is not 0 and does not mean \"there is no limit\". It is a signal to simplify first.",
+    "uz": "0/0 — bu 0 emas va «limit yoʻq» degani ham emas. Bu avval soddalashtirish kerakligini bildiradi.",
+    "ru": "0/0 — это не 0 и не «предела нет». Это сигнал, что сначала нужно упростить."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-cal011",
+      "rung": "calc",
+      "subskill": "limits"
+     },
+     "target": "(x² − a²)/(x − a) as x → a",
+     "probe": "answered_zero"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-cal012",
+      "rung": "calc",
+      "subskill": "limits"
+     },
+     "target": "factor both the numerator and the denominator",
+     "probe": "cancelled_terms"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "limits"
+     },
+     "target": "the limit of a rational function at infinity",
+     "probe": "ratio_of_wrong_terms"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "limits"
+     },
+     "target": "sin(kx)/x as x → 0",
+     "probe": "dropped_k"
+    }
+   ],
+   "minutes": 8,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1,
+   "factcheck": {
+    "verified_at": "2026-10-07",
+    "note": "idea said any 0/0 means the top and bottom share a factor (x − a). That holds only for polynomials (factor theorem), and checks[3] (sin(kx)/x) is a case where it is false. Scoped to 'a fraction of two polynomials' in all three languages. checks[2] and checks[3] still target methods this explainer does not teach (see FACTCHECK.md)."
+   }
+  },
+  {
+   "id": "C2-ca0002",
+   "type": "study",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "power_rule",
+   "title": {
+    "en": "The power rule",
+    "uz": "Darajali funksiyaning hosilasi",
+    "ru": "Производная степенной функции"
+   },
+   "idea": {
+    "en": "(xⁿ)′ = n·xⁿ⁻¹ for any real n: bring the exponent down and lower it by 1. Rewrite roots and fractions as powers first: √x = x^(1/2), 1/x² = x^(−2). A constant factor stays; the derivative of a constant is 0.",
+    "uz": "Har qanday haqiqiy n uchun (xⁿ)′ = n·xⁿ⁻¹: koʻrsatkichni oldinga tushiring va uni 1 ga kamaytiring. Ildiz va kasrlarni avval daraja shaklida yozing: √x = x^(1/2), 1/x² = x^(−2). Oʻzgarmas koʻpaytuvchi saqlanadi; oʻzgarmas sonning hosilasi 0 ga teng.",
+    "ru": "Для любого действительного n (xⁿ)′ = n·xⁿ⁻¹: показатель выносится вперёд и уменьшается на 1. Корни и дроби сначала запишите как степени: √x = x^(1/2), 1/x² = x^(−2). Постоянный множитель сохраняется; производная константы равна 0."
+   },
+   "example": {
+    "problem": {
+     "en": "f(x) = 4√x − 3/x² + 7. Find f′(x) and f′(1).",
+     "uz": "f(x) = 4√x − 3/x² + 7. f′(x) va f′(1) ni toping.",
+     "ru": "f(x) = 4√x − 3/x² + 7. Найдите f′(x) и f′(1)."
+    },
+    "steps": [
+     {
+      "en": "As powers: f(x) = 4x^(1/2) − 3x^(−2) + 7.",
+      "uz": "Daraja shaklida: f(x) = 4x^(1/2) − 3x^(−2) + 7.",
+      "ru": "В виде степеней: f(x) = 4x^(1/2) − 3x^(−2) + 7."
+     },
+     {
+      "en": "(4x^(1/2))′ = 4 · (1/2) · x^(−1/2) = 2/√x.",
+      "uz": "(4x^(1/2))′ = 4 · (1/2) · x^(−1/2) = 2/√x.",
+      "ru": "(4x^(1/2))′ = 4 · (1/2) · x^(−1/2) = 2/√x."
+     },
+     {
+      "en": "(−3x^(−2))′ = −3 · (−2) · x^(−3) = 6/x³; the derivative of 7 is 0.",
+      "uz": "(−3x^(−2))′ = −3 · (−2) · x^(−3) = 6/x³; 7 ning hosilasi 0.",
+      "ru": "(−3x^(−2))′ = −3 · (−2) · x^(−3) = 6/x³; производная 7 равна 0."
+     },
+     {
+      "en": "f′(x) = 2/√x + 6/x³, so f′(1) = 2 + 6 = 8.",
+      "uz": "f′(x) = 2/√x + 6/x³, demak f′(1) = 2 + 6 = 8.",
+      "ru": "f′(x) = 2/√x + 6/x³, значит, f′(1) = 2 + 6 = 8."
+     }
+    ],
+    "answer": {
+     "en": "f′(x) = 2/√x + 6/x³; f′(1) = 8",
+     "uz": "f′(x) = 2/√x + 6/x³; f′(1) = 8",
+     "ru": "f′(x) = 2/√x + 6/x³; f′(1) = 8"
+    },
+    "solver": [
+     "simplify(diff(4*sqrt(x) - 3/x**2 + 7, x) - (2/sqrt(x) + 6/x**3)) == 0",
+     "diff(4*sqrt(x) - 3/x**2 + 7, x).subs(x, 1) == 8",
+     "diff(x**-2, x) == -2*x**-3"
+    ]
+   },
+   "watch_out": {
+    "en": "The exponent goes down by 1 even when it is negative: (x^(−2))′ = −2x^(−3), not −2x^(−1).",
+    "uz": "Koʻrsatkich manfiy boʻlsa ham 1 ga kamayadi: (x^(−2))′ = −2x^(−3), −2x^(−1) emas.",
+    "ru": "Показатель уменьшается на 1, даже если он отрицательный: (x^(−2))′ = −2x^(−3), а не −2x^(−1)."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "power_rule"
+     },
+     "target": "the derivative of a polynomial at a point",
+     "probe": "forgot_lower_exponent"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "power_rule"
+     },
+     "target": "the derivative of a root written as a power",
+     "probe": "wrong_fraction_exponent"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "power_rule"
+     },
+     "target": "the derivative of a negative power",
+     "probe": "exponent_raised"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "power_rule"
+     },
+     "target": "the slope of the tangent line at a point",
+     "probe": "gave_f_value"
+    }
+   ],
+   "minutes": 8,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ca0003",
+   "type": "study",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "product_rule",
+   "title": {
+    "en": "The product rule",
+    "uz": "Koʻpaytmaning hosilasi",
+    "ru": "Производная произведения"
+   },
+   "idea": {
+    "en": "When two functions are multiplied, (u·v)′ = u′·v + u·v′: differentiate one factor at a time, keep the other one as it is, and add the two results.",
+    "uz": "Ikki funksiya koʻpaytirilganda (u·v)′ = u′·v + u·v′: koʻpaytuvchilarni navbat bilan differensiallang, ikkinchisini esa oʻzgartirmang, keyin ikki natijani qoʻshing.",
+    "ru": "Если две функции перемножаются, (u·v)′ = u′·v + u·v′: дифференцируйте множители по очереди, оставляя второй без изменений, и сложите два результата."
+   },
+   "example": {
+    "problem": {
+     "en": "y = x² sin x. Find y′ and y′(π).",
+     "uz": "y = x² sin x. y′ va y′(π) ni toping.",
+     "ru": "y = x² sin x. Найдите y′ и y′(π)."
+    },
+    "steps": [
+     {
+      "en": "u = x², v = sin x; u′ = 2x, v′ = cos x.",
+      "uz": "u = x², v = sin x; u′ = 2x, v′ = cos x.",
+      "ru": "u = x², v = sin x; u′ = 2x, v′ = cos x."
+     },
+     {
+      "en": "y′ = 2x · sin x + x² · cos x.",
+      "uz": "y′ = 2x · sin x + x² · cos x.",
+      "ru": "y′ = 2x · sin x + x² · cos x."
+     },
+     {
+      "en": "At x = π: sin π = 0 and cos π = −1, so y′(π) = 0 + π² · (−1) = −π².",
+      "uz": "x = π da: sin π = 0 va cos π = −1, demak y′(π) = 0 + π² · (−1) = −π².",
+      "ru": "При x = π: sin π = 0 и cos π = −1, значит, y′(π) = 0 + π² · (−1) = −π²."
+     }
+    ],
+    "answer": {
+     "en": "y′ = 2x sin x + x² cos x; y′(π) = −π²",
+     "uz": "y′ = 2x sin x + x² cos x; y′(π) = −π²",
+     "ru": "y′ = 2x sin x + x² cos x; y′(π) = −π²"
+    },
+    "solver": [
+     "simplify(diff(x**2*sin(x), x) - (2*x*sin(x) + x**2*cos(x))) == 0",
+     "diff(x**2*sin(x), x).subs(x, pi) == -pi**2",
+     "simplify(diff(x**2*sin(x), x) - 2*x*cos(x)) != 0"
+    ]
+   },
+   "watch_out": {
+    "en": "(u·v)′ is not u′·v′: 2x · cos x is not the derivative of x² sin x.",
+    "uz": "(u·v)′ bu u′·v′ emas: 2x · cos x ifodasi x² sin x ning hosilasi emas.",
+    "ru": "(u·v)′ — это не u′·v′: 2x · cos x не является производной x² sin x."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "product_rule"
+     },
+     "target": "a polynomial times an exponential",
+     "probe": "multiplied_derivatives"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "product_rule"
+     },
+     "target": "a polynomial times sin x or cos x",
+     "probe": "multiplied_derivatives"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "product_rule"
+     },
+     "target": "x · ln x or xⁿ · ln x",
+     "probe": "dropped_term"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "product_rule"
+     },
+     "target": "the value of the derivative of a product at a point",
+     "probe": "sign_error"
+    }
+   ],
+   "minutes": 8,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ca0004",
+   "type": "study",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "chain_rule",
+   "title": {
+    "en": "The chain rule: outside, then inside",
+    "uz": "Murakkab funksiya hosilasi: avval tashqisi, keyin ichkisi",
+    "ru": "Производная сложной функции: сначала внешняя, потом внутренняя"
+   },
+   "idea": {
+    "en": "For a function inside a function, (f(g(x)))′ = f′(g(x)) · g′(x). Differentiate the outer function and leave the inside unchanged, then multiply by the derivative of the inside.",
+    "uz": "Funksiya ichida funksiya boʻlsa, (f(g(x)))′ = f′(g(x)) · g′(x). Tashqi funksiyani differensiallang, ichkisini oʻzgartirmay qoldiring, keyin ichki funksiyaning hosilasiga koʻpaytiring.",
+    "ru": "Для функции внутри функции (f(g(x)))′ = f′(g(x)) · g′(x). Продифференцируйте внешнюю функцию, оставив внутреннюю без изменений, затем умножьте на производную внутренней."
+   },
+   "example": {
+    "problem": {
+     "en": "y = √(x² + 9). Find y′ and y′(4).",
+     "uz": "y = √(x² + 9). y′ va y′(4) ni toping.",
+     "ru": "y = √(x² + 9). Найдите y′ и y′(4)."
+    },
+    "steps": [
+     {
+      "en": "Outside: √u with u = x² + 9; (√u)′ = 1/(2√u).",
+      "uz": "Tashqi funksiya: √u, bu yerda u = x² + 9; (√u)′ = 1/(2√u).",
+      "ru": "Внешняя функция: √u, где u = x² + 9; (√u)′ = 1/(2√u)."
+     },
+     {
+      "en": "Inside: (x² + 9)′ = 2x.",
+      "uz": "Ichki funksiya: (x² + 9)′ = 2x.",
+      "ru": "Внутренняя функция: (x² + 9)′ = 2x."
+     },
+     {
+      "en": "y′ = 1/(2√(x² + 9)) · 2x = x/√(x² + 9).",
+      "uz": "y′ = 1/(2√(x² + 9)) · 2x = x/√(x² + 9).",
+      "ru": "y′ = 1/(2√(x² + 9)) · 2x = x/√(x² + 9)."
+     },
+     {
+      "en": "y′(4) = 4/√25 = 4/5.",
+      "uz": "y′(4) = 4/√25 = 4/5.",
+      "ru": "y′(4) = 4/√25 = 4/5."
+     }
+    ],
+    "answer": {
+     "en": "y′ = x/√(x² + 9); y′(4) = 4/5",
+     "uz": "y′ = x/√(x² + 9); y′(4) = 4/5",
+     "ru": "y′ = x/√(x² + 9); y′(4) = 4/5"
+    },
+    "solver": [
+     "simplify(diff(sqrt(x**2 + 9), x) - x/sqrt(x**2 + 9)) == 0",
+     "diff(sqrt(x**2 + 9), x).subs(x, 4) == Rational(4, 5)",
+     "4**2 + 9 == 25"
+    ]
+   },
+   "watch_out": {
+    "en": "Do not forget the derivative of the inside: 1/(2√(x² + 9)) on its own is not the answer.",
+    "uz": "Ichki funksiyaning hosilasini unutmang: faqat 1/(2√(x² + 9)) javob emas.",
+    "ru": "Не забудьте производную внутренней функции: одно 1/(2√(x² + 9)) — не ответ."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "chain_rule"
+     },
+     "target": "(ax + b)ⁿ",
+     "probe": "missed_inner_derivative"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "chain_rule"
+     },
+     "target": "sin(kx) or e^(kx)",
+     "probe": "missed_inner_derivative"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "chain_rule"
+     },
+     "target": "the square root of a polynomial",
+     "probe": "missed_inner_derivative"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "chain_rule"
+     },
+     "target": "the value of the derivative at a point",
+     "probe": "arithmetic"
+    }
+   ],
+   "minutes": 8,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ca0005",
+   "type": "study",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "integral",
+   "title": {
+    "en": "Antiderivatives: the power rule backwards",
+    "uz": "Boshlangʻich funksiya: daraja qoidasi teskari tartibda",
+    "ru": "Первообразная: правило степени наоборот"
+   },
+   "idea": {
+    "en": "∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C for n ≠ −1: raise the exponent by 1 and divide by the new exponent. ∫ 1/x dx = ln|x| + C. Always add + C, and check by differentiating your answer.",
+    "uz": "n ≠ −1 boʻlsa, ∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C: koʻrsatkichni 1 ga oshiring va yangi koʻrsatkichga boʻling. ∫ 1/x dx = ln|x| + C. Har doim + C ni qoʻshing va javobni differensiallab tekshiring.",
+    "ru": "При n ≠ −1 ∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C: увеличьте показатель на 1 и разделите на новый показатель. ∫ 1/x dx = ln|x| + C. Всегда добавляйте + C и проверяйте ответ дифференцированием."
+   },
+   "example": {
+    "problem": {
+     "en": "Find ∫ (3√x − 2/x³) dx.",
+     "uz": "∫ (3√x − 2/x³) dx ni toping.",
+     "ru": "Найдите ∫ (3√x − 2/x³) dx."
+    },
+    "steps": [
+     {
+      "en": "As powers: 3x^(1/2) − 2x^(−3).",
+      "uz": "Daraja shaklida: 3x^(1/2) − 2x^(−3).",
+      "ru": "В виде степеней: 3x^(1/2) − 2x^(−3)."
+     },
+     {
+      "en": "∫ 3x^(1/2) dx = 3 · x^(3/2)/(3/2) = 2x^(3/2).",
+      "uz": "∫ 3x^(1/2) dx = 3 · x^(3/2)/(3/2) = 2x^(3/2).",
+      "ru": "∫ 3x^(1/2) dx = 3 · x^(3/2)/(3/2) = 2x^(3/2)."
+     },
+     {
+      "en": "∫ (−2x^(−3)) dx = −2 · x^(−2)/(−2) = x^(−2) = 1/x².",
+      "uz": "∫ (−2x^(−3)) dx = −2 · x^(−2)/(−2) = x^(−2) = 1/x².",
+      "ru": "∫ (−2x^(−3)) dx = −2 · x^(−2)/(−2) = x^(−2) = 1/x²."
+     },
+     {
+      "en": "Check: (2x^(3/2) + x^(−2))′ = 3x^(1/2) − 2x^(−3). Correct.",
+      "uz": "Tekshirish: (2x^(3/2) + x^(−2))′ = 3x^(1/2) − 2x^(−3). Toʻgʻri.",
+      "ru": "Проверка: (2x^(3/2) + x^(−2))′ = 3x^(1/2) − 2x^(−3). Верно."
+     }
+    ],
+    "answer": {
+     "en": "2x^(3/2) + 1/x² + C",
+     "uz": "2x^(3/2) + 1/x² + C",
+     "ru": "2x^(3/2) + 1/x² + C"
+    },
+    "solver": [
+     "simplify(diff(2*x**Rational(3, 2) + x**-2, x) - (3*sqrt(x) - 2/x**3)) == 0",
+     "simplify(integrate(3*sqrt(x) - 2/x**3, x) - (2*x**Rational(3, 2) + x**-2)) == 0"
+    ]
+   },
+   "watch_out": {
+    "en": "Divide by the new exponent: for x^(1/2), divide by 3/2, not by 1/2.",
+    "uz": "Yangi koʻrsatkichga boʻling: x^(1/2) uchun 1/2 ga emas, 3/2 ga boʻling.",
+    "ru": "Делите на новый показатель: для x^(1/2) — на 3/2, а не на 1/2."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "integral"
+     },
+     "target": "the antiderivative of a polynomial",
+     "probe": "multiplied_by_exponent"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "integral"
+     },
+     "target": "the antiderivative of a root or a negative power",
+     "probe": "divided_by_old_exponent"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "integral"
+     },
+     "target": "∫ 1/x dx",
+     "probe": "power_rule_on_minus_one"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "integral"
+     },
+     "target": "the antiderivative F with a given value F(a) = b",
+     "probe": "forgot_constant"
+    }
+   ],
+   "minutes": 8,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:2/2",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 2,
+    "passed": 2,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ca0006",
+   "type": "study",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "definite_integral",
+   "title": {
+    "en": "Definite integrals: F(b) − F(a)",
+    "uz": "Aniq integral: F(b) − F(a)",
+    "ru": "Определённый интеграл: F(b) − F(a)"
+   },
+   "idea": {
+    "en": "∫ₐᵇ f(x) dx = F(b) − F(a), where F is any antiderivative of f (the Newton–Leibniz formula). No + C is needed. The result is the signed area between the graph and the x-axis.",
+    "uz": "∫ₐᵇ f(x) dx = F(b) − F(a), bu yerda F — f ning istalgan boshlangʻich funksiyasi (Nyuton–Leybnits formulasi). + C kerak emas. Natija — grafik va Ox oʻqi orasidagi ishorali yuz.",
+    "ru": "∫ₐᵇ f(x) dx = F(b) − F(a), где F — любая первообразная f (формула Ньютона–Лейбница). + C не нужно. Результат — площадь со знаком между графиком и осью Ox."
+   },
+   "example": {
+    "problem": {
+     "en": "Calculate ∫₁³ (x² − 2x + 1) dx.",
+     "uz": "∫₁³ (x² − 2x + 1) dx ni hisoblang.",
+     "ru": "Вычислите ∫₁³ (x² − 2x + 1) dx."
+    },
+    "steps": [
+     {
+      "en": "An antiderivative: F(x) = x³/3 − x² + x.",
+      "uz": "Boshlangʻich funksiya: F(x) = x³/3 − x² + x.",
+      "ru": "Первообразная: F(x) = x³/3 − x² + x."
+     },
+     {
+      "en": "F(3) = 9 − 9 + 3 = 3.",
+      "uz": "F(3) = 9 − 9 + 3 = 3.",
+      "ru": "F(3) = 9 − 9 + 3 = 3."
+     },
+     {
+      "en": "F(1) = 1/3 − 1 + 1 = 1/3.",
+      "uz": "F(1) = 1/3 − 1 + 1 = 1/3.",
+      "ru": "F(1) = 1/3 − 1 + 1 = 1/3."
+     },
+     {
+      "en": "F(3) − F(1) = 3 − 1/3 = 8/3.",
+      "uz": "F(3) − F(1) = 3 − 1/3 = 8/3.",
+      "ru": "F(3) − F(1) = 3 − 1/3 = 8/3."
+     }
+    ],
+    "answer": {
+     "en": "8/3",
+     "uz": "8/3",
+     "ru": "8/3"
+    },
+    "solver": [
+     "integrate(x**2 - 2*x + 1, (x, 1, 3)) == Rational(8, 3)",
+     "Rational(27, 3) - 9 + 3 == 3",
+     "Rational(1, 3) - 1 + 1 == Rational(1, 3)",
+     "diff(x**3/3 - x**2 + x, x) == x**2 - 2*x + 1"
+    ]
+   },
+   "watch_out": {
+    "en": "Subtract in the right order, F(b) − F(a). Computing F(1) − F(3) gives −8/3, the wrong sign.",
+    "uz": "Toʻgʻri tartibda ayiring: F(b) − F(a). F(1) − F(3) ni hisoblasangiz, −8/3 chiqadi va ishora notoʻgʻri boʻladi.",
+    "ru": "Вычитайте в правильном порядке: F(b) − F(a). Если считать F(1) − F(3), получится −8/3 — знак неверный."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "definite_integral"
+     },
+     "target": "the definite integral of a polynomial",
+     "probe": "subtracted_reversed"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "definite_integral"
+     },
+     "target": "the definite integral of sin x or cos x",
+     "probe": "sign_error_antiderivative"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "definite_integral"
+     },
+     "target": "the definite integral of e^(kx)",
+     "probe": "forgot_inner_factor"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "calc",
+      "subskill": "definite_integral"
+     },
+     "target": "the area under a graph (word problem)",
+     "probe": "subtracted_reversed"
+    }
+   ],
+   "minutes": 8,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-by0001",
+   "type": "study",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "partial_derivative",
+   "title": {
+    "en": "Partial derivatives: hold the other variable still",
+    "uz": "Xususiy hosilalar: boshqa oʻzgaruvchi oʻzgarmas",
+    "ru": "Частные производные: другая переменная — константа"
+   },
+   "idea": {
+    "en": "To find ∂f/∂x, differentiate with respect to x and treat y as a constant number. For ∂f/∂y, do the opposite. A term that contains only the other variable has derivative 0.",
+    "uz": "∂f/∂x ni topish uchun x boʻyicha differensiallang, y ni esa oʻzgarmas son deb hisoblang. ∂f/∂y uchun aksincha. Faqat boshqa oʻzgaruvchidan iborat hadning hosilasi 0 ga teng.",
+    "ru": "Чтобы найти ∂f/∂x, дифференцируйте по x, считая y постоянным числом. Для ∂f/∂y — наоборот. Слагаемое, содержащее только другую переменную, имеет производную 0."
+   },
+   "example": {
+    "problem": {
+     "en": "f(x, y) = 5x²y − xy³ + ln y. Find ∂f/∂x and ∂f/∂y, and the value of ∂f/∂x at (2, 1).",
+     "uz": "f(x, y) = 5x²y − xy³ + ln y. ∂f/∂x va ∂f/∂y ni, shuningdek ∂f/∂x ning (2, 1) nuqtadagi qiymatini toping.",
+     "ru": "f(x, y) = 5x²y − xy³ + ln y. Найдите ∂f/∂x и ∂f/∂y, а также значение ∂f/∂x в точке (2, 1)."
+    },
+    "steps": [
+     {
+      "en": "∂f/∂x (y is a constant): 10xy − y³ + 0.",
+      "uz": "∂f/∂x (y — oʻzgarmas): 10xy − y³ + 0.",
+      "ru": "∂f/∂x (y — константа): 10xy − y³ + 0."
+     },
+     {
+      "en": "∂f/∂y (x is a constant): 5x² − 3xy² + 1/y.",
+      "uz": "∂f/∂y (x — oʻzgarmas): 5x² − 3xy² + 1/y.",
+      "ru": "∂f/∂y (x — константа): 5x² − 3xy² + 1/y."
+     },
+     {
+      "en": "At (2, 1): ∂f/∂x = 10 · 2 · 1 − 1³ = 20 − 1 = 19.",
+      "uz": "(2, 1) nuqtada: ∂f/∂x = 10 · 2 · 1 − 1³ = 20 − 1 = 19.",
+      "ru": "В точке (2, 1): ∂f/∂x = 10 · 2 · 1 − 1³ = 20 − 1 = 19."
+     }
+    ],
+    "answer": {
+     "en": "∂f/∂x = 10xy − y³, ∂f/∂y = 5x² − 3xy² + 1/y; ∂f/∂x (2, 1) = 19",
+     "uz": "∂f/∂x = 10xy − y³, ∂f/∂y = 5x² − 3xy² + 1/y; ∂f/∂x (2, 1) = 19",
+     "ru": "∂f/∂x = 10xy − y³, ∂f/∂y = 5x² − 3xy² + 1/y; ∂f/∂x (2, 1) = 19"
+    },
+    "solver": [
+     "diff(5*x**2*y - x*y**3 + log(y), x) == 10*x*y - y**3",
+     "diff(5*x**2*y - x*y**3 + log(y), y) == 5*x**2 - 3*x*y**2 + 1/y",
+     "(10*x*y - y**3).subs({x: 2, y: 1}) == 19"
+    ]
+   },
+   "watch_out": {
+    "en": "In ∂f/∂x, ln y is a constant, so its derivative is 0, not 1/y.",
+    "uz": "∂f/∂x da ln y oʻzgarmas son, shuning uchun uning hosilasi 1/y emas, 0.",
+    "ru": "В ∂f/∂x ln y — константа, поэтому её производная равна 0, а не 1/y."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "partial_derivative"
+     },
+     "target": "∂f/∂x of a polynomial in x and y",
+     "probe": "differentiated_y_too"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "partial_derivative"
+     },
+     "target": "∂f/∂y",
+     "probe": "differentiated_x_too"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "partial_derivative"
+     },
+     "target": "a partial derivative at a point",
+     "probe": "swapped_coordinates"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "partial_derivative"
+     },
+     "target": "a mixed second partial derivative",
+     "probe": "order_confusion"
+    }
+   ],
+   "minutes": 8,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-by0002",
+   "type": "study",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "integration_by_parts",
+   "title": {
+    "en": "Integration by parts",
+    "uz": "Boʻlaklab integrallash",
+    "ru": "Интегрирование по частям"
+   },
+   "idea": {
+    "en": "∫ u dv = uv − ∫ v du. Choose u to be the factor that gets simpler when you differentiate it (a logarithm first, then a power of x), and dv the factor you can integrate (eˣ, sin x, cos x, xⁿ).",
+    "uz": "∫ u dv = uv − ∫ v du. u sifatida differensiallanganda soddalashadigan koʻpaytuvchini (avval logarifm, keyin x ning darajasi), dv sifatida esa integrallay oladigan koʻpaytuvchini (eˣ, sin x, cos x, xⁿ) tanlang.",
+    "ru": "∫ u dv = uv − ∫ v du. За u берите множитель, который упрощается при дифференцировании (сначала логарифм, затем степень x), а за dv — множитель, который вы умеете интегрировать (eˣ, sin x, cos x, xⁿ)."
+   },
+   "example": {
+    "problem": {
+     "en": "Find ∫ x ln x dx.",
+     "uz": "∫ x ln x dx ni toping.",
+     "ru": "Найдите ∫ x ln x dx."
+    },
+    "steps": [
+     {
+      "en": "u = ln x, dv = x dx. Then du = dx/x and v = x²/2.",
+      "uz": "u = ln x, dv = x dx. Unda du = dx/x va v = x²/2.",
+      "ru": "u = ln x, dv = x dx. Тогда du = dx/x и v = x²/2."
+     },
+     {
+      "en": "∫ x ln x dx = (x²/2) ln x − ∫ (x²/2) · (1/x) dx = (x²/2) ln x − ∫ (x/2) dx.",
+      "uz": "∫ x ln x dx = (x²/2) ln x − ∫ (x²/2) · (1/x) dx = (x²/2) ln x − ∫ (x/2) dx.",
+      "ru": "∫ x ln x dx = (x²/2) ln x − ∫ (x²/2) · (1/x) dx = (x²/2) ln x − ∫ (x/2) dx."
+     },
+     {
+      "en": "∫ (x/2) dx = x²/4, so the answer is (x²/2) ln x − x²/4 + C.",
+      "uz": "∫ (x/2) dx = x²/4, demak javob: (x²/2) ln x − x²/4 + C.",
+      "ru": "∫ (x/2) dx = x²/4, значит, ответ: (x²/2) ln x − x²/4 + C."
+     },
+     {
+      "en": "Check: the derivative is x ln x + x/2 − x/2 = x ln x.",
+      "uz": "Tekshirish: hosila x ln x + x/2 − x/2 = x ln x.",
+      "ru": "Проверка: производная равна x ln x + x/2 − x/2 = x ln x."
+     }
+    ],
+    "answer": {
+     "en": "(x²/2) ln x − x²/4 + C",
+     "uz": "(x²/2) ln x − x²/4 + C",
+     "ru": "(x²/2) ln x − x²/4 + C"
+    },
+    "solver": [
+     "simplify(diff(x**2/2*log(x) - x**2/4, x) - x*log(x)) == 0",
+     "simplify(integrate(x*log(x), x) - (x**2/2*log(x) - x**2/4)) == 0"
+    ]
+   },
+   "watch_out": {
+    "en": "Here u = x would be a bad choice: then dv = ln x dx, which is harder to integrate than the original integral.",
+    "uz": "Bu yerda u = x yomon tanlov boʻlardi: unda dv = ln x dx boʻladi, uni integrallash esa dastlabki integraldan qiyinroq.",
+    "ru": "Здесь выбор u = x был бы неудачным: тогда dv = ln x dx, а его проинтегрировать сложнее, чем исходный интеграл."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "integration_by_parts"
+     },
+     "target": "∫ x·e^(kx) dx",
+     "probe": "wrong_u_choice"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "integration_by_parts"
+     },
+     "target": "∫ x·sin x dx or ∫ x·cos x dx",
+     "probe": "sign_error_trig"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "integration_by_parts"
+     },
+     "target": "∫ xⁿ ln x dx",
+     "probe": "wrong_u_choice"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "integration_by_parts"
+     },
+     "target": "a definite integral by parts",
+     "probe": "forgot_uv_bounds"
+    }
+   ],
+   "minutes": 8,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:2/2",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 2,
+    "passed": 2,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-by0003",
+   "type": "study",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "double_integral",
+   "title": {
+    "en": "Double integrals: one variable at a time",
+    "uz": "Ikki karrali integral: bittadan oʻzgaruvchi",
+    "ru": "Двойной интеграл: по одной переменной"
+   },
+   "idea": {
+    "en": "Work from the inside out. In the inner integral, the outer variable is a constant. The inner integral leaves a function of the outer variable only; then integrate that between the outer limits.",
+    "uz": "Ichkaridan tashqariga qarab ishlang. Ichki integralda tashqi oʻzgaruvchi oʻzgarmas son. Ichki integraldan keyin faqat tashqi oʻzgaruvchiga bogʻliq funksiya qoladi; keyin uni tashqi chegaralar boʻyicha integrallang.",
+    "ru": "Работайте изнутри наружу. Во внутреннем интеграле внешняя переменная — константа. После внутреннего интеграла остаётся функция только внешней переменной; её интегрируют в пределах внешнего интеграла."
+   },
+   "example": {
+    "problem": {
+     "en": "Calculate ∫₁² ∫₀³ x y² dy dx.",
+     "uz": "∫₁² ∫₀³ x y² dy dx ni hisoblang.",
+     "ru": "Вычислите ∫₁² ∫₀³ x y² dy dx."
+    },
+    "steps": [
+     {
+      "en": "Inner integral (x is a constant): ∫₀³ x y² dy = x · [y³/3]₀³ = x · 9 = 9x.",
+      "uz": "Ichki integral (x — oʻzgarmas): ∫₀³ x y² dy = x · [y³/3]₀³ = x · 9 = 9x.",
+      "ru": "Внутренний интеграл (x — константа): ∫₀³ x y² dy = x · [y³/3]₀³ = x · 9 = 9x."
+     },
+     {
+      "en": "Outer integral: ∫₁² 9x dx = 9 · [x²/2]₁² = 9 · (2 − 1/2) = 27/2.",
+      "uz": "Tashqi integral: ∫₁² 9x dx = 9 · [x²/2]₁² = 9 · (2 − 1/2) = 27/2.",
+      "ru": "Внешний интеграл: ∫₁² 9x dx = 9 · [x²/2]₁² = 9 · (2 − 1/2) = 27/2."
+     }
+    ],
+    "answer": {
+     "en": "27/2 = 13.5",
+     "uz": "27/2 = 13,5",
+     "ru": "27/2 = 13,5"
+    },
+    "solver": [
+     "integrate(integrate(x*y**2, (y, 0, 3)), (x, 1, 2)) == Rational(27, 2)",
+     "integrate(x*y**2, (y, 0, 3)) == 9*x",
+     "integrate(integrate(x*y**2, (y, 1, 2)), (x, 0, 3)) == Rational(21, 2)"
+    ]
+   },
+   "watch_out": {
+    "en": "Match each integral with its own limits: dy goes from 0 to 3, dx from 1 to 2. Swapping them gives 21/2 instead of 27/2.",
+    "uz": "Har bir integralni oʻz chegaralari bilan juftlang: dy uchun 0 dan 3 gacha, dx uchun 1 dan 2 gacha. Ularni almashtirsangiz, 27/2 oʻrniga 21/2 chiqadi.",
+    "ru": "Сопоставляйте каждый интеграл со своими пределами: dy — от 0 до 3, dx — от 1 до 2. Если их перепутать, получится 21/2 вместо 27/2."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "double_integral"
+     },
+     "target": "a polynomial integrand over a rectangle",
+     "probe": "limits_swapped"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "double_integral"
+     },
+     "target": "a product integrand such as x·y",
+     "probe": "treated_outer_as_variable"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "double_integral"
+     },
+     "target": "an inner limit that depends on x",
+     "probe": "constant_inner_limit"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "double_integral"
+     },
+     "target": "the volume under a surface over a rectangle",
+     "probe": "limits_swapped"
+    }
+   ],
+   "minutes": 8,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-by0004",
+   "type": "study",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "separable_ode",
+   "title": {
+    "en": "Separable differential equations",
+    "uz": "Oʻzgaruvchilari ajraladigan differensial tenglamalar",
+    "ru": "Уравнения с разделяющимися переменными"
+   },
+   "idea": {
+    "en": "If dy/dx = g(x) · h(y), move everything with y to one side and everything with x to the other: dy/h(y) = g(x) dx. Integrate both sides, add one constant C, then use the initial condition to find C.",
+    "uz": "Agar dy/dx = g(x) · h(y) boʻlsa, y qatnashgan hamma narsani bir tomonga, x qatnashganini ikkinchi tomonga oʻtkazing: dy/h(y) = g(x) dx. Ikkala tomonni integrallang, bitta C oʻzgarmasni qoʻshing, keyin boshlangʻich shart yordamida C ni toping.",
+    "ru": "Если dy/dx = g(x) · h(y), перенесите всё, что содержит y, в одну сторону, а всё, что содержит x, — в другую: dy/h(y) = g(x) dx. Проинтегрируйте обе части, добавьте одну константу C, затем найдите C из начального условия."
+   },
+   "example": {
+    "problem": {
+     "en": "Solve dy/dx = x/y with y(0) = 2.",
+     "uz": "dy/dx = x/y, y(0) = 2 tenglamani yeching.",
+     "ru": "Решите уравнение dy/dx = x/y при y(0) = 2."
+    },
+    "steps": [
+     {
+      "en": "Separate: y dy = x dx.",
+      "uz": "Ajratamiz: y dy = x dx.",
+      "ru": "Разделяем переменные: y dy = x dx."
+     },
+     {
+      "en": "Integrate: y²/2 = x²/2 + C, so y² = x² + 2C.",
+      "uz": "Integrallaymiz: y²/2 = x²/2 + C, demak y² = x² + 2C.",
+      "ru": "Интегрируем: y²/2 = x²/2 + C, значит, y² = x² + 2C."
+     },
+     {
+      "en": "y(0) = 2: 4 = 0 + 2C, so y² = x² + 4.",
+      "uz": "y(0) = 2: 4 = 0 + 2C, demak y² = x² + 4.",
+      "ru": "y(0) = 2: 4 = 0 + 2C, значит, y² = x² + 4."
+     },
+     {
+      "en": "y(0) = 2 is positive, so take the positive root: y = √(x² + 4). Check: y′ = x/√(x² + 4) = x/y.",
+      "uz": "y(0) = 2 musbat, shuning uchun musbat ildizni olamiz: y = √(x² + 4). Tekshirish: y′ = x/√(x² + 4) = x/y.",
+      "ru": "y(0) = 2 положительно, поэтому берём положительный корень: y = √(x² + 4). Проверка: y′ = x/√(x² + 4) = x/y."
+     }
+    ],
+    "answer": {
+     "en": "y = √(x² + 4)",
+     "uz": "y = √(x² + 4)",
+     "ru": "y = √(x² + 4)"
+    },
+    "solver": [
+     "simplify(diff(sqrt(x**2 + 4), x) - x/sqrt(x**2 + 4)) == 0",
+     "sqrt(0**2 + 4) == 2",
+     "checkodesol(Eq(f(x).diff(x), x/f(x)), Eq(f(x), sqrt(x**2 + 4)))[0] == True"
+    ]
+   },
+   "watch_out": {
+    "en": "Find C before you take the square root, and choose the sign of the root that matches y(0).",
+    "uz": "C ni kvadrat ildiz olishdan oldin toping va ildiz ishorasini y(0) ga mos qilib tanlang.",
+    "ru": "Найдите C до извлечения корня и выберите знак корня, соответствующий y(0)."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "separable_ode"
+     },
+     "target": "dy/dx = ky with y(0) given",
+     "probe": "forgot_initial_condition"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "separable_ode"
+     },
+     "target": "dy/dx = g(x)·y",
+     "probe": "constant_misplaced"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "separable_ode"
+     },
+     "target": "dy/dx = x/y type, with a root sign to choose",
+     "probe": "wrong_root_sign"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "separable_ode"
+     },
+     "target": "the value of the solution at a point",
+     "probe": "forgot_initial_condition"
+    }
+   ],
+   "minutes": 8,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-by0005",
+   "type": "study",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "taylor_series",
+   "title": {
+    "en": "Taylor (Maclaurin) series",
+    "uz": "Teylor (Makloren) qatori",
+    "ru": "Ряд Тейлора (Маклорена)"
+   },
+   "idea": {
+    "en": "Near x = 0, f(x) = f(0) + f′(0)x + f″(0)x²/2! + f‴(0)x³/3! + … . Learn a few series by heart, such as eᵘ = 1 + u + u²/2! + u³/3! + …, and get new ones by substitution instead of differentiating again.",
+    "uz": "x = 0 atrofida f(x) = f(0) + f′(0)x + f″(0)x²/2! + f‴(0)x³/3! + … . Bir nechta qatorni yod oling, masalan eᵘ = 1 + u + u²/2! + u³/3! + …, yangilarini esa qayta differensiallamasdan, oʻrniga qoʻyish yoʻli bilan hosil qiling.",
+    "ru": "Вблизи x = 0 f(x) = f(0) + f′(0)x + f″(0)x²/2! + f‴(0)x³/3! + … . Выучите несколько рядов наизусть, например eᵘ = 1 + u + u²/2! + u³/3! + …, а новые получайте подстановкой, не дифференцируя заново."
+   },
+   "example": {
+    "problem": {
+     "en": "Find the first three non-zero terms of the Maclaurin series of e^(−x²).",
+     "uz": "e^(−x²) ning Makloren qatoridagi dastlabki uchta noldan farqli hadni toping.",
+     "ru": "Найдите первые три ненулевых члена ряда Маклорена для e^(−x²)."
+    },
+    "steps": [
+     {
+      "en": "Start from eᵘ = 1 + u + u²/2 + … .",
+      "uz": "eᵘ = 1 + u + u²/2 + … dan boshlaymiz.",
+      "ru": "Начинаем с eᵘ = 1 + u + u²/2 + … ."
+     },
+     {
+      "en": "Substitute u = −x²: 1 + (−x²) + (−x²)²/2 + … .",
+      "uz": "u = −x² ni qoʻyamiz: 1 + (−x²) + (−x²)²/2 + … .",
+      "ru": "Подставляем u = −x²: 1 + (−x²) + (−x²)²/2 + … ."
+     },
+     {
+      "en": "(−x²)² = x⁴, so e^(−x²) = 1 − x² + x⁴/2 − … .",
+      "uz": "(−x²)² = x⁴, demak e^(−x²) = 1 − x² + x⁴/2 − … .",
+      "ru": "(−x²)² = x⁴, значит, e^(−x²) = 1 − x² + x⁴/2 − … ."
+     }
+    ],
+    "answer": {
+     "en": "1 − x² + x⁴/2",
+     "uz": "1 − x² + x⁴/2",
+     "ru": "1 − x² + x⁴/2"
+    },
+    "solver": [
+     "series(exp(-x**2), x, 0, 6).removeO() == 1 - x**2 + x**4/2",
+     "expand((-x**2)**2) == x**4"
+    ]
+   },
+   "watch_out": {
+    "en": "(−x²)² = +x⁴: the square of a negative is positive. And the powers go up in steps of x², not x.",
+    "uz": "(−x²)² = +x⁴: manfiy ifodaning kvadrati musbat. Bundan tashqari, darajalar x emas, x² qadam bilan oshadi.",
+    "ru": "(−x²)² = +x⁴: квадрат отрицательного выражения положителен. Кроме того, степени растут шагом x², а не x."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "taylor_series"
+     },
+     "target": "the coefficient of xⁿ in the series of e^(kx)",
+     "probe": "forgot_factorial"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "taylor_series"
+     },
+     "target": "the Maclaurin series of sin x or cos x",
+     "probe": "wrong_powers"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "taylor_series"
+     },
+     "target": "a new series by substitution into a known one",
+     "probe": "sign_error"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "taylor_series"
+     },
+     "target": "an approximate value (e.g. e^0.1) from the first terms",
+     "probe": "too_few_terms"
+    }
+   ],
+   "minutes": 8,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:2/2",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 2,
+    "passed": 2,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-by0006",
+   "type": "study",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "determinant",
+   "title": {
+    "en": "Determinants of 2×2 and 3×3 matrices",
+    "uz": "2×2 va 3×3 matritsalar determinanti",
+    "ru": "Определитель матриц 2×2 и 3×3"
+   },
+   "idea": {
+    "en": "For a 2×2 matrix with rows (a, b) and (c, d), det = ad − bc. For a 3×3 matrix, expand along the first row: multiply each entry by the 2×2 determinant left after crossing out its row and column, with the signs +, −, +. If det = 0, the matrix has no inverse.",
+    "uz": "Qatorlari (a, b) va (c, d) boʻlgan 2×2 matritsa uchun det = ad − bc. 3×3 matritsada birinchi qator boʻyicha yoying: har bir elementni uning qatori va ustunini oʻchirgandan keyin qolgan 2×2 determinantga koʻpaytiring, ishoralar +, −, +. Agar det = 0 boʻlsa, matritsaning teskarisi yoʻq.",
+    "ru": "Для матрицы 2×2 со строками (a, b) и (c, d) det = ad − bc. Матрицу 3×3 разложите по первой строке: умножьте каждый элемент на определитель 2×2, который остаётся после вычёркивания его строки и столбца, со знаками +, −, +. Если det = 0, у матрицы нет обратной."
+   },
+   "example": {
+    "problem": {
+     "en": "Find det A, where the rows of A are (1, 2, 0), (3, −1, 4) and (2, 0, 1).",
+     "uz": "Qatorlari (1, 2, 0), (3, −1, 4) va (2, 0, 1) boʻlgan A matritsaning determinantini toping.",
+     "ru": "Найдите det A, если строки матрицы A: (1, 2, 0), (3, −1, 4) и (2, 0, 1)."
+    },
+    "steps": [
+     {
+      "en": "First entry (1): cross out row 1 and column 1; rows (−1, 4) and (0, 1) are left: (−1) · 1 − 4 · 0 = −1.",
+      "uz": "Birinchi element (1): 1-qator va 1-ustunni oʻchiramiz; (−1, 4) va (0, 1) qatorlari qoladi: (−1) · 1 − 4 · 0 = −1.",
+      "ru": "Первый элемент (1): вычёркиваем 1-ю строку и 1-й столбец; остаются строки (−1, 4) и (0, 1): (−1) · 1 − 4 · 0 = −1."
+     },
+     {
+      "en": "Second entry (2): cross out row 1 and column 2; rows (3, 4) and (2, 1) are left: 3 · 1 − 4 · 2 = −5.",
+      "uz": "Ikkinchi element (2): 1-qator va 2-ustunni oʻchiramiz; (3, 4) va (2, 1) qatorlari qoladi: 3 · 1 − 4 · 2 = −5.",
+      "ru": "Второй элемент (2): вычёркиваем 1-ю строку и 2-й столбец; остаются строки (3, 4) и (2, 1): 3 · 1 − 4 · 2 = −5."
+     },
+     {
+      "en": "The third entry is 0, so its term is 0.",
+      "uz": "Uchinchi element 0 ga teng, demak uning hadi ham 0.",
+      "ru": "Третий элемент равен 0, значит, его слагаемое тоже 0."
+     },
+     {
+      "en": "det A = 1 · (−1) − 2 · (−5) + 0 = −1 + 10 = 9.",
+      "uz": "det A = 1 · (−1) − 2 · (−5) + 0 = −1 + 10 = 9.",
+      "ru": "det A = 1 · (−1) − 2 · (−5) + 0 = −1 + 10 = 9."
+     }
+    ],
+    "answer": {
+     "en": "9",
+     "uz": "9",
+     "ru": "9"
+    },
+    "solver": [
+     "Matrix([[1, 2, 0], [3, -1, 4], [2, 0, 1]]).det() == 9",
+     "(-1)*1 - 4*0 == -1",
+     "3*1 - 4*2 == -5",
+     "1*(-1) + 2*(-5) + 0 == -11"
+    ]
+   },
+   "watch_out": {
+    "en": "The middle term takes a minus sign: −2 · (−5) = +10. Using + there gives −11.",
+    "uz": "Oʻrtadagi had minus ishora bilan olinadi: −2 · (−5) = +10. U yerda + olsangiz, −11 chiqadi.",
+    "ru": "Средний член берётся со знаком минус: −2 · (−5) = +10. Если взять там +, получится −11."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "determinant"
+     },
+     "target": "a 2×2 determinant",
+     "probe": "added_diagonals"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "determinant"
+     },
+     "target": "a 3×3 determinant",
+     "probe": "middle_sign"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "determinant"
+     },
+     "target": "the value of k that makes det = 0",
+     "probe": "sign_error"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "beyond",
+      "subskill": "determinant"
+     },
+     "target": "det(kA) for a 2×2 matrix",
+     "probe": "k_not_squared"
+    }
+   ],
+   "minutes": 8,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

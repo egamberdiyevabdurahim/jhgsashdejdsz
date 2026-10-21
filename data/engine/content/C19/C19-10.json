@@ -1,0 +1,2651 @@
+{
+  "bank": "C19",
+  "batch": 10,
+  "kind": "lessons",
+  "note": "SAT Math lesson bodies, phase 2 (SPEC-lessons rev. 2, 13 Oct 2026, §3.3, §11.1, §12.5 item 1; P7 PLAN.md §1 and §3, author a2): lessons 2 and 3 of the C10 units MAPS01-03 and MAGT01-03. `lessons` are the lesson records; `items` are their piece questions (the key is options[0]; `page` names the lesson). Our own wording; every worked line and key is checked by sympy (.superpowers/p7/a2/sympy_check.py). Key check 2 (P7, 13 Oct 2026): two blind solvers outside the author's session, P7s1 and P7s2, both chose the key on all 36 piece questions, so they are verified_auto with key_check_2 blind:P7s1+P7s2, and each lesson record with them (C19/RECONCILE-p7.md).",
+  "lessons": [
+    {
+      "kind": "lesson",
+      "id": "C19-MAPS01-2",
+      "course": "sat_m",
+      "unit": "C10-MAPS01",
+      "seq": 2,
+      "skill": "sat_m:MAPS01",
+      "requires": {
+        "math_rung_min": "prealg"
+      },
+      "title": {
+        "en": "SAT Math: Two percent changes in a row",
+        "uz": "SAT Math: Ketma-ket ikki foiz oʻzgarishi",
+        "ru": "SAT Math: Два изменения в процентах подряд"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "A change by a percent is a multiplication: up 20% is × 1.2, down 20% is × 0.8.\nTwo changes in a row multiply: 1.2 × 0.8 = 0.96.\nSo 50,000 soʻm that goes up 20% and then down 20% ends at 50,000 × 0.96 = 48,000 soʻm, not 50,000.\nPercent change = (new − old) ÷ old × 100.\nHere (48,000 − 50,000) ÷ 50,000 × 100 = −4: a 4% drop.",
+            "uz": "Foizga oʻzgarish — bu koʻpaytirish: 20% ga oshish — × 1,2, 20% ga kamayish — × 0,8.\nKetma-ket ikki oʻzgarish koʻpaytiriladi: 1,2 × 0,8 = 0,96.\nDemak 50 000 soʻm avval 20% ga oshib, keyin 20% ga tushsa, 50 000 × 0,96 = 48 000 soʻm boʻladi, 50 000 emas.\nFoiz oʻzgarishi = (yangi − eski) ÷ eski × 100.\nBu yerda (48 000 − 50 000) ÷ 50 000 × 100 = −4: 4% ga kamaydi.",
+            "ru": "Изменение на сколько-то процентов — это умножение: рост на 20% — это × 1,2, снижение на 20% — × 0,8.\nДва изменения подряд перемножаются: 1,2 × 0,8 = 0,96.\nЗначит, 50 000 сум после роста на 20% и снижения на 20% станут 50 000 × 0,96 = 48 000 сум, а не 50 000.\nИзменение в процентах = (новое − старое) ÷ старое × 100.\nЗдесь (48 000 − 50 000) ÷ 50 000 × 100 = −4: снижение на 4%."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps12q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A shop raises the price of a 600,000 soʻm bag by 10%. A month later it lowers the new price by 30%. What is the final price, in soʻm?\nStep 1: 600,000 × 1.1 = 660,000.\nStep 2: 660,000 × 0.7 = 462,000 soʻm.\nNow you: a shop raises the price of a 300,000 soʻm bag by 20%. A month later it lowers the new price by 10%.\n300,000 × 1.2 = 360,000 → 360,000 × 0.9 = ?",
+            "uz": "Doʻkon 600 000 soʻmlik sumkaning narxini 10% ga oshirdi. Bir oydan keyin yangi narxni 30% ga tushirdi. Oxirgi narx necha soʻm?\n1-qadam: 600 000 × 1,1 = 660 000.\n2-qadam: 660 000 × 0,7 = 462 000 soʻm.\nEndi siz: doʻkon 300 000 soʻmlik sumkaning narxini 20% ga oshirdi. Bir oydan keyin yangi narxni 10% ga tushirdi.\n300 000 × 1,2 = 360 000 → 360 000 × 0,9 = ?",
+            "ru": "Магазин поднял цену сумки стоимостью 600 000 сум на 10%. Через месяц новую цену снизили на 30%. Какова итоговая цена (в сумах)?\nШаг 1: 600 000 × 1,1 = 660 000.\nШаг 2: 660 000 × 0,7 = 462 000 сум.\nТеперь попробуйте сами: магазин поднял цену сумки стоимостью 300 000 сум на 20%. Через месяц новую цену снизили на 10%.\n300 000 × 1,2 = 360 000 → 360 000 × 0,9 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps12q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "To find the price before a rise, do not take the percent of the new price.\nA ticket costs 60,000 soʻm after a 20% rise. 20% of 60,000 is 12,000, but 60,000 − 12,000 = 48,000 is wrong: 48,000 × 1.2 = 57,600, not 60,000.\nThe rise was 20% of the old price: old × 1.2 = 60,000, so old = 60,000 ÷ 1.2 = 50,000 soʻm.",
+            "uz": "Oshishdan oldingi narxni topishda yangi narxning foizini olmang.\nChipta 20% ga qimmatlagach, 60 000 soʻm turadi. 60 000 ning 20 foizi 12 000, lekin 60 000 − 12 000 = 48 000 notoʻgʻri: 48 000 × 1,2 = 57 600, 60 000 emas.\nOshish eski narxning 20 foizi edi: eski × 1,2 = 60 000, demak eski = 60 000 ÷ 1,2 = 50 000 soʻm.",
+            "ru": "Чтобы найти цену до роста, не берите процент от новой цены.\nПосле роста на 20% билет стоит 60 000 сум. 20% от 60 000 — это 12 000, но 60 000 − 12 000 = 48 000 — неверно: 48 000 × 1,2 = 57 600, а не 60 000.\nРост составил 20% от старой цены: старая × 1,2 = 60 000, значит, старая = 60 000 ÷ 1,2 = 50 000 сум."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps12q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b001",
+          "C1-m2b002"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b001",
+          "C1-m2b002",
+          "C1-r3b016"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-MAPS01#official",
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-MAPS01-3",
+      "course": "sat_m",
+      "unit": "C10-MAPS01",
+      "seq": 3,
+      "skill": "sat_m:MAPS01",
+      "requires": {
+        "math_rung_min": "prealg"
+      },
+      "title": {
+        "en": "SAT Math: Units and rates: let the units cancel",
+        "uz": "SAT Math: Birliklar va tezliklar: birliklar qisqarsin",
+        "ru": "SAT Math: Единицы и скорости: пусть единицы сокращаются"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "To change units, multiply by a fraction that equals 1, such as 1 kg / 1,000 g or 60 min / 1 h. Write the units at every step: a unit on top and the same unit below cancel.\nA car uses 6 litres for every 100 km. For 350 km: 350 × 6 ÷ 100 = 21 litres (the km cancel).\nA unit rate first: 4 notebooks cost 20,000 soʻm, so one costs 20,000 ÷ 4 = 5,000 soʻm, and 45,000 soʻm buys 45,000 ÷ 5,000 = 9 notebooks.",
+            "uz": "Birlikni almashtirish uchun 1 ga teng kasrga koʻpaytiring, masalan 1 kg / 1000 g yoki 60 daqiqa / 1 soat. Har qadamda birliklarni yozing: suratdagi va maxrajdagi bir xil birlik qisqaradi.\nMashina har 100 km ga 6 litr sarflaydi. 350 km uchun: 350 × 6 ÷ 100 = 21 litr (km qisqaradi).\nAvval bir birlik narxi: 4 ta daftar 20 000 soʻm tursa, bittasi 20 000 ÷ 4 = 5000 soʻm, 45 000 soʻmga esa 45 000 ÷ 5000 = 9 ta daftar olinadi.",
+            "ru": "Чтобы перевести одни единицы в другие, умножьте на дробь, равную 1, например 1 кг / 1000 г или 60 мин / 1 ч. Пишите единицы на каждом шаге: одинаковые единицы в числителе и знаменателе сокращаются.\nМашина тратит 6 литров на каждые 100 км. На 350 км: 350 × 6 ÷ 100 = 21 литр (км сокращаются).\nСначала цена за единицу: 4 тетради стоят 20 000 сум, значит, одна стоит 20 000 ÷ 4 = 5000 сум, а на 45 000 сум можно купить 45 000 ÷ 5000 = 9 тетрадей."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps13q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A leaking tap drips 30 drops per minute, and 20 drops make 1 mL. How many litres of water does it waste in 2 days?\nDrops: 30 × 60 × 24 × 2 = 86,400 (per minute → per hour → per day → 2 days).\nmL: 86,400 ÷ 20 = 4,320. Litres: 4,320 ÷ 1,000 = 4.32.\nNow you: the tap drips 25 drops per minute, and 20 drops make 1 mL. In 4 days:\n25 × 60 × 24 × 4 = 144,000 drops → 144,000 ÷ 20 = 7,200 mL → 7,200 ÷ 1,000 = ?",
+            "uz": "Buzuq jumrakdan daqiqasiga 30 tomchi suv tomadi, 20 tomchi 1 mL ga teng. 2 kunda necha litr suv isrof boʻladi?\nTomchilar: 30 × 60 × 24 × 2 = 86 400 (daqiqa → soat → kun → 2 kun).\nmL: 86 400 ÷ 20 = 4320. Litr: 4320 ÷ 1000 = 4,32.\nEndi siz: jumrakdan daqiqasiga 25 tomchi tomadi, 20 tomchi 1 mL ga teng. 4 kunda:\n25 × 60 × 24 × 4 = 144 000 tomchi → 144 000 ÷ 20 = 7200 mL → 7200 ÷ 1000 = ?",
+            "ru": "Неисправный кран капает с частотой 30 капель в минуту, и 20 капель составляют 1 мл. Сколько литров воды теряется за 2 дня?\nКапли: 30 × 60 × 24 × 2 = 86 400 (минута → час → сутки → 2 дня).\nМиллилитры: 86 400 ÷ 20 = 4320. Литры: 4320 ÷ 1000 = 4,32.\nТеперь попробуйте сами: кран капает с частотой 25 капель в минуту, и 20 капель составляют 1 мл. За 4 дня:\n25 × 60 × 24 × 4 = 144 000 капель → 144 000 ÷ 20 = 7200 мл → 7200 ÷ 1000 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps13q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Every unit step counts. From per minute to per day is × 60 × 24, not × 60 alone: a day has 60 × 24 = 1,440 minutes.\nFrom a small unit to a big one, divide: 1,000 g = 1 kg, so 2,400 g = 2,400 ÷ 1,000 = 2.4 kg.\nA recipe uses 300 g of flour for every 4 servings. For 32 servings: 300 × 32 ÷ 4 = 2,400 g = 2.4 kg, not 2,400 kg.",
+            "uz": "Har bir birlik qadami muhim. Daqiqadan kunga oʻtish — × 60 × 24, faqat × 60 emas: bir kunda 60 × 24 = 1440 daqiqa bor.\nKichik birlikdan kattasiga oʻtishda boʻlinadi: 1000 g = 1 kg, demak 2400 g = 2400 ÷ 1000 = 2,4 kg.\nRetseptda har 4 porsiya uchun 300 g un ishlatiladi. 32 porsiya uchun: 300 × 32 ÷ 4 = 2400 g = 2,4 kg, 2400 kg emas.",
+            "ru": "Учитывайте каждый шаг перевода единиц. Из «в минуту» в «в сутки» — это × 60 × 24, а не только × 60: в сутках 60 × 24 = 1440 минут.\nОт мелкой единицы к крупной — делим: 1000 г = 1 кг, значит, 2400 г = 2400 ÷ 1000 = 2,4 кг.\nПо рецепту на каждые 4 порции нужно 300 г муки. На 32 порции: 300 × 32 ÷ 4 = 2400 г = 2,4 кг, а не 2400 кг."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps13q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-sat018",
+          "C1-sat013"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-sat018",
+          "C1-sat013",
+          "C1-pal062"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-MAPS01#official",
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-MAPS02-2",
+      "course": "sat_m",
+      "unit": "C10-MAPS02",
+      "seq": 2,
+      "skill": "sat_m:MAPS02",
+      "requires": {
+        "math_rung_min": "prealg"
+      },
+      "title": {
+        "en": "SAT Math: A new value: how the mean and the median move",
+        "uz": "SAT Math: Yangi qiymat: oʻrtacha va mediana qanday oʻzgaradi",
+        "ru": "SAT Math: Новое значение: как меняются среднее и медиана"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "When a value joins a data set, find the new sum first: sum = mean × number of values.\nFive boxes have a mean mass of 12 kg, so their sum is 5 × 12 = 60 kg. A 24 kg box is added: (60 + 24) ÷ 6 = 14 kg.\nA value above the mean pulls the mean up; a value below it pulls the mean down.\nTaking a value away works the same way: subtract it from the sum and divide by one less.",
+            "uz": "Toʻplamga yangi qiymat qoʻshilsa, avval yangi yigʻindini toping: yigʻindi = oʻrtacha × qiymatlar soni.\nBeshta qutining oʻrtacha massasi 12 kg, demak yigʻindi 5 × 12 = 60 kg. 24 kg li quti qoʻshildi: (60 + 24) ÷ 6 = 14 kg.\nOʻrtachadan katta qiymat oʻrtachani oshiradi, kichigi esa kamaytiradi.\nQiymat olib tashlansa ham xuddi shunday: uni yigʻindidan ayiring va bittaga kam songa boʻling.",
+            "ru": "Когда к набору данных добавляется значение, сначала найдите новую сумму: сумма = среднее × число значений.\nСредняя масса пяти коробок 12 кг, значит, их сумма 5 × 12 = 60 кг. Добавили коробку 24 кг: (60 + 24) ÷ 6 = 14 кг.\nЗначение больше среднего тянет среднее вверх, меньше — вниз.\nЕсли значение убрать, всё так же: вычтите его из суммы и разделите на количество значений, уменьшенное на 1."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps22q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "The mean age of the 11 players in a team is 16 years. Their 40-year-old coach joins them. What is the mean age of the whole group now?\nSum of the players' ages: 11 × 16 = 176.\nWith the coach: 176 + 40 = 216, and there are 12 people.\nMean: 216 ÷ 12 = 18 years.\nNow you: the mean age of the 9 players in a team is 15 years. Their 35-year-old coach joins them.\n9 × 15 = 135 → 135 + 35 = 170 → 170 ÷ 10 = ?",
+            "uz": "Jamoadagi 11 nafar oʻyinchining oʻrtacha yoshi 16 yosh. Ularga 40 yoshli murabbiy qoʻshildi. Endi butun guruhning oʻrtacha yoshi necha yosh?\nOʻyinchilar yoshlarining yigʻindisi: 11 × 16 = 176.\nMurabbiy bilan: 176 + 40 = 216, odamlar esa 12 ta.\nOʻrtacha: 216 ÷ 12 = 18 yosh.\nEndi siz: jamoadagi 9 nafar oʻyinchining oʻrtacha yoshi 15 yosh. Ularga 35 yoshli murabbiy qoʻshildi.\n9 × 15 = 135 → 135 + 35 = 170 → 170 ÷ 10 = ?",
+            "ru": "Средний возраст 11 игроков команды равен 16 годам. К ним присоединился их 40-летний тренер. Каков теперь средний возраст всей группы?\nСумма возрастов игроков: 11 × 16 = 176.\nС тренером: 176 + 40 = 216, а людей 12.\nСреднее: 216 ÷ 12 = 18 лет.\nТеперь попробуйте сами: средний возраст 9 игроков команды равен 15 годам. К ним присоединился их 35-летний тренер.\n9 × 15 = 135 → 135 + 35 = 170 → 170 ÷ 10 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps22q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "An outlier, a value far from the others, moves the mean a lot and the median only a little.\nData 3, 5, 6, 8, 9: mean (3 + 5 + 6 + 8 + 9) ÷ 5 = 6.2, median 6.\nAdd 40. Mean: (31 + 40) ÷ 6 ≈ 11.8. Median of 3, 5, 6, 8, 9, 40: (6 + 8) ÷ 2 = 7.\nWith six values, sort them and take the mean of the two middle ones: the old median is no longer the answer.",
+            "uz": "Chetga chiqqan qiymat (outlier) — boshqalardan uzoq qiymat — oʻrtachani koʻp, medianani esa oz oʻzgartiradi.\n3, 5, 6, 8, 9 maʼlumotlari: oʻrtacha (3 + 5 + 6 + 8 + 9) ÷ 5 = 6,2, mediana 6.\n40 qoʻshildi. Oʻrtacha: (31 + 40) ÷ 6 ≈ 11,8. 3, 5, 6, 8, 9, 40 ning medianasi: (6 + 8) ÷ 2 = 7.\nOltita qiymatda ularni tartiblang va oʻrtadagi ikkitasining oʻrtachasini oling: eski mediana endi javob emas.",
+            "ru": "Выброс (outlier) — значение, далёкое от остальных, — сильно сдвигает среднее и слабо — медиану.\nДанные 3, 5, 6, 8, 9: среднее (3 + 5 + 6 + 8 + 9) ÷ 5 = 6,2, медиана 6.\nДобавим 40. Среднее: (31 + 40) ÷ 6 ≈ 11,8. Медиана чисел 3, 5, 6, 8, 9, 40: (6 + 8) ÷ 2 = 7.\nПри шести значениях упорядочьте их и возьмите среднее двух чисел в середине: старая медиана уже не ответ."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps22q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b003",
+          "C1-sat015"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b003",
+          "C1-sat015",
+          "C1-r3b017"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-MAPS02#official",
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-MAPS02-3",
+      "course": "sat_m",
+      "unit": "C10-MAPS02",
+      "seq": 3,
+      "skill": "sat_m:MAPS02",
+      "requires": {
+        "math_rung_min": "prealg"
+      },
+      "title": {
+        "en": "SAT Math: Spread and the line of best fit",
+        "uz": "SAT Math: Tarqoqlik va eng mos chiziq",
+        "ru": "SAT Math: Разброс и линия тренда"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Spread tells how far apart the values are.\nThe range is the largest value minus the smallest. For 12, 15, 9, 20, 14 it is 20 − 9 = 11.\nThe standard deviation (SD) measures how far the values are from the mean, on average. You compare it rather than compute it: values close to the mean give a small SD, values far from it a large SD.\nSets 10, 10, 10, 10 and 4, 8, 12, 16 have the same mean, (4 + 8 + 12 + 16) ÷ 4 = 10, but the second has the larger SD.",
+            "uz": "Tarqoqlik qiymatlar bir-biridan qanchalik uzoqligini koʻrsatadi.\nQuloch (range) — eng katta qiymat minus eng kichigi. 12, 15, 9, 20, 14 uchun u 20 − 9 = 11.\nStandart chetlanish (SD) qiymatlar oʻrtachadan oʻrtacha qanchalik uzoqligini oʻlchaydi. Uni hisoblash emas, solishtirish kerak: oʻrtachaga yaqin qiymatlarda SD kichik, uzoq qiymatlarda katta.\n10, 10, 10, 10 va 4, 8, 12, 16 toʻplamlarining oʻrtachasi bir xil, (4 + 8 + 12 + 16) ÷ 4 = 10, lekin ikkinchisining SD si kattaroq.",
+            "ru": "Разброс показывает, насколько значения далеки друг от друга.\nРазмах (range) — наибольшее значение минус наименьшее. Для 12, 15, 9, 20, 14 он равен 20 − 9 = 11.\nСтандартное отклонение (SD) показывает, насколько в среднем значения далеки от среднего. Его сравнивают, а не вычисляют: значения рядом со средним дают малое SD, далёкие — большое.\nУ наборов 10, 10, 10, 10 и 4, 8, 12, 16 одно среднее, (4 + 8 + 12 + 16) ÷ 4 = 10, но у второго SD больше."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps23q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "For a class, the line of best fit for test score y and hours studied x is y = 6x + 52. What score does the line predict for a student who studied 5 hours?\nPut x = 5 into the line: y = 6 × 5 + 52 = 30 + 52 = 82.\nThe slope 6 means each extra hour adds about 6 points to the prediction.\nNow you: the line is y = 4x + 55, and the student studied 7 hours.\ny = 4 × 7 + 55 = 28 + 55 = ?",
+            "uz": "Bir sinf uchun test bali y va oʻqishga sarflangan soatlar x boʻyicha eng mos chiziq y = 6x + 52. Chiziq 5 soat oʻqigan oʻquvchi uchun qanday ball bashorat qiladi?\nx = 5 ni qoʻying: y = 6 × 5 + 52 = 30 + 52 = 82.\nBurchak koeffitsiyenti 6 har bir qoʻshimcha soat bashoratga taxminan 6 ball qoʻshishini bildiradi.\nEndi siz: chiziq y = 4x + 55, oʻquvchi 7 soat oʻqigan.\ny = 4 × 7 + 55 = 28 + 55 = ?",
+            "ru": "Для класса построена линия тренда, связывающая балл за тест y и часы подготовки x: y = 6x + 52. Какой балл предсказывает эта линия для ученика, который готовился 5 ч?\nПодставим x = 5: y = 6 × 5 + 52 = 30 + 52 = 82.\nУгловой коэффициент 6 означает: каждый дополнительный час добавляет к прогнозу примерно 6 баллов.\nТеперь попробуйте сами: линия y = 4x + 55, ученик готовился 7 ч.\ny = 4 × 7 + 55 = 28 + 55 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps23q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "The slope is the change in the prediction for each 1 more x, not a value of y.\nFor y = 6x + 52, going from x = 2 to x = 7 raises the prediction by 6 × (7 − 2) = 30 points.\nDo not trust a prediction far outside the data: if the class studied 0 to 10 hours, the line at 30 hours gives 6 × 30 + 52 = 232 points, more than a 100-point test allows.",
+            "uz": "Burchak koeffitsiyenti — x 1 ga oshganda bashorat qanchaga oʻzgarishi, y ning qiymati emas.\ny = 6x + 52 da x = 2 dan x = 7 ga oʻtilsa, bashorat 6 × (7 − 2) = 30 ballga oshadi.\nMaʼlumotlardan uzoqdagi bashoratga ishonmang: sinf 0 dan 10 soatgacha oʻqigan boʻlsa, 30 soat uchun chiziq 6 × 30 + 52 = 232 ball beradi — 100 ballik testda bunday ball yoʻq.",
+            "ru": "Угловой коэффициент — это изменение прогноза, когда x растёт на 1, а не значение y.\nДля y = 6x + 52 при переходе от x = 2 к x = 7 прогноз растёт на 6 × (7 − 2) = 30 баллов.\nНе доверяйте прогнозу далеко за пределами данных: если класс готовился от 0 до 10 ч, то при 30 ч линия даёт 6 × 30 + 52 = 232 балла — больше, чем возможно в тесте на 100 баллов."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps23q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b005",
+          "C1-m2b004"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b005",
+          "C1-m2b004",
+          "C1-r3b018"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-MAPS02#official",
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-MAPS03-2",
+      "course": "sat_m",
+      "unit": "C10-MAPS03",
+      "seq": 2,
+      "skill": "sat_m:MAPS03",
+      "requires": {
+        "math_rung_min": "alg1"
+      },
+      "title": {
+        "en": "SAT Math: Probability from a two-way table",
+        "uz": "SAT Math: Ikki belgili jadvaldan ehtimollik",
+        "ru": "SAT Math: Вероятность по таблице с двумя признаками"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "A two-way table counts people by two things at once, for example class and game.\nIn 9A, 12 play football and 8 play chess. In 9B, 10 play football and 15 play chess.\n“Given that” means: keep only that row or column and divide by its total, not by everyone.\nA 9B student is chosen: P(chess) = 15 ÷ (10 + 15) = 15 ÷ 25 = 0.6.\nA chess player is chosen: P(9B) = 15 ÷ (8 + 15) = 15/23.",
+            "uz": "Ikki belgili jadval odamlarni bir vaqtda ikki belgi boʻyicha sanaydi, masalan, sinf va oʻyin.\n9A da 12 kishi futbol, 8 kishi shaxmat oʻynaydi. 9B da 10 kishi futbol, 15 kishi shaxmat oʻynaydi.\n«Berilgan boʻlsa» (given that) degani: faqat oʻsha qator yoki ustunni qoldiring va uning jamiga boʻling, hammaga emas.\n9B oʻquvchisi tanlandi: P(shaxmat) = 15 ÷ (10 + 15) = 15 ÷ 25 = 0,6.\nShaxmatchi tanlandi: P(9B) = 15 ÷ (8 + 15) = 15/23.",
+            "ru": "В таблице с двумя признаками люди распределены сразу по двум признакам, например по классу и по игре.\nВ 9А в футбол играют 12, в шахматы — 8. В 9Б в футбол играют 10, в шахматы — 15.\n«При условии» (given that) значит: оставьте только эту строку или этот столбец и делите на его итог, а не на всех.\nВыбран ученик 9Б: P(шахматы) = 15 ÷ (10 + 15) = 15 ÷ 25 = 0,6.\nВыбран шахматист: P(9Б) = 15 ÷ (8 + 15) = 15/23."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps32q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Girls: 18 walk to school and 12 go by bus. Boys: 10 walk to school and 20 go by bus. One of the students who go by bus is chosen at random. What is the probability that this student is a girl?\nGiven “goes by bus”: keep only the bus column, 12 + 20 = 32 students.\nGirls among them: 12. P = 12/32 = 3/8.\nNow you: girls: 15 walk and 9 go by bus; boys: 11 walk and 21 go by bus.\nBus column: 9 + 21 = 30 → P(girl) = 9/30 = ?",
+            "uz": "Qizlar: 18 nafari maktabga piyoda boradi, 12 nafari avtobusda. Oʻgʻil bolalar: 10 nafari piyoda boradi, 20 nafari avtobusda. Avtobusda boradiganlardan biri tasodifan tanlandi. Uning qiz boʻlish ehtimoli qancha?\nShart «avtobusda boradi»: faqat avtobus ustuni qoladi, 12 + 20 = 32 oʻquvchi.\nUlardan qizlar: 12. P = 12/32 = 3/8.\nEndi siz: qizlardan 15 nafari piyoda, 9 nafari avtobusda; oʻgʻil bolalardan 11 nafari piyoda, 21 nafari avtobusda.\nAvtobus ustuni: 9 + 21 = 30 → P(qiz) = 9/30 = ?",
+            "ru": "Девочки: пешком в школу ходят 18, на автобусе ездят 12. Мальчики: пешком ходят 10, на автобусе ездят 20. Случайно выбирают одного из тех, кто ездит на автобусе. Какова вероятность, что это девочка?\nУсловие «ездит на автобусе»: остаётся только столбец «автобус», 12 + 20 = 32 ученика.\nИз них девочек 12. P = 12/32 = 3/8.\nТеперь попробуйте сами: девочки — пешком 15, на автобусе 9; мальчики — пешком 11, на автобусе 21.\nСтолбец «автобус»: 9 + 21 = 30 → P(девочка) = 9/30 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps32q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Read which group the question gives you. “A girl is chosen; P(bus)?” and “A bus rider is chosen; P(girl)?” have different totals.\nWith the example's numbers: P(bus, given girl) = 12 ÷ (18 + 12) = 12/30 = 2/5, but P(girl, given bus) = 12/32 = 3/8.\nAnd P(girl and bus) for a student chosen from everyone uses the grand total: 12 ÷ (18 + 12 + 10 + 20) = 12/60 = 1/5.",
+            "uz": "Savol qaysi guruhni berganini oʻqing. «Qiz tanlandi; P(avtobus)?» va «Avtobusda boruvchi tanlandi; P(qiz)?» savollarining jami har xil.\nMisoldagi sonlar bilan: P(avtobus, qiz berilgan) = 12 ÷ (18 + 12) = 12/30 = 2/5, lekin P(qiz, avtobus berilgan) = 12/32 = 3/8.\nHammadan tanlangan oʻquvchi uchun P(qiz va avtobus) umumiy jamni oladi: 12 ÷ (18 + 12 + 10 + 20) = 12/60 = 1/5.",
+            "ru": "Обратите внимание, какая группа задана в вопросе. В вопросах «Выбрана девочка; P(автобус)?» и «Выбран пассажир автобуса; P(девочка)?» делят на разные итоги.\nС числами из примера: P(автобус при условии «девочка») = 12 ÷ (18 + 12) = 12/30 = 2/5, а P(девочка при условии «автобус») = 12/32 = 3/8.\nА P(девочка и автобус) для ученика, выбранного из всех, считают по общему итогу: 12 ÷ (18 + 12 + 10 + 20) = 12/60 = 1/5."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps32q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b006"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b006",
+          "C1-r3b023",
+          "C1-r3b024"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-MAPS03#official",
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-MAPS03-3",
+      "course": "sat_m",
+      "unit": "C10-MAPS03",
+      "seq": 3,
+      "skill": "sat_m:MAPS03",
+      "requires": {
+        "math_rung_min": "alg1"
+      },
+      "title": {
+        "en": "SAT Math: From a sample to the whole group",
+        "uz": "SAT Math: Tanlanmadan butun guruhga",
+        "ru": "SAT Math: От выборки ко всей группе"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "A random sample lets you estimate the whole group (the population): use the sample's fraction for everyone.\nThe sample must be random and taken from that population: asking only the chess club about chess tells little about the whole school.\nA margin of error gives a plausible range: an estimate of 40% with a margin of error of 3% means the true value is likely between 40 − 3 = 37% and 40 + 3 = 43%.\nA larger random sample usually gives a smaller margin of error.",
+            "uz": "Tasodifiy tanlanma butun guruhni (bosh toʻplamni) taxmin qilishga imkon beradi: tanlanmadagi ulushni hammaga qoʻllang.\nTanlanma tasodifiy va aynan shu guruhdan olingan boʻlishi kerak: shaxmat haqida faqat shaxmat toʻgaragidan soʻrash butun maktab haqida kam narsa aytadi.\nXatolik chegarasi (margin of error) ehtimoliy oraliqni beradi: 40% lik taxmin va 3% xatolik chegarasi haqiqiy qiymat, ehtimol, 40 − 3 = 37% bilan 40 + 3 = 43% orasida ekanini bildiradi.\nKattaroq tasodifiy tanlanma odatda kichikroq xatolik chegarasini beradi.",
+            "ru": "Случайная выборка позволяет оценить всю группу (генеральную совокупность): примените долю из выборки ко всем.\nВыборка должна быть случайной и взятой из этой самой группы: опрос о шахматах только в шахматном кружке мало говорит обо всей школе.\nПогрешность (margin of error) даёт правдоподобный диапазон: оценка 40% с погрешностью 3% означает, что истинное значение, скорее всего, лежит между 40 − 3 = 37% и 40 + 3 = 43%.\nЧем больше случайная выборка, тем обычно меньше погрешность."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps33q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A school has 1,200 students. In a random sample of 80 of them, 28 said they read every day. Based on the sample, about how many students in the whole school read every day?\nIn the sample: 28 ÷ 80 = 0.35, that is 35%.\nWhole school: 1,200 × 0.35 = 420 students.\nNow you: a school has 900 students. In a random sample of 50 of them, 16 said they read every day.\n16 ÷ 50 = 0.32 → 900 × 0.32 = ?",
+            "uz": "Maktabda 1200 nafar oʻquvchi bor. Ulardan tasodifan tanlangan 80 nafarining 28 nafari har kuni kitob oʻqishini aytdi. Tanlanma boʻyicha butun maktabda taxminan nechta oʻquvchi har kuni kitob oʻqiydi?\nTanlanmada: 28 ÷ 80 = 0,35, yaʼni 35%.\nButun maktab: 1200 × 0,35 = 420 nafar oʻquvchi.\nEndi siz: maktabda 900 nafar oʻquvchi bor. Ulardan tasodifan tanlangan 50 nafarining 16 nafari har kuni kitob oʻqishini aytdi.\n16 ÷ 50 = 0,32 → 900 × 0,32 = ?",
+            "ru": "В школе 1200 учеников. В случайной выборке из 80 учеников число тех, кто сказал, что читает каждый день, равно 28. Сколько примерно учеников всей школы читают каждый день, если судить по выборке?\nВ выборке: 28 ÷ 80 = 0,35, то есть 35%.\nВся школа: 1200 × 0,35 = 420 учеников.\nТеперь попробуйте сами: в школе 900 учеников. В случайной выборке из 50 учеников число тех, кто сказал, что читает каждый день, равно 16.\n16 ÷ 50 = 0,32 → 900 × 0,32 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps33q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "The margin of error goes on both sides of the estimate, once.\nAn estimate of 55% with a margin of error of 4%: plausible values run from 55 − 4 = 51% to 55 + 4 = 59%. Not from 47% to 63%: do not double it.\nIt is about the population that was sampled, not about each person, and only that population: a sample from one school says nothing sure about the whole country.",
+            "uz": "Xatolik chegarasi taxminning ikki tomoniga bir martadan qoʻyiladi.\n55% lik taxmin va 4% xatolik chegarasi: ehtimoliy qiymatlar 55 − 4 = 51% dan 55 + 4 = 59% gacha. 47% dan 63% gacha emas: uni ikki marta olmang.\nU har bir odam haqida emas, tanlanma olingan guruh haqida va faqat oʻsha guruh haqida: bitta maktabdan olingan tanlanma butun mamlakat haqida aniq hech narsa aytmaydi.",
+            "ru": "Погрешность откладывают в обе стороны от оценки, по одному разу.\nОценка 55% с погрешностью 4%: правдоподобные значения — от 55 − 4 = 51% до 55 + 4 = 59%. Не от 47% до 63%: не удваивайте её.\nОна говорит о совокупности, из которой брали выборку, а не о каждом человеке, и только о ней: выборка из одной школы ничего точно не говорит обо всей стране."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ps33q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b007",
+          "C1-m2b008"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b007",
+          "C1-m2b008",
+          "C1-r3b020"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-MAPS03#official",
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-MAGT01-2",
+      "course": "sat_m",
+      "unit": "C10-MAGT01",
+      "seq": 2,
+      "skill": "sat_m:MAGT01",
+      "requires": {
+        "math_rung_min": "prealg"
+      },
+      "title": {
+        "en": "SAT Math: Scale factors: lengths, areas and volumes",
+        "uz": "SAT Math: Masshtab koeffitsiyenti: uzunlik, yuza va hajm",
+        "ru": "SAT Math: Коэффициент подобия: длины, площади и объёмы"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "If every length of a shape is multiplied by k (the scale factor), lengths and perimeters are multiplied by k, areas by k², and volumes by k³.\nA photo 10 cm by 15 cm has an area of 10 × 15 = 150 cm². Enlarged with k = 3, it is 30 cm by 45 cm.\nNew area: 30 × 45 = 1,350 cm², and indeed 150 × 9 = 1,350: the area grew by 3² = 9, not by 3.",
+            "uz": "Shaklning har bir uzunligi k ga (masshtab koeffitsiyentiga) koʻpaytirilsa, uzunlik va perimetrlar k ga, yuzalar k² ga, hajmlar esa k³ ga koʻpaytiriladi.\n10 sm ga 15 sm li rasmning yuzasi 10 × 15 = 150 sm². k = 3 bilan kattalashtirilsa, u 30 sm ga 45 sm boʻladi.\nYangi yuza: 30 × 45 = 1350 sm², haqiqatan ham 150 × 9 = 1350: yuza 3 marta emas, 3² = 9 marta oshdi.",
+            "ru": "Если каждую длину фигуры умножить на k (коэффициент подобия), то длины и периметры умножатся на k, площади — на k², объёмы — на k³.\nФото 10 см на 15 см имеет площадь 10 × 15 = 150 см². При увеличении с k = 3 оно станет 30 см на 45 см.\nНовая площадь: 30 × 45 = 1350 см², и правда 150 × 9 = 1350: площадь выросла в 3² = 9 раз, а не в 3."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt12q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Two jars have the same shape. The small jar is 6 cm tall and holds 150 mL. The large jar is 12 cm tall. How many millilitres does the large jar hold?\nScale factor: k = 12 ÷ 6 = 2. Volume grows by k³ = 2³ = 8.\nLarge jar: 150 × 8 = 1,200 mL.\nNow you: the small jar is 5 cm tall and holds 40 mL; the large jar is 15 cm tall.\nk = 15 ÷ 5 = 3 → k³ = 27 → 40 × 27 = ?",
+            "uz": "Ikki banka bir xil shaklda. Kichik banka balandligi 6 sm, unga 150 mL sigʻadi. Katta banka balandligi 12 sm. Katta bankaga necha millilitr sigʻadi?\nMasshtab koeffitsiyenti: k = 12 ÷ 6 = 2. Hajm k³ = 2³ = 8 marta oshadi.\nKatta banka: 150 × 8 = 1200 mL.\nEndi siz: kichik banka balandligi 5 sm, unga 40 mL sigʻadi; katta banka balandligi 15 sm.\nk = 15 ÷ 5 = 3 → k³ = 27 → 40 × 27 = ?",
+            "ru": "Две банки одинаковой формы. Маленькая банка высотой 6 см вмещает 150 мл. Большая банка имеет высоту 12 см. Сколько миллилитров вмещает большая банка?\nКоэффициент подобия: k = 12 ÷ 6 = 2. Объём растёт в k³ = 2³ = 8 раз.\nБольшая банка: 150 × 8 = 1200 мл.\nТеперь попробуйте сами: маленькая банка высотой 5 см вмещает 40 мл; большая банка имеет высоту 15 см.\nk = 15 ÷ 5 = 3 → k³ = 27 → 40 × 27 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt12q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Area grows by k², not by k.\nA square tile has an area of 9 cm². A larger tile has sides 2 times as long: its area is 9 × 2² = 36 cm², not 9 × 2 = 18 cm².\nBackwards too: if a model's volume is 1/8 of the real one, its lengths are 1/2 of the real ones, since (1/2)³ = 1/8.",
+            "uz": "Yuza k marta emas, k² marta oshadi.\nKvadrat plitkaning yuzasi 9 sm². Kattaroq plitkaning tomonlari 2 marta uzun: uning yuzasi 9 × 2² = 36 sm², 9 × 2 = 18 sm² emas.\nTeskarisiga ham: maketning hajmi haqiqiysining 1/8 qismi boʻlsa, uzunliklari haqiqiysining 1/2 qismi, chunki (1/2)³ = 1/8.",
+            "ru": "Площадь растёт в k² раз, а не в k.\nКвадратная плитка имеет площадь 9 см². У плитки побольше стороны в 2 раза длиннее: её площадь 9 × 2² = 36 см², а не 9 × 2 = 18 см².\nИ обратно: если объём макета — 1/8 настоящего, то его размеры — 1/2 настоящих, ведь (1/2)³ = 1/8."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt12q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b009"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b009",
+          "C1-r3b021",
+          "C1-r3b022"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-MAGT01#official",
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-MAGT01-3",
+      "course": "sat_m",
+      "unit": "C10-MAGT01",
+      "seq": 3,
+      "skill": "sat_m:MAGT01",
+      "requires": {
+        "math_rung_min": "prealg"
+      },
+      "title": {
+        "en": "SAT Math: Cones, spheres and shapes made of parts",
+        "uz": "SAT Math: Konus, shar va qismlardan tuzilgan shakllar",
+        "ru": "SAT Math: Конусы, шары и составные фигуры"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Two solids to know.\nCone: V = (1/3)πr²h, one third of a cylinder with the same base and height.\nSphere (a ball): V = (4/3)πr³.\nA cone with r = 3 and h = 4: (1/3) × π × 3² × 4 = 12π.\nA ball with r = 3: (4/3) × π × 3³ = 36π.\nAnd the length of a circle: C = 2πr.",
+            "uz": "Bilish kerak boʻlgan ikki jism.\nKonus: V = (1/3)πr²h, asosi va balandligi konusnikiga teng silindr hajmining uchdan biri.\nShar: V = (4/3)πr³.\nr = 3 va h = 4 boʻlgan konus: (1/3) × π × 3² × 4 = 12π.\nr = 3 boʻlgan shar: (4/3) × π × 3³ = 36π.\nAylana uzunligi esa: C = 2πr.",
+            "ru": "Два тела, которые нужно знать.\nКонус: V = (1/3)πr²h — треть объёма цилиндра с тем же основанием и той же высотой.\nШар: V = (4/3)πr³.\nКонус с r = 3 и h = 4: (1/3) × π × 3² × 4 = 12π.\nШар с r = 3: (4/3) × π × 3³ = 36π.\nА длина окружности: C = 2πr."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt13q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A paper cup is shaped like a cone with radius 4 cm and height 9 cm. Its volume is kπ cm³. What is k?\nV = (1/3) × π × 4² × 9 = (1/3) × 144π = 48π, so k = 48.\nNow you: a paper cup is shaped like a cone with radius 3 cm and height 10 cm.\n(1/3) × π × 3² × 10 = (1/3) × 90π → k = ?",
+            "uz": "Qogʻoz stakan konus shaklida: asosining radiusi 4 sm, balandligi 9 sm. Uning hajmi kπ sm³. k nechaga teng?\nV = (1/3) × π × 4² × 9 = (1/3) × 144π = 48π, demak k = 48.\nEndi siz: qogʻoz stakan konus shaklida: asosining radiusi 3 sm, balandligi 10 sm.\n(1/3) × π × 3² × 10 = (1/3) × 90π → k = ?",
+            "ru": "Бумажный стаканчик имеет форму конуса с радиусом основания 4 см и высотой 9 см. Его объём равен kπ см³. Найдите k.\nV = (1/3) × π × 4² × 9 = (1/3) × 144π = 48π, значит, k = 48.\nТеперь попробуйте сами: бумажный стаканчик имеет форму конуса с радиусом основания 3 см и высотой 10 см.\n(1/3) × π × 3² × 10 = (1/3) × 90π → k = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt13q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "In a shape made of parts, find each part, then add or subtract.\nA round pond has a radius of 5 m, and a path 2 m wide goes around it. The path is the big circle minus the pond:\nπ × 7² − π × 5² = 49π − 25π = 24π m².\nNot π × 2² = 4π: the path is a ring, not a circle of radius 2.\nThe outer edge of the path is a circle of radius 7: its length is 2 × π × 7 = 14π m.",
+            "uz": "Qismlardan tuzilgan shaklda har bir qismni toping, keyin qoʻshing yoki ayiring.\nDumaloq hovuzning radiusi 5 m, atrofida eni 2 m boʻlgan yoʻlak bor. Yoʻlak — katta doiradan hovuz ayirilgandan keyin qolgan qism:\nπ × 7² − π × 5² = 49π − 25π = 24π m².\nπ × 2² = 4π emas: yoʻlak — halqa, radiusi 2 boʻlgan doira emas.\nYoʻlakning tashqi cheti radiusi 7 boʻlgan aylana: uning uzunligi 2 × π × 7 = 14π m.",
+            "ru": "В составной фигуре найдите каждую часть, потом сложите или вычтите.\nРадиус круглого пруда 5 м, вокруг него дорожка шириной 2 м. Дорожка — это большой круг минус пруд:\nπ × 7² − π × 5² = 49π − 25π = 24π м².\nНе π × 2² = 4π: дорожка — кольцо, а не круг радиуса 2.\nВнешний край дорожки — окружность радиуса 7: её длина 2 × π × 7 = 14π м."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt13q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-gep007",
+          "C1-gel051"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-gep007",
+          "C1-gel051",
+          "C1-gel052"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-MAGT01#official",
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-MAGT02-2",
+      "course": "sat_m",
+      "unit": "C10-MAGT02",
+      "seq": 2,
+      "skill": "sat_m:MAGT02",
+      "requires": {
+        "math_rung_min": "geom"
+      },
+      "title": {
+        "en": "SAT Math: Similar triangles: sides in matching order",
+        "uz": "SAT Math: Oʻxshash uchburchaklar: mos tomonlar tartibi",
+        "ru": "SAT Math: Подобные треугольники: стороны по порядку"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Two triangles are similar when their angles are equal. Then each side of one is the same multiple of the matching side of the other.\nTriangles ABC and PQR are similar, with A matching P, B matching Q and C matching R. AB = 4, BC = 6 and PQ = 10.\nRatio: PQ ÷ AB = 10 ÷ 4 = 2.5, so QR = 6 × 2.5 = 15.\nMatching sides lie opposite equal angles.",
+            "uz": "Ikki uchburchakning burchaklari teng boʻlsa, ular oʻxshash. Unda bir uchburchak tomonlarining ikkinchisining mos tomonlariga nisbati bir xil boʻladi.\nABC va PQR uchburchaklar oʻxshash: A ga P, B ga Q, C ga R mos. AB = 4, BC = 6, PQ = 10.\nNisbat: PQ ÷ AB = 10 ÷ 4 = 2,5, demak QR = 6 × 2,5 = 15.\nMos tomonlar teng burchaklar qarshisida yotadi.",
+            "ru": "Два треугольника подобны, если их углы равны. Тогда каждая сторона одного во столько же раз больше соответствующей стороны другого.\nТреугольники ABC и PQR подобны: A соответствует P, B — Q, C — R. AB = 4, BC = 6, PQ = 10.\nОтношение: PQ ÷ AB = 10 ÷ 4 = 2,5, значит, QR = 6 × 2,5 = 15.\nСоответствующие стороны лежат против равных углов."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt22q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "At the same moment, a 2 m pole casts a 3 m shadow and a tree casts a 12 m shadow. How tall is the tree, in metres?\nThe sun's rays make two similar right triangles: height matches height, shadow matches shadow.\ntree ÷ 2 = 12 ÷ 3, so tree = 2 × 12 ÷ 3 = 8 m.\nNow you: a 3 m pole casts a 2 m shadow and a tree casts a 10 m shadow.\ntree ÷ 3 = 10 ÷ 2 → tree = 3 × 10 ÷ 2 = ?",
+            "uz": "Bir vaqtning oʻzida 2 m li ustun 3 m soya, daraxt esa 12 m soya tashlaydi. Daraxtning balandligi necha metr?\nQuyosh nurlari ikkita oʻxshash toʻgʻri burchakli uchburchak hosil qiladi: balandlik balandlikka, soya soyaga mos.\ndaraxt ÷ 2 = 12 ÷ 3, demak daraxt = 2 × 12 ÷ 3 = 8 m.\nEndi siz: 3 m li ustun 2 m soya, daraxt esa 10 m soya tashlaydi.\ndaraxt ÷ 3 = 10 ÷ 2 → daraxt = 3 × 10 ÷ 2 = ?",
+            "ru": "В один и тот же момент столб высотой 2 м отбрасывает тень длиной 3 м, а дерево — тень длиной 12 м. Какова высота дерева (в метрах)?\nСолнечные лучи дают два подобных прямоугольных треугольника: высота соответствует высоте, тень — тени.\nдерево ÷ 2 = 12 ÷ 3, значит, дерево = 2 × 12 ÷ 3 = 8 м.\nТеперь попробуйте сами: столб высотой 3 м отбрасывает тень длиной 2 м, а дерево — тень длиной 10 м.\nдерево ÷ 3 = 10 ÷ 2 → дерево = 3 × 10 ÷ 2 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt22q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch the order: put the small triangle's side over the big triangle's matching side.\nIn triangle ABC, D is on AB and E is on AC, with DE parallel to BC. AD = 4, DB = 6 and DE = 5.\nTriangle ADE matches triangle ABC, so compare AD with AB, and AB = 4 + 6 = 10, not DB = 6.\nBC = 5 × 10 ÷ 4 = 12.5. Using DB gives 5 × 6 ÷ 4 = 7.5: wrong.",
+            "uz": "Tartibga qarang: kichik uchburchak tomonini katta uchburchakning mos tomoni bilan solishtiring.\nABC uchburchakda D nuqta AB da, E nuqta AC da, DE ∥ BC. AD = 4, DB = 6, DE = 5.\nADE uchburchak ABC uchburchakka oʻxshash, shuning uchun AD ni AB bilan solishtiramiz: AB = 4 + 6 = 10, DB = 6 emas.\nBC = 5 × 10 ÷ 4 = 12,5. DB bilan 5 × 6 ÷ 4 = 7,5 chiqadi: notoʻgʻri.",
+            "ru": "Следите за порядком: сторону малого треугольника сравнивайте с соответствующей стороной большого.\nВ треугольнике ABC точка D лежит на AB, точка E — на AC, DE ∥ BC. AD = 4, DB = 6, DE = 5.\nТреугольник ADE подобен треугольнику ABC, поэтому сравниваем AD с AB: AB = 4 + 6 = 10, а не DB = 6.\nBC = 5 × 10 ÷ 4 = 12,5. С DB получится 5 × 6 ÷ 4 = 7,5 — неверно."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt22q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-gep005",
+          "C1-sat023",
+          "C1-gel042"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-gep005",
+          "C1-sat023",
+          "C1-gel042",
+          "C1-gel041"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-MAGT02#official",
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-MAGT02-3",
+      "course": "sat_m",
+      "unit": "C10-MAGT02",
+      "seq": 3,
+      "skill": "sat_m:MAGT02",
+      "requires": {
+        "math_rung_min": "geom"
+      },
+      "title": {
+        "en": "SAT Math: Angles of polygons",
+        "uz": "SAT Math: Koʻpburchak burchaklari",
+        "ru": "SAT Math: Углы многоугольников"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "From one corner, a polygon with n sides splits into n − 2 triangles, so its interior angles add up to (n − 2) × 180°.\nPentagon: (5 − 2) × 180 = 540°. Hexagon: (6 − 2) × 180 = 720°.\nIn a regular polygon all sides and all angles are equal: a regular hexagon has 720 ÷ 6 = 120° at each corner.",
+            "uz": "n tomonli koʻpburchak bitta uchidan n − 2 ta uchburchakka boʻlinadi, shuning uchun ichki burchaklari yigʻindisi (n − 2) × 180°.\nBeshburchak: (5 − 2) × 180 = 540°. Oltiburchak: (6 − 2) × 180 = 720°.\nMuntazam koʻpburchakda barcha tomonlar va barcha burchaklar teng: muntazam oltiburchakning har bir burchagi 720 ÷ 6 = 120°.",
+            "ru": "Диагонали из одной вершины делят многоугольник с n сторонами на n − 2 треугольника, поэтому сумма его внутренних углов равна (n − 2) × 180°.\nПятиугольник: (5 − 2) × 180 = 540°. Шестиугольник: (6 − 2) × 180 = 720°.\nУ правильного многоугольника все стороны и все углы равны: у правильного шестиугольника каждый угол 720 ÷ 6 = 120°."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt23q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A regular polygon has 9 sides. How many degrees is each of its interior angles?\nSum: (9 − 2) × 180 = 1,260°.\nEach: 1,260 ÷ 9 = 140°.\nNow you: a regular polygon has 12 sides.\n(12 − 2) × 180 = 1,800 → 1,800 ÷ 12 = ?",
+            "uz": "Muntazam koʻpburchakning 9 ta tomoni bor. Uning har bir ichki burchagi necha gradus?\nYigʻindi: (9 − 2) × 180 = 1260°.\nHar biri: 1260 ÷ 9 = 140°.\nEndi siz: muntazam koʻpburchakning 12 ta tomoni bor.\n(12 − 2) × 180 = 1800 → 1800 ÷ 12 = ?",
+            "ru": "У правильного многоугольника 9 сторон. Сколько градусов составляет каждый его внутренний угол?\nСумма: (9 − 2) × 180 = 1260°.\nКаждый: 1260 ÷ 9 = 140°.\nТеперь попробуйте сами: у правильного многоугольника 12 сторон.\n(12 − 2) × 180 = 1800 → 1800 ÷ 12 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt23q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "The exterior angles of any polygon, one at each corner, add up to 360°, whatever the number of sides.\nAt each corner, exterior angle = 180° − interior angle.\nA regular polygon with interior angles of 160°: each exterior angle is 180 − 160 = 20°, so it has 360 ÷ 20 = 18 sides.\nDo not divide 360 by the interior angle: 360 ÷ 160 is not even a whole number.",
+            "uz": "Har qanday koʻpburchakning tashqi burchaklari (har bir uchida bittadan) yigʻindisi 360°, tomonlari nechta boʻlishidan qatʼi nazar.\nHar bir uchda: tashqi burchak = 180° − ichki burchak.\nIchki burchaklari 160° boʻlgan muntazam koʻpburchak: har bir tashqi burchak 180 − 160 = 20°, demak unda 360 ÷ 20 = 18 ta tomon bor.\n360 ni ichki burchakka boʻlmang: 360 ÷ 160 hatto butun son ham emas.",
+            "ru": "Внешние углы любого многоугольника, по одному при каждой вершине, в сумме дают 360°, сколько бы ни было сторон.\nПри каждой вершине: внешний угол = 180° − внутренний угол.\nПравильный многоугольник с внутренними углами по 160°: каждый внешний угол 180 − 160 = 20°, значит, у него 360 ÷ 20 = 18 сторон.\nНе делите 360 на внутренний угол: 360 ÷ 160 — даже не целое число."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt23q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-gel022",
+          "C1-gep009",
+          "C1-gel021"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-gel022",
+          "C1-gep009",
+          "C1-gel021"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-MAGT02#official",
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-MAGT03-2",
+      "course": "sat_m",
+      "unit": "C10-MAGT03",
+      "seq": 2,
+      "skill": "sat_m:MAGT03",
+      "requires": {
+        "math_rung_min": "geom"
+      },
+      "title": {
+        "en": "SAT Math: Sides from sin, cos and tan; special right triangles",
+        "uz": "SAT Math: sin, cos va tan orqali tomonlar; maxsus toʻgʻri burchakli uchburchaklar",
+        "ru": "SAT Math: Стороны через sin, cos и tan; особые прямоугольные треугольники"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "In a right triangle, choose the ratio that links the side you know and the side you want.\nOpposite and hypotenuse: sin. Adjacent and hypotenuse: cos. Opposite and adjacent: tan.\nA ramp 13 m long rises at an angle x° with sin x° = 5/13. Its height is 13 × 5/13 = 5 m.\nTwo special right triangles: 45°-45°-90° has sides a, a, a√2; 30°-60°-90° has sides a, a√3, 2a.",
+            "uz": "Toʻgʻri burchakli uchburchakda maʼlum tomon bilan kerakli tomonni bogʻlaydigan nisbatni tanlang.\nQarshi katet va gipotenuza: sin. Yondosh katet va gipotenuza: cos. Qarshi va yondosh katetlar: tan.\nUzunligi 13 m boʻlgan qiya yoʻlak x° burchak ostida koʻtariladi, sin x° = 5/13. Uning balandligi 13 × 5/13 = 5 m.\nIkki maxsus toʻgʻri burchakli uchburchak: 45°-45°-90° tomonlari a, a, a√2; 30°-60°-90° tomonlari a, a√3, 2a.",
+            "ru": "В прямоугольном треугольнике выберите отношение, которое связывает известную сторону с нужной.\nПротиволежащий катет и гипотенуза: sin. Прилежащий катет и гипотенуза: cos. Противолежащий и прилежащий катеты: tan.\nПандус длиной 13 м поднимается под углом x°, sin x° = 5/13. Его высота 13 × 5/13 = 5 м.\nДва особых прямоугольных треугольника: 45°-45°-90° со сторонами a, a, a√2; 30°-60°-90° со сторонами a, a√3, 2a."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt32q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A kite's string is 30 m long and pulled straight. The string makes an angle of x° with the ground, and sin x° = 3/5. How high is the kite above the ground, in metres?\nThe height is opposite the angle, and the string is the hypotenuse: sin.\nheight = 30 × 3/5 = 18 m.\nNow you: the string is 39 m long, and sin x° = 5/13.\nheight = 39 × 5/13 = ?",
+            "uz": "Varrakning ipi 30 m uzunlikda va tarang tortilgan. Ip yer bilan x° burchak hosil qiladi, sin x° = 3/5. Varrak yerdan necha metr balandlikda?\nBalandlik burchak qarshisida, ip esa gipotenuza: sin.\nbalandlik = 30 × 3/5 = 18 m.\nEndi siz: ip 39 m uzunlikda, sin x° = 5/13.\nbalandlik = 39 × 5/13 = ?",
+            "ru": "Нить воздушного змея длиной 30 м натянута. Она образует с землёй угол x°, и sin x° = 3/5. На какой высоте над землёй змей (в метрах)?\nВысота лежит против угла, нить — гипотенуза: sin.\nвысота = 30 × 3/5 = 18 м.\nТеперь попробуйте сами: нить длиной 39 м, sin x° = 5/13.\nвысота = 39 × 5/13 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt32q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "An equilateral triangle cut down the middle gives two 30°-60°-90° triangles.\nSides of 6 cm: half the base is 3, and the height is 3√3, not 6√3 and not 3.\nCheck by Pythagoras: 3² + (3√3)² = 9 + 27 = 36 = 6².\nArea = (1/2) × 6 × 3√3 = 9√3 cm².",
+            "uz": "Teng tomonli uchburchakni oʻrtasidan kessak, ikkita 30°-60°-90° uchburchak hosil boʻladi.\nTomonlari 6 sm: asosning yarmi 3, balandlik 3√3, 6√3 ham, 3 ham emas.\nPifagor teoremasi bilan tekshiring: 3² + (3√3)² = 9 + 27 = 36 = 6².\nYuza = (1/2) × 6 × 3√3 = 9√3 sm².",
+            "ru": "Высота делит равносторонний треугольник на два треугольника 30°-60°-90°.\nСтороны 6 см: половина основания 3, высота 3√3, а не 6√3 и не 3.\nПроверка по теореме Пифагора: 3² + (3√3)² = 9 + 27 = 36 = 6².\nПлощадь = (1/2) × 6 × 3√3 = 9√3 см²."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt32q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b010",
+          "C1-m2b011"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-m2b010",
+          "C1-m2b011",
+          "C1-r3b014"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-MAGT03#official",
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-MAGT03-3",
+      "course": "sat_m",
+      "unit": "C10-MAGT03",
+      "seq": 3,
+      "skill": "sat_m:MAGT03",
+      "requires": {
+        "math_rung_min": "geom"
+      },
+      "title": {
+        "en": "SAT Math: Arcs, sectors, radians and a circle's equation",
+        "uz": "SAT Math: Yoy, sektor, radian va aylana tenglamasi",
+        "ru": "SAT Math: Дуги, секторы, радианы и уравнение окружности"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "A central angle of θ° cuts off the fraction θ/360 of the circle.\nArc length = (θ/360) × 2πr. Sector area = (θ/360) × πr².\nWith r = 9 and θ = 120°: arc = (120/360) × 2π × 9 = 6π, sector = (120/360) × π × 9² = 27π.\nRadians: π radians = 180°, so 60° = π/3. With θ in radians, arc = rθ.",
+            "uz": "θ° markaziy burchak aylananing θ/360 qismini ajratadi.\nYoy uzunligi = (θ/360) × 2πr. Sektor yuzasi = (θ/360) × πr².\nr = 9 va θ = 120° da: yoy = (120/360) × 2π × 9 = 6π, sektor = (120/360) × π × 9² = 27π.\nRadian: π radian = 180°, demak 60° = π/3. θ radianda boʻlsa, yoy = rθ.",
+            "ru": "Центральный угол θ° отсекает долю θ/360 окружности.\nДлина дуги = (θ/360) × 2πr. Площадь сектора = (θ/360) × πr².\nПри r = 9 и θ = 120°: дуга = (120/360) × 2π × 9 = 6π, сектор = (120/360) × π × 9² = 27π.\nРадианы: π радиан = 180°, значит, 60° = π/3. Если θ в радианах, дуга = rθ."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt33q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A sector of a circle has radius 8 cm and arc length 6 cm. What is the area of the sector, in cm²?\nThe sector is the part 6 ÷ (2π × 8) of the disc, so its area is 6 ÷ (16π) × 64π = 24. Short rule: area = (1/2) × r × arc.\n(1/2) × 8 × 6 = 24 cm².\nNow you: a sector of a circle has radius 10 cm and arc length 7 cm.\n(1/2) × 10 × 7 = ?",
+            "uz": "Doira sektorining radiusi 8 sm, yoyining uzunligi 6 sm. Sektorning yuzi necha sm²?\nSektor doiraning 6 ÷ (2π × 8) qismi, demak uning yuzi 6 ÷ (16π) × 64π = 24. Qisqa qoida: yuza = (1/2) × r × yoy.\n(1/2) × 8 × 6 = 24 sm².\nEndi siz: doira sektorining radiusi 10 sm, yoyining uzunligi 7 sm.\n(1/2) × 10 × 7 = ?",
+            "ru": "Сектор круга имеет радиус 8 см и длину дуги 6 см. Чему равна площадь сектора (в см²)?\nСектор — это часть 6 ÷ (2π × 8) круга, поэтому его площадь 6 ÷ (16π) × 64π = 24. Короткое правило: площадь = (1/2) × r × дуга.\n(1/2) × 8 × 6 = 24 см².\nТеперь попробуйте сами: сектор круга имеет радиус 10 см и длину дуги 7 см.\n(1/2) × 10 × 7 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt33q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "To read a circle's equation, complete the square in x and in y, adding the same numbers to both sides.\nx² + y² − 6x + 4y = 12\n(x² − 6x + 9) + (y² + 4y + 4) = 12 + 9 + 4\n(x − 3)² + (y + 2)² = 25\nCentre (3, −2), radius √25 = 5. The radius is not 12, and not 25: take the square root of the completed right side.",
+            "uz": "Aylana tenglamasini oʻqish uchun x va y boʻyicha toʻliq kvadrat ajrating, ikkala tomonga bir xil sonlarni qoʻshib.\nx² + y² − 6x + 4y = 12\n(x² − 6x + 9) + (y² + 4y + 4) = 12 + 9 + 4\n(x − 3)² + (y + 2)² = 25\nMarkaz (3, −2), radius √25 = 5. Radius 12 ham, 25 ham emas: toʻldirilgan oʻng tomonning kvadrat ildizini oling.",
+            "ru": "Чтобы найти по уравнению окружности её центр и радиус, выделите полные квадраты по x и по y, прибавляя одни и те же числа к обеим частям.\nx² + y² − 6x + 4y = 12\n(x² − 6x + 9) + (y² + 4y + 4) = 12 + 9 + 4\n(x − 3)² + (y + 2)² = 25\nЦентр (3, −2), радиус √25 = 5. Радиус не 12 и не 25: извлеките корень из новой правой части."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-gt33q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-sat024",
+          "C1-m2b012"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-sat024",
+          "C1-m2b012",
+          "C1-r3b015"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-MAGT03#official",
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ],
+  "items": [
+    {
+      "id": "C19-ps12q1",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS01-2",
+      "lang": "en",
+      "stem": {
+        "en": "The price of a book goes up by 50%. Then the new price goes down by 20%. In all, the price went up by what percent?",
+        "uz": "Kitobning narxi 50% ga oshdi. Keyin yangi narx 20% ga tushdi. Umuman olganda, narx necha foizga oshdi?",
+        "ru": "Цена книги выросла на 50%. Затем новая цена снизилась на 20%. На сколько процентов в итоге выросла цена?"
+      },
+      "options": [
+        {
+          "en": "20"
+        },
+        {
+          "en": "30"
+        },
+        {
+          "en": "70"
+        },
+        {
+          "en": "120"
+        }
+      ],
+      "why": {
+        "en": "1.5 × 0.8 = 1.2: the new price is 120% of the old one, so it went up by 20%.",
+        "uz": "1,5 × 0,8 = 1,2: yangi narx eskisining 120 foizi, demak 20% ga oshdi.",
+        "ru": "1,5 × 0,8 = 1,2: новая цена — 120% от старой, значит, рост на 20%."
+      },
+      "prior_b": -1.0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps12q2",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS01-2",
+      "lang": "en",
+      "stem": {
+        "en": "A shop raises the price of a 300,000 soʻm bag by 20%. A month later it lowers the new price by 10%. What is the final price, in soʻm?",
+        "uz": "Doʻkon 300 000 soʻmlik sumkaning narxini 20% ga oshirdi. Bir oydan keyin yangi narxni 10% ga tushirdi. Oxirgi narx necha soʻm?",
+        "ru": "Магазин поднял цену сумки стоимостью 300 000 сум на 20%. Через месяц новую цену снизили на 10%. Какова итоговая цена (в сумах)?"
+      },
+      "options": [
+        {
+          "en": "324,000",
+          "uz": "324 000",
+          "ru": "324 000"
+        },
+        {
+          "en": "330,000",
+          "uz": "330 000",
+          "ru": "330 000"
+        },
+        {
+          "en": "360,000",
+          "uz": "360 000",
+          "ru": "360 000"
+        },
+        {
+          "en": "270,000",
+          "uz": "270 000",
+          "ru": "270 000"
+        }
+      ],
+      "why": {
+        "en": "300,000 × 1.2 = 360,000, then 360,000 × 0.9 = 324,000 soʻm.",
+        "uz": "300 000 × 1,2 = 360 000, keyin 360 000 × 0,9 = 324 000 soʻm.",
+        "ru": "300 000 × 1,2 = 360 000, затем 360 000 × 0,9 = 324 000 сум."
+      },
+      "prior_b": -0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps12q3",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS01-2",
+      "lang": "en",
+      "stem": {
+        "en": "After its price went up by 25%, a ticket costs 75,000 soʻm. What was the price before the rise, in soʻm?",
+        "uz": "Narxi 25% ga oshgach, chipta 75 000 soʻm turadi. Oshishdan oldin uning narxi necha soʻm edi?",
+        "ru": "После роста цены на 25% билет стоит 75 000 сум. Сколько он стоил до повышения цены (в сумах)?"
+      },
+      "options": [
+        {
+          "en": "60,000",
+          "uz": "60 000",
+          "ru": "60 000"
+        },
+        {
+          "en": "56,250",
+          "uz": "56 250",
+          "ru": "56 250"
+        },
+        {
+          "en": "93,750",
+          "uz": "93 750",
+          "ru": "93 750"
+        },
+        {
+          "en": "18,750",
+          "uz": "18 750",
+          "ru": "18 750"
+        }
+      ],
+      "why": {
+        "en": "Old price × 1.25 = 75,000, so the old price = 75,000 ÷ 1.25 = 60,000 soʻm.",
+        "uz": "Eski narx × 1,25 = 75 000, demak eski narx = 75 000 ÷ 1,25 = 60 000 soʻm.",
+        "ru": "Старая цена × 1,25 = 75 000, значит, старая цена = 75 000 ÷ 1,25 = 60 000 сум."
+      },
+      "prior_b": -0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps13q1",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "unit_conversion",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "page": "C19-MAPS01-3",
+      "lang": "en",
+      "stem": {
+        "en": "A car uses 8 litres of fuel for every 100 km. How many litres does it use on a 450 km trip?",
+        "uz": "Mashina har 100 km ga 8 litr yoqilgʻi sarflaydi. 450 km yoʻlga necha litr sarflaydi?",
+        "ru": "Машина тратит 8 литров топлива на каждые 100 км. Сколько литров она потратит на поездку в 450 км?"
+      },
+      "options": [
+        {
+          "en": "36"
+        },
+        {
+          "en": "56.25",
+          "uz": "56,25",
+          "ru": "56,25"
+        },
+        {
+          "en": "3,600",
+          "uz": "3600",
+          "ru": "3600"
+        },
+        {
+          "en": "360"
+        }
+      ],
+      "why": {
+        "en": "450 × 8 ÷ 100 = 36 litres: the km cancel.",
+        "uz": "450 × 8 ÷ 100 = 36 litr: km qisqaradi.",
+        "ru": "450 × 8 ÷ 100 = 36 литров: км сокращаются."
+      },
+      "prior_b": -1.2,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps13q2",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "unit_conversion",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS01-3",
+      "lang": "en",
+      "stem": {
+        "en": "A leaking tap drips 25 drops per minute, and 20 drops make 1 mL. How many litres of water does it waste in 4 days?",
+        "uz": "Buzuq jumrakdan daqiqasiga 25 tomchi suv tomadi, 20 tomchi 1 mL ga teng. 4 kunda necha litr suv isrof boʻladi?",
+        "ru": "Неисправный кран капает с частотой 25 капель в минуту, и 20 капель составляют 1 мл. Сколько литров воды теряется за 4 дня?"
+      },
+      "options": [
+        {
+          "en": "7.2",
+          "uz": "7,2",
+          "ru": "7,2"
+        },
+        {
+          "en": "0.3",
+          "uz": "0,3",
+          "ru": "0,3"
+        },
+        {
+          "en": "72"
+        },
+        {
+          "en": "7,200",
+          "uz": "7200",
+          "ru": "7200"
+        }
+      ],
+      "why": {
+        "en": "25 × 60 × 24 × 4 = 144,000 drops; 144,000 ÷ 20 = 7,200 mL = 7.2 litres.",
+        "uz": "25 × 60 × 24 × 4 = 144 000 tomchi; 144 000 ÷ 20 = 7200 mL = 7,2 litr.",
+        "ru": "25 × 60 × 24 × 4 = 144 000 капель; 144 000 ÷ 20 = 7200 мл = 7,2 литра."
+      },
+      "prior_b": -0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps13q3",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "unit_conversion",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS01-3",
+      "lang": "en",
+      "stem": {
+        "en": "A café uses 250 g of tea for every 40 cups. How many kilograms of tea does it need for 960 cups?",
+        "uz": "Kafe har 40 piyola uchun 250 g choy ishlatadi. 960 piyola uchun necha kilogramm choy kerak?",
+        "ru": "Кафе расходует 250 г чая на каждые 40 чашек. Сколько килограммов чая нужно на 960 чашек?"
+      },
+      "options": [
+        {
+          "en": "6"
+        },
+        {
+          "en": "6,000",
+          "uz": "6000",
+          "ru": "6000"
+        },
+        {
+          "en": "60"
+        },
+        {
+          "en": "0.6",
+          "uz": "0,6",
+          "ru": "0,6"
+        }
+      ],
+      "why": {
+        "en": "250 × 960 ÷ 40 = 6,000 g, and 6,000 ÷ 1,000 = 6 kg.",
+        "uz": "250 × 960 ÷ 40 = 6000 g, 6000 ÷ 1000 = 6 kg.",
+        "ru": "250 × 960 ÷ 40 = 6000 г, а 6000 ÷ 1000 = 6 кг."
+      },
+      "prior_b": -0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps22q1",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "mean",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS02-2",
+      "lang": "en",
+      "stem": {
+        "en": "The mean of four numbers is 15. A fifth number is added, and the mean of the five numbers is 17. What is the fifth number?",
+        "uz": "Toʻrtta sonning oʻrtachasi 15 ga teng. Beshinchi son qoʻshilgach, beshta sonning oʻrtachasi 17 boʻldi. Beshinchi son nechaga teng?",
+        "ru": "Среднее четырёх чисел равно 15. Добавили пятое число, и среднее пяти чисел стало 17. Чему равно пятое число?"
+      },
+      "options": [
+        {
+          "en": "25"
+        },
+        {
+          "en": "17"
+        },
+        {
+          "en": "16"
+        },
+        {
+          "en": "2"
+        }
+      ],
+      "why": {
+        "en": "Sums: 5 × 17 = 85 and 4 × 15 = 60. The fifth number is 85 − 60 = 25.",
+        "uz": "Yigʻindilar: 5 × 17 = 85 va 4 × 15 = 60. Beshinchi son 85 − 60 = 25.",
+        "ru": "Суммы: 5 × 17 = 85 и 4 × 15 = 60. Пятое число равно 85 − 60 = 25."
+      },
+      "prior_b": -0.8,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps22q2",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "mean",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS02-2",
+      "lang": "en",
+      "stem": {
+        "en": "The mean age of the 9 players in a team is 15 years. Their 35-year-old coach joins them. What is the mean age of the whole group now, in years?",
+        "uz": "Jamoadagi 9 nafar oʻyinchining oʻrtacha yoshi 15 yosh. Ularga 35 yoshli murabbiy qoʻshildi. Endi butun guruhning oʻrtacha yoshi necha yosh?",
+        "ru": "Средний возраст 9 игроков команды равен 15 годам. К ним присоединился их 35-летний тренер. Каков теперь средний возраст всей группы (в годах)?"
+      },
+      "options": [
+        {
+          "en": "17"
+        },
+        {
+          "en": "25"
+        },
+        {
+          "en": "18.9",
+          "uz": "18,9",
+          "ru": "18,9"
+        },
+        {
+          "en": "15"
+        }
+      ],
+      "why": {
+        "en": "9 × 15 = 135; 135 + 35 = 170; there are 10 people, so the mean is 170 ÷ 10 = 17 years.",
+        "uz": "9 × 15 = 135; 135 + 35 = 170; odamlar 10 ta, demak oʻrtacha 170 ÷ 10 = 17 yosh.",
+        "ru": "9 × 15 = 135; 135 + 35 = 170; людей 10, значит, среднее 170 ÷ 10 = 17 лет."
+      },
+      "prior_b": -0.9,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps22q3",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "statistics",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS02-2",
+      "lang": "en",
+      "stem": {
+        "en": "Five runners finish a race in 21, 23, 24, 26 and 27 minutes. A sixth runner finishes in 59 minutes. What is the median of the six times, in minutes?",
+        "uz": "Beshta yuguruvchi masofani 21, 23, 24, 26 va 27 daqiqada bosib oʻtdi. Oltinchi yuguruvchi 59 daqiqada yetib keldi. Oltita vaqtning medianasi necha daqiqa?",
+        "ru": "Пять бегунов пробежали дистанцию за 21, 23, 24, 26 и 27 минут. Шестой бегун финишировал за 59 минут. Чему равна медиана шести результатов (в минутах)?"
+      },
+      "options": [
+        {
+          "en": "25"
+        },
+        {
+          "en": "24"
+        },
+        {
+          "en": "30"
+        },
+        {
+          "en": "26"
+        }
+      ],
+      "why": {
+        "en": "Sorted: 21, 23, 24, 26, 27, 59. The middle two are 24 and 26: (24 + 26) ÷ 2 = 25.",
+        "uz": "Tartiblangan: 21, 23, 24, 26, 27, 59. Oʻrtadagi ikkitasi 24 va 26: (24 + 26) ÷ 2 = 25.",
+        "ru": "По порядку: 21, 23, 24, 26, 27, 59. Два средних — 24 и 26: (24 + 26) ÷ 2 = 25."
+      },
+      "prior_b": -0.8,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps23q1",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "statistics",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS02-3",
+      "lang": "en",
+      "stem": {
+        "en": "Set P is 48, 49, 50, 51, 52. Set Q is 30, 40, 50, 60, 70. Which statement about their means and standard deviations (SD) is true?",
+        "uz": "P toʻplam: 48, 49, 50, 51, 52. Q toʻplam: 30, 40, 50, 60, 70. Ularning oʻrtachasi va standart chetlanishi (SD) haqidagi qaysi gap toʻgʻri?",
+        "ru": "Набор P: 48, 49, 50, 51, 52. Набор Q: 30, 40, 50, 60, 70. Какое утверждение об их средних и стандартных отклонениях (SD) верно?"
+      },
+      "options": [
+        {
+          "en": "Q has the larger SD",
+          "uz": "Q ning SD si kattaroq",
+          "ru": "У набора Q SD больше"
+        },
+        {
+          "en": "P has the larger SD",
+          "uz": "P ning SD si kattaroq",
+          "ru": "У набора P SD больше"
+        },
+        {
+          "en": "Their SDs are equal",
+          "uz": "Ikkalasining SD si teng",
+          "ru": "SD у наборов равны"
+        },
+        {
+          "en": "Their means differ",
+          "uz": "Oʻrtachalari har xil",
+          "ru": "Средние у них разные"
+        }
+      ],
+      "why": {
+        "en": "Both means are 50, but the values of Q are much farther from 50, so Q has the larger standard deviation.",
+        "uz": "Ikkalasining oʻrtachasi 50, lekin Q qiymatlari 50 dan ancha uzoq, shuning uchun Q ning standart chetlanishi kattaroq.",
+        "ru": "Оба средних равны 50, но значения Q гораздо дальше от 50, поэтому у Q стандартное отклонение больше."
+      },
+      "prior_b": -0.9,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps23q2",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "statistics",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS02-3",
+      "lang": "en",
+      "stem": {
+        "en": "For a class, the line of best fit for test score y and hours studied x is y = 4x + 55. What score does the line predict for a student who studied 7 hours?",
+        "uz": "Bir sinf uchun test bali y va oʻqishga sarflangan soatlar x boʻyicha eng mos chiziq y = 4x + 55. Chiziq 7 soat oʻqigan oʻquvchi uchun qanday ball bashorat qiladi?",
+        "ru": "Для класса построена линия тренда, связывающая балл за тест y и часы подготовки x: y = 4x + 55. Какой балл предсказывает эта линия для ученика, который готовился 7 ч?"
+      },
+      "options": [
+        {
+          "en": "83"
+        },
+        {
+          "en": "28"
+        },
+        {
+          "en": "62"
+        },
+        {
+          "en": "87"
+        }
+      ],
+      "why": {
+        "en": "y = 4 × 7 + 55 = 28 + 55 = 83.",
+        "uz": "y = 4 × 7 + 55 = 28 + 55 = 83.",
+        "ru": "y = 4 × 7 + 55 = 28 + 55 = 83."
+      },
+      "prior_b": -0.6,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps23q3",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "statistics",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS02-3",
+      "lang": "en",
+      "stem": {
+        "en": "A line of best fit for a plant's height y, in cm, and its age x, in weeks, is y = 2.5x + 3. By how many centimetres does the line's prediction go up from week 4 to week 10?",
+        "uz": "Oʻsimlikning sm dagi balandligi y va haftalardagi yoshi x uchun eng mos chiziq y = 2,5x + 3. 4-haftadan 10-haftagacha chiziq bashorati necha santimetrga oshadi?",
+        "ru": "Линия тренда для высоты растения y (в см) и его возраста x (в неделях): y = 2,5x + 3. На сколько сантиметров увеличивается прогноз с 4-й по 10-ю неделю?"
+      },
+      "options": [
+        {
+          "en": "15"
+        },
+        {
+          "en": "28"
+        },
+        {
+          "en": "13"
+        },
+        {
+          "en": "2.5",
+          "uz": "2,5",
+          "ru": "2,5"
+        }
+      ],
+      "why": {
+        "en": "The slope is 2.5 cm a week: 2.5 × (10 − 4) = 15 cm.",
+        "uz": "Burchak koeffitsiyenti — haftasiga 2,5 sm: 2,5 × (10 − 4) = 15 sm.",
+        "ru": "Угловой коэффициент — 2,5 см в неделю: 2,5 × (10 − 4) = 15 см."
+      },
+      "prior_b": -0.2,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps32q1",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "probability",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS03-2",
+      "lang": "en",
+      "stem": {
+        "en": "In a club, 14 boys and 10 girls like chess, and 6 boys and 20 girls like football. Each member likes exactly one of the two. A girl from the club is chosen at random. What is the probability that she likes chess?",
+        "uz": "Toʻgarakda 14 oʻgʻil bola va 10 qiz shaxmatni, 6 oʻgʻil bola va 20 qiz futbolni yaxshi koʻradi. Har bir aʼzo ikkalasidan faqat bittasini yaxshi koʻradi. Tasodifan bitta qiz tanlandi. Uning shaxmatni yaxshi koʻrish ehtimoli qancha?",
+        "ru": "В кружке шахматы любят 14 мальчиков и 10 девочек, а футбол — 6 мальчиков и 20 девочек. Каждый участник любит ровно одну из двух игр. Случайно выбрали девочку из кружка. Какова вероятность, что она любит шахматы?"
+      },
+      "options": [
+        {
+          "en": "1/3"
+        },
+        {
+          "en": "5/12"
+        },
+        {
+          "en": "1/5"
+        },
+        {
+          "en": "2/3"
+        }
+      ],
+      "why": {
+        "en": "Keep only the girls: 10 + 20 = 30. Chess among them: 10. P = 10/30 = 1/3.",
+        "uz": "Faqat qizlar: 10 + 20 = 30. Ulardan shaxmat: 10. P = 10/30 = 1/3.",
+        "ru": "Только девочки: 10 + 20 = 30. Из них шахматы любят 10. P = 10/30 = 1/3."
+      },
+      "prior_b": -0.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps32q2",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "probability",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS03-2",
+      "lang": "en",
+      "stem": {
+        "en": "Girls: 15 walk to school and 9 go by bus. Boys: 11 walk to school and 21 go by bus. One of the students who go by bus is chosen at random. What is the probability that this student is a girl?",
+        "uz": "Qizlar: 15 nafari maktabga piyoda boradi, 9 nafari avtobusda. Oʻgʻil bolalar: 11 nafari piyoda boradi, 21 nafari avtobusda. Avtobusda boradiganlardan biri tasodifan tanlandi. Uning qiz boʻlish ehtimoli qancha?",
+        "ru": "Девочки: пешком в школу ходят 15, на автобусе ездят 9. Мальчики: пешком ходят 11, на автобусе ездят 21. Случайно выбирают одного из тех, кто ездит на автобусе. Какова вероятность, что это девочка?"
+      },
+      "options": [
+        {
+          "en": "3/10"
+        },
+        {
+          "en": "3/8"
+        },
+        {
+          "en": "9/56"
+        },
+        {
+          "en": "7/10"
+        }
+      ],
+      "why": {
+        "en": "Keep only the bus column: 9 + 21 = 30. Girls: 9. P = 9/30 = 3/10.",
+        "uz": "Faqat avtobus ustuni: 9 + 21 = 30. Qizlar: 9. P = 9/30 = 3/10.",
+        "ru": "Только столбец «автобус»: 9 + 21 = 30. Девочек 9. P = 9/30 = 3/10."
+      },
+      "prior_b": -0.3,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps32q3",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "probability",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS03-2",
+      "lang": "en",
+      "stem": {
+        "en": "Girls: 16 walk to school and 4 go by bus. Boys: 9 walk to school and 11 go by bus. A girl is chosen at random. What is the probability that she goes by bus?",
+        "uz": "Qizlar: 16 nafari maktabga piyoda boradi, 4 nafari avtobusda. Oʻgʻil bolalar: 9 nafari piyoda boradi, 11 nafari avtobusda. Tasodifan bitta qiz tanlandi. Uning avtobusda borish ehtimoli qancha?",
+        "ru": "Девочки: пешком в школу ходят 16, на автобусе ездят 4. Мальчики: пешком ходят 9, на автобусе ездят 11. Случайно выбрали девочку. Какова вероятность, что она ездит на автобусе?"
+      },
+      "options": [
+        {
+          "en": "1/5"
+        },
+        {
+          "en": "4/15"
+        },
+        {
+          "en": "1/10"
+        },
+        {
+          "en": "4/5"
+        }
+      ],
+      "why": {
+        "en": "Keep only the girls: 16 + 4 = 20. By bus: 4. P = 4/20 = 1/5.",
+        "uz": "Faqat qizlar: 16 + 4 = 20. Avtobusda: 4. P = 4/20 = 1/5.",
+        "ru": "Только девочки: 16 + 4 = 20. На автобусе: 4. P = 4/20 = 1/5."
+      },
+      "prior_b": -0.2,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps33q1",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "statistics",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS03-3",
+      "lang": "en",
+      "stem": {
+        "en": "A random sample of students estimates that 62% of the students in a city walk to school, with a margin of error of 4%. Which range is plausible for the percent of all the city's students who walk to school?",
+        "uz": "Oʻquvchilarning tasodifiy tanlanmasi boʻyicha shahardagi oʻquvchilarning 62 foizi maktabga piyoda boradi, xatolik chegarasi 4%. Shahardagi barcha oʻquvchilar orasida piyoda boruvchilar foizi uchun qaysi oraliq ehtimoliy?",
+        "ru": "По случайной выборке учеников оценка такова: 62% учеников города ходят в школу пешком, погрешность — 4%. Какой диапазон правдоподобен для доли всех учеников города, которые ходят пешком?"
+      },
+      "options": [
+        {
+          "en": "58% to 66%",
+          "uz": "58% dan 66% gacha",
+          "ru": "от 58% до 66%"
+        },
+        {
+          "en": "62% to 66%",
+          "uz": "62% dan 66% gacha",
+          "ru": "от 62% до 66%"
+        },
+        {
+          "en": "60% to 64%",
+          "uz": "60% dan 64% gacha",
+          "ru": "от 60% до 64%"
+        },
+        {
+          "en": "54% to 70%",
+          "uz": "54% dan 70% gacha",
+          "ru": "от 54% до 70%"
+        }
+      ],
+      "why": {
+        "en": "62 − 4 = 58 and 62 + 4 = 66: from 58% to 66%.",
+        "uz": "62 − 4 = 58 va 62 + 4 = 66: 58% dan 66% gacha.",
+        "ru": "62 − 4 = 58 и 62 + 4 = 66: от 58% до 66%."
+      },
+      "prior_b": -0.5,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps33q2",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "statistics",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS03-3",
+      "lang": "en",
+      "stem": {
+        "en": "A school has 900 students. In a random sample of 50 of them, 16 said they read every day. Based on the sample, about how many students in the whole school read every day?",
+        "uz": "Maktabda 900 nafar oʻquvchi bor. Ulardan tasodifan tanlangan 50 nafarining 16 nafari har kuni kitob oʻqishini aytdi. Tanlanma boʻyicha butun maktabda taxminan nechta oʻquvchi har kuni kitob oʻqiydi?",
+        "ru": "В школе 900 учеников. В случайной выборке из 50 учеников число тех, кто сказал, что читает каждый день, равно 16. Сколько примерно учеников всей школы читают каждый день, если судить по выборке?"
+      },
+      "options": [
+        {
+          "en": "288"
+        },
+        {
+          "en": "16"
+        },
+        {
+          "en": "612"
+        },
+        {
+          "en": "304"
+        }
+      ],
+      "why": {
+        "en": "16 ÷ 50 = 0.32 of the sample, so about 900 × 0.32 = 288 students.",
+        "uz": "Tanlanmaning 16 ÷ 50 = 0,32 qismi, demak taxminan 900 × 0,32 = 288 nafar oʻquvchi.",
+        "ru": "Доля в выборке 16 ÷ 50 = 0,32, значит, примерно 900 × 0,32 = 288 учеников."
+      },
+      "prior_b": -0.6,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ps33q3",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "statistics",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAPS03-3",
+      "lang": "en",
+      "stem": {
+        "en": "A survey of a random sample of students estimates that 48% of all the students in a city have a library card, with a margin of error of 5%. What is the largest plausible percent of all the city's students who have a library card?",
+        "uz": "Tasodifiy tanlangan oʻquvchilar orasidagi soʻrovnomaga koʻra, shahardagi barcha oʻquvchilarning taxminan 48 foizida kutubxona kartasi bor, xatolik chegarasi 5%. Kartasi bor oʻquvchilar foizining ehtimoliy eng katta qiymati nechaga teng?",
+        "ru": "Опрос случайной выборки учеников показал, что у 48% всех учеников города есть читательский билет; погрешность — 5%. Каков наибольший правдоподобный процент учеников города с читательским билетом?"
+      },
+      "options": [
+        {
+          "en": "53"
+        },
+        {
+          "en": "43"
+        },
+        {
+          "en": "58"
+        },
+        {
+          "en": "48"
+        }
+      ],
+      "why": {
+        "en": "48 + 5 = 53: the plausible values run from 43% to 53%.",
+        "uz": "48 + 5 = 53: ehtimoliy qiymatlar 43% dan 53% gacha.",
+        "ru": "48 + 5 = 53: правдоподобные значения — от 43% до 53%."
+      },
+      "prior_b": -0.2,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt12q1",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "area_perimeter",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "page": "C19-MAGT01-2",
+      "lang": "en",
+      "stem": {
+        "en": "Both sides of a rectangle are multiplied by 4. Its area was 12 cm². What is its new area, in cm²?",
+        "uz": "Toʻgʻri toʻrtburchakning ikkala tomoni 4 ga koʻpaytirildi. Uning yuzasi 12 sm² edi. Yangi yuzasi necha sm²?",
+        "ru": "Обе стороны прямоугольника умножили на 4. Его площадь была 12 см². Какова его новая площадь (в см²)?"
+      },
+      "options": [
+        {
+          "en": "192"
+        },
+        {
+          "en": "48"
+        },
+        {
+          "en": "768"
+        },
+        {
+          "en": "16"
+        }
+      ],
+      "why": {
+        "en": "Area grows by 4² = 16: 12 × 16 = 192 cm².",
+        "uz": "Yuza 4² = 16 marta oshadi: 12 × 16 = 192 sm².",
+        "ru": "Площадь растёт в 4² = 16 раз: 12 × 16 = 192 см²."
+      },
+      "prior_b": -0.8,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt12q2",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT01-2",
+      "lang": "en",
+      "stem": {
+        "en": "Two jars have the same shape. The small jar is 5 cm tall and holds 40 mL. The large jar is 15 cm tall. How many millilitres does the large jar hold?",
+        "uz": "Ikki banka bir xil shaklda. Kichik banka balandligi 5 sm, unga 40 mL sigʻadi. Katta banka balandligi 15 sm. Katta bankaga necha millilitr sigʻadi?",
+        "ru": "Две банки одинаковой формы. Маленькая банка высотой 5 см вмещает 40 мл. Большая банка имеет высоту 15 см. Сколько миллилитров вмещает большая банка?"
+      },
+      "options": [
+        {
+          "en": "1,080",
+          "uz": "1080",
+          "ru": "1080"
+        },
+        {
+          "en": "120"
+        },
+        {
+          "en": "360"
+        },
+        {
+          "en": "1,040",
+          "uz": "1040",
+          "ru": "1040"
+        }
+      ],
+      "why": {
+        "en": "k = 15 ÷ 5 = 3, so the volume grows by 3³ = 27: 40 × 27 = 1,080 mL.",
+        "uz": "k = 15 ÷ 5 = 3, demak hajm 3³ = 27 marta oshadi: 40 × 27 = 1080 mL.",
+        "ru": "k = 15 ÷ 5 = 3, значит, объём растёт в 3³ = 27 раз: 40 × 27 = 1080 мл."
+      },
+      "prior_b": -0.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt12q3",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "area_perimeter",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT01-2",
+      "lang": "en",
+      "stem": {
+        "en": "Two maps of a park are similar. On the small map the park has an area of 20 cm². Every length on the large map is 2.5 times as long. What is the park's area on the large map, in cm²?",
+        "uz": "Bogʻning ikki xaritasi oʻxshash. Kichik xaritada bogʻning yuzasi 20 sm². Katta xaritadagi har bir uzunlik 2,5 marta uzun. Katta xaritada bogʻning yuzasi necha sm²?",
+        "ru": "Две карты парка подобны. На маленькой карте площадь парка 20 см². Все расстояния на большой карте в 2,5 раза больше. Какова площадь парка на большой карте (в см²)?"
+      },
+      "options": [
+        {
+          "en": "125"
+        },
+        {
+          "en": "50"
+        },
+        {
+          "en": "312.5",
+          "uz": "312,5",
+          "ru": "312,5"
+        },
+        {
+          "en": "22.5",
+          "uz": "22,5",
+          "ru": "22,5"
+        }
+      ],
+      "why": {
+        "en": "Area grows by 2.5² = 6.25: 20 × 6.25 = 125 cm².",
+        "uz": "Yuza 2,5² = 6,25 marta oshadi: 20 × 6,25 = 125 sm².",
+        "ru": "Площадь растёт в 2,5² = 6,25 раза: 20 × 6,25 = 125 см²."
+      },
+      "prior_b": -0.1,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt13q1",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT01-3",
+      "lang": "en",
+      "stem": {
+        "en": "A ball has a radius of 6 cm. Its volume is kπ cm³. What is k?",
+        "uz": "Sharning radiusi 6 sm. Uning hajmi kπ sm³. k nechaga teng?",
+        "ru": "Радиус шара равен 6 см. Его объём равен kπ см³. Найдите k."
+      },
+      "options": [
+        {
+          "en": "288"
+        },
+        {
+          "en": "216"
+        },
+        {
+          "en": "864"
+        },
+        {
+          "en": "144"
+        }
+      ],
+      "why": {
+        "en": "(4/3) × 6³ = (4/3) × 216 = 288, so k = 288.",
+        "uz": "(4/3) × 6³ = (4/3) × 216 = 288, demak k = 288.",
+        "ru": "(4/3) × 6³ = (4/3) × 216 = 288, значит, k = 288."
+      },
+      "prior_b": -0.5,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt13q2",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT01-3",
+      "lang": "en",
+      "stem": {
+        "en": "A paper cup is shaped like a cone with radius 3 cm and height 10 cm. Its volume is kπ cm³. What is k?",
+        "uz": "Qogʻoz stakan konus shaklida: asosining radiusi 3 sm, balandligi 10 sm. Uning hajmi kπ sm³. k nechaga teng?",
+        "ru": "Бумажный стаканчик имеет форму конуса с радиусом основания 3 см и высотой 10 см. Его объём равен kπ см³. Найдите k."
+      },
+      "options": [
+        {
+          "en": "30"
+        },
+        {
+          "en": "90"
+        },
+        {
+          "en": "45"
+        },
+        {
+          "en": "10"
+        }
+      ],
+      "why": {
+        "en": "(1/3) × 3² × 10 = (1/3) × 90 = 30, so k = 30.",
+        "uz": "(1/3) × 3² × 10 = (1/3) × 90 = 30, demak k = 30.",
+        "ru": "(1/3) × 3² × 10 = (1/3) × 90 = 30, значит, k = 30."
+      },
+      "prior_b": -0.4,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt13q3",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circle_area",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT01-3",
+      "lang": "en",
+      "stem": {
+        "en": "A round table top has a radius of 6 dm. A round cloth of radius 4 dm lies in its middle. The part of the table top not under the cloth is a ring with an area of kπ dm². What is k?",
+        "uz": "Dumaloq stol ustining radiusi 6 dm. Uning oʻrtasida radiusi 4 dm boʻlgan dumaloq dasturxon yotibdi. Stol ustining dasturxon bilan yopilmagan qismi — halqa, uning yuzasi kπ dm². k nechaga teng?",
+        "ru": "Радиус круглой столешницы равен 6 дм. В её середине лежит круглая салфетка радиусом 4 дм. Часть столешницы, не закрытая салфеткой, — кольцо площадью kπ дм². Найдите k."
+      },
+      "options": [
+        {
+          "en": "20"
+        },
+        {
+          "en": "4"
+        },
+        {
+          "en": "36"
+        },
+        {
+          "en": "52"
+        }
+      ],
+      "why": {
+        "en": "π × 6² − π × 4² = 36π − 16π = 20π, so k = 20.",
+        "uz": "π × 6² − π × 4² = 36π − 16π = 20π, demak k = 20.",
+        "ru": "π × 6² − π × 4² = 36π − 16π = 20π, значит, k = 20."
+      },
+      "prior_b": -0.2,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt22q1",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "similarity",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT02-2",
+      "lang": "en",
+      "stem": {
+        "en": "Triangle DEF is similar to triangle XYZ, with D matching X, E matching Y and F matching Z. DE = 6, EF = 9 and XY = 8. What is YZ?",
+        "uz": "DEF uchburchak XYZ uchburchakka oʻxshash: D ga X, E ga Y, F ga Z mos. DE = 6, EF = 9, XY = 8. YZ nechaga teng?",
+        "ru": "Треугольник DEF подобен треугольнику XYZ: D соответствует X, E — Y, F — Z. DE = 6, EF = 9, XY = 8. Найдите YZ."
+      },
+      "options": [
+        {
+          "en": "12"
+        },
+        {
+          "en": "11"
+        },
+        {
+          "en": "6.75",
+          "uz": "6,75",
+          "ru": "6,75"
+        },
+        {
+          "en": "13.5",
+          "uz": "13,5",
+          "ru": "13,5"
+        }
+      ],
+      "why": {
+        "en": "XY ÷ DE = 8 ÷ 6 = 4/3, so YZ = 9 × 4/3 = 12.",
+        "uz": "XY ÷ DE = 8 ÷ 6 = 4/3, demak YZ = 9 × 4/3 = 12.",
+        "ru": "XY ÷ DE = 8 ÷ 6 = 4/3, значит, YZ = 9 × 4/3 = 12."
+      },
+      "prior_b": -0.5,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt22q2",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "similarity",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "page": "C19-MAGT02-2",
+      "lang": "en",
+      "stem": {
+        "en": "At the same moment, a 3 m pole casts a 2 m shadow and a tree casts a 10 m shadow. How tall is the tree, in metres?",
+        "uz": "Bir vaqtning oʻzida 3 m li ustun 2 m soya, daraxt esa 10 m soya tashlaydi. Daraxtning balandligi necha metr?",
+        "ru": "В один и тот же момент столб высотой 3 м отбрасывает тень длиной 2 м, а дерево — тень длиной 10 м. Какова высота дерева (в метрах)?"
+      },
+      "options": [
+        {
+          "en": "15"
+        },
+        {
+          "en": "11"
+        },
+        {
+          "en": "30"
+        },
+        {
+          "en": "5"
+        }
+      ],
+      "why": {
+        "en": "tree ÷ 3 = 10 ÷ 2, so the tree is 3 × 10 ÷ 2 = 15 m.",
+        "uz": "daraxt ÷ 3 = 10 ÷ 2, demak daraxt 3 × 10 ÷ 2 = 15 m.",
+        "ru": "дерево ÷ 3 = 10 ÷ 2, значит, высота дерева 3 × 10 ÷ 2 = 15 м."
+      },
+      "prior_b": -0.7,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt22q3",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "similarity",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT02-2",
+      "lang": "en",
+      "stem": {
+        "en": "In triangle PQR, point S lies on PQ and point T lies on PR, with ST parallel to QR. PS = 3, SQ = 9 and ST = 4. What is QR?",
+        "uz": "PQR uchburchakda S nuqta PQ tomonda, T nuqta PR tomonda yotadi va ST ∥ QR. PS = 3, SQ = 9, ST = 4. QR nechaga teng?",
+        "ru": "В треугольнике PQR точка S лежит на PQ, точка T — на PR, причём ST ∥ QR. PS = 3, SQ = 9, ST = 4. Найдите QR."
+      },
+      "options": [
+        {
+          "en": "16"
+        },
+        {
+          "en": "12"
+        },
+        {
+          "en": "1"
+        },
+        {
+          "en": "13"
+        }
+      ],
+      "why": {
+        "en": "PQ = 3 + 9 = 12, so QR = 4 × 12 ÷ 3 = 16.",
+        "uz": "PQ = 3 + 9 = 12, demak QR = 4 × 12 ÷ 3 = 16.",
+        "ru": "PQ = 3 + 9 = 12, значит, QR = 4 × 12 ÷ 3 = 16."
+      },
+      "prior_b": -0.2,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt23q1",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "polygon_angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT02-3",
+      "lang": "en",
+      "stem": {
+        "en": "Four angles of a pentagon are 100°, 110°, 95° and 120°. What is the fifth angle, in degrees?",
+        "uz": "Beshburchakning toʻrtta burchagi 100°, 110°, 95° va 120°. Beshinchi burchagi necha gradus?",
+        "ru": "Четыре угла пятиугольника равны 100°, 110°, 95° и 120°. Сколько градусов составляет пятый угол?"
+      },
+      "options": [
+        {
+          "en": "115"
+        },
+        {
+          "en": "65"
+        },
+        {
+          "en": "108"
+        },
+        {
+          "en": "135"
+        }
+      ],
+      "why": {
+        "en": "The angles add up to (5 − 2) × 180 = 540°: 540 − (100 + 110 + 95 + 120) = 540 − 425 = 115°.",
+        "uz": "Burchaklar yigʻindisi (5 − 2) × 180 = 540°: 540 − (100 + 110 + 95 + 120) = 540 − 425 = 115°.",
+        "ru": "Сумма углов (5 − 2) × 180 = 540°: 540 − (100 + 110 + 95 + 120) = 540 − 425 = 115°."
+      },
+      "prior_b": -0.4,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt23q2",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "polygon_angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT02-3",
+      "lang": "en",
+      "stem": {
+        "en": "A regular polygon has 12 sides. How many degrees is each of its interior angles?",
+        "uz": "Muntazam koʻpburchakning 12 ta tomoni bor. Uning har bir ichki burchagi necha gradus?",
+        "ru": "У правильного многоугольника 12 сторон. Сколько градусов составляет каждый его внутренний угол?"
+      },
+      "options": [
+        {
+          "en": "150"
+        },
+        {
+          "en": "30"
+        },
+        {
+          "en": "1,800",
+          "uz": "1800",
+          "ru": "1800"
+        },
+        {
+          "en": "180"
+        }
+      ],
+      "why": {
+        "en": "(12 − 2) × 180 = 1,800, and 1,800 ÷ 12 = 150°.",
+        "uz": "(12 − 2) × 180 = 1800, 1800 ÷ 12 = 150°.",
+        "ru": "(12 − 2) × 180 = 1800, и 1800 ÷ 12 = 150°."
+      },
+      "prior_b": -0.5,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt23q3",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "polygon_angles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT02-3",
+      "lang": "en",
+      "stem": {
+        "en": "Each interior angle of a regular polygon is 156°. How many sides does it have?",
+        "uz": "Muntazam koʻpburchakning har bir ichki burchagi 156°. Uning nechta tomoni bor?",
+        "ru": "Каждый внутренний угол правильного многоугольника равен 156°. Сколько у него сторон?"
+      },
+      "options": [
+        {
+          "en": "15"
+        },
+        {
+          "en": "24"
+        },
+        {
+          "en": "13"
+        },
+        {
+          "en": "30"
+        }
+      ],
+      "why": {
+        "en": "Each exterior angle is 180 − 156 = 24°, so there are 360 ÷ 24 = 15 sides.",
+        "uz": "Har bir tashqi burchak 180 − 156 = 24°, demak 360 ÷ 24 = 15 ta tomon.",
+        "ru": "Каждый внешний угол 180 − 156 = 24°, значит, сторон 360 ÷ 24 = 15."
+      },
+      "prior_b": -0.1,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt32q1",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "right_triangle_trig",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT03-2",
+      "lang": "en",
+      "stem": {
+        "en": "A tree casts a shadow 15 m long. From the end of the shadow, the angle up to the top of the tree is x°, and tan x° = 4/3. How tall is the tree, in metres?",
+        "uz": "Daraxtning soyasi 15 m. Soyaning uchidan daraxt uchiga qarash burchagi x°, tan x° = 4/3. Daraxtning balandligi necha metr?",
+        "ru": "Дерево отбрасывает тень длиной 15 м. Из конца тени верхушка дерева видна под углом x° к земле, и tan x° = 4/3. Какова высота дерева (в метрах)?"
+      },
+      "options": [
+        {
+          "en": "20"
+        },
+        {
+          "en": "11.25",
+          "uz": "11,25",
+          "ru": "11,25"
+        },
+        {
+          "en": "25"
+        },
+        {
+          "en": "12"
+        }
+      ],
+      "why": {
+        "en": "The height is opposite x° and the shadow is adjacent, so use tan: height = 15 × 4/3 = 20 m.",
+        "uz": "Balandlik x° qarshisida, soya esa yondosh katet, shuning uchun tan. Balandlik = 15 × 4/3 = 20 m.",
+        "ru": "Высота лежит против x°, тень — прилежащий катет: tan. Высота = 15 × 4/3 = 20 м."
+      },
+      "prior_b": -0.3,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt32q2",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "right_triangle_trig",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT03-2",
+      "lang": "en",
+      "stem": {
+        "en": "A kite's string is 39 m long and pulled straight. The string makes an angle of x° with the ground, and sin x° = 5/13. How high is the kite above the ground, in metres?",
+        "uz": "Varrakning ipi 39 m uzunlikda va tarang tortilgan. Ip yer bilan x° burchak hosil qiladi, sin x° = 5/13. Varrak yerdan necha metr balandlikda?",
+        "ru": "Нить воздушного змея длиной 39 м натянута. Она образует с землёй угол x°, и sin x° = 5/13. На какой высоте над землёй змей (в метрах)?"
+      },
+      "options": [
+        {
+          "en": "15"
+        },
+        {
+          "en": "36"
+        },
+        {
+          "en": "5"
+        },
+        {
+          "en": "101.4",
+          "uz": "101,4",
+          "ru": "101,4"
+        }
+      ],
+      "why": {
+        "en": "The height is opposite x°, and the string is the hypotenuse: height = 39 × 5/13 = 15 m.",
+        "uz": "Balandlik x° qarshisida, ip — gipotenuza: balandlik = 39 × 5/13 = 15 m.",
+        "ru": "Высота лежит против угла x°, нить — гипотенуза: высота = 39 × 5/13 = 15 м."
+      },
+      "prior_b": -0.4,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt32q3",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "right_triangle_trig",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT03-2",
+      "lang": "en",
+      "stem": {
+        "en": "An equilateral triangle has sides of 10 cm. Its height is k√3 cm. What is k?",
+        "uz": "Teng tomonli uchburchakning tomonlari 10 sm. Uning balandligi k√3 sm. k nechaga teng?",
+        "ru": "Стороны равностороннего треугольника равны 10 см. Его высота равна k√3 см. Найдите k."
+      },
+      "options": [
+        {
+          "en": "5"
+        },
+        {
+          "en": "10"
+        },
+        {
+          "en": "2.5",
+          "uz": "2,5",
+          "ru": "2,5"
+        },
+        {
+          "en": "25"
+        }
+      ],
+      "why": {
+        "en": "Half the base is 5, and in a 30°-60°-90° triangle the side opposite 60° is 5√3, so k = 5.",
+        "uz": "Asosning yarmi 5, 30°-60°-90° uchburchakda 60° qarshisidagi tomon 5√3, demak k = 5.",
+        "ru": "Половина основания 5, а в треугольнике 30°-60°-90° сторона против 60° равна 5√3, значит, k = 5."
+      },
+      "prior_b": 0.0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt33q1",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT03-3",
+      "lang": "en",
+      "stem": {
+        "en": "A circle has a radius of 12 cm. An arc has a central angle of 150°. Its length is kπ cm. What is k?",
+        "uz": "Aylananing radiusi 12 sm. Yoyning markaziy burchagi 150°. Uning uzunligi kπ sm. k nechaga teng?",
+        "ru": "Радиус окружности 12 см. Центральный угол дуги 150°. Длина этой дуги равна kπ см. Найдите k."
+      },
+      "options": [
+        {
+          "en": "10"
+        },
+        {
+          "en": "60"
+        },
+        {
+          "en": "5"
+        },
+        {
+          "en": "24"
+        }
+      ],
+      "why": {
+        "en": "(150/360) × 2π × 12 = 10π, so k = 10.",
+        "uz": "(150/360) × 2π × 12 = 10π, demak k = 10.",
+        "ru": "(150/360) × 2π × 12 = 10π, значит, k = 10."
+      },
+      "prior_b": -0.2,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt33q2",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "page": "C19-MAGT03-3",
+      "lang": "en",
+      "stem": {
+        "en": "A sector of a circle has radius 10 cm and arc length 7 cm. What is the area of the sector, in cm²?",
+        "uz": "Doira sektorining radiusi 10 sm, yoyining uzunligi 7 sm. Sektorning yuzi necha sm²?",
+        "ru": "Сектор круга имеет радиус 10 см и длину дуги 7 см. Чему равна площадь сектора (в см²)?"
+      },
+      "options": [
+        {
+          "en": "35"
+        },
+        {
+          "en": "70"
+        },
+        {
+          "en": "0.7",
+          "uz": "0,7",
+          "ru": "0,7"
+        },
+        {
+          "en": "350"
+        }
+      ],
+      "why": {
+        "en": "Area = (1/2) × r × arc = (1/2) × 10 × 7 = 35 cm².",
+        "uz": "Yuza = (1/2) × r × yoy = (1/2) × 10 × 7 = 35 sm².",
+        "ru": "Площадь = (1/2) × r × дуга = (1/2) × 10 × 7 = 35 см²."
+      },
+      "prior_b": -0.3,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-gt33q3",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "hard"
+      },
+      "page": "C19-MAGT03-3",
+      "lang": "en",
+      "stem": {
+        "en": "The equation x² + y² + 8x − 10y = 8 describes a circle in the xy-plane. What is the radius of the circle?",
+        "uz": "xy tekisligida x² + y² + 8x − 10y = 8 tenglama aylanani ifodalaydi. Aylananing radiusi nechaga teng?",
+        "ru": "Уравнение x² + y² + 8x − 10y = 8 задаёт окружность на плоскости xy. Чему равен радиус окружности?"
+      },
+      "options": [
+        {
+          "en": "7"
+        },
+        {
+          "en": "49"
+        },
+        {
+          "en": "8"
+        },
+        {
+          "en": "41"
+        }
+      ],
+      "why": {
+        "en": "(x + 4)² + (y − 5)² = 8 + 16 + 25 = 49, so the radius is √49 = 7.",
+        "uz": "(x + 4)² + (y − 5)² = 8 + 16 + 25 = 49, demak radius √49 = 7.",
+        "ru": "(x + 4)² + (y − 5)² = 8 + 16 + 25 = 49, значит, радиус √49 = 7."
+      },
+      "prior_b": 0.4,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P7s1+P7s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

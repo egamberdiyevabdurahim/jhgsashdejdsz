@@ -1,0 +1,2887 @@
+{
+ "bank": "C19",
+ "batch": 13,
+ "kind": "lessons",
+ "note": "DTM lesson bodies, phase 2 (SPEC-lessons rev. 2, 12 Oct 2026, §3.6, §11.1, §12.5 item 3; .superpowers/p7/PLAN.md §6): one lesson per topic of the state test's compulsory mathematics block (C10-DTMC01 … DTMC10). Pieces idea, example and trap retell the named C2 explainer (`explainer`) with new numbers written the DTM way; the fourth piece, `format`, is the block's question style, its points (C18/README.md, Order No. 105) and the timer our DTM practice shows (src/engine/schedule/dtm.ts). `items` are the 40 piece questions (the key is options[0]; `page` names the lesson). Our own wording; every worked line and key is checked by sympy (.superpowers/p7/a6/sympy_check.py). Key check 2 (P7, 13 Oct 2026): two blind solvers outside the author's session, P7s1 and P7s2, both chose the key on all 40 piece questions, so they are verified_auto with key_check_2 blind:P7s1+P7s2, and each lesson record with them (C19/RECONCILE-p7.md).",
+ "lessons": [
+  {
+   "kind": "lesson",
+   "id": "C19-DTMC01-1",
+   "course": "dtm",
+   "unit": "C10-DTMC01",
+   "seq": 1,
+   "skill": "dtm:DTMC01",
+   "requires": {
+    "math_rung_min": "prealg"
+   },
+   "explainer": "C2-pa0003",
+   "title": {
+    "en": "DTM: Percentages",
+    "uz": "DTM: Foizlar",
+    "ru": "DTM: Проценты"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "p% means p hundredths, so p% of a number is the number × p/100.\nAfter an increase of p%, the new amount is (100 + p)% of the old one; after a decrease of p%, it is (100 − p)%. If p% of a group did something, the rest is (100 − p)%.\nIf k is p% of a whole, the whole is k × 100/p.\nExamples: 30% of 250,000 soʻm = 250,000 × 30/100 = 75,000 soʻm. If 12 is 40% of a whole, the whole is 12 × 100/40 = 30.",
+      "uz": "p% bu yuzdan p ulush, shuning uchun sonning p% i = son × p/100.\np% ga oshgandan keyin yangi miqdor eskisining (100 + p)% iga, p% ga kamaygandan keyin esa (100 − p)% iga teng boʻladi. Guruhning p% i biror ishni qilgan boʻlsa, qolgani (100 − p)%.\nAgar k butunning p% i boʻlsa, butun = k × 100/p.\nMisollar: 250 000 soʻmning 30% i = 250 000 × 30/100 = 75 000 soʻm. Agar 12 butunning 40% i boʻlsa, butun = 12 × 100/40 = 30.",
+      "ru": "p% — это p сотых, поэтому p% от числа = число × p/100.\nПосле увеличения на p% новое значение составляет (100 + p)% от старого, после уменьшения на p% — (100 − p)%. Если p% группы что-то сделали, остальные — это (100 − p)%.\nЕсли k — это p% от целого, то целое = k × 100/p.\nПримеры: 30% от 250 000 сум = 250 000 × 30/100 = 75 000 сум. Если 12 — это 40% от целого, то целое = 12 × 100/40 = 30."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt01q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A phone costs 1,600,000 soʻm. Its price goes up by 15%. What is the new price?\n15% of 1,600,000 = 1,600,000 × 15/100 = 240,000.\nNew price: 1,600,000 + 240,000 = 1,840,000 soʻm.\nIn one step: 115% of the price = 1,600,000 × 1.15 = 1,840,000.\nNow you: a phone costs 2,500,000 soʻm. Its price goes up by 8%.\n2,500,000 × 1.08 = ?",
+      "uz": "Telefon 1 600 000 soʻm turadi. Uning narxi 15% ga oshdi. Yangi narx qancha?\n1 600 000 ning 15% i = 1 600 000 × 15/100 = 240 000.\nYangi narx: 1 600 000 + 240 000 = 1 840 000 soʻm.\nBir qadamda: narxning 115% i = 1 600 000 × 1,15 = 1 840 000.\nEndi siz: telefon 2 500 000 soʻm turadi. Uning narxi 8% ga oshdi.\n2 500 000 × 1,08 = ?",
+      "ru": "Телефон стоит 1 600 000 сум. Его цена выросла на 15%. Какова новая цена?\n15% от 1 600 000 = 1 600 000 × 15/100 = 240 000.\nНовая цена: 1 600 000 + 240 000 = 1 840 000 сум.\nЗа один шаг: 115% цены = 1 600 000 × 1,15 = 1 840 000.\nТеперь попробуйте сами: телефон стоит 2 500 000 сум. Его цена выросла на 8%.\n2 500 000 × 1,08 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt01q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "To increase by 5%, multiply by 1.05, not by 0.05: 900,000 × 0.05 = 45,000 is only the increase. The new amount is 900,000 × 1.05 = 945,000.\nIn the same way, a decrease of 20% is × 0.80, not × 0.20.",
+      "uz": "5% ga oshirish uchun 0,05 ga emas, 1,05 ga koʻpaytiring: 900 000 × 0,05 = 45 000 — bu faqat oshgan qism. Yangi miqdor 900 000 × 1,05 = 945 000.\nXuddi shunday, 20% ga kamaytirish × 0,80 boʻladi, × 0,20 emas.",
+      "ru": "Чтобы увеличить на 5%, умножайте на 1,05, а не на 0,05: 900 000 × 0,05 = 45 000 — это только прибавка. Новое значение: 900 000 × 1,05 = 945 000.\nТак же уменьшение на 20% — это × 0,80, а не × 0,20."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt01q3"
+    },
+    {
+     "role": "format",
+     "body": {
+      "en": "DTM format. In the state test, the compulsory mathematics block has 10 questions. Each question has 4 options, and only one of them is right. A right answer is worth 1.1 points, so the whole block is worth 10 × 1.1 = 11 points.\nIn our DTM practice, a timer shows how many seconds each question has: about 40 seconds for a question like the ones in this lesson.\nExample: 9 right answers out of 10 is 9/10 = 90% of the questions, and 9 × 1.1 = 9.9 points.",
+      "uz": "DTM formati. Davlat testida matematikadan majburiy blok 10 ta savoldan iborat. Har bir savolda 4 ta variant bor va ulardan faqat bittasi toʻgʻri. Toʻgʻri javob 1,1 ball beradi, shuning uchun butun blok 10 × 1,1 = 11 ball.\nBizning DTM mashqimizda taymer har bir savolga necha soniya berilganini koʻrsatadi: shu darsdagi kabi savolga taxminan 40 soniya.\nMisol: 10 ta savoldan 9 tasiga toʻgʻri javob — savollarning 9/10 = 90% i, bu 9 × 1,1 = 9,9 ball.",
+      "ru": "Формат DTM. В государственном тесте обязательный блок по математике состоит из 10 вопросов. В каждом вопросе 4 варианта ответа, и верный только один. Верный ответ даёт 1,1 балла, поэтому весь блок стоит 10 × 1,1 = 11 баллов.\nВ нашей тренировке DTM таймер показывает, сколько секунд дано на каждый вопрос: на такой вопрос, как в этом уроке, — около 40 секунд.\nПример: 9 верных ответов из 10 — это 9/10 = 90% вопросов и 9 × 1,1 = 9,9 балла."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt01q4"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-pal031",
+     "C1-pal032",
+     "C1-sat014"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-pal031",
+     "C1-pal032",
+     "C1-sat014",
+     "C1-pap004"
+    ]
+   },
+   "reserve": null,
+   "extra_link": null,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-DTMC02-1",
+   "course": "dtm",
+   "unit": "C10-DTMC02",
+   "seq": 1,
+   "skill": "dtm:DTMC02",
+   "requires": {
+    "math_rung_min": "prealg"
+   },
+   "explainer": "C2-pa0001",
+   "title": {
+    "en": "DTM: Fractions and decimals",
+    "uz": "DTM: Kasrlar va oʻnli kasrlar",
+    "ru": "DTM: Обыкновенные и десятичные дроби"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Fractions can be added only when their denominators are equal. Find the least common denominator, rewrite each fraction with it, add the numerators and keep the denominator. Then simplify: 1/6 + 3/4 = 2/12 + 9/12 = 11/12.\nDecimals: multiply as if there were no points. Then count the digits after the point in both numbers together, and give the answer that many digits after the point: 0.6 × 0.07 → 6 × 7 = 42, 1 + 2 = 3 digits → 0.042.",
+      "uz": "Kasrlarni faqat maxrajlari teng boʻlganda qoʻshish mumkin. Eng kichik umumiy maxrajni toping, har bir kasrni shu maxrajga keltiring, suratlarni qoʻshing, maxrajni esa oʻzgartirmang. Soʻng qisqartiring: 1/6 + 3/4 = 2/12 + 9/12 = 11/12.\nOʻnli kasrlar: vergul yoʻqdek koʻpaytiring. Keyin ikkala sonda verguldan keyingi raqamlarni birga sanang va javobda verguldan keyin shuncha raqam qoldiring: 0,6 × 0,07 → 6 × 7 = 42, 1 + 2 = 3 ta raqam → 0,042.",
+      "ru": "Складывать дроби можно, только когда у них одинаковые знаменатели. Найдите наименьший общий знаменатель, приведите к нему каждую дробь, сложите числители, а знаменатель оставьте. Затем сократите: 1/6 + 3/4 = 2/12 + 9/12 = 11/12.\nДесятичные дроби: умножайте так, будто запятых нет. Затем сосчитайте, сколько всего цифр после запятой в обоих множителях, и оставьте столько же цифр после запятой в ответе: 0,6 × 0,07 → 6 × 7 = 42, 1 + 2 = 3 цифры → 0,042."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt02q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "2/3 + 3/10 = N/30, where 30 is the least common denominator of 3 and 10.\n2/3 = 20/30 (top and bottom × 10); 3/10 = 9/30 (top and bottom × 3).\n20/30 + 9/30 = 29/30, so N = 29.\nNow you: 4/9 + 5/6 = N/18, where 18 is the least common denominator of 9 and 6.\n4/9 = 8/18 and 5/6 = 15/18.\nN = 8 + 15 = ?",
+      "uz": "2/3 + 3/10 = N/30, bu yerda 30 — 3 va 10 ning eng kichik umumiy maxraji.\n2/3 = 20/30 (surat va maxraj × 10); 3/10 = 9/30 (surat va maxraj × 3).\n20/30 + 9/30 = 29/30, demak N = 29.\nEndi siz: 4/9 + 5/6 = N/18, bu yerda 18 — 9 va 6 ning eng kichik umumiy maxraji.\n4/9 = 8/18 va 5/6 = 15/18.\nN = 8 + 15 = ?",
+      "ru": "2/3 + 3/10 = N/30, где 30 — наименьший общий знаменатель чисел 3 и 10.\n2/3 = 20/30 (числитель и знаменатель × 10); 3/10 = 9/30 (числитель и знаменатель × 3).\n20/30 + 9/30 = 29/30, значит, N = 29.\nТеперь попробуйте сами: 4/9 + 5/6 = N/18, где 18 — наименьший общий знаменатель чисел 9 и 6.\n4/9 = 8/18 и 5/6 = 15/18.\nN = 8 + 15 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt02q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Never add the denominators: 1/2 + 1/3 is not 2/5 (it is 3/6 + 2/6 = 5/6).\nWith decimals, estimate first: 2.5 × 0.32 is a little more than 2 × 0.32 = 0.64. 25 × 32 = 800, and 1 + 2 = 3 digits after the point give 0.800 = 0.8. If you get 8 or 0.08, the point is in the wrong place.",
+      "uz": "Maxrajlarni hech qachon qoʻshmang: 1/2 + 1/3 ≠ 2/5 (yigʻindi 3/6 + 2/6 = 5/6).\nOʻnli kasrlarda avval taxminiy hisoblang: 2,5 × 0,32 bu 2 × 0,32 = 0,64 dan biroz katta. 25 × 32 = 800, verguldan keyin 1 + 2 = 3 ta raqam: 0,800 = 0,8. Agar 8 yoki 0,08 chiqsa, vergul notoʻgʻri joyda.",
+      "ru": "Никогда не складывайте знаменатели: 1/2 + 1/3 ≠ 2/5 (это 3/6 + 2/6 = 5/6).\nС десятичными дробями сначала прикиньте: 2,5 × 0,32 чуть больше, чем 2 × 0,32 = 0,64. 25 × 32 = 800, после запятой 1 + 2 = 3 цифры: 0,800 = 0,8. Если получилось 8 или 0,08, запятая стоит не там."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt02q3"
+    },
+    {
+     "role": "format",
+     "body": {
+      "en": "DTM format. In the state test, the compulsory mathematics block has 10 questions. Each question has 4 options, and only one of them is right. A right answer is worth 1.1 points, so the whole block is worth 10 × 1.1 = 11 points.\nIn our DTM practice, a timer shows how many seconds each question has: about 40 seconds for a question like the ones in this lesson.\nExample: 3 right answers give 3 × 1.1 = 3.3 points: 3 × 11 = 33, and one digit after the point.",
+      "uz": "DTM formati. Davlat testida matematikadan majburiy blok 10 ta savoldan iborat. Har bir savolda 4 ta variant bor va ulardan faqat bittasi toʻgʻri. Toʻgʻri javob 1,1 ball beradi, shuning uchun butun blok 10 × 1,1 = 11 ball.\nBizning DTM mashqimizda taymer har bir savolga necha soniya berilganini koʻrsatadi: shu darsdagi kabi savolga taxminan 40 soniya.\nMisol: 3 ta toʻgʻri javob 3 × 1,1 = 3,3 ball beradi: 3 × 11 = 33, verguldan keyin bitta raqam.",
+      "ru": "Формат DTM. В государственном тесте обязательный блок по математике состоит из 10 вопросов. В каждом вопросе 4 варианта ответа, и верный только один. Верный ответ даёт 1,1 балла, поэтому весь блок стоит 10 × 1,1 = 11 баллов.\nВ нашей тренировке DTM таймер показывает, сколько секунд дано на каждый вопрос: на такой вопрос, как в этом уроке, — около 40 секунд.\nПример: 3 верных ответа дают 3 × 1,1 = 3,3 балла: 3 × 11 = 33 и одна цифра после запятой."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt02q4"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-pal011",
+     "C1-pal012",
+     "C1-pal041"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-pal011",
+     "C1-pal012",
+     "C1-pal041"
+    ]
+   },
+   "reserve": null,
+   "extra_link": null,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-DTMC03-1",
+   "course": "dtm",
+   "unit": "C10-DTMC03",
+   "seq": 1,
+   "skill": "dtm:DTMC03",
+   "requires": {
+    "math_rung_min": "prealg"
+   },
+   "explainer": "C2-pa0006",
+   "title": {
+    "en": "DTM: Ratio and proportion",
+    "uz": "DTM: Nisbat va proporsiya",
+    "ru": "DTM: Отношения и пропорции"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "When two quantities grow at the same rate (twice as many kilograms cost twice as much), their ratios are equal: a/b = c/d. Then a × d = b × c, and you can find the missing number.\nExample: x/6 = 10/15 → 15 × x = 6 × 10 = 60 → x = 4.\nA ratio such as 2 : 3 works the same way: 2/3 = 8/x gives x = 12.",
+      "uz": "Ikki miqdor bir xil nisbatda oʻzgarsa (kilogramm ikki baravar koʻp boʻlsa, narx ham ikki baravar koʻp), ularning nisbatlari teng boʻladi: a/b = c/d. Bundan a × d = b × c (proporsiyaning asosiy xossasi) kelib chiqadi va nomaʼlum sonni topish mumkin.\nMisol: x/6 = 10/15 → 15 × x = 6 × 10 = 60 → x = 4.\n2 : 3 kabi nisbat ham xuddi shunday: 2/3 = 8/x dan x = 12.",
+      "ru": "Если две величины прямо пропорциональны (вдвое больше килограммов стоит вдвое дороже), их отношения равны: a/b = c/d. Тогда a × d = b × c, и можно найти неизвестное число.\nПример: x/6 = 10/15 → 15 × x = 6 × 10 = 60 → x = 4.\nОтношение вида 2 : 3 работает так же: из 2/3 = 8/x получаем x = 12."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt03q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "5 kg of apples cost 40,000 soʻm. How much do 8 kg cost?\nSame units in the same places: 5 kg / 40,000 soʻm = 8 kg / x soʻm.\nCross-multiply: 5 × x = 40,000 × 8 = 320,000.\nx = 320,000 ÷ 5 = 64,000 soʻm.\nCheck with the price of 1 kg: 40,000 ÷ 5 = 8,000, and 8,000 × 8 = 64,000.\nNow you: 3 kg of apples cost 45,000 soʻm. How much do 7 kg cost?\n3 × x = 45,000 × 7 = 315,000 → x = ?",
+      "uz": "5 kg olma 40 000 soʻm turadi. 8 kg olma qancha turadi?\nBir xil birliklar bir xil oʻrinda: 5 kg / 40 000 soʻm = 8 kg / x soʻm.\nProporsiyaning asosiy xossasi boʻyicha: 5 × x = 40 000 × 8 = 320 000.\nx = 320 000 ÷ 5 = 64 000 soʻm.\n1 kg narxi bilan tekshiramiz: 40 000 ÷ 5 = 8000 va 8000 × 8 = 64 000.\nEndi siz: 3 kg olma 45 000 soʻm turadi. 7 kg olma qancha turadi?\n3 × x = 45 000 × 7 = 315 000 → x = ?",
+      "ru": "5 кг яблок стоят 40 000 сум. Сколько стоят 8 кг?\nОдинаковые единицы на одинаковых местах: 5 кг / 40 000 сум = 8 кг / x сум.\nУмножаем крест-накрест: 5 × x = 40 000 × 8 = 320 000.\nx = 320 000 ÷ 5 = 64 000 сум.\nПроверка через цену 1 кг: 40 000 ÷ 5 = 8000, а 8000 × 8 = 64 000.\nТеперь попробуйте сами: 3 кг яблок стоят 45 000 сум. Сколько стоят 7 кг?\n3 × x = 45 000 × 7 = 315 000 → x = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt03q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Keep kilograms with kilograms and soʻm with soʻm. Writing 5/40000 = x/8 mixes them up and gives a wrong answer.\nCheck your answer: 8 kg must cost more than 5 kg.",
+      "uz": "Kilogrammni kilogramm bilan, soʻmni soʻm bilan bir xil oʻrinda saqlang. 5/40000 = x/8 deb yozish ularni aralashtirib yuboradi va notoʻgʻri javob beradi.\nJavobni tekshiring: 8 kg ning narxi 5 kg ning narxidan koʻp boʻlishi kerak.",
+      "ru": "Сопоставляйте килограммы с килограммами, а сумы — с сумами. В записи 5/40000 = x/8 они перепутаны, и ответ получится неверным.\nПроверьте ответ: 8 кг должны стоить больше, чем 5 кг."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt03q3"
+    },
+    {
+     "role": "format",
+     "body": {
+      "en": "DTM format. In the state test, the compulsory mathematics block has 10 questions. Each question has 4 options, and only one of them is right. A right answer is worth 1.1 points, so the whole block is worth 10 × 1.1 = 11 points.\nIn our DTM practice, a timer shows how many seconds each question has: about 40 seconds for a question like the ones in this lesson.\nExample: points grow at the same rate as right answers. 2 right answers give 2.2 points, so 5 right answers give 5.5 points: 2/2.2 = 5/x.",
+      "uz": "DTM formati. Davlat testida matematikadan majburiy blok 10 ta savoldan iborat. Har bir savolda 4 ta variant bor va ulardan faqat bittasi toʻgʻri. Toʻgʻri javob 1,1 ball beradi, shuning uchun butun blok 10 × 1,1 = 11 ball.\nBizning DTM mashqimizda taymer har bir savolga necha soniya berilganini koʻrsatadi: shu darsdagi kabi savolga taxminan 40 soniya.\nMisol: ball toʻgʻri javoblar bilan bir xil nisbatda oʻsadi. 2 ta toʻgʻri javob 2,2 ball beradi, demak 5 ta toʻgʻri javob 5,5 ball beradi: 2/2,2 = 5/x.",
+      "ru": "Формат DTM. В государственном тесте обязательный блок по математике состоит из 10 вопросов. В каждом вопросе 4 варианта ответа, и верный только один. Верный ответ даёт 1,1 балла, поэтому весь блок стоит 10 × 1,1 = 11 баллов.\nВ нашей тренировке DTM таймер показывает, сколько секунд дано на каждый вопрос: на такой вопрос, как в этом уроке, — около 40 секунд.\nПример: баллы растут в той же пропорции, что и верные ответы. 2 верных ответа дают 2,2 балла, значит, 5 верных ответов дают 5,5 балла: 2/2,2 = 5/x."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt03q4"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-pal061",
+     "C1-pal062",
+     "C1-pap005"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-pal061",
+     "C1-pal062",
+     "C1-pap005"
+    ]
+   },
+   "reserve": null,
+   "extra_link": null,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-DTMC04-1",
+   "course": "dtm",
+   "unit": "C10-DTMC04",
+   "seq": 1,
+   "skill": "dtm:DTMC04",
+   "requires": {
+    "math_rung_min": "prealg"
+   },
+   "explainer": "C2-pa0005",
+   "title": {
+    "en": "DTM: Powers and roots",
+    "uz": "DTM: Daraja va ildiz",
+    "ru": "DTM: Степени и корни"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "aⁿ is the product of n factors, each equal to a: 2⁵ = 2 × 2 × 2 × 2 × 2 = 32. A power applies only to what it touches: (−4)² = 16, but −4² = −16. Powers are worked out before multiplication, division, addition and subtraction.\nA square root undoes a square: √49 = 7, because 7² = 49. If n is not a square, √n lies between two whole numbers: 36 < 40 < 49, so 6 < √40 < 7.",
+      "uz": "aⁿ — har biri a ga teng boʻlgan n ta koʻpaytuvchining koʻpaytmasi: 2⁵ = 2 × 2 × 2 × 2 × 2 = 32. Daraja faqat oʻzi yozilgan songa tegishli: (−4)² = 16, lekin −4² = −16. Darajaga koʻtarish koʻpaytirish, boʻlish, qoʻshish va ayirishdan oldin bajariladi.\nKvadrat ildiz chiqarish — kvadratga koʻtarishning teskari amali: √49 = 7, chunki 7² = 49. Agar n biror butun sonning kvadrati boʻlmasa, √n ikki butun son orasida yotadi: 36 < 40 < 49, demak 6 < √40 < 7.",
+      "ru": "aⁿ — это произведение n множителей, каждый из которых равен a: 2⁵ = 2 × 2 × 2 × 2 × 2 = 32. Степень относится только к тому, к чему она приписана: (−4)² = 16, но −4² = −16. Возведение в степень выполняется раньше умножения, деления, сложения и вычитания.\nКвадратный корень отменяет квадрат: √49 = 7, потому что 7² = 49. Если n — не квадрат целого числа, √n лежит между двумя целыми числами: 36 < 40 < 49, значит, 6 < √40 < 7."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt04q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "Calculate: 3³ − (−4)² + 2 × 3²\nPowers first: 3³ = 27, (−4)² = 16, 3² = 9.\nThen multiplication: 2 × 9 = 18.\nLast, left to right: 27 − 16 + 18 = 29.\nNow you: 2⁵ − (−3)² + 4 × 2²\nPowers: 2⁵ = 32, (−3)² = 9, 2² = 4. Then 4 × 4 = 16.\n32 − 9 + 16 = ?",
+      "uz": "Hisoblang: 3³ − (−4)² + 2 × 3²\nAvval darajalar: 3³ = 27, (−4)² = 16, 3² = 9.\nKeyin koʻpaytirish: 2 × 9 = 18.\nOxirida chapdan oʻngga: 27 − 16 + 18 = 29.\nEndi siz: 2⁵ − (−3)² + 4 × 2²\nDarajalar: 2⁵ = 32, (−3)² = 9, 2² = 4. Keyin 4 × 4 = 16.\n32 − 9 + 16 = ?",
+      "ru": "Вычислите: 3³ − (−4)² + 2 × 3²\nСначала степени: 3³ = 27, (−4)² = 16, 3² = 9.\nЗатем умножение: 2 × 9 = 18.\nВ конце слева направо: 27 − 16 + 18 = 29.\nТеперь попробуйте сами: 2⁵ − (−3)² + 4 × 2²\nСтепени: 2⁵ = 32, (−3)² = 9, 2² = 4. Затем 4 × 4 = 16.\n32 − 9 + 16 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt04q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "3⁴ is 81, not 3 × 4 = 12. And 2 × 5² is 2 × 25 = 50, not 10² = 100: the power touches only the 5.",
+      "uz": "3⁴ = 81, 3 × 4 = 12 emas. 2 × 5² esa 2 × 25 = 50, 10² = 100 emas: daraja faqat 5 ga tegishli.",
+      "ru": "3⁴ = 81, а не 3 × 4 = 12. А 2 × 5² = 2 × 25 = 50, а не 10² = 100: степень относится только к 5."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt04q3"
+    },
+    {
+     "role": "format",
+     "body": {
+      "en": "DTM format. In the state test, the compulsory mathematics block has 10 questions. Each question has 4 options, and only one of them is right. A right answer is worth 1.1 points, so the whole block is worth 10 × 1.1 = 11 points.\nIn our DTM practice, a timer shows how many seconds each question has: about 40 seconds for a question like the ones in this lesson.\nExample: with 4 options, 2 questions can be answered in 4 × 4 = 4² = 16 ways, and only one of the 16 has both right.",
+      "uz": "DTM formati. Davlat testida matematikadan majburiy blok 10 ta savoldan iborat. Har bir savolda 4 ta variant bor va ulardan faqat bittasi toʻgʻri. Toʻgʻri javob 1,1 ball beradi, shuning uchun butun blok 10 × 1,1 = 11 ball.\nBizning DTM mashqimizda taymer har bir savolga necha soniya berilganini koʻrsatadi: shu darsdagi kabi savolga taxminan 40 soniya.\nMisol: 4 ta variant boʻlsa, 2 ta savolga 4 × 4 = 4² = 16 xil usulda javob berish mumkin, ulardan faqat bittasida ikkalasi ham toʻgʻri.",
+      "ru": "Формат DTM. В государственном тесте обязательный блок по математике состоит из 10 вопросов. В каждом вопросе 4 варианта ответа, и верный только один. Верный ответ даёт 1,1 балла, поэтому весь блок стоит 10 × 1,1 = 11 баллов.\nВ нашей тренировке DTM таймер показывает, сколько секунд дано на каждый вопрос: на такой вопрос, как в этом уроке, — около 40 секунд.\nПример: при 4 вариантах на 2 вопроса можно ответить 4 × 4 = 4² = 16 способами, и только в одном из них оба ответа верны."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt04q4"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-pal051",
+     "C1-pal052",
+     "C1-pap007"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-pal051",
+     "C1-pal052",
+     "C1-pap007",
+     "C1-pap006"
+    ]
+   },
+   "reserve": null,
+   "extra_link": null,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-DTMC05-1",
+   "course": "dtm",
+   "unit": "C10-DTMC05",
+   "seq": 1,
+   "skill": "dtm:DTMC05",
+   "requires": {
+    "math_rung_min": "arith"
+   },
+   "explainer": "C2-ar0006",
+   "title": {
+    "en": "DTM: GCD and LCM",
+    "uz": "DTM: EKUB va EKUK",
+    "ru": "DTM: НОД и НОК"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Write each number as a product of primes. The greatest common divisor (GCD) takes the primes the numbers share, each with the smaller power. The least common multiple (LCM) takes every prime that appears, each with the larger power. Check: GCD × LCM = the product of the two numbers.\n24 = 2³ × 3 and 36 = 2² × 3²: GCD = 2² × 3 = 12, LCM = 2³ × 3² = 72, and 12 × 72 = 864 = 24 × 36.\nIn word problems, things that repeat and meet again ask for the LCM; the largest equal groups ask for the GCD.",
+      "uz": "Har bir sonni tub koʻpaytuvchilar koʻpaytmasi shaklida yozing. Eng katta umumiy boʻluvchi (EKUB) ikkala sonda ham bor tub koʻpaytuvchilarni kichik darajasi bilan oladi. Eng kichik umumiy karrali (EKUK) uchragan barcha tub koʻpaytuvchilarni katta darajasi bilan oladi. Tekshirish: EKUB × EKUK = ikki sonning koʻpaytmasi.\n24 = 2³ × 3 va 36 = 2² × 3²: EKUB = 2² × 3 = 12, EKUK = 2³ × 3² = 72, 12 × 72 = 864 = 24 × 36.\nMasalada nimadir takrorlanib, yana bir vaqtga toʻgʻri kelsa, EKUK kerak; eng katta teng guruhlar soʻralsa, EKUB kerak.",
+      "ru": "Разложите каждое число на простые множители. Наибольший общий делитель (НОД) — это произведение общих простых множителей, каждый с меньшим показателем степени. Наименьшее общее кратное (НОК) — произведение всех встречающихся простых множителей, каждый с большим показателем степени. Проверка: НОД × НОК = произведение двух чисел.\n24 = 2³ × 3 и 36 = 2² × 3²: НОД = 2² × 3 = 12, НОК = 2³ × 3² = 72, и 12 × 72 = 864 = 24 × 36.\nВ текстовых задачах: если что-то повторяется и нужно узнать, когда оно снова совпадёт, ищите НОК; если нужно разделить на самые большие равные группы, ищите НОД."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt05q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "Two buses leave the station at the same time. One comes back every 12 minutes, the other every 18 minutes. After how many minutes will they next leave together?\nThey meet again: we need the LCM of 12 and 18.\n12 = 2² × 3 and 18 = 2 × 3².\nLCM: all primes with the larger powers: 2² × 3² = 36 minutes.\nCheck: GCD = 2 × 3 = 6, and 6 × 36 = 216 = 12 × 18.\nNow you: every 10 and every 15 minutes.\n10 = 2 × 5 and 15 = 3 × 5, so LCM = 2 × 3 × 5 = ?",
+      "uz": "Ikki avtobus bekatdan bir vaqtda joʻnaydi. Biri har 12 daqiqada, ikkinchisi har 18 daqiqada qaytib keladi. Necha daqiqadan keyin ular yana birga joʻnaydi?\nUlar yana uchrashadi: 12 va 18 ning EKUKi kerak.\n12 = 2² × 3 va 18 = 2 × 3².\nEKUK: barcha tub koʻpaytuvchilar katta darajalari bilan: 2² × 3² = 36 daqiqa.\nTekshirish: EKUB = 2 × 3 = 6 va 6 × 36 = 216 = 12 × 18.\nEndi siz: har 10 va har 15 daqiqada.\n10 = 2 × 5 va 15 = 3 × 5, demak EKUK = 2 × 3 × 5 = ?",
+      "ru": "Два автобуса одновременно отправляются со станции. Один возвращается каждые 12 мин, другой — каждые 18 мин. Через сколько минут они снова отправятся вместе?\nОни снова совпадут: нужен НОК чисел 12 и 18.\n12 = 2² × 3 и 18 = 2 × 3².\nНОК: все множители с большими показателями степени: 2² × 3² = 36 мин.\nПроверка: НОД = 2 × 3 = 6, и 6 × 36 = 216 = 12 × 18.\nТеперь попробуйте сами: каждые 10 и каждые 15 мин.\n10 = 2 × 5 и 15 = 3 × 5, значит, НОК = 2 × 3 × 5 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt05q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "The LCM is never smaller than the larger number, and the GCD is never larger than the smaller number. For 16 and 20: GCD = 4 and LCM = 80. If your GCD is 80, you have swapped them.",
+      "uz": "EKUK hech qachon katta sondan kichik boʻlmaydi, EKUB esa hech qachon kichik sondan katta boʻlmaydi. 16 va 20 uchun: EKUB = 4, EKUK = 80. Agar EKUB 80 chiqsa, ularni almashtirib yuborgansiz.",
+      "ru": "НОК никогда не меньше большего числа, а НОД никогда не больше меньшего. Для 16 и 20: НОД = 4, НОК = 80. Если у вас НОД вышел 80, вы их перепутали."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt05q3"
+    },
+    {
+     "role": "format",
+     "body": {
+      "en": "DTM format. In the state test, the compulsory mathematics block has 10 questions. Each question has 4 options, and only one of them is right. A right answer is worth 1.1 points, so the whole block is worth 10 × 1.1 = 11 points.\nIn our DTM practice, a timer shows how many seconds each question has: about 40 seconds for a question like the ones in this lesson.\nExample: one friend gives each practice question 30 seconds, another 45 seconds. Starting together, they next start a question together after LCM(30, 45) = 90 seconds.",
+      "uz": "DTM formati. Davlat testida matematikadan majburiy blok 10 ta savoldan iborat. Har bir savolda 4 ta variant bor va ulardan faqat bittasi toʻgʻri. Toʻgʻri javob 1,1 ball beradi, shuning uchun butun blok 10 × 1,1 = 11 ball.\nBizning DTM mashqimizda taymer har bir savolga necha soniya berilganini koʻrsatadi: shu darsdagi kabi savolga taxminan 40 soniya.\nMisol: bir doʻst har bir mashq savoliga 30 soniya, boshqasi 45 soniya ajratadi. Birga boshlashsa, ular EKUK(30, 45) = 90 soniyadan keyin yana birga yangi savolni boshlaydi.",
+      "ru": "Формат DTM. В государственном тесте обязательный блок по математике состоит из 10 вопросов. В каждом вопросе 4 варианта ответа, и верный только один. Верный ответ даёт 1,1 балла, поэтому весь блок стоит 10 × 1,1 = 11 баллов.\nВ нашей тренировке DTM таймер показывает, сколько секунд дано на каждый вопрос: на такой вопрос, как в этом уроке, — около 40 секунд.\nПример: один друг тратит на каждый вопрос тренировки 30 секунд, другой — 45 секунд. Начав вместе, они снова вместе начнут вопрос через НОК(30, 45) = 90 секунд."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt05q4"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-arp007",
+     "C1-arp008"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-arp007",
+     "C1-arp008",
+     "C1-r3a019"
+    ]
+   },
+   "reserve": null,
+   "extra_link": null,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-DTMC06-1",
+   "course": "dtm",
+   "unit": "C10-DTMC06",
+   "seq": 1,
+   "skill": "dtm:DTMC06",
+   "requires": {
+    "math_rung_min": "alg1"
+   },
+   "explainer": "C2-a10001",
+   "title": {
+    "en": "DTM: Linear equations and inequalities",
+    "uz": "DTM: Chiziqli tenglama va tengsizlik",
+    "ru": "DTM: Линейные уравнения и неравенства"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Whatever you do to one side, do to the other. Clear fractions by multiplying both sides, open the brackets, collect the x-terms on one side and the numbers on the other, then divide by the number in front of x. Check by substituting your answer.\nExample: 2(x − 3) + 4 = x + 6 → 2x − 2 = x + 6 → x = 8. Check: 2 · 5 + 4 = 14 = 8 + 6.\nA word problem gives the same kind of equation: one tank holds 20 litres and gets 6 litres a minute, another holds 44 litres and gets 2 litres a minute: 20 + 6t = 44 + 2t, so 4t = 24 and t = 6.",
+      "uz": "Tenglamaning bir tomoniga nima qilsangiz, ikkinchi tomoniga ham shuni qiling. Ikkala tomonni koʻpaytirib kasrlardan qutuling, qavslarni oching, x li hadlarni bir tomonga, sonlarni ikkinchi tomonga yigʻing, keyin x oldidagi songa boʻling. Javobni tenglamaga qoʻyib tekshiring.\nMisol: 2(x − 3) + 4 = x + 6 → 2x − 2 = x + 6 → x = 8. Tekshirish: 2 · 5 + 4 = 14 = 8 + 6.\nMasala ham shunday tenglama beradi: bir idishda 20 litr suv bor va unga har daqiqada 6 litr quyiladi, boshqasida 44 litr bor va har daqiqada 2 litr quyiladi: 20 + 6t = 44 + 2t, demak 4t = 24 va t = 6.",
+      "ru": "Что делаете с одной частью уравнения, делайте и с другой. Избавьтесь от дробей, умножив обе части, раскройте скобки, соберите слагаемые с x в одной части, а числа — в другой, затем разделите на коэффициент при x. Проверьте ответ подстановкой.\nПример: 2(x − 3) + 4 = x + 6 → 2x − 2 = x + 6 → x = 8. Проверка: 2 · 5 + 4 = 14 = 8 + 6.\nТекстовая задача сводится к такому же уравнению: в одном баке 20 л воды и каждую минуту добавляют 6 л, в другом 44 л и добавляют 2 л в минуту: 20 + 6t = 44 + 2t, значит, 4t = 24 и t = 6."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt06q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "(x + 5)/4 = (x − 1)/2. Multiply both sides by 4: x + 5 = 2(x − 1) = 2x − 2.\nMove x to the right and the numbers to the left: 5 + 2 = 2x − x, so x = 7.\nCheck: (7 + 5)/4 = 3 and (7 − 1)/2 = 3.\nNow you: (x + 7)/5 = (x − 1)/3. Multiply both sides by 15:\n3(x + 7) = 5(x − 1) → 3x + 21 = 5x − 5 → 26 = 2x → x = ?",
+      "uz": "(x + 5)/4 = (x − 1)/2. Ikkala tomonni 4 ga koʻpaytiramiz: x + 5 = 2(x − 1) = 2x − 2.\nx ni oʻngga, sonlarni chapga oʻtkazamiz: 5 + 2 = 2x − x, demak x = 7.\nTekshirish: (7 + 5)/4 = 3 va (7 − 1)/2 = 3.\nEndi siz: (x + 7)/5 = (x − 1)/3. Ikkala tomonni 15 ga koʻpaytiramiz:\n3(x + 7) = 5(x − 1) → 3x + 21 = 5x − 5 → 26 = 2x → x = ?",
+      "ru": "(x + 5)/4 = (x − 1)/2. Умножаем обе части на 4: x + 5 = 2(x − 1) = 2x − 2.\nПереносим x вправо, а числа влево: 5 + 2 = 2x − x, значит, x = 7.\nПроверка: (7 + 5)/4 = 3 и (7 − 1)/2 = 3.\nТеперь попробуйте сами: (x + 7)/5 = (x − 1)/3. Умножаем обе части на 15:\n3(x + 7) = 5(x − 1) → 3x + 21 = 5x − 5 → 26 = 2x → x = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt06q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Multiply the whole side: 5(x − 1) = 5x − 5, not 5x − 1.\nIn an inequality there is one more rule: when you multiply or divide both sides by a negative number, turn the sign around.\n7 − 3x > 1 → −3x > −6 → x < 2 (we divide by −3, so > becomes <).\nWith ≥ the boundary counts: 10 − 2x ≥ 4 → x ≤ 3, so the greatest x is 3.",
+      "uz": "Qavsdagi har bir hadni koʻpaytiring: 5(x − 1) = 5x − 5, 5x − 1 emas.\nTengsizlikda yana bitta qoida bor: ikkala tomonni manfiy songa koʻpaytirsangiz yoki boʻlsangiz, belgini teskarisiga almashtiring.\n7 − 3x > 1 → −3x > −6 → x < 2 (−3 ga boʻlamiz, shuning uchun > belgisi < ga aylanadi).\n≥ belgisida chegara ham kiradi: 10 − 2x ≥ 4 → x ≤ 3, demak x ning eng katta qiymati 3.",
+      "ru": "Умножайте на число каждое слагаемое в скобках: 5(x − 1) = 5x − 5, а не 5x − 1.\nВ неравенстве есть ещё одно правило: при умножении или делении обеих частей на отрицательное число знак меняется на противоположный.\n7 − 3x > 1 → −3x > −6 → x < 2 (делим на −3, поэтому > становится <).\nПри ≥ граница входит: 10 − 2x ≥ 4 → x ≤ 3, значит, наибольшее x равно 3."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt06q3"
+    },
+    {
+     "role": "format",
+     "body": {
+      "en": "DTM format. In the state test, the compulsory mathematics block has 10 questions. Each question has 4 options, and only one of them is right. A right answer is worth 1.1 points, so the whole block is worth 10 × 1.1 = 11 points.\nIn our DTM practice, a timer shows how many seconds each question has: about 40 seconds for a question like the ones in this lesson.\nExample: for x right answers the block gives 1.1x points. 4.4 points means 1.1x = 4.4, so x = 4 right answers.",
+      "uz": "DTM formati. Davlat testida matematikadan majburiy blok 10 ta savoldan iborat. Har bir savolda 4 ta variant bor va ulardan faqat bittasi toʻgʻri. Toʻgʻri javob 1,1 ball beradi, shuning uchun butun blok 10 × 1,1 = 11 ball.\nBizning DTM mashqimizda taymer har bir savolga necha soniya berilganini koʻrsatadi: shu darsdagi kabi savolga taxminan 40 soniya.\nMisol: x ta toʻgʻri javob uchun blok 1,1x ball beradi. 4,4 ball boʻlsa, 1,1x = 4,4, demak x = 4 ta toʻgʻri javob.",
+      "ru": "Формат DTM. В государственном тесте обязательный блок по математике состоит из 10 вопросов. В каждом вопросе 4 варианта ответа, и верный только один. Верный ответ даёт 1,1 балла, поэтому весь блок стоит 10 × 1,1 = 11 баллов.\nВ нашей тренировке DTM таймер показывает, сколько секунд дано на каждый вопрос: на такой вопрос, как в этом уроке, — около 40 секунд.\nПример: за x верных ответов блок даёт 1,1x балла. 4,4 балла означает 1,1x = 4,4, значит, x = 4 верных ответа."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt06q4"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-a1p001",
+     "C1-a1p008",
+     "C1-a1p002"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-a1p001",
+     "C1-a1p008",
+     "C1-a1p002"
+    ]
+   },
+   "reserve": null,
+   "extra_link": null,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-DTMC07-1",
+   "course": "dtm",
+   "unit": "C10-DTMC07",
+   "seq": 1,
+   "skill": "dtm:DTMC07",
+   "requires": {
+    "math_rung_min": "alg1"
+   },
+   "explainer": "C2-a10003",
+   "title": {
+    "en": "DTM: Systems of equations",
+    "uz": "DTM: Tenglamalar sistemasi",
+    "ru": "DTM: Системы уравнений"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Multiply one or both equations so that one variable gets opposite coefficients, then add the equations: that variable cancels. Solve for the other variable and substitute it back into either equation.\nExample: x + y = 11 and x − y = 3. Add them: 2x = 14, so x = 7, and then y = 4.\nA word problem with two unknowns gives one equation for each fact: 3 notebooks and 2 pens cost 13,000 soʻm, 5 notebooks and 2 pens cost 19,000 soʻm. Taking the first from the second: 2 notebooks cost 6,000 soʻm, so one notebook costs 3,000 soʻm.",
+      "uz": "Bitta yoki ikkala tenglamani shunday songa koʻpaytiringki, oʻzgaruvchilardan birining koeffitsiyentlari qarama-qarshi boʻlsin, keyin tenglamalarni qoʻshing: bu oʻzgaruvchi yoʻqoladi. Qolgan oʻzgaruvchini toping va uni istalgan tenglamaga qoʻying.\nMisol: x + y = 11 va x − y = 3. Qoʻshamiz: 2x = 14, demak x = 7, keyin y = 4.\nIkki nomaʼlumli masalada har bir shart bitta tenglama beradi: 3 ta daftar va 2 ta ruchka 13 000 soʻm, 5 ta daftar va 2 ta ruchka 19 000 soʻm turadi. Ikkinchisidan birinchisini ayiramiz: 2 ta daftar 6000 soʻm, demak bitta daftar 3000 soʻm.",
+      "ru": "Умножьте одно или оба уравнения так, чтобы коэффициенты при одной переменной стали противоположными, и сложите уравнения: эта переменная исчезнет. Найдите оставшуюся переменную и подставьте её значение в любое из уравнений.\nПример: x + y = 11 и x − y = 3. Складываем: 2x = 14, значит, x = 7, а затем y = 4.\nВ задаче с двумя неизвестными каждый факт даёт одно уравнение: 3 тетради и 2 ручки стоят 13 000 сум, 5 тетрадей и 2 ручки — 19 000 сум. Вычитаем первое из второго: 2 тетради стоят 6000 сум, значит, одна тетрадь — 3000 сум."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt07q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "Solve the system: 3x + 2y = 16 and 4x − y = 3.\nMultiply the second equation by 2: 8x − 2y = 6.\nAdd it to the first: 11x = 22, so x = 2.\nSubstitute into 4x − y = 3: 8 − y = 3, so y = 5.\nCheck in the first equation: 3 · 2 + 2 · 5 = 16.\nNow you: 2x + 5y = 19 and 3x − y = 3.\nMultiply the second by 5: 15x − 5y = 15. Add: 17x = 34, so x = 2.\n6 − y = 3 → y = ?",
+      "uz": "Sistemani yeching: 3x + 2y = 16 va 4x − y = 3.\nIkkinchi tenglamani 2 ga koʻpaytiramiz: 8x − 2y = 6.\nUni birinchisiga qoʻshamiz: 11x = 22, demak x = 2.\n4x − y = 3 ga qoʻyamiz: 8 − y = 3, demak y = 5.\nBirinchi tenglamada tekshiramiz: 3 · 2 + 2 · 5 = 16.\nEndi siz: 2x + 5y = 19 va 3x − y = 3.\nIkkinchisini 5 ga koʻpaytiramiz: 15x − 5y = 15. Qoʻshamiz: 17x = 34, demak x = 2.\n6 − y = 3 → y = ?",
+      "ru": "Решите систему: 3x + 2y = 16 и 4x − y = 3.\nУмножаем второе уравнение на 2: 8x − 2y = 6.\nСкладываем с первым: 11x = 22, значит, x = 2.\nПодставляем в 4x − y = 3: 8 − y = 3, значит, y = 5.\nПроверка в первом уравнении: 3 · 2 + 2 · 5 = 16.\nТеперь попробуйте сами: 2x + 5y = 19 и 3x − y = 3.\nУмножаем второе на 5: 15x − 5y = 15. Складываем: 17x = 34, значит, x = 2.\n6 − y = 3 → y = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt07q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Multiply every term, including the right side. When you multiply 4x − y = 3 by 2, you get 8x − 2y = 6, not 8x − 2y = 3. Leaving 3 there gives a wrong x.",
+      "uz": "Har bir hadni, oʻng tomonni ham koʻpaytiring. 4x − y = 3 ni 2 ga koʻpaytirsangiz, 8x − 2y = 6 chiqadi, 8x − 2y = 3 emas. U yerda 3 qolib ketsa, x notoʻgʻri chiqadi.",
+      "ru": "Умножайте каждое слагаемое, включая правую часть. Умножив 4x − y = 3 на 2, получите 8x − 2y = 6, а не 8x − 2y = 3. Если оставить там 3, x получится неверным."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt07q3"
+    },
+    {
+     "role": "format",
+     "body": {
+      "en": "DTM format. In the state test, the compulsory mathematics block has 10 questions. Each question has 4 options, and only one of them is right. A right answer is worth 1.1 points, so the whole block is worth 10 × 1.1 = 11 points.\nIn our DTM practice, a timer shows how many seconds each question has: about 40 seconds for a question like the ones in this lesson.\nExample: the compulsory mathematics and history blocks have 10 questions each. If Ali got x + y = 12 right in the two blocks and x − y = 2, then 2x = 14: x = 7 in mathematics and y = 5 in history.",
+      "uz": "DTM formati. Davlat testida matematikadan majburiy blok 10 ta savoldan iborat. Har bir savolda 4 ta variant bor va ulardan faqat bittasi toʻgʻri. Toʻgʻri javob 1,1 ball beradi, shuning uchun butun blok 10 × 1,1 = 11 ball.\nBizning DTM mashqimizda taymer har bir savolga necha soniya berilganini koʻrsatadi: shu darsdagi kabi savolga taxminan 40 soniya.\nMisol: matematika va tarixdan majburiy bloklarda 10 tadan savol bor. Ali ikki blokda x + y = 12 ta toʻgʻri javob bergan va x − y = 2 boʻlsa, 2x = 14: matematikadan x = 7, tarixdan y = 5.",
+      "ru": "Формат DTM. В государственном тесте обязательный блок по математике состоит из 10 вопросов. В каждом вопросе 4 варианта ответа, и верный только один. Верный ответ даёт 1,1 балла, поэтому весь блок стоит 10 × 1,1 = 11 баллов.\nВ нашей тренировке DTM таймер показывает, сколько секунд дано на каждый вопрос: на такой вопрос, как в этом уроке, — около 40 секунд.\nПример: в обязательных блоках по математике и истории по 10 вопросов. Если Али верно ответил на x + y = 12 вопросов в двух блоках и x − y = 2, то 2x = 14: x = 7 по математике и y = 5 по истории."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt07q4"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-sat003",
+     "C1-a1p004"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-sat003",
+     "C1-a1p004",
+     "C1-r3a020"
+    ]
+   },
+   "reserve": null,
+   "extra_link": null,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-DTMC08-1",
+   "course": "dtm",
+   "unit": "C10-DTMC08",
+   "seq": 1,
+   "skill": "dtm:DTMC08",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "explainer": "C2-a20001",
+   "title": {
+    "en": "DTM: Quadratic equations",
+    "uz": "DTM: Kvadrat tenglama",
+    "ru": "DTM: Квадратные уравнения"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "For ax² + bx + c = 0, first compute the discriminant D = b² − 4ac. If D > 0 there are two roots, if D = 0 one, if D < 0 no real roots. The roots are x = (−b ± √D)/(2a). If the equation factors easily, factoring is faster.\nExample: x² − 6x + 9 = 0: D = 36 − 36 = 0, one root x = 6/2 = 3.",
+      "uz": "ax² + bx + c = 0 uchun avval diskriminantni hisoblang: D = b² − 4ac. D > 0 boʻlsa, ikkita ildiz, D = 0 boʻlsa, bitta ildiz bor, D < 0 boʻlsa, haqiqiy ildiz yoʻq. Ildizlar: x = (−b ± √D)/(2a). Agar tenglama oson koʻpaytuvchilarga ajralsa, shu yoʻl tezroq.\nMisol: x² − 6x + 9 = 0: D = 36 − 36 = 0, bitta ildiz x = 6/2 = 3.",
+      "ru": "Для ax² + bx + c = 0 сначала вычислите дискриминант D = b² − 4ac. Если D > 0, корней два, если D = 0 — один, если D < 0 — действительных корней нет. Корни: x = (−b ± √D)/(2a). Если уравнение легко раскладывается на множители, так быстрее.\nПример: x² − 6x + 9 = 0: D = 36 − 36 = 0, один корень x = 6/2 = 3."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt08q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "Solve 2x² − 5x − 3 = 0. What is its larger root?\na = 2, b = −5, c = −3. D = (−5)² − 4 · 2 · (−3) = 25 + 24 = 49.\n√D = 7, so x = (5 ± 7)/4: x = 12/4 = 3 or x = −2/4 = −1/2.\nThe larger root is 3. Check: 2 · 9 − 15 − 3 = 0.\nNow you: 3x² − 4x − 4 = 0.\nD = 16 + 48 = 64, √D = 8.\nLarger root: x = (4 + 8)/6 = ?",
+      "uz": "2x² − 5x − 3 = 0 tenglamani yeching. Uning katta ildizi nechaga teng?\na = 2, b = −5, c = −3. D = (−5)² − 4 · 2 · (−3) = 25 + 24 = 49.\n√D = 7, demak x = (5 ± 7)/4: x = 12/4 = 3 yoki x = −2/4 = −1/2.\nKatta ildiz 3. Tekshirish: 2 · 9 − 15 − 3 = 0.\nEndi siz: 3x² − 4x − 4 = 0.\nD = 16 + 48 = 64, √D = 8.\nKatta ildiz: x = (4 + 8)/6 = ?",
+      "ru": "Решите уравнение 2x² − 5x − 3 = 0. Чему равен его больший корень?\na = 2, b = −5, c = −3. D = (−5)² − 4 · 2 · (−3) = 25 + 24 = 49.\n√D = 7, значит, x = (5 ± 7)/4: x = 12/4 = 3 или x = −2/4 = −1/2.\nБольший корень равен 3. Проверка: 2 · 9 − 15 − 3 = 0.\nТеперь попробуйте сами: 3x² − 4x − 4 = 0.\nD = 16 + 48 = 64, √D = 8.\nБольший корень: x = (4 + 8)/6 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt08q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "With b = −5, the formula starts with −b = +5. And divide by 2a = 4, not by 2.\nWhen x is a time or a length, keep only the root that makes sense: a time of −1 second is not an answer.",
+      "uz": "b = −5 boʻlganda formula −b = +5 bilan boshlanadi. Shuningdek, 2 ga emas, 2a = 4 ga boʻling.\nAgar x vaqt yoki uzunlik boʻlsa, faqat maʼnoli ildizni qoldiring: −1 soniya javob boʻla olmaydi.",
+      "ru": "При b = −5 формула начинается с −b = +5. И делите на 2a = 4, а не на 2.\nЕсли x — время или длина, оставьте только корень, который имеет смысл: время −1 секунда ответом быть не может."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt08q3"
+    },
+    {
+     "role": "format",
+     "body": {
+      "en": "DTM format. In the state test, the compulsory mathematics block has 10 questions. Each question has 4 options, and only one of them is right. A right answer is worth 1.1 points, so the whole block is worth 10 × 1.1 = 11 points.\nIn our DTM practice, a timer shows how many seconds each question has: about 40 seconds for a question like the ones in this lesson.\nExample: with 4 options you can check them. Is 3 a root of x² − 5x + 6 = 0? 9 − 15 + 6 = 0, so yes.",
+      "uz": "DTM formati. Davlat testida matematikadan majburiy blok 10 ta savoldan iborat. Har bir savolda 4 ta variant bor va ulardan faqat bittasi toʻgʻri. Toʻgʻri javob 1,1 ball beradi, shuning uchun butun blok 10 × 1,1 = 11 ball.\nBizning DTM mashqimizda taymer har bir savolga necha soniya berilganini koʻrsatadi: shu darsdagi kabi savolga taxminan 40 soniya.\nMisol: 4 ta variantni tekshirib koʻrish mumkin. 3 soni x² − 5x + 6 = 0 tenglamaning ildizimi? 9 − 15 + 6 = 0, demak ha.",
+      "ru": "Формат DTM. В государственном тесте обязательный блок по математике состоит из 10 вопросов. В каждом вопросе 4 варианта ответа, и верный только один. Верный ответ даёт 1,1 балла, поэтому весь блок стоит 10 × 1,1 = 11 баллов.\nВ нашей тренировке DTM таймер показывает, сколько секунд дано на каждый вопрос: на такой вопрос, как в этом уроке, — около 40 секунд.\nПример: 4 варианта можно проверить подстановкой. Является ли 3 корнем x² − 5x + 6 = 0? 9 − 15 + 6 = 0, значит, да."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt08q4"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-a2l011",
+     "C1-a2p001"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-a2l011",
+     "C1-a2p001",
+     "C1-r3b001"
+    ]
+   },
+   "reserve": null,
+   "extra_link": null,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-DTMC09-1",
+   "course": "dtm",
+   "unit": "C10-DTMC09",
+   "seq": 1,
+   "skill": "dtm:DTMC09",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "explainer": "C2-a20003",
+   "title": {
+    "en": "DTM: Arithmetic progression",
+    "uz": "DTM: Arifmetik progressiya",
+    "ru": "DTM: Арифметическая прогрессия"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "In an arithmetic sequence, each term is the previous one plus the same number d, the common difference. The n-th term is aₙ = a₁ + (n − 1)d: from the first term to the n-th there are n − 1 steps.\nThe sum of n terms is Sₙ = n(a₁ + aₙ)/2: pair the first and the last terms. For 1 + 2 + … + n this gives n(n + 1)/2, for example 1 + 2 + … + 10 = 10 · 11/2 = 55.",
+      "uz": "Arifmetik progressiyada har bir had oldingi hadga bir xil d sonini (progressiya ayirmasini) qoʻshishdan hosil boʻladi. n-had: aₙ = a₁ + (n − 1)d, chunki birinchi haddan n-hadgacha n − 1 ta qadam bor.\nn ta had yigʻindisi Sₙ = n(a₁ + aₙ)/2: birinchi va oxirgi hadlarni juftlang. 1 + 2 + … + n uchun bu n(n + 1)/2, masalan 1 + 2 + … + 10 = 10 · 11/2 = 55.",
+      "ru": "В арифметической прогрессии каждый член равен предыдущему плюс одно и то же число d — разность прогрессии. n-й член: aₙ = a₁ + (n − 1)d, ведь от первого члена до n-го n − 1 шагов.\nСумма n членов Sₙ = n(a₁ + aₙ)/2: объедините в пары первый и последний члены. Для 1 + 2 + … + n это n(n + 1)/2, например 1 + 2 + … + 10 = 10 · 11/2 = 55."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt09q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "In the arithmetic sequence 7, 11, 15, …, which term is equal to 63?\nd = 11 − 7 = 4. aₙ = 7 + (n − 1) · 4 = 63.\n(n − 1) · 4 = 56, so n − 1 = 14 and n = 15.\nCheck: 7 + 14 · 4 = 63.\nNow you: in the arithmetic sequence 5, 8, 11, …, which term is equal to 50?\nd = 3: 5 + (n − 1) · 3 = 50 → (n − 1) · 3 = 45 → n − 1 = 15 → n = ?",
+      "uz": "7, 11, 15, … arifmetik progressiyada qaysi had 63 ga teng?\nd = 11 − 7 = 4. aₙ = 7 + (n − 1) · 4 = 63.\n(n − 1) · 4 = 56, demak n − 1 = 14 va n = 15.\nTekshirish: 7 + 14 · 4 = 63.\nEndi siz: 5, 8, 11, … arifmetik progressiyada qaysi had 50 ga teng?\nd = 3: 5 + (n − 1) · 3 = 50 → (n − 1) · 3 = 45 → n − 1 = 15 → n = ?",
+      "ru": "В арифметической прогрессии 7, 11, 15, … какой по счёту член равен 63?\nd = 11 − 7 = 4. aₙ = 7 + (n − 1) · 4 = 63.\n(n − 1) · 4 = 56, значит, n − 1 = 14 и n = 15.\nПроверка: 7 + 14 · 4 = 63.\nТеперь попробуйте сами: в арифметической прогрессии 5, 8, 11, … какой по счёту член равен 50?\nd = 3: 5 + (n − 1) · 3 = 50 → (n − 1) · 3 = 45 → n − 1 = 15 → n = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt09q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "From a₁ to a₂₀ there are 19 steps, not 20: a₂₀ = a₁ + 19d.\nFor a sum, use the last term, not the difference: the 10 terms 2, 5, 8, …, 29 add up to 10 · (2 + 29)/2 = 155, not 10 · (2 + 3)/2 = 25.",
+      "uz": "a₁ dan a₂₀ gacha 20 emas, 19 ta qadam bor: a₂₀ = a₁ + 19d.\nYigʻindida ayirmani emas, oxirgi hadni oling: 2, 5, 8, …, 29 ning 10 ta hadi yigʻindisi 10 · (2 + 29)/2 = 155, 10 · (2 + 3)/2 = 25 emas.",
+      "ru": "От a₁ до a₂₀ не 20, а 19 шагов: a₂₀ = a₁ + 19d.\nДля суммы берите последний член, а не разность: сумма 10 членов 2, 5, 8, …, 29 равна 10 · (2 + 29)/2 = 155, а не 10 · (2 + 3)/2 = 25."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt09q3"
+    },
+    {
+     "role": "format",
+     "body": {
+      "en": "DTM format. In the state test, the compulsory mathematics block has 10 questions. Each question has 4 options, and only one of them is right. A right answer is worth 1.1 points, so the whole block is worth 10 × 1.1 = 11 points.\nIn our DTM practice, a timer shows how many seconds each question has: about 40 seconds for a question like the ones in this lesson.\nExample: the points for 1, 2, 3, … right answers, 1.1, 2.2, 3.3, …, form an arithmetic sequence with d = 1.1. The 10th term is 1.1 + 9 · 1.1 = 11, the whole block.",
+      "uz": "DTM formati. Davlat testida matematikadan majburiy blok 10 ta savoldan iborat. Har bir savolda 4 ta variant bor va ulardan faqat bittasi toʻgʻri. Toʻgʻri javob 1,1 ball beradi, shuning uchun butun blok 10 × 1,1 = 11 ball.\nBizning DTM mashqimizda taymer har bir savolga necha soniya berilganini koʻrsatadi: shu darsdagi kabi savolga taxminan 40 soniya.\nMisol: 1, 2, 3, … ta toʻgʻri javob uchun ballar (1,1; 2,2; 3,3; …) d = 1,1 boʻlgan arifmetik progressiya tashkil qiladi. 10-had 1,1 + 9 · 1,1 = 11, yaʼni butun blok.",
+      "ru": "Формат DTM. В государственном тесте обязательный блок по математике состоит из 10 вопросов. В каждом вопросе 4 варианта ответа, и верный только один. Верный ответ даёт 1,1 балла, поэтому весь блок стоит 10 × 1,1 = 11 баллов.\nВ нашей тренировке DTM таймер показывает, сколько секунд дано на каждый вопрос: на такой вопрос, как в этом уроке, — около 40 секунд.\nПример: баллы за 1, 2, 3, … верных ответа — 1,1; 2,2; 3,3; … — это арифметическая прогрессия с d = 1,1. 10-й член равен 1,1 + 9 · 1,1 = 11 — это баллы за весь блок."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt09q4"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-a2p004",
+     "C1-a2p009"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-a2p004",
+     "C1-a2p009",
+     "C1-r3b002"
+    ]
+   },
+   "reserve": null,
+   "extra_link": null,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-DTMC10-1",
+   "course": "dtm",
+   "unit": "C10-DTMC10",
+   "seq": 1,
+   "skill": "dtm:DTMC10",
+   "requires": {
+    "math_rung_min": "geom"
+   },
+   "explainer": "C2-ge0001",
+   "title": {
+    "en": "DTM: Triangles and the Pythagorean theorem",
+    "uz": "DTM: Uchburchak va Pifagor teoremasi",
+    "ru": "DTM: Треугольник и теорема Пифагора"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "In a right triangle, a² + b² = c², where c is the hypotenuse: the longest side, opposite the right angle. It finds any side from the other two: legs 5 and 12 give c² = 25 + 144 = 169, so c = 13.\nMany shapes hide a right triangle: the height of an isosceles triangle cuts it into two of them and cuts the base in half.",
+      "uz": "Toʻgʻri burchakli uchburchakda a² + b² = c², bu yerda c — gipotenuza: toʻgʻri burchak qarshisidagi eng uzun tomon. Bu formula bilan istalgan tomonni qolgan ikkitasi orqali topish mumkin: katetlar 5 va 12 boʻlsa, c² = 25 + 144 = 169, demak c = 13.\nKoʻp shakllarda toʻgʻri burchakli uchburchak yashiringan: teng yonli uchburchakning balandligi uni ikkita shunday uchburchakka ajratadi va asosni teng ikkiga boʻladi.",
+      "ru": "В прямоугольном треугольнике a² + b² = c², где c — гипотенуза: самая длинная сторона, лежащая напротив прямого угла. Так можно найти любую сторону по двум другим: при катетах 5 и 12 c² = 25 + 144 = 169, значит, c = 13.\nВо многих фигурах спрятан прямоугольный треугольник: высота равнобедренного треугольника делит его на два таких и делит основание пополам."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt10q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "An isosceles triangle has sides of 13 cm, 13 cm and 10 cm. Find its height to the base and its area.\nThe height cuts the base in half: two right triangles with hypotenuse 13 cm and one leg 10 ÷ 2 = 5 cm.\nh² = 13² − 5² = 169 − 25 = 144, so h = 12 cm.\nArea: 10 × 12 ÷ 2 = 60 cm².\nNow you: an isosceles triangle has sides of 17 cm, 17 cm and 16 cm. Half the base is 8 cm.\nh² = 17² − 8² = 289 − 64 = 225 → h = ?",
+      "uz": "Teng yonli uchburchakning tomonlari 13 sm, 13 sm va 10 sm. Uning asosiga tushirilgan balandligini va yuzini toping.\nBalandlik asosni teng ikkiga boʻladi: gipotenuzasi 13 sm, bir kateti 10 ÷ 2 = 5 sm boʻlgan ikkita toʻgʻri burchakli uchburchak.\nh² = 13² − 5² = 169 − 25 = 144, demak h = 12 sm.\nYuzi: 10 × 12 ÷ 2 = 60 sm².\nEndi siz: teng yonli uchburchakning tomonlari 17 sm, 17 sm va 16 sm. Asosning yarmi 8 sm.\nh² = 17² − 8² = 289 − 64 = 225 → h = ?",
+      "ru": "Стороны равнобедренного треугольника равны 13 см, 13 см и 10 см. Найдите его высоту, проведённую к основанию, и площадь.\nВысота делит основание пополам: два прямоугольных треугольника с гипотенузой 13 см и катетом 10 ÷ 2 = 5 см.\nh² = 13² − 5² = 169 − 25 = 144, значит, h = 12 см.\nПлощадь: 10 × 12 ÷ 2 = 60 см².\nТеперь попробуйте сами: стороны равнобедренного треугольника равны 17 см, 17 см и 16 см. Половина основания — 8 см.\nh² = 17² − 8² = 289 − 64 = 225 → h = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt10q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "To find a leg, subtract: b² = c² − a². Adding would make the leg longer than the hypotenuse, which is impossible: with c = 13 and a = 5, 13² + 5² = 194 gives about 13.9, longer than 13.",
+      "uz": "Katetni topish uchun ayiring: b² = c² − a². Qoʻshsangiz, katet gipotenuzadan uzun chiqadi, bu esa mumkin emas: c = 13 va a = 5 boʻlsa, 13² + 5² = 194 boʻlib, katet taxminan 13,9 chiqadi — bu 13 dan uzun.",
+      "ru": "Чтобы найти катет, вычитайте: b² = c² − a². Если сложить, катет выйдет длиннее гипотенузы, а это невозможно: при c = 13 и a = 5 сумма 13² + 5² = 194 даёт около 13,9 — длиннее 13."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt10q3"
+    },
+    {
+     "role": "format",
+     "body": {
+      "en": "DTM format. In the state test, the compulsory mathematics block has 10 questions. Each question has 4 options, and only one of them is right. A right answer is worth 1.1 points, so the whole block is worth 10 × 1.1 = 11 points.\nIn our DTM practice, a timer shows how many seconds each question has: about 40 seconds for a question like the ones in this lesson.\nExample: use the 4 options. A leg is always shorter than the hypotenuse, so if the hypotenuse is 10 cm, an option of 12 cm for a leg cannot be right.",
+      "uz": "DTM formati. Davlat testida matematikadan majburiy blok 10 ta savoldan iborat. Har bir savolda 4 ta variant bor va ulardan faqat bittasi toʻgʻri. Toʻgʻri javob 1,1 ball beradi, shuning uchun butun blok 10 × 1,1 = 11 ball.\nBizning DTM mashqimizda taymer har bir savolga necha soniya berilganini koʻrsatadi: shu darsdagi kabi savolga taxminan 40 soniya.\nMisol: 4 ta variantdan foydalaning. Katet har doim gipotenuzadan qisqa, shuning uchun gipotenuza 10 sm boʻlsa, katet uchun 12 sm varianti toʻgʻri boʻla olmaydi.",
+      "ru": "Формат DTM. В государственном тесте обязательный блок по математике состоит из 10 вопросов. В каждом вопросе 4 варианта ответа, и верный только один. Верный ответ даёт 1,1 балла, поэтому весь блок стоит 10 × 1,1 = 11 баллов.\nВ нашей тренировке DTM таймер показывает, сколько секунд дано на каждый вопрос: на такой вопрос, как в этом уроке, — около 40 секунд.\nПример: пользуйтесь 4 вариантами. Катет всегда короче гипотенузы, поэтому при гипотенузе 10 см вариант 12 см для катета не может быть верным."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-dt10q4"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-gel011",
+     "C1-gel012"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-gel011",
+     "C1-gel012",
+     "C1-r3b003"
+    ]
+   },
+   "reserve": null,
+   "extra_link": null,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ],
+ "items": [
+  {
+   "id": "C19-dt01q1",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "percent",
+   "page": "C19-DTMC01-1",
+   "lang": "en",
+   "stem": {
+    "en": "What is 35% of 640,000 soʻm?",
+    "uz": "640 000 soʻmning 35% i necha soʻm?",
+    "ru": "Чему равны 35% от 640 000 сум?"
+   },
+   "options": [
+    {
+     "en": "224,000",
+     "uz": "224 000",
+     "ru": "224 000"
+    },
+    {
+     "en": "22,400",
+     "uz": "22 400",
+     "ru": "22 400"
+    },
+    {
+     "en": "416,000",
+     "uz": "416 000",
+     "ru": "416 000"
+    },
+    {
+     "en": "2,240,000",
+     "uz": "2 240 000",
+     "ru": "2 240 000"
+    }
+   ],
+   "why": {
+    "en": "640,000 × 35/100 = 224,000 soʻm.",
+    "uz": "640 000 × 35/100 = 224 000 soʻm.",
+    "ru": "640 000 × 35/100 = 224 000 сум."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt01q2",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "percent",
+   "page": "C19-DTMC01-1",
+   "lang": "en",
+   "stem": {
+    "en": "A phone costs 2,500,000 soʻm. Its price goes up by 8%. What is the new price, in soʻm?",
+    "uz": "Telefon 2 500 000 soʻm turadi. Uning narxi 8% ga oshdi. Yangi narx necha soʻm?",
+    "ru": "Телефон стоит 2 500 000 сум. Его цена выросла на 8%. Какова новая цена (в сумах)?"
+   },
+   "options": [
+    {
+     "en": "2,700,000",
+     "uz": "2 700 000",
+     "ru": "2 700 000"
+    },
+    {
+     "en": "200,000",
+     "uz": "200 000",
+     "ru": "200 000"
+    },
+    {
+     "en": "2,508,000",
+     "uz": "2 508 000",
+     "ru": "2 508 000"
+    },
+    {
+     "en": "2,300,000",
+     "uz": "2 300 000",
+     "ru": "2 300 000"
+    }
+   ],
+   "why": {
+    "en": "2,500,000 × 1.08 = 2,700,000 soʻm; 2,500,000 × 0.08 = 200,000 is only the increase.",
+    "uz": "2 500 000 × 1,08 = 2 700 000 soʻm; 2 500 000 × 0,08 = 200 000 esa faqat oshgan qism.",
+    "ru": "2 500 000 × 1,08 = 2 700 000 сум; 2 500 000 × 0,08 = 200 000 — это только прибавка."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt01q3",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "percent",
+   "page": "C19-DTMC01-1",
+   "lang": "en",
+   "stem": {
+    "en": "A price goes up by 12%. To find the new price in one step, multiply the old price by which number?",
+    "uz": "Narx 12% ga oshdi. Yangi narxni bir qadamda topish uchun eski narxni qaysi songa koʻpaytirish kerak?",
+    "ru": "Цена выросла на 12%. На какое число нужно умножить старую цену, чтобы за один шаг найти новую?"
+   },
+   "options": [
+    {
+     "en": "1.12",
+     "uz": "1,12",
+     "ru": "1,12"
+    },
+    {
+     "en": "0.12",
+     "uz": "0,12",
+     "ru": "0,12"
+    },
+    {
+     "en": "12",
+     "uz": "12",
+     "ru": "12"
+    },
+    {
+     "en": "0.88",
+     "uz": "0,88",
+     "ru": "0,88"
+    }
+   ],
+   "why": {
+    "en": "An increase of 12% makes the price 112% of the old one: × 1.12. × 0.12 gives only the increase.",
+    "uz": "12% ga oshish narxni eskisining 112% iga aylantiradi: × 1,12. × 0,12 faqat oshgan qismni beradi.",
+    "ru": "Рост на 12% даёт 112% от старой цены: × 1,12. А × 0,12 даёт только прибавку."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt01q4",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "percent",
+   "page": "C19-DTMC01-1",
+   "lang": "en",
+   "stem": {
+    "en": "In the 10-question compulsory mathematics block, Sardor answered 7 questions correctly. What percent of the questions did he answer correctly?",
+    "uz": "Matematikadan 10 ta savolli majburiy blokda Sardor 7 ta savolga toʻgʻri javob berdi. U savollarning necha foiziga toʻgʻri javob bergan?",
+    "ru": "В обязательном блоке по математике из 10 вопросов Сардор верно ответил на 7. Какой процент вопросов он решил верно?"
+   },
+   "options": [
+    {
+     "en": "70%",
+     "uz": "70%",
+     "ru": "70%"
+    },
+    {
+     "en": "7%",
+     "uz": "7%",
+     "ru": "7%"
+    },
+    {
+     "en": "77%",
+     "uz": "77%",
+     "ru": "77%"
+    },
+    {
+     "en": "30%",
+     "uz": "30%",
+     "ru": "30%"
+    }
+   ],
+   "why": {
+    "en": "7/10 = 70/100 = 70%. (7 × 1.1 = 7.7 is his points, not a percent.)",
+    "uz": "7/10 = 70/100 = 70%. (7 × 1,1 = 7,7 — bu ball, foiz emas.)",
+    "ru": "7/10 = 70/100 = 70%. (7 × 1,1 = 7,7 — это баллы, а не проценты.)"
+   },
+   "prior_b": -1.6,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt02q1",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "fraction",
+   "page": "C19-DTMC02-1",
+   "lang": "en",
+   "stem": {
+    "en": "Calculate: 3/8 + 1/6",
+    "uz": "Hisoblang: 3/8 + 1/6",
+    "ru": "Вычислите: 3/8 + 1/6"
+   },
+   "options": [
+    {
+     "en": "13/24",
+     "uz": "13/24",
+     "ru": "13/24"
+    },
+    {
+     "en": "4/14",
+     "uz": "4/14",
+     "ru": "4/14"
+    },
+    {
+     "en": "10/24",
+     "uz": "10/24",
+     "ru": "10/24"
+    },
+    {
+     "en": "7/24",
+     "uz": "7/24",
+     "ru": "7/24"
+    }
+   ],
+   "why": {
+    "en": "3/8 = 9/24 and 1/6 = 4/24, so the sum is 13/24. Never add the denominators.",
+    "uz": "3/8 = 9/24 va 1/6 = 4/24, demak yigʻindi 13/24. Maxrajlarni hech qachon qoʻshmang.",
+    "ru": "3/8 = 9/24 и 1/6 = 4/24, значит, сумма равна 13/24. Знаменатели не складывают."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt02q2",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "fraction",
+   "page": "C19-DTMC02-1",
+   "lang": "en",
+   "stem": {
+    "en": "4/9 + 5/6 = N/18, where 18 is the least common denominator of 9 and 6. What is N?",
+    "uz": "4/9 + 5/6 = N/18, bu yerda 18 — 9 va 6 ning eng kichik umumiy maxraji. N nechaga teng?",
+    "ru": "4/9 + 5/6 = N/18, где 18 — наименьший общий знаменатель чисел 9 и 6. Чему равно N?"
+   },
+   "options": [
+    {
+     "en": "23",
+     "uz": "23",
+     "ru": "23"
+    },
+    {
+     "en": "9",
+     "uz": "9",
+     "ru": "9"
+    },
+    {
+     "en": "13",
+     "uz": "13",
+     "ru": "13"
+    },
+    {
+     "en": "19",
+     "uz": "19",
+     "ru": "19"
+    }
+   ],
+   "why": {
+    "en": "4/9 = 8/18 and 5/6 = 15/18, so N = 8 + 15 = 23.",
+    "uz": "4/9 = 8/18 va 5/6 = 15/18, demak N = 8 + 15 = 23.",
+    "ru": "4/9 = 8/18 и 5/6 = 15/18, значит, N = 8 + 15 = 23."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt02q3",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "decimals",
+   "page": "C19-DTMC02-1",
+   "lang": "en",
+   "stem": {
+    "en": "One metre of wire weighs 0.25 kg. How many kilograms do 1.6 m of this wire weigh?",
+    "uz": "Bir metr simning ogʻirligi 0,25 kg. Shu simning 1,6 metri necha kilogramm keladi?",
+    "ru": "Один метр проволоки весит 0,25 кг. Сколько килограммов весят 1,6 м этой проволоки?"
+   },
+   "options": [
+    {
+     "en": "0.4",
+     "uz": "0,4",
+     "ru": "0,4"
+    },
+    {
+     "en": "4",
+     "uz": "4",
+     "ru": "4"
+    },
+    {
+     "en": "0.04",
+     "uz": "0,04",
+     "ru": "0,04"
+    },
+    {
+     "en": "1.85",
+     "uz": "1,85",
+     "ru": "1,85"
+    }
+   ],
+   "why": {
+    "en": "1.6 × 0.25: 16 × 25 = 400, 3 digits after the point: 0.400 = 0.4 kg.",
+    "uz": "1,6 × 0,25: 16 × 25 = 400, verguldan keyin 3 ta raqam: 0,400 = 0,4 kg.",
+    "ru": "1,6 × 0,25: 16 × 25 = 400, после запятой 3 цифры: 0,400 = 0,4 кг."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt02q4",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "decimals",
+   "page": "C19-DTMC02-1",
+   "lang": "en",
+   "stem": {
+    "en": "In the compulsory mathematics block, each right answer is worth 1.1 points. How many points do 6 right answers give?",
+    "uz": "Matematikadan majburiy blokda har bir toʻgʻri javob 1,1 ball beradi. 6 ta toʻgʻri javob necha ball beradi?",
+    "ru": "В обязательном блоке по математике каждый верный ответ даёт 1,1 балла. Сколько баллов дают 6 верных ответов?"
+   },
+   "options": [
+    {
+     "en": "6.6",
+     "uz": "6,6",
+     "ru": "6,6"
+    },
+    {
+     "en": "66",
+     "uz": "66",
+     "ru": "66"
+    },
+    {
+     "en": "7.1",
+     "uz": "7,1",
+     "ru": "7,1"
+    },
+    {
+     "en": "0.66",
+     "uz": "0,66",
+     "ru": "0,66"
+    }
+   ],
+   "why": {
+    "en": "6 × 1.1: 6 × 11 = 66, one digit after the point: 6.6 points.",
+    "uz": "6 × 1,1: 6 × 11 = 66, verguldan keyin bitta raqam: 6,6 ball.",
+    "ru": "6 × 1,1: 6 × 11 = 66, одна цифра после запятой: 6,6 балла."
+   },
+   "prior_b": -1.6,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt03q1",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "proportion",
+   "page": "C19-DTMC03-1",
+   "lang": "en",
+   "stem": {
+    "en": "x/8 = 15/12. What is x?",
+    "uz": "x/8 = 15/12. x nechaga teng?",
+    "ru": "x/8 = 15/12. Найдите x."
+   },
+   "options": [
+    {
+     "en": "10",
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "en": "6.4",
+     "uz": "6,4",
+     "ru": "6,4"
+    },
+    {
+     "en": "120",
+     "uz": "120",
+     "ru": "120"
+    },
+    {
+     "en": "11",
+     "uz": "11",
+     "ru": "11"
+    }
+   ],
+   "why": {
+    "en": "12 × x = 8 × 15 = 120, so x = 10.",
+    "uz": "12 × x = 8 × 15 = 120, demak x = 10.",
+    "ru": "12 × x = 8 × 15 = 120, значит, x = 10."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt03q2",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "proportion",
+   "page": "C19-DTMC03-1",
+   "lang": "en",
+   "stem": {
+    "en": "3 kg of apples cost 45,000 soʻm. How much do 7 kg cost, in soʻm?",
+    "uz": "3 kg olma 45 000 soʻm turadi. 7 kg olma necha soʻm turadi?",
+    "ru": "3 кг яблок стоят 45 000 сум. Сколько стоят 7 кг (в сумах)?"
+   },
+   "options": [
+    {
+     "en": "105,000",
+     "uz": "105 000",
+     "ru": "105 000"
+    },
+    {
+     "en": "315,000",
+     "uz": "315 000",
+     "ru": "315 000"
+    },
+    {
+     "en": "135,000",
+     "uz": "135 000",
+     "ru": "135 000"
+    },
+    {
+     "en": "52,000",
+     "uz": "52 000",
+     "ru": "52 000"
+    }
+   ],
+   "why": {
+    "en": "3 × x = 45,000 × 7 = 315,000, so x = 105,000 soʻm (1 kg costs 15,000).",
+    "uz": "3 × x = 45 000 × 7 = 315 000, demak x = 105 000 soʻm (1 kg 15 000 soʻm).",
+    "ru": "3 × x = 45 000 × 7 = 315 000, значит, x = 105 000 сум (1 кг стоит 15 000)."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt03q3",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "proportion",
+   "page": "C19-DTMC03-1",
+   "lang": "en",
+   "stem": {
+    "en": "6 notebooks cost 27,000 soʻm. Which proportion gives the price x of 10 notebooks?",
+    "uz": "6 ta daftar 27 000 soʻm turadi. 10 ta daftarning narxi x ni qaysi proporsiya beradi?",
+    "ru": "6 тетрадей стоят 27 000 сум. Какая пропорция даёт цену x за 10 тетрадей?"
+   },
+   "options": [
+    {
+     "en": "6/27000 = 10/x",
+     "uz": "6/27000 = 10/x",
+     "ru": "6/27000 = 10/x"
+    },
+    {
+     "en": "6/27000 = x/10",
+     "uz": "6/27000 = x/10",
+     "ru": "6/27000 = x/10"
+    },
+    {
+     "en": "6/x = 27000/10",
+     "uz": "6/x = 27000/10",
+     "ru": "6/x = 27000/10"
+    },
+    {
+     "en": "10/27000 = x/6",
+     "uz": "10/27000 = x/6",
+     "ru": "10/27000 = x/6"
+    }
+   ],
+   "why": {
+    "en": "Notebooks over soʻm on both sides: 6/27000 = 10/x, so x = 45,000 soʻm.",
+    "uz": "Ikkala tomonda daftar/soʻm: 6/27000 = 10/x, demak x = 45 000 soʻm.",
+    "ru": "В обеих частях — тетради к сумам: 6/27000 = 10/x, значит, x = 45 000 сум."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt03q4",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "proportion",
+   "page": "C19-DTMC03-1",
+   "lang": "en",
+   "stem": {
+    "en": "In the compulsory mathematics block, 4 right answers give 4.4 points. How many points do 9 right answers give?",
+    "uz": "Matematikadan majburiy blokda 4 ta toʻgʻri javob 4,4 ball beradi. 9 ta toʻgʻri javob necha ball beradi?",
+    "ru": "В обязательном блоке по математике 4 верных ответа дают 4,4 балла. Сколько баллов дают 9 верных ответов?"
+   },
+   "options": [
+    {
+     "en": "9.9",
+     "uz": "9,9",
+     "ru": "9,9"
+    },
+    {
+     "en": "9.4",
+     "uz": "9,4",
+     "ru": "9,4"
+    },
+    {
+     "en": "39.6",
+     "uz": "39,6",
+     "ru": "39,6"
+    },
+    {
+     "en": "99",
+     "uz": "99",
+     "ru": "99"
+    }
+   ],
+   "why": {
+    "en": "4/4.4 = 9/x, so 4 × x = 4.4 × 9 = 39.6 and x = 9.9 points.",
+    "uz": "4/4,4 = 9/x, demak 4 × x = 4,4 × 9 = 39,6 va x = 9,9 ball.",
+    "ru": "4/4,4 = 9/x, значит, 4 × x = 4,4 × 9 = 39,6 и x = 9,9 балла."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt04q1",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "exponents",
+   "page": "C19-DTMC04-1",
+   "lang": "en",
+   "stem": {
+    "en": "Calculate: −5² + (−2)³",
+    "uz": "Hisoblang: −5² + (−2)³",
+    "ru": "Вычислите: −5² + (−2)³"
+   },
+   "options": [
+    {
+     "en": "−33",
+     "uz": "−33",
+     "ru": "−33"
+    },
+    {
+     "en": "17",
+     "uz": "17",
+     "ru": "17"
+    },
+    {
+     "en": "33",
+     "uz": "33",
+     "ru": "33"
+    },
+    {
+     "en": "−17",
+     "uz": "−17",
+     "ru": "−17"
+    }
+   ],
+   "why": {
+    "en": "−5² = −25 and (−2)³ = −8, so −25 + (−8) = −33.",
+    "uz": "−5² = −25 va (−2)³ = −8, demak −25 + (−8) = −33.",
+    "ru": "−5² = −25 и (−2)³ = −8, значит, −25 + (−8) = −33."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt04q2",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "exponents",
+   "page": "C19-DTMC04-1",
+   "lang": "en",
+   "stem": {
+    "en": "Calculate: 2⁵ − (−3)² + 4 × 2²",
+    "uz": "Hisoblang: 2⁵ − (−3)² + 4 × 2²",
+    "ru": "Вычислите: 2⁵ − (−3)² + 4 × 2²"
+   },
+   "options": [
+    {
+     "en": "39",
+     "uz": "39",
+     "ru": "39"
+    },
+    {
+     "en": "57",
+     "uz": "57",
+     "ru": "57"
+    },
+    {
+     "en": "17",
+     "uz": "17",
+     "ru": "17"
+    },
+    {
+     "en": "87",
+     "uz": "87",
+     "ru": "87"
+    }
+   ],
+   "why": {
+    "en": "Powers first: 32 − 9 + 4 × 4 = 32 − 9 + 16 = 39.",
+    "uz": "Avval darajalar: 32 − 9 + 4 × 4 = 32 − 9 + 16 = 39.",
+    "ru": "Сначала степени: 32 − 9 + 4 × 4 = 32 − 9 + 16 = 39."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt04q3",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "exponents",
+   "page": "C19-DTMC04-1",
+   "lang": "en",
+   "stem": {
+    "en": "Calculate: 3 × 4²",
+    "uz": "Hisoblang: 3 × 4²",
+    "ru": "Вычислите: 3 × 4²"
+   },
+   "options": [
+    {
+     "en": "48",
+     "uz": "48",
+     "ru": "48"
+    },
+    {
+     "en": "144",
+     "uz": "144",
+     "ru": "144"
+    },
+    {
+     "en": "24",
+     "uz": "24",
+     "ru": "24"
+    },
+    {
+     "en": "49",
+     "uz": "49",
+     "ru": "49"
+    }
+   ],
+   "why": {
+    "en": "4² = 16 first, then 3 × 16 = 48. (3 × 4)² = 144 squares the 3 too.",
+    "uz": "Avval 4² = 16, keyin 3 × 16 = 48. (3 × 4)² = 144 esa 3 ni ham kvadratga koʻtaradi.",
+    "ru": "Сначала 4² = 16, затем 3 × 16 = 48. А (3 × 4)² = 144 возводит в квадрат и 3."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt04q4",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "exponents",
+   "page": "C19-DTMC04-1",
+   "lang": "en",
+   "stem": {
+    "en": "Each question has 4 options. In how many different ways can 3 questions be answered?",
+    "uz": "Har bir savolda 4 ta variant bor. 3 ta savolga necha xil usulda javob berish mumkin?",
+    "ru": "В каждом вопросе 4 варианта. Сколькими способами можно ответить на 3 вопроса?"
+   },
+   "options": [
+    {
+     "en": "64",
+     "uz": "64",
+     "ru": "64"
+    },
+    {
+     "en": "12",
+     "uz": "12",
+     "ru": "12"
+    },
+    {
+     "en": "16",
+     "uz": "16",
+     "ru": "16"
+    },
+    {
+     "en": "81",
+     "uz": "81",
+     "ru": "81"
+    }
+   ],
+   "why": {
+    "en": "4 × 4 × 4 = 4³ = 64. 4 × 3 = 12 multiplies instead of taking a power.",
+    "uz": "4 × 4 × 4 = 4³ = 64. 4 × 3 = 12 esa darajaning oʻrniga koʻpaytirish.",
+    "ru": "4 × 4 × 4 = 4³ = 64. А 4 × 3 = 12 — это умножение вместо степени."
+   },
+   "prior_b": -1.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt05q1",
+   "skill": "math",
+   "rung": "arith",
+   "subskill": "gcd_lcm",
+   "page": "C19-DTMC05-1",
+   "lang": "en",
+   "stem": {
+    "en": "What is the GCD of 28 and 42?",
+    "uz": "28 va 42 sonlarining EKUBi nechaga teng?",
+    "ru": "Чему равен НОД чисел 28 и 42?"
+   },
+   "options": [
+    {
+     "en": "14",
+     "uz": "14",
+     "ru": "14"
+    },
+    {
+     "en": "84",
+     "uz": "84",
+     "ru": "84"
+    },
+    {
+     "en": "7",
+     "uz": "7",
+     "ru": "7"
+    },
+    {
+     "en": "1,176",
+     "uz": "1176",
+     "ru": "1176"
+    }
+   ],
+   "why": {
+    "en": "28 = 2² × 7 and 42 = 2 × 3 × 7; the shared primes with the smaller powers: 2 × 7 = 14.",
+    "uz": "28 = 2² × 7 va 42 = 2 × 3 × 7; umumiy tub koʻpaytuvchilar kichik darajasi bilan: 2 × 7 = 14.",
+    "ru": "28 = 2² × 7 и 42 = 2 × 3 × 7; общие простые множители с меньшим показателем степени: 2 × 7 = 14."
+   },
+   "prior_b": -2.2,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt05q2",
+   "skill": "math",
+   "rung": "arith",
+   "subskill": "gcd_lcm",
+   "page": "C19-DTMC05-1",
+   "lang": "en",
+   "stem": {
+    "en": "Two buses leave the station together. One comes back every 10 minutes, the other every 15 minutes. After how many minutes will they next leave together?",
+    "uz": "Ikki avtobus bekatdan birga joʻnaydi. Biri har 10 daqiqada, ikkinchisi har 15 daqiqada qaytib keladi. Necha daqiqadan keyin ular yana birga joʻnaydi?",
+    "ru": "Два автобуса вместе отправляются со станции. Один возвращается каждые 10 мин, другой — каждые 15 мин. Через сколько минут они снова отправятся вместе?"
+   },
+   "options": [
+    {
+     "en": "30",
+     "uz": "30",
+     "ru": "30"
+    },
+    {
+     "en": "5",
+     "uz": "5",
+     "ru": "5"
+    },
+    {
+     "en": "150",
+     "uz": "150",
+     "ru": "150"
+    },
+    {
+     "en": "25",
+     "uz": "25",
+     "ru": "25"
+    }
+   ],
+   "why": {
+    "en": "The LCM of 10 and 15: 2 × 3 × 5 = 30 minutes. 5 is the GCD.",
+    "uz": "10 va 15 ning EKUKi: 2 × 3 × 5 = 30 daqiqa. 5 bu EKUB.",
+    "ru": "НОК чисел 10 и 15: 2 × 3 × 5 = 30 мин. 5 — это НОД."
+   },
+   "prior_b": -2.2,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt05q3",
+   "skill": "math",
+   "rung": "arith",
+   "subskill": "gcd_lcm",
+   "page": "C19-DTMC05-1",
+   "lang": "en",
+   "stem": {
+    "en": "A teacher has 36 pens and 48 notebooks. She makes identical gift sets and uses all of them. What is the greatest number of sets she can make?",
+    "uz": "Oʻqituvchida 36 ta ruchka va 48 ta daftar bor. U hammasini ishlatib, bir xil sovgʻa toʻplamlari tuzadi. Eng koʻpi bilan nechta toʻplam tuzish mumkin?",
+    "ru": "У учительницы 36 ручек и 48 тетрадей. Она раскладывает их все по одинаковым подарочным наборам, ничего не оставляя. Какое наибольшее число наборов она может собрать?"
+   },
+   "options": [
+    {
+     "en": "12",
+     "uz": "12",
+     "ru": "12"
+    },
+    {
+     "en": "144",
+     "uz": "144",
+     "ru": "144"
+    },
+    {
+     "en": "6",
+     "uz": "6",
+     "ru": "6"
+    },
+    {
+     "en": "84",
+     "uz": "84",
+     "ru": "84"
+    }
+   ],
+   "why": {
+    "en": "The largest equal groups: GCD(36, 48) = 12 sets. 144 is the LCM, larger than both numbers.",
+    "uz": "Eng katta teng guruhlar: EKUB(36, 48) = 12 ta toʻplam. 144 bu EKUK, ikkala sondan ham katta.",
+    "ru": "Самые большие равные группы: НОД(36, 48) = 12 наборов. 144 — это НОК, он больше обоих чисел."
+   },
+   "prior_b": -2.2,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt05q4",
+   "skill": "math",
+   "rung": "arith",
+   "subskill": "gcd_lcm",
+   "page": "C19-DTMC05-1",
+   "lang": "en",
+   "stem": {
+    "en": "In DTM practice, Aziz gives each question 40 seconds and Bobur gives each question 60 seconds. They start at the same moment. After how many seconds do they next start a new question at the same time?",
+    "uz": "DTM mashqida Aziz har bir savolga 40 soniya, Bobur esa 60 soniya sarflaydi. Ular bir vaqtda boshlashdi. Necha soniyadan keyin ular yana bir vaqtda yangi savolni boshlaydi?",
+    "ru": "На тренировке DTM Азиз тратит на каждый вопрос 40 секунд, а Бобур — 60 секунд. Они начали одновременно. Через сколько секунд они снова одновременно начнут новый вопрос?"
+   },
+   "options": [
+    {
+     "en": "120",
+     "uz": "120",
+     "ru": "120"
+    },
+    {
+     "en": "20",
+     "uz": "20",
+     "ru": "20"
+    },
+    {
+     "en": "2,400",
+     "uz": "2400",
+     "ru": "2400"
+    },
+    {
+     "en": "100",
+     "uz": "100",
+     "ru": "100"
+    }
+   ],
+   "why": {
+    "en": "LCM(40, 60): 40 = 2³ × 5 and 60 = 2² × 3 × 5, so 2³ × 3 × 5 = 120 seconds.",
+    "uz": "EKUK(40, 60): 40 = 2³ × 5 va 60 = 2² × 3 × 5, demak 2³ × 3 × 5 = 120 soniya.",
+    "ru": "НОК(40, 60): 40 = 2³ × 5 и 60 = 2² × 3 × 5, значит, 2³ × 3 × 5 = 120 секунд."
+   },
+   "prior_b": -2.2,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt06q1",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_equation",
+   "page": "C19-DTMC06-1",
+   "lang": "en",
+   "stem": {
+    "en": "Solve: 3(x − 2) + 5 = x + 9. What is x?",
+    "uz": "Tenglamani yeching: 3(x − 2) + 5 = x + 9. x nechaga teng?",
+    "ru": "Решите уравнение: 3(x − 2) + 5 = x + 9. Чему равен x?"
+   },
+   "options": [
+    {
+     "en": "5",
+     "uz": "5",
+     "ru": "5"
+    },
+    {
+     "en": "3",
+     "uz": "3",
+     "ru": "3"
+    },
+    {
+     "en": "10",
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "en": "−5",
+     "uz": "−5",
+     "ru": "−5"
+    }
+   ],
+   "why": {
+    "en": "3x − 6 + 5 = x + 9, so 2x = 10 and x = 5.",
+    "uz": "3x − 6 + 5 = x + 9, demak 2x = 10 va x = 5.",
+    "ru": "3x − 6 + 5 = x + 9, значит, 2x = 10 и x = 5."
+   },
+   "prior_b": -1.0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt06q2",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_equation",
+   "page": "C19-DTMC06-1",
+   "lang": "en",
+   "stem": {
+    "en": "(x + 7)/5 = (x − 1)/3. What is x?",
+    "uz": "(x + 7)/5 = (x − 1)/3. x nechaga teng?",
+    "ru": "(x + 7)/5 = (x − 1)/3. Найдите x."
+   },
+   "options": [
+    {
+     "en": "13",
+     "uz": "13",
+     "ru": "13"
+    },
+    {
+     "en": "4",
+     "uz": "4",
+     "ru": "4"
+    },
+    {
+     "en": "11",
+     "uz": "11",
+     "ru": "11"
+    },
+    {
+     "en": "26",
+     "uz": "26",
+     "ru": "26"
+    }
+   ],
+   "why": {
+    "en": "3(x + 7) = 5(x − 1): 3x + 21 = 5x − 5, so 2x = 26 and x = 13. Check: 20/5 = 4 = 12/3.",
+    "uz": "3(x + 7) = 5(x − 1): 3x + 21 = 5x − 5, demak 2x = 26 va x = 13. Tekshirish: 20/5 = 4 = 12/3.",
+    "ru": "3(x + 7) = 5(x − 1): 3x + 21 = 5x − 5, значит, 2x = 26 и x = 13. Проверка: 20/5 = 4 = 12/3."
+   },
+   "prior_b": -1.0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt06q3",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_inequalities",
+   "page": "C19-DTMC06-1",
+   "lang": "en",
+   "stem": {
+    "en": "Solve: 5 − 2x > 3x − 15",
+    "uz": "Tengsizlikni yeching: 5 − 2x > 3x − 15",
+    "ru": "Решите неравенство: 5 − 2x > 3x − 15"
+   },
+   "options": [
+    {
+     "en": "x < 4",
+     "uz": "x < 4",
+     "ru": "x < 4"
+    },
+    {
+     "en": "x > 4",
+     "uz": "x > 4",
+     "ru": "x > 4"
+    },
+    {
+     "en": "x < −4",
+     "uz": "x < −4",
+     "ru": "x < −4"
+    },
+    {
+     "en": "x > −4",
+     "uz": "x > −4",
+     "ru": "x > −4"
+    }
+   ],
+   "why": {
+    "en": "−2x − 3x > −15 − 5, so −5x > −20. Dividing by −5 turns > into <: x < 4.",
+    "uz": "−2x − 3x > −15 − 5, demak −5x > −20. −5 ga boʻlganda > belgisi < ga aylanadi: x < 4.",
+    "ru": "−2x − 3x > −15 − 5, значит, −5x > −20. При делении на −5 знак > меняется на <: x < 4."
+   },
+   "prior_b": -1.0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt06q4",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_equation",
+   "page": "C19-DTMC06-1",
+   "lang": "en",
+   "stem": {
+    "en": "Nodira got 8.8 points in the compulsory mathematics block. Each right answer is worth 1.1 points. How many questions did she answer correctly?",
+    "uz": "Nodira matematikadan majburiy blokda 8,8 ball oldi. Har bir toʻgʻri javob 1,1 ball. U nechta savolga toʻgʻri javob bergan?",
+    "ru": "Нодира набрала 8,8 балла в обязательном блоке по математике. Каждый верный ответ стоит 1,1 балла. На сколько вопросов она ответила верно?"
+   },
+   "options": [
+    {
+     "en": "8",
+     "uz": "8",
+     "ru": "8"
+    },
+    {
+     "en": "7",
+     "uz": "7",
+     "ru": "7"
+    },
+    {
+     "en": "9.68",
+     "uz": "9,68",
+     "ru": "9,68"
+    },
+    {
+     "en": "80",
+     "uz": "80",
+     "ru": "80"
+    }
+   ],
+   "why": {
+    "en": "1.1x = 8.8, so x = 8.8 ÷ 1.1 = 8 questions.",
+    "uz": "1,1x = 8,8, demak x = 8,8 ÷ 1,1 = 8 ta savol.",
+    "ru": "1,1x = 8,8, значит, x = 8,8 ÷ 1,1 = 8 вопросов."
+   },
+   "prior_b": -1.0,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt07q1",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "system_of_equations",
+   "page": "C19-DTMC07-1",
+   "lang": "en",
+   "stem": {
+    "en": "x + y = 12 and x − y = 4. What is x?",
+    "uz": "x + y = 12 va x − y = 4. x nechaga teng?",
+    "ru": "x + y = 12 и x − y = 4. Чему равен x?"
+   },
+   "options": [
+    {
+     "en": "8",
+     "uz": "8",
+     "ru": "8"
+    },
+    {
+     "en": "4",
+     "uz": "4",
+     "ru": "4"
+    },
+    {
+     "en": "16",
+     "uz": "16",
+     "ru": "16"
+    },
+    {
+     "en": "6",
+     "uz": "6",
+     "ru": "6"
+    }
+   ],
+   "why": {
+    "en": "Add the equations: 2x = 16, so x = 8.",
+    "uz": "Tenglamalarni qoʻshamiz: 2x = 16, demak x = 8.",
+    "ru": "Сложим уравнения: 2x = 16, значит, x = 8."
+   },
+   "prior_b": -1.0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt07q2",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "system_of_equations",
+   "page": "C19-DTMC07-1",
+   "lang": "en",
+   "stem": {
+    "en": "Solve the system 2x + 5y = 19 and 3x − y = 3. What is y?",
+    "uz": "2x + 5y = 19 va 3x − y = 3 sistemasini yeching. y nechaga teng?",
+    "ru": "Решите систему 2x + 5y = 19 и 3x − y = 3. Чему равен y?"
+   },
+   "options": [
+    {
+     "en": "3",
+     "uz": "3",
+     "ru": "3"
+    },
+    {
+     "en": "−3",
+     "uz": "−3",
+     "ru": "−3"
+    },
+    {
+     "en": "9",
+     "uz": "9",
+     "ru": "9"
+    },
+    {
+     "en": "2",
+     "uz": "2",
+     "ru": "2"
+    }
+   ],
+   "why": {
+    "en": "15x − 5y = 15 added to the first gives 17x = 34, so x = 2; then 6 − y = 3 and y = 3.",
+    "uz": "15x − 5y = 15 ni birinchisiga qoʻshsak, 17x = 34, x = 2; keyin 6 − y = 3 va y = 3.",
+    "ru": "Сложив 15x − 5y = 15 с первым, получим 17x = 34, x = 2; тогда 6 − y = 3 и y = 3."
+   },
+   "prior_b": -1.0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt07q3",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "system_of_equations",
+   "page": "C19-DTMC07-1",
+   "lang": "en",
+   "stem": {
+    "en": "To cancel y in 5x + 3y = 21 and 2x − y = 4, you multiply the second equation by 3. Which equation do you get?",
+    "uz": "5x + 3y = 21 va 2x − y = 4 tenglamalarda y ni yoʻqotish uchun ikkinchi tenglamani 3 ga koʻpaytirasiz. Qaysi tenglama hosil boʻladi?",
+    "ru": "Чтобы исключить y в системе 5x + 3y = 21 и 2x − y = 4, второе уравнение умножают на 3. Какое уравнение получится?"
+   },
+   "options": [
+    {
+     "en": "6x − 3y = 12",
+     "uz": "6x − 3y = 12",
+     "ru": "6x − 3y = 12"
+    },
+    {
+     "en": "6x − 3y = 4",
+     "uz": "6x − 3y = 4",
+     "ru": "6x − 3y = 4"
+    },
+    {
+     "en": "6x − y = 12",
+     "uz": "6x − y = 12",
+     "ru": "6x − y = 12"
+    },
+    {
+     "en": "6x + 3y = 12",
+     "uz": "6x + 3y = 12",
+     "ru": "6x + 3y = 12"
+    }
+   ],
+   "why": {
+    "en": "Every term × 3: 2x · 3 = 6x, −y · 3 = −3y, 4 · 3 = 12, so 6x − 3y = 12.",
+    "uz": "Har bir had × 3: 2x · 3 = 6x, −y · 3 = −3y, 4 · 3 = 12, demak 6x − 3y = 12.",
+    "ru": "Каждое слагаемое × 3: 2x · 3 = 6x, −y · 3 = −3y, 4 · 3 = 12, значит, 6x − 3y = 12."
+   },
+   "prior_b": -1.0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt07q4",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "system_of_equations",
+   "page": "C19-DTMC07-1",
+   "lang": "en",
+   "stem": {
+    "en": "In the compulsory mathematics and history blocks, Dilnoza answered 15 questions correctly in all. She got 3 more right in mathematics than in history. How many mathematics questions did she answer correctly?",
+    "uz": "Matematika va tarixdan majburiy bloklarda Dilnoza jami 15 ta savolga toʻgʻri javob berdi. Matematikadan tarixga qaraganda 3 ta koʻp toʻgʻri javob bergan. U matematikadan nechta savolga toʻgʻri javob bergan?",
+    "ru": "В обязательных блоках по математике и истории Дильноза верно ответила всего на 15 вопросов. По математике у неё на 3 верных ответа больше, чем по истории. Сколько верных ответов у неё по математике?"
+   },
+   "options": [
+    {
+     "en": "9",
+     "uz": "9",
+     "ru": "9"
+    },
+    {
+     "en": "6",
+     "uz": "6",
+     "ru": "6"
+    },
+    {
+     "en": "12",
+     "uz": "12",
+     "ru": "12"
+    },
+    {
+     "en": "8",
+     "uz": "8",
+     "ru": "8"
+    }
+   ],
+   "why": {
+    "en": "x + y = 15 and x − y = 3: 2x = 18, so x = 9 in mathematics.",
+    "uz": "x + y = 15 va x − y = 3: 2x = 18, demak matematikadan x = 9.",
+    "ru": "x + y = 15 и x − y = 3: 2x = 18, значит, по математике x = 9."
+   },
+   "prior_b": -1.0,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt08q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "quadratic",
+   "page": "C19-DTMC08-1",
+   "lang": "en",
+   "stem": {
+    "en": "What is the discriminant of 2x² + 3x − 2 = 0?",
+    "uz": "2x² + 3x − 2 = 0 tenglamaning diskriminanti nechaga teng?",
+    "ru": "Чему равен дискриминант уравнения 2x² + 3x − 2 = 0?"
+   },
+   "options": [
+    {
+     "en": "25",
+     "uz": "25",
+     "ru": "25"
+    },
+    {
+     "en": "−7",
+     "uz": "−7",
+     "ru": "−7"
+    },
+    {
+     "en": "1",
+     "uz": "1",
+     "ru": "1"
+    },
+    {
+     "en": "17",
+     "uz": "17",
+     "ru": "17"
+    }
+   ],
+   "why": {
+    "en": "D = 3² − 4 · 2 · (−2) = 9 + 16 = 25.",
+    "uz": "D = 3² − 4 · 2 · (−2) = 9 + 16 = 25.",
+    "ru": "D = 3² − 4 · 2 · (−2) = 9 + 16 = 25."
+   },
+   "prior_b": 0.3,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt08q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "quadratic",
+   "page": "C19-DTMC08-1",
+   "lang": "en",
+   "stem": {
+    "en": "Solve 3x² − 4x − 4 = 0. What is its larger root?",
+    "uz": "3x² − 4x − 4 = 0 tenglamani yeching. Uning katta ildizi nechaga teng?",
+    "ru": "Решите уравнение 3x² − 4x − 4 = 0. Чему равен его больший корень?"
+   },
+   "options": [
+    {
+     "en": "2",
+     "uz": "2",
+     "ru": "2"
+    },
+    {
+     "en": "6",
+     "uz": "6",
+     "ru": "6"
+    },
+    {
+     "en": "2/3",
+     "uz": "2/3",
+     "ru": "2/3"
+    },
+    {
+     "en": "−2/3",
+     "uz": "−2/3",
+     "ru": "−2/3"
+    }
+   ],
+   "why": {
+    "en": "D = 16 + 48 = 64, so x = (4 ± 8)/6: 2 or −2/3. The larger root is 2.",
+    "uz": "D = 16 + 48 = 64, demak x = (4 ± 8)/6: 2 yoki −2/3. Katta ildiz 2.",
+    "ru": "D = 16 + 48 = 64, значит, x = (4 ± 8)/6: 2 или −2/3. Больший корень равен 2."
+   },
+   "prior_b": 0.3,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt08q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "quadratic",
+   "page": "C19-DTMC08-1",
+   "lang": "en",
+   "stem": {
+    "en": "A stone is thrown upwards from the top of a tower. t seconds later it is −5t² + 10t + 15 metres above the ground. When does it land, in seconds?",
+    "uz": "Tosh minora tepasidan yuqoriga otildi. t soniyadan soʻng u yerdan −5t² + 10t + 15 metr balandlikda boʻladi. U necha soniyadan keyin yerga tushadi?",
+    "ru": "Камень бросили вверх с вершины башни. Через t секунд он находится на высоте −5t² + 10t + 15 м над землёй. Через сколько секунд он упадёт на землю?"
+   },
+   "options": [
+    {
+     "en": "3",
+     "uz": "3",
+     "ru": "3"
+    },
+    {
+     "en": "−1",
+     "uz": "−1",
+     "ru": "−1"
+    },
+    {
+     "en": "1",
+     "uz": "1",
+     "ru": "1"
+    },
+    {
+     "en": "15",
+     "uz": "15",
+     "ru": "15"
+    }
+   ],
+   "why": {
+    "en": "−5t² + 10t + 15 = 0 → t² − 2t − 3 = 0 → t = 3 or t = −1. A time is not negative: 3 seconds.",
+    "uz": "−5t² + 10t + 15 = 0 → t² − 2t − 3 = 0 → t = 3 yoki t = −1. Vaqt manfiy boʻlmaydi: 3 soniya.",
+    "ru": "−5t² + 10t + 15 = 0 → t² − 2t − 3 = 0 → t = 3 или t = −1. Время не бывает отрицательным: 3 секунды."
+   },
+   "prior_b": 0.3,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt08q4",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "quadratic",
+   "page": "C19-DTMC08-1",
+   "lang": "en",
+   "stem": {
+    "en": "Only one of these numbers is a root of x² − 7x + 12 = 0. Which one?",
+    "uz": "Bu sonlardan faqat bittasi x² − 7x + 12 = 0 tenglamaning ildizi. Qaysi biri?",
+    "ru": "Только одно из этих чисел — корень уравнения x² − 7x + 12 = 0. Какое?"
+   },
+   "options": [
+    {
+     "en": "3",
+     "uz": "3",
+     "ru": "3"
+    },
+    {
+     "en": "2",
+     "uz": "2",
+     "ru": "2"
+    },
+    {
+     "en": "6",
+     "uz": "6",
+     "ru": "6"
+    },
+    {
+     "en": "−3",
+     "uz": "−3",
+     "ru": "−3"
+    }
+   ],
+   "why": {
+    "en": "Put 3 in: 9 − 21 + 12 = 0. For 2, 6 and −3 the left side is 2, 6 and 42.",
+    "uz": "3 ni qoʻyamiz: 9 − 21 + 12 = 0. 2, 6 va −3 da chap tomon 2, 6 va 42 ga teng.",
+    "ru": "Подставим 3: 9 − 21 + 12 = 0. При 2, 6 и −3 левая часть равна 2, 6 и 42."
+   },
+   "prior_b": 0.3,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt09q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "series",
+   "page": "C19-DTMC09-1",
+   "lang": "en",
+   "stem": {
+    "en": "Calculate: 1 + 2 + 3 + … + 20",
+    "uz": "Hisoblang: 1 + 2 + 3 + … + 20",
+    "ru": "Вычислите: 1 + 2 + 3 + … + 20"
+   },
+   "options": [
+    {
+     "en": "210",
+     "uz": "210",
+     "ru": "210"
+    },
+    {
+     "en": "200",
+     "uz": "200",
+     "ru": "200"
+    },
+    {
+     "en": "420",
+     "uz": "420",
+     "ru": "420"
+    },
+    {
+     "en": "190",
+     "uz": "190",
+     "ru": "190"
+    }
+   ],
+   "why": {
+    "en": "n(n + 1)/2 = 20 · 21/2 = 210.",
+    "uz": "n(n + 1)/2 = 20 · 21/2 = 210.",
+    "ru": "n(n + 1)/2 = 20 · 21/2 = 210."
+   },
+   "prior_b": 0.3,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt09q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "arithmetic_sequence",
+   "page": "C19-DTMC09-1",
+   "lang": "en",
+   "stem": {
+    "en": "In the arithmetic sequence 5, 8, 11, …, which term is equal to 50? Give its position number.",
+    "uz": "5, 8, 11, … arifmetik progressiyada qaysi had 50 ga teng? Uning tartib raqamini toping.",
+    "ru": "В арифметической прогрессии 5, 8, 11, … какой по счёту член равен 50? Укажите его номер."
+   },
+   "options": [
+    {
+     "en": "16",
+     "uz": "16",
+     "ru": "16"
+    },
+    {
+     "en": "15",
+     "uz": "15",
+     "ru": "15"
+    },
+    {
+     "en": "45",
+     "uz": "45",
+     "ru": "45"
+    },
+    {
+     "en": "17",
+     "uz": "17",
+     "ru": "17"
+    }
+   ],
+   "why": {
+    "en": "5 + (n − 1) · 3 = 50, so n − 1 = 15 and n = 16.",
+    "uz": "5 + (n − 1) · 3 = 50, demak n − 1 = 15 va n = 16.",
+    "ru": "5 + (n − 1) · 3 = 50, значит, n − 1 = 15 и n = 16."
+   },
+   "prior_b": 0.3,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt09q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "arithmetic_sequence",
+   "page": "C19-DTMC09-1",
+   "lang": "en",
+   "stem": {
+    "en": "In an arithmetic sequence, a₁ = 6 and d = 4. What is a₁₅?",
+    "uz": "Arifmetik progressiyada a₁ = 6 va d = 4. a₁₅ nechaga teng?",
+    "ru": "В арифметической прогрессии a₁ = 6 и d = 4. Найдите a₁₅."
+   },
+   "options": [
+    {
+     "en": "62",
+     "uz": "62",
+     "ru": "62"
+    },
+    {
+     "en": "66",
+     "uz": "66",
+     "ru": "66"
+    },
+    {
+     "en": "56",
+     "uz": "56",
+     "ru": "56"
+    },
+    {
+     "en": "60",
+     "uz": "60",
+     "ru": "60"
+    }
+   ],
+   "why": {
+    "en": "From a₁ to a₁₅ there are 14 steps: a₁₅ = 6 + 14 · 4 = 62.",
+    "uz": "a₁ dan a₁₅ gacha 14 ta qadam: a₁₅ = 6 + 14 · 4 = 62.",
+    "ru": "От a₁ до a₁₅ 14 шагов: a₁₅ = 6 + 14 · 4 = 62."
+   },
+   "prior_b": 0.3,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt09q4",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "arithmetic_sequence",
+   "page": "C19-DTMC09-1",
+   "lang": "en",
+   "stem": {
+    "en": "The points for 1, 2, 3, … right answers in the compulsory mathematics block are 1.1, 2.2, 3.3, … Which term of this sequence is equal to 7.7?",
+    "uz": "Matematikadan majburiy blokda 1, 2, 3, … ta toʻgʻri javob uchun ballar: 1,1; 2,2; 3,3; … Bu progressiyaning qaysi hadi 7,7 ga teng?",
+    "ru": "В обязательном блоке по математике баллы за 1, 2, 3, … верных ответа: 1,1; 2,2; 3,3; … Какой по счёту член этой прогрессии равен 7,7?"
+   },
+   "options": [
+    {
+     "en": "7",
+     "uz": "7",
+     "ru": "7"
+    },
+    {
+     "en": "8",
+     "uz": "8",
+     "ru": "8"
+    },
+    {
+     "en": "6",
+     "uz": "6",
+     "ru": "6"
+    },
+    {
+     "en": "77",
+     "uz": "77",
+     "ru": "77"
+    }
+   ],
+   "why": {
+    "en": "aₙ = 1.1 + (n − 1) · 1.1 = 1.1n = 7.7, so n = 7.",
+    "uz": "aₙ = 1,1 + (n − 1) · 1,1 = 1,1n = 7,7, demak n = 7.",
+    "ru": "aₙ = 1,1 + (n − 1) · 1,1 = 1,1n = 7,7, значит, n = 7."
+   },
+   "prior_b": 0.3,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt10q1",
+   "skill": "math",
+   "rung": "geom",
+   "subskill": "pythagoras",
+   "page": "C19-DTMC10-1",
+   "lang": "en",
+   "stem": {
+    "en": "A right triangle has legs of 8 cm and 15 cm. How long is its hypotenuse, in cm?",
+    "uz": "Toʻgʻri burchakli uchburchakning katetlari 8 sm va 15 sm. Uning gipotenuzasi necha sm?",
+    "ru": "Катеты прямоугольного треугольника равны 8 см и 15 см. Чему равна его гипотенуза (в см)?"
+   },
+   "options": [
+    {
+     "en": "17",
+     "uz": "17",
+     "ru": "17"
+    },
+    {
+     "en": "23",
+     "uz": "23",
+     "ru": "23"
+    },
+    {
+     "en": "7",
+     "uz": "7",
+     "ru": "7"
+    },
+    {
+     "en": "289",
+     "uz": "289",
+     "ru": "289"
+    }
+   ],
+   "why": {
+    "en": "c² = 8² + 15² = 64 + 225 = 289, so c = 17 cm.",
+    "uz": "c² = 8² + 15² = 64 + 225 = 289, demak c = 17 sm.",
+    "ru": "c² = 8² + 15² = 64 + 225 = 289, значит, c = 17 см."
+   },
+   "prior_b": -0.4,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt10q2",
+   "skill": "math",
+   "rung": "geom",
+   "subskill": "pythagoras",
+   "page": "C19-DTMC10-1",
+   "lang": "en",
+   "stem": {
+    "en": "The two equal sides of an isosceles triangle are 17 cm each, and its base is 16 cm. What is the height drawn to the base, in cm?",
+    "uz": "Teng yonli uchburchakning yon tomonlari 17 sm dan, asosi esa 16 sm. Asosga tushirilgan balandlik necha sm?",
+    "ru": "Боковые стороны равнобедренного треугольника равны 17 см, а основание — 16 см. Найдите высоту, проведённую к основанию (в см)."
+   },
+   "options": [
+    {
+     "en": "15",
+     "uz": "15",
+     "ru": "15"
+    },
+    {
+     "en": "225",
+     "uz": "225",
+     "ru": "225"
+    },
+    {
+     "en": "9",
+     "uz": "9",
+     "ru": "9"
+    },
+    {
+     "en": "25",
+     "uz": "25",
+     "ru": "25"
+    }
+   ],
+   "why": {
+    "en": "Half the base is 8 cm: h² = 17² − 8² = 225, so h = 15 cm.",
+    "uz": "Asosning yarmi 8 sm: h² = 17² − 8² = 225, demak h = 15 sm.",
+    "ru": "Половина основания — 8 см: h² = 17² − 8² = 225, значит, h = 15 см."
+   },
+   "prior_b": -0.4,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt10q3",
+   "skill": "math",
+   "rung": "geom",
+   "subskill": "pythagoras",
+   "page": "C19-DTMC10-1",
+   "lang": "en",
+   "stem": {
+    "en": "The hypotenuse of a right triangle is 25 cm and one leg is 7 cm. How long is the other leg, in cm?",
+    "uz": "Toʻgʻri burchakli uchburchakning gipotenuzasi 25 sm, bir kateti 7 sm. Ikkinchi kateti necha sm?",
+    "ru": "Гипотенуза прямоугольного треугольника равна 25 см, один катет — 7 см. Чему равен другой катет (в см)?"
+   },
+   "options": [
+    {
+     "en": "24",
+     "uz": "24",
+     "ru": "24"
+    },
+    {
+     "en": "18",
+     "uz": "18",
+     "ru": "18"
+    },
+    {
+     "en": "32",
+     "uz": "32",
+     "ru": "32"
+    },
+    {
+     "en": "576",
+     "uz": "576",
+     "ru": "576"
+    }
+   ],
+   "why": {
+    "en": "b² = 25² − 7² = 625 − 49 = 576, so b = 24 cm.",
+    "uz": "b² = 25² − 7² = 625 − 49 = 576, demak b = 24 sm.",
+    "ru": "b² = 25² − 7² = 625 − 49 = 576, значит, b = 24 см."
+   },
+   "prior_b": -0.4,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-dt10q4",
+   "skill": "math",
+   "rung": "geom",
+   "subskill": "pythagoras",
+   "page": "C19-DTMC10-1",
+   "lang": "en",
+   "stem": {
+    "en": "In the compulsory mathematics block of the state test, how many options does each question have, and how many of them are right?",
+    "uz": "Davlat testining matematikadan majburiy blokida har bir savolda nechta variant bor va ulardan nechtasi toʻgʻri?",
+    "ru": "Сколько вариантов ответа в каждом вопросе обязательного блока по математике государственного теста и сколько из них верных?"
+   },
+   "options": [
+    {
+     "en": "4 options, 1 right",
+     "uz": "4 ta variant, 1 tasi toʻgʻri",
+     "ru": "4 варианта, 1 верный"
+    },
+    {
+     "en": "4 options, 2 right",
+     "uz": "4 ta variant, 2 tasi toʻgʻri",
+     "ru": "4 варианта, 2 верных"
+    },
+    {
+     "en": "5 options, 1 right",
+     "uz": "5 ta variant, 1 tasi toʻgʻri",
+     "ru": "5 вариантов, 1 верный"
+    },
+    {
+     "en": "3 options, 1 right",
+     "uz": "3 ta variant, 1 tasi toʻgʻri",
+     "ru": "3 варианта, 1 верный"
+    }
+   ],
+   "why": {
+    "en": "Each question has 4 options and only one of them is right: 4 options, 1 right.",
+    "uz": "Har bir savolda 4 ta variant bor va faqat bittasi toʻgʻri: 4 ta variant, 1 tasi toʻgʻri.",
+    "ru": "В каждом вопросе 4 варианта и верный только один: 4 варианта, 1 верный."
+   },
+   "prior_b": -0.4,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:p7-a6",
+   "key_check_1": "author",
+   "key_check_2": "blind:P7s1+P7s2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  }
+ ]
+}

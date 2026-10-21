@@ -1,0 +1,1171 @@
+{
+ "bank": "K4",
+ "batch": 7,
+ "items": [
+  {
+   "id": "K4-bch001",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "partial_derivatives",
+   "family": {
+    "template": "f(x, y) = x³y² + {k}xy. What is ∂f/∂x at the point ({a}, {b})?",
+    "params": {
+     "k": {
+      "min": 2,
+      "max": 9
+     },
+     "a": {
+      "min": 1,
+      "max": 3
+     },
+     "b": {
+      "min": 1,
+      "max": 3
+     }
+    },
+    "derived": {
+     "aa": "a * a",
+     "bb": "b * b"
+    },
+    "answer": "3 * a * a * b * b + k * b",
+    "distractors": [
+     "2 * a**3 * b + k * a",
+     "a**3 * b * b + k * a * b",
+     "3 * a * a * b * b + k * a"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 28,
+    "constraints": [
+     "(3 * a * a * b * b + k * b) != (2 * a**3 * b + k * a)",
+     "(3 * a * a * b * b + k * b) != (a**3 * b * b + k * a * b)",
+     "(3 * a * a * b * b + k * b) != (3 * a * a * b * b + k * a)",
+     "(2 * a**3 * b + k * a) != (a**3 * b * b + k * a * b)",
+     "(2 * a**3 * b + k * a) != (3 * a * a * b * b + k * a)",
+     "(a**3 * b * b + k * a * b) != (3 * a * a * b * b + k * a)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x, y) = x³y² + {k}xy. What is ∂f/∂x at the point ({a}, {b})?",
+    "uz": "f(x, y) = x³y² + {k}xy. ({a}, {b}) nuqtada ∂f/∂x ni toping.",
+    "ru": "f(x, y) = x³y² + {k}xy. Найдите ∂f/∂x в точке ({a}, {b})."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "∂f/∂x = 3x²y² + {k}y (y is held constant); at ({a}, {b}): 3·{aa}·{bb} + {k}·{b} = {ANS}.",
+    "uz": "∂f/∂x = 3x²y² + {k}y (y oʻzgarmas deb olinadi); ({a}, {b}) da: 3·{aa}·{bb} + {k}·{b} = {ANS}.",
+    "ru": "∂f/∂x = 3x²y² + {k}y (y считаем постоянным); в точке ({a}, {b}): 3·{aa}·{bb} + {k}·{b} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.25,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 11 | 10 | 9 | 11 (seed check:1)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-bch002",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "partial_derivatives",
+   "lang": "en",
+   "stem": {
+    "en": "f(x, y) = x²y³. What is ∂²f/∂x∂y?",
+    "uz": "f(x, y) = x²y³. ∂²f/∂x∂y ni toping.",
+    "ru": "f(x, y) = x²y³. Найдите ∂²f/∂x∂y."
+   },
+   "options": [
+    {
+     "en": "6xy²"
+    },
+    {
+     "en": "2xy³"
+    },
+    {
+     "en": "3x²y²"
+    },
+    {
+     "en": "6x²y"
+    }
+   ],
+   "why": {
+    "en": "∂f/∂x = 2xy³, and differentiating that with respect to y gives 6xy².",
+    "uz": "∂f/∂x = 2xy³, buni y boʻyicha differensiallasak, 6xy² chiqadi.",
+    "ru": "∂f/∂x = 2xy³, а производная этого по y равна 6xy²."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.25,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch003",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "gradient",
+   "family": {
+    "template": "f(x, y) = x² + y². What is the length of the gradient ∇f at the point ({a}, {b})?",
+    "params": {
+     "t": {
+      "values": [
+       [
+        3,
+        4,
+        5
+       ],
+       [
+        4,
+        3,
+        5
+       ],
+       [
+        5,
+        12,
+        13
+       ],
+       [
+        12,
+        5,
+        13
+       ],
+       [
+        8,
+        15,
+        17
+       ],
+       [
+        15,
+        8,
+        17
+       ],
+       [
+        7,
+        24,
+        25
+       ],
+       [
+        24,
+        7,
+        25
+       ],
+       [
+        20,
+        21,
+        29
+       ],
+       [
+        21,
+        20,
+        29
+       ],
+       [
+        9,
+        40,
+        41
+       ],
+       [
+        40,
+        9,
+        41
+       ]
+      ]
+     }
+    },
+    "derived": {
+     "a": "t[0]",
+     "b": "t[1]",
+     "c": "t[2]",
+     "a2": "2 * t[0]",
+     "b2": "2 * t[1]"
+    },
+    "answer": "2 * c",
+    "distractors": [
+     "c",
+     "a * a + b * b",
+     "2 * (a + b)"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 12
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x, y) = x² + y². What is the length of the gradient ∇f at the point ({a}, {b})?",
+    "uz": "f(x, y) = x² + y². ({a}, {b}) nuqtada ∇f gradiyent vektorining uzunligini toping.",
+    "ru": "f(x, y) = x² + y². Найдите длину градиента ∇f в точке ({a}, {b})."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "∇f = (2x, 2y) = ({a2}, {b2}), whose length is √({a2}² + {b2}²) = {ANS}.",
+    "uz": "∇f = (2x, 2y) = ({a2}, {b2}), uning uzunligi √({a2}² + {b2}²) = {ANS}.",
+    "ru": "∇f = (2x, 2y) = ({a2}, {b2}), его длина √({a2}² + {b2}²) = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.25,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch004",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "directional_derivative",
+   "lang": "en",
+   "stem": {
+    "en": "f(x, y) = xy. What is the directional derivative of f at (2, 3) in the direction of the unit vector u = (3/5, 4/5)?",
+    "uz": "f(x, y) = xy. f funksiyaning (2, 3) nuqtadagi u = (3/5, 4/5) birlik vektor yoʻnalishi boʻyicha hosilasini toping.",
+    "ru": "f(x, y) = xy. Найдите производную функции f в точке (2, 3) по направлению единичного вектора u = (3/5, 4/5)."
+   },
+   "options": [
+    {
+     "en": "3.4"
+    },
+    {
+     "en": "3.6"
+    },
+    {
+     "en": "17"
+    },
+    {
+     "en": "5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 3.4,
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "At (2, 3), ∇f = (y, x) = (3, 2), so the directional derivative is 3·3/5 + 2·4/5 = 17/5 = 3.4.",
+    "uz": "(2, 3) nuqtada ∇f = (y, x) = (3, 2), demak yoʻnalish boʻyicha hosila 3·3/5 + 2·4/5 = 17/5 = 3,4.",
+    "ru": "В точке (2, 3) ∇f = (y, x) = (3, 2), поэтому производная по направлению 3·3/5 + 2·4/5 = 17/5 = 3,4."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 2.45,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch005",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "critical_points_2var",
+   "lang": "en",
+   "stem": {
+    "en": "f(x, y) = x² + 3xy + y². What kind of point is (0, 0) for f?",
+    "uz": "f(x, y) = x² + 3xy + y². (0, 0) nuqta f uchun qanday nuqta?",
+    "ru": "f(x, y) = x² + 3xy + y². Какой точкой для f является (0, 0)?"
+   },
+   "options": [
+    {
+     "en": "a saddle point",
+     "uz": "egar nuqta",
+     "ru": "седловая точка"
+    },
+    {
+     "en": "a local minimum",
+     "uz": "lokal minimum nuqtasi",
+     "ru": "точка локального минимума"
+    },
+    {
+     "en": "a local maximum",
+     "uz": "lokal maksimum nuqtasi",
+     "ru": "точка локального максимума"
+    },
+    {
+     "en": "not a critical point",
+     "uz": "kritik nuqta emas",
+     "ru": "не критическая точка"
+    }
+   ],
+   "why": {
+    "en": "∇f = 0 at (0, 0), and fxx·fyy − fxy² = 2·2 − 3² = −5 < 0, so it is a saddle point.",
+    "uz": "(0, 0) da ∇f = 0, fxx·fyy − fxy² = 2·2 − 3² = −5 < 0, demak bu egar nuqta.",
+    "ru": "В (0, 0) ∇f = 0, а fxx·fyy − fxy² = 2·2 − 3² = −5 < 0, значит это седловая точка."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.65,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch006",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "double_integrals",
+   "family": {
+    "template": "What is ∫₀^{a} ∫₀^{b} (x + y) dy dx?",
+    "params": {
+     "a": {
+      "min": 1,
+      "max": 6
+     },
+     "b": {
+      "min": 2,
+      "max": 6
+     }
+    },
+    "derived": {
+     "bb2": "b * b / 2"
+    },
+    "answer": "a * b * (a + b) / 2",
+    "distractors": [
+     "a * b * (a + b)",
+     "a * b",
+     "(a + b) / 2"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 30
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫₀^{a} ∫₀^{b} (x + y) dy dx?",
+    "uz": "∫₀^{a} ∫₀^{b} (x + y) dy dx ni hisoblang.",
+    "ru": "Вычислите ∫₀^{a} ∫₀^{b} (x + y) dy dx."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Inner: ∫₀^{b} (x + y) dy = {b}x + {bb2}; outer: ∫₀^{a} ({b}x + {bb2}) dx = {ANS}.",
+    "uz": "Ichki integral: ∫₀^{b} (x + y) dy = {b}x + {bb2}; tashqi: ∫₀^{a} ({b}x + {bb2}) dx = {ANS}.",
+    "ru": "Внутренний интеграл: ∫₀^{b} (x + y) dy = {b}x + {bb2}; внешний: ∫₀^{a} ({b}x + {bb2}) dx = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch007",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "double_integrals",
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫₀¹ ∫₀ˣ 6y dy dx?",
+    "uz": "∫₀¹ ∫₀ˣ 6y dy dx ni hisoblang.",
+    "ru": "Вычислите ∫₀¹ ∫₀ˣ 6y dy dx."
+   },
+   "options": [
+    {
+     "en": "1"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "2"
+    },
+    {
+     "en": "0.5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 1,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Inner: ∫₀ˣ 6y dy = 3x²; outer: ∫₀¹ 3x² dx = 1.",
+    "uz": "Ichki integral: ∫₀ˣ 6y dy = 3x²; tashqi: ∫₀¹ 3x² dx = 1.",
+    "ru": "Внутренний интеграл: ∫₀ˣ 6y dy = 3x²; внешний: ∫₀¹ 3x² dx = 1."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch008",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "polar_double_integrals",
+   "lang": "en",
+   "stem": {
+    "en": "D is the disk x² + y² ≤ 4. What is ∬_D (x² + y²) dA?",
+    "uz": "D — x² + y² ≤ 4 doira. ∬_D (x² + y²) dA ni hisoblang.",
+    "ru": "D — круг x² + y² ≤ 4. Вычислите ∬_D (x² + y²) dA."
+   },
+   "options": [
+    {
+     "en": "8π"
+    },
+    {
+     "en": "4π"
+    },
+    {
+     "en": "16π"
+    },
+    {
+     "en": "2π"
+    }
+   ],
+   "why": {
+    "en": "In polar coordinates: ∫₀^(2π) ∫₀² r²·r dr dθ = 2π·(2⁴/4) = 8π.",
+    "uz": "Qutb koordinatalarida: ∫₀^(2π) ∫₀² r²·r dr dθ = 2π·(2⁴/4) = 8π.",
+    "ru": "В полярных координатах: ∫₀^(2π) ∫₀² r²·r dr dθ = 2π·(2⁴/4) = 8π."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.65,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch009",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "determinants",
+   "lang": "en",
+   "stem": {
+    "en": "A is the 3×3 matrix with rows (2, 0, 1), (1, 3, 2) and (0, 1, 4). What is det A?",
+    "uz": "A — qatorlari (2, 0, 1), (1, 3, 2) va (0, 1, 4) boʻlgan 3×3 matritsa. det A ni toping.",
+    "ru": "A — матрица 3×3 со строками (2, 0, 1), (1, 3, 2) и (0, 1, 4). Найдите det A."
+   },
+   "options": [
+    {
+     "en": "21"
+    },
+    {
+     "en": "19"
+    },
+    {
+     "en": "29"
+    },
+    {
+     "en": "20"
+    }
+   ],
+   "answer_numeric": {
+    "value": 21,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Expand along the first row: 2·(3·4 − 2·1) − 0 + 1·(1·1 − 3·0) = 20 + 1 = 21.",
+    "uz": "Birinchi qator boʻyicha yoying: 2·(3·4 − 2·1) − 0 + 1·(1·1 − 3·0) = 20 + 1 = 21.",
+    "ru": "Разложим по первой строке: 2·(3·4 − 2·1) − 0 + 1·(1·1 − 3·0) = 20 + 1 = 21."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch010",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "eigenvalues",
+   "family": {
+    "template": "A is the 2×2 matrix with rows ({a}, {b}) and ({c}, {d}). What is the larger eigenvalue of A?",
+    "params": {
+     "l1": {
+      "min": 3,
+      "max": 7
+     },
+     "l2": {
+      "min": 1,
+      "max": 6
+     },
+     "a": {
+      "min": 1,
+      "max": 6
+     },
+     "b": {
+      "min": 1,
+      "max": 4
+     }
+    },
+    "derived": {
+     "d": "l1 + l2 - a",
+     "c": "(a * (l1 + l2 - a) - l1 * l2) // b",
+     "tr": "l1 + l2",
+     "dt": "l1 * l2"
+    },
+    "constraints": [
+     "l2 < l1",
+     "d >= 1",
+     "a * d - l1 * l2 > 0",
+     "(a * d - l1 * l2) % b == 0",
+     "(l1) != (l2)",
+     "(l1) != (a + d)",
+     "(l1) != (a * d - b * c)",
+     "(l2) != (a + d)",
+     "(l2) != (a * d - b * c)",
+     "(a + d) != (a * d - b * c)"
+    ],
+    "answer": "l1",
+    "distractors": [
+     "l2",
+     "a + d",
+     "a * d - b * c"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 42
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A is the 2×2 matrix with rows ({a}, {b}) and ({c}, {d}). What is the larger eigenvalue of A?",
+    "uz": "A — qatorlari ({a}, {b}) va ({c}, {d}) boʻlgan 2×2 matritsa. A ning kattaroq xos qiymatini toping.",
+    "ru": "A — матрица 2×2 со строками ({a}, {b}) и ({c}, {d}). Найдите большее собственное значение A."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "det(A − λI) = λ² − {tr}λ + {dt} = (λ − {l1})(λ − {l2}), so the eigenvalues are {l1} and {l2}; the larger is {l1}.",
+    "uz": "det(A − λI) = λ² − {tr}λ + {dt} = (λ − {l1})(λ − {l2}), demak xos qiymatlar {l1} va {l2}; kattasi {l1}.",
+    "ru": "det(A − λI) = λ² − {tr}λ + {dt} = (λ − {l1})(λ − {l2}), поэтому собственные значения {l1} и {l2}; большее {l1}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.65,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 7 | 1 | 8 | 7 (seed check:0)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-bch011",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "matrix_inverse",
+   "family": {
+    "template": "A is the 2×2 matrix with rows ({a}, {b}) and ({c}, {d}). What is the entry in row 1, column 2 of A⁻¹?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 6
+     },
+     "d": {
+      "min": 1,
+      "max": 6
+     },
+     "b": {
+      "min": 1,
+      "max": 5
+     }
+    },
+    "derived": {
+     "c": "(a * d - 1) // b"
+    },
+    "constraints": [
+     "(a * d - 1) % b == 0",
+     "(a * d - 1) // b >= 1",
+     "(-b) != (b)",
+     "(-b) != (d)",
+     "(-b) != (-c)",
+     "(b) != (d)",
+     "(b) != (-c)",
+     "(d) != (-c)"
+    ],
+    "answer": "-b",
+    "distractors": [
+     "b",
+     "d",
+     "-c"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 42
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A is the 2×2 matrix with rows ({a}, {b}) and ({c}, {d}). What is the entry in row 1, column 2 of A⁻¹?",
+    "uz": "A — qatorlari ({a}, {b}) va ({c}, {d}) boʻlgan 2×2 matritsa. A⁻¹ ning 1-qator, 2-ustundagi elementini toping.",
+    "ru": "A — матрица 2×2 со строками ({a}, {b}) и ({c}, {d}). Найдите элемент матрицы A⁻¹ в 1-й строке и 2-м столбце."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "det A = {a}·{d} − {b}·{c} = 1, and A⁻¹ has rows ({d}, −{b}) and (−{c}, {a}) divided by det A, so the entry is −{b}.",
+    "uz": "det A = {a}·{d} − {b}·{c} = 1; A⁻¹ ning qatorlari ({d}, −{b}) va (−{c}, {a}), det A ga boʻlingan, demak element −{b}.",
+    "ru": "det A = {a}·{d} − {b}·{c} = 1; строки A⁻¹ — ({d}, −{b}) и (−{c}, {a}), делённые на det A, значит элемент равен −{b}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: −1 | 1 | 1 | −2 (seed check:2)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-bch012",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "rank",
+   "lang": "en",
+   "stem": {
+    "en": "What is the rank of the matrix with rows (1, 2, 3), (2, 4, 6) and (1, 0, 1)?",
+    "uz": "Qatorlari (1, 2, 3), (2, 4, 6) va (1, 0, 1) boʻlgan matritsaning rangini toping.",
+    "ru": "Найдите ранг матрицы со строками (1, 2, 3), (2, 4, 6) и (1, 0, 1)."
+   },
+   "options": [
+    {
+     "en": "2"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "1"
+    },
+    {
+     "en": "0"
+    }
+   ],
+   "answer_numeric": {
+    "value": 2,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Row 2 = 2·row 1, and row 3 is not a multiple of row 1, so exactly 2 rows are independent.",
+    "uz": "2-qator = 2·(1-qator), 3-qator esa 1-qatorga proporsional emas, demak faqat 2 ta qator chiziqli erkli.",
+    "ru": "Строка 2 = 2·строка 1, а строка 3 ей не пропорциональна, поэтому линейно независимы ровно 2 строки."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch013",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "linear_systems_3var",
+   "family": {
+    "template": "x + y + z = {S1}, x − y + z = {S2}, x + y − z = {S3}. What is x?",
+    "params": {
+     "p": {
+      "min": 1,
+      "max": 6
+     },
+     "q": {
+      "min": 1,
+      "max": 6
+     },
+     "r": {
+      "min": 1,
+      "max": 6
+     }
+    },
+    "derived": {
+     "S1": "p + q + r",
+     "S2": "p - q + r",
+     "S3": "p + q - r",
+     "s23": "2 * p"
+    },
+    "answer": "p",
+    "distractors": [
+     "q",
+     "r",
+     "p + r"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 108,
+    "constraints": [
+     "(p) != (q)",
+     "(p) != (r)",
+     "(p) != (p + r)",
+     "(q) != (r)",
+     "(q) != (p + r)",
+     "(r) != (p + r)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "x + y + z = {S1}, x − y + z = {S2}, x + y − z = {S3}. What is x?",
+    "uz": "x + y + z = {S1}, x − y + z = {S2}, x + y − z = {S3}. x ni toping.",
+    "ru": "x + y + z = {S1}, x − y + z = {S2}, x + y − z = {S3}. Найдите x."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Add the second and third equations: 2x = {S2} + {(S3)} = {s23}, so x = {ANS}.",
+    "uz": "Ikkinchi va uchinchi tenglamalarni qoʻshing: 2x = {S2} + {(S3)} = {s23}, demak x = {ANS}.",
+    "ru": "Сложим второе и третье уравнения: 2x = {S2} + {(S3)} = {s23}, значит x = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 5 | 5 | 5 | 10 (seed check:0)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-bch014",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "cross_product",
+   "lang": "en",
+   "stem": {
+    "en": "What is the cross product (1, 2, 0) × (0, 1, 3)?",
+    "uz": "(1, 2, 0) × (0, 1, 3) vektor koʻpaytmani toping.",
+    "ru": "Найдите векторное произведение (1, 2, 0) × (0, 1, 3)."
+   },
+   "options": [
+    {
+     "en": "(6, −3, 1)"
+    },
+    {
+     "en": "(6, 3, 1)"
+    },
+    {
+     "en": "(−6, 3, −1)"
+    },
+    {
+     "en": "(0, 2, 0)"
+    }
+   ],
+   "why": {
+    "en": "(2·3 − 0·1, 0·0 − 1·3, 1·1 − 2·0) = (6, −3, 1).",
+    "uz": "Komponentlar: (2·3 − 0·1, 0·0 − 1·3, 1·1 − 2·0) = (6, −3, 1).",
+    "ru": "Компоненты: (2·3 − 0·1, 0·0 − 1·3, 1·1 − 2·0) = (6, −3, 1)."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.45,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch015",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "vectors_3d",
+   "lang": "en",
+   "stem": {
+    "en": "What is the angle, in degrees, between the vectors (1, 0, 1) and (0, 1, 1)?",
+    "uz": "(1, 0, 1) va (0, 1, 1) vektorlar orasidagi burchak necha gradus?",
+    "ru": "Найдите угол (в градусах) между векторами (1, 0, 1) и (0, 1, 1)."
+   },
+   "options": [
+    {
+     "en": "60"
+    },
+    {
+     "en": "45"
+    },
+    {
+     "en": "30"
+    },
+    {
+     "en": "90"
+    }
+   ],
+   "answer_numeric": {
+    "value": 60,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "cos θ = (u·v)/(|u||v|) = 1/(√2·√2) = 1/2, so θ = 60°.",
+    "uz": "cos θ = (u·v)/(|u||v|) = 1/(√2·√2) = 1/2, demak θ = 60°.",
+    "ru": "cos θ = (u·v)/(|u||v|) = 1/(√2·√2) = 1/2, поэтому θ = 60°."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch016",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "separable_ode",
+   "lang": "en",
+   "stem": {
+    "en": "Which function solves dy/dx = 2xy with y(0) = 3?",
+    "uz": "dy/dx = 2xy, y(0) = 3 masalaning yechimi qaysi funksiya?",
+    "ru": "Какая функция является решением задачи dy/dx = 2xy, y(0) = 3?"
+   },
+   "options": [
+    {
+     "en": "y = 3e^(x²)"
+    },
+    {
+     "en": "y = e^(x²) + 2"
+    },
+    {
+     "en": "y = 3e^(2x)"
+    },
+    {
+     "en": "y = 3e^(x²/2)"
+    }
+   ],
+   "why": {
+    "en": "Separate: dy/y = 2x dx, so ln|y| = x² + C and y = Ce^(x²); y(0) = 3 gives C = 3.",
+    "uz": "Oʻzgaruvchilarni ajrating: dy/y = 2x dx, ln|y| = x² + C, y = Ce^(x²); y(0) = 3 dan C = 3.",
+    "ru": "Разделим переменные: dy/y = 2x dx, ln|y| = x² + C, y = Ce^(x²); из y(0) = 3 получаем C = 3."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.45,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch017",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "exponential_ode",
+   "family": {
+    "template": "y′ = {k}y and y(0) = 1. What is y(ln {a})?",
+    "params": {
+     "k": {
+      "min": 2,
+      "max": 4
+     },
+     "a": {
+      "min": 2,
+      "max": 6
+     }
+    },
+    "answer": "a**k",
+    "distractors": [
+     "k * a",
+     "a**(k - 1)",
+     "a**(k + 1)"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 12,
+    "constraints": [
+     "(a**k) != (k * a)",
+     "(a**k) != (a**(k - 1))",
+     "(a**k) != (a**(k + 1))",
+     "(k * a) != (a**(k - 1))",
+     "(k * a) != (a**(k + 1))",
+     "(a**(k - 1)) != (a**(k + 1))"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "y′ = {k}y and y(0) = 1. What is y(ln {a})?",
+    "uz": "y′ = {k}y va y(0) = 1. y(ln {a}) ni toping.",
+    "ru": "y′ = {k}y, y(0) = 1. Найдите y(ln {a})."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "y = e^({k}x), so y(ln {a}) = e^({k} ln {a}) = {a}^{k} = {ANS}.",
+    "uz": "y = e^({k}x), demak y(ln {a}) = e^({k} ln {a}) = {a}^{k} = {ANS}.",
+    "ru": "y = e^({k}x), поэтому y(ln {a}) = e^({k} ln {a}) = {a}^{k} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 27 | 9 | 9 | 81 (seed check:11)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-bch018",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "second_order_ode",
+   "lang": "en",
+   "stem": {
+    "en": "What is the general solution of y″ − 5y′ + 6y = 0?",
+    "uz": "y″ − 5y′ + 6y = 0 tenglamaning umumiy yechimini toping.",
+    "ru": "Найдите общее решение уравнения y″ − 5y′ + 6y = 0."
+   },
+   "options": [
+    {
+     "en": "y = C₁e^(2x) + C₂e^(3x)"
+    },
+    {
+     "en": "y = C₁e^(−2x) + C₂e^(−3x)"
+    },
+    {
+     "en": "y = C₁eˣ + C₂e^(6x)"
+    },
+    {
+     "en": "y = C₁cos(2x) + C₂sin(3x)"
+    }
+   ],
+   "why": {
+    "en": "The characteristic equation r² − 5r + 6 = 0 has roots 2 and 3, so y = C₁e^(2x) + C₂e^(3x).",
+    "uz": "Xarakteristik tenglama r² − 5r + 6 = 0 ning ildizlari 2 va 3, demak y = C₁e^(2x) + C₂e^(3x).",
+    "ru": "Характеристическое уравнение r² − 5r + 6 = 0 имеет корни 2 и 3, поэтому y = C₁e^(2x) + C₂e^(3x)."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.45,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch019",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "second_order_ode",
+   "lang": "en",
+   "stem": {
+    "en": "What is the general solution of y″ + 4y = 0?",
+    "uz": "y″ + 4y = 0 tenglamaning umumiy yechimini toping.",
+    "ru": "Найдите общее решение уравнения y″ + 4y = 0."
+   },
+   "options": [
+    {
+     "en": "y = C₁cos(2x) + C₂sin(2x)"
+    },
+    {
+     "en": "y = C₁e^(2x) + C₂e^(−2x)"
+    },
+    {
+     "en": "y = C₁cos(4x) + C₂sin(4x)"
+    },
+    {
+     "en": "y = (C₁ + C₂x)e^(2x)"
+    }
+   ],
+   "why": {
+    "en": "r² + 4 = 0 gives r = ±2i, so y = C₁cos(2x) + C₂sin(2x).",
+    "uz": "r² + 4 = 0 dan r = ±2i, demak y = C₁cos(2x) + C₂sin(2x).",
+    "ru": "Из r² + 4 = 0 получаем r = ±2i, поэтому y = C₁cos(2x) + C₂sin(2x)."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 2.45,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-bch020",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "integration_by_parts",
+   "lang": "en",
+   "stem": {
+    "en": "What is ∫₀¹ x eˣ dx?",
+    "uz": "∫₀¹ x eˣ dx ni hisoblang.",
+    "ru": "Вычислите ∫₀¹ x eˣ dx."
+   },
+   "options": [
+    {
+     "en": "1"
+    },
+    {
+     "en": "e"
+    },
+    {
+     "en": "e − 1"
+    },
+    {
+     "en": "2"
+    }
+   ],
+   "answer_numeric": {
+    "value": 1,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "By parts: ∫ x eˣ dx = x eˣ − eˣ; from 0 to 1: (e − e) − (0 − 1) = 1.",
+    "uz": "Boʻlaklab integrallash: ∫ x eˣ dx = x eˣ − eˣ; 0 dan 1 gacha: (e − e) − (0 − 1) = 1.",
+    "ru": "Интегрирование по частям: ∫ x eˣ dx = x eˣ − eˣ; от 0 до 1: (e − e) − (0 − 1) = 1."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  }
+ ]
+}

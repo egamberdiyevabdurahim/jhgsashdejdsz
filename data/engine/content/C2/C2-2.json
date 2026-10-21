@@ -1,0 +1,1392 @@
+{
+ "bank": "C2",
+ "batch": 2,
+ "kind": "math_explainers",
+ "explainers": [
+  {
+   "id": "C2-a10001",
+   "type": "study",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_equation",
+   "title": {
+    "en": "Solving a linear equation",
+    "uz": "Chiziqli tenglamani yechish",
+    "ru": "Решение линейного уравнения"
+   },
+   "idea": {
+    "en": "Whatever you do to one side, do to the other. Clear fractions by multiplying both sides, open the brackets, collect the x-terms on one side and the numbers on the other, then divide by the number in front of x. Check by substituting your answer.",
+    "uz": "Tenglamaning bir tomoniga nima qilsangiz, ikkinchi tomoniga ham shuni qiling. Ikkala tomonni koʻpaytirib kasrlardan qutuling, qavslarni oching, x li hadlarni bir tomonga, sonlarni ikkinchi tomonga yigʻing, keyin x oldidagi songa boʻling. Javobni tenglamaga qoʻyib tekshiring.",
+    "ru": "Что делаете с одной частью уравнения, делайте и с другой. Избавьтесь от дробей, умножив обе части, раскройте скобки, соберите слагаемые с x в одной части, а числа — в другой, затем разделите на коэффициент при x. Проверьте ответ подстановкой."
+   },
+   "example": {
+    "problem": {
+     "en": "Solve: (x + 4)/3 = x − 2",
+     "uz": "Tenglamani yeching: (x + 4)/3 = x − 2",
+     "ru": "Решите уравнение: (x + 4)/3 = x − 2"
+    },
+    "steps": [
+     {
+      "en": "Multiply both sides by 3: x + 4 = 3(x − 2) = 3x − 6.",
+      "uz": "Ikkala tomonni 3 ga koʻpaytiramiz: x + 4 = 3(x − 2) = 3x − 6.",
+      "ru": "Умножаем обе части на 3: x + 4 = 3(x − 2) = 3x − 6."
+     },
+     {
+      "en": "Move x to the right and the numbers to the left: 4 + 6 = 3x − x, so 10 = 2x.",
+      "uz": "x ni oʻngga, sonlarni chapga oʻtkazamiz: 4 + 6 = 3x − x, yaʼni 10 = 2x.",
+      "ru": "Переносим x вправо, а числа влево: 4 + 6 = 3x − x, то есть 10 = 2x."
+     },
+     {
+      "en": "Divide by 2: x = 5.",
+      "uz": "2 ga boʻlamiz: x = 5.",
+      "ru": "Делим на 2: x = 5."
+     },
+     {
+      "en": "Check: (5 + 4)/3 = 3 and 5 − 2 = 3.",
+      "uz": "Tekshirish: (5 + 4)/3 = 3 va 5 − 2 = 3.",
+      "ru": "Проверка: (5 + 4)/3 = 3 и 5 − 2 = 3."
+     }
+    ],
+    "answer": {
+     "en": "x = 5",
+     "uz": "x = 5",
+     "ru": "x = 5"
+    },
+    "solver": [
+     "solve(Eq((x + 4)/3, x - 2), x) == [5]",
+     "expand(3*(x - 2)) == 3*x - 6",
+     "Rational(5 + 4, 3) == 5 - 2 == 3"
+    ]
+   },
+   "watch_out": {
+    "en": "Multiply the whole right side by 3: 3(x − 2) = 3x − 6, not 3x − 2.",
+    "uz": "Oʻng tomonni toʻliq 3 ga koʻpaytiring: 3(x − 2) = 3x − 6, 3x − 2 emas.",
+    "ru": "Умножайте на 3 всю правую часть: 3(x − 2) = 3x − 6, а не 3x − 2."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-a1p001",
+      "rung": "alg1",
+      "subskill": "linear_equation"
+     },
+     "target": "ax + b = c",
+     "probe": "sign_error_moving"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-a1p008",
+      "rung": "alg1",
+      "subskill": "linear_equation"
+     },
+     "target": "ax + b = cx + d",
+     "probe": "sign_error_moving"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-sat001",
+      "rung": "alg1",
+      "subskill": "linear_equation"
+     },
+     "target": "a(x + b) = c",
+     "probe": "partial_distribution"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "linear_equation"
+     },
+     "target": "an equation with a fraction, e.g. (x + a)/b = c",
+     "probe": "partial_distribution"
+    }
+   ],
+   "minutes": 6,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-a10002",
+   "type": "study",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "expansion",
+   "title": {
+    "en": "Expanding brackets",
+    "uz": "Qavslarni ochish",
+    "ru": "Раскрытие скобок"
+   },
+   "idea": {
+    "en": "To multiply two brackets, multiply every term of the first by every term of the second and add: (a + b)(c + d) = ac + ad + bc + bd. Two patterns are worth knowing by heart: (a ± b)² = a² ± 2ab + b² and (a − b)(a + b) = a² − b².",
+    "uz": "Ikki qavsni koʻpaytirish uchun birinchi qavsdagi har bir hadni ikkinchi qavsdagi har bir hadga koʻpaytirib, natijalarni qoʻshing: (a + b)(c + d) = ac + ad + bc + bd. Ikki formulani yod bilish foydali: (a ± b)² = a² ± 2ab + b² va (a − b)(a + b) = a² − b².",
+    "ru": "Чтобы перемножить две скобки, умножьте каждое слагаемое первой на каждое слагаемое второй и сложите: (a + b)(c + d) = ac + ad + bc + bd. Две формулы полезно знать наизусть: (a ± b)² = a² ± 2ab + b² и (a − b)(a + b) = a² − b²."
+   },
+   "example": {
+    "problem": {
+     "en": "Expand: (2x − 3)²",
+     "uz": "Qavslarni oching: (2x − 3)²",
+     "ru": "Раскройте скобки: (2x − 3)²"
+    },
+    "steps": [
+     {
+      "en": "(2x − 3)² = (2x − 3)(2x − 3).",
+      "uz": "(2x − 3)² = (2x − 3)(2x − 3).",
+      "ru": "(2x − 3)² = (2x − 3)(2x − 3)."
+     },
+     {
+      "en": "Every term times every term: 2x · 2x = 4x², 2x · (−3) = −6x, (−3) · 2x = −6x, (−3) · (−3) = 9.",
+      "uz": "Har bir hadni har bir hadga koʻpaytiramiz: 2x · 2x = 4x², 2x · (−3) = −6x, (−3) · 2x = −6x, (−3) · (−3) = 9.",
+      "ru": "Умножаем каждое на каждое: 2x · 2x = 4x², 2x · (−3) = −6x, (−3) · 2x = −6x, (−3) · (−3) = 9."
+     },
+     {
+      "en": "Add: 4x² − 6x − 6x + 9 = 4x² − 12x + 9.",
+      "uz": "Qoʻshamiz: 4x² − 6x − 6x + 9 = 4x² − 12x + 9.",
+      "ru": "Складываем: 4x² − 6x − 6x + 9 = 4x² − 12x + 9."
+     },
+     {
+      "en": "With the formula: (2x)² − 2 · 2x · 3 + 3² gives the same result.",
+      "uz": "Formula bilan: (2x)² − 2 · 2x · 3 + 3² ham xuddi shu natijani beradi.",
+      "ru": "По формуле: (2x)² − 2 · 2x · 3 + 3² даёт тот же результат."
+     }
+    ],
+    "answer": {
+     "en": "4x² − 12x + 9",
+     "uz": "4x² − 12x + 9",
+     "ru": "4x² − 12x + 9"
+    },
+    "solver": [
+     "expand((2*x - 3)**2) == 4*x**2 - 12*x + 9",
+     "expand((2*x)**2 - 2*(2*x)*3 + 3**2) == 4*x**2 - 12*x + 9"
+    ]
+   },
+   "watch_out": {
+    "en": "(2x − 3)² is not 4x² + 9 (and not 4x² − 9): the middle term −12x does not disappear.",
+    "uz": "(2x − 3)² ≠ 4x² + 9 (4x² − 9 ham emas): oʻrtadagi −12x hadi yoʻqolmaydi.",
+    "ru": "(2x − 3)² ≠ 4x² + 9 (и не 4x² − 9): средний член −12x не пропадает."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "expansion"
+     },
+     "target": "(x + a)(x + b)",
+     "probe": "missed_cross_terms"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "expansion"
+     },
+     "target": "(x − a)(x + a)",
+     "probe": "kept_middle_term"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "expansion"
+     },
+     "target": "(ax + b)²",
+     "probe": "square_each_term"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "expansion"
+     },
+     "target": "the coefficient of x in a product of two brackets",
+     "probe": "sign_error"
+    }
+   ],
+   "minutes": 6,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:2/2",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 2,
+    "passed": 2,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-a10003",
+   "type": "study",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "system_of_equations",
+   "title": {
+    "en": "Systems of equations: eliminate a variable",
+    "uz": "Tenglamalar sistemasi: bitta oʻzgaruvchini yoʻqotish",
+    "ru": "Системы уравнений: исключите одну переменную"
+   },
+   "idea": {
+    "en": "Multiply one or both equations so that one variable gets opposite coefficients, then add the equations: that variable cancels. Solve for the other variable and substitute it back into either equation.",
+    "uz": "Bitta yoki ikkala tenglamani shunday songa koʻpaytiringki, oʻzgaruvchilardan birining koeffitsiyentlari qarama-qarshi boʻlsin, keyin tenglamalarni qoʻshing: bu oʻzgaruvchi yoʻqoladi. Qolgan oʻzgaruvchini toping va uni istalgan tenglamaga qoʻying.",
+    "ru": "Умножьте одно или оба уравнения так, чтобы коэффициенты при одной переменной стали противоположными, и сложите уравнения: эта переменная исчезнет. Найдите вторую переменную и подставьте её в любое из уравнений."
+   },
+   "example": {
+    "problem": {
+     "en": "Solve the system: 2x + 3y = 13 and 5x − y = 7.",
+     "uz": "Sistemani yeching: 2x + 3y = 13 va 5x − y = 7.",
+     "ru": "Решите систему: 2x + 3y = 13 и 5x − y = 7."
+    },
+    "steps": [
+     {
+      "en": "Multiply the second equation by 3: 15x − 3y = 21.",
+      "uz": "Ikkinchi tenglamani 3 ga koʻpaytiramiz: 15x − 3y = 21.",
+      "ru": "Умножаем второе уравнение на 3: 15x − 3y = 21."
+     },
+     {
+      "en": "Add it to the first: (2x + 15x) + (3y − 3y) = 13 + 21, so 17x = 34 and x = 2.",
+      "uz": "Uni birinchisiga qoʻshamiz: (2x + 15x) + (3y − 3y) = 13 + 21, demak 17x = 34 va x = 2.",
+      "ru": "Складываем с первым: (2x + 15x) + (3y − 3y) = 13 + 21, значит, 17x = 34 и x = 2."
+     },
+     {
+      "en": "Substitute into 5x − y = 7: 10 − y = 7, so y = 3.",
+      "uz": "5x − y = 7 ga qoʻyamiz: 10 − y = 7, demak y = 3.",
+      "ru": "Подставляем в 5x − y = 7: 10 − y = 7, значит, y = 3."
+     },
+     {
+      "en": "Check in the first equation: 2 · 2 + 3 · 3 = 13.",
+      "uz": "Birinchi tenglamada tekshiramiz: 2 · 2 + 3 · 3 = 13.",
+      "ru": "Проверка в первом уравнении: 2 · 2 + 3 · 3 = 13."
+     }
+    ],
+    "answer": {
+     "en": "x = 2, y = 3",
+     "uz": "x = 2, y = 3",
+     "ru": "x = 2, y = 3"
+    },
+    "solver": [
+     "solve([Eq(2*x + 3*y, 13), Eq(5*x - y, 7)], [x, y]) == {x: 2, y: 3}",
+     "17*2 == 34",
+     "13 + 21 == 34",
+     "2*2 + 3*3 == 13"
+    ]
+   },
+   "watch_out": {
+    "en": "Multiply every term, including the right side: 3 × 7 = 21. Leaving 7 there gives a wrong x.",
+    "uz": "Har bir hadni, oʻng tomonni ham koʻpaytiring: 3 × 7 = 21. U yerda 7 qolib ketsa, x notoʻgʻri chiqadi.",
+    "ru": "Умножайте каждое слагаемое, включая правую часть: 3 × 7 = 21. Если оставить там 7, x получится неверным."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "system_of_equations"
+     },
+     "target": "x + y = s and x − y = d",
+     "probe": "subtracted_wrong_way"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "system_of_equations"
+     },
+     "target": "substitution: y = mx + b and px + y = q",
+     "probe": "sign_error"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "system_of_equations"
+     },
+     "target": "multiply one equation, then eliminate",
+     "probe": "right_side_not_multiplied"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "system_of_equations"
+     },
+     "target": "word problem with two unknowns",
+     "probe": "swapped_unknowns"
+    }
+   ],
+   "minutes": 6,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-a10004",
+   "type": "study",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_inequalities",
+   "title": {
+    "en": "Linear inequalities: watch the sign",
+    "uz": "Chiziqli tengsizliklar: belgiga eʼtibor bering",
+    "ru": "Линейные неравенства: следите за знаком"
+   },
+   "idea": {
+    "en": "Solve an inequality like an equation, with one extra rule: when you multiply or divide both sides by a negative number, reverse the inequality sign (< becomes >, ≤ becomes ≥).",
+    "uz": "Tengsizlikni tenglama kabi yeching, faqat bitta qoʻshimcha qoida bor: ikkala tomonni manfiy songa koʻpaytirsangiz yoki boʻlsangiz, tengsizlik belgisini teskarisiga almashtiring (< belgisi > ga, ≤ belgisi ≥ ga aylanadi).",
+    "ru": "Решайте неравенство как уравнение, но с одним дополнительным правилом: при умножении или делении обеих частей на отрицательное число знак неравенства меняется на противоположный (< на >, ≤ на ≥)."
+   },
+   "example": {
+    "problem": {
+     "en": "Solve: 4 − 2x > 3x − 11",
+     "uz": "Tengsizlikni yeching: 4 − 2x > 3x − 11",
+     "ru": "Решите неравенство: 4 − 2x > 3x − 11"
+    },
+    "steps": [
+     {
+      "en": "Move 3x to the left and 4 to the right: −2x − 3x > −11 − 4, so −5x > −15.",
+      "uz": "3x ni chapga, 4 ni oʻngga oʻtkazamiz: −2x − 3x > −11 − 4, demak −5x > −15.",
+      "ru": "Переносим 3x влево, а 4 вправо: −2x − 3x > −11 − 4, значит, −5x > −15."
+     },
+     {
+      "en": "Divide by −5 and reverse the sign: x < 3.",
+      "uz": "−5 ga boʻlamiz va belgini teskarisiga almashtiramiz: x < 3.",
+      "ru": "Делим на −5 и меняем знак: x < 3."
+     },
+     {
+      "en": "Check x = 0: 4 > −11 is true. Check x = 4: −4 > 1 is false. Both agree with x < 3.",
+      "uz": "x = 0 da tekshiramiz: 4 > −11 — toʻgʻri. x = 4 da: −4 > 1 — notoʻgʻri. Ikkalasi ham x < 3 ga mos.",
+      "ru": "Проверка x = 0: 4 > −11 — верно. Проверка x = 4: −4 > 1 — неверно. Оба результата согласуются с x < 3."
+     }
+    ],
+    "answer": {
+     "en": "x < 3",
+     "uz": "x < 3",
+     "ru": "x < 3"
+    },
+    "solver": [
+     "solve_univariate_inequality(4 - 2*x > 3*x - 11, x, relational=False) == Interval.open(-oo, 3)",
+     "(4 - 2*0 > 3*0 - 11) == True",
+     "(4 - 2*4 > 3*4 - 11) == False",
+     "Rational(-15, -5) == 3"
+    ]
+   },
+   "watch_out": {
+    "en": "If you divide by −5 and keep >, you get x > 3: exactly the wrong half of the number line.",
+    "uz": "−5 ga boʻlib, > belgisini qoldirsangiz, x > 3 chiqadi: bu son oʻqining aynan notoʻgʻri qismi.",
+    "ru": "Если разделить на −5 и оставить >, получится x > 3 — ровно противоположная часть числовой прямой."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "linear_inequalities"
+     },
+     "target": "ax + b < c",
+     "probe": "sign_error_moving"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "linear_inequalities"
+     },
+     "target": "a negative coefficient of x",
+     "probe": "sign_not_reversed"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "linear_inequalities"
+     },
+     "target": "x on both sides",
+     "probe": "sign_not_reversed"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "linear_inequalities"
+     },
+     "target": "the greatest integer that satisfies the inequality",
+     "probe": "included_endpoint"
+    }
+   ],
+   "minutes": 6,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-a10005",
+   "type": "study",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_functions",
+   "title": {
+    "en": "Lines: slope and intercept",
+    "uz": "Toʻgʻri chiziq: burchak koeffitsiyenti va ozod had",
+    "ru": "Прямая: угловой коэффициент и свободный член"
+   },
+   "idea": {
+    "en": "In y = mx + b, the slope m is how much y changes when x grows by 1, and b is where the line crosses the y-axis. Through two points: m = (y₂ − y₁)/(x₂ − x₁); then put one point into y = mx + b to find b.",
+    "uz": "y = mx + b da m — burchak koeffitsiyenti: x 1 ga oshganda y qanchaga oʻzgarishini koʻrsatadi; b esa toʻgʻri chiziq Oy oʻqini kesib oʻtadigan nuqta. Ikki nuqta orqali: m = (y₂ − y₁)/(x₂ − x₁); keyin b ni topish uchun nuqtalardan birini y = mx + b ga qoʻying.",
+    "ru": "В y = mx + b угловой коэффициент m показывает, на сколько меняется y, когда x увеличивается на 1, а b — точка пересечения прямой с осью Oy. По двум точкам: m = (y₂ − y₁)/(x₂ − x₁); затем подставьте одну из точек в y = mx + b, чтобы найти b."
+   },
+   "example": {
+    "problem": {
+     "en": "Find the equation of the line through (2, 1) and (5, 10).",
+     "uz": "(2, 1) va (5, 10) nuqtalardan oʻtuvchi toʻgʻri chiziq tenglamasini toping.",
+     "ru": "Найдите уравнение прямой, проходящей через точки (2, 1) и (5, 10)."
+    },
+    "steps": [
+     {
+      "en": "Slope: m = (10 − 1)/(5 − 2) = 9/3 = 3.",
+      "uz": "Burchak koeffitsiyenti: m = (10 − 1)/(5 − 2) = 9/3 = 3.",
+      "ru": "Угловой коэффициент: m = (10 − 1)/(5 − 2) = 9/3 = 3."
+     },
+     {
+      "en": "Put (2, 1) into y = 3x + b: 1 = 3 · 2 + b, so b = −5.",
+      "uz": "(2, 1) ni y = 3x + b ga qoʻyamiz: 1 = 3 · 2 + b, demak b = −5.",
+      "ru": "Подставляем (2, 1) в y = 3x + b: 1 = 3 · 2 + b, значит, b = −5."
+     },
+     {
+      "en": "Check the other point: 3 · 5 − 5 = 10.",
+      "uz": "Ikkinchi nuqtani tekshiramiz: 3 · 5 − 5 = 10.",
+      "ru": "Проверяем вторую точку: 3 · 5 − 5 = 10."
+     }
+    ],
+    "answer": {
+     "en": "y = 3x − 5",
+     "uz": "y = 3x − 5",
+     "ru": "y = 3x − 5"
+    },
+    "solver": [
+     "Rational(10 - 1, 5 - 2) == 3",
+     "1 - 3*2 == -5",
+     "3*5 - 5 == 10",
+     "3*2 - 5 == 1",
+     "Rational(10 - 1, 2 - 5) == -3"
+    ]
+   },
+   "watch_out": {
+    "en": "Subtract in the same order on top and bottom: (10 − 1)/(5 − 2). Mixing the order, (10 − 1)/(2 − 5) = −3, gives the wrong sign.",
+    "uz": "Surat va maxrajda bir xil tartibda ayiring: (10 − 1)/(5 − 2). Tartibni aralashtirsangiz, (10 − 1)/(2 − 5) = −3 chiqadi va ishora notoʻgʻri boʻladi.",
+    "ru": "Вычитайте в одном порядке сверху и снизу: (10 − 1)/(5 − 2). Если перепутать порядок, (10 − 1)/(2 − 5) = −3 — знак неверный."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-a1p003",
+      "rung": "alg1",
+      "subskill": "linear_functions"
+     },
+     "target": "the slope through two points",
+     "probe": "mixed_order"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-sat004",
+      "rung": "alg1",
+      "subskill": "linear_functions"
+     },
+     "target": "the value f(c) of a linear function",
+     "probe": "sign_error"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "linear_functions"
+     },
+     "target": "the equation from a point and a slope",
+     "probe": "wrong_intercept"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "linear_functions"
+     },
+     "target": "where a line crosses the x-axis",
+     "probe": "gave_y_intercept"
+    }
+   ],
+   "minutes": 6,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:5/5",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 5,
+    "passed": 5,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-a10006",
+   "type": "study",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "factoring",
+   "title": {
+    "en": "Factoring x² + bx + c",
+    "uz": "x² + bx + c ni koʻpaytuvchilarga ajratish",
+    "ru": "Разложение x² + bx + c на множители"
+   },
+   "idea": {
+    "en": "Look for two numbers whose product is c and whose sum is b. If they are p and q, then x² + bx + c = (x + p)(x + q). Check by expanding.",
+    "uz": "Koʻpaytmasi c ga, yigʻindisi b ga teng boʻlgan ikki sonni toping. Agar ular p va q boʻlsa, x² + bx + c = (x + p)(x + q). Qavslarni ochib tekshiring.",
+    "ru": "Найдите два числа, произведение которых равно c, а сумма равна b. Если это p и q, то x² + bx + c = (x + p)(x + q). Проверьте, раскрыв скобки."
+   },
+   "example": {
+    "problem": {
+     "en": "Factor: x² − 2x − 24",
+     "uz": "Koʻpaytuvchilarga ajrating: x² − 2x − 24",
+     "ru": "Разложите на множители: x² − 2x − 24"
+    },
+    "steps": [
+     {
+      "en": "We need two numbers with product −24 and sum −2.",
+      "uz": "Koʻpaytmasi −24, yigʻindisi −2 boʻlgan ikki son kerak.",
+      "ru": "Нужны два числа с произведением −24 и суммой −2."
+     },
+     {
+      "en": "The product is negative, so the signs are different. Pairs for 24: 1 and 24, 2 and 12, 3 and 8, 4 and 6. Only 4 and 6 differ by 2.",
+      "uz": "Koʻpaytma manfiy, demak ishoralar har xil. 24 uchun juftliklar: 1 va 24, 2 va 12, 3 va 8, 4 va 6. Faqat 4 va 6 ning ayirmasi 2 ga teng.",
+      "ru": "Произведение отрицательное, значит, знаки разные. Пары для 24: 1 и 24, 2 и 12, 3 и 8, 4 и 6. Только 4 и 6 отличаются на 2."
+     },
+     {
+      "en": "The sum is −2, so the number with the larger absolute value is negative: −6 and 4.",
+      "uz": "Yigʻindi −2, demak moduli katta son manfiy: −6 va 4.",
+      "ru": "Сумма равна −2, значит, число с большим модулем отрицательное: −6 и 4."
+     },
+     {
+      "en": "x² − 2x − 24 = (x − 6)(x + 4). Check: x² + 4x − 6x − 24 = x² − 2x − 24.",
+      "uz": "x² − 2x − 24 = (x − 6)(x + 4). Tekshirish: x² + 4x − 6x − 24 = x² − 2x − 24.",
+      "ru": "x² − 2x − 24 = (x − 6)(x + 4). Проверка: x² + 4x − 6x − 24 = x² − 2x − 24."
+     }
+    ],
+    "answer": {
+     "en": "(x − 6)(x + 4)",
+     "uz": "(x − 6)(x + 4)",
+     "ru": "(x − 6)(x + 4)"
+    },
+    "solver": [
+     "factor(x**2 - 2*x - 24) == (x - 6)*(x + 4)",
+     "(-6)*4 == -24",
+     "-6 + 4 == -2",
+     "expand((x + 6)*(x - 4)) == x**2 + 2*x - 24"
+    ]
+   },
+   "watch_out": {
+    "en": "(x + 6)(x − 4) has the right product but the wrong sum (+2). Always check the middle term.",
+    "uz": "(x + 6)(x − 4) da koʻpaytma toʻgʻri, lekin yigʻindi notoʻgʻri (+2). Oʻrta hadni doim tekshiring.",
+    "ru": "У (x + 6)(x − 4) произведение верное, а сумма — нет (+2). Всегда проверяйте средний член."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-a1l061",
+      "rung": "alg1",
+      "subskill": "factoring"
+     },
+     "target": "x² + bx + c with c > 0",
+     "probe": "wrong_sign_pair"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "factoring"
+     },
+     "target": "x² + bx + c with c < 0",
+     "probe": "wrong_sign_pair"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "factoring"
+     },
+     "target": "a difference of squares x² − a²",
+     "probe": "sum_of_squares"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "alg1",
+      "subskill": "factoring"
+     },
+     "target": "take out a common factor first, then factor",
+     "probe": "missed_common_factor"
+    }
+   ],
+   "minutes": 6,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ge0001",
+   "type": "study",
+   "skill": "math",
+   "rung": "geom",
+   "subskill": "pythagoras",
+   "title": {
+    "en": "The Pythagorean theorem",
+    "uz": "Pifagor teoremasi",
+    "ru": "Теорема Пифагора"
+   },
+   "idea": {
+    "en": "In a right triangle, a² + b² = c², where c is the hypotenuse: the longest side, opposite the right angle. It finds any side from the other two. Many shapes hide a right triangle: the height of an isosceles triangle cuts it into two of them.",
+    "uz": "Toʻgʻri burchakli uchburchakda a² + b² = c², bu yerda c — gipotenuza: toʻgʻri burchak qarshisidagi eng uzun tomon. Bu formula istalgan tomonni qolgan ikkitasi orqali topishga yordam beradi. Koʻp shakllarda toʻgʻri burchakli uchburchak yashiringan: teng yonli uchburchakning balandligi uni ikkita shunday uchburchakka ajratadi.",
+    "ru": "В прямоугольном треугольнике a² + b² = c², где c — гипотенуза: самая длинная сторона, лежащая напротив прямого угла. Так можно найти любую сторону по двум другим. Во многих фигурах спрятан прямоугольный треугольник: высота равнобедренного треугольника делит его на два таких."
+   },
+   "example": {
+    "problem": {
+     "en": "An isosceles triangle has sides of 10 cm, 10 cm and 12 cm. Find its height to the base and its area.",
+     "uz": "Teng yonli uchburchakning tomonlari 10 sm, 10 sm va 12 sm. Uning asosiga tushirilgan balandligini va yuzini toping.",
+     "ru": "Стороны равнобедренного треугольника равны 10 см, 10 см и 12 см. Найдите его высоту, проведённую к основанию, и площадь."
+    },
+    "steps": [
+     {
+      "en": "The height to the base cuts the base in half. This gives two right triangles with hypotenuse 10 cm and one leg 12 ÷ 2 = 6 cm.",
+      "uz": "Asosga tushirilgan balandlik asosni teng ikkiga boʻladi. Gipotenuzasi 10 sm, bir kateti 12 ÷ 2 = 6 sm boʻlgan ikkita toʻgʻri burchakli uchburchak hosil boʻladi.",
+      "ru": "Высота к основанию делит основание пополам. Получаются два прямоугольных треугольника с гипотенузой 10 см и катетом 12 ÷ 2 = 6 см."
+     },
+     {
+      "en": "The height is the other leg: h² = 10² − 6² = 100 − 36 = 64, so h = 8 cm.",
+      "uz": "Balandlik — ikkinchi katet: h² = 10² − 6² = 100 − 36 = 64, demak h = 8 sm.",
+      "ru": "Высота — второй катет: h² = 10² − 6² = 100 − 36 = 64, значит, h = 8 см."
+     },
+     {
+      "en": "Area: 12 × 8 ÷ 2 = 48 cm².",
+      "uz": "Yuzi: 12 × 8 ÷ 2 = 48 sm².",
+      "ru": "Площадь: 12 × 8 ÷ 2 = 48 см²."
+     }
+    ],
+    "answer": {
+     "en": "Height 8 cm, area 48 cm².",
+     "uz": "Balandligi 8 sm, yuzi 48 sm².",
+     "ru": "Высота 8 см, площадь 48 см²."
+    },
+    "solver": [
+     "sqrt(10**2 - 6**2) == 8",
+     "10**2 - 6**2 == 64",
+     "Rational(12*8, 2) == 48",
+     "sqrt(10**2 + 6**2) > 10"
+    ]
+   },
+   "watch_out": {
+    "en": "To find a leg, subtract: b² = c² − a². Adding (10² + 6²) would make the height longer than the 10 cm side, which is impossible.",
+    "uz": "Katetni topish uchun ayiring: b² = c² − a². Qoʻshsangiz (10² + 6²), balandlik 10 sm li yon tomondan uzun chiqadi, bu esa mumkin emas.",
+    "ru": "Чтобы найти катет, вычитайте: b² = c² − a². Если сложить (10² + 6²), высота выйдет длиннее боковой стороны 10 см, а это невозможно."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-gel011",
+      "rung": "geom",
+      "subskill": "pythagoras"
+     },
+     "target": "two legs → the hypotenuse",
+     "probe": "added_legs_without_squares"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-gel012",
+      "rung": "geom",
+      "subskill": "pythagoras"
+     },
+     "target": "the hypotenuse and one leg → the other leg",
+     "probe": "added_instead_of_subtracted"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "pythagoras"
+     },
+     "target": "the diagonal of a rectangle (word problem)",
+     "probe": "added_sides"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "pythagoras"
+     },
+     "target": "the distance between two points",
+     "probe": "sign_error_in_gap"
+    }
+   ],
+   "minutes": 6,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ge0002",
+   "type": "study",
+   "skill": "math",
+   "rung": "geom",
+   "subskill": "polygon_angles",
+   "title": {
+    "en": "Angles of a polygon",
+    "uz": "Koʻpburchak burchaklari",
+    "ru": "Углы многоугольника"
+   },
+   "idea": {
+    "en": "Diagonals from one vertex cut a polygon with n sides into n − 2 triangles, so its interior angles add up to (n − 2) × 180°. In a regular polygon all angles are equal. The exterior angles of any convex polygon add up to 360°, so in a regular one each is 360° ÷ n.",
+    "uz": "Bitta uchidan oʻtkazilgan diagonallar n tomonli koʻpburchakni n − 2 ta uchburchakka ajratadi, shuning uchun uning ichki burchaklari yigʻindisi (n − 2) × 180°. Muntazam koʻpburchakda barcha burchaklar teng. Har qanday qavariq koʻpburchak tashqi burchaklarining yigʻindisi 360°, shuning uchun muntazam koʻpburchakda har biri 360° ÷ n.",
+    "ru": "Диагонали из одной вершины делят многоугольник с n сторонами на n − 2 треугольника, поэтому сумма его внутренних углов равна (n − 2) × 180°. В правильном многоугольнике все углы равны. Сумма внешних углов любого выпуклого многоугольника равна 360°, поэтому в правильном каждый из них равен 360° ÷ n."
+   },
+   "example": {
+    "problem": {
+     "en": "Each interior angle of a regular polygon is 140°. How many sides does it have?",
+     "uz": "Muntazam koʻpburchakning har bir ichki burchagi 140°. Uning nechta tomoni bor?",
+     "ru": "Каждый внутренний угол правильного многоугольника равен 140°. Сколько у него сторон?"
+    },
+    "steps": [
+     {
+      "en": "The interior and exterior angles at a vertex add up to 180°, so each exterior angle is 180° − 140° = 40°.",
+      "uz": "Bir uchdagi ichki va tashqi burchaklar yigʻindisi 180°, shuning uchun har bir tashqi burchak 180° − 140° = 40°.",
+      "ru": "Внутренний и внешний углы при одной вершине в сумме дают 180°, поэтому каждый внешний угол равен 180° − 140° = 40°."
+     },
+     {
+      "en": "The exterior angles add up to 360°: n = 360° ÷ 40° = 9.",
+      "uz": "Tashqi burchaklar yigʻindisi 360°: n = 360° ÷ 40° = 9.",
+      "ru": "Сумма внешних углов 360°: n = 360° ÷ 40° = 9."
+     },
+     {
+      "en": "Check: (9 − 2) × 180° ÷ 9 = 1260° ÷ 9 = 140°.",
+      "uz": "Tekshirish: (9 − 2) × 180° ÷ 9 = 1260° ÷ 9 = 140°.",
+      "ru": "Проверка: (9 − 2) × 180° ÷ 9 = 1260° ÷ 9 = 140°."
+     }
+    ],
+    "answer": {
+     "en": "9 sides.",
+     "uz": "9 ta tomon.",
+     "ru": "9 сторон."
+    },
+    "solver": [
+     "180 - 140 == 40",
+     "Rational(360, 40) == 9",
+     "(9 - 2)*180 == 1260",
+     "Rational(1260, 9) == 140",
+     "3*180 == 540",
+     "5*180 == 900"
+    ]
+   },
+   "watch_out": {
+    "en": "Use n − 2, not n: a pentagon's angles add up to 3 × 180° = 540°, not 5 × 180° = 900°.",
+    "uz": "n emas, n − 2 ni oling: beshburchak burchaklarining yigʻindisi 3 × 180° = 540°, 5 × 180° = 900° emas.",
+    "ru": "Берите n − 2, а не n: сумма углов пятиугольника 3 × 180° = 540°, а не 5 × 180° = 900°."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "polygon_angles"
+     },
+     "target": "the sum of the interior angles of an n-gon",
+     "probe": "used_n_not_n_minus_2"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "polygon_angles"
+     },
+     "target": "each interior angle of a regular n-gon",
+     "probe": "forgot_divide"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "polygon_angles"
+     },
+     "target": "the number of sides from one angle",
+     "probe": "used_interior_as_exterior"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "polygon_angles"
+     },
+     "target": "each exterior angle of a regular n-gon",
+     "probe": "gave_interior"
+    }
+   ],
+   "minutes": 6,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:6/6",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 6,
+    "passed": 6,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ge0003",
+   "type": "study",
+   "skill": "math",
+   "rung": "geom",
+   "subskill": "isosceles_triangle",
+   "title": {
+    "en": "Isosceles triangles: equal base angles",
+    "uz": "Teng yonli uchburchak: asosdagi burchaklar teng",
+    "ru": "Равнобедренный треугольник: углы при основании равны"
+   },
+   "idea": {
+    "en": "The three angles of any triangle add up to 180°. In an isosceles triangle, the two angles opposite the equal sides (the base angles) are equal. Call the unknown angle x and write one equation.",
+    "uz": "Har qanday uchburchak uchta burchagining yigʻindisi 180°. Teng yonli uchburchakda teng tomonlar qarshisidagi ikki burchak (asosdagi burchaklar) teng. Nomaʼlum burchakni x deb belgilang va bitta tenglama tuzing.",
+    "ru": "Сумма трёх углов любого треугольника равна 180°. В равнобедренном треугольнике два угла напротив равных сторон (углы при основании) равны. Обозначьте неизвестный угол через x и составьте одно уравнение."
+   },
+   "example": {
+    "problem": {
+     "en": "In an isosceles triangle, the angle between the equal sides is 30° more than each base angle. Find all three angles.",
+     "uz": "Teng yonli uchburchakda teng tomonlar orasidagi burchak asosdagi har bir burchakdan 30° katta. Uchala burchakni toping.",
+     "ru": "В равнобедренном треугольнике угол между равными сторонами на 30° больше каждого угла при основании. Найдите все три угла."
+    },
+    "steps": [
+     {
+      "en": "Let each base angle be x. Then the third angle is x + 30°.",
+      "uz": "Asosdagi har bir burchak x boʻlsin. Unda uchinchi burchak x + 30°.",
+      "ru": "Пусть каждый угол при основании равен x. Тогда третий угол равен x + 30°."
+     },
+     {
+      "en": "x + x + (x + 30°) = 180°, so 3x = 150° and x = 50°.",
+      "uz": "x + x + (x + 30°) = 180°, demak 3x = 150° va x = 50°.",
+      "ru": "x + x + (x + 30°) = 180°, значит, 3x = 150° и x = 50°."
+     },
+     {
+      "en": "The third angle is 50° + 30° = 80°. Check: 50° + 50° + 80° = 180°.",
+      "uz": "Uchinchi burchak 50° + 30° = 80°. Tekshirish: 50° + 50° + 80° = 180°.",
+      "ru": "Третий угол равен 50° + 30° = 80°. Проверка: 50° + 50° + 80° = 180°."
+     }
+    ],
+    "answer": {
+     "en": "50°, 50° and 80°.",
+     "uz": "50°, 50° va 80°.",
+     "ru": "50°, 50° и 80°."
+    },
+    "solver": [
+     "solve(Eq(x + x + (x + 30), 180), x) == [50]",
+     "50 + 30 == 80",
+     "50 + 50 + 80 == 180"
+    ]
+   },
+   "watch_out": {
+    "en": "The equal angles are the base angles, opposite the equal sides, not the angle between the equal sides.",
+    "uz": "Teng burchaklar — teng tomonlar qarshisidagi, asosdagi burchaklar; teng tomonlar orasidagi burchak emas.",
+    "ru": "Равны углы при основании, лежащие напротив равных сторон, а не угол между равными сторонами."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-gel031",
+      "rung": "geom",
+      "subskill": "isosceles_triangle"
+     },
+     "target": "the angle between the equal sides → each base angle",
+     "probe": "did_not_halve"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-gel032",
+      "rung": "geom",
+      "subskill": "isosceles_triangle"
+     },
+     "target": "a base angle → the angle between the equal sides",
+     "probe": "subtracted_once"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "isosceles_triangle"
+     },
+     "target": "two angles of a triangle → the third",
+     "probe": "used_360"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "isosceles_triangle"
+     },
+     "target": "an exterior angle of a triangle",
+     "probe": "gave_interior"
+    }
+   ],
+   "minutes": 6,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ge0004",
+   "type": "study",
+   "skill": "math",
+   "rung": "geom",
+   "subskill": "similarity",
+   "title": {
+    "en": "Similar triangles: sides in one ratio",
+    "uz": "Oʻxshash uchburchaklar: tomonlar bir xil nisbatda",
+    "ru": "Подобные треугольники: стороны в одном отношении"
+   },
+   "idea": {
+    "en": "In similar figures, every length is multiplied by the same scale factor k. Match the corresponding sides, find k from one known pair, then multiply. Areas are multiplied by k².",
+    "uz": "Oʻxshash shakllarda har bir uzunlik bir xil k oʻxshashlik koeffitsiyentiga koʻpaytiriladi. Mos tomonlarni juftlang, maʼlum juftlikdan k ni toping, keyin koʻpaytiring. Yuzlar esa k² ga koʻpayadi.",
+    "ru": "У подобных фигур каждая длина умножается на один и тот же коэффициент подобия k. Сопоставьте соответствующие стороны, найдите k по известной паре и умножьте. Площади умножаются на k²."
+   },
+   "example": {
+    "problem": {
+     "en": "A 1.5 m pole casts a 2 m shadow. At the same moment a tree casts a 12 m shadow. How tall is the tree?",
+     "uz": "Balandligi 1,5 m boʻlgan ustun 2 m soya tashlaydi. Xuddi shu paytda daraxt 12 m soya tashlaydi. Daraxtning balandligi qancha?",
+     "ru": "Столб высотой 1,5 м отбрасывает тень длиной 2 м. В тот же момент дерево отбрасывает тень длиной 12 м. Какова высота дерева?"
+    },
+    "steps": [
+     {
+      "en": "The sun's rays fall on both at the same angle, so the two triangles (height, shadow, ray) are similar.",
+      "uz": "Quyosh nurlari ikkalasiga bir xil burchak ostida tushadi, shuning uchun ikki uchburchak (balandlik, soya, nur) oʻxshash.",
+      "ru": "Солнечные лучи падают на оба предмета под одним углом, поэтому два треугольника (высота, тень, луч) подобны."
+     },
+     {
+      "en": "Match shadow with shadow: k = 12 ÷ 2 = 6.",
+      "uz": "Soyani soya bilan juftlaymiz: k = 12 ÷ 2 = 6.",
+      "ru": "Сопоставляем тень с тенью: k = 12 ÷ 2 = 6."
+     },
+     {
+      "en": "Height of the tree: 1.5 × 6 = 9 m.",
+      "uz": "Daraxtning balandligi: 1,5 × 6 = 9 m.",
+      "ru": "Высота дерева: 1,5 × 6 = 9 м."
+     }
+    ],
+    "answer": {
+     "en": "9 m",
+     "uz": "9 m",
+     "ru": "9 м"
+    },
+    "solver": [
+     "Rational(12, 2) == 6",
+     "Rational(3, 2)*6 == 9",
+     "Rational(3, 2)*12/2 == 9",
+     "2*12/Rational(3, 2) == 16"
+    ]
+   },
+   "watch_out": {
+    "en": "Pair corresponding sides: height with height, shadow with shadow. 1.5 × 12 ÷ 2 is right; 2 × 12 ÷ 1.5 = 16 is not.",
+    "uz": "Mos tomonlarni juftlang: balandlikni balandlik bilan, soyani soya bilan. 1,5 × 12 ÷ 2 toʻgʻri; 2 × 12 ÷ 1,5 = 16 esa notoʻgʻri.",
+    "ru": "Сопоставляйте соответствующие стороны: высоту с высотой, тень с тенью. 1,5 × 12 ÷ 2 — верно, а 2 × 12 ÷ 1,5 = 16 — нет."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "similarity"
+     },
+     "target": "a missing side of two similar triangles",
+     "probe": "wrong_correspondence"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "similarity"
+     },
+     "target": "the scale factor from two corresponding sides",
+     "probe": "inverted_ratio"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "similarity"
+     },
+     "target": "the area of a similar figure (k²)",
+     "probe": "used_k_not_k_squared"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "similarity"
+     },
+     "target": "a shadow or map-scale word problem",
+     "probe": "wrong_correspondence"
+    }
+   ],
+   "minutes": 6,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ge0005",
+   "type": "study",
+   "skill": "math",
+   "rung": "geom",
+   "subskill": "circle_area",
+   "title": {
+    "en": "Circles: circumference and area",
+    "uz": "Aylana uzunligi va doira yuzi",
+    "ru": "Длина окружности и площадь круга"
+   },
+   "idea": {
+    "en": "For a circle of radius r, the circumference is C = 2πr and the area is A = πr². If you are given the diameter, halve it first. Leave the answer in terms of π unless you are asked to round.",
+    "uz": "Radiusi r boʻlgan aylananing uzunligi C = 2πr, doiraning yuzi esa S = πr². Agar diametr berilgan boʻlsa, avval uni ikkiga boʻling. Yaxlitlash soʻralmasa, javobni π orqali qoldiring.",
+    "ru": "Для круга радиуса r длина окружности C = 2πr, а площадь S = πr². Если дан диаметр, сначала разделите его пополам. Оставляйте ответ через π, если не просят округлить."
+   },
+   "example": {
+    "problem": {
+     "en": "A round flowerbed has a radius of 6 m. Around it there is a path 1 m wide. What is the area of the path?",
+     "uz": "Dumaloq gulzorning radiusi 6 m. Uning atrofida kengligi 1 m boʻlgan yoʻlak bor. Yoʻlakning yuzi qancha?",
+     "ru": "Радиус круглой клумбы 6 м. Вокруг неё проходит дорожка шириной 1 м. Какова площадь дорожки?"
+    },
+    "steps": [
+     {
+      "en": "The flowerbed and the path together form a circle of radius 6 + 1 = 7 m.",
+      "uz": "Gulzor va yoʻlak birgalikda radiusi 6 + 1 = 7 m boʻlgan doirani hosil qiladi.",
+      "ru": "Клумба вместе с дорожкой образуют круг радиуса 6 + 1 = 7 м."
+     },
+     {
+      "en": "Big circle: π · 7² = 49π m². Flowerbed: π · 6² = 36π m².",
+      "uz": "Katta doira: π · 7² = 49π m². Gulzor: π · 6² = 36π m².",
+      "ru": "Большой круг: π · 7² = 49π м². Клумба: π · 6² = 36π м²."
+     },
+     {
+      "en": "Path: 49π − 36π = 13π ≈ 40.8 m².",
+      "uz": "Yoʻlak: 49π − 36π = 13π ≈ 40,8 m².",
+      "ru": "Дорожка: 49π − 36π = 13π ≈ 40,8 м²."
+     }
+    ],
+    "answer": {
+     "en": "13π m² ≈ 40.8 m²",
+     "uz": "13π m² ≈ 40,8 m²",
+     "ru": "13π м² ≈ 40,8 м²"
+    },
+    "solver": [
+     "pi*7**2 - pi*6**2 == 13*pi",
+     "abs(N(13*pi) - Rational(408, 10)) < Rational(5, 100)"
+    ]
+   },
+   "watch_out": {
+    "en": "The path is not π · 1² = π m²: area depends on r², so subtract the two whole circles.",
+    "uz": "Yoʻlak yuzi π · 1² = π m² emas: yuz r² ga bogʻliq, shuning uchun ikki butun doira yuzlarini ayiring.",
+    "ru": "Площадь дорожки не равна π · 1² = π м²: площадь зависит от r², поэтому вычитайте площади двух целых кругов."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-gel051",
+      "rung": "geom",
+      "subskill": "circle_area"
+     },
+     "target": "the area from a diameter",
+     "probe": "used_diameter_as_radius"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-gel052",
+      "rung": "geom",
+      "subskill": "circle_area"
+     },
+     "target": "the circumference from a radius",
+     "probe": "used_area_formula"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "circle_area"
+     },
+     "target": "the area from the circumference",
+     "probe": "used_circumference_as_radius"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "circle_area"
+     },
+     "target": "the area of a ring between two circles",
+     "probe": "subtracted_radii_first"
+    }
+   ],
+   "minutes": 6,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:2/2",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 2,
+    "passed": 2,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ge0006",
+   "type": "study",
+   "skill": "math",
+   "rung": "geom",
+   "subskill": "volume",
+   "title": {
+    "en": "Volume: base area × height",
+    "uz": "Hajm: asos yuzi × balandlik",
+    "ru": "Объём: площадь основания × высота"
+   },
+   "idea": {
+    "en": "For any prism or cylinder, volume = area of the base × height. A box: V = length × width × height. A cylinder: V = πr²h. 1 m³ = 1000 litres.",
+    "uz": "Har qanday prizma yoki silindr uchun hajm = asos yuzi × balandlik. Toʻgʻri burchakli parallelepiped (quti): V = uzunlik × eni × balandlik. Silindr: V = πr²h. 1 m³ = 1000 litr.",
+    "ru": "Для любой призмы или цилиндра объём = площадь основания × высота. Прямоугольный параллелепипед (коробка): V = длина × ширина × высота. Цилиндр: V = πr²h. 1 м³ = 1000 литров."
+   },
+   "example": {
+    "problem": {
+     "en": "A cylindrical water tank has a radius of 0.5 m and a height of 2 m. How many litres of water does it hold, to the nearest litre?",
+     "uz": "Silindr shaklidagi suv idishining radiusi 0,5 m, balandligi 2 m. Unga necha litr suv sigʻadi (butun litrgacha yaxlitlang)?",
+     "ru": "Цилиндрический бак для воды имеет радиус 0,5 м и высоту 2 м. Сколько литров воды в него помещается (округлите до целого литра)?"
+    },
+    "steps": [
+     {
+      "en": "Base area: π · 0.5² = 0.25π m².",
+      "uz": "Asos yuzi: π · 0,5² = 0,25π m².",
+      "ru": "Площадь основания: π · 0,5² = 0,25π м²."
+     },
+     {
+      "en": "Volume: 0.25π · 2 = 0.5π ≈ 1.5708 m³.",
+      "uz": "Hajm: 0,25π · 2 = 0,5π ≈ 1,5708 m³.",
+      "ru": "Объём: 0,25π · 2 = 0,5π ≈ 1,5708 м³."
+     },
+     {
+      "en": "In litres: 1.5708 × 1000 ≈ 1571 L.",
+      "uz": "Litrda: 1,5708 × 1000 ≈ 1571 l.",
+      "ru": "В литрах: 1,5708 × 1000 ≈ 1571 л."
+     }
+    ],
+    "answer": {
+     "en": "About 1571 litres.",
+     "uz": "Taxminan 1571 litr.",
+     "ru": "Около 1571 литра."
+    },
+    "solver": [
+     "pi*Rational(1, 2)**2*2 == pi/2",
+     "abs(N(pi/2) - Rational(15708, 10000)) < Rational(1, 10000)",
+     "floor(N(pi/2*1000) + Rational(1, 2)) == 1571",
+     "floor(N(pi*Rational(1, 2)*2*1000) + Rational(1, 2)) == 3142"
+    ]
+   },
+   "watch_out": {
+    "en": "Square the radius before multiplying: π · 0.5² · 2, not π · 0.5 · 2 (that gives about 3142 L, twice too much).",
+    "uz": "Koʻpaytirishdan oldin radiusni kvadratga koʻtaring: π · 0,5² · 2, π · 0,5 · 2 emas (bunda taxminan 3142 l chiqadi, ikki baravar koʻp).",
+    "ru": "Возводите радиус в квадрат до умножения: π · 0,5² · 2, а не π · 0,5 · 2 (так получится около 3142 л — вдвое больше)."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-sat020",
+      "rung": "geom",
+      "subskill": "volume"
+     },
+     "target": "the volume of a box",
+     "probe": "added_dimensions"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-gel061",
+      "rung": "geom",
+      "subskill": "volume"
+     },
+     "target": "the volume of a cylinder",
+     "probe": "radius_not_squared"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-gel062",
+      "rung": "geom",
+      "subskill": "volume"
+     },
+     "target": "the edge of a cube from its volume",
+     "probe": "divided_by_3"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "geom",
+      "subskill": "volume"
+     },
+     "target": "how the volume changes when the radius is doubled",
+     "probe": "doubled_not_quadrupled"
+    }
+   ],
+   "minutes": 6,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

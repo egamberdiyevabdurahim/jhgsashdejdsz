@@ -1,0 +1,4986 @@
+{
+ "bank": "C10",
+ "batch": 2,
+ "kind": "catalog",
+ "note": "Test-prep units (P5 spec §5.3 C10). Catalog records, not quiz items: no options or keys. 'practice[].where' is a tag query against the practice pools (C1, C2, C3, C5, C6, C7); subskill values are proposed tags the integrator maps onto each stream's vocabulary, falling back to 'fallback_where'. End-of-unit checks draw only from practice pools, never from the K assessment banks. Official links are links only. Pass marks are design defaults to tune from logs (spec §4.5), not evidence-based thresholds.",
+ "items": [
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-MAAL01",
+   "test": "SAT",
+   "section": "math",
+   "domain": "algebra",
+   "domain_label": {
+    "en": "Algebra",
+    "uz": "Algebra",
+    "ru": "Algebra (алгебра)"
+   },
+   "domain_share": {
+    "approx_pct": 35,
+    "questions": "13-15",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 1,
+   "units_in_domain": 3,
+   "level_band": "foundation",
+   "skills": [
+    "linear_equations",
+    "linear_inequalities",
+    "number_of_solutions",
+    "one_step_equations"
+   ],
+   "rungs": [
+    "prealg",
+    "alg1"
+   ],
+   "title": {
+    "en": "Linear equations and inequalities in one variable",
+    "uz": "Bir oʻzgaruvchili chiziqli tenglama va tengsizliklar",
+    "ru": "Линейные уравнения и неравенства с одной переменной"
+   },
+   "goal": {
+    "en": "Solve linear equations and inequalities in one variable fluently, including ones with fractions and ones with no solution or infinitely many.",
+    "uz": "Bir oʻzgaruvchili chiziqli tenglama va tengsizliklarni, jumladan kasrli, yechimi yoʻq yoki cheksiz koʻp yechimli holatlarni ham ravon yeching.",
+    "ru": "Уверенно решайте линейные уравнения и неравенства с одной переменной, в том числе с дробями, без решений и с бесконечным числом решений."
+   },
+   "study": [
+    {
+     "en": "Undo operations in reverse order and keep both sides balanced; clear fractions by multiplying every term by the common denominator.",
+     "uz": "Amallarni teskari tartibda bekor qiling va ikkala tomonni teng saqlang; kasrlardan qutulish uchun har bir hadni umumiy maxrajga koʻpaytiring.",
+     "ru": "Отменяйте действия в обратном порядке, сохраняя равенство сторон; чтобы избавиться от дробей, умножьте каждый член на общий знаменатель."
+    },
+    {
+     "en": "If the variable cancels out, a true statement (such as 5 = 5) means infinitely many solutions and a false one (such as 5 = 3) means no solution.",
+     "uz": "Agar oʻzgaruvchi qisqarib ketsa, toʻgʻri tenglik (masalan, 5 = 5) cheksiz koʻp yechim, notoʻgʻrisi (masalan, 5 = 3) esa yechim yoʻqligini bildiradi.",
+     "ru": "Если переменная сокращается, верное равенство (например, 5 = 5) означает бесконечно много решений, а неверное (например, 5 = 3) — отсутствие решений."
+    },
+    {
+     "en": "When you multiply or divide an inequality by a negative number, reverse the inequality sign.",
+     "uz": "Tengsizlikni manfiy songa koʻpaytirsangiz yoki boʻlsangiz, tengsizlik belgisini teskarisiga oʻzgartiring.",
+     "ru": "При умножении или делении неравенства на отрицательное число меняйте знак неравенства на противоположный."
+    }
+   ],
+   "study_ref": {
+    "content": "C2",
+    "where": {
+     "rung": [
+      "prealg",
+      "alg1"
+     ],
+     "subskill": [
+      "linear_equations",
+      "linear_inequalities",
+      "number_of_solutions",
+      "one_step_equations"
+     ]
+    },
+    "fallback_where": {
+     "rung": [
+      "prealg",
+      "alg1"
+     ]
+    },
+    "note": "C2 math explainer (one idea, one worked example, 3-4 checks) read during the study step"
+   },
+   "practice": [
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "rung": [
+       "prealg",
+       "alg1"
+      ],
+      "subskill": [
+       "one_step_equations",
+       "linear_equations"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "prealg",
+       "alg1"
+      ]
+     },
+     "n": 8,
+     "split": [
+      8
+     ],
+     "minutes_each": 8,
+     "purpose": {
+      "en": "Warm-up: solving equations.",
+      "uz": "Tayyorgarlik: tenglamalar yechish.",
+      "ru": "Разминка: решение уравнений."
+     },
+     "instances": "fresh parameters each time (templates)"
+    },
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "algebra",
+      "subskill": [
+       "linear_equations",
+       "linear_inequalities",
+       "number_of_solutions",
+       "one_step_equations"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "alg1"
+      ],
+      "subskill": [
+       "linear_equations",
+       "linear_inequalities",
+       "number_of_solutions",
+       "one_step_equations"
+      ]
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 16,
+     "purpose": {
+      "en": "SAT-format linear equations and inequalities.",
+      "uz": "SAT formatidagi chiziqli tenglama va tengsizliklar.",
+      "ru": "Линейные уравнения и неравенства в формате SAT."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Math, domain Algebra, skill Linear equations in one variable; do 10 Easy questions.",
+      "uz": "Question Bankʼda SAT, keyin Math, Algebra domeni va Linear equations in one variable koʻnikmasini tanlang; Easy (oson) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Math, домен Algebra, навык Linear equations in one variable; решите 10 вопросов уровня Easy (лёгкие)."
+     },
+     "step": {
+      "minutes": 20
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Math course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Math kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Math на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C1",
+    "where": {
+     "skill": "math",
+     "format": "sat",
+     "sat.domain": "algebra",
+     "subskill": [
+      "linear_equations",
+      "linear_inequalities",
+      "number_of_solutions",
+      "one_step_equations"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "fallback_where": {
+     "skill": "math",
+     "rung": [
+      "alg1"
+     ],
+     "subskill": [
+      "linear_equations",
+      "linear_inequalities",
+      "number_of_solutions",
+      "one_step_equations"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 950,
+    "minutes": 19,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "numeric_entry_share": 0.25,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 95 seconds a question, the test's pace (44 questions in 70 minutes). Some ask you to type the answer. Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 95 soniya — test surʼati (70 daqiqada 44 ta savol). Baʼzilarida javobni oʻzingiz yozasiz. Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 95 секунд на вопрос — темп теста (44 вопроса за 70 минут). В некоторых ответ нужно ввести самому. Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Redo the worked example in the explainer, do one more practice set on the skill you missed most, then retake the check with new numbers.",
+     "uz": "Tushuntirishdagi ishlangan misolni qayta bajaring, eng koʻp xato qilgan koʻnikma boʻyicha yana bitta mashq toʻplamini ishlang, keyin tekshiruvni yangi sonlar bilan qayta topshiring.",
+     "ru": "Повторите разобранный пример из объяснения, выполните ещё один набор по навыку с наибольшим числом ошибок и пересдайте проверку с новыми числами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 40,
+    "check": 19,
+    "official_required": 0,
+    "official_optional": 20,
+    "total": 74
+   },
+   "requires": {
+    "math_rung_min": "prealg",
+    "after_units": [],
+    "basis": "design default: the rung should be at least Familiar"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Math: 44 questions in 70 minutes, two 35-minute modules; Algebra is about 35 % of questions (13-15).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "About 75 % of Math questions are multiple choice and about 25 % ask the student to enter the answer.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "A built-in graphing calculator is available on the entire Math section, and students may bring an approved calculator.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Linear equations and inequalities in one variable",
+      "uz": "Oʻrganing: Bir oʻzgaruvchili chiziqli tenglama va tengsizliklar",
+      "ru": "Изучите: Линейные уравнения и неравенства с одной переменной"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 8,
+     "title": {
+      "en": "Practice 1: Linear equations and inequalities in one variable",
+      "uz": "Mashq 1: Bir oʻzgaruvchili chiziqli tenglama va tengsizliklar",
+      "ru": "Практика 1: Линейные уравнения и неравенства с одной переменной"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 2: Linear equations and inequalities in one variable",
+      "uz": "Mashq 2: Bir oʻzgaruvchili chiziqli tenglama va tengsizliklar",
+      "ru": "Практика 2: Линейные уравнения и неравенства с одной переменной"
+     },
+     "practice_ref": 1,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 3: Linear equations and inequalities in one variable",
+      "uz": "Mashq 3: Bir oʻzgaruvchili chiziqli tenglama va tengsizliklar",
+      "ru": "Практика 3: Линейные уравнения и неравенства с одной переменной"
+     },
+     "practice_ref": 1,
+     "items": 8,
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 20,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Linear equations and inequalities in one variable",
+      "uz": "Rasmiy mashq: Bir oʻzgaruvchili chiziqli tenglama va tengsizliklar",
+      "ru": "Официальная практика: Линейные уравнения и неравенства с одной переменной"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 5
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "End-of-unit check: Linear equations and inequalities in one variable",
+      "uz": "Boʻlim yakuniy tekshiruvi: Bir oʻzgaruvchili chiziqli tenglama va tengsizliklar",
+      "ru": "Итоговая проверка раздела: Линейные уравнения и неравенства с одной переменной"
+     },
+     "end_check": true,
+     "n": 6
+    }
+   ],
+   "sessions": 5,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-MAAL02",
+   "test": "SAT",
+   "section": "math",
+   "domain": "algebra",
+   "domain_label": {
+    "en": "Algebra",
+    "uz": "Algebra",
+    "ru": "Algebra (алгебра)"
+   },
+   "domain_share": {
+    "approx_pct": 35,
+    "questions": "13-15",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 2,
+   "units_in_domain": 3,
+   "level_band": "core",
+   "skills": [
+    "linear_functions",
+    "slope",
+    "linear_models",
+    "linear_word_problems"
+   ],
+   "rungs": [
+    "alg1"
+   ],
+   "title": {
+    "en": "Linear equations in two variables and linear functions",
+    "uz": "Ikki oʻzgaruvchili chiziqli tenglamalar va chiziqli funksiyalar",
+    "ru": "Линейные уравнения с двумя переменными и линейные функции"
+   },
+   "goal": {
+    "en": "Write and interpret linear equations and functions: slope as a rate, the intercept as a starting value, and moving between equations, tables and graphs.",
+    "uz": "Chiziqli tenglama va funksiyalarni tuzing va izohlang: burchak koeffitsiyenti — oʻzgarish tezligi, kesishish nuqtasi — boshlangʻich qiymat; tenglama, jadval va grafik orasida oʻting.",
+    "ru": "Составляйте и толкуйте линейные уравнения и функции: угловой коэффициент как скорость изменения, свободный член как начальное значение; переходите между уравнением, таблицей и графиком."
+   },
+   "study": [
+    {
+     "en": "In y = mx + b, m is the change in y for each increase of 1 in x, and b is the value of y when x = 0; say what each means in a word problem.",
+     "uz": "y = mx + b da m — x 1 ga oshganda y ning oʻzgarishi, b esa x = 0 boʻlgandagi y qiymati; matnli masalada har birining maʼnosini ayting.",
+     "ru": "В y = mx + b число m — изменение y при увеличении x на 1, а b — значение y при x = 0; в текстовой задаче объясните смысл каждого."
+    },
+    {
+     "en": "Slope from two points: (y₂ − y₁) ÷ (x₂ − x₁); parallel lines have equal slopes.",
+     "uz": "Ikki nuqta orqali burchak koeffitsiyenti: (y₂ − y₁) ÷ (x₂ − x₁); parallel toʻgʻri chiziqlarning burchak koeffitsiyentlari teng.",
+     "ru": "Угловой коэффициент по двум точкам: (y₂ − y₁) ÷ (x₂ − x₁); у параллельных прямых угловые коэффициенты равны."
+    },
+    {
+     "en": "Use the built-in graphing calculator to check an answer by graphing, but set up the equation yourself first.",
+     "uz": "Javobni grafik orqali tekshirish uchun ichki grafik kalkulyatordan foydalaning, lekin avval tenglamani oʻzingiz tuzing.",
+     "ru": "Проверяйте ответ графиком во встроенном графическом калькуляторе, но сначала составьте уравнение сами."
+    }
+   ],
+   "study_ref": {
+    "content": "C2",
+    "where": {
+     "rung": [
+      "alg1"
+     ],
+     "subskill": [
+      "linear_functions",
+      "slope",
+      "linear_models",
+      "linear_word_problems"
+     ]
+    },
+    "fallback_where": {
+     "rung": [
+      "alg1"
+     ]
+    },
+    "note": "C2 math explainer (one idea, one worked example, 3-4 checks) read during the study step"
+   },
+   "practice": [
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "algebra",
+      "subskill": [
+       "linear_functions",
+       "slope",
+       "linear_models",
+       "linear_word_problems"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "alg1"
+      ],
+      "subskill": [
+       "linear_functions",
+       "slope",
+       "linear_models",
+       "linear_word_problems"
+      ]
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 16,
+     "purpose": {
+      "en": "SAT-format linear functions and models.",
+      "uz": "SAT formatidagi chiziqli funksiyalar va modellar.",
+      "ru": "Линейные функции и модели в формате SAT."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Math, domain Algebra, skill Linear functions; do 10 Medium questions.",
+      "uz": "Question Bankʼda SAT, keyin Math, Algebra domeni va Linear functions koʻnikmasini tanlang; Medium (oʻrta) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Math, домен Algebra, навык Linear functions; решите 10 вопросов уровня Medium (средние)."
+     },
+     "step": {
+      "minutes": 20
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Math course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Math kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Math на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C1",
+    "where": {
+     "skill": "math",
+     "format": "sat",
+     "sat.domain": "algebra",
+     "subskill": [
+      "linear_functions",
+      "slope",
+      "linear_models",
+      "linear_word_problems"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "fallback_where": {
+     "skill": "math",
+     "rung": [
+      "alg1"
+     ],
+     "subskill": [
+      "linear_functions",
+      "slope",
+      "linear_models",
+      "linear_word_problems"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 950,
+    "minutes": 19,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "numeric_entry_share": 0.25,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 95 seconds a question, the test's pace (44 questions in 70 minutes). Some ask you to type the answer. Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 95 soniya — test surʼati (70 daqiqada 44 ta savol). Baʼzilarida javobni oʻzingiz yozasiz. Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 95 секунд на вопрос — темп теста (44 вопроса за 70 минут). В некоторых ответ нужно ввести самому. Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Redo the worked example in the explainer, do one more practice set on the skill you missed most, then retake the check with new numbers.",
+     "uz": "Tushuntirishdagi ishlangan misolni qayta bajaring, eng koʻp xato qilgan koʻnikma boʻyicha yana bitta mashq toʻplamini ishlang, keyin tekshiruvni yangi sonlar bilan qayta topshiring.",
+     "ru": "Повторите разобранный пример из объяснения, выполните ещё один набор по навыку с наибольшим числом ошибок и пересдайте проверку с новыми числами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 32,
+    "check": 19,
+    "official_required": 0,
+    "official_optional": 20,
+    "total": 66
+   },
+   "requires": {
+    "math_rung_min": "alg1",
+    "after_units": [
+     "C10-MAAL01"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Math: 44 questions in 70 minutes, two 35-minute modules; Algebra is about 35 % of questions (13-15).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "About 75 % of Math questions are multiple choice and about 25 % ask the student to enter the answer.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "A built-in graphing calculator is available on the entire Math section, and students may bring an approved calculator.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Linear equations in two variables and linear functions",
+      "uz": "Oʻrganing: Ikki oʻzgaruvchili chiziqli tenglamalar va chiziqli funksiyalar",
+      "ru": "Изучите: Линейные уравнения с двумя переменными и линейные функции"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 1: Linear equations in two variables and linear functions",
+      "uz": "Mashq 1: Ikki oʻzgaruvchili chiziqli tenglamalar va chiziqli funksiyalar",
+      "ru": "Практика 1: Линейные уравнения с двумя переменными и линейные функции"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 2: Linear equations in two variables and linear functions",
+      "uz": "Mashq 2: Ikki oʻzgaruvchili chiziqli tenglamalar va chiziqli funksiyalar",
+      "ru": "Практика 2: Линейные уравнения с двумя переменными и линейные функции"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 20,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Linear equations in two variables and linear functions",
+      "uz": "Rasmiy mashq: Ikki oʻzgaruvchili chiziqli tenglamalar va chiziqli funksiyalar",
+      "ru": "Официальная практика: Линейные уравнения с двумя переменными и линейные функции"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "End-of-unit check: Linear equations in two variables and linear functions",
+      "uz": "Boʻlim yakuniy tekshiruvi: Ikki oʻzgaruvchili chiziqli tenglamalar va chiziqli funksiyalar",
+      "ru": "Итоговая проверка раздела: Линейные уравнения с двумя переменными и линейные функции"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-MAAL03",
+   "test": "SAT",
+   "section": "math",
+   "domain": "algebra",
+   "domain_label": {
+    "en": "Algebra",
+    "uz": "Algebra",
+    "ru": "Algebra (алгебра)"
+   },
+   "domain_share": {
+    "approx_pct": 35,
+    "questions": "13-15",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 3,
+   "units_in_domain": 3,
+   "level_band": "advanced",
+   "skills": [
+    "systems_of_equations",
+    "linear_system_no_solution",
+    "linear_system_infinite",
+    "linear_inequalities"
+   ],
+   "rungs": [
+    "alg1",
+    "alg2"
+   ],
+   "title": {
+    "en": "Systems of linear equations and inequalities in two variables",
+    "uz": "Ikki oʻzgaruvchili chiziqli tenglamalar sistemasi va tengsizliklar",
+    "ru": "Системы линейных уравнений и неравенства с двумя переменными"
+   },
+   "goal": {
+    "en": "Solve systems of two linear equations by substitution or elimination, decide when a system has no solution or infinitely many, and work with linear inequalities in two variables.",
+    "uz": "Ikki chiziqli tenglama sistemasini oʻrniga qoʻyish yoki qoʻshish usuli bilan yeching, sistema qachon yechimsiz yoki cheksiz koʻp yechimli boʻlishini aniqlang va ikki oʻzgaruvchili chiziqli tengsizliklar bilan ishlang.",
+    "ru": "Решайте системы двух линейных уравнений подстановкой или сложением, определяйте, когда система не имеет решений или имеет бесконечно много, и работайте с линейными неравенствами с двумя переменными."
+   },
+   "study": [
+    {
+     "en": "Elimination: multiply one equation so that a variable cancels when you add; use substitution when a variable is already on its own.",
+     "uz": "Qoʻshish usuli: tenglamalardan birini shunday koʻpaytiringki, qoʻshganda bitta oʻzgaruvchi yoʻqolsin; oʻzgaruvchi allaqachon ajratilgan boʻlsa, oʻrniga qoʻyish usulidan foydalaning.",
+     "ru": "Сложение: умножьте одно уравнение так, чтобы при сложении одна переменная исчезла; если переменная уже выражена, используйте подстановку."
+    },
+    {
+     "en": "No solution: same slope, different intercepts (parallel lines). Infinitely many: the two equations describe the same line.",
+     "uz": "Yechim yoʻq: burchak koeffitsiyentlari bir xil, kesishish nuqtalari har xil (parallel chiziqlar). Cheksiz koʻp: ikkala tenglama bitta chiziqni ifodalaydi.",
+     "ru": "Нет решений: одинаковый угловой коэффициент, разные свободные члены (параллельные прямые). Бесконечно много: оба уравнения задают одну прямую."
+    },
+    {
+     "en": "For an inequality in two variables, test a point such as (0, 0): if it makes the inequality true, it lies in the solution region.",
+     "uz": "Ikki oʻzgaruvchili tengsizlikda (0, 0) kabi nuqtani tekshiring: agar u tengsizlikni toʻgʻri qilsa, yechimlar sohasida yotadi.",
+     "ru": "Для неравенства с двумя переменными проверьте точку, например (0, 0): если неравенство верно, точка лежит в области решений."
+    }
+   ],
+   "study_ref": {
+    "content": "C2",
+    "where": {
+     "rung": [
+      "alg1",
+      "alg2"
+     ],
+     "subskill": [
+      "systems_of_equations",
+      "linear_system_no_solution",
+      "linear_system_infinite",
+      "linear_inequalities"
+     ]
+    },
+    "fallback_where": {
+     "rung": [
+      "alg1",
+      "alg2"
+     ]
+    },
+    "note": "C2 math explainer (one idea, one worked example, 3-4 checks) read during the study step"
+   },
+   "practice": [
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "algebra",
+      "subskill": [
+       "systems_of_equations",
+       "linear_system_no_solution",
+       "linear_system_infinite",
+       "linear_inequalities"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "alg1",
+       "alg2"
+      ],
+      "subskill": [
+       "systems_of_equations",
+       "linear_system_no_solution",
+       "linear_system_infinite",
+       "linear_inequalities"
+      ]
+     },
+     "n": 8,
+     "split": [
+      8
+     ],
+     "minutes_each": 16,
+     "purpose": {
+      "en": "SAT-format systems.",
+      "uz": "SAT formatidagi sistemalar.",
+      "ru": "Системы в формате SAT."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0
+    },
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "algebra",
+      "subskill": [
+       "linear_equations",
+       "linear_functions",
+       "slope",
+       "systems_of_equations",
+       "linear_inequalities"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "alg1"
+      ],
+      "subskill": [
+       "linear_equations",
+       "linear_functions",
+       "slope",
+       "systems_of_equations",
+       "linear_inequalities"
+      ]
+     },
+     "n": 10,
+     "split": [
+      10
+     ],
+     "minutes_each": 19,
+     "purpose": {
+      "en": "Mixed Algebra, timed, earlier units mixed in.",
+      "uz": "Aralash Algebra, vaqtli, oldingi boʻlimlar ham qoʻshilgan.",
+      "ru": "Смешанная алгебра на время с заданиями прошлых разделов."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0.4,
+     "time_limit_s_each": 950
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Math, domain Algebra, skill Systems of two linear equations in two variables; do 10 Hard questions.",
+      "uz": "Question Bankʼda SAT, keyin Math, Algebra domeni va Systems of two linear equations in two variables koʻnikmasini tanlang; Hard (qiyin) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Math, домен Algebra, навык Systems of two linear equations in two variables; решите 10 вопросов уровня Hard (сложные)."
+     },
+     "step": {
+      "minutes": 20
+     }
+    },
+    {
+     "id": "bluebook_tests",
+     "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+     "kind": "full_length_practice_test",
+     "label": {
+      "en": "Bluebook: full-length SAT practice tests",
+      "uz": "Bluebook: SAT boʻyicha toʻliq sinov testlari",
+      "ru": "Bluebook: полные пробные тесты SAT"
+     },
+     "note": {
+      "en": "Official College Board practice tests in the Bluebook app; scores and question review appear in My Practice.",
+      "uz": "College Boardʼning Bluebook ilovasidagi rasmiy sinov testlari; ballar va savollar tahlili My Practice boʻlimida chiqadi.",
+      "ru": "Официальные пробные тесты College Board в приложении Bluebook; баллы и разбор вопросов появляются в разделе My Practice."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/practice-tests",
+     "how": {
+      "en": "After the third unit of every domain, the plan schedules a full-length Bluebook practice test (see the sequence).",
+      "uz": "Har bir domenning uchinchi boʻlimidan keyin reja Bluebookʼda toʻliq sinov testini belgilaydi (ketma-ketlikka qarang).",
+      "ru": "После третьего раздела каждого домена план назначает полный пробный тест в Bluebook (см. последовательность)."
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Math course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Math kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Math на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C1",
+    "where": {
+     "skill": "math",
+     "format": "sat",
+     "sat.domain": "algebra",
+     "subskill": [
+      "systems_of_equations",
+      "linear_system_no_solution",
+      "linear_system_infinite",
+      "linear_inequalities",
+      "linear_functions"
+     ],
+     "sat.difficulty": [
+      "medium",
+      "hard"
+     ]
+    },
+    "fallback_where": {
+     "skill": "math",
+     "rung": [
+      "alg1",
+      "alg2"
+     ],
+     "subskill": [
+      "systems_of_equations",
+      "linear_system_no_solution",
+      "linear_system_infinite",
+      "linear_inequalities",
+      "linear_functions"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 950,
+    "minutes": 19,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "numeric_entry_share": 0.25,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 95 seconds a question, the test's pace (44 questions in 70 minutes). Some ask you to type the answer. Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 95 soniya — test surʼati (70 daqiqada 44 ta savol). Baʼzilarida javobni oʻzingiz yozasiz. Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 95 секунд на вопрос — темп теста (44 вопроса за 70 минут). В некоторых ответ нужно ввести самому. Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Redo the worked example in the explainer, do one more practice set on the skill you missed most, then retake the check with new numbers.",
+     "uz": "Tushuntirishdagi ishlangan misolni qayta bajaring, eng koʻp xato qilgan koʻnikma boʻyicha yana bitta mashq toʻplamini ishlang, keyin tekshiruvni yangi sonlar bilan qayta topshiring.",
+     "ru": "Повторите разобранный пример из объяснения, выполните ещё один набор по навыку с наибольшим числом ошибок и пересдайте проверку с новыми числами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 35,
+    "check": 19,
+    "official_required": 0,
+    "official_optional": 20,
+    "total": 69
+   },
+   "requires": {
+    "math_rung_min": "alg1",
+    "after_units": [
+     "C10-MAAL02"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Math: 44 questions in 70 minutes, two 35-minute modules; Algebra is about 35 % of questions (13-15).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "About 75 % of Math questions are multiple choice and about 25 % ask the student to enter the answer.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "A built-in graphing calculator is available on the entire Math section, and students may bring an approved calculator.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Systems of linear equations and inequalities in two variables",
+      "uz": "Oʻrganing: Ikki oʻzgaruvchili chiziqli tenglamalar sistemasi va tengsizliklar",
+      "ru": "Изучите: Системы линейных уравнений и неравенства с двумя переменными"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 1: Systems of linear equations and inequalities in two variables",
+      "uz": "Mashq 1: Ikki oʻzgaruvchili chiziqli tenglamalar sistemasi va tengsizliklar",
+      "ru": "Практика 1: Системы линейных уравнений и неравенства с двумя переменными"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "Practice 2: Systems of linear equations and inequalities in two variables",
+      "uz": "Mashq 2: Ikki oʻzgaruvchili chiziqli tenglamalar sistemasi va tengsizliklar",
+      "ru": "Практика 2: Системы линейных уравнений и неравенства с двумя переменными"
+     },
+     "practice_ref": 1,
+     "items": 10,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 20,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Systems of linear equations and inequalities in two variables",
+      "uz": "Rasmiy mashq: Ikki oʻzgaruvchili chiziqli tenglamalar sistemasi va tengsizliklar",
+      "ru": "Официальная практика: Системы линейных уравнений и неравенства с двумя переменными"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "End-of-unit check: Systems of linear equations and inequalities in two variables",
+      "uz": "Boʻlim yakuniy tekshiruvi: Ikki oʻzgaruvchili chiziqli tenglamalar sistemasi va tengsizliklar",
+      "ru": "Итоговая проверка раздела: Системы линейных уравнений и неравенства с двумя переменными"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-MAAM01",
+   "test": "SAT",
+   "section": "math",
+   "domain": "advanced_math",
+   "domain_label": {
+    "en": "Advanced Math",
+    "uz": "Advanced Math (yuqori algebra)",
+    "ru": "Advanced Math (продвинутая алгебра)"
+   },
+   "domain_share": {
+    "approx_pct": 35,
+    "questions": "13-15",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 1,
+   "units_in_domain": 3,
+   "level_band": "foundation",
+   "skills": [
+    "polynomial_expansion",
+    "factoring",
+    "exponent_rules",
+    "rational_exponents",
+    "radicals_as_powers",
+    "rational_expression"
+   ],
+   "rungs": [
+    "alg1",
+    "alg2"
+   ],
+   "title": {
+    "en": "Equivalent expressions",
+    "uz": "Teng kuchli ifodalar",
+    "ru": "Равносильные выражения"
+   },
+   "goal": {
+    "en": "Rewrite expressions in equivalent forms: expand and factor polynomials, use exponent rules, and simplify rational and radical expressions.",
+    "uz": "Ifodalarni teng kuchli shaklga keltiring: koʻphadlarni ochib chiqing va koʻpaytuvchilarga ajrating, daraja xossalarini qoʻllang, kasr-ratsional va ildizli ifodalarni soddalashtiring.",
+    "ru": "Преобразуйте выражения в равносильные: раскрывайте скобки и раскладывайте многочлены на множители, применяйте свойства степеней, упрощайте рациональные выражения и выражения с корнями."
+   },
+   "study": [
+    {
+     "en": "Factor in order: take out the common factor first, then use patterns such as a² − b² = (a − b)(a + b) and trinomial factoring.",
+     "uz": "Tartib bilan ajrating: avval umumiy koʻpaytuvchini chiqaring, keyin a² − b² = (a − b)(a + b) kabi formulalar va uchhadni ajratishdan foydalaning.",
+     "ru": "Раскладывайте по порядку: сначала общий множитель, затем формулы вроде a² − b² = (a − b)(a + b) и разложение трёхчлена."
+    },
+    {
+     "en": "Exponent rules: aᵐ·aⁿ = aᵐ⁺ⁿ, (aᵐ)ⁿ = aᵐⁿ, a⁻ⁿ = 1/aⁿ, and a to the power 1/n is the n-th root of a.",
+     "uz": "Daraja xossalari: aᵐ·aⁿ = aᵐ⁺ⁿ, (aᵐ)ⁿ = aᵐⁿ, a⁻ⁿ = 1/aⁿ, a ning 1/n darajasi esa a dan n-darajali ildiz.",
+     "ru": "Свойства степеней: aᵐ·aⁿ = aᵐ⁺ⁿ, (aᵐ)ⁿ = aᵐⁿ, a⁻ⁿ = 1/aⁿ, а a в степени 1/n — корень n-й степени из a."
+    },
+    {
+     "en": "To test whether two expressions are equivalent, substitute a simple value such as x = 2 into both and compare.",
+     "uz": "Ikki ifoda teng kuchli ekanini tekshirish uchun ikkalasiga x = 2 kabi oddiy qiymatni qoʻyib, natijalarni solishtiring.",
+     "ru": "Чтобы проверить равносильность двух выражений, подставьте в оба простое значение, например x = 2, и сравните."
+    }
+   ],
+   "study_ref": {
+    "content": "C2",
+    "where": {
+     "rung": [
+      "alg1",
+      "alg2"
+     ],
+     "subskill": [
+      "polynomial_expansion",
+      "factoring",
+      "exponent_rules",
+      "rational_exponents",
+      "radicals_as_powers",
+      "rational_expression"
+     ]
+    },
+    "fallback_where": {
+     "rung": [
+      "alg1",
+      "alg2"
+     ]
+    },
+    "note": "C2 math explainer (one idea, one worked example, 3-4 checks) read during the study step"
+   },
+   "practice": [
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "rung": [
+       "alg1"
+      ],
+      "subskill": [
+       "like_terms",
+       "polynomial_expansion",
+       "factoring"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "alg1"
+      ]
+     },
+     "n": 8,
+     "split": [
+      8
+     ],
+     "minutes_each": 8,
+     "purpose": {
+      "en": "Warm-up: expanding and factoring.",
+      "uz": "Tayyorgarlik: qavslarni ochish va ajratish.",
+      "ru": "Разминка: раскрытие скобок и разложение."
+     },
+     "instances": "fresh parameters each time (templates)"
+    },
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "advanced_math",
+      "subskill": [
+       "polynomial_expansion",
+       "factoring",
+       "exponent_rules",
+       "rational_exponents",
+       "radicals_as_powers",
+       "rational_expression"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "alg1",
+       "alg2"
+      ],
+      "subskill": [
+       "polynomial_expansion",
+       "factoring",
+       "exponent_rules",
+       "rational_exponents",
+       "radicals_as_powers",
+       "rational_expression"
+      ]
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 16,
+     "purpose": {
+      "en": "SAT-format equivalent expressions.",
+      "uz": "SAT formatidagi teng kuchli ifodalar.",
+      "ru": "Равносильные выражения в формате SAT."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Math, domain Advanced Math, skill Equivalent expressions; do 10 Easy questions.",
+      "uz": "Question Bankʼda SAT, keyin Math, Advanced Math domeni va Equivalent expressions koʻnikmasini tanlang; Easy (oson) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Math, домен Advanced Math, навык Equivalent expressions; решите 10 вопросов уровня Easy (лёгкие)."
+     },
+     "step": {
+      "minutes": 20
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Math course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Math kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Math на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C1",
+    "where": {
+     "skill": "math",
+     "format": "sat",
+     "sat.domain": "advanced_math",
+     "subskill": [
+      "polynomial_expansion",
+      "factoring",
+      "exponent_rules",
+      "rational_exponents",
+      "radicals_as_powers",
+      "rational_expression"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "fallback_where": {
+     "skill": "math",
+     "rung": [
+      "alg1",
+      "alg2"
+     ],
+     "subskill": [
+      "polynomial_expansion",
+      "factoring",
+      "exponent_rules",
+      "rational_exponents",
+      "radicals_as_powers",
+      "rational_expression"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 950,
+    "minutes": 19,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "numeric_entry_share": 0.25,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 95 seconds a question, the test's pace (44 questions in 70 minutes). Some ask you to type the answer. Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 95 soniya — test surʼati (70 daqiqada 44 ta savol). Baʼzilarida javobni oʻzingiz yozasiz. Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 95 секунд на вопрос — темп теста (44 вопроса за 70 минут). В некоторых ответ нужно ввести самому. Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Redo the worked example in the explainer, do one more practice set on the skill you missed most, then retake the check with new numbers.",
+     "uz": "Tushuntirishdagi ishlangan misolni qayta bajaring, eng koʻp xato qilgan koʻnikma boʻyicha yana bitta mashq toʻplamini ishlang, keyin tekshiruvni yangi sonlar bilan qayta topshiring.",
+     "ru": "Повторите разобранный пример из объяснения, выполните ещё один набор по навыку с наибольшим числом ошибок и пересдайте проверку с новыми числами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 40,
+    "check": 19,
+    "official_required": 0,
+    "official_optional": 20,
+    "total": 74
+   },
+   "requires": {
+    "math_rung_min": "alg1",
+    "after_units": [],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Math: 44 questions in 70 minutes, two 35-minute modules; Advanced Math is about 35 % of questions (13-15).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "About 75 % of Math questions are multiple choice and about 25 % ask the student to enter the answer.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "A built-in graphing calculator is available on the entire Math section, and students may bring an approved calculator.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Equivalent expressions",
+      "uz": "Oʻrganing: Teng kuchli ifodalar",
+      "ru": "Изучите: Равносильные выражения"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 8,
+     "title": {
+      "en": "Practice 1: Equivalent expressions",
+      "uz": "Mashq 1: Teng kuchli ifodalar",
+      "ru": "Практика 1: Равносильные выражения"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 2: Equivalent expressions",
+      "uz": "Mashq 2: Teng kuchli ifodalar",
+      "ru": "Практика 2: Равносильные выражения"
+     },
+     "practice_ref": 1,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 3: Equivalent expressions",
+      "uz": "Mashq 3: Teng kuchli ifodalar",
+      "ru": "Практика 3: Равносильные выражения"
+     },
+     "practice_ref": 1,
+     "items": 8,
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 20,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Equivalent expressions",
+      "uz": "Rasmiy mashq: Teng kuchli ifodalar",
+      "ru": "Официальная практика: Равносильные выражения"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 5
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "End-of-unit check: Equivalent expressions",
+      "uz": "Boʻlim yakuniy tekshiruvi: Teng kuchli ifodalar",
+      "ru": "Итоговая проверка раздела: Равносильные выражения"
+     },
+     "end_check": true,
+     "n": 6
+    }
+   ],
+   "sessions": 5,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-MAAM02",
+   "test": "SAT",
+   "section": "math",
+   "domain": "advanced_math",
+   "domain_label": {
+    "en": "Advanced Math",
+    "uz": "Advanced Math (yuqori algebra)",
+    "ru": "Advanced Math (продвинутая алгебра)"
+   },
+   "domain_share": {
+    "approx_pct": 35,
+    "questions": "13-15",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 2,
+   "units_in_domain": 3,
+   "level_band": "core",
+   "skills": [
+    "quadratic_factoring",
+    "quadratic_formula",
+    "discriminant",
+    "absolute_value_equation",
+    "radical_equation",
+    "rational_equation",
+    "nonlinear_system"
+   ],
+   "rungs": [
+    "alg2"
+   ],
+   "title": {
+    "en": "Nonlinear equations and systems",
+    "uz": "Chiziqli boʻlmagan tenglamalar va sistemalar",
+    "ru": "Нелинейные уравнения и системы"
+   },
+   "goal": {
+    "en": "Solve quadratic, absolute value, radical and rational equations, and systems of one linear and one nonlinear equation.",
+    "uz": "Kvadrat, modulli, ildizli va kasr-ratsional tenglamalarni hamda bitta chiziqli va bitta chiziqli boʻlmagan tenglamadan iborat sistemalarni yeching.",
+    "ru": "Решайте квадратные уравнения, уравнения с модулем, с корнями и рациональные уравнения, а также системы из одного линейного и одного нелинейного уравнения."
+   },
+   "study": [
+    {
+     "en": "Quadratics: factor when you can; otherwise use x = (−b ± √(b² − 4ac)) ÷ 2a. The discriminant b² − 4ac tells you how many real solutions there are.",
+     "uz": "Kvadrat tenglamalar: imkon boʻlsa, koʻpaytuvchilarga ajrating; aks holda x = (−b ± √(b² − 4ac)) ÷ 2a formulasidan foydalaning. Diskriminant b² − 4ac haqiqiy yechimlar sonini koʻrsatadi.",
+     "ru": "Квадратные уравнения: если можно, раскладывайте на множители; иначе используйте x = (−b ± √(b² − 4ac)) ÷ 2a. Дискриминант b² − 4ac показывает число действительных корней."
+    },
+    {
+     "en": "Radical and rational equations: check every solution in the original equation, because squaring or clearing denominators can add false ones.",
+     "uz": "Ildizli va kasr-ratsional tenglamalar: har bir yechimni asl tenglamada tekshiring, chunki kvadratga koʻtarish yoki maxrajdan qutulish soxta yechim qoʻshishi mumkin.",
+     "ru": "Уравнения с корнями и рациональные: проверяйте каждое решение в исходном уравнении — возведение в квадрат или избавление от знаменателя может дать посторонние корни."
+    },
+    {
+     "en": "For a line and a parabola, substitute the line into the quadratic and solve the quadratic that results.",
+     "uz": "Toʻgʻri chiziq va parabola uchun chiziq tenglamasini kvadrat tenglamaga qoʻying va hosil boʻlgan kvadrat tenglamani yeching.",
+     "ru": "Для прямой и параболы подставьте уравнение прямой в квадратное и решите получившееся квадратное уравнение."
+    }
+   ],
+   "study_ref": {
+    "content": "C2",
+    "where": {
+     "rung": [
+      "alg2"
+     ],
+     "subskill": [
+      "quadratic_factoring",
+      "quadratic_formula",
+      "discriminant",
+      "absolute_value_equation",
+      "radical_equation",
+      "rational_equation",
+      "nonlinear_system"
+     ]
+    },
+    "fallback_where": {
+     "rung": [
+      "alg2"
+     ]
+    },
+    "note": "C2 math explainer (one idea, one worked example, 3-4 checks) read during the study step"
+   },
+   "practice": [
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "advanced_math",
+      "subskill": [
+       "quadratic_factoring",
+       "quadratic_formula",
+       "discriminant",
+       "absolute_value_equation",
+       "radical_equation",
+       "rational_equation",
+       "nonlinear_system"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "alg2"
+      ],
+      "subskill": [
+       "quadratic_factoring",
+       "quadratic_formula",
+       "discriminant",
+       "absolute_value_equation",
+       "radical_equation",
+       "rational_equation",
+       "nonlinear_system"
+      ]
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 16,
+     "purpose": {
+      "en": "SAT-format nonlinear equations.",
+      "uz": "SAT formatidagi chiziqli boʻlmagan tenglamalar.",
+      "ru": "Нелинейные уравнения в формате SAT."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Math, domain Advanced Math, skill Nonlinear equations in one variable and systems of equations in two variables; do 10 Medium questions.",
+      "uz": "Question Bankʼda SAT, keyin Math, Advanced Math domeni va Nonlinear equations in one variable and systems of equations in two variables koʻnikmasini tanlang; Medium (oʻrta) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Math, домен Advanced Math, навык Nonlinear equations in one variable and systems of equations in two variables; решите 10 вопросов уровня Medium (средние)."
+     },
+     "step": {
+      "minutes": 20
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Math course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Math kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Math на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C1",
+    "where": {
+     "skill": "math",
+     "format": "sat",
+     "sat.domain": "advanced_math",
+     "subskill": [
+      "quadratic_factoring",
+      "quadratic_formula",
+      "discriminant",
+      "absolute_value_equation",
+      "radical_equation",
+      "rational_equation",
+      "nonlinear_system"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "fallback_where": {
+     "skill": "math",
+     "rung": [
+      "alg2"
+     ],
+     "subskill": [
+      "quadratic_factoring",
+      "quadratic_formula",
+      "discriminant",
+      "absolute_value_equation",
+      "radical_equation",
+      "rational_equation",
+      "nonlinear_system"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 950,
+    "minutes": 19,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "numeric_entry_share": 0.25,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 95 seconds a question, the test's pace (44 questions in 70 minutes). Some ask you to type the answer. Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 95 soniya — test surʼati (70 daqiqada 44 ta savol). Baʼzilarida javobni oʻzingiz yozasiz. Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 95 секунд на вопрос — темп теста (44 вопроса за 70 минут). В некоторых ответ нужно ввести самому. Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Redo the worked example in the explainer, do one more practice set on the skill you missed most, then retake the check with new numbers.",
+     "uz": "Tushuntirishdagi ishlangan misolni qayta bajaring, eng koʻp xato qilgan koʻnikma boʻyicha yana bitta mashq toʻplamini ishlang, keyin tekshiruvni yangi sonlar bilan qayta topshiring.",
+     "ru": "Повторите разобранный пример из объяснения, выполните ещё один набор по навыку с наибольшим числом ошибок и пересдайте проверку с новыми числами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 32,
+    "check": 19,
+    "official_required": 0,
+    "official_optional": 20,
+    "total": 66
+   },
+   "requires": {
+    "math_rung_min": "alg1",
+    "after_units": [
+     "C10-MAAM01"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Math: 44 questions in 70 minutes, two 35-minute modules; Advanced Math is about 35 % of questions (13-15).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "About 75 % of Math questions are multiple choice and about 25 % ask the student to enter the answer.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "A built-in graphing calculator is available on the entire Math section, and students may bring an approved calculator.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Nonlinear equations and systems",
+      "uz": "Oʻrganing: Chiziqli boʻlmagan tenglamalar va sistemalar",
+      "ru": "Изучите: Нелинейные уравнения и системы"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 1: Nonlinear equations and systems",
+      "uz": "Mashq 1: Chiziqli boʻlmagan tenglamalar va sistemalar",
+      "ru": "Практика 1: Нелинейные уравнения и системы"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 2: Nonlinear equations and systems",
+      "uz": "Mashq 2: Chiziqli boʻlmagan tenglamalar va sistemalar",
+      "ru": "Практика 2: Нелинейные уравнения и системы"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 20,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Nonlinear equations and systems",
+      "uz": "Rasmiy mashq: Chiziqli boʻlmagan tenglamalar va sistemalar",
+      "ru": "Официальная практика: Нелинейные уравнения и системы"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "End-of-unit check: Nonlinear equations and systems",
+      "uz": "Boʻlim yakuniy tekshiruvi: Chiziqli boʻlmagan tenglamalar va sistemalar",
+      "ru": "Итоговая проверка раздела: Нелинейные уравнения и системы"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-MAAM03",
+   "test": "SAT",
+   "section": "math",
+   "domain": "advanced_math",
+   "domain_label": {
+    "en": "Advanced Math",
+    "uz": "Advanced Math (yuqori algebra)",
+    "ru": "Advanced Math (продвинутая алгебра)"
+   },
+   "domain_share": {
+    "approx_pct": 35,
+    "questions": "13-15",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 3,
+   "units_in_domain": 3,
+   "level_band": "advanced",
+   "skills": [
+    "vertex_form",
+    "polynomial_zeros",
+    "exponential_model",
+    "exponential_decay",
+    "exponential_functions",
+    "function_transformations",
+    "function_composition"
+   ],
+   "rungs": [
+    "alg2",
+    "precalc"
+   ],
+   "title": {
+    "en": "Nonlinear functions",
+    "uz": "Chiziqli boʻlmagan funksiyalar",
+    "ru": "Нелинейные функции"
+   },
+   "goal": {
+    "en": "Read and build quadratic, exponential and polynomial functions: the vertex, the zeros, growth and decay, and how a graph moves under a transformation.",
+    "uz": "Kvadrat, koʻrsatkichli va koʻphad funksiyalarni oʻqing va tuzing: parabola uchi, funksiya nollari, oʻsish va kamayish, almashtirishda grafik qanday siljishi.",
+    "ru": "Читайте и составляйте квадратичные, показательные и многочленные функции: вершина, нули, рост и убывание, сдвиг графика при преобразовании."
+   },
+   "study": [
+    {
+     "en": "Vertex form y = a(x − h)² + k shows the vertex (h, k); factored form y = a(x − p)(x − q) shows the zeros p and q.",
+     "uz": "y = a(x − h)² + k koʻrinishi parabola uchini (h, k) koʻrsatadi; y = a(x − p)(x − q) koʻrinishi esa p va q nollarni koʻrsatadi.",
+     "ru": "Вид y = a(x − h)² + k показывает вершину (h, k); вид y = a(x − p)(x − q) показывает нули p и q."
+    },
+    {
+     "en": "In y = a·bˣ, b > 1 means growth and 0 < b < 1 means decay; a change of r per period gives b = 1 + r for growth or 1 − r for decay.",
+     "uz": "y = a·bˣ da b > 1 oʻsishni, 0 < b < 1 esa kamayishni bildiradi; har davrda r ulushga oʻzgarish oʻsishda b = 1 + r, kamayishda b = 1 − r beradi.",
+     "ru": "В y = a·bˣ при b > 1 — рост, при 0 < b < 1 — убывание; изменение на долю r за период даёт b = 1 + r при росте и b = 1 − r при убывании."
+    },
+    {
+     "en": "f(x) + k moves the graph up by k; f(x − h) moves it right by h; −f(x) reflects it in the x-axis.",
+     "uz": "f(x) + k grafikni k birlik yuqoriga, f(x − h) esa h birlik oʻngga suradi; −f(x) uni x oʻqiga nisbatan aks ettiradi.",
+     "ru": "f(x) + k сдвигает график вверх на k, f(x − h) — вправо на h, −f(x) отражает его относительно оси x."
+    }
+   ],
+   "study_ref": {
+    "content": "C2",
+    "where": {
+     "rung": [
+      "alg2",
+      "precalc"
+     ],
+     "subskill": [
+      "vertex_form",
+      "polynomial_zeros",
+      "exponential_model",
+      "exponential_decay",
+      "exponential_functions",
+      "function_transformations",
+      "function_composition"
+     ]
+    },
+    "fallback_where": {
+     "rung": [
+      "alg2",
+      "precalc"
+     ]
+    },
+    "note": "C2 math explainer (one idea, one worked example, 3-4 checks) read during the study step"
+   },
+   "practice": [
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "advanced_math",
+      "subskill": [
+       "vertex_form",
+       "polynomial_zeros",
+       "exponential_model",
+       "exponential_decay",
+       "exponential_functions",
+       "function_transformations",
+       "function_composition"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "alg2",
+       "precalc"
+      ],
+      "subskill": [
+       "vertex_form",
+       "polynomial_zeros",
+       "exponential_model",
+       "exponential_decay",
+       "exponential_functions",
+       "function_transformations",
+       "function_composition"
+      ]
+     },
+     "n": 8,
+     "split": [
+      8
+     ],
+     "minutes_each": 16,
+     "purpose": {
+      "en": "SAT-format nonlinear functions.",
+      "uz": "SAT formatidagi chiziqli boʻlmagan funksiyalar.",
+      "ru": "Нелинейные функции в формате SAT."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0
+    },
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "advanced_math",
+      "subskill": [
+       "vertex_form",
+       "polynomial_zeros",
+       "exponential_model",
+       "exponential_decay",
+       "exponential_functions",
+       "function_transformations",
+       "function_composition",
+       "factoring",
+       "quadratic_formula",
+       "discriminant"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "alg2"
+      ],
+      "subskill": [
+       "vertex_form",
+       "polynomial_zeros",
+       "exponential_model",
+       "exponential_decay",
+       "exponential_functions",
+       "function_transformations",
+       "function_composition",
+       "factoring",
+       "quadratic_formula",
+       "discriminant"
+      ]
+     },
+     "n": 10,
+     "split": [
+      10
+     ],
+     "minutes_each": 19,
+     "purpose": {
+      "en": "Mixed Advanced Math, timed, earlier units mixed in.",
+      "uz": "Aralash Advanced Math, vaqtli, oldingi boʻlimlar ham qoʻshilgan.",
+      "ru": "Смешанный Advanced Math на время с заданиями прошлых разделов."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0.4,
+     "time_limit_s_each": 950
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Math, domain Advanced Math, skill Nonlinear functions; do 10 Hard questions.",
+      "uz": "Question Bankʼda SAT, keyin Math, Advanced Math domeni va Nonlinear functions koʻnikmasini tanlang; Hard (qiyin) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Math, домен Advanced Math, навык Nonlinear functions; решите 10 вопросов уровня Hard (сложные)."
+     },
+     "step": {
+      "minutes": 20
+     }
+    },
+    {
+     "id": "bluebook_tests",
+     "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+     "kind": "full_length_practice_test",
+     "label": {
+      "en": "Bluebook: full-length SAT practice tests",
+      "uz": "Bluebook: SAT boʻyicha toʻliq sinov testlari",
+      "ru": "Bluebook: полные пробные тесты SAT"
+     },
+     "note": {
+      "en": "Official College Board practice tests in the Bluebook app; scores and question review appear in My Practice.",
+      "uz": "College Boardʼning Bluebook ilovasidagi rasmiy sinov testlari; ballar va savollar tahlili My Practice boʻlimida chiqadi.",
+      "ru": "Официальные пробные тесты College Board в приложении Bluebook; баллы и разбор вопросов появляются в разделе My Practice."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/practice-tests",
+     "how": {
+      "en": "After the third unit of every domain, the plan schedules a full-length Bluebook practice test (see the sequence).",
+      "uz": "Har bir domenning uchinchi boʻlimidan keyin reja Bluebookʼda toʻliq sinov testini belgilaydi (ketma-ketlikka qarang).",
+      "ru": "После третьего раздела каждого домена план назначает полный пробный тест в Bluebook (см. последовательность)."
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Math course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Math kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Math на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C1",
+    "where": {
+     "skill": "math",
+     "format": "sat",
+     "sat.domain": "advanced_math",
+     "subskill": [
+      "vertex_form",
+      "polynomial_zeros",
+      "exponential_model",
+      "exponential_decay",
+      "exponential_functions",
+      "function_transformations",
+      "function_composition",
+      "quadratic_formula",
+      "discriminant"
+     ],
+     "sat.difficulty": [
+      "medium",
+      "hard"
+     ]
+    },
+    "fallback_where": {
+     "skill": "math",
+     "rung": [
+      "alg2",
+      "precalc"
+     ],
+     "subskill": [
+      "vertex_form",
+      "polynomial_zeros",
+      "exponential_model",
+      "exponential_decay",
+      "exponential_functions",
+      "function_transformations",
+      "function_composition",
+      "quadratic_formula",
+      "discriminant"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 950,
+    "minutes": 19,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "numeric_entry_share": 0.25,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 95 seconds a question, the test's pace (44 questions in 70 minutes). Some ask you to type the answer. Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 95 soniya — test surʼati (70 daqiqada 44 ta savol). Baʼzilarida javobni oʻzingiz yozasiz. Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 95 секунд на вопрос — темп теста (44 вопроса за 70 минут). В некоторых ответ нужно ввести самому. Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Redo the worked example in the explainer, do one more practice set on the skill you missed most, then retake the check with new numbers.",
+     "uz": "Tushuntirishdagi ishlangan misolni qayta bajaring, eng koʻp xato qilgan koʻnikma boʻyicha yana bitta mashq toʻplamini ishlang, keyin tekshiruvni yangi sonlar bilan qayta topshiring.",
+     "ru": "Повторите разобранный пример из объяснения, выполните ещё один набор по навыку с наибольшим числом ошибок и пересдайте проверку с новыми числами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 35,
+    "check": 19,
+    "official_required": 0,
+    "official_optional": 20,
+    "total": 69
+   },
+   "requires": {
+    "math_rung_min": "alg2",
+    "after_units": [
+     "C10-MAAM02"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Math: 44 questions in 70 minutes, two 35-minute modules; Advanced Math is about 35 % of questions (13-15).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "About 75 % of Math questions are multiple choice and about 25 % ask the student to enter the answer.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "A built-in graphing calculator is available on the entire Math section, and students may bring an approved calculator.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Nonlinear functions",
+      "uz": "Oʻrganing: Chiziqli boʻlmagan funksiyalar",
+      "ru": "Изучите: Нелинейные функции"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 1: Nonlinear functions",
+      "uz": "Mashq 1: Chiziqli boʻlmagan funksiyalar",
+      "ru": "Практика 1: Нелинейные функции"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "Practice 2: Nonlinear functions",
+      "uz": "Mashq 2: Chiziqli boʻlmagan funksiyalar",
+      "ru": "Практика 2: Нелинейные функции"
+     },
+     "practice_ref": 1,
+     "items": 10,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 20,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Nonlinear functions",
+      "uz": "Rasmiy mashq: Chiziqli boʻlmagan funksiyalar",
+      "ru": "Официальная практика: Нелинейные функции"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "End-of-unit check: Nonlinear functions",
+      "uz": "Boʻlim yakuniy tekshiruvi: Chiziqli boʻlmagan funksiyalar",
+      "ru": "Итоговая проверка раздела: Нелинейные функции"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-MAPS01",
+   "test": "SAT",
+   "section": "math",
+   "domain": "psda",
+   "domain_label": {
+    "en": "Problem-Solving and Data Analysis",
+    "uz": "Problem-Solving and Data Analysis (masalalar va maʼlumotlar tahlili)",
+    "ru": "Problem-Solving and Data Analysis (задачи и анализ данных)"
+   },
+   "domain_share": {
+    "approx_pct": 15,
+    "questions": "5-7",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 1,
+   "units_in_domain": 3,
+   "level_band": "foundation",
+   "skills": [
+    "ratio",
+    "proportion",
+    "unit_rate",
+    "rate_distance",
+    "percent",
+    "percent_change"
+   ],
+   "rungs": [
+    "prealg"
+   ],
+   "title": {
+    "en": "Ratios, rates, units and percentages",
+    "uz": "Nisbatlar, tezliklar, birliklar va foizlar",
+    "ru": "Отношения, скорости, единицы и проценты"
+   },
+   "goal": {
+    "en": "Solve problems with ratios, rates, proportional relationships, unit conversions and percentages, including percent increase and decrease.",
+    "uz": "Nisbat, tezlik, proporsional bogʻliqlik, oʻlchov birliklarini oʻtkazish va foizlarga oid masalalarni, jumladan foizli oshish va kamayishni yeching.",
+    "ru": "Решайте задачи на отношения, скорости, пропорциональность, перевод единиц и проценты, включая процентное увеличение и уменьшение."
+   },
+   "study": [
+    {
+     "en": "Write the units at every step; if they cancel to the units you want, the setup is right.",
+     "uz": "Har bir qadamda oʻlchov birliklarini yozing; agar ular qisqarib, kerakli birlik qolsa, masala toʻgʻri tuzilgan.",
+     "ru": "Пишите единицы на каждом шаге; если после сокращения остаются нужные единицы, задача составлена верно."
+    },
+    {
+     "en": "Percent change = (new − old) ÷ old × 100; a 20 % increase followed by a 20 % decrease does not bring you back to the start.",
+     "uz": "Foizli oʻzgarish = (yangi − eski) ÷ eski × 100; 20 % oshib, keyin 20 % kamaysa, boshlangʻich qiymatga qaytilmaydi.",
+     "ru": "Процентное изменение = (новое − старое) ÷ старое × 100; рост на 20 %, а затем снижение на 20 % не возвращают к исходному значению."
+    },
+    {
+     "en": "For a proportional relationship, write two equal ratios and cross-multiply.",
+     "uz": "Proporsional bogʻliqlikda ikkita teng nisbat yozing va ularni koʻndalang koʻpaytiring.",
+     "ru": "Для пропорциональной зависимости запишите два равных отношения и перемножьте крест-накрест."
+    }
+   ],
+   "study_ref": {
+    "content": "C2",
+    "where": {
+     "rung": [
+      "prealg"
+     ],
+     "subskill": [
+      "ratio",
+      "proportion",
+      "unit_rate",
+      "rate_distance",
+      "percent",
+      "percent_change"
+     ]
+    },
+    "fallback_where": {
+     "rung": [
+      "prealg"
+     ]
+    },
+    "note": "C2 math explainer (one idea, one worked example, 3-4 checks) read during the study step"
+   },
+   "practice": [
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "rung": [
+       "prealg"
+      ],
+      "subskill": [
+       "ratio",
+       "percent",
+       "unit_rate"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "prealg"
+      ]
+     },
+     "n": 8,
+     "split": [
+      8
+     ],
+     "minutes_each": 8,
+     "purpose": {
+      "en": "Warm-up: ratios and percentages.",
+      "uz": "Tayyorgarlik: nisbatlar va foizlar.",
+      "ru": "Разминка: отношения и проценты."
+     },
+     "instances": "fresh parameters each time (templates)"
+    },
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "psda",
+      "subskill": [
+       "ratio",
+       "proportion",
+       "unit_rate",
+       "rate_distance",
+       "percent",
+       "percent_change"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "prealg",
+       "alg2"
+      ],
+      "subskill": [
+       "ratio",
+       "proportion",
+       "unit_rate",
+       "rate_distance",
+       "percent",
+       "percent_change"
+      ]
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 16,
+     "purpose": {
+      "en": "SAT-format ratio, rate and percentage problems.",
+      "uz": "SAT formatidagi nisbat, tezlik va foiz masalalari.",
+      "ru": "Задачи на отношения, скорости и проценты в формате SAT."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Math, domain Problem-Solving and Data Analysis, skill Ratios, rates, proportional relationships, and units; do 10 Easy questions.",
+      "uz": "Question Bankʼda SAT, keyin Math, Problem-Solving and Data Analysis domeni va Ratios, rates, proportional relationships, and units koʻnikmasini tanlang; Easy (oson) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Math, домен Problem-Solving and Data Analysis, навык Ratios, rates, proportional relationships, and units; решите 10 вопросов уровня Easy (лёгкие)."
+     },
+     "step": {
+      "minutes": 20
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Math course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Math kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Math на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C1",
+    "where": {
+     "skill": "math",
+     "format": "sat",
+     "sat.domain": "psda",
+     "subskill": [
+      "ratio",
+      "proportion",
+      "unit_rate",
+      "rate_distance",
+      "percent",
+      "percent_change"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "fallback_where": {
+     "skill": "math",
+     "rung": [
+      "prealg",
+      "alg2"
+     ],
+     "subskill": [
+      "ratio",
+      "proportion",
+      "unit_rate",
+      "rate_distance",
+      "percent",
+      "percent_change"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 950,
+    "minutes": 19,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "numeric_entry_share": 0.25,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 95 seconds a question, the test's pace (44 questions in 70 minutes). Some ask you to type the answer. Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 95 soniya — test surʼati (70 daqiqada 44 ta savol). Baʼzilarida javobni oʻzingiz yozasiz. Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 95 секунд на вопрос — темп теста (44 вопроса за 70 минут). В некоторых ответ нужно ввести самому. Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Redo the worked example in the explainer, do one more practice set on the skill you missed most, then retake the check with new numbers.",
+     "uz": "Tushuntirishdagi ishlangan misolni qayta bajaring, eng koʻp xato qilgan koʻnikma boʻyicha yana bitta mashq toʻplamini ishlang, keyin tekshiruvni yangi sonlar bilan qayta topshiring.",
+     "ru": "Повторите разобранный пример из объяснения, выполните ещё один набор по навыку с наибольшим числом ошибок и пересдайте проверку с новыми числами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 40,
+    "check": 19,
+    "official_required": 0,
+    "official_optional": 20,
+    "total": 74
+   },
+   "requires": {
+    "math_rung_min": "prealg",
+    "after_units": [],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Math: 44 questions in 70 minutes, two 35-minute modules; Problem-Solving and Data Analysis is about 15 % of questions (5-7).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "About 75 % of Math questions are multiple choice and about 25 % ask the student to enter the answer.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "A built-in graphing calculator is available on the entire Math section, and students may bring an approved calculator.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Ratios, rates, units and percentages",
+      "uz": "Oʻrganing: Nisbatlar, tezliklar, birliklar va foizlar",
+      "ru": "Изучите: Отношения, скорости, единицы и проценты"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 8,
+     "title": {
+      "en": "Practice 1: Ratios, rates, units and percentages",
+      "uz": "Mashq 1: Nisbatlar, tezliklar, birliklar va foizlar",
+      "ru": "Практика 1: Отношения, скорости, единицы и проценты"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 2: Ratios, rates, units and percentages",
+      "uz": "Mashq 2: Nisbatlar, tezliklar, birliklar va foizlar",
+      "ru": "Практика 2: Отношения, скорости, единицы и проценты"
+     },
+     "practice_ref": 1,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 3: Ratios, rates, units and percentages",
+      "uz": "Mashq 3: Nisbatlar, tezliklar, birliklar va foizlar",
+      "ru": "Практика 3: Отношения, скорости, единицы и проценты"
+     },
+     "practice_ref": 1,
+     "items": 8,
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 20,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Ratios, rates, units and percentages",
+      "uz": "Rasmiy mashq: Nisbatlar, tezliklar, birliklar va foizlar",
+      "ru": "Официальная практика: Отношения, скорости, единицы и проценты"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 5
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "End-of-unit check: Ratios, rates, units and percentages",
+      "uz": "Boʻlim yakuniy tekshiruvi: Nisbatlar, tezliklar, birliklar va foizlar",
+      "ru": "Итоговая проверка раздела: Отношения, скорости, единицы и проценты"
+     },
+     "end_check": true,
+     "n": 6
+    }
+   ],
+   "sessions": 5,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-MAPS02",
+   "test": "SAT",
+   "section": "math",
+   "domain": "psda",
+   "domain_label": {
+    "en": "Problem-Solving and Data Analysis",
+    "uz": "Problem-Solving and Data Analysis (masalalar va maʼlumotlar tahlili)",
+    "ru": "Problem-Solving and Data Analysis (задачи и анализ данных)"
+   },
+   "domain_share": {
+    "approx_pct": 15,
+    "questions": "5-7",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 2,
+   "units_in_domain": 3,
+   "level_band": "core",
+   "skills": [
+    "mean",
+    "median",
+    "standard_deviation",
+    "scatterplots",
+    "linear_models",
+    "exponential_model"
+   ],
+   "rungs": [
+    "prealg",
+    "alg1"
+   ],
+   "title": {
+    "en": "One-variable and two-variable data",
+    "uz": "Bir va ikki oʻzgaruvchili maʼlumotlar",
+    "ru": "Данные с одной и двумя переменными"
+   },
+   "goal": {
+    "en": "Describe data with the mean, median, range and standard deviation, and read scatterplots and the models that fit them.",
+    "uz": "Maʼlumotlarni oʻrta arifmetik, mediana, qiymatlar oraligʻi va standart chetlanish orqali tasvirlang; nuqtali diagrammalar va ularga mos modellarni oʻqing.",
+    "ru": "Описывайте данные через среднее, медиану, размах и стандартное отклонение, читайте диаграммы рассеяния и подходящие к ним модели."
+   },
+   "study": [
+    {
+     "en": "An extreme value (an outlier) moves the mean much more than the median.",
+     "uz": "Keskin farq qiladigan qiymat (outlier) oʻrta arifmetikni medianaga qaraganda ancha koʻproq siljitadi.",
+     "ru": "Резко выделяющееся значение (выброс) сдвигает среднее гораздо сильнее, чем медиану."
+    },
+    {
+     "en": "Standard deviation measures spread: data clustered close to the mean have a smaller standard deviation.",
+     "uz": "Standart chetlanish tarqoqlikni oʻlchaydi: oʻrta qiymat atrofida zich joylashgan maʼlumotlarning standart chetlanishi kichikroq.",
+     "ru": "Стандартное отклонение измеряет разброс: у данных, сгруппированных около среднего, оно меньше."
+    },
+    {
+     "en": "In a line of best fit, the slope is the predicted change in y for each unit of x; a prediction far outside the data is unreliable.",
+     "uz": "Eng mos chiziqda burchak koeffitsiyenti x ning har bir birligiga y ning taxminiy oʻzgarishi; maʼlumotlar chegarasidan uzoqdagi bashorat ishonchsiz.",
+     "ru": "У линии наилучшего приближения угловой коэффициент — предсказанное изменение y на единицу x; прогноз далеко за пределами данных ненадёжен."
+    }
+   ],
+   "study_ref": {
+    "content": "C2",
+    "where": {
+     "rung": [
+      "prealg",
+      "alg1"
+     ],
+     "subskill": [
+      "mean",
+      "median",
+      "standard_deviation",
+      "scatterplots",
+      "linear_models",
+      "exponential_model"
+     ]
+    },
+    "fallback_where": {
+     "rung": [
+      "prealg",
+      "alg1"
+     ]
+    },
+    "note": "C2 math explainer (one idea, one worked example, 3-4 checks) read during the study step"
+   },
+   "practice": [
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "psda",
+      "subskill": [
+       "mean",
+       "median",
+       "standard_deviation",
+       "scatterplots",
+       "linear_models",
+       "exponential_model"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "prealg",
+       "alg1"
+      ],
+      "subskill": [
+       "mean",
+       "median",
+       "standard_deviation",
+       "scatterplots",
+       "linear_models",
+       "exponential_model"
+      ]
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 16,
+     "purpose": {
+      "en": "SAT-format data questions.",
+      "uz": "SAT formatidagi maʼlumotlar savollari.",
+      "ru": "Вопросы по данным в формате SAT."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Math, domain Problem-Solving and Data Analysis, skill One-variable data: distributions and measures of center and spread; do 10 Medium questions.",
+      "uz": "Question Bankʼda SAT, keyin Math, Problem-Solving and Data Analysis domeni va One-variable data: distributions and measures of center and spread koʻnikmasini tanlang; Medium (oʻrta) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Math, домен Problem-Solving and Data Analysis, навык One-variable data: distributions and measures of center and spread; решите 10 вопросов уровня Medium (средние)."
+     },
+     "step": {
+      "minutes": 20
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Math course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Math kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Math на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C1",
+    "where": {
+     "skill": "math",
+     "format": "sat",
+     "sat.domain": "psda",
+     "subskill": [
+      "mean",
+      "median",
+      "standard_deviation",
+      "scatterplots",
+      "linear_models",
+      "exponential_model"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "fallback_where": {
+     "skill": "math",
+     "rung": [
+      "prealg",
+      "alg1"
+     ],
+     "subskill": [
+      "mean",
+      "median",
+      "standard_deviation",
+      "scatterplots",
+      "linear_models",
+      "exponential_model"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 950,
+    "minutes": 19,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "numeric_entry_share": 0.25,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 95 seconds a question, the test's pace (44 questions in 70 minutes). Some ask you to type the answer. Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 95 soniya — test surʼati (70 daqiqada 44 ta savol). Baʼzilarida javobni oʻzingiz yozasiz. Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 95 секунд на вопрос — темп теста (44 вопроса за 70 минут). В некоторых ответ нужно ввести самому. Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Redo the worked example in the explainer, do one more practice set on the skill you missed most, then retake the check with new numbers.",
+     "uz": "Tushuntirishdagi ishlangan misolni qayta bajaring, eng koʻp xato qilgan koʻnikma boʻyicha yana bitta mashq toʻplamini ishlang, keyin tekshiruvni yangi sonlar bilan qayta topshiring.",
+     "ru": "Повторите разобранный пример из объяснения, выполните ещё один набор по навыку с наибольшим числом ошибок и пересдайте проверку с новыми числами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 32,
+    "check": 19,
+    "official_required": 0,
+    "official_optional": 20,
+    "total": 66
+   },
+   "requires": {
+    "math_rung_min": "prealg",
+    "after_units": [
+     "C10-MAPS01"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Math: 44 questions in 70 minutes, two 35-minute modules; Problem-Solving and Data Analysis is about 15 % of questions (5-7).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "About 75 % of Math questions are multiple choice and about 25 % ask the student to enter the answer.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "A built-in graphing calculator is available on the entire Math section, and students may bring an approved calculator.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: One-variable and two-variable data",
+      "uz": "Oʻrganing: Bir va ikki oʻzgaruvchili maʼlumotlar",
+      "ru": "Изучите: Данные с одной и двумя переменными"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 1: One-variable and two-variable data",
+      "uz": "Mashq 1: Bir va ikki oʻzgaruvchili maʼlumotlar",
+      "ru": "Практика 1: Данные с одной и двумя переменными"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 2: One-variable and two-variable data",
+      "uz": "Mashq 2: Bir va ikki oʻzgaruvchili maʼlumotlar",
+      "ru": "Практика 2: Данные с одной и двумя переменными"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 20,
+     "optional": true,
+     "title": {
+      "en": "Official practice: One-variable and two-variable data",
+      "uz": "Rasmiy mashq: Bir va ikki oʻzgaruvchili maʼlumotlar",
+      "ru": "Официальная практика: Данные с одной и двумя переменными"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "End-of-unit check: One-variable and two-variable data",
+      "uz": "Boʻlim yakuniy tekshiruvi: Bir va ikki oʻzgaruvchili maʼlumotlar",
+      "ru": "Итоговая проверка раздела: Данные с одной и двумя переменными"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-MAPS03",
+   "test": "SAT",
+   "section": "math",
+   "domain": "psda",
+   "domain_label": {
+    "en": "Problem-Solving and Data Analysis",
+    "uz": "Problem-Solving and Data Analysis (masalalar va maʼlumotlar tahlili)",
+    "ru": "Problem-Solving and Data Analysis (задачи и анализ данных)"
+   },
+   "domain_share": {
+    "approx_pct": 15,
+    "questions": "5-7",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 3,
+   "units_in_domain": 3,
+   "level_band": "advanced",
+   "skills": [
+    "probability",
+    "conditional_probability",
+    "two_way_tables",
+    "sample_statistics",
+    "margin_of_error",
+    "study_design"
+   ],
+   "rungs": [
+    "alg1",
+    "precalc"
+   ],
+   "title": {
+    "en": "Probability, inference and statistical claims",
+    "uz": "Ehtimollik, xulosa chiqarish va statistik daʼvolar",
+    "ru": "Вероятность, статистический вывод и утверждения"
+   },
+   "goal": {
+    "en": "Find probabilities from two-way tables, use a sample result with its margin of error, and judge what a study's design allows you to conclude.",
+    "uz": "Ikki oʻlchovli jadvallardan ehtimollikni toping, tanlanma natijasini xatolik chegarasi bilan qoʻllang va tadqiqot tuzilishi qanday xulosaga ruxsat berishini baholang.",
+    "ru": "Находите вероятности по таблицам сопряжённости, используйте результат выборки с погрешностью и оценивайте, какие выводы допускает план исследования."
+   },
+   "study": [
+    {
+     "en": "Conditional probability: keep only the row or column you are given, then divide by its total.",
+     "uz": "Shartli ehtimollik: faqat berilgan satr yoki ustunni qoldiring va uning jamiga boʻling.",
+     "ru": "Условная вероятность: оставьте только заданную строку или столбец и делите на их итог."
+    },
+    {
+     "en": "A margin of error gives a plausible range for the population value; a larger random sample usually gives a smaller margin.",
+     "uz": "Xatolik chegarasi bosh toʻplam qiymati uchun ehtimoliy oraliqni beradi; kattaroq tasodifiy tanlanma odatda kichikroq xatolik chegarasini beradi.",
+     "ru": "Погрешность задаёт правдоподобный диапазон для значения в генеральной совокупности; большая случайная выборка обычно даёт меньшую погрешность."
+    },
+    {
+     "en": "Only a randomized experiment supports cause and effect, and results generalize only to the population that was sampled at random.",
+     "uz": "Faqat tasodifiy taqsimlangan tajriba sabab-oqibatni asoslaydi; natijalar esa faqat tasodifiy tanlab olingan bosh toʻplamga tatbiq etiladi.",
+     "ru": "Только рандомизированный эксперимент подтверждает причинно-следственную связь, а результаты обобщаются лишь на совокупность, из которой делалась случайная выборка."
+    }
+   ],
+   "study_ref": {
+    "content": "C2",
+    "where": {
+     "rung": [
+      "alg1",
+      "precalc"
+     ],
+     "subskill": [
+      "probability",
+      "conditional_probability",
+      "two_way_tables",
+      "sample_statistics",
+      "margin_of_error",
+      "study_design"
+     ]
+    },
+    "fallback_where": {
+     "rung": [
+      "alg1",
+      "precalc"
+     ]
+    },
+    "note": "C2 math explainer (one idea, one worked example, 3-4 checks) read during the study step"
+   },
+   "practice": [
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "psda",
+      "subskill": [
+       "probability",
+       "conditional_probability",
+       "two_way_tables",
+       "sample_statistics",
+       "margin_of_error",
+       "study_design"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "alg1",
+       "precalc"
+      ],
+      "subskill": [
+       "probability",
+       "conditional_probability",
+       "two_way_tables",
+       "sample_statistics",
+       "margin_of_error",
+       "study_design"
+      ]
+     },
+     "n": 8,
+     "split": [
+      8
+     ],
+     "minutes_each": 16,
+     "purpose": {
+      "en": "SAT-format probability and inference.",
+      "uz": "SAT formatidagi ehtimollik va xulosa.",
+      "ru": "Вероятность и статистический вывод в формате SAT."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0
+    },
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "psda",
+      "subskill": [
+       "probability",
+       "conditional_probability",
+       "two_way_tables",
+       "sample_statistics",
+       "margin_of_error",
+       "study_design",
+       "percent_change",
+       "mean",
+       "scatterplots"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "prealg",
+       "alg1"
+      ],
+      "subskill": [
+       "probability",
+       "conditional_probability",
+       "two_way_tables",
+       "sample_statistics",
+       "margin_of_error",
+       "study_design",
+       "percent_change",
+       "mean",
+       "scatterplots"
+      ]
+     },
+     "n": 10,
+     "split": [
+      10
+     ],
+     "minutes_each": 19,
+     "purpose": {
+      "en": "Mixed data analysis, timed, earlier units mixed in.",
+      "uz": "Aralash maʼlumotlar tahlili, vaqtli, oldingi boʻlimlar ham qoʻshilgan.",
+      "ru": "Смешанный анализ данных на время с заданиями прошлых разделов."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0.4,
+     "time_limit_s_each": 950
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Math, domain Problem-Solving and Data Analysis, skill Probability and conditional probability; do 10 Hard questions.",
+      "uz": "Question Bankʼda SAT, keyin Math, Problem-Solving and Data Analysis domeni va Probability and conditional probability koʻnikmasini tanlang; Hard (qiyin) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Math, домен Problem-Solving and Data Analysis, навык Probability and conditional probability; решите 10 вопросов уровня Hard (сложные)."
+     },
+     "step": {
+      "minutes": 20
+     }
+    },
+    {
+     "id": "bluebook_tests",
+     "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+     "kind": "full_length_practice_test",
+     "label": {
+      "en": "Bluebook: full-length SAT practice tests",
+      "uz": "Bluebook: SAT boʻyicha toʻliq sinov testlari",
+      "ru": "Bluebook: полные пробные тесты SAT"
+     },
+     "note": {
+      "en": "Official College Board practice tests in the Bluebook app; scores and question review appear in My Practice.",
+      "uz": "College Boardʼning Bluebook ilovasidagi rasmiy sinov testlari; ballar va savollar tahlili My Practice boʻlimida chiqadi.",
+      "ru": "Официальные пробные тесты College Board в приложении Bluebook; баллы и разбор вопросов появляются в разделе My Practice."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/practice-tests",
+     "how": {
+      "en": "After the third unit of every domain, the plan schedules a full-length Bluebook practice test (see the sequence).",
+      "uz": "Har bir domenning uchinchi boʻlimidan keyin reja Bluebookʼda toʻliq sinov testini belgilaydi (ketma-ketlikka qarang).",
+      "ru": "После третьего раздела каждого домена план назначает полный пробный тест в Bluebook (см. последовательность)."
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Math course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Math kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Math на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C1",
+    "where": {
+     "skill": "math",
+     "format": "sat",
+     "sat.domain": "psda",
+     "subskill": [
+      "probability",
+      "conditional_probability",
+      "two_way_tables",
+      "sample_statistics",
+      "margin_of_error",
+      "study_design"
+     ],
+     "sat.difficulty": [
+      "medium",
+      "hard"
+     ]
+    },
+    "fallback_where": {
+     "skill": "math",
+     "rung": [
+      "alg1",
+      "precalc"
+     ],
+     "subskill": [
+      "probability",
+      "conditional_probability",
+      "two_way_tables",
+      "sample_statistics",
+      "margin_of_error",
+      "study_design"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 950,
+    "minutes": 19,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "numeric_entry_share": 0.25,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 95 seconds a question, the test's pace (44 questions in 70 minutes). Some ask you to type the answer. Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 95 soniya — test surʼati (70 daqiqada 44 ta savol). Baʼzilarida javobni oʻzingiz yozasiz. Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 95 секунд на вопрос — темп теста (44 вопроса за 70 минут). В некоторых ответ нужно ввести самому. Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Redo the worked example in the explainer, do one more practice set on the skill you missed most, then retake the check with new numbers.",
+     "uz": "Tushuntirishdagi ishlangan misolni qayta bajaring, eng koʻp xato qilgan koʻnikma boʻyicha yana bitta mashq toʻplamini ishlang, keyin tekshiruvni yangi sonlar bilan qayta topshiring.",
+     "ru": "Повторите разобранный пример из объяснения, выполните ещё один набор по навыку с наибольшим числом ошибок и пересдайте проверку с новыми числами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 35,
+    "check": 19,
+    "official_required": 0,
+    "official_optional": 20,
+    "total": 69
+   },
+   "requires": {
+    "math_rung_min": "alg1",
+    "after_units": [
+     "C10-MAPS02"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Math: 44 questions in 70 minutes, two 35-minute modules; Problem-Solving and Data Analysis is about 15 % of questions (5-7).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "About 75 % of Math questions are multiple choice and about 25 % ask the student to enter the answer.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "A built-in graphing calculator is available on the entire Math section, and students may bring an approved calculator.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Probability, inference and statistical claims",
+      "uz": "Oʻrganing: Ehtimollik, xulosa chiqarish va statistik daʼvolar",
+      "ru": "Изучите: Вероятность, статистический вывод и утверждения"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 1: Probability, inference and statistical claims",
+      "uz": "Mashq 1: Ehtimollik, xulosa chiqarish va statistik daʼvolar",
+      "ru": "Практика 1: Вероятность, статистический вывод и утверждения"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "Practice 2: Probability, inference and statistical claims",
+      "uz": "Mashq 2: Ehtimollik, xulosa chiqarish va statistik daʼvolar",
+      "ru": "Практика 2: Вероятность, статистический вывод и утверждения"
+     },
+     "practice_ref": 1,
+     "items": 10,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 20,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Probability, inference and statistical claims",
+      "uz": "Rasmiy mashq: Ehtimollik, xulosa chiqarish va statistik daʼvolar",
+      "ru": "Официальная практика: Вероятность, статистический вывод и утверждения"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "End-of-unit check: Probability, inference and statistical claims",
+      "uz": "Boʻlim yakuniy tekshiruvi: Ehtimollik, xulosa chiqarish va statistik daʼvolar",
+      "ru": "Итоговая проверка раздела: Вероятность, статистический вывод и утверждения"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-MAGT01",
+   "test": "SAT",
+   "section": "math",
+   "domain": "geometry_trig",
+   "domain_label": {
+    "en": "Geometry and Trigonometry",
+    "uz": "Geometry and Trigonometry (geometriya va trigonometriya)",
+    "ru": "Geometry and Trigonometry (геометрия и тригонометрия)"
+   },
+   "domain_share": {
+    "approx_pct": 15,
+    "questions": "5-7",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 1,
+   "units_in_domain": 3,
+   "level_band": "foundation",
+   "skills": [
+    "area_perimeter",
+    "volume",
+    "surface_area",
+    "solids"
+   ],
+   "rungs": [
+    "geom"
+   ],
+   "title": {
+    "en": "Area and volume",
+    "uz": "Yuza va hajm",
+    "ru": "Площадь и объём"
+   },
+   "goal": {
+    "en": "Find areas, surface areas and volumes of common shapes and solids, and see how they change when lengths are scaled.",
+    "uz": "Oddiy shakllar va jismlarning yuzasi, sirt yuzasi va hajmini toping hamda uzunliklar oʻzgarganda ular qanday oʻzgarishini koʻring.",
+    "ru": "Находите площади, площади поверхности и объёмы обычных фигур и тел и смотрите, как они меняются при изменении длин."
+   },
+   "study": [
+    {
+     "en": "The test gives a reference sheet of common formulas; learn what is on it and practise finding a formula quickly.",
+     "uz": "Testda umumiy formulalar varagʻi beriladi; unda nimalar borligini bilib oling va kerakli formulani tez topishni mashq qiling.",
+     "ru": "На тесте дают справочный лист с основными формулами; узнайте, что на нём есть, и потренируйтесь быстро находить формулу."
+    },
+    {
+     "en": "If every length is multiplied by k, area is multiplied by k² and volume by k³.",
+     "uz": "Agar barcha uzunliklar k marta oshsa, yuza k² marta, hajm esa k³ marta oshadi.",
+     "ru": "Если все длины умножить на k, площадь умножится на k², а объём — на k³."
+    },
+    {
+     "en": "Break a composite figure into rectangles, triangles and circles, then add or subtract the parts.",
+     "uz": "Murakkab shaklni toʻgʻri toʻrtburchak, uchburchak va doiralarga ajrating, keyin qismlarni qoʻshing yoki ayiring.",
+     "ru": "Разбейте составную фигуру на прямоугольники, треугольники и круги, затем сложите или вычтите части."
+    }
+   ],
+   "study_ref": {
+    "content": "C2",
+    "where": {
+     "rung": [
+      "geom"
+     ],
+     "subskill": [
+      "area_perimeter",
+      "volume",
+      "surface_area",
+      "solids"
+     ]
+    },
+    "fallback_where": {
+     "rung": [
+      "geom"
+     ]
+    },
+    "note": "C2 math explainer (one idea, one worked example, 3-4 checks) read during the study step"
+   },
+   "practice": [
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "rung": [
+       "geom"
+      ],
+      "subskill": [
+       "area_perimeter",
+       "volume"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "geom"
+      ]
+     },
+     "n": 8,
+     "split": [
+      8
+     ],
+     "minutes_each": 8,
+     "purpose": {
+      "en": "Warm-up: area and volume.",
+      "uz": "Tayyorgarlik: yuza va hajm.",
+      "ru": "Разминка: площадь и объём."
+     },
+     "instances": "fresh parameters each time (templates)"
+    },
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "geometry_trig",
+      "subskill": [
+       "area_perimeter",
+       "volume",
+       "surface_area",
+       "solids"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "geom"
+      ],
+      "subskill": [
+       "area_perimeter",
+       "volume",
+       "surface_area",
+       "solids"
+      ]
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 16,
+     "purpose": {
+      "en": "SAT-format area and volume.",
+      "uz": "SAT formatidagi yuza va hajm.",
+      "ru": "Площадь и объём в формате SAT."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Math, domain Geometry and Trigonometry, skill Area and volume; do 10 Easy questions.",
+      "uz": "Question Bankʼda SAT, keyin Math, Geometry and Trigonometry domeni va Area and volume koʻnikmasini tanlang; Easy (oson) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Math, домен Geometry and Trigonometry, навык Area and volume; решите 10 вопросов уровня Easy (лёгкие)."
+     },
+     "step": {
+      "minutes": 20
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Math course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Math kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Math на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C1",
+    "where": {
+     "skill": "math",
+     "format": "sat",
+     "sat.domain": "geometry_trig",
+     "subskill": [
+      "area_perimeter",
+      "volume",
+      "surface_area",
+      "solids"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "fallback_where": {
+     "skill": "math",
+     "rung": [
+      "geom"
+     ],
+     "subskill": [
+      "area_perimeter",
+      "volume",
+      "surface_area",
+      "solids"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 950,
+    "minutes": 19,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "numeric_entry_share": 0.25,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 95 seconds a question, the test's pace (44 questions in 70 minutes). Some ask you to type the answer. Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 95 soniya — test surʼati (70 daqiqada 44 ta savol). Baʼzilarida javobni oʻzingiz yozasiz. Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 95 секунд на вопрос — темп теста (44 вопроса за 70 минут). В некоторых ответ нужно ввести самому. Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Redo the worked example in the explainer, do one more practice set on the skill you missed most, then retake the check with new numbers.",
+     "uz": "Tushuntirishdagi ishlangan misolni qayta bajaring, eng koʻp xato qilgan koʻnikma boʻyicha yana bitta mashq toʻplamini ishlang, keyin tekshiruvni yangi sonlar bilan qayta topshiring.",
+     "ru": "Повторите разобранный пример из объяснения, выполните ещё один набор по навыку с наибольшим числом ошибок и пересдайте проверку с новыми числами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 40,
+    "check": 19,
+    "official_required": 0,
+    "official_optional": 20,
+    "total": 74
+   },
+   "requires": {
+    "math_rung_min": "prealg",
+    "after_units": [],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Math: 44 questions in 70 minutes, two 35-minute modules; Geometry and Trigonometry is about 15 % of questions (5-7).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "About 75 % of Math questions are multiple choice and about 25 % ask the student to enter the answer.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "A built-in graphing calculator is available on the entire Math section, and students may bring an approved calculator.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "On the Math section students have access to a reference sheet of common formulas.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Area and volume",
+      "uz": "Oʻrganing: Yuza va hajm",
+      "ru": "Изучите: Площадь и объём"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 8,
+     "title": {
+      "en": "Practice 1: Area and volume",
+      "uz": "Mashq 1: Yuza va hajm",
+      "ru": "Практика 1: Площадь и объём"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 2: Area and volume",
+      "uz": "Mashq 2: Yuza va hajm",
+      "ru": "Практика 2: Площадь и объём"
+     },
+     "practice_ref": 1,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 3: Area and volume",
+      "uz": "Mashq 3: Yuza va hajm",
+      "ru": "Практика 3: Площадь и объём"
+     },
+     "practice_ref": 1,
+     "items": 8,
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 20,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Area and volume",
+      "uz": "Rasmiy mashq: Yuza va hajm",
+      "ru": "Официальная практика: Площадь и объём"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 5
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "End-of-unit check: Area and volume",
+      "uz": "Boʻlim yakuniy tekshiruvi: Yuza va hajm",
+      "ru": "Итоговая проверка раздела: Площадь и объём"
+     },
+     "end_check": true,
+     "n": 6
+    }
+   ],
+   "sessions": 5,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-MAGT02",
+   "test": "SAT",
+   "section": "math",
+   "domain": "geometry_trig",
+   "domain_label": {
+    "en": "Geometry and Trigonometry",
+    "uz": "Geometry and Trigonometry (geometriya va trigonometriya)",
+    "ru": "Geometry and Trigonometry (геометрия и тригонометрия)"
+   },
+   "domain_share": {
+    "approx_pct": 15,
+    "questions": "5-7",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 2,
+   "units_in_domain": 3,
+   "level_band": "core",
+   "skills": [
+    "angles",
+    "triangle_angles",
+    "polygon_angles",
+    "similarity",
+    "pythagoras"
+   ],
+   "rungs": [
+    "geom"
+   ],
+   "title": {
+    "en": "Lines, angles and triangles",
+    "uz": "Toʻgʻri chiziqlar, burchaklar va uchburchaklar",
+    "ru": "Прямые, углы и треугольники"
+   },
+   "goal": {
+    "en": "Use angle relationships, the angle sum of a triangle, and congruent and similar triangles to find missing lengths and angles.",
+    "uz": "Burchaklar orasidagi bogʻlanishlar, uchburchak burchaklari yigʻindisi, teng va oʻxshash uchburchaklar yordamida nomaʼlum uzunlik va burchaklarni toping.",
+    "ru": "Используйте соотношения углов, сумму углов треугольника, равные и подобные треугольники, чтобы находить неизвестные длины и углы."
+   },
+   "study": [
+    {
+     "en": "Parallel lines cut by a transversal: corresponding angles are equal and alternate interior angles are equal.",
+     "uz": "Kesuvchi bilan kesilgan parallel toʻgʻri chiziqlarda mos burchaklar teng va ichki almashinuvchi burchaklar teng.",
+     "ru": "При пересечении параллельных прямых секущей соответственные углы равны и накрест лежащие углы равны."
+    },
+    {
+     "en": "The angles of a triangle add up to 180°; an exterior angle equals the sum of the two interior angles not next to it.",
+     "uz": "Uchburchak burchaklari yigʻindisi 180°; tashqi burchak unga qoʻshni boʻlmagan ikki ichki burchak yigʻindisiga teng.",
+     "ru": "Сумма углов треугольника 180°; внешний угол равен сумме двух внутренних углов, не смежных с ним."
+    },
+    {
+     "en": "Similar triangles have equal angles and proportional sides; write the ratio with the sides in matching order.",
+     "uz": "Oʻxshash uchburchaklarning burchaklari teng, tomonlari proporsional; nisbatni mos tomonlar tartibida yozing.",
+     "ru": "У подобных треугольников углы равны, а стороны пропорциональны; записывайте отношение, соблюдая соответствие сторон."
+    }
+   ],
+   "study_ref": {
+    "content": "C2",
+    "where": {
+     "rung": [
+      "geom"
+     ],
+     "subskill": [
+      "angles",
+      "triangle_angles",
+      "polygon_angles",
+      "similarity",
+      "pythagoras"
+     ]
+    },
+    "fallback_where": {
+     "rung": [
+      "geom"
+     ]
+    },
+    "note": "C2 math explainer (one idea, one worked example, 3-4 checks) read during the study step"
+   },
+   "practice": [
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "geometry_trig",
+      "subskill": [
+       "angles",
+       "triangle_angles",
+       "polygon_angles",
+       "similarity",
+       "pythagoras"
+      ],
+      "sat.difficulty": [
+       "easy",
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "geom"
+      ],
+      "subskill": [
+       "angles",
+       "triangle_angles",
+       "polygon_angles",
+       "similarity",
+       "pythagoras"
+      ]
+     },
+     "n": 16,
+     "split": [
+      8,
+      8
+     ],
+     "minutes_each": 16,
+     "purpose": {
+      "en": "SAT-format angle and triangle problems.",
+      "uz": "SAT formatidagi burchak va uchburchak masalalari.",
+      "ru": "Задачи на углы и треугольники в формате SAT."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Math, domain Geometry and Trigonometry, skill Lines, angles, and triangles; do 10 Medium questions.",
+      "uz": "Question Bankʼda SAT, keyin Math, Geometry and Trigonometry domeni va Lines, angles, and triangles koʻnikmasini tanlang; Medium (oʻrta) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Math, домен Geometry and Trigonometry, навык Lines, angles, and triangles; решите 10 вопросов уровня Medium (средние)."
+     },
+     "step": {
+      "minutes": 20
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Math course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Math kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Math на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C1",
+    "where": {
+     "skill": "math",
+     "format": "sat",
+     "sat.domain": "geometry_trig",
+     "subskill": [
+      "angles",
+      "triangle_angles",
+      "polygon_angles",
+      "similarity",
+      "pythagoras"
+     ],
+     "sat.difficulty": [
+      "easy",
+      "medium",
+      "hard"
+     ]
+    },
+    "fallback_where": {
+     "skill": "math",
+     "rung": [
+      "geom"
+     ],
+     "subskill": [
+      "angles",
+      "triangle_angles",
+      "polygon_angles",
+      "similarity",
+      "pythagoras"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 950,
+    "minutes": 19,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "numeric_entry_share": 0.25,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 95 seconds a question, the test's pace (44 questions in 70 minutes). Some ask you to type the answer. Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 95 soniya — test surʼati (70 daqiqada 44 ta savol). Baʼzilarida javobni oʻzingiz yozasiz. Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 95 секунд на вопрос — темп теста (44 вопроса за 70 минут). В некоторых ответ нужно ввести самому. Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Redo the worked example in the explainer, do one more practice set on the skill you missed most, then retake the check with new numbers.",
+     "uz": "Tushuntirishdagi ishlangan misolni qayta bajaring, eng koʻp xato qilgan koʻnikma boʻyicha yana bitta mashq toʻplamini ishlang, keyin tekshiruvni yangi sonlar bilan qayta topshiring.",
+     "ru": "Повторите разобранный пример из объяснения, выполните ещё один набор по навыку с наибольшим числом ошибок и пересдайте проверку с новыми числами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 32,
+    "check": 19,
+    "official_required": 0,
+    "official_optional": 20,
+    "total": 66
+   },
+   "requires": {
+    "math_rung_min": "geom",
+    "after_units": [
+     "C10-MAGT01"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Math: 44 questions in 70 minutes, two 35-minute modules; Geometry and Trigonometry is about 15 % of questions (5-7).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "About 75 % of Math questions are multiple choice and about 25 % ask the student to enter the answer.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "A built-in graphing calculator is available on the entire Math section, and students may bring an approved calculator.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Lines, angles and triangles",
+      "uz": "Oʻrganing: Toʻgʻri chiziqlar, burchaklar va uchburchaklar",
+      "ru": "Изучите: Прямые, углы и треугольники"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 1: Lines, angles and triangles",
+      "uz": "Mashq 1: Toʻgʻri chiziqlar, burchaklar va uchburchaklar",
+      "ru": "Практика 1: Прямые, углы и треугольники"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 2: Lines, angles and triangles",
+      "uz": "Mashq 2: Toʻgʻri chiziqlar, burchaklar va uchburchaklar",
+      "ru": "Практика 2: Прямые, углы и треугольники"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 20,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Lines, angles and triangles",
+      "uz": "Rasmiy mashq: Toʻgʻri chiziqlar, burchaklar va uchburchaklar",
+      "ru": "Официальная практика: Прямые, углы и треугольники"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "End-of-unit check: Lines, angles and triangles",
+      "uz": "Boʻlim yakuniy tekshiruvi: Toʻgʻri chiziqlar, burchaklar va uchburchaklar",
+      "ru": "Итоговая проверка раздела: Прямые, углы и треугольники"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-MAGT03",
+   "test": "SAT",
+   "section": "math",
+   "domain": "geometry_trig",
+   "domain_label": {
+    "en": "Geometry and Trigonometry",
+    "uz": "Geometry and Trigonometry (geometriya va trigonometriya)",
+    "ru": "Geometry and Trigonometry (геометрия и тригонометрия)"
+   },
+   "domain_share": {
+    "approx_pct": 15,
+    "questions": "5-7",
+    "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+    "verified_at": "2026-10-07"
+   },
+   "unit": 3,
+   "units_in_domain": 3,
+   "level_band": "advanced",
+   "skills": [
+    "pythagoras",
+    "right_triangle_trig",
+    "complementary_angles",
+    "degrees_to_radians",
+    "arc_length",
+    "sector_area",
+    "circle_equation",
+    "circles"
+   ],
+   "rungs": [
+    "geom",
+    "precalc",
+    "alg2"
+   ],
+   "title": {
+    "en": "Right triangles, trigonometry and circles",
+    "uz": "Toʻgʻri burchakli uchburchaklar, trigonometriya va aylanalar",
+    "ru": "Прямоугольные треугольники, тригонометрия и окружности"
+   },
+   "goal": {
+    "en": "Use the Pythagorean theorem, sine, cosine and tangent, radians, and circle equations, arcs and sectors.",
+    "uz": "Pifagor teoremasi, sinus, kosinus va tangens, radianlar hamda aylana tenglamasi, yoy va sektorlardan foydalaning.",
+    "ru": "Применяйте теорему Пифагора, синус, косинус и тангенс, радианы, а также уравнение окружности, дуги и секторы."
+   },
+   "study": [
+    {
+     "en": "In a right triangle: sin = opposite ÷ hypotenuse, cos = adjacent ÷ hypotenuse, tan = opposite ÷ adjacent; and sin x° = cos(90° − x°).",
+     "uz": "Toʻgʻri burchakli uchburchakda: sin = qarshi katet ÷ gipotenuza, cos = yopishgan katet ÷ gipotenuza, tan = qarshi katet ÷ yopishgan katet; shuningdek sin x° = cos(90° − x°).",
+     "ru": "В прямоугольном треугольнике: sin = противолежащий катет ÷ гипотенуза, cos = прилежащий катет ÷ гипотенуза, tan = противолежащий ÷ прилежащий; и sin x° = cos(90° − x°)."
+    },
+    {
+     "en": "Arc length = (central angle ÷ 360°) × 2πr; π radians = 180°.",
+     "uz": "Yoy uzunligi = (markaziy burchak ÷ 360°) × 2πr; π radian = 180°.",
+     "ru": "Длина дуги = (центральный угол ÷ 360°) × 2πr; π радиан = 180°."
+    },
+    {
+     "en": "Complete the square to put a circle's equation into the form (x − h)² + (y − k)² = r², which gives the centre (h, k) and the radius r.",
+     "uz": "Aylana tenglamasini toʻliq kvadratga keltirib, (x − h)² + (y − k)² = r² koʻrinishiga oʻtkazing: u markaz (h, k) va radius r ni beradi.",
+     "ru": "Выделите полный квадрат, чтобы привести уравнение окружности к виду (x − h)² + (y − k)² = r²: он даёт центр (h, k) и радиус r."
+    }
+   ],
+   "study_ref": {
+    "content": "C2",
+    "where": {
+     "rung": [
+      "geom",
+      "precalc",
+      "alg2"
+     ],
+     "subskill": [
+      "pythagoras",
+      "right_triangle_trig",
+      "complementary_angles",
+      "degrees_to_radians",
+      "arc_length",
+      "sector_area",
+      "circle_equation",
+      "circles"
+     ]
+    },
+    "fallback_where": {
+     "rung": [
+      "geom",
+      "precalc",
+      "alg2"
+     ]
+    },
+    "note": "C2 math explainer (one idea, one worked example, 3-4 checks) read during the study step"
+   },
+   "practice": [
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "geometry_trig",
+      "subskill": [
+       "pythagoras",
+       "right_triangle_trig",
+       "complementary_angles",
+       "degrees_to_radians",
+       "arc_length",
+       "sector_area",
+       "circle_equation",
+       "circles"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "geom",
+       "precalc",
+       "alg2"
+      ],
+      "subskill": [
+       "pythagoras",
+       "right_triangle_trig",
+       "complementary_angles",
+       "degrees_to_radians",
+       "arc_length",
+       "sector_area",
+       "circle_equation",
+       "circles"
+      ]
+     },
+     "n": 8,
+     "split": [
+      8
+     ],
+     "minutes_each": 16,
+     "purpose": {
+      "en": "SAT-format trigonometry and circles.",
+      "uz": "SAT formatidagi trigonometriya va aylanalar.",
+      "ru": "Тригонометрия и окружности в формате SAT."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0
+    },
+    {
+     "content": "C1",
+     "where": {
+      "skill": "math",
+      "format": "sat",
+      "sat.domain": "geometry_trig",
+      "subskill": [
+       "pythagoras",
+       "right_triangle_trig",
+       "complementary_angles",
+       "degrees_to_radians",
+       "arc_length",
+       "sector_area",
+       "circle_equation",
+       "circles",
+       "area_perimeter",
+       "volume",
+       "similarity",
+       "triangle_angles"
+      ],
+      "sat.difficulty": [
+       "medium",
+       "hard"
+      ]
+     },
+     "fallback_where": {
+      "skill": "math",
+      "rung": [
+       "geom"
+      ],
+      "subskill": [
+       "pythagoras",
+       "right_triangle_trig",
+       "complementary_angles",
+       "degrees_to_radians",
+       "arc_length",
+       "sector_area",
+       "circle_equation",
+       "circles",
+       "area_perimeter",
+       "volume",
+       "similarity",
+       "triangle_angles"
+      ]
+     },
+     "n": 10,
+     "split": [
+      10
+     ],
+     "minutes_each": 19,
+     "purpose": {
+      "en": "Mixed Geometry and Trigonometry, timed, earlier units mixed in.",
+      "uz": "Aralash geometriya va trigonometriya, vaqtli, oldingi boʻlimlar ham qoʻshilgan.",
+      "ru": "Смешанная геометрия и тригонометрия на время с заданиями прошлых разделов."
+     },
+     "instances": "fresh parameters each time (templates)",
+     "interleave_earlier": 0.4,
+     "time_limit_s_each": 950
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cb_question_bank",
+     "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "kind": "question_bank",
+     "label": {
+      "en": "College Board Student Question Bank",
+      "uz": "College Board Student Question Bank (savollar bazasi)",
+      "ru": "College Board Student Question Bank (банк вопросов)"
+     },
+     "note": {
+      "en": "Official questions you can filter by section, domain, skill and difficulty. Sign in to My Practice with a College Board student account.",
+      "uz": "Boʻlim, domen, koʻnikma va qiyinlik boʻyicha saralanadigan rasmiy savollar. My Practice boʻlimiga College Board talaba hisobi orqali kiring.",
+      "ru": "Официальные вопросы с фильтрами по секции, домену, навыку и сложности. Войдите в My Practice через учётную запись ученика College Board."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+     "needs_login": true,
+     "how": {
+      "en": "In the Question Bank choose SAT, then Math, domain Geometry and Trigonometry, skill Right triangles and trigonometry; do 10 Hard questions.",
+      "uz": "Question Bankʼda SAT, keyin Math, Geometry and Trigonometry domeni va Right triangles and trigonometry koʻnikmasini tanlang; Hard (qiyin) darajadagi 10 ta savolni bajaring.",
+      "ru": "В Question Bank выберите SAT, затем Math, домен Geometry and Trigonometry, навык Right triangles and trigonometry; решите 10 вопросов уровня Hard (сложные)."
+     },
+     "step": {
+      "minutes": 20
+     }
+    },
+    {
+     "id": "bluebook_tests",
+     "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+     "kind": "full_length_practice_test",
+     "label": {
+      "en": "Bluebook: full-length SAT practice tests",
+      "uz": "Bluebook: SAT boʻyicha toʻliq sinov testlari",
+      "ru": "Bluebook: полные пробные тесты SAT"
+     },
+     "note": {
+      "en": "Official College Board practice tests in the Bluebook app; scores and question review appear in My Practice.",
+      "uz": "College Boardʼning Bluebook ilovasidagi rasmiy sinov testlari; ballar va savollar tahlili My Practice boʻlimida chiqadi.",
+      "ru": "Официальные пробные тесты College Board в приложении Bluebook; баллы и разбор вопросов появляются в разделе My Practice."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/practice-tests",
+     "how": {
+      "en": "After the third unit of every domain, the plan schedules a full-length Bluebook practice test (see the sequence).",
+      "uz": "Har bir domenning uchinchi boʻlimidan keyin reja Bluebookʼda toʻliq sinov testini belgilaydi (ketma-ketlikka qarang).",
+      "ru": "После третьего раздела каждого домена план назначает полный пробный тест в Bluebook (см. последовательность)."
+     }
+    },
+    {
+     "id": "khan_sat",
+     "url": "https://www.khanacademy.org/digital-sat",
+     "kind": "course",
+     "label": {
+      "en": "Khan Academy: Official SAT Prep",
+      "uz": "Khan Academy: Official SAT Prep (rasmiy SAT tayyorgarligi)",
+      "ru": "Khan Academy: Official SAT Prep (официальная подготовка к SAT)"
+     },
+     "note": {
+      "en": "Free, developed in partnership with College Board: SAT Reading and Writing and SAT Math courses with lessons, practice and unit tests. Link only: we do not copy its content.",
+      "uz": "Bepul, College Board bilan hamkorlikda yaratilgan: SAT Reading and Writing va SAT Math kurslari, darslar, mashqlar va boʻlim testlari. Faqat havola: uning materiallarini koʻchirmaymiz.",
+      "ru": "Бесплатно, создано в партнёрстве с College Board: курсы SAT Reading and Writing и SAT Math с уроками, практикой и тестами по разделам. Только ссылка: мы не копируем материалы."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://satsuite.collegeboard.org/practice/khan-academy",
+     "how": {
+      "en": "Optional: the matching lessons in Khan Academy's SAT Math course.",
+      "uz": "Ixtiyoriy: Khan Academyʼning SAT Math kursidagi mos darslar.",
+      "ru": "По желанию: соответствующие уроки курса SAT Math на Khan Academy."
+     }
+    }
+   ],
+   "end_check": {
+    "verification": "quiz",
+    "ladder": "L2",
+    "content": "C1",
+    "where": {
+     "skill": "math",
+     "format": "sat",
+     "sat.domain": "geometry_trig",
+     "subskill": [
+      "pythagoras",
+      "right_triangle_trig",
+      "complementary_angles",
+      "degrees_to_radians",
+      "arc_length",
+      "sector_area",
+      "circle_equation",
+      "circles"
+     ],
+     "sat.difficulty": [
+      "medium",
+      "hard"
+     ]
+    },
+    "fallback_where": {
+     "skill": "math",
+     "rung": [
+      "geom",
+      "precalc",
+      "alg2"
+     ],
+     "subskill": [
+      "pythagoras",
+      "right_triangle_trig",
+      "complementary_angles",
+      "degrees_to_radians",
+      "arc_length",
+      "sector_area",
+      "circle_equation",
+      "circles"
+     ]
+    },
+    "n": 10,
+    "time_limit_s": 950,
+    "minutes": 19,
+    "pass": {
+     "min_correct": 8,
+     "of": 10,
+     "basis": "design default (about Khan's 'Familiar' band, 70-99 %); tune from logs",
+     "basis_url": "https://support.khanacademy.org/hc/en-us/articles/5548760867853--How-do-Khan-Academy-s-Mastery-levels-work",
+     "basis_verified_at": "2026-10-07"
+    },
+    "fresh_items": true,
+    "numeric_entry_share": 0.25,
+    "instructions": {
+     "en": "10 questions on this unit's skills at about 95 seconds a question, the test's pace (44 questions in 70 minutes). Some ask you to type the answer. Pass: 8 of 10.",
+     "uz": "Ushbu boʻlim koʻnikmalari boʻyicha 10 ta savol, har biriga taxminan 95 soniya — test surʼati (70 daqiqada 44 ta savol). Baʼzilarida javobni oʻzingiz yozasiz. Oʻtish: 10 tadan 8 ta.",
+     "ru": "10 вопросов по навыкам раздела, примерно 95 секунд на вопрос — темп теста (44 вопроса за 70 минут). В некоторых ответ нужно ввести самому. Зачёт: 8 из 10."
+    },
+    "on_fail": {
+     "en": "Redo the worked example in the explainer, do one more practice set on the skill you missed most, then retake the check with new numbers.",
+     "uz": "Tushuntirishdagi ishlangan misolni qayta bajaring, eng koʻp xato qilgan koʻnikma boʻyicha yana bitta mashq toʻplamini ishlang, keyin tekshiruvni yangi sonlar bilan qayta topshiring.",
+     "ru": "Повторите разобранный пример из объяснения, выполните ещё один набор по навыку с наибольшим числом ошибок и пересдайте проверку с новыми числами."
+    },
+    "on_pass": {
+     "en": "Move to the next unit; this unit's skills come back in mixed practice later.",
+     "uz": "Keyingi boʻlimga oʻting; bu boʻlim koʻnikmalari keyinroq aralash mashqlarda yana uchraydi.",
+     "ru": "Переходите к следующему разделу; навыки этого раздела позже вернутся в смешанной практике."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 35,
+    "check": 19,
+    "official_required": 0,
+    "official_optional": 20,
+    "total": 69
+   },
+   "requires": {
+    "math_rung_min": "geom",
+    "after_units": [
+     "C10-MAGT02"
+    ],
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "SAT Math: 44 questions in 70 minutes, two 35-minute modules; Geometry and Trigonometry is about 15 % of questions (5-7).",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "About 75 % of Math questions are multiple choice and about 25 % ask the student to enter the answer.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "A built-in graphing calculator is available on the entire Math section, and students may bring an approved calculator.",
+     "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Right triangles, trigonometry and circles",
+      "uz": "Oʻrganing: Toʻgʻri burchakli uchburchaklar, trigonometriya va aylanalar",
+      "ru": "Изучите: Прямоугольные треугольники, тригонометрия и окружности"
+     },
+     "note": {
+      "en": "Read the unit's study points, then answer 3 quick check questions from our practice pool.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini oʻqing, keyin amaliy bazamizdan 3 ta qisqa savolga javob bering.",
+      "ru": "Прочитайте пункты раздела, затем ответьте на 3 коротких вопроса из нашего банка практики."
+     },
+     "check_items": 3,
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 16,
+     "title": {
+      "en": "Practice 1: Right triangles, trigonometry and circles",
+      "uz": "Mashq 1: Toʻgʻri burchakli uchburchaklar, trigonometriya va aylanalar",
+      "ru": "Практика 1: Прямоугольные треугольники, тригонометрия и окружности"
+     },
+     "practice_ref": 0,
+     "items": 8,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "Practice 2: Right triangles, trigonometry and circles",
+      "uz": "Mashq 2: Toʻgʻri burchakli uchburchaklar, trigonometriya va aylanalar",
+      "ru": "Практика 2: Прямоугольные треугольники, тригонометрия и окружности"
+     },
+     "practice_ref": 1,
+     "items": 10,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "self_report",
+     "ladder": "L1",
+     "minutes": 20,
+     "optional": true,
+     "title": {
+      "en": "Official practice: Right triangles, trigonometry and circles",
+      "uz": "Rasmiy mashq: Toʻgʻri burchakli uchburchaklar, trigonometriya va aylanalar",
+      "ru": "Официальная практика: Прямоугольные треугольники, тригонометрия и окружности"
+     },
+     "link_ref": 0,
+     "note": {
+      "en": "Do the official set at the link, then enter how many you got right and how many there were.",
+      "uz": "Havoladagi rasmiy toʻplamni bajaring, keyin nechta toʻgʻri topganingizni va jami nechta savol boʻlganini kiriting.",
+      "ru": "Выполните официальный набор по ссылке, затем введите, сколько ответов верно и сколько было вопросов."
+     },
+     "fields": [
+      "correct",
+      "total"
+     ],
+     "n": 4
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 19,
+     "title": {
+      "en": "End-of-unit check: Right triangles, trigonometry and circles",
+      "uz": "Boʻlim yakuniy tekshiruvi: Toʻgʻri burchakli uchburchaklar, trigonometriya va aylanalar",
+      "ru": "Итоговая проверка раздела: Прямоугольные треугольники, тригонометрия и окружности"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

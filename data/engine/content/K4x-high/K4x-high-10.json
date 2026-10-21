@@ -1,0 +1,326 @@
+{
+ "bank": "K4x",
+ "batch": 10,
+ "items": [
+  {
+   "id": "K4x-bch38a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "recurrences",
+   "family_ref": "K4-bch038",
+   "params": {
+    "m": 10
+   },
+   "lang": "en",
+   "stem": {
+    "en": "a₁ = 1 and aₙ₊₁ = 2aₙ + 1 for n ≥ 1. What is a₁₀?",
+    "uz": "a₁ = 1 va n ≥ 1 uchun aₙ₊₁ = 2aₙ + 1. a₁₀ ni toping.",
+    "ru": "a₁ = 1 и aₙ₊₁ = 2aₙ + 1 при n ≥ 1. Найдите a₁₀."
+   },
+   "options": [
+    {
+     "en": "1023"
+    },
+    {
+     "en": "1024"
+    },
+    {
+     "en": "511"
+    },
+    {
+     "en": "19"
+    }
+   ],
+   "answer_numeric": {
+    "value": 1023,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "aₙ + 1 doubles at each step, so aₙ + 1 = 2ⁿ and a₁₀ = 2¹⁰ − 1 = 1023.",
+    "uz": "aₙ + 1 har qadamda ikki barobar ortadi, demak aₙ + 1 = 2ⁿ va a₁₀ = 2¹⁰ − 1 = 1023.",
+    "ru": "aₙ + 1 удваивается на каждом шаге, поэтому aₙ + 1 = 2ⁿ и a₁₀ = 2¹⁰ − 1 = 1023."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-bch38b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "recurrences",
+   "family_ref": "K4-bch038",
+   "params": {
+    "m": 7
+   },
+   "lang": "en",
+   "stem": {
+    "en": "a₁ = 1 and aₙ₊₁ = 2aₙ + 1 for n ≥ 1. What is a₇?",
+    "uz": "a₁ = 1 va n ≥ 1 uchun aₙ₊₁ = 2aₙ + 1. a₇ ni toping.",
+    "ru": "a₁ = 1 и aₙ₊₁ = 2aₙ + 1 при n ≥ 1. Найдите a₇."
+   },
+   "options": [
+    {
+     "en": "127"
+    },
+    {
+     "en": "128"
+    },
+    {
+     "en": "63"
+    },
+    {
+     "en": "13"
+    }
+   ],
+   "answer_numeric": {
+    "value": 127,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "aₙ + 1 doubles at each step, so aₙ + 1 = 2ⁿ and a₇ = 2⁷ − 1 = 127.",
+    "uz": "aₙ + 1 har qadamda ikki barobar ortadi, demak aₙ + 1 = 2ⁿ va a₇ = 2⁷ − 1 = 127.",
+    "ru": "aₙ + 1 удваивается на каждом шаге, поэтому aₙ + 1 = 2ⁿ и a₇ = 2⁷ − 1 = 127."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-bch39a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "modular_arithmetic",
+   "family_ref": "K4-bch039",
+   "params": {
+    "a": 7,
+    "N": 46
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the remainder when 7⁴⁶ is divided by 5?",
+    "uz": "7⁴⁶ ni 5 ga boʻlganda qoldiq nechaga teng?",
+    "ru": "Найдите остаток от деления 7⁴⁶ на 5."
+   },
+   "options": [
+    {
+     "en": "4"
+    },
+    {
+     "en": "2"
+    },
+    {
+     "en": "49"
+    },
+    {
+     "en": "0"
+    }
+   ],
+   "answer_numeric": {
+    "value": 4,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Remainders of powers of 7 modulo 5 repeat with period 4: 46 = 4·11 + 2, so the remainder is that of 7², which is 4.",
+    "uz": "7 ning darajalarini 5 ga boʻlgandagi qoldiqlar 4 davr bilan takrorlanadi: 46 = 4·11 + 2, demak qoldiq 7² niki bilan bir xil, yaʼni 4.",
+    "ru": "Остатки степеней 7 при делении на 5 повторяются с периодом 4: 46 = 4·11 + 2, поэтому остаток такой же, как у 7², т. е. 4."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-bch39b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "modular_arithmetic",
+   "family_ref": "K4-bch039",
+   "params": {
+    "a": 3,
+    "N": 31
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the remainder when 3³¹ is divided by 5?",
+    "uz": "3³¹ ni 5 ga boʻlganda qoldiq nechaga teng?",
+    "ru": "Найдите остаток от деления 3³¹ на 5."
+   },
+   "options": [
+    {
+     "en": "2"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "27"
+    },
+    {
+     "en": "0"
+    }
+   ],
+   "answer_numeric": {
+    "value": 2,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Remainders of powers of 3 modulo 5 repeat with period 4: 31 = 4·7 + 3, so the remainder is that of 3³, which is 2.",
+    "uz": "3 ning darajalarini 5 ga boʻlgandagi qoldiqlar 4 davr bilan takrorlanadi: 31 = 4·7 + 3, demak qoldiq 3³ niki bilan bir xil, yaʼni 2.",
+    "ru": "Остатки степеней 3 при делении на 5 повторяются с периодом 4: 31 = 4·7 + 3, поэтому остаток такой же, как у 3³, т. е. 2."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-bch40a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "sums_of_powers",
+   "family_ref": "K4-bch040",
+   "params": {
+    "n": 10
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is 1³ + 2³ + 3³ + … + 10³?",
+    "uz": "1³ + 2³ + 3³ + … + 10³ yigʻindini toping.",
+    "ru": "Найдите сумму 1³ + 2³ + 3³ + … + 10³."
+   },
+   "options": [
+    {
+     "en": "3025"
+    },
+    {
+     "en": "55"
+    },
+    {
+     "en": "385"
+    },
+    {
+     "en": "1000"
+    }
+   ],
+   "answer_numeric": {
+    "value": 3025,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 55² = 3025.",
+    "uz": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 55² = 3025.",
+    "ru": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 55² = 3025."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-bch40b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "beyond",
+   "subskill": "sums_of_powers",
+   "family_ref": "K4-bch040",
+   "params": {
+    "n": 6
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is 1³ + 2³ + 3³ + … + 6³?",
+    "uz": "1³ + 2³ + 3³ + … + 6³ yigʻindini toping.",
+    "ru": "Найдите сумму 1³ + 2³ + 3³ + … + 6³."
+   },
+   "options": [
+    {
+     "en": "441"
+    },
+    {
+     "en": "21"
+    },
+    {
+     "en": "91"
+    },
+    {
+     "en": "216"
+    }
+   ],
+   "answer_numeric": {
+    "value": 441,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 21² = 441.",
+    "uz": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 21² = 441.",
+    "ru": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 21² = 441."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 2.45,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

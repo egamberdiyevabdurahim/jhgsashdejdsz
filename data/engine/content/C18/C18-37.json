@@ -1,0 +1,790 @@
+{
+ "bank": "C18",
+ "batch": 37,
+ "items": [
+  {
+   "id": "C18-phm016",
+   "skill": "dtm_physics",
+   "level": "easy",
+   "subskill": "tolqinlar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Toʻlqin uzunligi 2 m, tebranish davri 0,5 s. Toʻlqin tarqalish tezligi necha m/s?",
+    "ru": "Длина волны 2 м, период колебаний 0,5 с. Какова скорость распространения волны (м/с)?"
+   },
+   "options": [
+    {
+     "uz": "4",
+     "ru": "4"
+    },
+    {
+     "uz": "1",
+     "ru": "1"
+    },
+    {
+     "uz": "2,5",
+     "ru": "2,5"
+    },
+    {
+     "uz": "0,25",
+     "ru": "0,25"
+    }
+   ],
+   "why": {
+    "en": "v = lambda / T = 2 / 0.5 = 4 m/s.",
+    "uz": "v = λ/T = 2 : 0,5 = 4 m/s.",
+    "ru": "v = λ/T = 2 : 0,5 = 4 м/с."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Wavelength",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "lambda = v / f.",
+      "url": "https://en.wikipedia.org/wiki/Wavelength"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm017",
+   "skill": "dtm_physics",
+   "level": "easy",
+   "subskill": "molekulyar.temperatura",
+   "lang": "uz",
+   "stem": {
+    "uz": "27 °C temperatura Kelvin shkalasida necha K ga teng?",
+    "ru": "Сколько кельвинов составляет температура 27 °C?"
+   },
+   "options": [
+    {
+     "uz": "300",
+     "ru": "300"
+    },
+    {
+     "uz": "246",
+     "ru": "246"
+    },
+    {
+     "uz": "273",
+     "ru": "273"
+    },
+    {
+     "uz": "327",
+     "ru": "327"
+    }
+   ],
+   "why": {
+    "en": "T = t + 273 = 300 K.",
+    "uz": "T = t + 273 = 300 K.",
+    "ru": "T = t + 273 = 300 К."
+   },
+   "prior_b": -0.8,
+   "time_s": 20,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Kelvin",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "T(K) = t(C) + 273.15.",
+      "url": "https://en.wikipedia.org/wiki/Kelvin"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm018",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "issiqlik.erish",
+   "lang": "uz",
+   "stem": {
+    "uz": "0 °C dagi 2 kg muzni eritish uchun qancha issiqlik kerak? (λ = 3,4 · 10⁵ J/kg)",
+    "ru": "Сколько теплоты нужно, чтобы расплавить 2 кг льда при 0 °C? (λ = 3,4 · 10⁵ Дж/кг)"
+   },
+   "options": [
+    {
+     "uz": "6,8 · 10⁵ J",
+     "ru": "6,8 · 10⁵ Дж"
+    },
+    {
+     "uz": "1,7 · 10⁵ J",
+     "ru": "1,7 · 10⁵ Дж"
+    },
+    {
+     "uz": "3,4 · 10⁵ J",
+     "ru": "3,4 · 10⁵ Дж"
+    },
+    {
+     "uz": "6,8 · 10⁶ J",
+     "ru": "6,8 · 10⁶ Дж"
+    }
+   ],
+   "why": {
+    "en": "Q = lambda m = 3.4e5 x 2 = 6.8e5 J.",
+    "uz": "Q = λm = 3,4·10⁵ · 2 = 6,8·10⁵ J.",
+    "ru": "Q = λm = 3,4·10⁵ · 2 = 6,8·10⁵ Дж."
+   },
+   "prior_b": 0.0,
+   "time_s": 35,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Latent_heat",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Q = m L for a phase change.",
+      "url": "https://en.wikipedia.org/wiki/Latent_heat"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm019",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "gaz_qonunlari",
+   "lang": "uz",
+   "stem": {
+    "uz": "Yopiq idishdagi gaz 300 K dan 450 K gacha qizdirildi (hajm oʻzgarmas). Dastlabki bosim 200 kPa boʻlsa, oxirgi bosim necha kPa?",
+    "ru": "Газ в закрытом сосуде нагрели от 300 К до 450 К (объём постоянен). Начальное давление 200 кПа. Каково конечное давление (кПа)?"
+   },
+   "options": [
+    {
+     "uz": "300",
+     "ru": "300"
+    },
+    {
+     "uz": "133",
+     "ru": "133"
+    },
+    {
+     "uz": "450",
+     "ru": "450"
+    },
+    {
+     "uz": "250",
+     "ru": "250"
+    }
+   ],
+   "why": {
+    "en": "p / T = const: p2 = 200 x 450 / 300 = 300 kPa.",
+    "uz": "p/T = const: p₂ = 200 · 450 : 300 = 300 kPa.",
+    "ru": "p/T = const: p₂ = 200 · 450 : 300 = 300 кПа."
+   },
+   "prior_b": 0.0,
+   "time_s": 40,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Gas_laws",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Boyle: pV = const; Charles: V/T = const; Gay-Lussac: p/T = const.",
+      "url": "https://en.wikipedia.org/wiki/Gas_laws"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm020",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "termodinamika.ish",
+   "lang": "uz",
+   "stem": {
+    "uz": "Gaz 10⁵ Pa oʻzgarmas bosimda kengayib, hajmi 0,02 m³ ga ortdi. Gaz bajargan ish necha J?",
+    "ru": "Газ расширился при постоянном давлении 10⁵ Па, его объём увеличился на 0,02 м³. Какую работу (Дж) совершил газ?"
+   },
+   "options": [
+    {
+     "uz": "2000",
+     "ru": "2000"
+    },
+    {
+     "uz": "200",
+     "ru": "200"
+    },
+    {
+     "uz": "20 000",
+     "ru": "20 000"
+    },
+    {
+     "uz": "500",
+     "ru": "500"
+    }
+   ],
+   "why": {
+    "en": "A = p dV = 1e5 x 0.02 = 2000 J.",
+    "uz": "A = pΔV = 10⁵ · 0,02 = 2000 J.",
+    "ru": "A = pΔV = 10⁵ · 0,02 = 2000 Дж."
+   },
+   "prior_b": 0.0,
+   "time_s": 35,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Work_(thermodynamics)",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Pressure-volume work dW = p dV (p dV at constant pressure).",
+      "url": "https://en.wikipedia.org/wiki/Work_(thermodynamics)"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm021",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "elektrostatika.maydon",
+   "lang": "uz",
+   "stem": {
+    "uz": "4 μC zaryadga elektr maydonda 0,02 N kuch taʼsir qilmoqda. Maydon kuchlanganligi necha N/C?",
+    "ru": "На заряд 4 мкКл в электрическом поле действует сила 0,02 Н. Какова напряжённость поля (Н/Кл)?"
+   },
+   "options": [
+    {
+     "uz": "5000",
+     "ru": "5000"
+    },
+    {
+     "uz": "80",
+     "ru": "80"
+    },
+    {
+     "uz": "0,005",
+     "ru": "0,005"
+    },
+    {
+     "uz": "500",
+     "ru": "500"
+    }
+   ],
+   "why": {
+    "en": "E = F / q = 0.02 / 4e-6 = 5000 N/C.",
+    "uz": "E = F/q = 0,02 : 4·10⁻⁶ = 5000 N/C.",
+    "ru": "E = F/q = 0,02 : 4·10⁻⁶ = 5000 Н/Кл."
+   },
+   "prior_b": 0.0,
+   "time_s": 35,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Electric_field",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "E = F / q, in N/C.",
+      "url": "https://en.wikipedia.org/wiki/Electric_field"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm022",
+   "skill": "dtm_physics",
+   "level": "easy",
+   "subskill": "elektrostatika.kondensator",
+   "lang": "uz",
+   "stem": {
+    "uz": "Sigʻimlari 2 μF va 3 μF boʻlgan kondensatorlar parallel ulandi. Umumiy sigʻim necha μF?",
+    "ru": "Конденсаторы ёмкостью 2 мкФ и 3 мкФ соединены параллельно. Какова общая ёмкость (мкФ)?"
+   },
+   "options": [
+    {
+     "uz": "5",
+     "ru": "5"
+    },
+    {
+     "uz": "1,2",
+     "ru": "1,2"
+    },
+    {
+     "uz": "6",
+     "ru": "6"
+    },
+    {
+     "uz": "1",
+     "ru": "1"
+    }
+   ],
+   "why": {
+    "en": "In parallel capacitances add: 5 microfarads.",
+    "uz": "Parallel ulashda sigʻimlar qoʻshiladi: 5 μF.",
+    "ru": "При параллельном соединении ёмкости складываются: 5 мкФ."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Capacitance",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "C = Q / V.",
+      "url": "https://en.wikipedia.org/wiki/Capacitance"
+     },
+     {
+      "claim": "Series resistances add; parallel 1/R = 1/R1 + 1/R2; parallel capacitances add.",
+      "url": "https://en.wikipedia.org/wiki/Series_and_parallel_circuits"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm023",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "elektr.qarshilik",
+   "lang": "uz",
+   "stem": {
+    "uz": "Simning uzunligi 2 marta oshirilsa (kesimi oʻzgarmasa), uning qarshiligi qanday oʻzgaradi?",
+    "ru": "Как изменится сопротивление провода, если его длину увеличить в 2 раза (сечение то же)?"
+   },
+   "options": [
+    {
+     "uz": "2 marta ortadi",
+     "ru": "увеличится в 2 раза"
+    },
+    {
+     "uz": "2 marta kamayadi",
+     "ru": "уменьшится в 2 раза"
+    },
+    {
+     "uz": "4 marta ortadi",
+     "ru": "увеличится в 4 раза"
+    },
+    {
+     "uz": "oʻzgarmaydi",
+     "ru": "не изменится"
+    }
+   ],
+   "why": {
+    "en": "R = rho L / S is proportional to length.",
+    "uz": "R = ρL/S uzunlikka proporsional.",
+    "ru": "R = ρL/S пропорционально длине."
+   },
+   "prior_b": 0.0,
+   "time_s": 60,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "R = rho L / A.",
+      "url": "https://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm024",
+   "skill": "dtm_physics",
+   "level": "easy",
+   "subskill": "elektr.tok",
+   "lang": "uz",
+   "stem": {
+    "uz": "Oʻtkazgichdan 0,5 A tok 1 minut davomida oʻtdi. Oʻtkazgich kesimidan qancha zaryad (C) oʻtgan?",
+    "ru": "По проводнику 1 минуту шёл ток 0,5 А. Какой заряд (Кл) прошёл через сечение?"
+   },
+   "options": [
+    {
+     "uz": "30",
+     "ru": "30"
+    },
+    {
+     "uz": "0,5",
+     "ru": "0,5"
+    },
+    {
+     "uz": "120",
+     "ru": "120"
+    },
+    {
+     "uz": "3",
+     "ru": "3"
+    }
+   ],
+   "why": {
+    "en": "q = I t = 0.5 x 60 s = 30 C.",
+    "uz": "q = It = 0,5 · 60 = 30 C.",
+    "ru": "q = It = 0,5 · 60 = 30 Кл."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Electric_current",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "I = Q / t; 1 A = 1 C/s.",
+      "url": "https://en.wikipedia.org/wiki/Electric_current"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm025",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "elektr.toliq_zanjir",
+   "lang": "uz",
+   "stem": {
+    "uz": "Tok manbaining EYuK 12 V, ichki qarshiligi 1 Om. Tashqi qarshilik 5 Om boʻlsa, zanjirdagi tok kuchi necha A?",
+    "ru": "ЭДС источника 12 В, внутреннее сопротивление 1 Ом, внешнее сопротивление 5 Ом. Какова сила тока (А)?"
+   },
+   "options": [
+    {
+     "uz": "2",
+     "ru": "2"
+    },
+    {
+     "uz": "2,4",
+     "ru": "2,4"
+    },
+    {
+     "uz": "12",
+     "ru": "12"
+    },
+    {
+     "uz": "3",
+     "ru": "3"
+    }
+   ],
+   "why": {
+    "en": "I = E / (R + r) = 12 / 6 = 2 A.",
+    "uz": "I = ε/(R + r) = 12 : 6 = 2 A.",
+    "ru": "I = ε/(R + r) = 12 : 6 = 2 А."
+   },
+   "prior_b": 0.0,
+   "time_s": 40,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Internal_resistance",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "I = E / (R + r).",
+      "url": "https://en.wikipedia.org/wiki/Internal_resistance"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm026",
+   "skill": "dtm_physics",
+   "level": "easy",
+   "subskill": "elektr.energiya",
+   "lang": "uz",
+   "stem": {
+    "uz": "Quvvati 100 W boʻlgan lampa 10 soat yondi. U qancha elektr energiyasi (kW·soat) sarflagan?",
+    "ru": "Лампа мощностью 100 Вт горела 10 часов. Сколько электроэнергии (кВт·ч) она израсходовала?"
+   },
+   "options": [
+    {
+     "uz": "1",
+     "ru": "1"
+    },
+    {
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "uz": "1000",
+     "ru": "1000"
+    },
+    {
+     "uz": "0,1",
+     "ru": "0,1"
+    }
+   ],
+   "why": {
+    "en": "100 W x 10 h = 1000 Wh = 1 kWh.",
+    "uz": "100 W · 10 soat = 1000 W·soat = 1 kW·soat.",
+    "ru": "100 Вт · 10 ч = 1000 Вт·ч = 1 кВт·ч."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Electric_power",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "P = VI = I^2 R; the kilowatt-hour is one kilowatt for one hour.",
+      "url": "https://en.wikipedia.org/wiki/Electric_power"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm027",
+   "skill": "dtm_physics",
+   "level": "hard",
+   "subskill": "magnetizm.lorens",
+   "lang": "uz",
+   "stem": {
+    "uz": "Zaryadi 1,6 · 10⁻¹⁹ C boʻlgan zarra induksiyasi 0,5 T boʻlgan magnit maydonda induksiya chiziqlariga tik ravishda 10⁶ m/s tezlik bilan harakatlanmoqda. Lorens kuchi qancha?",
+    "ru": "Частица с зарядом 1,6 · 10⁻¹⁹ Кл движется со скоростью 10⁶ м/с перпендикулярно линиям индукции поля 0,5 Тл. Какова сила Лоренца?"
+   },
+   "options": [
+    {
+     "uz": "8 · 10⁻¹⁴ N",
+     "ru": "8 · 10⁻¹⁴ Н"
+    },
+    {
+     "uz": "3,2 · 10⁻¹³ N",
+     "ru": "3,2 · 10⁻¹³ Н"
+    },
+    {
+     "uz": "8 · 10⁻²⁰ N",
+     "ru": "8 · 10⁻²⁰ Н"
+    },
+    {
+     "uz": "1,6 · 10⁻¹³ N",
+     "ru": "1,6 · 10⁻¹³ Н"
+    }
+   ],
+   "why": {
+    "en": "F = q v B = 1.6e-19 x 1e6 x 0.5 = 8e-14 N.",
+    "uz": "F = qvB = 8 · 10⁻¹⁴ N.",
+    "ru": "F = qvB = 8 · 10⁻¹⁴ Н."
+   },
+   "prior_b": 0.9,
+   "time_s": 45,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Lorentz_force",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Magnetic force F = qvB on a charge and F = I L B on a wire (perpendicular field).",
+      "url": "https://en.wikipedia.org/wiki/Lorentz_force"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm028",
+   "skill": "dtm_physics",
+   "level": "easy",
+   "subskill": "elektromagnit_induksiya",
+   "lang": "uz",
+   "stem": {
+    "uz": "Elektromagnit induksiya hodisasini 1831-yilda kim kashf etgan?",
+    "ru": "Кто открыл явление электромагнитной индукции в 1831 году?"
+   },
+   "options": [
+    {
+     "uz": "Maykl Faradey",
+     "ru": "Майкл Фарадей"
+    },
+    {
+     "uz": "Georg Om",
+     "ru": "Георг Ом"
+    },
+    {
+     "uz": "Isaak Nyuton",
+     "ru": "Исаак Ньютон"
+    },
+    {
+     "uz": "Ernest Rezerford",
+     "ru": "Эрнест Резерфорд"
+    }
+   ],
+   "why": {
+    "en": "Michael Faraday discovered electromagnetic induction in 1831.",
+    "uz": "Elektromagnit induksiyani 1831-yilda Faradey kashf etgan.",
+    "ru": "Электромагнитную индукцию открыл Фарадей в 1831 году."
+   },
+   "prior_b": -0.8,
+   "time_s": 60,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Electromagnetic_induction",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Michael Faraday discovered electromagnetic induction in 1831.",
+      "url": "https://en.wikipedia.org/wiki/Electromagnetic_induction"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm029",
+   "skill": "dtm_physics",
+   "level": "easy",
+   "subskill": "optika.kozgu",
+   "lang": "uz",
+   "stem": {
+    "uz": "Buyum yassi koʻzgudan 2 m uzoqlikda turibdi. Buyum bilan uning tasviri orasidagi masofa necha metr?",
+    "ru": "Предмет находится в 2 м от плоского зеркала. Каково расстояние (м) между предметом и его изображением?"
+   },
+   "options": [
+    {
+     "uz": "4",
+     "ru": "4"
+    },
+    {
+     "uz": "2",
+     "ru": "2"
+    },
+    {
+     "uz": "1",
+     "ru": "1"
+    },
+    {
+     "uz": "8",
+     "ru": "8"
+    }
+   ],
+   "why": {
+    "en": "The image is 2 m behind the mirror: 2 + 2 = 4 m.",
+    "uz": "Tasvir koʻzgu ortida 2 m da: 2 + 2 = 4 m.",
+    "ru": "Изображение в 2 м за зеркалом: 2 + 2 = 4 м."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Plane_mirror",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "A plane mirror forms an image as far behind the mirror as the object is in front.",
+      "url": "https://en.wikipedia.org/wiki/Plane_mirror"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-phm030",
+   "skill": "dtm_physics",
+   "level": "medium",
+   "subskill": "yadro_fizikasi",
+   "lang": "uz",
+   "stem": {
+    "uz": "β⁻ yemirilishda yadroning zaryad soni (Z) qanday oʻzgaradi?",
+    "ru": "Как изменяется зарядовое число ядра (Z) при β⁻-распаде?"
+   },
+   "options": [
+    {
+     "uz": "1 ga ortadi",
+     "ru": "увеличивается на 1"
+    },
+    {
+     "uz": "1 ga kamayadi",
+     "ru": "уменьшается на 1"
+    },
+    {
+     "uz": "2 ga kamayadi",
+     "ru": "уменьшается на 2"
+    },
+    {
+     "uz": "oʻzgarmaydi",
+     "ru": "не изменяется"
+    }
+   ],
+   "why": {
+    "en": "A neutron becomes a proton: Z rises by 1, A stays the same.",
+    "uz": "Neytron protonga aylanadi: Z 1 ga ortadi, A oʻzgarmaydi.",
+    "ru": "Нейтрон превращается в протон: Z растёт на 1, A не меняется."
+   },
+   "prior_b": 0.0,
+   "time_s": 60,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Beta_decay",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "In beta-minus decay the atomic number rises by 1 and the mass number is unchanged.",
+      "url": "https://en.wikipedia.org/wiki/Beta_decay"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

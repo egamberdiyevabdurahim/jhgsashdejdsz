@@ -1,0 +1,794 @@
+{
+ "bank": "C18",
+ "batch": 31,
+ "items": [
+  {
+   "id": "C18-chm001",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "hisob.molyar_massa",
+   "lang": "uz",
+   "stem": {
+    "uz": "NaOH ning molyar massasini toping (g/mol). Ar: Na = 23, O = 16, H = 1.",
+    "ru": "Найдите молярную массу NaOH (г/моль). Ar: Na = 23, O = 16, H = 1."
+   },
+   "options": [
+    {
+     "uz": "40",
+     "ru": "40"
+    },
+    {
+     "uz": "39",
+     "ru": "39"
+    },
+    {
+     "uz": "41",
+     "ru": "41"
+    },
+    {
+     "uz": "56",
+     "ru": "56"
+    }
+   ],
+   "why": {
+    "en": "23 + 16 + 1 = 40.",
+    "uz": "23 + 16 + 1 = 40.",
+    "ru": "23 + 16 + 1 = 40."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Molar_mass",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Molar mass of a compound = sum of the relative atomic masses of its atoms (g/mol).",
+      "url": "https://en.wikipedia.org/wiki/Molar_mass"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm002",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "hisob.molyar_massa",
+   "lang": "uz",
+   "stem": {
+    "uz": "Al₂(SO₄)₃ ning molyar massasini toping (g/mol). Ar: Al = 27, S = 32, O = 16.",
+    "ru": "Найдите молярную массу Al₂(SO₄)₃ (г/моль). Ar: Al = 27, S = 32, O = 16."
+   },
+   "options": [
+    {
+     "uz": "342",
+     "ru": "342"
+    },
+    {
+     "uz": "150",
+     "ru": "150"
+    },
+    {
+     "uz": "246",
+     "ru": "246"
+    },
+    {
+     "uz": "315",
+     "ru": "315"
+    }
+   ],
+   "why": {
+    "en": "2 x 27 + 3 x 96 = 54 + 288 = 342.",
+    "uz": "2 · 27 + 3 · 96 = 342.",
+    "ru": "2 · 27 + 3 · 96 = 342."
+   },
+   "prior_b": 0.0,
+   "time_s": 45,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Molar_mass",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Molar mass of a compound = sum of the relative atomic masses of its atoms (g/mol).",
+      "url": "https://en.wikipedia.org/wiki/Molar_mass"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm003",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "hisob.massa_ulushi",
+   "lang": "uz",
+   "stem": {
+    "uz": "Ammoniy nitrat (NH₄NO₃) tarkibidagi azotning massa ulushini toping (%). Ar: N = 14, H = 1, O = 16.",
+    "ru": "Найдите массовую долю азота в нитрате аммония NH₄NO₃ (%). Ar: N = 14, H = 1, O = 16."
+   },
+   "options": [
+    {
+     "uz": "35",
+     "ru": "35"
+    },
+    {
+     "uz": "17,5",
+     "ru": "17,5"
+    },
+    {
+     "uz": "28",
+     "ru": "28"
+    },
+    {
+     "uz": "60",
+     "ru": "60"
+    }
+   ],
+   "why": {
+    "en": "Two N atoms: 28 / 80 = 35 %.",
+    "uz": "Ikkita N atomi: 28 : 80 = 35 %.",
+    "ru": "Два атома N: 28 : 80 = 35 %."
+   },
+   "prior_b": 0.0,
+   "time_s": 45,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "w = m_i / m_total (x 100 for a percentage).",
+      "url": "https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm004",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "hisob.massa_ulushi",
+   "lang": "uz",
+   "stem": {
+    "uz": "Fe₂O₃ tarkibidagi temirning massa ulushini toping (%). Ar: Fe = 56, O = 16.",
+    "ru": "Найдите массовую долю железа в Fe₂O₃ (%). Ar: Fe = 56, O = 16."
+   },
+   "options": [
+    {
+     "uz": "70",
+     "ru": "70"
+    },
+    {
+     "uz": "35",
+     "ru": "35"
+    },
+    {
+     "uz": "30",
+     "ru": "30"
+    },
+    {
+     "uz": "56",
+     "ru": "56"
+    }
+   ],
+   "why": {
+    "en": "112 / 160 = 70 %.",
+    "uz": "112 : 160 = 70 %.",
+    "ru": "112 : 160 = 70 %."
+   },
+   "prior_b": 0.0,
+   "time_s": 40,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "w = m_i / m_total (x 100 for a percentage).",
+      "url": "https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm005",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "hisob.massa_ulushi",
+   "lang": "uz",
+   "stem": {
+    "uz": "CaCO₃ tarkibidagi kalsiyning massa ulushini toping (%). Ar: Ca = 40, C = 12, O = 16.",
+    "ru": "Найдите массовую долю кальция в CaCO₃ (%). Ar: Ca = 40, C = 12, O = 16."
+   },
+   "options": [
+    {
+     "uz": "40",
+     "ru": "40"
+    },
+    {
+     "uz": "12",
+     "ru": "12"
+    },
+    {
+     "uz": "48",
+     "ru": "48"
+    },
+    {
+     "uz": "20",
+     "ru": "20"
+    }
+   ],
+   "why": {
+    "en": "40 / 100 = 40 %.",
+    "uz": "40 : 100 = 40 %.",
+    "ru": "40 : 100 = 40 %."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "w = m_i / m_total (x 100 for a percentage).",
+      "url": "https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm006",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "hisob.mol",
+   "lang": "uz",
+   "stem": {
+    "uz": "0,2 mol sulfat kislota (H₂SO₄) necha gramm keladi? (M = 98 g/mol)",
+    "ru": "Какова масса 0,2 моль серной кислоты H₂SO₄ (в граммах)? (M = 98 г/моль)"
+   },
+   "options": [
+    {
+     "uz": "19,6",
+     "ru": "19,6"
+    },
+    {
+     "uz": "9,8",
+     "ru": "9,8"
+    },
+    {
+     "uz": "49",
+     "ru": "49"
+    },
+    {
+     "uz": "490",
+     "ru": "490"
+    }
+   ],
+   "why": {
+    "en": "m = n x M = 0.2 x 98 = 19.6 g.",
+    "uz": "m = n · M = 0,2 · 98 = 19,6 g.",
+    "ru": "m = n · M = 0,2 · 98 = 19,6 г."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Stoichiometry",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "The coefficients of a balanced equation give the mole ratios of reactants and products.",
+      "url": "https://en.wikipedia.org/wiki/Stoichiometry"
+     },
+     {
+      "claim": "Molar mass of a compound = sum of the relative atomic masses of its atoms (g/mol).",
+      "url": "https://en.wikipedia.org/wiki/Molar_mass"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm007",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "hisob.reaksiya",
+   "lang": "uz",
+   "stem": {
+    "uz": "Fe + CuSO₄ → FeSO₄ + Cu reaksiyasida 5,6 g temirdan necha gramm mis ajraladi? Ar: Fe = 56, Cu = 64.",
+    "ru": "Сколько граммов меди выделится из 5,6 г железа по реакции Fe + CuSO₄ → FeSO₄ + Cu? Ar: Fe = 56, Cu = 64."
+   },
+   "options": [
+    {
+     "uz": "6,4",
+     "ru": "6,4"
+    },
+    {
+     "uz": "5,6",
+     "ru": "5,6"
+    },
+    {
+     "uz": "3,2",
+     "ru": "3,2"
+    },
+    {
+     "uz": "12,8",
+     "ru": "12,8"
+    }
+   ],
+   "why": {
+    "en": "0.1 mol Fe gives 0.1 mol Cu = 6.4 g.",
+    "uz": "0,1 mol Fe → 0,1 mol Cu = 6,4 g.",
+    "ru": "0,1 моль Fe → 0,1 моль Cu = 6,4 г."
+   },
+   "prior_b": 0.0,
+   "time_s": 50,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Stoichiometry",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "The coefficients of a balanced equation give the mole ratios of reactants and products.",
+      "url": "https://en.wikipedia.org/wiki/Stoichiometry"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm008",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "hisob.eritma",
+   "lang": "uz",
+   "stem": {
+    "uz": "20 % li 100 g eritmaga 100 g suv qoʻshildi. Yangi eritmadagi moddaning massa ulushi necha foiz?",
+    "ru": "К 100 г 20 %-ного раствора добавили 100 г воды. Какова массовая доля вещества в новом растворе (%)?"
+   },
+   "options": [
+    {
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "uz": "20",
+     "ru": "20"
+    },
+    {
+     "uz": "40",
+     "ru": "40"
+    },
+    {
+     "uz": "15",
+     "ru": "15"
+    }
+   ],
+   "why": {
+    "en": "20 g of solute in 200 g: 10 %.",
+    "uz": "200 g eritmada 20 g modda: 10 %.",
+    "ru": "20 г вещества в 200 г раствора: 10 %."
+   },
+   "prior_b": 0.0,
+   "time_s": 40,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "w = m_i / m_total (x 100 for a percentage).",
+      "url": "https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm009",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "oksidlanish_darajasi",
+   "lang": "uz",
+   "stem": {
+    "uz": "K₂Cr₂O₇ tarkibidagi xromning oksidlanish darajasi qancha?",
+    "ru": "Какова степень окисления хрома в K₂Cr₂O₇?"
+   },
+   "options": [
+    {
+     "uz": "+6",
+     "ru": "+6"
+    },
+    {
+     "uz": "+3",
+     "ru": "+3"
+    },
+    {
+     "uz": "+7",
+     "ru": "+7"
+    },
+    {
+     "uz": "+2",
+     "ru": "+2"
+    }
+   ],
+   "why": {
+    "en": "2(+1) + 2x + 7(-2) = 0, so x = +6.",
+    "uz": "2(+1) + 2x + 7(−2) = 0, x = +6.",
+    "ru": "2(+1) + 2x + 7(−2) = 0, x = +6."
+   },
+   "prior_b": 0.0,
+   "time_s": 30,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Oxidation_state",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Oxidation states sum to zero in a neutral compound; O usually -2, H usually +1, group 1 metals +1.",
+      "url": "https://en.wikipedia.org/wiki/Oxidation_state"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm010",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "oksidlanish_darajasi",
+   "lang": "uz",
+   "stem": {
+    "uz": "KClO₃ tarkibidagi xlorning oksidlanish darajasi qancha?",
+    "ru": "Какова степень окисления хлора в KClO₃?"
+   },
+   "options": [
+    {
+     "uz": "+5",
+     "ru": "+5"
+    },
+    {
+     "uz": "−1",
+     "ru": "−1"
+    },
+    {
+     "uz": "+7",
+     "ru": "+7"
+    },
+    {
+     "uz": "+3",
+     "ru": "+3"
+    }
+   ],
+   "why": {
+    "en": "+1 + x + 3(-2) = 0, so x = +5.",
+    "uz": "+1 + x + 3(−2) = 0, x = +5.",
+    "ru": "+1 + x + 3(−2) = 0, x = +5."
+   },
+   "prior_b": 0.0,
+   "time_s": 30,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Oxidation_state",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Oxidation states sum to zero in a neutral compound; O usually -2, H usually +1, group 1 metals +1.",
+      "url": "https://en.wikipedia.org/wiki/Oxidation_state"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm011",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "oksidlanish_darajasi",
+   "lang": "uz",
+   "stem": {
+    "uz": "Metan (CH₄) tarkibidagi uglerodning oksidlanish darajasi qancha?",
+    "ru": "Какова степень окисления углерода в метане CH₄?"
+   },
+   "options": [
+    {
+     "uz": "−4",
+     "ru": "−4"
+    },
+    {
+     "uz": "+4",
+     "ru": "+4"
+    },
+    {
+     "uz": "0",
+     "ru": "0"
+    },
+    {
+     "uz": "−2",
+     "ru": "−2"
+    }
+   ],
+   "why": {
+    "en": "x + 4(+1) = 0, so x = -4.",
+    "uz": "x + 4(+1) = 0, x = −4.",
+    "ru": "x + 4(+1) = 0, x = −4."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Oxidation_state",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Oxidation states sum to zero in a neutral compound; O usually -2, H usually +1, group 1 metals +1.",
+      "url": "https://en.wikipedia.org/wiki/Oxidation_state"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm012",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "atom_tuzilishi",
+   "lang": "uz",
+   "stem": {
+    "uz": "⁵⁶Fe izotopi yadrosida nechta neytron bor? (Z = 26)",
+    "ru": "Сколько нейтронов в ядре изотопа ⁵⁶Fe? (Z = 26)"
+   },
+   "options": [
+    {
+     "uz": "30",
+     "ru": "30"
+    },
+    {
+     "uz": "26",
+     "ru": "26"
+    },
+    {
+     "uz": "56",
+     "ru": "56"
+    },
+    {
+     "uz": "82",
+     "ru": "82"
+    }
+   ],
+   "why": {
+    "en": "56 - 26 = 30 neutrons.",
+    "uz": "56 − 26 = 30 neytron.",
+    "ru": "56 − 26 = 30 нейтронов."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mass_number",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "A = Z + N.",
+      "url": "https://en.wikipedia.org/wiki/Mass_number"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm013",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "hisob.nisbiy_zichlik",
+   "lang": "uz",
+   "stem": {
+    "uz": "Gazning havoga nisbatan zichligi 2 ga teng. Uning molyar massasini toping (g/mol). (M(havo) = 29 g/mol)",
+    "ru": "Плотность газа по воздуху равна 2. Найдите его молярную массу (г/моль). (M(воздуха) = 29 г/моль)"
+   },
+   "options": [
+    {
+     "uz": "58",
+     "ru": "58"
+    },
+    {
+     "uz": "29",
+     "ru": "29"
+    },
+    {
+     "uz": "14,5",
+     "ru": "14,5"
+    },
+    {
+     "uz": "31",
+     "ru": "31"
+    }
+   ],
+   "why": {
+    "en": "M = 29 x D(air) = 58.",
+    "uz": "M = 29 · D(havo) = 58.",
+    "ru": "M = 29 · D(возд.) = 58."
+   },
+   "prior_b": 0.0,
+   "time_s": 30,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Vapour_density",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Vapour density (relative to hydrogen) = molar mass / 2.",
+      "url": "https://en.wikipedia.org/wiki/Vapour_density"
+     },
+     {
+      "claim": "The molar mass of dry air is about 28.97 g/mol.",
+      "url": "https://en.wikipedia.org/wiki/Density_of_air"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm014",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "pH",
+   "lang": "uz",
+   "stem": {
+    "uz": "0,01 mol/l li xlorid kislota (HCl) eritmasining pH qiymati qancha (toʻliq dissotsilanadi)?",
+    "ru": "Каков pH раствора соляной кислоты HCl с концентрацией 0,01 моль/л (полная диссоциация)?"
+   },
+   "options": [
+    {
+     "uz": "2",
+     "ru": "2"
+    },
+    {
+     "uz": "1",
+     "ru": "1"
+    },
+    {
+     "uz": "12",
+     "ru": "12"
+    },
+    {
+     "uz": "0,01",
+     "ru": "0,01"
+    }
+   ],
+   "why": {
+    "en": "[H+] = 10^-2, so pH = 2.",
+    "uz": "[H⁺] = 10⁻², pH = 2.",
+    "ru": "[H⁺] = 10⁻², pH = 2."
+   },
+   "prior_b": 0.0,
+   "time_s": 30,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/PH",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "pH = -log10[H+]; pH 7 is neutral at 25 C, acids below 7.",
+      "url": "https://en.wikipedia.org/wiki/PH"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chm015",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "hisob.gaz_hajmi",
+   "lang": "uz",
+   "stem": {
+    "uz": "Normal sharoitda 3 mol azot (N₂) qancha hajmni (l) egallaydi?",
+    "ru": "Какой объём (л) занимают 3 моль азота N₂ при нормальных условиях?"
+   },
+   "options": [
+    {
+     "uz": "67,2",
+     "ru": "67,2"
+    },
+    {
+     "uz": "22,4",
+     "ru": "22,4"
+    },
+    {
+     "uz": "44,8",
+     "ru": "44,8"
+    },
+    {
+     "uz": "84",
+     "ru": "84"
+    }
+   ],
+   "why": {
+    "en": "V = n x 22.4 = 3 x 22.4 = 67.2 L.",
+    "uz": "V = n · 22,4 = 67,2 l.",
+    "ru": "V = n · 22,4 = 67,2 л."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Molar_volume",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "At 0 C and 1 atm the molar volume of an ideal gas is about 22.4 L/mol.",
+      "url": "https://en.wikipedia.org/wiki/Molar_volume"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

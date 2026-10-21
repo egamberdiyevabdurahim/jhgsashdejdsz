@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#123a29">
+<title>Math check study · Jamals Global</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runtime/jg-uz-marks.css?v=1" data-jg-uz-marks>
+<style>
+  /* A screen the design does not have, drawn in its style: JIA Jade tokens, Raleway, the student profile's
+     "bowl" header, the design's card radius and shadow, its mascot entrance (mcIn) and float (mcFloat).
+     signin.html, welcome.html, link.html and signout.html carry the same <style>; change all four together.
+     P5i (owner 7 Oct 2026 decision 4c): study.html carries link.html's <style> too, plus the few rules at its end. */
+  :root {
+    --forest: #123a29; --forest-2: #19553c; --mint: #66c69a; --accent: #207251;
+    --ink: #10271e; --ink-2: #4b6559; --muted: #587066; --page: #eef4f1; --line: #e4ece7;
+    --jade-300: #91dab6; --jade-600: #2b9067;
+    --edge: #d4e0d8; --soft: #e8f7ee; --danger: #b0402f;
+    --font: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --shadow: 0 16px 36px rgba(18, 58, 40, .10), 0 1px 3px rgba(18, 58, 40, .06);
+  }
+  /* P15 fixes lane (18 Oct 2026): in Uzbek (auth.js sets <html lang="uz-Latn">) U+02BB/U+02BC are drawn with Raleway's own turned comma
+     and apostrophe ("JG Uz Marks", public/runtime/jg-uz-marks.css; Raleway's U+02BC is its acute), first in the stack, word for word after it */
+  html[lang="uz-Latn"] { --font: "JG Uz Marks", "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    min-height: 100vh; min-height: 100dvh; background: var(--page);
+    font-family: var(--font); color: var(--ink); -webkit-font-smoothing: antialiased;
+    font-feature-settings: "lnum" 1; font-variant-numeric: lining-nums;
+  }
+  button, input { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--jade-600); outline-offset: 3px; }
+
+  /* ---------- phone: the bowl header, the card overlapping its curve by 40px ---------- */
+  .frame { position: relative; }
+  .hero { position: relative; height: calc(220px + env(safe-area-inset-top)); color: #fff; }
+  .bowl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .hero h1 {
+    position: absolute; left: 24px; right: 150px; top: calc(64px + env(safe-area-inset-top));
+    font-size: 22px; font-weight: 700; line-height: 1.22; letter-spacing: .005em; text-wrap: balance;
+  }
+  .mascot {
+    position: absolute; z-index: 3; right: 18px; bottom: 32px; width: 116px; height: 134px;
+    animation: mcIn .85s cubic-bezier(.3, 1.5, .5, 1) .15s both;
+  }
+  .mascot img {
+    display: block; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%;
+    filter: drop-shadow(0 4px 6px rgba(11, 40, 27, .16)); animation: mcFloat 3.2s ease-in-out 1s infinite;
+    -webkit-user-drag: none; user-select: none;
+  }
+  .langs {
+    position: absolute; z-index: 5; top: calc(10px + env(safe-area-inset-top)); right: 12px; display: flex;
+    border-radius: 999px; background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2);
+  }
+  .langs button {
+    min-width: 44px; height: 44px; padding: 0 10px; border: 0; border-radius: 999px; background: none;
+    color: #d6ebe0; font-size: 12.5px; font-weight: 700; letter-spacing: .06em; cursor: pointer; transition: background .2s, color .2s;
+  }
+  .langs button[aria-pressed="true"] { background: #fff; color: var(--forest); }
+  .card {
+    position: relative; z-index: 2; display: grid; gap: 16px; align-content: start;
+    margin: -40px 16px calc(24px + env(safe-area-inset-bottom)); padding: 22px 18px 24px;
+    background: #fff; border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow);
+    animation: rise .9s cubic-bezier(.2, .8, .2, 1) both;
+  }
+
+  /* ---------- the card's parts ---------- */
+  .tabs { display: grid; grid-template-columns: 1fr 1fr; padding: 4px; border-radius: 16px; background: #e9efec; }
+  .tabs button {
+    min-height: 44px; padding: 6px 8px; border: 0; border-radius: 12px; background: none; line-height: 1.2;
+    color: var(--ink-2); font-size: 14px; font-weight: 700; cursor: pointer; transition: background .25s, color .25s, box-shadow .25s;
+  }
+  .tabs button[aria-selected="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 4px rgba(16, 39, 30, .1); }
+  .err { padding: 12px 14px; border-radius: 14px; background: #fbeae6; color: var(--danger); font-size: 14px; font-weight: 600; line-height: 1.4; }
+  .social { display: grid; gap: 10px; }
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; height: 52px; padding: 0 18px;
+    border: 0; border-radius: 15px; font-size: 15px; font-weight: 700; text-decoration: none; cursor: pointer;
+    transition: background .2s, transform .12s, opacity .2s;
+  }
+  .btn:active { transform: scale(.985); }
+  .btn svg { flex: none; width: 22px; height: 22px; }
+  .btn[aria-busy="true"] { opacity: .72; cursor: progress; }
+  .btn-primary { background: var(--forest); color: #fff; }
+  .btn-primary:hover { background: var(--forest-2); }
+  .btn-social { background: #fff; color: var(--ink); box-shadow: inset 0 0 0 1px var(--edge); }
+  .btn-social:hover { background: #f4f8f6; }
+  .or { display: flex; align-items: center; gap: 12px; margin-top: 4px; color: var(--muted); font-size: 13px; font-weight: 600; }
+  .or::before, .or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .form { display: grid; gap: 14px; }
+  .field { display: grid; gap: 6px; }
+  .field > span { color: var(--ink-2); font-size: 13px; font-weight: 600; }
+  .field input {
+    width: 100%; height: 52px; padding: 0 16px; border: 1px solid var(--edge); border-radius: 15px; background: #f8fbf9;
+    color: var(--ink); font-size: 16px; font-weight: 500; transition: border-color .2s, background .2s;
+  }
+  .field input:focus { border-color: #9fdcbd; background: #fff; }
+  /* the teen walk of 10 Oct 2026 (the owner's delegated call): the password field's eye (the design's own roadmap eye, student shell .eye) and the
+     password rule under the field, said before the button is pressed; .pitch: the sign-in page's one sentence about the app */
+  .pw { position: relative; display: block; }
+  .pw input { padding-right: 56px; }
+  .pw-eye {
+    position: absolute; top: 4px; right: 4px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0;
+    border: 0; border-radius: 12px; background: none; color: var(--muted); cursor: pointer; transition: color .2s, background .2s;
+  }
+  .pw-eye:hover { color: var(--ink); background: #eef4f1; }
+  .pw-eye svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .pw-eye .off, .pw-eye[aria-pressed="true"] .on { display: none; }
+  .pw-eye[aria-pressed="true"] .off { display: block; }
+  .field .hint { color: var(--muted); font-size: 13px; font-weight: 500; line-height: 1.4; }
+  .pitch { color: var(--ink-2); font-size: 15px; font-weight: 600; line-height: 1.45; text-wrap: balance; }
+  .form .btn-primary { margin-top: 4px; }
+  .roles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .role {
+    position: relative; display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 10px 12px;
+    border-radius: 15px; box-shadow: inset 0 0 0 1px var(--edge); color: var(--ink-2);
+    font-size: 14px; font-weight: 700; line-height: 1.25; cursor: pointer; transition: background .2s, box-shadow .2s, color .2s;
+  }
+  .role input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+  .role i { flex: none; width: 20px; height: 20px; border-radius: 50%; background: #fff; box-shadow: inset 0 0 0 2px var(--edge); transition: box-shadow .2s; }
+  .role:has(input:checked) { background: var(--soft); color: var(--forest); box-shadow: inset 0 0 0 1.5px var(--jade-600); }
+  .role:has(input:checked) i { box-shadow: inset 0 0 0 6px var(--jade-600); }
+  .role:has(input:focus-visible) { outline: 2px solid var(--jade-600); outline-offset: 3px; }
+  .lead { color: var(--ink-2); font-size: 15px; font-weight: 500; line-height: 1.5; }
+  .field .code-in { font-size: 18px; font-weight: 700; letter-spacing: .12em; }
+  .out {
+    display: flex; align-items: center; justify-content: center; min-height: 44px; margin-top: -4px;
+    color: var(--muted); font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px;
+  }
+  .out:hover { color: var(--ink); }
+  /* owner 5 Oct 2026: the line that opens the AI notice (/runtime/jg-ai-notice.js), under Create account */
+  .ai-link {
+    display: block; width: 100%; min-height: 44px; margin-top: -6px; padding: 12px 8px;
+    border: 0; background: none; color: var(--muted); font-size: 13.5px; font-weight: 600; line-height: 1.45; text-align: center; text-wrap: balance;
+    text-decoration: underline; text-underline-offset: 3px; cursor: pointer; transition: color .2s;
+  }
+  .ai-link::before {
+    content: ""; display: inline-block; width: 15px; height: 15px; margin-right: 6px; vertical-align: -2px; background: var(--jade-600);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9zM18.5 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z'/%3E%3C/svg%3E") center / contain no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9zM18.5 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+  .ai-link:hover { color: var(--ink); }
+
+  @keyframes rise { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+  @keyframes mcIn { 0% { opacity: 0; transform: translateY(26px) scale(.55); } 55% { opacity: 1; } 100% { opacity: 1; transform: none; } }
+  @keyframes mcFloat { 50% { transform: translateY(-3.5px); } }
+
+  /* ---------- desktop: a centred card with the forest panel on its left ---------- */
+  @media (min-width: 768px) {
+    body { display: grid; place-items: center; padding: 88px 24px 48px; }
+    .langs { position: fixed; top: 24px; right: 24px; background: #fff; box-shadow: inset 0 0 0 1px var(--edge), 0 1px 3px rgba(18, 58, 40, .06); }
+    .langs button { color: var(--ink-2); }
+    .langs button[aria-pressed="true"] { background: var(--forest); color: #fff; }
+    .frame {
+      display: grid; grid-template-columns: 9fr 11fr; width: min(800px, 100%);
+      border-radius: 28px; overflow: hidden; background: #fff; box-shadow: var(--shadow);
+      animation: rise .9s cubic-bezier(.2, .8, .2, 1) both;
+    }
+    .hero {
+      height: auto; min-height: 580px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 28px; padding: 48px 36px; background: linear-gradient(180deg, #0f3323 0%, #19553c 100%);
+    }
+    .bowl { display: none; }
+    .hero h1 { position: static; font-size: 26px; text-align: center; }
+    .mascot { position: static; width: 184px; height: 212px; }
+    .card { margin: 0; padding: 48px 40px; border: 0; border-radius: 0; box-shadow: none; align-content: center; animation: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card, .frame, .mascot, .mascot img { animation: none; }
+    .btn, .role, .tabs button, .langs button { transition: none; }
+  }
+
+  /* ---------- study.html only (P5i, owner decision 4c) ---------- */
+  .field small { color: var(--muted); font-size: 12.5px; font-weight: 600; line-height: 1.4; }
+  fieldset.field { border: 0; min-width: 0; }
+  .consent {
+    display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; padding: 14px;
+    border-radius: 15px; background: #f4f8f6; box-shadow: inset 0 0 0 1px var(--edge); color: var(--ink-2); font-size: 14px; font-weight: 500; line-height: 1.5; cursor: pointer;
+  }
+  .consent input { width: 22px; height: 22px; margin: 1px 0 0; accent-color: var(--jade-600); cursor: pointer; }
+  .consent:has(input:checked) { background: var(--soft); box-shadow: inset 0 0 0 1.5px var(--jade-600); color: var(--ink); }
+  .done { display: grid; gap: 12px; padding: 16px; border-radius: 16px; background: var(--soft); color: var(--forest); font-size: 15px; font-weight: 600; line-height: 1.5; }
+  .steps { display: grid; gap: 8px; margin: 0; padding: 0 0 0 20px; color: var(--ink-2); font-size: 14px; font-weight: 500; line-height: 1.5; }
+  a.btn { text-decoration: none; }
+  .note { padding: 12px 14px; border-radius: 14px; background: var(--soft); color: var(--forest); font-size: 14px; font-weight: 600; line-height: 1.4; }
+  .link-btn { justify-self: center; min-height: 44px; padding: 0 8px; border: 0; background: none; color: var(--muted); font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .link-btn:hover { color: var(--ink); }
+  /* owner 10 Oct 2026 (delegated call): under 18, a parent says yes first */
+  .ask { display: grid; gap: 14px; }
+  .ask .lead { padding: 14px; border-radius: 15px; background: #f4f8f6; box-shadow: inset 0 0 0 1px var(--edge); color: var(--ink); font-weight: 600; }
+  .ask-share { display: grid; gap: 10px; }
+  .ask-share small { color: var(--muted); font-size: 12.5px; font-weight: 600; line-height: 1.4; text-align: center; }
+</style>
+</head>
+<body data-error="{{ERROR}}" data-joined="{{JOINED}}" data-consent="{{CONSENT}}" data-uid="{{UID}}" data-parent="{{PARENT}}" data-linked="{{LINKED}}" data-asked="{{ASKED}}">
+<!-- outside .frame: the frame's rise animation would otherwise contain the fixed desktop switch -->
+<div class="langs" role="group" data-t-aria="lang" aria-label="Language">
+  <button type="button" data-lang="uz" lang="uz-Latn" aria-label="Oʻzbekcha" aria-pressed="false">UZ</button>
+  <button type="button" data-lang="ru" lang="ru" aria-label="Русский" aria-pressed="false">RU</button>
+  <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+</div>
+<main class="frame">
+  <header class="hero">
+    <svg class="bowl" viewBox="0 0 375 260" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0f3323"/>
+          <stop offset="1" stop-color="#19553c"/>
+        </linearGradient>
+      </defs>
+      <path d="M0 0H375V168Q187.5 336 0 168Z" fill="url(#g)"/>
+    </svg>
+    <div class="mascot"><img src="/d/student-mobile/media/c5b64f4480cda475.webp" width="365" height="420" alt="" draggable="false"></div>
+    <h1 data-t="title">Math check study</h1>
+  </header>
+
+  <section class="card">
+    <p class="lead" id="help" data-t="help">You took a Bluebook SAT test. Tell us your Math score, then take the Jamals Global math check within 14 days of that test. We compare the two to see how accurate our check is.</p>
+    <p class="err" id="err" role="alert" hidden></p>
+    <p class="note" id="note" role="status" hidden></p>
+    <div class="done" id="done" hidden>
+      <span data-t="doneTitle">Thank you. You are in the study.</span>
+      <ol class="steps"><li data-t="step1">Open Jamals Global and take the math check (in your first questions, or when it is offered).</li><li data-t="step2">Take it within 14 days of your Bluebook test.</li></ol>
+      <a class="btn btn-primary" href="/app" data-t="open">Open Jamals Global</a>
+      <button type="button" class="link-btn" id="leave" data-t="leave">Leave the study</button>
+    </div>
+    <!-- owner 10 Oct 2026 (delegated call): under 18 (or with no date of birth yet) a parent's yes comes first; the form stays hidden until then -->
+    <div class="ask" id="ask" hidden>
+      <p class="lead" id="askLead"></p>
+      <ol class="steps" id="askSteps"><li data-t="ask1">Tap “Ask my parent”.</li><li data-t="ask2">Your parent opens the Jamals Global parent app and answers yes or no.</li><li data-t="ask3">After a yes, open this link again and join.</li></ol>
+      <button type="button" class="btn btn-primary" id="askBtn" data-t="askBtn">Ask my parent</button>
+      <div class="ask-share" id="askShare" hidden>
+        <a class="btn btn-primary" id="askTg" href="#" target="_blank" rel="noopener" data-t="askTg">Send in Telegram</a>
+        <button type="button" class="btn btn-social" id="askCopy" data-t="askCopy">Copy link</button>
+        <small data-t="askValid">The link works for one parent, for up to 3 days.</small>
+      </div>
+    </div>
+    <form id="f-study" class="form" novalidate>
+      <input type="hidden" name="code" value="{{CODE}}">
+      <fieldset class="field">
+        <span data-t="kind">Which Bluebook test?</span>
+        <div class="roles">
+          <label class="role"><input type="radio" name="kind" value="practice" checked><i></i><span data-t="practice">Practice test</span></label>
+          <label class="role"><input type="radio" name="kind" value="official"><i></i><span data-t="official">Official SAT</span></label>
+        </div>
+      </fieldset>
+      <label class="field"><span data-t="date">Test date</span><input type="date" name="date" required></label>
+      <label class="field"><span data-t="math">Math score (200-800)</span><input type="number" name="math" min="200" max="800" step="10" inputmode="numeric" required></label>
+      <label class="field"><span data-t="total">Total score (optional)</span><input type="number" name="total" min="400" max="1600" step="10" inputmode="numeric"></label>
+      <label class="consent"><input type="checkbox" name="consent" required><span data-t="consent">I agree that Jamals Global and Jamals International Academy compare my Bluebook Math score with my result on the Jamals Global math check, to measure how accurate the check is. My name is not used in the comparison. I can leave the study at any time on this page.</span></label>
+      <button type="submit" class="btn btn-primary" data-t="join">Join the study</button>
+    </form>
+    <a class="out" href="/app" data-t="back">Back to Jamals Global</a>
+  </section>
+</main>
+
+<script src="/runtime/auth.js"></script>
+<script>
+(() => {
+  /* New copy for the owner's review (owner 7 Oct 2026 decision 4c; P5i). Uzbek with U+02BB (oʻ, gʻ). */
+  const STR = {
+    en: {
+      docTitle: 'Math check study · Jamals Global', lang: 'Language', title: 'Math check study',
+      help: 'You took a Bluebook SAT test. Tell us your Math score, then take the Jamals Global math check within 14 days of that test. We compare the two to see how accurate our check is.',
+      kind: 'Which Bluebook test?', practice: 'Practice test', official: 'Official SAT', date: 'Test date', math: 'Math score (200-800)', total: 'Total score (optional)',
+      consent: 'I agree that Jamals Global and Jamals International Academy compare my Bluebook Math score with my result on the Jamals Global math check, to measure how accurate the check is. My name is not used in the comparison. I can leave the study at any time on this page.',
+      join: 'Join the study', back: 'Back to Jamals Global', doneTitle: 'Thank you. You are in the study.',
+      step1: 'Open Jamals Global and take the math check (in your first questions, or when it is offered).', step2: 'Take it within 14 days of your Bluebook test.',
+      open: 'Open Jamals Global', leave: 'Leave the study', left: 'You left the study. Your score will not be used.',
+      invalid: 'This link is not valid. Ask your teacher for the study link.', revoked: 'This link was closed. Ask your teacher for a new one.',
+      expired: 'This link has expired. Ask your teacher for a new one.', used_up: 'This link is full. Ask your teacher for a new one.',
+      needConsent: 'Tick the consent box to join.', badMath: 'Enter a Math score from 200 to 800, in steps of 10.', badTotal: 'Enter a total from 400 to 1600, in steps of 10, or leave it empty.',
+      badDate: 'Enter the date of a test you took in the last six months.', failed: 'Something went wrong. Please try again.', tooMany: 'Too many attempts. Please wait a few minutes and try again.',
+      /* owner 10 Oct 2026 (delegated call): under 18, a parent says yes first. New copy for the owner's review. */
+      needParent: 'You are under 18, so a parent says yes first.',
+      needAge: 'If you are under 18, a parent says yes first. If you are 18 or older, finish your first questions in Jamals Global (they ask your date of birth) and open this link again.',
+      ask1: 'Tap “Ask my parent”.', ask2: 'Your parent opens the Jamals Global parent app and answers yes or no.', ask3: 'After a yes, open this link again and join.',
+      askBtn: 'Ask my parent', asked: 'Asked. Your parent sees the question on the first screen of the parent app.',
+      askedSend: 'Asked. Your parent is not connected yet: send them this link. They sign in as a parent and see the question on the first screen.',
+      askTg: 'Send in Telegram', askCopy: 'Copy link', askCopied: 'Copied', askValid: 'The link works for one parent, for up to 3 days.',
+      askText: 'Please open Jamals Global and answer one question: may I take part in a math study? It takes about a minute.',
+      parentNo: 'Your parent said no to this study, so you are not in it. That is fine: nothing else changes in Jamals Global. If your parent changes the answer in the parent app, you can join here.',
+    },
+    uz: {
+      docTitle: 'Matematika tekshiruvi tadqiqoti · Jamals Global', lang: 'Til', title: 'Matematika tekshiruvi tadqiqoti',
+      help: 'Siz Bluebook SAT testini topshirdingiz. Math ballingizni yozing, soʻng oʻsha testdan keyin 14 kun ichida Jamals Global matematika tekshiruvidan oʻting. Tekshiruvimiz qanchalik aniq ekanini bilish uchun ikkalasini solishtiramiz.',
+      kind: 'Qaysi Bluebook testi?', practice: 'Mashq testi', official: 'Rasmiy SAT', date: 'Test sanasi', math: 'Math balli (200-800)', total: 'Umumiy ball (ixtiyoriy)',
+      consent: 'Jamals Global va Jamals International Academy mening Bluebook Math ballimni Jamals Global matematika tekshiruvidagi natijam bilan solishtirishiga roziman: bu tekshiruv qanchalik aniq ekanini oʻlchash uchun. Solishtirishda ismim ishlatilmaydi. Istalgan vaqtda shu sahifada tadqiqotdan chiqishim mumkin.',
+      join: 'Tadqiqotga qoʻshilish', back: 'Jamals Globalga qaytish', doneTitle: 'Rahmat. Siz tadqiqotdasiz.',
+      step1: 'Jamals Globalni oching va matematika tekshiruvidan oʻting (birinchi savollaringiz ichida yoki taklif qilinganda).', step2: 'Uni Bluebook testingizdan keyin 14 kun ichida topshiring.',
+      open: 'Jamals Globalni ochish', leave: 'Tadqiqotdan chiqish', left: 'Siz tadqiqotdan chiqdingiz. Ballingiz ishlatilmaydi.',
+      invalid: 'Bu havola yaroqsiz. Tadqiqot havolasini oʻqituvchingizdan soʻrang.', revoked: 'Bu havola yopilgan. Oʻqituvchingizdan yangisini soʻrang.',
+      expired: 'Bu havolaning muddati oʻtgan. Oʻqituvchingizdan yangisini soʻrang.', used_up: 'Bu havola toʻlgan. Oʻqituvchingizdan yangisini soʻrang.',
+      needConsent: 'Qoʻshilish uchun rozilik belgisini qoʻying.', badMath: '200 dan 800 gacha, 10 lik qadam bilan Math ballini yozing.', badTotal: '400 dan 1600 gacha, 10 lik qadam bilan umumiy ballni yozing yoki boʻsh qoldiring.',
+      badDate: 'Oxirgi olti oy ichida topshirgan testingiz sanasini yozing.', failed: 'Nimadir xato ketdi. Qaytadan urinib koʻring.', tooMany: 'Urinishlar juda koʻp. Bir necha daqiqa kutib, qaytadan urinib koʻring.',
+      needParent: 'Siz 18 yoshga toʻlmagansiz, shuning uchun avval ota-onangiz rozi boʻlishi kerak.',
+      needAge: 'Agar 18 yoshga toʻlmagan boʻlsangiz, avval ota-onangiz rozi boʻlishi kerak. Agar 18 yoki undan katta boʻlsangiz, Jamals Globaldagi birinchi savollaringizni tugating (ularda tugʻilgan sanangiz soʻraladi) va shu havolani qayta oching.',
+      ask1: '«Ota-onamdan soʻrash» tugmasini bosing.', ask2: 'Ota-onangiz Jamals Global ota-onalar ilovasini ochib, «ha» yoki «yoʻq» deb javob beradi.', ask3: '«Ha» javobidan keyin shu havolani qayta oching va qoʻshiling.',
+      askBtn: 'Ota-onamdan soʻrash', asked: 'Soʻraldi. Ota-onangiz savolni ota-onalar ilovasining birinchi ekranida koʻradi.',
+      askedSend: 'Soʻraldi. Ota-onangiz hali ulanmagan: ularga shu havolani yuboring. Ular ota-ona sifatida kiradi va savolni birinchi ekranda koʻradi.',
+      askTg: 'Telegramda yuborish', askCopy: 'Havolani nusxalash', askCopied: 'Nusxalandi', askValid: 'Havola bitta ota-ona uchun, 3 kungacha amal qiladi.',
+      askText: 'Iltimos, Jamals Globalni ochib, bitta savolga javob bering: matematika tadqiqotida qatnashsam maylimi? Taxminan bir daqiqa vaqt oladi.',
+      parentNo: 'Ota-onangiz bu tadqiqotga «yoʻq» dedi, shuning uchun siz unda qatnashmaysiz. Hechqisi yoʻq: Jamals Globalda boshqa hech narsa oʻzgarmaydi. Ota-onangiz ota-onalar ilovasida javobini oʻzgartirsa, shu yerda qoʻshilishingiz mumkin.',
+    },
+    ru: {
+      docTitle: 'Исследование проверки по математике · Jamals Global', lang: 'Язык', title: 'Исследование проверки по математике',
+      help: 'Вы сдали тест SAT в Bluebook. Укажите балл по Math, затем в течение 14 дней после этого теста пройдите проверку по математике в Jamals Global. Мы сравним результаты, чтобы узнать, насколько точна наша проверка.',
+      kind: 'Какой тест Bluebook?', practice: 'Пробный тест', official: 'Официальный SAT', date: 'Дата теста', math: 'Балл Math (200-800)', total: 'Общий балл (необязательно)',
+      consent: 'Я согласен(на), что Jamals Global и Jamals International Academy сравнят мой балл Bluebook Math с моим результатом проверки по математике в Jamals Global, чтобы измерить её точность. Моё имя при сравнении не используется. Я могу выйти из исследования в любой момент на этой странице.',
+      join: 'Участвовать', back: 'Вернуться в Jamals Global', doneTitle: 'Спасибо. Вы участвуете в исследовании.',
+      step1: 'Откройте Jamals Global и пройдите проверку по математике (среди первых вопросов или когда её предложат).', step2: 'Пройдите её в течение 14 дней после теста Bluebook.',
+      open: 'Открыть Jamals Global', leave: 'Выйти из исследования', left: 'Вы вышли из исследования. Ваш балл не будет использован.',
+      invalid: 'Ссылка недействительна. Попросите ссылку у преподавателя.', revoked: 'Эта ссылка закрыта. Попросите новую у преподавателя.',
+      expired: 'Срок действия ссылки истёк. Попросите новую у преподавателя.', used_up: 'Мест по этой ссылке больше нет. Попросите новую у преподавателя.',
+      needConsent: 'Отметьте согласие, чтобы участвовать.', badMath: 'Введите балл Math от 200 до 800 с шагом 10.', badTotal: 'Введите общий балл от 400 до 1600 с шагом 10 или оставьте поле пустым.',
+      badDate: 'Укажите дату теста за последние шесть месяцев.', failed: 'Что-то пошло не так. Попробуйте ещё раз.', tooMany: 'Слишком много попыток. Подождите несколько минут и попробуйте снова.',
+      needParent: 'Вам ещё нет 18 лет, поэтому сначала согласие даёт родитель.',
+      needAge: 'Если вам нет 18 лет, сначала согласие даёт родитель. Если вам 18 или больше, ответьте на первые вопросы в Jamals Global (там спрашивают дату рождения) и откройте эту ссылку снова.',
+      ask1: 'Нажмите «Спросить родителя».', ask2: 'Родитель открывает родительское приложение Jamals Global и отвечает «да» или «нет».', ask3: 'После «да» откройте эту ссылку снова и присоединяйтесь.',
+      askBtn: 'Спросить родителя', asked: 'Вопрос отправлен. Родитель видит его на первом экране родительского приложения.',
+      askedSend: 'Вопрос отправлен. Родитель ещё не подключён: отправьте ему эту ссылку. Он войдёт как родитель и увидит вопрос на первом экране.',
+      askTg: 'Отправить в Telegram', askCopy: 'Скопировать ссылку', askCopied: 'Скопировано', askValid: 'Ссылка действует для одного родителя, не дольше 3 дней.',
+      askText: 'Пожалуйста, откройте Jamals Global и ответьте на один вопрос: можно ли мне участвовать в исследовании по математике? Это займёт около минуты.',
+      parentNo: 'Родитель ответил «нет», поэтому вы не участвуете в исследовании. Ничего страшного: в Jamals Global больше ничего не меняется. Если родитель изменит ответ в родительском приложении, вы сможете присоединиться здесь.',
+    },
+  };
+  const A = window.JGAuth, $ = (id) => document.getElementById(id), B = document.body.dataset;
+  const err = $('err'), note = $('note'), form = $('f-study'), done = $('done');
+  /* owner 10 Oct 2026 (delegated call): under 18 a parent says yes first. data-parent: '' at 18 or over (the page as it was), 'age' with no
+     date of birth yet, 'need' under 18, then the parent's own 'yes' (the form) or 'no'. The server refuses the join whatever this page shows. */
+  const ask = $('ask'), askLead = $('askLead'), gate = B.parent === 'need' || B.parent === 'age' || B.parent === 'no';
+  let shown = '', noted = '', lead = '', url = '';
+  function tg() { if (url) $('askTg').href = 'https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(L.t('askText')); }
+  const L = A.i18n(STR, 'student', () => { if (shown) err.textContent = L.t(shown); if (noted) note.textContent = L.t(noted); if (lead) askLead.textContent = L.t(lead); tg(); });
+  function show(key) { shown = key || ''; err.textContent = shown ? L.t(shown) : ''; err.hidden = !shown; }
+  function say(key) { noted = key || ''; note.textContent = noted ? L.t(noted) : ''; note.hidden = !noted; }
+  function state(joined) { done.hidden = !joined; form.hidden = joined || !!B.error || gate; ask.hidden = joined || !!B.error || !gate; }
+  show(B.error || ''); state(B.joined === '1');
+  if (gate) {
+    lead = B.parent === 'no' ? 'parentNo' : B.parent === 'age' ? 'needAge' : 'needParent'; askLead.textContent = L.t(lead);
+    if (B.parent === 'no') { $('askSteps').hidden = true; $('askBtn').hidden = true; }
+    else if (B.asked === '1' && B.linked === '1' && !B.error) say('asked');
+  }
+  $('askBtn').addEventListener('click', async () => {
+    const btn = $('askBtn'), head = { 'content-type': 'application/json', 'x-jg-uid': B.uid }; show(''); A.busy(btn, true);
+    const r = await fetch('/api/v1/study/math/ask', { method: 'POST', credentials: 'same-origin', headers: head, body: JSON.stringify({ code: form.elements.code.value }) })
+      .then((x) => x.json().then((j) => ({ s: x.status, j }), () => ({ s: x.status, j: {} })), () => ({ s: 0, j: {} }));
+    A.busy(btn, false);
+    if (r.s === 401 || r.s === 409) return location.reload();
+    if (r.s !== 200) return show(r.s === 404 ? 'invalid' : r.s === 410 ? 'expired' : r.s === 429 ? 'tooMany' : 'failed');
+    if (!r.j.needed) return location.reload();                                 // 18 or over after all: the page as it was
+    if (r.j.linked) return say('asked');
+    /* no parent connected yet: the existing family link (the student's own code, /join/<code>), to send in Telegram or copy */
+    const f = await fetch('/api/v1/family', { credentials: 'same-origin', headers: { 'x-jg-uid': B.uid } }).then((x) => (x.ok ? x.json() : null), () => null);
+    if (!f || !f.code) return show('failed');
+    url = location.origin + '/join/' + f.code; tg(); btn.hidden = true; $('askShare').hidden = false; say('askedSend');   // the two ways to send take the button's place
+  });
+  $('askCopy').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(url); $('askCopy').textContent = L.t('askCopied'); } catch (e) { noted = ''; note.textContent = url; note.hidden = false; }
+  });
+  const send = (method, body) => fetch('/api/v1/study/math', { method, credentials: 'same-origin', headers: { 'content-type': 'application/json', 'x-jg-uid': B.uid }, body: body ? JSON.stringify(body) : undefined })
+    .then((r) => r.status, () => 0);
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const f = new FormData(form), math = Number(f.get('math')), totalRaw = String(f.get('total') || '').trim(), total = Number(totalRaw), date = String(f.get('date') || '');
+    say('');
+    if (!f.get('consent')) return show('needConsent');
+    if (!(math >= 200 && math <= 800 && math % 10 === 0)) return show('badMath');
+    if (totalRaw && !(total >= 400 && total <= 1600 && total % 10 === 0)) return show('badTotal');
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return show('badDate');
+    const btn = form.querySelector('[type=submit]'); show(''); A.busy(btn, true);
+    const s = await send('POST', { code: String(f.get('code')), consent: true, consentVersion: B.consent, kind: String(f.get('kind')), date, math, ...(totalRaw ? { total } : {}) });
+    A.busy(btn, false);
+    if (s === 200) { state(true); return; }
+    if (s === 401 || s === 403 || s === 409) return location.reload();   // 403: the parent's yes is not there (any more); the page says so after a reload
+    show(s === 404 ? 'invalid' : s === 410 ? 'expired' : s === 422 ? 'badDate' : s === 429 ? 'tooMany' : 'failed');
+  });
+  $('leave').addEventListener('click', async () => {
+    const s = await send('DELETE');
+    if (s === 200) { done.hidden = true; form.hidden = !!B.error; say('left'); } else show('failed');
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,2708 @@
+{
+ "bank": "C11",
+ "batch": 3,
+ "kind": "admin_template",
+ "note": "Admin and registration templates (P5 spec §5.3 C11), batch 3: registration for the private and foreign-branch universities' own entrance routes in Tashkent (WIUT, Inha, CAU, Millat Umidi, TTPU, Webster, Amity, MDIS, BMU, KIUT, New Uzbekistan University). `uni_id` matches src/engine/data/universities_uz.json, whose requirement records were each read on the university's official page on 4 Oct 2026; Inha, NewUU, WIUT's apply FAQ, TTPU's regulations and MDIS's foundation page were re-read on 7 Oct 2026. Windows give the 2026 intake as a dated reference; no university had published 2027-intake dates on the pages read, so every 2027 window is null with needs_verification. Fees are quoted only where the official page states them. Same conventions as batch 1.",
+ "items": [
+  {
+   "id": "C11-puwiut",
+   "template_id": "C11-puwiut",
+   "uni_id": "wiut",
+   "kind": "admin_template",
+   "category": "uz_private_entrance",
+   "workstream_kind": "uz_unis",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "uni.application_deadline",
+    "milestone_ids": []
+   },
+   "rule_ids": [
+    "universities_uz:wiut",
+    "planner.verify_missing_rule"
+   ],
+   "lead_time": {
+    "start_days_before": 60,
+    "due_days_before": 14,
+    "basis": "inference",
+    "note": {
+     "en": "Apply and sit the maths exam well before the online deadline: complete applications take 14-20 days to review.",
+     "uz": "Onlayn muddatdan ancha oldin ariza bering va matematika imtihonini topshiring: toʻliq arizalar 14-20 kunda koʻrib chiqiladi.",
+     "ru": "Подайте заявку и сдайте математику задолго до онлайн-срока: полные заявки рассматривают 14-20 дней."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "The maths entrance exam costs 300,000 soʻm; the foundation year has a tuition fee.",
+    "uz": "Matematika kirish imtihoni 300 000 soʻm turadi; tayyorlov yili pullik.",
+    "ru": "Вступительный экзамен по математике стоит 300 000 сумов; подготовительный год платный."
+   },
+   "title": {
+    "en": "Apply to WIUT and book its maths exam",
+    "uz": "WIUTga ariza bering va matematika imtihoniga yoziling",
+    "ru": "Подайте заявку в WIUT и запишитесь на экзамен по математике"
+   },
+   "summary": {
+    "en": "School leavers enter WIUT through its one-year foundation (CIFS): IELTS 6.0 with writing 5.0 or TOEFL 78, and a pass of 50 in WIUT's computer-based maths exam (SAT Math 570 or GCSE Maths grade C instead), usually with a school average around 70 % and age 17. You apply and book the maths exam on admission.wiut.uz.",
+    "uz": "Maktab bitiruvchilari WIUTga bir yillik tayyorlov dasturi (CIFS) orqali kiradi: IELTS 6.0 (writing 5.0) yoki TOEFL 78 hamda WIUTning kompyuterdagi matematika imtihonidan 50 ball (uning oʻrniga SAT Math 570 yoki GCSE Maths C), odatda maktab oʻrtacha bahosi taxminan 70 % va yosh 17. Ariza va matematika imtihoniga yozilish admission.wiut.uz da.",
+    "ru": "Выпускники школ поступают в WIUT через годичную подготовительную программу (CIFS): IELTS 6.0 (writing 5.0) или TOEFL 78 и 50 баллов на компьютерном экзамене WIUT по математике (вместо него SAT Math 570 или GCSE Maths на C), обычно со средней школьной оценкой около 70 % и с 17 лет. Заявка и запись на математику — на admission.wiut.uz."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-puwiut-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -60,
+     "title": {
+      "en": "Check this year's dates",
+      "uz": "Shu yilgi sanalarni tekshiring",
+      "ru": "Проверьте даты этого года"
+     },
+     "instructions": {
+      "en": "On wiut.uz, find this year's CIFS application and document deadlines and paste the link.",
+      "uz": "wiut.uz saytida shu yilgi CIFS arizasi va hujjatlar muddatini toping va havolani qoʻying.",
+      "ru": "Найдите на wiut.uz сроки подачи заявки и документов CIFS этого года и вставьте ссылку."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "wiut.uz"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-puwiut-s2",
+     "type": "submit",
+     "minutes": 40,
+     "offset_days": -45,
+     "title": {
+      "en": "Create your account and apply",
+      "uz": "Akkaunt oching va ariza bering",
+      "ru": "Создайте аккаунт и подайте заявку"
+     },
+     "instructions": {
+      "en": "On admission.wiut.uz, create an account and fill in the application. Upload a passport-size photo, your passport copy and your school document.",
+      "uz": "admission.wiut.uz da akkaunt oching va arizani toʻldiring. Pasport oʻlchamidagi rasm, pasport nusxasi va maktab hujjatingizni yuklang.",
+      "ru": "На admission.wiut.uz создайте аккаунт и заполните заявку. Загрузите фото паспортного размера, копию паспорта и школьный документ."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the submitted application",
+       "uz": "yuborilgan ariza skrinshoti",
+       "ru": "скриншот отправленной заявки"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-puwiut-s3",
+     "type": "book",
+     "minutes": 15,
+     "offset_days": -40,
+     "title": {
+      "en": "Book the maths exam or record your exemption",
+      "uz": "Matematika imtihoniga yoziling yoki ozod boʻlishingizni kiriting",
+      "ru": "Запишитесь на математику или отметьте освобождение"
+     },
+     "instructions": {
+      "en": "In the portal, pick a date for the computer-based maths exam and pay 300,000 soʻm. If you have SAT Math 570 or more, record that instead.",
+      "uz": "Portalda kompyuterdagi matematika imtihoni uchun sana tanlang va 300 000 soʻm toʻlang. SAT Math natijangiz 570 va undan yuqori boʻlsa, oʻrniga shuni kiriting.",
+      "ru": "В портале выберите дату компьютерного экзамена по математике и оплатите 300 000 сумов. Если у вас SAT Math от 570, отметьте это вместо экзамена."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "route",
+        "type": "choice",
+        "options": [
+         "wiut_maths_exam",
+         "sat_math",
+         "gcse_maths"
+        ]
+       },
+       {
+        "key": "exam_date",
+        "type": "date",
+        "optional": true
+       }
+      ]
+     }
+    },
+    {
+     "n": 4,
+     "id": "C11-puwiut-s4",
+     "type": "submit",
+     "minutes": 30,
+     "anchor_override": "uni.documents_deadline",
+     "offset_days": -10,
+     "title": {
+      "en": "Hand in the paper documents",
+      "uz": "Hujjatlarning qogʻoz nusxalarini topshiring",
+      "ru": "Сдайте бумажные документы"
+     },
+     "instructions": {
+      "en": "After an offer, bring the paper documents WIUT asks for before the document deadline.",
+      "uz": "Taklif olgach, WIUT soʻragan hujjatlarning qogʻoz nusxalarini hujjatlar muddatidan oldin olib boring.",
+      "ru": "После предложения принесите бумажные документы, которые просит WIUT, до срока сдачи документов."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "documents_handed_in",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "apply_2026",
+     "kind": "application",
+     "label": {
+      "en": "Online application (2026 intake)",
+      "uz": "Onlayn ariza (2026-yil qabuli)",
+      "ru": "Онлайн-заявка (набор 2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "until": "2026-07-15",
+     "source": {
+      "url": "https://www.wiut.uz/cifs-undergraduate-apply-faq",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "docs_2026",
+     "kind": "documents",
+     "label": {
+      "en": "Paper documents (2026 intake)",
+      "uz": "Qogʻoz hujjatlar (2026-yil qabuli)",
+      "ru": "Бумажные документы (набор 2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "until": "2026-08-12",
+     "source": {
+      "url": "https://www.wiut.uz/cifs-undergraduate-apply-faq",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "apply_2027",
+     "kind": "application",
+     "label": {
+      "en": "Online application (2027 intake)",
+      "uz": "Onlayn ariza (2027-yil qabuli)",
+      "ru": "Онлайн-заявка (набор 2027)"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "until": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "entry",
+     "claim": "CIFS entry: IELTS 6.0 (writing 5.0), TOEFL iBT 78 (writing 17, test centre only) or IGCSE English C; WIUT computer-based maths exam with pass mark 50, or SAT Math 570, or GCSE Maths C; school average normally around 70 %; age normally 17.",
+     "url": "https://www.wiut.uz/certificate-international-foundation-studies",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record wiut; page re-read 7 Oct 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "process",
+     "claim": "Apply on admission.wiut.uz; choose a date for the computer-based maths exam and pay UZS 300,000 in the portal; pass 50; upload a photo, passport copy and secondary-education document; complete applications are reviewed in 14-20 days.",
+     "url": "https://www.wiut.uz/cifs-undergraduate-apply-faq",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "scholarship",
+     "claim": "WIUT gives 30 full CIFS scholarships a year to Uzbek citizens, ranked 60 % IELTS and 40 % maths, with a second paper stage.",
+     "url": "https://www.wiut.uz/scholarship",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "via R3 §5",
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "wiut_apply",
+     "url": "https://admission.wiut.uz",
+     "kind": "official",
+     "label": {
+      "en": "WIUT admission portal",
+      "uz": "WIUT qabul portali",
+      "ru": "Портал приёма WIUT"
+     }
+    },
+    {
+     "id": "wiut_cifs",
+     "url": "https://www.wiut.uz/certificate-international-foundation-studies",
+     "kind": "official",
+     "label": {
+      "en": "WIUT foundation (CIFS)",
+      "uz": "WIUT tayyorlov dasturi (CIFS)",
+      "ru": "Подготовительная программа WIUT (CIFS)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "WIUT's 2027 deadlines are not published yet: check wiut.uz from the spring.",
+    "uz": "WIUTning 2027-yilgi muddatlari hali eʼlon qilinmagan: bahordan boshlab wiut.uz ni tekshiring.",
+    "ru": "Сроки WIUT на 2027 год ещё не опубликованы: проверяйте wiut.uz с весны."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-puinha",
+   "template_id": "C11-puinha",
+   "uni_id": "inha",
+   "kind": "admin_template",
+   "category": "uz_private_entrance",
+   "workstream_kind": "uz_unis",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "uni.round.application_until",
+    "milestone_ids": []
+   },
+   "rule_ids": [
+    "universities_uz:inha",
+    "planner.verify_missing_rule"
+   ],
+   "lead_time": {
+    "start_days_before": 30,
+    "due_days_before": 10,
+    "never_within_hours": 48,
+    "basis": "inference",
+    "note": {
+     "en": "Inha runs three rounds; aim for round 1 or 2 so a later round is left if needed.",
+     "uz": "Inha uch bosqichda qabul qiladi; kerak boʻlsa keyingisi qolishi uchun 1- yoki 2-bosqichni moʻljallang.",
+     "ru": "У Инха три раунда; целитесь в 1-й или 2-й, чтобы в запасе остался следующий."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "The application fee is 200,000 soʻm; tuition is paid by contract.",
+    "uz": "Ariza toʻlovi 200 000 soʻm; oʻqish kontrakt asosida toʻlanadi.",
+    "ru": "Сбор за заявку — 200 000 сумов; обучение оплачивается по контракту."
+   },
+   "title": {
+    "en": "Apply to Inha University in Tashkent",
+    "uz": "Toshkentdagi Inha universitetiga ariza bering",
+    "ru": "Подайте заявку в Университет Инха в Ташкенте"
+   },
+   "summary": {
+    "en": "Inha admits through its own 60-minute test of 30 questions: 21 maths and 9 physics for computer and information engineering, or 30 maths for business and logistics. You need IELTS 5.0 (engineering) or 5.5 (business) and apply in one of three rounds on admissions.inha.uz.",
+    "uz": "Inha oʻzining 60 daqiqalik 30 savollik testi orqali qabul qiladi: kompyuter va axborot muhandisligi uchun 21 ta matematika va 9 ta fizika, biznes va logistika uchun 30 ta matematika. IELTS 5.0 (muhandislik) yoki 5.5 (biznes) kerak; ariza admissions.inha.uz da uch bosqichdan birida beriladi.",
+    "ru": "Инха принимает по собственному 60-минутному тесту из 30 вопросов: 21 по математике и 9 по физике для компьютерной и информационной инженерии или 30 по математике для бизнеса и логистики. Нужен IELTS 5.0 (инженерия) или 5.5 (бизнес); заявка подаётся на admissions.inha.uz в одном из трёх раундов."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-puinha-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -30,
+     "title": {
+      "en": "Choose your round",
+      "uz": "Bosqichni tanlang",
+      "ru": "Выберите раунд"
+     },
+     "instructions": {
+      "en": "Check this year's rounds on inha.uz and choose one whose exam leaves time for your English certificate. Paste the link.",
+      "uz": "inha.uz da shu yilgi bosqichlarni tekshiring va imtihoni ingliz tili sertifikatingizga vaqt qoldiradigan bosqichni tanlang. Havolani qoʻying.",
+      "ru": "Проверьте раунды этого года на inha.uz и выберите тот, экзамен которого оставляет время на сертификат по английскому. Вставьте ссылку."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "inha.uz"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-puinha-s2",
+     "type": "submit",
+     "minutes": 40,
+     "offset_days": -10,
+     "title": {
+      "en": "Apply online and pay the fee",
+      "uz": "Onlayn ariza bering va toʻlovni qiling",
+      "ru": "Подайте заявку онлайн и оплатите сбор"
+     },
+     "instructions": {
+      "en": "On admissions.inha.uz, apply with your passport or ID copy, school certificate and transcript (or a certificate of study), a 3.5 × 4.5 cm photo taken in the last 3 months and your English certificate if you have it. Pay 200,000 soʻm.",
+      "uz": "admissions.inha.uz da pasport yoki ID karta nusxasi, attestat va baholar varaqasi (yoki oʻqish haqidagi maʼlumotnoma), soʻnggi 3 oyda tushilgan 3,5 × 4,5 sm rasm va bor boʻlsa ingliz tili sertifikati bilan ariza bering. 200 000 soʻm toʻlang.",
+      "ru": "На admissions.inha.uz подайте заявку с копией паспорта или ID-карты, аттестатом и выпиской оценок (или справкой об обучении), фото 3,5 × 4,5 см не старше 3 месяцев и сертификатом по английскому, если он есть. Оплатите 200 000 сумов."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the submitted application",
+       "uz": "yuborilgan ariza skrinshoti",
+       "ru": "скриншот отправленной заявки"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-puinha-s3",
+     "type": "verify",
+     "minutes": 60,
+     "anchor_override": "uni.round.exam",
+     "offset_days": 0,
+     "title": {
+      "en": "Sit the entrance test",
+      "uz": "Kirish testini topshiring",
+      "ru": "Сдайте вступительный тест"
+     },
+     "instructions": {
+      "en": "Sit the 60-minute test on your round's date. Wrong answers are not penalised, so answer every question.",
+      "uz": "Bosqichingiz sanasida 60 daqiqalik testni topshiring. Notoʻgʻri javob uchun ball ayrilmaydi, shuning uchun har bir savolga javob bering.",
+      "ru": "Сдайте 60-минутный тест в дату своего раунда. За неверные ответы баллы не снимают, поэтому отвечайте на все вопросы."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "test_sat",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 4,
+     "id": "C11-puinha-s4",
+     "type": "submit",
+     "minutes": 10,
+     "anchor_override": "uni.english_cert_deadline",
+     "offset_days": -14,
+     "title": {
+      "en": "Hand in the English certificate",
+      "uz": "Ingliz tili sertifikatini topshiring",
+      "ru": "Сдайте сертификат по английскому"
+     },
+     "instructions": {
+      "en": "If you applied without an English certificate, send it before Inha's certificate deadline.",
+      "uz": "Ingliz tili sertifikatisiz ariza bergan boʻlsangiz, uni Inhaning sertifikat muddatidan oldin yuboring.",
+      "ru": "Если вы подали заявку без сертификата по английскому, отправьте его до срока Инха для сертификатов."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "english_cert_sent",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no",
+         "not_needed"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "r1_apply_2026",
+     "kind": "application",
+     "label": {
+      "en": "Round 1: apply (2026)",
+      "uz": "1-bosqich: ariza (2026)",
+      "ru": "1-й раунд: заявка (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "from": "2026-03-02",
+     "until": "2026-04-10",
+     "source": {
+      "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "r1_exam_2026",
+     "kind": "exam",
+     "label": {
+      "en": "Round 1: exam (2026)",
+      "uz": "1-bosqich: imtihon (2026)",
+      "ru": "1-й раунд: экзамен (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "from": "2026-04-18",
+     "until": "2026-04-19",
+     "source": {
+      "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "r2_apply_2026",
+     "kind": "application",
+     "label": {
+      "en": "Round 2: apply (2026)",
+      "uz": "2-bosqich: ariza (2026)",
+      "ru": "2-й раунд: заявка (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "from": "2026-05-08",
+     "until": "2026-06-19",
+     "source": {
+      "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "r2_exam_2026",
+     "kind": "exam",
+     "label": {
+      "en": "Round 2: exam (2026)",
+      "uz": "2-bosqich: imtihon (2026)",
+      "ru": "2-й раунд: экзамен (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "from": "2026-06-27",
+     "until": "2026-06-28",
+     "source": {
+      "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "r3_apply_2026",
+     "kind": "application",
+     "label": {
+      "en": "Round 3: apply (2026)",
+      "uz": "3-bosqich: ariza (2026)",
+      "ru": "3-й раунд: заявка (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "from": "2026-07-01",
+     "until": "2026-07-24",
+     "source": {
+      "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "r3_exam_2026",
+     "kind": "exam",
+     "label": {
+      "en": "Round 3: exam (2026)",
+      "uz": "3-bosqich: imtihon (2026)",
+      "ru": "3-й раунд: экзамен (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "from": "2026-08-01",
+     "until": "2026-08-02",
+     "source": {
+      "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "english_2026",
+     "kind": "documents",
+     "label": {
+      "en": "English certificate, rounds 1-2 (2026)",
+      "uz": "Ingliz tili sertifikati, 1-2-bosqichlar (2026)",
+      "ru": "Сертификат по английскому, раунды 1-2 (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "until": "2026-07-24",
+     "source": {
+      "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false,
+      "ref": "universities_uz.json record inha; page re-read 7 Oct 2026 (round 3: 21 Aug)"
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "rounds_2027",
+     "kind": "application",
+     "label": {
+      "en": "Rounds (2027 intake)",
+      "uz": "Bosqichlar (2027-yil qabuli)",
+      "ru": "Раунды (набор 2027)"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "from": null,
+     "until": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "exam",
+     "claim": "Inha's own test: 30 multiple-choice questions in 60 minutes; 21 maths + 9 physics (SOCIE) or 30 maths (SBL); application fee UZS 200,000 (or USD 20); domestic applicants apply on admissions.inha.uz.",
+     "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "english",
+     "claim": "English: IELTS 5.0 or TOEFL 50 for computer and information engineering; IELTS 5.5 or TOEFL 71 for business and logistics.",
+     "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record inha; page re-read 7 Oct 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "no_penalty",
+     "claim": "The test is ranked with no penalty for wrong answers.",
+     "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "via R3 §5",
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "inha_apply",
+     "url": "https://admissions.inha.uz",
+     "kind": "official",
+     "label": {
+      "en": "Inha admission portal",
+      "uz": "Inha qabul portali",
+      "ru": "Портал приёма Инха"
+     }
+    },
+    {
+     "id": "inha_guide",
+     "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+     "kind": "official",
+     "label": {
+      "en": "Inha application guideline",
+      "uz": "Inha ariza yoʻriqnomasi",
+      "ru": "Инструкция по подаче в Инха"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Inha's 2027 rounds are not published yet: check inha.uz from February.",
+    "uz": "Inhaning 2027-yilgi bosqichlari hali eʼlon qilinmagan: fevraldan boshlab inha.uz ni tekshiring.",
+    "ru": "Раунды Инха на 2027 год ещё не опубликованы: проверяйте inha.uz с февраля."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-pucau",
+   "template_id": "C11-pucau",
+   "uni_id": "cau",
+   "kind": "admin_template",
+   "category": "uz_private_entrance",
+   "workstream_kind": "uz_unis",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "uni.application_deadline",
+    "milestone_ids": []
+   },
+   "rule_ids": [
+    "universities_uz:cau",
+    "planner.verify_missing_rule"
+   ],
+   "lead_time": {
+    "start_days_before": 45,
+    "due_days_before": 14,
+    "basis": "inference",
+    "note": {
+     "en": "Book the subject exams early enough to retake an English certificate if one exempts you.",
+     "uz": "Fan imtihonlariga yetarlicha erta yoziling, agar ingliz tili sertifikati sizni ozod qilsa, uni qayta topshirishga ulguring.",
+     "ru": "Записывайтесь на экзамены заранее, чтобы успеть пересдать сертификат по английскому, если он освобождает."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "Each entrance exam subject costs 100,000 soʻm.",
+    "uz": "Har bir kirish imtihoni fani 100 000 soʻm turadi.",
+    "ru": "Каждый предмет вступительного экзамена стоит 100 000 сумов."
+   },
+   "title": {
+    "en": "Apply to Central Asian University (CAU)",
+    "uz": "Central Asian Universityʼga (CAU) ariza bering",
+    "ru": "Подайте заявку в Central Asian University (CAU)"
+   },
+   "summary": {
+    "en": "CAU sets its own exams, each needing 50 % to pass: English (60 questions, 30 minutes), then maths, or chemistry and biology, depending on the programme (20 questions in 45 minutes each), and a 10-minute interview after English. IELTS 5.5-6.0, TOEFL or SAT English 585 replace the English exam; SAT Math 585 or a national certificate at C+ replace a subject exam.",
+    "uz": "CAU oʻz imtihonlarini oʻtkazadi, har biridan oʻtish uchun 50 % kerak: ingliz tili (60 savol, 30 daqiqa), keyin dasturga qarab matematika yoki kimyo va biologiya (har biri 45 daqiqada 20 savol) hamda ingliz tilidan keyin 10 daqiqalik suhbat. IELTS 5.5-6.0, TOEFL yoki SAT English 585 ingliz tili imtihoni oʻrnini bosadi; SAT Math 585 yoki C+ darajali milliy sertifikat fan imtihoni oʻrnini bosadi.",
+    "ru": "CAU проводит собственные экзамены, для каждого нужно 50 %: английский (60 вопросов, 30 минут), затем в зависимости от программы математика или химия и биология (по 20 вопросов за 45 минут) и 10-минутное собеседование после английского. IELTS 5.5-6.0, TOEFL или SAT English 585 заменяют экзамен по английскому; SAT Math 585 или национальный сертификат уровня C+ заменяют предметный экзамен."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-pucau-s1",
+     "type": "verify",
+     "minutes": 15,
+     "offset_days": -45,
+     "title": {
+      "en": "Check the dates and your programme's exams",
+      "uz": "Sanalarni va dasturingiz imtihonlarini tekshiring",
+      "ru": "Проверьте даты и экзамены вашей программы"
+     },
+     "instructions": {
+      "en": "CAU's regulations do not say which programme sits which subject exam. Find this year's admission dates on centralasian.uz and ask admission@centralasian.uz which exams your programme needs. Paste the link.",
+      "uz": "CAU qoidalarida qaysi dastur qaysi fandan imtihon topshirishi aytilmagan. centralasian.uz da shu yilgi qabul sanalarini toping va dasturingizga qaysi imtihonlar kerakligini admission@centralasian.uz dan soʻrang. Havolani qoʻying.",
+      "ru": "В правилах CAU не сказано, какая программа сдаёт какой предмет. Найдите даты приёма этого года на centralasian.uz и спросите на admission@centralasian.uz, какие экзамены нужны вашей программе. Вставьте ссылку."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "centralasian.uz"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-pucau-s2",
+     "type": "submit",
+     "minutes": 30,
+     "offset_days": -30,
+     "title": {
+      "en": "Apply and register for the exams",
+      "uz": "Ariza bering va imtihonlarga roʻyxatdan oʻting",
+      "ru": "Подайте заявку и зарегистрируйтесь на экзамены"
+     },
+     "instructions": {
+      "en": "Apply with your passport, school certificate, a 3 × 4 photo and any English or SAT result. Register for the exams you are not exempt from and pay 100,000 soʻm per subject.",
+      "uz": "Pasport, attestat, 3 × 4 rasm va bor boʻlsa ingliz tili yoki SAT natijasi bilan ariza bering. Ozod boʻlmagan imtihonlaringizga roʻyxatdan oʻting va har bir fan uchun 100 000 soʻm toʻlang.",
+      "ru": "Подайте заявку с паспортом, аттестатом, фото 3 × 4 и результатом по английскому или SAT, если есть. Зарегистрируйтесь на экзамены, от которых вы не освобождены, и оплатите 100 000 сумов за предмет."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the application or exam registration",
+       "uz": "ariza yoki imtihonga roʻyxatdan oʻtish skrinshoti",
+       "ru": "скриншот заявки или регистрации на экзамен"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-pucau-s3",
+     "type": "verify",
+     "minutes": 90,
+     "anchor_override": "uni.exam_date",
+     "offset_days": 0,
+     "title": {
+      "en": "Sit the exams and the interview",
+      "uz": "Imtihonlar va suhbatdan oʻting",
+      "ru": "Сдайте экзамены и пройдите собеседование"
+     },
+     "instructions": {
+      "en": "Sit your exams; after passing English you have a 10-minute interview with the admissions committee. Record which exams you passed.",
+      "uz": "Imtihonlaringizni topshiring; ingliz tilidan oʻtgach, qabul komissiyasi bilan 10 daqiqalik suhbat boʻladi. Qaysi imtihonlardan oʻtganingizni kiriting.",
+      "ru": "Сдайте экзамены; после английского — 10-минутное собеседование с приёмной комиссией. Отметьте, какие экзамены вы сдали."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "passed",
+        "type": "multi",
+        "options": [
+         "english",
+         "maths",
+         "chemistry",
+         "biology",
+         "interview"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "olympiad_2026",
+     "kind": "olympiad",
+     "label": {
+      "en": "CAU International Olympiad in chemistry, maths and physics, scholarships (2026)",
+      "uz": "CAU xalqaro olimpiadasi: kimyo, matematika, fizika, grantlar (2026)",
+      "ru": "Международная олимпиада CAU по химии, математике и физике, гранты (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "from": "2026-06-12",
+     "until": "2026-06-13",
+     "source": {
+      "url": "https://centralasian.uz/university_community/aybvhbrhd1-cau-admission-2026-is-now-open-fewer-sea",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false,
+      "ref": "universities_uz.json record cau"
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "apply_2027",
+     "kind": "application",
+     "label": {
+      "en": "Admission (2027 intake)",
+      "uz": "Qabul (2027-yil)",
+      "ru": "Приём (набор 2027)"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "from": null,
+     "until": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "exams",
+     "claim": "CAU entrance exams: maths, chemistry and biology (20 questions, 45 minutes each) and English (60 questions, 30 minutes), 50 % to pass each; a mandatory 10-minute interview after passing English; 100,000 UZS a subject.",
+     "url": "https://centralasian.uz/admissionregulations",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record cau; page re-read 7 Oct 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "exemptions",
+     "claim": "Exempt from English: IELTS 6.0, TOEFL iBT 60 or SAT English 585 (medicine, dentistry); IELTS 5.5, TOEFL iBT 46 or SAT English 585 (other programmes). Exempt from maths: SAT Math 585 or a national certificate at C+; from biology and chemistry (medicine, dentistry): a national certificate at C+.",
+     "url": "https://centralasian.uz/admissionregulations",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record cau; page re-read 7 Oct 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "programme_exams",
+     "claim": "The regulations group only the exemptions by faculty and do not say which programme sits which subject exam.",
+     "url": "https://centralasian.uz/admissionregulations",
+     "verified_at": "2026-10-04",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": true
+    },
+    {
+     "key": "olympiad_scholarship",
+     "claim": "CAU's olympiad of 12-13 Jun 2026 for grade 11 gave scholarships: places 1-3 100 %, 4-6 50 %, 7-10 25 %, kept with a GPA of 3.3 or more.",
+     "url": "https://centralasian.uz/university_community/aybvhbrhd1-cau-admission-2026-is-now-open-fewer-sea",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "via R3 §5",
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "cau_regs",
+     "url": "https://centralasian.uz/admissionregulations",
+     "kind": "official",
+     "label": {
+      "en": "CAU admission regulations",
+      "uz": "CAU qabul qoidalari",
+      "ru": "Правила приёма CAU"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Ask CAU which exams your programme sits and when the 2027 admission opens.",
+    "uz": "CAUʼdan dasturingiz qaysi imtihonlarni topshirishini va 2027-yil qabuli qachon ochilishini soʻrang.",
+    "ru": "Спросите CAU, какие экзамены сдаёт ваша программа и когда откроется приём 2027 года."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-pumillat",
+   "template_id": "C11-pumillat",
+   "uni_id": "millat_umidi",
+   "kind": "admin_template",
+   "category": "uz_private_entrance",
+   "workstream_kind": "uz_unis",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "uni.classes_start",
+    "milestone_ids": []
+   },
+   "rule_ids": [
+    "universities_uz:millat_umidi",
+    "planner.verify_missing_rule"
+   ],
+   "lead_time": {
+    "start_days_before": 90,
+    "due_days_before": 45,
+    "basis": "inference",
+    "note": {
+     "en": "Admission is rolling with an exam every Wednesday; apply well before classes start on 15 September.",
+     "uz": "Qabul doimiy, imtihon har chorshanba; 15-sentabrda darslar boshlanishidan ancha oldin ariza bering.",
+     "ru": "Приём постоянный, экзамен каждую среду; подайте заявку задолго до начала занятий 15 сентября."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "The entrance exam costs 300,000 soʻm.",
+    "uz": "Kirish imtihoni 300 000 soʻm turadi.",
+    "ru": "Вступительный экзамен стоит 300 000 сумов."
+   },
+   "title": {
+    "en": "Apply to Millat Umidi University",
+    "uz": "Millat Umidi universitetiga ariza bering",
+    "ru": "Подайте заявку в университет Millat Umidi"
+   },
+   "summary": {
+    "en": "Millat Umidi admits all year: you apply online, sit its entrance exam on campus on a Wednesday (English, maths and logic, and questions for your programme) and have an interview. English-taught programmes ask for IELTS 5.0 (business and IT) or 5.5 (English teaching).",
+    "uz": "Millat Umidi yil davomida qabul qiladi: onlayn ariza berasiz, chorshanba kuni kampusda kirish imtihonini (ingliz tili, matematika va mantiq, dasturingizga oid savollar) topshirasiz va suhbatdan oʻtasiz. Ingliz tilida oʻqitiladigan dasturlar IELTS 5.0 (biznes va IT) yoki 5.5 (ingliz tili oʻqitish) soʻraydi.",
+    "ru": "Millat Umidi принимает круглый год: вы подаёте заявку онлайн, в среду сдаёте вступительный экзамен в кампусе (английский, математика и логика, вопросы по программе) и проходите собеседование. Англоязычные программы требуют IELTS 5.0 (бизнес и IT) или 5.5 (преподавание английского)."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-pumillat-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -90,
+     "title": {
+      "en": "Confirm your programme's English rule",
+      "uz": "Dasturingizning ingliz tili talabini aniqlang",
+      "ru": "Уточните требование по английскому вашей программы"
+     },
+     "instructions": {
+      "en": "The university's pages differ on whether its own exam can replace IELTS. Ask the admissions office which applies to your programme and paste the page you used.",
+      "uz": "Universitet sahifalarida uning oʻz imtihoni IELTS oʻrnini bosa oladimi-yoʻqmi, turlicha yozilgan. Dasturingizga qaysi biri tegishli ekanini qabul boʻlimidan soʻrang va foydalangan sahifangizni qoʻying.",
+      "ru": "Страницы университета расходятся в том, может ли его экзамен заменить IELTS. Спросите в приёмной комиссии, что относится к вашей программе, и вставьте страницу, которой пользовались."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "millatumidi.uz"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-pumillat-s2",
+     "type": "submit",
+     "minutes": 30,
+     "offset_days": -60,
+     "title": {
+      "en": "Apply online with your documents",
+      "uz": "Hujjatlaringiz bilan onlayn ariza bering",
+      "ru": "Подайте заявку онлайн с документами"
+     },
+     "instructions": {
+      "en": "Apply with your passport or ID, school certificate and transcript, 4 photos 3 × 4 cm and your IELTS certificate if your programme needs it.",
+      "uz": "Pasport yoki ID karta, attestat va baholar varaqasi, 3 × 4 sm oʻlchamdagi 4 ta rasm va dasturingizga kerak boʻlsa IELTS sertifikati bilan ariza bering.",
+      "ru": "Подайте заявку с паспортом или ID-картой, аттестатом и выпиской оценок, 4 фото 3 × 4 см и сертификатом IELTS, если он нужен программе."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the submitted application",
+       "uz": "yuborilgan ariza skrinshoti",
+       "ru": "скриншот отправленной заявки"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-pumillat-s3",
+     "type": "book",
+     "minutes": 120,
+     "offset_days": -50,
+     "title": {
+      "en": "Sit the Wednesday exam and the interview",
+      "uz": "Chorshanba imtihoni va suhbatdan oʻting",
+      "ru": "Сдайте экзамен в среду и пройдите собеседование"
+     },
+     "instructions": {
+      "en": "Choose a Wednesday, pay 300,000 soʻm, sit the exam on campus and then the interview. Record the date and the outcome.",
+      "uz": "Chorshanba kunini tanlang, 300 000 soʻm toʻlang, kampusda imtihon topshiring, soʻng suhbatdan oʻting. Sana va natijani kiriting.",
+      "ru": "Выберите среду, оплатите 300 000 сумов, сдайте экзамен в кампусе, затем пройдите собеседование. Отметьте дату и итог."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "exam_date",
+        "type": "date"
+       },
+       {
+        "key": "outcome",
+        "type": "choice",
+        "options": [
+         "offer",
+         "no_offer",
+         "waiting"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "rolling",
+     "kind": "application",
+     "label": {
+      "en": "Admissions open (rolling), exams every Wednesday",
+      "uz": "Qabul ochiq (doimiy), imtihonlar har chorshanba",
+      "ru": "Приём открыт (постоянно), экзамены каждую среду"
+     },
+     "cycle": "rolling",
+     "use": "plan",
+     "source": {
+      "url": "https://millatumidi.uz/admissions/entry-requirements",
+      "verified_at": "2026-10-04",
+      "read": "page",
+      "secondary": false,
+      "ref": "universities_uz.json record millat_umidi; the page is drawn by script and answers 404 to a plain request"
+     },
+     "needs_verification": true
+    },
+    {
+     "key": "classes",
+     "kind": "start",
+     "label": {
+      "en": "Classes begin 15 September",
+      "uz": "Darslar 15-sentabrda boshlanadi",
+      "ru": "Занятия начинаются 15 сентября"
+     },
+     "cycle": "yearly",
+     "use": "plan",
+     "source": {
+      "url": "https://millatumidi.uz/admissions/entry-requirements",
+      "verified_at": "2026-10-04",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    }
+   ],
+   "facts": [
+    {
+     "key": "exam",
+     "claim": "Entrance exam on campus every Wednesday, fee 300,000 UZS: English, maths and logic, and programme questions; then an interview; rolling admission.",
+     "url": "https://millatumidi.uz/admissions/how-to-apply",
+     "verified_at": "2026-10-04",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record millat_umidi",
+     "note": "not re-read on 7 Oct 2026 (404 to a plain request); contradicted by a third-party listing, see aggregator_2026",
+     "needs_verification": true
+    },
+    {
+     "key": "documents",
+     "claim": "Documents: passport or ID and school certificate (original and copy), 4 photos 3 × 4 cm, IELTS certificate (5.5 minimum for English programmes), transcript.",
+     "url": "https://millatumidi.uz/admissions/entry-requirements",
+     "verified_at": "2026-10-04",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record millat_umidi",
+     "needs_verification": false
+    },
+    {
+     "key": "english_conflict",
+     "claim": "Its English table lists IELTS 5.5, TOEFL iBT 72, Cambridge B2 First and 'MU exam: pass', while the FAQ and how-to-apply page say IELTS is required for English-medium programmes (5.0 business and IT, 5.5 ELT).",
+     "url": "https://millatumidi.uz/admissions/faq",
+     "verified_at": "2026-10-04",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": true
+    },
+    {
+     "key": "aggregator_2026",
+     "claim": "A third-party listing gives a 2026 admission period of 20 May-30 Sep, an online entrance test and an 'IELTS mock' minimum of 5.0, which conflicts with the official pages as read on 4 Oct 2026.",
+     "url": "https://mentalaba.uz/universities/otm-haqida/millat-umidi-university",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "Mentalaba.uz, an admissions aggregator",
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "mu_apply",
+     "url": "https://millatumidi.uz/admissions/how-to-apply",
+     "kind": "official",
+     "label": {
+      "en": "Millat Umidi: how to apply",
+      "uz": "Millat Umidi: ariza berish tartibi",
+      "ru": "Millat Umidi: как подать заявку"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Ask Millat Umidi's admissions office whether the entrance exam is still held on campus every Wednesday or online, and whether your programme needs IELTS or accepts its own exam instead.",
+    "uz": "Millat Umidi qabul boʻlimidan kirish imtihoni hali ham har chorshanba kampusda oʻtkaziladimi yoki onlaynmi, hamda dasturingizga IELTS kerakmi yoki uning oʻrniga universitetning oʻz imtihoni qabul qilinadimi, soʻrang.",
+    "ru": "Спросите в приёмной комиссии Millat Umidi, проводится ли вступительный экзамен по-прежнему каждую среду в кампусе или уже онлайн, и нужен ли вашей программе IELTS или вместо него принимается собственный экзамен."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-puttpu",
+   "template_id": "C11-puttpu",
+   "uni_id": "ttpu",
+   "kind": "admin_template",
+   "category": "uz_private_entrance",
+   "workstream_kind": "uz_unis",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "uni.exam_date",
+    "milestone_ids": []
+   },
+   "rule_ids": [
+    "universities_uz:ttpu",
+    "planner.verify_missing_rule"
+   ],
+   "lead_time": {
+    "start_days_before": 30,
+    "due_days_before": 10,
+    "basis": "inference",
+    "note": {
+     "en": "Up to 3 attempts are allowed, so an early first attempt leaves room to improve.",
+     "uz": "3 martagacha topshirish mumkin, shuning uchun erta birinchi urinish yaxshilashga imkon qoldiradi.",
+     "ru": "Разрешено до 3 попыток, поэтому ранняя первая попытка оставляет место для улучшения."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "Registration costs 200,000 soʻm; an SAT of 1400 or 1500 can earn a 50 % or 100 % grant.",
+    "uz": "Roʻyxatdan oʻtish 200 000 soʻm; 1400 yoki 1500 SAT 50 % yoki 100 % grant berishi mumkin.",
+    "ru": "Регистрация стоит 200 000 сумов; SAT 1400 или 1500 может дать грант 50 % или 100 %."
+   },
+   "title": {
+    "en": "Register for TTPU's entrance exam (or enter with IELTS or SAT)",
+    "uz": "TTPU kirish imtihoniga roʻyxatdan oʻting (yoki IELTS yoki SAT bilan kiring)",
+    "ru": "Зарегистрируйтесь на экзамен TTPU (или поступите с IELTS или SAT)"
+   },
+   "summary": {
+    "en": "TTPU's computer exam has 30 maths and 10 logic questions in 90 minutes: 30 % admits you to year 1 and 20 % to the foundation year, with up to 3 attempts. IELTS 5.0 or SAT 1100 admits you to year 1 without the exam, except that Economics, Marketing and Aviation Engineering applicants with IELTS still sit maths and logic.",
+    "uz": "TTPUning kompyuterdagi imtihonida 90 daqiqada 30 ta matematika va 10 ta mantiq savoli bor: 30 % bilan 1-kursga, 20 % bilan tayyorlov yiliga qabul qilinasiz, 3 martagacha topshirish mumkin. IELTS 5.0 yoki SAT 1100 bilan imtihonsiz 1-kursga qabul qilinasiz, faqat Iqtisodiyot, Marketing va Aviatsiya muhandisligiga IELTS bilan topshirganlar matematika va mantiqni baribir topshiradi.",
+    "ru": "Компьютерный экзамен TTPU — 30 вопросов по математике и 10 по логике за 90 минут: 30 % дают первый курс, 20 % — подготовительный год, до 3 попыток. IELTS 5.0 или SAT 1100 дают первый курс без экзамена, но поступающие с IELTS на экономику, маркетинг и авиационную инженерию всё равно сдают математику и логику."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-puttpu-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -30,
+     "title": {
+      "en": "Check whether you are exempt",
+      "uz": "Imtihondan ozod ekanligingizni tekshiring",
+      "ru": "Проверьте, освобождены ли вы"
+     },
+     "instructions": {
+      "en": "If you have IELTS 5.0 or SAT 1100, check on qabul.turin.uz whether your programme still needs the maths and logic exam.",
+      "uz": "IELTS 5.0 yoki SAT 1100 natijangiz boʻlsa, qabul.turin.uz da dasturingizga matematika va mantiq imtihoni baribir kerakmi, tekshiring.",
+      "ru": "Если у вас IELTS 5.0 или SAT 1100, проверьте на qabul.turin.uz, нужен ли вашей программе всё же экзамен по математике и логике."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "route",
+        "type": "choice",
+        "options": [
+         "exam",
+         "ielts_exempt",
+         "sat_exempt"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-puttpu-s2",
+     "type": "book",
+     "minutes": 20,
+     "offset_days": -14,
+     "title": {
+      "en": "Register and pay",
+      "uz": "Roʻyxatdan oʻting va toʻlang",
+      "ru": "Зарегистрируйтесь и оплатите"
+     },
+     "instructions": {
+      "en": "Register on qabul.turin.uz (or in room 106 at TTPU), pay 200,000 soʻm and choose an exam date from those announced on the portal.",
+      "uz": "qabul.turin.uz da (yoki TTPUning 106-xonasida) roʻyxatdan oʻting, 200 000 soʻm toʻlang va portalda eʼlon qilingan sanalardan imtihon kunini tanlang.",
+      "ru": "Зарегистрируйтесь на qabul.turin.uz (или в кабинете 106 TTPU), оплатите 200 000 сумов и выберите дату экзамена из объявленных на портале."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the registration",
+       "uz": "roʻyxatdan oʻtish skrinshoti",
+       "ru": "скриншот регистрации"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-puttpu-s3",
+     "type": "verify",
+     "minutes": 100,
+     "offset_days": 0,
+     "title": {
+      "en": "Sit the exam and record your result",
+      "uz": "Imtihonni topshiring va natijani kiriting",
+      "ru": "Сдайте экзамен и внесите результат"
+     },
+     "instructions": {
+      "en": "Sit the 90-minute exam and record your percentage. Below 30 % you may try again, up to 3 attempts in all.",
+      "uz": "90 daqiqalik imtihonni topshiring va foizingizni kiriting. 30 % dan past boʻlsa, jami 3 martagacha qayta urinishingiz mumkin.",
+      "ru": "Сдайте 90-минутный экзамен и внесите процент. Ниже 30 % можно пересдать, всего до 3 попыток."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "ttpu_percent",
+        "type": "number",
+        "min": 0,
+        "max": 100,
+        "step": 1
+       },
+       {
+        "key": "attempt",
+        "type": "number",
+        "min": 1,
+        "max": 3,
+        "step": 1
+       }
+      ]
+     }
+    },
+    {
+     "n": 4,
+     "id": "C11-puttpu-s4",
+     "type": "submit",
+     "minutes": 30,
+     "offset_days": 7,
+     "title": {
+      "en": "Bring the original documents",
+      "uz": "Hujjatlarning asl nusxalarini olib boring",
+      "ru": "Принесите оригиналы документов"
+     },
+     "instructions": {
+      "en": "Bring your passport or ID with PINFL (or your birth certificate if you are under passport age) and your school certificate with its transcript.",
+      "uz": "JSHSHIR koʻrsatilgan pasport yoki ID kartangizni (pasport yoshiga yetmagan boʻlsangiz, tugʻilganlik haqidagi guvohnomani) hamda attestat va baholar varaqasini olib boring.",
+      "ru": "Принесите паспорт или ID-карту с ПИНФЛ (или свидетельство о рождении, если нет паспорта по возрасту) и аттестат с выпиской оценок."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "originals_handed_in",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "exam_dates",
+     "kind": "exam",
+     "label": {
+      "en": "Exam dates: announced on qabul.turin.uz",
+      "uz": "Imtihon sanalari: qabul.turin.uz da eʼlon qilinadi",
+      "ru": "Даты экзаменов: объявляются на qabul.turin.uz"
+     },
+     "cycle": "2026/27",
+     "use": "plan",
+     "from": null,
+     "until": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "regs",
+     "claim": "TTPU Admission Regulations 2026/2027: register at qabul.turin.uz or in room 106, fee 200,000 UZS; up to three attempts; computer-based exam of 30 maths and 10 logic questions in 90 minutes, in English or Uzbek; 30 % or above admits to year 1, 20 % or above to the Foundation Year; IELTS 5.0 or SAT 1100 admits to year 1; SAT 1400+ gives a 50 % grant and SAT 1500+ a 100 % grant; documents: passport with PINFL, birth certificate if applicable, the 11-grade school certificate or a vocational diploma.",
+     "url": "https://qabul.turin.uz/regulations/bachelor",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "ielts_extra",
+     "claim": "With IELTS, Economics, Marketing and Aviation Engineering applicants take an extra maths and logic exam; an IELTS 5.0 from the last 12 months lets you sit the exam in Uzbek, except for Mechanical, Civil, Computer and Aviation Engineering.",
+     "url": "https://qabul.turin.uz/regulations/bachelor",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record ttpu; page re-read 7 Oct 2026",
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ttpu_qabul",
+     "url": "https://qabul.turin.uz",
+     "kind": "official",
+     "label": {
+      "en": "TTPU admission portal",
+      "uz": "TTPU qabul portali",
+      "ru": "Портал приёма TTPU"
+     }
+    },
+    {
+     "id": "ttpu_regs",
+     "url": "https://qabul.turin.uz/regulations/bachelor",
+     "kind": "official",
+     "label": {
+      "en": "TTPU bachelor admission regulations",
+      "uz": "TTPU bakalavriat qabul qoidalari",
+      "ru": "Правила приёма TTPU на бакалавриат"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Pick your exam date from those posted on qabul.turin.uz.",
+    "uz": "Imtihon sanasini qabul.turin.uz da eʼlon qilinganlaridan tanlang.",
+    "ru": "Выберите дату экзамена из опубликованных на qabul.turin.uz."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-puwebster",
+   "template_id": "C11-puwebster",
+   "uni_id": "webster_tashkent",
+   "kind": "admin_template",
+   "category": "uz_private_entrance",
+   "workstream_kind": "uz_unis",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "uni.intake_start",
+    "milestone_ids": []
+   },
+   "rule_ids": [
+    "universities_uz:webster_tashkent",
+    "planner.verify_missing_rule"
+   ],
+   "lead_time": {
+    "start_days_before": 90,
+    "due_days_before": 45,
+    "basis": "inference",
+    "note": {
+     "en": "Webster takes students three times a year; apply about two months before the intake you want.",
+     "uz": "Webster yiliga uch marta qabul qiladi; xohlagan qabulingizdan taxminan ikki oy oldin ariza bering.",
+     "ru": "Webster набирает три раза в год; подайте заявку примерно за два месяца до нужного набора."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "Tuition is paid by contract; ask the university for this year's fees.",
+    "uz": "Oʻqish kontrakt asosida toʻlanadi; shu yilgi narxlarni universitetdan soʻrang.",
+    "ru": "Обучение платное по контракту; узнайте стоимость этого года в университете."
+   },
+   "title": {
+    "en": "Apply to Webster University in Tashkent",
+    "uz": "Toshkentdagi Webster universitetiga ariza bering",
+    "ru": "Подайте заявку в Webster University в Ташкенте"
+   },
+   "summary": {
+    "en": "Webster Tashkent admits in August, January and summer. It asks for IELTS 6.0, TOEFL iBT 80, PTE 53, LanguageCert C1 or Duolingo 120, and a GPA of 2.5 out of 4; with IELTS 5.5 or TOEFL 69-79 you can be admitted conditionally, with free English classes in the first two semesters.",
+    "uz": "Webster Toshkent avgust, yanvar va yozda qabul qiladi. U IELTS 6.0, TOEFL iBT 80, PTE 53, LanguageCert C1 yoki Duolingo 120 hamda 4 dan 2,5 GPA soʻraydi; IELTS 5.5 yoki TOEFL 69-79 bilan birinchi ikki semestrda bepul ingliz tili darslari bilan shartli qabul qilinishingiz mumkin.",
+    "ru": "Webster Ташкент принимает в августе, январе и летом. Требуются IELTS 6.0, TOEFL iBT 80, PTE 53, LanguageCert C1 или Duolingo 120 и GPA 2,5 из 4; с IELTS 5.5 или TOEFL 69-79 возможен условный приём с бесплатным английским в первые два семестра."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-puwebster-s1",
+     "type": "verify",
+     "minutes": 15,
+     "offset_days": -90,
+     "title": {
+      "en": "Confirm the intake dates and how your grades count",
+      "uz": "Qabul sanalarini va baholaringiz qanday hisoblanishini aniqlang",
+      "ru": "Уточните даты набора и пересчёт ваших оценок"
+     },
+     "instructions": {
+      "en": "Find the next intake's deadline on Webster Tashkent's site, and ask the admissions office how a 5-point school grade average is compared with their GPA of 2.5 out of 4. Paste the link.",
+      "uz": "Webster Toshkent saytida keyingi qabul muddatini toping va 5 ballik maktab baholaringiz oʻrtachasi ularning 4 dan 2,5 GPA talabi bilan qanday solishtirilishini qabul boʻlimidan soʻrang. Havolani qoʻying.",
+      "ru": "Найдите на сайте Webster Ташкент срок ближайшего набора и спросите в приёмной комиссии, как средний балл по 5-балльной шкале сравнивают с их требованием GPA 2,5 из 4. Вставьте ссылку."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "webster.uz"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-puwebster-s2",
+     "type": "submit",
+     "minutes": 40,
+     "offset_days": -60,
+     "title": {
+      "en": "Apply with transcript, English result and passport",
+      "uz": "Baholar varaqasi, ingliz tili natijasi va pasport bilan ariza bering",
+      "ru": "Подайте заявку с выпиской оценок, результатом по английскому и паспортом"
+     },
+     "instructions": {
+      "en": "Submit the application with your school transcript, your English certificate and your passport.",
+      "uz": "Arizani maktab baholar varaqasi, ingliz tili sertifikati va pasportingiz bilan yuboring.",
+      "ru": "Отправьте заявку с выпиской школьных оценок, сертификатом по английскому и паспортом."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the submitted application",
+       "uz": "yuborilgan ariza skrinshoti",
+       "ru": "скриншот отправленной заявки"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-puwebster-s3",
+     "type": "verify",
+     "minutes": 5,
+     "offset_days": -30,
+     "title": {
+      "en": "Record the decision",
+      "uz": "Qarorni kiriting",
+      "ru": "Отметьте решение"
+     },
+     "instructions": {
+      "en": "Record whether you received a full offer, a conditional offer or no offer.",
+      "uz": "Toʻliq taklif, shartli taklif yoki rad javobi olganingizni kiriting.",
+      "ru": "Отметьте, получили ли вы полное предложение, условное или отказ."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "outcome",
+        "type": "choice",
+        "options": [
+         "full_offer",
+         "conditional_offer",
+         "no_offer",
+         "waiting"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "intakes",
+     "kind": "application",
+     "label": {
+      "en": "Three intakes a year: August, January and summer",
+      "uz": "Yiliga uch marta qabul: avgust, yanvar va yoz",
+      "ru": "Три набора в год: август, январь и лето"
+     },
+     "cycle": "yearly",
+     "use": "plan",
+     "from": null,
+     "until": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "entry",
+     "claim": "English: IELTS 6.0 (5.5 conditional), TOEFL iBT 80 (69-79 conditional), PTE 53, LanguageCert C1 or Duolingo 120; conditional admission comes with free English classes in the first two semesters; GPA 2.5 of 4; documents: transcript, English certificate, passport; three intakes a year.",
+     "url": "https://ciep.webster.uz/en/bachelor-degree.php",
+     "verified_at": "2026-10-04",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record webster_tashkent",
+     "needs_verification": false
+    },
+    {
+     "key": "site_down",
+     "claim": "On 7 Oct 2026 the page answered 504 on every attempt and webster.uz did not resolve, so the requirements (last read 4 Oct 2026) were not re-read.",
+     "url": "https://ciep.webster.uz/en/bachelor-degree.php",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": true
+    },
+    {
+     "key": "gpa_conversion",
+     "claim": "How Webster converts an Uzbek 5-point school average to its 4-point GPA was not found.",
+     "url": null,
+     "verified_at": null,
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "webster_bachelor",
+     "url": "https://ciep.webster.uz/en/bachelor-degree.php",
+     "kind": "official",
+     "label": {
+      "en": "Webster Tashkent: bachelor's admission",
+      "uz": "Webster Toshkent: bakalavriatga qabul",
+      "ru": "Webster Ташкент: приём на бакалавриат"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Webster's site was unreachable on 7 Oct 2026: confirm the requirements and the next intake's deadline with the university before you apply.",
+    "uz": "Webster sayti 2026-yil 7-oktabrda ochilmadi: ariza berishdan oldin talablar va keyingi qabul muddatini universitet bilan tasdiqlang.",
+    "ru": "Сайт Webster 7 октября 2026 года был недоступен: перед подачей подтвердите в университете требования и срок ближайшего набора."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-puamity",
+   "template_id": "C11-puamity",
+   "uni_id": "amity_tashkent",
+   "kind": "admin_template",
+   "category": "uz_private_entrance",
+   "workstream_kind": "uz_unis",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "uni.application_deadline",
+    "milestone_ids": []
+   },
+   "rule_ids": [
+    "universities_uz:amity_tashkent",
+    "planner.verify_missing_rule"
+   ],
+   "lead_time": {
+    "start_days_before": 75,
+    "due_days_before": 30,
+    "basis": "inference",
+    "note": {
+     "en": "Amity publishes no dates on its requirements page; ask early.",
+     "uz": "Amity talablar sahifasida sana eʼlon qilmagan; erta soʻrang.",
+     "ru": "Amity не публикует даты на странице требований; спрашивайте заранее."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "Tuition is paid by contract; ask the university for this year's fees.",
+    "uz": "Oʻqish kontrakt asosida toʻlanadi; shu yilgi narxlarni universitetdan soʻrang.",
+    "ru": "Обучение платное по контракту; узнайте стоимость этого года в университете."
+   },
+   "title": {
+    "en": "Apply to Amity University Tashkent",
+    "uz": "Amity University Tashkentʼga ariza bering",
+    "ru": "Подайте заявку в Amity University Tashkent"
+   },
+   "summary": {
+    "en": "Amity sets entrance exams by programme (maths, physics and chemistry for B.Tech CSE; maths and an aptitude test for B.Sc IT; an aptitude test for BA and BBA) and an interview, and asks for IELTS 5.5 (B.Tech, B.Sc IT) or 6.0 (BA, BBA). Its page lists 12 years of schooling, so ask how an 11-year Uzbek certificate is treated.",
+    "uz": "Amity dasturga qarab kirish imtihonlarini (B.Tech CSE uchun matematika, fizika va kimyo; B.Sc IT uchun matematika va qobiliyat testi; BA va BBA uchun qobiliyat testi) va suhbat oʻtkazadi hamda IELTS 5.5 (B.Tech, B.Sc IT) yoki 6.0 (BA, BBA) soʻraydi. Sahifasida 12 yillik taʼlim koʻrsatilgan, shuning uchun 11 yillik Oʻzbekiston attestati qanday qabul qilinishini soʻrang.",
+    "ru": "Amity проводит вступительные экзамены по программе (математика, физика и химия для B.Tech CSE; математика и тест способностей для B.Sc IT; тест способностей для BA и BBA) и собеседование, требует IELTS 5.5 (B.Tech, B.Sc IT) или 6.0 (BA, BBA). На странице указаны 12 лет обучения, поэтому спросите, как рассматривают 11-летний узбекский аттестат."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-puamity-s1",
+     "type": "verify",
+     "minutes": 15,
+     "offset_days": -75,
+     "title": {
+      "en": "Ask about dates and the 11-year certificate",
+      "uz": "Sanalar va 11 yillik attestat haqida soʻrang",
+      "ru": "Спросите о датах и 11-летнем аттестате"
+     },
+     "instructions": {
+      "en": "Ask Amity's admissions office for this year's application and exam dates and whether an 11-year school certificate admits you to year 1. Paste the page or write the answer.",
+      "uz": "Amity qabul boʻlimidan shu yilgi ariza va imtihon sanalarini hamda 11 yillik attestat bilan 1-kursga qabul qilinish mumkinmi, soʻrang. Sahifani qoʻying yoki javobni yozing.",
+      "ru": "Спросите в приёмной комиссии Amity даты подачи и экзаменов этого года и принимают ли с 11-летним аттестатом на первый курс. Вставьте страницу или запишите ответ."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "amity.uz"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-puamity-s2",
+     "type": "submit",
+     "minutes": 30,
+     "offset_days": -45,
+     "title": {
+      "en": "Apply",
+      "uz": "Ariza bering",
+      "ru": "Подайте заявку"
+     },
+     "instructions": {
+      "en": "Submit the application with the documents Amity asks for, including your English certificate.",
+      "uz": "Arizani Amity soʻragan hujjatlar, jumladan ingliz tili sertifikatingiz bilan yuboring.",
+      "ru": "Отправьте заявку с документами, которые просит Amity, включая сертификат по английскому."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the submitted application",
+       "uz": "yuborilgan ariza skrinshoti",
+       "ru": "скриншот отправленной заявки"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-puamity-s3",
+     "type": "verify",
+     "minutes": 90,
+     "anchor_override": "uni.exam_date",
+     "offset_days": 0,
+     "title": {
+      "en": "Sit the exams and the interview",
+      "uz": "Imtihonlar va suhbatdan oʻting",
+      "ru": "Сдайте экзамены и пройдите собеседование"
+     },
+     "instructions": {
+      "en": "Sit your programme's entrance exams and the interview, then record the outcome.",
+      "uz": "Dasturingizning kirish imtihonlari va suhbatdan oʻting, soʻng natijani kiriting.",
+      "ru": "Сдайте вступительные экзамены своей программы и пройдите собеседование, затем отметьте итог."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "outcome",
+        "type": "choice",
+        "options": [
+         "offer",
+         "no_offer",
+         "waiting"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "windows": [],
+   "facts": [
+    {
+     "key": "entry",
+     "claim": "Entrance exams: maths, physics and chemistry (B.Tech CSE); maths and aptitude (B.Sc IT); aptitude (BA, BBA); interview; IELTS 5.5 or equivalent (B.Tech CSE, B.Sc IT) or 6.0 (BA, BBA); 12 years of schooling listed.",
+     "url": "https://amity.uz/en/pages/view/entry_requirements",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record amity_tashkent; page re-read 7 Oct 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "dates",
+     "claim": "No application or exam dates were published on the requirements page.",
+     "url": "https://amity.uz/en/pages/view/entry_requirements",
+     "verified_at": "2026-10-04",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": true
+    },
+    {
+     "key": "eleven_years",
+     "claim": "Whether an 11-year Uzbek school certificate meets Amity's 12-year requirement was not found.",
+     "url": null,
+     "verified_at": null,
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "amity_req",
+     "url": "https://amity.uz/en/pages/view/entry_requirements",
+     "kind": "official",
+     "label": {
+      "en": "Amity Tashkent entry requirements",
+      "uz": "Amity Toshkent qabul talablari",
+      "ru": "Требования Amity Ташкент"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Ask Amity for this year's dates and whether your 11-year certificate is enough for year 1.",
+    "uz": "Amityʼdan shu yilgi sanalarni va 11 yillik attestatingiz 1-kurs uchun yetarlimi, soʻrang.",
+    "ru": "Спросите Amity о датах этого года и достаточно ли вашего 11-летнего аттестата для первого курса."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-pumdis",
+   "template_id": "C11-pumdis",
+   "uni_id": "mdis",
+   "kind": "admin_template",
+   "category": "uz_private_entrance",
+   "workstream_kind": "uz_unis",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "uni.application_deadline",
+    "milestone_ids": []
+   },
+   "rule_ids": [
+    "universities_uz:mdis",
+    "planner.verify_missing_rule"
+   ],
+   "lead_time": {
+    "start_days_before": 75,
+    "due_days_before": 30,
+    "basis": "inference",
+    "note": {
+     "en": "Places go first to stronger English scores, so applying early with IELTS 6.0 helps; the notarised translation takes about two weeks.",
+     "uz": "Oʻrinlar avval ingliz tili bali yuqorilarga beriladi, shuning uchun IELTS 6.0 bilan erta ariza berish foydali; notarial tarjima taxminan ikki hafta oladi.",
+     "ru": "Места сначала дают кандидатам с более высоким английским, поэтому ранняя подача с IELTS 6.0 помогает; нотариальный перевод занимает около двух недель."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "MDIS's own English test cost 510,000 soʻm in 2025; translation and notarisation are paid separately.",
+    "uz": "MDISning oʻz ingliz tili testi 2025-yilda 510 000 soʻm turgan; tarjima va notarial tasdiqlash alohida toʻlanadi.",
+    "ru": "Собственный тест MDIS по английскому в 2025 году стоил 510 000 сумов; перевод и нотариальное заверение оплачиваются отдельно."
+   },
+   "title": {
+    "en": "Apply to MDIS Tashkent's Foundation Year",
+    "uz": "MDIS Tashkentʼning Foundation Year dasturiga ariza bering",
+    "ru": "Подайте заявку на Foundation Year в MDIS Tashkent"
+   },
+   "summary": {
+    "en": "School leavers start MDIS Tashkent in its Foundation Year. You need IELTS 5.5 with no band below 5.0, TOEFL iBT 46 or MDIS's own English test at 5.5; places go first to candidates at 6.0 and above. Your school certificate and transcript must be translated into English and notarised if they have no English version.",
+    "uz": "Maktab bitiruvchilari MDIS Tashkentʼda Foundation Year dasturidan boshlaydi. IELTS 5.5 (hech bir boʻlim 5.0 dan past emas), TOEFL iBT 46 yoki MDISning oʻz ingliz tili testidan 5.5 kerak; oʻrinlar avval 6.0 va undan yuqori natijaga ega nomzodlarga beriladi. Attestat va baholar varaqasining inglizcha varianti boʻlmasa, ular ingliz tiliga tarjima qilinib, notarial tasdiqlanishi kerak.",
+    "ru": "Выпускники школ начинают в MDIS Tashkent с Foundation Year. Нужен IELTS 5.5 (ни один раздел ниже 5.0), TOEFL iBT 46 или собственный тест MDIS на 5.5; места сначала дают кандидатам с 6.0 и выше. Если у аттестата и выписки нет английской версии, их переводят на английский и заверяют у нотариуса."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-pumdis-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -75,
+     "title": {
+      "en": "Check this year's registration dates",
+      "uz": "Shu yilgi roʻyxatdan oʻtish sanalarini tekshiring",
+      "ru": "Проверьте даты регистрации этого года"
+     },
+     "instructions": {
+      "en": "MDIS's page still shows the 2025 dates. Find this year's registration window on mdis.uz and paste the link.",
+      "uz": "MDIS sahifasida hali 2025-yil sanalari turibdi. mdis.uz da shu yilgi roʻyxatdan oʻtish muddatini toping va havolani qoʻying.",
+      "ru": "На странице MDIS всё ещё даты 2025 года. Найдите окно регистрации этого года на mdis.uz и вставьте ссылку."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "mdis.uz"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-pumdis-s2",
+     "type": "submit",
+     "minutes": 20,
+     "offset_days": -60,
+     "title": {
+      "en": "Get your school documents translated and notarised",
+      "uz": "Maktab hujjatlaringizni tarjima va notarial tasdiqlating",
+      "ru": "Переведите и заверьте школьные документы"
+     },
+     "instructions": {
+      "en": "If your school certificate and transcript have no English version, have them translated into English and notarised (see the translation task).",
+      "uz": "Attestat va baholar varaqasining inglizcha varianti boʻlmasa, ularni ingliz tiliga tarjima qildiring va notarial tasdiqlating (tarjima vazifasiga qarang).",
+      "ru": "Если у аттестата и выписки нет английской версии, переведите их на английский и заверьте у нотариуса (см. задачу о переводе)."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "translation_done",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no",
+         "not_needed"
+        ]
+       }
+      ]
+     },
+     "links_to": [
+      "C11-translation"
+     ]
+    },
+    {
+     "n": 3,
+     "id": "C11-pumdis-s3",
+     "type": "submit",
+     "minutes": 30,
+     "offset_days": -40,
+     "title": {
+      "en": "Register online with PDFs",
+      "uz": "PDF fayllar bilan onlayn roʻyxatdan oʻting",
+      "ru": "Зарегистрируйтесь онлайн с PDF-файлами"
+     },
+     "instructions": {
+      "en": "Register online with PDFs of your passport (with the registration page), your translated school documents and your English result, and a 3.5 × 4.5 photo in JPEG.",
+      "uz": "Pasportingiz (propiska sahifasi bilan), tarjima qilingan maktab hujjatlaringiz va ingliz tili natijangizning PDF nusxalari hamda JPEG formatdagi 3,5 × 4,5 rasm bilan onlayn roʻyxatdan oʻting.",
+      "ru": "Зарегистрируйтесь онлайн с PDF паспорта (со страницей прописки), переведённых школьных документов и результата по английскому, а также фото 3,5 × 4,5 в JPEG."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the registration",
+       "uz": "roʻyxatdan oʻtish skrinshoti",
+       "ru": "скриншот регистрации"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "reg_2025",
+     "kind": "application",
+     "label": {
+      "en": "Online registration (2025 intake)",
+      "uz": "Onlayn roʻyxatdan oʻtish (2025-yil qabuli)",
+      "ru": "Онлайн-регистрация (набор 2025)"
+     },
+     "cycle": "2025",
+     "use": "reference",
+     "from": "2025-03-01",
+     "until": "2025-08-15",
+     "source": {
+      "url": "https://www.mdis.uz/en/menu/foundation-year",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "reg_2027",
+     "kind": "application",
+     "label": {
+      "en": "Online registration (2027 intake)",
+      "uz": "Onlayn roʻyxatdan oʻtish (2027-yil qabuli)",
+      "ru": "Онлайн-регистрация (набор 2027)"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "from": null,
+     "until": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "entry",
+     "claim": "Foundation Year entry: 11 years of secondary education; IELTS 5.5 (no component below 5.0) or TOEFL iBT 46-59 / PBT 453-496 and above, or the MDIS English Test at 5.5; places offered earlier to IELTS or MDIS English Test 6.0 and above; documents: passport with permanent registration page (PDF), school diploma and transcript translated into English and notarised if there is no English version, English results, a 3.5 × 4.5 photo.",
+     "url": "https://www.mdis.uz/en/menu/foundation-year",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "eet_fee",
+     "claim": "The MDIS English Entrance Test, an alternative to IELTS, cost UZS 510,000 (news of 20 May 2025).",
+     "url": "https://www.mdis.uz/en/news/apply-to-mdis-tashkent-without-ielts-register-for-eet",
+     "verified_at": "2026-10-04",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record mdis",
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "mdis_fy",
+     "url": "https://www.mdis.uz/en/menu/foundation-year",
+     "kind": "official",
+     "label": {
+      "en": "MDIS Tashkent Foundation Year",
+      "uz": "MDIS Tashkent Foundation Year",
+      "ru": "MDIS Tashkent Foundation Year"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "MDIS has not published this year's dates or test fee: check mdis.uz from March.",
+    "uz": "MDIS shu yilgi sanalar va test narxini eʼlon qilmagan: martdan boshlab mdis.uz ni tekshiring.",
+    "ru": "MDIS ещё не опубликовал даты и стоимость теста этого года: проверяйте mdis.uz с марта."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-pubmu",
+   "template_id": "C11-pubmu",
+   "uni_id": "bmu",
+   "kind": "admin_template",
+   "category": "uz_private_entrance",
+   "workstream_kind": "uz_unis",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "uni.application_deadline",
+    "milestone_ids": []
+   },
+   "rule_ids": [
+    "universities_uz:bmu",
+    "planner.verify_missing_rule"
+   ],
+   "lead_time": {
+    "start_days_before": 75,
+    "due_days_before": 30,
+    "basis": "inference",
+    "note": {
+     "en": "BMU publishes no dates on its requirements page; ask early which entry point your certificate gives.",
+     "uz": "BMU talablar sahifasida sana eʼlon qilmagan; attestatingiz qaysi bosqichdan boshlashga imkon berishini erta soʻrang.",
+     "ru": "BMU не публикует даты на странице требований; заранее спросите, с какого этапа вас примут с вашим аттестатом."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "Tuition is paid by contract; BMU lists several grant types.",
+    "uz": "Oʻqish kontrakt asosida toʻlanadi; BMU bir necha turdagi grantlarni koʻrsatgan.",
+    "ru": "Обучение платное по контракту; BMU перечисляет несколько видов грантов."
+   },
+   "title": {
+    "en": "Apply to British Management University (BMU)",
+    "uz": "British Management Universityʼga (BMU) ariza bering",
+    "ru": "Подайте заявку в British Management University (BMU)"
+   },
+   "summary": {
+    "en": "BMU's bachelor's needs IELTS 6.0 (5.5 in each band) or Aptis C1, a maths qualification (GCSE Maths C/4 or equivalent) plus a pass in BMU's maths exam or an SAT Math score at its threshold, age 17 by 31 December, and 12 years of schooling or a foundation year, so an 11-year school leaver usually starts with BMU's Foundation.",
+    "uz": "BMU bakalavriati uchun IELTS 6.0 (har bir boʻlim 5.5) yoki Aptis C1, matematika boʻyicha hujjat (GCSE Maths C/4 yoki unga teng) va BMU matematika imtihonidan oʻtish yoki uning chegarasidagi SAT Math bali, 31-dekabrgacha 17 yosh hamda 12 yillik taʼlim yoki tayyorlov yili kerak, shuning uchun 11 yillik maktab bitiruvchisi odatda BMU Foundationʼdan boshlaydi.",
+    "ru": "Для бакалавриата BMU нужны IELTS 6.0 (5.5 по каждому разделу) или Aptis C1, документ по математике (GCSE Maths C/4 или аналог) плюс сданный экзамен BMU по математике или балл SAT Math не ниже порога, 17 лет к 31 декабря и 12 лет обучения или подготовительный год, поэтому выпускник 11-летней школы обычно начинает с Foundation BMU."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-pubmu-s1",
+     "type": "verify",
+     "minutes": 15,
+     "offset_days": -75,
+     "title": {
+      "en": "Ask which entry point you get, and the dates",
+      "uz": "Qaysi bosqichdan boshlashingiz va sanalarni soʻrang",
+      "ru": "Узнайте этап зачисления и даты"
+     },
+     "instructions": {
+      "en": "Ask BMU's admissions office whether your 11-year certificate admits you to the Foundation or to year 1, the SAT Math threshold, and this year's dates. Paste the page or write the answer.",
+      "uz": "BMU qabul boʻlimidan 11 yillik attestatingiz bilan Foundationʼgami yoki 1-kursgami qabul qilinishingizni, SAT Math chegarasini va shu yilgi sanalarni soʻrang. Sahifani qoʻying yoki javobni yozing.",
+      "ru": "Спросите в приёмной комиссии BMU, примут ли вас с 11-летним аттестатом на Foundation или на первый курс, каков порог SAT Math и даты этого года. Вставьте страницу или запишите ответ."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "bmu-edu.uz"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-pubmu-s2",
+     "type": "book",
+     "minutes": 60,
+     "offset_days": -45,
+     "title": {
+      "en": "Sit BMU's maths exam or send your SAT Math",
+      "uz": "BMU matematika imtihonini topshiring yoki SAT Math natijangizni yuboring",
+      "ru": "Сдайте экзамен BMU по математике или отправьте SAT Math"
+     },
+     "instructions": {
+      "en": "Book BMU's maths entrance exam, or send your SAT Math score if it meets their threshold. Record which route you used.",
+      "uz": "BMU matematika kirish imtihoniga yoziling yoki SAT Math balingiz ularning chegarasiga yetsa, uni yuboring. Qaysi yoʻldan foydalanganingizni kiriting.",
+      "ru": "Запишитесь на вступительный экзамен BMU по математике или отправьте SAT Math, если балл не ниже порога. Отметьте, какой путь выбрали."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "maths_route",
+        "type": "choice",
+        "options": [
+         "bmu_exam",
+         "sat_math",
+         "foundation_qm1"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-pubmu-s3",
+     "type": "submit",
+     "minutes": 30,
+     "offset_days": -30,
+     "title": {
+      "en": "Apply with your documents",
+      "uz": "Hujjatlaringiz bilan ariza bering",
+      "ru": "Подайте заявку с документами"
+     },
+     "instructions": {
+      "en": "Apply with your passport (or birth certificate), a 3 × 4 photo, your school certificate and transcript, and your English certificate.",
+      "uz": "Pasport (yoki tugʻilganlik haqidagi guvohnoma), 3 × 4 rasm, attestat va baholar varaqasi hamda ingliz tili sertifikatingiz bilan ariza bering.",
+      "ru": "Подайте заявку с паспортом (или свидетельством о рождении), фото 3 × 4, аттестатом с выпиской и сертификатом по английскому."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the submitted application",
+       "uz": "yuborilgan ariza skrinshoti",
+       "ru": "скриншот отправленной заявки"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    }
+   ],
+   "windows": [],
+   "facts": [
+    {
+     "key": "entry",
+     "claim": "BMU bachelor's: IELTS 6.0 (5.5 per band) or Aptis C1; GCSE Maths C/4 or equivalent plus a pass in BMU's maths entrance exam or its Foundation's Quantitative Methods I, or an SAT Math score at BMU's threshold; age 17 by 31 December; any one of BMU Foundation, an equivalent international foundation, a first university year, or 12 years of schooling under an internationally recognised curriculum; documents: passport or birth certificate, 3 × 4 photo, school certificate and transcript, English certificate.",
+     "url": "https://bmu-edu.uz/page/admission-requirements-tuition-fees",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record bmu; page re-read 7 Oct 2026, which adds that no internal English exam is accepted for undergraduate admission",
+     "needs_verification": false
+    },
+    {
+     "key": "sat_threshold",
+     "claim": "BMU's SAT Math threshold and its application dates were not stated on the page.",
+     "url": "https://bmu-edu.uz/page/admission-requirements-tuition-fees",
+     "verified_at": "2026-10-04",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "bmu_req",
+     "url": "https://bmu-edu.uz/page/admission-requirements-tuition-fees",
+     "kind": "official",
+     "label": {
+      "en": "BMU admission requirements",
+      "uz": "BMU qabul talablari",
+      "ru": "Требования BMU к поступающим"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Ask BMU for this year's dates, the SAT Math threshold and whether you start in the Foundation.",
+    "uz": "BMUʼdan shu yilgi sanalar, SAT Math chegarasi va Foundationʼdan boshlashingiz kerakmi, soʻrang.",
+    "ru": "Спросите BMU о датах этого года, пороге SAT Math и начнёте ли вы с Foundation."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-pukiut",
+   "template_id": "C11-pukiut",
+   "uni_id": "kiut",
+   "kind": "admin_template",
+   "category": "uz_private_entrance",
+   "workstream_kind": "uz_unis",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "uni.application_deadline",
+    "milestone_ids": []
+   },
+   "rule_ids": [
+    "universities_uz:kiut",
+    "planner.verify_missing_rule"
+   ],
+   "lead_time": {
+    "start_days_before": 60,
+    "due_days_before": 21,
+    "basis": "inference",
+    "note": {
+     "en": "KIUT's page says applications run until the official deadline without giving a date; apply early.",
+     "uz": "KIUT sahifasida arizalar rasmiy muddatgacha qabul qilinishi aytilgan, lekin sana koʻrsatilmagan; erta ariza bering.",
+     "ru": "На странице KIUT сказано, что заявки принимают до официального срока, но дата не указана; подавайте заранее."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "Tuition is paid by contract; KIUT's page gave fees of 16.9-29.7 million soʻm a year by programme when read.",
+    "uz": "Oʻqish kontrakt asosida toʻlanadi; oʻqilgan paytda KIUT sahifasida yoʻnalishga qarab yiliga 16,9-29,7 million soʻm koʻrsatilgan.",
+    "ru": "Обучение платное по контракту; на момент чтения страница KIUT указывала 16,9-29,7 млн сумов в год в зависимости от программы."
+   },
+   "title": {
+    "en": "Apply to Kimyo International University in Tashkent (KIUT)",
+    "uz": "Toshkentdagi Kimyo xalqaro universitetiga (KIUT) ariza bering",
+    "ru": "Подайте заявку в Kimyo International University in Tashkent (KIUT)"
+   },
+   "summary": {
+    "en": "KIUT admits by a subject test or an interview, depending on the school (a creative exam for the arts). A language certificate is optional: IELTS 5.5, CEFR B1, Duolingo 85, TOEFL 58, TOPIK 3 or TÖMER are listed.",
+    "uz": "KIUT maktabga (fakultetga) qarab fan testi yoki suhbat orqali qabul qiladi (sanʼat uchun ijodiy imtihon). Til sertifikati ixtiyoriy: IELTS 5.5, CEFR B1, Duolingo 85, TOEFL 58, TOPIK 3 yoki TÖMER koʻrsatilgan.",
+    "ru": "KIUT принимает по предметному тесту или собеседованию в зависимости от школы (для искусств — творческий экзамен). Языковой сертификат необязателен: указаны IELTS 5.5, CEFR B1, Duolingo 85, TOEFL 58, TOPIK 3 или TÖMER."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-pukiut-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -60,
+     "title": {
+      "en": "Check your school's entrance route and the deadline",
+      "uz": "Fakultetingizning qabul yoʻli va muddatini tekshiring",
+      "ru": "Проверьте путь поступления и срок вашей школы"
+     },
+     "instructions": {
+      "en": "On kiut.uz, find whether your programme uses a subject test or an interview, and this year's deadline. Paste the link.",
+      "uz": "kiut.uz da dasturingiz fan testi yoki suhbat orqali qabul qilishini va shu yilgi muddatni toping. Havolani qoʻying.",
+      "ru": "Найдите на kiut.uz, принимает ли ваша программа по тесту или собеседованию, и срок этого года. Вставьте ссылку."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "kiut.uz"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-pukiut-s2",
+     "type": "submit",
+     "minutes": 30,
+     "offset_days": -30,
+     "title": {
+      "en": "Apply",
+      "uz": "Ariza bering",
+      "ru": "Подайте заявку"
+     },
+     "instructions": {
+      "en": "Apply with your passport, school certificate, a recent photo and a language certificate if you have one.",
+      "uz": "Pasport, attestat, yaqinda tushilgan rasm va bor boʻlsa til sertifikati bilan ariza bering.",
+      "ru": "Подайте заявку с паспортом, аттестатом, недавним фото и языковым сертификатом, если он есть."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the submitted application",
+       "uz": "yuborilgan ariza skrinshoti",
+       "ru": "скриншот отправленной заявки"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-pukiut-s3",
+     "type": "verify",
+     "minutes": 60,
+     "anchor_override": "uni.exam_date",
+     "offset_days": 0,
+     "title": {
+      "en": "Take the test or interview",
+      "uz": "Test yoki suhbatdan oʻting",
+      "ru": "Пройдите тест или собеседование"
+     },
+     "instructions": {
+      "en": "Take the subject test or the interview and record the outcome.",
+      "uz": "Fan testi yoki suhbatdan oʻting va natijani kiriting.",
+      "ru": "Пройдите предметный тест или собеседование и отметьте итог."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "outcome",
+        "type": "choice",
+        "options": [
+         "offer",
+         "no_offer",
+         "waiting"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "apply_2026_27",
+     "kind": "application",
+     "label": {
+      "en": "Applications for 2026/2027: open until the official deadline (no date published)",
+      "uz": "2026/2027 uchun arizalar: rasmiy muddatgacha (sana eʼlon qilinmagan)",
+      "ru": "Заявки на 2026/2027: до официального срока (дата не опубликована)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "from": null,
+     "until": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "entry",
+     "claim": "KIUT: a subject test or an interview by school (a creative exam for the arts); language certificate optional (IELTS 5.5, CEFR B1, Duolingo 85, TOEFL 58, TOPIK 3, TÖMER); documents: passport, school certificate, a 3.5 × 4.5 cm photo from the last 3 months, English certificate if any; full-time fees 16.9-29.7 million UZS a year (evening study from 12.8 million).",
+     "url": "https://kiut.uz/en/admissions/tashkent-admission/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record kiut; page re-read 7 Oct 2026",
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "kiut_adm",
+     "url": "https://kiut.uz/en/admissions/tashkent-admission/",
+     "kind": "official",
+     "label": {
+      "en": "KIUT Tashkent admission",
+      "uz": "KIUT Toshkent qabuli",
+      "ru": "Приём KIUT Ташкент"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "KIUT gives no deadline on its page: ask the admissions office for this year's last day.",
+    "uz": "KIUT sahifasida muddat koʻrsatilmagan: shu yilgi oxirgi kunni qabul boʻlimidan soʻrang.",
+    "ru": "На странице KIUT нет срока: узнайте последний день этого года в приёмной комиссии."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-punewuu",
+   "template_id": "C11-punewuu",
+   "uni_id": "newuu",
+   "kind": "admin_template",
+   "category": "uz_private_entrance",
+   "workstream_kind": "uz_unis",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "uni.registration_until",
+    "milestone_ids": []
+   },
+   "rule_ids": [
+    "universities_uz:newuu",
+    "planner.verify_missing_rule"
+   ],
+   "lead_time": {
+    "start_days_before": 60,
+    "due_days_before": 14,
+    "never_within_hours": 48,
+    "basis": "inference",
+    "note": {
+     "en": "Registration opened in late January in 2026 and closed a week before the exam; register early and plan the English certificate for the document deadline.",
+     "uz": "2026-yilda roʻyxatdan oʻtish yanvar oxirida ochilib, imtihondan bir hafta oldin yopilgan; erta roʻyxatdan oʻting va ingliz tili sertifikatini hujjatlar muddatiga rejalashtiring.",
+     "ru": "В 2026 году регистрация открылась в конце января и закрылась за неделю до экзамена; регистрируйтесь заранее и планируйте сертификат по английскому к сроку документов."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Register for New Uzbekistan University's entrance exam",
+    "uz": "Yangi Oʻzbekiston universiteti kirish imtihoniga roʻyxatdan oʻting",
+    "ru": "Зарегистрируйтесь на экзамен New Uzbekistan University"
+   },
+   "summary": {
+    "en": "NewUU admits by its Math & Logical Thinking exam (SAT Math 780-800, IB Maths 5-7 or A-level Maths B-A* can exempt you, with an English interview) and an English certificate: IELTS 5.5-6.0 by programme, CEFR B2 or TOEFL. In 2026 registration ran 30 Jan-19 Jun on admission.newuu.uz, the exam was on 27 Jun and documents were due by 13 Jul.",
+    "uz": "NewUU Math & Logical Thinking imtihoni (SAT Math 780-800, IB Maths 5-7 yoki A-level Maths B-A* ingliz tilidagi suhbat bilan undan ozod qilishi mumkin) va ingliz tili sertifikati boʻyicha qabul qiladi: dasturga qarab IELTS 5.5-6.0, CEFR B2 yoki TOEFL. 2026-yilda roʻyxatdan oʻtish 30-yanvardan 19-iyungacha admission.newuu.uz da boʻlgan, imtihon 27-iyunda oʻtgan, hujjatlar 13-iyulgacha topshirilgan.",
+    "ru": "NewUU принимает по экзамену Math & Logical Thinking (SAT Math 780-800, IB Maths 5-7 или A-level Maths B-A* могут освободить от него, с собеседованием на английском) и сертификату по английскому: IELTS 5.5-6.0 в зависимости от программы, CEFR B2 или TOEFL. В 2026 году регистрация шла с 30 января по 19 июня на admission.newuu.uz, экзамен был 27 июня, документы — до 13 июля."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-punewuu-s1",
+     "type": "book",
+     "minutes": 30,
+     "offset_days": -45,
+     "title": {
+      "en": "Register on admission.newuu.uz",
+      "uz": "admission.newuu.uz da roʻyxatdan oʻting",
+      "ru": "Зарегистрируйтесь на admission.newuu.uz"
+     },
+     "instructions": {
+      "en": "Create your account on admission.newuu.uz, choose your programme and register for the entrance exam.",
+      "uz": "admission.newuu.uz da akkaunt oching, dasturingizni tanlang va kirish imtihoniga roʻyxatdan oʻting.",
+      "ru": "Создайте аккаунт на admission.newuu.uz, выберите программу и зарегистрируйтесь на вступительный экзамен."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the registration",
+       "uz": "roʻyxatdan oʻtish skrinshoti",
+       "ru": "скриншот регистрации"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-punewuu-s2",
+     "type": "verify",
+     "minutes": 150,
+     "anchor_override": "uni.exam_date",
+     "offset_days": 0,
+     "title": {
+      "en": "Sit the Math & Logical Thinking exam (or use your exemption)",
+      "uz": "Math & Logical Thinking imtihonini topshiring (yoki ozod boʻlish huquqingizdan foydalaning)",
+      "ru": "Сдайте Math & Logical Thinking (или используйте освобождение)"
+     },
+     "instructions": {
+      "en": "Sit the exam on its date. If you have SAT Math 780 or more, IB Maths 5 or more, or A-level Maths B or more, ask whether the university will exempt you after an interview in English.",
+      "uz": "Imtihonni belgilangan kuni topshiring. SAT Math 780 va undan yuqori, IB Maths 5 va undan yuqori yoki A-level Maths B va undan yuqori natijangiz boʻlsa, universitet ingliz tilidagi suhbatdan keyin sizni ozod qiladimi, soʻrang.",
+      "ru": "Сдайте экзамен в назначенный день. Если у вас SAT Math от 780, IB Maths от 5 или A-level Maths от B, спросите, освободит ли университет после собеседования на английском."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "route",
+        "type": "choice",
+        "options": [
+         "exam",
+         "sat_math_exempt",
+         "ib_exempt",
+         "alevel_exempt"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-punewuu-s3",
+     "type": "submit",
+     "minutes": 20,
+     "anchor_override": "uni.documents_deadline",
+     "offset_days": -7,
+     "title": {
+      "en": "Upload documents and the English certificate",
+      "uz": "Hujjatlar va ingliz tili sertifikatini yuklang",
+      "ru": "Загрузите документы и сертификат по английскому"
+     },
+     "instructions": {
+      "en": "Upload your school certificate with its transcript and your English certificate before the document deadline.",
+      "uz": "Attestat va baholar varaqasi hamda ingliz tili sertifikatingizni hujjatlar muddatidan oldin yuklang.",
+      "ru": "Загрузите аттестат с выпиской и сертификат по английскому до срока подачи документов."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "documents_uploaded",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "reg_2026",
+     "kind": "registration",
+     "label": {
+      "en": "Registration (Fall 2026 intake)",
+      "uz": "Roʻyxatdan oʻtish (2026-yil kuzgi qabul)",
+      "ru": "Регистрация (набор осень 2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "from": "2026-01-30",
+     "until": "2026-06-19",
+     "source": {
+      "url": "https://newuu.uz/en/undergraduate-admissions",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "exam_2026",
+     "kind": "exam",
+     "label": {
+      "en": "Entrance exam (2026)",
+      "uz": "Kirish imtihoni (2026)",
+      "ru": "Вступительный экзамен (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "date": "2026-06-27",
+     "source": {
+      "url": "https://newuu.uz/en/undergraduate-admissions",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "docs_2026",
+     "kind": "documents",
+     "label": {
+      "en": "Documents and English certificate (2026)",
+      "uz": "Hujjatlar va ingliz tili sertifikati (2026)",
+      "ru": "Документы и сертификат по английскому (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "until": "2026-07-13",
+     "source": {
+      "url": "https://newuu.uz/en/undergraduate-admissions",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "reg_2027",
+     "kind": "registration",
+     "label": {
+      "en": "Registration (Fall 2027 intake)",
+      "uz": "Roʻyxatdan oʻtish (2027-yil kuzgi qabul)",
+      "ru": "Регистрация (набор осень 2027)"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "from": null,
+     "until": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "entry",
+     "claim": "Fall 2026: registration until 19 Jun 2026 on admission.newuu.uz; Math & Logical Thinking entrance exam on 27 Jun 2026; documents by 13 Jul 2026; English: IELTS 5.5 or 6.0 depending on the programme, with TOEFL iBT and CEFR alternatives.",
+     "url": "https://newuu.uz/en/undergraduate-admissions",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "exemptions",
+     "claim": "SAT Math 780-800, IB Maths 5-7 or A-level Maths B-A* may exempt from the exam, with an interview in English; CEFR B2 and TOEFL iBT 46-60 (by programme) are accepted English alternatives.",
+     "url": "https://newuu.uz/en/undergraduate-admissions",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "universities_uz.json record newuu; page re-read 7 Oct 2026",
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "newuu_portal",
+     "url": "https://admission.newuu.uz/auth/login",
+     "kind": "official",
+     "label": {
+      "en": "NewUU admission portal",
+      "uz": "NewUU qabul portali",
+      "ru": "Портал приёма NewUU"
+     }
+    },
+    {
+     "id": "newuu_ug",
+     "url": "https://newuu.uz/en/undergraduate-admissions",
+     "kind": "official",
+     "label": {
+      "en": "NewUU undergraduate admissions",
+      "uz": "NewUU bakalavriatga qabul",
+      "ru": "NewUU: приём на бакалавриат"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "NewUU's Fall 2027 dates are not published yet: check newuu.uz from January.",
+    "uz": "NewUUning 2027-yil kuzgi qabul sanalari hali eʼlon qilinmagan: yanvardan boshlab newuu.uz ni tekshiring.",
+    "ru": "Даты NewUU на осень 2027 года ещё не опубликованы: проверяйте newuu.uz с января."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

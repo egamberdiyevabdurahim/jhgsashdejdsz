@@ -1,0 +1,2014 @@
+{
+  "bank": "C1",
+  "batch": 13,
+  "items": [
+    {
+      "id": "C1-r3b001",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "quadratic",
+      "family": {
+        "template": "A rectangular carpet is {d} m longer than it is wide, and its area is {A} m². How wide is the carpet, in metres?",
+        "params": {
+          "w": {
+            "min": 2,
+            "max": 9
+          },
+          "d": {
+            "min": 2,
+            "max": 6
+          }
+        },
+        "derived": {
+          "A": "w*(w + d)",
+          "dd": "d*d",
+          "A4": "4*w*(w + d)",
+          "D": "d*d + 4*w*(w + d)",
+          "s": "2*w + d"
+        },
+        "constraints": [
+          "d != w"
+        ],
+        "answer": "(sqrt(d*d + 4*A) - d)/2",
+        "distractors": [
+          "(sqrt(d*d + 4*A) + d)/2",
+          "sqrt(d*d + 4*A) - d",
+          "sqrt(d*d + 4*A)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | wrong_formula | partial_answer (C1/error_rules.json).",
+        "relation": "X*(X + {d}) = {A}; X > 0"
+      },
+      "page": "C19-DTMC08-1",
+      "lang": "en",
+      "stem": {
+        "en": "A rectangular carpet is {d} m longer than it is wide, and its area is {A} m². How wide is the carpet, in metres?",
+        "uz": "Toʻgʻri toʻrtburchak shaklidagi gilamning boʻyi enidan {d} m uzun, yuzi esa {A} m². Gilamning eni necha metr?",
+        "ru": "Длина прямоугольного ковра на {d} м больше его ширины, а площадь равна {A} м². Какова ширина ковра (в метрах)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Width x, length x + {d}: x(x + {d}) = {A}, so x² + {d}x − {A} = 0. D = {dd} + {A4} = {D}, √D = {s}. x = (−{d} + {s}) ÷ 2 = {ANS} m; the other root is negative.",
+        "uz": "Eni x, boʻyi x + {d}: x(x + {d}) = {A}, yaʼni x² + {d}x − {A} = 0. D = {dd} + {A4} = {D}, √D = {s}. x = (−{d} + {s}) ÷ 2 = {ANS} m; ikkinchi ildiz manfiy.",
+        "ru": "Ширина x, длина x + {d}: x(x + {d}) = {A}, то есть x² + {d}x − {A} = 0. D = {dd} + {A4} = {D}, √D = {s}. x = (−{d} + {s}) ÷ 2 = {ANS} м; второй корень отрицательный."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.2,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b002",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "series",
+      "family": {
+        "template": "A stand at a stadium has {n} rows. The first row has {a} seats, and each row has {d} more seats than the row in front of it. How many seats are there in the stand?",
+        "params": {
+          "n": {
+            "min": 8,
+            "max": 20
+          },
+          "a": {
+            "min": 10,
+            "max": 30
+          },
+          "d": {
+            "min": 2,
+            "max": 6
+          }
+        },
+        "derived": {
+          "L": "a + (n - 1)*d",
+          "nm": "n - 1"
+        },
+        "constraints": [
+          "(n*d) % 2 == 0",
+          "(n*(a + d)) % 2 == 0"
+        ],
+        "answer": "n*(2*a + (n - 1)*d)/2",
+        "distractors": [
+          "a + (n - 1)*d",
+          "n*(2*a + n*d)/2",
+          "n*(a + d)/2"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | off_by_one | wrong_formula (C1/error_rules.json).",
+        "relation": "X = {n}*{a} + {d}*{n}*({n} - 1)/2"
+      },
+      "page": "C19-DTMC09-1",
+      "lang": "en",
+      "stem": {
+        "en": "A stand at a stadium has {n} rows. The first row has {a} seats, and each row has {d} more seats than the row in front of it. How many seats are there in the stand?",
+        "uz": "Stadion tribunasida {n} qator bor. Birinchi qatorda {a} ta oʻrindiq bor, har bir keyingi qatorda esa oldingisidan {d} ta koʻp. Tribunada jami nechta oʻrindiq bor?",
+        "ru": "На трибуне стадиона {n|ряд|ряда|рядов}. В первом ряду {a|место|места|мест}, а в каждом следующем ряду на {d|место|места|мест} больше, чем в предыдущем. Сколько всего мест на трибуне?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The last row has {a} + {nm} × {d} = {L} seats. Pair the first and the last rows: {n} × ({a} + {L}) ÷ 2 = {ANS} seats.",
+        "uz": "Oxirgi qatorda {a} + {nm} × {d} = {L} ta oʻrindiq bor. Qatorlarni juft-juft qoʻshing (birinchisini oxirgisi bilan va h.k.): {n} × ({a} + {L}) ÷ 2 = {ANS} ta oʻrindiq.",
+        "ru": "В последнем ряду {a} + {nm} × {d} = {L|место|места|мест}. Складываем ряды парами (первый с последним и т. д.): {n} × ({a} + {L}) ÷ 2 = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.2,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b003",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "pythagoras",
+      "family": {
+        "template": "A fire engine's ladder is {c} m long. Its foot stands on the ground {a} m from the wall of a house, and its top rests against the wall. How high up the wall does the top of the ladder reach, in metres?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                8,
+                10
+              ],
+              [
+                9,
+                12,
+                15
+              ],
+              [
+                5,
+                12,
+                13
+              ],
+              [
+                8,
+                15,
+                17
+              ],
+              [
+                12,
+                16,
+                20
+              ],
+              [
+                7,
+                24,
+                25
+              ],
+              [
+                15,
+                20,
+                25
+              ],
+              [
+                10,
+                24,
+                26
+              ],
+              [
+                20,
+                21,
+                29
+              ],
+              [
+                18,
+                24,
+                30
+              ],
+              [
+                16,
+                30,
+                34
+              ]
+            ]
+          }
+        },
+        "derived": {
+          "a": "t[0]",
+          "b": "t[1]",
+          "c": "t[2]",
+          "cc": "t[2]*t[2]",
+          "aa": "t[0]*t[0]",
+          "bb": "t[2]*t[2] - t[0]*t[0]"
+        },
+        "answer": "sqrt(c*c - a*a)",
+        "distractors": [
+          "c - a",
+          "round(sqrt(c*c + a*a), 1)",
+          "c*c - a*a"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | sign_slip | partial_answer (C1/error_rules.json).",
+        "relation": "X^2 + {a}^2 = {c}^2; X > 0"
+      },
+      "page": "C19-DTMC10-1",
+      "lang": "en",
+      "stem": {
+        "en": "A fire engine's ladder is {c} m long. Its foot stands on the ground {a} m from the wall of a house, and its top rests against the wall. How high up the wall does the top of the ladder reach, in metres?",
+        "uz": "Oʻt oʻchirish mashinasining narvoni {c} m uzunlikda. Uning pastki uchi yerda, uy devoridan {a} m uzoqlikda turibdi, yuqori uchi esa devorga tiralgan. Narvonning yuqori uchi devorning qanday balandligiga yetadi (metrda)?",
+        "ru": "Длина лестницы пожарной машины — {c} м. Её нижний конец стоит на земле в {a} м от стены дома, а верхний упирается в стену. На какой высоте (в метрах) верхний конец лестницы касается стены?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The ladder is the hypotenuse, so subtract: h² = {c}² − {a}² = {cc} − {aa} = {bb}, and h = {ANS} m.",
+        "uz": "Narvon — gipotenuza, shuning uchun ayiring: h² = {c}² − {a}² = {cc} − {aa} = {bb}, demak h = {ANS} m.",
+        "ru": "Лестница — гипотенуза, поэтому вычитаем: h² = {c}² − {a}² = {cc} − {aa} = {bb}, значит, h = {ANS} м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.6,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b004",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equation",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A family spent 1/{a} of its money for the week at the market and 1/{b} of it on bus fares. It has {r} soʻm left. How many soʻm did the family have for the week?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                2,
+                8
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                3,
+                9
+              ],
+              [
+                3,
+                12
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                4,
+                8
+              ],
+              [
+                5,
+                10
+              ]
+            ]
+          },
+          "m": {
+            "min": 2,
+            "max": 20
+          }
+        },
+        "derived": {
+          "a": "t[0]",
+          "b": "t[1]",
+          "L": "lcm(a, b)",
+          "x": "L*m*5000",
+          "r": "x - x/a - x/b",
+          "c4": "L - L/a - L/b",
+          "c5": "c4/gcd(c4, L)",
+          "L5": "L/gcd(c4, L)"
+        },
+        "constraints": [
+          "(r*a*b) % (a + b) == 0",
+          "x/a + x/b != r + x/b",
+          "x/a + x/b != r*a*b/(a + b)",
+          "r + x/b != r*a*b/(a + b)"
+        ],
+        "answer": "r*a*b/(a*b - a - b)",
+        "distractors": [
+          "x/a + x/b",
+          "r + x/b",
+          "r*a*b/(a + b)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | partial_answer | inverse_slip (C1/error_rules.json).",
+        "relation": "X - X/{a} - X/{b} = {r}"
+      },
+      "page": "C19-MAAL01-2",
+      "lang": "en",
+      "stem": {
+        "en": "A family spent 1/{a} of its money for the week at the market and 1/{b} of it on bus fares. It has {r} soʻm left. How many soʻm did the family have for the week?",
+        "uz": "Oila haftalik pulining 1/{a} qismini bozorga, 1/{b} qismini avtobus yoʻlkirasiga sarfladi. Oilada {r} soʻm qoldi. Oilaning haftalik puli necha soʻm edi?",
+        "ru": "Из денег, отложенных на неделю, семья потратила 1/{a} на базаре и 1/{b} — на проезд в автобусе. Осталось {r} сум. Сколько денег (в сумах) было у семьи на неделю?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Let x be the money: x − x/{a} − x/{b} = {r}. The part left is 1 − 1/{a} − 1/{b} = {c5}/{L5} of x, so x = {r} ÷ {c5} × {L5} = {ANS} soʻm.",
+        "uz": "Pul x boʻlsin: x − x/{a} − x/{b} = {r}. Qolgan qism x ning 1 − 1/{a} − 1/{b} = {c5}/{L5} qismi, demak x = {r} ÷ {c5} × {L5} = {ANS} soʻm.",
+        "ru": "Пусть денег было x: x − x/{a} − x/{b} = {r}. Осталось 1 − 1/{a} − 1/{b} = {c5}/{L5} от x, значит, x = {r} ÷ {c5} × {L5} = {ANS} сум."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.2,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b005",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A sports club charges a joining fee and then the same amount every month. {x1|month costs|months cost} {y1} soʻm in all, and {x2} months cost {y2} soʻm in all. How many soʻm do {x3} months cost in all?",
+        "params": {
+          "m": {
+            "min": 100000,
+            "max": 300000,
+            "step": 10000
+          },
+          "F": {
+            "min": 50000,
+            "max": 200000,
+            "step": 10000
+          },
+          "x1": {
+            "min": 1,
+            "max": 4
+          },
+          "dx": {
+            "min": 2,
+            "max": 5
+          },
+          "x3": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "derived": {
+          "x2": "x1 + dx",
+          "y1": "F + m*x1",
+          "y2": "F + m*(x1 + dx)"
+        },
+        "constraints": [
+          "x3 != x1",
+          "x3 != x1 + dx",
+          "(y1*x3) % x1 == 0",
+          "y1*x3/x1 != y1 + m*(x3 - x1)",
+          "y1*x3/x1 != m*x3",
+          "y1*x3/x1 != y1 + m*x3"
+        ],
+        "answer": "y1 + (y2 - y1)/(x2 - x1)*(x3 - x1)",
+        "distractors": [
+          "y1*x3/x1",
+          "(y2 - y1)/(x2 - x1)*x3",
+          "y1 + (y2 - y1)/(x2 - x1)*x3"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | wrong_formula (C1/error_rules.json).",
+        "relation": "(X - {y1})*({x2} - {x1}) = ({y2} - {y1})*({x3} - {x1})"
+      },
+      "page": "C19-MAAL02-2",
+      "lang": "en",
+      "stem": {
+        "en": "A sports club charges a joining fee and then the same amount every month. {x1|month costs|months cost} {y1} soʻm in all, and {x2} months cost {y2} soʻm in all. How many soʻm do {x3} months cost in all?",
+        "uz": "Sport klubi aʼzolik uchun bir martalik toʻlov va har oy bir xil miqdorda pul oladi. {x1} oy uchun jami {y1} soʻm, {x2} oy uchun jami {y2} soʻm toʻlanadi. {x3} oy uchun jami necha soʻm toʻlanadi?",
+        "ru": "Спортивный клуб берёт вступительный взнос и затем каждый месяц одну и ту же плату. За {x1|месяц|месяца|месяцев} всего платят {y1} сум, за {x2|месяц|месяца|месяцев} — {y2} сум. Сколько всего нужно заплатить (в сумах) за {x3|месяц|месяца|месяцев}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Each month adds ({y2} − {y1}) ÷ ({x2} − {x1}) = {m} soʻm. The fee: {y1} − {m} × {x1} = {F} soʻm. {x3} months: {F} + {m} × {x3} = {ANS} soʻm.",
+        "uz": "Har oy ({y2} − {y1}) ÷ ({x2} − {x1}) = {m} soʻm qoʻshiladi. Bir martalik toʻlov: {y1} − {m} × {x1} = {F} soʻm. {x3} oy: {F} + {m} × {x3} = {ANS} soʻm.",
+        "ru": "Каждый месяц добавляет ({y2} − {y1}) ÷ ({x2} − {x1}) = {m} сум. Взнос: {y1} − {m} × {x1} = {F} сум. За {x3|месяц|месяца|месяцев}: {F} + {m} × {x3} = {ANS} сум."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.4,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b006",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "Taxi A charges {sA} soʻm to start and {pA} soʻm for each km. Taxi B charges {sB} soʻm to start and {pB} soʻm for each km. For a ride of how many km do the two taxis cost the same?",
+        "params": {
+          "pA": {
+            "min": 1500,
+            "max": 3000,
+            "step": 500
+          },
+          "dp": {
+            "values": [
+              500,
+              1000,
+              1500
+            ]
+          },
+          "sB": {
+            "min": 3000,
+            "max": 8000,
+            "step": 1000
+          },
+          "x0": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "derived": {
+          "pB": "pA + dp",
+          "sA": "sB + dp*x0",
+          "ds": "dp*x0"
+        },
+        "constraints": [
+          "dp != pA",
+          "((sA + sB) % dp) == 0",
+          "((sA - sB) % pA) == 0"
+        ],
+        "answer": "(sA - sB)/(pB - pA)",
+        "distractors": [
+          "(sA + sB)/(pB - pA)",
+          "(sA - sB)/pA",
+          "sA - sB"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | wrong_formula | partial_answer (C1/error_rules.json).",
+        "relation": "{sA} + {pA}*X = {sB} + {pB}*X"
+      },
+      "page": "C19-MAAL02-3",
+      "lang": "en",
+      "stem": {
+        "en": "Taxi A charges {sA} soʻm to start and {pA} soʻm for each km. Taxi B charges {sB} soʻm to start and {pB} soʻm for each km. For a ride of how many km do the two taxis cost the same?",
+        "uz": "A taksi yoʻlga chiqish uchun {sA} soʻm va har bir km uchun {pA} soʻm oladi. B taksi yoʻlga chiqish uchun {sB} soʻm va har bir km uchun {pB} soʻm oladi. Necha km yoʻlda ikki taksining narxi teng boʻladi?",
+        "ru": "Такси A берёт {sA} сум за посадку и {pA} сум за каждый километр. Такси B берёт {sB} сум за посадку и {pB} сум за каждый километр. При какой длине поездки (в км) она стоит одинаково в обоих такси?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The start fee is each line's b and the price per km its rate: {sA} + {pA}x = {sB} + {pB}x, so {ds} = {dp}x and x = {ANS} km.",
+        "uz": "Yoʻlga chiqish narxi — har bir toʻgʻri chiziqning ozod hadi (b), km narxi — uning oʻzgarish tezligi: {sA} + {pA}x = {sB} + {pB}x, demak {ds} = {dp}x va x = {ANS} km.",
+        "ru": "Плата за посадку — это b каждой прямой, цена за километр — её скорость изменения: {sA} + {pA}x = {sB} + {pB}x, значит, {ds} = {dp}x и x = {ANS} км."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.4,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b007",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "system_of_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A father is {k} times as old as his son. Together they are {S} years old. How old is the father?",
+        "params": {
+          "x": {
+            "min": 5,
+            "max": 16
+          },
+          "k": {
+            "min": 2,
+            "max": 5
+          }
+        },
+        "derived": {
+          "y": "k*x",
+          "S": "x + k*x",
+          "kp": "k + 1"
+        },
+        "constraints": [
+          "k*x >= 25",
+          "k*x <= 60",
+          "(x + k*x) % 2 == 0",
+          "(x + k*x)/2 != x + k*x - k",
+          "(x + k*x)/2 != x",
+          "x + k*x - k != x",
+          "x != k"
+        ],
+        "answer": "S*k/(k + 1)",
+        "distractors": [
+          "S/(k + 1)",
+          "S/2",
+          "S - k"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | wrong_formula | wrong_operation (C1/error_rules.json).",
+        "relation": "X + X/{k} = {S}"
+      },
+      "page": "C19-MAAL03-1",
+      "lang": "en",
+      "stem": {
+        "en": "A father is {k} times as old as his son. Together they are {S} years old. How old is the father?",
+        "uz": "Ota oʻgʻlidan {k} marta katta. Ularning yoshlari yigʻindisi {S} ga teng. Ota necha yoshda?",
+        "ru": "Отец в {k|раз|раза|раз} старше сына. Вместе им {S|год|года|лет}. Сколько лет отцу?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Son x, father {k}x: x + {k}x = {S}, so {kp}x = {S} and x = {x}. The question asks for the father: {k} × {x} = {ANS}.",
+        "uz": "Oʻgʻil x yoshda, ota {k}x: x + {k}x = {S}, yaʼni {kp}x = {S} va x = {x}. Savol otaning yoshini soʻraydi: {k} × {x} = {ANS}.",
+        "ru": "Сыну x лет, отцу {k}x: x + {k}x = {S}, то есть {kp}x = {S} и x = {x}. Вопрос — про отца: {k} × {x} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.8,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b008",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "system_of_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "At a market, {a} kg of rice and {b} kg of sugar cost N soʻm; {d} kg of rice and {e} kg of sugar cost {f} soʻm. If x and y are the prices of 1 kg of rice and 1 kg of sugar, the system {a}x + {b}y = N and {d}x + {e}y = {f} has infinitely many solutions. What is N?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 4
+          },
+          "b": {
+            "min": 2,
+            "max": 5
+          },
+          "n": {
+            "values": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "ck": {
+            "min": 20,
+            "max": 90
+          }
+        },
+        "derived": {
+          "c": "1000*ck",
+          "d": "n*a",
+          "e": "n*b",
+          "f": "n*1000*ck"
+        },
+        "constraints": [
+          "a != b",
+          "(f % (d - a)) == 0",
+          "d - a != n"
+        ],
+        "answer": "f/n",
+        "distractors": [
+          "f",
+          "f*n",
+          "f/(d - a)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | inverse_slip | additive_reasoning (C1/error_rules.json).",
+        "relation": "X*{d} = {f}*{a}"
+      },
+      "page": "C19-MAAL03-2",
+      "lang": "en",
+      "stem": {
+        "en": "At a market, {a} kg of rice and {b} kg of sugar cost N soʻm; {d} kg of rice and {e} kg of sugar cost {f} soʻm. If x and y are the prices of 1 kg of rice and 1 kg of sugar, the system {a}x + {b}y = N and {d}x + {e}y = {f} has infinitely many solutions. What is N?",
+        "uz": "Bozorda {a} kg guruch va {b} kg shakar N soʻm, {d} kg guruch va {e} kg shakar esa {f} soʻm turadi. x va y — 1 kg guruch va 1 kg shakar narxi boʻlsa, {a}x + {b}y = N va {d}x + {e}y = {f} tenglamalar sistemasi cheksiz koʻp yechimga ega. N nechaga teng?",
+        "ru": "На рынке {a} кг риса и {b} кг сахара стоят N сум, а {d} кг риса и {e} кг сахара — {f} сум. Если x и y — цены 1 кг риса и 1 кг сахара, то система {a}x + {b}y = N и {d}x + {e}y = {f} имеет бесконечно много решений. Чему равно N?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Infinitely many solutions: one equation is the other times one number, the right side too. {d} = {n} × {a} and {e} = {n} × {b}, so N = {f} ÷ {n} = {ANS} soʻm.",
+        "uz": "Cheksiz koʻp yechim: bir tenglama ikkinchisini bitta songa koʻpaytirishdan hosil boʻladi, oʻng tomoni ham. {d} = {n} × {a} va {e} = {n} × {b}, demak N = {f} ÷ {n} = {ANS} soʻm.",
+        "ru": "Бесконечно много решений: одно уравнение — это другое, умноженное на одно и то же число, вместе с правой частью. {d} = {n} × {a} и {e} = {n} × {b}, значит, N = {f} ÷ {n} = {ANS} сум."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.1,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b009",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "factoring",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A rectangular vegetable plot has an area of (x² + {b}x + {c}) m². One side is (x + {n}) m long and the other side is (x + k) m long. What is k?",
+        "params": {
+          "m": {
+            "min": 2,
+            "max": 12
+          },
+          "n": {
+            "min": 2,
+            "max": 9
+          }
+        },
+        "derived": {
+          "b": "m + n",
+          "c": "m*n"
+        },
+        "constraints": [
+          "m != n",
+          "m*n - n != m + 2*n",
+          "m*n - n != m"
+        ],
+        "answer": "c/n",
+        "distractors": [
+          "c - n",
+          "b + n",
+          "c*n"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_operation | sign_slip | inverse_slip (C1/error_rules.json).",
+        "relation": "{n}*X = {c}"
+      },
+      "page": "C19-MAAM01-2",
+      "lang": "en",
+      "stem": {
+        "en": "A rectangular vegetable plot has an area of (x² + {b}x + {c}) m². One side is (x + {n}) m long and the other side is (x + k) m long. What is k?",
+        "uz": "Toʻgʻri toʻrtburchak shaklidagi tomorqaning yuzi (x² + {b}x + {c}) m². Uning bir tomoni (x + {n}) m, ikkinchi tomoni esa (x + k) m. k nechaga teng?",
+        "ru": "Площадь прямоугольного огорода равна (x² + {b}x + {c}) м². Одна его сторона равна (x + {n}) м, другая — (x + k) м. Чему равно k?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Two numbers that multiply to {c} and add to {b}: {n} and {ANS}, since {n} × {ANS} = {c} and {n} + {ANS} = {b}. So k = {ANS}.",
+        "uz": "Koʻpaytmasi {c} ga, yigʻindisi {b} ga teng ikki son: {n} va {ANS}, chunki {n} × {ANS} = {c} va {n} + {ANS} = {b}. Demak, k = {ANS}.",
+        "ru": "Два числа с произведением {c} и суммой {b}: {n} и {ANS}, так как {n} × {ANS} = {c} и {n} + {ANS} = {b}. Значит, k = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b010",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "exponent_rules",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A family's phone holds 4^{m} photos, and each photo takes up {B}^{n} KB. Together the photos take up 2ˣ KB. What is x?",
+        "params": {
+          "m": {
+            "min": 2,
+            "max": 6
+          },
+          "t": {
+            "values": [
+              [
+                8,
+                3
+              ],
+              [
+                16,
+                4
+              ],
+              [
+                32,
+                5
+              ]
+            ]
+          },
+          "n": {
+            "values": [
+              2,
+              3
+            ]
+          }
+        },
+        "derived": {
+          "B": "t[0]",
+          "e": "t[1]",
+          "en": "t[1]*n",
+          "m2": "2*m"
+        },
+        "answer": "2*m + e*n",
+        "distractors": [
+          "m + n",
+          "2*m*e*n",
+          "2*m + n"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: exponent_slip | exponent_slip | partial_answer (C1/error_rules.json).",
+        "relation": "X = log2(4^{m}*{B}^{n})"
+      },
+      "page": "C19-MAAM01-3",
+      "lang": "en",
+      "stem": {
+        "en": "A family's phone holds 4^{m} photos, and each photo takes up {B}^{n} KB. Together the photos take up 2ˣ KB. What is x?",
+        "uz": "Oilaning telefonida 4^{m} ta surat bor, har bir surat {B}^{n} KB joy egallaydi. Barcha suratlar birgalikda 2ˣ KB joy egallaydi. x nechaga teng?",
+        "ru": "В телефоне семьи 4^{m} фотографий, каждая занимает {B}^{n} КБ. Все фотографии вместе занимают 2ˣ КБ. Чему равно x?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Write both with base 2: 4^{m} = 2^{m2} and {B}^{n} = 2^{en}. Multiplying adds the powers: {m2} + {en} = {ANS}.",
+        "uz": "Ikkalasini 2 asosli daraja shaklida yozing: 4^{m} = 2^{m2} va {B}^{n} = 2^{en}. Koʻpaytirishda daraja koʻrsatkichlari qoʻshiladi: {m2} + {en} = {ANS}.",
+        "ru": "Запишите оба числа в виде степеней с основанием 2: 4^{m} = 2^{m2} и {B}^{n} = 2^{en}. При умножении показатели складываются: {m2} + {en} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.1,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b011",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "quadratic",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "In a football tournament, each team played every other team exactly once. {G} games were played in all. How many teams took part?",
+        "params": {
+          "n": {
+            "min": 5,
+            "max": 16
+          }
+        },
+        "derived": {
+          "G": "n*(n - 1)/2",
+          "G2": "n*(n - 1)",
+          "nm": "n - 1"
+        },
+        "answer": "(1 + sqrt(1 + 8*G))/2",
+        "distractors": [
+          "n - 1",
+          "floor((1 + sqrt(1 + 4*G))/2)",
+          "n + 1"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: off_by_one | wrong_formula | off_by_one (C1/error_rules.json).",
+        "relation": "X*(X - 1)/2 = {G}; X > 0"
+      },
+      "page": "C19-MAAM02-1",
+      "lang": "en",
+      "stem": {
+        "en": "In a football tournament, each team played every other team exactly once. {G} games were played in all. How many teams took part?",
+        "uz": "Futbol turnirida har bir jamoa qolgan har bir jamoa bilan bir martadan oʻynadi. Jami {G} ta oʻyin boʻldi. Turnirda nechta jamoa qatnashdi?",
+        "ru": "В футбольном турнире каждая команда сыграла с каждой из остальных ровно один раз. Всего команды провели {G|матч|матча|матчей}. Сколько команд участвовало в турнире?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Each pair of teams plays once: n(n − 1) ÷ 2 = {G}, so n² − n − {G2} = 0 and (n − {n})(n + {nm}) = 0. The number of teams is positive: n = {ANS}.",
+        "uz": "Har bir juft jamoa bir marta oʻynaydi: n(n − 1) ÷ 2 = {G}, yaʼni n² − n − {G2} = 0 va (n − {n})(n + {nm}) = 0. Jamoalar soni musbat: n = {ANS}.",
+        "ru": "Каждая пара команд играет один раз: n(n − 1) ÷ 2 = {G}, то есть n² − n − {G2} = 0 и (n − {n})(n + {nm}) = 0. Число команд положительно: n = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.2,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b012",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rational_equations",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A father can sweep the yard alone in {a} minutes. With his son's help they sweep it in {T} minutes. How many minutes would the son take to sweep the yard alone?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                10,
+                15
+              ],
+              [
+                12,
+                24
+              ],
+              [
+                6,
+                30
+              ],
+              [
+                20,
+                30
+              ],
+              [
+                12,
+                36
+              ],
+              [
+                15,
+                30
+              ],
+              [
+                18,
+                36
+              ],
+              [
+                8,
+                24
+              ],
+              [
+                9,
+                18
+              ],
+              [
+                10,
+                40
+              ],
+              [
+                12,
+                60
+              ],
+              [
+                24,
+                40
+              ]
+            ]
+          }
+        },
+        "derived": {
+          "a": "t[0]",
+          "x": "t[1]",
+          "T": "t[0]*t[1]/(t[0] + t[1])"
+        },
+        "answer": "a*T/(a - T)",
+        "distractors": [
+          "round(a*T/(a + T), 1)",
+          "a - T",
+          "2*T"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | wrong_operation | wrong_formula (C1/error_rules.json).",
+        "relation": "1/{a} + 1/X = 1/{T}"
+      },
+      "page": "C19-MAAM02-3",
+      "lang": "en",
+      "stem": {
+        "en": "A father can sweep the yard alone in {a} minutes. With his son's help they sweep it in {T} minutes. How many minutes would the son take to sweep the yard alone?",
+        "uz": "Ota hovlini yolgʻiz oʻzi {a} daqiqada supurib chiqadi. Oʻgʻli bilan birga ular hovlini {T} daqiqada supurishadi. Oʻgʻil hovlini yolgʻiz oʻzi necha daqiqada supurib chiqadi?",
+        "ru": "Отец один подметает двор за {a|минуту|минуты|минут}, а вместе с сыном — за {T|минуту|минуты|минут}. За сколько минут сын подмёл бы двор один?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "In one minute the father does 1/{a} of the job and both together do 1/{T}. The son does 1/{T} − 1/{a} = 1/{ANS}, so alone he takes {ANS} minutes.",
+        "uz": "Bir daqiqada ota ishning 1/{a} qismini, ikkalasi birga 1/{T} qismini bajaradi. Oʻgʻil 1/{T} − 1/{a} = 1/{ANS} qismini bajaradi, demak yolgʻiz oʻzi {ANS} daqiqa sarflaydi.",
+        "ru": "За минуту отец делает 1/{a} работы, а вдвоём они делают 1/{T}. Сын делает 1/{T} − 1/{a} = 1/{ANS}, значит, один он справится за {x|минуту|минуты|минут}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.4,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b013",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "functions",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A school is making a rectangular flower bed along one of its walls, with {L} m of fence on the other three sides. If the width (the side going out from the wall) is x m, the area is A = x({L} − 2x) m². What is the greatest possible area, in m²?",
+        "params": {
+          "s": {
+            "min": 3,
+            "max": 15
+          }
+        },
+        "derived": {
+          "L": "4*s",
+          "h": "2*s",
+          "Lw": "2*s"
+        },
+        "answer": "L*L/8",
+        "distractors": [
+          "s",
+          "s*s",
+          "3*s*s"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | wrong_formula | wrong_formula (C1/error_rules.json).",
+        "relation": "X = ({L}/4)*({L} - 2*({L}/4))"
+      },
+      "page": "C19-MAAM03-3",
+      "lang": "en",
+      "stem": {
+        "en": "A school is making a rectangular flower bed along one of its walls, with {L} m of fence on the other three sides. If the width (the side going out from the wall) is x m, the area is A = x({L} − 2x) m². What is the greatest possible area, in m²?",
+        "uz": "Maktab oʻz devorlaridan biri boʻylab toʻgʻri toʻrtburchak shaklidagi gulzor barpo etmoqda, qolgan uch tomoniga {L} m toʻsiq qoʻyiladi. Eni (devorga perpendikulyar tomoni) x m boʻlsa, yuzi A = x({L} − 2x) m². Eng katta yuz necha m²?",
+        "ru": "Школа разбивает вдоль одной из своих стен прямоугольную клумбу, а остальные три её стороны огораживает забором длиной {L} м. Если ширина (сторона, отходящая от стены) равна x м, то площадь равна A = x({L} − 2x) м². Какова наибольшая возможная площадь (в м²)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "A = 0 at x = 0 and at x = {h}. The vertex is halfway: x = {h} ÷ 2 = {s}, where A = {s} × ({L} − {Lw}) = {ANS} m².",
+        "uz": "x = 0 va x = {h} da A = 0. Parabola uchi ularning oʻrtasida: x = {h} ÷ 2 = {s}, bunda A = {s} × ({L} − {Lw}) = {ANS} m².",
+        "ru": "A = 0 при x = 0 и при x = {h}. Вершина параболы — посередине: x = {h} ÷ 2 = {s}, и там A = {s} × ({L} − {Lw}) = {ANS} м²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b014",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "right_triangle_trig",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A cable car line in the mountains rises at a steady angle of x° to the horizontal, with tan x° = {a}/{b}. Its two stations are {D} m apart horizontally. How many metres higher is the upper station than the lower one?",
+        "params": {
+          "tri": {
+            "values": [
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                4,
+                3,
+                5
+              ],
+              [
+                5,
+                12,
+                13
+              ],
+              [
+                8,
+                15,
+                17
+              ],
+              [
+                7,
+                24,
+                25
+              ]
+            ]
+          },
+          "j": {
+            "min": 2,
+            "max": 6
+          }
+        },
+        "derived": {
+          "a": "tri[0]",
+          "b": "tri[1]",
+          "c": "tri[2]",
+          "D": "tri[1]*tri[2]*j"
+        },
+        "answer": "D*a/b",
+        "distractors": [
+          "D*a/c",
+          "round(D*b/a, 1)",
+          "D*b/c"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | inverse_slip | wrong_formula (C1/error_rules.json).",
+        "relation": "X/{D} = {a}/{b}"
+      },
+      "page": "C19-MAGT03-2",
+      "lang": "en",
+      "stem": {
+        "en": "A cable car line in the mountains rises at a steady angle of x° to the horizontal, with tan x° = {a}/{b}. Its two stations are {D} m apart horizontally. How many metres higher is the upper station than the lower one?",
+        "uz": "Togʻdagi osma yoʻl gorizontga nisbatan oʻzgarmas x° burchak ostida koʻtariladi, tg x° = {a}/{b}. Ikki bekat orasidagi gorizontal masofa {D} m. Yuqori bekat pastki bekatdan necha metr baland?",
+        "ru": "Канатная дорога в горах поднимается под постоянным углом x° к горизонту, tg x° = {a}/{b}. Расстояние между двумя станциями по горизонтали — {D} м. На сколько метров верхняя станция выше нижней?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The rise is opposite x° and the horizontal distance is next to it: tan. Rise = {D} × {a}/{b} = {ANS} m.",
+        "uz": "Koʻtarilish balandligi — x° burchak qarshisidagi katet, gorizontal masofa — unga yopishgan katet, demak tg dan foydalanamiz. Balandlik = {D} × {a}/{b} = {ANS} m.",
+        "ru": "Подъём — катет, противолежащий углу x°, а расстояние по горизонтали — прилежащий катет, поэтому нужен тангенс. Подъём = {D} × {a}/{b} = {ANS} м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.1,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b015",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "The minute hand of a wall clock is {r} cm long. In {mm} minutes, its tip moves along an arc of kπ cm. What is k?",
+        "params": {
+          "r": {
+            "values": [
+              6,
+              9,
+              12,
+              15,
+              18,
+              24,
+              30
+            ]
+          },
+          "mm": {
+            "values": [
+              5,
+              10,
+              15,
+              20,
+              25,
+              40,
+              45,
+              50
+            ]
+          }
+        },
+        "derived": {
+          "th": "6*mm"
+        },
+        "constraints": [
+          "(r*mm) % 30 == 0",
+          "r*mm != 30"
+        ],
+        "answer": "r*mm/30",
+        "distractors": [
+          "r*mm/60",
+          "r*r*mm/60",
+          "6*mm"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: diameter_radius | wrong_formula | partial_answer (C1/error_rules.json).",
+        "relation": "X*pi = ({mm}/60)*2*pi*{r}"
+      },
+      "page": "C19-MAGT03-3",
+      "lang": "en",
+      "stem": {
+        "en": "The minute hand of a wall clock is {r} cm long. In {mm} minutes, its tip moves along an arc of kπ cm. What is k?",
+        "uz": "Devor soatining minut mili {r} sm uzunlikda. {mm} daqiqada uning uchi kπ sm uzunlikdagi yoy boʻylab harakatlanadi. k nechaga teng?",
+        "ru": "Минутная стрелка настенных часов имеет длину {r} см. За {mm|минуту|минуты|минут} её конец проходит дугу длиной kπ см. Чему равно k?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "In {mm} minutes the hand turns {mm}/60 of a full turn, that is {th}°. Arc = ({th}/360) × 2π × {r} = {ANS}π cm, so k = {ANS}.",
+        "uz": "{mm} daqiqada mil toʻliq aylanishning {mm}/60 qismiga, yaʼni {th}° ga buriladi. Yoy = ({th}/360) × 2π × {r} = {ANS}π sm, demak k = {ANS}.",
+        "ru": "За {mm|минуту|минуты|минут} стрелка поворачивается на {mm}/60 полного оборота, то есть на {th}°. Дуга = ({th}/360) × 2π × {r} = {ANS}π см, значит, k = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.2,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p14-content",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C1-r3b016",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A sports shop marks a ball down by {a}%. At the end of the season it takes another {b}% off the new price. What single discount, in percent, would give the same final price?",
+        "params": {
+          "a": {
+            "values": [
+              10,
+              20,
+              25,
+              30,
+              40,
+              50
+            ]
+          },
+          "b": {
+            "values": [
+              10,
+              20,
+              30,
+              40,
+              50
+            ]
+          }
+        },
+        "derived": {
+          "left": "(100 - a)*(100 - b)/100"
+        },
+        "constraints": [
+          "(a*b) % 100 == 0",
+          "(100 - a)*(100 - b)/100 != (a + b)/2",
+          "(100 - a)*(100 - b)/100 != a + b",
+          "(100 - a)*(100 - b)/100 != a + b - a*b/100"
+        ],
+        "answer": "a + b - a*b/100",
+        "distractors": [
+          "a + b",
+          "(100 - a)*(100 - b)/100",
+          "(a + b)/2"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: additive_reasoning | partial_answer | wrong_formula (C1/error_rules.json).",
+        "relation": "100 - X = (100 - {a})*(100 - {b})/100"
+      },
+      "page": "C19-MAPS01-2",
+      "lang": "en",
+      "stem": {
+        "en": "A sports shop marks a ball down by {a}%. At the end of the season it takes another {b}% off the new price. What single discount, in percent, would give the same final price?",
+        "uz": "Sport doʻkoni toʻp narxini {a}% ga tushirdi. Mavsum oxirida yangi narxni yana {b}% ga tushirdi. Qanday bitta chegirma (foizda) xuddi shu yakuniy narxni beradi?",
+        "ru": "Спортивный магазин снизил цену мяча на {a}%. В конце сезона он снизил новую цену ещё на {b}%. Какая единая скидка (в процентах) дала бы ту же итоговую цену?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Two changes multiply: (1 − {a}/100) × (1 − {b}/100) leaves {left}% of the price. The single discount is 100 − {left} = {ANS}%.",
+        "uz": "Ikki oʻzgarish koʻpaytiriladi: (1 − {a}/100) × (1 − {b}/100) narxning {left} foizini qoldiradi. Bitta chegirma: 100 − {left} = {ANS}%.",
+        "ru": "Скидки не складываются: перемножаются оставшиеся доли цены. (1 − {a}/100) × (1 − {b}/100) — это {left}% цены. Единая скидка: 100 − {left} = {ANS}%."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b017",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "mean",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A student's mean score on {n} tests is {m}. What score does she need on the next test to raise her mean to {m2}?",
+        "params": {
+          "n": {
+            "min": 3,
+            "max": 6
+          },
+          "m": {
+            "min": 60,
+            "max": 85
+          },
+          "up": {
+            "min": 1,
+            "max": 4
+          }
+        },
+        "derived": {
+          "m2": "m + up",
+          "S": "n*m",
+          "n1": "n + 1",
+          "S2": "(n + 1)*(m + up)"
+        },
+        "constraints": [
+          "(n + 1)*(m + up) - n*m <= 100"
+        ],
+        "answer": "(n + 1)*m2 - n*m",
+        "distractors": [
+          "2*m2 - m",
+          "m + n*(m2 - m)",
+          "(n + 1)*(m2 - m)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | off_by_one | partial_answer (C1/error_rules.json).",
+        "relation": "({n}*{m} + X)/({n} + 1) = {m2}"
+      },
+      "page": "C19-MAPS02-2",
+      "lang": "en",
+      "stem": {
+        "en": "A student's mean score on {n} tests is {m}. What score does she need on the next test to raise her mean to {m2}?",
+        "uz": "Oʻquvchi qizning {n} ta testdagi oʻrtacha bali {m}. Oʻrtacha bali {m2} ga koʻtarilishi uchun u keyingi testda necha ball olishi kerak?",
+        "ru": "Средний балл ученицы за {n|тест|теста|тестов} равен {m}. Сколько баллов ей нужно набрать на следующем тесте, чтобы средний балл стал {m2}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Her sum now: {n} × {m} = {S}. A mean of {m2} over {n1} tests needs a sum of {n1} × {m2} = {S2}. Next score: {S2} − {S} = {ANS}.",
+        "uz": "Hozirgi yigʻindi: {n} × {m} = {S}. {n1} ta testda oʻrtacha {m2} boʻlishi uchun yigʻindi {n1} × {m2} = {S2} boʻlishi kerak. Keyingi ball: {S2} − {S} = {ANS}.",
+        "ru": "Сейчас сумма баллов {n} × {m} = {S}. Для среднего {m2} за {n1|тест|теста|тестов} сумма должна быть {n1} × {m2} = {S2}. Следующий балл: {S2} − {S} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b018",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "statistics",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "For used bicycles at a market, the line of best fit for the price y, in soʻm, and the age x, in years, is y = {b} − {m}x. For what age does the line predict a price of {Y} soʻm?",
+        "params": {
+          "m": {
+            "values": [
+              50000,
+              60000,
+              80000,
+              100000
+            ]
+          },
+          "q": {
+            "min": 8,
+            "max": 14
+          },
+          "x0": {
+            "min": 2,
+            "max": 7
+          }
+        },
+        "derived": {
+          "b": "m*q",
+          "Y": "m*(q - x0)",
+          "d": "m*x0"
+        },
+        "constraints": [
+          "q != 2*x0"
+        ],
+        "answer": "(b - Y)/m",
+        "distractors": [
+          "(b + Y)/m",
+          "Y/m",
+          "b/m"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | wrong_formula | wrong_formula (C1/error_rules.json).",
+        "relation": "{b} - {m}*X = {Y}"
+      },
+      "page": "C19-MAPS02-3",
+      "lang": "en",
+      "stem": {
+        "en": "For used bicycles at a market, the line of best fit for the price y, in soʻm, and the age x, in years, is y = {b} − {m}x. For what age does the line predict a price of {Y} soʻm?",
+        "uz": "Bozordagi ishlatilgan velosipedlar uchun narx y (soʻmda) va yoshi x (yilda) boʻyicha eng mos keladigan toʻgʻri chiziq y = {b} − {m}x. Chiziq qaysi yosh uchun {Y} soʻm narxni bashorat qiladi?",
+        "ru": "Для подержанных велосипедов на рынке построена линия тренда, связывающая цену y (в сумах) и возраст x (в годах): y = {b} − {m}x. Для какого возраста эта линия предсказывает цену {Y} сум?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{b} − {m}x = {Y}, so {m}x = {d} and x = {ANS} years. The slope says each year takes about {m} soʻm off the predicted price.",
+        "uz": "{b} − {m}x = {Y}, demak {m}x = {d} va x = {ANS} yil. Qiyalik har bir yil bashorat qilingan narxni taxminan {m} soʻmga kamaytirishini bildiradi.",
+        "ru": "{b} − {m}x = {Y}, значит, {m}x = {d} и x = {x0|год|года|лет}. Наклон показывает: каждый год снижает предсказанную цену примерно на {m} сум."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.5,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b019",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "probability",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A fruit seller's basket holds {r} red apples and some green apples. An apple taken from it at random is red with probability {k}/{d}. How many green apples are in the basket?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                3,
+                8
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                9
+              ],
+              [
+                5,
+                8
+              ]
+            ]
+          },
+          "u": {
+            "min": 2,
+            "max": 9
+          }
+        },
+        "derived": {
+          "k": "t[0]",
+          "d": "t[1]",
+          "r": "t[0]*u",
+          "T": "t[1]*u",
+          "g": "(t[1] - t[0])*u"
+        },
+        "constraints": [
+          "(r*k) % (d - k) == 0",
+          "d - k != r*k/(d - k)",
+          "r*k/(d - k) != g",
+          "r*k/(d - k) != r*d/k"
+        ],
+        "answer": "r*d/k - r",
+        "distractors": [
+          "r*d/k",
+          "d - k",
+          "r*k/(d - k)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | wrong_formula | inverse_slip (C1/error_rules.json).",
+        "relation": "{r}/({r} + X) = {k}/{d}"
+      },
+      "page": "C19-MAPS03-1",
+      "lang": "en",
+      "stem": {
+        "en": "A fruit seller's basket holds {r} red apples and some green apples. An apple taken from it at random is red with probability {k}/{d}. How many green apples are in the basket?",
+        "uz": "Meva sotuvchining savatida {r} ta qizil olma va bir nechta yashil olma bor. Savatdan tasodifan olingan olmaning qizil boʻlish ehtimoli {k}/{d}. Savatda nechta yashil olma bor?",
+        "ru": "В корзине продавца фруктов {r|красное яблоко|красных яблока|красных яблок} и несколько зелёных. Вероятность того, что случайно взятое из корзины яблоко окажется красным, равна {k}/{d}. Сколько зелёных яблок в корзине?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The {r} red apples are {k}/{d} of all, so the basket holds {r} ÷ {k} × {d} = {T} apples. Green: {T} − {r} = {ANS}.",
+        "uz": "{r} ta qizil olma hammasining {k}/{d} qismi, demak savatda {r} ÷ {k} × {d} = {T} ta olma bor. Yashil olmalar: {T} − {r} = {ANS}.",
+        "ru": "Красные яблоки составляют {k}/{d} всех, значит, в корзине {r} ÷ {k} × {d} = {T|яблоко|яблока|яблок}. Зелёных: {T} − {r} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p14-content",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C1-r3b020",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "statistics",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A survey of a random sample of households in a town estimates that {p}% of the town's {N} households have a car, with a margin of error of {e}%. What is the largest plausible number of households in the town that have a car?",
+        "params": {
+          "N": {
+            "min": 2000,
+            "max": 20000,
+            "step": 1000
+          },
+          "p": {
+            "min": 20,
+            "max": 70
+          },
+          "e": {
+            "values": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        },
+        "derived": {
+          "hi": "p + e",
+          "lo": "p - e",
+          "Xh": "N*(p + e)/100"
+        },
+        "answer": "N*(p + e)/100",
+        "distractors": [
+          "N*p/100",
+          "N*(p + 2*e)/100",
+          "N*(p - e)/100"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | wrong_formula | sign_slip (C1/error_rules.json).",
+        "relation": "X = {N}*({p} + {e})/100"
+      },
+      "page": "C19-MAPS03-3",
+      "lang": "en",
+      "stem": {
+        "en": "A survey of a random sample of households in a town estimates that {p}% of the town's {N} households have a car, with a margin of error of {e}%. What is the largest plausible number of households in the town that have a car?",
+        "uz": "Shaharchadagi tasodifiy tanlangan xonadonlar orasidagi soʻrovnoma shaharchaning {N} ta xonadonidan {p} foizida avtomobil borligini koʻrsatdi, xatolik chegarasi {e}%. Avtomobili bor xonadonlar sonining mumkin boʻlgan eng katta qiymati nechaga teng?",
+        "ru": "Опрос случайной выборки домохозяйств городка показал, что автомобиль есть у {p}% из его {N|домохозяйства|домохозяйств|домохозяйств}; погрешность — {e}%. Каково наибольшее возможное с учётом погрешности число домохозяйств городка, у которых есть автомобиль?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The plausible range is {p}% ± {e}%, from {lo}% to {hi}%. The largest: {N} × {hi}/100 = {ANS} households.",
+        "uz": "Mumkin boʻlgan qiymatlar {p} − {e} dan {p} + {e} gacha, yaʼni {lo}% dan {hi}% gacha. Eng kattasi: {N} × {hi}/100 = {ANS} ta xonadon.",
+        "ru": "Возможные значения — от {p} − {e} до {p} + {e}, то есть от {lo}% до {hi}%. Наибольшее: {N} × {hi}/100 = {Xh|домохозяйство|домохозяйства|домохозяйств}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.4,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b021",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "area_perimeter",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A carpet seller at a market has a small carpet and a large carpet of the same shape and pattern. The small carpet is {a} m long and its area is {A} m². The large carpet is {b} m long. What is its area, in m²?",
+        "params": {
+          "A": {
+            "min": 2,
+            "max": 12
+          },
+          "a": {
+            "values": [
+              2,
+              3,
+              4
+            ]
+          },
+          "k": {
+            "values": [
+              2,
+              3
+            ]
+          }
+        },
+        "derived": {
+          "b": "k*a",
+          "kk": "k*k"
+        },
+        "constraints": [
+          "A >= a",
+          "A <= a*a",
+          "A*k != A + k*k",
+          "A*k*k*k != A + k*k",
+          "A*k*k != A + k*k"
+        ],
+        "answer": "A*(b/a)^2",
+        "distractors": [
+          "A*k",
+          "A*k*k*k",
+          "A + k*k"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | exponent_slip | wrong_operation (C1/error_rules.json).",
+        "relation": "X/{A} = ({b}/{a})^2"
+      },
+      "page": "C19-MAGT01-2",
+      "lang": "en",
+      "stem": {
+        "en": "A carpet seller at a market has a small carpet and a large carpet of the same shape and pattern. The small carpet is {a} m long and its area is {A} m². The large carpet is {b} m long. What is its area, in m²?",
+        "uz": "Bozordagi gilam sotuvchida shakli va naqshi bir xil boʻlgan kichik va katta gilam bor. Kichik gilamning boʻyi {a} m, yuzi {A} m². Katta gilamning boʻyi {b} m. Uning yuzi necha m²?",
+        "ru": "У продавца ковров на базаре есть маленький и большой ковёр одной формы и с одинаковым узором. Длина маленького ковра — {a} м, его площадь — {A} м². Длина большого ковра — {b} м. Какова его площадь (в м²)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Scale factor k = {b} ÷ {a} = {k}, and areas are multiplied by k² = {kk}: {A} × {kk} = {ANS} m².",
+        "uz": "Oʻxshashlik koeffitsiyenti k = {b} ÷ {a} = {k}, yuzalar esa k² = {kk} marta ortadi: {A} × {kk} = {ANS} m².",
+        "ru": "Коэффициент подобия k = {b} ÷ {a} = {k}, а площади умножаются на k² = {kk}: {A} × {kk} = {ANS} м²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b022",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "Two exercise balls in a sports hall have the same shape. The large ball's diameter is {k} times the small ball's, and it holds {V} litres of air. How many litres of air does the small ball hold?",
+        "params": {
+          "k": {
+            "values": [
+              2,
+              3
+            ]
+          },
+          "u": {
+            "min": 2,
+            "max": 40
+          }
+        },
+        "derived": {
+          "kkk": "k*k*k",
+          "V": "k*k*k*u",
+          "s": "u"
+        },
+        "answer": "V/(k*k*k)",
+        "distractors": [
+          "V/k",
+          "V/(k*k)",
+          "V*k*k*k"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | exponent_slip | inverse_slip (C1/error_rules.json).",
+        "relation": "{V}/X = {k}^3"
+      },
+      "page": "C19-MAGT01-2",
+      "lang": "en",
+      "stem": {
+        "en": "Two exercise balls in a sports hall have the same shape. The large ball's diameter is {k} times the small ball's, and it holds {V} litres of air. How many litres of air does the small ball hold?",
+        "uz": "Sport zalidagi ikki mashq toʻpi bir xil shaklda. Katta toʻpning diametri kichik toʻpnikidan {k} marta katta, unga {V} litr havo sigʻadi. Kichik toʻpga necha litr havo sigʻadi?",
+        "ru": "В спортзале есть два одинаковых по форме мяча для упражнений. Диаметр большого мяча в {k|раз|раза|раз} больше, чем у маленького, и большой мяч вмещает {V|литр|литра|литров} воздуха. Сколько литров воздуха вмещает маленький мяч?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "k = {k}, and volume is multiplied by k³ = {kkk}. Backwards: {V} ÷ {kkk} = {ANS} litres.",
+        "uz": "k = {k}, hajm esa k³ = {kkk} marta ortadi. Kichik toʻp uchun esa boʻlamiz: {V} ÷ {kkk} = {ANS} litr.",
+        "ru": "k = {k}, а объём умножается на k³ = {kkk}. Для маленького мяча делим: {V} ÷ {kkk} = {s|литр|литра|литров}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.2,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b023",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "probability",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "At a market stall, apples from two orchards are counted: the first orchard sent {a1} red and {a2} green apples, the second {b1} red and {b2} green. One apple from the first orchard is chosen at random. What is the probability that it is green?",
+        "params": {
+          "a1": {
+            "min": 8,
+            "max": 20
+          },
+          "a2": {
+            "min": 6,
+            "max": 20
+          },
+          "b1": {
+            "min": 8,
+            "max": 20
+          },
+          "b2": {
+            "min": 6,
+            "max": 20
+          }
+        },
+        "derived": {
+          "R1": "a1 + a2",
+          "Gc": "a2 + b2",
+          "T": "a1 + a2 + b1 + b2",
+          "G1": "gcd(a2, a1 + a2)",
+          "k1": "a2/gcd(a2, a1 + a2)",
+          "d1": "(a1 + a2)/gcd(a2, a1 + a2)",
+          "G2": "gcd(a2, a2 + b2)",
+          "k2": "a2/gcd(a2, a2 + b2)",
+          "d2": "(a2 + b2)/gcd(a2, a2 + b2)",
+          "G3": "gcd(a2, a1 + a2 + b1 + b2)",
+          "k3": "a2/gcd(a2, a1 + a2 + b1 + b2)",
+          "d3": "(a1 + a2 + b1 + b2)/gcd(a2, a1 + a2 + b1 + b2)",
+          "G4": "gcd(a1, a1 + a2)",
+          "k4": "a1/gcd(a1, a1 + a2)",
+          "d4": "(a1 + a2)/gcd(a1, a1 + a2)"
+        },
+        "constraints": [
+          "a1 != a2",
+          "a1 != b2",
+          "a2*(a1 + a2) != a1*(a2 + b2)",
+          "a2*(a1 + a2) != a1*(a1 + a2 + b1 + b2)"
+        ],
+        "answer": "a2/(a1 + a2)",
+        "option_templates": [
+          "{k1}/{d1}",
+          "{k2}/{d2}",
+          "{k3}/{d3}",
+          "{k4}/{d4}"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: inverse_slip | wrong_formula | wrong_formula (C1/error_rules.json).",
+        "relation": "X = {a2}/({a1} + {a2})"
+      },
+      "page": "C19-MAPS03-2",
+      "lang": "en",
+      "stem": {
+        "en": "At a market stall, apples from two orchards are counted: the first orchard sent {a1} red and {a2} green apples, the second {b1} red and {b2} green. One apple from the first orchard is chosen at random. What is the probability that it is green?",
+        "uz": "Bozordagi rastada ikki bogʻning olmalari sanaldi: birinchi bogʻdan {a1} ta qizil va {a2} ta yashil, ikkinchisidan {b1} ta qizil va {b2} ta yashil olma keltirilgan. Birinchi bogʻ olmalaridan biri tasodifan tanlandi. Uning yashil boʻlish ehtimoli qancha?",
+        "ru": "На рыночном прилавке посчитали яблоки из двух садов: из первого {a1|красное|красных|красных} и {a2|зелёное|зелёных|зелёных}, из второго {b1|красное|красных|красных} и {b2|зелёное|зелёных|зелёных}. Случайно выбирают яблоко из первого сада. Какова вероятность, что оно зелёное?"
+      },
+      "why": {
+        "en": "Given “from the first orchard”: keep only its row, {a1} + {a2} = {R1} apples. Green among them: {a2}. P = {a2} ÷ {R1}, that is {k1}/{d1}.",
+        "uz": "Shart «birinchi bogʻdan»: faqat birinchi bogʻ olmalari qoladi, {a1} + {a2} = {R1} ta olma. Ulardan {a2} tasi yashil. P = {a2} ÷ {R1}, yaʼni {k1}/{d1}.",
+        "ru": "Условие «из первого сада»: остаются только яблоки первого сада, {a1} + {a2} = {R1|яблоко|яблока|яблок}. Из них зелёных {a2}. P = {a2} ÷ {R1}, то есть {k1}/{d1}."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-r3b024",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "probability",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A bus driver counted a day's passengers. Morning: {c1} paid by card and {c2} in cash. Evening: {e1} paid by card and {e2} in cash. One of all these passengers is chosen at random. What is the probability that this passenger rode in the evening and paid in cash?",
+        "params": {
+          "c1": {
+            "min": 10,
+            "max": 40
+          },
+          "c2": {
+            "min": 5,
+            "max": 25
+          },
+          "e1": {
+            "min": 10,
+            "max": 40
+          },
+          "e2": {
+            "min": 5,
+            "max": 25
+          }
+        },
+        "derived": {
+          "T": "c1 + c2 + e1 + e2",
+          "Rw": "e1 + e2",
+          "Cc": "c2 + e2",
+          "G1": "gcd(e2, c1 + c2 + e1 + e2)",
+          "k1": "e2/gcd(e2, c1 + c2 + e1 + e2)",
+          "d1": "(c1 + c2 + e1 + e2)/gcd(e2, c1 + c2 + e1 + e2)",
+          "G2": "gcd(e2, e1 + e2)",
+          "k2": "e2/gcd(e2, e1 + e2)",
+          "d2": "(e1 + e2)/gcd(e2, e1 + e2)",
+          "G3": "gcd(e2, c2 + e2)",
+          "k3": "e2/gcd(e2, c2 + e2)",
+          "d3": "(c2 + e2)/gcd(e2, c2 + e2)",
+          "G4": "gcd(e1 + e2, c1 + c2 + e1 + e2)",
+          "k4": "(e1 + e2)/gcd(e1 + e2, c1 + c2 + e1 + e2)",
+          "d4": "(c1 + c2 + e1 + e2)/gcd(e1 + e2, c1 + c2 + e1 + e2)"
+        },
+        "constraints": [
+          "e1 != c2",
+          "e2*(c1 + c2 + e1 + e2) != (e1 + e2)*(e1 + e2)",
+          "e2*(c1 + c2 + e1 + e2) != (e1 + e2)*(c2 + e2)"
+        ],
+        "answer": "e2/(c1 + c2 + e1 + e2)",
+        "option_templates": [
+          "{k1}/{d1}",
+          "{k2}/{d2}",
+          "{k3}/{d3}",
+          "{k4}/{d4}"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | wrong_formula | partial_answer (C1/error_rules.json).",
+        "relation": "X = {e2}/({c1} + {c2} + {e1} + {e2})"
+      },
+      "page": "C19-MAPS03-2",
+      "lang": "en",
+      "stem": {
+        "en": "A bus driver counted a day's passengers. Morning: {c1} paid by card and {c2} in cash. Evening: {e1} paid by card and {e2} in cash. One of all these passengers is chosen at random. What is the probability that this passenger rode in the evening and paid in cash?",
+        "uz": "Avtobus haydovchisi bir kunlik yoʻlovchilarni sanadi: ertalab {c1} nafari karta bilan, {c2} nafari naqd pul bilan, kechqurun {e1} nafari karta bilan, {e2} nafari naqd pul bilan toʻladi. Barcha yoʻlovchilardan biri tasodifan tanlandi. Uning kechqurun naqd pul bilan toʻlagan boʻlish ehtimoli qancha?",
+        "ru": "Водитель автобуса посчитал пассажиров за день. Утром картой заплатили {c1}, наличными — {c2}. Вечером картой заплатили {e1}, наличными — {e2}. Случайно выбирают одного из всех этих пассажиров. Какова вероятность, что он ехал вечером и платил наличными?"
+      },
+      "why": {
+        "en": "Chosen from everyone: divide by the grand total, {c1} + {c2} + {e1} + {e2} = {T}. Evening and cash: {e2}. P = {e2} ÷ {T}, that is {k1}/{d1}.",
+        "uz": "Hammadan tanlanadi: umumiy songa boʻling, {c1} + {c2} + {e1} + {e2} = {T}. Kechqurun naqd pul bilan {e2} nafari toʻlagan. P = {e2} ÷ {T}, yaʼni {k1}/{d1}.",
+        "ru": "Выбирают из всех: делим на общее число пассажиров {c1} + {c2} + {e1} + {e2} = {T}. Вечером наличными заплатили {e2}. P = {e2} ÷ {T}, то есть {k1}/{d1}."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.4,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p12-math-b",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

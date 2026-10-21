@@ -1,0 +1,759 @@
+{
+ "bank": "C12",
+ "batch": 4,
+ "note": "C12 essay tracks: the playbook ids the roadmap’s essays workstream may choose (V9: at most one essay track at a time). Steps reference the task templates in batches 1-3 and the micro-prompts in batches 5-6; minutes_total is computed from the tasks’ own minutes, optional steps excluded.",
+ "items": [
+  {
+   "id": "C12-tcomap",
+   "kind": "essay_track",
+   "playbook_id": "C12-tcomap",
+   "workstream_kind": "essays",
+   "weight": "major",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "min_age": null,
+   "anchor_milestone": "m_essays",
+   "addresses": [],
+   "title": {
+    "en": "Common App personal essay",
+    "uz": "Common App shaxsiy inshosi",
+    "ru": "Личное эссе Common App"
+   },
+   "summary": {
+    "en": "The Common App personal essay from story bank to final version: read the seven prompts, explore two, choose one story, outline, draft, revise in six passes with checklists, read it to someone, and have a Jamals counselor read the final version.",
+    "uz": "Common App shaxsiy inshosi hikoyalar bankidan yakuniy nusxagacha: yettita savolni oʻqing, ikkitasini oʻrganing, bitta hikoyani tanlang, reja tuzing, qoralama yozing, uni roʻyxatlar yordamida olti bosqichda tahrir qiling, kimgadir oʻqib bering, yakuniy nusxani esa Jamals maslahatchisi oʻqiydi.",
+    "ru": "Личное эссе Common App от банка историй до финальной версии: прочитайте семь тем, разберите две, выберите одну историю, составьте план, напишите черновик, отредактируйте его в шесть проходов по чек-листам, прочитайте кому-нибудь вслух, а финальную версию прочитает консультант Jamals."
+   },
+   "weeks": {
+    "min": 5,
+    "typical": 7
+   },
+   "minutes_total": 463,
+   "weekly_minutes": {
+    "typical": 75
+   },
+   "steps": [
+    {
+     "n": 1,
+     "task_id": "C12-ownwrd"
+    },
+    {
+     "n": 2,
+     "task_id": "C12-rd7prm"
+    },
+    {
+     "n": 3,
+     "task_id": "C12-sbank1",
+     "skip_if_done": true
+    },
+    {
+     "n": 4,
+     "task_id": "C12-sbank2",
+     "skip_if_done": true
+    },
+    {
+     "n": 5,
+     "task_id": "C12-sbank3"
+    },
+    {
+     "n": 6,
+     "choose": {
+      "from": [
+       "C12-capr01",
+       "C12-capr02",
+       "C12-capr03",
+       "C12-capr04",
+       "C12-capr05",
+       "C12-capr06",
+       "C12-capr07"
+      ],
+      "count": 2,
+      "picked_by": [
+       "C12-rd7prm.pick_1",
+       "C12-rd7prm.pick_2"
+      ]
+     }
+    },
+    {
+     "n": 7,
+     "task_id": "C12-cachoo"
+    },
+    {
+     "n": 8,
+     "task_id": "C12-caoutl"
+    },
+    {
+     "n": 9,
+     "task_id": "C12-cadrf1"
+    },
+    {
+     "n": 10,
+     "task_id": "C12-rvsowh"
+    },
+    {
+     "n": 11,
+     "task_id": "C12-rvstru"
+    },
+    {
+     "n": 12,
+     "task_id": "C12-rvdeta"
+    },
+    {
+     "n": 13,
+     "task_id": "C12-rvvoic"
+    },
+    {
+     "n": 14,
+     "task_id": "C12-rvcut6"
+    },
+    {
+     "n": 15,
+     "task_id": "C12-rvlang"
+    },
+    {
+     "n": 16,
+     "task_id": "C12-rdalou"
+    },
+    {
+     "n": 17,
+     "task_id": "C12-cadrf2"
+    },
+    {
+     "n": 18,
+     "task_id": "C12-caaddi",
+     "optional": true
+    },
+    {
+     "n": 19,
+     "task_id": "C12-cafinl"
+    },
+    {
+     "n": 20,
+     "task_id": "C12-supfnd",
+     "optional": true,
+     "per_university": true,
+     "parallel_from": "C12-cadrf2"
+    },
+    {
+     "n": 21,
+     "task_id": "C12-supwhy",
+     "optional": true,
+     "per_university": true,
+     "parallel_from": "C12-supfnd"
+    }
+   ],
+   "rules": [
+    {
+     "en": "At most one essay task a day, and one essay track at a time.",
+     "uz": "Kuniga koʻpi bilan bitta insho vazifasi va bir vaqtda bitta insho yoʻnalishi.",
+     "ru": "Не больше одного задания по эссе в день и одно направление эссе за раз."
+    }
+   ],
+   "parent_step": {
+    "id": "C12-tcomap-p",
+    "audience": "parent",
+    "type": "contact",
+    "minutes": 10,
+    "title": {
+     "en": "Listen to one story",
+     "uz": "Bitta hikoyani tinglang",
+     "ru": "Выслушайте одну историю"
+    },
+    "instructions": {
+     "en": "Ask your child to tell you, in their own words, one story they might write about. Listen to the end, ask one question about what they felt or learned, and do not suggest sentences: the essay must be their own work.",
+     "uz": "Farzandingizdan yozishi mumkin boʻlgan bitta hikoyani oʻz soʻzlari bilan aytib berishini soʻrang. Oxirigacha tinglang, u nimani his qilgani yoki nimani oʻrgangani haqida bitta savol bering va gap taklif qilmang: insho faqat farzandingizning oʻz ishi boʻlishi kerak.",
+     "ru": "Попросите ребёнка своими словами рассказать одну историю, о которой он может написать. Дослушайте до конца, задайте один вопрос о том, что он чувствовал или чему научился, и не предлагайте формулировок: эссе должно быть его собственной работой."
+    },
+    "evidence": {
+     "level": "L0",
+     "method": "self_report"
+    },
+    "generated_by": "code"
+   },
+   "note": {
+    "en": "Anchored to the planner’s essays milestone (rule planner.essays_before_deadline: drafted at least 12 weeks before the first deadline). Supplements run per university after the clean version and are optional in the minutes total.",
+    "uz": "Rejalashtiruvchining insho bosqichiga bogʻlangan (planner.essays_before_deadline qoidasi: birinchi muddatdan kamida 12 hafta oldin qoralama tayyor). Qoʻshimcha savollar har bir universitet uchun toza nusxadan keyin bajariladi va umumiy daqiqalarga kiritilmagan.",
+    "ru": "Привязано к этапу эссе в планировщике (правило planner.essays_before_deadline: черновик готов минимум за 12 недель до первого срока). Дополнительные вопросы выполняются по каждому университету после чистовика и не входят в общий подсчёт минут."
+   },
+   "facts": [
+    {
+     "claim": "Common App first-year essay prompts for 2026-2027: seven prompts, quoted verbatim in this item from the official page.",
+     "url": "https://www.commonapp.org/apply/essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "Common App announced that the essay prompts remain unchanged for 2026-2027 (post dated 27 Feb 2026).",
+     "url": "https://www.commonapp.org/blog/announcing-2026-2027-common-app-essay-prompts",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "The Common App personal essay is limited to 650 words, with a minimum of 250 words.",
+     "url": "https://www.collegetransitions.com/blog/common-app-essay-prompts/",
+     "verified_at": "2026-10-07",
+     "secondary": true,
+     "needs_verification": true,
+     "note": "Re-checked 2026-10-07. No commonapp.org page that opens without signing in states the limit: the essay-prompts page, the 2026-2027 announcement and the 2026-2027 'What's new' deck give no word count, and the help-centre article 'are-there-word-limits-kudeoeos' is about the UChicago supplement, not the personal essay. College Transitions (published 5 Mar 2026, 2026-27 cycle) says the limit 'remains at 650 words' with 'a minimum floor of 250 words'. The application enforces the limit itself; confirm in its Writing section."
+    },
+    {
+     "claim": "Common App's fraud policy lists as fraud: submitting plagiarized essays, or intentionally misrepresenting as one's own original work another person's thoughts, language, ideas, expressions or experiences, or the substantive content or output of an artificial intelligence platform, technology or algorithm.",
+     "url": "https://www.commonapp.org/fraud-policy",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": true,
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true,
+   "verify_task": true
+  },
+  {
+   "id": "C12-tucasp",
+   "kind": "essay_track",
+   "playbook_id": "C12-tucasp",
+   "workstream_kind": "essays",
+   "weight": "major",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UK"
+   ],
+   "min_age": null,
+   "anchor_milestone": null,
+   "addresses": [],
+   "title": {
+    "en": "UCAS personal statement",
+    "uz": "UCAS shaxsiy bayonoti",
+    "ru": "Мотивационное письмо UCAS (personal statement)"
+   },
+   "summary": {
+    "en": "The UCAS personal statement: learn the three questions, collect evidence in three lists, draft each answer, revise the three together against a checklist, read them to someone, and have a Jamals counselor read them before you paste them into UCAS.",
+    "uz": "UCAS shaxsiy bayonoti: uchta savolni oʻrganing, dalillarni uchta roʻyxatga yigʻing, har bir javob qoralamasini yozing, uchalasini roʻyxat boʻyicha birga tahrir qiling, kimgadir oʻqib bering, UCAS tizimiga joylashdan oldin esa ularni Jamals maslahatchisi oʻqiydi.",
+    "ru": "Мотивационное письмо (personal statement) для UCAS: изучите три вопроса, соберите доказательства в три списка, напишите черновик каждого ответа, отредактируйте все три вместе по чек-листу, прочитайте их кому-нибудь, а перед вставкой в UCAS их прочитает консультант Jamals."
+   },
+   "weeks": {
+    "min": 3,
+    "typical": 4
+   },
+   "minutes_total": 233,
+   "weekly_minutes": {
+    "typical": 60
+   },
+   "steps": [
+    {
+     "n": 1,
+     "task_id": "C12-ownwrd"
+    },
+    {
+     "n": 2,
+     "task_id": "C12-sbank1",
+     "skip_if_done": true,
+     "optional": true
+    },
+    {
+     "n": 3,
+     "task_id": "C12-ucintr"
+    },
+    {
+     "n": 4,
+     "task_id": "C12-ucevid"
+    },
+    {
+     "n": 5,
+     "task_id": "C12-ucq1dr"
+    },
+    {
+     "n": 6,
+     "task_id": "C12-ucq2dr"
+    },
+    {
+     "n": 7,
+     "task_id": "C12-ucq3dr"
+    },
+    {
+     "n": 8,
+     "task_id": "C12-ucrevi"
+    },
+    {
+     "n": 9,
+     "task_id": "C12-rdalou"
+    },
+    {
+     "n": 10,
+     "task_id": "C12-ucfinl"
+    }
+   ],
+   "rules": [
+    {
+     "en": "At most one essay task a day, and one essay track at a time.",
+     "uz": "Kuniga koʻpi bilan bitta insho vazifasi va bir vaqtda bitta insho yoʻnalishi.",
+     "ru": "Не больше одного задания по эссе в день и одно направление эссе за раз."
+    }
+   ],
+   "parent_step": {
+    "id": "C12-tucasp-p",
+    "audience": "parent",
+    "type": "contact",
+    "minutes": 10,
+    "title": {
+     "en": "Ask about the subject",
+     "uz": "Fan haqida soʻrang",
+     "ru": "Спросите о предмете"
+    },
+    "instructions": {
+     "en": "Ask your child why they chose their subject and what they have recently read, watched or done about it. Listening helps them find their reasons; the statement itself must be in their own words.",
+     "uz": "Farzandingizdan nega aynan shu fanni tanlaganini va yaqinda u haqida nimalarni oʻqigani, koʻrgani yoki qilganini soʻrang. Sizning tinglashingiz unga oʻz sabablarini topishga yordam beradi; bayonotning oʻzi esa uning oʻz soʻzlari bilan yozilishi kerak.",
+     "ru": "Спросите ребёнка, почему он выбрал свой предмет и что он недавно прочитал, посмотрел или сделал по этой теме. Ваше внимание помогает ему найти свои причины; само письмо должно быть написано его словами."
+    },
+    "evidence": {
+     "level": "L0",
+     "method": "self_report"
+    },
+    "generated_by": "code"
+   },
+   "note": {
+    "en": "plan.ts has no UK personal-statement milestone today; code anchors this track to the UCAS deadline in src/engine/data/seed_rules.json (destination UK, still needs_verification) or adds a milestone. Dates never come from this catalog.",
+    "uz": "plan.ts faylida hozircha Buyuk Britaniya shaxsiy bayonoti uchun bosqich yoʻq; kod bu yoʻnalishni src/engine/data/seed_rules.json faylidagi UCAS muddatiga (UK yoʻnalishi, hali tekshirilishi kerak) bogʻlaydi yoki yangi bosqich qoʻshadi. Sanalar hech qachon bu katalogdan olinmaydi.",
+    "ru": "В plan.ts пока нет этапа для personal statement в Великобританию; код привязывает это направление к сроку UCAS в src/engine/data/seed_rules.json (направление UK, ещё требует проверки) или добавляет этап. Даты никогда не берутся из этого каталога."
+   },
+   "facts": [
+    {
+     "claim": "UCAS personal statement: three questions (quoted verbatim in this item); each answer has a minimum of 350 characters; 4,000 characters overall including spaces; the 4,000 may be shared across the answers in any way; admissions staff review the statement as a whole, so information should not be repeated.",
+     "url": "https://www.ucas.com/personal-statement",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "UCAS changed the personal statement from one longer text to three separate sections, each with its own question; the 4,000-character total, including spaces, stays.",
+     "url": "https://www.ucas.com/about-us/news-and-insights/reforming-admissions",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "UCAS: generating and submitting all or a large part of a personal statement from an AI tool and presenting it as your own words could be considered cheating; applicants declare that the statement has not been copied or provided from another source, including artificial intelligence software.",
+     "url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/a-guide-to-using-ai-and-chatgpt-with-your-personal-statement",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": false,
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true,
+   "factcheck": {
+    "verified_at": "2026-10-07",
+    "note": "Corrected an internal reference: the note sent code to 'the UCAS deadline rule (C11)', but C11 holds test registrations, the Uzbek state application and Tashkent private universities and has no UCAS record. The UCAS deadlines live in src/engine/data/seed_rules.json (destination UK, both needs_verification: true). Confirmed: plan.ts has no UK personal-statement milestone (its only UK milestone is m_verify_UCAT)."
+   }
+  },
+  {
+   "id": "C12-tstory",
+   "kind": "essay_track",
+   "playbook_id": "C12-tstory",
+   "workstream_kind": "essays",
+   "weight": "minor",
+   "stages": [
+    "S1",
+    "S2"
+   ],
+   "routes": [
+    "any"
+   ],
+   "min_age": null,
+   "anchor_milestone": null,
+   "addresses": [],
+   "title": {
+    "en": "Story bank habit",
+    "uz": "Hikoyalar banki odati",
+    "ru": "Привычка вести банк историй"
+   },
+   "summary": {
+    "en": "A light, early habit for younger students: a few minutes a week building a private story bank of real moments, so that essays later start from material, not from a blank page.",
+    "uz": "Kichikroq oʻquvchilar uchun yengil, erta odat: haftasiga bir necha daqiqa ajratib, haqiqiy lahzalardan iborat shaxsiy hikoyalar bankini yarating, toki keyinchalik inshoni boʻsh varaqdan emas, tayyor materialdan boshlaysiz.",
+    "ru": "Лёгкая ранняя привычка для младших учеников: несколько минут в неделю собирайте личный банк реальных историй, чтобы потом эссе начиналось с материала, а не с чистого листа."
+   },
+   "weeks": {
+    "min": 5,
+    "typical": 7
+   },
+   "minutes_total": 100,
+   "weekly_minutes": {
+    "typical": 15
+   },
+   "steps": [
+    {
+     "n": 1,
+     "task_id": "C12-sbank1"
+    },
+    {
+     "n": 2,
+     "choose": {
+      "kind": "brainstorm_micro",
+      "from_range": [
+       "C12-bmp001",
+       "C12-bmp030"
+      ],
+      "count": 4,
+      "picked_by": "code: not yet answered, stage-eligible"
+     }
+    },
+    {
+     "n": 3,
+     "task_id": "C12-sbank2"
+    },
+    {
+     "n": 4,
+     "choose": {
+      "kind": "brainstorm_micro",
+      "from_range": [
+       "C12-bmp001",
+       "C12-bmp030"
+      ],
+      "count": 4,
+      "picked_by": "code: not yet answered, stage-eligible"
+     }
+    },
+    {
+     "n": 5,
+     "task_id": "C12-sbank3",
+     "stages": [
+      "S2"
+     ]
+    },
+    {
+     "n": 6,
+     "task_id": "C12-sbankr",
+     "repeat": 1,
+     "repeat_every_weeks": 8
+    }
+   ],
+   "rules": [
+    {
+     "en": "At most one essay task a day, and one essay track at a time.",
+     "uz": "Kuniga koʻpi bilan bitta insho vazifasi va bir vaqtda bitta insho yoʻnalishi.",
+     "ru": "Не больше одного задания по эссе в день и одно направление эссе за раз."
+    },
+    {
+     "en": "For S1 this is the only essay content: no university essays before S2.",
+     "uz": "S1 uchun bu yagona insho mazmuni: S2 bosqichidan oldin universitet inshosi yoʻq.",
+     "ru": "Для S1 это единственное содержание по эссе: никаких университетских эссе до S2."
+    }
+   ],
+   "parent_step": {
+    "id": "C12-tstory-p",
+    "audience": "parent",
+    "type": "contact",
+    "minutes": 10,
+    "title": {
+     "en": "Swap one family story",
+     "uz": "Bitta oilaviy hikoya bilan almashing",
+     "ru": "Обменяйтесь семейной историей"
+    },
+    "instructions": {
+     "en": "Tell your child one family story they may not know: a move, a first job, how a family tradition started. Ask them for one story from their week in return.",
+     "uz": "Farzandingizga u bilmasligi mumkin boʻlgan bitta oilaviy hikoyani aytib bering: koʻchib oʻtish, birinchi ish, oilaviy anʼana qanday boshlangani. Evaziga undan shu haftadagi bitta voqeani aytib berishini soʻrang.",
+     "ru": "Расскажите ребёнку одну семейную историю, которую он может не знать: переезд, первая работа, как появилась семейная традиция. В ответ попросите его рассказать одну историю из его недели."
+    },
+    "evidence": {
+     "level": "L0",
+     "method": "self_report"
+    },
+    "generated_by": "code"
+   },
+   "note": {
+    "en": "The micro-prompts are picked by code from C12-bmp001 to C12-bmp030 (batches 5-6); the minutes total counts 8 of them.",
+    "uz": "Mikro-savollarni kod 5-6-paketlardagi 30 ta savol (C12-bmp001 – C12-bmp030) orasidan tanlaydi; umumiy daqiqalarda ulardan 8 tasi hisoblangan.",
+    "ru": "Микро-вопросы код выбирает из C12-bmp001-C12-bmp030 (пакеты 5-6); в общем подсчёте минут учтено 8 из них."
+   },
+   "facts": [],
+   "needs_verification": false,
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-tredo4",
+   "kind": "essay_track",
+   "playbook_id": "C12-tredo4",
+   "workstream_kind": "essays",
+   "weight": "major",
+   "stages": [
+    "S4"
+   ],
+   "routes": [
+    "US"
+   ],
+   "min_age": null,
+   "anchor_milestone": "m_essays",
+   "addresses": [],
+   "title": {
+    "en": "Second-cycle essay rewrite",
+    "uz": "Qayta topshirish uchun inshoni yangilash",
+    "ru": "Переписать эссе для повторной подачи"
+   },
+   "summary": {
+    "en": "For a second application after a gap year or a first university year: rewrite last year’s essay around what changed, revise it, read it to someone, and have a Jamals counselor read it.",
+    "uz": "Tanaffus yili yoki universitetdagi birinchi yildan keyin qayta topshirish uchun: oʻtgan yilgi inshoni nima oʻzgargani atrofida qayta yozing, tahrir qiling, kimgadir oʻqib bering, soʻng uni Jamals maslahatchisi oʻqiydi.",
+    "ru": "Для повторной подачи после года перерыва или первого курса университета: перепишите прошлогоднее эссе вокруг того, что изменилось, отредактируйте, прочитайте кому-нибудь, а затем его прочитает консультант Jamals."
+   },
+   "weeks": {
+    "min": 3,
+    "typical": 5
+   },
+   "minutes_total": 248,
+   "weekly_minutes": {
+    "typical": 60
+   },
+   "steps": [
+    {
+     "n": 1,
+     "task_id": "C12-ownwrd"
+    },
+    {
+     "n": 2,
+     "task_id": "C12-sbankr"
+    },
+    {
+     "n": 3,
+     "task_id": "C12-redo4s"
+    },
+    {
+     "n": 4,
+     "task_id": "C12-rvsowh"
+    },
+    {
+     "n": 5,
+     "task_id": "C12-rvvoic"
+    },
+    {
+     "n": 6,
+     "task_id": "C12-rvcut6"
+    },
+    {
+     "n": 7,
+     "task_id": "C12-rvlang"
+    },
+    {
+     "n": 8,
+     "task_id": "C12-rdalou"
+    },
+    {
+     "n": 9,
+     "task_id": "C12-cadrf2"
+    },
+    {
+     "n": 10,
+     "task_id": "C12-cafinl"
+    }
+   ],
+   "rules": [
+    {
+     "en": "At most one essay task a day, and one essay track at a time.",
+     "uz": "Kuniga koʻpi bilan bitta insho vazifasi va bir vaqtda bitta insho yoʻnalishi.",
+     "ru": "Не больше одного задания по эссе в день и одно направление эссе за раз."
+    }
+   ],
+   "parent_step": {
+    "id": "C12-tredo4-p",
+    "audience": "parent",
+    "type": "contact",
+    "minutes": 10,
+    "title": {
+     "en": "Name one change you saw",
+     "uz": "Siz koʻrgan bitta oʻzgarishni ayting",
+     "ru": "Назовите одну перемену, которую вы заметили"
+    },
+    "instructions": {
+     "en": "Ask your child what changed for them this year, and tell them one change you noticed that they may not see in themselves.",
+     "uz": "Farzandingizdan bu yil unda nima oʻzgarganini soʻrang va oʻzi sezmasligi mumkin boʻlgan, siz payqagan bitta oʻzgarishni aytib bering.",
+     "ru": "Спросите ребёнка, что изменилось для него за этот год, и скажите об одной перемене, которую вы заметили, а он в себе мог не увидеть."
+    },
+    "evidence": {
+     "level": "L0",
+     "method": "self_report"
+    },
+    "generated_by": "code"
+   },
+   "note": {
+    "en": "For S4 students applying through UCAS, the roadmap picks C12-tucasp instead.",
+    "uz": "UCAS orqali topshiradigan S4 oʻquvchilari uchun yoʻl xaritasi buning oʻrniga C12-tucasp yoʻnalishini tanlaydi.",
+    "ru": "Для учеников S4, подающих через UCAS, дорожная карта вместо этого выбирает C12-tucasp."
+   },
+   "facts": [
+    {
+     "claim": "The Common App personal essay is limited to 650 words, with a minimum of 250 words.",
+     "url": "https://www.collegetransitions.com/blog/common-app-essay-prompts/",
+     "verified_at": "2026-10-07",
+     "secondary": true,
+     "needs_verification": true,
+     "note": "Re-checked 2026-10-07. No commonapp.org page that opens without signing in states the limit: the essay-prompts page, the 2026-2027 announcement and the 2026-2027 'What's new' deck give no word count, and the help-centre article 'are-there-word-limits-kudeoeos' is about the UChicago supplement, not the personal essay. College Transitions (published 5 Mar 2026, 2026-27 cycle) says the limit 'remains at 650 words' with 'a minimum floor of 250 words'. The application enforces the limit itself; confirm in its Writing section."
+    },
+    {
+     "claim": "Common App's fraud policy lists as fraud: submitting plagiarized essays, or intentionally misrepresenting as one's own original work another person's thoughts, language, ideas, expressions or experiences, or the substantive content or output of an artificial intelligence platform, technology or algorithm.",
+     "url": "https://www.commonapp.org/fraud-policy",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": true,
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true,
+   "verify_task": true
+  },
+  {
+   "id": "C12-tmotiv",
+   "kind": "essay_track",
+   "playbook_id": "C12-tmotiv",
+   "workstream_kind": "essays",
+   "weight": "major",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "min_age": null,
+   "anchor_milestone": null,
+   "addresses": [],
+   "title": {
+    "en": "Motivation letter for other applications",
+    "uz": "Boshqa arizalar uchun motivatsion xat",
+    "ru": "Мотивационное письмо для других заявок"
+   },
+   "summary": {
+    "en": "For applications outside the Common App and UCAS: read the official rules, write the motivation letter in the language they require, read it to someone, and have a Jamals counselor read it.",
+    "uz": "Common App va UCAS tizimlaridan tashqari arizalar uchun: rasmiy qoidalarni oʻqing, motivatsion xatni ular talab qilgan tilda yozing, kimgadir oʻqib bering, soʻng uni Jamals maslahatchisi oʻqiydi.",
+    "ru": "Для заявок вне Common App и UCAS: прочитайте официальные правила, напишите мотивационное письмо на требуемом языке, прочитайте его кому-нибудь, а затем его прочитает консультант Jamals."
+   },
+   "weeks": {
+    "min": 3,
+    "typical": 4
+   },
+   "minutes_total": 143,
+   "weekly_minutes": {
+    "typical": 45
+   },
+   "steps": [
+    {
+     "n": 1,
+     "task_id": "C12-ownwrd"
+    },
+    {
+     "n": 2,
+     "task_id": "C12-sbank1",
+     "skip_if_done": true
+    },
+    {
+     "n": 3,
+     "task_id": "C12-sbank2",
+     "skip_if_done": true
+    },
+    {
+     "n": 4,
+     "task_id": "C12-motivl"
+    },
+    {
+     "n": 5,
+     "task_id": "C12-motdrf"
+    },
+    {
+     "n": 6,
+     "task_id": "C12-rdalou"
+    }
+   ],
+   "rules": [
+    {
+     "en": "At most one essay task a day, and one essay track at a time.",
+     "uz": "Kuniga koʻpi bilan bitta insho vazifasi va bir vaqtda bitta insho yoʻnalishi.",
+     "ru": "Не больше одного задания по эссе в день и одно направление эссе за раз."
+    }
+   ],
+   "parent_step": {
+    "id": "C12-tmotiv-p",
+    "audience": "parent",
+    "type": "contact",
+    "minutes": 10,
+    "title": {
+     "en": "Check the rules together",
+     "uz": "Qoidalarni birga tekshiring",
+     "ru": "Проверьте правила вместе"
+    },
+    "instructions": {
+     "en": "Check the language and the deadline of the motivation letter on the official page together with your child. The letter is theirs to write: please do not write or translate it for them.",
+     "uz": "Farzandingiz bilan birga rasmiy sahifada motivatsion xat tili va muddatini tekshiring. Xatni farzandingizning oʻzi yozadi: iltimos, uni uning oʻrniga yozmang va tarjima qilmang.",
+     "ru": "Вместе с ребёнком проверьте на официальной странице язык и срок мотивационного письма. Письмо он пишет сам: пожалуйста, не пишите и не переводите его вместо него."
+    },
+    "evidence": {
+     "level": "L0",
+     "method": "self_report"
+    },
+    "generated_by": "code"
+   },
+   "note": {
+    "en": "The counselor checkpoint is inside C12-motdrf. The deadline the student records goes to a verify step; code never invents one.",
+    "uz": "Maslahatchi tekshiruvi C12-motdrf ichida. Oʻquvchi yozib olgan muddat tekshirish bosqichiga yuboriladi; kod hech qachon muddatni oʻzi oʻylab topmaydi.",
+    "ru": "Проверка консультантом находится внутри C12-motdrf. Срок, записанный учеником, уходит на шаг проверки; код никогда не придумывает его сам."
+   },
+   "facts": [
+    {
+     "claim": "Common App's fraud policy lists as fraud: submitting plagiarized essays, or intentionally misrepresenting as one's own original work another person's thoughts, language, ideas, expressions or experiences, or the substantive content or output of an artificial intelligence platform, technology or algorithm.",
+     "url": "https://www.commonapp.org/fraud-policy",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    },
+    {
+     "claim": "UCAS: generating and submitting all or a large part of a personal statement from an AI tool and presenting it as your own words could be considered cheating; applicants declare that the statement has not been copied or provided from another source, including artificial intelligence software.",
+     "url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/a-guide-to-using-ai-and-chatgpt-with-your-personal-statement",
+     "verified_at": "2026-10-07",
+     "secondary": false
+    }
+   ],
+   "needs_verification": false,
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  }
+ ]
+}

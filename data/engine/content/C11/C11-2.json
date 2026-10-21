@@ -1,0 +1,2002 @@
+{
+ "bank": "C11",
+ "batch": 2,
+ "kind": "admin_template",
+ "note": "Admin and registration templates (P5 spec §5.3 C11), batch 2: the Uzbek state application (choosing a subject set, the Agency's stage-1 registration, certificates, test day, results, the stage-2 choices window, appeal, final lists, and the state grants at non-state and foreign universities). Same conventions as batch 1. `windows` carry the last cycle (2026) as a dated reference and the next cycle only where a regulation fixes the date every year (CM Resolution No. 578 cl. 10: 5-25 June); every other 2027 date is null with needs_verification. Uzbek text: U+02BB for oʻ/gʻ, U+02BC for the tutuq belgisi.",
+ "items": [
+  {
+   "id": "C11-uzsubj",
+   "template_id": "C11-uzsubj",
+   "kind": "admin_template",
+   "category": "uz_state",
+   "workstream_kind": "uz_unis",
+   "task_kind": "research",
+   "task_type": "verify",
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UZ_HOME"
+   ],
+   "anchor": {
+    "event": "uz.registration_stage1.from",
+    "milestone_ids": [
+     "m_verify_cycle_UZ_HOME"
+    ]
+   },
+   "rule_ids": [
+    "UZ_HOME",
+    "CP_UZ"
+   ],
+   "lead_time": {
+    "start_days_before": 120,
+    "due_days_before": 60,
+    "basis": "inference",
+    "note": {
+     "en": "Decide the subject set months before June: each subject block needs months of practice, and certificates (Milliy sertifikat, IELTS) need sessions booked in advance.",
+     "uz": "Fanlar majmuasini iyundan bir necha oy oldin hal qiling: har bir fan bloki oylab mashq talab qiladi, sertifikatlar (milliy sertifikat, IELTS) uchun esa sessiyalarga oldindan yozilish kerak.",
+     "ru": "Определитесь с набором предметов за несколько месяцев до июня: каждый блок требует месяцев практики, а на сертификаты (Milliy sertifikat, IELTS) нужно записываться заранее."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Choose your subject set and up to 5 programmes",
+    "uz": "Fanlar majmuangizni va 5 tagacha yoʻnalishni tanlang",
+    "ru": "Выберите набор предметов и до 5 направлений"
+   },
+   "summary": {
+    "en": "On the state test you sit three compulsory blocks and two subjects of your programme. You may list up to 5 programmes, but all of them must share the same subject set, so the subject set is the first decision.",
+    "uz": "Davlat testida uchta majburiy blok va yoʻnalishingizning ikkita fanini topshirasiz. 5 tagacha yoʻnalishni tanlash mumkin, lekin ularning barchasida fanlar majmuasi bir xil boʻlishi shart, shuning uchun birinchi qaror — fanlar majmuasi.",
+    "ru": "На госэкзамене вы сдаёте три обязательных блока и два предмета своего направления. Можно выбрать до 5 направлений, но у всех должен быть одинаковый набор предметов, поэтому первое решение — набор предметов."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-uzsubj-s1",
+     "type": "study",
+     "minutes": 20,
+     "offset_days": -120,
+     "title": {
+      "en": "Find your programmes' subject pairs",
+      "uz": "Yoʻnalishlaringizning fan juftligini toping",
+      "ru": "Найдите пары предметов ваших направлений"
+     },
+     "instructions": {
+      "en": "Open the Agency's subject list for this year (Fanlar majmuasi) and find the programmes you are interested in. Write down each one's 1st and 2nd subject. Paste the link.",
+      "uz": "Agentlikning shu yilgi fanlar roʻyxatini (Fanlar majmuasi) oching va sizni qiziqtirgan yoʻnalishlarni toping. Har birining 1- va 2-fanini yozib oling. Havolani qoʻying.",
+      "ru": "Откройте перечень предметов Агентства на этот год (Fanlar majmuasi) и найдите интересующие вас направления. Выпишите 1-й и 2-й предмет каждого. Вставьте ссылку."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "uzbmb.uz",
+       "gov.uz"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-uzsubj-s2",
+     "type": "study",
+     "minutes": 20,
+     "offset_days": -100,
+     "title": {
+      "en": "Look at last year's lists",
+      "uz": "Oʻtgan yilgi roʻyxatlarni koʻring",
+      "ru": "Посмотрите прошлогодние списки"
+     },
+     "instructions": {
+      "en": "On mandat.uzbmb.uz, open last year's list for each programme (region, university, programme, language, form) and note the lowest grant and contract scores. Your plan will show the same numbers next to your measured level.",
+      "uz": "mandat.uzbmb.uz da har bir yoʻnalish boʻyicha oʻtgan yilgi roʻyxatni oching (hudud, universitet, yoʻnalish, til, shakl) va grant hamda kontrakt boʻyicha eng past ballarni yozib oling. Rejangiz xuddi shu raqamlarni oʻlchangan darajangiz yonida koʻrsatadi.",
+      "ru": "На mandat.uzbmb.uz откройте прошлогодний список по каждому направлению (регион, университет, направление, язык, форма) и выпишите самые низкие баллы на грант и контракт. План покажет те же числа рядом с вашим измеренным уровнем."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "mandat.uzbmb.uz"
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-uzsubj-s3",
+     "type": "reflect",
+     "minutes": 10,
+     "offset_days": -60,
+     "title": {
+      "en": "Fix the subject set and the 5 programmes",
+      "uz": "Fanlar majmuasi va 5 ta yoʻnalishni belgilang",
+      "ru": "Зафиксируйте набор предметов и 5 направлений"
+     },
+     "instructions": {
+      "en": "Choose one subject set and up to 5 programmes that use it, in the order you want them. In grade 11, your mentor confirms the list with you.",
+      "uz": "Bitta fanlar majmuasini va undan foydalanadigan 5 tagacha yoʻnalishni oʻzingiz xohlagan tartibda tanlang. 11-sinfda mentoringiz roʻyxatni siz bilan birga tasdiqlaydi.",
+      "ru": "Выберите один набор предметов и до 5 направлений с ним в нужном вам порядке. В 11 классе ментор подтверждает список вместе с вами."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "uz_subject_set",
+        "type": "choice",
+        "options_from": "catalog.uz_subject_sets"
+       },
+       {
+        "key": "uz_programmes",
+        "type": "list",
+        "max_items": 5,
+        "options_from": "catalog.uz_programmes"
+       }
+      ]
+     },
+     "checkpoint": {
+      "when": {
+       "stage": [
+        "S3"
+       ]
+      },
+      "level": "L7",
+      "what": {
+       "en": "a counselor confirms the subject set and the list",
+       "uz": "maslahatchi fanlar majmuasi va roʻyxatni tasdiqlaydi",
+       "ru": "консультант подтверждает набор предметов и список"
+      }
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "five_choices",
+     "claim": "An applicant may choose up to 5 bachelor programmes with the same test subject set (CM Resolution No. 578 cl. 10).",
+     "url": "https://lex.uz/uz/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "CM Resolution No. 578 of 13 Sep 2025, Annex 1",
+     "needs_verification": false
+    },
+    {
+     "key": "test_structure",
+     "claim": "The bachelor test is 90 questions: three compulsory blocks (native language, maths, history of Uzbekistan; 10 questions at 1.1 points each) and the programme's two subjects (30 questions at 3.1 and 30 at 2.1 points); 189 points at most.",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+     "verified_at": "2026-10-07",
+     "read": "pdf",
+     "secondary": false,
+     "ref": "Order No. 105 of the Ministry of Higher Education, Science and Innovation, 13 Mar 2026, Annex 1; PDF re-read 7 Oct 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "subject_list",
+     "claim": "The 2026/27 subject list per programme is the Agency's 'Fanlar majmuasi'.",
+     "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Fanlar%20majmuasi.pdf",
+     "verified_at": "2026-10-07",
+     "read": "pdf",
+     "secondary": false,
+     "ref": "via R3 §1.3",
+     "needs_verification": false
+    },
+    {
+     "key": "mandat_lists",
+     "claim": "mandat.uzbmb.uz shows, per programme, language and form, every applicant who listed it with a final status (grant, contract, placed in another choice, not recommended) and a score; aggregates only are used here.",
+     "url": "https://mandat.uzbmb.uz/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "via R3 §2.1",
+     "needs_verification": false
+    },
+    {
+     "key": "list_2027",
+     "claim": "The 2027/28 subject list is not published yet; programmes can change their subjects between years.",
+     "url": null,
+     "verified_at": null,
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "uzbmb_hub",
+     "url": "https://uzbmb.uz/page/qabul2026_2027",
+     "kind": "official",
+     "label": {
+      "en": "Agency: admission 2026/27 hub",
+      "uz": "Agentlik: 2026/27-yil qabul sahifasi",
+      "ru": "Агентство: страница приёма 2026/27"
+     }
+    },
+    {
+     "id": "mandat",
+     "url": "https://mandat.uzbmb.uz/",
+     "kind": "official",
+     "label": {
+      "en": "Last year's admission lists (mandat.uzbmb.uz)",
+      "uz": "Oʻtgan yilgi qabul roʻyxatlari (mandat.uzbmb.uz)",
+      "ru": "Прошлогодние списки приёма (mandat.uzbmb.uz)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "When the Agency publishes next year's subject list, check that your programmes kept the same subjects.",
+    "uz": "Agentlik keyingi yilgi fanlar roʻyxatini eʼlon qilganda, yoʻnalishlaringizning fanlari oʻzgarmaganini tekshiring.",
+    "ru": "Когда Агентство опубликует перечень на следующий год, проверьте, что предметы ваших направлений не изменились."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-uzreg",
+   "template_id": "C11-uzreg",
+   "kind": "admin_template",
+   "category": "uz_state",
+   "workstream_kind": "uz_unis",
+   "task_kind": "test-registration",
+   "task_type": "book",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UZ_HOME"
+   ],
+   "anchor": {
+    "event": "uz.registration_stage1.until",
+    "milestone_ids": [
+     "m_UZ_HOME_DTM_registration",
+     "m_verify_cycle_UZ_HOME"
+    ]
+   },
+   "rule_ids": [
+    "UZ_HOME",
+    "CP_UZ"
+   ],
+   "lead_time": {
+    "start_days_before": 20,
+    "due_days_before": 13,
+    "never_within_hours": 48,
+    "basis": "inference",
+    "note": {
+     "en": "Register in the first week of the window (5-12 June), never in the last two days.",
+     "uz": "Muddatning birinchi haftasida (5-12-iyun) roʻyxatdan oʻting, oxirgi ikki kunda emas.",
+     "ru": "Регистрируйтесь в первую неделю окна (5-12 июня), не в последние два дня."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "This year's school leavers do not pay for the test; others pay half of the base calculation amount (BHM).",
+    "uz": "Shu yilgi maktab bitiruvchilari test uchun toʻlamaydi; boshqalar bazaviy hisoblash miqdorining (BHM) yarmini toʻlaydi.",
+    "ru": "Выпускники школ этого года за тест не платят; остальные платят половину базовой расчётной величины (БРВ)."
+   },
+   "title": {
+    "en": "Register for the state test on my.uzbmb.uz",
+    "uz": "my.uzbmb.uz da davlat testiga roʻyxatdan oʻting",
+    "ru": "Зарегистрируйтесь на госэкзамен на my.uzbmb.uz"
+   },
+   "summary": {
+    "en": "Stage 1 of the state application runs from 5 to 25 June every year on the Agency's portal. You choose your subject set, the test language and where you will sit the test; your school certificate and identity data are pulled automatically.",
+    "uz": "Davlat qabulining 1-bosqichi har yili 5-25-iyun kunlari Agentlik portalida oʻtadi. Siz fanlar majmuasi, test tili va test topshiradigan joyni tanlaysiz; attestat va shaxsiy maʼlumotlaringiz avtomatik olinadi.",
+    "ru": "Первый этап госприёма проходит каждый год с 5 по 25 июня на портале Агентства. Вы выбираете набор предметов, язык теста и место сдачи; данные аттестата и личности подтягиваются автоматически."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-uzreg-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -25,
+     "title": {
+      "en": "Check this year's announcement",
+      "uz": "Shu yilgi eʼlonni tekshiring",
+      "ru": "Проверьте объявление этого года"
+     },
+     "instructions": {
+      "en": "Before 5 June, read the Agency's admission announcement for this year: the registration dates, the fee and any change to the rules. Paste the link.",
+      "uz": "5-iyungacha Agentlikning shu yilgi qabul eʼlonini oʻqing: roʻyxatdan oʻtish sanalari, toʻlov va qoidalardagi oʻzgarishlar. Havolani qoʻying.",
+      "ru": "До 5 июня прочитайте объявление Агентства о приёме этого года: даты регистрации, сбор и изменения правил. Вставьте ссылку."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "uzbmb.uz",
+       "gov.uz",
+       "lex.uz"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-uzreg-s2",
+     "type": "book",
+     "minutes": 30,
+     "offset_days": -18,
+     "title": {
+      "en": "Register: subject set, language, test place",
+      "uz": "Roʻyxatdan oʻting: fanlar majmuasi, til, test joyi",
+      "ru": "Регистрация: набор предметов, язык, место теста"
+     },
+     "instructions": {
+      "en": "On my.uzbmb.uz, choose the subject set you decided on, the language of the test and the region where you will sit it. Check that your school certificate data appeared correctly; if not, contact the Agency before the window closes.",
+      "uz": "my.uzbmb.uz da oldindan tanlagan fanlar majmuangizni, test tilini va test topshiradigan hududni belgilang. Attestat maʼlumotlaringiz toʻgʻri chiqqanini tekshiring; notoʻgʻri boʻlsa, muddat tugashidan oldin Agentlikka murojaat qiling.",
+      "ru": "На my.uzbmb.uz выберите заранее определённый набор предметов, язык теста и регион сдачи. Проверьте, что данные аттестата подтянулись верно; если нет, обратитесь в Агентство до закрытия окна."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the completed registration",
+       "uz": "yakunlangan roʻyxatdan oʻtish skrinshoti",
+       "ru": "скриншот завершённой регистрации"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-uzreg-s3",
+     "type": "submit",
+     "minutes": 10,
+     "offset_days": -13,
+     "when": {
+      "school_leaver_this_year": false
+     },
+     "title": {
+      "en": "Pay the test fee",
+      "uz": "Test toʻlovini toʻlang",
+      "ru": "Оплатите тест"
+     },
+     "instructions": {
+      "en": "If you finished school before this year, pay the test fee (half of the BHM) in your cabinet. Without payment no admission ticket is issued.",
+      "uz": "Agar maktabni shu yildan oldin tugatgan boʻlsangiz, kabinetingizda test toʻlovini (BHMning yarmi) toʻlang. Toʻlovsiz ruxsatnoma berilmaydi.",
+      "ru": "Если вы окончили школу до этого года, оплатите тест (половина БРВ) в личном кабинете. Без оплаты пропуск не выдаётся."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "uz_test_paid",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no",
+         "exempt"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "stage1_2026",
+     "kind": "registration",
+     "label": {
+      "en": "Stage 1 registration (2026)",
+      "uz": "1-bosqich roʻyxatdan oʻtish (2026)",
+      "ru": "Регистрация, 1-й этап (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "from": "2026-06-05",
+     "until": "2026-06-25",
+     "source": {
+      "url": "https://lex.uz/uz/docs/-7726569",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false,
+      "ref": "CM Resolution No. 578 cl. 10: 5-25 June every year"
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "stage1_2027",
+     "kind": "registration",
+     "label": {
+      "en": "Stage 1 registration (2027)",
+      "uz": "1-bosqich roʻyxatdan oʻtish (2027)",
+      "ru": "Регистрация, 1-й этап (2027)"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "from": "2027-06-05",
+     "until": "2027-06-25",
+     "source": {
+      "url": "https://lex.uz/uz/docs/-7726569",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": false,
+      "ref": "derived from cl. 10 'every year'; holds unless the resolution is amended",
+      "derived": true
+     },
+     "needs_verification": false
+    }
+   ],
+   "facts": [
+    {
+     "key": "what_stage1",
+     "claim": "At stage 1 (5-25 June, inclusive) applicants choose the test subject set, the test language and the test place online; education and identity data are obtained automatically from the ministries' systems.",
+     "url": "https://lex.uz/ru/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "CM Resolution No. 578 cl. 10",
+     "needs_verification": false
+    },
+    {
+     "key": "fee",
+     "claim": "The test fee is 50 % of the base calculation amount (BHM); exempt are that year's school graduates, people with disabilities of groups I-II, people under state care, families in the Social Register and their children, and young people in the Youth Register. Without payment no admission ticket is issued (cl. 15).",
+     "url": "https://lex.uz/ru/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "CM Resolution No. 578",
+     "needs_verification": false
+    },
+    {
+     "key": "stage1_programmes",
+     "claim": "CM Resolution No. 578 cl. 10: at stage 1 the applicant chooses the test subject set, the language and the test region (and, where a programme has a professional or creative exam, the university that holds it); the university, programme, form of study and priority order are chosen at stage 2, within 15 days after all tests.",
+     "url": "https://lex.uz/uz/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "cl. 10 read 7 Oct 2026",
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "my_uzbmb",
+     "url": "https://my.uzbmb.uz",
+     "kind": "official",
+     "label": {
+      "en": "Agency applicant portal (my.uzbmb.uz)",
+      "uz": "Agentlik abituriyent portali (my.uzbmb.uz)",
+      "ru": "Портал абитуриента Агентства (my.uzbmb.uz)"
+     }
+    },
+    {
+     "id": "lex_cm578",
+     "url": "https://lex.uz/uz/docs/-7726569",
+     "kind": "official",
+     "label": {
+      "en": "CM Resolution No. 578 (admission rules)",
+      "uz": "VM 578-son qarori (qabul qoidalari)",
+      "ru": "Постановление КМ № 578 (правила приёма)"
+     }
+    }
+   ],
+   "needs_verification": false,
+   "verify_task": null,
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-uzcert",
+   "template_id": "C11-uzcert",
+   "kind": "admin_template",
+   "category": "uz_state",
+   "workstream_kind": "uz_unis",
+   "task_kind": "admin",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UZ_HOME"
+   ],
+   "anchor": {
+    "event": "uz.registration_stage1.until",
+    "milestone_ids": [
+     "m_verify_cycle_UZ_HOME"
+    ]
+   },
+   "rule_ids": [
+    "UZ_HOME",
+    "CP_UZ"
+   ],
+   "lead_time": {
+    "start_days_before": 20,
+    "due_days_before": 13,
+    "never_within_hours": 48,
+    "basis": "inference",
+    "note": {
+     "en": "Certificates are entered during stage-1 registration; a certificate that is not entered does not count.",
+     "uz": "Sertifikatlar 1-bosqich roʻyxatdan oʻtish paytida kiritiladi; kiritilmagan sertifikat hisobga olinmaydi.",
+     "ru": "Сертификаты указываются при регистрации на первом этапе; неуказанный сертификат не учитывается."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Add your certificates to the state application",
+    "uz": "Sertifikatlaringizni davlat arizasiga qoʻshing",
+    "ru": "Добавьте сертификаты в госзаявку"
+   },
+   "summary": {
+    "en": "Certificates can replace a block of the test or add points: a national certificate (Milliy sertifikat), an English certificate at B1 or B2, an SAT of 1200 or more, A-level or IB results. Enter each one while you register.",
+    "uz": "Sertifikatlar test blokining oʻrnini bosishi yoki ball qoʻshishi mumkin: milliy sertifikat, B1 yoki B2 darajadagi ingliz tili sertifikati, 1200 va undan yuqori SAT, A-level yoki IB natijalari. Har birini roʻyxatdan oʻtayotganda kiriting.",
+    "ru": "Сертификаты могут заменить блок теста или добавить баллы: национальный сертификат (Milliy sertifikat), сертификат по английскому уровня B1 или B2, SAT от 1200, результаты A-level или IB. Укажите каждый при регистрации."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-uzcert-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -25,
+     "title": {
+      "en": "List your certificates and their dates",
+      "uz": "Sertifikatlaringiz va sanalarini roʻyxat qiling",
+      "ru": "Перечислите сертификаты и их даты"
+     },
+     "instructions": {
+      "en": "List every certificate you hold with its level or score and its date, and check that each is still valid in June.",
+      "uz": "Qoʻlingizdagi har bir sertifikatni darajasi yoki bali va sanasi bilan yozing hamda har biri iyunda hali amal qilishini tekshiring.",
+      "ru": "Перечислите все сертификаты с уровнем или баллом и датой и проверьте, что каждый ещё действует в июне."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "certificates",
+        "type": "list",
+        "item_fields": [
+         {
+          "key": "type",
+          "type": "choice",
+          "options": [
+           "MILLIY_SERTIFIKAT",
+           "IELTS",
+           "TOEFL_iBT",
+           "NATIONAL_CEFR",
+           "SAT",
+           "A_LEVEL",
+           "IB"
+          ]
+         },
+         {
+          "key": "subject_or_level",
+          "type": "text",
+          "max_chars": 40
+         },
+         {
+          "key": "date",
+          "type": "date"
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-uzcert-s2",
+     "type": "submit",
+     "minutes": 15,
+     "offset_days": -15,
+     "title": {
+      "en": "Enter them during registration",
+      "uz": "Ularni roʻyxatdan oʻtishda kiriting",
+      "ru": "Укажите их при регистрации"
+     },
+     "instructions": {
+      "en": "While you register on my.uzbmb.uz, enter each certificate in its field. An SAT counts only if College Board has sent it to the Agency.",
+      "uz": "my.uzbmb.uz da roʻyxatdan oʻtayotganda har bir sertifikatni tegishli maydonga kiriting. SAT faqat College Board uni Agentlikka yuborgan boʻlsa hisobga olinadi.",
+      "ru": "При регистрации на my.uzbmb.uz укажите каждый сертификат в своём поле. SAT учитывается, только если College Board отправил его в Агентство."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "certs_entered",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-uzcert-s3",
+     "type": "reflect",
+     "minutes": 5,
+     "offset_days": -15,
+     "when": {
+      "has_ms_level": [
+       "B+",
+       "B",
+       "C+",
+       "C"
+      ]
+     },
+     "title": {
+      "en": "Use the certificate or sit the subject?",
+      "uz": "Sertifikatdan foydalanasizmi yoki fandan test topshirasizmi?",
+      "ru": "Использовать сертификат или сдавать предмет?"
+     },
+     "instructions": {
+      "en": "A B+ to C national certificate gives points in proportion and you skip that subject's test, or you can decline it and sit the test. Compare the certificate's points with your practice scores and decide with your mentor.",
+      "uz": "B+ dan C gacha boʻlgan milliy sertifikat mutanosib ball beradi va siz shu fandan test topshirmaysiz, yoki undan voz kechib test topshirishingiz mumkin. Sertifikat beradigan ballni mashq natijalaringiz bilan solishtiring va mentoringiz bilan hal qiling.",
+      "ru": "Национальный сертификат уровня от B+ до C даёт пропорциональный балл, и вы не сдаёте этот предмет, либо можно отказаться от него и сдать тест. Сравните баллы сертификата с результатами практики и решите вместе с ментором."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "ms_use",
+        "type": "choice",
+        "options": [
+         "use_certificate",
+         "sit_test"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "milliy",
+     "claim": "CM Resolution No. 578 cl. 45: A+ and A give the subject's full points (93 or 63); B+, B, C+ and C give points in proportion and the applicant does not sit that subject (or may decline and sit it); any level in a compulsory subject gives that block's full 11 points.",
+     "url": "https://lex.uz/uz/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "via R3 §4",
+     "needs_verification": false
+    },
+    {
+     "key": "language",
+     "claim": "CM Resolution No. 578 cl. 12 (amended 29 Jan 2026): a national or international foreign-language certificate at B2 or above gives the foreign-language subject's full points; B1 gives 75 %.",
+     "url": "https://lex.uz/uz/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "cl. 12 re-read on lex.uz 7 Oct 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "sat_alevel_ib",
+     "claim": "CM Resolution No. 578 cl. 42: A-level grade B or above, or IB 32 or above, gives additional admission on a base contract; SAT 1200 or above gives admission on an additional state grant.",
+     "url": "https://lex.uz/uz/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "via R3 §1.4",
+     "needs_verification": false
+    },
+    {
+     "key": "cefr_table",
+     "claim": "The IELTS-to-CEFR table the Agency applies was not found.",
+     "url": null,
+     "verified_at": null,
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "my_uzbmb",
+     "url": "https://my.uzbmb.uz",
+     "kind": "official",
+     "label": {
+      "en": "Agency applicant portal (my.uzbmb.uz)",
+      "uz": "Agentlik abituriyent portali (my.uzbmb.uz)",
+      "ru": "Портал абитуриента Агентства (my.uzbmb.uz)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "If you have an IELTS or TOEFL score, check in this year's Agency instructions which level (B1 or B2) it counts as.",
+    "uz": "IELTS yoki TOEFL natijangiz boʻlsa, Agentlikning shu yilgi yoʻriqnomasida u qaysi darajaga (B1 yoki B2) toʻgʻri kelishini tekshiring.",
+    "ru": "Если у вас есть IELTS или TOEFL, проверьте в инструкции Агентства этого года, каким уровнем (B1 или B2) он считается."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-uztest",
+   "template_id": "C11-uztest",
+   "kind": "admin_template",
+   "category": "test_day",
+   "workstream_kind": "uz_unis",
+   "task_kind": "admin",
+   "task_type": "verify",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UZ_HOME"
+   ],
+   "anchor": {
+    "event": "uz.test_date",
+    "milestone_ids": [
+     "m_UZ_HOME_DTM_test_window"
+    ]
+   },
+   "rule_ids": [
+    "UZ_HOME"
+   ],
+   "lead_time": {
+    "start_days_before": 7,
+    "due_days_before": 1,
+    "basis": "inference",
+    "note": {
+     "en": "Admission tickets were issued in early July in recent years; download yours as soon as it appears.",
+     "uz": "Soʻnggi yillarda ruxsatnomalar iyul boshida berilgan; oʻzingiznikini paydo boʻlishi bilan yuklab oling.",
+     "ru": "В последние годы пропуска выдавали в начале июля; скачайте свой, как только он появится."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "State test day: ticket, ID and what stays home",
+    "uz": "Davlat testi kuni: ruxsatnoma, hujjat va uyda qoladigan narsalar",
+    "ru": "День госэкзамена: пропуск, документ и что оставить дома"
+   },
+   "summary": {
+    "en": "You need the admission ticket from my.uzbmb.uz and your original passport or ID card. Phones, books, dictionaries, tables and any device are not allowed in the test room.",
+    "uz": "Sizga my.uzbmb.uz dan olingan ruxsatnoma va asl pasport yoki ID karta kerak. Test xonasiga telefon, kitob, lugʻat, jadval va har qanday qurilma olib kirish mumkin emas.",
+    "ru": "Нужны пропуск с my.uzbmb.uz и оригинал паспорта или ID-карты. Телефоны, книги, словари, таблицы и любые устройства в зал не допускаются."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-uztest-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -7,
+     "title": {
+      "en": "Download and check the admission ticket",
+      "uz": "Ruxsatnomani yuklab oling va tekshiring",
+      "ru": "Скачайте и проверьте пропуск"
+     },
+     "instructions": {
+      "en": "In your my.uzbmb.uz cabinet, download the admission ticket. Check your name, subjects, date, time and the test building's address, and plan how you will get there.",
+      "uz": "my.uzbmb.uz kabinetingizdan ruxsatnomani yuklab oling. Ismingiz, fanlar, sana, vaqt va test binosining manzilini tekshiring hamda u yerga qanday borishni rejalashtiring.",
+      "ru": "Скачайте пропуск в кабинете my.uzbmb.uz. Проверьте имя, предметы, дату, время и адрес здания, продумайте, как туда добраться."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "ticket_downloaded",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       },
+       {
+        "key": "test_date",
+        "type": "date"
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-uztest-s2",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -1,
+     "title": {
+      "en": "Pack the evening before",
+      "uz": "Kechqurun tayyorlab qoʻying",
+      "ru": "Соберитесь накануне вечером"
+     },
+     "instructions": {
+      "en": "Put the printed ticket and your original passport or ID card in one place; a copy of the document is not accepted. Leave your phone and any device at home or with your parents, and plan to arrive about an hour early: latecomers are not let in.",
+      "uz": "Chop etilgan ruxsatnoma va asl pasport yoki ID kartangizni bir joyga qoʻying; hujjat nusxasi qabul qilinmaydi. Telefon va boshqa qurilmalarni uyda yoki ota-onangizda qoldiring, taxminan bir soat oldin yetib borishni rejalashtiring: kechikkanlar kiritilmaydi.",
+      "ru": "Положите распечатанный пропуск и оригинал паспорта или ID-карты в одно место; копия документа не принимается. Оставьте телефон и устройства дома или у родителей и рассчитайте приезд примерно за час: опоздавших не пускают."
+     },
+     "evidence": {
+      "level": "L0",
+      "method": "self_report"
+     }
+    }
+   ],
+   "facts": [
+    {
+     "key": "prohibited",
+     "claim": "CM Resolution No. 578 cl. 27 bans dictionaries, tables, books, mobile phones, computers, telecommunication devices and cribs, but it sits in chapter 4 (professional and creative exams); the rules for the Agency's own test are in a separate 2018 regulation (cl. 37), which was not read. No admission ticket is issued without payment where payment applies (cl. 15).",
+     "url": "https://lex.uz/ru/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "chapter heading of cl. 27 checked 7 Oct 2026",
+     "needs_verification": true
+    },
+    {
+     "key": "ticket",
+     "claim": "Admission tickets are issued through the personal cabinet on my.uzbmb.uz, in early July in recent cycles; the ticket shows personal data, subjects, date, time and place; testing without it is not allowed; arriving at least an hour early is advised.",
+     "url": "https://talimxabarlari.uz/74134/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "Ta'lim xabarlari, 28 Jun 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "id_original",
+     "claim": "Applicants need an original passport or ID card and the admission ticket; copies of documents are not accepted and latecomers are not admitted.",
+     "url": "https://infoedu.uz/abituriyentlar-uchun-ruxsatnomalarni-yuklab-olish-boshlandi",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "InfoEdu.uz, 8 Jul 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "test_2026",
+     "claim": "In 2026 the tests ran over 10 days in July in 64 centres, ending on 23 July.",
+     "url": "https://www.spot.uz/oz/2026/07/24/admission26/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "Spot.uz, 24 Jul 2026, via R3 §1.2",
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "my_uzbmb",
+     "url": "https://my.uzbmb.uz",
+     "kind": "official",
+     "label": {
+      "en": "Agency applicant portal (my.uzbmb.uz)",
+      "uz": "Agentlik abituriyent portali (my.uzbmb.uz)",
+      "ru": "Портал абитуриента Агентства (my.uzbmb.uz)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Read the test-day rules printed on your admission ticket: the arrival time and the ID rule there are the ones that apply to you.",
+    "uz": "Ruxsatnomangizda yozilgan test kuni qoidalarini oʻqing: u yerdagi kelish vaqti va hujjat qoidasi aynan sizga tegishli.",
+    "ru": "Прочитайте правила дня теста, напечатанные в пропуске: время прибытия и требования к документу там — те, что действуют для вас."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-uzresult",
+   "template_id": "C11-uzresult",
+   "kind": "admin_template",
+   "category": "uz_state",
+   "workstream_kind": "uz_unis",
+   "task_kind": "admin",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UZ_HOME"
+   ],
+   "anchor": {
+    "event": "uz.results_date",
+    "milestone_ids": [
+     "m_UZ_HOME_DTM_test_window"
+    ]
+   },
+   "rule_ids": [
+    "UZ_HOME"
+   ],
+   "lead_time": {
+    "start_days_before": 0,
+    "due_days_after": 1,
+    "basis": "official+inference",
+    "note": {
+     "en": "Enter your score the day it appears: the choices window opens right after.",
+     "uz": "Ballingizni chiqqan kuniyoq kiriting: tanlov oynasi darhol ochiladi.",
+     "ru": "Внесите балл в тот же день: окно выбора открывается сразу после этого."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Record your state test score",
+    "uz": "Davlat testi balingizni kiriting",
+    "ru": "Внесите балл госэкзамена"
+   },
+   "summary": {
+    "en": "Your score appears in your my.uzbmb.uz cabinet. Enter the total and the points per block: your plan uses them to show which of your programmes are within reach before the choices window.",
+    "uz": "Ballingiz my.uzbmb.uz kabinetingizda paydo boʻladi. Umumiy ball va har bir blok boʻyicha ballarni kiriting: rejangiz tanlov oynasidan oldin qaysi yoʻnalishlaringiz yetib boriladigan ekanini koʻrsatish uchun ulardan foydalanadi.",
+    "ru": "Балл появится в кабинете my.uzbmb.uz. Внесите общий балл и баллы по блокам: план покажет по ним, какие направления вам доступны, ещё до окна выбора."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-uzresult-s1",
+     "type": "submit",
+     "minutes": 10,
+     "offset_days": 0,
+     "title": {
+      "en": "Enter the total and block points",
+      "uz": "Umumiy ball va blok ballarini kiriting",
+      "ru": "Внесите общий балл и баллы по блокам"
+     },
+     "instructions": {
+      "en": "From your cabinet, enter the total (out of 189) and the points for each of the five blocks. Upload the result page so the score counts as official.",
+      "uz": "Kabinetingizdan umumiy ballni (189 dan) va beshta blokning har biri boʻyicha ballarni kiriting. Ball rasmiy hisoblanishi uchun natija sahifasini yuklang.",
+      "ru": "Внесите из кабинета общий балл (из 189) и баллы по каждому из пяти блоков. Загрузите страницу с результатом, чтобы балл считался официальным."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "fields": [
+       {
+        "key": "uz_total",
+        "type": "number",
+        "min": 0,
+        "max": 189,
+        "step": 0.1
+       },
+       {
+        "key": "uz_native",
+        "type": "number",
+        "min": 0,
+        "max": 11,
+        "step": 0.1
+       },
+       {
+        "key": "uz_math_comp",
+        "type": "number",
+        "min": 0,
+        "max": 11,
+        "step": 0.1
+       },
+       {
+        "key": "uz_history",
+        "type": "number",
+        "min": 0,
+        "max": 11,
+        "step": 0.1
+       },
+       {
+        "key": "uz_subject1",
+        "type": "number",
+        "min": 0,
+        "max": 93,
+        "step": 0.1
+       },
+       {
+        "key": "uz_subject2",
+        "type": "number",
+        "min": 0,
+        "max": 63,
+        "step": 0.1
+       }
+      ],
+      "plausibility": "uz_total = uz_native + uz_math_comp + uz_history + uz_subject1 + uz_subject2",
+      "redact": {
+       "en": "Cover your PINFL and passport number.",
+       "uz": "JSHSHIR va pasport raqamingizni yopib qoʻying.",
+       "ru": "Закройте ПИНФЛ и номер паспорта."
+      }
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-uzresult-s2",
+     "type": "reflect",
+     "minutes": 10,
+     "offset_days": 1,
+     "title": {
+      "en": "Compare with last year's lists",
+      "uz": "Oʻtgan yilgi roʻyxatlar bilan solishtiring",
+      "ru": "Сравните с прошлогодними списками"
+     },
+     "instructions": {
+      "en": "Your plan now shows each programme's last-year grant and contract minimum next to your score. Mark the ones to keep, and note any block where you think the score is wrong: that is the appeal question.",
+      "uz": "Rejangiz endi har bir yoʻnalishning oʻtgan yilgi grant va kontrakt boʻyicha eng past balini ballingiz yonida koʻrsatadi. Qoldiradiganlaringizni belgilang va ball notoʻgʻri deb hisoblagan blokingiz boʻlsa, yozib qoʻying: bu apellyatsiya masalasi.",
+      "ru": "Теперь план показывает рядом с вашим баллом прошлогодний минимум на грант и контракт по каждому направлению. Отметьте, какие оставить, и запишите блок, где, по-вашему, балл неверен: это вопрос для апелляции."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "appeal_considered",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "results_2026",
+     "kind": "results",
+     "label": {
+      "en": "Results (2026)",
+      "uz": "Natijalar (2026)",
+      "ru": "Результаты (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "date": "2026-07-24",
+     "source": {
+      "url": "https://www.spot.uz/oz/2026/07/24/admission26/",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": true,
+      "ref": "Spot.uz, 24 Jul 2026, via R3 §1.7"
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "results_2027",
+     "kind": "results",
+     "label": {
+      "en": "Results (2027)",
+      "uz": "Natijalar (2027)",
+      "ru": "Результаты (2027)"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "date": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "next_day",
+     "claim": "CM Resolution No. 578 cl. 38: test results are announced the day after the test; final admission results within a week after stage 2 is fully completed.",
+     "url": "https://lex.uz/ru/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "cl. 38 read 7 Oct 2026",
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "my_uzbmb",
+     "url": "https://my.uzbmb.uz",
+     "kind": "official",
+     "label": {
+      "en": "Agency applicant portal (my.uzbmb.uz)",
+      "uz": "Agentlik abituriyent portali (my.uzbmb.uz)",
+      "ru": "Портал абитуриента Агентства (my.uzbmb.uz)"
+     }
+    },
+    {
+     "id": "mandat",
+     "url": "https://mandat.uzbmb.uz/",
+     "kind": "official",
+     "label": {
+      "en": "Admission lists (mandat.uzbmb.uz)",
+      "uz": "Qabul roʻyxatlari (mandat.uzbmb.uz)",
+      "ru": "Списки приёма (mandat.uzbmb.uz)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Check in this year's Agency announcement when scores are published: after each test day or all on one date.",
+    "uz": "Agentlikning shu yilgi eʼlonida ballar qachon eʼlon qilinishini tekshiring: har bir test kunidan keyinmi yoki hammasi bir kundami.",
+    "ru": "Проверьте в объявлении Агентства этого года, когда публикуют баллы: после каждого дня теста или все в один день."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-uzchoice",
+   "template_id": "C11-uzchoice",
+   "kind": "admin_template",
+   "category": "uz_state",
+   "workstream_kind": "uz_unis",
+   "task_kind": "apply",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UZ_HOME"
+   ],
+   "anchor": {
+    "event": "uz.stage2.until",
+    "milestone_ids": [
+     "m_verify_cycle_UZ_HOME"
+    ]
+   },
+   "rule_ids": [
+    "UZ_HOME"
+   ],
+   "lead_time": {
+    "start_days_before": 14,
+    "due_days_before": 5,
+    "never_within_hours": 48,
+    "basis": "inference",
+    "note": {
+     "en": "The window lasts about two weeks; submit in its first week and keep the last days for corrections.",
+     "uz": "Oyna taxminan ikki hafta davom etadi; birinchi haftasida yuboring, oxirgi kunlarni tuzatishlar uchun qoldiring.",
+     "ru": "Окно длится около двух недель; подайте в первую неделю, последние дни оставьте для исправлений."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "Talk through the order of the 5 choices with your child: a contract place has a yearly fee, and the order decides where your child is placed.",
+    "uz": "5 ta tanlov tartibini farzandingiz bilan muhokama qiling: kontrakt oʻrni yillik toʻlovga ega, tartib esa farzandingiz qayerga joylashishini belgilaydi.",
+    "ru": "Обсудите с ребёнком порядок 5 выборов: место по контракту платное каждый год, а порядок решает, куда ребёнок попадёт."
+   },
+   "title": {
+    "en": "Choose your 5 programmes in order",
+    "uz": "5 ta yoʻnalishingizni tartib bilan tanlang",
+    "ru": "Выберите 5 направлений по порядку"
+   },
+   "summary": {
+    "en": "After the tests you choose up to 5 programmes and forms of study that share your subject set, in priority order. Places go by score: grants first, then contract places. If you qualify for a higher choice, you are placed there.",
+    "uz": "Testlardan keyin fanlar majmuangiz bir xil boʻlgan 5 tagacha yoʻnalish va taʼlim shaklini ustuvorlik tartibida tanlaysiz. Oʻrinlar ball boʻyicha beriladi: avval grant, keyin kontrakt. Yuqoriroq tanlovingizga ballingiz yetsa, oʻsha yerga joylashasiz.",
+    "ru": "После тестов вы выбираете до 5 направлений и форм обучения с вашим набором предметов в порядке приоритета. Места распределяются по баллам: сначала гранты, затем контракт. Если вы проходите на более высокий выбор, вас зачисляют туда."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-uzchoice-s1",
+     "type": "reflect",
+     "minutes": 20,
+     "offset_days": -14,
+     "title": {
+      "en": "Build the list with your score",
+      "uz": "Ballingiz bilan roʻyxat tuzing",
+      "ru": "Составьте список по своему баллу"
+     },
+     "instructions": {
+      "en": "Using your score and last year's minimums, choose up to 5 programmes: one or two you want most even if they are a stretch, the rest where your score has cleared last year's minimum. Put them in the order you would accept them.",
+      "uz": "Ballingiz va oʻtgan yilgi eng past ballar asosida 5 tagacha yoʻnalish tanlang: eng xohlaganingiz bir-ikkitasi, hatto qiyin boʻlsa ham, qolganlari esa ballingiz oʻtgan yilgi eng past baldan yuqori boʻlganlari. Ularni qabul qilishga rozi boʻladigan tartibingizda joylashtiring.",
+      "ru": "По своему баллу и прошлогодним минимумам выберите до 5 направлений: одно-два самых желанных, даже если это рискованно, остальные — где ваш балл выше прошлогоднего минимума. Расставьте их в том порядке, в котором готовы на них согласиться."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "uz_choices_ranked",
+        "type": "list",
+        "max_items": 5,
+        "options_from": "catalog.uz_programmes"
+       }
+      ]
+     },
+     "checkpoint": {
+      "when": {
+       "stage": [
+        "S3"
+       ]
+      },
+      "level": "L7",
+      "what": {
+       "en": "a counselor reviews the order before you submit",
+       "uz": "maslahatchi yuborishdan oldin tartibni koʻrib chiqadi",
+       "ru": "консультант проверяет порядок до подачи"
+      }
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-uzchoice-s2",
+     "type": "submit",
+     "minutes": 20,
+     "offset_days": -7,
+     "title": {
+      "en": "Submit the choices on my.uzbmb.uz",
+      "uz": "Tanlovlarni my.uzbmb.uz da yuboring",
+      "ru": "Подайте выбор на my.uzbmb.uz"
+     },
+     "instructions": {
+      "en": "In your cabinet, enter the programmes, language and form of study in your order and submit. Check the saved list once more the next day.",
+      "uz": "Kabinetingizda yoʻnalishlar, til va taʼlim shaklini oʻz tartibingizda kiriting va yuboring. Saqlangan roʻyxatni ertasi kuni yana bir bor tekshiring.",
+      "ru": "В кабинете укажите направления, язык и форму обучения в своём порядке и отправьте. На следующий день ещё раз проверьте сохранённый список."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the saved choices",
+       "uz": "saqlangan tanlovlar skrinshoti",
+       "ru": "скриншот сохранённого выбора"
+      },
+      "redact": {
+       "en": "Cover your PINFL and passport number.",
+       "uz": "JSHSHIR va pasport raqamingizni yopib qoʻying.",
+       "ru": "Закройте ПИНФЛ и номер паспорта."
+      }
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "stage2_2026",
+     "kind": "choices",
+     "label": {
+      "en": "Choices window (2026)",
+      "uz": "Tanlov oynasi (2026)",
+      "ru": "Окно выбора (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "from": "2026-07-25",
+     "until": "2026-08-08",
+     "source": {
+      "url": "https://www.spot.uz/oz/2026/07/24/admission26/",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": true,
+      "ref": "Spot.uz, 24 Jul 2026, via R3 §1.4"
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "stage2_2027",
+     "kind": "choices",
+     "label": {
+      "en": "Choices window (2027)",
+      "uz": "Tanlov oynasi (2027)",
+      "ru": "Окно выбора (2027)"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "from": null,
+     "until": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "stage2_rule",
+     "claim": "After all tests are held, applicants have 15 days to choose the university, programme, form of study and priority order (CM Resolution No. 578 cl. 10).",
+     "url": "https://lex.uz/ru/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "needs_verification": false
+    },
+    {
+     "key": "ranking",
+     "claim": "Grants are awarded first by score, then contract places by score; all applicants tied at the last place are recommended.",
+     "url": "https://lex.uz/uz/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "via R3 §1.4",
+     "needs_verification": false
+    },
+    {
+     "key": "higher_choice",
+     "claim": "The Agency's lists mark applicants 'placed in another of their choices'; a programme's listing includes applicants placed in a higher choice.",
+     "url": "https://mandat.uzbmb.uz/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "via R3 §2.1",
+     "needs_verification": false
+    },
+    {
+     "key": "minimums",
+     "claim": "Minimum scores: 68.0 for a grant and 56.7 for a contract in 2025, unchanged in 2026.",
+     "url": "https://talimxabarlari.uz/77201/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "via R3 §1.4 (2025: spot.uz press)",
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "my_uzbmb",
+     "url": "https://my.uzbmb.uz",
+     "kind": "official",
+     "label": {
+      "en": "Agency applicant portal (my.uzbmb.uz)",
+      "uz": "Agentlik abituriyent portali (my.uzbmb.uz)",
+      "ru": "Портал абитуриента Агентства (my.uzbmb.uz)"
+     }
+    },
+    {
+     "id": "mandat",
+     "url": "https://mandat.uzbmb.uz/",
+     "kind": "official",
+     "label": {
+      "en": "Admission lists (mandat.uzbmb.uz)",
+      "uz": "Qabul roʻyxatlari (mandat.uzbmb.uz)",
+      "ru": "Списки приёма (mandat.uzbmb.uz)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "When the 2027 tests end, check the Agency's announcement for the exact choices window.",
+    "uz": "2027-yil testlari tugagach, aniq tanlov oynasini Agentlik eʼlonidan tekshiring.",
+    "ru": "Когда закончатся тесты 2027 года, проверьте точное окно выбора в объявлении Агентства."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-uzappeal",
+   "template_id": "C11-uzappeal",
+   "kind": "admin_template",
+   "category": "uz_state",
+   "workstream_kind": "uz_unis",
+   "task_kind": "admin",
+   "task_type": "submit",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UZ_HOME"
+   ],
+   "anchor": {
+    "event": "uz.appeal_window.from",
+    "milestone_ids": [
+     "m_verify_cycle_UZ_HOME"
+    ]
+   },
+   "rule_ids": [
+    "UZ_HOME"
+   ],
+   "optional": true,
+   "lead_time": {
+    "start_days_before": 0,
+    "due_days_after": 3,
+    "basis": "inference",
+    "note": {
+     "en": "Only if you believe a block was scored wrongly; file in the first days of the window.",
+     "uz": "Faqat biror blok notoʻgʻri baholangan deb hisoblasangiz; oynaning dastlabki kunlarida topshiring.",
+     "ru": "Только если вы считаете, что блок оценён неверно; подавайте в первые дни окна."
+    }
+   },
+   "needs_parent": false,
+   "title": {
+    "en": "Appeal your state test score (only if needed)",
+    "uz": "Davlat testi balingiz ustidan apellyatsiya (faqat zarur boʻlsa)",
+    "ru": "Апелляция на балл госэкзамена (только при необходимости)"
+   },
+   "summary": {
+    "en": "If you sat the test and were not disqualified, you can appeal online in your my.uzbmb.uz cabinet during the window the Agency announces. You then get a notice with the date and time of the review and bring your ID and the notice.",
+    "uz": "Testda qatnashgan va chetlatilmagan boʻlsangiz, Agentlik eʼlon qilgan muddatda my.uzbmb.uz kabinetingiz orqali onlayn apellyatsiya berishingiz mumkin. Soʻng koʻrib chiqish sanasi va vaqti koʻrsatilgan xabarnoma olasiz va hujjatingiz hamda xabarnoma bilan borasiz.",
+    "ru": "Если вы сдавали тест и не были удалены, можно подать апелляцию онлайн в кабинете my.uzbmb.uz в окно, объявленное Агентством. Затем придёт уведомление с датой и временем рассмотрения; приходите с документом и уведомлением."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-uzappeal-s1",
+     "type": "submit",
+     "minutes": 15,
+     "offset_days": 0,
+     "title": {
+      "en": "File the appeal online",
+      "uz": "Apellyatsiyani onlayn topshiring",
+      "ru": "Подайте апелляцию онлайн"
+     },
+     "instructions": {
+      "en": "In your my.uzbmb.uz cabinet, open the appeal section and say which block you are appealing and why, in one or two sentences.",
+      "uz": "my.uzbmb.uz kabinetingizda apellyatsiya boʻlimini oching va qaysi blok ustidan va nima uchun apellyatsiya berayotganingizni bir-ikki gapda yozing.",
+      "ru": "В кабинете my.uzbmb.uz откройте раздел апелляции и в одном-двух предложениях укажите, какой блок вы оспариваете и почему."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "appeal_filed",
+        "type": "choice",
+        "options": [
+         "yes",
+         "no"
+        ]
+       },
+       {
+        "key": "appeal_block",
+        "type": "choice",
+        "options": [
+         "native",
+         "math_comp",
+         "history",
+         "subject1",
+         "subject2"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-uzappeal-s2",
+     "type": "verify",
+     "minutes": 60,
+     "anchor_override": "uz.appeal_review_date",
+     "offset_days": 0,
+     "title": {
+      "en": "Go to the review",
+      "uz": "Koʻrib chiqishga boring",
+      "ru": "Придите на рассмотрение"
+     },
+     "instructions": {
+      "en": "Go at the date and time in your notice with your ID and the notice. Afterwards, record whether the score changed.",
+      "uz": "Xabarnomadagi sana va vaqtda hujjatingiz hamda xabarnoma bilan boring. Soʻng ball oʻzgargan-oʻzgarmaganini kiriting.",
+      "ru": "Придите в дату и время из уведомления с документом и уведомлением. Потом отметьте, изменился ли балл."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "appeal_outcome",
+        "type": "choice",
+        "options": [
+         "score_raised",
+         "unchanged",
+         "not_reviewed"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "appeal_2026",
+     "kind": "appeal",
+     "label": {
+      "en": "Appeal window (2026)",
+      "uz": "Apellyatsiya muddati (2026)",
+      "ru": "Окно апелляций (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "from": "2026-08-15",
+     "until": "2026-08-24",
+     "source": {
+      "url": "https://talimxabarlari.uz/77112/",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": true,
+      "ref": "Ta'lim xabarlari, 15 Aug 2026, citing the Agency: appeals on my.uzbmb.uz 15-24 Aug, reviews from 19 Aug"
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "appeal_2027",
+     "kind": "appeal",
+     "label": {
+      "en": "Appeal window (2027)",
+      "uz": "Apellyatsiya muddati (2027)",
+      "ru": "Окно апелляций (2027)"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "from": null,
+     "until": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "who_how",
+     "claim": "Only applicants who sat the test and were not disqualified may appeal; appeals are filed in the personal cabinet on my.uzbmb.uz; applicants receive a notice with the review date and time and bring an identity document and the notice to the Agency or the place named.",
+     "url": "https://talimxabarlari.uz/77112/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "Ta'lim xabarlari, 15 Aug 2026, citing the Agency",
+     "needs_verification": false
+    },
+    {
+     "key": "regulation",
+     "claim": "CM Resolution No. 578 cl. 30 (appeal within 24 hours of a result's announcement, reviewed within 3 days) belongs to the professional (creative) exams; appeals on the Agency's test follow the window the Agency announces.",
+     "url": "https://lex.uz/ru/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "cl. 30 read 7 Oct 2026",
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "my_uzbmb",
+     "url": "https://my.uzbmb.uz",
+     "kind": "official",
+     "label": {
+      "en": "Agency applicant portal (my.uzbmb.uz)",
+      "uz": "Agentlik abituriyent portali (my.uzbmb.uz)",
+      "ru": "Портал абитуриента Агентства (my.uzbmb.uz)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "As soon as your score is out, check the Agency's announcement for this year's appeal dates: the deadline can be short.",
+    "uz": "Ballingiz chiqishi bilan Agentlik eʼlonida shu yilgi apellyatsiya sanalarini tekshiring: muddat qisqa boʻlishi mumkin.",
+    "ru": "Как только выйдет балл, проверьте в объявлении Агентства даты апелляций этого года: срок может быть коротким."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-uzmandat",
+   "template_id": "C11-uzmandat",
+   "kind": "admin_template",
+   "category": "uz_state",
+   "workstream_kind": "uz_unis",
+   "task_kind": "admin",
+   "task_type": "verify",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UZ_HOME"
+   ],
+   "anchor": {
+    "event": "uz.final_lists_date",
+    "milestone_ids": [
+     "m_verify_cycle_UZ_HOME"
+    ]
+   },
+   "rule_ids": [
+    "UZ_HOME"
+   ],
+   "lead_time": {
+    "start_days_before": 0,
+    "due_days_after": 2,
+    "basis": "inference",
+    "note": {
+     "en": "Check your status the day lists appear; enrolment steps and payment deadlines follow quickly.",
+     "uz": "Roʻyxatlar chiqqan kuniyoq holatingizni tekshiring; oʻqishga kirish qadamlari va toʻlov muddatlari tez keladi.",
+     "ru": "Проверьте статус в день публикации списков; шаги зачисления и сроки оплаты наступают быстро."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "If your child is recommended for a contract place, the contract and the payment deadline come from the university; read them together.",
+    "uz": "Agar farzandingiz kontrakt oʻrniga tavsiya etilsa, shartnoma va toʻlov muddati universitetdan keladi; ularni birga oʻqing.",
+    "ru": "Если ребёнка рекомендовали на контракт, договор и срок оплаты присылает университет; прочитайте их вместе."
+   },
+   "title": {
+    "en": "Final lists: check your status and next steps",
+    "uz": "Yakuniy roʻyxatlar: holatingizni va keyingi qadamlarni tekshiring",
+    "ru": "Итоговые списки: проверьте статус и следующие шаги"
+   },
+   "summary": {
+    "en": "Final lists come out about a week after the choices window closes. Your status is grant, contract, placed in another of your choices, or not recommended; each one has a different next step.",
+    "uz": "Yakuniy roʻyxatlar tanlov oynasi yopilganidan taxminan bir hafta keyin chiqadi. Holatingiz: grant, kontrakt, boshqa tanlovingizga joylashtirilgan yoki tavsiya etilmagan; har birining keyingi qadami boshqacha.",
+    "ru": "Итоговые списки выходят примерно через неделю после закрытия окна выбора. Ваш статус: грант, контракт, зачислен на другой выбор или не рекомендован; у каждого свой следующий шаг."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-uzmandat-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": 0,
+     "title": {
+      "en": "Check your status",
+      "uz": "Holatingizni tekshiring",
+      "ru": "Проверьте статус"
+     },
+     "instructions": {
+      "en": "Open your cabinet or the lists on mandat.uzbmb.uz and record your status and the programme you were placed on.",
+      "uz": "Kabinetingizni yoki mandat.uzbmb.uz dagi roʻyxatlarni oching va holatingizni hamda joylashtirilgan yoʻnalishingizni kiriting.",
+      "ru": "Откройте кабинет или списки на mandat.uzbmb.uz и отметьте свой статус и направление, на которое вас зачислили."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "uz_status",
+        "type": "choice",
+        "options": [
+         "grant",
+         "contract",
+         "other_choice",
+         "not_recommended"
+        ]
+       },
+       {
+        "key": "uz_programme",
+        "type": "choice",
+        "options_from": "catalog.uz_programmes",
+        "optional": true
+       }
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-uzmandat-s2",
+     "type": "submit",
+     "minutes": 30,
+     "offset_days": 1,
+     "when": {
+      "uz_status": [
+       "grant",
+       "contract",
+       "other_choice"
+      ]
+     },
+     "title": {
+      "en": "Follow the university's enrolment instructions",
+      "uz": "Universitetning oʻqishga qabul yoʻriqnomasiga amal qiling",
+      "ru": "Выполните инструкции университета по зачислению"
+     },
+     "instructions": {
+      "en": "Read the university's enrolment instructions: the documents to bring or upload, and, for a contract place, the contract and its payment deadline. Write the deadlines here.",
+      "uz": "Universitetning oʻqishga qabul yoʻriqnomasini oʻqing: olib boriladigan yoki yuklanadigan hujjatlar, kontrakt oʻrni boʻlsa, shartnoma va uning toʻlov muddati. Muddatlarni shu yerga yozing.",
+      "ru": "Прочитайте инструкции университета по зачислению: какие документы принести или загрузить, а для контракта — договор и срок оплаты. Запишите сроки здесь."
+     },
+     "evidence": {
+      "level": "L1",
+      "method": "self_report",
+      "fields": [
+       {
+        "key": "enrol_deadline",
+        "type": "date"
+       },
+       {
+        "key": "contract_payment_deadline",
+        "type": "date",
+        "optional": true
+       }
+      ]
+     }
+    },
+    {
+     "n": 3,
+     "id": "C11-uzmandat-s3",
+     "type": "reflect",
+     "minutes": 20,
+     "offset_days": 1,
+     "when": {
+      "uz_status": [
+       "not_recommended"
+      ]
+     },
+     "title": {
+      "en": "Not recommended: look at the options left this year",
+      "uz": "Tavsiya etilmadingiz: shu yil qolgan imkoniyatlarni koʻring",
+      "ru": "Не рекомендованы: посмотрите оставшиеся варианты этого года"
+     },
+     "instructions": {
+      "en": "With your mentor, look at what is still open: private universities' later rounds, the state grants at non-state and foreign universities (registration in the autumn), or a planned gap year with a retake.",
+      "uz": "Mentoringiz bilan hali ochiq imkoniyatlarni koʻrib chiqing: xususiy universitetlarning keyingi bosqichlari, nodavlat va xorijiy universitetlardagi davlat grantlari (kuzda roʻyxatdan oʻtiladi) yoki qayta topshirish bilan rejalashtirilgan oraliq yil.",
+      "ru": "Вместе с ментором посмотрите, что ещё открыто: поздние раунды частных университетов, госгранты в негосударственных и иностранных вузах (регистрация осенью) или запланированный год перерыва с пересдачей."
+     },
+     "evidence": {
+      "level": "L7",
+      "method": "checkpoint",
+      "what": {
+       "en": "a counselor talks the options through with you",
+       "uz": "maslahatchi imkoniyatlarni siz bilan muhokama qiladi",
+       "ru": "консультант обсуждает с вами варианты"
+      }
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "final_2026",
+     "kind": "results",
+     "label": {
+      "en": "Final lists and minimum scores (2026)",
+      "uz": "Yakuniy roʻyxatlar va minimal ballar (2026)",
+      "ru": "Итоговые списки и минимальные баллы (2026)"
+     },
+     "cycle": "2026",
+     "use": "reference",
+     "date": "2026-08-17",
+     "source": {
+      "url": "https://talimxabarlari.uz/77201/",
+      "verified_at": "2026-10-07",
+      "read": "page",
+      "secondary": true,
+      "ref": "via R3 §1.7: final lists about 1 week after 8 Aug; minimum scores announced 17 Aug"
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "final_2027",
+     "kind": "results",
+     "label": {
+      "en": "Final lists (2027)",
+      "uz": "Yakuniy roʻyxatlar (2027)",
+      "ru": "Итоговые списки (2027)"
+     },
+     "cycle": "2027",
+     "use": "plan",
+     "date": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "one_week",
+     "claim": "Final admission results are announced within a week after stage 2 is complete.",
+     "url": "https://lex.uz/ru/docs/-7726569",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "CM Resolution No. 578 cl. 38",
+     "needs_verification": false
+    },
+    {
+     "key": "statuses",
+     "claim": "The lists show, for every applicant who listed a programme, a final status: grant, contract, placed in another of their choices, or not recommended.",
+     "url": "https://mandat.uzbmb.uz/",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": false,
+     "ref": "via R3 §2.1",
+     "needs_verification": false
+    },
+    {
+     "key": "enrolment",
+     "claim": "Enrolment documents and contract payment deadlines are set by each university and were not collected.",
+     "url": null,
+     "verified_at": null,
+     "secondary": false,
+     "needs_verification": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "mandat",
+     "url": "https://mandat.uzbmb.uz/",
+     "kind": "official",
+     "label": {
+      "en": "Admission lists (mandat.uzbmb.uz)",
+      "uz": "Qabul roʻyxatlari (mandat.uzbmb.uz)",
+      "ru": "Списки приёма (mandat.uzbmb.uz)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Find your university's enrolment page and write down its document list and payment deadline.",
+    "uz": "Universitetingizning oʻqishga qabul sahifasini toping va hujjatlar roʻyxati hamda toʻlov muddatini yozib oling.",
+    "ru": "Найдите страницу зачисления вашего университета и выпишите список документов и срок оплаты."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C11-uzprivgrant",
+   "template_id": "C11-uzprivgrant",
+   "kind": "admin_template",
+   "category": "uz_state",
+   "workstream_kind": "uz_unis",
+   "task_kind": "test-registration",
+   "task_type": "book",
+   "stages": [
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "UZ_HOME",
+    "uz_private"
+   ],
+   "anchor": {
+    "event": "uz.private_grant.registration_until",
+    "milestone_ids": [
+     "m_verify_cycle_UZ_HOME"
+    ]
+   },
+   "rule_ids": [
+    "UZ_HOME"
+   ],
+   "lead_time": {
+    "start_days_before": 7,
+    "due_days_before": 3,
+    "never_within_hours": 48,
+    "basis": "inference",
+    "note": {
+     "en": "The 2025 registration lasted one week; register in its first days.",
+     "uz": "2025-yilda roʻyxatdan oʻtish bir hafta davom etgan; dastlabki kunlarida roʻyxatdan oʻting.",
+     "ru": "В 2025 году регистрация длилась неделю; регистрируйтесь в первые дни."
+    }
+   },
+   "needs_parent": true,
+   "parent_note": {
+    "en": "A state grant would replace your child's contract fee at a non-state or foreign university; registration needs a fee payment.",
+    "uz": "Davlat granti farzandingizning nodavlat yoki xorijiy universitetdagi kontrakt toʻlovini qoplaydi; roʻyxatdan oʻtish uchun toʻlov qilinadi.",
+    "ru": "Госгрант заменит контрактную плату ребёнка в негосударственном или иностранном вузе; для регистрации нужно внести сбор."
+   },
+   "title": {
+    "en": "State grant at a non-state or foreign university",
+    "uz": "Nodavlat yoki xorijiy universitetda davlat granti",
+    "ru": "Госгрант в негосударственном или иностранном вузе"
+   },
+   "summary": {
+    "en": "Each year a set number of state grants goes to students on contract places at non-state and foreign universities in Uzbekistan (1,452 for 2026/27). They are won by a separate Agency test; registration opens after the main admission ends.",
+    "uz": "Har yili Oʻzbekistondagi nodavlat va xorijiy universitetlarda kontrakt asosida oʻqiyotganlar uchun belgilangan miqdorda davlat granti ajratiladi (2026/27-yil uchun 1 452 ta). Ular Agentlikning alohida testi orqali yutib olinadi; roʻyxatdan oʻtish asosiy qabul tugagach ochiladi.",
+    "ru": "Каждый год определённое число госгрантов выделяется студентам на контракте в негосударственных и иностранных вузах Узбекистана (1 452 на 2026/27). Их получают по отдельному тесту Агентства; регистрация открывается после основного приёма."
+   },
+   "steps": [
+    {
+     "n": 1,
+     "id": "C11-uzprivgrant-s1",
+     "type": "verify",
+     "minutes": 10,
+     "offset_days": -7,
+     "title": {
+      "en": "Check this year's announcement",
+      "uz": "Shu yilgi eʼlonni tekshiring",
+      "ru": "Проверьте объявление этого года"
+     },
+     "instructions": {
+      "en": "Find the Agency's announcement for this year's grants: who can apply, how many grants your university and programme have, the registration dates, the fee and the test date. Paste the link.",
+      "uz": "Agentlikning shu yilgi grantlar boʻyicha eʼlonini toping: kim topshira oladi, universitetingiz va yoʻnalishingizga nechta grant ajratilgan, roʻyxatdan oʻtish sanalari, toʻlov va test sanasi. Havolani qoʻying.",
+      "ru": "Найдите объявление Агентства о грантах этого года: кто может участвовать, сколько грантов у вашего университета и направления, даты регистрации, сбор и дата теста. Вставьте ссылку."
+     },
+     "evidence": {
+      "level": "L4",
+      "method": "link",
+      "allow_hosts": [
+       "uzbmb.uz",
+       "gov.uz",
+       "edu.uz"
+      ]
+     }
+    },
+    {
+     "n": 2,
+     "id": "C11-uzprivgrant-s2",
+     "type": "book",
+     "minutes": 20,
+     "offset_days": -5,
+     "title": {
+      "en": "Register on my.uzbmb.uz and pay",
+      "uz": "my.uzbmb.uz da roʻyxatdan oʻting va toʻlang",
+      "ru": "Зарегистрируйтесь на my.uzbmb.uz и оплатите"
+     },
+     "instructions": {
+      "en": "Register in your cabinet for the grant test, pay the fee and download the admission ticket when it appears.",
+      "uz": "Kabinetingizda grant testiga roʻyxatdan oʻting, toʻlovni amalga oshiring va ruxsatnoma paydo boʻlganda yuklab oling.",
+      "ru": "Зарегистрируйтесь в кабинете на грантовый тест, оплатите сбор и скачайте пропуск, когда он появится."
+     },
+     "evidence": {
+      "level": "L5",
+      "method": "upload",
+      "what": {
+       "en": "a screenshot of the registration",
+       "uz": "roʻyxatdan oʻtish skrinshoti",
+       "ru": "скриншот регистрации"
+      },
+      "redact": {
+       "en": "Cover your passport number, PINFL, home address and card details before you upload.",
+       "uz": "Yuklashdan oldin pasport raqami, JSHSHIR, uy manzili va karta maʼlumotlarini yopib qoʻying.",
+       "ru": "Перед загрузкой закройте номер паспорта, ПИНФЛ, домашний адрес и данные карты."
+      }
+     }
+    }
+   ],
+   "windows": [
+    {
+     "key": "reg_2025",
+     "kind": "registration",
+     "label": {
+      "en": "Registration (2025/26 cycle)",
+      "uz": "Roʻyxatdan oʻtish (2025/26)",
+      "ru": "Регистрация (2025/26)"
+     },
+     "cycle": "2025",
+     "use": "reference",
+     "from": "2025-09-29",
+     "until": "2025-10-05",
+     "source": {
+      "url": "https://talimxabarlari.uz/47968/",
+      "verified_at": "2026-10-07",
+      "read": "search_snippet",
+      "secondary": true,
+      "ref": "Ta'lim xabarlari; tests by 12 Oct 2025; a second round for vacant grants 25 Nov-4 Dec 2025 (talimxabarlari.uz/57313)"
+     },
+     "needs_verification": false
+    },
+    {
+     "key": "reg_2026",
+     "kind": "registration",
+     "label": {
+      "en": "Registration (2026/27 cycle)",
+      "uz": "Roʻyxatdan oʻtish (2026/27)",
+      "ru": "Регистрация (2026/27)"
+     },
+     "cycle": "2026",
+     "use": "plan",
+     "from": null,
+     "until": null,
+     "needs_verification": true
+    }
+   ],
+   "facts": [
+    {
+     "key": "count_2026",
+     "claim": "1,452 state grants were approved for foreign and non-state universities for 2026/27, across 25 fields; students admitted on contract and applicants not admitted to state universities can compete in a separate test, ranked by score; registration requires a fee payment; dates are announced after admissions end.",
+     "url": "https://infoedu.uz/xorijiy-va-nodavlat-otmlar-uchun-1-452-ta-davlat-granti-tasdiqlandi",
+     "verified_at": "2026-10-07",
+     "read": "page",
+     "secondary": true,
+     "ref": "InfoEdu.uz and Ta'lim xabarlari (talimxabarlari.uz/76034), 27 Jul 2026",
+     "needs_verification": false
+    },
+    {
+     "key": "platform",
+     "claim": "In 2025 registration for these grants was on my.uzbmb.uz for students recommended for contract places at foreign and non-state universities.",
+     "url": "https://talimxabarlari.uz/47267/",
+     "verified_at": "2026-10-07",
+     "read": "search_snippet",
+     "secondary": true,
+     "needs_verification": false
+    }
+   ],
+   "official_links": [
+    {
+     "id": "my_uzbmb",
+     "url": "https://my.uzbmb.uz",
+     "kind": "official",
+     "label": {
+      "en": "Agency applicant portal (my.uzbmb.uz)",
+      "uz": "Agentlik abituriyent portali (my.uzbmb.uz)",
+      "ru": "Портал абитуриента Агентства (my.uzbmb.uz)"
+     }
+    }
+   ],
+   "needs_verification": true,
+   "verify_task": {
+    "en": "Watch the Agency's news in September and October for this year's grant registration dates.",
+    "uz": "Shu yilgi grant roʻyxatdan oʻtish sanalari uchun sentabr va oktabrda Agentlik yangiliklarini kuzating.",
+    "ru": "Следите за новостями Агентства в сентябре и октябре: там объявят даты регистрации на гранты этого года."
+   },
+   "source": "own",
+   "author": "agent:C11",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

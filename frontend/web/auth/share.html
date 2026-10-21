@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#123a29">
+<meta name="robots" content="noindex, nofollow">
+<title>{{OG_TITLE}}</title>
+<!-- M1 lane socsrv: a shared community link (a post, a reel, a profile). Link previews (Telegram, WhatsApp) get the handle and the kind
+     only: never a full name, a photo, or what the post says. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jamals Global">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESC}}">
+<meta property="og:url" content="{{OG_URL}}">
+<meta property="og:image" content="{{OG_IMAGE}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runtime/jg-uz-marks.css?v=1" data-jg-uz-marks>
+<style>
+  /* A screen the design does not have, drawn in its style (the sign-in screens' tokens, bowl header, card and mascot: signout.html). */
+  :root {
+    --forest: #123a29; --forest-2: #19553c; --mint: #66c69a; --accent: #207251;
+    --ink: #10271e; --ink-2: #4b6559; --muted: #587066; --page: #eef4f1; --line: #e4ece7;
+    --jade-300: #91dab6; --jade-600: #2b9067; --edge: #d4e0d8; --soft: #e8f7ee;
+    --font: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --shadow: 0 16px 36px rgba(18, 58, 40, .10), 0 1px 3px rgba(18, 58, 40, .06);
+  }
+  html[lang="uz-Latn"] { --font: "JG Uz Marks", "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    min-height: 100vh; min-height: 100dvh; background: var(--page);
+    font-family: var(--font); color: var(--ink); -webkit-font-smoothing: antialiased;
+    font-feature-settings: "lnum" 1; font-variant-numeric: lining-nums;
+  }
+  button { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--jade-600); outline-offset: 3px; }
+  .frame { position: relative; }
+  .hero { position: relative; height: calc(220px + env(safe-area-inset-top)); color: #fff; }
+  .bowl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .hero h1 {
+    position: absolute; left: 24px; right: 150px; top: calc(64px + env(safe-area-inset-top));
+    font-size: 22px; font-weight: 700; line-height: 1.22; letter-spacing: .005em; text-wrap: balance;
+  }
+  .mascot {
+    position: absolute; z-index: 3; right: 18px; bottom: 32px; width: 116px; height: 134px;
+    animation: mcIn .85s cubic-bezier(.3, 1.5, .5, 1) .15s both;
+  }
+  .mascot img {
+    display: block; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%;
+    filter: drop-shadow(0 4px 6px rgba(11, 40, 27, .16)); animation: mcFloat 3.2s ease-in-out 1s infinite;
+    -webkit-user-drag: none; user-select: none;
+  }
+  .langs {
+    position: absolute; z-index: 5; top: calc(10px + env(safe-area-inset-top)); right: 12px; display: flex;
+    border-radius: 999px; background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2);
+  }
+  .langs button {
+    min-width: 44px; height: 44px; padding: 0 10px; border: 0; border-radius: 999px; background: none;
+    color: #d6ebe0; font-size: 12.5px; font-weight: 700; letter-spacing: .06em; cursor: pointer; transition: background .2s, color .2s;
+  }
+  .langs button[aria-pressed="true"] { background: #fff; color: var(--forest); }
+  .card {
+    position: relative; z-index: 2; display: grid; gap: 16px; align-content: start;
+    margin: -40px 16px calc(24px + env(safe-area-inset-bottom)); padding: 22px 18px 24px;
+    background: #fff; border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow);
+    animation: rise .9s cubic-bezier(.2, .8, .2, 1) both;
+  }
+  /* the preview: the handle and what it is, nothing else (no name, no photo, no words from the post) */
+  .pv { display: flex; align-items: center; gap: 14px; padding: 14px; border-radius: 20px; background: var(--soft); box-shadow: inset 0 0 0 1px #d3eedf; }
+  .pv-av {
+    flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--jade-300), var(--jade-600)); color: #fff;
+  }
+  .pv-av svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+  .pv-txt { display: grid; gap: 4px; min-width: 0; }
+  .pv-h { font-size: 17px; font-weight: 800; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .pv-k { display: flex; align-items: center; gap: 8px; color: var(--ink-2); font-size: 13.5px; font-weight: 600; }
+  .chip { padding: 3px 10px; border-radius: 999px; background: #fff; color: var(--accent); font-size: 12.5px; font-weight: 700; box-shadow: inset 0 0 0 1px #cfe9db; }
+  .lead { color: var(--ink-2); font-size: 15px; font-weight: 500; line-height: 1.5; }
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; height: 52px; padding: 0 18px;
+    border: 0; border-radius: 15px; font-size: 15px; font-weight: 700; text-decoration: none; cursor: pointer;
+    transition: background .2s, transform .12s;
+  }
+  .btn:active { transform: scale(.985); }
+  .btn-primary { background: var(--forest); color: #fff; }
+  .btn-primary:hover { background: var(--forest-2); }
+  .sub { color: var(--muted); font-size: 13.5px; font-weight: 600; line-height: 1.45; text-align: center; text-wrap: balance; }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+  @keyframes mcIn { 0% { opacity: 0; transform: translateY(26px) scale(.55); } 55% { opacity: 1; } 100% { opacity: 1; transform: none; } }
+  @keyframes mcFloat { 50% { transform: translateY(-3.5px); } }
+  @media (min-width: 768px) {
+    body { display: grid; place-items: center; padding: 88px 24px 48px; }
+    .langs { position: fixed; top: 24px; right: 24px; background: #fff; box-shadow: inset 0 0 0 1px var(--edge), 0 1px 3px rgba(18, 58, 40, .06); }
+    .langs button { color: var(--ink-2); }
+    .langs button[aria-pressed="true"] { background: var(--forest); color: #fff; }
+    .frame {
+      display: grid; grid-template-columns: 9fr 11fr; width: min(800px, 100%);
+      border-radius: 28px; overflow: hidden; background: #fff; box-shadow: var(--shadow);
+      animation: rise .9s cubic-bezier(.2, .8, .2, 1) both;
+    }
+    .hero {
+      height: auto; min-height: 460px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 28px; padding: 48px 36px; background: linear-gradient(180deg, #0f3323 0%, #19553c 100%);
+    }
+    .bowl { display: none; }
+    .hero h1 { position: static; font-size: 26px; text-align: center; }
+    .mascot { position: static; width: 184px; height: 212px; }
+    .card { margin: 0; padding: 48px 40px; border: 0; border-radius: 0; box-shadow: none; align-content: center; animation: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card, .frame, .mascot, .mascot img { animation: none; }
+    .btn, .langs button { transition: none; }
+  }
+</style>
+</head>
+<body data-kind="{{KIND}}" data-handle="{{HANDLE}}">
+<div class="langs" role="group" data-t-aria="lang" aria-label="Language">
+  <button type="button" data-lang="uz" lang="uz-Latn" aria-label="Oʻzbekcha" aria-pressed="false">UZ</button>
+  <button type="button" data-lang="ru" lang="ru" aria-label="Русский" aria-pressed="false">RU</button>
+  <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+</div>
+<main class="frame">
+  <header class="hero">
+    <svg class="bowl" viewBox="0 0 375 260" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0f3323"/>
+          <stop offset="1" stop-color="#19553c"/>
+        </linearGradient>
+      </defs>
+      <path d="M0 0H375V168Q187.5 336 0 168Z" fill="url(#g)"/>
+    </svg>
+    <div class="mascot"><img src="/d/student-mobile/media/c5b64f4480cda475.webp" width="365" height="420" alt="" draggable="false"></div>
+    <h1 id="title" data-t="title_none">Sign in to see it</h1>
+  </header>
+  <section class="card">
+    <div class="pv" id="pv">
+      <span class="pv-av" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.6"/><path d="M5 19.5c1.3-3.3 3.9-5 7-5s5.7 1.7 7 5"/></svg></span>
+      <span class="pv-txt">
+        <span class="pv-h" id="pv-h">{{HANDLE_AT}}</span>
+        <span class="pv-k"><span class="chip" id="pv-chip" data-t="chip_none">Jamals Global</span><span id="pv-on" data-t="on">on Jamals Global</span></span>
+      </span>
+    </div>
+    <p class="lead" data-t="lead">Posts, reels and profiles on Jamals Global are for its students. Sign in, or create an account, to see it.</p>
+    <a class="btn btn-primary" href="/signin?next={{NEXT_Q}}" data-t="signIn">Sign in</a>
+    <p class="sub" data-t="sub">No account yet? You can create one on the next page.</p>
+  </section>
+</main>
+<script src="/runtime/auth.js"></script>
+<script>
+(() => {
+  const STR = {
+    en: {
+      docTitle: 'Jamals Global', lang: 'Language', title_post: 'Sign in to see this post', title_reel: 'Sign in to watch this reel',
+      title_profile: 'Sign in to see this profile', title_none: 'Sign in to see it', chip_post: 'Post', chip_reel: 'Reel', chip_profile: 'Profile',
+      chip_none: 'Jamals Global', on: 'on Jamals Global',
+      lead: 'Posts, reels and profiles on Jamals Global are for its students. Sign in, or create an account, to see it.',
+      signIn: 'Sign in', sub: 'No account yet? You can create one on the next page.',
+    },
+    uz: {
+      docTitle: 'Jamals Global', lang: 'Til', title_post: 'Bu postni koʻrish uchun kiring', title_reel: 'Bu rolikni koʻrish uchun kiring',
+      title_profile: 'Bu profilni koʻrish uchun kiring', title_none: 'Koʻrish uchun kiring', chip_post: 'Post', chip_reel: 'Rolik', chip_profile: 'Profil',
+      chip_none: 'Jamals Global', on: 'Jamals Globalda',
+      lead: 'Jamals Globaldagi postlar, roliklar va profillar uning oʻquvchilari uchun. Koʻrish uchun kiring yoki hisob yarating.',
+      signIn: 'Kirish', sub: 'Hisobingiz yoʻqmi? Keyingi sahifada yaratishingiz mumkin.',
+    },
+    ru: {
+      docTitle: 'Jamals Global', lang: 'Язык', title_post: 'Войдите, чтобы увидеть этот пост', title_reel: 'Войдите, чтобы посмотреть этот рилс',
+      title_profile: 'Войдите, чтобы увидеть этот профиль', title_none: 'Войдите, чтобы увидеть', chip_post: 'Пост', chip_reel: 'Рилс', chip_profile: 'Профиль',
+      chip_none: 'Jamals Global', on: 'в Jamals Global',
+      lead: 'Посты, рилсы и профили в Jamals Global — для его учеников. Войдите или создайте аккаунт, чтобы увидеть.',
+      signIn: 'Войти', sub: 'Ещё нет аккаунта? Его можно создать на следующей странице.',
+    },
+  };
+  const kind = ['post', 'reel', 'profile'].includes(document.body.dataset.kind) ? document.body.dataset.kind : 'none';
+  document.getElementById('title').setAttribute('data-t', 'title_' + kind);
+  document.getElementById('pv-chip').setAttribute('data-t', 'chip_' + kind);
+  if (!document.body.dataset.handle) { document.getElementById('pv-h').textContent = 'Jamals Global'; document.getElementById('pv-chip').hidden = kind === 'none'; document.getElementById('pv-on').hidden = true }
+  window.JGAuth.i18n(STR, 'student')
+})();
+</script>
+</body>
+</html>

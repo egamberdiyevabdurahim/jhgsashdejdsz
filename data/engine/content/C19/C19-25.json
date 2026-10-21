@@ -1,0 +1,2734 @@
+{
+ "bank": "C19",
+ "batch": 25,
+ "kind": "lessons",
+ "note": "AP Physics 1 lesson bodies, units 1-4 (P15, the owner's 18 Oct 2026 \"add\": AP beyond Calculus; SPEC-lessons rev. 2 §3.2, §3.5, §11.1; author ap1, agent:p15-ap1, 18 Oct 2026): lessons 1-3 of the C10 units APPH01 (Kinematics), APPH02 (Force and Translational Dynamics), APPH03 (Work, Energy, and Power) and APPH04 (Linear Momentum). `lessons` are the lesson records; `items` are their piece questions (the key is options[0]; `page` names the lesson). Template lessons: the test draws the two C1 families each record names (C1-ph1101 … ph4302 in C1/C1-14.json, written for these lessons); the homework draws those and two fixed conceptual items (C22/C22-1.json). Diagrams are described in words; g = 9.8 m/s². Our own wording and numbers, written to the public unit list only: no College Board item, text or AP Daily material was used, and no exam format or score is claimed. JG's own content: no AP class of the academy is implied (owner, 4 Oct 2026). Every worked line and key is checked by the author's script (.superpowers/p15/ap1/build.py). Draft until the blind key checks.",
+ "lessons": [
+  {
+   "kind": "lesson",
+   "id": "C19-APPH01-1",
+   "course": "ap_physics_1",
+   "unit": "C10-APPH01",
+   "seq": 1,
+   "skill": "ap_physics_1:APPH01",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "AP Physics 1: Displacement, velocity and acceleration",
+    "uz": "AP Physics 1: Koʻchish, tezlik va tezlanish",
+    "ru": "AP Physics 1: Перемещение, скорость и ускорение"
+   },
+   "minutes": 7,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Position x tells where an object is on a line; its sign tells which side of the zero point it is on.\nDisplacement Δx = x₂ − x₁ (end minus start): how far and which way. Distance is the length of the whole path; it is never negative.\nAverage velocity = Δx ÷ Δt; average speed = distance ÷ Δt.\nExample: a runner goes 300 m east, then 100 m west, in 100 s.\nDistance 400 m, displacement 200 m east: average speed 4 m/s, average velocity 2 m/s east.",
+      "uz": "x vaziyat jism toʻgʻri chiziqning qayerida ekanini koʻrsatadi; uning ishorasi jism sanoq boshining qaysi tomonida ekanini bildiradi.\nKoʻchish Δx = x₂ − x₁ (oxiri minus boshi): qancha va qaysi tomonga. Yoʻl — butun trayektoriyaning uzunligi; u hech qachon manfiy boʻlmaydi.\nOʻrtacha tezlik = Δx ÷ Δt; oʻrtacha yoʻl tezligi = yoʻl ÷ Δt.\nMisol: yuguruvchi 100 s ichida 300 m sharqqa, keyin 100 m gʻarbga yuguradi.\nYoʻl 400 m, koʻchish 200 m sharqqa: oʻrtacha yoʻl tezligi 4 m/s, oʻrtacha tezlik 2 m/s sharqqa.",
+      "ru": "Координата x показывает, где на прямой находится тело; её знак показывает, по какую сторону от начала отсчёта оно находится.\nПеремещение Δx = x₂ − x₁ (конец минус начало): на сколько и в какую сторону. Путь — длина всей траектории; он не бывает отрицательным.\nСредняя скорость = Δx ÷ Δt; средняя путевая скорость = путь ÷ Δt.\nПример: бегун за 100 с пробегает 300 м на восток, затем 100 м на запад.\nПуть 400 м, перемещение 200 м на восток: средняя путевая скорость 4 м/с, средняя скорость 2 м/с на восток."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph11q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A car speeds up from 6 m/s to 24 m/s in 6 s.\nAverage acceleration: a = Δv ÷ Δt = (24 − 6) ÷ 6 = 3 m/s².\nNow you: a car speeds up from 6 m/s to 18 m/s in 4 s.\na = (18 − 6) ÷ 4 = ?",
+      "uz": "Avtomobil 6 s ichida tezligini 6 m/s dan 24 m/s gacha oshiradi.\nOʻrtacha tezlanish: a = Δv ÷ Δt = (24 − 6) ÷ 6 = 3 m/s².\nEndi siz: avtomobil 4 s ichida tezligini 6 m/s dan 18 m/s gacha oshiradi.\na = (18 − 6) ÷ 4 = ?",
+      "ru": "Автомобиль за 6 с разгоняется с 6 м/с до 24 м/с.\nСреднее ускорение: a = Δv ÷ Δt = (24 − 6) ÷ 6 = 3 м/с².\nТеперь попробуйте сами: автомобиль за 4 с разгоняется с 6 м/с до 18 м/с.\na = (18 − 6) ÷ 4 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph11q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Watch out: a trip that ends where it started has zero displacement, so its average velocity is 0, even though its average speed is not.\nExample: a swimmer swims one 50 m length of a pool and back in 80 s.\nDistance 100 m, average speed 100 ÷ 80 = 1.25 m/s; displacement 0, average velocity 0.",
+      "uz": "Ehtiyot boʻling: boshlangan joyida tugagan harakatda koʻchish nolga teng, shuning uchun oʻrtacha tezlik 0 ga teng, oʻrtacha yoʻl tezligi esa noldan farqli.\nMisol: suzuvchi 50 m uzunlikdagi basseynni 80 s da borib-kelib suzib chiqadi.\nYoʻl 100 m, oʻrtacha yoʻl tezligi 100 ÷ 80 = 1,25 m/s; koʻchish 0, oʻrtacha tezlik 0.",
+      "ru": "Осторожно: если движение закончилось там же, где началось, перемещение равно нулю, поэтому средняя скорость равна 0, а средняя путевая скорость — нет.\nПример: пловец проплывает 50-метровый бассейн туда и обратно за 80 с.\nПуть 100 м, средняя путевая скорость 100 ÷ 80 = 1,25 м/с; перемещение 0, средняя скорость 0."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph11q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ph1101",
+     "C1-ph1102"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ph1101",
+     "C1-ph1102",
+     "C22-ph11c1",
+     "C22-ph11c2"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APPH01#official",
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APPH01-2",
+   "course": "ap_physics_1",
+   "unit": "C10-APPH01",
+   "seq": 2,
+   "skill": "ap_physics_1:APPH01",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "AP Physics 1: Constant acceleration and free fall",
+    "uz": "AP Physics 1: Tekis tezlanuvchan harakat va erkin tushish",
+    "ru": "AP Physics 1: Равноускоренное движение и свободное падение"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "With a constant acceleration a, three equations link the motion:\n• v = v₀ + at\n• Δx = v₀t + ½at²\n• v² = v₀² + 2aΔx\nPick the one that holds the three things you know and the one you want.\nExample: a cart starts from rest with a = 2 m/s². After 5 s: v = 0 + 2 × 5 = 10 m/s and Δx = ½ × 2 × 5² = 25 m.",
+      "uz": "Tezlanish a oʻzgarmas boʻlsa, harakatni uchta tenglama bogʻlaydi:\n• v = v₀ + at\n• Δx = v₀t + ½at²\n• v² = v₀² + 2aΔx\nMaʼlum boʻlgan uchta kattalik va izlanayotgan kattalik qatnashgan tenglamani tanlang.\nMisol: aravacha tinch holatdan a = 2 m/s² tezlanish bilan harakat boshlaydi. 5 s dan keyin: v = 0 + 2 × 5 = 10 m/s va Δx = ½ × 2 × 5² = 25 m.",
+      "ru": "При постоянном ускорении a движение связывают три уравнения:\n• v = v₀ + at\n• Δx = v₀t + ½at²\n• v² = v₀² + 2aΔx\nВыберите то, в котором есть три известные величины и искомая.\nПример: тележка трогается с места с ускорением a = 2 м/с². Через 5 с: v = 0 + 2 × 5 = 10 м/с и Δx = ½ × 2 × 5² = 25 м."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph12q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A stone is dropped from rest from the top of a 100 m tower. In free fall a = g = 9.8 m/s² (no air resistance).\nAfter 4 s it has fallen ½ × 9.8 × 4² = 78.4 m, so it is 100 − 78.4 = 21.6 m above the ground.\nNow you: a stone is dropped from rest from the top of a 90 m tower. After 3 s it has fallen ½ × 9.8 × 3² = 44.1 m.\nHeight above the ground = 90 − 44.1 = ?",
+      "uz": "Tosh 100 m balandlikdagi minora tepasidan tinch holatdan qoʻyib yuboriladi. Erkin tushishda a = g = 9,8 m/s² (havoning qarshiligisiz).\n4 s da u ½ × 9,8 × 4² = 78,4 m tushadi, demak yerdan 100 − 78,4 = 21,6 m balandlikda boʻladi.\nEndi siz: tosh 90 m balandlikdagi minora tepasidan tinch holatdan qoʻyib yuboriladi. 3 s da u ½ × 9,8 × 3² = 44,1 m tushadi.\nYerdan balandlik = 90 − 44,1 = ?",
+      "ru": "Камень отпускают без начальной скорости с вершины башни высотой 100 м. При свободном падении a = g = 9,8 м/с² (без сопротивления воздуха).\nЗа 4 с он пролетает ½ × 9,8 × 4² = 78,4 м, значит, он на высоте 100 − 78,4 = 21,6 м над землёй.\nТеперь попробуйте сами: камень отпускают без начальной скорости с вершины башни высотой 90 м. За 3 с он пролетает ½ × 9,8 × 3² = 44,1 м.\nВысота над землёй = 90 − 44,1 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph12q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Watch out: at the top of a throw straight up the velocity is 0, but the acceleration is still 9.8 m/s² downward. Gravity does not switch off.\nExample: a ball is thrown up at 14.7 m/s: v = 14.7 − 9.8t = 0 at t = 1.5 s.\nBefore, at and after that moment the acceleration is the same 9.8 m/s² down; that is why the ball turns and falls back.",
+      "uz": "Ehtiyot boʻling: tik yuqoriga otilgan jismning eng yuqori nuqtasida tezlik 0 ga teng, lekin tezlanish baribir 9,8 m/s², pastga yoʻnalgan. Ogʻirlik kuchi yoʻqolmaydi.\nMisol: koptok yuqoriga 14,7 m/s tezlik bilan otiladi: v = 14,7 − 9,8t = 0, t = 1,5 s da.\nShu paytdan oldin ham, shu paytda ham, keyin ham tezlanish bir xil — pastga 9,8 m/s²; shuning uchun koptok burilib, pastga qaytadi.",
+      "ru": "Осторожно: в верхней точке броска вертикально вверх скорость равна 0, но ускорение по-прежнему 9,8 м/с² и направлено вниз. Сила тяжести не исчезает.\nПример: мяч бросают вверх со скоростью 14,7 м/с: v = 14,7 − 9,8t = 0 при t = 1,5 с.\nДо этого момента, в этот момент и после него ускорение одно и то же — 9,8 м/с² вниз; поэтому мяч разворачивается и падает обратно."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph12q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ph1201",
+     "C1-ph1202"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ph1201",
+     "C1-ph1202",
+     "C22-ph12c1",
+     "C22-ph12c2"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APPH01#official",
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APPH01-3",
+   "course": "ap_physics_1",
+   "unit": "C10-APPH01",
+   "seq": 3,
+   "skill": "ap_physics_1:APPH01",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "AP Physics 1: Projectiles and relative motion",
+    "uz": "AP Physics 1: Gorizontal otilgan jism va nisbiy harakat",
+    "ru": "AP Physics 1: Бросок горизонтально и относительное движение"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "A ball launched horizontally makes two motions at once, and they share the same time t:\n• across: a steady speed, x = v₀t (nothing pushes it sideways);\n• down: a free fall from rest, h = ½gt².\nSo the time in the air comes from the height alone.\nExample: from a ledge 19.6 m high, ½ × 9.8 × t² = 19.6 gives t = 2 s, whatever the launch speed.",
+      "uz": "Gorizontal otilgan koptok bir vaqtning oʻzida ikki xil harakat qiladi va ularning vaqti t bir xil:\n• yon tomonga: oʻzgarmas tezlik bilan, x = v₀t (uni yon tomonga hech narsa itarmaydi);\n• pastga: tinch holatdan erkin tushish, h = ½gt².\nDemak, havoda boʻlish vaqti faqat balandlikdan topiladi.\nMisol: 19,6 m balandlikdagi supachadan: ½ × 9,8 × t² = 19,6 dan t = 2 s, otish tezligi qanday boʻlishidan qatʼi nazar.",
+      "ru": "Мяч, брошенный горизонтально, совершает сразу два движения, и время t у них общее:\n• в сторону: с постоянной скоростью, x = v₀t (в сторону его ничто не толкает);\n• вниз: свободное падение без начальной скорости, h = ½gt².\nПоэтому время полёта находят только по высоте.\nПример: с уступа высотой 19,6 м: из ½ × 9,8 × t² = 19,6 получаем t = 2 с при любой скорости броска."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph13q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A ball rolls horizontally off a cliff 19.6 m high at 5 m/s.\nTime: ½ × 9.8 × t² = 19.6 → t = 2 s. Distance from the foot of the cliff: x = 5 × 2 = 10 m.\nNow you: a ball rolls horizontally off a cliff 44.1 m high at 4 m/s.\n½ × 9.8 × t² = 44.1 → t = 3 s; x = 4 × 3 = ?",
+      "uz": "Koptok balandligi 19,6 m boʻlgan jardan 5 m/s tezlik bilan gorizontal dumalab tushadi.\nVaqt: ½ × 9,8 × t² = 19,6 → t = 2 s. Jar etagidan masofa: x = 5 × 2 = 10 m.\nEndi siz: koptok balandligi 44,1 m boʻlgan jardan 4 m/s tezlik bilan gorizontal dumalab tushadi.\n½ × 9,8 × t² = 44,1 → t = 3 s; x = 4 × 3 = ?",
+      "ru": "Мяч скатывается горизонтально с обрыва высотой 19,6 м со скоростью 5 м/с.\nВремя: ½ × 9,8 × t² = 19,6 → t = 2 с. Расстояние от подножия обрыва: x = 5 × 2 = 10 м.\nТеперь попробуйте сами: мяч скатывается горизонтально с обрыва высотой 44,1 м со скоростью 4 м/с.\n½ × 9,8 × t² = 44,1 → t = 3 с; x = 4 × 3 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph13q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Watch out: in flight the horizontal speed stays the same (no air resistance); only the vertical speed grows.\nSo a ball dropped and a ball launched sideways from the same height at the same moment land together.\nExample: from 19.6 m, a dropped ball and a ball rolled off at 8 m/s both land after 2 s; the second lands 8 × 2 = 16 m away.",
+      "uz": "Ehtiyot boʻling: uchish davomida gorizontal tezlik oʻzgarmaydi (havoning qarshiligi boʻlmasa); faqat vertikal tezlik ortadi.\nShuning uchun bir xil balandlikdan bir paytda qoʻyib yuborilgan koptok va yon tomonga otilgan koptok yerga birga tushadi.\nMisol: 19,6 m balandlikdan qoʻyib yuborilgan koptok ham, 8 m/s tezlik bilan dumalab tushgan koptok ham 2 s dan keyin yerga tushadi; ikkinchisi 8 × 2 = 16 m narida tushadi.",
+      "ru": "Осторожно: в полёте горизонтальная скорость не меняется (без сопротивления воздуха); растёт только вертикальная.\nПоэтому мяч, который просто отпустили, и мяч, брошенный горизонтально с той же высоты в тот же момент, приземляются одновременно.\nПример: с высоты 19,6 м и отпущенный мяч, и мяч, скатившийся со скоростью 8 м/с, падают через 2 с; второй — в 8 × 2 = 16 м от обрыва."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph13q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ph1301",
+     "C1-ph1302"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ph1301",
+     "C1-ph1302",
+     "C22-ph13c1",
+     "C22-ph13c2"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APPH01#official",
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APPH02-1",
+   "course": "ap_physics_1",
+   "unit": "C10-APPH02",
+   "seq": 1,
+   "skill": "ap_physics_1:APPH02",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "AP Physics 1: Net force and Newton’s laws",
+    "uz": "AP Physics 1: Teng taʼsir etuvchi kuch va Nyuton qonunlari",
+    "ru": "AP Physics 1: Равнодействующая сила и законы Ньютона"
+   },
+   "minutes": 7,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Newton’s second law: ΣF = ma. Add the forces along one line as signed numbers (choose + for one direction), then divide by the mass.\nNewton’s first law: if ΣF = 0, the velocity does not change. An object at rest stays at rest; a moving one keeps the same speed in a straight line.\nExample: 12 N to the right and 4 N to the left act on a 2 kg box: ΣF = 12 − 4 = 8 N to the right, so a = 8 ÷ 2 = 4 m/s² to the right.",
+      "uz": "Nyutonning ikkinchi qonuni: ΣF = ma. Bir chiziq boʻylab taʼsir qiluvchi kuchlarni ishorasi bilan qoʻshing (bir yoʻnalishni + deb oling), soʻng massaga boʻling.\nNyutonning birinchi qonuni: agar ΣF = 0 boʻlsa, tezlik oʻzgarmaydi. Tinch turgan jism tinch turaveradi; harakatlanayotgan jism toʻgʻri chiziq boʻylab oʻsha tezlik bilan harakatlanaveradi.\nMisol: 2 kg massali qutiga oʻngga 12 N va chapga 4 N kuch taʼsir qiladi: ΣF = 12 − 4 = 8 N, oʻngga, demak a = 8 ÷ 2 = 4 m/s², oʻngga.",
+      "ru": "Второй закон Ньютона: ΣF = ma. Сложите силы вдоль одной прямой с учётом знака (одно направление примите за +), затем разделите на массу.\nПервый закон Ньютона: если ΣF = 0, скорость не меняется. Покоящееся тело остаётся в покое; движущееся продолжает двигаться прямолинейно с той же скоростью.\nПример: на ящик массой 2 кг действуют 12 Н вправо и 4 Н влево: ΣF = 12 − 4 = 8 Н вправо, значит, a = 8 ÷ 2 = 4 м/с² вправо."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph21q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "Two horizontal forces act on a 4 kg cart: 26 N forward and 6 N backward.\nΣF = 26 − 6 = 20 N; a = ΣF ÷ m = 20 ÷ 4 = 5 m/s².\nNow you: two horizontal forces act on an 8 kg cart: 60 N forward and 4 N backward.\nΣF = 60 − 4 = 56 N; a = 56 ÷ 8 = ?",
+      "uz": "4 kg massali aravachaga ikkita gorizontal kuch taʼsir qiladi: oldinga 26 N va orqaga 6 N.\nΣF = 26 − 6 = 20 N; a = ΣF ÷ m = 20 ÷ 4 = 5 m/s².\nEndi siz: 8 kg massali aravachaga ikkita gorizontal kuch taʼsir qiladi: oldinga 60 N va orqaga 4 N.\nΣF = 60 − 4 = 56 N; a = 56 ÷ 8 = ?",
+      "ru": "На тележку массой 4 кг действуют две горизонтальные силы — 26 Н вперёд и 6 Н назад.\nΣF = 26 − 6 = 20 Н; a = ΣF ÷ m = 20 ÷ 4 = 5 м/с².\nТеперь попробуйте сами: на тележку массой 8 кг действуют две горизонтальные силы — 60 Н вперёд и 4 Н назад.\nΣF = 60 − 4 = 56 Н; a = 56 ÷ 8 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph21q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Watch out: the two forces of a third-law pair are equal in size even when the objects are very different, and they act on different objects, so they never cancel each other.\nExample: a 60 kg skater pushes a 30 kg skater with 90 N; the 30 kg skater pushes back on her with 90 N.\nTheir accelerations differ: 90 ÷ 30 = 3 m/s² and 90 ÷ 60 = 1.5 m/s².",
+      "uz": "Ehtiyot boʻling: uchinchi qonun boʻyicha juft kuchlar jismlar juda farq qilsa ham kattaligi boʻyicha teng boʻladi va ular turli jismlarga qoʻyilgan, shuning uchun hech qachon bir-birini muvozanatlamaydi.\nMisol: 60 kg massali konkichi 30 kg massali konkichini 90 N kuch bilan itaradi; 30 kg lik konkichi ham uni 90 N kuch bilan itaradi.\nUlarning tezlanishlari esa har xil: 90 ÷ 30 = 3 m/s² va 90 ÷ 60 = 1,5 m/s².",
+      "ru": "Осторожно: силы, связанные третьим законом, равны по модулю, даже если тела совсем разные, и приложены к разным телам, поэтому они никогда не уравновешивают друг друга.\nПример: фигуристка массой 60 кг толкает фигуристку массой 30 кг с силой 90 Н; та действует на неё в ответ тоже с силой 90 Н.\nА ускорения у них разные: 90 ÷ 30 = 3 м/с² и 90 ÷ 60 = 1,5 м/с²."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph21q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ph2101",
+     "C1-ph2102"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ph2101",
+     "C1-ph2102",
+     "C22-ph21c1",
+     "C22-ph21c2"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APPH02#official",
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APPH02-2",
+   "course": "ap_physics_1",
+   "unit": "C10-APPH02",
+   "seq": 2,
+   "skill": "ap_physics_1:APPH02",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "AP Physics 1: Weight, normal force and friction",
+    "uz": "AP Physics 1: Ogʻirlik kuchi, tayanchning reaksiya kuchi va ishqalanish",
+    "ru": "AP Physics 1: Сила тяжести, сила реакции опоры и трение"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Weight W = mg points down (g = 9.8 m/s²). On a level floor, with no vertical acceleration, the normal force N from the floor equals mg.\nKinetic friction on a sliding object: f = μₖN, pointing against the sliding.\nExample: a 10 kg box on a level floor: N = 10 × 9.8 = 98 N; with μₖ = 0.3 the friction is 0.3 × 98 = 29.4 N.",
+      "uz": "Ogʻirlik kuchi W = mg pastga yoʻnalgan (g = 9,8 m/s²). Gorizontal polda, vertikal tezlanish boʻlmasa, poldan taʼsir qiluvchi reaksiya kuchi N mg ga teng.\nSirpanayotgan jismga taʼsir qiluvchi sirpanish ishqalanishi: f = μₖN, sirpanishga qarshi yoʻnalgan.\nMisol: gorizontal poldagi 10 kg massali quti: N = 10 × 9,8 = 98 N; μₖ = 0,3 boʻlsa, ishqalanish kuchi 0,3 × 98 = 29,4 N.",
+      "ru": "Сила тяжести W = mg направлена вниз (g = 9,8 м/с²). На горизонтальном полу, если вертикального ускорения нет, сила нормальной реакции пола N равна mg.\nСила трения скольжения: f = μₖN, направлена против скольжения.\nПример: ящик массой 10 кг на горизонтальном полу: N = 10 × 9,8 = 98 Н; при μₖ = 0,3 сила трения 0,3 × 98 = 29,4 Н."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph22q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A 10 kg box is pushed across a level floor by a 50 N horizontal force. The coefficient of kinetic friction is 0.2.\nFriction: f = μₖmg = 0.2 × 10 × 9.8 = 19.6 N. Acceleration: a = (50 − 19.6) ÷ 10 = 3.04 m/s².\nNow you: a 5 kg box is pushed across a level floor by a 30 N horizontal force; μₖ = 0.4.\nf = 0.4 × 5 × 9.8 = 19.6 N; a = (30 − 19.6) ÷ 5 = ?",
+      "uz": "10 kg massali quti gorizontal pol boʻylab 50 N gorizontal kuch bilan itariladi. Sirpanish ishqalanish koeffitsiyenti 0,2.\nIshqalanish: f = μₖmg = 0,2 × 10 × 9,8 = 19,6 N. Tezlanish: a = (50 − 19,6) ÷ 10 = 3,04 m/s².\nEndi siz: 5 kg massali quti gorizontal pol boʻylab 30 N gorizontal kuch bilan itariladi; μₖ = 0,4.\nf = 0,4 × 5 × 9,8 = 19,6 N; a = (30 − 19,6) ÷ 5 = ?",
+      "ru": "Ящик массой 10 кг толкают по горизонтальному полу горизонтальной силой 50 Н. Коэффициент трения скольжения 0,2.\nТрение: f = μₖmg = 0,2 × 10 × 9,8 = 19,6 Н. Ускорение: a = (50 − 19,6) ÷ 10 = 3,04 м/с².\nТеперь попробуйте сами: ящик массой 5 кг толкают по горизонтальному полу горизонтальной силой 30 Н; μₖ = 0,4.\nf = 0,4 × 5 × 9,8 = 19,6 Н; a = (30 − 19,6) ÷ 5 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph22q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Watch out: static friction is not always μₛN. It is only as large as it needs to be to stop the sliding, up to μₛN.\nExample: a 10 kg box rests on a floor with μₛ = 0.5, so static friction can reach 0.5 × 98 = 49 N.\nPush it with 20 N and it stays put: the static friction is 20 N, not 49 N.",
+      "uz": "Ehtiyot boʻling: tinchlikdagi ishqalanish kuchi har doim ham μₛN ga teng emas. U sirpanishni toʻxtatish uchun qancha kerak boʻlsa, shuncha boʻladi, eng koʻpi bilan μₛN.\nMisol: 10 kg massali quti μₛ = 0,5 boʻlgan polda turibdi, demak tinchlikdagi ishqalanish 0,5 × 98 = 49 N gacha yetishi mumkin.\nUni 20 N kuch bilan itarsangiz, u joyidan qoʻzgʻalmaydi: tinchlikdagi ishqalanish 20 N, 49 N emas.",
+      "ru": "Осторожно: сила трения покоя не всегда равна μₛN. Она ровно такая, какая нужна, чтобы не было скольжения, но не больше μₛN.\nПример: ящик массой 10 кг стоит на полу с μₛ = 0,5, значит, трение покоя может достигать 0,5 × 98 = 49 Н.\nТолкните его с силой 20 Н — он не сдвинется: трение покоя равно 20 Н, а не 49 Н."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph22q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ph2201",
+     "C1-ph2202"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ph2201",
+     "C1-ph2202",
+     "C22-ph22c1",
+     "C22-ph22c2"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APPH02#official",
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APPH02-3",
+   "course": "ap_physics_1",
+   "unit": "C10-APPH02",
+   "seq": 3,
+   "skill": "ap_physics_1:APPH02",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "AP Physics 1: Springs and circular motion",
+    "uz": "AP Physics 1: Prujina kuchi va aylana boʻylab harakat",
+    "ru": "AP Physics 1: Сила упругости пружины и движение по окружности"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "A spring pulls or pushes back toward its natural length with F = kx: x is how far it is stretched or squeezed, k is the spring constant in N/m.\nExample: a spring with k = 200 N/m stretched by 0.15 m pulls back with 200 × 0.15 = 30 N.\nA mass hanging at rest on a spring: kx = mg. A 3 kg mass on that spring stretches it x = 3 × 9.8 ÷ 200 = 0.147 m.",
+      "uz": "Prujina oʻz tabiiy uzunligiga qaytish tomonga F = kx kuch bilan tortadi yoki itaradi: x — uning choʻzilishi yoki siqilishi, k — prujinaning bikrligi, N/m da.\nMisol: bikrligi k = 200 N/m boʻlgan prujina 0,15 m ga choʻzilsa, 200 × 0,15 = 30 N kuch bilan orqaga tortadi.\nPrujinaga osilib tinch turgan yuk uchun: kx = mg. Shu prujinaga osilgan 3 kg massali yuk uni x = 3 × 9,8 ÷ 200 = 0,147 m ga choʻzadi.",
+      "ru": "Пружина тянет или толкает назад, к своей естественной длине, с силой F = kx: x — её растяжение или сжатие, k — жёсткость пружины в Н/м.\nПример: пружина жёсткостью k = 200 Н/м, растянутая на 0,15 м, тянет назад с силой 200 × 0,15 = 30 Н.\nДля груза, неподвижно висящего на пружине: kx = mg. Груз массой 3 кг растягивает эту пружину на x = 3 × 9,8 ÷ 200 = 0,147 м."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph23q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A 2 kg ball moves in a circle of radius 0.5 m at a steady 3 m/s.\nCentripetal acceleration: a = v² ÷ r = 3² ÷ 0.5 = 18 m/s², toward the centre. Net force: F = ma = 2 × 18 = 36 N.\nNow you: a 3 kg ball moves in a circle of radius 2 m at a steady 4 m/s.\na = 4² ÷ 2 = 8 m/s²; F = 3 × 8 = ?",
+      "uz": "2 kg massali shar radiusi 0,5 m boʻlgan aylana boʻylab oʻzgarmas 3 m/s tezlik bilan harakatlanadi.\nMarkazga intilma tezlanish: a = v² ÷ r = 3² ÷ 0,5 = 18 m/s², markazga yoʻnalgan. Teng taʼsir etuvchi kuch: F = ma = 2 × 18 = 36 N.\nEndi siz: 3 kg massali shar radiusi 2 m boʻlgan aylana boʻylab oʻzgarmas 4 m/s tezlik bilan harakatlanadi.\na = 4² ÷ 2 = 8 m/s²; F = 3 × 8 = ?",
+      "ru": "Шар массой 2 кг движется по окружности радиусом 0,5 м с постоянной скоростью 3 м/с.\nЦентростремительное ускорение: a = v² ÷ r = 3² ÷ 0,5 = 18 м/с², к центру. Равнодействующая: F = ma = 2 × 18 = 36 Н.\nТеперь попробуйте сами: шар массой 3 кг движется по окружности радиусом 2 м с постоянной скоростью 4 м/с.\na = 4² ÷ 2 = 8 м/с²; F = 3 × 8 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph23q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Watch out: the ‘centripetal force’ is not an extra force to draw. It is the net force toward the centre, made of forces you can name: tension, gravity, friction, the normal force.\nExample: a stone whirled on a string in a horizontal circle: the string’s pull is the force toward the centre.\nIf the string breaks, nothing pulls the stone in, and it flies off along the tangent, not straight outward.",
+      "uz": "Ehtiyot boʻling: «markazga intilma kuch» chizmaga qoʻshiladigan alohida kuch emas. Bu markazga yoʻnalgan teng taʼsir etuvchi kuch, u nomini aytish mumkin boʻlgan kuchlardan tashkil topadi: ipning taranglik kuchi, ogʻirlik kuchi, ishqalanish, reaksiya kuchi.\nMisol: ipga bogʻlab gorizontal aylana boʻylab aylantirilayotgan tosh: markazga yoʻnalgan kuch — ipning tortishi.\nIp uzilsa, toshni markazga hech narsa tortmaydi va u toʻgʻri tashqariga emas, urinma boʻylab uchib ketadi.",
+      "ru": "Осторожно: «центростремительная сила» — не отдельная сила, которую надо добавить на рисунок. Это равнодействующая, направленная к центру, и складывается она из сил, которые можно назвать: натяжение, сила тяжести, трение, сила реакции.\nПример: камень на верёвке вращают по горизонтальной окружности: к центру его тянет натяжение верёвки.\nЕсли верёвка порвётся, камень к центру ничто не тянет, и он улетает по касательной, а не прямо наружу."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph23q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ph2301",
+     "C1-ph2302"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ph2301",
+     "C1-ph2302",
+     "C22-ph23c1",
+     "C22-ph23c2"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APPH02#official",
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APPH03-1",
+   "course": "ap_physics_1",
+   "unit": "C10-APPH03",
+   "seq": 1,
+   "skill": "ap_physics_1:APPH03",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "AP Physics 1: Kinetic energy and work",
+    "uz": "AP Physics 1: Kinetik energiya va ish",
+    "ru": "AP Physics 1: Кинетическая энергия и работа"
+   },
+   "minutes": 7,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Kinetic energy: K = ½mv², in joules (J).\nWork done by a steady force along the motion: W = Fd. A force against the motion does negative work; a force at a right angle to the motion does no work.\nWork-energy theorem: the net work equals the change in kinetic energy, W_net = ΔK.\nExample: a 2 kg ball at 3 m/s has K = ½ × 2 × 3² = 9 J.",
+      "uz": "Kinetik energiya: K = ½mv², joullarda (J).\nHarakat yoʻnalishidagi oʻzgarmas kuchning ishi: W = Fd. Harakatga qarshi kuch manfiy ish bajaradi; harakatga tik yoʻnalgan kuch ish bajarmaydi.\nIsh va energiya haqidagi teorema: teng taʼsir etuvchi kuchning ishi kinetik energiyaning oʻzgarishiga teng, W_net = ΔK.\nMisol: 3 m/s tezlikdagi 2 kg massali koptokning K = ½ × 2 × 3² = 9 J.",
+      "ru": "Кинетическая энергия: K = ½mv², в джоулях (Дж).\nРабота постоянной силы, направленной вдоль движения: W = Fd. Сила против движения совершает отрицательную работу; сила, перпендикулярная движению, работы не совершает.\nТеорема о кинетической энергии: работа равнодействующей равна изменению кинетической энергии, W_net = ΔK.\nПример: у мяча массой 2 кг при скорости 3 м/с K = ½ × 2 × 3² = 9 Дж."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph31q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A 2 kg box at rest is pushed 4 m across frictionless ice by a steady 9 N horizontal force.\nW = Fd = 9 × 4 = 36 J = ΔK, so ½ × 2 × v² = 36 → v² = 36 → v = 6 m/s.\nNow you: a 3 kg box at rest is pushed 6 m across frictionless ice by a steady 4 N horizontal force.\nW = 4 × 6 = 24 J; ½ × 3 × v² = 24 → v² = 16 → v = ?",
+      "uz": "Tinch turgan 2 kg massali quti ishqalanishsiz muz ustida 9 N oʻzgarmas gorizontal kuch bilan 4 m itariladi.\nW = Fd = 9 × 4 = 36 J = ΔK, demak ½ × 2 × v² = 36 → v² = 36 → v = 6 m/s.\nEndi siz: tinch turgan 3 kg massali quti ishqalanishsiz muz ustida 4 N oʻzgarmas gorizontal kuch bilan 6 m itariladi.\nW = 4 × 6 = 24 J; ½ × 3 × v² = 24 → v² = 16 → v = ?",
+      "ru": "Покоящийся ящик массой 2 кг толкают по льду без трения постоянной горизонтальной силой 9 Н на расстояние 4 м.\nW = Fd = 9 × 4 = 36 Дж = ΔK, значит, ½ × 2 × v² = 36 → v² = 36 → v = 6 м/с.\nТеперь попробуйте сами: покоящийся ящик массой 3 кг толкают по льду без трения постоянной горизонтальной силой 4 Н на расстояние 6 м.\nW = 4 × 6 = 24 Дж; ½ × 3 × v² = 24 → v² = 16 → v = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph31q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Watch out: kinetic energy grows with the square of the speed. Twice the speed gives 4 times the kinetic energy; three times the speed gives 9 times.\nExample: a 1,000 kg car at 10 m/s has K = 50,000 J; at 20 m/s it has 200,000 J, not 100,000 J.\nThat is why a faster car needs so much more distance to stop.",
+      "uz": "Ehtiyot boʻling: kinetik energiya tezlikning kvadratiga proporsional ortadi. Tezlik 2 marta ortsa, kinetik energiya 4 marta, 3 marta ortsa — 9 marta ortadi.\nMisol: 10 m/s tezlikdagi 1000 kg massali avtomobilning K = 50 000 J; 20 m/s da esa 200 000 J, 100 000 J emas.\nShuning uchun tezroq avtomobil toʻxtashi uchun ancha uzunroq masofa kerak.",
+      "ru": "Осторожно: кинетическая энергия растёт как квадрат скорости. Скорость вдвое больше — энергия в 4 раза больше; втрое больше — в 9 раз.\nПример: у автомобиля массой 1000 кг при 10 м/с K = 50 000 Дж; при 20 м/с — 200 000 Дж, а не 100 000 Дж.\nПоэтому более быстрой машине нужен намного более длинный тормозной путь."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph31q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ph3101",
+     "C1-ph3102"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ph3101",
+     "C1-ph3102",
+     "C22-ph31c1",
+     "C22-ph31c2"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APPH03#official",
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APPH03-2",
+   "course": "ap_physics_1",
+   "unit": "C10-APPH03",
+   "seq": 2,
+   "skill": "ap_physics_1:APPH03",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "AP Physics 1: Potential energy and conservation of energy",
+    "uz": "AP Physics 1: Potensial energiya va energiyaning saqlanishi",
+    "ru": "AP Physics 1: Потенциальная энергия и закон сохранения энергии"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Gravitational potential energy: U = mgh, where h is the height above a level you choose as 0.\nA spring stretched or squeezed by x stores U = ½kx².\nWith no friction or air resistance, K + U stays the same: what U loses, K gains.\nExample: a 2 kg ball 5 m above the floor has U = 2 × 9.8 × 5 = 98 J; dropped, it reaches the floor with K = 98 J.",
+      "uz": "Ogʻirlik kuchi maydonidagi potensial energiya: U = mgh, bunda h — siz 0 deb tanlagan sathdan balandlik.\nx ga choʻzilgan yoki siqilgan prujina U = ½kx² energiya saqlaydi.\nIshqalanish va havoning qarshiligi boʻlmasa, K + U oʻzgarmaydi: U qancha kamaysa, K shuncha ortadi.\nMisol: poldan 5 m balandlikdagi 2 kg massali koptokning U = 2 × 9,8 × 5 = 98 J; qoʻyib yuborilsa, u polga K = 98 J bilan yetib keladi.",
+      "ru": "Потенциальная энергия в поле тяжести: U = mgh, где h — высота над уровнем, который вы приняли за 0.\nПружина, растянутая или сжатая на x, запасает U = ½kx².\nЕсли нет трения и сопротивления воздуха, K + U не меняется: сколько теряет U, столько получает K.\nПример: у мяча массой 2 кг на высоте 5 м над полом U = 2 × 9,8 × 5 = 98 Дж; если его отпустить, он долетит до пола с K = 98 Дж."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph32q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A sled starts from rest at the top of a frictionless hill 10 m high.\nAt the bottom mgh = ½mv², so v² = 2gh = 2 × 9.8 × 10 = 196 and v = 14 m/s. The mass cancels.\nNow you: a sled starts from rest at the top of a frictionless hill 2.5 m high.\nv² = 2 × 9.8 × 2.5 = 49 → v = ?",
+      "uz": "Chana balandligi 10 m boʻlgan ishqalanishsiz tepalik choʻqqisidan tinch holatdan harakat boshlaydi.\nPastda mgh = ½mv², demak v² = 2gh = 2 × 9,8 × 10 = 196 va v = 14 m/s. Massa qisqarib ketadi.\nEndi siz: chana balandligi 2,5 m boʻlgan ishqalanishsiz tepalik choʻqqisidan tinch holatdan harakat boshlaydi.\nv² = 2 × 9,8 × 2,5 = 49 → v = ?",
+      "ru": "Санки начинают движение из состояния покоя с вершины горки высотой 10 м без трения.\nВнизу mgh = ½mv², значит, v² = 2gh = 2 × 9,8 × 10 = 196 и v = 14 м/с. Масса сокращается.\nТеперь попробуйте сами: санки начинают движение из состояния покоя с вершины горки высотой 2,5 м без трения.\nv² = 2 × 9,8 × 2,5 = 49 → v = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph32q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Watch out: on a frictionless slope the speed at the bottom depends only on the height. Neither the mass nor the shape of the slope changes it.\nExample: a 5 kg sled and a 50 kg sled start from rest 0.9 m up, one on a steep slope and one on a gentle one.\nBoth reach v = √(2 × 9.8 × 0.9) = 4.2 m/s at the bottom.",
+      "uz": "Ehtiyot boʻling: ishqalanishsiz qiyalikda pastdagi tezlik faqat balandlikka bogʻliq. Uni na massa, na qiyalikning shakli oʻzgartiradi.\nMisol: 5 kg va 50 kg massali chanalar 0,9 m balandlikdan tinch holatdan harakat boshlaydi, biri tik qiyalikda, ikkinchisi yotiq qiyalikda.\nIkkalasi ham pastda v = √(2 × 9,8 × 0,9) = 4,2 m/s tezlikka erishadi.",
+      "ru": "Осторожно: на склоне без трения скорость внизу зависит только от высоты. Ни масса, ни форма склона её не меняют.\nПример: санки массой 5 кг и 50 кг начинают движение из покоя с высоты 0,9 м, одни по крутому склону, другие по пологому.\nВнизу у обоих v = √(2 × 9,8 × 0,9) = 4,2 м/с."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph32q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ph3201",
+     "C1-ph3202"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ph3201",
+     "C1-ph3202",
+     "C22-ph32c1",
+     "C22-ph32c2"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APPH03#official",
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APPH03-3",
+   "course": "ap_physics_1",
+   "unit": "C10-APPH03",
+   "seq": 3,
+   "skill": "ap_physics_1:APPH03",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "AP Physics 1: Power, and energy lost to friction",
+    "uz": "AP Physics 1: Quvvat va ishqalanishga sarflangan energiya",
+    "ru": "AP Physics 1: Мощность и энергия, потерянная на трение"
+   },
+   "minutes": 7,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Power is how fast work is done: P = W ÷ t, in watts (1 W = 1 J/s).\nFor a steady force F on an object moving at a steady speed v in the force’s direction, P = Fv.\nExample: a motor lifts a 50 kg load 6 m in 10 s: W = mgh = 50 × 9.8 × 6 = 2,940 J, so P = 2,940 ÷ 10 = 294 W.",
+      "uz": "Quvvat — ish qanchalik tez bajarilishi: P = W ÷ t, vattlarda (1 Vt = 1 J/s).\nJism kuch yoʻnalishida oʻzgarmas v tezlik bilan harakatlanayotgan boʻlsa, oʻzgarmas F kuchning quvvati P = Fv.\nMisol: motor 50 kg yukni 10 s da 6 m ga koʻtaradi: W = mgh = 50 × 9,8 × 6 = 2940 J, demak P = 2940 ÷ 10 = 294 Vt.",
+      "ru": "Мощность — то, насколько быстро совершается работа: P = W ÷ t, в ваттах (1 Вт = 1 Дж/с).\nЕсли тело движется с постоянной скоростью v в направлении постоянной силы F, то P = Fv.\nПример: мотор поднимает груз массой 50 кг на 6 м за 10 с: W = mgh = 50 × 9,8 × 6 = 2940 Дж, значит, P = 2940 ÷ 10 = 294 Вт."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph33q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A tractor pulls a log with a steady 600 N force at a steady 2 m/s.\nP = Fv = 600 × 2 = 1,200 W.\nNow you: a tractor pulls a log with a steady 750 N force at a steady 4 m/s.\nP = 750 × 4 = ?",
+      "uz": "Traktor xodani 600 N oʻzgarmas kuch bilan 2 m/s oʻzgarmas tezlikda tortadi.\nP = Fv = 600 × 2 = 1200 Vt.\nEndi siz: traktor xodani 750 N oʻzgarmas kuch bilan 4 m/s oʻzgarmas tezlikda tortadi.\nP = 750 × 4 = ?",
+      "ru": "Трактор тянет бревно с постоянной силой 600 Н при постоянной скорости 2 м/с.\nP = Fv = 600 × 2 = 1200 Вт.\nТеперь попробуйте сами: трактор тянет бревно с постоянной силой 750 Н при постоянной скорости 4 м/с.\nP = 750 × 4 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph33q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Watch out: power is not the same as work. A weak motor can do as much work as a strong one; it just takes longer.\nExample: two cranes each lift a 100 kg load 5 m: W = 100 × 9.8 × 5 = 4,900 J each.\nOne takes 7 s: P = 700 W. The other takes 35 s: P = 140 W. Same work, five times less power.",
+      "uz": "Ehtiyot boʻling: quvvat — bu ish emas. Kuchsiz motor ham kuchli motor bajargancha ish bajara oladi; faqat koʻproq vaqt sarflaydi.\nMisol: ikki kran har biri 100 kg yukni 5 m ga koʻtaradi: har biri W = 100 × 9,8 × 5 = 4900 J ish bajaradi.\nBiri 7 s sarflaydi: P = 700 Vt. Ikkinchisi 35 s sarflaydi: P = 140 Vt. Ish bir xil, quvvat besh marta kam.",
+      "ru": "Осторожно: мощность — это не работа. Слабый мотор может совершить столько же работы, сколько сильный; ему просто нужно больше времени.\nПример: два крана поднимают по грузу массой 100 кг на 5 м: каждый совершает W = 100 × 9,8 × 5 = 4900 Дж.\nОдин тратит 7 с: P = 700 Вт. Другой — 35 с: P = 140 Вт. Работа одна и та же, мощность в пять раз меньше."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph33q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ph3301",
+     "C1-ph3302"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ph3301",
+     "C1-ph3302",
+     "C22-ph33c1",
+     "C22-ph33c2"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APPH03#official",
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APPH04-1",
+   "course": "ap_physics_1",
+   "unit": "C10-APPH04",
+   "seq": 1,
+   "skill": "ap_physics_1:APPH04",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "AP Physics 1: Momentum and impulse",
+    "uz": "AP Physics 1: Impuls va kuch impulsi",
+    "ru": "AP Physics 1: Импульс тела и импульс силы"
+   },
+   "minutes": 7,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "Momentum: p = mv, in kg·m/s. It is a vector: choose a + direction; a velocity the other way is negative.\nImpulse: J = FΔt, in N·s. The impulse on an object equals its change in momentum: FΔt = Δp = m(v − v₀).\nExample: a 0.5 kg ball at 8 m/s has p = 0.5 × 8 = 4 kg·m/s.",
+      "uz": "Impuls: p = mv, kg·m/s da. U vektor: bir yoʻnalishni + deb oling; teskari yoʻnalgan tezlik manfiy boʻladi.\nKuch impulsi: J = FΔt, N·s da. Jismga berilgan kuch impulsi uning impulsi oʻzgarishiga teng: FΔt = Δp = m(v − v₀).\nMisol: 8 m/s tezlikdagi 0,5 kg massali koptokning p = 0,5 × 8 = 4 kg·m/s.",
+      "ru": "Импульс тела: p = mv, в кг·м/с. Это вектор: выберите положительное направление; скорость в обратную сторону отрицательна.\nИмпульс силы: J = FΔt, в Н·с. Импульс силы, действующей на тело, равен изменению его импульса: FΔt = Δp = m(v − v₀).\nПример: у мяча массой 0,5 кг при скорости 8 м/с p = 0,5 × 8 = 4 кг·м/с."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph41q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A 0.5 kg puck sliding at 6 m/s is stopped by a goalie’s pad in 0.02 s.\nΔp = m(v − v₀) = 0.5 × (0 − 6) = −3 kg·m/s. Average force: F = Δp ÷ Δt = −3 ÷ 0.02 = −150 N; the minus says it points back. Size: 150 N.\nNow you: a 0.2 kg puck sliding at 10 m/s is stopped by a goalie’s pad in 0.05 s.\nΔp = 0.2 × (0 − 10) = −2 kg·m/s; size of the average force = 2 ÷ 0.05 = ?",
+      "uz": "6 m/s tezlik bilan sirpanayotgan 0,5 kg massali shayba darvozabonning himoya qalqoniga urilib, 0,02 s da toʻxtaydi.\nΔp = m(v − v₀) = 0,5 × (0 − 6) = −3 kg·m/s. Oʻrtacha kuch: F = Δp ÷ Δt = −3 ÷ 0,02 = −150 N; minus ishorasi kuch orqaga yoʻnalganini bildiradi. Moduli: 150 N.\nEndi siz: 10 m/s tezlik bilan sirpanayotgan 0,2 kg massali shayba darvozabonning himoya qalqoniga urilib, 0,05 s da toʻxtaydi.\nΔp = 0,2 × (0 − 10) = −2 kg·m/s; oʻrtacha kuch moduli = 2 ÷ 0,05 = ?",
+      "ru": "Шайба массой 0,5 кг, скользящая со скоростью 6 м/с, останавливается о щиток вратаря за 0,02 с.\nΔp = m(v − v₀) = 0,5 × (0 − 6) = −3 кг·м/с. Средняя сила: F = Δp ÷ Δt = −3 ÷ 0,02 = −150 Н; минус значит, что она направлена назад. Модуль: 150 Н.\nТеперь попробуйте сами: шайба массой 0,2 кг, скользящая со скоростью 10 м/с, останавливается о щиток вратаря за 0,05 с.\nΔp = 0,2 × (0 − 10) = −2 кг·м/с; модуль средней силы = 2 ÷ 0,05 = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph41q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Watch out: momentum has a direction. When a ball bounces back, its velocity changes sign, so its change in momentum is larger than for a ball that just stops.\nExample: a 0.5 kg ball hits a wall at 6 m/s and bounces straight back at 4 m/s. Take toward the wall as +.\nΔp = 0.5 × (−4 − 6) = −5 kg·m/s: its size is 5 kg·m/s, not 0.5 × (6 − 4) = 1.",
+      "uz": "Ehtiyot boʻling: impulsning yoʻnalishi bor. Koptok orqaga qaytganda tezligining ishorasi oʻzgaradi, shuning uchun uning impulsi shunchaki toʻxtagan koptoknikidan koʻproq oʻzgaradi.\nMisol: 0,5 kg massali koptok devorga 6 m/s tezlik bilan urilib, 4 m/s tezlik bilan toʻgʻri orqaga qaytadi. Devor tomonni + deb olamiz.\nΔp = 0,5 × (−4 − 6) = −5 kg·m/s: moduli 5 kg·m/s, 0,5 × (6 − 4) = 1 emas.",
+      "ru": "Осторожно: у импульса есть направление. Когда мяч отскакивает назад, знак его скорости меняется, поэтому импульс меняется сильнее, чем у мяча, который просто остановился.\nПример: мяч массой 0,5 кг ударяется о стену со скоростью 6 м/с и отскакивает прямо назад со скоростью 4 м/с. Направление к стене примем за +.\nΔp = 0,5 × (−4 − 6) = −5 кг·м/с: модуль 5 кг·м/с, а не 0,5 × (6 − 4) = 1."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph41q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ph4101",
+     "C1-ph4102"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ph4101",
+     "C1-ph4102",
+     "C22-ph41c1",
+     "C22-ph41c2"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APPH04#official",
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APPH04-2",
+   "course": "ap_physics_1",
+   "unit": "C10-APPH04",
+   "seq": 2,
+   "skill": "ap_physics_1:APPH04",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "AP Physics 1: Conservation of momentum",
+    "uz": "AP Physics 1: Impulsning saqlanishi",
+    "ru": "AP Physics 1: Закон сохранения импульса"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "If no outside force acts on a system, its total momentum stays the same: total p before = total p after.\nThis holds for any push between the parts of the system: collisions, explosions, a person jumping off a boat.\nExample: two skaters at rest push apart. The 60 kg one moves off at 2 m/s, so the 40 kg one moves off at 3 m/s the other way: 60 × 2 = 40 × 3.",
+      "uz": "Agar sistemaga tashqi kuch taʼsir qilmasa, uning umumiy impulsi oʻzgarmaydi: oldingi umumiy p = keyingi umumiy p.\nBu sistema qismlari orasidagi har qanday itarishda bajariladi: toʻqnashuvda, portlashda, odam qayiqdan sakraganda.\nMisol: tinch turgan ikki konkichi bir-birini itaradi. 60 kg lik konkichi 2 m/s tezlik bilan ketadi, demak 40 kg lik konkichi teskari tomonga 3 m/s tezlik bilan ketadi: 60 × 2 = 40 × 3.",
+      "ru": "Если на систему не действуют внешние силы, её полный импульс не меняется: полный p до = полный p после.\nЭто верно для любого взаимодействия частей системы: столкновения, взрыва, прыжка человека с лодки.\nПример: два неподвижных конькобежца отталкиваются друг от друга. Тот, что массой 60 кг, уезжает со скоростью 2 м/с, значит, тот, что массой 40 кг, уезжает в обратную сторону со скоростью 3 м/с: 60 × 2 = 40 × 3."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph42q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A 3 kg cart moving at 4 m/s hits a 1 kg cart at rest, and they stick together.\nBefore: 3 × 4 + 1 × 0 = 12 kg·m/s. After: (3 + 1) × v = 12, so v = 3 m/s.\nNow you: a 2 kg cart moving at 9 m/s hits a 1 kg cart at rest, and they stick together.\n(2 + 1) × v = 2 × 9 = 18 → v = ?",
+      "uz": "4 m/s tezlik bilan harakatlanayotgan 3 kg massali aravacha tinch turgan 1 kg massali aravachaga urilib, ular bir-biriga yopishib qoladi.\nOldin: 3 × 4 + 1 × 0 = 12 kg·m/s. Keyin: (3 + 1) × v = 12, demak v = 3 m/s.\nEndi siz: 9 m/s tezlik bilan harakatlanayotgan 2 kg massali aravacha tinch turgan 1 kg massali aravachaga urilib, ular bir-biriga yopishib qoladi.\n(2 + 1) × v = 2 × 9 = 18 → v = ?",
+      "ru": "Тележка массой 3 кг, движущаяся со скоростью 4 м/с, налетает на покоящуюся тележку массой 1 кг, и они сцепляются.\nДо: 3 × 4 + 1 × 0 = 12 кг·м/с. После: (3 + 1) × v = 12, значит, v = 3 м/с.\nТеперь попробуйте сами: тележка массой 2 кг, движущаяся со скоростью 9 м/с, налетает на покоящуюся тележку массой 1 кг, и они сцепляются.\n(2 + 1) × v = 2 × 9 = 18 → v = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph42q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Watch out: momentum is a vector. When two objects move toward each other, give one velocity + and the other −.\nExample: a 2 kg cart at +3 m/s meets a 1 kg cart at −4 m/s, and they stick: (2 + 1) × v = 2 × 3 + 1 × (−4) = 2, so v ≈ 0.67 m/s in the + direction.\nAdding the momenta as if both were + gives 10 ÷ 3 ≈ 3.33 m/s, which is wrong.",
+      "uz": "Ehtiyot boʻling: impuls — vektor. Ikki jism bir-biriga qarab harakatlansa, birining tezligini +, ikkinchisinikini − deb oling.\nMisol: +3 m/s tezlikdagi 2 kg massali aravacha −4 m/s tezlikdagi 1 kg massali aravacha bilan uchrashib, ular yopishib qoladi: (2 + 1) × v = 2 × 3 + 1 × (−4) = 2, demak v ≈ 0,67 m/s, + yoʻnalishda.\nIkkala impulsni + deb qoʻshsangiz, 10 ÷ 3 ≈ 3,33 m/s chiqadi — bu notoʻgʻri.",
+      "ru": "Осторожно: импульс — вектор. Если два тела движутся навстречу друг другу, скорость одного берите со знаком +, другого — со знаком −.\nПример: тележка 2 кг со скоростью +3 м/с встречает тележку 1 кг со скоростью −4 м/с, и они сцепляются: (2 + 1) × v = 2 × 3 + 1 × (−4) = 2, значит, v ≈ 0,67 м/с в направлении +.\nЕсли сложить импульсы, будто оба положительны, получится 10 ÷ 3 ≈ 3,33 м/с, а это неверно."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph42q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ph4201",
+     "C1-ph4202"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ph4201",
+     "C1-ph4202",
+     "C22-ph42c1",
+     "C22-ph42c2"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APPH04#official",
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "lesson",
+   "id": "C19-APPH04-3",
+   "course": "ap_physics_1",
+   "unit": "C10-APPH04",
+   "seq": 3,
+   "skill": "ap_physics_1:APPH04",
+   "requires": {
+    "math_rung_min": "alg2"
+   },
+   "title": {
+    "en": "AP Physics 1: Elastic and inelastic collisions",
+    "uz": "AP Physics 1: Elastik va noelastik toʻqnashuvlar",
+    "ru": "AP Physics 1: Упругие и неупругие столкновения"
+   },
+   "minutes": 8,
+   "format": "text",
+   "pieces": [
+    {
+     "role": "idea",
+     "body": {
+      "en": "In every collision with no outside force, momentum is conserved. Kinetic energy is conserved only in an elastic collision.\nIn an inelastic collision some kinetic energy turns into heat, sound and bent shapes. When the objects stick together, the most kinetic energy is lost.\nExample: a 1 kg ball at 6 m/s hits a 2 kg ball at rest; after, the first moves back at 2 m/s and the second forward at 4 m/s.\nMomentum: 1 × 6 = 1 × (−2) + 2 × 4 = 6. K: 18 J before, 2 + 16 = 18 J after. Elastic.",
+      "uz": "Tashqi kuch boʻlmagan har qanday toʻqnashuvda impuls saqlanadi. Kinetik energiya esa faqat elastik toʻqnashuvda saqlanadi.\nNoelastik toʻqnashuvda kinetik energiyaning bir qismi issiqlikka, tovushga va shakl oʻzgarishiga aylanadi. Jismlar bir-biriga yopishib qolsa, eng koʻp kinetik energiya yoʻqoladi.\nMisol: 6 m/s tezlikdagi 1 kg massali shar tinch turgan 2 kg massali sharga uriladi; keyin birinchisi 2 m/s tezlik bilan orqaga, ikkinchisi 4 m/s tezlik bilan oldinga harakatlanadi.\nImpuls: 1 × 6 = 1 × (−2) + 2 × 4 = 6. K: oldin 18 J, keyin 2 + 16 = 18 J. Elastik.",
+      "ru": "При любом столкновении без внешних сил импульс сохраняется. Кинетическая энергия сохраняется только при упругом столкновении.\nПри неупругом столкновении часть кинетической энергии переходит в тепло, звук и деформацию. Когда тела слипаются, теряется больше всего кинетической энергии.\nПример: шар массой 1 кг со скоростью 6 м/с налетает на покоящийся шар массой 2 кг; после удара первый движется назад со скоростью 2 м/с, второй — вперёд со скоростью 4 м/с.\nИмпульс: 1 × 6 = 1 × (−2) + 2 × 4 = 6. K: до 18 Дж, после 2 + 16 = 18 Дж. Упругое."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph43q1"
+    },
+    {
+     "role": "example",
+     "body": {
+      "en": "A 4 kg cart moving at 5 m/s hits a 1 kg cart at rest, and they stick together.\nv = 4 × 5 ÷ (4 + 1) = 4 m/s. K before = ½ × 4 × 5² = 50 J; K after = ½ × 5 × 4² = 40 J; lost: 50 − 40 = 10 J.\nNow you: a 2 kg cart moving at 6 m/s hits a 1 kg cart at rest, and they stick together.\nv = 2 × 6 ÷ 3 = 4 m/s; K before = ½ × 2 × 6² = 36 J; K after = ½ × 3 × 4² = 24 J; lost = ?",
+      "uz": "5 m/s tezlik bilan harakatlanayotgan 4 kg massali aravacha tinch turgan 1 kg massali aravachaga urilib, ular bir-biriga yopishib qoladi.\nv = 4 × 5 ÷ (4 + 1) = 4 m/s. Oldingi K = ½ × 4 × 5² = 50 J; keyingi K = ½ × 5 × 4² = 40 J; yoʻqolgani: 50 − 40 = 10 J.\nEndi siz: 6 m/s tezlik bilan harakatlanayotgan 2 kg massali aravacha tinch turgan 1 kg massali aravachaga urilib, ular bir-biriga yopishib qoladi.\nv = 2 × 6 ÷ 3 = 4 m/s; oldingi K = ½ × 2 × 6² = 36 J; keyingi K = ½ × 3 × 4² = 24 J; yoʻqolgani = ?",
+      "ru": "Тележка массой 4 кг, движущаяся со скоростью 5 м/с, налетает на покоящуюся тележку массой 1 кг, и они сцепляются.\nv = 4 × 5 ÷ (4 + 1) = 4 м/с. K до = ½ × 4 × 5² = 50 Дж; K после = ½ × 5 × 4² = 40 Дж; потеряно: 50 − 40 = 10 Дж.\nТеперь попробуйте сами: тележка массой 2 кг, движущаяся со скоростью 6 м/с, налетает на покоящуюся тележку массой 1 кг, и они сцепляются.\nv = 2 × 6 ÷ 3 = 4 м/с; K до = ½ × 2 × 6² = 36 Дж; K после = ½ × 3 × 4² = 24 Дж; потеряно = ?"
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph43q2"
+    },
+    {
+     "role": "trap",
+     "body": {
+      "en": "Watch out: ‘elastic’ is about kinetic energy, not about bouncing. Momentum is conserved in both kinds; compare K before and after to tell them apart.\nExample: two carts bounce apart, but their total K falls from 24 J to 18 J: the collision is inelastic, even though they did not stick.\nTotal K never grows in a collision unless stored energy is set free, as by a squeezed spring or an explosion.",
+      "uz": "Ehtiyot boʻling: «elastik» soʻzi sakrab qaytishni emas, kinetik energiyani bildiradi. Impuls ikkala turda ham saqlanadi; ularni farqlash uchun K ni oldin va keyin solishtiring.\nMisol: ikki aravacha bir-biridan qaytadi, lekin ularning umumiy K si 24 J dan 18 J gacha kamayadi: ular yopishmagan boʻlsa ham, toʻqnashuv noelastik.\nToʻqnashuvda umumiy K hech qachon ortmaydi, agar jamgʻarilgan energiya ajralib chiqmasa (masalan, siqilgan prujina yoki portlash).",
+      "ru": "Осторожно: «упругое» говорит о кинетической энергии, а не об отскоке. Импульс сохраняется в обоих случаях; чтобы их различить, сравните K до и после.\nПример: две тележки отскакивают друг от друга, но их полная K падает с 24 Дж до 18 Дж: столкновение неупругое, хотя они не сцепились.\nПолная K при столкновении никогда не растёт, если не высвобождается запасённая энергия, как у сжатой пружины или при взрыве."
+     },
+     "figure": null,
+     "video": null,
+     "check": "C19-ph43q3"
+    }
+   ],
+   "test": {
+    "pool": "C1",
+    "families": [
+     "C1-ph4301",
+     "C1-ph4302"
+    ],
+    "n": 3,
+    "first_is_example": true,
+    "test_out": true
+   },
+   "homework": {
+    "pool": "C1",
+    "families": [
+     "C1-ph4301",
+     "C1-ph4302",
+     "C22-ph43c1",
+     "C22-ph43c2"
+    ]
+   },
+   "reserve": null,
+   "extra_link": "C10-APPH04#official",
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ],
+ "items": [
+  {
+   "id": "C19-ph11q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "displacement_velocity",
+   "page": "C19-APPH01-1",
+   "lang": "en",
+   "stem": {
+    "en": "A cyclist rides 600 m north and then 200 m south along a straight road. The whole ride takes 200 s. What is the size of the cyclist’s average velocity?",
+    "uz": "Velosipedchi toʻgʻri yoʻl boʻylab 600 m shimolga, keyin 200 m janubga yuradi. Butun yoʻlga 200 s ketadi. Velosipedchi oʻrtacha tezligining moduli qancha?",
+    "ru": "Велосипедист проезжает по прямой дороге 600 м на север, затем 200 м на юг. Вся поездка занимает 200 с. Каков модуль средней скорости велосипедиста?"
+   },
+   "options": [
+    {
+     "en": "2 m/s",
+     "uz": "2 m/s",
+     "ru": "2 м/с"
+    },
+    {
+     "en": "4 m/s",
+     "uz": "4 m/s",
+     "ru": "4 м/с"
+    },
+    {
+     "en": "3 m/s",
+     "uz": "3 m/s",
+     "ru": "3 м/с"
+    },
+    {
+     "en": "1 m/s",
+     "uz": "1 m/s",
+     "ru": "1 м/с"
+    }
+   ],
+   "why": {
+    "en": "Displacement = 600 − 200 = 400 m north; 400 ÷ 200 = 2 m/s. 4 m/s is the average speed (800 m ÷ 200 s).",
+    "uz": "Koʻchish = 600 − 200 = 400 m shimolga; 400 ÷ 200 = 2 m/s. 4 m/s — oʻrtacha yoʻl tezligi (800 m ÷ 200 s).",
+    "ru": "Перемещение = 600 − 200 = 400 м на север; 400 ÷ 200 = 2 м/с. 4 м/с — средняя путевая скорость (800 м ÷ 200 с)."
+   },
+   "prior_b": 0.3,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph11q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "average_acceleration",
+   "page": "C19-APPH01-1",
+   "lang": "en",
+   "stem": {
+    "en": "A car speeds up from 6 m/s to 18 m/s in 4 s. What is its average acceleration?",
+    "uz": "Avtomobil 4 s ichida tezligini 6 m/s dan 18 m/s gacha oshiradi. Uning oʻrtacha tezlanishi qancha?",
+    "ru": "Автомобиль за 4 с разгоняется с 6 м/с до 18 м/с. Каково его среднее ускорение?"
+   },
+   "options": [
+    {
+     "en": "3 m/s²",
+     "uz": "3 m/s²",
+     "ru": "3 м/с²"
+    },
+    {
+     "en": "4.5 m/s²",
+     "uz": "4,5 m/s²",
+     "ru": "4,5 м/с²"
+    },
+    {
+     "en": "6 m/s²",
+     "uz": "6 m/s²",
+     "ru": "6 м/с²"
+    },
+    {
+     "en": "48 m/s²",
+     "uz": "48 m/s²",
+     "ru": "48 м/с²"
+    }
+   ],
+   "why": {
+    "en": "a = Δv ÷ Δt = (18 − 6) ÷ 4 = 12 ÷ 4 = 3 m/s².",
+    "uz": "a = Δv ÷ Δt = (18 − 6) ÷ 4 = 12 ÷ 4 = 3 m/s².",
+    "ru": "a = Δv ÷ Δt = (18 − 6) ÷ 4 = 12 ÷ 4 = 3 м/с²."
+   },
+   "prior_b": 0.2,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph11q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "displacement_velocity",
+   "page": "C19-APPH01-1",
+   "lang": "en",
+   "stem": {
+    "en": "A dog runs 30 m to fetch a ball and runs back to its owner along the same line. The trip takes 12 s. What is the dog’s average velocity for the whole trip?",
+    "uz": "It koptokni olib kelish uchun 30 m yuguradi va xuddi shu chiziq boʻylab egasiga qaytib keladi. Bunga 12 s ketadi. Butun harakat davomida itning oʻrtacha tezligi qancha?",
+    "ru": "Собака пробегает 30 м за мячом и возвращается к хозяину по той же прямой. На это уходит 12 с. Какова средняя скорость собаки за всё движение?"
+   },
+   "options": [
+    {
+     "en": "0 m/s",
+     "uz": "0 m/s",
+     "ru": "0 м/с"
+    },
+    {
+     "en": "5 m/s",
+     "uz": "5 m/s",
+     "ru": "5 м/с"
+    },
+    {
+     "en": "2.5 m/s",
+     "uz": "2,5 m/s",
+     "ru": "2,5 м/с"
+    },
+    {
+     "en": "0.4 m/s",
+     "uz": "0,4 m/s",
+     "ru": "0,4 м/с"
+    }
+   ],
+   "why": {
+    "en": "The dog ends where it started, so its displacement is 0 and its average velocity is 0. 5 m/s is its average speed (60 m ÷ 12 s).",
+    "uz": "It boshlagan joyiga qaytdi, shuning uchun koʻchish 0, oʻrtacha tezlik ham 0. 5 m/s — uning oʻrtacha yoʻl tezligi (60 m ÷ 12 s).",
+    "ru": "Собака вернулась туда, откуда начала, поэтому перемещение 0 и средняя скорость 0. 5 м/с — её средняя путевая скорость (60 м ÷ 12 с)."
+   },
+   "prior_b": 0.5,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph12q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "constant_acceleration",
+   "page": "C19-APPH01-2",
+   "lang": "en",
+   "stem": {
+    "en": "A cart starts from rest and speeds up with a constant acceleration of 3 m/s². How far does it go in the first 4 s?",
+    "uz": "Aravacha tinch holatdan 3 m/s² oʻzgarmas tezlanish bilan harakat boshlaydi. U dastlabki 4 s da qancha masofani bosib oʻtadi?",
+    "ru": "Тележка трогается с места с постоянным ускорением 3 м/с². Какое расстояние она проходит за первые 4 с?"
+   },
+   "options": [
+    {
+     "en": "24 m",
+     "uz": "24 m",
+     "ru": "24 м"
+    },
+    {
+     "en": "12 m",
+     "uz": "12 m",
+     "ru": "12 м"
+    },
+    {
+     "en": "48 m",
+     "uz": "48 m",
+     "ru": "48 м"
+    },
+    {
+     "en": "6 m",
+     "uz": "6 m",
+     "ru": "6 м"
+    }
+   ],
+   "why": {
+    "en": "Δx = v₀t + ½at² = 0 + ½ × 3 × 4² = 24 m. 12 m/s is its speed then, not a distance.",
+    "uz": "Δx = v₀t + ½at² = 0 + ½ × 3 × 4² = 24 m. 12 m/s — shu paytdagi tezlik, masofa emas.",
+    "ru": "Δx = v₀t + ½at² = 0 + ½ × 3 × 4² = 24 м. 12 м/с — скорость в этот момент, а не расстояние."
+   },
+   "prior_b": 0.3,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph12q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "free_fall",
+   "page": "C19-APPH01-2",
+   "lang": "en",
+   "stem": {
+    "en": "A stone is dropped from rest from the top of a 90 m tower. How high above the ground is it 3 s later? Use g = 9.8 m/s² and ignore air resistance.",
+    "uz": "Tosh 90 m balandlikdagi minora tepasidan tinch holatdan qoʻyib yuboriladi. 3 s dan keyin u yerdan qancha balandlikda boʻladi? g = 9,8 m/s² deb oling, havoning qarshiligini hisobga olmang.",
+    "ru": "Камень отпускают без начальной скорости с вершины башни высотой 90 м. На какой высоте над землёй он будет через 3 с? Примите g = 9,8 м/с², сопротивлением воздуха пренебрегите."
+   },
+   "options": [
+    {
+     "en": "45.9 m",
+     "uz": "45,9 m",
+     "ru": "45,9 м"
+    },
+    {
+     "en": "60.6 m",
+     "uz": "60,6 m",
+     "ru": "60,6 м"
+    },
+    {
+     "en": "44.1 m",
+     "uz": "44,1 m",
+     "ru": "44,1 м"
+    },
+    {
+     "en": "1.8 m",
+     "uz": "1,8 m",
+     "ru": "1,8 м"
+    }
+   ],
+   "why": {
+    "en": "Fallen: ½ × 9.8 × 3² = 44.1 m; height = 90 − 44.1 = 45.9 m. 44.1 m is how far it fell, not its height.",
+    "uz": "Tushgan masofa: ½ × 9,8 × 3² = 44,1 m; balandlik = 90 − 44,1 = 45,9 m. 44,1 m — tushgan masofa, balandlik emas.",
+    "ru": "Пролетел: ½ × 9,8 × 3² = 44,1 м; высота = 90 − 44,1 = 45,9 м. 44,1 м — пройденное расстояние, а не высота."
+   },
+   "prior_b": 0.5,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph12q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "free_fall",
+   "page": "C19-APPH01-2",
+   "lang": "en",
+   "stem": {
+    "en": "A ball is thrown straight up. At the highest point of its path, what are its velocity v and acceleration a? Ignore air resistance.",
+    "uz": "Koptok tik yuqoriga otiladi. Trayektoriyasining eng yuqori nuqtasida uning tezligi v va tezlanishi a qanday? Havoning qarshiligini hisobga olmang.",
+    "ru": "Мяч бросают вертикально вверх. Каковы его скорость v и ускорение a в верхней точке траектории? Сопротивлением воздуха пренебрегите."
+   },
+   "options": [
+    {
+     "en": "v = 0, a = 9.8 m/s² down",
+     "uz": "v = 0, a = 9,8 m/s², pastga",
+     "ru": "v = 0, a = 9,8 м/с², вниз"
+    },
+    {
+     "en": "v = 0, a = 9.8 m/s² up",
+     "uz": "v = 0, a = 9,8 m/s², yuqoriga",
+     "ru": "v = 0, a = 9,8 м/с², вверх"
+    },
+    {
+     "en": "v = 9.8 m/s down, a = 0 m/s²",
+     "uz": "v = 9,8 m/s pastga, a = 0 m/s²",
+     "ru": "v = 9,8 м/с вниз, a = 0 м/с²"
+    },
+    {
+     "en": "v = 0, a = 0 (it stops)",
+     "uz": "v = 0, a = 0 (u toʻxtaydi)",
+     "ru": "v = 0, a = 0 (мяч остановился)"
+    }
+   ],
+   "why": {
+    "en": "At the top the ball stops for an instant (v = 0), but gravity still acts on it, so a = 9.8 m/s² downward.",
+    "uz": "Eng yuqori nuqtada koptok bir lahzaga toʻxtaydi (v = 0), lekin unga ogʻirlik kuchi taʼsir qilishda davom etadi, shuning uchun a = 9,8 m/s², pastga.",
+    "ru": "В верхней точке мяч на мгновение останавливается (v = 0), но сила тяжести продолжает действовать, поэтому a = 9,8 м/с² вниз."
+   },
+   "prior_b": 0.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph13q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "projectile_motion",
+   "page": "C19-APPH01-3",
+   "lang": "en",
+   "stem": {
+    "en": "A ball is launched horizontally at 6 m/s from a ledge 78.4 m high. How long does it take to reach the ground? Use g = 9.8 m/s² and ignore air resistance.",
+    "uz": "Koptok 78,4 m balandlikdagi supachadan 6 m/s tezlik bilan gorizontal otiladi. U yerga qancha vaqtda yetib boradi? g = 9,8 m/s² deb oling, havoning qarshiligini hisobga olmang.",
+    "ru": "Мяч бросают горизонтально со скоростью 6 м/с с уступа высотой 78,4 м. За какое время он долетит до земли? Примите g = 9,8 м/с², сопротивлением воздуха пренебрегите."
+   },
+   "options": [
+    {
+     "en": "4 s",
+     "uz": "4 s",
+     "ru": "4 с"
+    },
+    {
+     "en": "8 s",
+     "uz": "8 s",
+     "ru": "8 с"
+    },
+    {
+     "en": "16 s",
+     "uz": "16 s",
+     "ru": "16 с"
+    },
+    {
+     "en": "2.8 s",
+     "uz": "2,8 s",
+     "ru": "2,8 с"
+    }
+   ],
+   "why": {
+    "en": "½ × 9.8 × t² = 78.4 → t² = 16 → t = 4 s. The 6 m/s does not change the time in the air.",
+    "uz": "½ × 9,8 × t² = 78,4 → t² = 16 → t = 4 s. 6 m/s havoda boʻlish vaqtini oʻzgartirmaydi.",
+    "ru": "½ × 9,8 × t² = 78,4 → t² = 16 → t = 4 с. 6 м/с не меняют время полёта."
+   },
+   "prior_b": 0.5,
+   "time_s": 55,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph13q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "projectile_motion",
+   "page": "C19-APPH01-3",
+   "lang": "en",
+   "stem": {
+    "en": "A ball rolls horizontally off a cliff 44.1 m high at 4 m/s. How far from the foot of the cliff does it land? Use g = 9.8 m/s² and ignore air resistance.",
+    "uz": "Koptok balandligi 44,1 m boʻlgan jardan 4 m/s tezlik bilan gorizontal dumalab tushadi. U jar etagidan qancha uzoqlikka tushadi? g = 9,8 m/s² deb oling, havoning qarshiligini hisobga olmang.",
+    "ru": "Мяч скатывается горизонтально с обрыва высотой 44,1 м со скоростью 4 м/с. На каком расстоянии от подножия обрыва он упадёт? Примите g = 9,8 м/с², сопротивлением воздуха пренебрегите."
+   },
+   "options": [
+    {
+     "en": "12 m",
+     "uz": "12 m",
+     "ru": "12 м"
+    },
+    {
+     "en": "18 m",
+     "uz": "18 m",
+     "ru": "18 м"
+    },
+    {
+     "en": "36 m",
+     "uz": "36 m",
+     "ru": "36 м"
+    },
+    {
+     "en": "6 m",
+     "uz": "6 m",
+     "ru": "6 м"
+    }
+   ],
+   "why": {
+    "en": "½ × 9.8 × t² = 44.1 → t = 3 s; x = v₀t = 4 × 3 = 12 m.",
+    "uz": "½ × 9,8 × t² = 44,1 → t = 3 s; x = v₀t = 4 × 3 = 12 m.",
+    "ru": "½ × 9,8 × t² = 44,1 → t = 3 с; x = v₀t = 4 × 3 = 12 м."
+   },
+   "prior_b": 0.6,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph13q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "projectile_motion",
+   "page": "C19-APPH01-3",
+   "lang": "en",
+   "stem": {
+    "en": "From the same height and at the same moment, ball A is dropped and ball B is launched horizontally at 10 m/s. Ignoring air resistance, which reaches the ground first?",
+    "uz": "Bir xil balandlikdan bir paytda A koptok qoʻyib yuboriladi, B koptok esa 10 m/s tezlik bilan gorizontal otiladi. Havoning qarshiligini hisobga olmasak, qaysi biri yerga birinchi tushadi?",
+    "ru": "С одной высоты в один и тот же момент мяч A отпускают, а мяч B бросают горизонтально со скоростью 10 м/с. Какой из них первым долетит до земли, если пренебречь сопротивлением воздуха?"
+   },
+   "options": [
+    {
+     "en": "Both at the same time",
+     "uz": "Ikkalasi bir vaqtda",
+     "ru": "Оба одновременно"
+    },
+    {
+     "en": "Ball A",
+     "uz": "A koptok",
+     "ru": "Мяч A"
+    },
+    {
+     "en": "Ball B, as it is faster",
+     "uz": "B koptok, u tezroq",
+     "ru": "Мяч B, он быстрее"
+    },
+    {
+     "en": "The heavier of the two",
+     "uz": "Ikkalasining ogʻirrogʻi",
+     "ru": "Тот, что тяжелее"
+    }
+   ],
+   "why": {
+    "en": "Both start with no vertical speed and fall with the same g from the same height, so they land together; B just lands farther away.",
+    "uz": "Ikkalasining ham boshlangʻich vertikal tezligi yoʻq va ular bir xil balandlikdan bir xil g bilan tushadi, shuning uchun birga tushadi; B shunchaki uzoqroqqa tushadi.",
+    "ru": "У обоих нет начальной вертикальной скорости, оба падают с одной высоты с одним и тем же g, поэтому приземляются одновременно; B просто падает дальше."
+   },
+   "prior_b": 0.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph21q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "newtons_second_law",
+   "page": "C19-APPH02-1",
+   "lang": "en",
+   "stem": {
+    "en": "A 5 kg sled is pulled forward with 30 N while friction pulls back on it with 10 N. What is its acceleration?",
+    "uz": "5 kg massali chana oldinga 30 N kuch bilan tortiladi, ishqalanish esa uni orqaga 10 N kuch bilan tortadi. Uning tezlanishi qancha?",
+    "ru": "Санки массой 5 кг тянут вперёд с силой 30 Н, а сила трения тянет их назад с силой 10 Н. Каково их ускорение?"
+   },
+   "options": [
+    {
+     "en": "4 m/s²",
+     "uz": "4 m/s²",
+     "ru": "4 м/с²"
+    },
+    {
+     "en": "6 m/s²",
+     "uz": "6 m/s²",
+     "ru": "6 м/с²"
+    },
+    {
+     "en": "8 m/s²",
+     "uz": "8 m/s²",
+     "ru": "8 м/с²"
+    },
+    {
+     "en": "2 m/s²",
+     "uz": "2 m/s²",
+     "ru": "2 м/с²"
+    }
+   ],
+   "why": {
+    "en": "ΣF = 30 − 10 = 20 N forward; a = 20 ÷ 5 = 4 m/s². The friction is subtracted, not added.",
+    "uz": "ΣF = 30 − 10 = 20 N, oldinga; a = 20 ÷ 5 = 4 m/s². Ishqalanish kuchi qoʻshilmaydi, ayiriladi.",
+    "ru": "ΣF = 30 − 10 = 20 Н вперёд; a = 20 ÷ 5 = 4 м/с². Сила трения вычитается, а не прибавляется."
+   },
+   "prior_b": 0.2,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph21q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "newtons_second_law",
+   "page": "C19-APPH02-1",
+   "lang": "en",
+   "stem": {
+    "en": "Two horizontal forces act on an 8 kg cart: 60 N forward and 4 N backward. What is its acceleration?",
+    "uz": "8 kg massali aravachaga ikkita gorizontal kuch taʼsir qiladi: oldinga 60 N va orqaga 4 N. Uning tezlanishi qancha?",
+    "ru": "На тележку массой 8 кг действуют две горизонтальные силы — 60 Н вперёд и 4 Н назад. Каково её ускорение?"
+   },
+   "options": [
+    {
+     "en": "7 m/s²",
+     "uz": "7 m/s²",
+     "ru": "7 м/с²"
+    },
+    {
+     "en": "7.5 m/s²",
+     "uz": "7,5 m/s²",
+     "ru": "7,5 м/с²"
+    },
+    {
+     "en": "8 m/s²",
+     "uz": "8 m/s²",
+     "ru": "8 м/с²"
+    },
+    {
+     "en": "448 m/s²",
+     "uz": "448 m/s²",
+     "ru": "448 м/с²"
+    }
+   ],
+   "why": {
+    "en": "ΣF = 60 − 4 = 56 N; a = ΣF ÷ m = 56 ÷ 8 = 7 m/s².",
+    "uz": "ΣF = 60 − 4 = 56 N; a = ΣF ÷ m = 56 ÷ 8 = 7 m/s².",
+    "ru": "ΣF = 60 − 4 = 56 Н; a = ΣF ÷ m = 56 ÷ 8 = 7 м/с²."
+   },
+   "prior_b": 0.3,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph21q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "newtons_third_law",
+   "page": "C19-APPH02-1",
+   "lang": "en",
+   "stem": {
+    "en": "A heavy truck and a small car collide head-on. Compare the force of the truck on the car with the force of the car on the truck.",
+    "uz": "Ogʻir yuk mashinasi va kichik yengil mashina peshonama-peshona toʻqnashadi. Yuk mashinasining yengil mashinaga taʼsir kuchini yengil mashinaning yuk mashinasiga taʼsir kuchi bilan solishtiring.",
+    "ru": "Тяжёлый грузовик и маленький легковой автомобиль сталкиваются лоб в лоб. Сравните силу, с которой грузовик действует на автомобиль, и силу, с которой автомобиль действует на грузовик."
+   },
+   "options": [
+    {
+     "en": "They are equal in size",
+     "uz": "Ular kattaligi boʻyicha teng",
+     "ru": "Они равны по модулю"
+    },
+    {
+     "en": "The truck’s is bigger",
+     "uz": "Yuk mashinasiniki kattaroq",
+     "ru": "Сила грузовика больше"
+    },
+    {
+     "en": "Larger from the faster one",
+     "uz": "Tezroq yurganiniki kattaroq",
+     "ru": "Больше у того, кто быстрее"
+    },
+    {
+     "en": "Zero, since they cancel",
+     "uz": "Nolga teng: bir-birini yoʻqotadi",
+     "ru": "Ноль: они компенсируются"
+    }
+   ],
+   "why": {
+    "en": "They are a Newton’s third law pair: equal in size and opposite in direction. The car accelerates more only because its mass is smaller.",
+    "uz": "Ular Nyutonning uchinchi qonuni boʻyicha juft kuchlar: kattaligi teng, yoʻnalishi qarama-qarshi. Yengil mashina faqat massasi kichikroq boʻlgani uchun koʻproq tezlanish oladi.",
+    "ru": "Это пара сил по третьему закону Ньютона: они равны по модулю и противоположны по направлению. Легковой автомобиль ускоряется сильнее только потому, что его масса меньше."
+   },
+   "prior_b": 0.5,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph22q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "friction",
+   "page": "C19-APPH02-2",
+   "lang": "en",
+   "stem": {
+    "en": "A 20 kg crate slides on a level floor. The coefficient of kinetic friction is 0.25. What is the friction force on the crate? Use g = 9.8 m/s².",
+    "uz": "20 kg massali yashik gorizontal pol boʻylab sirpanmoqda. Sirpanish ishqalanish koeffitsiyenti 0,25. Yashikka taʼsir qiluvchi ishqalanish kuchi qancha? g = 9,8 m/s² deb oling.",
+    "ru": "Ящик массой 20 кг скользит по горизонтальному полу. Коэффициент трения скольжения 0,25. Чему равна сила трения, действующая на ящик? Примите g = 9,8 м/с²."
+   },
+   "options": [
+    {
+     "en": "49 N",
+     "uz": "49 N",
+     "ru": "49 Н"
+    },
+    {
+     "en": "5 N",
+     "uz": "5 N",
+     "ru": "5 Н"
+    },
+    {
+     "en": "196 N",
+     "uz": "196 N",
+     "ru": "196 Н"
+    },
+    {
+     "en": "245 N",
+     "uz": "245 N",
+     "ru": "245 Н"
+    }
+   ],
+   "why": {
+    "en": "N = mg = 20 × 9.8 = 196 N; f = μₖN = 0.25 × 196 = 49 N.",
+    "uz": "N = mg = 20 × 9,8 = 196 N; f = μₖN = 0,25 × 196 = 49 N.",
+    "ru": "N = mg = 20 × 9,8 = 196 Н; f = μₖN = 0,25 × 196 = 49 Н."
+   },
+   "prior_b": 0.3,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph22q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "friction",
+   "page": "C19-APPH02-2",
+   "lang": "en",
+   "stem": {
+    "en": "A 5 kg box is pushed across a level floor by a 30 N horizontal force. The coefficient of kinetic friction is 0.4. What is the box’s acceleration? Use g = 9.8 m/s².",
+    "uz": "5 kg massali quti gorizontal pol boʻylab 30 N gorizontal kuch bilan itariladi. Sirpanish ishqalanish koeffitsiyenti 0,4. Qutining tezlanishi qancha? g = 9,8 m/s² deb oling.",
+    "ru": "Ящик массой 5 кг толкают по горизонтальному полу горизонтальной силой 30 Н. Коэффициент трения скольжения 0,4. Каково ускорение ящика? Примите g = 9,8 м/с²."
+   },
+   "options": [
+    {
+     "en": "2.08 m/s²",
+     "uz": "2,08 m/s²",
+     "ru": "2,08 м/с²"
+    },
+    {
+     "en": "6 m/s²",
+     "uz": "6 m/s²",
+     "ru": "6 м/с²"
+    },
+    {
+     "en": "9.92 m/s²",
+     "uz": "9,92 m/s²",
+     "ru": "9,92 м/с²"
+    },
+    {
+     "en": "5.6 m/s²",
+     "uz": "5,6 m/s²",
+     "ru": "5,6 м/с²"
+    }
+   ],
+   "why": {
+    "en": "f = 0.4 × 5 × 9.8 = 19.6 N; a = (30 − 19.6) ÷ 5 = 10.4 ÷ 5 = 2.08 m/s².",
+    "uz": "f = 0,4 × 5 × 9,8 = 19,6 N; a = (30 − 19,6) ÷ 5 = 10,4 ÷ 5 = 2,08 m/s².",
+    "ru": "f = 0,4 × 5 × 9,8 = 19,6 Н; a = (30 − 19,6) ÷ 5 = 10,4 ÷ 5 = 2,08 м/с²."
+   },
+   "prior_b": 0.6,
+   "time_s": 70,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph22q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "friction",
+   "page": "C19-APPH02-2",
+   "lang": "en",
+   "stem": {
+    "en": "A 20 kg desk rests on a level floor, and μₛ = 0.6. You push it horizontally with 50 N and it does not move. What is the static friction force on the desk? Use g = 9.8 m/s².",
+    "uz": "20 kg massali stol gorizontal polda turibdi, μₛ = 0,6. Siz uni 50 N kuch bilan gorizontal itarasiz, lekin u qoʻzgʻalmaydi. Stolga taʼsir qiluvchi tinchlikdagi ishqalanish kuchi qancha? g = 9,8 m/s² deb oling.",
+    "ru": "Стол массой 20 кг стоит на горизонтальном полу, μₛ = 0,6. Вы толкаете его горизонтально с силой 50 Н, но он не сдвигается. Чему равна сила трения покоя, действующая на стол? Примите g = 9,8 м/с²."
+   },
+   "options": [
+    {
+     "en": "50 N",
+     "uz": "50 N",
+     "ru": "50 Н"
+    },
+    {
+     "en": "117.6 N",
+     "uz": "117,6 N",
+     "ru": "117,6 Н"
+    },
+    {
+     "en": "196 N",
+     "uz": "196 N",
+     "ru": "196 Н"
+    },
+    {
+     "en": "0 N",
+     "uz": "0 N",
+     "ru": "0 Н"
+    }
+   ],
+   "why": {
+    "en": "The desk does not accelerate, so friction balances the push: 50 N. 117.6 N (0.6 × 196) is only the most it could be.",
+    "uz": "Stol tezlanish olmaydi, demak ishqalanish itarish kuchini muvozanatlaydi: 50 N. 117,6 N (0,6 × 196) — uning eng katta mumkin boʻlgan qiymati, xolos.",
+    "ru": "Стол не ускоряется, значит, трение уравновешивает толчок: 50 Н. 117,6 Н (0,6 × 196) — лишь наибольшее возможное значение."
+   },
+   "prior_b": 0.8,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph23q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "spring_force",
+   "page": "C19-APPH02-3",
+   "lang": "en",
+   "stem": {
+    "en": "A spring with k = 400 N/m is squeezed by 0.05 m. How hard does it push back?",
+    "uz": "Bikrligi k = 400 N/m boʻlgan prujina 0,05 m ga siqilgan. U qanday kuch bilan orqaga itaradi?",
+    "ru": "Пружину жёсткостью k = 400 Н/м сжали на 0,05 м. С какой силой она отталкивает назад?"
+   },
+   "options": [
+    {
+     "en": "20 N",
+     "uz": "20 N",
+     "ru": "20 Н"
+    },
+    {
+     "en": "0.5 N",
+     "uz": "0,5 N",
+     "ru": "0,5 Н"
+    },
+    {
+     "en": "10 N",
+     "uz": "10 N",
+     "ru": "10 Н"
+    },
+    {
+     "en": "8,000 N",
+     "uz": "8000 N",
+     "ru": "8000 Н"
+    }
+   ],
+   "why": {
+    "en": "F = kx = 400 × 0.05 = 20 N. 0.5 is ½kx², the energy in joules, not a force.",
+    "uz": "F = kx = 400 × 0,05 = 20 N. 0,5 — ½kx², yaʼni joullardagi energiya, kuch emas.",
+    "ru": "F = kx = 400 × 0,05 = 20 Н. 0,5 — это ½kx², энергия в джоулях, а не сила."
+   },
+   "prior_b": 0.3,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph23q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "circular_motion",
+   "page": "C19-APPH02-3",
+   "lang": "en",
+   "stem": {
+    "en": "A 3 kg ball moves in a circle of radius 2 m at a steady 4 m/s. What net force toward the centre does it need?",
+    "uz": "3 kg massali shar radiusi 2 m boʻlgan aylana boʻylab oʻzgarmas 4 m/s tezlik bilan harakatlanadi. Unga markazga yoʻnalgan qancha teng taʼsir etuvchi kuch kerak?",
+    "ru": "Шар массой 3 кг движется по окружности радиусом 2 м с постоянной скоростью 4 м/с. Какая равнодействующая, направленная к центру, ему нужна?"
+   },
+   "options": [
+    {
+     "en": "24 N",
+     "uz": "24 N",
+     "ru": "24 Н"
+    },
+    {
+     "en": "6 N",
+     "uz": "6 N",
+     "ru": "6 Н"
+    },
+    {
+     "en": "48 N",
+     "uz": "48 N",
+     "ru": "48 Н"
+    },
+    {
+     "en": "96 N",
+     "uz": "96 N",
+     "ru": "96 Н"
+    }
+   ],
+   "why": {
+    "en": "a = v² ÷ r = 4² ÷ 2 = 8 m/s²; F = ma = 3 × 8 = 24 N.",
+    "uz": "a = v² ÷ r = 4² ÷ 2 = 8 m/s²; F = ma = 3 × 8 = 24 N.",
+    "ru": "a = v² ÷ r = 4² ÷ 2 = 8 м/с²; F = ma = 3 × 8 = 24 Н."
+   },
+   "prior_b": 0.5,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph23q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "circular_motion",
+   "page": "C19-APPH02-3",
+   "lang": "en",
+   "stem": {
+    "en": "A car drives around a level curve at a steady speed. Which force points toward the centre of the curve?",
+    "uz": "Avtomobil gorizontal yoʻlning burilishida oʻzgarmas tezlik bilan harakatlanmoqda. Burilish markaziga qaysi kuch yoʻnalgan?",
+    "ru": "Автомобиль проходит поворот на горизонтальной дороге с постоянной скоростью. Какая сила направлена к центру поворота?"
+   },
+   "options": [
+    {
+     "en": "Friction from the road",
+     "uz": "Yoʻlning ishqalanish kuchi",
+     "ru": "Сила трения со стороны дороги"
+    },
+    {
+     "en": "The car’s weight",
+     "uz": "Avtomobilning ogʻirlik kuchi",
+     "ru": "Сила тяжести автомобиля"
+    },
+    {
+     "en": "An outward centrifugal force",
+     "uz": "Markazdan qochma kuch, tashqariga",
+     "ru": "Центробежная сила наружу"
+    },
+    {
+     "en": "The engine’s forward push",
+     "uz": "Dvigatelning oldinga itarishi",
+     "ru": "Сила тяги двигателя вперёд"
+    }
+   ],
+   "why": {
+    "en": "On a level road only static friction from the tyres can point sideways, toward the centre; weight and the normal force are vertical.",
+    "uz": "Gorizontal yoʻlda faqat shinalarga taʼsir qiluvchi tinchlikdagi ishqalanish yon tomonga, markazga yoʻnalishi mumkin; ogʻirlik va reaksiya kuchi vertikal.",
+    "ru": "На горизонтальной дороге вбок, к центру, может быть направлено только трение покоя шин о дорогу; сила тяжести и сила реакции вертикальны."
+   },
+   "prior_b": 0.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph31q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "kinetic_energy",
+   "page": "C19-APPH03-1",
+   "lang": "en",
+   "stem": {
+    "en": "A 4 kg cart moves at 5 m/s. What is its kinetic energy?",
+    "uz": "4 kg massali aravacha 5 m/s tezlik bilan harakatlanmoqda. Uning kinetik energiyasi qancha?",
+    "ru": "Тележка массой 4 кг движется со скоростью 5 м/с. Какова её кинетическая энергия?"
+   },
+   "options": [
+    {
+     "en": "50 J",
+     "uz": "50 J",
+     "ru": "50 Дж"
+    },
+    {
+     "en": "100 J",
+     "uz": "100 J",
+     "ru": "100 Дж"
+    },
+    {
+     "en": "10 J",
+     "uz": "10 J",
+     "ru": "10 Дж"
+    },
+    {
+     "en": "20 J",
+     "uz": "20 J",
+     "ru": "20 Дж"
+    }
+   ],
+   "why": {
+    "en": "K = ½mv² = ½ × 4 × 5² = 50 J. The speed is squared before halving.",
+    "uz": "K = ½mv² = ½ × 4 × 5² = 50 J. Avval tezlik kvadratga oshiriladi.",
+    "ru": "K = ½mv² = ½ × 4 × 5² = 50 Дж. Сначала скорость возводят в квадрат."
+   },
+   "prior_b": 0.1,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph31q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "work_energy",
+   "page": "C19-APPH03-1",
+   "lang": "en",
+   "stem": {
+    "en": "A 3 kg box at rest is pushed 6 m across frictionless ice by a steady 4 N horizontal force. How fast is it moving then?",
+    "uz": "Tinch turgan 3 kg massali quti ishqalanishsiz muz ustida 4 N oʻzgarmas gorizontal kuch bilan 6 m itariladi. Shundan keyin uning tezligi qancha?",
+    "ru": "Покоящийся ящик массой 3 кг толкают по льду без трения постоянной горизонтальной силой 4 Н на расстояние 6 м. Какой станет его скорость?"
+   },
+   "options": [
+    {
+     "en": "4 m/s",
+     "uz": "4 m/s",
+     "ru": "4 м/с"
+    },
+    {
+     "en": "16 m/s",
+     "uz": "16 m/s",
+     "ru": "16 м/с"
+    },
+    {
+     "en": "2.8 m/s",
+     "uz": "2,8 m/s",
+     "ru": "2,8 м/с"
+    },
+    {
+     "en": "8 m/s",
+     "uz": "8 m/s",
+     "ru": "8 м/с"
+    }
+   ],
+   "why": {
+    "en": "W = 4 × 6 = 24 J = ½ × 3 × v², so v² = 16 and v = 4 m/s. 16 is v², not v.",
+    "uz": "W = 4 × 6 = 24 J = ½ × 3 × v², demak v² = 16 va v = 4 m/s. 16 — bu v², v emas.",
+    "ru": "W = 4 × 6 = 24 Дж = ½ × 3 × v², значит, v² = 16 и v = 4 м/с. 16 — это v², а не v."
+   },
+   "prior_b": 0.6,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph31q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "kinetic_energy",
+   "page": "C19-APPH03-1",
+   "lang": "en",
+   "stem": {
+    "en": "A cyclist speeds up from 4 m/s to 12 m/s. How many times as large does her kinetic energy become?",
+    "uz": "Velosipedchi tezligini 4 m/s dan 12 m/s gacha oshiradi. Uning kinetik energiyasi necha marta ortadi?",
+    "ru": "Велосипедистка разгоняется с 4 м/с до 12 м/с. Во сколько раз увеличится её кинетическая энергия?"
+   },
+   "options": [
+    {
+     "en": "9 times",
+     "uz": "9 marta",
+     "ru": "в 9 раз"
+    },
+    {
+     "en": "3 times",
+     "uz": "3 marta",
+     "ru": "в 3 раза"
+    },
+    {
+     "en": "6 times",
+     "uz": "6 marta",
+     "ru": "в 6 раз"
+    },
+    {
+     "en": "8 times",
+     "uz": "8 marta",
+     "ru": "в 8 раз"
+    }
+   ],
+   "why": {
+    "en": "K grows as v²: the speed is 12 ÷ 4 = 3 times as large, so K is 3² = 9 times as large.",
+    "uz": "K v² ga proporsional: tezlik 12 ÷ 4 = 3 marta ortdi, demak K 3² = 9 marta ortadi.",
+    "ru": "K пропорциональна v²: скорость выросла в 12 ÷ 4 = 3 раза, значит, K — в 3² = 9 раз."
+   },
+   "prior_b": 0.5,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph32q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "potential_energy",
+   "page": "C19-APPH03-2",
+   "lang": "en",
+   "stem": {
+    "en": "A 3 kg book sits on a shelf 2 m above the floor. Taking the floor as h = 0, what is its gravitational potential energy? Use g = 9.8 m/s².",
+    "uz": "3 kg massali kitob poldan 2 m balandlikdagi tokchada turibdi. Polni h = 0 deb olsak, uning ogʻirlik kuchi maydonidagi potensial energiyasi qancha? g = 9,8 m/s² deb oling.",
+    "ru": "Книга массой 3 кг лежит на полке на высоте 2 м над полом. Если принять пол за h = 0, какова её потенциальная энергия в поле тяжести? Примите g = 9,8 м/с²."
+   },
+   "options": [
+    {
+     "en": "58.8 J",
+     "uz": "58,8 J",
+     "ru": "58,8 Дж"
+    },
+    {
+     "en": "6 J",
+     "uz": "6 J",
+     "ru": "6 Дж"
+    },
+    {
+     "en": "29.4 J",
+     "uz": "29,4 J",
+     "ru": "29,4 Дж"
+    },
+    {
+     "en": "117.6 J",
+     "uz": "117,6 J",
+     "ru": "117,6 Дж"
+    }
+   ],
+   "why": {
+    "en": "U = mgh = 3 × 9.8 × 2 = 58.8 J.",
+    "uz": "U = mgh = 3 × 9,8 × 2 = 58,8 J.",
+    "ru": "U = mgh = 3 × 9,8 × 2 = 58,8 Дж."
+   },
+   "prior_b": 0.2,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph32q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "energy_conservation",
+   "page": "C19-APPH03-2",
+   "lang": "en",
+   "stem": {
+    "en": "A sled starts from rest at the top of a frictionless hill 2.5 m high. How fast is it moving at the bottom? Use g = 9.8 m/s².",
+    "uz": "Chana balandligi 2,5 m boʻlgan ishqalanishsiz tepalik choʻqqisidan tinch holatdan harakat boshlaydi. Pastda uning tezligi qancha boʻladi? g = 9,8 m/s² deb oling.",
+    "ru": "Санки начинают движение из состояния покоя с вершины горки высотой 2,5 м без трения. Какой будет их скорость внизу? Примите g = 9,8 м/с²."
+   },
+   "options": [
+    {
+     "en": "7 m/s",
+     "uz": "7 m/s",
+     "ru": "7 м/с"
+    },
+    {
+     "en": "49 m/s",
+     "uz": "49 m/s",
+     "ru": "49 м/с"
+    },
+    {
+     "en": "24.5 m/s",
+     "uz": "24,5 m/s",
+     "ru": "24,5 м/с"
+    },
+    {
+     "en": "5 m/s",
+     "uz": "5 m/s",
+     "ru": "5 м/с"
+    }
+   ],
+   "why": {
+    "en": "v² = 2gh = 2 × 9.8 × 2.5 = 49, so v = 7 m/s. 49 is v², not v.",
+    "uz": "v² = 2gh = 2 × 9,8 × 2,5 = 49, demak v = 7 m/s. 49 — bu v², v emas.",
+    "ru": "v² = 2gh = 2 × 9,8 × 2,5 = 49, значит, v = 7 м/с. 49 — это v², а не v."
+   },
+   "prior_b": 0.5,
+   "time_s": 55,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph32q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "energy_conservation",
+   "page": "C19-APPH03-2",
+   "lang": "en",
+   "stem": {
+    "en": "Two frictionless slides start at the same height. One is short and steep, the other long and curved. A child starts from rest at the top of each. How do their speeds at the bottom compare?",
+    "uz": "Ikkita ishqalanishsiz tepalik bir xil balandlikdan boshlanadi. Biri qisqa va tik, ikkinchisi uzun va egri. Har birining tepasidan bittadan bola tinch holatdan harakat boshlaydi. Ularning pastdagi tezliklarini solishtiring.",
+    "ru": "Две горки без трения начинаются на одной высоте. Одна короткая и крутая, другая длинная и изогнутая. С вершины каждой из состояния покоя съезжает ребёнок. Сравните их скорости внизу."
+   },
+   "options": [
+    {
+     "en": "Equal: the height is the same",
+     "uz": "Teng: balandlik bir xil",
+     "ru": "Равны: высота одна и та же"
+    },
+    {
+     "en": "Faster on the steep one",
+     "uz": "Tik tepalikda tezroq",
+     "ru": "Больше на крутой горке"
+    },
+    {
+     "en": "Faster on the long curved one",
+     "uz": "Uzun egri tepalikda tezroq",
+     "ru": "Больше на длинной изогнутой"
+    },
+    {
+     "en": "Faster for the heavier child",
+     "uz": "Ogʻirroq bolada tezroq",
+     "ru": "Больше у более тяжёлого ребёнка"
+    }
+   ],
+   "why": {
+    "en": "With no friction mgh = ½mv² on both slides: v = √(2gh) depends on the height only, not on the shape or the mass.",
+    "uz": "Ishqalanish boʻlmasa, ikkala tepalikda ham mgh = ½mv²: v = √(2gh) faqat balandlikka bogʻliq, shaklga ham, massaga ham emas.",
+    "ru": "Без трения на обеих горках mgh = ½mv²: v = √(2gh) зависит только от высоты, а не от формы горки и не от массы."
+   },
+   "prior_b": 0.6,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph33q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "power",
+   "page": "C19-APPH03-3",
+   "lang": "en",
+   "stem": {
+    "en": "A 60 kg student runs up stairs 4 m high in 8 s. What average power does she use to lift herself? Use g = 9.8 m/s².",
+    "uz": "60 kg massali oʻquvchi qiz balandligi 4 m boʻlgan zinapoyadan 8 s da yugurib chiqadi. Oʻzini koʻtarish uchun u qancha oʻrtacha quvvat sarflaydi? g = 9,8 m/s² deb oling.",
+    "ru": "Ученица массой 60 кг взбегает по лестнице на высоту 4 м за 8 с. Какую среднюю мощность она развивает, поднимая себя? Примите g = 9,8 м/с²."
+   },
+   "options": [
+    {
+     "en": "294 W",
+     "uz": "294 Vt",
+     "ru": "294 Вт"
+    },
+    {
+     "en": "2,352 W",
+     "uz": "2352 Vt",
+     "ru": "2352 Вт"
+    },
+    {
+     "en": "30 W",
+     "uz": "30 Vt",
+     "ru": "30 Вт"
+    },
+    {
+     "en": "588 W",
+     "uz": "588 Vt",
+     "ru": "588 Вт"
+    }
+   ],
+   "why": {
+    "en": "W = mgh = 60 × 9.8 × 4 = 2,352 J; P = W ÷ t = 2,352 ÷ 8 = 294 W. 2,352 is the work in joules, not the power.",
+    "uz": "W = mgh = 60 × 9,8 × 4 = 2352 J; P = W ÷ t = 2352 ÷ 8 = 294 Vt. 2352 — joullardagi ish, quvvat emas.",
+    "ru": "W = mgh = 60 × 9,8 × 4 = 2352 Дж; P = W ÷ t = 2352 ÷ 8 = 294 Вт. 2352 — работа в джоулях, а не мощность."
+   },
+   "prior_b": 0.5,
+   "time_s": 55,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph33q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "power",
+   "page": "C19-APPH03-3",
+   "lang": "en",
+   "stem": {
+    "en": "A tractor pulls a log with a steady 750 N force at a steady 4 m/s. What power does it deliver?",
+    "uz": "Traktor xodani 750 N oʻzgarmas kuch bilan 4 m/s oʻzgarmas tezlikda tortadi. U qancha quvvat beradi?",
+    "ru": "Трактор тянет бревно с постоянной силой 750 Н при постоянной скорости 4 м/с. Какую мощность он развивает?"
+   },
+   "options": [
+    {
+     "en": "3,000 W",
+     "uz": "3000 Vt",
+     "ru": "3000 Вт"
+    },
+    {
+     "en": "187.5 W",
+     "uz": "187,5 Vt",
+     "ru": "187,5 Вт"
+    },
+    {
+     "en": "6,000 W",
+     "uz": "6000 Vt",
+     "ru": "6000 Вт"
+    },
+    {
+     "en": "1,500 W",
+     "uz": "1500 Vt",
+     "ru": "1500 Вт"
+    }
+   ],
+   "why": {
+    "en": "P = Fv = 750 × 4 = 3,000 W.",
+    "uz": "P = Fv = 750 × 4 = 3000 Vt.",
+    "ru": "P = Fv = 750 × 4 = 3000 Вт."
+   },
+   "prior_b": 0.2,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph33q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "power",
+   "page": "C19-APPH03-3",
+   "lang": "en",
+   "stem": {
+    "en": "Motor A lifts a load in 10 s. Motor B lifts the same load to the same height in 20 s. Which is true?",
+    "uz": "A motor yukni 10 s da koʻtaradi. B motor xuddi shu yukni xuddi shu balandlikka 20 s da koʻtaradi. Qaysi gap toʻgʻri?",
+    "ru": "Мотор A поднимает груз за 10 с. Мотор B поднимает тот же груз на ту же высоту за 20 с. Какое утверждение верно?"
+   },
+   "options": [
+    {
+     "en": "Same work; A has twice the power",
+     "uz": "Ish bir xil; A ning quvvati 2 baravar",
+     "ru": "Работа одна; мощность A вдвое больше"
+    },
+    {
+     "en": "Same work; B has twice the power",
+     "uz": "Ish bir xil; B ning quvvati 2 baravar",
+     "ru": "Работа одна; мощность B вдвое больше"
+    },
+    {
+     "en": "A does twice the work of B",
+     "uz": "A B dan 2 marta koʻp ish bajaradi",
+     "ru": "A совершает вдвое больше работы"
+    },
+    {
+     "en": "Same work and the same power",
+     "uz": "Ish ham, quvvat ham bir xil",
+     "ru": "Одинаковы и работа, и мощность"
+    }
+   ],
+   "why": {
+    "en": "Both do W = mgh, the same work. A does it in half the time, so P = W ÷ t is twice as large for A.",
+    "uz": "Ikkalasi ham bir xil W = mgh ish bajaradi. A uni ikki marta tezroq bajaradi, demak A ning P = W ÷ t quvvati 2 marta katta.",
+    "ru": "Оба совершают одну и ту же работу W = mgh. A делает это вдвое быстрее, поэтому P = W ÷ t у A вдвое больше."
+   },
+   "prior_b": 0.4,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph41q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "momentum",
+   "page": "C19-APPH04-1",
+   "lang": "en",
+   "stem": {
+    "en": "A 0.4 kg ball moves at 15 m/s. What is the size of its momentum?",
+    "uz": "0,4 kg massali koptok 15 m/s tezlik bilan harakatlanmoqda. Uning impulsi moduli qancha?",
+    "ru": "Мяч массой 0,4 кг движется со скоростью 15 м/с. Каков модуль его импульса?"
+   },
+   "options": [
+    {
+     "en": "6 kg·m/s",
+     "uz": "6 kg·m/s",
+     "ru": "6 кг·м/с"
+    },
+    {
+     "en": "3 kg·m/s",
+     "uz": "3 kg·m/s",
+     "ru": "3 кг·м/с"
+    },
+    {
+     "en": "45 kg·m/s",
+     "uz": "45 kg·m/s",
+     "ru": "45 кг·м/с"
+    },
+    {
+     "en": "37.5 kg·m/s",
+     "uz": "37,5 kg·m/s",
+     "ru": "37,5 кг·м/с"
+    }
+   ],
+   "why": {
+    "en": "p = mv = 0.4 × 15 = 6 kg·m/s. 45 is ½mv², an energy in joules, not a momentum.",
+    "uz": "p = mv = 0,4 × 15 = 6 kg·m/s. 45 — bu ½mv², joullardagi energiya, impuls emas.",
+    "ru": "p = mv = 0,4 × 15 = 6 кг·м/с. 45 — это ½mv², энергия в джоулях, а не импульс."
+   },
+   "prior_b": 0.0,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph41q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "impulse",
+   "page": "C19-APPH04-1",
+   "lang": "en",
+   "stem": {
+    "en": "A 0.2 kg puck sliding at 10 m/s is stopped by a goalie’s pad in 0.05 s. What is the size of the average force on the puck?",
+    "uz": "10 m/s tezlik bilan sirpanayotgan 0,2 kg massali shayba darvozabonning himoya qalqoniga urilib, 0,05 s da toʻxtaydi. Shaybaga taʼsir qilgan oʻrtacha kuchning moduli qancha?",
+    "ru": "Шайба массой 0,2 кг, скользящая со скоростью 10 м/с, останавливается о щиток вратаря за 0,05 с. Каков модуль средней силы, действовавшей на шайбу?"
+   },
+   "options": [
+    {
+     "en": "40 N",
+     "uz": "40 N",
+     "ru": "40 Н"
+    },
+    {
+     "en": "0.1 N",
+     "uz": "0,1 N",
+     "ru": "0,1 Н"
+    },
+    {
+     "en": "200 N",
+     "uz": "200 N",
+     "ru": "200 Н"
+    },
+    {
+     "en": "2 N",
+     "uz": "2 N",
+     "ru": "2 Н"
+    }
+   ],
+   "why": {
+    "en": "|Δp| = 0.2 × 10 = 2 kg·m/s; F = |Δp| ÷ Δt = 2 ÷ 0.05 = 40 N.",
+    "uz": "|Δp| = 0,2 × 10 = 2 kg·m/s; F = |Δp| ÷ Δt = 2 ÷ 0,05 = 40 N.",
+    "ru": "|Δp| = 0,2 × 10 = 2 кг·м/с; F = |Δp| ÷ Δt = 2 ÷ 0,05 = 40 Н."
+   },
+   "prior_b": 0.5,
+   "time_s": 55,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph41q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "impulse",
+   "page": "C19-APPH04-1",
+   "lang": "en",
+   "stem": {
+    "en": "A 0.2 kg ball hits the floor at 5 m/s and bounces straight up at 5 m/s. What is the size of its change in momentum?",
+    "uz": "0,2 kg massali koptok polga 5 m/s tezlik bilan urilib, 5 m/s tezlik bilan tik yuqoriga sakraydi. Uning impulsi oʻzgarishining moduli qancha?",
+    "ru": "Мяч массой 0,2 кг ударяется о пол со скоростью 5 м/с и отскакивает вертикально вверх со скоростью 5 м/с. Каков модуль изменения его импульса?"
+   },
+   "options": [
+    {
+     "en": "2 kg·m/s",
+     "uz": "2 kg·m/s",
+     "ru": "2 кг·м/с"
+    },
+    {
+     "en": "0 kg·m/s",
+     "uz": "0 kg·m/s",
+     "ru": "0 кг·м/с"
+    },
+    {
+     "en": "1 kg·m/s",
+     "uz": "1 kg·m/s",
+     "ru": "1 кг·м/с"
+    },
+    {
+     "en": "10 kg·m/s",
+     "uz": "10 kg·m/s",
+     "ru": "10 кг·м/с"
+    }
+   ],
+   "why": {
+    "en": "Take up as +: Δp = 0.2 × (5 − (−5)) = 2 kg·m/s. The same speed back is not zero change: the direction turned around.",
+    "uz": "Yuqorini + deb olamiz: Δp = 0,2 × (5 − (−5)) = 2 kg·m/s. Orqaga xuddi shunday tezlik — bu nol oʻzgarish emas: yoʻnalish teskarisiga oʻzgardi.",
+    "ru": "Примем вверх за +: Δp = 0,2 × (5 − (−5)) = 2 кг·м/с. Та же скорость назад — не нулевое изменение: направление сменилось на обратное."
+   },
+   "prior_b": 0.7,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph42q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "momentum_conservation",
+   "page": "C19-APPH04-2",
+   "lang": "en",
+   "stem": {
+    "en": "A 50 kg girl and a 75 kg boy stand at rest on ice and push apart. The girl moves off at 3 m/s. How fast does the boy move?",
+    "uz": "Muz ustida tinch turgan 50 kg massali qiz va 75 kg massali bola bir-birini itaradi. Qiz 3 m/s tezlik bilan ketadi. Bola qanday tezlik bilan ketadi?",
+    "ru": "Девочка массой 50 кг и мальчик массой 75 кг стоят на льду и отталкиваются друг от друга. Девочка уезжает со скоростью 3 м/с. С какой скоростью уезжает мальчик?"
+   },
+   "options": [
+    {
+     "en": "2 m/s",
+     "uz": "2 m/s",
+     "ru": "2 м/с"
+    },
+    {
+     "en": "3 m/s",
+     "uz": "3 m/s",
+     "ru": "3 м/с"
+    },
+    {
+     "en": "4.5 m/s",
+     "uz": "4,5 m/s",
+     "ru": "4,5 м/с"
+    },
+    {
+     "en": "1.2 m/s",
+     "uz": "1,2 m/s",
+     "ru": "1,2 м/с"
+    }
+   ],
+   "why": {
+    "en": "Total p stays 0: 50 × 3 = 75 × v, so v = 150 ÷ 75 = 2 m/s, the other way. The heavier one moves more slowly.",
+    "uz": "Umumiy p 0 boʻlib qoladi: 50 × 3 = 75 × v, demak v = 150 ÷ 75 = 2 m/s, teskari tomonga. Ogʻirrogʻi sekinroq harakatlanadi.",
+    "ru": "Полный p остаётся 0: 50 × 3 = 75 × v, значит, v = 150 ÷ 75 = 2 м/с, в обратную сторону. Кто тяжелее, тот движется медленнее."
+   },
+   "prior_b": 0.4,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph42q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "momentum_conservation",
+   "page": "C19-APPH04-2",
+   "lang": "en",
+   "stem": {
+    "en": "A 2 kg cart moving at 9 m/s hits a 1 kg cart at rest, and they stick together. How fast do they move together?",
+    "uz": "9 m/s tezlik bilan harakatlanayotgan 2 kg massali aravacha tinch turgan 1 kg massali aravachaga urilib, ular bir-biriga yopishib qoladi. Ular birgalikda qanday tezlik bilan harakatlanadi?",
+    "ru": "Тележка массой 2 кг, движущаяся со скоростью 9 м/с, налетает на покоящуюся тележку массой 1 кг, и они сцепляются. С какой скоростью они движутся вместе?"
+   },
+   "options": [
+    {
+     "en": "6 m/s",
+     "uz": "6 m/s",
+     "ru": "6 м/с"
+    },
+    {
+     "en": "9 m/s",
+     "uz": "9 m/s",
+     "ru": "9 м/с"
+    },
+    {
+     "en": "18 m/s",
+     "uz": "18 m/s",
+     "ru": "18 м/с"
+    },
+    {
+     "en": "4.5 m/s",
+     "uz": "4,5 m/s",
+     "ru": "4,5 м/с"
+    }
+   ],
+   "why": {
+    "en": "2 × 9 = (2 + 1) × v, so v = 18 ÷ 3 = 6 m/s.",
+    "uz": "2 × 9 = (2 + 1) × v, demak v = 18 ÷ 3 = 6 m/s.",
+    "ru": "2 × 9 = (2 + 1) × v, значит, v = 18 ÷ 3 = 6 м/с."
+   },
+   "prior_b": 0.4,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph42q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "momentum_conservation",
+   "page": "C19-APPH04-2",
+   "lang": "en",
+   "stem": {
+    "en": "A 4 kg cart moving right at 3 m/s hits a 2 kg cart moving left at 3 m/s. They stick together. What is their velocity just after?",
+    "uz": "Oʻngga 3 m/s tezlik bilan harakatlanayotgan 4 kg massali aravacha chapga 3 m/s tezlik bilan harakatlanayotgan 2 kg massali aravachaga urilib, ular yopishib qoladi. Toʻqnashuvdan keyingi tezliklari qanday?",
+    "ru": "Тележка массой 4 кг, движущаяся вправо со скоростью 3 м/с, налетает на тележку массой 2 кг, движущуюся влево со скоростью 3 м/с. Они сцепляются. Какова их скорость сразу после удара?"
+   },
+   "options": [
+    {
+     "en": "1 m/s right",
+     "uz": "1 m/s, oʻngga",
+     "ru": "1 м/с вправо"
+    },
+    {
+     "en": "3 m/s right",
+     "uz": "3 m/s, oʻngga",
+     "ru": "3 м/с вправо"
+    },
+    {
+     "en": "1 m/s left",
+     "uz": "1 m/s, chapga",
+     "ru": "1 м/с влево"
+    },
+    {
+     "en": "2 m/s right",
+     "uz": "2 m/s, oʻngga",
+     "ru": "2 м/с вправо"
+    }
+   ],
+   "why": {
+    "en": "Right is +: 4 × 3 + 2 × (−3) = 6 kg·m/s = (4 + 2) × v, so v = 1 m/s to the right.",
+    "uz": "Oʻng tomon +: 4 × 3 + 2 × (−3) = 6 kg·m/s = (4 + 2) × v, demak v = 1 m/s, oʻngga.",
+    "ru": "Вправо — это +: 4 × 3 + 2 × (−3) = 6 кг·м/с = (4 + 2) × v, значит, v = 1 м/с вправо."
+   },
+   "prior_b": 0.8,
+   "time_s": 55,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph43q1",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "collisions",
+   "page": "C19-APPH04-3",
+   "lang": "en",
+   "stem": {
+    "en": "A 2 kg ball at 3 m/s hits a 1 kg ball at rest. After, the 2 kg ball moves on at 1 m/s and the 1 kg ball at 4 m/s, both the same way. Is the collision elastic?",
+    "uz": "3 m/s tezlikdagi 2 kg massali shar tinch turgan 1 kg massali sharga uriladi. Keyin 2 kg lik shar 1 m/s, 1 kg lik shar 4 m/s tezlik bilan, ikkalasi bir tomonga harakatlanadi. Toʻqnashuv elastikmi?",
+    "ru": "Шар массой 2 кг со скоростью 3 м/с налетает на покоящийся шар массой 1 кг. После удара шар 2 кг движется со скоростью 1 м/с, а шар 1 кг — со скоростью 4 м/с, оба в ту же сторону. Упругое ли столкновение?"
+   },
+   "options": [
+    {
+     "en": "Yes: total K stays 9 J",
+     "uz": "Ha: umumiy K 9 J ligicha qoladi",
+     "ru": "Да: полная K остаётся 9 Дж"
+    },
+    {
+     "en": "No: K drops from 9 J to 5 J",
+     "uz": "Yoʻq: K 9 J dan 5 J gacha tushadi",
+     "ru": "Нет: K падает с 9 Дж до 5 Дж"
+    },
+    {
+     "en": "No: momentum is lost",
+     "uz": "Yoʻq: impuls yoʻqoladi",
+     "ru": "Нет: импульс теряется"
+    },
+    {
+     "en": "No: they did not stick",
+     "uz": "Yoʻq: ular yopishmadi",
+     "ru": "Нет: шары не сцепились"
+    }
+   ],
+   "why": {
+    "en": "p: 2 × 3 = 6 and 2 × 1 + 1 × 4 = 6. K: ½ × 2 × 3² = 9 J before; ½ × 2 × 1² + ½ × 1 × 4² = 1 + 8 = 9 J after. K is kept: elastic.",
+    "uz": "p: 2 × 3 = 6 va 2 × 1 + 1 × 4 = 6. K: oldin ½ × 2 × 3² = 9 J; keyin ½ × 2 × 1² + ½ × 1 × 4² = 1 + 8 = 9 J. K saqlandi: elastik.",
+    "ru": "p: 2 × 3 = 6 и 2 × 1 + 1 × 4 = 6. K: до ½ × 2 × 3² = 9 Дж; после ½ × 2 × 1² + ½ × 1 × 4² = 1 + 8 = 9 Дж. K сохранилась: упругое."
+   },
+   "prior_b": 0.7,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph43q2",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "collisions",
+   "page": "C19-APPH04-3",
+   "lang": "en",
+   "stem": {
+    "en": "A 2 kg cart moving at 6 m/s hits a 1 kg cart at rest, and they stick together. How much kinetic energy is lost in the collision?",
+    "uz": "6 m/s tezlik bilan harakatlanayotgan 2 kg massali aravacha tinch turgan 1 kg massali aravachaga urilib, ular bir-biriga yopishib qoladi. Toʻqnashuvda qancha kinetik energiya yoʻqoladi?",
+    "ru": "Тележка массой 2 кг, движущаяся со скоростью 6 м/с, налетает на покоящуюся тележку массой 1 кг, и они сцепляются. Сколько кинетической энергии теряется при столкновении?"
+   },
+   "options": [
+    {
+     "en": "12 J",
+     "uz": "12 J",
+     "ru": "12 Дж"
+    },
+    {
+     "en": "36 J",
+     "uz": "36 J",
+     "ru": "36 Дж"
+    },
+    {
+     "en": "24 J",
+     "uz": "24 J",
+     "ru": "24 Дж"
+    },
+    {
+     "en": "8 J",
+     "uz": "8 J",
+     "ru": "8 Дж"
+    }
+   ],
+   "why": {
+    "en": "v = 12 ÷ 3 = 4 m/s; K before = ½ × 2 × 6² = 36 J; after = ½ × 3 × 4² = 24 J; lost 36 − 24 = 12 J.",
+    "uz": "v = 12 ÷ 3 = 4 m/s; oldingi K = ½ × 2 × 6² = 36 J; keyingisi = ½ × 3 × 4² = 24 J; yoʻqolgani 36 − 24 = 12 J.",
+    "ru": "v = 12 ÷ 3 = 4 м/с; K до = ½ × 2 × 6² = 36 Дж; после = ½ × 3 × 4² = 24 Дж; потеряно 36 − 24 = 12 Дж."
+   },
+   "prior_b": 0.7,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C19-ph43q3",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "collisions",
+   "page": "C19-APPH04-3",
+   "lang": "en",
+   "stem": {
+    "en": "Two carts collide and bounce apart. Their total momentum is 10 kg·m/s before and after; their total kinetic energy goes from 20 J to 15 J. What kind of collision is it?",
+    "uz": "Ikki aravacha toʻqnashib, bir-biridan qaytadi. Ularning umumiy impulsi oldin ham, keyin ham 10 kg·m/s; umumiy kinetik energiyasi 20 J dan 15 J gacha kamayadi. Bu qanday toʻqnashuv?",
+    "ru": "Две тележки сталкиваются и отскакивают друг от друга. Их полный импульс до и после равен 10 кг·м/с; полная кинетическая энергия уменьшается с 20 Дж до 15 Дж. Какое это столкновение?"
+   },
+   "options": [
+    {
+     "en": "Inelastic: K is lost",
+     "uz": "Noelastik: K yoʻqoladi",
+     "ru": "Неупругое: K уменьшилась"
+    },
+    {
+     "en": "Elastic: they bounced",
+     "uz": "Elastik: ular qaytdi",
+     "ru": "Упругое: тела отскочили"
+    },
+    {
+     "en": "Perfectly inelastic",
+     "uz": "Mutlaq noelastik",
+     "ru": "Абсолютно неупругое"
+    },
+    {
+     "en": "Elastic: p is conserved",
+     "uz": "Elastik: p saqlanadi",
+     "ru": "Упругое: p сохранился"
+    }
+   ],
+   "why": {
+    "en": "Momentum is kept in every collision; here K falls by 5 J, so it is inelastic. It is not perfectly inelastic: the carts did not stick.",
+    "uz": "Impuls har qanday toʻqnashuvda saqlanadi; bu yerda K 5 J ga kamaydi, demak toʻqnashuv noelastik. U mutlaq noelastik emas: aravachalar yopishmadi.",
+    "ru": "Импульс сохраняется при любом столкновении; здесь K уменьшилась на 5 Дж, значит, столкновение неупругое. Но не абсолютно неупругое: тележки не сцепились."
+   },
+   "prior_b": 0.6,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "blind:P15aps1+P15aps2",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  }
+ ]
+}

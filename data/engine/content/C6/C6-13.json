@@ -1,0 +1,3767 @@
+{
+  "bank": "C6",
+  "batch": 13,
+  "note": "Reserve items of the SAT R&W lessons C19-RWEI01-2, C19-RWEI01-3, C19-RWEI02-2 and C19-RWEI02-3 (C19/C19-19.json): 20 per lesson, each item in exactly one lesson's reserve (SPEC-lessons §4.5, §9.4; .superpowers/p8b/PLAN.md §1.1 and §2, lane p8b-a1, 14 Oct 2026). Lesson 2's 20: 5 easy, 9 medium, 6 hard; lesson 3's: 2 easy, 8 medium, 10 hard; each asks its own lesson's focus. Our own texts and notes; the key is options[0]. Key check 2 (P8b, 14 Oct 2026): two blind solvers outside the author's session, P8bs1 and P8bs2, both chose the key on all 80, so they are verified_auto with key_check_2 blind:P8bs1+P8bs2 (C6/RECONCILE-p8b.md). A reserve, not a practice pool: the integrator adds this file to RESERVE_FILES (src/server/content/bank.ts). P13 (15-17 Oct 2026, author fix-a, agent:p13-fix-a, after the P13 defect scan): version 2 of C6-ei2303, ei2309, ei2314, ei2315, ei2318 and ei2320 (cue.length and key.cue_batch) and of C6-ei2208, ei2216, ei2219 and ei2319 (key.cue_batch: rhetorical_synthesis's key was uniquely the longest in 19 of 40). The key is still options[0]; id, subskill, level, difficulty, prior_b, time_s and instructions are v1's. Key check 2 of version 2 (17 Oct 2026): two blind solvers outside the authors' sessions, P13s1 and P13s2, chose the key on all 10, so they are verified_auto with key_check_2 blind:P13s1+P13s2 and key_check_2_version 2 (C6/RECONCILE-p13.md); they stay where they were and no lesson is held for them. P14 (18 Oct 2026, author agent:p14-content, the open items of P13): version+1 drafts (status draft, key_check_2 null, no key_check_2_version; each needs a fresh key check 2 by two blind solvers outside this session, and while they are drafts the lessons whose reserves or pieces hold them are held): C6-ei2205, ei2304 and ei2310 (rhetorical_synthesis: the key uniquely the longest in 15 of 40, now 12; C19-RWEI02-3 14 of 40, now 12) and C6-ei1307 (transitions: the key uniquely the shortest in 13 of 40, now 12; C19-RWEI01-3 the same) (a distractor lengthened, the key tightened, or a distractor as short as the key that is still the wrong relation). The key is still options[0]; id, subskill, level, difficulty, prior_b, time_s and instructions are kept.",
+  "items": [
+    {
+      "id": "C6-ei1201",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "On Sunday, Zafar and his younger sister cooked plov for the whole family. They chopped the carrots and onions, browned the meat in the big pot, and added the rice and water. ______ they covered the pot and let everything cook slowly for forty minutes.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Finally,"
+        },
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "In contrast,"
+        }
+      ],
+      "why": {
+        "en": "Covering the pot is the last step, after the chopping, browning and adding: 'Finally,'. 'Previously,' would put it before those steps.",
+        "uz": "Qozonni yopish — maydalash, qovurish va qoʻshishdan keyingi oxirgi qadam: «Finally,». «Previously,» uni oldingi qadamlardan oldinga qoʻyardi.",
+        "ru": "Накрыть казан — последний шаг после нарезки, обжарки и добавления риса: «Finally,». «Previously,» поставило бы его раньше."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1202",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Madina's little brother is afraid of many animals, even small and friendly ones. ______ he hides behind his mother whenever the neighbour's old cat walks slowly across the yard.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "Instead,"
+        }
+      ],
+      "why": {
+        "en": "Hiding from the old cat is one case of being afraid of animals, so the link is example: 'For example,'.",
+        "uz": "Keksa mushukdan yashirinishi hayvonlardan qoʻrqishining bitta holati, demak bogʻlanish misol: «For example,».",
+        "ru": "Прятаться от старой кошки — один случай страха перед животными, значит, связь — пример: «For example,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1203",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The bakery near the bus stop sells warm bread every morning from six o'clock. ______ it sells fresh samsa at lunchtime, so many workers stop there for a quick meal.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "In addition,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "In contrast,"
+        }
+      ],
+      "why": {
+        "en": "Samsa at lunch is a second thing the bakery sells, a new point of the same kind as the bread, not a case of it: 'In addition,'.",
+        "uz": "Tushlikdagi somsa nonvoyxona sotadigan ikkinchi narsa, non bilan bir turdagi yangi fikr, uning holati emas: «In addition,».",
+        "ru": "Самса в обед — вторая вещь, которую продаёт пекарня, новая мысль того же рода, что и хлеб, а не его случай: «In addition,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1204",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "On the morning of sports day, the older pupils carried tables and chairs out onto the school field. ______ the younger pupils, working at the same time near the gate, blew up balloons and tied them to the fence.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Meanwhile,"
+        },
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "As a result,"
+        }
+      ],
+      "why": {
+        "en": "The younger pupils work at the same time as the older ones, so the link is 'Meanwhile,'. 'Previously,' would put the balloons first.",
+        "uz": "Kichik oʻquvchilar kattalar bilan ayni bir vaqtda ishlaydi, demak bogʻlanish «Meanwhile,». «Previously,» sharlarni oldinga qoʻyardi.",
+        "ru": "Младшие работают одновременно со старшими, значит, связь — «Meanwhile,». «Previously,» поставило бы шарики раньше."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1205",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In March, Nargiza planted a small lemon tree in a pot on her balcony and watered it every evening. ______ in October, she picked the first three lemons from it and gave one to her grandmother.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Later,"
+        },
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "For instance,"
+        },
+        {
+          "en": "Instead,"
+        }
+      ],
+      "why": {
+        "en": "October comes after March, and the lemons grow after the planting, so the link points forward in time: 'Later,'.",
+        "uz": "Oktyabr martdan keyin keladi, limonlar ekilgandan keyin pishadi, demak bogʻlanish oldinga ishora qiladi: «Later,».",
+        "ru": "Октябрь идёт после марта, лимоны созрели после посадки, значит, связь указывает вперёд: «Later,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1206",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Since last September, the school choir has practiced in the new music room, which has thick walls and its own piano. ______ the choir had sung in a corner of the canteen, where the noise of plates and chairs often drowned out the music.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "Afterward,"
+        },
+        {
+          "en": "In addition,"
+        },
+        {
+          "en": "For example,"
+        }
+      ],
+      "why": {
+        "en": "'Had sung' in the canteen tells what happened before last September, so the link points back: 'Previously,'. 'Afterward,' points forward.",
+        "uz": "«Had sung» oshxonada oʻtgan sentyabrdan oldin nima boʻlganini aytadi, demak bogʻlanish orqaga ishora qiladi: «Previously,».",
+        "ru": "«Had sung» говорит о том, что было до прошлого сентября, значит, связь указывает назад: «Previously,». «Afterward,» — вперёд."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1207",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The volunteers of the mahalla clean-up day learned that small jobs can make a big difference. ______ after they painted the old benches at the bus stop green, more neighbours began sitting there in the evenings to talk.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "In addition,"
+        },
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "Instead,"
+        }
+      ],
+      "why": {
+        "en": "Painting the benches is one small job that made a difference, a case of the first sentence's idea: 'For example,'.",
+        "uz": "Oʻrindiqlarni boʻyash — farq yaratgan kichik ishlardan biri, birinchi gapdagi fikrning bir holati: «For example,».",
+        "ru": "Покраска скамеек — одно маленькое дело, которое что-то изменило, случай мысли первого предложения: «For example,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1208",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Bekzod's family bought a new washing machine that uses half as much water as their old one. ______ it is so quiet that the baby keeps sleeping while it runs in the next room.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Moreover,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Meanwhile,"
+        },
+        {
+          "en": "Previously,"
+        }
+      ],
+      "why": {
+        "en": "Being quiet is a second good point about the machine, not a case of saving water: 'Moreover,' adds it.",
+        "uz": "Shovqinsizlik mashinaning ikkinchi yaxshi tomoni, suv tejashning bir holati emas: «Moreover,» uni qoʻshadi.",
+        "ru": "Тишина — второе достоинство машины, а не случай экономии воды: «Moreover,» добавляет её."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1209",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "At six in the evening, Aziza's mother began frying onions and carrots for the soup in the kitchen. ______ in the next room, Aziza laid the table, putting out bowls, spoons and a basket of bread, so that everything was ready at the same moment.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Meanwhile,"
+        },
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Instead,"
+        }
+      ],
+      "why": {
+        "en": "Aziza lays the table while her mother cooks, and both are ready together: 'Meanwhile,'. 'Previously,' would put the table first.",
+        "uz": "Onasi ovqat pishirayotganda Aziza dasturxon yozadi, ikkalasi birga tayyor boʻladi: «Meanwhile,». «Previously,» stolni oldinga qoʻyardi.",
+        "ru": "Азиза накрывает стол, пока мама готовит, и всё готово одновременно: «Meanwhile,». «Previously,» поставило бы стол раньше."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1210",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The class read the short story aloud together, with each pupil taking one paragraph in turn. ______ they split into small groups to discuss why the main character had decided to leave her village.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Afterward,"
+        },
+        {
+          "en": "Meanwhile,"
+        },
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "For instance,"
+        }
+      ],
+      "why": {
+        "en": "The group talk comes after the whole story is read, so the link points forward: 'Afterward,'. They do not talk while reading, so not 'Meanwhile,'.",
+        "uz": "Guruh suhbati hikoya oʻqib boʻlingandan keyin boʻladi, demak bogʻlanish oldinga: «Afterward,». Oʻqish paytida suhbat yoʻq, «Meanwhile,» emas.",
+        "ru": "Обсуждение идёт после чтения рассказа, значит, связь указывает вперёд: «Afterward,». Во время чтения не обсуждают, не «Meanwhile,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1211",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In the kitchen of Gulchehra's grandmother, old things often get a second life. ______ the empty jam jars hold buttons, nails and seeds, and each jar has a paper label in her neat handwriting.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "For instance,"
+        },
+        {
+          "en": "Moreover,"
+        },
+        {
+          "en": "Later,"
+        },
+        {
+          "en": "In contrast,"
+        }
+      ],
+      "why": {
+        "en": "Jam jars that hold buttons are one case of old things getting a second life: 'For instance,'. 'Moreover,' would add a new point.",
+        "uz": "Murabbo bankalarida tugma saqlash eski narsalar ikkinchi umr koʻrishining bir holati: «For instance,». «Moreover,» yangi fikr qoʻshardi.",
+        "ru": "Банки из-под варенья с пуговицами — один случай второй жизни старых вещей: «For instance,». «Moreover,» добавило бы новую мысль."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1212",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "By the time the guests arrived at eight, the long table was covered with salads, bread, fruit and sweets. ______ that afternoon, Lola and her aunt had spent three hours washing, chopping and arranging everything.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Earlier,"
+        },
+        {
+          "en": "Later,"
+        },
+        {
+          "en": "Moreover,"
+        },
+        {
+          "en": "For example,"
+        }
+      ],
+      "why": {
+        "en": "'That afternoon' and 'had spent' come before eight o'clock, so the link points back in time: 'Earlier,'. 'Later,' points forward.",
+        "uz": "«That afternoon» va «had spent» soat sakkizdan oldin boʻlgan, demak bogʻlanish orqaga: «Earlier,». «Later,» oldinga ishora qiladi.",
+        "ru": "«That afternoon» и «had spent» — это до восьми, значит, связь указывает назад: «Earlier,». «Later,» указывает вперёд."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1213",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "This spring, the children's corner of the mahalla library got two new shelves of picture books. ______ a retired teacher now reads stories aloud there every Saturday at ten. Many parents say their children ask to visit the library every weekend.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "In addition,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "Instead,"
+        }
+      ],
+      "why": {
+        "en": "The Saturday reading is a second new thing in the corner, like the shelves, not a case of them: 'In addition,'.",
+        "uz": "Shanbalik oʻqish — javonlar kabi burchakdagi ikkinchi yangilik, ularning bir holati emas: «In addition,».",
+        "ru": "Чтение по субботам — вторая новинка уголка, как и полки, а не их случай: «In addition,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1214",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "To make the class newspaper, the editors first collect the articles from every group. Next, they check each article for spelling mistakes and choose the photos. ______ they print thirty copies and pin one on the board outside the staff room.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Finally,"
+        },
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Meanwhile,"
+        }
+      ],
+      "why": {
+        "en": "First, Next and then the printing: the printing is the last step in the order, so 'Finally,'. 'Previously,' would move it to the start.",
+        "uz": "First, Next, keyin chop etish: chop etish tartibdagi oxirgi qadam, demak «Finally,». «Previously,» uni boshiga koʻchirardi.",
+        "ru": "First, Next, а потом печать: это последний шаг, значит, «Finally,». «Previously,» перенесло бы его в начало."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1215",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Small changes to the timetable have made mornings at the school noticeably calmer. ______ since the first lesson moved from eight o'clock to half past eight, fewer pupils run through the gate out of breath, and lessons start on time.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "In addition,"
+        },
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "Nevertheless,"
+        }
+      ],
+      "why": {
+        "en": "Moving the first lesson is one of the small changes the first sentence names, and it made mornings calmer: a case, so 'For example,'.",
+        "uz": "Birinchi darsni surish birinchi gapda aytilgan kichik oʻzgarishlardan biri va ertalabni tinchlantirgan: holat, demak «For example,».",
+        "ru": "Перенос первого урока — одно из небольших изменений из первого предложения, и утро стало спокойнее: случай, значит, «For example,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1216",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Every summer, Shahnoza's uncle sells apricots from a table outside his gate. This year he has put up a small sign with the price per kilogram and bought a scale with large numbers that buyers can read. ______ he had simply guessed the weight in his hands, and buyers often argued with him about it.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "Afterward,"
+        },
+        {
+          "en": "Meanwhile,"
+        },
+        {
+          "en": "In addition,"
+        }
+      ],
+      "why": {
+        "en": "Guessing by hand 'had' happened before this year's sign and scale, so the link points back: 'Previously,'. It is not a new point to add.",
+        "uz": "Qoʻlda chamalash bu yilgi yozuv va tarozidan oldin boʻlgan («had»), demak bogʻlanish orqaga: «Previously,». Bu qoʻshimcha fikr emas.",
+        "ru": "Взвешивание на глаз было до нынешней таблички и весов («had»), значит, связь указывает назад: «Previously,». Это не добавление."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 65,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1217",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The bus that stops outside the school now comes every ten minutes, not every twenty as it did last year. ______ the drivers wait at the stop until the last pupil has climbed on, even when the bus is running late.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Moreover,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Earlier,"
+        },
+        {
+          "en": "Meanwhile,"
+        }
+      ],
+      "why": {
+        "en": "The first sentence is one fact, not a general claim, and waiting for pupils is a second good point about the bus: 'Moreover,'.",
+        "uz": "Birinchi gap umumiy fikr emas, bitta fakt; oʻquvchilarni kutish avtobusning ikkinchi yaxshi tomoni: «Moreover,».",
+        "ru": "Первое предложение — один факт, а не общая мысль; ожидание учеников — второе достоинство автобуса: «Moreover,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1218",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "For the whole hour that the family guests were eating, the two young musicians rested in a small room behind the hall. They drank tea, tuned their instruments and talked quietly about the next songs. ______ the waiters hurried between the tables, carrying plates of plov and pouring more tea for everyone.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Meanwhile,"
+        },
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Instead,"
+        }
+      ],
+      "why": {
+        "en": "The waiters work during the same hour that the musicians rest, so the link is 'Meanwhile,'. Nothing shows their work came before.",
+        "uz": "Ofitsiantlar musiqachilar dam olayotgan oʻsha bir soatda ishlaydi, demak bogʻlanish «Meanwhile,». Bu oldin boʻlgani koʻrinmaydi.",
+        "ru": "Официанты работают в тот же час, когда музыканты отдыхают, значит, «Meanwhile,». Ничто не говорит, что это было раньше."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 65,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1219",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Many of the games that Feruza's grandparents played as children needed nothing bought from a shop. ______ the children made a ball from old socks stuffed with rags, and they drew the squares for hopscotch on the ground with a stick.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "For instance,"
+        },
+        {
+          "en": "In addition,"
+        },
+        {
+          "en": "Afterward,"
+        },
+        {
+          "en": "Similarly,"
+        }
+      ],
+      "why": {
+        "en": "A sock ball and hopscotch drawn with a stick are cases of games that needed nothing from a shop: 'For instance,'. They are not a new point.",
+        "uz": "Paypoq toʻp va tayoqcha bilan chizilgan klassik — doʻkondan hech narsa kerak boʻlmagan oʻyinlarning holatlari: «For instance,».",
+        "ru": "Мяч из носков и классики, нарисованные палкой, — случаи игр без покупок: «For instance,». Это не новая мысль."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 65,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1220",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Rustam's family moved the dining table from the dark kitchen to the bright room that faces the garden. Now they can see the fruit trees while they eat. ______ the move freed space in the kitchen, so his mother finally has room for a second cupboard.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "In addition,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Previously,"
+        },
+        {
+          "en": "Instead,"
+        }
+      ],
+      "why": {
+        "en": "More kitchen space is a second benefit of the move, of the same kind as the view, not a case of it: 'In addition,'.",
+        "uz": "Oshxonada joy boʻshagani — koʻchirishning manzara kabi ikkinchi foydasi, uning bir holati emas: «In addition,».",
+        "ru": "Место на кухне — вторая польза от переноса, того же рода, что и вид на сад, а не его случай: «In addition,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 65,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1301",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Kamila's mother saves orange peels and dries them on the windowsill to add to her tea. ______ Kamila's grandmother saves apple peels and dries them to make tea in winter.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "Instead,"
+        },
+        {
+          "en": "As a result,"
+        }
+      ],
+      "why": {
+        "en": "Both women save peels and dry them: the same pattern in a second case, so 'Similarly,'. Orange or apple does not make a contrast.",
+        "uz": "Ikkala ayol ham poʻstloqni saqlab quritadi: ikkinchi holatda xuddi shu naqsh, demak «Similarly,». Apelsin yoki olma qarama-qarshilik emas.",
+        "ru": "Обе сушат кожуру: та же схема во втором случае, значит, «Similarly,». Апельсин или яблоко — это не контраст."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1302",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The school canteen did not serve soup on Monday because its biggest pot had cracked. ______ the cooks made cheese and cucumber sandwiches for everyone.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Instead,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "For example,"
+        }
+      ],
+      "why": {
+        "en": "Sandwiches were served in place of the soup that could not be made: 'Instead,'. Nothing is compared or repeated.",
+        "uz": "Pishirib boʻlmagan shoʻrva oʻrniga sendvich berildi: «Instead,». Hech narsa solishtirilmaydi yoki takrorlanmaydi.",
+        "ru": "Бутерброды подали вместо супа, который нельзя было сварить: «Instead,». Ничего не сравнивается и не повторяется."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1303",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Otabek reads the news on his phone every morning on the bus to school. ______ his father still buys a paper newspaper at the corner kiosk and reads it slowly over breakfast.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "For instance,"
+        },
+        {
+          "en": "As a result,"
+        }
+      ],
+      "why": {
+        "en": "Two people and two ways of reading the news are set side by side: 'In contrast,'. 'Similarly,' would need the same way.",
+        "uz": "Ikki kishi va yangilik oʻqishning ikki usuli yonma-yon qoʻyilgan: «In contrast,». «Similarly,» bir xil usulni talab qilardi.",
+        "ru": "Два человека и два способа читать новости поставлены рядом: «In contrast,». «Similarly,» требовало бы одного способа."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1304",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The bicycle path along the canal is narrow and has no lamps, and in winter it is dark before five o'clock. ______ dozens of pupils ride along it to school every day, because it is the quickest way to the gate.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Nevertheless,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "In contrast,"
+        }
+      ],
+      "why": {
+        "en": "A narrow, dark path should put pupils off, yet many ride it: what was expected did not happen, so 'Nevertheless,'.",
+        "uz": "Tor va qorongʻi yoʻl oʻquvchilarni qochirishi kerak edi, lekin koʻpchilik undan yuradi: kutilgani boʻlmadi, demak «Nevertheless,».",
+        "ru": "Узкая тёмная дорожка должна отпугивать, но многие по ней ездят: ожидаемое не случилось, значит, «Nevertheless,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1305",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Laziz planned to spend Sunday finishing his science poster. When his cousins arrived from the village that morning, he put the poster away in a drawer. ______ he spent the day showing them the zoo and the boats on the lake in the park.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Instead,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "For example,"
+        }
+      ],
+      "why": {
+        "en": "The day with his cousins took the place of the planned work on the poster: 'Instead,'. Nothing is compared side by side.",
+        "uz": "Qarindoshlari bilan oʻtgan kun plakat ustidagi rejali ish oʻrnini egalladi: «Instead,». Hech narsa yonma-yon solishtirilmaydi.",
+        "ru": "День с двоюродными братьями занял место работы над плакатом: «Instead,». Ничего не сравнивается рядом."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1306",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "At the end of each lesson, the art teacher asks the pupils to wash their brushes and put the lids back on the paints. ______ the music teacher asks them to wipe the piano keys and close the lid before they leave.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Likewise,"
+        },
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "Nevertheless,"
+        },
+        {
+          "en": "Instead,"
+        }
+      ],
+      "why": {
+        "en": "Both teachers ask pupils to clean up and close their things before leaving: the same pattern, so 'Likewise,'.",
+        "uz": "Ikkala oʻqituvchi ham ketishdan oldin yigʻishtirib, yopib qoʻyishni soʻraydi: bir xil naqsh, demak «Likewise,».",
+        "ru": "Оба учителя просят убрать и закрыть всё перед уходом: та же схема, значит, «Likewise,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1307",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The weather app showed no rain for the whole week, so Shoira left her umbrella at home every day. ______ on Wednesday afternoon a sudden shower soaked her on the way back from school.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "However,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "Also,"
+        },
+        {
+          "en": "For example,"
+        }
+      ],
+      "why": {
+        "en": "No rain was expected, yet a shower came: what was expected did not happen, so 'However,'.",
+        "uz": "Yomgʻir kutilmagan edi, ammo jala quydi: kutilgani boʻlmadi, demak «However,».",
+        "ru": "Дождя не ждали, но пошёл ливень: ожидаемое не случилось, значит, «However,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p14-content",
+      "key_check_1": "author",
+      "key_check_2": "blind:P14s1+P14s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-ei1308",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The two bakeries in our mahalla keep very different hours. The one at the bus stop opens at five in the morning, when the first workers pass by. ______ the one next to the school does not open until eleven, just before the lunch break.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "As a result,"
+        },
+        {
+          "en": "Nevertheless,"
+        }
+      ],
+      "why": {
+        "en": "The second bakery is set beside the first, and its hours are very different: 'In contrast,'. Nothing expected fails, so not 'Nevertheless,'.",
+        "uz": "Ikkinchi nonvoyxona birinchisi bilan yonma-yon qoʻyilgan, ish vaqti juda boshqacha: «In contrast,». Kutilgan narsa buzilmagan.",
+        "ru": "Вторая пекарня поставлена рядом с первой, и часы у неё совсем другие: «In contrast,». Ничего ожидаемого не нарушено."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1309",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Mansur practiced his speech for his sister's wedding many times in front of the mirror. ______ when he stood up in front of two hundred guests, his hands shook and he forgot the whole second half.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Still,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Likewise,"
+        },
+        {
+          "en": "In contrast,"
+        }
+      ],
+      "why": {
+        "en": "So much practice should have made the speech go well, but it did not: 'Still,' marks what was expected not happening.",
+        "uz": "Shuncha mashqdan keyin nutq yaxshi chiqishi kerak edi, lekin chiqmadi: «Still,» kutilgan narsa boʻlmaganini koʻrsatadi.",
+        "ru": "После стольких репетиций речь должна была удаться, но нет: «Still,» показывает, что ожидаемое не случилось."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1310",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "At the end of the poetry unit, the class did not write a test. ______ each pupil chose a short poem, learned it by heart and recited it in front of the class.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Instead,"
+        },
+        {
+          "en": "Likewise,"
+        },
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "For instance,"
+        }
+      ],
+      "why": {
+        "en": "Reciting a poem took the place of the test that was not written: 'Instead,'. It follows 'did not', as 'Instead,' often does.",
+        "uz": "Sheʼr aytish yozilmagan test oʻrnini egalladi: «Instead,». U «did not» dan keyin keladi, «Instead,» koʻpincha shunday.",
+        "ru": "Чтение стихов наизусть заменило несостоявшийся тест: «Instead,». Оно идёт после «did not», как часто бывает с «Instead,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1311",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "After the old cinema in the mahalla closed, its building stood empty for three years until a family turned it into a sports hall for children. ______ the former bathhouse on the next street, a much smaller building, was empty for years before a group of parents opened a library and a chess room in it.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "Instead,"
+        },
+        {
+          "en": "Nevertheless,"
+        }
+      ],
+      "why": {
+        "en": "Both empty buildings became places for children after years: the same pattern, so 'Similarly,'. Size and use differ, but that is detail, not contrast.",
+        "uz": "Ikkala boʻsh bino ham yillar oʻtib bolalar joyiga aylandi: bir xil naqsh, «Similarly,». Hajm va vazifa farqi — tafsilot, qarama-qarshilik emas.",
+        "ru": "Оба пустых здания через годы стали местом для детей: та же схема, «Similarly,». Размер и назначение — детали, а не контраст."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1312",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Dilfuza's younger brother has refused to eat vegetables for as long as anyone can remember. At dinner he pushes the carrots to the edge of his plate and hides the peas under his bread. ______ this summer, after helping in the garden, he ate the tomatoes he had grown himself straight from the plant.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Still,"
+        },
+        {
+          "en": "Likewise,"
+        },
+        {
+          "en": "For instance,"
+        },
+        {
+          "en": "Therefore,"
+        }
+      ],
+      "why": {
+        "en": "After years of refusing vegetables, eating his own tomatoes is not what anyone would expect: 'Still,'. 'For instance,' would show a refusal.",
+        "uz": "Yillab sabzavot yemagan bola oʻzi oʻstirgan pomidorni yedi — buni hech kim kutmasdi: «Still,». «For instance,» rad etish misolini berardi.",
+        "ru": "После многих лет отказа от овощей съесть свои помидоры — неожиданно: «Still,». «For instance,» показало бы пример отказа."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 65,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1313",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The school council had planned to spend this year's small budget on new curtains for the assembly hall. After a long vote, the pupils agreed that the curtains could wait. ______ the money paid for a water filter in the main corridor, so that nobody has to carry bottles from home.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Instead,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "Nevertheless,"
+        },
+        {
+          "en": "In contrast,"
+        }
+      ],
+      "why": {
+        "en": "The filter took the place of the curtains the council had planned to buy: 'Instead,'. The vote made the change, so no expectation failed.",
+        "uz": "Filtr kengash olmoqchi boʻlgan pardalar oʻrnini egalladi: «Instead,». Oʻzgarishni ovoz berish qildi, kutilgan narsa buzilmadi.",
+        "ru": "Фильтр занял место штор, которые совет собирался купить: «Instead,». Перемену решило голосование, ожидание не нарушено."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1314",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Both of Aziz's parents enjoy cooking for the family. His mother plans every meal of the week on Sunday evening and writes a shopping list for each day. ______ his father decides what to cook only when he opens the fridge, and no two of his dishes are ever quite the same.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "Nevertheless,"
+        },
+        {
+          "en": "As a result,"
+        }
+      ],
+      "why": {
+        "en": "Two ways of cooking, planned and unplanned, are set side by side: 'In contrast,'. Both parents enjoy cooking, but their ways differ.",
+        "uz": "Ota-onaning ovqat qilish usullari, rejali va rejasiz, yonma-yon qoʻyilgan: «In contrast,». Ikkalasi ham yoqtiradi, lekin usul boshqa.",
+        "ru": "Два способа готовить, по плану и без плана, поставлены рядом: «In contrast,». Обоим нравится готовить, но по-разному."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1315",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The tailor on the corner never throws away the small pieces of cloth left over from a job; she sews them into bright patchwork bags. ______ the carpenter next door keeps every short end of wood that falls from his saw and turns it into toy cars for the children of the street.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Likewise,"
+        },
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "Instead,"
+        },
+        {
+          "en": "Nevertheless,"
+        }
+      ],
+      "why": {
+        "en": "Each keeps scraps from work and makes something new from them: the same pattern in a second case, so 'Likewise,'. Cloth or wood is a detail.",
+        "uz": "Har biri ish qoldiqlarini saqlab, ulardan yangi narsa yasaydi: ikkinchi holatda bir xil naqsh, «Likewise,». Mato yoki yogʻoch — tafsilot.",
+        "ru": "Каждый сохраняет обрезки и делает из них новое: та же схема во втором случае, «Likewise,». Ткань или дерево — деталь."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1316",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The football pitch behind the school has no grass, only hard, dusty ground, and its goals lost their nets long ago. In summer the ground is so hot by noon that it burns through thin shoes. ______ the pupils play a match there every afternoon, and the games often last until the caretaker locks the gate.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Nevertheless,"
+        },
+        {
+          "en": "As a result,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "For example,"
+        }
+      ],
+      "why": {
+        "en": "A bare, burning pitch should keep pupils away, yet they play there every day: what was expected did not happen, so 'Nevertheless,'.",
+        "uz": "Yalangʻoch, qizigan maydon oʻquvchilarni qochirishi kerak edi, ammo ular har kuni oʻynaydi: kutilgani boʻlmadi, «Nevertheless,».",
+        "ru": "Голое раскалённое поле должно отпугивать, но дети играют каждый день: ожидаемое не случилось, «Nevertheless,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 65,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1317",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "When Malika's family moved into their new flat, her mother hung the old family photographs in the hallway before she unpacked a single plate, so that the place would feel like home. ______ Malika put her small lamp and her favourite books by her bed on the very first night, before the boxes in her room were even opened.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "Instead,"
+        },
+        {
+          "en": "Still,"
+        }
+      ],
+      "why": {
+        "en": "Mother and daughter both set out familiar things first, to feel at home: the same pattern, so 'Similarly,'. Nothing is replaced.",
+        "uz": "Ona ham, qiz ham birinchi navbatda tanish narsalarni qoʻyadi: bir xil naqsh, «Similarly,». Hech narsa boshqasining oʻrnini olmaydi.",
+        "ru": "И мама, и дочь первым делом ставят знакомые вещи: та же схема, «Similarly,». Ничто ничего не заменяет."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1318",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Two friends, Sevara and Nilufar, both got pocket money every week for a whole year. Sevara put every coin in a jar and spent it all at once on a bicycle in the spring. ______ Nilufar spent a little each month on books and craft paper, and she ended the year with only a few coins left. Each girl says her way was the right one.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "Nevertheless,"
+        },
+        {
+          "en": "As a result,"
+        }
+      ],
+      "why": {
+        "en": "The two girls' ways of using money are set side by side, all at once against a little each month: 'In contrast,'.",
+        "uz": "Ikki qizning puldan foydalanish usuli yonma-yon: bir yoʻla sarflash va har oy ozgina: «In contrast,».",
+        "ru": "Два способа тратить деньги поставлены рядом: всё сразу и понемногу каждый месяц: «In contrast,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1319",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The school science club usually loses the city quiz to older teams, and this year three of its best members had moved to other schools. Few people expected the club to reach the final. ______ the team won every round in the first week and finished in second place.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "However,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "As a result,"
+        }
+      ],
+      "why": {
+        "en": "Nobody expected the club to go far, yet it won and came second: what was expected did not happen, so 'However,'.",
+        "uz": "Hech kim toʻgarak uzoqqa boradi deb kutmagan, ammo u gʻalaba qozonib, ikkinchi boʻldi: kutilgani boʻlmadi, «However,».",
+        "ru": "Никто не ждал успеха кружка, а он побеждал и стал вторым: ожидаемое не случилось, значит, «However,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 65,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei1320",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "For years, the families in our building each bought their own ladder, drill and garden hose, and most of these tools sat unused in cupboards. Last spring the neighbours stopped buying them. ______ they set up a shared tool shelf in the basement, where anyone can borrow a tool and sign it out in a notebook.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Instead,"
+        },
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Still,"
+        }
+      ],
+      "why": {
+        "en": "A shared shelf took the place of each family buying its own tools: 'Instead,'. It comes after 'stopped buying', a dropped habit.",
+        "uz": "Umumiy javon har bir oila oʻz asbobini sotib olishi oʻrnini egalladi: «Instead,». U «stopped buying» dan keyin keladi.",
+        "ru": "Общая полка заменила покупку своих инструментов каждой семьёй: «Instead,». Это идёт после «stopped buying»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2201",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• The Karimovs and the Yusupovs live next door to each other in the mahalla.\n• The Karimovs grow grapes over their yard.\n• The Yusupovs grow pomegranates by their gate.\n• Both families give part of their harvest to the mahalla's autumn fair.\n\nThe student wants to emphasize a similarity between the two families.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Both the Karimovs and the Yusupovs give part of their harvest to the autumn fair."
+        },
+        {
+          "en": "The Karimovs grow grapes over their yard, while the Yusupovs grow pomegranates by their gate."
+        },
+        {
+          "en": "The Yusupovs, who live next door to the Karimovs, grow pomegranates by their gate."
+        },
+        {
+          "en": "The Karimovs live in the mahalla and grow grapes over their yard."
+        }
+      ],
+      "why": {
+        "en": "A similarity is what both families share: giving part of the harvest to the fair. Grapes against pomegranates is a difference.",
+        "uz": "Oʻxshashlik — ikkala oila uchun umumiy narsa: hosilning bir qismini yarmarkaga berish. Uzum va anor — farq.",
+        "ru": "Сходство — то, что общее у обеих семей: часть урожая идёт на ярмарку. Виноград и гранаты — различие."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2202",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Bobur and his sister Zilola both walk to school.\n• Bobur leaves home at 7:30.\n• Zilola leaves home at 7:50.\n• They go to the same school.\n\nThe student wants to emphasize a difference between Bobur and Zilola.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Bobur leaves home for school at 7:30, twenty minutes before his sister Zilola."
+        },
+        {
+          "en": "Bobur and his sister Zilola both walk to the same school."
+        },
+        {
+          "en": "Zilola walks to school and leaves home at 7:50."
+        },
+        {
+          "en": "Bobur walks to school, and so does his sister Zilola."
+        }
+      ],
+      "why": {
+        "en": "A difference sets the two side by side: Bobur leaves twenty minutes before Zilola. Walking to the same school is shared, not a difference.",
+        "uz": "Farq ikkalasini yonma-yon qoʻyadi: Bobur Ziloladan yigirma daqiqa oldin chiqadi. Bir maktabga piyoda borish — umumiy jihat.",
+        "ru": "Различие ставит их рядом: Бобур выходит на двадцать минут раньше Зилолы. Ходить в одну школу — общее, не различие."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2203",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• A class collected old newspapers for recycling.\n• In October, the class collected 30 kilograms.\n• In November, the class collected 60 kilograms.\n• The newspapers were kept in the school storeroom until a truck took them away.\n\nThe student wants to compare the amounts collected in the two months.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The class collected 60 kilograms of newspapers in November, twice the 30 kilograms it collected in October."
+        },
+        {
+          "en": "In November, the class collected 60 kilograms of old newspapers for recycling."
+        },
+        {
+          "en": "The class collected old newspapers for recycling in October and in November."
+        },
+        {
+          "en": "In October, the class collected 30 kilograms of old newspapers."
+        }
+      ],
+      "why": {
+        "en": "A comparison by numbers needs both months and their relation: 60 kilograms is twice 30. The other choices give one month or no number.",
+        "uz": "Sonlar bilan solishtirish uchun ikkala oy va nisbat kerak: 60 kilogramm 30 ning ikki baravari. Qolganlarida bitta oy yoki son yoʻq.",
+        "ru": "Для сравнения нужны оба месяца и их соотношение: 60 килограммов — вдвое больше 30. В остальных один месяц или нет чисел."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2204",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Two pupils wrote stories for the school magazine.\n• Asal wrote about a lost kitten.\n• Temur wrote about a trip to the mountains.\n• Each story was exactly one page long.\n\nThe student wants to emphasize a similarity between the two stories.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Asal's story and Temur's story were each exactly one page long."
+        },
+        {
+          "en": "Asal wrote about a lost kitten, but Temur wrote about a trip to the mountains."
+        },
+        {
+          "en": "Temur wrote a one-page story about a trip to the mountains for the school magazine."
+        },
+        {
+          "en": "Two pupils, Asal and Temur, wrote stories on very different topics."
+        }
+      ],
+      "why": {
+        "en": "The shared fact is the length: each story was one page. The topics differ, and one choice is about Temur alone.",
+        "uz": "Umumiy fakt — hajm: har bir hikoya bir sahifa. Mavzular har xil, bir javob esa faqat Temur haqida.",
+        "ru": "Общий факт — объём: каждый рассказ на одну страницу. Темы разные, а один вариант только о Темуре."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2205",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• A school has two reading rooms.\n• The small room on the first floor has 12 seats.\n• The large room on the third floor has 40 seats.\n• Both rooms are open until 5 p.m.\n\nThe student wants to emphasize a difference between the two reading rooms.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The small reading room has only 12 seats, while the large one has 40."
+        },
+        {
+          "en": "Both of the school's reading rooms are open until 5 p.m."
+        },
+        {
+          "en": "The large reading room is on the third floor of the school and has 40 seats."
+        },
+        {
+          "en": "The small reading room on the first floor is open until 5 p.m."
+        }
+      ],
+      "why": {
+        "en": "Only the seat numbers set the two rooms against each other: 12 against 40. The opening hours are the same for both, a similarity.",
+        "uz": "Faqat oʻrinlar soni ikki xonani bir-biriga qarshi qoʻyadi: 12 va 40. Ish vaqti ikkalasida bir xil — bu oʻxshashlik.",
+        "ru": "Только число мест противопоставляет комнаты: 12 и 40. Часы работы у обеих одинаковы — это сходство."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p14-content",
+      "key_check_1": "author",
+      "key_check_2": "blind:P14s1+P14s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-ei2206",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• The mahalla committee counted the cars that drove past the school gate.\n• On Monday morning, 120 cars passed between 7 and 8 a.m.\n• A new speed bump was put in on Tuesday.\n• On Wednesday morning, 80 cars passed in the same hour.\n\nThe student wants to compare the number of cars on Monday and on Wednesday.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "In the same morning hour, 80 cars passed the school gate on Wednesday, 40 fewer than the 120 that passed on Monday."
+        },
+        {
+          "en": "On Wednesday morning, 120 cars passed the school gate, 40 more than on Monday."
+        },
+        {
+          "en": "A new speed bump was put in near the school gate on Tuesday."
+        },
+        {
+          "en": "Between 7 and 8 a.m. on Monday, 120 cars drove past the school gate."
+        }
+      ],
+      "why": {
+        "en": "Wednesday had 80 cars, 40 fewer than the 120 on Monday, and that choice names both days. Another choice swaps the numbers of the two days.",
+        "uz": "Chorshanba 80 ta mashina, dushanbadagi 120 tadan 40 ta kam; shu javob ikkala kunni aytadi. Boshqa javob kunlarning sonini almashtirgan.",
+        "ru": "В среду 80 машин, на 40 меньше, чем 120 в понедельник; этот вариант называет оба дня. Другой путает числа двух дней."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2207",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Ozoda and her cousin Diyor both learned to swim last summer.\n• Ozoda learned at a pool in the city.\n• Diyor learned in a lake near his village.\n• Each of them took twelve lessons.\n• Both can now swim 200 meters without stopping.\n\nThe student wants to emphasize a similarity in how Ozoda and Diyor learned to swim.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Ozoda and her cousin Diyor each took twelve lessons when they learned to swim."
+        },
+        {
+          "en": "Ozoda learned to swim at a pool in the city, whereas Diyor learned in a lake near his village."
+        },
+        {
+          "en": "Diyor, who learned in a lake near his village, can now swim 200 meters without stopping."
+        },
+        {
+          "en": "Last summer, Ozoda took swimming lessons at a pool in the city."
+        }
+      ],
+      "why": {
+        "en": "The goal asks what was the same in how they learned: twelve lessons each. A pool against a lake is a difference.",
+        "uz": "Maqsad ular qanday oʻrganganidagi umumiy jihatni soʻraydi: har biri oʻn ikki dars. Hovuz va koʻl — farq.",
+        "ru": "Цель — общее в том, как они учились: по двенадцать уроков. Бассейн и озеро — различие."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2208",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Two school clubs raised money for new equipment.\n• The chess club sold homemade cakes at the school fair.\n• The football club washed cars in the school yard.\n• Each club raised enough to buy what it needed.\n\nThe student wants to emphasize a difference between how the two clubs raised money.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The chess club raised money by selling homemade cakes, but the football club washed cars."
+        },
+        {
+          "en": "Both the chess club and the football club raised enough money to buy the new equipment they needed."
+        },
+        {
+          "en": "To raise money for new equipment, the football club washed cars in the school yard."
+        },
+        {
+          "en": "At the school fair, the chess club sold homemade cakes to raise money."
+        }
+      ],
+      "why": {
+        "en": "A difference in how they raised money sets the two ways side by side: cakes against car washing. Raising enough is shared.",
+        "uz": "Pul yigʻish usulidagi farq ikki usulni yonma-yon qoʻyadi: pishiriq va mashina yuvish. Yetarli pul yigʻish — umumiy.",
+        "ru": "Различие в способах ставит их рядом: пироги и мойка машин. Собрать достаточно — общее."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-ei2209",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Kumush and Rahim are neighbours who planted tulip bulbs in their front gardens in autumn.\n• Kumush planted 45 bulbs.\n• Rahim planted 15 bulbs.\n• In spring, almost all of the bulbs flowered.\n\nThe student wants to compare the number of bulbs the two neighbours planted.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Kumush planted 45 tulip bulbs, three times as many as the 15 that Rahim planted."
+        },
+        {
+          "en": "Kumush planted 45 tulip bulbs, twice as many as the 15 that Rahim planted."
+        },
+        {
+          "en": "In autumn, the two neighbours planted tulip bulbs, and almost all of them flowered in spring."
+        },
+        {
+          "en": "Rahim planted 15 tulip bulbs in his front garden in autumn."
+        }
+      ],
+      "why": {
+        "en": "45 is three times 15, so 'three times as many' is the right relation. 'Twice as many' names both numbers but gets the relation wrong.",
+        "uz": "45 soni 15 ning uch baravari, demak «three times as many» toʻgʻri nisbat. «Twice as many» ikkala sonni aytadi, lekin nisbat xato.",
+        "ru": "45 — это втрое больше 15, значит, верно «three times as many». «Twice as many» называет оба числа, но соотношение неверно."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2210",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Two classes planted trees along the road to the school.\n• Class 8A planted apple trees on the left side of the road.\n• Class 8B planted plane trees on the right side.\n• Each class planted 18 trees.\n• The work took each class one Saturday.\n\nThe student wants to emphasize a similarity between the work of the two classes.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Each class planted 18 trees along the road, and each finished in a single Saturday."
+        },
+        {
+          "en": "Class 8A planted apple trees on the left side of the road, and Class 8B planted plane trees on the right."
+        },
+        {
+          "en": "Class 8B spent one Saturday planting 18 plane trees on the right side of the road."
+        },
+        {
+          "en": "Along the road to the school, Class 8A planted 18 apple trees on the left side."
+        }
+      ],
+      "why": {
+        "en": "The shared facts are the number of trees and the time: 18 trees and one Saturday for each class. The kinds of tree and the sides differ.",
+        "uz": "Umumiy faktlar — daraxt soni va vaqt: har bir sinfga 18 daraxt va bitta shanba. Daraxt turi va yoʻl tomoni har xil.",
+        "ru": "Общее — число деревьев и время: по 18 деревьев и одной субботе у каждого класса. Породы и стороны дороги разные."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2211",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Hilola and her brother Javlon each read the same book for a school project.\n• The book has 240 pages.\n• Hilola read it in 6 days.\n• Javlon read it in 12 days.\n• Both wrote a one-page report on it.\n\nThe student wants to emphasize how the time Hilola and Javlon took to read the book differed.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Hilola finished the 240-page book in 6 days, half the 12 days that Javlon needed."
+        },
+        {
+          "en": "Hilola and Javlon both read the same 240-page book and wrote a one-page report on it."
+        },
+        {
+          "en": "Javlon took 12 days to read the book for his school project."
+        },
+        {
+          "en": "Hilola read the book, which has 240 pages, in 6 days."
+        }
+      ],
+      "why": {
+        "en": "The goal is the difference in time, so both readers and both times are needed: 6 days against 12. One choice gives what they share.",
+        "uz": "Maqsad vaqtdagi farq, demak ikkala oʻquvchi va ikkala muddat kerak: 6 kun va 12 kun. Bir javob umumiy jihatni aytadi.",
+        "ru": "Цель — различие во времени, нужны оба читателя и оба срока: 6 дней против 12. Один вариант даёт общее."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2212",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• The school canteen sells two kinds of lunch.\n• On a normal day, it sells 90 bowls of soup.\n• On a normal day, it sells 150 plates of plov.\n• A bowl of soup is cheaper than a plate of plov.\n\nThe student wants to compare how many of each lunch the canteen sells on a normal day.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "On a normal day, the canteen sells 150 plates of plov, 60 more than the 90 bowls of soup it sells."
+        },
+        {
+          "en": "A bowl of soup in the school canteen is cheaper than a plate of plov."
+        },
+        {
+          "en": "The canteen sells 90 bowls of soup on a normal day."
+        },
+        {
+          "en": "The school canteen sells two kinds of lunch, soup and plov."
+        }
+      ],
+      "why": {
+        "en": "The goal compares how many, so both numbers and the gap are needed: 150 is 60 more than 90. One choice compares prices instead.",
+        "uz": "Maqsad sonni solishtiradi, demak ikkala son va farq kerak: 150 soni 90 dan 60 ta koʻp. Bir javob narxni solishtiradi.",
+        "ru": "Цель — сравнить количество, нужны оба числа и разница: 150 больше 90 на 60. Один вариант сравнивает цены."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2213",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Two pupils grew beans for a science project.\n• Elyor kept his plant on a sunny windowsill.\n• Munisa kept hers under a lamp in a dark cupboard.\n• Elyor watered his plant every day; Munisa watered hers every second day.\n• After four weeks, each plant was 30 centimeters tall.\n\nThe student wants to emphasize a similarity between the results for the two plants.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "After four weeks, both bean plants were 30 centimeters tall."
+        },
+        {
+          "en": "Elyor kept his bean plant on a sunny windowsill, while Munisa kept hers under a lamp in a dark cupboard."
+        },
+        {
+          "en": "Elyor watered his bean plant every day, but Munisa watered hers only every second day."
+        },
+        {
+          "en": "Munisa grew a bean plant under a lamp in a dark cupboard for a science project."
+        }
+      ],
+      "why": {
+        "en": "The goal asks for a similarity in the results: both plants reached 30 centimeters. Light and watering are differences in method.",
+        "uz": "Maqsad natijadagi oʻxshashlikni soʻraydi: ikkala oʻsimlik 30 santimetrga yetdi. Yorugʻlik va sugʻorish — usuldagi farqlar.",
+        "ru": "Цель — сходство в результатах: оба растения выросли до 30 сантиметров. Свет и полив — различия в способе."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2214",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Two buses go from the mahalla to the city center.\n• Bus 12 takes 25 minutes and stops 6 times.\n• Bus 41 takes 40 minutes and stops 15 times.\n• Both buses cost the same.\n\nThe student wants to emphasize a difference between the two buses.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Bus 12 reaches the city center in 25 minutes, while Bus 41 takes 40."
+        },
+        {
+          "en": "Both Bus 12 and Bus 41 go from the mahalla to the city center for the same price."
+        },
+        {
+          "en": "Bus 41 stops 15 times on its 40-minute trip to the city center."
+        },
+        {
+          "en": "From the mahalla, Bus 12 takes 25 minutes to reach the city center and stops 6 times."
+        }
+      ],
+      "why": {
+        "en": "Only the choice with both buses and their times, 25 against 40 minutes, shows a difference. The price is the same for both.",
+        "uz": "Faqat ikkala avtobus va vaqti (25 va 40 daqiqa) berilgan javob farqni koʻrsatadi. Narx ikkalasida bir xil.",
+        "ru": "Только вариант с обоими автобусами и их временем, 25 против 40 минут, показывает различие. Цена у них одинакова."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2215",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• The school library lends books and board games.\n• In September, it lent 360 books.\n• In September, it lent 90 board games.\n• In October, it lent 300 books.\n• In October, it lent 120 board games.\n• The library is open five days a week.\n\nThe student wants to compare the number of books lent in September and in October.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The library lent 300 books in October, 60 fewer than the 360 it lent in September."
+        },
+        {
+          "en": "The library lent 360 books in September, 60 fewer than it lent in October."
+        },
+        {
+          "en": "In October, the library lent 120 board games, 30 more than in September."
+        },
+        {
+          "en": "The library lent 360 books in September, four times as many as the 90 board games it lent that month."
+        }
+      ],
+      "why": {
+        "en": "The goal is books in two months: 300 in October is 60 fewer than 360 in September. Other choices compare games or turn 'fewer' around.",
+        "uz": "Maqsad ikki oydagi kitoblar: oktyabrdagi 300 sentyabrdagi 360 dan 60 ta kam. Boshqalari oʻyinlarni solishtiradi yoki «fewer» ni teskari qiladi.",
+        "ru": "Цель — книги за два месяца: 300 в октябре на 60 меньше, чем 360 в сентябре. Другие сравнивают игры или путают «fewer»."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2216",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Saodat and Mahbuba are two grandmothers in the mahalla who bake bread in clay ovens in their yards.\n• Saodat bakes every morning before sunrise.\n• Mahbuba bakes only on Fridays and Sundays.\n• Saodat sells her bread to the neighbours.\n• Mahbuba gives hers to her children and grandchildren.\n• Both learned to bake from their own mothers.\n\nThe student wants to emphasize a similarity between the two grandmothers.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Saodat and Mahbuba both bake bread in clay ovens, a skill each of them learned from her own mother."
+        },
+        {
+          "en": "Saodat bakes every morning before sunrise, whereas Mahbuba bakes only on Fridays and Sundays."
+        },
+        {
+          "en": "Saodat sells her bread to the neighbours, but Mahbuba gives hers to her family."
+        },
+        {
+          "en": "Mahbuba, who learned to bake from her own mother, bakes bread in a clay oven in her yard on Fridays and Sundays."
+        }
+      ],
+      "why": {
+        "en": "A similarity must hold for both women: clay ovens and a skill learned from their mothers. The days and what they do with the bread differ.",
+        "uz": "Oʻxshashlik ikkala ayolga tegishli boʻlishi kerak: tandir va onasidan oʻrgangan hunar. Kunlar va non bilan nima qilishi har xil.",
+        "ru": "Сходство должно касаться обеих: глиняная печь и умение от матери. Дни и то, куда идёт хлеб, — различия."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-ei2217",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Sardor and Akmal are brothers who both learn the piano.\n• Sardor practices for 20 minutes a day, every day.\n• Akmal practices for 60 minutes, but only on Saturdays and Sundays.\n• Sardor has been learning for two years.\n• Akmal has been learning for one year.\n• Both will play at the school concert in May.\n\nThe student wants to emphasize a difference between how the two brothers practice.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Sardor practices for 20 minutes every day, while Akmal practices for an hour, but only on weekends."
+        },
+        {
+          "en": "Sardor has been learning the piano for two years, twice as long as Akmal."
+        },
+        {
+          "en": "Both brothers learn the piano and will play at the school concert in May."
+        },
+        {
+          "en": "Akmal practices the piano for 60 minutes on Saturdays and Sundays."
+        }
+      ],
+      "why": {
+        "en": "The goal is a difference in practice, so both brothers' habits must be set side by side. Years of learning is a different difference.",
+        "uz": "Maqsad mashqdagi farq, demak ikkala aka-ukaning mashq odati yonma-yon boʻlishi kerak. Oʻrganish yillari — boshqa farq.",
+        "ru": "Цель — различие в занятиях, поэтому нужны привычки обоих братьев рядом. Годы учёбы — другое различие."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2218",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• A school held a two-day plant sale to raise money for the garden club.\n• On Saturday, the club sold 64 pots of herbs.\n• On Sunday, it sold 32 pots of herbs.\n• On both days, the sale ran from 9 a.m. to 1 p.m.\n• It rained on Sunday morning.\n\nThe student wants to compare the number of pots sold on the two days.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The club sold 32 pots of herbs on Sunday, half as many as the 64 it sold on Saturday."
+        },
+        {
+          "en": "The club sold 64 pots of herbs on Saturday, half as many as the 32 it sold on Sunday."
+        },
+        {
+          "en": "On both days of the sale, the club sold pots of herbs from 9 a.m. to 1 p.m."
+        },
+        {
+          "en": "It rained on Sunday morning, so the club sold fewer pots of herbs that day."
+        }
+      ],
+      "why": {
+        "en": "Both numbers and the right relation are needed: 32 is half of 64. One choice turns them around, and one adds a cause the notes never give.",
+        "uz": "Ikkala son va toʻgʻri nisbat kerak: 32 soni 64 ning yarmi. Bir javob ularni almashtirgan, biri qaydlarda yoʻq sababni qoʻshgan.",
+        "ru": "Нужны оба числа и верное соотношение: 32 — половина 64. Один вариант их переставляет, другой добавляет причину не из заметок."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2219",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Two pupils built model houses for a design class.\n• Madina built hers from cardboard boxes.\n• Rustam built his from old wooden ice-cream sticks.\n• Madina's house took 3 evenings to build.\n• Rustam's house took 9 evenings to build.\n• Both houses had a door that opened and a roof that lifted off.\n• The teacher gave both houses top marks.\n\nThe student wants to emphasize a difference in how long the two houses took to build.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Rustam spent 9 evenings building his model house, three times as long as the 3 evenings Madina needed."
+        },
+        {
+          "en": "Madina built her model house from cardboard boxes, while Rustam used old wooden ice-cream sticks."
+        },
+        {
+          "en": "Both model houses had a door that opened and a roof that lifted off, and both got top marks."
+        },
+        {
+          "en": "Rustam spent 9 evenings building his model house, three times as long as any other pupil in the whole class."
+        }
+      ],
+      "why": {
+        "en": "The goal is the time: 9 evenings is three times the 3 Madina needed. Materials are a different difference, and \"any other pupil\" is not in the notes.",
+        "uz": "Maqsad vaqt: 9 kecha Madinaning 3 kechasidan uch baravar koʻp. Material — boshqa farq, «any other pupil» esa qaydlarda yoʻq.",
+        "ru": "Цель — время: 9 вечеров втрое больше 3 вечеров Мадины. Материал — другое различие, а «any other pupil» нет в заметках."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 95,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-ei2220",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Two classes took part in the school sports day.\n• Class 9A won 4 races and lost 2.\n• Class 9B won 4 races and lost 5.\n• Class 9A wore green shirts; Class 9B wore yellow.\n• Each class won exactly one relay.\n\nThe student wants to emphasize a similarity between the results of the two classes.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Class 9A and Class 9B each won 4 races, and each also won exactly one relay."
+        },
+        {
+          "en": "Class 9A lost only 2 races, while Class 9B lost 5."
+        },
+        {
+          "en": "Class 9A, in green shirts, won 4 races and one relay at the sports day."
+        },
+        {
+          "en": "Both classes took part in the sports day, Class 9A in green shirts and Class 9B in yellow."
+        }
+      ],
+      "why": {
+        "en": "The goal is a similarity in results: each class won 4 races and one relay. The losses differ, and shirts are not results.",
+        "uz": "Maqsad natijadagi oʻxshashlik: har bir sinf 4 ta poygada va bitta estafetada gʻolib. Magʻlubiyatlar har xil, futbolka natija emas.",
+        "ru": "Цель — сходство в результатах: каждый класс выиграл 4 забега и одну эстафету. Поражения разные, футболки — не результат."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2301",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• The school garden club grows tomatoes and peppers.\n• The club waters the plants at 6 p.m.\n• At midday the sun is very strong.\n• Water given at midday dries up before it reaches the roots.\n\nThe student wants to explain why the club waters its plants in the evening.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The club waters at 6 p.m. because water given in the strong midday sun dries up before it reaches the roots."
+        },
+        {
+          "en": "The school garden club grows tomatoes and peppers and waters them at 6 p.m."
+        },
+        {
+          "en": "At midday, the sun over the school garden is very strong."
+        },
+        {
+          "en": "The garden club grows tomatoes and peppers in the school garden."
+        }
+      ],
+      "why": {
+        "en": "An explanation needs the reason with 'because': midday water dries up before reaching the roots. The others say what or when.",
+        "uz": "Tushuntirish uchun «because» bilan sabab kerak: tushda berilgan suv ildizga yetmay qurib qoladi. Qolganlari nima yoki qachonni aytadi.",
+        "ru": "Для объяснения нужна причина с «because»: дневная вода высыхает, не дойдя до корней. Остальные говорят что или когда."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2302",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Class 7C wanted to waste less food in the school canteen.\n• For two weeks, they weighed the food left on plates after lunch.\n• Then they asked the cooks to serve smaller portions, with seconds for anyone still hungry.\n• Two weeks later, the food left on plates had fallen by half.\n\nThe student wants to present the result of the class project.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "After the cooks served smaller portions, the food left on plates fell by half."
+        },
+        {
+          "en": "For two weeks, Class 7C weighed the food left on plates after lunch."
+        },
+        {
+          "en": "Class 7C wanted to waste less food in the school canteen."
+        },
+        {
+          "en": "The class asked the cooks to serve smaller portions, with seconds for anyone still hungry."
+        }
+      ],
+      "why": {
+        "en": "A result is what happened in the end: the food left on plates fell by half. The other choices give the aim or the steps.",
+        "uz": "Natija — oxirida nima boʻlgani: likopchalarda qolgan ovqat yarmiga kamaydi. Qolganlari maqsad yoki qadamlarni aytadi.",
+        "ru": "Результат — то, что вышло в конце: остатков еды стало вдвое меньше. Другие варианты дают цель или шаги."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2303",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Bahrom wanted to find out which window in his flat got the most sun.\n• He put the same kind of thermometer on each of three windowsills.\n• He read all three thermometers at 9 a.m., 12 p.m. and 3 p.m. for one week.\n• The kitchen window was the warmest at every reading.\n\nThe student wants to describe the method Bahrom used.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Bahrom put the same kind of thermometer on three windowsills and read each one at 9 a.m., noon and 3 p.m. for a week."
+        },
+        {
+          "en": "The kitchen window was the warmest of the three windows in Bahrom's flat at every single reading that he took that week."
+        },
+        {
+          "en": "Bahrom wanted to know which window in his flat got the most sun."
+        },
+        {
+          "en": "Bahrom found that the kitchen window got more sun than the other two."
+        }
+      ],
+      "why": {
+        "en": "A method is how it was done: the same thermometers on three sills, read three times a day for a week. The others give the aim or the result.",
+        "uz": "Usul — qanday qilingani: uchta deraza tokchasida bir xil termometr, bir hafta kuniga uch marta. Qolganlari maqsad yoki natija.",
+        "ru": "Способ — как это делали: одинаковые термометры на трёх подоконниках, три раза в день неделю. Остальные — цель или результат."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-ei2304",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• The swap shelf is a bookshelf in the entrance of Block 7 in the mahalla.\n• Neighbours leave books, toys and jars they no longer need.\n• Anyone can take what they like, free of charge.\n• A retired teacher who lives in the block started it two years ago.\n• The most popular things are picture books for children.\n\nThe student wants to introduce the swap shelf to readers who do not know about it.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The swap shelf in Block 7 is a bookshelf where neighbours leave things they no longer need, free for anyone to take."
+        },
+        {
+          "en": "Picture books for children are the most popular things on the swap shelf."
+        },
+        {
+          "en": "A retired teacher who lives in Block 7 started the swap shelf two years ago."
+        },
+        {
+          "en": "Since a retired teacher started it two years ago, the swap shelf has become very popular with the neighbours in Block 7."
+        }
+      ],
+      "why": {
+        "en": "Readers new to it need to know what the shelf is and how it works. The others give a detail, or a claim the notes never make.",
+        "uz": "Uni bilmaydigan oʻquvchiga javon nima ekani va qanday ishlashi kerak. Qolganlari tafsilot yoki qaydlarda yoʻq daʼvo.",
+        "ru": "Тем, кто о ней не слышал, нужно знать, что это за полка и как она работает. Остальные — деталь или утверждение не из заметок."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p14-content",
+      "key_check_1": "author",
+      "key_check_2": "blind:P14s1+P14s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-ei2305",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Dilnoza's grandfather keeps his melons fresh until the New Year.\n• His storeroom is under the house.\n• He hangs each melon in a net bag from the ceiling of the cool, dark storeroom.\n• The melons do not touch each other or the floor.\n\nThe student wants to explain how Dilnoza's grandfather keeps his melons fresh for so long.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "He hangs each melon in its own net bag from the ceiling of a cool, dark storeroom, so the melons touch nothing."
+        },
+        {
+          "en": "Every year, Dilnoza's grandfather keeps his melons fresh until the New Year."
+        },
+        {
+          "en": "His storeroom, which is under the house, is cool and dark."
+        },
+        {
+          "en": "The melons that Dilnoza's grandfather grows are the sweetest in the mahalla."
+        }
+      ],
+      "why": {
+        "en": "'How' needs the way: each melon hangs in a net bag in a cool, dark room, touching nothing. The rest state facts without the way.",
+        "uz": "«How» usulni talab qiladi: har bir qovun salqin, qorongʻi xonada toʻrda osilib, hech narsaga tegmaydi. Qolganlarida usul yoʻq.",
+        "ru": "«How» требует способа: каждая дыня висит в сетке в прохладной тёмной комнате и ничего не касается. В остальных способа нет."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2306",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Ruxshona asked the 28 pupils in her class how they get to school.\n• 16 of them walk.\n• 8 of them come by bus.\n• 4 of them are driven by a parent.\n• She asked her questions on a Monday morning.\n\nThe student wants to present Ruxshona's main finding.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "More than half of the 28 pupils in Ruxshona's class, 16 of them, walk to school."
+        },
+        {
+          "en": "Ruxshona asked the 28 pupils in her class, on a Monday morning, how they get to school."
+        },
+        {
+          "en": "In Ruxshona's class, 4 pupils are driven to school by a parent."
+        },
+        {
+          "en": "Ruxshona wanted to find out how her classmates get to school."
+        }
+      ],
+      "why": {
+        "en": "The main finding is the biggest result: 16 of 28, more than half, walk. Being driven is a minor detail, and the rest is the method.",
+        "uz": "Asosiy topilma — eng katta natija: 28 tadan 16 tasi, yarmidan koʻpi piyoda keladi. Qolganlari mayda tafsilot yoki usul.",
+        "ru": "Главный вывод — самый крупный результат: 16 из 28, больше половины, ходят пешком. Остальное — мелкая деталь или способ."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2307",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• The mahalla library is open from Tuesday to Sunday.\n• It has 3,000 books in Uzbek, Russian and English.\n• Children under 12 can borrow books for free.\n• Adults pay a small fee each year.\n• It has a reading room with eight tables.\n\nThe student wants to emphasize what the library offers young children.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Children under 12 can borrow books from the mahalla library for free."
+        },
+        {
+          "en": "The mahalla library, open from Tuesday to Sunday, has 3,000 books in three languages and a reading room."
+        },
+        {
+          "en": "Adults pay a small yearly fee to borrow books from the mahalla library."
+        },
+        {
+          "en": "The library has 3,000 books in Uzbek, Russian and English."
+        }
+      ],
+      "why": {
+        "en": "The goal is one aspect, what young children get: free borrowing under 12. An overview of the whole library blurs that point.",
+        "uz": "Maqsad bitta jihat — kichik bolalar nima oladi: 12 yoshgacha bepul kitob. Butun kutubxona haqidagi umumiy gap bu fikrni xiralashtiradi.",
+        "ru": "Цель — один аспект, что получают маленькие дети: бесплатные книги до 12 лет. Обзор всей библиотеки размывает эту мысль."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2308",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Every autumn, Iroda and her mother make apple jam.\n• First, they wash and cut 3 kilograms of apples.\n• Next, they cook the apples with sugar for one hour.\n• Finally, they pour the hot jam into clean jars.\n• The family eats the jam all winter.\n\nThe student wants to describe the steps Iroda and her mother follow to make the jam.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Iroda and her mother wash and cut the apples, cook them with sugar for an hour, and then pour the hot jam into clean jars."
+        },
+        {
+          "en": "Every autumn, Iroda and her mother make apple jam that the family eats all winter."
+        },
+        {
+          "en": "Iroda and her mother cook 3 kilograms of apples with sugar for one hour."
+        },
+        {
+          "en": "The apple jam that Iroda and her mother make lasts the family the whole winter."
+        }
+      ],
+      "why": {
+        "en": "Steps need the order of the work: wash and cut, cook, pour into jars. One choice gives only one step; the others say what or how long it lasts.",
+        "uz": "Qadamlar ish tartibini talab qiladi: yuvish va kesish, pishirish, bankalarga quyish. Bir javobda bitta qadam bor, xolos.",
+        "ru": "Шаги требуют порядка работы: помыть и нарезать, сварить, разлить по банкам. В одном варианте только один шаг."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2309",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• The school moved its football matches from Saturday to Friday afternoon.\n• Many pupils go to their grandparents in the villages on Saturdays.\n• Last year, teams often could not find eleven players on a Saturday.\n• This year, every match has had full teams.\n\nThe student wants to explain why the school moved its football matches.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The school moved its matches to Friday because many pupils visit their grandparents on Saturdays, which left teams without eleven players."
+        },
+        {
+          "en": "Since the matches moved to Friday afternoon, every match has had full teams."
+        },
+        {
+          "en": "The school now holds its football matches on Friday afternoon instead of on Saturday, and so far this year every match has had full teams."
+        },
+        {
+          "en": "Many pupils at the school go to their grandparents in the villages on Saturdays."
+        }
+      ],
+      "why": {
+        "en": "'Why' needs the reason linked to the change: Saturday visits left teams short, so matches moved. Full teams this year is the result.",
+        "uz": "«Why» oʻzgarishga bogʻlangan sababni talab qiladi: shanbadagi safarlar jamoalarni kamaytirgan. Bu yilgi toʻliq jamoalar — natija.",
+        "ru": "«Why» требует причины, связанной с переменой: субботние поездки оставляли команды без игроков. Полные команды — результат."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-ei2310",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• A class of 30 pupils tested whether music helps them remember words.\n• Half the class learned 20 new English words in silence.\n• The other half learned the same words with quiet music playing.\n• The next day, both groups remembered about 14 words on average.\n\nThe student wants to present the result of the test.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The next day, the pupils who learned with music and those who learned in silence both remembered about 14 of the 20 words."
+        },
+        {
+          "en": "Half the class learned 20 new English words in silence, and the other half learned the same words with quiet music playing."
+        },
+        {
+          "en": "A class of 30 pupils tested whether music helps them remember new words."
+        },
+        {
+          "en": "The test showed that quiet music helps pupils remember new English words."
+        }
+      ],
+      "why": {
+        "en": "The result is what the test showed: both groups remembered about 14 words. One choice claims music helped, which the notes do not show.",
+        "uz": "Natija — test nimani koʻrsatgani: ikkala guruh ham 14 tacha soʻz esladi. Bir javob musiqa yordam berdi deydi, qaydlar buni koʻrsatmaydi.",
+        "ru": "Результат — что показал опыт: обе группы запомнили около 14 слов. Один вариант утверждает, что музыка помогла, а заметки этого не показывают."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p14-content",
+      "key_check_1": "author",
+      "key_check_2": "blind:P14s1+P14s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-ei2311",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• The Saturday Fixers is a group of pupils at a school in the mahalla.\n• Every Saturday morning, members repair broken things that neighbours bring in.\n• They mend chairs, lamps, radios and bicycles.\n• They charge nothing, but ask each neighbour to watch and learn.\n• Last month they repaired 37 items.\n• The group was started by two pupils in Grade 10.\n\nThe student wants to introduce the Saturday Fixers to an audience unfamiliar with the group.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The Saturday Fixers is a group of pupils who, every Saturday morning, repair the broken things neighbours bring in, free of charge."
+        },
+        {
+          "en": "Last month, the Saturday Fixers repaired 37 items, from chairs and lamps to radios and bicycles."
+        },
+        {
+          "en": "The Saturday Fixers charge nothing, but they ask each neighbour to watch and learn."
+        },
+        {
+          "en": "Two pupils in Grade 10 started the Saturday Fixers."
+        }
+      ],
+      "why": {
+        "en": "An unfamiliar audience first needs what the group is and does: pupils who repair neighbours' things each Saturday, for free.",
+        "uz": "Guruhni bilmaydigan auditoriyaga avval u nima va nima qilishi kerak: har shanba qoʻshnilar buyumini bepul taʼmirlaydigan oʻquvchilar.",
+        "ru": "Незнакомой аудитории сначала нужно знать, что это за группа и что она делает: ученики бесплатно чинят вещи соседей по субботам."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 95,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2312",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Last winter, the heating in the old school gym often failed.\n• The caretaker, Ilhom, wanted to keep the gym warm without new heaters.\n• He sealed the gaps around the windows with strips of felt.\n• He hung thick curtains over the two doors to the yard.\n• After these changes, the gym stayed 4 degrees warmer on cold mornings.\n• Ilhom spent less than a day on the work.\n\nThe student wants to explain how Ilhom kept the gym warmer.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Ilhom kept the gym warmer by sealing the gaps around its windows with felt and hanging thick curtains over the doors to the yard."
+        },
+        {
+          "en": "After the changes Ilhom made, the old school gym stayed 4 degrees warmer on cold mornings."
+        },
+        {
+          "en": "The caretaker, Ilhom, wanted to keep the gym warm without buying new heaters."
+        },
+        {
+          "en": "Ilhom spent less than a day making the old school gym warmer."
+        }
+      ],
+      "why": {
+        "en": "'How' asks for the way: felt in the window gaps and curtains over the doors, with 'by'. Four degrees warmer is the result, not the way.",
+        "uz": "«How» usulni soʻraydi: deraza tirqishlariga kigiz va eshiklarga qalin parda, «by» bilan. Toʻrt daraja issiqroq — natija, usul emas.",
+        "ru": "«How» спрашивает о способе: войлок в щелях окон и шторы на дверях, со словом «by». На 4 градуса теплее — результат."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 95,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2313",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Members of the school science club counted birds at the feeder in the yard.\n• They counted for 15 minutes each morning for four weeks.\n• In the first two weeks, the feeder held only bread.\n• In the last two weeks, it held sunflower seeds.\n• They counted about 6 birds a morning with bread and about 15 with seeds.\n\nThe student wants to present the club's finding.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The club counted more than twice as many birds a morning when the feeder held sunflower seeds, about 15, as when it held bread, about 6."
+        },
+        {
+          "en": "For four weeks, club members counted the birds at the feeder for 15 minutes each morning."
+        },
+        {
+          "en": "The club found that birds will eat only sunflower seeds."
+        },
+        {
+          "en": "Pupils in the science club put bread in the feeder in the first two weeks and seeds in the last two."
+        }
+      ],
+      "why": {
+        "en": "A finding is what the counts showed: about 15 birds with seeds, more than twice the 6 with bread. 'Only sunflower seeds' goes beyond the notes.",
+        "uz": "Topilma — sanoq nimani koʻrsatgani: urugʻ bilan 15 tacha qush, non bilan 6 tadan ikki baravardan koʻp. «Only sunflower seeds» ortiqcha.",
+        "ru": "Вывод — что показал подсчёт: около 15 птиц с семечками, больше чем вдвое против 6 с хлебом. «Only sunflower seeds» выходит за заметки."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 95,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2314",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• The mahalla holds an autumn fair every October on the square by the school.\n• Families sell vegetables, fruit and homemade pickles.\n• Children perform songs and short plays on a small stage.\n• Money from the fair pays for repairs to the mahalla playground.\n• This year, the fair ran for two days instead of one.\n• The best-selling stall sold pumpkin samsa.\n\nThe student wants to give an overview of the autumn fair.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Every October, the mahalla's autumn fair brings stalls of produce and pickles and shows by children, and its money pays for playground repairs."
+        },
+        {
+          "en": "This year, the mahalla's autumn fair on the square by the school ran for two days instead of one, and its best-selling stall sold pumpkin samsa."
+        },
+        {
+          "en": "The children performed songs and short plays on a small stage at the fair."
+        },
+        {
+          "en": "This year, the mahalla's autumn fair ran for two days instead of one."
+        }
+      ],
+      "why": {
+        "en": "An overview covers the whole fair: when, what happens and what the money is for. The other choices give only a detail or two.",
+        "uz": "Umumiy koʻrinish butun yarmarkani qamrab oladi: qachon, nima boʻladi va pul nimaga ketadi. Boshqa javoblar faqat bir-ikki tafsilotni beradi.",
+        "ru": "Обзор охватывает всю ярмарку: когда, что там бывает и на что идут деньги. Остальные варианты дают лишь одну-две детали."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 95,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-ei2315",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Shoxrux wanted to know which of three kinds of soil kept water longest.\n• He filled three cups with garden soil, sand and clay soil.\n• He poured 100 milliliters of water into each cup.\n• He weighed each cup every evening for five days.\n• The clay soil lost water most slowly.\n• He chose clay soil for his pepper seedlings, which need damp roots.\n\nThe student wants to describe the method Shoxrux used.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Shoxrux poured 100 milliliters of water into cups of garden soil, sand and clay soil, then weighed each cup every evening for five days."
+        },
+        {
+          "en": "Shoxrux chose clay soil for his pepper seedlings, which need damp roots, because of the three soils he tested it lost water most slowly."
+        },
+        {
+          "en": "Of the three soils Shoxrux tested, the clay soil lost water most slowly."
+        },
+        {
+          "en": "Shoxrux wanted to know which of three kinds of soil kept water the longest."
+        }
+      ],
+      "why": {
+        "en": "A method is what he did, in order: water into three cups of soil, then weighing each evening for five days. The others give aim, result or choice.",
+        "uz": "Usul — u nima qilgani, tartib bilan: uchta stakan tuproqqa suv, keyin besh kun har kechqurun tortish. Qolganlari maqsad, natija yoki tanlov.",
+        "ru": "Способ — что он делал по порядку: вода в три стакана с почвой, потом взвешивание каждый вечер пять дней. Остальное — цель, итог, выбор."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 95,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-ei2316",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• The school canteen stopped selling fizzy drinks in September.\n• It now sells water, milk and fruit tea instead.\n• The head cook says sugary drinks made many pupils sleepy in afternoon lessons.\n• Parents had also asked for healthier drinks at a school meeting.\n• Sales of fruit tea have grown every month since.\n\nThe student wants to explain why the canteen stopped selling fizzy drinks.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The canteen stopped selling fizzy drinks because sugary drinks made pupils sleepy in the afternoon and parents had asked for healthier ones."
+        },
+        {
+          "en": "Since the canteen stopped selling fizzy drinks in September, sales of fruit tea have grown every month."
+        },
+        {
+          "en": "The canteen stopped selling fizzy drinks because they had become too expensive."
+        },
+        {
+          "en": "The canteen now sells water, milk and fruit tea in place of fizzy drinks."
+        }
+      ],
+      "why": {
+        "en": "The notes give two reasons, sleepy pupils and parents' wishes, and the key states them. 'Too expensive' is a reason the notes never give.",
+        "uz": "Qaydlarda ikki sabab bor: uyquchan oʻquvchilar va ota-onalar istagi; toʻgʻri javob ikkalasini aytadi. «Too expensive» qaydlarda yoʻq.",
+        "ru": "В заметках две причины: сонные ученики и просьба родителей; ключ называет обе. «Too expensive» — причина не из заметок."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 95,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2317",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Last spring, the pupils of Class 10B painted a large picture on the wall of the school canteen.\n• The picture shows the mountains, a river and the town bazaar.\n• Twelve pupils took part, led by their art teacher.\n• The work took 26 afternoons, from March to May.\n• They used 40 liters of paint.\n• The head teacher unveiled it at the end of the school year.\n\nThe student wants to emphasize how much time the painting took.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Painting the picture on the canteen wall took Class 10B 26 afternoons, from March to May."
+        },
+        {
+          "en": "Last spring, twelve pupils of Class 10B, led by their art teacher, painted the mountains, a river and the bazaar on the canteen wall."
+        },
+        {
+          "en": "Class 10B used 40 liters of paint for the picture on the canteen wall."
+        },
+        {
+          "en": "At the end of the school year, the head teacher unveiled the picture painted by Class 10B."
+        }
+      ],
+      "why": {
+        "en": "The goal is one aspect, time: 26 afternoons from March to May. A full overview hides it, and 40 liters of paint is an amount, not a time.",
+        "uz": "Maqsad bitta jihat — vaqt: martdan maygacha 26 kun tushdan keyin. Umumiy gap uni yashiradi, 40 litr boʻyoq esa vaqt emas.",
+        "ru": "Цель — один аспект, время: 26 дней с марта по май. Полный обзор его скрывает, а 40 литров краски — это не время."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 95,
+      "source": "own",
+      "author": "agent:p8b-a1",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8bs1+P8bs2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C6-ei2318",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• The school started sorting its rubbish in January.\n• Each classroom has three bins: blue for paper, yellow for plastic, grey for everything else.\n• At the end of the day, two pupils from each class carry the bins to the yard.\n• There they empty them into three large containers of the same colors.\n• A recycling truck collects the paper and plastic every Thursday.\n• The school now throws away half as much rubbish as before.\n\nThe student wants to describe how the rubbish is sorted and collected.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Pupils sort rubbish into blue, yellow and grey bins in each classroom, empty them into matching containers in the yard, and a truck takes the paper and plastic on Thursdays."
+        },
+        {
+          "en": "Since the school started sorting its rubbish in January, it throws away half as much as before."
+        },
+        {
+          "en": "Each classroom has a blue bin for paper, a yellow bin for plastic and a grey bin for everything else, and since January the school has thrown away half as much rubbish as before."
+        },
+        {
+          "en": "The school sorts its rubbish so that the paper and the plastic can be recycled."
+        }
+      ],
+      "why": {
+        "en": "To describe the process, the answer follows the rubbish from classroom bins to yard containers to the Thursday truck. A list of bins is one step.",
+        "uz": "Jarayonni tasvirlash uchun javob chiqindini sinf qutilaridan hovli konteynerlariga va payshanbadagi mashinagacha kuzatadi. Qutilar roʻyxati — faqat bitta qadam.",
+        "ru": "Чтобы описать процесс, ответ ведёт мусор от классных урн к контейнерам во дворе и к машине по четвергам. Список урн — один шаг."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 100,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-ei2319",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• In April, the pupils of a village school held a \"no phones at lunch\" week.\n• For five days, everyone left their phones in a box at the canteen door.\n• Before the week, a teacher counted how many pupils talked with someone during lunch: 40 of 120.\n• On the last day of the week, she counted again: 95 of 120.\n• Many pupils asked for the week to be repeated in May.\n\nThe student wants to present the result of the week.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "By the last day of the week, 95 of the 120 pupils talked with someone at lunch, up from 40 before it began."
+        },
+        {
+          "en": "For five days in April, pupils at the village school left their phones in a box at the canteen door during lunch."
+        },
+        {
+          "en": "Before the week began, a teacher counted 40 of the 120 pupils talking with someone at lunch."
+        },
+        {
+          "en": "The week without phones made the pupils of the village school happier and calmer."
+        }
+      ],
+      "why": {
+        "en": "A result is what changed: 95 of 120 talked at lunch by the last day, up from 40. 'Happier and calmer' is not in the notes.",
+        "uz": "Natija — nima oʻzgargani: oxirgi kuni 120 tadan 95 tasi gaplashdi, oldin 40 ta edi. «Happier and calmer» qaydlarda yoʻq.",
+        "ru": "Результат — что изменилось: к последнему дню за обедом говорили 95 из 120, а было 40. «Happier and calmer» нет в заметках."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 100,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C6-ei2320",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Five stones is a game that Shirin learned from her grandmother.\n• Players throw one small stone into the air.\n• While it is in the air, they pick up other stones from the ground and then catch it.\n• The player who picks up all the stones without a drop wins.\n• Her grandmother played it as a girl.\n• Shirin now plays it with her friends at break.\n\nThe student wants to introduce the game to readers who have never played it.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "In five stones, players toss one stone up, pick up others while it is in the air and catch it; whoever picks up all the stones without a drop wins."
+        },
+        {
+          "en": "Shirin learned to play five stones from her grandmother, who played it as a girl, and now she plays the game with her own friends during the break at school."
+        },
+        {
+          "en": "Shirin now plays five stones with her friends at break."
+        },
+        {
+          "en": "The player who picks up all the stones without dropping one wins the game."
+        }
+      ],
+      "why": {
+        "en": "Readers who have never played need what the game is and how it goes: toss, pick up, catch, and how to win. The others give one part or a story.",
+        "uz": "Hech oʻynamaganlarga oʻyin qanday oʻtishi kerak: otish, terish, ushlash va qanday yutish. Qolganlari bitta qism yoki tarix.",
+        "ru": "Тем, кто не играл, нужно, как идёт игра: бросить, подобрать, поймать и как выиграть. Остальное — одна часть или история."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 100,
+      "source": "own",
+      "author": "agent:p13-fix-a",
+      "key_check_1": "author",
+      "key_check_2": "blind:P13s1+P13s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    }
+  ]
+}

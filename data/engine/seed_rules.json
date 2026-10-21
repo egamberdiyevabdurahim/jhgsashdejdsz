@@ -1,0 +1,959 @@
+{
+ "version": "0.1.0",
+ "note": "SEED ONLY. Every record carries verified_at/source_url/needs_verification. Records marked needs_verification=true contain typical values from general knowledge and MUST be checked on the official site before use in production. The engine must treat them as unverified and emit verify tasks.",
+ "country_profiles": [
+  {
+   "country": "UZ",
+   "label": "Uzbekistan",
+   "verified_at": null,
+   "source_url": null,
+   "needs_verification": true,
+   "verify_task": "Confirm grade structure, fork options after grade 9, DTM calendar and conscription/deferment rules on official sources",
+   "grades": [
+    {
+     "code": "1",
+     "label_i18n": "grade_1",
+     "typical_age": 7
+    },
+    {
+     "code": "2",
+     "label_i18n": "grade_2",
+     "typical_age": 8
+    },
+    {
+     "code": "3",
+     "label_i18n": "grade_3",
+     "typical_age": 9
+    },
+    {
+     "code": "4",
+     "label_i18n": "grade_4",
+     "typical_age": 10
+    },
+    {
+     "code": "5",
+     "label_i18n": "grade_5",
+     "typical_age": 11
+    },
+    {
+     "code": "6",
+     "label_i18n": "grade_6",
+     "typical_age": 12
+    },
+    {
+     "code": "7",
+     "label_i18n": "grade_7",
+     "typical_age": 13
+    },
+    {
+     "code": "8",
+     "label_i18n": "grade_8",
+     "typical_age": 14
+    },
+    {
+     "code": "9",
+     "label_i18n": "grade_9",
+     "typical_age": 15
+    },
+    {
+     "code": "10",
+     "label_i18n": "grade_10",
+     "typical_age": 16
+    },
+    {
+     "code": "11",
+     "label_i18n": "grade_11",
+     "typical_age": 17
+    }
+   ],
+   "final_grade": "11",
+   "school_year_start_month": 9,
+   "school_types": [
+    "public_state",
+    "presidential_school",
+    "specialized_school",
+    "academic_lyceum",
+    "vocational_college",
+    "private_national",
+    "international_ib",
+    "international_cambridge",
+    "other"
+   ],
+   "grading_scales": [
+    "five_point"
+   ],
+   "fork_points": [
+    {
+     "after_grade": "9",
+     "options": [
+      "stay_grades_10_11",
+      "academic_lyceum",
+      "vocational_college",
+      "international_school",
+      "move_abroad"
+     ]
+    }
+   ],
+   "national_exams": [
+    {
+     "id": "DTM",
+     "name": "DTM state test for university admission",
+     "taken_in_grade": "11",
+     "typical_dates": "June-July (registration in spring)",
+     "admission_logic": "exam_driven"
+    },
+    {
+     "id": "MILLIY_SERTIFIKAT",
+     "name": "Milliy sertifikat (national certificate exams by subject)",
+     "needs_verification": true,
+     "notes": "P4b (owner 3 Oct 2026, R6): the student gives subject + grade (A+, A, B+, B, C+, C); how a certificate counts for admission is not in the rules yet"
+    }
+   ],
+   "instruction_languages": [
+    "uz",
+    "ru",
+    "en"
+   ],
+   "conscription": {
+    "applies_to": "male",
+    "age_range": "18-27",
+    "deferment_for_study_abroad": "unknown"
+   },
+   "test_centers": [
+    {
+     "test": "SAT",
+     "cities": [
+      "Tashkent"
+     ],
+     "note": "dates fill early; some students travel to Almaty/Bishkek"
+    },
+    {
+     "test": "IELTS",
+     "cities": [
+      "Tashkent",
+      "Samarkand",
+      "Fergana",
+      "Namangan",
+      "Bukhara"
+     ]
+    },
+    {
+     "test": "AP",
+     "cities": [
+      "Tashkent"
+     ],
+     "note": "limited authorized centers"
+    }
+   ],
+   "typical_family_budget_band_usd": "most families need full or near-full aid for US/UK; German/Turkish/Korean routes more often affordable",
+   "scholarship_programs_home": [
+    "El-Yurt Umidi (mostly graduate level; check undergrad availability)"
+   ]
+  },
+  {
+   "country": "TEMPLATE",
+   "label": "Copy this for each launch corridor country",
+   "verified_at": null,
+   "source_url": null,
+   "needs_verification": true,
+   "verify_task": "Fill from official ministry sources",
+   "grades": [],
+   "final_grade": null,
+   "school_year_start_month": null,
+   "school_types": [],
+   "grading_scales": [],
+   "fork_points": [],
+   "national_exams": [],
+   "instruction_languages": [],
+   "conscription": {
+    "applies_to": "none",
+    "age_range": null,
+    "deferment_for_study_abroad": "unknown"
+   },
+   "test_centers": [],
+   "scholarship_programs_home": []
+  }
+ ],
+ "destination_rules": [
+  {
+   "destination": "US",
+   "admission_logic": "holistic",
+   "cycles": [
+    {
+     "entry_term": "Fall 2029 (for a student graduating June 2029)",
+     "deadlines": [
+      {
+       "name": "Early Decision / Early Action",
+       "date": "2028-11-01",
+       "applies_to": "most selective universities; varies",
+       "hard": true,
+       "verified_at": null,
+       "source_url": null,
+       "needs_verification": true,
+       "verify_task": "Confirm per university; ED/EA dates vary (Oct 15 - Nov 15)"
+      },
+      {
+       "name": "Regular Decision",
+       "date": "2029-01-01",
+       "applies_to": "most universities; many are Jan 1-5",
+       "hard": true,
+       "verified_at": null,
+       "source_url": null,
+       "needs_verification": true,
+       "verify_task": "Confirm per university"
+      }
+     ],
+     "decision_window": "Dec (ED) / Mar-Apr (RD)"
+    }
+   ],
+   "requirements": {
+    "school_leaving": {
+     "accepted_certificates": [
+      "national secondary certificate + transcript in English",
+      "IB",
+      "A-levels",
+      "AP-based"
+     ],
+     "needs_foundation_or_studienkolleg_for": []
+    },
+    "tests": [
+     {
+      "test_id": "SAT_or_ACT",
+      "required_for": {
+       "universities": [
+        "Harvard",
+        "Yale",
+        "Dartmouth",
+        "Brown",
+        "Penn",
+        "Cornell",
+        "Stanford",
+        "MIT",
+        "Caltech",
+        "Johns Hopkins",
+        "UT Austin",
+        "Ohio State",
+        "Purdue",
+        "Georgetown",
+        "Florida and Georgia public systems",
+        "Princeton",
+        "Carnegie Mellon"
+       ]
+      },
+      "sources_by_university": {
+       "Princeton": {
+        "url": "https://admission.princeton.edu/apply/standardized-testing",
+        "checked": "2026-10-04",
+        "says": "SAT or ACT required for fall 2028 entry onward; test optional for fall 2027 entry"
+       },
+       "Carnegie Mellon": {
+        "url": "https://admission-pantheon.cmu.edu/admission/standardized-testing",
+        "checked": "2026-10-04",
+        "says": "School of Computer Science requires SAT or ACT; Engineering, Dietrich, MCS, Tepper and Heinz IS are test flexible (scores required: SAT, ACT, IB, AP, A-level or French Bac); Fine Arts is test optional"
+       }
+      },
+      "typical_score_band": "1500+ SAT for most selective as an international; 1300-1450 for strong publics",
+      "optional_where": "many other universities remain test-optional; Princeton requires from Fall 2028 entry; Columbia reverted for fall 2027 applicants",
+      "verified_at": "2026-09-24",
+      "source_url": "https://www.carnegieprep.com/college-admissions/college-admissions-testing-policy-updates/",
+      "needs_verification": false
+     },
+     {
+      "test_id": "AP",
+      "required_for": {},
+      "typical_score_band": "4-5 as rigor evidence",
+      "optional_where": "everywhere",
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Optional; confirm availability at home test centers"
+     }
+    ],
+    "language": [
+     {
+      "language": "en",
+      "min_level": "B2",
+      "accepted_certificates": [
+       "TOEFL iBT 100+ (selective) / 80+",
+       "IELTS 7.0+ (selective) / 6.5+",
+       "Duolingo 120-130+"
+      ],
+      "waivers": "often waived with high SAT EBRW or English-medium schooling; varies",
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Confirm per university"
+     }
+    ]
+   },
+   "costs": {
+    "tuition_band_usd": "private 60k-70k; public out-of-state 35k-55k",
+    "living_band_usd": "15k-25k",
+    "application_fee_band_usd": "75-90 per application (waivers exist)",
+    "visa_and_process_usd": "SEVIS + visa fee ~535; plus tests, translations",
+    "verified_at": null,
+    "source_url": null,
+    "needs_verification": true,
+    "verify_task": "Confirm current fees"
+   },
+   "aid": {
+    "need_blind_for_internationals": [
+     "Harvard",
+     "Yale",
+     "Princeton",
+     "MIT",
+     "Amherst",
+     "Dartmouth",
+     "Bowdoin"
+    ],
+    "note": "Brown reported need-blind for internationals from the class of 2029 - verify",
+    "meets_full_need": [
+     "same list; plus some need-aware schools meet full need for admitted internationals"
+    ],
+    "merit_full_ride_examples": [
+     "check current lists; examples change yearly"
+    ],
+    "government_scholarships": [],
+    "verified_at": "2026-09-24",
+    "source_url": "https://www.thedp.com/article/2023/04/international-students-need-blind-financial-aid",
+    "needs_verification": false
+   },
+   "visa": {
+    "type": "F-1",
+    "docs": [
+     "I-20 from university",
+     "SEVIS fee receipt",
+     "DS-160",
+     "passport",
+     "proof of funds for year 1",
+     "admission letter",
+     "academic documents"
+    ],
+    "proof_of_funds_rule": "documented funds covering I-20 estimated cost for the first year",
+    "intent_rule": "nonimmigrant intent required (INA 214(b)); post-graduation 'stay' plans hurt interviews",
+    "post_study_work_note": "OPT exists; from 2026-09-15 F-1 admission is a fixed period tied to the I-20 end date, max 4 years + 30-day grace; undergraduates may change major only after one academic year; H-1B path became costlier in 2025 (verify current fee)",
+    "restrictions_by_citizenship": [
+     {
+      "country": "full_ban_list_2026",
+      "type": "F/M/J entry suspended (e.g., Afghanistan, Iran, Myanmar, Haiti, Syria, Yemen and others)",
+      "source_url": "https://isss.uoregon.edu/federal-updates"
+     },
+     {
+      "country": "partial_ban_list_2026",
+      "type": "F/M/J entry suspended (e.g., Nigeria, Venezuela, Cuba, Tanzania and others)",
+      "source_url": "https://isss.uoregon.edu/federal-updates"
+     },
+     {
+      "country": "UZ",
+      "type": "not on F-1 ban lists; appears on 2026 list of countries with increased immigrant-visa (public charge) scrutiny; student visas still issued",
+      "source_url": "https://manifestlaw.com/blog/212f-visa-rejections"
+     }
+    ],
+    "verified_at": "2026-09-24",
+    "source_url": "https://miracosta.edu/student-services/international-students/immigration-updates.html",
+    "needs_verification": false
+   },
+   "portals": [
+    "Common App",
+    "Coalition (Scoir)",
+    "university-specific"
+   ],
+   "recommendation_letters": {
+    "count": "2 teachers + counselor/school report",
+    "who": "grade 10-11 teachers"
+   },
+   "interview": "some",
+   "universities": [
+    {
+     "id": "mit",
+     "name": "MIT",
+     "selectivity_band": "ultra",
+     "need_aware_for_internationals": false,
+     "typical_scores": "SAT 1520-1580",
+     "notes": "need-blind, meets full need"
+    },
+    {
+     "id": "penn",
+     "name": "University of Pennsylvania",
+     "selectivity_band": "ultra",
+     "need_aware_for_internationals": true,
+     "typical_scores": "SAT 1500-1570",
+     "notes": "need-aware for internationals"
+    }
+   ],
+   "verified_at": "2026-09-24",
+   "source_url": "https://thecollegeinvestor.com/77443/colleges-are-requiring-sat-and-act-scores-again-heres-the-full-list-for-2027/",
+   "needs_verification": false
+  },
+  {
+   "destination": "UK",
+   "admission_logic": "hybrid",
+   "cycles": [
+    {
+     "entry_term": "Sept 2029",
+     "deadlines": [
+      {
+       "name": "UCAS early deadline (Oxford, Cambridge, medicine, dentistry, veterinary)",
+       "date": "2028-10-15",
+       "applies_to": "those courses",
+       "hard": true,
+       "verified_at": null,
+       "source_url": null,
+       "needs_verification": true,
+       "verify_task": "Confirm UCAS date for that cycle"
+      },
+      {
+       "name": "UCAS main deadline",
+       "date": "2029-01-14",
+       "applies_to": "most courses (mid-January; exact date varies by year)",
+       "hard": true,
+       "verified_at": null,
+       "source_url": null,
+       "needs_verification": true,
+       "verify_task": "Confirm UCAS date for that cycle"
+      }
+     ],
+     "decision_window": "Nov-May"
+    }
+   ],
+   "requirements": {
+    "school_leaving": {
+     "accepted_certificates": [
+      "A-levels",
+      "IB",
+      "national certificates with strong grades (varies; many non-EU certificates need a foundation year)"
+     ],
+     "needs_foundation_or_studienkolleg_for": [
+      "many national 11-year certificates -> International Foundation Year"
+     ]
+    },
+    "tests": [
+     {
+      "test_id": "UCAT",
+      "required_for": {
+       "fields": [
+        "medicine",
+        "dentistry"
+       ]
+      },
+      "typical_score_band": "course-specific",
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Confirm test dates/registration"
+     },
+     {
+      "test_id": "LNAT",
+      "required_for": {
+       "fields": [
+        "law"
+       ],
+       "universities": [
+        "Oxford",
+        "LSE",
+        "UCL",
+        "KCL",
+        "Bristol",
+        "Durham",
+        "Glasgow",
+        "Nottingham",
+        "SOAS"
+       ]
+      },
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Confirm list"
+     },
+     {
+      "test_id": "MAT",
+      "required_for": {
+       "fields": [
+        "mathematics",
+        "computer science"
+       ],
+       "universities": [
+        "Oxford",
+        "Imperial"
+       ]
+      },
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Confirm"
+     },
+     {
+      "test_id": "TMUA",
+      "required_for": {
+       "fields": [
+        "economics",
+        "computer science",
+        "mathematics"
+       ],
+       "universities": [
+        "Cambridge",
+        "Imperial",
+        "Durham",
+        "LSE",
+        "Warwick"
+       ]
+      },
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Confirm per course"
+     },
+     {
+      "test_id": "ESAT",
+      "required_for": {
+       "fields": [
+        "engineering",
+        "natural sciences"
+       ],
+       "universities": [
+        "Cambridge",
+        "Imperial"
+       ]
+      },
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Confirm"
+     },
+     {
+      "test_id": "STEP",
+      "required_for": {
+       "fields": [
+        "mathematics"
+       ],
+       "universities": [
+        "Cambridge (offer condition)",
+        "Warwick"
+       ]
+      },
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Confirm"
+     }
+    ],
+    "language": [
+     {
+      "language": "en",
+      "min_level": "B2",
+      "accepted_certificates": [
+       "IELTS for UKVI 6.0-7.0 by course",
+       "TOEFL iBT (accepted by most universities; check visa rules)",
+       "PTE Academic"
+      ],
+      "waivers": "English-medium qualifications accepted by some",
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Confirm per university and UKVI"
+     }
+    ],
+    "personal_statement": "from 2026 entry UCAS uses three structured questions instead of one free statement (verify)"
+   },
+   "costs": {
+    "tuition_band_usd": "28k-50k",
+    "living_band_usd": "15k-22k (London higher)",
+    "application_fee_band_usd": "UCAS fee ~35",
+    "visa_and_process_usd": "visa fee + immigration health surcharge per year (verify)",
+    "verified_at": null,
+    "source_url": null,
+    "needs_verification": true,
+    "verify_task": "Confirm current fees"
+   },
+   "aid": {
+    "need_blind_for_internationals": [],
+    "meets_full_need": [],
+    "merit_full_ride_examples": [
+     "very rare at undergraduate level; partial scholarships common"
+    ],
+    "government_scholarships": [],
+    "verified_at": null,
+    "source_url": null,
+    "needs_verification": true,
+    "verify_task": "Confirm scholarship landscape per university"
+   },
+   "visa": {
+    "type": "Student visa",
+    "docs": [
+     "CAS from university",
+     "proof of funds (28-day rule)",
+     "passport",
+     "English evidence",
+     "TB test for some countries"
+    ],
+    "proof_of_funds_rule": "tuition for year 1 + living costs held for 28 days",
+    "intent_rule": "genuine student; credibility interviews possible",
+    "post_study_work_note": "Graduate Route exists; length under review (verify)",
+    "restrictions_by_citizenship": [],
+    "verified_at": null,
+    "source_url": null,
+    "needs_verification": true,
+    "verify_task": "Confirm on gov.uk"
+   },
+   "portals": [
+    "UCAS"
+   ],
+   "recommendation_letters": {
+    "count": "1 reference",
+    "who": "school"
+   },
+   "interview": "some (Oxbridge, medicine)",
+   "universities": [],
+   "verified_at": null,
+   "source_url": null,
+   "needs_verification": true,
+   "verify_task": "Whole record: typical values, verify on ucas.com and university sites"
+  },
+  {
+   "destination": "DE",
+   "admission_logic": "exam_driven",
+   "cycles": [
+    {
+     "entry_term": "Winter semester 2029/30",
+     "deadlines": [
+      {
+       "name": "uni-assist / university deadline (winter)",
+       "date": "2029-07-15",
+       "applies_to": "many programs; some earlier (Jan-Apr for restricted programs)",
+       "hard": true,
+       "verified_at": null,
+       "source_url": null,
+       "needs_verification": true,
+       "verify_task": "Confirm per program"
+      },
+      {
+       "name": "summer semester deadline",
+       "date": "2029-01-15",
+       "applies_to": "some programs",
+       "hard": true,
+       "verified_at": null,
+       "source_url": null,
+       "needs_verification": true,
+       "verify_task": "Confirm"
+      }
+     ],
+     "decision_window": "Aug-Sept"
+    }
+   ],
+   "requirements": {
+    "school_leaving": {
+     "accepted_certificates": [
+      "Abitur",
+      "IB",
+      "A-levels",
+      "recognized national certificates via anabin/uni-assist"
+     ],
+     "needs_foundation_or_studienkolleg_for": [
+      "many non-EU 11-year certificates (e.g., Uzbekistan attestat) -> Studienkolleg + Feststellungspruefung, or 1-2 years of home university study; verify per country in anabin"
+     ]
+    },
+    "tests": [
+     {
+      "test_id": "TestAS",
+      "required_for": {},
+      "typical_score_band": "optional/recommended by some universities",
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Confirm"
+     },
+     {
+      "test_id": "Studienkolleg_FSP",
+      "required_for": {
+       "fields": [
+        "all, when certificate not directly recognized"
+       ]
+      },
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Confirm per state"
+     }
+    ],
+    "language": [
+     {
+      "language": "de",
+      "min_level": "C1",
+      "accepted_certificates": [
+       "TestDaF 4x4",
+       "DSH-2",
+       "Goethe C1/C2",
+       "telc C1 Hochschule"
+      ],
+      "waivers": "none for German-taught programs",
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Confirm per university"
+     },
+     {
+      "language": "en",
+      "min_level": "B2",
+      "accepted_certificates": [
+       "IELTS 6.5",
+       "TOEFL iBT 88-90"
+      ],
+      "waivers": "for English-taught programs only",
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Confirm per program"
+     }
+    ]
+   },
+   "costs": {
+    "tuition_band_usd": "mostly 0 (semester fee 150-400 EUR); Baden-Wuerttemberg ~1500 EUR/semester for non-EU; private universities charge",
+    "living_band_usd": "12k-15k",
+    "application_fee_band_usd": "uni-assist ~75 first application",
+    "visa_and_process_usd": "visa + blocked account (~12k EUR/year) + health insurance",
+    "verified_at": null,
+    "source_url": null,
+    "needs_verification": true,
+    "verify_task": "Confirm blocked account amount for the year"
+   },
+   "aid": {
+    "need_blind_for_internationals": [
+     "n/a (tuition-free public system)"
+    ],
+    "meets_full_need": [],
+    "merit_full_ride_examples": [
+     "DAAD mostly graduate; Deutschlandstipendium 300 EUR/month"
+    ],
+    "government_scholarships": [],
+    "verified_at": null,
+    "source_url": null,
+    "needs_verification": true,
+    "verify_task": "Confirm"
+   },
+   "visa": {
+    "type": "National visa (D) for studies",
+    "docs": [
+     "admission or Studienkolleg letter",
+     "blocked account or sponsor",
+     "health insurance",
+     "passport",
+     "certificates"
+    ],
+    "proof_of_funds_rule": "blocked account covering 12 months",
+    "intent_rule": "study purpose; 18-month job-seeker residence after graduation (verify)",
+    "post_study_work_note": "18-month job search residence permit",
+    "restrictions_by_citizenship": [],
+    "verified_at": null,
+    "source_url": null,
+    "needs_verification": true,
+    "verify_task": "Confirm on make-it-in-germany / consulate site"
+   },
+   "portals": [
+    "uni-assist",
+    "university portals",
+    "hochschulstart (restricted programs)"
+   ],
+   "recommendation_letters": {
+    "count": "usually none",
+    "who": "n/a"
+   },
+   "interview": false,
+   "universities": [],
+   "verified_at": null,
+   "source_url": null,
+   "needs_verification": true,
+   "verify_task": "Whole record: typical values; verify with DAAD, anabin, uni-assist"
+  },
+  {
+   "destination": "UZ_HOME",
+   "admission_logic": "exam_driven",
+   "cycles": [
+    {
+     "entry_term": "Sept 2029",
+     "deadlines": [
+      {
+       "name": "DTM registration",
+       "date": "2029-04-15",
+       "applies_to": "all state universities",
+       "hard": true,
+       "verified_at": null,
+       "source_url": null,
+       "needs_verification": true,
+       "verify_task": "Confirm DTM registration window"
+      },
+      {
+       "name": "DTM test window",
+       "date": "2029-06-20",
+       "applies_to": "all",
+       "hard": true,
+       "verified_at": null,
+       "source_url": null,
+       "needs_verification": true,
+       "verify_task": "Confirm"
+      }
+     ],
+     "decision_window": "Aug"
+    }
+   ],
+   "requirements": {
+    "school_leaving": {
+     "accepted_certificates": [
+      "attestat (grade 11) / lyceum diploma"
+     ],
+     "needs_foundation_or_studienkolleg_for": []
+    },
+    "tests": [
+     {
+      "test_id": "DTM",
+      "required_for": {
+       "fields": [
+        "all"
+       ]
+      },
+      "typical_score_band": "3 subjects; grant thresholds vary by program",
+      "verified_at": null,
+      "source_url": null,
+      "needs_verification": true,
+      "verify_task": "Confirm subject sets per program"
+     }
+    ],
+    "language": [
+     {
+      "language": "uz_or_ru",
+      "min_level": "native",
+      "accepted_certificates": [],
+      "waivers": "language certificates (IELTS, etc.) may add points - verify"
+     }
+    ]
+   },
+   "costs": {
+    "tuition_band_usd": "grant (free) or contract (varies)",
+    "living_band_usd": "low",
+    "application_fee_band_usd": "small",
+    "visa_and_process_usd": "0",
+    "verified_at": null,
+    "source_url": null,
+    "needs_verification": true,
+    "verify_task": "Confirm"
+   },
+   "aid": {
+    "need_blind_for_internationals": [],
+    "meets_full_need": [],
+    "merit_full_ride_examples": [
+     "state grant places by DTM score"
+    ],
+    "government_scholarships": [],
+    "verified_at": null,
+    "source_url": null,
+    "needs_verification": true,
+    "verify_task": "Confirm"
+   },
+   "visa": {
+    "type": "none",
+    "docs": [],
+    "proof_of_funds_rule": "n/a",
+    "intent_rule": "n/a",
+    "post_study_work_note": "n/a",
+    "restrictions_by_citizenship": [],
+    "verified_at": "2026-09-24",
+    "source_url": "n/a",
+    "needs_verification": false
+   },
+   "portals": [
+    "my.gov.uz / DTM portal"
+   ],
+   "recommendation_letters": {
+    "count": "0",
+    "who": "n/a"
+   },
+   "interview": false,
+   "universities": [],
+   "verified_at": null,
+   "source_url": null,
+   "needs_verification": true,
+   "verify_task": "Verify all on dtm.uz"
+  }
+ ],
+ "scholarship_programs": [
+  {
+   "id": "GKS",
+   "name": "Global Korea Scholarship (undergraduate)",
+   "destination": "KR",
+   "age_cap": "under 25 (verify)",
+   "citizenship_rules": "non-Korean; country quotas",
+   "covers": "tuition, stipend, language year",
+   "verified_at": null,
+   "source_url": null,
+   "needs_verification": true,
+   "verify_task": "Confirm on studyinkorea.go.kr"
+  },
+  {
+   "id": "MEXT_UG",
+   "name": "MEXT undergraduate",
+   "destination": "JP",
+   "age_cap": "17-24 (verify)",
+   "citizenship_rules": "embassy recommendation by country",
+   "covers": "tuition, stipend, airfare",
+   "verified_at": null,
+   "source_url": null,
+   "needs_verification": true,
+   "verify_task": "Confirm on MEXT/embassy site"
+  },
+  {
+   "id": "CSC",
+   "name": "Chinese Government Scholarship",
+   "destination": "CN",
+   "age_cap": "under 25 for bachelor (verify)",
+   "citizenship_rules": "non-Chinese",
+   "covers": "tuition, dorm, stipend",
+   "verified_at": null,
+   "source_url": null,
+   "needs_verification": true,
+   "verify_task": "Confirm on campuschina.org"
+  },
+  {
+   "id": "TURKIYE_BURSLARI",
+   "name": "Turkiye Scholarships (undergraduate)",
+   "destination": "TR",
+   "age_cap": "under 21 (verify)",
+   "citizenship_rules": "non-Turkish",
+   "covers": "tuition, stipend, housing, Turkish year",
+   "verified_at": null,
+   "source_url": null,
+   "needs_verification": true,
+   "verify_task": "Confirm on turkiyeburslari.gov.tr"
+  },
+  {
+   "id": "STIPENDIUM_HUNGARICUM",
+   "name": "Stipendium Hungaricum",
+   "destination": "HU",
+   "age_cap": "unknown (verify)",
+   "citizenship_rules": "partner countries via national nominating authority",
+   "covers": "tuition, stipend, dorm",
+   "verified_at": null,
+   "source_url": null,
+   "needs_verification": true,
+   "verify_task": "Confirm"
+  },
+  {
+   "id": "NYUAD",
+   "name": "NYU Abu Dhabi need-based aid",
+   "destination": "AE",
+   "age_cap": "none",
+   "citizenship_rules": "all",
+   "covers": "full demonstrated need for admitted students (verify)",
+   "verified_at": null,
+   "source_url": null,
+   "needs_verification": true,
+   "verify_task": "Confirm on nyuad.nyu.edu"
+  }
+ ],
+ "language_gap_months_heuristic": {
+  "A0->A1": 3,
+  "A1->A2": 4,
+  "A2->B1": 6,
+  "B1->B2": 8,
+  "B2->C1": 10,
+  "note": "at 5-7 h/week; multiply by 1.3 for distant language families (e.g., English speaker -> Korean); heuristic only"
+ }
+}

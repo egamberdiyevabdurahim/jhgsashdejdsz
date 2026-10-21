@@ -1,0 +1,1571 @@
+{
+  "bank": "C1",
+  "batch": 2,
+  "items": [
+    {
+      "id": "C1-a1p005",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "expansion",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "({a}x + {b})({c}x − {d}) = Ax² + Bx + C for all x. What is A + B + C?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 5
+          },
+          "b": {
+            "min": 1,
+            "max": 9
+          },
+          "c": {
+            "min": 2,
+            "max": 5
+          },
+          "d": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "constraints": [
+          "b*c != a*d",
+          "a != b",
+          "c != d",
+          "(a*c + b*c - a*d + b*d) != (a*c - b*d)"
+        ],
+        "answer": "(a + b)*(c - d)",
+        "distractors": [
+          "a*c + b*c - a*d + b*d",
+          "a*c + b*c + a*d - b*d",
+          "a*c - b*d"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | sign_slip | partial_answer (C1/error_rules.json).",
+        "relation": "X = {a}*{c} + ({b}*{c} - {a}*{d}) - {b}*{d}",
+        "variants": 974
+      },
+      "lang": "en",
+      "stem": {
+        "en": "({a}x + {b})({c}x − {d}) = Ax² + Bx + C for all x. What is A + B + C?",
+        "uz": "Barcha x uchun ({a}x + {b})({c}x − {d}) = Ax² + Bx + C. A + B + C nechaga teng?",
+        "ru": "При всех x верно ({a}x + {b})({c}x − {d}) = Ax² + Bx + C. Найдите A + B + C."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "A + B + C is the value at x = 1: ({a} + {b})({c} − {d}) = {ANS}.",
+        "uz": "A + B + C — bu x = 1 dagi qiymat: ({a} + {b})({c} − {d}) = {ANS}.",
+        "ru": "A + B + C — это значение при x = 1: ({a} + {b})({c} − {d}) = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -0.9,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a1p006",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "factoring",
+      "family": {
+        "template": "Work out {a}² − {b}² without a calculator.",
+        "params": {
+          "m": {
+            "min": 20,
+            "max": 80
+          },
+          "h": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "derived": {
+          "a": "m + h",
+          "b": "m - h",
+          "s": "a + b",
+          "t": "a - b"
+        },
+        "answer": "(a - b)*(a + b)",
+        "distractors": [
+          "(a - b)^2",
+          "a + b",
+          "a*a + b*b"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: square_slip | partial_answer | sign_slip (C1/error_rules.json).",
+        "relation": "X = {a}^2 - {b}^2",
+        "constraints": [
+          "((a - b)^2) != (a + b)"
+        ],
+        "variants": 546
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Work out {a}² − {b}² without a calculator.",
+        "uz": "{a}² − {b}² ni kalkulyatorsiz hisoblang.",
+        "ru": "Вычислите {a}² − {b}² без калькулятора."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{a}² − {b}² = ({a} − {b})({a} + {b}) = {t} × {s} = {ANS}.",
+        "uz": "{a}² − {b}² = ({a} − {b})({a} + {b}) = {t} × {s} = {ANS}.",
+        "ru": "{a}² − {b}² = ({a} − {b})({a} + {b}) = {t} × {s} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a1p007",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "exponent_rules",
+      "family": {
+        "template": "({a}^{m})^{n} ÷ {a}^{k} = {a}ˣ. What is x?",
+        "params": {
+          "a": {
+            "values": [
+              2,
+              3,
+              5
+            ]
+          },
+          "m": {
+            "min": 2,
+            "max": 5
+          },
+          "n": {
+            "min": 2,
+            "max": 4
+          },
+          "k": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "derived": {
+          "mn": "m*n"
+        },
+        "constraints": [
+          "m*n > k",
+          "m + n != m*n",
+          "m + n - k != m*n",
+          "m + n - k != m*n + k"
+        ],
+        "answer": "m*n - k",
+        "distractors": [
+          "m + n - k",
+          "m*n + k",
+          "m*n"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: exponent_slip | sign_slip | partial_answer (C1/error_rules.json).",
+        "relation": "({a}^{m})^{n} / {a}^{k} = {a}^X",
+        "variants": 258
+      },
+      "lang": "en",
+      "stem": {
+        "en": "({a}^{m})^{n} ÷ {a}^{k} = {a}ˣ. What is x?",
+        "uz": "({a}^{m})^{n} ÷ {a}^{k} = {a}ˣ. x nechaga teng?",
+        "ru": "({a}^{m})^{n} ÷ {a}^{k} = {a}ˣ. Найдите x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "A power of a power multiplies the exponents ({m} × {n} = {mn}); dividing subtracts them: {mn} − {k} = {ANS}.",
+        "uz": "Darajaning darajasida koʻrsatkichlar koʻpaytiriladi ({m} × {n} = {mn}); boʻlishda ayiriladi: {mn} − {k} = {ANS}.",
+        "ru": "При возведении степени в степень показатели перемножаются ({m} × {n} = {mn}); при делении вычитаются: {mn} − {k} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1,
+      "time_s": 25,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a1p008",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equation",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "Tank A holds {a} litres of water and gets {r} litres more every minute. Tank B holds {b} litres and gets {s|litre|litres} more every minute. After how many minutes will the two tanks hold the same amount?",
+        "params": {
+          "a": {
+            "min": 10,
+            "max": 60,
+            "step": 5
+          },
+          "r": {
+            "min": 4,
+            "max": 12
+          },
+          "s": {
+            "min": 1,
+            "max": 6
+          },
+          "t": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "derived": {
+          "b": "a + (r - s)*t",
+          "g": "r - s"
+        },
+        "constraints": [
+          "r - s >= 2",
+          "round((a + b)/(r - s), 2) != round(b - a, 2)"
+        ],
+        "answer": "(b - a)/(r - s)",
+        "distractors": [
+          "(b - a)/(r + s)",
+          "(a + b)/(r - s)",
+          "b - a"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | sign_slip | partial_answer (C1/error_rules.json).",
+        "relation": "{a} + {r}*X = {b} + {s}*X",
+        "decimals": 2,
+        "variants": 5247
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Tank A holds {a} litres of water and gets {r} litres more every minute. Tank B holds {b} litres and gets {s|litre|litres} more every minute. After how many minutes will the two tanks hold the same amount?",
+        "uz": "A idishda {a} litr suv bor va unga har daqiqada {r} litr quyiladi. B idishda {b} litr suv bor va unga har daqiqada {s} litr quyiladi. Necha daqiqadan keyin ikkala idishdagi suv miqdori tenglashadi?",
+        "ru": "В баке A {a} л воды, и каждую минуту в него добавляют {r} л. В баке B {b} л, и каждую минуту в него добавляют {s} л. Через сколько минут воды в баках станет поровну?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{a} + {r}t = {b} + {s}t, so {g}t = {b} − {a} and t = {ANS}.",
+        "uz": "{a} + {r}t = {b} + {s}t, demak {g}t = {b} − {a} va t = {ANS}.",
+        "ru": "{a} + {r}t = {b} + {s}t, значит, {g}t = {b} − {a}, t = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-gep001",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "parallel_lines",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "Two parallel lines are crossed by a transversal. One of the two co-interior angles (between the parallel lines, on the same side of the transversal) is {a}°. What is the other one, in degrees?",
+        "params": {
+          "a": {
+            "min": 35,
+            "max": 145,
+            "not": [
+              45,
+              90,
+              135
+            ]
+          }
+        },
+        "answer": "180 - a",
+        "distractors": [
+          "a",
+          "abs(90 - a)",
+          "360 - a"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | wrong_formula | wrong_formula (C1/error_rules.json).",
+        "relation": "X + {a} = 180",
+        "variants": 108
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Two parallel lines are crossed by a transversal. One of the two co-interior angles (between the parallel lines, on the same side of the transversal) is {a}°. What is the other one, in degrees?",
+        "uz": "Ikki parallel toʻgʻri chiziqni kesuvchi kesib oʻtadi. Ichki bir tomonli ikki burchakdan biri {a}°. Ikkinchisi necha gradus?",
+        "ru": "Две параллельные прямые пересечены секущей. Один из двух внутренних односторонних углов равен {a}°. Чему равен другой (в градусах)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Co-interior angles add up to 180°: 180° − {a}° = {ANS}°.",
+        "uz": "Ichki bir tomonli burchaklar yigʻindisi 180°: 180° − {a}° = {ANS}°.",
+        "ru": "Сумма внутренних односторонних углов равна 180°: 180° − {a}° = {ANS}°."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.5,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-gep002",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "area_perimeter",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "A floor has an L shape: it is a {A} m by {B} m rectangle with a {c} m by {d} m rectangle cut out of one corner. What is the area of the floor, in m²?",
+        "params": {
+          "A": {
+            "min": 8,
+            "max": 15
+          },
+          "B": {
+            "min": 6,
+            "max": 12
+          },
+          "c": {
+            "min": 2,
+            "max": 6
+          },
+          "d": {
+            "min": 2,
+            "max": 5
+          }
+        },
+        "derived": {
+          "Rr": "A*B",
+          "S": "c*d"
+        },
+        "constraints": [
+          "c < A",
+          "d < B",
+          "A*B - c*d != 2*(A + B)"
+        ],
+        "answer": "A*B - c*d",
+        "distractors": [
+          "A*B",
+          "2*(A + B)",
+          "A*B + c*d"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | wrong_formula | sign_slip (C1/error_rules.json).",
+        "relation": "X + {c}*{d} = {A}*{B}",
+        "variants": 1117
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A floor has an L shape: it is a {A} m by {B} m rectangle with a {c} m by {d} m rectangle cut out of one corner. What is the area of the floor, in m²?",
+        "uz": "Xona poli L shaklida: u {A} m ga {B} m li toʻgʻri toʻrtburchakning bir burchagidan {c} m ga {d} m li toʻgʻri toʻrtburchak kesib olinganiga teng. Polning yuzi necha m²?",
+        "ru": "Пол имеет форму буквы Г: это прямоугольник {A} м на {B} м, из угла которого вырезан прямоугольник {c} м на {d} м. Чему равна площадь пола (в м²)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Whole rectangle minus the cut-out: {A} × {B} − {c} × {d} = {Rr} − {S} = {ANS} m².",
+        "uz": "Butun toʻrtburchakdan kesilgan qismni ayiramiz: {A} × {B} − {c} × {d} = {Rr} − {S} = {ANS} m².",
+        "ru": "Из площади всего прямоугольника вычитаем вырез: {A} × {B} − {c} × {d} = {Rr} − {S} = {ANS} м²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.6,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-gep003",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circle_area",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "hard"
+      },
+      "family": {
+        "template": "A square with side {s} cm is drawn inside a circle so that all four corners lie on the circle. The area of the circle is kπ cm². What is k?",
+        "params": {
+          "s": {
+            "min": 2,
+            "max": 20,
+            "step": 2
+          }
+        },
+        "derived": {
+          "ss": "s*s"
+        },
+        "answer": "s*s/2",
+        "distractors": [
+          "s*s/4",
+          "s*s",
+          "2*s*s"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | wrong_formula | diameter_radius (C1/error_rules.json).",
+        "relation": "pi*X = pi*({s}*sqrt(2)/2)^2",
+        "variants": 10
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A square with side {s} cm is drawn inside a circle so that all four corners lie on the circle. The area of the circle is kπ cm². What is k?",
+        "uz": "Tomoni {s} sm boʻlgan kvadrat aylanaga ichki chizilgan: uning toʻrtala uchi aylanada yotadi. Doiraning yuzi kπ sm². k nechaga teng?",
+        "ru": "Квадрат со стороной {s} см вписан в окружность: все четыре его вершины лежат на окружности. Площадь круга равна kπ см². Найдите k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The diameter is the square’s diagonal {s}√2, so r² = {ss} ÷ 2 = {ANS} and the area is {ANS}π cm².",
+        "uz": "Diametr kvadratning diagonaliga teng: {s}√2, demak r² = {ss} ÷ 2 = {ANS}, yuza {ANS}π sm².",
+        "ru": "Диаметр равен диагонали квадрата {s}√2, поэтому r² = {ss} ÷ 2 = {ANS}, площадь {ANS}π см²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.2,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-gep004",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "pythagoras",
+      "family": {
+        "template": "A box is {a} cm long, {b} cm wide and {c} cm high. How long is the longest straight stick that fits inside it (from one corner to the opposite corner), in cm?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                1,
+                2,
+                2
+              ],
+              [
+                2,
+                3,
+                6
+              ],
+              [
+                1,
+                4,
+                8
+              ],
+              [
+                4,
+                4,
+                7
+              ],
+              [
+                2,
+                6,
+                9
+              ],
+              [
+                6,
+                6,
+                7
+              ],
+              [
+                3,
+                4,
+                12
+              ],
+              [
+                2,
+                10,
+                11
+              ],
+              [
+                1,
+                12,
+                12
+              ],
+              [
+                8,
+                9,
+                12
+              ],
+              [
+                2,
+                5,
+                14
+              ],
+              [
+                4,
+                8,
+                8
+              ],
+              [
+                6,
+                10,
+                15
+              ]
+            ]
+          },
+          "f": {
+            "values": [
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        "derived": {
+          "a": "f*t[0]",
+          "b": "f*t[1]",
+          "c": "f*t[2]",
+          "DD": "a^2 + b^2 + c^2"
+        },
+        "constraints": [
+          "a + b + c <= 60"
+        ],
+        "answer": "sqrt(a^2 + b^2 + c^2)",
+        "distractors": [
+          "sqrt(a^2 + b^2)",
+          "a + b + c",
+          "a^2 + b^2 + c^2"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | wrong_formula | partial_answer (C1/error_rules.json).",
+        "relation": "X^2 = {a}^2 + {b}^2 + {c}^2; X > 0",
+        "decimals": 2,
+        "variants": 33
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A box is {a} cm long, {b} cm wide and {c} cm high. How long is the longest straight stick that fits inside it (from one corner to the opposite corner), in cm?",
+        "uz": "Quti uzunligi {a} sm, eni {b} sm, balandligi {c} sm. Uning ichiga sigʻadigan eng uzun toʻgʻri tayoqcha (bir uchidan qarama-qarshi uchigacha) necha sm?",
+        "ru": "Коробка имеет длину {a} см, ширину {b} см и высоту {c} см. Какой длины самая длинная прямая палочка, которая в ней поместится (от одной вершины до противоположной), в см?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The space diagonal is √({a}² + {b}² + {c}²) = √{DD} = {ANS} cm.",
+        "uz": "Fazoviy diagonal: √({a}² + {b}² + {c}²) = √{DD} = {ANS} sm.",
+        "ru": "Диагональ параллелепипеда: √({a}² + {b}² + {c}²) = √{DD} = {ANS} см."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.1,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-gep005",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "similarity",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "At the same moment, a {h} m pole casts a {s} m shadow and a tree casts a {S} m shadow. How tall is the tree, in metres?",
+        "params": {
+          "h": {
+            "min": 2,
+            "max": 6
+          },
+          "s": {
+            "min": 2,
+            "max": 5
+          },
+          "j": {
+            "min": 2,
+            "max": 6
+          }
+        },
+        "derived": {
+          "S": "s*j"
+        },
+        "constraints": [
+          "h != s",
+          "round(s*S/h, 2) != round(h*S, 2)"
+        ],
+        "answer": "h*S/s",
+        "distractors": [
+          "s*S/h",
+          "h + S - s",
+          "h*S"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: inverse_slip | additive_reasoning | partial_answer (C1/error_rules.json).",
+        "relation": "X/{S} = {h}/{s}",
+        "decimals": 2,
+        "variants": 75
+      },
+      "lang": "en",
+      "stem": {
+        "en": "At the same moment, a {h} m pole casts a {s} m shadow and a tree casts a {S} m shadow. How tall is the tree, in metres?",
+        "uz": "Bir vaqtning oʻzida {h} m li ustun {s} m soya, daraxt esa {S} m soya tashlaydi. Daraxtning balandligi necha metr?",
+        "ru": "В один и тот же момент столб высотой {h} м отбрасывает тень длиной {s} м, а дерево — тень длиной {S} м. Какова высота дерева (в метрах)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Height ÷ shadow is the same for both: {h}/{s} = H/{S}, so H = {h} × {S} ÷ {s} = {ANS} m.",
+        "uz": "Balandlikning soyaga nisbati ikkalasida bir xil: {h}/{s} = H/{S}, demak H = {h} × {S} ÷ {s} = {ANS} m.",
+        "ru": "Отношение высоты к тени одинаково: {h}/{s} = H/{S}, значит, H = {h} × {S} ÷ {s} = {ANS} м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.4,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-gep006",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "coordinate_geometry",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A({x1}, {y1}) and C are the ends of a segment, and B({x2}, {y2}) is its midpoint. What is the x-coordinate of C?",
+        "params": {
+          "x1": {
+            "min": -8,
+            "max": 8
+          },
+          "y1": {
+            "min": -8,
+            "max": 8
+          },
+          "x2": {
+            "min": -8,
+            "max": 8,
+            "not": [
+              0
+            ]
+          },
+          "y2": {
+            "min": -8,
+            "max": 8
+          }
+        },
+        "constraints": [
+          "x1 != x2",
+          "3*x1 != x2",
+          "2*x2 != 3*x1",
+          "abs(2*x2 - x1) <= 14"
+        ],
+        "answer": "2*x2 - x1",
+        "distractors": [
+          "(x1 + x2)/2",
+          "x2 - x1",
+          "2*x1 - x2"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | inverse_slip (C1/error_rules.json).",
+        "relation": "({x1} + X)/2 = {x2}",
+        "decimals": 1,
+        "variants": 54332
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A({x1}, {y1}) and C are the ends of a segment, and B({x2}, {y2}) is its midpoint. What is the x-coordinate of C?",
+        "uz": "A({x1}, {y1}) va C — kesmaning uchlari, B({x2}, {y2}) esa uning oʻrtasi. C nuqtaning abssissasi (x koordinatasi) nechaga teng?",
+        "ru": "A({x1}, {y1}) и C — концы отрезка, а B({x2}, {y2}) — его середина. Чему равна абсцисса (x-координата) точки C?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "B is halfway, so C is as far beyond B as A is before it: x = 2 × ({x2}) − ({x1}) = {ANS}.",
+        "uz": "B oʻrtada, demak C B dan A qancha uzoq boʻlsa, shuncha narida: x = 2 × ({x2}) − ({x1}) = {ANS}.",
+        "ru": "B — середина, поэтому C отстоит от B на столько же, на сколько A: x = 2 × ({x2}) − ({x1}) = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -0.4,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-gep007",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A paper cup is shaped like a cone with radius {r} cm and height {h} cm. Its volume is kπ cm³. What is k?",
+        "params": {
+          "r": {
+            "min": 2,
+            "max": 9
+          },
+          "h": {
+            "min": 3,
+            "max": 15
+          }
+        },
+        "derived": {
+          "rr": "r*r"
+        },
+        "constraints": [
+          "(r*r*h) % 3 == 0"
+        ],
+        "answer": "r*r*h/3",
+        "distractors": [
+          "r*r*h",
+          "r*r*h/2",
+          "r*h/3"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | wrong_formula | exponent_slip (C1/error_rules.json).",
+        "relation": "pi*X = pi*{r}^2*{h}/3",
+        "decimals": 1,
+        "variants": 64
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A paper cup is shaped like a cone with radius {r} cm and height {h} cm. Its volume is kπ cm³. What is k?",
+        "uz": "Qogʻoz stakan konus shaklida: asosining radiusi {r} sm, balandligi {h} sm. Uning hajmi kπ sm³. k nechaga teng?",
+        "ru": "Бумажный стаканчик имеет форму конуса с радиусом основания {r} см и высотой {h} см. Его объём равен kπ см³. Найдите k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "V = (1/3)πr²h = (1/3)π × {rr} × {h} = {ANS}π cm³.",
+        "uz": "V = (1/3)πr²h = (1/3)π × {rr} × {h} = {ANS}π sm³.",
+        "ru": "V = (1/3)πr²h = (1/3)π × {rr} × {h} = {ANS}π см³."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.3,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-gep008",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "transformations",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "The point P({x}, {y}) is rotated 90° anticlockwise about the origin. What is the x-coordinate of its image?",
+        "params": {
+          "x": {
+            "min": -9,
+            "max": 9,
+            "not": [
+              0
+            ]
+          },
+          "y": {
+            "min": -9,
+            "max": 9,
+            "not": [
+              0
+            ]
+          }
+        },
+        "constraints": [
+          "abs(x) != abs(y)"
+        ],
+        "answer": "-y",
+        "distractors": [
+          "y",
+          "-x",
+          "x"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | wrong_formula | wrong_formula (C1/error_rules.json).",
+        "relation": "X = {x}*cosd(90) - {y}*sind(90)",
+        "variants": 288
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The point P({x}, {y}) is rotated 90° anticlockwise about the origin. What is the x-coordinate of its image?",
+        "uz": "P({x}, {y}) nuqta koordinatalar boshi atrofida soat strelkasiga qarshi 90° ga burildi. Hosil boʻlgan nuqtaning abssissasi (x koordinatasi) nechaga teng?",
+        "ru": "Точку P({x}, {y}) повернули на 90° против часовой стрелки вокруг начала координат. Чему равна абсцисса (x-координата) её образа?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "A 90° anticlockwise turn sends (x, y) to (−y, x), so the new x is −({y}) = {ANS}.",
+        "uz": "Soat strelkasiga qarshi 90° burish (x, y) ni (−y, x) ga oʻtkazadi, demak yangi x = −({y}) = {ANS}.",
+        "ru": "Поворот на 90° против часовой стрелки переводит (x, y) в (−y, x), поэтому новая абсцисса −({y}) = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -0.4,
+      "time_s": 25,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-gep009",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "polygon_angles",
+      "family": {
+        "template": "Each exterior angle of a regular polygon is {e}°. How many sides does the polygon have?",
+        "params": {
+          "e": {
+            "values": [
+              72,
+              60,
+              45,
+              40,
+              36,
+              30,
+              24,
+              20,
+              18,
+              15,
+              12,
+              10
+            ]
+          }
+        },
+        "answer": "360/e",
+        "distractors": [
+          "ceil(180/e)",
+          "360/e - 1",
+          "180 - e"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | off_by_one | partial_answer (C1/error_rules.json).",
+        "relation": "X*{e} = 360",
+        "decimals": 1,
+        "variants": 12
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Each exterior angle of a regular polygon is {e}°. How many sides does the polygon have?",
+        "uz": "Muntazam koʻpburchakning har bir tashqi burchagi {e}°. Bu koʻpburchakning nechta tomoni bor?",
+        "ru": "Каждый внешний угол правильного многоугольника равен {e}°. Сколько у него сторон?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The exterior angles add up to 360°, so n = 360° ÷ {e}° = {ANS}.",
+        "uz": "Tashqi burchaklar yigʻindisi 360°, demak n = 360° ÷ {e}° = {ANS}.",
+        "ru": "Сумма внешних углов равна 360°, поэтому n = 360° ÷ {e}° = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.5,
+      "time_s": 25,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C1-gep010",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "isosceles_triangle",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "An isosceles triangle has two equal sides of {s} cm and a base of {b} cm. What is its height to the base, in cm?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                4,
+                3,
+                5
+              ],
+              [
+                5,
+                12,
+                13
+              ],
+              [
+                12,
+                5,
+                13
+              ],
+              [
+                8,
+                15,
+                17
+              ],
+              [
+                15,
+                8,
+                17
+              ],
+              [
+                6,
+                8,
+                10
+              ],
+              [
+                8,
+                6,
+                10
+              ],
+              [
+                9,
+                12,
+                15
+              ],
+              [
+                12,
+                9,
+                15
+              ],
+              [
+                7,
+                24,
+                25
+              ],
+              [
+                24,
+                7,
+                25
+              ]
+            ]
+          }
+        },
+        "derived": {
+          "b": "2*t[0]",
+          "hb": "t[0]",
+          "s": "t[2]"
+        },
+        "constraints": [
+          "s - b/2 != b/2"
+        ],
+        "answer": "sqrt(s*s - b*b/4)",
+        "distractors": [
+          "sqrt(s*s + b*b/4)",
+          "s - b/2",
+          "b/2"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | wrong_formula | partial_answer (C1/error_rules.json).",
+        "relation": "X^2 + ({b}/2)^2 = {s}^2; X > 0",
+        "decimals": 2,
+        "variants": 12
+      },
+      "lang": "en",
+      "stem": {
+        "en": "An isosceles triangle has two equal sides of {s} cm and a base of {b} cm. What is its height to the base, in cm?",
+        "uz": "Teng yonli uchburchakning yon tomonlari {s} sm dan, asosi {b} sm. Asosga tushirilgan balandligi necha sm?",
+        "ru": "У равнобедренного треугольника боковые стороны по {s} см, а основание {b} см. Чему равна высота, проведённая к основанию (в см)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The height cuts the base in half ({hb} cm), so h = √({s}² − {hb}²) = {ANS} cm.",
+        "uz": "Balandlik asosni teng ikkiga boʻladi ({hb} sm), demak h = √({s}² − {hb}²) = {ANS} sm.",
+        "ru": "Высота делит основание пополам ({hb} см), поэтому h = √({s}² − {hb}²) = {ANS} см."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.4,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a2p001",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "quadratic",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A ball is thrown from a roof. Its height after t seconds is h(t) = −5t² + {v}t + {h0} metres. After how many seconds does it hit the ground?",
+        "params": {
+          "T": {
+            "min": 2,
+            "max": 6
+          },
+          "m": {
+            "min": 1,
+            "max": 5
+          }
+        },
+        "derived": {
+          "v": "5*(T - m)",
+          "h0": "5*T*m",
+          "tv": "(T - m)/2"
+        },
+        "constraints": [
+          "m < T",
+          "3*m != T",
+          "T - m >= 1"
+        ],
+        "answer": "(v + sqrt(v*v + 20*h0))/10",
+        "distractors": [
+          "m",
+          "(T - m)/2",
+          "h0"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: extraneous_root | wrong_formula | partial_answer (C1/error_rules.json).",
+        "relation": "-5*X^2 + {v}*X + {h0} = 0; X > 0",
+        "decimals": 1,
+        "variants": 13
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A ball is thrown from a roof. Its height after t seconds is h(t) = −5t² + {v}t + {h0} metres. After how many seconds does it hit the ground?",
+        "uz": "Tom ustidan toʻp otildi. t soniyadan keyin uning balandligi h(t) = −5t² + {v}t + {h0} metr. Necha soniyadan keyin toʻp yerga tushadi?",
+        "ru": "Мяч бросили с крыши. Через t секунд его высота равна h(t) = −5t² + {v}t + {h0} метров. Через сколько секунд мяч упадёт на землю?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Solve −5t² + {v}t + {h0} = 0: −5(t − {T})(t + {m}) = 0; time is positive, so t = {ANS}.",
+        "uz": "−5t² + {v}t + {h0} = 0 ni yeching: −5(t − {T})(t + {m}) = 0; vaqt musbat, demak t = {ANS}.",
+        "ru": "Решаем −5t² + {v}t + {h0} = 0: −5(t − {T})(t + {m}) = 0; время положительно, значит, t = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.3,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a2p002",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "exponential_growth",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A bacteria colony starts with {n0} cells and doubles every {d} hours. After how many hours will it have {N} cells?",
+        "params": {
+          "d": {
+            "min": 2,
+            "max": 8
+          },
+          "n0": {
+            "min": 100,
+            "max": 900,
+            "step": 100
+          },
+          "k": {
+            "min": 2,
+            "max": 6
+          }
+        },
+        "derived": {
+          "N": "n0*2^k",
+          "Rr": "2^k"
+        },
+        "answer": "d*log2(N/n0)",
+        "distractors": [
+          "d*(2^k - 1)",
+          "k",
+          "d*2^k"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: additive_reasoning | partial_answer | wrong_formula (C1/error_rules.json).",
+        "relation": "{n0}*2^(X/{d}) = {N}",
+        "variants": 315
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A bacteria colony starts with {n0} cells and doubles every {d} hours. After how many hours will it have {N} cells?",
+        "uz": "Bakteriyalar koloniyasida dastlab {n0} ta hujayra bor va ularning soni har {d} soatda ikki baravar oshadi. Necha soatdan keyin hujayralar soni {N} taga yetadi?",
+        "ru": "Колония бактерий начинается с {n0} клеток и удваивается каждые {d} ч. Через сколько часов в ней будет {N} клеток?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{N} ÷ {n0} = {Rr} = 2^{k}, so it doubles {k} times: {k} × {d} = {ANS} hours.",
+        "uz": "{N} ÷ {n0} = {Rr} = 2^{k}, demak {k} marta ikki baravar oshadi: {k} × {d} = {ANS} soat.",
+        "ru": "{N} ÷ {n0} = {Rr} = 2^{k}, то есть {k|удвоение|удвоения|удвоений}: {k} × {d} = {ANS} ч."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.3,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a2p003",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "logarithm",
+      "family": {
+        "template": "What is log_{b}({B}·√{b})?",
+        "params": {
+          "b": {
+            "values": [
+              2,
+              3,
+              5,
+              7
+            ]
+          },
+          "n": {
+            "min": 1,
+            "max": 4
+          }
+        },
+        "derived": {
+          "B": "b^n"
+        },
+        "answer": "log(B*sqrt(b), b)",
+        "distractors": [
+          "n",
+          "n*0.5",
+          "n + 2"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | exponent_slip | exponent_slip (C1/error_rules.json).",
+        "relation": "X = log({B}*sqrt({b}), {b})",
+        "decimals": 1,
+        "variants": 16
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is log_{b}({B}·√{b})?",
+        "uz": "log_{b}({B}·√{b}) nechaga teng?",
+        "ru": "Чему равен log_{b}({B}·√{b})?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{B} = {b}^{n} and √{b} is {b} to the power ½, so the logarithm is {n} + ½ = {ANS}.",
+        "uz": "{B} = {b}^{n}, √{b} esa {b} ning ½-darajasi, demak logarifm {n} + ½ = {ANS}.",
+        "ru": "{B} = {b}^{n}, а √{b} — это {b} в степени ½, поэтому логарифм равен {n} + ½ = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.4,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a2p004",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "arithmetic_sequence",
+      "family": {
+        "template": "In the arithmetic sequence {a}, {a2}, {a3}, …, which term is equal to {T}? Give its position number.",
+        "params": {
+          "a": {
+            "min": -10,
+            "max": 20,
+            "not": [
+              0
+            ]
+          },
+          "d": {
+            "min": 2,
+            "max": 9
+          },
+          "n": {
+            "min": 8,
+            "max": 40
+          }
+        },
+        "derived": {
+          "T": "a + (n - 1)*d",
+          "a2": "a + d",
+          "a3": "a + 2*d",
+          "m1": "n - 1"
+        },
+        "constraints": [
+          "a != d",
+          "2*a != -d",
+          "round(T/d, 2) != round((T + a)/d + 1, 2)"
+        ],
+        "answer": "(T - a)/d + 1",
+        "distractors": [
+          "(T - a)/d",
+          "(T - a)/d + 2",
+          "T - a"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: off_by_one | off_by_one | partial_answer (C1/error_rules.json).",
+        "relation": "{a} + (X - 1)*{d} = {T}",
+        "decimals": 2,
+        "variants": 7260
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In the arithmetic sequence {a}, {a2}, {a3}, …, which term is equal to {T}? Give its position number.",
+        "uz": "{a}, {a2}, {a3}, … arifmetik progressiyada qaysi had {T} ga teng? Uning tartib raqamini toping.",
+        "ru": "В арифметической прогрессии {a}, {a2}, {a3}, … какой по счёту член равен {T}? Укажите его номер."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The difference is {d}: {T} = {a} + (n − 1) × {d}, so n − 1 = {m1} and n = {ANS}.",
+        "uz": "Ayirma {d}: {T} = {a} + (n − 1) × {d}, demak n − 1 = {m1} va n = {ANS}.",
+        "ru": "Разность равна {d}: {T} = {a} + (n − 1) × {d}, значит, n − 1 = {m1}, n = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.2,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C1-a2p005",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "complex_numbers",
+      "family": {
+        "template": "What is ({a} + {b}i)({a} − {b}i), where i² = −1?",
+        "params": {
+          "a": {
+            "min": 1,
+            "max": 9
+          },
+          "b": {
+            "min": 2,
+            "max": 9
+          }
+        },
+        "derived": {
+          "aa": "a*a",
+          "bb": "b*b"
+        },
+        "constraints": [
+          "a != b"
+        ],
+        "answer": "a*a + b*b",
+        "distractors": [
+          "a*a - b*b",
+          "(a + b)^2",
+          "2*a"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | square_slip | wrong_operation (C1/error_rules.json).",
+        "relation": "X = {a}*{a} - {b}*{b}*(-1)",
+        "variants": 64
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is ({a} + {b}i)({a} − {b}i), where i² = −1?",
+        "uz": "({a} + {b}i)({a} − {b}i) nechaga teng (i² = −1)?",
+        "ru": "Чему равно ({a} + {b}i)({a} − {b}i), если i² = −1?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "(a + bi)(a − bi) = a² − b²i² = a² + b², that is {aa} + {bb} = {ANS}.",
+        "uz": "(a + bi)(a − bi) = a² − b²i² = a² + b², yaʼni {aa} + {bb} = {ANS}.",
+        "ru": "(a + bi)(a − bi) = a² − b²i² = a² + b², то есть {aa} + {bb} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.3,
+      "time_s": 25,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a2p006",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rational_equations",
+      "family": {
+        "template": "One pipe fills a tank in {a} hours, another fills it in {b} hours. How many hours do they take to fill it together?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                3,
+                6
+              ],
+              [
+                4,
+                12
+              ],
+              [
+                6,
+                12
+              ],
+              [
+                10,
+                15
+              ],
+              [
+                12,
+                24
+              ],
+              [
+                6,
+                30
+              ],
+              [
+                20,
+                30
+              ],
+              [
+                12,
+                36
+              ],
+              [
+                15,
+                30
+              ],
+              [
+                18,
+                36
+              ],
+              [
+                8,
+                24
+              ],
+              [
+                5,
+                20
+              ],
+              [
+                9,
+                18
+              ],
+              [
+                10,
+                40
+              ],
+              [
+                12,
+                60
+              ],
+              [
+                24,
+                40
+              ]
+            ]
+          }
+        },
+        "derived": {
+          "a": "t[0]",
+          "b": "t[1]"
+        },
+        "answer": "a*b/(a + b)",
+        "distractors": [
+          "(a + b)/2",
+          "a + b",
+          "a*b"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | wrong_operation | partial_answer (C1/error_rules.json).",
+        "relation": "X/{a} + X/{b} = 1",
+        "decimals": 1,
+        "variants": 16
+      },
+      "lang": "en",
+      "stem": {
+        "en": "One pipe fills a tank in {a} hours, another fills it in {b} hours. How many hours do they take to fill it together?",
+        "uz": "Birinchi quvur hovuzni {a} soatda, ikkinchisi {b} soatda toʻldiradi. Ikkalasi birga hovuzni necha soatda toʻldiradi?",
+        "ru": "Одна труба наполняет бак за {a} ч, другая — за {b} ч. За сколько часов они наполнят бак вместе?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Per hour they fill 1/{a} + 1/{b} of the tank, so the time is {a} × {b} ÷ ({a} + {b}) = {ANS} hours.",
+        "uz": "Bir soatda ular hovuzning 1/{a} + 1/{b} qismini toʻldiradi, demak vaqt {a} × {b} ÷ ({a} + {b}) = {ANS} soat.",
+        "ru": "За час они наполняют 1/{a} + 1/{b} бака, поэтому время равно {a} × {b} ÷ ({a} + {b}) = {ANS} ч."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.4,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ]
+}

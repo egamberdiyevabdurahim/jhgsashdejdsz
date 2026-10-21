@@ -1,0 +1,384 @@
+{
+  "bank": "K4x",
+  "batch": 17,
+  "items": [
+    {
+      "id": "K4x-bch38x",
+      "bank": "K4x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "recurrences",
+      "family_ref": "K4-bch038",
+      "params": {
+        "m": 14
+      },
+      "edge": true,
+      "lang": "en",
+      "stem": {
+        "en": "a₁ = 1 and aₙ₊₁ = 2aₙ + 1 for n ≥ 1. What is a₁₄?",
+        "uz": "a₁ = 1 va n ≥ 1 uchun aₙ₊₁ = 2aₙ + 1. a₁₄ ni toping.",
+        "ru": "a₁ = 1 и aₙ₊₁ = 2aₙ + 1 при n ≥ 1. Найдите a₁₄."
+      },
+      "options": [
+        {
+          "en": "16,383",
+          "uz": "16 383",
+          "ru": "16 383"
+        },
+        {
+          "en": "16,384",
+          "uz": "16 384",
+          "ru": "16 384"
+        },
+        {
+          "en": "8,191",
+          "uz": "8191",
+          "ru": "8191"
+        },
+        {
+          "en": "27",
+          "uz": "27",
+          "ru": "27"
+        }
+      ],
+      "answer_numeric": {
+        "value": 16383,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "aₙ + 1 doubles at each step, so aₙ + 1 = 2ⁿ and a₁₀ = 2¹⁰ − 1 = 1023.",
+        "uz": "aₙ + 1 har qadamda ikki barobar ortadi, demak aₙ + 1 = 2ⁿ va a₁₀ = 2¹⁰ − 1 = 1023.",
+        "ru": "aₙ + 1 удваивается на каждом шаге, поэтому aₙ + 1 = 2ⁿ и a₁₀ = 2¹⁰ − 1 = 1023."
+      },
+      "instructions": {
+        "en": "Type the answer as a number.",
+        "uz": "Javobni son bilan yozing.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 2.45,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p5int-edges",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4x",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4x-bch38y",
+      "bank": "K4x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "recurrences",
+      "family_ref": "K4-bch038",
+      "params": {
+        "m": 5
+      },
+      "edge": true,
+      "lang": "en",
+      "stem": {
+        "en": "a₁ = 1 and aₙ₊₁ = 2aₙ + 1 for n ≥ 1. What is a₅?",
+        "uz": "a₁ = 1 va n ≥ 1 uchun aₙ₊₁ = 2aₙ + 1. a₅ ni toping.",
+        "ru": "a₁ = 1 и aₙ₊₁ = 2aₙ + 1 при n ≥ 1. Найдите a₅."
+      },
+      "options": [
+        {
+          "en": "31",
+          "uz": "31",
+          "ru": "31"
+        },
+        {
+          "en": "32",
+          "uz": "32",
+          "ru": "32"
+        },
+        {
+          "en": "15",
+          "uz": "15",
+          "ru": "15"
+        },
+        {
+          "en": "9",
+          "uz": "9",
+          "ru": "9"
+        }
+      ],
+      "answer_numeric": {
+        "value": 31,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "aₙ + 1 doubles at each step, so aₙ + 1 = 2ⁿ and a₁₀ = 2¹⁰ − 1 = 1023.",
+        "uz": "aₙ + 1 har qadamda ikki barobar ortadi, demak aₙ + 1 = 2ⁿ va a₁₀ = 2¹⁰ − 1 = 1023.",
+        "ru": "aₙ + 1 удваивается на каждом шаге, поэтому aₙ + 1 = 2ⁿ и a₁₀ = 2¹⁰ − 1 = 1023."
+      },
+      "instructions": {
+        "en": "Type the answer as a number.",
+        "uz": "Javobni son bilan yozing.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 2.45,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p5int-edges",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4x",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4x-bch38z",
+      "bank": "K4x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "recurrences",
+      "family_ref": "K4-bch038",
+      "params": {
+        "m": 13
+      },
+      "edge": true,
+      "lang": "en",
+      "stem": {
+        "en": "a₁ = 1 and aₙ₊₁ = 2aₙ + 1 for n ≥ 1. What is a₁₃?",
+        "uz": "a₁ = 1 va n ≥ 1 uchun aₙ₊₁ = 2aₙ + 1. a₁₃ ni toping.",
+        "ru": "a₁ = 1 и aₙ₊₁ = 2aₙ + 1 при n ≥ 1. Найдите a₁₃."
+      },
+      "options": [
+        {
+          "en": "8,191",
+          "uz": "8191",
+          "ru": "8191"
+        },
+        {
+          "en": "8,192",
+          "uz": "8192",
+          "ru": "8192"
+        },
+        {
+          "en": "4,095",
+          "uz": "4095",
+          "ru": "4095"
+        },
+        {
+          "en": "25",
+          "uz": "25",
+          "ru": "25"
+        }
+      ],
+      "answer_numeric": {
+        "value": 8191,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "aₙ + 1 doubles at each step, so aₙ + 1 = 2ⁿ and a₁₀ = 2¹⁰ − 1 = 1023.",
+        "uz": "aₙ + 1 har qadamda ikki barobar ortadi, demak aₙ + 1 = 2ⁿ va a₁₀ = 2¹⁰ − 1 = 1023.",
+        "ru": "aₙ + 1 удваивается на каждом шаге, поэтому aₙ + 1 = 2ⁿ и a₁₀ = 2¹⁰ − 1 = 1023."
+      },
+      "instructions": {
+        "en": "Type the answer as a number.",
+        "uz": "Javobni son bilan yozing.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 2.45,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p5int-edges",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4x",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4x-bch40x",
+      "bank": "K4x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "sums_of_powers",
+      "family_ref": "K4-bch040",
+      "params": {
+        "n": 20
+      },
+      "edge": true,
+      "lang": "en",
+      "stem": {
+        "en": "What is 1³ + 2³ + 3³ + … + 20³?",
+        "uz": "1³ + 2³ + 3³ + … + 20³ yigʻindini toping.",
+        "ru": "Найдите сумму 1³ + 2³ + 3³ + … + 20³."
+      },
+      "options": [
+        {
+          "en": "44,100",
+          "uz": "44 100",
+          "ru": "44 100"
+        },
+        {
+          "en": "210",
+          "uz": "210",
+          "ru": "210"
+        },
+        {
+          "en": "2,870",
+          "uz": "2870",
+          "ru": "2870"
+        },
+        {
+          "en": "8,000",
+          "uz": "8000",
+          "ru": "8000"
+        }
+      ],
+      "answer_numeric": {
+        "value": 44100,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 55² = 3025.",
+        "uz": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 55² = 3025.",
+        "ru": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 55² = 3025."
+      },
+      "instructions": {
+        "en": "Type the answer as a number.",
+        "uz": "Javobni son bilan yozing.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 2.45,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:p5int-edges",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4x",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4x-bch40y",
+      "bank": "K4x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "sums_of_powers",
+      "family_ref": "K4-bch040",
+      "params": {
+        "n": 5
+      },
+      "edge": true,
+      "lang": "en",
+      "stem": {
+        "en": "What is 1³ + 2³ + 3³ + … + 5³?",
+        "uz": "1³ + 2³ + 3³ + … + 5³ yigʻindini toping.",
+        "ru": "Найдите сумму 1³ + 2³ + 3³ + … + 5³."
+      },
+      "options": [
+        {
+          "en": "225",
+          "uz": "225",
+          "ru": "225"
+        },
+        {
+          "en": "15",
+          "uz": "15",
+          "ru": "15"
+        },
+        {
+          "en": "55",
+          "uz": "55",
+          "ru": "55"
+        },
+        {
+          "en": "125",
+          "uz": "125",
+          "ru": "125"
+        }
+      ],
+      "answer_numeric": {
+        "value": 225,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 55² = 3025.",
+        "uz": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 55² = 3025.",
+        "ru": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 55² = 3025."
+      },
+      "instructions": {
+        "en": "Type the answer as a number.",
+        "uz": "Javobni son bilan yozing.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 2.45,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:p5int-edges",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4x",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4x-bch40z",
+      "bank": "K4x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "sums_of_powers",
+      "family_ref": "K4-bch040",
+      "params": {
+        "n": 19
+      },
+      "edge": true,
+      "lang": "en",
+      "stem": {
+        "en": "What is 1³ + 2³ + 3³ + … + 19³?",
+        "uz": "1³ + 2³ + 3³ + … + 19³ yigʻindini toping.",
+        "ru": "Найдите сумму 1³ + 2³ + 3³ + … + 19³."
+      },
+      "options": [
+        {
+          "en": "36,100",
+          "uz": "36 100",
+          "ru": "36 100"
+        },
+        {
+          "en": "190",
+          "uz": "190",
+          "ru": "190"
+        },
+        {
+          "en": "2,470",
+          "uz": "2470",
+          "ru": "2470"
+        },
+        {
+          "en": "6,859",
+          "uz": "6859",
+          "ru": "6859"
+        }
+      ],
+      "answer_numeric": {
+        "value": 36100,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 55² = 3025.",
+        "uz": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 55² = 3025.",
+        "ru": "1³ + 2³ + … + n³ = (n(n + 1)/2)² = 55² = 3025."
+      },
+      "instructions": {
+        "en": "Type the answer as a number.",
+        "uz": "Javobni son bilan yozing.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 2.45,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:p5int-edges",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4x",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

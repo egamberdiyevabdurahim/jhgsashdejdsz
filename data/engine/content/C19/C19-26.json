@@ -1,0 +1,2726 @@
+{
+  "bank": "C19",
+  "batch": 26,
+  "kind": "lessons",
+  "note": "AP Physics 1 lesson bodies, units 5-8 (P15, the owner's 18 Oct 2026 \"add\": AP beyond Calculus; SPEC-lessons rev. 2 §3.5, §11.1; author ap2, agent:p15-ap2, 18 Oct 2026): lessons 1-3 of the C10 units APPH05 (Torque and Rotational Dynamics), APPH06 (Energy and Momentum of Rotating Systems), APPH07 (Oscillations) and APPH08 (Fluids), unit names as AP Students and AP Central give them (read 18 Oct 2026). `lessons` are the lesson records; `items` are their piece questions (the key is options[0]; `page` names the lesson). Template lessons: test and homework draw the C1 families each record names (C1-ph5101 … ph8303 in C1/C1-15.json, written for these lessons); the homework also asks two fixed conceptual items of its own lesson (C22-ph51c1 … ph83c2 in C22/C22-2.json). Diagrams are words only (no figure); g = 9.8 m/s² unless a stem says otherwise. Our own wording and numbers, written to the public unit list only; no College Board item or text was used. JG's own content: no AP class of the academy is implied (owner, 4 Oct 2026). Every record and item is draft until its key check 2 (two blind solvers outside the author's session; the families by the 50-instance solver).",
+  "lessons": [
+    {
+      "kind": "lesson",
+      "id": "C19-APPH05-1",
+      "course": "ap_physics_1",
+      "unit": "C10-APPH05",
+      "seq": 1,
+      "skill": "ap_physics_1:APPH05",
+      "requires": {
+        "math_rung_min": "alg2"
+      },
+      "title": {
+        "en": "AP Physics 1: Rotational kinematics and v = rω",
+        "uz": "AP Physics 1: Aylanma harakat kinematikasi va v = rω",
+        "ru": "AP Physics 1: Кинематика вращения и v = rω"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "A turning object is described by angles in radians (rad): one full turn is 2π rad.\nAngular velocity ω = Δθ/Δt, in rad/s; angular acceleration α = Δω/Δt, in rad/s².\nWith a constant α the equations match the ones for motion along a line:\n• ω = ω₀ + αt\n• θ = ω₀t + ½αt²\n• ω² = ω₀² + 2αθ\nA point at distance r from the axis moves along an arc s = rθ with speed v = rω. Every point of a rigid body has the same ω.",
+            "uz": "Aylanayotgan jism harakati burchaklar bilan tasvirlanadi, ular radianda (rad) oʻlchanadi: bitta toʻliq aylanish 2π rad.\nBurchak tezlik ω = Δθ/Δt, rad/s da; burchak tezlanish α = Δω/Δt, rad/s² da.\nα oʻzgarmas boʻlsa, tenglamalar toʻgʻri chiziq boʻylab harakatdagiga oʻxshaydi:\n• ω = ω₀ + αt\n• θ = ω₀t + ½αt²\n• ω² = ω₀² + 2αθ\nOʻqdan r masofadagi nuqta s = rθ yoy boʻylab v = rω tezlik bilan harakatlanadi. Qattiq jismning barcha nuqtalari bir xil ω ga ega.",
+            "ru": "Вращение описывают углами в радианах (рад): один полный оборот — 2π рад.\nУгловая скорость ω = Δθ/Δt, в рад/с; угловое ускорение α = Δω/Δt, в рад/с².\nПри постоянном α уравнения такие же, как для движения по прямой:\n• ω = ω₀ + αt\n• θ = ω₀t + ½αt²\n• ω² = ω₀² + 2αθ\nТочка на расстоянии r от оси проходит дугу s = rθ со скоростью v = rω. У всех точек твёрдого тела одна и та же ω."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph51q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A grinding wheel starts from rest and turns with a constant angular acceleration α = 2 rad/s².\nIn the first 6 s it turns through θ = ½αt² = ½ × 2 × 6² = 36 rad.\nThat is 36/(2π) ≈ 5.7 full turns.\nNow you: a wheel starts from rest and turns with a constant angular acceleration α = 4 rad/s². θ in the first 5 s = ?",
+            "uz": "Charxtosh tinch holatdan α = 2 rad/s² oʻzgarmas burchak tezlanish bilan aylana boshlaydi.\nBirinchi 6 s ichida u θ = ½αt² = ½ × 2 × 6² = 36 rad ga buriladi.\nBu 36/(2π) ≈ 5,7 toʻliq aylanish.\nEndi siz: gʻildirak tinch holatdan α = 4 rad/s² oʻzgarmas burchak tezlanish bilan aylana boshlaydi. Birinchi 5 s dagi θ = ?",
+            "ru": "Точильный круг начинает вращаться из состояния покоя с постоянным угловым ускорением α = 2 рад/с².\nЗа первые 6 с он поворачивается на θ = ½αt² = ½ × 2 × 6² = 36 рад.\nЭто 36/(2π) ≈ 5,7 оборота.\nТеперь вы: колесо начинает вращаться из состояния покоя с постоянным угловым ускорением α = 4 рад/с². θ за первые 5 с = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph51q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: v = rω and s = rθ need ω in rad/s and θ in rad.\nA fan blade’s tip is 0.5 m from the axis, and the fan makes 2 full turns per second.\nω = 2 × 2π = 4π ≈ 12.6 rad/s, so v = 0.5 × 12.6 ≈ 6.3 m/s.\nUsing ω = 2 gives v = 1 m/s: wrong, because 2 counts turns per second, not radians per second.",
+            "uz": "Ehtiyot boʻling: v = rω va s = rθ da ω rad/s da, θ esa rad da boʻlishi kerak.\nVentilyator parragining uchi oʻqdan 0,5 m uzoqlikda, ventilyator soniyasiga 2 marta toʻliq aylanadi.\nω = 2 × 2π = 4π ≈ 12,6 rad/s, demak v = 0,5 × 12,6 ≈ 6,3 m/s.\nω = 2 deb olsangiz, v = 1 m/s chiqadi — bu xato, chunki 2 soniyadagi aylanishlar soni, radian emas.",
+            "ru": "Осторожно: в v = rω и s = rθ угловая скорость нужна в рад/с, а угол — в радианах.\nКончик лопасти вентилятора находится в 0,5 м от оси, вентилятор делает 2 полных оборота в секунду.\nω = 2 × 2π = 4π ≈ 12,6 рад/с, значит, v = 0,5 × 12,6 ≈ 6,3 м/с.\nЕсли взять ω = 2, получится v = 1 м/с — это ошибка: 2 — это число оборотов в секунду, а не радиан в секунду."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph51q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ph5101",
+          "C1-ph5102"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ph5101",
+          "C1-ph5102",
+          "C1-ph5103",
+          "C22-ph51c1",
+          "C22-ph51c2"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APPH05#official",
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APPH05-2",
+      "course": "ap_physics_1",
+      "unit": "C10-APPH05",
+      "seq": 2,
+      "skill": "ap_physics_1:APPH05",
+      "requires": {
+        "math_rung_min": "alg2"
+      },
+      "title": {
+        "en": "AP Physics 1: Torque and rotational equilibrium",
+        "uz": "AP Physics 1: Kuch momenti va aylanma muvozanat",
+        "ru": "AP Physics 1: Момент силы и вращательное равновесие"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Torque tells how strongly a force turns an object about an axis: τ = rF sin θ, in N·m.\n• r is the distance from the axis to the point where the force acts.\n• θ is the angle between r and the force; at 90°, τ = rF, the most a force can give.\nTorques that turn counterclockwise count as positive, clockwise ones as negative.\nAn object is in rotational equilibrium when the net torque is zero, Στ = 0: it stays at rest or turns at a steady rate.",
+            "uz": "Kuch momenti kuch jismni oʻq atrofida qanchalik kuchli burishini koʻrsatadi: τ = rF sin θ, N·m da.\n• r — oʻqdan kuch qoʻyilgan nuqtagacha boʻlgan masofa.\n• θ — r va kuch orasidagi burchak; 90° da τ = rF, bu eng katta qiymat.\nSoat miliga qarshi burovchi momentlar musbat, soat mili boʻyicha burovchilari manfiy hisoblanadi.\nNatijaviy kuch momenti nolga teng boʻlsa, Στ = 0, jism aylanma muvozanatda boʻladi: u tinch turadi yoki bir tekis aylanadi.",
+            "ru": "Момент силы показывает, насколько сильно сила поворачивает тело вокруг оси: τ = rF sin θ, в Н·м.\n• r — расстояние от оси до точки приложения силы.\n• θ — угол между r и силой; при 90° τ = rF — наибольшее значение.\nМоменты, поворачивающие против часовой стрелки, считают положительными, по часовой — отрицательными.\nЕсли суммарный момент сил равен нулю, Στ = 0, тело находится во вращательном равновесии: оно покоится или вращается равномерно."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph52q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A seesaw is balanced on a pivot at its middle. A 30 kg child sits 2 m from the pivot, and a 40 kg child sits on the other side.\nBalance needs the two torques to cancel: 30g × 2 = 40g × x.\ng cancels: x = 30 × 2/40 = 1.5 m. The heavier child sits closer.\nNow you: a seesaw is balanced on a pivot at its middle. A 20 kg child sits 3 m from the pivot. Where must a 30 kg child sit on the other side? x = ?",
+            "uz": "Uzun taxta oʻrtasidagi tayanchda muvozanatda turibdi. 30 kg massali bola tayanchdan 2 m uzoqlikda oʻtiribdi, 40 kg massali bola esa narigi tomonda.\nMuvozanat uchun ikki moment bir-birini yoʻqqa chiqarishi kerak: 30g × 2 = 40g × x.\ng qisqaradi: x = 30 × 2/40 = 1,5 m. Ogʻirroq bola tayanchga yaqinroq oʻtiradi.\nEndi siz: uzun taxta oʻrtasidagi tayanchda muvozanatda turibdi. 20 kg massali bola tayanchdan 3 m uzoqlikda oʻtiribdi. 30 kg massali bola narigi tomonda qayerda oʻtirishi kerak? x = ?",
+            "ru": "Доска-качели уравновешена на опоре посередине. Ребёнок массой 30 кг сидит в 2 м от опоры, а ребёнок массой 40 кг — по другую сторону.\nДля равновесия моменты сил должны компенсировать друг друга: 30g × 2 = 40g × x.\ng сокращается: x = 30 × 2/40 = 1,5 м. Более тяжёлый ребёнок садится ближе к опоре.\nТеперь вы: доска-качели уравновешена на опоре посередине. Ребёнок массой 20 кг сидит в 3 м от опоры. Где должен сесть ребёнок массой 30 кг по другую сторону? x = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph52q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: only the part of the force perpendicular to r turns the object.\nA force F = 20 N pulls on a wrench 0.5 m from the bolt, at 30° to the handle.\nτ = rF sin 30° = 0.5 × 20 × 0.5 = 5 N·m, not 0.5 × 20 = 10 N·m.\nA force along the handle (θ = 0°) makes no torque at all.",
+            "uz": "Ehtiyot boʻling: jismni faqat kuchning r ga perpendikulyar qismi buradi.\nF = 20 N kuch gayka kalitini boltdan 0,5 m uzoqlikda, dastaga 30° burchak ostida tortadi.\nτ = rF sin 30° = 0,5 × 20 × 0,5 = 5 N·m, 0,5 × 20 = 10 N·m emas.\nDasta boʻylab yoʻnalgan kuch (θ = 0°) umuman moment hosil qilmaydi.",
+            "ru": "Осторожно: тело поворачивает только составляющая силы, перпендикулярная r.\nСила F = 20 Н тянет гаечный ключ на расстоянии 0,5 м от болта под углом 30° к рукоятке.\nτ = rF sin 30° = 0,5 × 20 × 0,5 = 5 Н·м, а не 0,5 × 20 = 10 Н·м.\nСила, направленная вдоль рукоятки (θ = 0°), вообще не создаёт момента."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph52q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ph5201",
+          "C1-ph5202"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ph5201",
+          "C1-ph5202",
+          "C1-ph5203",
+          "C22-ph52c1",
+          "C22-ph52c2"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APPH05#official",
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APPH05-3",
+      "course": "ap_physics_1",
+      "unit": "C10-APPH05",
+      "seq": 3,
+      "skill": "ap_physics_1:APPH05",
+      "requires": {
+        "math_rung_min": "alg2"
+      },
+      "title": {
+        "en": "AP Physics 1: Rotational inertia and Newton’s second law for rotation",
+        "uz": "AP Physics 1: Inersiya momenti va aylanma harakat uchun Nyutonning ikkinchi qonuni",
+        "ru": "AP Physics 1: Момент инерции и второй закон Ньютона для вращения"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Rotational inertia I measures how hard it is to change an object’s rotation, in kg·m².\nFor small masses at distances r from the axis: I = Σmr², each mass times its distance squared.\nMass far from the axis counts much more than mass near it.\nNewton’s second law for rotation: α = Στ/I. A larger net torque gives a larger α; a larger I gives a smaller α.\nAbout an axis through the centre: a hoop has I = MR², a solid disk I = ½MR².",
+            "uz": "Inersiya momenti I jismning aylanishini oʻzgartirish qanchalik qiyinligini koʻrsatadi, kg·m² da.\nOʻqdan r masofalardagi kichik massalar uchun: I = Σmr², har bir massa oʻz masofasining kvadratiga koʻpaytiriladi.\nOʻqdan uzoqdagi massa yaqindagisidan ancha koʻproq hissa qoʻshadi.\nAylanma harakat uchun Nyutonning ikkinchi qonuni: α = Στ/I. Natijaviy moment katta boʻlsa, α katta; I katta boʻlsa, α kichik.\nMarkazdan oʻtuvchi oʻqqa nisbatan: halqa uchun I = MR², yaxlit disk uchun I = ½MR².",
+            "ru": "Момент инерции I показывает, насколько трудно изменить вращение тела, в кг·м².\nДля небольших грузов на расстояниях r от оси: I = Σmr² — каждая масса умножается на квадрат своего расстояния.\nМасса далеко от оси даёт гораздо больший вклад, чем масса рядом с ней.\nВторой закон Ньютона для вращения: α = Στ/I. Чем больше суммарный момент, тем больше α; чем больше I, тем меньше α.\nОтносительно оси через центр: у обруча I = MR², у сплошного диска I = ½MR²."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph53q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Two balls of 2 kg each sit on a light rod, each 0.5 m from the axis at its middle.\nI = 2 × 2 × 0.5² = 1 kg·m².\nA net torque τ = 4 N·m acts on the rod: α = Στ/I = 4/1 = 4 rad/s².\nNow you: two balls of 3 kg each sit on a light rod, each 1 m from the axis at its middle, and the net torque is τ = 12 N·m. α = ?",
+            "uz": "Yengil sterjenda har biri 2 kg boʻlgan ikkita shar bor, ikkalasi ham sterjen oʻrtasidagi oʻqdan 0,5 m uzoqlikda.\nI = 2 × 2 × 0,5² = 1 kg·m².\nSterjenga τ = 4 N·m natijaviy kuch momenti taʼsir qiladi: α = Στ/I = 4/1 = 4 rad/s².\nEndi siz: yengil sterjenda har biri 3 kg boʻlgan ikkita shar bor, ikkalasi ham sterjen oʻrtasidagi oʻqdan 1 m uzoqlikda, natijaviy moment τ = 12 N·m. α = ?",
+            "ru": "На лёгком стержне закреплены два шара массой по 2 кг, каждый в 0,5 м от оси, проходящей через середину стержня.\nI = 2 × 2 × 0,5² = 1 кг·м².\nНа стержень действует суммарный момент сил τ = 4 Н·м: α = Στ/I = 4/1 = 4 рад/с².\nТеперь вы: на лёгком стержне закреплены два шара массой по 3 кг, каждый в 1 м от оси, проходящей через середину стержня, суммарный момент τ = 12 Н·м. α = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph53q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: the distance is squared in I = Σmr².\nMove the two 2 kg balls from 0.5 m to 1 m from the axis: I = 2 × 2 × 1² = 4 kg·m², four times as much, not twice.\nThe same 4 N·m torque now gives α = 4/4 = 1 rad/s², a quarter of what it was.",
+            "uz": "Ehtiyot boʻling: I = Σmr² da masofa kvadratga oshiriladi.\nIkkala 2 kg li sharni oʻqdan 0,5 m dan 1 m ga suring: I = 2 × 2 × 1² = 4 kg·m², ikki emas, toʻrt baravar koʻp.\nOʻsha 4 N·m moment endi α = 4/4 = 1 rad/s² beradi, avvalgisining toʻrtdan biri.",
+            "ru": "Осторожно: в I = Σmr² расстояние возводится в квадрат.\nПередвиньте оба шара по 2 кг с 0,5 м на 1 м от оси: I = 2 × 2 × 1² = 4 кг·м² — в четыре раза больше, а не в два.\nТот же момент 4 Н·м теперь даёт α = 4/4 = 1 рад/с², в четыре раза меньше прежнего."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph53q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ph5301",
+          "C1-ph5302"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ph5301",
+          "C1-ph5302",
+          "C1-ph5303",
+          "C22-ph53c1",
+          "C22-ph53c2"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APPH05#official",
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APPH06-1",
+      "course": "ap_physics_1",
+      "unit": "C10-APPH06",
+      "seq": 1,
+      "skill": "ap_physics_1:APPH06",
+      "requires": {
+        "math_rung_min": "alg2"
+      },
+      "title": {
+        "en": "AP Physics 1: Rotational kinetic energy and the work of a torque",
+        "uz": "AP Physics 1: Aylanma harakat kinetik energiyasi va kuch momentining ishi",
+        "ru": "AP Physics 1: Кинетическая энергия вращения и работа момента силы"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "A turning object has rotational kinetic energy K = ½Iω², in joules (J), with ω in rad/s.\nA constant torque τ that turns an object through an angle Δθ, in radians, does work W = τΔθ.\nThat work changes the rotational kinetic energy: W = ΔK = ½Iω² − ½Iω₀².\nExample: a torque of 3 N·m that turns a wheel through 10 rad does W = 3 × 10 = 30 J of work, so K grows by 30 J.",
+            "uz": "Aylanayotgan jism aylanma harakat kinetik energiyasiga ega: K = ½Iω², joulda (J), ω rad/s da.\nJismni Δθ burchakka (radianda) buradigan oʻzgarmas τ kuch momenti W = τΔθ ish bajaradi.\nBu ish aylanma kinetik energiyani oʻzgartiradi: W = ΔK = ½Iω² − ½Iω₀².\nMisol: gʻildirakni 10 rad ga buradigan 3 N·m moment W = 3 × 10 = 30 J ish bajaradi, demak K 30 J ga ortadi.",
+            "ru": "Вращающееся тело обладает кинетической энергией вращения K = ½Iω², в джоулях (Дж), ω — в рад/с.\nПостоянный момент силы τ, поворачивающий тело на угол Δθ (в радианах), совершает работу W = τΔθ.\nЭта работа меняет кинетическую энергию вращения: W = ΔK = ½Iω² − ½Iω₀².\nПример: момент 3 Н·м, поворачивающий колесо на 10 рад, совершает работу W = 3 × 10 = 30 Дж, и K растёт на 30 Дж."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph61q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A flywheel with rotational inertia I = 2 kg·m² spins at ω = 5 rad/s.\nK = ½Iω² = ½ × 2 × 5² = 25 J.\nAt ω = 10 rad/s, K = ½ × 2 × 10² = 100 J: twice the speed, four times the energy.\nNow you: a flywheel with rotational inertia I = 4 kg·m² spins at ω = 3 rad/s. K = ?",
+            "uz": "Inersiya momenti I = 2 kg·m² boʻlgan maxovik ω = 5 rad/s burchak tezlik bilan aylanmoqda.\nK = ½Iω² = ½ × 2 × 5² = 25 J.\nω = 10 rad/s da K = ½ × 2 × 10² = 100 J: tezlik ikki baravar, energiya toʻrt baravar.\nEndi siz: inersiya momenti I = 4 kg·m² boʻlgan maxovik ω = 3 rad/s burchak tezlik bilan aylanmoqda. K = ?",
+            "ru": "Маховик с моментом инерции I = 2 кг·м² вращается с угловой скоростью ω = 5 рад/с.\nK = ½Iω² = ½ × 2 × 5² = 25 Дж.\nПри ω = 10 рад/с K = ½ × 2 × 10² = 100 Дж: скорость вдвое больше, энергия — вчетверо.\nТеперь вы: маховик с моментом инерции I = 4 кг·м² вращается с угловой скоростью ω = 3 рад/с. K = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph61q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: in W = τΔθ the angle is in radians, and one full turn is 2π rad.\nA torque of 5 N·m acting through 2 full turns: Δθ = 2 × 2π = 4π ≈ 12.6 rad.\nW = 5 × 12.6 ≈ 63 J, not 5 × 2 = 10 J.",
+            "uz": "Ehtiyot boʻling: W = τΔθ da burchak radianda olinadi, bitta toʻliq aylanish esa 2π rad.\n5 N·m moment gʻildirakni 2 marta toʻliq aylantirsa: Δθ = 2 × 2π = 4π ≈ 12,6 rad.\nW = 5 × 12,6 ≈ 63 J, 5 × 2 = 10 J emas.",
+            "ru": "Осторожно: в W = τΔθ угол берут в радианах, а один полный оборот — это 2π рад.\nМомент 5 Н·м за 2 полных оборота: Δθ = 2 × 2π = 4π ≈ 12,6 рад.\nW = 5 × 12,6 ≈ 63 Дж, а не 5 × 2 = 10 Дж."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph61q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ph6101",
+          "C1-ph6102"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ph6101",
+          "C1-ph6102",
+          "C1-ph6103",
+          "C22-ph61c1",
+          "C22-ph61c2"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APPH06#official",
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APPH06-2",
+      "course": "ap_physics_1",
+      "unit": "C10-APPH06",
+      "seq": 2,
+      "skill": "ap_physics_1:APPH06",
+      "requires": {
+        "math_rung_min": "alg2"
+      },
+      "title": {
+        "en": "AP Physics 1: Angular momentum and its conservation",
+        "uz": "AP Physics 1: Impuls momenti va uning saqlanishi",
+        "ru": "AP Physics 1: Момент импульса и его сохранение"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Angular momentum L = Iω, in kg·m²/s.\nA net torque acting for a time Δt changes it: τΔt = ΔL. The product τΔt is the angular impulse.\nIf the net torque from outside a system is zero, its L stays the same: I₁ω₁ = I₂ω₂.\nSo when I gets smaller, ω gets larger, and the other way round.\nExample: a torque of 2 N·m acting for 3 s changes L by 2 × 3 = 6 kg·m²/s.",
+            "uz": "Impuls momenti L = Iω, kg·m²/s da.\nΔt vaqt davomida taʼsir qilgan natijaviy kuch momenti uni oʻzgartiradi: τΔt = ΔL. τΔt koʻpaytma kuch momenti impulsi deyiladi.\nSistemaga tashqaridan taʼsir qilayotgan natijaviy kuch momenti nolga teng boʻlsa, uning impuls momenti L oʻzgarmaydi: I₁ω₁ = I₂ω₂.\nDemak, I kamaysa, ω ortadi va aksincha.\nMisol: 3 s davomida taʼsir qilgan 2 N·m moment L ni 2 × 3 = 6 kg·m²/s ga oʻzgartiradi.",
+            "ru": "Момент импульса L = Iω, в кг·м²/с.\nСуммарный момент сил, действующий в течение времени Δt, меняет его: τΔt = ΔL. Произведение τΔt называют импульсом момента силы.\nЕсли суммарный момент внешних сил равен нулю, L системы не меняется: I₁ω₁ = I₂ω₂.\nЗначит, когда I уменьшается, ω растёт, и наоборот.\nПример: момент 2 Н·м, действующий 3 с, меняет L на 2 × 3 = 6 кг·м²/с."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph62q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A skater spins at ω₁ = 3 rad/s with rotational inertia I₁ = 4 kg·m². She pulls her arms in, and her rotational inertia becomes I₂ = 2 kg·m².\nThe ice makes almost no torque, so L is conserved: 4 × 3 = 2 × ω₂.\nω₂ = 12/2 = 6 rad/s: she spins twice as fast.\nNow you: a skater spins at ω₁ = 2 rad/s with rotational inertia I₁ = 6 kg·m² and pulls her arms in to I₂ = 3 kg·m². ω₂ = ?",
+            "uz": "Konkichi qiz I₁ = 4 kg·m² inersiya momenti bilan ω₁ = 3 rad/s burchak tezlikda aylanmoqda. U qoʻllarini tanasiga yaqinlashtiradi va inersiya momenti I₂ = 2 kg·m² boʻladi.\nMuz deyarli moment hosil qilmaydi, shuning uchun L saqlanadi: 4 × 3 = 2 × ω₂.\nω₂ = 12/2 = 6 rad/s: u ikki baravar tez aylanadi.\nEndi siz: konkichi qiz I₁ = 6 kg·m² inersiya momenti bilan ω₁ = 2 rad/s burchak tezlikda aylanmoqda va qoʻllarini yaqinlashtirib, inersiya momentini I₂ = 3 kg·m² ga keltiradi. ω₂ = ?",
+            "ru": "Фигуристка вращается с угловой скоростью ω₁ = 3 рад/с, её момент инерции I₁ = 4 кг·м². Она прижимает руки к телу, и момент инерции становится I₂ = 2 кг·м².\nЛёд почти не создаёт момента сил, поэтому L сохраняется: 4 × 3 = 2 × ω₂.\nω₂ = 12/2 = 6 рад/с: она вращается вдвое быстрее.\nТеперь вы: фигуристка вращается с угловой скоростью ω₁ = 2 рад/с, её момент инерции I₁ = 6 кг·м², и она прижимает руки, уменьшая его до I₂ = 3 кг·м². ω₂ = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph62q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: L is conserved, but rotational kinetic energy is not.\nIn the example, K₁ = ½ × 4 × 3² = 18 J and K₂ = ½ × 2 × 6² = 36 J.\nK doubled: her muscles did work to pull her arms in.\nWith L the same, K = L²/(2I), so a smaller I means a larger K.",
+            "uz": "Ehtiyot boʻling: L saqlanadi, aylanma kinetik energiya esa saqlanmaydi.\nMisolda K₁ = ½ × 4 × 3² = 18 J va K₂ = ½ × 2 × 6² = 36 J.\nK ikki baravar ortdi: qoʻllarini yaqinlashtirishda uning muskullari ish bajardi.\nL oʻzgarmasa, K = L²/(2I), demak I kichikroq boʻlsa, K kattaroq.",
+            "ru": "Осторожно: L сохраняется, а кинетическая энергия вращения — нет.\nВ примере K₁ = ½ × 4 × 3² = 18 Дж и K₂ = ½ × 2 × 6² = 36 Дж.\nK выросла вдвое: прижимая руки, фигуристка совершила работу мышцами.\nПри неизменном L K = L²/(2I), так что меньший I означает большую K."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph62q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ph6201",
+          "C1-ph6202"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ph6201",
+          "C1-ph6202",
+          "C1-ph6203",
+          "C22-ph62c1",
+          "C22-ph62c2"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APPH06#official",
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APPH06-3",
+      "course": "ap_physics_1",
+      "unit": "C10-APPH06",
+      "seq": 3,
+      "skill": "ap_physics_1:APPH06",
+      "requires": {
+        "math_rung_min": "alg2"
+      },
+      "title": {
+        "en": "AP Physics 1: Rolling, and satellites in orbit",
+        "uz": "AP Physics 1: Dumalash va orbitadagi sunʼiy yoʻldoshlar",
+        "ru": "AP Physics 1: Качение и спутники на орбите"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "An object rolling without slipping turns and moves at once: its centre moves at v = Rω.\nIts kinetic energy has two parts: K = ½mv² + ½Iω².\nFor a solid cylinder (I = ½mR²) the turning part is ½ × ½mR² × (v/R)² = ¼mv², so K = ¾mv².\nFor a hoop (I = mR²) the two parts are equal: K = mv².\nRolling down a ramp from rest, the lost potential energy mgh becomes both parts.",
+            "uz": "Sirpanmasdan dumalayotgan jism bir vaqtda ham aylanadi, ham ilgarilanma harakatlanadi: uning markazi v = Rω tezlik bilan harakatlanadi.\nUning kinetik energiyasi ikki qismdan iborat: K = ½mv² + ½Iω².\nYaxlit silindr (I = ½mR²) uchun aylanma qism ½ × ½mR² × (v/R)² = ¼mv², demak K = ¾mv².\nHalqa (I = mR²) uchun ikki qism teng: K = mv².\nQiya tekislikdan tinch holatdan dumalab tushganda, yoʻqotilgan potensial energiya mgh ikkala qismga aylanadi.",
+            "ru": "Тело, катящееся без проскальзывания, одновременно вращается и движется поступательно: его центр движется со скоростью v = Rω.\nЕго кинетическая энергия состоит из двух частей: K = ½mv² + ½Iω².\nДля сплошного цилиндра (I = ½mR²) вращательная часть равна ½ × ½mR² × (v/R)² = ¼mv², значит, K = ¾mv².\nУ обруча (I = mR²) обе части равны: K = mv².\nПри скатывании с наклонной плоскости из состояния покоя потерянная потенциальная энергия mgh переходит в обе части."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph63q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A 2 kg solid cylinder (I = ½mR²) rolls without slipping at v = 4 m/s.\nK = ½mv² + ¼mv² = ¾mv² = ¾ × 2 × 4² = 24 J: 16 J for moving along and 8 J for turning.\nNow you: a 4 kg solid cylinder (I = ½mR²) rolls without slipping at v = 3 m/s. K = ?",
+            "uz": "2 kg massali yaxlit silindr (I = ½mR²) sirpanmasdan v = 4 m/s tezlik bilan dumalamoqda.\nK = ½mv² + ¼mv² = ¾mv² = ¾ × 2 × 4² = 24 J: 16 J ilgarilanma harakatga, 8 J aylanishga.\nEndi siz: 4 kg massali yaxlit silindr (I = ½mR²) sirpanmasdan v = 3 m/s tezlik bilan dumalamoqda. K = ?",
+            "ru": "Сплошной цилиндр массой 2 кг (I = ½mR²) катится без проскальзывания со скоростью v = 4 м/с.\nK = ½mv² + ¼mv² = ¾mv² = ¾ × 2 × 4² = 24 Дж: 16 Дж на поступательное движение и 8 Дж на вращение.\nТеперь вы: сплошной цилиндр массой 4 кг (I = ½mR²) катится без проскальзывания со скоростью v = 3 м/с. K = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph63q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: a satellite on an elliptical (oval) orbit does not keep one speed.\nGravity pulls along the line to the planet’s centre, so it makes no torque about that centre, and the satellite’s L stays the same.\nAt the nearest and farthest points the velocity is perpendicular to r, so there L = mvr and v₁r₁ = v₂r₂.\nIf r drops from 8,000 km to 6,000 km and v was 3 km/s: 8,000 × 3 = 6,000 × v, so v = 4 km/s, faster when closer.",
+            "uz": "Ehtiyot boʻling: elliptik (choʻziq) orbitadagi sunʼiy yoʻldoshning tezligi oʻzgarmas emas.\nTortishish kuchi sayyora markaziga yoʻnalgan chiziq boʻylab taʼsir qiladi, shuning uchun u markazga nisbatan moment hosil qilmaydi va yoʻldoshning impuls momenti L saqlanadi.\nEng yaqin va eng uzoq nuqtalarda tezlik r ga perpendikulyar, shuning uchun u yerda L = mvr va v₁r₁ = v₂r₂.\nAgar r 8000 km dan 6000 km gacha kamaysa va v 3 km/s boʻlgan boʻlsa: 8000 × 3 = 6000 × v, demak v = 4 km/s — yaqinroqda tezroq.",
+            "ru": "Осторожно: спутник на эллиптической (вытянутой) орбите движется не с постоянной скоростью.\nСила тяготения направлена к центру планеты, поэтому не создаёт момента относительно этого центра, и момент импульса спутника L сохраняется.\nВ ближайшей и самой дальней точках скорость перпендикулярна r, поэтому там L = mvr и v₁r₁ = v₂r₂.\nЕсли r уменьшается с 8000 км до 6000 км, а v было 3 км/с: 8000 × 3 = 6000 × v, значит, v = 4 км/с — ближе к планете спутник движется быстрее."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph63q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ph6301",
+          "C1-ph6302"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ph6301",
+          "C1-ph6302",
+          "C1-ph6303",
+          "C22-ph63c1",
+          "C22-ph63c2"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APPH06#official",
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APPH07-1",
+      "course": "ap_physics_1",
+      "unit": "C10-APPH07",
+      "seq": 1,
+      "skill": "ap_physics_1:APPH07",
+      "requires": {
+        "math_rung_min": "alg2"
+      },
+      "title": {
+        "en": "AP Physics 1: Simple harmonic motion, period and frequency",
+        "uz": "AP Physics 1: Garmonik tebranishlar, davr va chastota",
+        "ru": "AP Physics 1: Гармонические колебания, период и частота"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Simple harmonic motion (SHM) happens when a restoring force points back to the equilibrium position and is proportional to the displacement: F = −kx for a spring (Hooke’s law).\nThe amplitude A is the largest displacement from equilibrium.\nThe period T is the time for one full cycle, in seconds; the frequency f = 1/T is the number of cycles per second, in hertz (Hz).\nExample: 20 full cycles in 10 s give T = 10/20 = 0.5 s and f = 1/0.5 = 2 Hz.",
+            "uz": "Garmonik tebranish qaytaruvchi kuch muvozanat holatiga yoʻnalgan va siljishga proporsional boʻlganda roʻy beradi: prujina uchun F = −kx (Guk qonuni).\nAmplituda A — muvozanat holatidan eng katta siljish.\nDavr T — bitta toʻliq tebranish vaqti, soniyada; chastota f = 1/T — bir soniyadagi tebranishlar soni, gersda (Hz).\nMisol: 10 s da 20 ta toʻliq tebranish boʻlsa, T = 10/20 = 0,5 s va f = 1/0,5 = 2 Hz.",
+            "ru": "Гармонические колебания возникают, когда возвращающая сила направлена к положению равновесия и пропорциональна смещению: для пружины F = −kx (закон Гука).\nАмплитуда A — наибольшее смещение от положения равновесия.\nПериод T — время одного полного колебания, в секундах; частота f = 1/T — число колебаний в секунду, в герцах (Гц).\nПример: 20 полных колебаний за 10 с дают T = 10/20 = 0,5 с и f = 1/0,5 = 2 Гц."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph71q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A 2 kg block on a smooth floor is attached to a spring with k = 80 N/m. It is pulled 0.1 m from equilibrium and let go.\nThe spring pulls it back with F = kx = 80 × 0.1 = 8 N.\na = F/m = 8/2 = 4 m/s², pointing back to equilibrium.\nNow you: a 4 kg block on a smooth floor is attached to a spring with k = 200 N/m and pulled 0.2 m from equilibrium. a = ?",
+            "uz": "Silliq poldagi 2 kg massali brusok bikrligi k = 80 N/m boʻlgan prujinaga biriktirilgan. U muvozanat holatidan 0,1 m tortiladi va qoʻyib yuboriladi.\nPrujina uni F = kx = 80 × 0,1 = 8 N kuch bilan orqaga tortadi.\na = F/m = 8/2 = 4 m/s², muvozanat holatiga yoʻnalgan.\nEndi siz: silliq poldagi 4 kg massali brusok bikrligi k = 200 N/m boʻlgan prujinaga biriktirilgan va muvozanat holatidan 0,2 m tortilgan. a = ?",
+            "ru": "Брусок массой 2 кг на гладком полу прикреплён к пружине жёсткостью k = 80 Н/м. Его оттягивают на 0,1 м от положения равновесия и отпускают.\nПружина тянет его назад с силой F = kx = 80 × 0,1 = 8 Н.\na = F/m = 8/2 = 4 м/с², ускорение направлено к положению равновесия.\nТеперь вы: брусок массой 4 кг на гладком полу прикреплён к пружине жёсткостью k = 200 Н/м и оттянут на 0,2 м от положения равновесия. a = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph71q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: the period does not depend on the amplitude.\nPull the same block 0.1 m or 0.2 m: at 0.2 m the force and the top speed are larger, but one full cycle takes the same time.\nAnd keep T and f apart: T = 1/f. A 4 Hz motion has T = 0.25 s, not 4 s.",
+            "uz": "Ehtiyot boʻling: davr amplitudaga bogʻliq emas.\nOʻsha brusokni 0,1 m yoki 0,2 m tortib qoʻyib yuboring: 0,2 m da kuch va eng katta tezlik kattaroq, lekin bitta toʻliq tebranish bir xil vaqt oladi.\nT va f ni adashtirmang: T = 1/f. Chastotasi 4 Hz boʻlgan tebranishning davri T = 0,25 s, 4 s emas.",
+            "ru": "Осторожно: период не зависит от амплитуды.\nОттяните тот же брусок на 0,1 м или на 0,2 м: при 0,2 м сила и наибольшая скорость больше, но одно полное колебание длится столько же.\nИ не путайте T и f: T = 1/f. У колебаний с частотой 4 Гц T = 0,25 с, а не 4 с."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph71q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ph7101",
+          "C1-ph7102"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ph7101",
+          "C1-ph7102",
+          "C1-ph7103",
+          "C22-ph71c1",
+          "C22-ph71c2"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APPH07#official",
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APPH07-2",
+      "course": "ap_physics_1",
+      "unit": "C10-APPH07",
+      "seq": 2,
+      "skill": "ap_physics_1:APPH07",
+      "requires": {
+        "math_rung_min": "alg2"
+      },
+      "title": {
+        "en": "AP Physics 1: The period of a spring and of a pendulum",
+        "uz": "AP Physics 1: Prujinali va oddiy mayatnik davri",
+        "ru": "AP Physics 1: Период пружинного и математического маятника"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "For a mass m on a spring with spring constant k: T = 2π√(m/k).\nFor a simple pendulum of length L, with small swings: T = 2π√(L/g).\n• A larger mass or a softer spring (smaller k) gives a longer period.\n• A longer pendulum gives a longer period; the mass of its bob does not matter.\nExample: a 1 kg mass on a spring with k = 100 N/m has T = 2π√(1/100) = 2π × 0.1 ≈ 0.63 s.",
+            "uz": "Bikrligi k boʻlgan prujinadagi m massali yuk uchun: T = 2π√(m/k).\nUzunligi L boʻlgan oddiy mayatnik uchun, kichik tebranishlarda: T = 2π√(L/g).\n• Massa katta yoki prujina yumshoqroq (k kichik) boʻlsa, davr uzunroq.\n• Mayatnik uzun boʻlsa, davr uzunroq; yuk massasining ahamiyati yoʻq.\nMisol: k = 100 N/m boʻlgan prujinadagi 1 kg yukning davri T = 2π√(1/100) = 2π × 0,1 ≈ 0,63 s.",
+            "ru": "Для груза массой m на пружине жёсткостью k: T = 2π√(m/k).\nДля математического маятника длиной L при малых колебаниях: T = 2π√(L/g).\n• Большая масса или более мягкая пружина (меньше k) дают больший период.\n• У более длинного маятника период больше; масса груза не важна.\nПример: у груза 1 кг на пружине с k = 100 Н/м T = 2π√(1/100) = 2π × 0,1 ≈ 0,63 с."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph72q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A mass on a spring has a period of 1.2 s. The mass is made 4 times as large, and the spring stays the same.\nT = 2π√(m/k), so T grows by √4 = 2.\nThe new period is 2 × 1.2 = 2.4 s, not 4 × 1.2 = 4.8 s.\nNow you: a mass on a spring has a period of 0.5 s, and the mass is made 9 times as large. T = ?",
+            "uz": "Prujinadagi yukning tebranish davri 1,2 s. Yuk massasi 4 marta oshiriladi, prujina esa oʻsha-oʻsha.\nT = 2π√(m/k), demak T √4 = 2 marta ortadi.\nYangi davr 2 × 1,2 = 2,4 s, 4 × 1,2 = 4,8 s emas.\nEndi siz: prujinadagi yukning tebranish davri 0,5 s, yuk massasi 9 marta oshiriladi. T = ?",
+            "ru": "Период колебаний груза на пружине 1,2 с. Массу груза увеличивают в 4 раза, пружина та же.\nT = 2π√(m/k), поэтому T растёт в √4 = 2 раза.\nНовый период 2 × 1,2 = 2,4 с, а не 4 × 1,2 = 4,8 с.\nТеперь вы: период колебаний груза на пружине 0,5 с, массу груза увеличивают в 9 раз. T = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph72q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: T grows with the square root of the length, and the bob’s mass does not count.\nDoubling a pendulum’s length makes T only √2 ≈ 1.41 times as long; to double T, make the pendulum 4 times as long.\nA heavier bob on the same string keeps the same period.",
+            "uz": "Ehtiyot boʻling: T uzunlikning kvadrat ildiziga qarab ortadi, yuk massasi esa hisobga kirmaydi.\nMayatnik uzunligini ikki baravar oshirsangiz, T faqat √2 ≈ 1,41 marta uzayadi; T ni ikki baravar oshirish uchun mayatnikni 4 marta uzun qiling.\nOʻsha ipdagi ogʻirroq yukning davri ham oʻsha-oʻsha.",
+            "ru": "Осторожно: T растёт как квадратный корень из длины, а масса груза не играет роли.\nЕсли удвоить длину маятника, T вырастет лишь в √2 ≈ 1,41 раза; чтобы удвоить T, маятник нужно удлинить в 4 раза.\nБолее тяжёлый груз на той же нити даёт тот же период."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph72q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ph7201",
+          "C1-ph7202"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ph7201",
+          "C1-ph7202",
+          "C1-ph7203",
+          "C22-ph72c1",
+          "C22-ph72c2"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APPH07#official",
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APPH07-3",
+      "course": "ap_physics_1",
+      "unit": "C10-APPH07",
+      "seq": 3,
+      "skill": "ap_physics_1:APPH07",
+      "requires": {
+        "math_rung_min": "alg2"
+      },
+      "title": {
+        "en": "AP Physics 1: Energy of an oscillator, and reading its motion",
+        "uz": "AP Physics 1: Tebrangich energiyasi va uning harakatini tahlil qilish",
+        "ru": "AP Physics 1: Энергия осциллятора и описание его движения"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "With no friction, the total energy of an oscillator stays the same and moves between the spring and the block.\nAt the ends (x = ±A) the block stops for a moment: all the energy is in the spring, E = ½kA².\nAt equilibrium (x = 0) the spring holds no energy, and the speed is largest: ½mv_max² = ½kA².\nAt any x: ½kA² = ½kx² + ½mv².\nThe position can be written as x(t) = A cos(2πft): the speed is largest at x = 0, and the size of the acceleration is largest at the ends.",
+            "uz": "Ishqalanish boʻlmasa, tebrangichning toʻliq energiyasi oʻzgarmaydi, u prujina va brusok oʻrtasida almashinib turadi.\nChetki nuqtalarda (x = ±A) brusok bir lahza toʻxtaydi: butun energiya prujinada, E = ½kA².\nMuvozanat holatida (x = 0) prujinada energiya yoʻq, tezlik esa eng katta: ½mv_max² = ½kA².\nIxtiyoriy x da: ½kA² = ½kx² + ½mv².\nKoordinatani x(t) = A cos(2πft) koʻrinishida yozish mumkin: tezlik x = 0 da eng katta, tezlanish moduli esa chetki nuqtalarda eng katta.",
+            "ru": "Без трения полная энергия осциллятора не меняется: она переходит от пружины к бруску и обратно.\nВ крайних точках (x = ±A) брусок на миг останавливается: вся энергия в пружине, E = ½kA².\nВ положении равновесия (x = 0) энергия пружины равна нулю, а скорость наибольшая: ½mv_max² = ½kA².\nПри любом x: ½kA² = ½kx² + ½mv².\nКоординату можно записать как x(t) = A cos(2πft): скорость наибольшая при x = 0, а модуль ускорения — в крайних точках."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph73q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A 2 kg block on a spring with k = 200 N/m oscillates on a smooth floor with amplitude A = 0.3 m.\nTotal energy: E = ½kA² = ½ × 200 × 0.3² = 9 J.\nAt equilibrium it is all kinetic: ½ × 2 × v_max² = 9, so v_max = 3 m/s.\nNow you: a 4 kg block on a spring with k = 400 N/m oscillates on a smooth floor with amplitude A = 0.5 m. v_max = ?",
+            "uz": "Bikrligi k = 200 N/m boʻlgan prujinadagi 2 kg massali brusok silliq polda A = 0,3 m amplituda bilan tebranmoqda.\nToʻliq energiya: E = ½kA² = ½ × 200 × 0,3² = 9 J.\nMuvozanat holatida hammasi kinetik energiya: ½ × 2 × v_max² = 9, demak v_max = 3 m/s.\nEndi siz: bikrligi k = 400 N/m boʻlgan prujinadagi 4 kg massali brusok silliq polda A = 0,5 m amplituda bilan tebranmoqda. v_max = ?",
+            "ru": "Брусок массой 2 кг на пружине жёсткостью k = 200 Н/м колеблется на гладком полу с амплитудой A = 0,3 м.\nПолная энергия: E = ½kA² = ½ × 200 × 0,3² = 9 Дж.\nВ положении равновесия вся она кинетическая: ½ × 2 × v_max² = 9, значит, v_max = 3 м/с.\nТеперь вы: брусок массой 4 кг на пружине жёсткостью k = 400 Н/м колеблется на гладком полу с амплитудой A = 0,5 м. v_max = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph73q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: the energy grows with A², not with A.\nDouble the amplitude of the same oscillator: E = ½kA² becomes 4 times as large, and v_max = A√(k/m) becomes 2 times as large.\nThe period stays the same.",
+            "uz": "Ehtiyot boʻling: energiya A ga emas, A² ga qarab ortadi.\nOʻsha tebrangichning amplitudasini ikki baravar oshirsangiz: E = ½kA² 4 marta, v_max = A√(k/m) esa 2 marta ortadi.\nDavr oʻzgarmaydi.",
+            "ru": "Осторожно: энергия растёт как A², а не как A.\nУдвойте амплитуду того же осциллятора: E = ½kA² вырастет в 4 раза, а v_max = A√(k/m) — в 2 раза.\nПериод не изменится."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph73q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ph7301",
+          "C1-ph7302"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ph7301",
+          "C1-ph7302",
+          "C1-ph7303",
+          "C22-ph73c1",
+          "C22-ph73c2"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APPH07#official",
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APPH08-1",
+      "course": "ap_physics_1",
+      "unit": "C10-APPH08",
+      "seq": 1,
+      "skill": "ap_physics_1:APPH08",
+      "requires": {
+        "math_rung_min": "alg2"
+      },
+      "title": {
+        "en": "AP Physics 1: Density and pressure",
+        "uz": "AP Physics 1: Zichlik va bosim",
+        "ru": "AP Physics 1: Плотность и давление"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Density is mass per volume: ρ = m/V, in kg/m³. Water’s density is about 1,000 kg/m³.\nPressure is force per area: P = F/A, in pascals (1 Pa = 1 N/m²).\nThe same force on a smaller area makes a larger pressure.\nExample: a 600 N person standing on 0.04 m² of shoe sole makes P = 600/0.04 = 15,000 Pa.",
+            "uz": "Zichlik — hajm birligidagi massa: ρ = m/V, kg/m³ da. Suvning zichligi taxminan 1000 kg/m³.\nBosim — yuza birligiga toʻgʻri keladigan kuch: P = F/A, paskalda (1 Pa = 1 N/m²).\nBir xil kuch kichikroq yuzaga kattaroq bosim beradi.\nMisol: ogʻirligi 600 N boʻlgan odam 0,04 m² poyabzal tagi bilan turganda P = 600/0,04 = 15 000 Pa bosim beradi.",
+            "ru": "Плотность — масса единицы объёма: ρ = m/V, в кг/м³. Плотность воды — около 1000 кг/м³.\nДавление — сила, приходящаяся на единицу площади: P = F/A, в паскалях (1 Па = 1 Н/м²).\nОдна и та же сила на меньшую площадь создаёт большее давление.\nПример: человек весом 600 Н, стоящий на подошвах площадью 0,04 м², создаёт давление P = 600/0,04 = 15 000 Па."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph81q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A metal block has a mass of 5.4 kg and a volume of 0.002 m³.\nρ = m/V = 5.4/0.002 = 2,700 kg/m³, nearly 3 times the density of water.\nNow you: a block has a mass of 7.8 kg and a volume of 0.001 m³. ρ = ?",
+            "uz": "Metall brusokning massasi 5,4 kg, hajmi 0,002 m³.\nρ = m/V = 5,4/0,002 = 2700 kg/m³, suvning zichligidan qariyb 3 baravar katta.\nEndi siz: brusokning massasi 7,8 kg, hajmi 0,001 m³. ρ = ?",
+            "ru": "Масса металлического бруска 5,4 кг, его объём 0,002 м³.\nρ = m/V = 5,4/0,002 = 2700 кг/м³ — почти в 3 раза больше плотности воды.\nТеперь вы: масса бруска 7,8 кг, его объём 0,001 м³. ρ = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph81q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: change the area to m² before you divide. 1 cm² = 0.0001 m².\nA 50 N force on 2 cm²: A = 0.0002 m², so P = 50/0.0002 = 250,000 Pa, not 50/2 = 25 Pa.",
+            "uz": "Ehtiyot boʻling: boʻlishdan oldin yuzani m² ga oʻtkazing. 1 sm² = 0,0001 m².\n50 N kuch 2 sm² yuzaga: A = 0,0002 m², demak P = 50/0,0002 = 250 000 Pa, 50/2 = 25 Pa emas.",
+            "ru": "Осторожно: перед делением переведите площадь в м². 1 см² = 0,0001 м².\nСила 50 Н на площадь 2 см²: A = 0,0002 м², значит, P = 50/0,0002 = 250 000 Па, а не 50/2 = 25 Па."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph81q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ph8101",
+          "C1-ph8102"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ph8101",
+          "C1-ph8102",
+          "C1-ph8103",
+          "C22-ph81c1",
+          "C22-ph81c2"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APPH08#official",
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APPH08-2",
+      "course": "ap_physics_1",
+      "unit": "C10-APPH08",
+      "seq": 2,
+      "skill": "ap_physics_1:APPH08",
+      "requires": {
+        "math_rung_min": "alg2"
+      },
+      "title": {
+        "en": "AP Physics 1: Pressure in a fluid and the buoyant force",
+        "uz": "AP Physics 1: Suyuqlikdagi bosim va Arximed kuchi",
+        "ru": "AP Physics 1: Давление в жидкости и выталкивающая сила"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "In a fluid at rest, pressure grows with depth: P = P₀ + ρgh, where P₀ is the pressure at the surface and h the depth.\nThe part ρgh is what the fluid itself adds (the gauge pressure).\nArchimedes’ principle: a fluid pushes up on an object in it with a buoyant force equal to the weight of the fluid the object pushes aside: F_b = ρVg, with ρ the fluid’s density and V the volume under the surface.\nAn object floats if the buoyant force can match its weight before the object is fully under.",
+            "uz": "Tinch turgan suyuqlikda bosim chuqurlik bilan ortadi: P = P₀ + ρgh, bu yerda P₀ — sirtdagi bosim, h — chuqurlik.\nρgh qismini suyuqlikning oʻzi qoʻshadi (ortiqcha, manometrik bosim).\nArximed qonuni: suyuqlik undagi jismni yuqoriga jism siqib chiqargan suyuqlik ogʻirligiga teng kuch bilan itaradi: F_b = ρVg, bu yerda ρ — suyuqlik zichligi, V — jismning botgan qismi hajmi.\nJism toʻliq botmasidan oldin Arximed kuchi uning ogʻirligiga tenglasha olsa, jism suzadi.",
+            "ru": "В покоящейся жидкости давление растёт с глубиной: P = P₀ + ρgh, где P₀ — давление у поверхности, h — глубина.\nЧасть ρgh добавляет сама жидкость (избыточное давление).\nЗакон Архимеда: жидкость выталкивает погружённое в неё тело силой, равной весу вытесненной жидкости: F_b = ρVg, где ρ — плотность жидкости, V — объём погружённой части тела.\nТело плавает, если выталкивающая сила может сравняться с его весом раньше, чем тело погрузится целиком."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph82q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A stone with a volume of 0.002 m³ is held fully under water (ρ = 1,000 kg/m³).\nF_b = ρVg = 1,000 × 0.002 × 9.8 = 19.6 N.\nIf the stone weighs 50 N, the string holding it pulls up with 50 − 19.6 = 30.4 N.\nNow you: a stone with a volume of 0.005 m³ is held fully under water. F_b = ?",
+            "uz": "Hajmi 0,002 m³ boʻlgan tosh suvga (ρ = 1000 kg/m³) toʻliq botirilib ushlab turiladi.\nF_b = ρVg = 1000 × 0,002 × 9,8 = 19,6 N.\nToshning ogʻirligi 50 N boʻlsa, uni ushlab turgan ip yuqoriga 50 − 19,6 = 30,4 N kuch bilan tortadi.\nEndi siz: hajmi 0,005 m³ boʻlgan tosh suvga toʻliq botirilib ushlab turiladi. F_b = ?",
+            "ru": "Камень объёмом 0,002 м³ удерживают полностью погружённым в воду (ρ = 1000 кг/м³).\nF_b = ρVg = 1000 × 0,002 × 9,8 = 19,6 Н.\nЕсли камень весит 50 Н, нить, которая его держит, тянет вверх с силой 50 − 19,6 = 30,4 Н.\nТеперь вы: камень объёмом 0,005 м³ удерживают полностью погружённым в воду. F_b = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph82q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: the buoyant force depends on the volume under the fluid and on the fluid’s density, not on how deep the object is or how heavy it is.\nAn iron block and a wooden block of the same volume, both fully under water, get the same buoyant force.\nThe iron one sinks because its weight is larger than that force.",
+            "uz": "Ehtiyot boʻling: Arximed kuchi jismning botgan qismi hajmiga va suyuqlik zichligiga bogʻliq, jism qanchalik chuqurda yoki qanchalik ogʻir ekaniga emas.\nHajmi bir xil temir va yogʻoch brusoklar suvga toʻliq botirilsa, ularga bir xil Arximed kuchi taʼsir qiladi.\nTemir brusok choʻkadi, chunki uning ogʻirligi shu kuchdan katta.",
+            "ru": "Осторожно: выталкивающая сила зависит от объёма погружённой части и плотности жидкости, а не от глубины и не от веса тела.\nЖелезный и деревянный бруски одинакового объёма, полностью погружённые в воду, получают одинаковую выталкивающую силу.\nЖелезный тонет, потому что его вес больше этой силы."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph82q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ph8201",
+          "C1-ph8202"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ph8201",
+          "C1-ph8202",
+          "C1-ph8203",
+          "C22-ph82c1",
+          "C22-ph82c2"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APPH08#official",
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APPH08-3",
+      "course": "ap_physics_1",
+      "unit": "C10-APPH08",
+      "seq": 3,
+      "skill": "ap_physics_1:APPH08",
+      "requires": {
+        "math_rung_min": "alg2"
+      },
+      "title": {
+        "en": "AP Physics 1: Fluids in motion: continuity and Bernoulli",
+        "uz": "AP Physics 1: Harakatdagi suyuqlik: uzluksizlik va Bernulli tenglamasi",
+        "ru": "AP Physics 1: Движение жидкости: уравнение неразрывности и уравнение Бернулли"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "An incompressible fluid that fills a pipe has the same volume flow rate everywhere: A₁v₁ = A₂v₂. So it moves faster where the pipe is narrower.\nBernoulli’s equation (energy per volume, no friction): P₁ + ½ρv₁² + ρgy₁ = P₂ + ½ρv₂² + ρgy₂.\nIn a level pipe, where the fluid is faster its pressure is lower.\nWater leaving a small hole a depth h below the open surface of a wide tank moves at v = √(2gh).",
+            "uz": "Quvurni toʻldirib oqayotgan siqilmaydigan suyuqlikning hajmiy sarfi hamma joyda bir xil: A₁v₁ = A₂v₂. Demak, quvur torroq joyda suyuqlik tezroq oqadi.\nBernulli tenglamasi (hajm birligidagi energiya, ishqalanishsiz): P₁ + ½ρv₁² + ρgy₁ = P₂ + ½ρv₂² + ρgy₂.\nGorizontal quvurda suyuqlik tezroq oqqan joyda bosim pastroq.\nKeng ochiq idishda suv sirtidan h chuqurlikdagi kichik teshikdan oqib chiqayotgan suv tezligi v = √(2gh).",
+            "ru": "Несжимаемая жидкость, заполняющая трубу, везде имеет один и тот же объёмный расход: A₁v₁ = A₂v₂. Поэтому там, где труба уже, жидкость течёт быстрее.\nУравнение Бернулли (энергия единицы объёма, без трения): P₁ + ½ρv₁² + ρgy₁ = P₂ + ½ρv₂² + ρgy₂.\nВ горизонтальной трубе там, где жидкость течёт быстрее, давление ниже.\nСкорость воды, вытекающей из маленького отверстия на глубине h под открытой поверхностью широкого бака: v = √(2gh)."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph83q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Water flows at 2 m/s through a pipe with a cross-section area of 0.03 m². The pipe narrows to 0.01 m².\nA₁v₁ = A₂v₂: 0.03 × 2 = 0.01 × v₂, so v₂ = 6 m/s.\nThe area is 3 times smaller, so the speed is 3 times larger.\nNow you: water flows at 3 m/s through a pipe with a cross-section area of 0.04 m², and the pipe narrows to 0.01 m². v₂ = ?",
+            "uz": "Suv koʻndalang kesim yuzi 0,03 m² boʻlgan quvurda 2 m/s tezlik bilan oqmoqda. Quvur 0,01 m² gacha torayadi.\nA₁v₁ = A₂v₂: 0,03 × 2 = 0,01 × v₂, demak v₂ = 6 m/s.\nYuza 3 marta kichik, shuning uchun tezlik 3 marta katta.\nEndi siz: suv koʻndalang kesim yuzi 0,04 m² boʻlgan quvurda 3 m/s tezlik bilan oqmoqda, quvur 0,01 m² gacha torayadi. v₂ = ?",
+            "ru": "Вода течёт со скоростью 2 м/с по трубе с площадью поперечного сечения 0,03 м². Труба сужается до 0,01 м².\nA₁v₁ = A₂v₂: 0,03 × 2 = 0,01 × v₂, значит, v₂ = 6 м/с.\nПлощадь в 3 раза меньше, поэтому скорость в 3 раза больше.\nТеперь вы: вода течёт со скоростью 3 м/с по трубе с площадью поперечного сечения 0,04 м², и труба сужается до 0,01 м². v₂ = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph83q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: Bernoulli’s equation has ½ρv², with the speed squared, and the faster part has the lower pressure.\nLevel pipe, ρ = 1,000 kg/m³: P₁ = 200,000 Pa where v₁ = 2 m/s; in a narrower part v₂ = 6 m/s.\nP₂ = P₁ + ½ρ(v₁² − v₂²) = 200,000 + 500 × (4 − 36) = 184,000 Pa.\nUsing v instead of v² would give 200,000 + 500 × (2 − 6) = 198,000 Pa: wrong.",
+            "uz": "Ehtiyot boʻling: Bernulli tenglamasida ½ρv², yaʼni tezlik kvadrati bor, tezroq qismda esa bosim pastroq.\nGorizontal quvur, ρ = 1000 kg/m³: v₁ = 2 m/s boʻlgan joyda P₁ = 200 000 Pa; torroq qismda v₂ = 6 m/s.\nP₂ = P₁ + ½ρ(v₁² − v₂²) = 200 000 + 500 × (4 − 36) = 184 000 Pa.\nv² oʻrniga v olinsa, 200 000 + 500 × (2 − 6) = 198 000 Pa chiqadi — bu xato.",
+            "ru": "Осторожно: в уравнении Бернулли стоит ½ρv² — скорость в квадрате, и в более быстрой части давление ниже.\nГоризонтальная труба, ρ = 1000 кг/м³: P₁ = 200 000 Па там, где v₁ = 2 м/с; в более узкой части v₂ = 6 м/с.\nP₂ = P₁ + ½ρ(v₁² − v₂²) = 200 000 + 500 × (4 − 36) = 184 000 Па.\nЕсли взять v вместо v², получится 200 000 + 500 × (2 − 6) = 198 000 Па — это ошибка."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ph83q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ph8301",
+          "C1-ph8302"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ph8301",
+          "C1-ph8302",
+          "C1-ph8303",
+          "C22-ph83c1",
+          "C22-ph83c2"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APPH08#official",
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ],
+  "items": [
+    {
+      "id": "C19-ph51q1",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_kinematics",
+      "page": "C19-APPH05-1",
+      "lang": "en",
+      "stem": {
+        "en": "A wheel turns at ω₀ = 4 rad/s and speeds up with a constant angular acceleration α = 3 rad/s². What is its angular velocity after 5 s?",
+        "uz": "Gʻildirak ω₀ = 4 rad/s burchak tezlik bilan aylanmoqda va α = 3 rad/s² oʻzgarmas burchak tezlanish bilan tezlashadi. 5 s dan keyin uning burchak tezligi qancha boʻladi?",
+        "ru": "Колесо вращается с угловой скоростью ω₀ = 4 рад/с и разгоняется с постоянным угловым ускорением α = 3 рад/с². Какой будет его угловая скорость через 5 с?"
+      },
+      "options": [
+        {
+          "en": "19 rad/s",
+          "uz": "19 rad/s",
+          "ru": "19 рад/с"
+        },
+        {
+          "en": "15 rad/s",
+          "uz": "15 rad/s",
+          "ru": "15 рад/с"
+        },
+        {
+          "en": "12 rad/s",
+          "uz": "12 rad/s",
+          "ru": "12 рад/с"
+        },
+        {
+          "en": "7 rad/s",
+          "uz": "7 rad/s",
+          "ru": "7 рад/с"
+        }
+      ],
+      "why": {
+        "en": "ω = ω₀ + αt = 4 + 3 × 5 = 19 rad/s.",
+        "uz": "ω = ω₀ + αt = 4 + 3 × 5 = 19 rad/s.",
+        "ru": "ω = ω₀ + αt = 4 + 3 × 5 = 19 рад/с."
+      },
+      "prior_b": 0.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph51q2",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_kinematics",
+      "page": "C19-APPH05-1",
+      "lang": "en",
+      "stem": {
+        "en": "A wheel starts from rest and turns with a constant angular acceleration α = 4 rad/s². Through what angle, in radians, does it turn in the first 5 s?",
+        "uz": "Gʻildirak tinch holatdan α = 4 rad/s² oʻzgarmas burchak tezlanish bilan aylana boshlaydi. Birinchi 5 s ichida u necha radianga buriladi?",
+        "ru": "Колесо начинает вращаться из состояния покоя с постоянным угловым ускорением α = 4 рад/с². На какой угол (в радианах) оно повернётся за первые 5 с?"
+      },
+      "options": [
+        {
+          "en": "50"
+        },
+        {
+          "en": "100"
+        },
+        {
+          "en": "20"
+        },
+        {
+          "en": "10"
+        }
+      ],
+      "why": {
+        "en": "From rest, θ = ½αt² = ½ × 4 × 5² = 50 rad.",
+        "uz": "Tinch holatdan: θ = ½αt² = ½ × 4 × 5² = 50 rad.",
+        "ru": "Из состояния покоя: θ = ½αt² = ½ × 4 × 5² = 50 рад."
+      },
+      "prior_b": 0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph51q3",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "linear_rotational",
+      "page": "C19-APPH05-1",
+      "lang": "en",
+      "stem": {
+        "en": "A disk of radius 0.2 m makes 10 full turns per second. How fast does a point on its rim move? (Use π ≈ 3.14.)",
+        "uz": "Radiusi 0,2 m boʻlgan disk soniyasiga 10 marta toʻliq aylanadi. Uning chetidagi nuqta qanday tezlik bilan harakatlanadi? (π ≈ 3,14 deb oling.)",
+        "ru": "Диск радиусом 0,2 м делает 10 полных оборотов в секунду. С какой скоростью движется точка на его краю? (Примите π ≈ 3,14.)"
+      },
+      "options": [
+        {
+          "en": "about 12.6 m/s",
+          "uz": "taxminan 12,6 m/s",
+          "ru": "около 12,6 м/с"
+        },
+        {
+          "en": "2 m/s",
+          "uz": "2 m/s",
+          "ru": "2 м/с"
+        },
+        {
+          "en": "about 6.3 m/s",
+          "uz": "taxminan 6,3 m/s",
+          "ru": "около 6,3 м/с"
+        },
+        {
+          "en": "about 25.1 m/s",
+          "uz": "taxminan 25,1 m/s",
+          "ru": "около 25,1 м/с"
+        }
+      ],
+      "why": {
+        "en": "ω = 10 × 2π = 20π rad/s, so v = rω = 0.2 × 20π = 4π ≈ 12.6 m/s.",
+        "uz": "ω = 10 × 2π = 20π rad/s, demak v = rω = 0,2 × 20π = 4π ≈ 12,6 m/s.",
+        "ru": "ω = 10 × 2π = 20π рад/с, значит, v = rω = 0,2 × 20π = 4π ≈ 12,6 м/с."
+      },
+      "prior_b": 0.8,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph52q1",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "torque",
+      "page": "C19-APPH05-2",
+      "lang": "en",
+      "stem": {
+        "en": "A force F = 30 N pushes on a door at 90°, 0.6 m from its hinges. What torque does it make about the hinges?",
+        "uz": "F = 30 N kuch eshikni ilgaklaridan 0,6 m uzoqlikda, eshikka 90° burchak ostida itaradi. U ilgaklarga nisbatan qanday kuch momenti hosil qiladi?",
+        "ru": "Сила F = 30 Н толкает дверь под углом 90° на расстоянии 0,6 м от петель. Какой момент силы относительно петель она создаёт?"
+      },
+      "options": [
+        {
+          "en": "18 N·m",
+          "uz": "18 N·m",
+          "ru": "18 Н·м"
+        },
+        {
+          "en": "50 N·m",
+          "uz": "50 N·m",
+          "ru": "50 Н·м"
+        },
+        {
+          "en": "30 N·m",
+          "uz": "30 N·m",
+          "ru": "30 Н·м"
+        },
+        {
+          "en": "9 N·m",
+          "uz": "9 N·m",
+          "ru": "9 Н·м"
+        }
+      ],
+      "why": {
+        "en": "At 90°, τ = rF = 0.6 × 30 = 18 N·m.",
+        "uz": "90° da τ = rF = 0,6 × 30 = 18 N·m.",
+        "ru": "При 90° τ = rF = 0,6 × 30 = 18 Н·м."
+      },
+      "prior_b": 0.3,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph52q2",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_equilibrium",
+      "page": "C19-APPH05-2",
+      "lang": "en",
+      "stem": {
+        "en": "A seesaw is balanced on a pivot at its middle. A 20 kg child sits 3 m from the pivot. How far from the pivot, in metres, must a 30 kg child sit on the other side to balance it?",
+        "uz": "Uzun taxta oʻrtasidagi tayanchda muvozanatda turibdi. 20 kg massali bola tayanchdan 3 m uzoqlikda oʻtiribdi. Taxtani muvozanatda saqlash uchun 30 kg massali bola narigi tomonda tayanchdan necha metr uzoqlikda oʻtirishi kerak?",
+        "ru": "Доска-качели уравновешена на опоре посередине. Ребёнок массой 20 кг сидит в 3 м от опоры. На каком расстоянии от опоры (в метрах) по другую сторону должен сесть ребёнок массой 30 кг, чтобы уравновесить доску?"
+      },
+      "options": [
+        {
+          "en": "2"
+        },
+        {
+          "en": "4.5",
+          "uz": "4,5",
+          "ru": "4,5"
+        },
+        {
+          "en": "3"
+        },
+        {
+          "en": "1.5",
+          "uz": "1,5",
+          "ru": "1,5"
+        }
+      ],
+      "why": {
+        "en": "The torques cancel: 20g × 3 = 30g × x, so x = 60/30 = 2 m.",
+        "uz": "Momentlar bir-birini yoʻqqa chiqaradi: 20g × 3 = 30g × x, demak x = 60/30 = 2 m.",
+        "ru": "Моменты компенсируют друг друга: 20g × 3 = 30g × x, значит, x = 60/30 = 2 м."
+      },
+      "prior_b": 0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph52q3",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "torque",
+      "page": "C19-APPH05-2",
+      "lang": "en",
+      "stem": {
+        "en": "A force F = 80 N pulls on a wrench 0.25 m from the bolt, at 30° to the handle. What torque does it make about the bolt? (sin 30° = 0.5, cos 30° ≈ 0.87)",
+        "uz": "F = 80 N kuch gayka kalitini boltdan 0,25 m uzoqlikda, dastaga 30° burchak ostida tortadi. U boltga nisbatan qanday kuch momenti hosil qiladi? (sin 30° = 0,5, cos 30° ≈ 0,87)",
+        "ru": "Сила F = 80 Н тянет гаечный ключ на расстоянии 0,25 м от болта под углом 30° к рукоятке. Какой момент силы относительно болта она создаёт? (sin 30° = 0,5, cos 30° ≈ 0,87)"
+      },
+      "options": [
+        {
+          "en": "10 N·m",
+          "uz": "10 N·m",
+          "ru": "10 Н·м"
+        },
+        {
+          "en": "20 N·m",
+          "uz": "20 N·m",
+          "ru": "20 Н·м"
+        },
+        {
+          "en": "about 17 N·m",
+          "uz": "taxminan 17 N·m",
+          "ru": "около 17 Н·м"
+        },
+        {
+          "en": "40 N·m",
+          "uz": "40 N·m",
+          "ru": "40 Н·м"
+        }
+      ],
+      "why": {
+        "en": "τ = rF sin 30° = 0.25 × 80 × 0.5 = 10 N·m.",
+        "uz": "τ = rF sin 30° = 0,25 × 80 × 0,5 = 10 N·m.",
+        "ru": "τ = rF sin 30° = 0,25 × 80 × 0,5 = 10 Н·м."
+      },
+      "prior_b": 0.7,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph53q1",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_inertia",
+      "page": "C19-APPH05-3",
+      "lang": "en",
+      "stem": {
+        "en": "A light rod turns about one end. A 2 kg mass sits 1 m from that end and a 3 kg mass sits 2 m from it. What is the rod’s rotational inertia about that end?",
+        "uz": "Yengil sterjen bir uchi atrofida aylanadi. Shu uchdan 1 m uzoqlikda 2 kg, 2 m uzoqlikda 3 kg massali yuk bor. Sterjenning shu uchga nisbatan inersiya momenti qancha?",
+        "ru": "Лёгкий стержень вращается вокруг оси на одном конце. В 1 м от этого конца закреплён груз массой 2 кг, в 2 м — груз массой 3 кг. Каков момент инерции стержня относительно этой оси?"
+      },
+      "options": [
+        {
+          "en": "14 kg·m²",
+          "uz": "14 kg·m²",
+          "ru": "14 кг·м²"
+        },
+        {
+          "en": "8 kg·m²",
+          "uz": "8 kg·m²",
+          "ru": "8 кг·м²"
+        },
+        {
+          "en": "20 kg·m²",
+          "uz": "20 kg·m²",
+          "ru": "20 кг·м²"
+        },
+        {
+          "en": "5 kg·m²",
+          "uz": "5 kg·m²",
+          "ru": "5 кг·м²"
+        }
+      ],
+      "why": {
+        "en": "I = Σmr² = 2 × 1² + 3 × 2² = 2 + 12 = 14 kg·m².",
+        "uz": "I = Σmr² = 2 × 1² + 3 × 2² = 2 + 12 = 14 kg·m².",
+        "ru": "I = Σmr² = 2 × 1² + 3 × 2² = 2 + 12 = 14 кг·м²."
+      },
+      "prior_b": 0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph53q2",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_second_law",
+      "page": "C19-APPH05-3",
+      "lang": "en",
+      "stem": {
+        "en": "Two balls of 3 kg each sit on a light rod, each 1 m from the axis at its middle. A net torque τ = 12 N·m acts on the rod. What is its angular acceleration?",
+        "uz": "Yengil sterjenda har biri 3 kg boʻlgan ikkita shar bor, ikkalasi ham sterjen oʻrtasidagi oʻqdan 1 m uzoqlikda. Sterjenga τ = 12 N·m natijaviy kuch momenti taʼsir qiladi. Uning burchak tezlanishi qancha?",
+        "ru": "На лёгком стержне закреплены два шара массой по 3 кг, каждый в 1 м от оси, проходящей через середину стержня. На стержень действует суммарный момент сил τ = 12 Н·м. Каково его угловое ускорение?"
+      },
+      "options": [
+        {
+          "en": "2 rad/s²",
+          "uz": "2 rad/s²",
+          "ru": "2 рад/с²"
+        },
+        {
+          "en": "4 rad/s²",
+          "uz": "4 rad/s²",
+          "ru": "4 рад/с²"
+        },
+        {
+          "en": "72 rad/s²",
+          "uz": "72 rad/s²",
+          "ru": "72 рад/с²"
+        },
+        {
+          "en": "6 rad/s²",
+          "uz": "6 rad/s²",
+          "ru": "6 рад/с²"
+        }
+      ],
+      "why": {
+        "en": "I = 2 × 3 × 1² = 6 kg·m², so α = Στ/I = 12/6 = 2 rad/s².",
+        "uz": "I = 2 × 3 × 1² = 6 kg·m², demak α = Στ/I = 12/6 = 2 rad/s².",
+        "ru": "I = 2 × 3 × 1² = 6 кг·м², значит, α = Στ/I = 12/6 = 2 рад/с²."
+      },
+      "prior_b": 0.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph53q3",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_inertia",
+      "page": "C19-APPH05-3",
+      "lang": "en",
+      "stem": {
+        "en": "A net torque gives a light rod with two small balls an angular acceleration of 12 rad/s². The balls are moved to twice their distance from the axis, and the same torque acts. What is the new angular acceleration?",
+        "uz": "Natijaviy kuch momenti ikkita kichik shar oʻrnatilgan yengil sterjenga 12 rad/s² burchak tezlanish beradi. Sharlar oʻqdan ikki baravar uzoqroqqa suriladi va oʻsha moment taʼsir qiladi. Endi burchak tezlanish qancha?",
+        "ru": "Суммарный момент сил сообщает лёгкому стержню с двумя маленькими шарами угловое ускорение 12 рад/с². Шары передвигают вдвое дальше от оси, момент тот же. Каким станет угловое ускорение?"
+      },
+      "options": [
+        {
+          "en": "3 rad/s²",
+          "uz": "3 rad/s²",
+          "ru": "3 рад/с²"
+        },
+        {
+          "en": "6 rad/s²",
+          "uz": "6 rad/s²",
+          "ru": "6 рад/с²"
+        },
+        {
+          "en": "24 rad/s²",
+          "uz": "24 rad/s²",
+          "ru": "24 рад/с²"
+        },
+        {
+          "en": "48 rad/s²",
+          "uz": "48 rad/s²",
+          "ru": "48 рад/с²"
+        }
+      ],
+      "why": {
+        "en": "Twice the distance makes I = Σmr² four times as large, so α = 12/4 = 3 rad/s².",
+        "uz": "Masofa ikki baravar boʻlsa, I = Σmr² toʻrt baravar ortadi, demak α = 12/4 = 3 rad/s².",
+        "ru": "При вдвое большем расстоянии I = Σmr² вырастает в четыре раза, значит, α = 12/4 = 3 рад/с²."
+      },
+      "prior_b": 0.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph61q1",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "torque_work",
+      "page": "C19-APPH06-1",
+      "lang": "en",
+      "stem": {
+        "en": "A constant torque of 4 N·m turns a wheel through 15 rad. Before that, the wheel had 20 J of rotational kinetic energy. With no friction, how much does it have after?",
+        "uz": "4 N·m oʻzgarmas kuch momenti gʻildirakni 15 rad ga buradi. Bundan oldin gʻildirakning aylanma kinetik energiyasi 20 J edi. Ishqalanish boʻlmasa, keyin u qancha boʻladi?",
+        "ru": "Постоянный момент силы 4 Н·м поворачивает колесо на 15 рад. До этого кинетическая энергия вращения колеса была 20 Дж. Какой она станет, если трения нет?"
+      },
+      "options": [
+        {
+          "en": "80 J",
+          "uz": "80 J",
+          "ru": "80 Дж"
+        },
+        {
+          "en": "60 J",
+          "uz": "60 J",
+          "ru": "60 Дж"
+        },
+        {
+          "en": "40 J",
+          "uz": "40 J",
+          "ru": "40 Дж"
+        },
+        {
+          "en": "39 J",
+          "uz": "39 J",
+          "ru": "39 Дж"
+        }
+      ],
+      "why": {
+        "en": "W = τΔθ = 4 × 15 = 60 J, so K = 20 + 60 = 80 J.",
+        "uz": "W = τΔθ = 4 × 15 = 60 J, demak K = 20 + 60 = 80 J.",
+        "ru": "W = τΔθ = 4 × 15 = 60 Дж, значит, K = 20 + 60 = 80 Дж."
+      },
+      "prior_b": 0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph61q2",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_kinetic_energy",
+      "page": "C19-APPH06-1",
+      "lang": "en",
+      "stem": {
+        "en": "A flywheel with rotational inertia I = 4 kg·m² spins at ω = 3 rad/s. What is its rotational kinetic energy?",
+        "uz": "Inersiya momenti I = 4 kg·m² boʻlgan maxovik ω = 3 rad/s burchak tezlik bilan aylanmoqda. Uning aylanma harakat kinetik energiyasi qancha?",
+        "ru": "Маховик с моментом инерции I = 4 кг·м² вращается с угловой скоростью ω = 3 рад/с. Какова его кинетическая энергия вращения?"
+      },
+      "options": [
+        {
+          "en": "18 J",
+          "uz": "18 J",
+          "ru": "18 Дж"
+        },
+        {
+          "en": "6 J",
+          "uz": "6 J",
+          "ru": "6 Дж"
+        },
+        {
+          "en": "36 J",
+          "uz": "36 J",
+          "ru": "36 Дж"
+        },
+        {
+          "en": "12 J",
+          "uz": "12 J",
+          "ru": "12 Дж"
+        }
+      ],
+      "why": {
+        "en": "K = ½Iω² = ½ × 4 × 3² = 18 J.",
+        "uz": "K = ½Iω² = ½ × 4 × 3² = 18 J.",
+        "ru": "K = ½Iω² = ½ × 4 × 3² = 18 Дж."
+      },
+      "prior_b": 0.4,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph61q3",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "torque_work",
+      "page": "C19-APPH06-1",
+      "lang": "en",
+      "stem": {
+        "en": "A constant torque of 3 N·m turns a wheel through 5 full turns. How much work does it do? (Use π ≈ 3.14.)",
+        "uz": "3 N·m oʻzgarmas kuch momenti gʻildirakni 5 marta toʻliq aylantiradi. U qancha ish bajaradi? (π ≈ 3,14 deb oling.)",
+        "ru": "Постоянный момент силы 3 Н·м поворачивает колесо на 5 полных оборотов. Какую работу он совершает? (Примите π ≈ 3,14.)"
+      },
+      "options": [
+        {
+          "en": "about 94 J",
+          "uz": "taxminan 94 J",
+          "ru": "около 94 Дж"
+        },
+        {
+          "en": "15 J",
+          "uz": "15 J",
+          "ru": "15 Дж"
+        },
+        {
+          "en": "about 47 J",
+          "uz": "taxminan 47 J",
+          "ru": "около 47 Дж"
+        },
+        {
+          "en": "about 188 J",
+          "uz": "taxminan 188 J",
+          "ru": "около 188 Дж"
+        }
+      ],
+      "why": {
+        "en": "Δθ = 5 × 2π = 10π ≈ 31.4 rad, so W = τΔθ = 3 × 31.4 ≈ 94 J.",
+        "uz": "Δθ = 5 × 2π = 10π ≈ 31,4 rad, demak W = τΔθ = 3 × 31,4 ≈ 94 J.",
+        "ru": "Δθ = 5 × 2π = 10π ≈ 31,4 рад, значит, W = τΔθ = 3 × 31,4 ≈ 94 Дж."
+      },
+      "prior_b": 0.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph62q1",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "angular_momentum",
+      "page": "C19-APPH06-2",
+      "lang": "en",
+      "stem": {
+        "en": "A wheel with rotational inertia I = 3 kg·m² is at rest. A constant net torque τ = 6 N·m acts on it for 4 s. What is its angular velocity then?",
+        "uz": "Inersiya momenti I = 3 kg·m² boʻlgan gʻildirak tinch turibdi. Unga 4 s davomida τ = 6 N·m oʻzgarmas natijaviy kuch momenti taʼsir qiladi. Shundan keyin uning burchak tezligi qancha?",
+        "ru": "Колесо с моментом инерции I = 3 кг·м² покоится. На него в течение 4 с действует постоянный суммарный момент сил τ = 6 Н·м. Какой станет его угловая скорость?"
+      },
+      "options": [
+        {
+          "en": "8 rad/s",
+          "uz": "8 rad/s",
+          "ru": "8 рад/с"
+        },
+        {
+          "en": "24 rad/s",
+          "uz": "24 rad/s",
+          "ru": "24 рад/с"
+        },
+        {
+          "en": "2 rad/s",
+          "uz": "2 rad/s",
+          "ru": "2 рад/с"
+        },
+        {
+          "en": "4.5 rad/s",
+          "uz": "4,5 rad/s",
+          "ru": "4,5 рад/с"
+        }
+      ],
+      "why": {
+        "en": "τΔt = ΔL: 6 × 4 = 24 kg·m²/s = Iω, so ω = 24/3 = 8 rad/s.",
+        "uz": "τΔt = ΔL: 6 × 4 = 24 kg·m²/s = Iω, demak ω = 24/3 = 8 rad/s.",
+        "ru": "τΔt = ΔL: 6 × 4 = 24 кг·м²/с = Iω, значит, ω = 24/3 = 8 рад/с."
+      },
+      "prior_b": 0.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph62q2",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "angular_momentum_conservation",
+      "page": "C19-APPH06-2",
+      "lang": "en",
+      "stem": {
+        "en": "A skater spins at ω₁ = 2 rad/s with rotational inertia I₁ = 6 kg·m². She pulls her arms in, and her rotational inertia becomes I₂ = 3 kg·m². What is her new angular velocity?",
+        "uz": "Konkichi qiz I₁ = 6 kg·m² inersiya momenti bilan ω₁ = 2 rad/s burchak tezlikda aylanmoqda. U qoʻllarini tanasiga yaqinlashtiradi va inersiya momenti I₂ = 3 kg·m² boʻladi. Endi uning burchak tezligi qancha?",
+        "ru": "Фигуристка вращается с угловой скоростью ω₁ = 2 рад/с, её момент инерции I₁ = 6 кг·м². Она прижимает руки к телу, и момент инерции становится I₂ = 3 кг·м². Какой станет её угловая скорость?"
+      },
+      "options": [
+        {
+          "en": "4 rad/s",
+          "uz": "4 rad/s",
+          "ru": "4 рад/с"
+        },
+        {
+          "en": "1 rad/s",
+          "uz": "1 rad/s",
+          "ru": "1 рад/с"
+        },
+        {
+          "en": "2 rad/s",
+          "uz": "2 rad/s",
+          "ru": "2 рад/с"
+        },
+        {
+          "en": "12 rad/s",
+          "uz": "12 rad/s",
+          "ru": "12 рад/с"
+        }
+      ],
+      "why": {
+        "en": "L is conserved: 6 × 2 = 3 × ω₂, so ω₂ = 4 rad/s.",
+        "uz": "L saqlanadi: 6 × 2 = 3 × ω₂, demak ω₂ = 4 rad/s.",
+        "ru": "L сохраняется: 6 × 2 = 3 × ω₂, значит, ω₂ = 4 рад/с."
+      },
+      "prior_b": 0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph62q3",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "angular_momentum_conservation",
+      "page": "C19-APPH06-2",
+      "lang": "en",
+      "stem": {
+        "en": "A skater spinning with I₁ = 6 kg·m² at ω₁ = 2 rad/s pulls her arms in to I₂ = 2 kg·m². How does her rotational kinetic energy change?",
+        "uz": "I₁ = 6 kg·m² inersiya momenti bilan ω₁ = 2 rad/s burchak tezlikda aylanayotgan konkichi qiz qoʻllarini yaqinlashtirib, inersiya momentini I₂ = 2 kg·m² ga keltiradi. Uning aylanma kinetik energiyasi qanday oʻzgaradi?",
+        "ru": "Фигуристка, вращающаяся с I₁ = 6 кг·м² и ω₁ = 2 рад/с, прижимает руки, и её момент инерции становится I₂ = 2 кг·м². Как изменится её кинетическая энергия вращения?"
+      },
+      "options": [
+        {
+          "en": "It becomes 3 times as large",
+          "uz": "U 3 marta ortadi",
+          "ru": "Увеличится в 3 раза"
+        },
+        {
+          "en": "It does not change",
+          "uz": "U oʻzgarmaydi",
+          "ru": "Не изменится"
+        },
+        {
+          "en": "It becomes 9 times as large",
+          "uz": "U 9 marta ortadi",
+          "ru": "Увеличится в 9 раз"
+        },
+        {
+          "en": "It becomes a third as large",
+          "uz": "U 3 marta kamayadi",
+          "ru": "Уменьшится в 3 раза"
+        }
+      ],
+      "why": {
+        "en": "ω₂ = 6 × 2/2 = 6 rad/s. K₁ = ½ × 6 × 2² = 12 J and K₂ = ½ × 2 × 6² = 36 J: 3 times as large.",
+        "uz": "ω₂ = 6 × 2/2 = 6 rad/s. K₁ = ½ × 6 × 2² = 12 J va K₂ = ½ × 2 × 6² = 36 J: 3 marta katta.",
+        "ru": "ω₂ = 6 × 2/2 = 6 рад/с. K₁ = ½ × 6 × 2² = 12 Дж и K₂ = ½ × 2 × 6² = 36 Дж: в 3 раза больше."
+      },
+      "prior_b": 1.0,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph63q1",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rolling",
+      "page": "C19-APPH06-3",
+      "lang": "en",
+      "stem": {
+        "en": "A solid cylinder (I = ½mR²) rolls without slipping. What fraction of its kinetic energy is rotational?",
+        "uz": "Yaxlit silindr (I = ½mR²) sirpanmasdan dumalamoqda. Uning kinetik energiyasining qanday ulushi aylanma harakatga toʻgʻri keladi?",
+        "ru": "Сплошной цилиндр (I = ½mR²) катится без проскальзывания. Какая доля его кинетической энергии приходится на вращение?"
+      },
+      "options": [
+        {
+          "en": "1/3"
+        },
+        {
+          "en": "1/2"
+        },
+        {
+          "en": "1/4"
+        },
+        {
+          "en": "2/3"
+        }
+      ],
+      "why": {
+        "en": "K_rot = ¼mv² and K = ¾mv², so the rotational part is (¼)/(¾) = 1/3.",
+        "uz": "K_rot = ¼mv² va K = ¾mv², demak aylanma ulush (¼)/(¾) = 1/3.",
+        "ru": "K_вр = ¼mv² и K = ¾mv², значит, доля вращения (¼)/(¾) = 1/3."
+      },
+      "prior_b": 0.7,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph63q2",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rolling",
+      "page": "C19-APPH06-3",
+      "lang": "en",
+      "stem": {
+        "en": "A 4 kg solid cylinder (I = ½mR²) rolls without slipping at v = 3 m/s. What is its total kinetic energy?",
+        "uz": "4 kg massali yaxlit silindr (I = ½mR²) sirpanmasdan v = 3 m/s tezlik bilan dumalamoqda. Uning toʻliq kinetik energiyasi qancha?",
+        "ru": "Сплошной цилиндр массой 4 кг (I = ½mR²) катится без проскальзывания со скоростью v = 3 м/с. Какова его полная кинетическая энергия?"
+      },
+      "options": [
+        {
+          "en": "27 J",
+          "uz": "27 J",
+          "ru": "27 Дж"
+        },
+        {
+          "en": "18 J",
+          "uz": "18 J",
+          "ru": "18 Дж"
+        },
+        {
+          "en": "9 J",
+          "uz": "9 J",
+          "ru": "9 Дж"
+        },
+        {
+          "en": "36 J",
+          "uz": "36 J",
+          "ru": "36 Дж"
+        }
+      ],
+      "why": {
+        "en": "K = ½mv² + ¼mv² = ¾mv² = ¾ × 4 × 3² = 27 J.",
+        "uz": "K = ½mv² + ¼mv² = ¾mv² = ¾ × 4 × 3² = 27 J.",
+        "ru": "K = ½mv² + ¼mv² = ¾mv² = ¾ × 4 × 3² = 27 Дж."
+      },
+      "prior_b": 0.7,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph63q3",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "orbits",
+      "page": "C19-APPH06-3",
+      "lang": "en",
+      "stem": {
+        "en": "At its farthest point, a satellite on an elliptical orbit is 9,000 km from the planet’s centre and moves at 2 km/s. At its nearest point it is 6,000 km from the centre. How fast does it move there?",
+        "uz": "Elliptik orbitadagi sunʼiy yoʻldosh eng uzoq nuqtasida sayyora markazidan 9000 km uzoqlikda boʻlib, 2 km/s tezlik bilan harakatlanadi. Eng yaqin nuqtasida u markazdan 6000 km uzoqlikda. U yerda yoʻldosh qanday tezlik bilan harakatlanadi?",
+        "ru": "В самой дальней точке эллиптической орбиты спутник находится в 9000 км от центра планеты и движется со скоростью 2 км/с. В самой близкой точке он находится в 6000 км от центра. С какой скоростью он движется там?"
+      },
+      "options": [
+        {
+          "en": "3 km/s",
+          "uz": "3 km/s",
+          "ru": "3 км/с"
+        },
+        {
+          "en": "2 km/s",
+          "uz": "2 km/s",
+          "ru": "2 км/с"
+        },
+        {
+          "en": "about 1.3 km/s",
+          "uz": "taxminan 1,3 km/s",
+          "ru": "около 1,3 км/с"
+        },
+        {
+          "en": "4.5 km/s",
+          "uz": "4,5 km/s",
+          "ru": "4,5 км/с"
+        }
+      ],
+      "why": {
+        "en": "L is conserved: 2 × 9,000 = v × 6,000, so v = 3 km/s.",
+        "uz": "L saqlanadi: 2 × 9000 = v × 6000, demak v = 3 km/s.",
+        "ru": "L сохраняется: 2 × 9000 = v × 6000, значит, v = 3 км/с."
+      },
+      "prior_b": 0.9,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph71q1",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "period_frequency",
+      "page": "C19-APPH07-1",
+      "lang": "en",
+      "stem": {
+        "en": "A mass on a spring makes 30 full cycles in 12 s. What is the frequency of its motion?",
+        "uz": "Prujinadagi yuk 12 s ichida 30 marta toʻliq tebranadi. Uning tebranish chastotasi qancha?",
+        "ru": "Груз на пружине совершает 30 полных колебаний за 12 с. Какова частота его колебаний?"
+      },
+      "options": [
+        {
+          "en": "2.5 Hz",
+          "uz": "2,5 Hz",
+          "ru": "2,5 Гц"
+        },
+        {
+          "en": "0.4 Hz",
+          "uz": "0,4 Hz",
+          "ru": "0,4 Гц"
+        },
+        {
+          "en": "360 Hz",
+          "uz": "360 Hz",
+          "ru": "360 Гц"
+        },
+        {
+          "en": "30 Hz",
+          "uz": "30 Hz",
+          "ru": "30 Гц"
+        }
+      ],
+      "why": {
+        "en": "f = cycles/time = 30/12 = 2.5 Hz (and T = 1/f = 0.4 s).",
+        "uz": "f = tebranishlar soni/vaqt = 30/12 = 2,5 Hz (T = 1/f = 0,4 s).",
+        "ru": "f = число колебаний/время = 30/12 = 2,5 Гц (а T = 1/f = 0,4 с)."
+      },
+      "prior_b": 0.3,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph71q2",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "simple_harmonic_motion",
+      "page": "C19-APPH07-1",
+      "lang": "en",
+      "stem": {
+        "en": "A 4 kg block on a smooth floor is attached to a spring with k = 200 N/m. It is pulled 0.2 m from equilibrium and let go. What is the size of its acceleration at that moment?",
+        "uz": "Silliq poldagi 4 kg massali brusok bikrligi k = 200 N/m boʻlgan prujinaga biriktirilgan. U muvozanat holatidan 0,2 m tortiladi va qoʻyib yuboriladi. Shu paytda uning tezlanishi moduli qancha?",
+        "ru": "Брусок массой 4 кг на гладком полу прикреплён к пружине жёсткостью k = 200 Н/м. Его оттягивают на 0,2 м от положения равновесия и отпускают. Каков модуль его ускорения в этот момент?"
+      },
+      "options": [
+        {
+          "en": "10 m/s²",
+          "uz": "10 m/s²",
+          "ru": "10 м/с²"
+        },
+        {
+          "en": "40 m/s²",
+          "uz": "40 m/s²",
+          "ru": "40 м/с²"
+        },
+        {
+          "en": "50 m/s²",
+          "uz": "50 m/s²",
+          "ru": "50 м/с²"
+        },
+        {
+          "en": "160 m/s²",
+          "uz": "160 m/s²",
+          "ru": "160 м/с²"
+        }
+      ],
+      "why": {
+        "en": "F = kx = 200 × 0.2 = 40 N, so a = F/m = 40/4 = 10 m/s².",
+        "uz": "F = kx = 200 × 0,2 = 40 N, demak a = F/m = 40/4 = 10 m/s².",
+        "ru": "F = kx = 200 × 0,2 = 40 Н, значит, a = F/m = 40/4 = 10 м/с²."
+      },
+      "prior_b": 0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph71q3",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "period_frequency",
+      "page": "C19-APPH07-1",
+      "lang": "en",
+      "stem": {
+        "en": "A block on a spring makes 10 full cycles in 5 s after it is pulled 3 cm from equilibrium and let go. Then it is pulled 6 cm and let go. What is its period now?",
+        "uz": "Prujinadagi brusok muvozanat holatidan 3 sm tortib qoʻyib yuborilgach, 5 s ichida 10 marta toʻliq tebranadi. Keyin u 6 sm tortib qoʻyib yuboriladi. Endi uning davri qancha?",
+        "ru": "Брусок на пружине, оттянутый на 3 см от положения равновесия и отпущенный, совершает 10 полных колебаний за 5 с. Затем его оттягивают на 6 см и отпускают. Каков теперь его период?"
+      },
+      "options": [
+        {
+          "en": "0.5 s",
+          "uz": "0,5 s",
+          "ru": "0,5 с"
+        },
+        {
+          "en": "1 s",
+          "uz": "1 s",
+          "ru": "1 с"
+        },
+        {
+          "en": "0.25 s",
+          "uz": "0,25 s",
+          "ru": "0,25 с"
+        },
+        {
+          "en": "2 s",
+          "uz": "2 s",
+          "ru": "2 с"
+        }
+      ],
+      "why": {
+        "en": "T = 5/10 = 0.5 s, and the amplitude does not change the period.",
+        "uz": "T = 5/10 = 0,5 s, amplituda esa davrni oʻzgartirmaydi.",
+        "ru": "T = 5/10 = 0,5 с, а амплитуда период не меняет."
+      },
+      "prior_b": 0.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph72q1",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "period_frequency",
+      "page": "C19-APPH07-2",
+      "lang": "en",
+      "stem": {
+        "en": "A simple pendulum makes small swings. Which change makes its period longer?",
+        "uz": "Oddiy mayatnik kichik tebranishlar qilmoqda. Qaysi oʻzgarish uning davrini uzaytiradi?",
+        "ru": "Математический маятник совершает малые колебания. Какое изменение увеличит его период?"
+      },
+      "options": [
+        {
+          "en": "Using a longer string",
+          "uz": "Ipni uzunroq qilish",
+          "ru": "Взять нить длиннее"
+        },
+        {
+          "en": "Using a heavier bob",
+          "uz": "Ogʻirroq yuk osish",
+          "ru": "Взять груз тяжелее"
+        },
+        {
+          "en": "Using a shorter string",
+          "uz": "Ipni qisqaroq qilish",
+          "ru": "Взять нить короче"
+        },
+        {
+          "en": "Using a lighter bob",
+          "uz": "Yengilroq yuk osish",
+          "ru": "Взять груз легче"
+        }
+      ],
+      "why": {
+        "en": "T = 2π√(L/g) grows with the length L; the bob’s mass does not appear in it.",
+        "uz": "T = 2π√(L/g) uzunlik L bilan ortadi; yuk massasi formulada yoʻq.",
+        "ru": "T = 2π√(L/g) растёт с длиной L; массы груза в формуле нет."
+      },
+      "prior_b": 0.2,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph72q2",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "period_frequency",
+      "page": "C19-APPH07-2",
+      "lang": "en",
+      "stem": {
+        "en": "A mass on a spring has a period of 0.5 s. The mass is made 9 times as large, and the spring stays the same. What is the new period?",
+        "uz": "Prujinadagi yukning tebranish davri 0,5 s. Yuk massasi 9 marta oshiriladi, prujina esa oʻsha-oʻsha. Yangi davr qancha?",
+        "ru": "Период колебаний груза на пружине 0,5 с. Массу груза увеличивают в 9 раз, пружина та же. Каким станет период?"
+      },
+      "options": [
+        {
+          "en": "1.5 s",
+          "uz": "1,5 s",
+          "ru": "1,5 с"
+        },
+        {
+          "en": "4.5 s",
+          "uz": "4,5 s",
+          "ru": "4,5 с"
+        },
+        {
+          "en": "about 0.17 s",
+          "uz": "taxminan 0,17 s",
+          "ru": "около 0,17 с"
+        },
+        {
+          "en": "0.5 s",
+          "uz": "0,5 s",
+          "ru": "0,5 с"
+        }
+      ],
+      "why": {
+        "en": "T grows by √9 = 3: 3 × 0.5 = 1.5 s.",
+        "uz": "T √9 = 3 marta ortadi: 3 × 0,5 = 1,5 s.",
+        "ru": "T растёт в √9 = 3 раза: 3 × 0,5 = 1,5 с."
+      },
+      "prior_b": 0.6,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph72q3",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "period_frequency",
+      "page": "C19-APPH07-2",
+      "lang": "en",
+      "stem": {
+        "en": "A simple pendulum has a period of 2 s. Which change gives it a period of 4 s?",
+        "uz": "Oddiy mayatnikning davri 2 s. Qaysi oʻzgarish uning davrini 4 s ga yetkazadi?",
+        "ru": "Период математического маятника 2 с. Какое изменение сделает его период равным 4 с?"
+      },
+      "options": [
+        {
+          "en": "A string 4 times as long",
+          "uz": "4 marta uzunroq ip",
+          "ru": "Нить в 4 раза длиннее"
+        },
+        {
+          "en": "A string 2 times as long",
+          "uz": "2 marta uzunroq ip",
+          "ru": "Нить в 2 раза длиннее"
+        },
+        {
+          "en": "A bob 4 times as heavy",
+          "uz": "4 marta ogʻirroq yuk",
+          "ru": "Груз в 4 раза тяжелее"
+        },
+        {
+          "en": "A bob 16 times as heavy",
+          "uz": "16 marta ogʻirroq yuk",
+          "ru": "Груз в 16 раз тяжелее"
+        }
+      ],
+      "why": {
+        "en": "T = 2π√(L/g): to double T, L must be 2² = 4 times as long; the mass does not matter.",
+        "uz": "T = 2π√(L/g): T ni ikki baravar oshirish uchun L 2² = 4 marta uzun boʻlishi kerak; massaning ahamiyati yoʻq.",
+        "ru": "T = 2π√(L/g): чтобы удвоить T, L должна стать в 2² = 4 раза длиннее; масса не важна."
+      },
+      "prior_b": 0.7,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph73q1",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "shm_graphs",
+      "page": "C19-APPH07-3",
+      "lang": "en",
+      "stem": {
+        "en": "A block oscillates on a spring between x = −A and x = +A. Where is the size of its acceleration largest?",
+        "uz": "Prujinadagi brusok x = −A va x = +A orasida tebranmoqda. Uning tezlanish moduli qayerda eng katta?",
+        "ru": "Брусок на пружине колеблется между x = −A и x = +A. Где модуль его ускорения наибольший?"
+      },
+      "options": [
+        {
+          "en": "At x = +A and at x = −A",
+          "uz": "x = +A va x = −A da",
+          "ru": "При x = +A и при x = −A"
+        },
+        {
+          "en": "At x = 0",
+          "uz": "x = 0 da",
+          "ru": "При x = 0"
+        },
+        {
+          "en": "At x = +A/2 only",
+          "uz": "Faqat x = +A/2 da",
+          "ru": "Только при x = +A/2"
+        },
+        {
+          "en": "It is the same everywhere",
+          "uz": "Hamma joyda bir xil",
+          "ru": "Везде одинаков"
+        }
+      ],
+      "why": {
+        "en": "a = −kx/m, so the size of a is largest where |x| is largest: at the two ends.",
+        "uz": "a = −kx/m, demak a ning moduli |x| eng katta boʻlgan joyda eng katta: ikki chetda.",
+        "ru": "a = −kx/m, значит, модуль a наибольший там, где наибольший |x|: в двух крайних точках."
+      },
+      "prior_b": 0.4,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph73q2",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "shm_energy",
+      "page": "C19-APPH07-3",
+      "lang": "en",
+      "stem": {
+        "en": "A 4 kg block on a spring with k = 400 N/m oscillates on a smooth floor with amplitude A = 0.5 m. What is its largest speed?",
+        "uz": "Bikrligi k = 400 N/m boʻlgan prujinadagi 4 kg massali brusok silliq polda A = 0,5 m amplituda bilan tebranmoqda. Uning eng katta tezligi qancha?",
+        "ru": "Брусок массой 4 кг на пружине жёсткостью k = 400 Н/м колеблется на гладком полу с амплитудой A = 0,5 м. Какова его наибольшая скорость?"
+      },
+      "options": [
+        {
+          "en": "5 m/s",
+          "uz": "5 m/s",
+          "ru": "5 м/с"
+        },
+        {
+          "en": "25 m/s",
+          "uz": "25 m/s",
+          "ru": "25 м/с"
+        },
+        {
+          "en": "50 m/s",
+          "uz": "50 m/s",
+          "ru": "50 м/с"
+        },
+        {
+          "en": "2.5 m/s",
+          "uz": "2,5 m/s",
+          "ru": "2,5 м/с"
+        }
+      ],
+      "why": {
+        "en": "E = ½ × 400 × 0.5² = 50 J = ½ × 4 × v_max², so v_max² = 25 and v_max = 5 m/s.",
+        "uz": "E = ½ × 400 × 0,5² = 50 J = ½ × 4 × v_max², demak v_max² = 25 va v_max = 5 m/s.",
+        "ru": "E = ½ × 400 × 0,5² = 50 Дж = ½ × 4 × v_max², значит, v_max² = 25 и v_max = 5 м/с."
+      },
+      "prior_b": 0.7,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph73q3",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "shm_energy",
+      "page": "C19-APPH07-3",
+      "lang": "en",
+      "stem": {
+        "en": "A block on a spring oscillates with a total energy of 6 J when its amplitude is 1 cm. With the same spring and block, the amplitude is made 3 cm. What is the total energy now?",
+        "uz": "Prujinadagi brusokning amplitudasi 1 sm boʻlganda toʻliq energiyasi 6 J. Prujina va brusok oʻsha, amplituda 3 sm qilinadi. Endi toʻliq energiya qancha?",
+        "ru": "Брусок на пружине колеблется с полной энергией 6 Дж при амплитуде 1 см. С той же пружиной и тем же бруском амплитуду делают 3 см. Какой станет полная энергия?"
+      },
+      "options": [
+        {
+          "en": "54 J",
+          "uz": "54 J",
+          "ru": "54 Дж"
+        },
+        {
+          "en": "18 J",
+          "uz": "18 J",
+          "ru": "18 Дж"
+        },
+        {
+          "en": "6 J",
+          "uz": "6 J",
+          "ru": "6 Дж"
+        },
+        {
+          "en": "2 J",
+          "uz": "2 J",
+          "ru": "2 Дж"
+        }
+      ],
+      "why": {
+        "en": "E = ½kA² grows with A²: 3² × 6 = 54 J.",
+        "uz": "E = ½kA² A² ga qarab ortadi: 3² × 6 = 54 J.",
+        "ru": "E = ½kA² растёт как A²: 3² × 6 = 54 Дж."
+      },
+      "prior_b": 0.6,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph81q1",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "pressure",
+      "page": "C19-APPH08-1",
+      "lang": "en",
+      "stem": {
+        "en": "A load of weight 3,000 N rests on a flat base of area 0.5 m². What pressure does it put on the floor?",
+        "uz": "Ogʻirligi 3000 N boʻlgan yuk yuzi 0,5 m² boʻlgan tekis asosi bilan polda turibdi. U polga qanday bosim beradi?",
+        "ru": "Груз весом 3000 Н стоит на полу на плоском основании площадью 0,5 м². Какое давление он оказывает на пол?"
+      },
+      "options": [
+        {
+          "en": "6,000 Pa",
+          "uz": "6000 Pa",
+          "ru": "6000 Па"
+        },
+        {
+          "en": "1,500 Pa",
+          "uz": "1500 Pa",
+          "ru": "1500 Па"
+        },
+        {
+          "en": "3,000 Pa",
+          "uz": "3000 Pa",
+          "ru": "3000 Па"
+        },
+        {
+          "en": "600 Pa",
+          "uz": "600 Pa",
+          "ru": "600 Па"
+        }
+      ],
+      "why": {
+        "en": "P = F/A = 3,000 ÷ 0.5 = 6,000 Pa.",
+        "uz": "P = F/A = 3000 ÷ 0,5 = 6000 Pa.",
+        "ru": "P = F/A = 3000 ÷ 0,5 = 6000 Па."
+      },
+      "prior_b": 0.2,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph81q2",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "density",
+      "page": "C19-APPH08-1",
+      "lang": "en",
+      "stem": {
+        "en": "A block has a mass of 7.8 kg and a volume of 0.001 m³. What is its density?",
+        "uz": "Brusokning massasi 7,8 kg, hajmi 0,001 m³. Uning zichligi qancha?",
+        "ru": "Масса бруска 7,8 кг, его объём 0,001 м³. Какова его плотность?"
+      },
+      "options": [
+        {
+          "en": "7,800 kg/m³",
+          "uz": "7800 kg/m³",
+          "ru": "7800 кг/м³"
+        },
+        {
+          "en": "0.0078 kg/m³",
+          "uz": "0,0078 kg/m³",
+          "ru": "0,0078 кг/м³"
+        },
+        {
+          "en": "780 kg/m³",
+          "uz": "780 kg/m³",
+          "ru": "780 кг/м³"
+        },
+        {
+          "en": "78,000 kg/m³",
+          "uz": "78 000 kg/m³",
+          "ru": "78 000 кг/м³"
+        }
+      ],
+      "why": {
+        "en": "ρ = m/V = 7.8 ÷ 0.001 = 7,800 kg/m³.",
+        "uz": "ρ = m/V = 7,8 ÷ 0,001 = 7800 kg/m³.",
+        "ru": "ρ = m/V = 7,8 ÷ 0,001 = 7800 кг/м³."
+      },
+      "prior_b": 0.3,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph81q3",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "pressure",
+      "page": "C19-APPH08-1",
+      "lang": "en",
+      "stem": {
+        "en": "A force F = 60 N presses on an area of 3 cm². What pressure does it make?",
+        "uz": "F = 60 N kuch 3 sm² yuzaga bosadi. U qanday bosim hosil qiladi?",
+        "ru": "Сила F = 60 Н давит на площадку площадью 3 см². Какое давление она создаёт?"
+      },
+      "options": [
+        {
+          "en": "200,000 Pa",
+          "uz": "200 000 Pa",
+          "ru": "200 000 Па"
+        },
+        {
+          "en": "20 Pa",
+          "uz": "20 Pa",
+          "ru": "20 Па"
+        },
+        {
+          "en": "2,000 Pa",
+          "uz": "2000 Pa",
+          "ru": "2000 Па"
+        },
+        {
+          "en": "2,000,000 Pa",
+          "uz": "2 000 000 Pa",
+          "ru": "2 000 000 Па"
+        }
+      ],
+      "why": {
+        "en": "3 cm² = 0.0003 m², so P = 60 ÷ 0.0003 = 200,000 Pa.",
+        "uz": "3 sm² = 0,0003 m², demak P = 60 ÷ 0,0003 =200 000 Pa.",
+        "ru": "3 см² = 0,0003 м², значит, P = 60 ÷ 0,0003 =200 000 Па."
+      },
+      "prior_b": 0.7,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph82q1",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "pressure",
+      "page": "C19-APPH08-2",
+      "lang": "en",
+      "stem": {
+        "en": "How much greater is the pressure 5 m under the surface of fresh water (ρ = 1,000 kg/m³) than the pressure at the surface? (Use g = 9.8 m/s².)",
+        "uz": "Chuchuk suvda (ρ = 1000 kg/m³) sirtdan 5 m chuqurlikdagi bosim sirtdagi bosimdan qanchaga ortiq? (g = 9,8 m/s² deb oling.)",
+        "ru": "На сколько давление на глубине 5 м в пресной воде (ρ = 1000 кг/м³) больше, чем у поверхности? (Примите g = 9,8 м/с².)"
+      },
+      "options": [
+        {
+          "en": "49,000 Pa",
+          "uz": "49 000 Pa",
+          "ru": "49 000 Па"
+        },
+        {
+          "en": "5,000 Pa",
+          "uz": "5000 Pa",
+          "ru": "5000 Па"
+        },
+        {
+          "en": "4,900 Pa",
+          "uz": "4900 Pa",
+          "ru": "4900 Па"
+        },
+        {
+          "en": "150,000 Pa",
+          "uz": "150 000 Pa",
+          "ru": "150 000 Па"
+        }
+      ],
+      "why": {
+        "en": "The extra pressure is ρgh = 1,000 × 9.8 × 5 = 49,000 Pa.",
+        "uz": "Ortiqcha bosim ρgh = 1000 × 9,8 × 5 = 49 000 Pa.",
+        "ru": "Избыточное давление ρgh = 1000 × 9,8 × 5 = 49 000 Па."
+      },
+      "prior_b": 0.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph82q2",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "buoyancy",
+      "page": "C19-APPH08-2",
+      "lang": "en",
+      "stem": {
+        "en": "A stone with a volume of 0.005 m³ is held fully under water (ρ = 1,000 kg/m³). What buoyant force does the water put on it? (Use g = 9.8 m/s².)",
+        "uz": "Hajmi 0,005 m³ boʻlgan tosh suvga (ρ = 1000 kg/m³) toʻliq botirilib ushlab turiladi. Suv unga qanday Arximed kuchi bilan taʼsir qiladi? (g = 9,8 m/s² deb oling.)",
+        "ru": "Камень объёмом 0,005 м³ удерживают полностью погружённым в воду (ρ = 1000 кг/м³). С какой выталкивающей силой вода действует на него? (Примите g = 9,8 м/с².)"
+      },
+      "options": [
+        {
+          "en": "49 N",
+          "uz": "49 N",
+          "ru": "49 Н"
+        },
+        {
+          "en": "5 N",
+          "uz": "5 N",
+          "ru": "5 Н"
+        },
+        {
+          "en": "4.9 N",
+          "uz": "4,9 N",
+          "ru": "4,9 Н"
+        },
+        {
+          "en": "490 N",
+          "uz": "490 N",
+          "ru": "490 Н"
+        }
+      ],
+      "why": {
+        "en": "F_b = ρVg = 1,000 × 0.005 × 9.8 = 49 N.",
+        "uz": "F_b = ρVg = 1000 × 0,005 × 9,8 = 49 N.",
+        "ru": "F_b = ρVg = 1000 × 0,005 × 9,8 = 49 Н."
+      },
+      "prior_b": 0.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph82q3",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "buoyancy",
+      "page": "C19-APPH08-2",
+      "lang": "en",
+      "stem": {
+        "en": "Block A is aluminium (2.7 kg) and block B is lead (11.3 kg); each has a volume of 0.001 m³. Both are held fully under water (ρ = 1,000 kg/m³). What buoyant force acts on each? (Use g = 9.8 m/s².)",
+        "uz": "A brusok alyuminiydan (2,7 kg), B brusok qoʻrgʻoshindan (11,3 kg); har birining hajmi 0,001 m³. Ikkalasi ham suvga (ρ = 1000 kg/m³) toʻliq botirilib ushlab turiladi. Har biriga qanday Arximed kuchi taʼsir qiladi? (g = 9,8 m/s² deb oling.)",
+        "ru": "Брусок A алюминиевый (2,7 кг), брусок B свинцовый (11,3 кг); объём каждого 0,001 м³. Оба удерживают полностью погружёнными в воду (ρ = 1000 кг/м³). Какая выталкивающая сила действует на каждый? (Примите g = 9,8 м/с².)"
+      },
+      "options": [
+        {
+          "en": "A: 9.8 N, B: 9.8 N",
+          "uz": "A: 9,8 N, B: 9,8 N",
+          "ru": "A: 9,8 Н, B: 9,8 Н"
+        },
+        {
+          "en": "A: 26.5 N, B: 111 N",
+          "uz": "A: 26,5 N, B: 111 N",
+          "ru": "A: 26,5 Н, B: 111 Н"
+        },
+        {
+          "en": "A: 9.8 N, B: 0 N",
+          "uz": "A: 9,8 N, B: 0 N",
+          "ru": "A: 9,8 Н, B: 0 Н"
+        },
+        {
+          "en": "A: 16.7 N, B: 101 N",
+          "uz": "A: 16,7 N, B: 101 N",
+          "ru": "A: 16,7 Н, B: 101 Н"
+        }
+      ],
+      "why": {
+        "en": "Each pushes aside 0.001 m³ of water: F_b = 1,000 × 0.001 × 9.8 = 9.8 N on each, whatever its mass.",
+        "uz": "Har biri 0,001 m³ suvni siqib chiqaradi: F_b = 1000 × 0,001 × 9,8 = 9,8 N, massasidan qatʼi nazar.",
+        "ru": "Каждый вытесняет 0,001 м³ воды: F_b = 1000 × 0,001 × 9,8 = 9,8 Н на каждый, какой бы ни была его масса."
+      },
+      "prior_b": 0.9,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph83q1",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "bernoulli",
+      "page": "C19-APPH08-3",
+      "lang": "en",
+      "stem": {
+        "en": "Water flows through a level pipe from a wide part into a narrow part. Compared with the wide part, in the narrow part the water’s …",
+        "uz": "Suv gorizontal quvurda keng qismdan tor qismga oqib oʻtadi. Keng qismga nisbatan tor qismda suvning …",
+        "ru": "Вода течёт по горизонтальной трубе из широкой части в узкую. По сравнению с широкой частью в узкой части у воды …"
+      },
+      "options": [
+        {
+          "en": "speed is higher and pressure is lower",
+          "uz": "tezligi kattaroq, bosimi pastroq",
+          "ru": "скорость больше, а давление ниже"
+        },
+        {
+          "en": "speed is higher and pressure is higher",
+          "uz": "tezligi kattaroq, bosimi yuqoriroq",
+          "ru": "скорость больше и давление выше"
+        },
+        {
+          "en": "speed is lower and pressure is higher",
+          "uz": "tezligi kichikroq, bosimi yuqoriroq",
+          "ru": "скорость меньше, а давление выше"
+        },
+        {
+          "en": "speed and pressure both stay the same",
+          "uz": "tezligi ham, bosimi ham oʻzgarmaydi",
+          "ru": "скорость и давление не меняются"
+        }
+      ],
+      "why": {
+        "en": "A₁v₁ = A₂v₂ makes the water faster in the narrow part, and Bernoulli on a level pipe makes the faster part’s pressure lower.",
+        "uz": "A₁v₁ = A₂v₂ ga koʻra tor qismda suv tezroq, gorizontal quvur uchun Bernulli tenglamasiga koʻra tezroq qismda bosim pastroq.",
+        "ru": "Из A₁v₁ = A₂v₂ вода в узкой части быстрее, а по уравнению Бернулли для горизонтальной трубы в более быстрой части давление ниже."
+      },
+      "prior_b": 0.5,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph83q2",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "continuity",
+      "page": "C19-APPH08-3",
+      "lang": "en",
+      "stem": {
+        "en": "Water flows at 3 m/s through a pipe with a cross-section area of 0.04 m². The pipe narrows to 0.01 m². How fast does the water move in the narrow part?",
+        "uz": "Suv koʻndalang kesim yuzi 0,04 m² boʻlgan quvurda 3 m/s tezlik bilan oqmoqda. Quvur 0,01 m² gacha torayadi. Tor qismida suv qanday tezlik bilan oqadi?",
+        "ru": "Вода течёт со скоростью 3 м/с по трубе с площадью поперечного сечения 0,04 м². Труба сужается до 0,01 м². С какой скоростью вода движется в узкой части?"
+      },
+      "options": [
+        {
+          "en": "12 m/s",
+          "uz": "12 m/s",
+          "ru": "12 м/с"
+        },
+        {
+          "en": "0.75 m/s",
+          "uz": "0,75 m/s",
+          "ru": "0,75 м/с"
+        },
+        {
+          "en": "3 m/s",
+          "uz": "3 m/s",
+          "ru": "3 м/с"
+        },
+        {
+          "en": "48 m/s",
+          "uz": "48 m/s",
+          "ru": "48 м/с"
+        }
+      ],
+      "why": {
+        "en": "A₁v₁ = A₂v₂: 0.04 × 3 = 0.01 × v₂, so v₂ = 12 m/s.",
+        "uz": "A₁v₁ = A₂v₂: 0,04 × 3 = 0,01 × v₂, demak v₂ = 12 m/s.",
+        "ru": "A₁v₁ = A₂v₂: 0,04 × 3 = 0,01 × v₂, значит, v₂ = 12 м/с."
+      },
+      "prior_b": 0.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ph83q3",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "bernoulli",
+      "page": "C19-APPH08-3",
+      "lang": "en",
+      "stem": {
+        "en": "Water (ρ = 1,000 kg/m³) flows through a level pipe. At a wide part the pressure is P₁ = 150,000 Pa and the speed is v₁ = 1 m/s; at a narrow part the speed is v₂ = 4 m/s. What is the pressure at the narrow part?",
+        "uz": "Suv (ρ = 1000 kg/m³) gorizontal quvurda oqmoqda. Keng qismida bosim P₁ = 150 000 Pa, tezlik v₁ = 1 m/s; tor qismida tezlik v₂ = 4 m/s. Tor qismidagi bosim qancha?",
+        "ru": "Вода (ρ = 1000 кг/м³) течёт по горизонтальной трубе. В широкой части давление P₁ = 150 000 Па, скорость v₁ = 1 м/с; в узкой части скорость v₂ = 4 м/с. Каково давление в узкой части?"
+      },
+      "options": [
+        {
+          "en": "142,500 Pa",
+          "uz": "142 500 Pa",
+          "ru": "142 500 Па"
+        },
+        {
+          "en": "157,500 Pa",
+          "uz": "157 500 Pa",
+          "ru": "157 500 Па"
+        },
+        {
+          "en": "148,500 Pa",
+          "uz": "148 500 Pa",
+          "ru": "148 500 Па"
+        },
+        {
+          "en": "145,500 Pa",
+          "uz": "145 500 Pa",
+          "ru": "145 500 Па"
+        }
+      ],
+      "why": {
+        "en": "P₂ = P₁ + ½ρ(v₁² − v₂²) = 150,000 + 500 × (1 − 16) = 142,500 Pa.",
+        "uz": "P₂ = P₁ + ½ρ(v₁² − v₂²) = 150 000 + 500 × (1 − 16) = 142 500 Pa.",
+        "ru": "P₂ = P₁ + ½ρ(v₁² − v₂²) = 150 000 + 500 × (1 − 16) = 142 500 Па."
+      },
+      "prior_b": 1.0,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15aps1+P15aps2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

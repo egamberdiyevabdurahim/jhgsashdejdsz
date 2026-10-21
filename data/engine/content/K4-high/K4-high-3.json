@@ -1,0 +1,1236 @@
+{
+ "bank": "K4",
+ "batch": 3,
+ "items": [
+  {
+   "id": "K4-pch001",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "radians_to_degrees",
+   "sat": {
+    "domain": "geometry_trig",
+    "difficulty": "easy"
+   },
+   "family": {
+    "template": "How many degrees is {k}π/{d} radians?",
+    "params": {
+     "d": {
+      "values": [
+       2,
+       3,
+       4,
+       6,
+       12
+      ]
+     },
+     "k": {
+      "min": 2,
+      "max": 23
+     }
+    },
+    "constraints": [
+     "gcd(k, d) == 1",
+     "k < 2 * d",
+     "(180 * k / d) != (360 * k / d)",
+     "(180 * k / d) != (90 * k / d)",
+     "(180 * k / d) != (abs(180 - 180 * k / d))",
+     "(360 * k / d) != (90 * k / d)",
+     "(360 * k / d) != (abs(180 - 180 * k / d))",
+     "(90 * k / d) != (abs(180 - 180 * k / d))"
+    ],
+    "answer": "180 * k / d",
+    "distractors": [
+     "360 * k / d",
+     "90 * k / d",
+     "abs(180 - 180 * k / d)"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 16
+   },
+   "lang": "en",
+   "stem": {
+    "en": "How many degrees is {k}π/{d} radians?",
+    "uz": "{k}π/{d} radian necha gradus?",
+    "ru": "Сколько градусов составляет {k}π/{d} радиан?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "π rad = 180°, so {k}π/{d} = {k}·180°/{d} = {ANS}°.",
+    "uz": "π radian = 180°, demak {k}π/{d} = {k}·180°/{d} = {ANS}°.",
+    "ru": "π рад = 180°, поэтому {k}π/{d} = {k}·180°/{d} = {ANS}°."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.85,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 120 | 240 | 60 | 60 (seed check:4)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-pch002",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "degrees_to_radians",
+   "sat": {
+    "domain": "geometry_trig",
+    "difficulty": "easy"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is 135° in radians?",
+    "uz": "135° necha radian?",
+    "ru": "Сколько радиан составляет 135°?"
+   },
+   "options": [
+    {
+     "en": "3π/4"
+    },
+    {
+     "en": "4π/3"
+    },
+    {
+     "en": "2π/3"
+    },
+    {
+     "en": "3π/2"
+    }
+   ],
+   "why": {
+    "en": "Multiply by π/180: 135·π/180 = 3π/4.",
+    "uz": "π/180 ga koʻpaytiring: 135·π/180 = 3π/4.",
+    "ru": "Умножим на π/180: 135·π/180 = 3π/4."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 0.85,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch003",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "unit_circle",
+   "sat": {
+    "domain": "geometry_trig",
+    "difficulty": "medium"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is cos(7π/4)?",
+    "uz": "cos(7π/4) nechaga teng?",
+    "ru": "Чему равен cos(7π/4)?"
+   },
+   "options": [
+    {
+     "en": "√2/2"
+    },
+    {
+     "en": "−√2/2"
+    },
+    {
+     "en": "1/2"
+    },
+    {
+     "en": "−√3/2"
+    }
+   ],
+   "why": {
+    "en": "7π/4 is in the fourth quadrant with reference angle π/4, where cosine is positive: √2/2.",
+    "uz": "7π/4 toʻrtinchi chorakda, keltirilgan burchagi π/4; bu chorakda kosinus musbat: √2/2.",
+    "ru": "7π/4 лежит в четвёртой четверти, опорный угол π/4, косинус там положителен: √2/2."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch004",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "unit_circle",
+   "sat": {
+    "domain": "geometry_trig",
+    "difficulty": "medium"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is tan(2π/3)?",
+    "uz": "tan(2π/3) nechaga teng?",
+    "ru": "Чему равен tan(2π/3)?"
+   },
+   "options": [
+    {
+     "en": "−√3"
+    },
+    {
+     "en": "√3"
+    },
+    {
+     "en": "−√3/3"
+    },
+    {
+     "en": "−1/2"
+    }
+   ],
+   "why": {
+    "en": "2π/3 is in the second quadrant with reference angle π/3; tan(π/3) = √3 and tangent is negative there: −√3.",
+    "uz": "2π/3 ikkinchi chorakda, keltirilgan burchagi π/3; tan(π/3) = √3, bu chorakda tangens manfiy: −√3.",
+    "ru": "2π/3 лежит во второй четверти, опорный угол π/3; tan(π/3) = √3, а тангенс там отрицателен: −√3."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch005",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "complementary_angles",
+   "sat": {
+    "domain": "geometry_trig",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "sin({p}a + {q})° = cos({r}a + {s})°, and both angles are between 0° and 90°. What is a?",
+    "params": {
+     "p": {
+      "min": 2,
+      "max": 4
+     },
+     "q": {
+      "min": 5,
+      "max": 20,
+      "step": 5
+     },
+     "r": {
+      "min": 2,
+      "max": 3
+     },
+     "s": {
+      "min": 5,
+      "max": 20,
+      "step": 5
+     }
+    },
+    "derived": {
+     "pr": "p + r",
+     "qs": "q + s"
+    },
+    "constraints": [
+     "(90 - q - s) % (p + r) == 0",
+     "0 < p * (90 - q - s) / (p + r) + q < 90",
+     "0 < r * (90 - q - s) / (p + r) + s < 90",
+     "((90 - q - s) / (p + r)) != ((180 - q - s) / (p + r))",
+     "((90 - q - s) / (p + r)) != ((90 - q + s) / (p + r))",
+     "((90 - q - s) / (p + r)) != (90 / (p + r))",
+     "((180 - q - s) / (p + r)) != ((90 - q + s) / (p + r))",
+     "((180 - q - s) / (p + r)) != (90 / (p + r))",
+     "((90 - q + s) / (p + r)) != (90 / (p + r))"
+    ],
+    "answer": "(90 - q - s) / (p + r)",
+    "distractors": [
+     "(180 - q - s) / (p + r)",
+     "(90 - q + s) / (p + r)",
+     "90 / (p + r)"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 32
+   },
+   "lang": "en",
+   "stem": {
+    "en": "sin({p}a + {q})° = cos({r}a + {s})°, and both angles are between 0° and 90°. What is a?",
+    "uz": "sin({p}a + {q})° = cos({r}a + {s})°, ikkala burchak ham 0° va 90° orasida. a ni toping.",
+    "ru": "sin({p}a + {q})° = cos({r}a + {s})°, оба угла лежат между 0° и 90°. Найдите a."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "sin x° = cos(90 − x)°, so the two angles add to 90°: {pr}a + {qs} = 90 and a = {ANS}.",
+    "uz": "sin x° = cos(90 − x)°, yaʼni ikki burchak yigʻindisi 90°: {pr}a + {qs} = 90, a = {ANS}.",
+    "ru": "sin x° = cos(90 − x)°, поэтому сумма углов равна 90°: {pr}a + {qs} = 90, a = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 16 | 34 | 18 | 18 (seed check:8)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-pch006",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "right_triangle_trig",
+   "sat": {
+    "domain": "geometry_trig",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "In a right triangle, sin A = {a}/{c}, where A is an acute angle. What is tan A?",
+    "params": {
+     "t": {
+      "values": [
+       [
+        3,
+        4,
+        5
+       ],
+       [
+        4,
+        3,
+        5
+       ],
+       [
+        5,
+        12,
+        13
+       ],
+       [
+        12,
+        5,
+        13
+       ],
+       [
+        8,
+        15,
+        17
+       ],
+       [
+        15,
+        8,
+        17
+       ],
+       [
+        7,
+        24,
+        25
+       ],
+       [
+        24,
+        7,
+        25
+       ],
+       [
+        20,
+        21,
+        29
+       ],
+       [
+        21,
+        20,
+        29
+       ],
+       [
+        9,
+        40,
+        41
+       ],
+       [
+        40,
+        9,
+        41
+       ]
+      ]
+     }
+    },
+    "derived": {
+     "a": "t[0]",
+     "b": "t[1]",
+     "c": "t[2]"
+    },
+    "answer": "a / b",
+    "option_templates": [
+     "{a}/{b}",
+     "{b}/{a}",
+     "{b}/{c}",
+     "{c}/{b}"
+    ],
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 12
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In a right triangle, sin A = {a}/{c}, where A is an acute angle. What is tan A?",
+    "uz": "Toʻgʻri burchakli uchburchakda sin A = {a}/{c} (A — oʻtkir burchak). tan A nechaga teng?",
+    "ru": "В прямоугольном треугольнике sin A = {a}/{c} (A — острый угол). Чему равен tan A?"
+   },
+   "why": {
+    "en": "Opposite side {a}, hypotenuse {c}, so the adjacent side is √({c}² − {a}²) = {b}; tan A = {a}/{b}.",
+    "uz": "Qarama-qarshi katet {a}, gipotenuza {c}, demak yopishgan katet √({c}² − {a}²) = {b}; tan A = {a}/{b}.",
+    "ru": "Противолежащий катет {a}, гипотенуза {c}, значит прилежащий катет √({c}² − {a}²) = {b}; tan A = {a}/{b}."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch007",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "trig_signs",
+   "sat": {
+    "domain": "geometry_trig",
+    "difficulty": "hard"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "sin θ = 3/5 and π/2 < θ < π. What is cos θ?",
+    "uz": "sin θ = 3/5 va π/2 < θ < π. cos θ nechaga teng?",
+    "ru": "sin θ = 3/5 и π/2 < θ < π. Найдите cos θ."
+   },
+   "options": [
+    {
+     "en": "−4/5"
+    },
+    {
+     "en": "4/5"
+    },
+    {
+     "en": "−3/4"
+    },
+    {
+     "en": "−5/4"
+    }
+   ],
+   "why": {
+    "en": "cos²θ = 1 − 9/25 = 16/25, and cos θ < 0 in the second quadrant, so cos θ = −4/5.",
+    "uz": "cos²θ = 1 − 9/25 = 16/25, ikkinchi chorakda cos θ < 0, demak cos θ = −4/5.",
+    "ru": "cos²θ = 1 − 9/25 = 16/25, а во второй четверти cos θ < 0, поэтому cos θ = −4/5."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.25,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch008",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "trig_graphs",
+   "lang": "en",
+   "stem": {
+    "en": "What is the period of y = 3 sin(4x)?",
+    "uz": "y = 3 sin(4x) funksiyaning davri nechaga teng?",
+    "ru": "Найдите период функции y = 3 sin(4x)."
+   },
+   "options": [
+    {
+     "en": "π/2"
+    },
+    {
+     "en": "8π"
+    },
+    {
+     "en": "2π/3"
+    },
+    {
+     "en": "π/4"
+    }
+   ],
+   "why": {
+    "en": "The period of sin(kx) is 2π/k = 2π/4 = π/2; the 3 changes only the amplitude.",
+    "uz": "sin(kx) ning davri 2π/k = 2π/4 = π/2; 3 soni faqat amplitudani oʻzgartiradi.",
+    "ru": "Период sin(kx) равен 2π/k = 2π/4 = π/2; множитель 3 меняет только амплитуду."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch009",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "trig_equations",
+   "lang": "en",
+   "stem": {
+    "en": "2 sin x − 1 = 0 and 0 ≤ x < 2π. What are all the solutions?",
+    "uz": "2 sin x − 1 = 0 va 0 ≤ x < 2π. Tenglamaning barcha yechimlarini toping.",
+    "ru": "2 sin x − 1 = 0 и 0 ≤ x < 2π. Найдите все решения уравнения."
+   },
+   "options": [
+    {
+     "en": "π/6, 5π/6"
+    },
+    {
+     "en": "π/6, 7π/6"
+    },
+    {
+     "en": "π/3, 2π/3"
+    },
+    {
+     "en": "π/6, 11π/6"
+    }
+   ],
+   "why": {
+    "en": "sin x = 1/2 on [0, 2π) at x = π/6 and x = π − π/6 = 5π/6.",
+    "uz": "[0, 2π) oraliqda sin x = 1/2 tenglik x = π/6 va x = π − π/6 = 5π/6 da bajariladi.",
+    "ru": "На [0, 2π) sin x = 1/2 при x = π/6 и x = π − π/6 = 5π/6."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch010",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "trig_identities",
+   "lang": "en",
+   "stem": {
+    "en": "For cos x ≠ 1, which expression equals sin²x/(1 − cos x)?",
+    "uz": "cos x ≠ 1 boʻlganda sin²x/(1 − cos x) qaysi ifodaga teng?",
+    "ru": "Какому выражению равно sin²x/(1 − cos x) при cos x ≠ 1?"
+   },
+   "options": [
+    {
+     "en": "1 + cos x"
+    },
+    {
+     "en": "1 − cos x"
+    },
+    {
+     "en": "sin x"
+    },
+    {
+     "en": "1 + sin x"
+    }
+   ],
+   "why": {
+    "en": "sin²x = 1 − cos²x = (1 − cos x)(1 + cos x); cancel 1 − cos x to get 1 + cos x.",
+    "uz": "sin²x = 1 − cos²x = (1 − cos x)(1 + cos x); 1 − cos x ga qisqartirsak, 1 + cos x qoladi.",
+    "ru": "sin²x = 1 − cos²x = (1 − cos x)(1 + cos x); сократим на 1 − cos x и получим 1 + cos x."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.25,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch011",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "double_angle",
+   "family": {
+    "template": "x is an acute angle and sin x = {a}/{c}. What is sin 2x?",
+    "params": {
+     "t": {
+      "values": [
+       [
+        3,
+        4,
+        5
+       ],
+       [
+        4,
+        3,
+        5
+       ],
+       [
+        5,
+        12,
+        13
+       ],
+       [
+        12,
+        5,
+        13
+       ],
+       [
+        8,
+        15,
+        17
+       ],
+       [
+        15,
+        8,
+        17
+       ],
+       [
+        7,
+        24,
+        25
+       ],
+       [
+        24,
+        7,
+        25
+       ],
+       [
+        20,
+        21,
+        29
+       ],
+       [
+        21,
+        20,
+        29
+       ]
+      ]
+     }
+    },
+    "derived": {
+     "a": "t[0]",
+     "b": "t[1]",
+     "c": "t[2]",
+     "cc": "c * c",
+     "tab": "2 * a * b",
+     "twoa": "2 * a",
+     "ab": "a * b",
+     "bma": "b * b - a * a"
+    },
+    "answer": "2 * a * b / (c * c)",
+    "option_templates": [
+     "{tab}/{cc}",
+     "{twoa}/{c}",
+     "{ab}/{cc}",
+     "{bma}/{cc}"
+    ],
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 10
+   },
+   "lang": "en",
+   "stem": {
+    "en": "x is an acute angle and sin x = {a}/{c}. What is sin 2x?",
+    "uz": "x — oʻtkir burchak va sin x = {a}/{c}. sin 2x nechaga teng?",
+    "ru": "Угол x острый и sin x = {a}/{c}. Найдите sin 2x."
+   },
+   "why": {
+    "en": "cos x = {b}/{c}, so sin 2x = 2 sin x cos x = 2·{a}·{b}/{cc} = {tab}/{cc}.",
+    "uz": "cos x = {b}/{c}, demak sin 2x = 2 sin x cos x = 2·{a}·{b}/{cc} = {tab}/{cc}.",
+    "ru": "cos x = {b}/{c}, поэтому sin 2x = 2 sin x cos x = 2·{a}·{b}/{cc} = {tab}/{cc}."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch012",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "law_of_cosines",
+   "family": {
+    "template": "In triangle ABC, AB = {b}, AC = {c} and ∠A = 60°. What is BC?",
+    "params": {
+     "b": {
+      "min": 2,
+      "max": 21
+     },
+     "c": {
+      "min": 2,
+      "max": 21
+     }
+    },
+    "derived": {
+     "a": "round(sqrt(b * b + c * c - b * c))",
+     "aa": "b * b + c * c - b * c",
+     "s2": "b * b + c * c",
+     "s3": "b * b + c * c + b * c",
+     "bc": "b * c",
+     "d1": "abs(c - b)"
+    },
+    "constraints": [
+     "a * a == b * b + c * c - b * c",
+     "b != c",
+     "round(sqrt(s2)) ** 2 != s2",
+     "round(sqrt(s3)) ** 2 != s3"
+    ],
+    "answer": "a",
+    "option_templates": [
+     "{a}",
+     "√{s2}",
+     "√{s3}",
+     "{d1}"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 14
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In triangle ABC, AB = {b}, AC = {c} and ∠A = 60°. What is BC?",
+    "uz": "ABC uchburchakda AB = {b}, AC = {c} va ∠A = 60°. BC ni toping.",
+    "ru": "В треугольнике ABC AB = {b}, AC = {c}, ∠A = 60°. Найдите BC."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Law of cosines: BC² = {b}² + {c}² − 2·{b}·{c}·cos 60° = {s2} − {bc} = {aa}, so BC = {ANS}.",
+    "uz": "Kosinuslar teoremasi: BC² = {b}² + {c}² − 2·{b}·{c}·cos 60° = {s2} − {bc} = {aa}, demak BC = {ANS}.",
+    "ru": "Теорема косинусов: BC² = {b}² + {c}² − 2·{b}·{c}·cos 60° = {s2} − {bc} = {aa}, значит BC = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch013",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "law_of_sines",
+   "lang": "en",
+   "stem": {
+    "en": "In triangle ABC, ∠A = 30°, ∠B = 45° and BC = 4. What is AC?",
+    "uz": "ABC uchburchakda ∠A = 30°, ∠B = 45° va BC = 4. AC ni toping.",
+    "ru": "В треугольнике ABC ∠A = 30°, ∠B = 45°, BC = 4. Найдите AC."
+   },
+   "options": [
+    {
+     "en": "4√2"
+    },
+    {
+     "en": "2√2"
+    },
+    {
+     "en": "4√3"
+    },
+    {
+     "en": "8"
+    }
+   ],
+   "why": {
+    "en": "Law of sines: AC/sin B = BC/sin A, so AC = 4·(√2/2)/(1/2) = 4√2.",
+    "uz": "Sinuslar teoremasi: AC/sin B = BC/sin A, demak AC = 4·(√2/2)/(1/2) = 4√2.",
+    "ru": "Теорема синусов: AC/sin B = BC/sin A, откуда AC = 4·(√2/2)/(1/2) = 4√2."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.25,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch014",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "triangle_area_sine",
+   "family": {
+    "template": "Two sides of a triangle are {a} and {b}, and the angle between them is 30°. What is the area of the triangle?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 12
+     },
+     "b": {
+      "min": 2,
+      "max": 12
+     }
+    },
+    "derived": {
+     "ab": "a * b"
+    },
+    "constraints": [
+     "a < b",
+     "(a * b) % 4 == 0"
+    ],
+    "answer": "a * b / 4",
+    "distractors": [
+     "a * b / 2",
+     "a * b",
+     "a * b / 8"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 30
+   },
+   "lang": "en",
+   "stem": {
+    "en": "Two sides of a triangle are {a} and {b}, and the angle between them is 30°. What is the area of the triangle?",
+    "uz": "Uchburchakning ikki tomoni {a} va {b}, ular orasidagi burchak 30°. Uchburchak yuzi nechaga teng?",
+    "ru": "Две стороны треугольника равны {a} и {b}, угол между ними 30°. Найдите площадь треугольника."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "S = ½·{a}·{b}·sin 30° = ½·{ab}·½ = {ANS}.",
+    "uz": "S = ½·{a}·{b}·sin 30° = ½·{ab}·½ = {ANS}.",
+    "ru": "S = ½·{a}·{b}·sin 30° = ½·{ab}·½ = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch015",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "inverse_functions",
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = (2x + 3)/(x − 1). Which expression is f⁻¹(x)?",
+    "uz": "f(x) = (2x + 3)/(x − 1). f⁻¹(x) qaysi ifodaga teng?",
+    "ru": "f(x) = (2x + 3)/(x − 1). Какое выражение задаёт f⁻¹(x)?"
+   },
+   "options": [
+    {
+     "en": "(x + 3)/(x − 2)"
+    },
+    {
+     "en": "(x − 1)/(2x + 3)"
+    },
+    {
+     "en": "(x − 3)/(x + 2)"
+    },
+    {
+     "en": "(2x − 3)/(x + 1)"
+    }
+   ],
+   "why": {
+    "en": "Solve y = (2x + 3)/(x − 1) for x: xy − y = 2x + 3, x(y − 2) = y + 3, so f⁻¹(x) = (x + 3)/(x − 2).",
+    "uz": "y = (2x + 3)/(x − 1) dan x ni toping: xy − y = 2x + 3, x(y − 2) = y + 3, demak f⁻¹(x) = (x + 3)/(x − 2).",
+    "ru": "Выразим x из y = (2x + 3)/(x − 1): xy − y = 2x + 3, x(y − 2) = y + 3, значит f⁻¹(x) = (x + 3)/(x − 2)."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.25,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch016",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "inverse_functions",
+   "family": {
+    "template": "f(x) = x³ + {c}. What is f⁻¹({N})?",
+    "params": {
+     "k": {
+      "min": 2,
+      "max": 5
+     },
+     "c": {
+      "min": 1,
+      "max": 9
+     }
+    },
+    "derived": {
+     "N": "k**3 + c",
+     "k3": "k**3"
+    },
+    "answer": "k",
+    "distractors": [
+     "N - c",
+     "N + c",
+     "k * k"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 36
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = x³ + {c}. What is f⁻¹({N})?",
+    "uz": "f(x) = x³ + {c}. f⁻¹({N}) ni toping.",
+    "ru": "f(x) = x³ + {c}. Найдите f⁻¹({N})."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f⁻¹({N}) is the x with x³ + {c} = {N}: x³ = {k3}, so x = {ANS}.",
+    "uz": "f⁻¹({N}) — bu x³ + {c} = {N} boʻladigan x: x³ = {k3}, demak x = {ANS}.",
+    "ru": "f⁻¹({N}) — это x, для которого x³ + {c} = {N}: x³ = {k3}, значит x = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch017",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "domain",
+   "lang": "en",
+   "stem": {
+    "en": "What is the domain of f(x) = √(x − 2)/(x − 5)?",
+    "uz": "f(x) = √(x − 2)/(x − 5) funksiyaning aniqlanish sohasini toping.",
+    "ru": "Найдите область определения функции f(x) = √(x − 2)/(x − 5)."
+   },
+   "options": [
+    {
+     "en": "x ≥ 2, x ≠ 5"
+    },
+    {
+     "en": "x > 2, x ≠ 5"
+    },
+    {
+     "en": "x ≥ 2"
+    },
+    {
+     "en": "x ≠ 5"
+    }
+   ],
+   "why": {
+    "en": "The root needs x − 2 ≥ 0 and the denominator needs x ≠ 5: x ≥ 2, x ≠ 5.",
+    "uz": "Ildiz uchun x − 2 ≥ 0, maxraj uchun x ≠ 5 boʻlishi kerak: x ≥ 2, x ≠ 5.",
+    "ru": "Под корнем нужно x − 2 ≥ 0, а знаменатель не равен нулю: x ≠ 5. Итого x ≥ 2, x ≠ 5."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch018",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "even_odd_functions",
+   "lang": "en",
+   "stem": {
+    "en": "Which function is odd, that is, f(−x) = −f(x) for every x?",
+    "uz": "Qaysi funksiya toq, yaʼni har qanday x uchun f(−x) = −f(x)?",
+    "ru": "Какая функция нечётная, т. е. f(−x) = −f(x) при всех x?"
+   },
+   "options": [
+    {
+     "en": "f(x) = x³ − x"
+    },
+    {
+     "en": "f(x) = x² + 1"
+    },
+    {
+     "en": "f(x) = |x|"
+    },
+    {
+     "en": "f(x) = x³ + 1"
+    }
+   ],
+   "why": {
+    "en": "(−x)³ − (−x) = −x³ + x = −(x³ − x); the others fail, e.g. x³ + 1 is 2 at x = 1 but 0 at x = −1.",
+    "uz": "(−x)³ − (−x) = −x³ + x = −(x³ − x); qolganlari bajarmaydi, masalan x³ + 1 ifoda x = 1 da 2, x = −1 da esa 0.",
+    "ru": "(−x)³ − (−x) = −x³ + x = −(x³ − x); остальные не подходят: например, x³ + 1 при x = 1 равно 2, а при x = −1 равно 0."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 0.85,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch019",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "rational_functions",
+   "family": {
+    "template": "The graph of y = ({a}x² − 1)/({b}x² + x) has the horizontal asymptote y = c. What is c?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 9
+     },
+     "b": {
+      "min": 2,
+      "max": 5
+     }
+    },
+    "constraints": [
+     "(100 * a) % b == 0",
+     "a != b"
+    ],
+    "answer": "a / b",
+    "option_templates": [
+     "{ANS}",
+     "{b}/{a}",
+     "0",
+     "{a}"
+    ],
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 22
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The graph of y = ({a}x² − 1)/({b}x² + x) has the horizontal asymptote y = c. What is c?",
+    "uz": "y = ({a}x² − 1)/({b}x² + x) funksiya grafigining gorizontal asimptotasi y = c. c ni toping.",
+    "ru": "Горизонтальная асимптота графика y = ({a}x² − 1)/({b}x² + x) — прямая y = c. Найдите c."
+   },
+   "answer_numeric": {
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "The degrees are equal, so c is the ratio of the leading coefficients: {a}/{b} = {ANS}.",
+    "uz": "Surat va maxraj darajalari teng, shuning uchun c bosh koeffitsiyentlar nisbati: {a}/{b} = {ANS}.",
+    "ru": "Степени числителя и знаменателя равны, поэтому c — отношение старших коэффициентов: {a}/{b} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.05,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": null,
+   "status": "draft",
+   "version": 2,
+   "quarantine_reason": "family.distractor: a distractor equals the key 1: {__ANS} | 2/2 | 0 | 2 (seed check:1)"
+  },
+  {
+   "id": "K4-pch020",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "polynomial_zeros",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "p(x) = x³ − {A}x² + {B}x − {C}, and p(1) = 0. What is the largest zero of p?",
+    "params": {
+     "r": {
+      "min": 2,
+      "max": 6
+     },
+     "s": {
+      "min": 3,
+      "max": 9
+     }
+    },
+    "derived": {
+     "A": "1 + r + s",
+     "B": "r + s + r * s",
+     "C": "r * s",
+     "rs": "r + s"
+    },
+    "constraints": [
+     "r < s",
+     "(s) != (r)",
+     "(s) != (C)",
+     "(s) != (A)",
+     "(r) != (C)",
+     "(r) != (A)",
+     "(C) != (A)"
+    ],
+    "answer": "s",
+    "distractors": [
+     "r",
+     "C",
+     "A"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 24
+   },
+   "lang": "en",
+   "stem": {
+    "en": "p(x) = x³ − {A}x² + {B}x − {C}, and p(1) = 0. What is the largest zero of p?",
+    "uz": "p(x) = x³ − {A}x² + {B}x − {C} va p(1) = 0. p ning eng katta nolini toping.",
+    "ru": "p(x) = x³ − {A}x² + {B}x − {C}, причём p(1) = 0. Найдите наибольший нуль многочлена p."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Divide by x − 1: p(x) = (x − 1)(x² − {rs}x + {C}) = (x − 1)(x − {r})(x − {s}); the largest zero is {s}.",
+    "uz": "x − 1 ga boʻling: p(x) = (x − 1)(x² − {rs}x + {C}) = (x − 1)(x − {r})(x − {s}); eng katta nol {s}.",
+    "ru": "Разделим на x − 1: p(x) = (x − 1)(x² − {rs}x + {C}) = (x − 1)(x − {r})(x − {s}); наибольший нуль {s}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 3 | 2 | 6 | 6 (seed check:3)",
+   "key_check_2_version": 2
+  }
+ ]
+}

@@ -1,0 +1,3285 @@
+{
+ "bank": "C10",
+ "batch": 4,
+ "kind": "catalog",
+ "note": "Test-prep units (P5 spec §5.3 C10). Catalog records, not quiz items: no options or keys. 'practice[].where' is a tag query against the practice pools (C1, C2, C3, C5, C6, C7); subskill values are proposed tags the integrator maps onto each stream's vocabulary, falling back to 'fallback_where'. End-of-unit checks draw only from practice pools, never from the K assessment banks. Official links are links only. Pass marks are design defaults to tune from logs (spec §4.5), not evidence-based thresholds.",
+ "items": [
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IEWR01",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "writing",
+   "skill_label": {
+    "en": "Writing",
+    "uz": "Writing (yozish)",
+    "ru": "Writing (письмо)"
+   },
+   "unit": 1,
+   "units_in_skill": 6,
+   "level_band": "foundation",
+   "title": {
+    "en": "Task 1: overview and trends in line and bar graphs",
+    "uz": "Task 1: chiziqli va ustunli grafiklarda umumiy koʻrinish va tendensiyalar",
+    "ru": "Task 1: общая картина и тенденции на линейных и столбчатых графиках"
+   },
+   "goal": {
+    "en": "Write a Task 1 report of at least 150 words in about 20 minutes that gives an overview and the key trends of a line or bar graph.",
+    "uz": "Chiziqli yoki ustunli grafikning umumiy koʻrinishi va asosiy tendensiyalarini beradigan kamida 150 soʻzli Task 1 hisobotini taxminan 20 daqiqada yozing.",
+    "ru": "Напишите отчёт Task 1 не менее 150 слов примерно за 20 минут с общей картиной и главными тенденциями линейного или столбчатого графика."
+   },
+   "study": [
+    {
+     "en": "Structure: one sentence saying what the graph shows, an overview of the main trends, then two body paragraphs with selected figures.",
+     "uz": "Tuzilish: grafik nimani koʻrsatishini aytadigan bitta gap, asosiy tendensiyalarning umumiy koʻrinishi, keyin tanlangan raqamlar bilan ikki asosiy xatboshi.",
+     "ru": "Структура: одно предложение о том, что показывает график, общая картина главных тенденций, затем два абзаца с отобранными цифрами."
+    },
+    {
+     "en": "Describe only what the data show; do not add opinions or reasons the graph does not give.",
+     "uz": "Faqat maʼlumotlar koʻrsatgan narsani tasvirlang; grafikda yoʻq fikr yoki sabablarni qoʻshmang.",
+     "ru": "Описывайте только то, что показывают данные; не добавляйте мнений и причин, которых нет на графике."
+    },
+    {
+     "en": "Vary your trend language: rose steadily, fell sharply, peaked at, remained stable.",
+     "uz": "Tendensiyani ifodalash uchun turli iboralardan foydalaning: rose steadily, fell sharply, peaked at, remained stable.",
+     "ru": "Разнообразьте язык тенденций: rose steadily, fell sharply, peaked at, remained stable."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_writing",
+      "task": "task1",
+      "task_type": [
+       "line_graph",
+       "bar_chart"
+      ],
+      "band": "from_student_level"
+     },
+     "fallback_where": {
+      "skill": "ielts_writing",
+      "task": "task1"
+     },
+     "band_note": "prompt band chosen from the student's measured English level (C7 has one prompt per task type per band)",
+     "n": 1,
+     "split": [
+      1
+     ],
+     "minutes_each": 25,
+     "purpose": {
+      "en": "One Task 1 report on a line or bar graph.",
+      "uz": "Chiziqli yoki ustunli grafik boʻyicha bitta Task 1 hisoboti.",
+      "ru": "Один отчёт Task 1 по линейному или столбчатому графику."
+     },
+     "task_type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "artifact_rules": {
+      "min_words": 150,
+      "lang": "en",
+      "not_blank": true,
+      "not_prompt_copy": true
+     }
+    },
+    {
+     "content": "C3",
+     "where": {
+      "skill": "en_grammar",
+      "level": [
+       "B1",
+       "B2"
+      ],
+      "subskill": [
+       "comparatives",
+       "past_simple",
+       "prepositions"
+      ]
+     },
+     "fallback_where": {
+      "skill": "en_grammar",
+      "level": [
+       "B1",
+       "B2"
+      ]
+     },
+     "n": 12,
+     "split": [
+      12
+     ],
+     "minutes_each": 5,
+     "purpose": {
+      "en": "Grammar for describing change and comparing numbers.",
+      "uz": "Oʻzgarishni tasvirlash va raqamlarni solishtirish uchun grammatika.",
+      "ru": "Грамматика для описания изменений и сравнения чисел."
+     }
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Look at the Academic Writing Part 1 sample task.",
+      "uz": "Academic Writing Part 1 namunaviy topshirigʻini koʻrib chiqing.",
+      "ru": "Посмотрите пример задания Academic Writing Part 1."
+     }
+    },
+    {
+     "id": "ielts_writing_descriptors",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-writing-band-descriptors.pdf",
+     "kind": "band_descriptors",
+     "label": {
+      "en": "IELTS Writing band descriptors (PDF)",
+      "uz": "IELTS Writing band deskriptorlari (PDF)",
+      "ru": "Дескрипторы баллов IELTS Writing (PDF)"
+     },
+     "note": {
+      "en": "The official descriptions of each band for Task 1 and Task 2.",
+      "uz": "Task 1 va Task 2 uchun har bir ball darajasining rasmiy tavsifi.",
+      "ru": "Официальные описания каждого балла для Task 1 и Task 2."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources"
+    },
+    {
+     "id": "ielts_writing_criteria",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-writing-key-assessment-criteria.pdf",
+     "kind": "guide",
+     "label": {
+      "en": "IELTS Writing key assessment criteria (PDF)",
+      "uz": "IELTS Writing asosiy baholash mezonlari (PDF)",
+      "ru": "Ключевые критерии оценки IELTS Writing (PDF)"
+     },
+     "note": {
+      "en": "Explains the four criteria in plain language.",
+      "uz": "Toʻrt mezonni oddiy tilda tushuntiradi.",
+      "ru": "Простым языком объясняет четыре критерия."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources"
+    }
+   ],
+   "end_check": {
+    "verification": "artifact",
+    "ladder": "L3",
+    "task_type": "create",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_writing",
+     "task": "task1",
+     "task_type": [
+      "line_graph",
+      "bar_chart"
+     ],
+     "band": "from_student_level"
+    },
+    "fresh_items": true,
+    "minutes": 20,
+    "time_limit_s": 1200,
+    "artifact_rules": {
+     "min_words": 150,
+     "lang": "en",
+     "not_blank": true,
+     "not_prompt_copy": true
+    },
+    "self_rating": {
+     "criteria": [
+      "task_achievement_or_response",
+      "coherence_cohesion",
+      "lexical_resource",
+      "grammatical_range_accuracy"
+     ],
+     "scale": "band 1-9, self-assessed",
+     "ladder": "L1"
+    },
+    "pass": {
+     "rule": "code checks pass (word count, English, not blank, not the prompt pasted back) and the self-rating is filled in",
+     "basis": "a band score needs a trained marker; this check confirms the work was done, not its band"
+    },
+    "instructions": {
+     "en": "Write a Task 1 report on a new line or bar graph in 20 minutes, at least 150 words. Then rate your text on the four criteria with the official band descriptors and write one thing to fix next time.",
+     "uz": "Yangi chiziqli yoki ustunli grafik boʻyicha 20 daqiqada kamida 150 soʻzli Task 1 hisobotini yozing. Keyin matningizni rasmiy band deskriptorlari boʻyicha toʻrt mezon asosida baholang va keyingi safar tuzatadigan bitta narsani yozing.",
+     "ru": "Напишите отчёт Task 1 по новому линейному или столбчатому графику за 20 минут, не менее 150 слов. Затем оцените текст по четырём критериям с официальными дескрипторами баллов и запишите одну вещь, которую исправите в следующий раз."
+    },
+    "on_fail": {
+     "en": "If the text is under the word count, finish it before the next unit; length is part of the task.",
+     "uz": "Agar matn soʻz sonidan qisqa boʻlsa, keyingi boʻlimdan oldin uni tugating; hajm topshiriqning bir qismi.",
+     "ru": "Если текст короче нужного объёма, допишите его до следующего раздела: объём — часть задания."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 30,
+    "check": 20,
+    "official_required": 0,
+    "official_optional": 0,
+    "total": 65
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "basis": "design default: below B1 the English ladder (C3, C5) comes first"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Academic Writing: Task 1 describes visual information (a graph, table, chart or diagram) in at least 150 words in about 20 minutes; Task 2 discusses a point of view, argument or problem in at least 250 words in about 40 minutes; 60 minutes in all.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Task 2 contributes twice as much as Task 1 to the Writing score.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Writing is marked on task achievement (Task 1) or task response (Task 2), coherence and cohesion, lexical resource, and grammatical range and accuracy.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Task 1: overview and trends in line and bar graphs",
+      "uz": "Oʻrganing: Task 1: chiziqli va ustunli grafiklarda umumiy koʻrinish va tendensiyalar",
+      "ru": "Изучите: Task 1: общая картина и тенденции на линейных и столбчатых графиках"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "minutes": 25,
+     "title": {
+      "en": "Practice 1: Task 1: overview and trends in line and bar graphs",
+      "uz": "Mashq 1: Task 1: chiziqli va ustunli grafiklarda umumiy koʻrinish va tendensiyalar",
+      "ru": "Практика 1: Task 1: общая картина и тенденции на линейных и столбчатых графиках"
+     },
+     "practice_ref": 0,
+     "items": 1,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 5,
+     "title": {
+      "en": "Practice 2: Task 1: overview and trends in line and bar graphs",
+      "uz": "Mashq 2: Task 1: chiziqli va ustunli grafiklarda umumiy koʻrinish va tendensiyalar",
+      "ru": "Практика 2: Task 1: общая картина и тенденции на линейных и столбчатых графиках"
+     },
+     "practice_ref": 1,
+     "items": 12,
+     "n": 3
+    },
+    {
+     "type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "minutes": 20,
+     "title": {
+      "en": "End-of-unit check: Task 1: overview and trends in line and bar graphs",
+      "uz": "Boʻlim yakuniy tekshiruvi: Task 1: chiziqli va ustunli grafiklarda umumiy koʻrinish va tendensiyalar",
+      "ru": "Итоговая проверка раздела: Task 1: общая картина и тенденции на линейных и столбчатых графиках"
+     },
+     "end_check": true,
+     "n": 4
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IEWR02",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "writing",
+   "skill_label": {
+    "en": "Writing",
+    "uz": "Writing (yozish)",
+    "ru": "Writing (письмо)"
+   },
+   "unit": 2,
+   "units_in_skill": 6,
+   "level_band": "core",
+   "title": {
+    "en": "Task 1: tables, pie charts, processes and maps",
+    "uz": "Task 1: jadvallar, doiraviy diagrammalar, jarayonlar va xaritalar",
+    "ru": "Task 1: таблицы, круговые диаграммы, процессы и карты"
+   },
+   "goal": {
+    "en": "Compare figures in tables and pie charts, and describe processes and changes on maps, in at least 150 words.",
+    "uz": "Jadval va doiraviy diagrammalardagi raqamlarni solishtiring, jarayonlar va xaritadagi oʻzgarishlarni kamida 150 soʻzda tasvirlang.",
+    "ru": "Сравнивайте данные таблиц и круговых диаграмм, описывайте процессы и изменения на картах, не менее 150 слов."
+   },
+   "study": [
+    {
+     "en": "Group the data: compare the largest and smallest, or similar items, instead of listing every number.",
+     "uz": "Maʼlumotlarni guruhlang: har bir raqamni sanab oʻtish oʻrniga eng katta va eng kichigini yoki oʻxshashlarini solishtiring.",
+     "ru": "Группируйте данные: сравнивайте наибольшее и наименьшее или похожие пункты, а не перечисляйте все числа."
+    },
+    {
+     "en": "Processes: use sequence words (first, next, once this has happened) and the passive (the leaves are dried).",
+     "uz": "Jarayonlar: ketma-ketlik soʻzlari (first, next, once this has happened) va majhul nisbatdan (the leaves are dried) foydalaning.",
+     "ru": "Процессы: используйте слова последовательности (first, next, once this has happened) и пассив (the leaves are dried)."
+    },
+    {
+     "en": "Maps: say what was added, removed or changed, with past and present forms.",
+     "uz": "Xaritalar: nima qoʻshilgani, olib tashlangani yoki oʻzgarganini oʻtgan va hozirgi zamon shakllari bilan ayting.",
+     "ru": "Карты: говорите, что добавили, убрали или изменили, используя прошедшие и настоящие формы."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_writing",
+      "task": "task1",
+      "task_type": [
+       "table",
+       "pie_chart"
+      ],
+      "band": "from_student_level"
+     },
+     "fallback_where": {
+      "skill": "ielts_writing",
+      "task": "task1"
+     },
+     "band_note": "prompt band chosen from the student's measured English level (C7 has one prompt per task type per band)",
+     "n": 1,
+     "split": [
+      1
+     ],
+     "minutes_each": 25,
+     "purpose": {
+      "en": "One Task 1 report on a table or pie chart.",
+      "uz": "Jadval yoki doiraviy diagramma boʻyicha bitta Task 1 hisoboti.",
+      "ru": "Один отчёт Task 1 по таблице или круговой диаграмме."
+     },
+     "task_type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "artifact_rules": {
+      "min_words": 150,
+      "lang": "en",
+      "not_blank": true,
+      "not_prompt_copy": true
+     }
+    },
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_writing",
+      "task": "task1",
+      "task_type": [
+       "process",
+       "map"
+      ],
+      "band": "from_student_level"
+     },
+     "fallback_where": {
+      "skill": "ielts_writing",
+      "task": "task1"
+     },
+     "band_note": "prompt band chosen from the student's measured English level (C7 has one prompt per task type per band)",
+     "n": 1,
+     "split": [
+      1
+     ],
+     "minutes_each": 25,
+     "purpose": {
+      "en": "One Task 1 report on a process or a map.",
+      "uz": "Jarayon yoki xarita boʻyicha bitta Task 1 hisoboti.",
+      "ru": "Один отчёт Task 1 по процессу или карте."
+     },
+     "task_type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "artifact_rules": {
+      "min_words": 150,
+      "lang": "en",
+      "not_blank": true,
+      "not_prompt_copy": true
+     }
+    },
+    {
+     "content": "C3",
+     "where": {
+      "skill": "en_grammar",
+      "level": [
+       "B2"
+      ],
+      "subskill": [
+       "passive_voice",
+       "sequencing"
+      ]
+     },
+     "fallback_where": {
+      "skill": "en_grammar",
+      "level": [
+       "B2"
+      ]
+     },
+     "n": 10,
+     "split": [
+      10
+     ],
+     "minutes_each": 5,
+     "purpose": {
+      "en": "Passive voice and sequencing.",
+      "uz": "Majhul nisbat va ketma-ketlik.",
+      "ru": "Пассивный залог и последовательность."
+     }
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Look at the Academic Writing Part 1 sample on paper as well.",
+      "uz": "Academic Writing Part 1 ning qogʻozdagi namunasini ham koʻrib chiqing.",
+      "ru": "Посмотрите также бумажный вариант примера Academic Writing Part 1."
+     }
+    },
+    {
+     "id": "ielts_writing_descriptors",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-writing-band-descriptors.pdf",
+     "kind": "band_descriptors",
+     "label": {
+      "en": "IELTS Writing band descriptors (PDF)",
+      "uz": "IELTS Writing band deskriptorlari (PDF)",
+      "ru": "Дескрипторы баллов IELTS Writing (PDF)"
+     },
+     "note": {
+      "en": "The official descriptions of each band for Task 1 and Task 2.",
+      "uz": "Task 1 va Task 2 uchun har bir ball darajasining rasmiy tavsifi.",
+      "ru": "Официальные описания каждого балла для Task 1 и Task 2."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources"
+    }
+   ],
+   "end_check": {
+    "verification": "artifact",
+    "ladder": "L3",
+    "task_type": "create",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_writing",
+     "task": "task1",
+     "task_type": [
+      "table",
+      "pie_chart",
+      "process",
+      "map"
+     ],
+     "band": "from_student_level"
+    },
+    "fresh_items": true,
+    "minutes": 20,
+    "time_limit_s": 1200,
+    "artifact_rules": {
+     "min_words": 150,
+     "lang": "en",
+     "not_blank": true,
+     "not_prompt_copy": true
+    },
+    "self_rating": {
+     "criteria": [
+      "task_achievement_or_response",
+      "coherence_cohesion",
+      "lexical_resource",
+      "grammatical_range_accuracy"
+     ],
+     "scale": "band 1-9, self-assessed",
+     "ladder": "L1"
+    },
+    "pass": {
+     "rule": "code checks pass (word count, English, not blank, not the prompt pasted back) and the self-rating is filled in",
+     "basis": "a band score needs a trained marker; this check confirms the work was done, not its band"
+    },
+    "instructions": {
+     "en": "Write a Task 1 report on a new table, pie chart, process or map in 20 minutes, at least 150 words. Then rate your text on the four criteria with the official band descriptors and write one thing to fix next time.",
+     "uz": "Yangi jadval, doiraviy diagramma, jarayon yoki xarita boʻyicha 20 daqiqada kamida 150 soʻzli Task 1 hisobotini yozing. Keyin matningizni rasmiy band deskriptorlari boʻyicha toʻrt mezon asosida baholang va keyingi safar tuzatadigan bitta narsani yozing.",
+     "ru": "Напишите отчёт Task 1 по новой таблице, круговой диаграмме, процессу или карте за 20 минут, не менее 150 слов. Затем оцените текст по четырём критериям с официальными дескрипторами баллов и запишите одну вещь, которую исправите в следующий раз."
+    },
+    "on_fail": {
+     "en": "If the text is under the word count, finish it before the next unit; length is part of the task.",
+     "uz": "Agar matn soʻz sonidan qisqa boʻlsa, keyingi boʻlimdan oldin uni tugating; hajm topshiriqning bir qismi.",
+     "ru": "Если текст короче нужного объёма, допишите его до следующего раздела: объём — часть задания."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 55,
+    "check": 20,
+    "official_required": 0,
+    "official_optional": 0,
+    "total": 90
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "basis": "design default: below B1 the English ladder (C3, C5) comes first"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Academic Writing: Task 1 describes visual information (a graph, table, chart or diagram) in at least 150 words in about 20 minutes; Task 2 discusses a point of view, argument or problem in at least 250 words in about 40 minutes; 60 minutes in all.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Task 2 contributes twice as much as Task 1 to the Writing score.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Writing is marked on task achievement (Task 1) or task response (Task 2), coherence and cohesion, lexical resource, and grammatical range and accuracy.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Task 1: tables, pie charts, processes and maps",
+      "uz": "Oʻrganing: Task 1: jadvallar, doiraviy diagrammalar, jarayonlar va xaritalar",
+      "ru": "Изучите: Task 1: таблицы, круговые диаграммы, процессы и карты"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "minutes": 25,
+     "title": {
+      "en": "Practice 1: Task 1: tables, pie charts, processes and maps",
+      "uz": "Mashq 1: Task 1: jadvallar, doiraviy diagrammalar, jarayonlar va xaritalar",
+      "ru": "Практика 1: Task 1: таблицы, круговые диаграммы, процессы и карты"
+     },
+     "practice_ref": 0,
+     "items": 1,
+     "n": 2
+    },
+    {
+     "type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "minutes": 25,
+     "title": {
+      "en": "Practice 2: Task 1: tables, pie charts, processes and maps",
+      "uz": "Mashq 2: Task 1: jadvallar, doiraviy diagrammalar, jarayonlar va xaritalar",
+      "ru": "Практика 2: Task 1: таблицы, круговые диаграммы, процессы и карты"
+     },
+     "practice_ref": 1,
+     "items": 1,
+     "n": 3
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 5,
+     "title": {
+      "en": "Practice 3: Task 1: tables, pie charts, processes and maps",
+      "uz": "Mashq 3: Task 1: jadvallar, doiraviy diagrammalar, jarayonlar va xaritalar",
+      "ru": "Практика 3: Task 1: таблицы, круговые диаграммы, процессы и карты"
+     },
+     "practice_ref": 2,
+     "items": 10,
+     "n": 4
+    },
+    {
+     "type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "minutes": 20,
+     "title": {
+      "en": "End-of-unit check: Task 1: tables, pie charts, processes and maps",
+      "uz": "Boʻlim yakuniy tekshiruvi: Task 1: jadvallar, doiraviy diagrammalar, jarayonlar va xaritalar",
+      "ru": "Итоговая проверка раздела: Task 1: таблицы, круговые диаграммы, процессы и карты"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 5,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IEWR03",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "writing",
+   "skill_label": {
+    "en": "Writing",
+    "uz": "Writing (yozish)",
+    "ru": "Writing (письмо)"
+   },
+   "unit": 3,
+   "units_in_skill": 6,
+   "level_band": "core",
+   "title": {
+    "en": "Task 2: question types and planning",
+    "uz": "Task 2: savol turlari va reja tuzish",
+    "ru": "Task 2: типы вопросов и план"
+   },
+   "goal": {
+    "en": "Recognise the Task 2 question type (opinion, discussion, problem and solution, two-part question) and plan a 250-word essay in five minutes.",
+    "uz": "Task 2 savol turini (fikr bildirish, muhokama, muammo va yechim, ikki qismli savol) aniqlang va 250 soʻzli insho rejasini besh daqiqada tuzing.",
+    "ru": "Определяйте тип вопроса Task 2 (мнение, обсуждение, проблема и решение, вопрос из двух частей) и составляйте план эссе на 250 слов за пять минут."
+   },
+   "study": [
+    {
+     "en": "Underline every part of the question; an essay that skips a part cannot fully answer it.",
+     "uz": "Savolning har bir qismining tagiga chizing; biror qismini tashlab ketgan insho savolga toʻliq javob bera olmaydi.",
+     "ru": "Подчеркните каждую часть вопроса: эссе, пропустившее часть, не может ответить на него полностью."
+    },
+    {
+     "en": "Plan: your position, two main ideas, and one explanation or example for each.",
+     "uz": "Reja: pozitsiyangiz, ikkita asosiy fikr va har biri uchun bitta izoh yoki misol.",
+     "ru": "План: ваша позиция, две главные мысли и по одному объяснению или примеру к каждой."
+    },
+    {
+     "en": "Task 2 counts twice as much as Task 1, so give it about 40 minutes.",
+     "uz": "Task 2 Task 1 ga qaraganda ikki baravar koʻp hisoblanadi, shuning uchun unga taxminan 40 daqiqa ajrating.",
+     "ru": "Task 2 весит вдвое больше Task 1, поэтому отводите на него около 40 минут."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_writing",
+      "task": "task2",
+      "task_type": [
+       "opinion",
+       "discussion",
+       "problem_solution",
+       "two_part"
+      ],
+      "band": "from_student_level"
+     },
+     "fallback_where": {
+      "skill": "ielts_writing",
+      "task": "task2"
+     },
+     "band_note": "prompt band chosen from the student's measured English level (C7 has one prompt per task type per band)",
+     "n": 1,
+     "split": [
+      1
+     ],
+     "minutes_each": 45,
+     "purpose": {
+      "en": "Plan three different Task 2 prompts in five minutes each, then write one of them in full.",
+      "uz": "Uchta turli Task 2 topshirigʻi uchun har biriga besh daqiqadan reja tuzing, keyin bittasini toʻliq yozing.",
+      "ru": "Составьте планы к трём разным заданиям Task 2 по пять минут на каждый, затем напишите одно полностью."
+     },
+     "task_type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "artifact_rules": {
+      "min_words": 250,
+      "lang": "en",
+      "not_blank": true,
+      "not_prompt_copy": true
+     },
+     "long": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Look at the Academic Writing Part 2 sample and the example responses with examiner comments.",
+      "uz": "Academic Writing Part 2 namunasini va imtihon oluvchi izohlari bilan berilgan javob namunalarini koʻrib chiqing.",
+      "ru": "Посмотрите пример Academic Writing Part 2 и образцы ответов с комментариями экзаменатора."
+     }
+    },
+    {
+     "id": "ielts_writing_descriptors",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-writing-band-descriptors.pdf",
+     "kind": "band_descriptors",
+     "label": {
+      "en": "IELTS Writing band descriptors (PDF)",
+      "uz": "IELTS Writing band deskriptorlari (PDF)",
+      "ru": "Дескрипторы баллов IELTS Writing (PDF)"
+     },
+     "note": {
+      "en": "The official descriptions of each band for Task 1 and Task 2.",
+      "uz": "Task 1 va Task 2 uchun har bir ball darajasining rasmiy tavsifi.",
+      "ru": "Официальные описания каждого балла для Task 1 и Task 2."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources"
+    },
+    {
+     "id": "ielts_writing_res",
+     "url": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources",
+     "kind": "guide",
+     "label": {
+      "en": "IELTS Writing: official preparation resources",
+      "uz": "IELTS Writing: rasmiy tayyorgarlik materiallari",
+      "ru": "IELTS Writing: официальные материалы для подготовки"
+     },
+     "note": {
+      "en": "Videos on how Writing is scored, the key assessment criteria and the band descriptors.",
+      "uz": "Writing qanday baholanishi haqida videolar, asosiy baholash mezonlari va band deskriptorlari.",
+      "ru": "Видео о том, как оценивается Writing, ключевые критерии оценки и дескрипторы баллов."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources"
+    }
+   ],
+   "end_check": {
+    "verification": "artifact",
+    "ladder": "L3",
+    "task_type": "create",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_writing",
+     "task": "task2",
+     "task_type": [
+      "opinion",
+      "discussion",
+      "problem_solution",
+      "two_part"
+     ],
+     "band": "from_student_level"
+    },
+    "fresh_items": true,
+    "minutes": 40,
+    "time_limit_s": 2400,
+    "artifact_rules": {
+     "min_words": 250,
+     "lang": "en",
+     "not_blank": true,
+     "not_prompt_copy": true
+    },
+    "self_rating": {
+     "criteria": [
+      "task_achievement_or_response",
+      "coherence_cohesion",
+      "lexical_resource",
+      "grammatical_range_accuracy"
+     ],
+     "scale": "band 1-9, self-assessed",
+     "ladder": "L1"
+    },
+    "pass": {
+     "rule": "code checks pass (word count, English, not blank, not the prompt pasted back) and the self-rating is filled in",
+     "basis": "a band score needs a trained marker; this check confirms the work was done, not its band"
+    },
+    "instructions": {
+     "en": "Write a Task 2 essay on a new prompt in 40 minutes, at least 250 words, starting from a five-minute plan. Then rate your text on the four criteria with the official band descriptors and write one thing to fix next time.",
+     "uz": "Yangi topshiriq boʻyicha besh daqiqalik rejadan boshlab, 40 daqiqada kamida 250 soʻzli Task 2 inshosini yozing. Keyin matningizni rasmiy band deskriptorlari boʻyicha toʻrt mezon asosida baholang va keyingi safar tuzatadigan bitta narsani yozing.",
+     "ru": "Напишите эссе Task 2 на новое задание за 40 минут, не менее 250 слов, начав с пятиминутного плана. Затем оцените текст по четырём критериям с официальными дескрипторами баллов и запишите одну вещь, которую исправите в следующий раз."
+    },
+    "on_fail": {
+     "en": "If the text is under the word count, finish it before the next unit; length is part of the task.",
+     "uz": "Agar matn soʻz sonidan qisqa boʻlsa, keyingi boʻlimdan oldin uni tugating; hajm topshiriqning bir qismi.",
+     "ru": "Если текст короче нужного объёма, допишите его до следующего раздела: объём — часть задания."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    },
+    "long": true
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 45,
+    "check": 40,
+    "official_required": 0,
+    "official_optional": 0,
+    "total": 100
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "basis": "design default: below B1 the English ladder (C3, C5) comes first"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Academic Writing: Task 1 describes visual information (a graph, table, chart or diagram) in at least 150 words in about 20 minutes; Task 2 discusses a point of view, argument or problem in at least 250 words in about 40 minutes; 60 minutes in all.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Task 2 contributes twice as much as Task 1 to the Writing score.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Writing is marked on task achievement (Task 1) or task response (Task 2), coherence and cohesion, lexical resource, and grammatical range and accuracy.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Task 2: question types and planning",
+      "uz": "Oʻrganing: Task 2: savol turlari va reja tuzish",
+      "ru": "Изучите: Task 2: типы вопросов и план"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "minutes": 45,
+     "title": {
+      "en": "Practice 1: Task 2: question types and planning",
+      "uz": "Mashq 1: Task 2: savol turlari va reja tuzish",
+      "ru": "Практика 1: Task 2: типы вопросов и план"
+     },
+     "practice_ref": 0,
+     "items": 1,
+     "long": true,
+     "n": 2
+    },
+    {
+     "type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "minutes": 40,
+     "title": {
+      "en": "End-of-unit check: Task 2: question types and planning",
+      "uz": "Boʻlim yakuniy tekshiruvi: Task 2: savol turlari va reja tuzish",
+      "ru": "Итоговая проверка раздела: Task 2: типы вопросов и план"
+     },
+     "end_check": true,
+     "long": true,
+     "n": 3
+    }
+   ],
+   "sessions": 3,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IEWR04",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "writing",
+   "skill_label": {
+    "en": "Writing",
+    "uz": "Writing (yozish)",
+    "ru": "Writing (письмо)"
+   },
+   "unit": 4,
+   "units_in_skill": 6,
+   "level_band": "core",
+   "title": {
+    "en": "Task 2: paragraphs, coherence and cohesion",
+    "uz": "Task 2: xatboshilar, izchillik va bogʻliqlik",
+    "ru": "Task 2: абзацы, связность и логичность"
+   },
+   "goal": {
+    "en": "Write body paragraphs with one main idea each, and link ideas clearly without overusing linking words.",
+    "uz": "Har birida bitta asosiy fikr boʻlgan asosiy xatboshilarni yozing va fikrlarni bogʻlovchi soʻzlarni haddan tashqari koʻp ishlatmasdan aniq bogʻlang.",
+    "ru": "Пишите основные абзацы с одной главной мыслью в каждом и ясно связывайте мысли, не злоупотребляя связующими словами."
+   },
+   "study": [
+    {
+     "en": "Each paragraph: a topic sentence, an explanation, an example and a link back to the question.",
+     "uz": "Har bir xatboshi: mavzu gapi, izoh, misol va savolga qaytuvchi bogʻlanish.",
+     "ru": "Каждый абзац: тематическое предложение, объяснение, пример и связь с вопросом."
+    },
+    {
+     "en": "Use reference words (this, these, such) as well as linking words, and do not start every sentence with one.",
+     "uz": "Bogʻlovchi soʻzlar bilan birga ishora soʻzlaridan (this, these, such) ham foydalaning va har bir gapni bogʻlovchi bilan boshlamang.",
+     "ru": "Используйте не только связующие слова, но и указательные (this, these, such), и не начинайте ими каждое предложение."
+    },
+    {
+     "en": "Read the official key assessment criteria for coherence and cohesion and compare one of your paragraphs with them.",
+     "uz": "Izchillik va bogʻliqlik boʻyicha rasmiy asosiy baholash mezonlarini oʻqing va xatboshilaringizdan birini ular bilan solishtiring.",
+     "ru": "Прочитайте официальные ключевые критерии по связности и логичности и сравните с ними один из своих абзацев."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_writing",
+      "task": "task2",
+      "task_type": [
+       "opinion",
+       "discussion"
+      ],
+      "band": "from_student_level"
+     },
+     "fallback_where": {
+      "skill": "ielts_writing",
+      "task": "task2"
+     },
+     "band_note": "prompt band chosen from the student's measured English level (C7 has one prompt per task type per band)",
+     "n": 1,
+     "split": [
+      1
+     ],
+     "minutes_each": 45,
+     "purpose": {
+      "en": "Rewrite the body paragraphs of your unit 3 essay, then write one new essay.",
+      "uz": "3-boʻlimdagi inshongizning asosiy xatboshilarini qayta yozing, keyin bitta yangi insho yozing.",
+      "ru": "Перепишите основные абзацы эссе из раздела 3, затем напишите одно новое эссе."
+     },
+     "task_type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "artifact_rules": {
+      "min_words": 250,
+      "lang": "en",
+      "not_blank": true,
+      "not_prompt_copy": true
+     },
+     "long": true
+    },
+    {
+     "content": "C3",
+     "where": {
+      "skill": "en_grammar",
+      "level": [
+       "B2",
+       "C1"
+      ],
+      "subskill": [
+       "linking_words",
+       "reference",
+       "relative_clauses"
+      ]
+     },
+     "fallback_where": {
+      "skill": "en_grammar",
+      "level": [
+       "B2",
+       "C1"
+      ]
+     },
+     "n": 10,
+     "split": [
+      10
+     ],
+     "minutes_each": 5,
+     "purpose": {
+      "en": "Linking and reference words.",
+      "uz": "Bogʻlovchi va ishora soʻzlari.",
+      "ru": "Связующие и указательные слова."
+     }
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_writing_criteria",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-writing-key-assessment-criteria.pdf",
+     "kind": "guide",
+     "label": {
+      "en": "IELTS Writing key assessment criteria (PDF)",
+      "uz": "IELTS Writing asosiy baholash mezonlari (PDF)",
+      "ru": "Ключевые критерии оценки IELTS Writing (PDF)"
+     },
+     "note": {
+      "en": "Explains the four criteria in plain language.",
+      "uz": "Toʻrt mezonni oddiy tilda tushuntiradi.",
+      "ru": "Простым языком объясняет четыре критерия."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources"
+    },
+    {
+     "id": "ielts_writing_descriptors",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-writing-band-descriptors.pdf",
+     "kind": "band_descriptors",
+     "label": {
+      "en": "IELTS Writing band descriptors (PDF)",
+      "uz": "IELTS Writing band deskriptorlari (PDF)",
+      "ru": "Дескрипторы баллов IELTS Writing (PDF)"
+     },
+     "note": {
+      "en": "The official descriptions of each band for Task 1 and Task 2.",
+      "uz": "Task 1 va Task 2 uchun har bir ball darajasining rasmiy tavsifi.",
+      "ru": "Официальные описания каждого балла для Task 1 и Task 2."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources"
+    }
+   ],
+   "end_check": {
+    "verification": "artifact",
+    "ladder": "L3",
+    "task_type": "create",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_writing",
+     "task": "task2",
+     "task_type": [
+      "problem_solution",
+      "two_part"
+     ],
+     "band": "from_student_level"
+    },
+    "fresh_items": true,
+    "minutes": 40,
+    "time_limit_s": 2400,
+    "artifact_rules": {
+     "min_words": 250,
+     "lang": "en",
+     "not_blank": true,
+     "not_prompt_copy": true
+    },
+    "self_rating": {
+     "criteria": [
+      "task_achievement_or_response",
+      "coherence_cohesion",
+      "lexical_resource",
+      "grammatical_range_accuracy"
+     ],
+     "scale": "band 1-9, self-assessed",
+     "ladder": "L1"
+    },
+    "pass": {
+     "rule": "code checks pass (word count, English, not blank, not the prompt pasted back) and the self-rating is filled in",
+     "basis": "a band score needs a trained marker; this check confirms the work was done, not its band"
+    },
+    "instructions": {
+     "en": "Write a Task 2 essay on a new prompt in 40 minutes, at least 250 words, with one clear idea per paragraph. Then rate your text on the four criteria with the official band descriptors and write one thing to fix next time.",
+     "uz": "Yangi topshiriq boʻyicha 40 daqiqada kamida 250 soʻzli Task 2 inshosini yozing, har bir xatboshida bitta aniq fikr boʻlsin. Keyin matningizni rasmiy band deskriptorlari boʻyicha toʻrt mezon asosida baholang va keyingi safar tuzatadigan bitta narsani yozing.",
+     "ru": "Напишите эссе Task 2 на новое задание за 40 минут, не менее 250 слов, по одной ясной мысли в абзаце. Затем оцените текст по четырём критериям с официальными дескрипторами баллов и запишите одну вещь, которую исправите в следующий раз."
+    },
+    "on_fail": {
+     "en": "If the text is under the word count, finish it before the next unit; length is part of the task.",
+     "uz": "Agar matn soʻz sonidan qisqa boʻlsa, keyingi boʻlimdan oldin uni tugating; hajm topshiriqning bir qismi.",
+     "ru": "Если текст короче нужного объёма, допишите его до следующего раздела: объём — часть задания."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    },
+    "long": true
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 50,
+    "check": 40,
+    "official_required": 0,
+    "official_optional": 0,
+    "total": 105
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Academic Writing: Task 1 describes visual information (a graph, table, chart or diagram) in at least 150 words in about 20 minutes; Task 2 discusses a point of view, argument or problem in at least 250 words in about 40 minutes; 60 minutes in all.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Task 2 contributes twice as much as Task 1 to the Writing score.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Writing is marked on task achievement (Task 1) or task response (Task 2), coherence and cohesion, lexical resource, and grammatical range and accuracy.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Task 2: paragraphs, coherence and cohesion",
+      "uz": "Oʻrganing: Task 2: xatboshilar, izchillik va bogʻliqlik",
+      "ru": "Изучите: Task 2: абзацы, связность и логичность"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "minutes": 45,
+     "title": {
+      "en": "Practice 1: Task 2: paragraphs, coherence and cohesion",
+      "uz": "Mashq 1: Task 2: xatboshilar, izchillik va bogʻliqlik",
+      "ru": "Практика 1: Task 2: абзацы, связность и логичность"
+     },
+     "practice_ref": 0,
+     "items": 1,
+     "long": true,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 5,
+     "title": {
+      "en": "Practice 2: Task 2: paragraphs, coherence and cohesion",
+      "uz": "Mashq 2: Task 2: xatboshilar, izchillik va bogʻliqlik",
+      "ru": "Практика 2: Task 2: абзацы, связность и логичность"
+     },
+     "practice_ref": 1,
+     "items": 10,
+     "n": 3
+    },
+    {
+     "type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "minutes": 40,
+     "title": {
+      "en": "End-of-unit check: Task 2: paragraphs, coherence and cohesion",
+      "uz": "Boʻlim yakuniy tekshiruvi: Task 2: xatboshilar, izchillik va bogʻliqlik",
+      "ru": "Итоговая проверка раздела: Task 2: абзацы, связность и логичность"
+     },
+     "end_check": true,
+     "long": true,
+     "n": 4
+    }
+   ],
+   "sessions": 4,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IEWR05",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "writing",
+   "skill_label": {
+    "en": "Writing",
+    "uz": "Writing (yozish)",
+    "ru": "Writing (письмо)"
+   },
+   "unit": 5,
+   "units_in_skill": 6,
+   "level_band": "advanced",
+   "title": {
+    "en": "Lexical resource and grammatical range",
+    "uz": "Leksik boylik va grammatik xilma-xillik",
+    "ru": "Лексический запас и грамматическое разнообразие"
+   },
+   "goal": {
+    "en": "Use precise vocabulary and a mix of accurate simple and complex sentences.",
+    "uz": "Aniq soʻzlar va toʻgʻri tuzilgan sodda hamda murakkab gaplar aralashmasidan foydalaning.",
+    "ru": "Используйте точную лексику и сочетание правильных простых и сложных предложений."
+   },
+   "study": [
+    {
+     "en": "Replace general words (good, bad, thing) with precise ones (beneficial, harmful, factor).",
+     "uz": "Umumiy soʻzlarni (good, bad, thing) aniqroqlari bilan almashtiring (beneficial, harmful, factor).",
+     "ru": "Заменяйте общие слова (good, bad, thing) точными (beneficial, harmful, factor)."
+    },
+    {
+     "en": "Use a range of structures (relative clauses, conditionals, the passive), but only ones you can write without errors.",
+     "uz": "Turli tuzilmalardan (nisbiy ergash gaplar, shart gaplar, majhul nisbat) foydalaning, lekin faqat xatosiz yoza oladiganlaringizdan.",
+     "ru": "Используйте разные конструкции (относительные придаточные, условные предложения, пассив), но только те, что пишете без ошибок."
+    },
+    {
+     "en": "Keep a list of your own repeated grammar errors and check for them before you finish.",
+     "uz": "Oʻzingizda takrorlanadigan grammatik xatolar roʻyxatini yuriting va yakunlashdan oldin ularni tekshiring.",
+     "ru": "Ведите список своих повторяющихся грамматических ошибок и проверяйте их перед завершением."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C3",
+     "where": {
+      "skill": "en_grammar",
+      "level": [
+       "B2",
+       "C1"
+      ],
+      "subskill": [
+       "conditionals",
+       "relative_clauses",
+       "passive_voice"
+      ]
+     },
+     "fallback_where": {
+      "skill": "en_grammar",
+      "level": [
+       "B2",
+       "C1"
+      ]
+     },
+     "n": 24,
+     "split": [
+      12,
+      12
+     ],
+     "minutes_each": 5,
+     "purpose": {
+      "en": "Grammar items for complex sentences.",
+      "uz": "Murakkab gaplar uchun grammatik savollar.",
+      "ru": "Грамматические задания на сложные предложения."
+     }
+    },
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_writing",
+      "task": "task2",
+      "task_type": [
+       "opinion",
+       "discussion",
+       "problem_solution",
+       "two_part"
+      ],
+      "band": "from_student_level"
+     },
+     "fallback_where": {
+      "skill": "ielts_writing",
+      "task": "task2"
+     },
+     "band_note": "prompt band chosen from the student's measured English level (C7 has one prompt per task type per band)",
+     "n": 1,
+     "split": [
+      1
+     ],
+     "minutes_each": 45,
+     "purpose": {
+      "en": "One Task 2 essay; then underline five words you could make more precise and rewrite those sentences.",
+      "uz": "Bitta Task 2 inshosi; keyin aniqroq qilish mumkin boʻlgan beshta soʻzning tagiga chizing va shu gaplarni qayta yozing.",
+      "ru": "Одно эссе Task 2; затем подчеркните пять слов, которые можно сделать точнее, и перепишите эти предложения."
+     },
+     "task_type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "artifact_rules": {
+      "min_words": 250,
+      "lang": "en",
+      "not_blank": true,
+      "not_prompt_copy": true
+     },
+     "long": true
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_writing_descriptors",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-writing-band-descriptors.pdf",
+     "kind": "band_descriptors",
+     "label": {
+      "en": "IELTS Writing band descriptors (PDF)",
+      "uz": "IELTS Writing band deskriptorlari (PDF)",
+      "ru": "Дескрипторы баллов IELTS Writing (PDF)"
+     },
+     "note": {
+      "en": "The official descriptions of each band for Task 1 and Task 2.",
+      "uz": "Task 1 va Task 2 uchun har bir ball darajasining rasmiy tavsifi.",
+      "ru": "Официальные описания каждого балла для Task 1 и Task 2."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources"
+    },
+    {
+     "id": "ielts_writing_res",
+     "url": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources",
+     "kind": "guide",
+     "label": {
+      "en": "IELTS Writing: official preparation resources",
+      "uz": "IELTS Writing: rasmiy tayyorgarlik materiallari",
+      "ru": "IELTS Writing: официальные материалы для подготовки"
+     },
+     "note": {
+      "en": "Videos on how Writing is scored, the key assessment criteria and the band descriptors.",
+      "uz": "Writing qanday baholanishi haqida videolar, asosiy baholash mezonlari va band deskriptorlari.",
+      "ru": "Видео о том, как оценивается Writing, ключевые критерии оценки и дескрипторы баллов."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources"
+    }
+   ],
+   "end_check": {
+    "verification": "artifact",
+    "ladder": "L3",
+    "task_type": "create",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_writing",
+     "task": "task1",
+     "task_type": [
+      "line_graph",
+      "bar_chart",
+      "table",
+      "pie_chart",
+      "process",
+      "map"
+     ],
+     "band": "from_student_level"
+    },
+    "fresh_items": true,
+    "minutes": 20,
+    "time_limit_s": 1200,
+    "artifact_rules": {
+     "min_words": 150,
+     "lang": "en",
+     "not_blank": true,
+     "not_prompt_copy": true
+    },
+    "self_rating": {
+     "criteria": [
+      "task_achievement_or_response",
+      "coherence_cohesion",
+      "lexical_resource",
+      "grammatical_range_accuracy"
+     ],
+     "scale": "band 1-9, self-assessed",
+     "ladder": "L1"
+    },
+    "pass": {
+     "rule": "code checks pass (word count, English, not blank, not the prompt pasted back) and the self-rating is filled in",
+     "basis": "a band score needs a trained marker; this check confirms the work was done, not its band"
+    },
+    "instructions": {
+     "en": "Write a Task 1 report on a new prompt in 20 minutes, at least 150 words, using at least three precise trend or comparison words. Then rate your text on the four criteria with the official band descriptors and write one thing to fix next time.",
+     "uz": "Yangi topshiriq boʻyicha 20 daqiqada kamida 150 soʻzli Task 1 hisobotini yozing, kamida uchta aniq tendensiya yoki solishtirish soʻzidan foydalaning. Keyin matningizni rasmiy band deskriptorlari boʻyicha toʻrt mezon asosida baholang va keyingi safar tuzatadigan bitta narsani yozing.",
+     "ru": "Напишите отчёт Task 1 на новое задание за 20 минут, не менее 150 слов, используя не меньше трёх точных слов для тенденций или сравнения. Затем оцените текст по четырём критериям с официальными дескрипторами баллов и запишите одну вещь, которую исправите в следующий раз."
+    },
+    "on_fail": {
+     "en": "If the text is under the word count, finish it before the next unit; length is part of the task.",
+     "uz": "Agar matn soʻz sonidan qisqa boʻlsa, keyingi boʻlimdan oldin uni tugating; hajm topshiriqning bir qismi.",
+     "ru": "Если текст короче нужного объёма, допишите его до следующего раздела: объём — часть задания."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 55,
+    "check": 20,
+    "official_required": 0,
+    "official_optional": 0,
+    "total": 90
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Academic Writing: Task 1 describes visual information (a graph, table, chart or diagram) in at least 150 words in about 20 minutes; Task 2 discusses a point of view, argument or problem in at least 250 words in about 40 minutes; 60 minutes in all.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Task 2 contributes twice as much as Task 1 to the Writing score.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Writing is marked on task achievement (Task 1) or task response (Task 2), coherence and cohesion, lexical resource, and grammatical range and accuracy.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Lexical resource and grammatical range",
+      "uz": "Oʻrganing: Leksik boylik va grammatik xilma-xillik",
+      "ru": "Изучите: Лексический запас и грамматическое разнообразие"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 5,
+     "title": {
+      "en": "Practice 1: Lexical resource and grammatical range",
+      "uz": "Mashq 1: Leksik boylik va grammatik xilma-xillik",
+      "ru": "Практика 1: Лексический запас и грамматическое разнообразие"
+     },
+     "practice_ref": 0,
+     "items": 12,
+     "n": 2
+    },
+    {
+     "type": "practice",
+     "verification": "quiz",
+     "ladder": "L2",
+     "minutes": 5,
+     "title": {
+      "en": "Practice 2: Lexical resource and grammatical range",
+      "uz": "Mashq 2: Leksik boylik va grammatik xilma-xillik",
+      "ru": "Практика 2: Лексический запас и грамматическое разнообразие"
+     },
+     "practice_ref": 0,
+     "items": 12,
+     "n": 3
+    },
+    {
+     "type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "minutes": 45,
+     "title": {
+      "en": "Practice 3: Lexical resource and grammatical range",
+      "uz": "Mashq 3: Leksik boylik va grammatik xilma-xillik",
+      "ru": "Практика 3: Лексический запас и грамматическое разнообразие"
+     },
+     "practice_ref": 1,
+     "items": 1,
+     "long": true,
+     "n": 4
+    },
+    {
+     "type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "minutes": 20,
+     "title": {
+      "en": "End-of-unit check: Lexical resource and grammatical range",
+      "uz": "Boʻlim yakuniy tekshiruvi: Leksik boylik va grammatik xilma-xillik",
+      "ru": "Итоговая проверка раздела: Лексический запас и грамматическое разнообразие"
+     },
+     "end_check": true,
+     "n": 5
+    }
+   ],
+   "sessions": 5,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IEWR06",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "writing",
+   "skill_label": {
+    "en": "Writing",
+    "uz": "Writing (yozish)",
+    "ru": "Writing (письмо)"
+   },
+   "unit": 6,
+   "units_in_skill": 6,
+   "level_band": "mock",
+   "title": {
+    "en": "Full Writing test in 60 minutes and self-assessment",
+    "uz": "60 daqiqada toʻliq Writing testi va oʻzini baholash",
+    "ru": "Полный Writing за 60 минут и самооценка"
+   },
+   "goal": {
+    "en": "Write Task 1 and Task 2 in 60 minutes, rate both against the official band descriptors, and ask a tutor to check one.",
+    "uz": "60 daqiqada Task 1 va Task 2 ni yozing, ikkalasini rasmiy band deskriptorlari boʻyicha baholang va bittasini tutorga tekshirtiring.",
+    "ru": "Напишите Task 1 и Task 2 за 60 минут, оцените оба по официальным дескрипторам баллов и попросите тьютора проверить один."
+   },
+   "study": [
+    {
+     "en": "Timing: about 20 minutes for Task 1 and 40 for Task 2; do not let Task 1 run over, because Task 2 counts twice as much.",
+     "uz": "Vaqt: Task 1 ga taxminan 20, Task 2 ga 40 daqiqa; Task 1 ga ortiqcha vaqt ketkazmang, chunki Task 2 ikki baravar koʻp hisoblanadi.",
+     "ru": "Время: около 20 минут на Task 1 и 40 на Task 2; не затягивайте Task 1, потому что Task 2 весит вдвое больше."
+    },
+    {
+     "en": "Leave three minutes at the end to check word counts and your personal error list.",
+     "uz": "Oxirida soʻz sonini va shaxsiy xatolar roʻyxatingizni tekshirish uchun uch daqiqa qoldiring.",
+     "ru": "Оставьте в конце три минуты, чтобы проверить количество слов и свой список ошибок."
+    },
+    {
+     "en": "Compare your self-rating with the tutor's and note where they differ.",
+     "uz": "Oʻz bahoyingizni tutor bahosi bilan solishtiring va qayerda farq qilishini yozib qoʻying.",
+     "ru": "Сравните свою оценку с оценкой тьютора и отметьте, где они расходятся."
+    }
+   ],
+   "practice": [],
+   "official_links": [
+    {
+     "id": "ielts_samples",
+     "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Academic: official sample questions",
+      "uz": "IELTS Academic: rasmiy namunaviy savollar",
+      "ru": "IELTS Academic: официальные примеры заданий"
+     },
+     "note": {
+      "en": "Free sample tasks for Listening, Reading, Writing and Speaking, with answer keys (and transcripts for Listening).",
+      "uz": "Listening, Reading, Writing va Speaking boʻyicha bepul namunaviy topshiriqlar, javoblar kaliti bilan (Listening uchun matn yozuvi ham bor).",
+      "ru": "Бесплатные примеры заданий по Listening, Reading, Writing и Speaking с ключами ответов (для Listening есть и расшифровки)."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+     "how": {
+      "en": "Optional: the official example responses with band scores and examiner comments, to calibrate your self-rating.",
+      "uz": "Ixtiyoriy: oʻz bahoyingizni moslashtirish uchun ball va imtihon oluvchi izohlari berilgan rasmiy javob namunalari.",
+      "ru": "По желанию: официальные образцы ответов с баллами и комментариями экзаменатора, чтобы выверить самооценку."
+     }
+    },
+    {
+     "id": "ielts_writing_descriptors",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-writing-band-descriptors.pdf",
+     "kind": "band_descriptors",
+     "label": {
+      "en": "IELTS Writing band descriptors (PDF)",
+      "uz": "IELTS Writing band deskriptorlari (PDF)",
+      "ru": "Дескрипторы баллов IELTS Writing (PDF)"
+     },
+     "note": {
+      "en": "The official descriptions of each band for Task 1 and Task 2.",
+      "uz": "Task 1 va Task 2 uchun har bir ball darajasining rasmiy tavsifi.",
+      "ru": "Официальные описания каждого балла для Task 1 и Task 2."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources"
+    }
+   ],
+   "end_check": {
+    "verification": "artifact",
+    "ladder": "L3",
+    "task_type": "create",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_writing",
+     "task": [
+      "task1",
+      "task2"
+     ],
+     "band": "from_student_level"
+    },
+    "fresh_items": true,
+    "minutes": 60,
+    "time_limit_s": 3600,
+    "artifact_rules": {
+     "min_words": {
+      "task1": 150,
+      "task2": 250
+     },
+     "lang": "en",
+     "not_blank": true,
+     "not_prompt_copy": true
+    },
+    "self_rating": {
+     "criteria": [
+      "task_achievement_or_response",
+      "coherence_cohesion",
+      "lexical_resource",
+      "grammatical_range_accuracy"
+     ],
+     "scale": "band 1-9, self-assessed",
+     "ladder": "L1"
+    },
+    "pass": {
+     "rule": "code checks pass (word count, English, not blank, not the prompt pasted back) and the self-rating is filled in",
+     "basis": "a band score needs a trained marker; this check confirms the work was done, not its band"
+    },
+    "instructions": {
+     "en": "Write Task 1 (at least 150 words) and Task 2 (at least 250 words) on new prompts in 60 minutes. Then rate your text on the four criteria with the official band descriptors and write one thing to fix next time.",
+     "uz": "Yangi topshiriqlar boʻyicha 60 daqiqada Task 1 (kamida 150 soʻz) va Task 2 (kamida 250 soʻz) yozing. Keyin matningizni rasmiy band deskriptorlari boʻyicha toʻrt mezon asosida baholang va keyingi safar tuzatadigan bitta narsani yozing.",
+     "ru": "Напишите Task 1 (не менее 150 слов) и Task 2 (не менее 250 слов) на новые задания за 60 минут. Затем оцените текст по четырём критериям с официальными дескрипторами баллов и запишите одну вещь, которую исправите в следующий раз."
+    },
+    "on_fail": {
+     "en": "If the text is under the word count, finish it before the next unit; length is part of the task.",
+     "uz": "Agar matn soʻz sonidan qisqa boʻlsa, keyingi boʻlimdan oldin uni tugating; hajm topshiriqning bir qismi.",
+     "ru": "Если текст короче нужного объёма, допишите его до следующего раздела: объём — часть задания."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    },
+    "checkpoint": {
+     "ladder": "L7",
+     "who": "Jamals tutor or counselor",
+     "optional": true,
+     "note": "a tutor marks one of the two tasks against the band descriptors (launch gate LG1 for real families)"
+    },
+    "long": true
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 0,
+    "check": 60,
+    "official_required": 0,
+    "official_optional": 0,
+    "total": 75
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Academic Writing: Task 1 describes visual information (a graph, table, chart or diagram) in at least 150 words in about 20 minutes; Task 2 discusses a point of view, argument or problem in at least 250 words in about 40 minutes; 60 minutes in all.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Task 2 contributes twice as much as Task 1 to the Writing score.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Writing is marked on task achievement (Task 1) or task response (Task 2), coherence and cohesion, lexical resource, and grammatical range and accuracy.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Full Writing test in 60 minutes and self-assessment",
+      "uz": "Oʻrganing: 60 daqiqada toʻliq Writing testi va oʻzini baholash",
+      "ru": "Изучите: Полный Writing за 60 минут и самооценка"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "create",
+     "verification": "artifact",
+     "ladder": "L3",
+     "minutes": 60,
+     "title": {
+      "en": "End-of-unit check: Full Writing test in 60 minutes and self-assessment",
+      "uz": "Boʻlim yakuniy tekshiruvi: 60 daqiqada toʻliq Writing testi va oʻzini baholash",
+      "ru": "Итоговая проверка раздела: Полный Writing за 60 минут и самооценка"
+     },
+     "end_check": true,
+     "long": true,
+     "n": 2
+    }
+   ],
+   "sessions": 2,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IESP01",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "speaking",
+   "skill_label": {
+    "en": "Speaking",
+    "uz": "Speaking (gapirish)",
+    "ru": "Speaking (говорение)"
+   },
+   "unit": 1,
+   "units_in_skill": 6,
+   "level_band": "foundation",
+   "title": {
+    "en": "Test format and Part 1: familiar topics",
+    "uz": "Test tuzilishi va Part 1: tanish mavzular",
+    "ru": "Формат теста и Part 1: знакомые темы"
+   },
+   "goal": {
+    "en": "Know the Speaking test (a face-to-face interview, 11-14 minutes, three parts, recorded) and answer Part 1 questions in two or three sentences.",
+    "uz": "Speaking testini biling (imtihon oluvchi bilan yuzma-yuz suhbat, 11-14 daqiqa, uch qism, yozib olinadi) va Part 1 savollariga ikki-uch gap bilan javob bering.",
+    "ru": "Знайте Speaking (личное интервью с экзаменатором, 11-14 минут, три части, ведётся запись) и отвечайте на вопросы Part 1 двумя-тремя предложениями."
+   },
+   "study": [
+    {
+     "en": "Part 1 lasts 4-5 minutes on topics such as home, family, work or studies; answer, then add a reason or an example.",
+     "uz": "Part 1 uy, oila, ish yoki oʻqish kabi mavzularda 4-5 daqiqa davom etadi; javob bering, keyin sabab yoki misol qoʻshing.",
+     "ru": "Part 1 длится 4-5 минут на темы вроде дома, семьи, работы или учёбы; ответьте, затем добавьте причину или пример."
+    },
+    {
+     "en": "Avoid one-word answers and memorised speeches; speak naturally.",
+     "uz": "Bir soʻzli javoblar va yodlangan nutqlardan qoching; tabiiy gapiring.",
+     "ru": "Избегайте ответов из одного слова и заученных речей; говорите естественно."
+    },
+    {
+     "en": "Record yourself answering everyday questions and listen back.",
+     "uz": "Kundalik savollarga javobingizni yozib oling va qayta tinglang.",
+     "ru": "Записывайте свои ответы на повседневные вопросы и прослушивайте их."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_speaking",
+      "part": "part1"
+     },
+     "fallback_where": {
+      "skill": "ielts_speaking"
+     },
+     "fallback_official": "ielts_speaking_samples",
+     "n": 5,
+     "split": [
+      5
+     ],
+     "minutes_each": 10,
+     "purpose": {
+      "en": "Record answers to five Part 1 questions.",
+      "uz": "Beshta Part 1 savoliga javoblaringizni yozib oling.",
+      "ru": "Запишите ответы на пять вопросов Part 1."
+     },
+     "task_type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "upload_rules": {
+      "kind": "audio",
+      "note": "the recording file must be stored (spec §4.6 L5; today only the file name is stored, M:908)"
+     }
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_speaking_samples",
+     "url": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Speaking sample tasks (PDF)",
+      "uz": "IELTS Speaking namunaviy topshiriqlari (PDF)",
+      "ru": "Примеры заданий IELTS Speaking (PDF)"
+     },
+     "note": {
+      "en": "Official examples of Part 1, Part 2 and Part 3 tasks.",
+      "uz": "Part 1, Part 2 va Part 3 topshiriqlarining rasmiy namunalari.",
+      "ru": "Официальные примеры заданий Part 1, Part 2 и Part 3."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test"
+    },
+    {
+     "id": "ielts_speaking_descriptors",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf",
+     "kind": "band_descriptors",
+     "label": {
+      "en": "IELTS Speaking band descriptors (PDF)",
+      "uz": "IELTS Speaking band deskriptorlari (PDF)",
+      "ru": "Дескрипторы баллов IELTS Speaking (PDF)"
+     },
+     "note": {
+      "en": "The official descriptions of each band for the four Speaking criteria.",
+      "uz": "Speaking boʻyicha toʻrt mezonning har biri uchun ball darajalarining rasmiy tavsifi.",
+      "ru": "Официальные описания каждого балла по четырём критериям Speaking."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf"
+    }
+   ],
+   "end_check": {
+    "verification": "upload",
+    "ladder": "L5",
+    "task_type": "create",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_speaking",
+     "part": "part1"
+    },
+    "fresh_items": true,
+    "minutes": 10,
+    "upload_rules": {
+     "kind": "audio",
+     "note": "the recording file must be stored (spec §4.6 L5; today only the file name is stored, M:908)"
+    },
+    "self_report_fields": [
+     "answers_recorded",
+     "checklist_ticks"
+    ],
+    "pass": {
+     "rule": "a recording is stored and the self-check is filled in",
+     "basis": "a band score needs a trained examiner; this check confirms the practice, not its band"
+    },
+    "instructions": {
+     "en": "Record answers to five new Part 1 questions, two or three sentences each. Then listen back and tick the checklist: did you keep talking, answer the question, and use the words you planned?",
+     "uz": "Beshta yangi Part 1 savoliga har biriga ikki-uch gapdan iborat javob yozib oling. Keyin yozuvni tinglang va roʻyxatni belgilang: toʻxtamasdan gapirdingizmi, savolga javob berdingizmi, rejalashtirgan soʻzlaringizni ishlatdingizmi?",
+     "ru": "Запишите ответы на пять новых вопросов Part 1, по два-три предложения. Затем прослушайте запись и отметьте список: говорили ли вы без остановок, ответили ли на вопрос, использовали ли запланированные слова?"
+    },
+    "on_fail": {
+     "en": "Record it again; a second take after listening to the first is part of the practice.",
+     "uz": "Yana bir marta yozib oling; birinchisini tinglab, ikkinchi marta yozish ham mashqning bir qismi.",
+     "ru": "Запишите ещё раз: второй дубль после прослушивания первого — часть практики."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 10,
+    "check": 10,
+    "official_required": 0,
+    "official_optional": 0,
+    "total": 35
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "basis": "design default: below B1 the English ladder (C3, C5) comes first"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Speaking is a face-to-face interview with an examiner, 11-14 minutes, in three parts, and it is recorded.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Part 1 is 4-5 minutes of general questions on familiar topics; Part 2 gives a task card, 1 minute to prepare and about 2 minutes to speak (3-4 minutes in all); Part 3 is a 4-5 minute discussion of the Part 2 topic in a more general and abstract way.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Speaking is marked on fluency and coherence, lexical resource, grammatical range and accuracy, and pronunciation.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Test format and Part 1: familiar topics",
+      "uz": "Oʻrganing: Test tuzilishi va Part 1: tanish mavzular",
+      "ru": "Изучите: Формат теста и Part 1: знакомые темы"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "minutes": 10,
+     "title": {
+      "en": "Practice 1: Test format and Part 1: familiar topics",
+      "uz": "Mashq 1: Test tuzilishi va Part 1: tanish mavzular",
+      "ru": "Практика 1: Формат теста и Part 1: знакомые темы"
+     },
+     "practice_ref": 0,
+     "items": 5,
+     "n": 2
+    },
+    {
+     "type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "minutes": 10,
+     "title": {
+      "en": "End-of-unit check: Test format and Part 1: familiar topics",
+      "uz": "Boʻlim yakuniy tekshiruvi: Test tuzilishi va Part 1: tanish mavzular",
+      "ru": "Итоговая проверка раздела: Формат теста и Part 1: знакомые темы"
+     },
+     "end_check": true,
+     "n": 3
+    }
+   ],
+   "sessions": 3,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IESP02",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "speaking",
+   "skill_label": {
+    "en": "Speaking",
+    "uz": "Speaking (gapirish)",
+    "ru": "Speaking (говорение)"
+   },
+   "unit": 2,
+   "units_in_skill": 6,
+   "level_band": "core",
+   "title": {
+    "en": "Part 2: one minute to prepare",
+    "uz": "Part 2: tayyorgarlik uchun bir daqiqa",
+    "ru": "Part 2: одна минута на подготовку"
+   },
+   "goal": {
+    "en": "Use the one minute of preparation to write short notes that carry you through a two-minute talk.",
+    "uz": "Bir daqiqalik tayyorgarlik vaqtida ikki daqiqalik nutqni olib borishga yetadigan qisqa qaydlar yozing.",
+    "ru": "За минуту подготовки делайте короткие заметки, которых хватит на двухминутное выступление."
+   },
+   "study": [
+    {
+     "en": "Write key words, not sentences: one for each point on the card, plus one personal detail.",
+     "uz": "Gap emas, kalit soʻzlar yozing: kartochkadagi har bir band uchun bittadan va bitta shaxsiy tafsilot.",
+     "ru": "Пишите ключевые слова, а не предложения: по одному на каждый пункт карточки и одну личную деталь."
+    },
+    {
+     "en": "Plan an order: what, when, where, and why it matters to you.",
+     "uz": "Tartibni rejalashtiring: nima, qachon, qayerda va bu siz uchun nega muhim.",
+     "ru": "Спланируйте порядок: что, когда, где и почему это важно для вас."
+    },
+    {
+     "en": "Practise with a timer: one minute of notes, then two minutes of speaking.",
+     "uz": "Taymer bilan mashq qiling: bir daqiqa qayd, keyin ikki daqiqa gapirish.",
+     "ru": "Тренируйтесь с таймером: минута на заметки, затем две минуты речи."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_speaking",
+      "part": "part2"
+     },
+     "fallback_where": {
+      "skill": "ielts_speaking"
+     },
+     "fallback_official": "ielts_speaking_samples",
+     "n": 2,
+     "split": [
+      2
+     ],
+     "minutes_each": 8,
+     "purpose": {
+      "en": "Two cue cards: one minute of notes, two minutes of talk, recorded.",
+      "uz": "Ikkita kartochka: bir daqiqa qayd, ikki daqiqa nutq, yozib olingan.",
+      "ru": "Две карточки: минута на заметки, две минуты речи, с записью."
+     },
+     "task_type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "upload_rules": {
+      "kind": "audio",
+      "note": "the recording file must be stored (spec §4.6 L5; today only the file name is stored, M:908)"
+     }
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_speaking_samples",
+     "url": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Speaking sample tasks (PDF)",
+      "uz": "IELTS Speaking namunaviy topshiriqlari (PDF)",
+      "ru": "Примеры заданий IELTS Speaking (PDF)"
+     },
+     "note": {
+      "en": "Official examples of Part 1, Part 2 and Part 3 tasks.",
+      "uz": "Part 1, Part 2 va Part 3 topshiriqlarining rasmiy namunalari.",
+      "ru": "Официальные примеры заданий Part 1, Part 2 и Part 3."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test"
+    },
+    {
+     "id": "ielts_speaking_descriptors",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf",
+     "kind": "band_descriptors",
+     "label": {
+      "en": "IELTS Speaking band descriptors (PDF)",
+      "uz": "IELTS Speaking band deskriptorlari (PDF)",
+      "ru": "Дескрипторы баллов IELTS Speaking (PDF)"
+     },
+     "note": {
+      "en": "The official descriptions of each band for the four Speaking criteria.",
+      "uz": "Speaking boʻyicha toʻrt mezonning har biri uchun ball darajalarining rasmiy tavsifi.",
+      "ru": "Официальные описания каждого балла по четырём критериям Speaking."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf"
+    }
+   ],
+   "end_check": {
+    "verification": "upload",
+    "ladder": "L5",
+    "task_type": "create",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_speaking",
+     "part": "part2"
+    },
+    "fresh_items": true,
+    "minutes": 8,
+    "upload_rules": {
+     "kind": "audio",
+     "note": "the recording file must be stored (spec §4.6 L5; today only the file name is stored, M:908)"
+    },
+    "self_report_fields": [
+     "talk_seconds",
+     "points_covered"
+    ],
+    "pass": {
+     "rule": "a recording is stored and the self-check is filled in",
+     "basis": "a band score needs a trained examiner; this check confirms the practice, not its band"
+    },
+    "instructions": {
+     "en": "Take a new cue card, make notes for one minute and record a two-minute talk. Then listen back and tick the checklist: did you keep talking, answer the question, and use the words you planned?",
+     "uz": "Yangi kartochka oling, bir daqiqa qayd qiling va ikki daqiqalik nutqni yozib oling. Keyin yozuvni tinglang va roʻyxatni belgilang: toʻxtamasdan gapirdingizmi, savolga javob berdingizmi, rejalashtirgan soʻzlaringizni ishlatdingizmi?",
+     "ru": "Возьмите новую карточку, минуту делайте заметки и запишите двухминутное выступление. Затем прослушайте запись и отметьте список: говорили ли вы без остановок, ответили ли на вопрос, использовали ли запланированные слова?"
+    },
+    "on_fail": {
+     "en": "Record it again; a second take after listening to the first is part of the practice.",
+     "uz": "Yana bir marta yozib oling; birinchisini tinglab, ikkinchi marta yozish ham mashqning bir qismi.",
+     "ru": "Запишите ещё раз: второй дубль после прослушивания первого — часть практики."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    },
+    "plausibility": "30 <= talk_seconds <= 180"
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 8,
+    "check": 8,
+    "official_required": 0,
+    "official_optional": 0,
+    "total": 31
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "basis": "design default: below B1 the English ladder (C3, C5) comes first"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Speaking is a face-to-face interview with an examiner, 11-14 minutes, in three parts, and it is recorded.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Part 1 is 4-5 minutes of general questions on familiar topics; Part 2 gives a task card, 1 minute to prepare and about 2 minutes to speak (3-4 minutes in all); Part 3 is a 4-5 minute discussion of the Part 2 topic in a more general and abstract way.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Speaking is marked on fluency and coherence, lexical resource, grammatical range and accuracy, and pronunciation.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Part 2: one minute to prepare",
+      "uz": "Oʻrganing: Part 2: tayyorgarlik uchun bir daqiqa",
+      "ru": "Изучите: Part 2: одна минута на подготовку"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "minutes": 8,
+     "title": {
+      "en": "Practice 1: Part 2: one minute to prepare",
+      "uz": "Mashq 1: Part 2: tayyorgarlik uchun bir daqiqa",
+      "ru": "Практика 1: Part 2: одна минута на подготовку"
+     },
+     "practice_ref": 0,
+     "items": 2,
+     "n": 2
+    },
+    {
+     "type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "minutes": 8,
+     "title": {
+      "en": "End-of-unit check: Part 2: one minute to prepare",
+      "uz": "Boʻlim yakuniy tekshiruvi: Part 2: tayyorgarlik uchun bir daqiqa",
+      "ru": "Итоговая проверка раздела: Part 2: одна минута на подготовку"
+     },
+     "end_check": true,
+     "n": 3
+    }
+   ],
+   "sessions": 3,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IESP03",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "speaking",
+   "skill_label": {
+    "en": "Speaking",
+    "uz": "Speaking (gapirish)",
+    "ru": "Speaking (говорение)"
+   },
+   "unit": 3,
+   "units_in_skill": 6,
+   "level_band": "core",
+   "title": {
+    "en": "Part 2: speaking for two minutes",
+    "uz": "Part 2: ikki daqiqa gapirish",
+    "ru": "Part 2: две минуты речи"
+   },
+   "goal": {
+    "en": "Speak for the full two minutes without long pauses, using your notes and extending each point.",
+    "uz": "Qaydlaringizdan foydalanib va har bir bandni kengaytirib, uzoq toʻxtalishlarsiz toʻliq ikki daqiqa gapiring.",
+    "ru": "Говорите все две минуты без долгих пауз, опираясь на заметки и развивая каждый пункт."
+   },
+   "study": [
+    {
+     "en": "If you run out of ideas, add a detail: a time, a person, a feeling or a comparison.",
+     "uz": "Fikr tugab qolsa, tafsilot qoʻshing: vaqt, inson, his-tuygʻu yoki solishtirish.",
+     "ru": "Если мысли закончились, добавьте деталь: время, человека, чувство или сравнение."
+    },
+    {
+     "en": "After a small mistake, correct it briefly and keep going.",
+     "uz": "Kichik xatodan keyin uni qisqa tuzating va davom eting.",
+     "ru": "После небольшой ошибки коротко исправьтесь и продолжайте."
+    },
+    {
+     "en": "Check each recording: did you reach two minutes and cover every point on the card?",
+     "uz": "Har bir yozuvni tekshiring: ikki daqiqaga yetdingizmi va kartochkadagi har bir bandni qamradingizmi?",
+     "ru": "Проверяйте каждую запись: дотянули ли до двух минут и раскрыли ли все пункты карточки?"
+    }
+   ],
+   "practice": [
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_speaking",
+      "part": "part2"
+     },
+     "fallback_where": {
+      "skill": "ielts_speaking"
+     },
+     "fallback_official": "ielts_speaking_samples",
+     "n": 3,
+     "split": [
+      3
+     ],
+     "minutes_each": 12,
+     "purpose": {
+      "en": "Three cue-card talks, recorded.",
+      "uz": "Uchta kartochka boʻyicha nutq, yozib olingan.",
+      "ru": "Три выступления по карточкам, с записью."
+     },
+     "task_type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "upload_rules": {
+      "kind": "audio",
+      "note": "the recording file must be stored (spec §4.6 L5; today only the file name is stored, M:908)"
+     }
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_speaking_samples",
+     "url": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Speaking sample tasks (PDF)",
+      "uz": "IELTS Speaking namunaviy topshiriqlari (PDF)",
+      "ru": "Примеры заданий IELTS Speaking (PDF)"
+     },
+     "note": {
+      "en": "Official examples of Part 1, Part 2 and Part 3 tasks.",
+      "uz": "Part 1, Part 2 va Part 3 topshiriqlarining rasmiy namunalari.",
+      "ru": "Официальные примеры заданий Part 1, Part 2 и Part 3."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test"
+    },
+    {
+     "id": "ielts_speaking_descriptors",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf",
+     "kind": "band_descriptors",
+     "label": {
+      "en": "IELTS Speaking band descriptors (PDF)",
+      "uz": "IELTS Speaking band deskriptorlari (PDF)",
+      "ru": "Дескрипторы баллов IELTS Speaking (PDF)"
+     },
+     "note": {
+      "en": "The official descriptions of each band for the four Speaking criteria.",
+      "uz": "Speaking boʻyicha toʻrt mezonning har biri uchun ball darajalarining rasmiy tavsifi.",
+      "ru": "Официальные описания каждого балла по четырём критериям Speaking."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf"
+    }
+   ],
+   "end_check": {
+    "verification": "upload",
+    "ladder": "L5",
+    "task_type": "create",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_speaking",
+     "part": "part2"
+    },
+    "fresh_items": true,
+    "minutes": 8,
+    "upload_rules": {
+     "kind": "audio",
+     "note": "the recording file must be stored (spec §4.6 L5; today only the file name is stored, M:908)"
+    },
+    "self_report_fields": [
+     "talk_seconds",
+     "points_covered",
+     "long_pauses"
+    ],
+    "pass": {
+     "rule": "a recording is stored and the self-check is filled in",
+     "basis": "a band score needs a trained examiner; this check confirms the practice, not its band"
+    },
+    "instructions": {
+     "en": "Record a two-minute talk on a new cue card. Then listen back and tick the checklist: did you keep talking, answer the question, and use the words you planned?",
+     "uz": "Yangi kartochka boʻyicha ikki daqiqalik nutqni yozib oling. Keyin yozuvni tinglang va roʻyxatni belgilang: toʻxtamasdan gapirdingizmi, savolga javob berdingizmi, rejalashtirgan soʻzlaringizni ishlatdingizmi?",
+     "ru": "Запишите двухминутное выступление по новой карточке. Затем прослушайте запись и отметьте список: говорили ли вы без остановок, ответили ли на вопрос, использовали ли запланированные слова?"
+    },
+    "on_fail": {
+     "en": "Record it again; a second take after listening to the first is part of the practice.",
+     "uz": "Yana bir marta yozib oling; birinchisini tinglab, ikkinchi marta yozish ham mashqning bir qismi.",
+     "ru": "Запишите ещё раз: второй дубль после прослушивания первого — часть практики."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    },
+    "plausibility": "30 <= talk_seconds <= 180"
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 12,
+    "check": 8,
+    "official_required": 0,
+    "official_optional": 0,
+    "total": 35
+   },
+   "requires": {
+    "english_cefr_min": "B1",
+    "basis": "design default: below B1 the English ladder (C3, C5) comes first"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Speaking is a face-to-face interview with an examiner, 11-14 minutes, in three parts, and it is recorded.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Part 1 is 4-5 minutes of general questions on familiar topics; Part 2 gives a task card, 1 minute to prepare and about 2 minutes to speak (3-4 minutes in all); Part 3 is a 4-5 minute discussion of the Part 2 topic in a more general and abstract way.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Speaking is marked on fluency and coherence, lexical resource, grammatical range and accuracy, and pronunciation.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Part 2: speaking for two minutes",
+      "uz": "Oʻrganing: Part 2: ikki daqiqa gapirish",
+      "ru": "Изучите: Part 2: две минуты речи"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "minutes": 12,
+     "title": {
+      "en": "Practice 1: Part 2: speaking for two minutes",
+      "uz": "Mashq 1: Part 2: ikki daqiqa gapirish",
+      "ru": "Практика 1: Part 2: две минуты речи"
+     },
+     "practice_ref": 0,
+     "items": 3,
+     "n": 2
+    },
+    {
+     "type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "minutes": 8,
+     "title": {
+      "en": "End-of-unit check: Part 2: speaking for two minutes",
+      "uz": "Boʻlim yakuniy tekshiruvi: Part 2: ikki daqiqa gapirish",
+      "ru": "Итоговая проверка раздела: Part 2: две минуты речи"
+     },
+     "end_check": true,
+     "n": 3
+    }
+   ],
+   "sessions": 3,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IESP04",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "speaking",
+   "skill_label": {
+    "en": "Speaking",
+    "uz": "Speaking (gapirish)",
+    "ru": "Speaking (говорение)"
+   },
+   "unit": 4,
+   "units_in_skill": 6,
+   "level_band": "advanced",
+   "title": {
+    "en": "Part 3: discussion and opinions",
+    "uz": "Part 3: muhokama va fikr bildirish",
+    "ru": "Part 3: обсуждение и мнения"
+   },
+   "goal": {
+    "en": "Discuss abstract questions linked to the Part 2 topic: give an opinion, a reason, an example and a comparison.",
+    "uz": "Part 2 mavzusiga bogʻliq mavhum savollarni muhokama qiling: fikr, sabab, misol va solishtirish keltiring.",
+    "ru": "Обсуждайте абстрактные вопросы по теме Part 2: высказывайте мнение, причину, пример и сравнение."
+   },
+   "study": [
+    {
+     "en": "Part 3 lasts 4-5 minutes and takes the Part 2 topic in a more general, abstract direction.",
+     "uz": "Part 3 4-5 daqiqa davom etadi va Part 2 mavzusini umumiyroq, mavhumroq yoʻnalishda davom ettiradi.",
+     "ru": "Part 3 длится 4-5 минут и развивает тему Part 2 в более общем, абстрактном ключе."
+    },
+    {
+     "en": "Use a pattern: opinion, reason, example, then the other side.",
+     "uz": "Andozadan foydalaning: fikr, sabab, misol, keyin qarama-qarshi tomon.",
+     "ru": "Используйте схему: мнение, причина, пример, затем другая сторона."
+    },
+    {
+     "en": "Useful frames: 'It depends on…', 'On the one hand…', 'In my country…'.",
+     "uz": "Foydali iboralar: 'It depends on…', 'On the one hand…', 'In my country…'.",
+     "ru": "Полезные обороты: 'It depends on…', 'On the one hand…', 'In my country…'."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_speaking",
+      "part": "part3"
+     },
+     "fallback_where": {
+      "skill": "ielts_speaking"
+     },
+     "fallback_official": "ielts_speaking_samples",
+     "n": 4,
+     "split": [
+      4
+     ],
+     "minutes_each": 10,
+     "purpose": {
+      "en": "Record answers to four Part 3 questions.",
+      "uz": "Toʻrtta Part 3 savoliga javoblaringizni yozib oling.",
+      "ru": "Запишите ответы на четыре вопроса Part 3."
+     },
+     "task_type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "upload_rules": {
+      "kind": "audio",
+      "note": "the recording file must be stored (spec §4.6 L5; today only the file name is stored, M:908)"
+     }
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_speaking_samples",
+     "url": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Speaking sample tasks (PDF)",
+      "uz": "IELTS Speaking namunaviy topshiriqlari (PDF)",
+      "ru": "Примеры заданий IELTS Speaking (PDF)"
+     },
+     "note": {
+      "en": "Official examples of Part 1, Part 2 and Part 3 tasks.",
+      "uz": "Part 1, Part 2 va Part 3 topshiriqlarining rasmiy namunalari.",
+      "ru": "Официальные примеры заданий Part 1, Part 2 и Part 3."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test"
+    },
+    {
+     "id": "ielts_speaking_descriptors",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf",
+     "kind": "band_descriptors",
+     "label": {
+      "en": "IELTS Speaking band descriptors (PDF)",
+      "uz": "IELTS Speaking band deskriptorlari (PDF)",
+      "ru": "Дескрипторы баллов IELTS Speaking (PDF)"
+     },
+     "note": {
+      "en": "The official descriptions of each band for the four Speaking criteria.",
+      "uz": "Speaking boʻyicha toʻrt mezonning har biri uchun ball darajalarining rasmiy tavsifi.",
+      "ru": "Официальные описания каждого балла по четырём критериям Speaking."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf"
+    }
+   ],
+   "end_check": {
+    "verification": "upload",
+    "ladder": "L5",
+    "task_type": "create",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_speaking",
+     "part": "part3"
+    },
+    "fresh_items": true,
+    "minutes": 10,
+    "upload_rules": {
+     "kind": "audio",
+     "note": "the recording file must be stored (spec §4.6 L5; today only the file name is stored, M:908)"
+    },
+    "self_report_fields": [
+     "answers_recorded",
+     "checklist_ticks"
+    ],
+    "pass": {
+     "rule": "a recording is stored and the self-check is filled in",
+     "basis": "a band score needs a trained examiner; this check confirms the practice, not its band"
+    },
+    "instructions": {
+     "en": "Record answers to four new Part 3 questions, each with an opinion, a reason and an example. Then listen back and tick the checklist: did you keep talking, answer the question, and use the words you planned?",
+     "uz": "Toʻrtta yangi Part 3 savoliga har birida fikr, sabab va misol boʻlgan javob yozib oling. Keyin yozuvni tinglang va roʻyxatni belgilang: toʻxtamasdan gapirdingizmi, savolga javob berdingizmi, rejalashtirgan soʻzlaringizni ishlatdingizmi?",
+     "ru": "Запишите ответы на четыре новых вопроса Part 3, в каждом — мнение, причина и пример. Затем прослушайте запись и отметьте список: говорили ли вы без остановок, ответили ли на вопрос, использовали ли запланированные слова?"
+    },
+    "on_fail": {
+     "en": "Record it again; a second take after listening to the first is part of the practice.",
+     "uz": "Yana bir marta yozib oling; birinchisini tinglab, ikkinchi marta yozish ham mashqning bir qismi.",
+     "ru": "Запишите ещё раз: второй дубль после прослушивания первого — часть практики."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    }
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 10,
+    "check": 10,
+    "official_required": 0,
+    "official_optional": 0,
+    "total": 35
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Speaking is a face-to-face interview with an examiner, 11-14 minutes, in three parts, and it is recorded.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Part 1 is 4-5 minutes of general questions on familiar topics; Part 2 gives a task card, 1 minute to prepare and about 2 minutes to speak (3-4 minutes in all); Part 3 is a 4-5 minute discussion of the Part 2 topic in a more general and abstract way.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Speaking is marked on fluency and coherence, lexical resource, grammatical range and accuracy, and pronunciation.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Part 3: discussion and opinions",
+      "uz": "Oʻrganing: Part 3: muhokama va fikr bildirish",
+      "ru": "Изучите: Part 3: обсуждение и мнения"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "minutes": 10,
+     "title": {
+      "en": "Practice 1: Part 3: discussion and opinions",
+      "uz": "Mashq 1: Part 3: muhokama va fikr bildirish",
+      "ru": "Практика 1: Part 3: обсуждение и мнения"
+     },
+     "practice_ref": 0,
+     "items": 4,
+     "n": 2
+    },
+    {
+     "type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "minutes": 10,
+     "title": {
+      "en": "End-of-unit check: Part 3: discussion and opinions",
+      "uz": "Boʻlim yakuniy tekshiruvi: Part 3: muhokama va fikr bildirish",
+      "ru": "Итоговая проверка раздела: Part 3: обсуждение и мнения"
+     },
+     "end_check": true,
+     "n": 3
+    }
+   ],
+   "sessions": 3,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IESP05",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "speaking",
+   "skill_label": {
+    "en": "Speaking",
+    "uz": "Speaking (gapirish)",
+    "ru": "Speaking (говорение)"
+   },
+   "unit": 5,
+   "units_in_skill": 6,
+   "level_band": "advanced",
+   "title": {
+    "en": "Pronunciation and lexical resource",
+    "uz": "Talaffuz va leksik boylik",
+    "ru": "Произношение и лексический запас"
+   },
+   "goal": {
+    "en": "Make your speech clearer and your vocabulary more precise, using the four criteria in the official band descriptors.",
+    "uz": "Rasmiy band deskriptorlaridagi toʻrt mezondan foydalanib, nutqingizni aniqroq va soʻz boyligingizni puxtaroq qiling.",
+    "ru": "Делайте речь понятнее, а лексику точнее, опираясь на четыре критерия официальных дескрипторов."
+   },
+   "study": [
+    {
+     "en": "The four criteria: fluency and coherence, lexical resource, grammatical range and accuracy, and pronunciation.",
+     "uz": "Toʻrt mezon: ravonlik va izchillik, leksik boylik, grammatik xilma-xillik va aniqlik, talaffuz.",
+     "ru": "Четыре критерия: беглость и связность, лексический запас, грамматическое разнообразие и точность, произношение."
+    },
+    {
+     "en": "Practise word stress and sentence stress on key words; record yourself and compare with English-language media.",
+     "uz": "Soʻz va gap urgʻusini kalit soʻzlarda mashq qiling; oʻzingizni yozib oling va ingliz tilidagi media bilan solishtiring.",
+     "ru": "Отрабатывайте словесное и фразовое ударение на ключевых словах; записывайте себя и сравнивайте с англоязычными медиа."
+    },
+    {
+     "en": "When you lack a word, explain it in other words instead of stopping.",
+     "uz": "Soʻz topa olmasangiz, toʻxtab qolish oʻrniga uni boshqa soʻzlar bilan tushuntiring.",
+     "ru": "Если не хватает слова, объясните его другими словами, а не останавливайтесь."
+    }
+   ],
+   "practice": [
+    {
+     "content": "C7",
+     "where": {
+      "skill": "ielts_speaking",
+      "part": "part2"
+     },
+     "fallback_where": {
+      "skill": "ielts_speaking"
+     },
+     "fallback_official": "ielts_speaking_samples",
+     "n": 2,
+     "split": [
+      2
+     ],
+     "minutes_each": 10,
+     "purpose": {
+      "en": "Two cue-card talks; mark three words you would say more precisely and record again.",
+      "uz": "Ikkita kartochka boʻyicha nutq; aniqroq aytsa boʻladigan uchta soʻzni belgilang va qayta yozib oling.",
+      "ru": "Два выступления по карточкам; отметьте три слова, которые можно сказать точнее, и запишите снова."
+     },
+     "task_type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "upload_rules": {
+      "kind": "audio",
+      "note": "the recording file must be stored (spec §4.6 L5; today only the file name is stored, M:908)"
+     }
+    }
+   ],
+   "official_links": [
+    {
+     "id": "ielts_speaking_samples",
+     "url": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Speaking sample tasks (PDF)",
+      "uz": "IELTS Speaking namunaviy topshiriqlari (PDF)",
+      "ru": "Примеры заданий IELTS Speaking (PDF)"
+     },
+     "note": {
+      "en": "Official examples of Part 1, Part 2 and Part 3 tasks.",
+      "uz": "Part 1, Part 2 va Part 3 topshiriqlarining rasmiy namunalari.",
+      "ru": "Официальные примеры заданий Part 1, Part 2 и Part 3."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test"
+    },
+    {
+     "id": "ielts_speaking_descriptors",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf",
+     "kind": "band_descriptors",
+     "label": {
+      "en": "IELTS Speaking band descriptors (PDF)",
+      "uz": "IELTS Speaking band deskriptorlari (PDF)",
+      "ru": "Дескрипторы баллов IELTS Speaking (PDF)"
+     },
+     "note": {
+      "en": "The official descriptions of each band for the four Speaking criteria.",
+      "uz": "Speaking boʻyicha toʻrt mezonning har biri uchun ball darajalarining rasmiy tavsifi.",
+      "ru": "Официальные описания каждого балла по четырём критериям Speaking."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf"
+    }
+   ],
+   "end_check": {
+    "verification": "upload",
+    "ladder": "L5",
+    "task_type": "create",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_speaking",
+     "part": "part2"
+    },
+    "fresh_items": true,
+    "minutes": 10,
+    "upload_rules": {
+     "kind": "audio",
+     "note": "the recording file must be stored (spec §4.6 L5; today only the file name is stored, M:908)"
+    },
+    "self_report_fields": [
+     "talk_seconds",
+     "self_rating_4_criteria"
+    ],
+    "pass": {
+     "rule": "a recording is stored and the self-check is filled in",
+     "basis": "a band score needs a trained examiner; this check confirms the practice, not its band"
+    },
+    "instructions": {
+     "en": "Record a two-minute talk on a new cue card, then rate yourself on the four criteria. Then listen back and tick the checklist: did you keep talking, answer the question, and use the words you planned?",
+     "uz": "Yangi kartochka boʻyicha ikki daqiqalik nutqni yozib oling, keyin oʻzingizni toʻrt mezon boʻyicha baholang. Keyin yozuvni tinglang va roʻyxatni belgilang: toʻxtamasdan gapirdingizmi, savolga javob berdingizmi, rejalashtirgan soʻzlaringizni ishlatdingizmi?",
+     "ru": "Запишите двухминутное выступление по новой карточке и оцените себя по четырём критериям. Затем прослушайте запись и отметьте список: говорили ли вы без остановок, ответили ли на вопрос, использовали ли запланированные слова?"
+    },
+    "on_fail": {
+     "en": "Record it again; a second take after listening to the first is part of the practice.",
+     "uz": "Yana bir marta yozib oling; birinchisini tinglab, ikkinchi marta yozish ham mashqning bir qismi.",
+     "ru": "Запишите ещё раз: второй дубль после прослушивания первого — часть практики."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    },
+    "plausibility": "30 <= talk_seconds <= 180"
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 10,
+    "check": 10,
+    "official_required": 0,
+    "official_optional": 0,
+    "total": 35
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Speaking is a face-to-face interview with an examiner, 11-14 minutes, in three parts, and it is recorded.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Part 1 is 4-5 minutes of general questions on familiar topics; Part 2 gives a task card, 1 minute to prepare and about 2 minutes to speak (3-4 minutes in all); Part 3 is a 4-5 minute discussion of the Part 2 topic in a more general and abstract way.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Speaking is marked on fluency and coherence, lexical resource, grammatical range and accuracy, and pronunciation.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: Pronunciation and lexical resource",
+      "uz": "Oʻrganing: Talaffuz va leksik boylik",
+      "ru": "Изучите: Произношение и лексический запас"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "minutes": 10,
+     "title": {
+      "en": "Practice 1: Pronunciation and lexical resource",
+      "uz": "Mashq 1: Talaffuz va leksik boylik",
+      "ru": "Практика 1: Произношение и лексический запас"
+     },
+     "practice_ref": 0,
+     "items": 2,
+     "n": 2
+    },
+    {
+     "type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "minutes": 10,
+     "title": {
+      "en": "End-of-unit check: Pronunciation and lexical resource",
+      "uz": "Boʻlim yakuniy tekshiruvi: Talaffuz va leksik boylik",
+      "ru": "Итоговая проверка раздела: Произношение и лексический запас"
+     },
+     "end_check": true,
+     "n": 3
+    }
+   ],
+   "sessions": 3,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "kind": "test_prep_unit",
+   "id": "C10-IESP06",
+   "test": "IELTS",
+   "test_variant": "academic",
+   "section": "speaking",
+   "skill_label": {
+    "en": "Speaking",
+    "uz": "Speaking (gapirish)",
+    "ru": "Speaking (говорение)"
+   },
+   "unit": 6,
+   "units_in_skill": 6,
+   "level_band": "mock",
+   "title": {
+    "en": "A full Speaking mock and self-assessment",
+    "uz": "Toʻliq Speaking sinovi va oʻzini baholash",
+    "ru": "Полный пробный Speaking и самооценка"
+   },
+   "goal": {
+    "en": "Do a full three-part Speaking mock (11-14 minutes) with a partner or a tutor, record it, and rate it against the band descriptors.",
+    "uz": "Hamroh yoki tutor bilan toʻliq uch qismli Speaking sinovini (11-14 daqiqa) oʻtkazing, yozib oling va band deskriptorlari boʻyicha baholang.",
+    "ru": "Проведите полный трёхчастный пробный Speaking (11-14 минут) с партнёром или тьютором, запишите его и оцените по дескрипторам."
+   },
+   "study": [
+    {
+     "en": "Your partner reads the examiner's role: Part 1 questions, a cue card, then Part 3 questions on the same topic.",
+     "uz": "Hamrohingiz imtihon oluvchi rolini bajaradi: Part 1 savollari, kartochka, keyin shu mavzu boʻyicha Part 3 savollari.",
+     "ru": "Партнёр играет роль экзаменатора: вопросы Part 1, карточка, затем вопросы Part 3 по той же теме."
+    },
+    {
+     "en": "Keep to the timing: 4-5 minutes, then 3-4 minutes, then 4-5 minutes.",
+     "uz": "Vaqtga rioya qiling: 4-5 daqiqa, keyin 3-4 daqiqa, keyin 4-5 daqiqa.",
+     "ru": "Соблюдайте время: 4-5 минут, затем 3-4 минуты, затем 4-5 минут."
+    },
+    {
+     "en": "Choose one criterion to work on next week, based on the recording.",
+     "uz": "Yozuv asosida keyingi hafta ustida ishlash uchun bitta mezonni tanlang.",
+     "ru": "По записи выберите один критерий для работы на следующей неделе."
+    }
+   ],
+   "practice": [],
+   "official_links": [
+    {
+     "id": "ielts_speaking_samples",
+     "url": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf",
+     "kind": "sample_questions",
+     "label": {
+      "en": "IELTS Speaking sample tasks (PDF)",
+      "uz": "IELTS Speaking namunaviy topshiriqlari (PDF)",
+      "ru": "Примеры заданий IELTS Speaking (PDF)"
+     },
+     "note": {
+      "en": "Official examples of Part 1, Part 2 and Part 3 tasks.",
+      "uz": "Part 1, Part 2 va Part 3 topshiriqlarining rasmiy namunalari.",
+      "ru": "Официальные примеры заданий Part 1, Part 2 и Part 3."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test"
+    },
+    {
+     "id": "ielts_speaking_descriptors",
+     "url": "https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf",
+     "kind": "band_descriptors",
+     "label": {
+      "en": "IELTS Speaking band descriptors (PDF)",
+      "uz": "IELTS Speaking band deskriptorlari (PDF)",
+      "ru": "Дескрипторы баллов IELTS Speaking (PDF)"
+     },
+     "note": {
+      "en": "The official descriptions of each band for the four Speaking criteria.",
+      "uz": "Speaking boʻyicha toʻrt mezonning har biri uchun ball darajalarining rasmiy tavsifi.",
+      "ru": "Официальные описания каждого балла по четырём критериям Speaking."
+     },
+     "verified_at": "2026-10-07",
+     "source_url": "https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf"
+    }
+   ],
+   "end_check": {
+    "verification": "upload",
+    "ladder": "L5",
+    "task_type": "create",
+    "content": "C7",
+    "where": {
+     "skill": "ielts_speaking",
+     "part": [
+      "part1",
+      "part2",
+      "part3"
+     ]
+    },
+    "fresh_items": true,
+    "minutes": 20,
+    "upload_rules": {
+     "kind": "audio",
+     "note": "the recording file must be stored (spec §4.6 L5; today only the file name is stored, M:908)"
+    },
+    "self_report_fields": [
+     "total_minutes",
+     "self_rating_4_criteria"
+    ],
+    "pass": {
+     "rule": "a recording is stored and the self-check is filled in",
+     "basis": "a band score needs a trained examiner; this check confirms the practice, not its band"
+    },
+    "instructions": {
+     "en": "Record a full three-part mock with new questions and a new cue card. Then listen back and tick the checklist: did you keep talking, answer the question, and use the words you planned?",
+     "uz": "Yangi savollar va yangi kartochka bilan toʻliq uch qismli sinovni yozib oling. Keyin yozuvni tinglang va roʻyxatni belgilang: toʻxtamasdan gapirdingizmi, savolga javob berdingizmi, rejalashtirgan soʻzlaringizni ishlatdingizmi?",
+     "ru": "Запишите полный трёхчастный пробный тест с новыми вопросами и новой карточкой. Затем прослушайте запись и отметьте список: говорили ли вы без остановок, ответили ли на вопрос, использовали ли запланированные слова?"
+    },
+    "on_fail": {
+     "en": "Record it again; a second take after listening to the first is part of the practice.",
+     "uz": "Yana bir marta yozib oling; birinchisini tinglab, ikkinchi marta yozish ham mashqning bir qismi.",
+     "ru": "Запишите ещё раз: второй дубль после прослушивания первого — часть практики."
+    },
+    "on_pass": {
+     "en": "Move to the next unit.",
+     "uz": "Keyingi boʻlimga oʻting.",
+     "ru": "Переходите к следующему разделу."
+    },
+    "checkpoint": {
+     "ladder": "L7",
+     "who": "Jamals tutor or counselor",
+     "optional": true,
+     "note": "a tutor listens to the recording and rates it against the band descriptors (launch gate LG1 for real families)"
+    },
+    "plausibility": "8 <= total_minutes <= 20"
+   },
+   "minutes": {
+    "study": 15,
+    "practice": 0,
+    "check": 20,
+    "official_required": 0,
+    "official_optional": 0,
+    "total": 35
+   },
+   "requires": {
+    "english_cefr_min": "B2",
+    "basis": "design default"
+   },
+   "stages": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "facts": [
+    {
+     "claim": "IELTS Academic takes 2 hours 45 minutes: Listening about 30 minutes, Reading 60, Writing 60, Speaking 11-14.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Speaking is a face-to-face interview with an examiner, 11-14 minutes, in three parts, and it is recorded.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Part 1 is 4-5 minutes of general questions on familiar topics; Part 2 gives a task card, 1 minute to prepare and about 2 minutes to speak (3-4 minutes in all); Part 3 is a 4-5 minute discussion of the Part 2 topic in a more general and abstract way.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    },
+    {
+     "claim": "Speaking is marked on fluency and coherence, lexical resource, grammatical range and accuracy, and pronunciation.",
+     "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking",
+     "verified_at": "2026-10-07"
+    }
+   ],
+   "steps": [
+    {
+     "type": "study",
+     "verification": "self_report",
+     "ladder": "L0",
+     "minutes": 15,
+     "title": {
+      "en": "Learn: A full Speaking mock and self-assessment",
+      "uz": "Oʻrganing: Toʻliq Speaking sinovi va oʻzini baholash",
+      "ru": "Изучите: Полный пробный Speaking и самооценка"
+     },
+     "note": {
+      "en": "Read the unit's study points and the official format page, then tick when done.",
+      "uz": "Boʻlimning oʻrganish nuqtalarini va rasmiy format sahifasini oʻqing, keyin bajarilganini belgilang.",
+      "ru": "Прочитайте пункты раздела и официальную страницу формата, затем отметьте выполнение."
+     },
+     "n": 1
+    },
+    {
+     "type": "create",
+     "verification": "upload",
+     "ladder": "L5",
+     "minutes": 20,
+     "title": {
+      "en": "End-of-unit check: A full Speaking mock and self-assessment",
+      "uz": "Boʻlim yakuniy tekshiruvi: Toʻliq Speaking sinovi va oʻzini baholash",
+      "ru": "Итоговая проверка раздела: Полный пробный Speaking и самооценка"
+     },
+     "end_check": true,
+     "n": 2
+    }
+   ],
+   "sessions": 2,
+   "source": "own",
+   "author": "agent:C10",
+   "review": {
+    "tutor": null,
+    "gate": "LG1"
+   },
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

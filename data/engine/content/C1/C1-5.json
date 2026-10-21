@@ -1,0 +1,1393 @@
+{
+  "bank": "C1",
+  "batch": 5,
+  "items": [
+    {
+      "id": "C1-sat007",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "functions",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "f(x) = {a}x² − {b}. What is the value of f(−{t})?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 6
+          },
+          "b": {
+            "min": 1,
+            "max": 15
+          },
+          "t": {
+            "min": 3,
+            "max": 6
+          }
+        },
+        "derived": {
+          "tt": "t*t"
+        },
+        "answer": "a*t*t - b",
+        "distractors": [
+          "-a*t*t - b",
+          "-2*a*t - b",
+          "a*t*t + b"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | exponent_slip | sign_slip (C1/error_rules.json).",
+        "relation": "X = {a}*(-{t})^2 - {b}",
+        "variants": 300
+      },
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = {a}x² − {b}. What is the value of f(−{t})?",
+        "uz": "f(x) = {a}x² − {b}. f(−{t}) ning qiymati nechaga teng?",
+        "ru": "f(x) = {a}x² − {b}. Найдите значение f(−{t})."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "f(−{t}) = {a}(−{t})² − {b} = {a} × {tt} − {b} = {ANS}.",
+        "uz": "f(−{t}) = {a}(−{t})² − {b} = {a} × {tt} − {b} = {ANS}.",
+        "ru": "f(−{t}) = {a}(−{t})² − {b} = {a} × {tt} − {b} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -0.4,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat008",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "exponential_growth",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "The number of downloads of an app t weeks after launch is modelled by N(t) = {N0} · {g}ᵗ. According to the model, what is N({k})?",
+        "params": {
+          "N0": {
+            "min": 100,
+            "max": 500,
+            "step": 50
+          },
+          "g": {
+            "values": [
+              2,
+              3
+            ]
+          },
+          "k": {
+            "min": 2,
+            "max": 4
+          }
+        },
+        "derived": {
+          "gk": "g^k"
+        },
+        "constraints": [
+          "g*k != g^k",
+          "(N0*g*k) != (N0*g^(k - 1))"
+        ],
+        "answer": "N0*g^k",
+        "distractors": [
+          "N0*g*k",
+          "N0 + g^k",
+          "N0*g^(k - 1)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | wrong_operation | off_by_one (C1/error_rules.json).",
+        "relation": "X = {N0}*{g}^{k}",
+        "variants": 27
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The number of downloads of an app t weeks after launch is modelled by N(t) = {N0} · {g}ᵗ. According to the model, what is N({k})?",
+        "uz": "Ilova ishga tushirilgandan t hafta oʻtgach yuklab olishlar soni N(t) = {N0} · {g}ᵗ model bilan ifodalanadi. Modelga koʻra N({k}) nechaga teng?",
+        "ru": "Число скачиваний приложения через t недель после запуска описывается моделью N(t) = {N0} · {g}ᵗ. Чему равно N({k}) по этой модели?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "N({k}) = {N0} · {g}^{k} = {N0} × {gk} = {ANS}.",
+        "uz": "N({k}) = {N0} · {g}^{k} = {N0} × {gk} = {ANS}.",
+        "ru": "N({k}) = {N0} · {g}^{k} = {N0} × {gk} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.3,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat009",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "quadratic",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "The graph of y = (x − {p})(x + {q}) is a parabola. What is the x-coordinate of its vertex?",
+        "params": {
+          "p": {
+            "min": 1,
+            "max": 9
+          },
+          "q": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "constraints": [
+          "p != q"
+        ],
+        "answer": "(p - q)/2",
+        "distractors": [
+          "(q - p)/2",
+          "p - q",
+          "-p*q"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | wrong_formula | partial_answer (C1/error_rules.json).",
+        "relation": "2*X + {q} - {p} = 0",
+        "decimals": 1,
+        "variants": 72
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The graph of y = (x − {p})(x + {q}) is a parabola. What is the x-coordinate of its vertex?",
+        "uz": "y = (x − {p})(x + {q}) funksiyaning grafigi parabola. Uning uchining abssissasi nechaga teng?",
+        "ru": "График функции y = (x − {p})(x + {q}) — парабола. Найдите абсциссу её вершины."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The zeros are {p} and −{q}; the vertex is halfway between them: ({p} + (−{q})) ÷ 2 = {ANS}.",
+        "uz": "Nollari {p} va −{q}; parabola uchi ular oʻrtasida: ({p} + (−{q})) ÷ 2 = {ANS}.",
+        "ru": "Нули функции {p} и −{q}; вершина посередине между ними: ({p} + (−{q})) ÷ 2 = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.2,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat010",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "equivalent_expressions",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "For all x, ({a}x + {b})² − ({a}x − {b})² = kx, where k is a constant. What is k?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 7
+          },
+          "b": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "constraints": [
+          "a != b",
+          "b != 2*a"
+        ],
+        "answer": "4*a*b",
+        "distractors": [
+          "2*a*b",
+          "0",
+          "2*b*b"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | sign_slip | square_slip (C1/error_rules.json).",
+        "relation": "X = ({a} + {b})^2 - ({a} - {b})^2",
+        "variants": 45
+      },
+      "lang": "en",
+      "stem": {
+        "en": "For all x, ({a}x + {b})² − ({a}x − {b})² = kx, where k is a constant. What is k?",
+        "uz": "Barcha x uchun ({a}x + {b})² − ({a}x − {b})² = kx, bunda k — oʻzgarmas son. k nechaga teng?",
+        "ru": "При всех x верно ({a}x + {b})² − ({a}x − {b})² = kx, где k — постоянная. Найдите k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The x² terms and the constants cancel; the middle terms give 2 · {a} · {b} − (−2 · {a} · {b}) = {ANS}, so k = {ANS}.",
+        "uz": "x² li hadlar va ozod hadlar qisqaradi; oʻrta hadlar 2 · {a} · {b} − (−2 · {a} · {b}) = {ANS} beradi, demak k = {ANS}.",
+        "ru": "Члены с x² и свободные члены сокращаются; средние члены дают 2 · {a} · {b} − (−2 · {a} · {b}) = {ANS}, значит, k = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.3,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat011",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "exponential_decay",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "hard"
+      },
+      "family": {
+        "template": "A car loses {p}% of its value every year. After how many whole years will its value first be less than {f}% of the original value?",
+        "params": {
+          "p": {
+            "values": [
+              4,
+              5,
+              8,
+              10
+            ]
+          },
+          "f": {
+            "values": [
+              50,
+              40,
+              30,
+              25
+            ]
+          }
+        },
+        "derived": {
+          "r": "1 - p/100",
+          "F": "f/100",
+          "L": "round(ln(f/100)/ln(1 - p/100), 2)"
+        },
+        "constraints": [
+          "ceil((100 - f)/p) != ceil(ln(f/100)/ln(1 - p/100))",
+          "ceil((100 - f)/p) != ceil(ln(f/100)/ln(1 - p/100)) - 1",
+          "ceil(100/p) != ceil(ln(f/100)/ln(1 - p/100))",
+          "ceil(100/p) != ceil(ln(f/100)/ln(1 - p/100)) - 1",
+          "ceil(100/p) != ceil((100 - f)/p)"
+        ],
+        "answer": "ceil(ln(f/100)/ln(1 - p/100))",
+        "distractors": [
+          "ceil(ln(f/100)/ln(1 - p/100)) - 1",
+          "ceil((100 - f)/p)",
+          "ceil(100/p)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: off_by_one | additive_reasoning | wrong_formula (C1/error_rules.json).",
+        "relation": "X = ceil(log({f}/100, 1 - {p}/100))",
+        "variants": 16
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A car loses {p}% of its value every year. After how many whole years will its value first be less than {f}% of the original value?",
+        "uz": "Avtomobil har yili qiymatining {p} foizini yoʻqotadi. Necha toʻliq yildan keyin uning qiymati ilk bor boshlangʻich qiymatning {f} foizidan kam boʻladi?",
+        "ru": "Автомобиль каждый год теряет {p}% своей стоимости. Через сколько полных лет его стоимость впервые станет меньше {f}% первоначальной?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "After n years the value is {r}ⁿ of the original; {r}ⁿ < {F} gives n > {L}, so n = {ANS}.",
+        "uz": "n yildan keyin qiymat boshlangʻichning {r}ⁿ qismi; {r}ⁿ < {F} dan n > {L}, demak n = {ANS}.",
+        "ru": "Через n лет стоимость равна {r}ⁿ от исходной; из {r}ⁿ < {F} следует n > {L}, значит, n = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat012",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "exponential_functions",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "hard"
+      },
+      "family": {
+        "template": "f(x) = {c} · {a}ˣ. For every x, f(x + {h}) = k · f(x). What is k?",
+        "params": {
+          "c": {
+            "min": 2,
+            "max": 9
+          },
+          "a": {
+            "values": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "h": {
+            "min": 2,
+            "max": 4
+          }
+        },
+        "constraints": [
+          "a*h != a^h",
+          "a + h != a^h"
+        ],
+        "answer": "a^h",
+        "distractors": [
+          "a*h",
+          "c*a^h",
+          "a + h"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: exponent_slip | partial_answer | wrong_operation (C1/error_rules.json).",
+        "relation": "X = ({c}*{a}^(1 + {h}))/({c}*{a}^1)",
+        "variants": 88
+      },
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = {c} · {a}ˣ. For every x, f(x + {h}) = k · f(x). What is k?",
+        "uz": "f(x) = {c} · {a}ˣ. Barcha x uchun f(x + {h}) = k · f(x). k nechaga teng?",
+        "ru": "f(x) = {c} · {a}ˣ. При всех x верно f(x + {h}) = k · f(x). Найдите k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "f(x + {h}) = {c} · {a}ˣ · {a}^{h}, so k = {a}^{h} = {ANS}.",
+        "uz": "f(x + {h}) = {c} · {a}ˣ · {a}^{h}, demak k = {a}^{h} = {ANS}.",
+        "ru": "f(x + {h}) = {c} · {a}ˣ · {a}^{h}, поэтому k = {a}^{h} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat013",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "unit_conversion",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "A recipe uses {g} g of flour for every {n} servings. How many kilograms of flour are needed for {N} servings?",
+        "params": {
+          "g": {
+            "min": 150,
+            "max": 500,
+            "step": 50
+          },
+          "n": {
+            "min": 2,
+            "max": 8
+          },
+          "N": {
+            "min": 10,
+            "max": 60,
+            "step": 2
+          }
+        },
+        "derived": {
+          "gN": "g*N/n"
+        },
+        "constraints": [
+          "(g*N) % n == 0"
+        ],
+        "answer": "g*N/(n*1000)",
+        "distractors": [
+          "g*N/n",
+          "g*N/(n*100)",
+          "g*n/(N*1000)"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: unit_slip | unit_slip | inverse_slip (C1/error_rules.json).",
+        "relation": "X*1000/{N} = {g}/{n}",
+        "decimals": 3,
+        "variants": 1080
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A recipe uses {g} g of flour for every {n} servings. How many kilograms of flour are needed for {N} servings?",
+        "uz": "Retseptda har {n} porsiya uchun {g} g un ishlatiladi. {N} porsiya uchun necha kilogramm un kerak?",
+        "ru": "По рецепту на каждые {n|порцию|порции|порций} нужно {g} г муки. Сколько килограммов муки нужно на {N|порцию|порции|порций}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "One serving needs {g} ÷ {n} g, so {N} servings need {gN} g = {ANS} kg (1 kg = 1000 g).",
+        "uz": "Bir porsiyaga {g} ÷ {n} g, demak {N} porsiyaga {gN} g = {ANS} kg kerak (1 kg = 1000 g).",
+        "ru": "На одну порцию {g} ÷ {n} г, значит, на {N|порцию|порции|порций} — {gN} г = {ANS} кг (1 кг = 1000 г)."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": -1.4,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat014",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "In a school test, {p}% of the {n} students passed. How many students did not pass?",
+        "params": {
+          "n": {
+            "min": 50,
+            "max": 80
+          },
+          "p": {
+            "values": [
+              60,
+              65,
+              70,
+              75,
+              80,
+              85,
+              90
+            ]
+          }
+        },
+        "derived": {
+          "q": "100 - p"
+        },
+        "constraints": [
+          "(n*p) % 100 == 0",
+          "n - (100 - p) != n*(100 - p)/100",
+          "n*p/100 != 100 - p",
+          "n*p/100 != n - (100 - p)",
+          "n - (100 - p) != 100 - p"
+        ],
+        "answer": "n*(100 - p)/100",
+        "distractors": [
+          "n*p/100",
+          "100 - p",
+          "n - (100 - p)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | percent_base | wrong_operation (C1/error_rules.json).",
+        "relation": "X + {n}*{p}/100 = {n}",
+        "variants": 32
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In a school test, {p}% of the {n} students passed. How many students did not pass?",
+        "uz": "Maktab testida {n} nafar oʻquvchining {p} foizi muvaffaqiyatli oʻtdi. Nechta oʻquvchi oʻta olmadi?",
+        "ru": "Из {n|ученика|учеников|учеников}, писавших школьный тест, {p}% сдали его. Сколько учеников не сдали тест?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{q}% did not pass: {n} × {q} ÷ 100 = {ANS}.",
+        "uz": "Oʻta olmaganlar {q} foiz: {n} × {q} ÷ 100 = {ANS}.",
+        "ru": "Не сдали {q}%: {n} × {q} ÷ 100 = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.5,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat015",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "statistics",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "The data set {a}, {b}, {c}, {d}, {e} gets one more value, {f}. What is the median of the six values?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 10
+          },
+          "d1": {
+            "min": 1,
+            "max": 6
+          },
+          "d2": {
+            "min": 1,
+            "max": 6
+          },
+          "d3": {
+            "min": 1,
+            "max": 6
+          },
+          "d4": {
+            "min": 1,
+            "max": 6
+          },
+          "d5": {
+            "min": 1,
+            "max": 10
+          }
+        },
+        "derived": {
+          "b": "a + d1",
+          "c": "b + d2",
+          "d": "c + d3",
+          "e": "d + d4",
+          "f": "e + d5"
+        },
+        "constraints": [
+          "(a + b + c + d + e + f)/6 != (c + d)/2",
+          "(a + b + c + d + e + f)/6 != c",
+          "(a + b + c + d + e + f)/6 != (b + c)/2"
+        ],
+        "answer": "(c + d)/2",
+        "distractors": [
+          "c",
+          "(a + b + c + d + e + f)/6",
+          "(b + c)/2"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | wrong_formula | off_by_one (C1/error_rules.json).",
+        "relation": "X = ({c} + {d})/2",
+        "decimals": 2,
+        "variants": 107577
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The data set {a}, {b}, {c}, {d}, {e} gets one more value, {f}. What is the median of the six values?",
+        "uz": "{a}, {b}, {c}, {d}, {e} maʼlumotlar toʻplamiga yana bitta qiymat — {f} qoʻshildi. Oltita qiymatning medianasi nechaga teng?",
+        "ru": "К набору данных {a}, {b}, {c}, {d}, {e} добавили ещё одно значение — {f}. Найдите медиану шести значений."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "In order, the two middle values of six are the 3rd and 4th: ({c} + {d}) ÷ 2 = {ANS}.",
+        "uz": "Tartiblangan oltita qiymatning oʻrtadagi ikkitasi — 3- va 4-qiymatlar: ({c} + {d}) ÷ 2 = {ANS}.",
+        "ru": "В упорядоченном наборе из шести значений средние — 3-е и 4-е: ({c} + {d}) ÷ 2 = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": -1,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat016",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "probability",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "In a survey of {N} students, {a} play football, {b} play chess and {c} play both. A student is chosen at random. What is the probability that the student plays neither? Give a decimal.",
+        "params": {
+          "N": {
+            "values": [
+              40,
+              50,
+              80,
+              100,
+              200
+            ]
+          },
+          "a": {
+            "min": 10,
+            "max": 30
+          },
+          "b": {
+            "min": 8,
+            "max": 25
+          },
+          "c": {
+            "min": 2,
+            "max": 8
+          }
+        },
+        "derived": {
+          "u": "a + b - c",
+          "v": "N - a - b + c"
+        },
+        "constraints": [
+          "a + b - c < N",
+          "c < a",
+          "c < b",
+          "N != 2*(a + b - c)",
+          "N != a + b",
+          "(N - a - b)/N != c/N",
+          "(N - a - b)/N != (a + b - c)/N",
+          "c != a + b - c",
+          "a + b < N"
+        ],
+        "answer": "(N - a - b + c)/N",
+        "distractors": [
+          "(N - a - b)/N",
+          "c/N",
+          "(a + b - c)/N"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | wrong_formula | wrong_formula (C1/error_rules.json).",
+        "relation": "X*{N} + ({a} + {b} - {c}) = {N}",
+        "decimals": 4,
+        "variants": 11468
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In a survey of {N} students, {a} play football, {b} play chess and {c} play both. A student is chosen at random. What is the probability that the student plays neither? Give a decimal.",
+        "uz": "Soʻrovnomada {N} nafar oʻquvchi qatnashdi: {a} nafari futbol, {b} nafari shaxmat, {c} nafari ikkalasini ham oʻynaydi. Tavakkaliga tanlangan oʻquvchi hech birini oʻynamasligi ehtimoli qancha? Javobni oʻnli kasr koʻrinishida ifodalang.",
+        "ru": "В опросе участвовали {N|ученик|ученика|учеников}: в футбол играют {a}, в шахматы — {b}, в обе игры — {c}. Случайно выбирают одного ученика. Какова вероятность, что он не играет ни в одну из этих игр? Ответ дайте десятичной дробью."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Football or chess: {a} + {b} − {c} = {u}; neither: {N} − {u} = {v}; P = {v} ÷ {N} = {ANS}.",
+        "uz": "Futbol yoki shaxmat: {a} + {b} − {c} = {u}; hech biri: {N} − {u} = {v}; P = {v} ÷ {N} = {ANS}.",
+        "ru": "Футбол или шахматы: {a} + {b} − {c} = {u}; ни то ни другое: {N} − {u} = {v}; P = {v} ÷ {N} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": -0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C1-sat017",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "statistics",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "hard"
+      },
+      "family": {
+        "template": "Class A has {n1} students with a mean score of {m1}. Class B has {n2} students with a mean score of {m2}. What is the mean score of all the students together?",
+        "params": {
+          "n1": {
+            "min": 10,
+            "max": 30
+          },
+          "n2": {
+            "min": 10,
+            "max": 30
+          },
+          "m1": {
+            "min": 60,
+            "max": 90
+          },
+          "m2": {
+            "min": 60,
+            "max": 90
+          }
+        },
+        "derived": {
+          "T": "n1*m1 + n2*m2",
+          "n": "n1 + n2"
+        },
+        "constraints": [
+          "n1 != n2",
+          "m1 != m2",
+          "(n1*m1 + n2*m2) % (n1 + n2) == 0"
+        ],
+        "answer": "(n1*m1 + n2*m2)/(n1 + n2)",
+        "distractors": [
+          "(m1 + m2)/2",
+          "(n2*m1 + n1*m2)/(n1 + n2)",
+          "n1*m1 + n2*m2"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | inverse_slip | partial_answer (C1/error_rules.json).",
+        "relation": "X*({n1} + {n2}) = {n1}*{m1} + {n2}*{m2}",
+        "decimals": 2,
+        "variants": 573
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Class A has {n1} students with a mean score of {m1}. Class B has {n2} students with a mean score of {m2}. What is the mean score of all the students together?",
+        "uz": "A sinfda {n1} nafar oʻquvchi bor, ularning oʻrtacha bali {m1}. B sinfda {n2} nafar oʻquvchi, oʻrtacha bali {m2}. Barcha oʻquvchilarning birgalikdagi oʻrtacha bali nechaga teng?",
+        "ru": "Число учеников в классе A — {n1}, их средний балл — {m1}. Число учеников в классе B — {n2}, их средний балл — {m2}. Каков средний балл всех учеников вместе?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Total points: {n1} × {m1} + {n2} × {m2} = {T}; divided by {n} students: {ANS}.",
+        "uz": "Ballar yigʻindisi: {n1} × {m1} + {n2} × {m2} = {T}; {n} nafar oʻquvchiga boʻlamiz: {ANS}.",
+        "ru": "Сумма баллов: {n1} × {m1} + {n2} × {m2} = {T}; делим на число учеников {n}: {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.4,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat018",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "unit_conversion",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "hard"
+      },
+      "family": {
+        "template": "A leaking tap drips {d} drops per minute, and {k} drops make 1 mL. How many litres of water does it waste in {D} days? Round to the nearest hundredth.",
+        "params": {
+          "d": {
+            "min": 10,
+            "max": 40
+          },
+          "k": {
+            "values": [
+              10,
+              15,
+              20,
+              25
+            ]
+          },
+          "D": {
+            "min": 2,
+            "max": 7
+          }
+        },
+        "derived": {
+          "drops": "d*60*24*D",
+          "ml": "d*60*24*D/k"
+        },
+        "answer": "d*60*24*D/(k*1000)",
+        "distractors": [
+          "d*60*D/(k*1000)",
+          "d*60*24*D/(k*100)",
+          "d*60*24*D*k/1000"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: unit_slip | unit_slip | inverse_slip (C1/error_rules.json).",
+        "relation": "X*1000*{k} = {d}*60*24*{D}",
+        "tolerance": 0.01,
+        "decimals": 2,
+        "variants": 744
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A leaking tap drips {d} drops per minute, and {k} drops make 1 mL. How many litres of water does it waste in {D} days? Round to the nearest hundredth.",
+        "uz": "Buzuq jumrakdan daqiqasiga {d} tomchi suv tomadi, {k} tomchi 1 mL ga teng. {D} kunda necha litr suv isrof boʻladi? Yuzdan birlargacha yaxlitlang.",
+        "ru": "Неисправный кран капает с частотой {d|капля|капли|капель} в минуту, и {k} капель составляют 1 мл. Сколько литров воды теряется за {D|сутки|суток|суток}? Ответ округлите до сотых."
+      },
+      "answer_numeric": {
+        "tolerance": 0.01
+      },
+      "why": {
+        "en": "{d} × 60 × 24 × {D} = {drops} drops = {ml} mL ≈ {ANS} L.",
+        "uz": "{d} × 60 × 24 × {D} = {drops} tomchi = {ml} mL ≈ {ANS} L.",
+        "ru": "{d} × 60 × 24 × {D} = {drops} капель = {ml} мл ≈ {ANS} л."
+      },
+      "instructions": {
+        "en": "Type your answer as a number rounded to hundredths.",
+        "uz": "Javobni yuzdan birlargacha yaxlitlab, son bilan kiriting.",
+        "ru": "Введите ответ числом, округлив до сотых."
+      },
+      "prior_b": -0.3,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat019",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "An inscribed angle in a circle intercepts an arc of {a}°. What is the measure of the inscribed angle, in degrees?",
+        "params": {
+          "a": {
+            "min": 40,
+            "max": 160,
+            "step": 2
+          }
+        },
+        "answer": "a/2",
+        "distractors": [
+          "a",
+          "2*a",
+          "180 - a/2"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | inverse_slip | wrong_formula (C1/error_rules.json).",
+        "relation": "2*X = {a}",
+        "constraints": [
+          "(a) != (180 - a/2)",
+          "(2*a) != (180 - a/2)"
+        ],
+        "variants": 59
+      },
+      "lang": "en",
+      "stem": {
+        "en": "An inscribed angle in a circle intercepts an arc of {a}°. What is the measure of the inscribed angle, in degrees?",
+        "uz": "Aylanaga ichki chizilgan burchak {a}° li yoyga tiralgan. Bu burchak necha gradus?",
+        "ru": "Вписанный угол опирается на дугу в {a}°. Чему равен этот угол (в градусах)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "An inscribed angle is half of its arc: {a}° ÷ 2 = {ANS}°.",
+        "uz": "Ichki chizilgan burchak tiralgan yoyining yarmiga teng: {a}° ÷ 2 = {ANS}°.",
+        "ru": "Вписанный угол равен половине дуги, на которую он опирается: {a}° ÷ 2 = {ANS}°."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.7,
+      "time_s": 25,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat020",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "A rectangular tank with a base of {a} cm by {b} cm holds water {w} cm deep. When a stone is placed in it, the water level rises by {r} cm. What is the volume of the stone, in cm³?",
+        "params": {
+          "a": {
+            "min": 10,
+            "max": 30
+          },
+          "b": {
+            "min": 10,
+            "max": 25
+          },
+          "w": {
+            "min": 5,
+            "max": 15
+          },
+          "r": {
+            "min": 1,
+            "max": 4
+          }
+        },
+        "answer": "a*b*r",
+        "distractors": [
+          "a*b*(w + r)",
+          "a*b*w",
+          "2*(a + b)*r"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | wrong_formula | wrong_formula (C1/error_rules.json).",
+        "relation": "X = {a}*{b}*({w} + {r}) - {a}*{b}*{w}",
+        "variants": 14784
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A rectangular tank with a base of {a} cm by {b} cm holds water {w} cm deep. When a stone is placed in it, the water level rises by {r} cm. What is the volume of the stone, in cm³?",
+        "uz": "Asosi {a} sm ga {b} sm boʻlgan toʻgʻri burchakli idishda {w} sm balandlikda suv bor. Unga tosh solinganda suv sathi {r} sm ga koʻtarildi. Toshning hajmi necha sm³?",
+        "ru": "В прямоугольном баке с основанием {a} см на {b} см налита вода высотой {w} см. Когда в бак опустили камень, уровень воды поднялся на {r} см. Каков объём камня (в см³)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The stone pushes up a layer of water {a} × {b} × {r} = {ANS} cm³.",
+        "uz": "Tosh hajmi koʻtarilgan suv qatlami hajmiga teng: {a} × {b} × {r} = {ANS} sm³.",
+        "ru": "Объём камня равен объёму поднявшегося слоя воды: {a} × {b} × {r} = {ANS} см³."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.6,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat021",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "right_triangle_trig",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "In right triangle PQR, angle R is the right angle and cos P = {a}/{c}. What is sin Q?",
+        "params": {
+          "tri": {
+            "values": [
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                5,
+                12,
+                13
+              ],
+              [
+                8,
+                15,
+                17
+              ],
+              [
+                7,
+                24,
+                25
+              ],
+              [
+                20,
+                21,
+                29
+              ],
+              [
+                12,
+                35,
+                37
+              ],
+              [
+                9,
+                40,
+                41
+              ],
+              [
+                28,
+                45,
+                53
+              ],
+              [
+                11,
+                60,
+                61
+              ],
+              [
+                33,
+                56,
+                65
+              ],
+              [
+                16,
+                63,
+                65
+              ],
+              [
+                48,
+                55,
+                73
+              ],
+              [
+                13,
+                84,
+                85
+              ],
+              [
+                36,
+                77,
+                85
+              ]
+            ]
+          },
+          "s": {
+            "values": [
+              0,
+              1
+            ]
+          }
+        },
+        "derived": {
+          "a": "tri[s]",
+          "b": "tri[1 - s]",
+          "c": "tri[2]"
+        },
+        "answer": "a/c",
+        "option_templates": [
+          "{a}/{c}",
+          "{b}/{c}",
+          "{c}/{a}",
+          "{a}/{b}"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | inverse_slip | wrong_formula (C1/error_rules.json).",
+        "relation": "X = sind(90 - acosd({a}/{c}))",
+        "variants": 28
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In right triangle PQR, angle R is the right angle and cos P = {a}/{c}. What is sin Q?",
+        "uz": "PQR toʻgʻri burchakli uchburchakda R — toʻgʻri burchak va cos P = {a}/{c}. sin Q nechaga teng?",
+        "ru": "В прямоугольном треугольнике PQR угол R прямой и cos P = {a}/{c}. Чему равен sin Q?"
+      },
+      "why": {
+        "en": "P + Q = 90°, so sin Q = cos P = {a}/{c}.",
+        "uz": "P + Q = 90°, shuning uchun sin Q = cos P = {a}/{c}.",
+        "ru": "P + Q = 90°, поэтому sin Q = cos P = {a}/{c}."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.1,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat022",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A circle has its center at ({h}, {k}) and passes through the point ({x1}, {y1}). If its equation is written as (x − a)² + (y − b)² = r², what is r²?",
+        "params": {
+          "h": {
+            "min": -6,
+            "max": 6
+          },
+          "k": {
+            "min": -6,
+            "max": 6
+          },
+          "dx": {
+            "min": -7,
+            "max": 7,
+            "not": [
+              0
+            ]
+          },
+          "dy": {
+            "min": -7,
+            "max": 7,
+            "not": [
+              0
+            ]
+          }
+        },
+        "derived": {
+          "x1": "h + dx",
+          "y1": "k + dy",
+          "dx2": "dx*dx",
+          "dy2": "dy*dy"
+        },
+        "constraints": [
+          "abs(dx) != abs(dy)",
+          "abs(dx) + abs(dy) != dx*dx + dy*dy",
+          "abs(dx) + abs(dy) != (dx + dy)^2",
+          "abs(dx) + abs(dy) != dx*dx - dy*dy",
+          "(dx + dy)^2 != dx*dx - dy*dy"
+        ],
+        "answer": "dx*dx + dy*dy",
+        "distractors": [
+          "abs(dx) + abs(dy)",
+          "(dx + dy)^2",
+          "dx*dx - dy*dy"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | square_slip | sign_slip (C1/error_rules.json).",
+        "relation": "X = ({x1} - {h})^2 + ({y1} - {k})^2",
+        "variants": 22984
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A circle has its center at ({h}, {k}) and passes through the point ({x1}, {y1}). If its equation is written as (x − a)² + (y − b)² = r², what is r²?",
+        "uz": "Aylananing markazi ({h}, {k}) nuqtada va u ({x1}, {y1}) nuqtadan oʻtadi. Aylana tenglamasi (x − a)² + (y − b)² = r² koʻrinishida yozilsa, r² nechaga teng?",
+        "ru": "Окружность с центром ({h}, {k}) проходит через точку ({x1}, {y1}). Если её уравнение записать в виде (x − a)² + (y − b)² = r², чему равно r²?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "r² = ({x1} − ({h}))² + ({y1} − ({k}))² = {dx2} + {dy2} = {ANS}.",
+        "uz": "r² = ({x1} − ({h}))² + ({y1} − ({k}))² = {dx2} + {dy2} = {ANS}.",
+        "ru": "r² = ({x1} − ({h}))² + ({y1} − ({k}))² = {dx2} + {dy2} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.1,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat023",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "similarity",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "hard"
+      },
+      "family": {
+        "template": "In triangle ABC, point D lies on AB and point E lies on AC, with DE parallel to BC. AD = {p}, DB = {q} and DE = {d}. What is BC?",
+        "params": {
+          "p": {
+            "min": 2,
+            "max": 9
+          },
+          "q": {
+            "min": 1,
+            "max": 9
+          },
+          "d": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "derived": {
+          "s": "p + q"
+        },
+        "constraints": [
+          "(d*(p + q)) % p == 0",
+          "p != q",
+          "d != p",
+          "d*q/p != d + q",
+          "d*q/p != d*p/(p + q)"
+        ],
+        "answer": "d*(p + q)/p",
+        "distractors": [
+          "d*q/p",
+          "d*p/(p + q)",
+          "d + q"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | inverse_slip | additive_reasoning (C1/error_rules.json).",
+        "relation": "X/{d} = ({p} + {q})/{p}",
+        "decimals": 2,
+        "variants": 161
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In triangle ABC, point D lies on AB and point E lies on AC, with DE parallel to BC. AD = {p}, DB = {q} and DE = {d}. What is BC?",
+        "uz": "ABC uchburchakda D nuqta AB tomonda, E nuqta AC tomonda yotadi va DE ∥ BC. AD = {p}, DB = {q}, DE = {d}. BC nechaga teng?",
+        "ru": "В треугольнике ABC точка D лежит на AB, точка E — на AC, причём DE ∥ BC. AD = {p}, DB = {q}, DE = {d}. Найдите BC."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Triangles ADE and ABC are similar with ratio AB/AD = {s}/{p}, so BC = {d} × {s} ÷ {p} = {ANS}.",
+        "uz": "ADE va ABC uchburchaklar oʻxshash, oʻxshashlik koeffitsiyenti AB/AD = {s}/{p}, demak BC = {d} × {s} ÷ {p} = {ANS}.",
+        "ru": "Треугольники ADE и ABC подобны с коэффициентом AB/AD = {s}/{p}, поэтому BC = {d} × {s} ÷ {p} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-sat024",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "sat": {
+        "domain": "geometry_trig",
+        "difficulty": "hard"
+      },
+      "family": {
+        "template": "A sector of a circle has radius {r} cm and arc length {s} cm. What is the area of the sector, in cm²?",
+        "params": {
+          "r": {
+            "min": 3,
+            "max": 12
+          },
+          "s": {
+            "min": 2,
+            "max": 20
+          }
+        },
+        "constraints": [
+          "(r*s) % 2 == 0",
+          "s < 2*pi*r"
+        ],
+        "answer": "r*s/2",
+        "distractors": [
+          "r*s",
+          "s/r",
+          "r*r*s/2"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | exponent_slip (C1/error_rules.json).",
+        "relation": "X = 1/2*{r}^2*({s}/{r})",
+        "decimals": 2,
+        "variants": 144
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A sector of a circle has radius {r} cm and arc length {s} cm. What is the area of the sector, in cm²?",
+        "uz": "Doira sektorining radiusi {r} sm, yoyining uzunligi {s} sm. Sektorning yuzi necha sm²?",
+        "ru": "Сектор круга имеет радиус {r} см и длину дуги {s} см. Чему равна площадь сектора (в см²)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The angle is θ = {s}/{r} radians and the area is ½r²θ = ½ × {r} × {s} = {ANS} cm².",
+        "uz": "Burchak θ = {s}/{r} radian, yuza ½r²θ = ½ × {r} × {s} = {ANS} sm².",
+        "ru": "Угол θ = {s}/{r} рад, площадь ½r²θ = ½ × {r} × {s} = {ANS} см²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.4,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+/* "JG Uz Marks": Uzbek's two marks in Raleway's own quote shapes, declared once for every surface the app serves in Uzbek.
+   Raleway (the app's font) draws U+02BC, the tutuq belgisi of «maʼno», «taʼsir», «sunʼiy», with its acute accent, and U+02BB (oʻ, gʻ)
+   with a short tick that is nearly a dot at body size (the P14 glyph lane, 18 Oct 2026). This face is Raleway itself cut down to those two
+   glyphs (public/runtime/fonts/jg-uz-marks.woff2, OFL, built by tools/fonts/build-uz-marks.py): its turned comma answers U+02BB and its
+   apostrophe U+02BC, every weight. A unicode-range of those two code points means the browser asks it for them alone, so every other
+   letter stays Raleway's, and a page with neither mark never fetches the file. The serif faces (Fraunces, Lora, Cormorant Garamond) draw
+   both marks as they should and are left alone.
+   The one declaration (P15 fixes lane, 18 Oct 2026: P14 had it inside jg-i18n.css, which only the student pages load). Each surface puts
+   the name first in its own Raleway stack for Uzbek only: the student pages in jg-i18n.css (html[lang="uz"], linked with it by
+   src/server/pages.ts and jg-i18n.js), the parent pages of a real family (src/server/pages.ts), the AI notice (jg-ai-notice.js), the
+   sign-in, family-link, welcome, sign-out and study pages (web/auth/*.html) and the staff queue (src/server/phase-x/staff-page.ts).
+   Pinned by tests/unit/uz-marks.test.ts. */
+@font-face { font-family: "JG Uz Marks"; src: url(/runtime/fonts/jg-uz-marks.woff2?v=1) format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; unicode-range: U+02BB-02BC; }

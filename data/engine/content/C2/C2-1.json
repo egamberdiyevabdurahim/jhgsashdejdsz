@@ -1,0 +1,1418 @@
+{
+ "bank": "C2",
+ "batch": 1,
+ "kind": "math_explainers",
+ "explainers": [
+  {
+   "id": "C2-ar0001",
+   "type": "study",
+   "skill": "math",
+   "rung": "arith",
+   "subskill": "addition",
+   "title": {
+    "en": "Column addition: carry the ten",
+    "uz": "Ustun shaklida qoʻshish: oʻnlikni keyingi xonaga oʻtkazing",
+    "ru": "Сложение столбиком: перенос десятка"
+   },
+   "idea": {
+    "en": "Write the numbers one under the other: ones under ones, tens under tens, and so on. Add each column from right to left. If a column gives 10 or more, write its ones digit and carry 1 to the next column on the left.",
+    "uz": "Sonlarni birini ikkinchisining ostiga yozing: birliklar birliklar ostida, oʻnliklar oʻnliklar ostida va hokazo. Har bir ustunni oʻngdan chapga qarab qoʻshing. Agar ustun yigʻindisi 10 yoki undan katta boʻlsa, uning birliklar raqamini yozing va 1 ni chapdagi keyingi ustunga oʻtkazing.",
+    "ru": "Запишите числа друг под другом: единицы под единицами, десятки под десятками и так далее. Складывайте столбцы справа налево. Если в столбце получилось 10 или больше, запишите цифру единиц, а 1 перенесите в следующий столбец слева."
+   },
+   "example": {
+    "problem": {
+     "en": "A school library had 1,486 books and received 357 new ones. How many books does it have now?",
+     "uz": "Maktab kutubxonasida 1486 ta kitob bor edi, unga yana 357 ta yangi kitob keltirildi. Endi kutubxonada nechta kitob bor?",
+     "ru": "В школьной библиотеке было 1486 книг, в неё привезли ещё 357 новых. Сколько книг стало в библиотеке?"
+    },
+    "steps": [
+     {
+      "en": "Ones: 6 + 7 = 13. Write 3, carry 1.",
+      "uz": "Birliklar: 6 + 7 = 13. 3 ni yozamiz, 1 ni keyingi xonaga oʻtkazamiz.",
+      "ru": "Единицы: 6 + 7 = 13. Пишем 3, 1 переносим."
+     },
+     {
+      "en": "Tens: 8 + 5 + 1 (carried) = 14. Write 4, carry 1.",
+      "uz": "Oʻnliklar: 8 + 5 + 1 (oʻtkazilgan) = 14. 4 ni yozamiz, 1 ni oʻtkazamiz.",
+      "ru": "Десятки: 8 + 5 + 1 (перенос) = 14. Пишем 4, 1 переносим."
+     },
+     {
+      "en": "Hundreds: 4 + 3 + 1 (carried) = 8. Write 8.",
+      "uz": "Yuzliklar: 4 + 3 + 1 (oʻtkazilgan) = 8. 8 ni yozamiz.",
+      "ru": "Сотни: 4 + 3 + 1 (перенос) = 8. Пишем 8."
+     },
+     {
+      "en": "Thousands: 1. Write 1. The sum is 1,843.",
+      "uz": "Mingliklar: 1. 1 ni yozamiz. Yigʻindi 1843.",
+      "ru": "Тысячи: 1. Пишем 1. Сумма равна 1843."
+     }
+    ],
+    "answer": {
+     "en": "1,843 books.",
+     "uz": "1843 ta kitob.",
+     "ru": "1843 книги."
+    },
+    "solver": [
+     "1486 + 357 == 1843",
+     "6 + 7 == 13",
+     "8 + 5 + 1 == 14",
+     "4 + 3 + 1 == 8"
+    ]
+   },
+   "watch_out": {
+    "en": "Add the carried 1 in the next column. Forgetting it is a common slip.",
+    "uz": "Oʻtkazilgan 1 ni keyingi ustunga qoʻshishni unutmang: bu koʻp uchraydigan xato.",
+    "ru": "Не забудьте прибавить перенесённую 1 в следующем столбце: это частая ошибка."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "addition"
+     },
+     "target": "two 3-digit numbers, one carry",
+     "probe": "forgot_carry"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "addition"
+     },
+     "target": "two 3- or 4-digit numbers, carries in two columns",
+     "probe": "forgot_carry"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "addition"
+     },
+     "target": "word problem: the total of two amounts",
+     "probe": "wrong_operation"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "addition"
+     },
+     "target": "three numbers added in a column",
+     "probe": "forgot_carry"
+    }
+   ],
+   "minutes": 5,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1,
+   "factcheck": {
+    "verified_at": "2026-10-07",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2788949/",
+    "note": "watch_out said forgetting the carry is 'the most common slip' (en/uz/ru). Unsupported: Raghubar et al. 2009 (J Learn Disabil, n = 291 grade 3-4) found addition procedural bugs 'a relatively rare occurrence (5% overall)', with math-fact errors more frequent. Softened to 'a common slip' in all three languages."
+   }
+  },
+  {
+   "id": "C2-ar0002",
+   "type": "study",
+   "skill": "math",
+   "rung": "arith",
+   "subskill": "subtraction",
+   "title": {
+    "en": "Subtraction with borrowing",
+    "uz": "Ayirish: qoʻshni xonadan bitta olish",
+    "ru": "Вычитание с заниманием"
+   },
+   "idea": {
+    "en": "Subtract column by column from right to left. If the top digit is smaller than the bottom one, borrow 1 from the next column on the left: it becomes 10 in your column. If that column is 0, first borrow from the column further left.",
+    "uz": "Ustunlarni oʻngdan chapga qarab ayiring. Agar yuqoridagi raqam pastdagidan kichik boʻlsa, chapdagi qoʻshni xonadan 1 ni oling: u sizning ustuningizda 10 ga aylanadi. Agar u xona 0 boʻlsa, avval undan ham chapdagi xonadan oling.",
+    "ru": "Вычитайте по столбцам справа налево. Если верхняя цифра меньше нижней, займите 1 у соседнего разряда слева: в вашем столбце она превращается в 10. Если в том разряде 0, сначала займите у разряда ещё левее."
+   },
+   "example": {
+    "problem": {
+     "en": "A road is 702 km long. A bus has already driven 268 km. How many kilometres are left?",
+     "uz": "Yoʻlning uzunligi 702 km. Avtobus 268 km yurdi. Yana necha kilometr qoldi?",
+     "ru": "Длина дороги 702 км. Автобус уже проехал 268 км. Сколько километров осталось?"
+    },
+    "steps": [
+     {
+      "en": "Ones: 2 is less than 8, and the tens digit is 0. Borrow from the hundreds: 7 hundreds become 6 hundreds and 10 tens; then 1 ten goes to the ones and 9 tens stay. The ones become 12.",
+      "uz": "Birliklar: 2 soni 8 dan kichik, oʻnliklar raqami esa 0. Yuzliklardan olamiz: 7 ta yuzlik 6 ta yuzlik va 10 ta oʻnlikka aylanadi; keyin 1 ta oʻnlik birliklarga oʻtadi va 9 ta oʻnlik qoladi. Birliklar 12 boʻladi.",
+      "ru": "Единицы: 2 меньше 8, а в разряде десятков 0. Занимаем у сотен: 7 сотен превращаются в 6 сотен и 10 десятков; затем 1 десяток переходит в единицы, остаётся 9 десятков. Единиц становится 12."
+     },
+     {
+      "en": "Ones: 12 − 8 = 4. Tens: 9 − 6 = 3. Hundreds: 6 − 2 = 4.",
+      "uz": "Birliklar: 12 − 8 = 4. Oʻnliklar: 9 − 6 = 3. Yuzliklar: 6 − 2 = 4.",
+      "ru": "Единицы: 12 − 8 = 4. Десятки: 9 − 6 = 3. Сотни: 6 − 2 = 4."
+     },
+     {
+      "en": "Check by adding: 434 + 268 = 702.",
+      "uz": "Qoʻshish bilan tekshiramiz: 434 + 268 = 702.",
+      "ru": "Проверка сложением: 434 + 268 = 702."
+     }
+    ],
+    "answer": {
+     "en": "434 km are left.",
+     "uz": "434 km qoldi.",
+     "ru": "Осталось 434 км."
+    },
+    "solver": [
+     "702 - 268 == 434",
+     "434 + 268 == 702",
+     "12 - 8 == 4",
+     "9 - 6 == 3",
+     "6 - 2 == 4",
+     "(8 - 2) + 10*(6 - 0) + 100*(7 - 2) == 566"
+    ]
+   },
+   "watch_out": {
+    "en": "Do not just subtract the smaller digit from the larger one in each column (8 − 2 instead of borrowing): that is how the wrong answer 566 appears.",
+    "uz": "Har bir ustunda shunchaki kattasidan kichigini ayirmang (qoʻshni xonadan olish oʻrniga 8 − 2): notoʻgʻri 566 javobi aynan shunday paydo boʻladi.",
+    "ru": "Не вычитайте в каждом столбце просто меньшую цифру из большей (8 − 2 вместо занимания): именно так получается неверный ответ 566."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "subtraction"
+     },
+     "target": "3-digit minus 3-digit with one borrow",
+     "probe": "smaller_from_larger"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "subtraction"
+     },
+     "target": "borrowing across a zero (e.g. 600-something minus a 3-digit number)",
+     "probe": "zero_borrow"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "subtraction"
+     },
+     "target": "word problem: how much is left / the difference",
+     "probe": "wrong_operation"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "subtraction"
+     },
+     "target": "missing number: ? + b = c, checked by adding",
+     "probe": "added_instead"
+    }
+   ],
+   "minutes": 5,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:6/6",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 6,
+    "passed": 6,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ar0003",
+   "type": "study",
+   "skill": "math",
+   "rung": "arith",
+   "subskill": "times_table",
+   "title": {
+    "en": "Multiplying by splitting a number",
+    "uz": "Sonni boʻlaklarga ajratib koʻpaytirish",
+    "ru": "Умножение по частям"
+   },
+   "idea": {
+    "en": "Know the times table up to 10 × 10 by heart. For a bigger product, split one number into tens and ones, multiply each part, then add the results. For example, 3 × 15 = 3 × 10 + 3 × 5.",
+    "uz": "Karra jadvalini 10 × 10 gacha yod biling. Kattaroq koʻpaytmada sonlardan birini oʻnliklar va birliklarga ajrating, har bir qismni koʻpaytiring, keyin natijalarni qoʻshing. Masalan, 3 × 15 = 3 × 10 + 3 × 5.",
+    "ru": "Знайте таблицу умножения до 10 × 10 наизусть. Для большего произведения разбейте одно из чисел на десятки и единицы, умножьте каждую часть и сложите результаты. Например, 3 × 15 = 3 × 10 + 3 × 5."
+   },
+   "example": {
+    "problem": {
+     "en": "A box holds 36 pencils. How many pencils are there in 7 boxes?",
+     "uz": "Bir qutida 36 ta qalam bor. 7 ta qutida nechta qalam bor?",
+     "ru": "В одной коробке 36 карандашей. Сколько карандашей в 7 коробках?"
+    },
+    "steps": [
+     {
+      "en": "We need 7 × 36. Split: 36 = 30 + 6.",
+      "uz": "Bizga 7 × 36 kerak. Ajratamiz: 36 = 30 + 6.",
+      "ru": "Нужно найти 7 × 36. Разбиваем: 36 = 30 + 6."
+     },
+     {
+      "en": "7 × 30 = 210 and 7 × 6 = 42.",
+      "uz": "7 × 30 = 210 va 7 × 6 = 42.",
+      "ru": "7 × 30 = 210 и 7 × 6 = 42."
+     },
+     {
+      "en": "Add: 210 + 42 = 252.",
+      "uz": "Qoʻshamiz: 210 + 42 = 252.",
+      "ru": "Складываем: 210 + 42 = 252."
+     }
+    ],
+    "answer": {
+     "en": "252 pencils.",
+     "uz": "252 ta qalam.",
+     "ru": "252 карандаша."
+    },
+    "solver": [
+     "7*36 == 252",
+     "7*30 == 210",
+     "7*6 == 42",
+     "210 + 42 == 252",
+     "7*30 + 6 == 216",
+     "3*15 == 3*10 + 3*5"
+    ]
+   },
+   "watch_out": {
+    "en": "Multiply both parts. 7 × 30 + 6 = 216 is wrong: the 6 must be multiplied by 7 too.",
+    "uz": "Ikkala qismni ham koʻpaytiring. 7 × 30 + 6 = 216 notoʻgʻri: 6 ham 7 ga koʻpaytirilishi kerak.",
+    "ru": "Умножайте обе части. 7 × 30 + 6 = 216 — неверно: 6 тоже нужно умножить на 7."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "times_table"
+     },
+     "target": "one-digit facts from the 6-9 rows of the times table",
+     "probe": "neighbour_fact"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "times_table"
+     },
+     "target": "one-digit × two-digit, solved by splitting",
+     "probe": "split_one_part"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "times_table"
+     },
+     "target": "two-digit × two-digit (e.g. teens × teens)",
+     "probe": "split_one_part"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "times_table"
+     },
+     "target": "word problem: equal groups",
+     "probe": "added_instead"
+    }
+   ],
+   "minutes": 5,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:6/6",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 6,
+    "passed": 6,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ar0004",
+   "type": "study",
+   "skill": "math",
+   "rung": "arith",
+   "subskill": "division_remainder",
+   "title": {
+    "en": "Division with a remainder",
+    "uz": "Qoldiqli boʻlish",
+    "ru": "Деление с остатком"
+   },
+   "idea": {
+    "en": "a ÷ b asks how many whole groups of b fit into a. What is left over is the remainder, and it is always smaller than b. Check: divisor × quotient + remainder = the number you divided.",
+    "uz": "a ÷ b savoli: a ning ichiga b tadan nechta toʻliq guruh sigʻadi? Ortib qolgan qism qoldiq deyiladi va u har doim b dan kichik boʻladi. Tekshirish: boʻluvchi × boʻlinma + qoldiq = boʻlinuvchi.",
+    "ru": "a ÷ b — это вопрос: сколько целых групп по b помещается в a? То, что осталось, — остаток, и он всегда меньше b. Проверка: делитель × неполное частное + остаток = делимое."
+   },
+   "example": {
+    "problem": {
+     "en": "75 students are going on a trip. A minibus takes 12 students. How many minibuses are needed?",
+     "uz": "Sayohatga 75 nafar oʻquvchi boradi. Bitta mikroavtobusga 12 nafar oʻquvchi sigʻadi. Nechta mikroavtobus kerak?",
+     "ru": "На экскурсию едут 75 учеников. В один микроавтобус помещается 12 учеников. Сколько нужно микроавтобусов?"
+    },
+    "steps": [
+     {
+      "en": "12 × 6 = 72 and 12 × 7 = 84. 84 is more than 75, so the quotient is 6.",
+      "uz": "12 × 6 = 72 va 12 × 7 = 84. 84 soni 75 dan katta, demak boʻlinma 6.",
+      "ru": "12 × 6 = 72, а 12 × 7 = 84. 84 больше 75, значит, неполное частное равно 6."
+     },
+     {
+      "en": "Remainder: 75 − 72 = 3. It is smaller than 12, as it must be.",
+      "uz": "Qoldiq: 75 − 72 = 3. U 12 dan kichik, shunday boʻlishi kerak.",
+      "ru": "Остаток: 75 − 72 = 3. Он меньше 12, как и должно быть."
+     },
+     {
+      "en": "Check: 12 × 6 + 3 = 75.",
+      "uz": "Tekshirish: 12 × 6 + 3 = 75.",
+      "ru": "Проверка: 12 × 6 + 3 = 75."
+     },
+     {
+      "en": "6 minibuses are full and 3 students are left, so one more minibus is needed: 7 in total.",
+      "uz": "6 ta mikroavtobus toʻladi, 3 nafar oʻquvchi qoladi, shuning uchun yana bitta mikroavtobus kerak: jami 7 ta.",
+      "ru": "6 микроавтобусов заполнены, 3 ученика остались, поэтому нужен ещё один микроавтобус: всего 7."
+     }
+    ],
+    "answer": {
+     "en": "75 = 12 × 6 + 3, so 7 minibuses are needed.",
+     "uz": "75 = 12 × 6 + 3, demak 7 ta mikroavtobus kerak.",
+     "ru": "75 = 12 × 6 + 3, значит, нужно 7 микроавтобусов."
+    },
+    "solver": [
+     "75 // 12 == 6",
+     "75 % 12 == 3",
+     "12*6 + 3 == 75",
+     "12*7 == 84",
+     "ceiling(Rational(75, 12)) == 7"
+    ]
+   },
+   "watch_out": {
+    "en": "Read what the question asks: the quotient (6), the remainder (3) and the number of minibuses (7) are three different answers.",
+    "uz": "Savol nimani soʻrayotganini oʻqing: boʻlinma (6), qoldiq (3) va mikroavtobuslar soni (7) uch xil javob.",
+    "ru": "Читайте, что спрашивают: неполное частное (6), остаток (3) и число микроавтобусов (7) — три разных ответа."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "division_remainder"
+     },
+     "target": "the remainder of n ÷ d",
+     "probe": "remainder_not_less_than_divisor"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "division_remainder"
+     },
+     "target": "quotient and remainder written as n = d × q + r",
+     "probe": "quotient_off_by_one"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "division_remainder"
+     },
+     "target": "word problem where the answer rounds up (how many are needed)",
+     "probe": "no_round_up"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "division_remainder"
+     },
+     "target": "word problem where the answer rounds down (how many full groups)",
+     "probe": "rounded_up_wrongly"
+    }
+   ],
+   "minutes": 5,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:5/5",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 5,
+    "passed": 5,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ar0005",
+   "type": "study",
+   "skill": "math",
+   "rung": "arith",
+   "subskill": "order_of_operations",
+   "title": {
+    "en": "Order of operations",
+    "uz": "Amallar tartibi",
+    "ru": "Порядок действий"
+   },
+   "idea": {
+    "en": "First work out the brackets. Then do multiplication and division, from left to right. Last, do addition and subtraction, also from left to right.",
+    "uz": "Avval qavs ichidagi amallarni bajaring. Keyin koʻpaytirish va boʻlishni chapdan oʻngga qarab bajaring. Eng oxirida qoʻshish va ayirishni, yana chapdan oʻngga qarab bajaring.",
+    "ru": "Сначала выполните действия в скобках. Затем умножение и деление — слева направо. В конце сложение и вычитание — тоже слева направо."
+   },
+   "example": {
+    "problem": {
+     "en": "Calculate: 40 − (6 + 2) × 3 + 12 ÷ 4",
+     "uz": "Hisoblang: 40 − (6 + 2) × 3 + 12 ÷ 4",
+     "ru": "Вычислите: 40 − (6 + 2) × 3 + 12 ÷ 4"
+    },
+    "steps": [
+     {
+      "en": "Brackets: 6 + 2 = 8.",
+      "uz": "Qavs: 6 + 2 = 8.",
+      "ru": "Скобки: 6 + 2 = 8."
+     },
+     {
+      "en": "Multiplication and division: 8 × 3 = 24 and 12 ÷ 4 = 3.",
+      "uz": "Koʻpaytirish va boʻlish: 8 × 3 = 24 va 12 ÷ 4 = 3.",
+      "ru": "Умножение и деление: 8 × 3 = 24 и 12 ÷ 4 = 3."
+     },
+     {
+      "en": "Now 40 − 24 + 3. Left to right: 40 − 24 = 16, then 16 + 3 = 19.",
+      "uz": "Endi 40 − 24 + 3. Chapdan oʻngga: 40 − 24 = 16, keyin 16 + 3 = 19.",
+      "ru": "Теперь 40 − 24 + 3. Слева направо: 40 − 24 = 16, затем 16 + 3 = 19."
+     }
+    ],
+    "answer": {
+     "en": "19",
+     "uz": "19",
+     "ru": "19"
+    },
+    "solver": [
+     "40 - (6 + 2)*3 + Rational(12, 4) == 19",
+     "40 - 24 + 3 == 19",
+     "40 - 27 == 13"
+    ]
+   },
+   "watch_out": {
+    "en": "Addition does not come before subtraction: 40 − 24 + 3 is 19, not 40 − 27 = 13.",
+    "uz": "Qoʻshish ayirishdan oldin bajarilmaydi: 40 − 24 + 3 = 19, 40 − 27 = 13 emas.",
+    "ru": "Сложение не выполняется раньше вычитания: 40 − 24 + 3 = 19, а не 40 − 27 = 13."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "order_of_operations"
+     },
+     "target": "a + b × c",
+     "probe": "left_to_right_ignoring_precedence"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "order_of_operations"
+     },
+     "target": "(a + b) × c",
+     "probe": "ignored_brackets"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "order_of_operations"
+     },
+     "target": "a − b ÷ c",
+     "probe": "left_to_right_ignoring_precedence"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "order_of_operations"
+     },
+     "target": "a ÷ b × c, worked left to right",
+     "probe": "multiplied_first"
+    }
+   ],
+   "minutes": 5,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-ar0006",
+   "type": "study",
+   "skill": "math",
+   "rung": "arith",
+   "subskill": "gcd_lcm",
+   "title": {
+    "en": "GCD and LCM through prime factors",
+    "uz": "EKUB va EKUK: tub koʻpaytuvchilar orqali",
+    "ru": "НОД и НОК через простые множители"
+   },
+   "idea": {
+    "en": "Write each number as a product of primes. The greatest common divisor (GCD) takes the primes the numbers share, each with the smaller power. The least common multiple (LCM) takes every prime that appears, each with the larger power. Check: GCD × LCM = the product of the two numbers.",
+    "uz": "Har bir sonni tub koʻpaytuvchilar koʻpaytmasi shaklida yozing. Eng katta umumiy boʻluvchi (EKUB) ikkala sonda ham bor tub koʻpaytuvchilarni kichik darajasi bilan oladi. Eng kichik umumiy karrali (EKUK) uchragan barcha tub koʻpaytuvchilarni katta darajasi bilan oladi. Tekshirish: EKUB × EKUK = ikki sonning koʻpaytmasi.",
+    "ru": "Разложите каждое число на простые множители. Наибольший общий делитель (НОД) берёт общие простые множители в меньшей степени. Наименьшее общее кратное (НОК) берёт все встречающиеся простые множители в большей степени. Проверка: НОД × НОК = произведение двух чисел."
+   },
+   "example": {
+    "problem": {
+     "en": "Find the GCD and the LCM of 18 and 30.",
+     "uz": "18 va 30 sonlarining EKUB va EKUKini toping.",
+     "ru": "Найдите НОД и НОК чисел 18 и 30."
+    },
+    "steps": [
+     {
+      "en": "18 = 2 × 3² and 30 = 2 × 3 × 5.",
+      "uz": "18 = 2 × 3² va 30 = 2 × 3 × 5.",
+      "ru": "18 = 2 × 3², 30 = 2 × 3 × 5."
+     },
+     {
+      "en": "GCD: the shared primes 2 and 3, with the smaller powers: 2 × 3 = 6.",
+      "uz": "EKUB: umumiy tub koʻpaytuvchilar 2 va 3, kichik darajalari bilan: 2 × 3 = 6.",
+      "ru": "НОД: общие множители 2 и 3 в меньших степенях: 2 × 3 = 6."
+     },
+     {
+      "en": "LCM: all primes 2, 3 and 5, with the larger powers: 2 × 3² × 5 = 90.",
+      "uz": "EKUK: barcha tub koʻpaytuvchilar 2, 3 va 5, katta darajalari bilan: 2 × 3² × 5 = 90.",
+      "ru": "НОК: все множители 2, 3 и 5 в больших степенях: 2 × 3² × 5 = 90."
+     },
+     {
+      "en": "Check: 6 × 90 = 540 = 18 × 30.",
+      "uz": "Tekshirish: 6 × 90 = 540 = 18 × 30.",
+      "ru": "Проверка: 6 × 90 = 540 = 18 × 30."
+     }
+    ],
+    "answer": {
+     "en": "GCD = 6, LCM = 90.",
+     "uz": "EKUB = 6, EKUK = 90.",
+     "ru": "НОД = 6, НОК = 90."
+    },
+    "solver": [
+     "gcd(18, 30) == 6",
+     "lcm(18, 30) == 90",
+     "factorint(18) == {2: 1, 3: 2}",
+     "factorint(30) == {2: 1, 3: 1, 5: 1}",
+     "6*90 == 18*30 == 540"
+    ]
+   },
+   "watch_out": {
+    "en": "The LCM is never smaller than the larger number, and the GCD is never larger than the smaller number. If yours is, you have swapped them.",
+    "uz": "EKUK hech qachon katta sondan kichik boʻlmaydi, EKUB esa hech qachon kichik sondan katta boʻlmaydi. Agar sizda shunday chiqsa, ularni almashtirib yuborgansiz.",
+    "ru": "НОК никогда не меньше большего числа, а НОД никогда не больше меньшего. Если у вас вышло иначе, вы их перепутали."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "gcd_lcm"
+     },
+     "target": "the GCD of two numbers",
+     "probe": "gave_lcm"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "gcd_lcm"
+     },
+     "target": "the LCM of two numbers",
+     "probe": "gave_product"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "gcd_lcm"
+     },
+     "target": "word problem: two events repeat every a and b minutes; when together again (LCM)",
+     "probe": "gave_gcd"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "arith",
+      "subskill": "gcd_lcm"
+     },
+     "target": "word problem: the largest equal groups (GCD)",
+     "probe": "gave_lcm"
+    }
+   ],
+   "minutes": 5,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:5/5",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 5,
+    "passed": 5,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-pa0001",
+   "type": "study",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "fraction",
+   "title": {
+    "en": "Adding fractions: make the denominators equal",
+    "uz": "Kasrlarni qoʻshish: umumiy maxrajga keltiring",
+    "ru": "Сложение дробей: приведите к общему знаменателю"
+   },
+   "idea": {
+    "en": "Fractions can be added only when their denominators are equal. Find the least common denominator, rewrite each fraction with it, add the numerators and keep the denominator. Then simplify.",
+    "uz": "Kasrlarni faqat maxrajlari teng boʻlganda qoʻshish mumkin. Eng kichik umumiy maxrajni toping, har bir kasrni shu maxrajga keltiring, suratlarni qoʻshing, maxrajni esa oʻzgartirmang. Soʻng kasrni qisqartiring.",
+    "ru": "Складывать дроби можно, только когда у них одинаковые знаменатели. Найдите наименьший общий знаменатель, приведите к нему каждую дробь, сложите числители, а знаменатель оставьте. Затем сократите дробь."
+   },
+   "example": {
+    "problem": {
+     "en": "Calculate: 5/6 + 3/8",
+     "uz": "Hisoblang: 5/6 + 3/8",
+     "ru": "Вычислите: 5/6 + 3/8"
+    },
+    "steps": [
+     {
+      "en": "The least common denominator of 6 and 8 is 24.",
+      "uz": "6 va 8 ning eng kichik umumiy maxraji 24.",
+      "ru": "Наименьший общий знаменатель 6 и 8 — это 24."
+     },
+     {
+      "en": "5/6 = 20/24 (top and bottom × 4); 3/8 = 9/24 (top and bottom × 3).",
+      "uz": "5/6 = 20/24 (surat va maxraj × 4); 3/8 = 9/24 (surat va maxraj × 3).",
+      "ru": "5/6 = 20/24 (числитель и знаменатель × 4); 3/8 = 9/24 (числитель и знаменатель × 3)."
+     },
+     {
+      "en": "20/24 + 9/24 = 29/24.",
+      "uz": "20/24 + 9/24 = 29/24.",
+      "ru": "20/24 + 9/24 = 29/24."
+     },
+     {
+      "en": "29/24 cannot be simplified; as a mixed number it is 1 5/24.",
+      "uz": "29/24 qisqarmaydi; aralash son shaklida 1 5/24.",
+      "ru": "29/24 не сокращается; в виде смешанного числа это 1 5/24."
+     }
+    ],
+    "answer": {
+     "en": "29/24 = 1 5/24",
+     "uz": "29/24 = 1 5/24",
+     "ru": "29/24 = 1 5/24"
+    },
+    "solver": [
+     "Rational(5, 6) + Rational(3, 8) == Rational(29, 24)",
+     "lcm(6, 8) == 24",
+     "Rational(5, 6) == Rational(20, 24)",
+     "Rational(3, 8) == Rational(9, 24)",
+     "gcd(29, 24) == 1",
+     "Rational(29, 24) == 1 + Rational(5, 24)"
+    ]
+   },
+   "watch_out": {
+    "en": "Never add the denominators: 5/6 + 3/8 is not 8/14.",
+    "uz": "Maxrajlarni hech qachon qoʻshmang: 5/6 + 3/8 ≠ 8/14.",
+    "ru": "Никогда не складывайте знаменатели: 5/6 + 3/8 ≠ 8/14."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-pal011",
+      "rung": "prealg",
+      "subskill": "fraction"
+     },
+     "target": "one denominator is a multiple of the other",
+     "probe": "added_denominators"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-pal012",
+      "rung": "prealg",
+      "subskill": "fraction"
+     },
+     "target": "denominators that need a least common denominator (e.g. 4 and 6)",
+     "probe": "added_denominators"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "fraction"
+     },
+     "target": "subtracting fractions with unlike denominators",
+     "probe": "subtracted_denominators"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "fraction"
+     },
+     "target": "a sum that must be simplified",
+     "probe": "not_simplified"
+    }
+   ],
+   "minutes": 5,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:6/6",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 6,
+    "passed": 6,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-pa0002",
+   "type": "study",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "negative_numbers",
+   "title": {
+    "en": "Negative numbers: the sign rules",
+    "uz": "Manfiy sonlar: ishora qoidalari",
+    "ru": "Отрицательные числа: правила знаков"
+   },
+   "idea": {
+    "en": "Subtracting a negative number is the same as adding a positive one: a − (−b) = a + b. When you multiply or divide, equal signs give a positive result and different signs give a negative result.",
+    "uz": "Manfiy sonni ayirish musbat sonni qoʻshish bilan bir xil: a − (−b) = a + b. Koʻpaytirish va boʻlishda ishoralar bir xil boʻlsa, natija musbat, har xil boʻlsa, manfiy boʻladi.",
+    "ru": "Вычесть отрицательное число — то же самое, что прибавить положительное: a − (−b) = a + b. При умножении и делении одинаковые знаки дают плюс, разные — минус."
+   },
+   "example": {
+    "problem": {
+     "en": "Calculate: −6 − (−9) + (−2) × 4",
+     "uz": "Hisoblang: −6 − (−9) + (−2) × 4",
+     "ru": "Вычислите: −6 − (−9) + (−2) × 4"
+    },
+    "steps": [
+     {
+      "en": "Multiplication first: (−2) × 4 = −8 (different signs give a negative).",
+      "uz": "Avval koʻpaytirish: (−2) × 4 = −8 (ishoralar har xil, natija manfiy).",
+      "ru": "Сначала умножение: (−2) × 4 = −8 (знаки разные, результат отрицательный)."
+     },
+     {
+      "en": "−6 − (−9) = −6 + 9 = 3.",
+      "uz": "−6 − (−9) = −6 + 9 = 3.",
+      "ru": "−6 − (−9) = −6 + 9 = 3."
+     },
+     {
+      "en": "3 + (−8) = 3 − 8 = −5.",
+      "uz": "3 + (−8) = 3 − 8 = −5.",
+      "ru": "3 + (−8) = 3 − 8 = −5."
+     }
+    ],
+    "answer": {
+     "en": "−5",
+     "uz": "−5",
+     "ru": "−5"
+    },
+    "solver": [
+     "-6 - (-9) + (-2)*4 == -5",
+     "(-2)*4 == -8",
+     "-6 - (-9) == 3",
+     "3 + (-8) == -5"
+    ]
+   },
+   "watch_out": {
+    "en": "−6 − (−9) is −6 + 9 = 3, not −15: the two minus signs together make a plus.",
+    "uz": "−6 − (−9) = −6 + 9 = 3, −15 emas: ketma-ket kelgan ikki minus plyusga aylanadi.",
+    "ru": "−6 − (−9) = −6 + 9 = 3, а не −15: два минуса подряд дают плюс."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "negative_numbers"
+     },
+     "target": "−a + b",
+     "probe": "sign_of_larger"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "negative_numbers"
+     },
+     "target": "a − (−b)",
+     "probe": "double_minus"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "negative_numbers"
+     },
+     "target": "the product of two negative numbers",
+     "probe": "sign_rule"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "negative_numbers"
+     },
+     "target": "dividing a negative number by a positive one",
+     "probe": "sign_rule"
+    }
+   ],
+   "minutes": 5,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:4/4",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 4,
+    "passed": 4,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-pa0003",
+   "type": "study",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "percent",
+   "title": {
+    "en": "Percent: a part out of 100",
+    "uz": "Foiz: yuzdan bir qism",
+    "ru": "Процент — сотая часть"
+   },
+   "idea": {
+    "en": "p% means p hundredths, so p% of a number is the number × p/100. After an increase of p%, the new amount is (100 + p)% of the old one; after a decrease of p%, it is (100 − p)%.",
+    "uz": "p% bu yuzdan p ulush, shuning uchun sonning p% i = son × p/100. p% ga oshgandan keyin yangi miqdor eskisining (100 + p)% iga, p% ga kamaygandan keyin esa (100 − p)% iga teng boʻladi.",
+    "ru": "p% — это p сотых, поэтому p% от числа = число × p/100. После увеличения на p% новое значение составляет (100 + p)% от старого, после уменьшения на p% — (100 − p)%."
+   },
+   "example": {
+    "problem": {
+     "en": "A phone costs 2,400,000 soʻm. Its price goes up by 5%. What is the new price?",
+     "uz": "Telefon 2 400 000 soʻm turadi. Uning narxi 5% ga oshdi. Yangi narx qancha?",
+     "ru": "Телефон стоит 2 400 000 сум. Его цена выросла на 5%. Какова новая цена?"
+    },
+    "steps": [
+     {
+      "en": "5% of 2,400,000 = 2,400,000 × 5/100 = 120,000.",
+      "uz": "2 400 000 ning 5% i = 2 400 000 × 5/100 = 120 000.",
+      "ru": "5% от 2 400 000 = 2 400 000 × 5/100 = 120 000."
+     },
+     {
+      "en": "New price: 2,400,000 + 120,000 = 2,520,000 soʻm.",
+      "uz": "Yangi narx: 2 400 000 + 120 000 = 2 520 000 soʻm.",
+      "ru": "Новая цена: 2 400 000 + 120 000 = 2 520 000 сум."
+     },
+     {
+      "en": "In one step: 105% of the price = 2,400,000 × 1.05 = 2,520,000.",
+      "uz": "Bir qadamda: narxning 105% i = 2 400 000 × 1,05 = 2 520 000.",
+      "ru": "За один шаг: 105% цены = 2 400 000 × 1,05 = 2 520 000."
+     }
+    ],
+    "answer": {
+     "en": "2,520,000 soʻm.",
+     "uz": "2 520 000 soʻm.",
+     "ru": "2 520 000 сум."
+    },
+    "solver": [
+     "2400000*Rational(5, 100) == 120000",
+     "2400000 + 120000 == 2520000",
+     "2400000*Rational(105, 100) == 2520000"
+    ]
+   },
+   "watch_out": {
+    "en": "To increase by 5%, multiply by 1.05, not by 0.05: 2,400,000 × 0.05 is only the increase.",
+    "uz": "5% ga oshirish uchun 0,05 ga emas, 1,05 ga koʻpaytiring: 2 400 000 × 0,05 bu faqat oshgan qism.",
+    "ru": "Чтобы увеличить на 5%, умножайте на 1,05, а не на 0,05: 2 400 000 × 0,05 — это только прибавка."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-sat014",
+      "rung": "prealg",
+      "subskill": "percent"
+     },
+     "target": "p% of n",
+     "probe": "divided_by_p"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-pal031",
+      "rung": "prealg",
+      "subskill": "percent"
+     },
+     "target": "the price after a p% discount",
+     "probe": "gave_discount_amount"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-pal032",
+      "rung": "prealg",
+      "subskill": "percent"
+     },
+     "target": "the amount after a p% increase",
+     "probe": "gave_increase_amount"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "percent"
+     },
+     "target": "what percent a is of b",
+     "probe": "inverted_ratio"
+    }
+   ],
+   "minutes": 5,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-pa0004",
+   "type": "study",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "decimals",
+   "title": {
+    "en": "Multiplying decimals",
+    "uz": "Oʻnli kasrlarni koʻpaytirish",
+    "ru": "Умножение десятичных дробей"
+   },
+   "idea": {
+    "en": "Multiply as if there were no decimal points. Then count the digits after the point in both numbers together, and place the point so the answer has that many digits after it. Estimate first, to catch a misplaced point.",
+    "uz": "Vergul yoʻqdek koʻpaytiring. Keyin ikkala sonda verguldan keyingi raqamlarni birga sanang va javobda verguldan keyin shuncha raqam qoladigan qilib vergul qoʻying. Vergul joyida xato boʻlmasligi uchun avval taxminiy hisoblang.",
+    "ru": "Умножайте так, будто запятых нет. Затем сосчитайте, сколько всего цифр после запятой в обоих множителях, и поставьте запятую так, чтобы в ответе после неё было столько же цифр. Сначала прикиньте ответ, чтобы не ошибиться с запятой."
+   },
+   "example": {
+    "problem": {
+     "en": "One metre of fabric weighs 0.35 kg. How much do 2.4 m of this fabric weigh?",
+     "uz": "Bir metr matoning ogʻirligi 0,35 kg. Shu matoning 2,4 metri necha kilogramm keladi?",
+     "ru": "Один метр ткани весит 0,35 кг. Сколько весят 2,4 м этой ткани?"
+    },
+    "steps": [
+     {
+      "en": "We need 2.4 × 0.35. Estimate: it is a little more than 2 × 0.35 = 0.7.",
+      "uz": "Bizga 2,4 × 0,35 kerak. Taxmin: bu 2 × 0,35 = 0,7 dan biroz katta.",
+      "ru": "Нужно найти 2,4 × 0,35. Прикидка: это чуть больше, чем 2 × 0,35 = 0,7."
+     },
+     {
+      "en": "Without the points: 24 × 35 = 840.",
+      "uz": "Vergulsiz: 24 × 35 = 840.",
+      "ru": "Без запятых: 24 × 35 = 840."
+     },
+     {
+      "en": "Digits after the point: 1 (in 2.4) + 2 (in 0.35) = 3. So the answer is 0.840 = 0.84.",
+      "uz": "Verguldan keyingi raqamlar: 1 ta (2,4 da) + 2 ta (0,35 da) = 3 ta. Demak javob 0,840 = 0,84.",
+      "ru": "Цифр после запятой: 1 (в 2,4) + 2 (в 0,35) = 3. Значит, ответ 0,840 = 0,84."
+     },
+     {
+      "en": "0.84 is close to the estimate 0.7, so the point is in the right place.",
+      "uz": "0,84 taxminiy 0,7 ga yaqin, demak vergul toʻgʻri joyda.",
+      "ru": "0,84 близко к прикидке 0,7, значит, запятая стоит верно."
+     }
+    ],
+    "answer": {
+     "en": "0.84 kg",
+     "uz": "0,84 kg",
+     "ru": "0,84 кг"
+    },
+    "solver": [
+     "Rational('2.4')*Rational('0.35') == Rational('0.84')",
+     "24*35 == 840",
+     "2*Rational('0.35') == Rational('0.7')"
+    ]
+   },
+   "watch_out": {
+    "en": "If you get 8.4 or 0.084, the point is in the wrong place; the estimate shows it.",
+    "uz": "Agar 8,4 yoki 0,084 chiqsa, vergul notoʻgʻri joyda; taxminiy hisob buni koʻrsatadi.",
+    "ru": "Если получилось 8,4 или 0,084, запятая стоит не там; прикидка это покажет."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": "C1-pal041",
+      "rung": "prealg",
+      "subskill": "decimals"
+     },
+     "target": "decimal × decimal",
+     "probe": "misplaced_point"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "decimals"
+     },
+     "target": "a fraction written as a decimal",
+     "probe": "digits_swapped"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "decimals"
+     },
+     "target": "rounding to the nearest tenth",
+     "probe": "truncated"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "decimals"
+     },
+     "target": "which decimal is the largest",
+     "probe": "longer_is_larger"
+    }
+   ],
+   "minutes": 5,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:3/3",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 3,
+    "passed": 3,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-pa0005",
+   "type": "study",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "exponents",
+   "title": {
+    "en": "Powers: repeated multiplication",
+    "uz": "Daraja: takroriy koʻpaytirish",
+    "ru": "Степень — повторное умножение"
+   },
+   "idea": {
+    "en": "aⁿ is the product of n factors, each equal to a: 3⁴ = 3 × 3 × 3 × 3 = 81. A power applies only to what it touches: (−3)² = 9, but −3² = −9. Powers are worked out before multiplication, division, addition and subtraction.",
+    "uz": "aⁿ — har biri a ga teng boʻlgan n ta koʻpaytuvchining koʻpaytmasi: 3⁴ = 3 × 3 × 3 × 3 = 81. Daraja faqat oʻzi yozilgan songa tegishli: (−3)² = 9, lekin −3² = −9. Darajaga koʻtarish koʻpaytirish, boʻlish, qoʻshish va ayirishdan oldin bajariladi.",
+    "ru": "aⁿ — это произведение n множителей, каждый из которых равен a: 3⁴ = 3 × 3 × 3 × 3 = 81. Степень относится только к тому, к чему она приписана: (−3)² = 9, но −3² = −9. Возведение в степень выполняется раньше умножения, деления, сложения и вычитания."
+   },
+   "example": {
+    "problem": {
+     "en": "Calculate: 2⁴ − (−3)² + 5 × 2²",
+     "uz": "Hisoblang: 2⁴ − (−3)² + 5 × 2²",
+     "ru": "Вычислите: 2⁴ − (−3)² + 5 × 2²"
+    },
+    "steps": [
+     {
+      "en": "Powers first: 2⁴ = 16, (−3)² = 9, 2² = 4.",
+      "uz": "Avval darajalar: 2⁴ = 16, (−3)² = 9, 2² = 4.",
+      "ru": "Сначала степени: 2⁴ = 16, (−3)² = 9, 2² = 4."
+     },
+     {
+      "en": "Then multiplication: 5 × 4 = 20.",
+      "uz": "Keyin koʻpaytirish: 5 × 4 = 20.",
+      "ru": "Затем умножение: 5 × 4 = 20."
+     },
+     {
+      "en": "Last, left to right: 16 − 9 + 20 = 27.",
+      "uz": "Oxirida chapdan oʻngga: 16 − 9 + 20 = 27.",
+      "ru": "В конце слева направо: 16 − 9 + 20 = 27."
+     }
+    ],
+    "answer": {
+     "en": "27",
+     "uz": "27",
+     "ru": "27"
+    },
+    "solver": [
+     "2**4 - (-3)**2 + 5*2**2 == 27",
+     "(-3)**2 == 9",
+     "-3**2 == -9",
+     "3**4 == 81",
+     "2*4 == 8",
+     "10**2 == 100"
+    ]
+   },
+   "watch_out": {
+    "en": "2⁴ is 16, not 2 × 4 = 8. And 5 × 2² is 5 × 4 = 20, not 10² = 100.",
+    "uz": "2⁴ = 16, 2 × 4 = 8 emas. 5 × 2² esa 5 × 4 = 20, 10² = 100 emas.",
+    "ru": "2⁴ = 16, а не 2 × 4 = 8. А 5 × 2² = 5 × 4 = 20, а не 10² = 100."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "exponents"
+     },
+     "target": "a² or a³",
+     "probe": "multiplied_by_exponent"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "exponents"
+     },
+     "target": "(−a)ⁿ with an even or odd n",
+     "probe": "sign_of_power"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "exponents"
+     },
+     "target": "a product of powers such as 2³ × 3²",
+     "probe": "added_bases"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "exponents"
+     },
+     "target": "a power inside a longer expression",
+     "probe": "power_after_product"
+    }
+   ],
+   "minutes": 5,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:6/6",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 6,
+    "passed": 6,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C2-pa0006",
+   "type": "study",
+   "skill": "math",
+   "rung": "prealg",
+   "subskill": "proportion",
+   "title": {
+    "en": "Proportions: cross-multiply",
+    "uz": "Proporsiya: nomaʼlum hadni topish",
+    "ru": "Пропорция: умножаем крест-накрест"
+   },
+   "idea": {
+    "en": "When two quantities grow at the same rate (twice as many kilograms cost twice as much), their ratios are equal: a/b = c/d. Then a × d = b × c, and you can find the missing number.",
+    "uz": "Ikki miqdor bir xil nisbatda oʻzgarsa (kilogramm ikki baravar koʻp boʻlsa, narx ham ikki baravar koʻp), ularning nisbatlari teng boʻladi: a/b = c/d. Bundan a × d = b × c (proporsiyaning asosiy xossasi) kelib chiqadi va nomaʼlum sonni topish mumkin.",
+    "ru": "Если две величины меняются в одной пропорции (вдвое больше килограммов стоит вдвое дороже), их отношения равны: a/b = c/d. Тогда a × d = b × c, и можно найти неизвестное число."
+   },
+   "example": {
+    "problem": {
+     "en": "4 kg of apples cost 36,000 soʻm. How much do 7 kg cost?",
+     "uz": "4 kg olma 36 000 soʻm turadi. 7 kg olma qancha turadi?",
+     "ru": "4 кг яблок стоят 36 000 сум. Сколько стоят 7 кг?"
+    },
+    "steps": [
+     {
+      "en": "Same units in the same places: 4 kg / 36,000 soʻm = 7 kg / x soʻm.",
+      "uz": "Bir xil birliklar bir xil oʻrinda: 4 kg / 36 000 soʻm = 7 kg / x soʻm.",
+      "ru": "Одинаковые единицы на одинаковых местах: 4 кг / 36 000 сум = 7 кг / x сум."
+     },
+     {
+      "en": "Cross-multiply: 4 × x = 36,000 × 7 = 252,000.",
+      "uz": "Proporsiyaning asosiy xossasi boʻyicha: 4 × x = 36 000 × 7 = 252 000.",
+      "ru": "Умножаем крест-накрест: 4 × x = 36 000 × 7 = 252 000."
+     },
+     {
+      "en": "x = 252,000 ÷ 4 = 63,000.",
+      "uz": "x = 252 000 ÷ 4 = 63 000.",
+      "ru": "x = 252 000 ÷ 4 = 63 000."
+     },
+     {
+      "en": "Check with the price of 1 kg: 36,000 ÷ 4 = 9,000, and 9,000 × 7 = 63,000.",
+      "uz": "1 kg narxi bilan tekshiramiz: 36 000 ÷ 4 = 9000 va 9000 × 7 = 63 000.",
+      "ru": "Проверка через цену 1 кг: 36 000 ÷ 4 = 9000, а 9000 × 7 = 63 000."
+     }
+    ],
+    "answer": {
+     "en": "63,000 soʻm.",
+     "uz": "63 000 soʻm.",
+     "ru": "63 000 сум."
+    },
+    "solver": [
+     "solve(Eq(Rational(4, 36000), 7/x), x) == [63000]",
+     "36000*7 == 252000",
+     "252000 // 4 == 63000",
+     "36000 // 4 == 9000",
+     "9000*7 == 63000"
+    ]
+   },
+   "watch_out": {
+    "en": "Keep kilograms with kilograms and soʻm with soʻm. Writing 4/36,000 = x/7 mixes them up and gives a wrong answer.",
+    "uz": "Kilogrammni kilogramm bilan, soʻmni soʻm bilan bir xil oʻrinda saqlang. 4/36 000 = x/7 deb yozish ularni aralashtirib yuboradi va notoʻgʻri javob beradi.",
+    "ru": "Держите килограммы с килограммами, а сумы с сумами. Запись 4/36 000 = x/7 их перепутывает и даёт неверный ответ."
+   },
+   "checks": [
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "proportion"
+     },
+     "target": "solve a/b = x/c",
+     "probe": "multiplied_wrong_pair"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "proportion"
+     },
+     "target": "word problem with direct proportion",
+     "probe": "inverted_ratio"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "proportion"
+     },
+     "target": "unit rate (the price of one)",
+     "probe": "inverted_ratio"
+    },
+    {
+     "ref": {
+      "bank": "C1",
+      "family_id": null,
+      "rung": "prealg",
+      "subskill": "proportion"
+     },
+     "target": "divide an amount in a given ratio",
+     "probe": "used_one_part"
+    }
+   ],
+   "minutes": 5,
+   "verification": "L2",
+   "source": "own",
+   "author": "agent:C2",
+   "key_check_1": "author",
+   "key_check_2": "sympy-1.14.0:5/5",
+   "example_check": {
+    "method": "sympy",
+    "asserts": 5,
+    "passed": 5,
+    "at": "2026-10-07"
+   },
+   "back_translation": null,
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

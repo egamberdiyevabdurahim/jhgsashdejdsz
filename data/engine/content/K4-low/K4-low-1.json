@@ -1,0 +1,1061 @@
+{
+  "bank": "K4",
+  "batch": 1,
+  "items": [
+    {
+      "id": "K4-ar0001",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "whole_number_addition",
+      "family": {
+        "template": "Calculate: {a} + {b}",
+        "params": {
+          "a": {
+            "min": 25,
+            "max": 89,
+            "step": 1
+          },
+          "b": {
+            "min": 17,
+            "max": 68,
+            "step": 1
+          }
+        },
+        "answer": "a + b",
+        "variants": 3380
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: {a} + {b}",
+        "uz": "Hisoblang: {a} + {b}",
+        "ru": "Вычислите: {a} + {b}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Add the ones; if they make 10 or more, carry 1 to the tens, then add the tens.",
+        "uz": "Birliklarni qoʻshing; 10 yoki undan koʻp boʻlsa, 1 ni oʻnliklarga oʻtkazing, soʻng oʻnliklarni qoʻshing.",
+        "ru": "Сложите единицы; если получилось 10 или больше, перенесите 1 в десятки, затем сложите десятки."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0002",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "whole_number_subtraction",
+      "family": {
+        "template": "Calculate: {a} − {b}",
+        "params": {
+          "a": {
+            "min": 52,
+            "max": 98,
+            "step": 1
+          },
+          "b": {
+            "min": 17,
+            "max": 49,
+            "step": 1
+          }
+        },
+        "answer": "a - b",
+        "variants": 1551
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: {a} − {b}",
+        "uz": "Hisoblang: {a} − {b}",
+        "ru": "Вычислите: {a} − {b}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Subtract the ones (borrow one ten if needed), then subtract the tens.",
+        "uz": "Birliklarni ayiring (kerak boʻlsa, oʻnliklardan bittasini birliklarga oʻtkazing), soʻng oʻnliklarni ayiring.",
+        "ru": "Вычтите единицы (если нужно, займите один десяток), затем вычтите десятки."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0003",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "times_table",
+      "family": {
+        "template": "Calculate: {a} × {b}",
+        "params": {
+          "a": {
+            "min": 6,
+            "max": 9,
+            "step": 1
+          },
+          "b": {
+            "min": 6,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "answer": "a * b",
+        "variants": 16
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: {a} × {b}",
+        "uz": "Hisoblang: {a} × {b}",
+        "ru": "Вычислите: {a} × {b}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Use the multiplication table; if unsure, add the number to itself the required number of times.",
+        "uz": "Koʻpaytirish jadvalidan foydalaning; ikkilansangiz, sonni kerakli marta qoʻshib chiqing.",
+        "ru": "Используйте таблицу умножения; если сомневаетесь, сложите число нужное количество раз."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0004",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "times_table_division",
+      "family": {
+        "template": "Calculate: {p} ÷ {a}",
+        "params": {
+          "a": {
+            "min": 3,
+            "max": 9,
+            "step": 1
+          },
+          "q": {
+            "min": 4,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "derived": {
+          "p": "a * q"
+        },
+        "answer": "q",
+        "variants": 42
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: {p} ÷ {a}",
+        "uz": "Hisoblang: {p} : {a}",
+        "ru": "Вычислите: {p} : {a}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Division undoes multiplication: find the number that, multiplied by the divisor, gives the dividend.",
+        "uz": "Boʻlish koʻpaytirishga teskari amal: boʻluvchiga koʻpaytirilganda boʻlinuvchini beradigan sonni toping.",
+        "ru": "Деление обратно умножению: найдите число, которое при умножении на делитель даёт делимое."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0005",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "whole_number_multiplication",
+      "family": {
+        "template": "Calculate: {a} × {b}",
+        "params": {
+          "a": {
+            "min": 12,
+            "max": 39,
+            "step": 1
+          },
+          "b": {
+            "min": 3,
+            "max": 8,
+            "step": 1
+          }
+        },
+        "answer": "a * b",
+        "variants": 168
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: {a} × {b}",
+        "uz": "Hisoblang: {a} × {b}",
+        "ru": "Вычислите: {a} × {b}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Split the two-digit number into tens and ones, multiply each part, then add.",
+        "uz": "Ikki xonali sonni oʻnlik va birliklarga ajrating, har birini koʻpaytiring, soʻng qoʻshing.",
+        "ru": "Разложите двузначное число на десятки и единицы, умножьте каждую часть и сложите."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0006",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "whole_number_addition",
+      "family": {
+        "template": "Calculate: {a} + {b}",
+        "params": {
+          "a": {
+            "min": 126,
+            "max": 486,
+            "step": 9
+          },
+          "b": {
+            "min": 115,
+            "max": 385,
+            "step": 9
+          }
+        },
+        "answer": "a + b",
+        "variants": 1271
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: {a} + {b}",
+        "uz": "Hisoblang: {a} + {b}",
+        "ru": "Вычислите: {a} + {b}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Add column by column from the ones, carrying 1 into the next column when a sum reaches 10.",
+        "uz": "Birliklardan boshlab xonama-xona qoʻshing; yigʻindi 10 ga yetsa, keyingi xonaga 1 oʻtkazing.",
+        "ru": "Складывайте поразрядно, начиная с единиц; если сумма достигла 10, переносите 1 в следующий разряд."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0007",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "order_of_operations",
+      "family": {
+        "template": "Calculate: {a} + {b} × {c}",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 9,
+            "step": 1
+          },
+          "b": {
+            "min": 2,
+            "max": 9,
+            "step": 1
+          },
+          "c": {
+            "min": 2,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "answer": "a + b * c",
+        "variants": 512
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: {a} + {b} × {c}",
+        "uz": "Hisoblang: {a} + {b} × {c}",
+        "ru": "Вычислите: {a} + {b} × {c}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Multiply before you add.",
+        "uz": "Avval koʻpaytiring, keyin qoʻshing.",
+        "ru": "Сначала умножение, потом сложение."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0008",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "order_of_operations",
+      "family": {
+        "template": "Calculate: ({a} + {b}) × {c}",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 9,
+            "step": 1
+          },
+          "b": {
+            "min": 2,
+            "max": 9,
+            "step": 1
+          },
+          "c": {
+            "min": 2,
+            "max": 6,
+            "step": 1
+          }
+        },
+        "answer": "(a + b) * c",
+        "variants": 320
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: ({a} + {b}) × {c}",
+        "uz": "Hisoblang: ({a} + {b}) × {c}",
+        "ru": "Вычислите: ({a} + {b}) × {c}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Work out the brackets first, then multiply.",
+        "uz": "Avval qavs ichini hisoblang, keyin koʻpaytiring.",
+        "ru": "Сначала вычислите выражение в скобках, затем умножьте."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0009",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "order_of_operations",
+      "family": {
+        "template": "Calculate: {a} − {b} ÷ {c}",
+        "params": {
+          "a": {
+            "min": 10,
+            "max": 30,
+            "step": 2
+          },
+          "c": {
+            "min": 2,
+            "max": 6,
+            "step": 1
+          },
+          "k": {
+            "min": 2,
+            "max": 8,
+            "step": 1
+          }
+        },
+        "derived": {
+          "b": "c * k"
+        },
+        "answer": "a - k",
+        "variants": 385
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: {a} − {b} ÷ {c}",
+        "uz": "Hisoblang: {a} − {b} : {c}",
+        "ru": "Вычислите: {a} − {b} : {c}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Divide before you subtract.",
+        "uz": "Avval boʻling, keyin ayiring.",
+        "ru": "Сначала деление, потом вычитание."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0010",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "division_remainder",
+      "family": {
+        "template": "What is the remainder when {n} is divided by {d}?",
+        "params": {
+          "d": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "q": {
+            "min": 3,
+            "max": 11,
+            "step": 1
+          },
+          "r": {
+            "min": 1,
+            "max": 5,
+            "step": 1
+          }
+        },
+        "derived": {
+          "n": "d * q + r"
+        },
+        "answer": "r",
+        "variants": 180
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is the remainder when {n} is divided by {d}?",
+        "uz": "{n} sonini {d} soniga boʻlganda qoldiq nechaga teng?",
+        "ru": "Какой остаток получится при делении {n} на {d}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Find the largest multiple of the divisor that does not exceed the number; what is left over is the remainder.",
+        "uz": "Boʻluvchining sondan oshmaydigan eng katta karralisini toping; ortib qolgan qism qoldiq boʻladi.",
+        "ru": "Найдите наибольшее кратное делителя, не превышающее число; то, что осталось, и есть остаток."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0011",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "word_problem_multiplication",
+      "family": {
+        "template": "One notebook costs {p} soʻm. Malika buys {n} notebooks. How many soʻm does she pay?",
+        "params": {
+          "p": [
+            500,
+            1500,
+            2000,
+            2500,
+            3000,
+            3500
+          ],
+          "n": {
+            "min": 5,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "answer": "p * n",
+        "variants": 30
+      },
+      "lang": "en",
+      "stem": {
+        "en": "One notebook costs {p} soʻm. Malika buys {n} notebooks. How many soʻm does she pay?",
+        "uz": "Bitta daftar {p} soʻm turadi. Malika {n} ta daftar sotib oldi. U necha soʻm toʻladi?",
+        "ru": "Одна тетрадь стоит {p} сум. Малика купила {n} тетрадей. Сколько она заплатила (в сумах)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Total cost = price of one item × number of items.",
+        "uz": "Umumiy narx = bittasining narxi × soni.",
+        "ru": "Общая стоимость = цена одной вещи × количество."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0012",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "word_problem_subtraction",
+      "family": {
+        "template": "A pen costs {p} soʻm. Aziz pays with a 10,000 soʻm note. How much change, in soʻm, does he get?",
+        "params": {
+          "p": {
+            "min": 2300,
+            "max": 8700,
+            "step": 100
+          }
+        },
+        "answer": "10000 - p",
+        "variants": 65
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A pen costs {p} soʻm. Aziz pays with a 10,000 soʻm note. How much change, in soʻm, does he get?",
+        "uz": "Ruchka {p} soʻm turadi. Aziz 10 000 soʻmlik pul bilan toʻladi. U necha soʻm qaytim oladi?",
+        "ru": "Ручка стоит {p} сум. Азиз платит купюрой 10 000 сум. Сколько сдачи (в сумах) он получит?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Change = amount paid − price.",
+        "uz": "Qaytim = toʻlangan pul − narx.",
+        "ru": "Сдача = уплаченная сумма − цена."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0013",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "word_problem_division",
+      "family": {
+        "template": "{t} apples are shared equally among {k} children. How many apples does each child get?",
+        "params": {
+          "k": {
+            "min": 3,
+            "max": 8,
+            "step": 1
+          },
+          "q": {
+            "min": 4,
+            "max": 12,
+            "step": 1
+          }
+        },
+        "derived": {
+          "t": "k * q"
+        },
+        "answer": "q",
+        "variants": 54
+      },
+      "lang": "en",
+      "stem": {
+        "en": "{t} apples are shared equally among {k} children. How many apples does each child get?",
+        "uz": "{t} ta olma {k} nafar bolaga teng boʻlib berildi. Har bir bolaga nechta olma tegdi?",
+        "ru": "Яблоки разделили поровну между {k} детьми. Всего было {t} шт. Сколько яблок получил каждый ребёнок?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Sharing equally is division: total ÷ number of children.",
+        "uz": "Teng boʻlish — bu boʻlish amali: jami : bolalar soni.",
+        "ru": "Разделить поровну — значит выполнить деление: всего : число детей."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0014",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "rounding",
+      "family": {
+        "template": "Round {n} to the nearest hundred.",
+        "params": {
+          "h": {
+            "min": 10,
+            "max": 98,
+            "step": 1
+          },
+          "u": [
+            12,
+            23,
+            38,
+            41,
+            49,
+            51,
+            62,
+            77,
+            86,
+            94
+          ]
+        },
+        "derived": {
+          "n": "100 * h + u"
+        },
+        "answer": "round(n / 100) * 100",
+        "variants": 890
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Round {n} to the nearest hundred.",
+        "uz": "{n} sonini yuzlargacha yaxlitlang.",
+        "ru": "Округлите число {n} до сотен."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Look at the tens digit: 5 or more rounds up, less than 5 rounds down.",
+        "uz": "Oʻnliklar xonasidagi raqamga qarang: 5 yoki undan katta boʻlsa, yuqoriga, kichik boʻlsa, pastga yaxlitlanadi.",
+        "ru": "Смотрите на цифру десятков: 5 и больше — округляем вверх, меньше 5 — вниз."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0015",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "missing_number",
+      "family": {
+        "template": "What number goes in the box?   {a} + □ = {s}",
+        "params": {
+          "a": {
+            "min": 18,
+            "max": 64,
+            "step": 1
+          },
+          "x": {
+            "min": 13,
+            "max": 38,
+            "step": 1
+          }
+        },
+        "derived": {
+          "s": "a + x"
+        },
+        "answer": "x",
+        "variants": 1222
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What number goes in the box?   {a} + □ = {s}",
+        "uz": "Katakchaga qaysi son yoziladi?   {a} + □ = {s}",
+        "ru": "Какое число нужно вписать в окошко?   {a} + □ = {s}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Missing addend = sum − known addend.",
+        "uz": "Nomaʼlum qoʻshiluvchi = yigʻindi − maʼlum qoʻshiluvchi.",
+        "ru": "Неизвестное слагаемое = сумма − известное слагаемое."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0016",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "missing_number",
+      "family": {
+        "template": "What number goes in the box?   {a} × □ = {p}",
+        "params": {
+          "a": {
+            "min": 3,
+            "max": 9,
+            "step": 1
+          },
+          "x": {
+            "min": 6,
+            "max": 12,
+            "step": 1
+          }
+        },
+        "derived": {
+          "p": "a * x"
+        },
+        "answer": "x",
+        "variants": 49
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What number goes in the box?   {a} × □ = {p}",
+        "uz": "Katakchaga qaysi son yoziladi?   {a} × □ = {p}",
+        "ru": "Какое число нужно вписать в окошко?   {a} × □ = {p}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Missing factor = product ÷ known factor.",
+        "uz": "Nomaʼlum koʻpaytuvchi = koʻpaytma : maʼlum koʻpaytuvchi.",
+        "ru": "Неизвестный множитель = произведение : известный множитель."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0017",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "units_time",
+      "family": {
+        "template": "A film lasts {h} h {m} min. How many minutes is that in total?",
+        "params": {
+          "h": {
+            "min": 1,
+            "max": 3,
+            "step": 1
+          },
+          "m": {
+            "min": 5,
+            "max": 55,
+            "step": 5
+          }
+        },
+        "answer": "60 * h + m",
+        "variants": 33
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A film lasts {h} h {m} min. How many minutes is that in total?",
+        "uz": "Film {h} soat {m} daqiqa davom etadi. Bu jami necha daqiqa?",
+        "ru": "Фильм идёт {h} ч {m} мин. Сколько это минут всего?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "1 hour = 60 minutes: multiply the hours by 60 and add the minutes.",
+        "uz": "1 soat = 60 daqiqa: soatlarni 60 ga koʻpaytirib, daqiqalarni qoʻshing.",
+        "ru": "1 час = 60 минут: умножьте часы на 60 и прибавьте минуты."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0018",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "units_length",
+      "family": {
+        "template": "How many centimetres are there in {m} m {c} cm?",
+        "params": {
+          "m": {
+            "min": 2,
+            "max": 9,
+            "step": 1
+          },
+          "c": {
+            "min": 5,
+            "max": 95,
+            "step": 5
+          }
+        },
+        "answer": "100 * m + c",
+        "variants": 152
+      },
+      "lang": "en",
+      "stem": {
+        "en": "How many centimetres are there in {m} m {c} cm?",
+        "uz": "{m} m {c} sm necha santimetrga teng?",
+        "ru": "Сколько сантиметров в {m} м {c} см?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "1 m = 100 cm.",
+        "uz": "1 m = 100 sm.",
+        "ru": "1 м = 100 см."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind-instances:3",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-ar0019",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "whole_number_multiplication",
+      "family": {
+        "template": "Calculate: {a} × {b}",
+        "params": {
+          "a": {
+            "min": 20,
+            "max": 90,
+            "step": 10
+          },
+          "b": {
+            "min": 3,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "answer": "a * b",
+        "variants": 56
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: {a} × {b}",
+        "uz": "Hisoblang: {a} × {b}",
+        "ru": "Вычислите: {a} × {b}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Multiply the non-zero digits, then write the zero at the end.",
+        "uz": "Noldan farqli raqamlarni koʻpaytiring, soʻng oxiriga nolni yozing.",
+        "ru": "Перемножьте ненулевые цифры и допишите ноль в конце."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-ar0020",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "whole_number_division",
+      "family": {
+        "template": "Calculate: {p} ÷ {d}",
+        "params": {
+          "d": {
+            "min": 3,
+            "max": 9,
+            "step": 1
+          },
+          "q": {
+            "min": 12,
+            "max": 25,
+            "step": 1
+          }
+        },
+        "derived": {
+          "p": "d * q"
+        },
+        "answer": "q",
+        "variants": 98
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: {p} ÷ {d}",
+        "uz": "Hisoblang: {p} : {d}",
+        "ru": "Вычислите: {p} : {d}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Divide step by step: split the number into easy parts (for example tens and the rest) and divide each.",
+        "uz": "Bosqichma-bosqich boʻling: sonni qulay qismlarga ajrating (masalan, oʻnliklar va qolgani) va har birini boʻling.",
+        "ru": "Делите по шагам: разбейте число на удобные части (например, десятки и остаток) и разделите каждую."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.45,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ]
+}

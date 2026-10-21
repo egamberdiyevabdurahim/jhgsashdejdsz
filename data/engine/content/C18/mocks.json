@@ -1,0 +1,915 @@
+{
+ "bank": "C18",
+ "kind": "dtm_mocks",
+ "version": 1,
+ "status": "draft",
+ "author": "agent:c18-v1",
+ "created": "2026-10-07",
+ "about": {
+  "en": "Four full mocks of the Uzbek state test (Bilim va malakalarni baholash agentligi), one per subject pair, in the block order and scoring of Order No. 105 Annex 1. Every item id points to an item in this folder; mock items (C18-..m...) are a separate pool from the practice items (C18-..p...) and never appear in practice.",
+  "uz": "Oʻzbekiston davlat testining (Bilim va malakalarni baholash agentligi) toʻrtta toʻliq sinov varianti, har bir fanlar juftligi uchun bittadan, 105-son buyruq 1-ilovasidagi bloklar tartibi va baholash asosida. Sinov savollari (C18-..m...) mashq savollaridan (C18-..p...) alohida va mashqda koʻrsatilmaydi.",
+  "ru": "Четыре полных пробных варианта государственного теста (Агентство по оценке знаний и навыков), по одному на пару предметов, в порядке блоков и с баллами по Приказу № 105, приложение 1. Вопросы пробников (C18-..m...) – отдельный пул от тренировочных (C18-..p...) и в тренировке не показываются."
+ },
+ "format": {
+  "source": {
+   "url": "https://uzbmb.uz/upload/file/pdf/qabul2026/Baholash%20mezoni.pdf",
+   "title": "Order No. 105 of the Ministry of Higher Education, Science and Innovation, 13 Mar 2026, Annex 1 (scoring criteria)",
+   "checked_by": "R3-uzbekistan.md section 1.2 (text extracted from the official PDF on 2026-10-07); not re-fetched by this stream"
+  },
+  "block_order": [
+   "native",
+   "math_core",
+   "history",
+   "subject_1",
+   "subject_2"
+  ],
+  "questions": 90,
+  "max_points": 189.0,
+  "points": {
+   "native": 1.1,
+   "math_core": 1.1,
+   "history": 1.1,
+   "subject_1": 3.1,
+   "subject_2": 2.1
+  },
+  "options_per_question": 4,
+  "duration_minutes": {
+   "value": 180,
+   "needs_verification": true,
+   "source": "https://infoedu.uz/maksimal-ball-189-boladi-5-ta-fan-90-ta-test-3-soat-vaqt",
+   "note": "third-party figure (about 3 hours), not confirmed on an official page"
+  },
+  "pairs_source": "P5-spec.md section 5.3 C18 (the four most common pairs in the R3 table: Biology + Chemistry, Maths + Physics, Maths + Foreign language, Foreign language + Native language and literature)"
+ },
+ "instructions": {
+  "en": "The test has 90 questions in 5 blocks: native language, mathematics and history of Uzbekistan (10 questions each, 1.1 points), then your first subject (30 questions, 3.1 points) and second subject (30 questions, 2.1 points). Each question has 4 options and one correct answer. Maximum 189 points.",
+  "uz": "Test 5 blokdan iborat 90 ta savol: ona tili, matematika va Oʻzbekiston tarixi (har biri 10 ta savol, 1,1 ball), soʻng birinchi fan (30 ta savol, 3,1 ball) va ikkinchi fan (30 ta savol, 2,1 ball). Har bir savolda 4 ta variant va bitta toʻgʻri javob bor. Eng yuqori ball – 189.",
+  "ru": "Тест – 90 вопросов в 5 блоках: родной язык, математика и история Узбекистана (по 10 вопросов, 1,1 балла), затем первый предмет (30 вопросов, 3,1 балла) и второй предмет (30 вопросов, 2,1 балла). В каждом вопросе 4 варианта и один верный ответ. Максимум – 189 баллов."
+ },
+ "pools": {
+  "practice": {
+   "files": [
+    "C18-1.json",
+    "C18-2.json",
+    "C18-3.json",
+    "C18-4.json",
+    "C18-5.json",
+    "C18-6.json",
+    "C18-7.json",
+    "C18-8.json",
+    "C18-9.json",
+    "C18-10.json",
+    "C18-11.json",
+    "C18-12.json",
+    "C18-13.json",
+    "C18-14.json",
+    "C18-15.json",
+    "C18-16.json",
+    "C18-17.json",
+    "C18-18.json",
+    "C18-19.json",
+    "C18-20.json"
+   ],
+   "items": 400,
+   "id_pattern": "C18-<block>p<nnn>"
+  },
+  "mock": {
+   "files": [
+    "C18-21.json",
+    "C18-22.json",
+    "C18-23.json",
+    "C18-24.json",
+    "C18-25.json",
+    "C18-26.json",
+    "C18-27.json",
+    "C18-28.json",
+    "C18-29.json",
+    "C18-30.json",
+    "C18-31.json",
+    "C18-32.json",
+    "C18-33.json",
+    "C18-34.json",
+    "C18-35.json",
+    "C18-36.json",
+    "C18-37.json",
+    "C18-38.json",
+    "C18-39.json",
+    "C18-40.json",
+    "C18-41.json",
+    "C18-42.json"
+   ],
+   "items": 400,
+   "id_pattern": "C18-<block>m<nnn>"
+  }
+ },
+ "mocks": [
+  {
+   "id": "C18-mock-bio-chem",
+   "pair": [
+    "Biology",
+    "Chemistry"
+   ],
+   "title": {
+    "en": "State-test mock: Biology + Chemistry",
+    "uz": "DTM sinov testi: Biologiya + Kimyo",
+    "ru": "Пробный тест ДТМ: Биология + Химия"
+   },
+   "groups": [
+    "uz",
+    "ru"
+   ],
+   "questions": 90,
+   "max_points": 189.0,
+   "blocks": [
+    {
+     "order": 1,
+     "block": "native",
+     "name": {
+      "en": "Native language (compulsory)",
+      "uz": "Ona tili (majburiy)",
+      "ru": "Родной язык (обязательный)"
+     },
+     "questions": 10,
+     "points_each": 1.1,
+     "max": 11.0,
+     "items_by_group": {
+      "uz": [
+       "C18-otm001",
+       "C18-otm002",
+       "C18-otm003",
+       "C18-otm004",
+       "C18-otm005",
+       "C18-otm006",
+       "C18-otm007",
+       "C18-otm008",
+       "C18-otm009",
+       "C18-otm010"
+      ],
+      "ru": [
+       "C18-rtm001",
+       "C18-rtm002",
+       "C18-rtm003",
+       "C18-rtm004",
+       "C18-rtm005",
+       "C18-rtm006",
+       "C18-rtm007",
+       "C18-rtm008",
+       "C18-rtm009",
+       "C18-rtm010"
+      ]
+     },
+     "note": {
+      "en": "uz groups take Uzbek (ona tili); ru groups take Russian.",
+      "uz": "Oʻzbek guruhlari ona tilini, rus guruhlari rus tilini topshiradi.",
+      "ru": "Узбекские группы сдают узбекский язык, русские группы – русский."
+     }
+    },
+    {
+     "order": 2,
+     "block": "math_core",
+     "name": {
+      "en": "Mathematics (compulsory)",
+      "uz": "Matematika (majburiy)",
+      "ru": "Математика (обязательная)"
+     },
+     "questions": 10,
+     "points_each": 1.1,
+     "max": 11.0,
+     "items": [
+      "C18-mcm001",
+      "C18-mcm002",
+      "C18-mcm003",
+      "C18-mcm004",
+      "C18-mcm005",
+      "C18-mcm006",
+      "C18-mcm007",
+      "C18-mcm008",
+      "C18-mcm009",
+      "C18-mcm010"
+     ]
+    },
+    {
+     "order": 3,
+     "block": "history",
+     "name": {
+      "en": "History of Uzbekistan (compulsory)",
+      "uz": "Oʻzbekiston tarixi (majburiy)",
+      "ru": "История Узбекистана (обязательная)"
+     },
+     "questions": 10,
+     "points_each": 1.1,
+     "max": 11.0,
+     "items": [
+      "C18-him001",
+      "C18-him002",
+      "C18-him003",
+      "C18-him004",
+      "C18-him005",
+      "C18-him006",
+      "C18-him007",
+      "C18-him008",
+      "C18-him009",
+      "C18-him010"
+     ]
+    },
+    {
+     "order": 4,
+     "block": "subject_1",
+     "subject": "bi",
+     "name": {
+      "en": "Biology",
+      "uz": "Biologiya",
+      "ru": "Биология"
+     },
+     "questions": 30,
+     "points_each": 3.1,
+     "max": 93.0,
+     "items": [
+      "C18-bim001",
+      "C18-bim002",
+      "C18-bim003",
+      "C18-bim004",
+      "C18-bim005",
+      "C18-bim006",
+      "C18-bim007",
+      "C18-bim008",
+      "C18-bim009",
+      "C18-bim010",
+      "C18-bim011",
+      "C18-bim012",
+      "C18-bim013",
+      "C18-bim014",
+      "C18-bim015",
+      "C18-bim016",
+      "C18-bim017",
+      "C18-bim018",
+      "C18-bim019",
+      "C18-bim020",
+      "C18-bim021",
+      "C18-bim022",
+      "C18-bim023",
+      "C18-bim024",
+      "C18-bim025",
+      "C18-bim026",
+      "C18-bim027",
+      "C18-bim028",
+      "C18-bim029",
+      "C18-bim030"
+     ]
+    },
+    {
+     "order": 5,
+     "block": "subject_2",
+     "subject": "ch",
+     "name": {
+      "en": "Chemistry",
+      "uz": "Kimyo",
+      "ru": "Химия"
+     },
+     "questions": 30,
+     "points_each": 2.1,
+     "max": 63.0,
+     "items": [
+      "C18-chm001",
+      "C18-chm002",
+      "C18-chm003",
+      "C18-chm004",
+      "C18-chm005",
+      "C18-chm006",
+      "C18-chm007",
+      "C18-chm008",
+      "C18-chm009",
+      "C18-chm010",
+      "C18-chm011",
+      "C18-chm012",
+      "C18-chm013",
+      "C18-chm014",
+      "C18-chm015",
+      "C18-chm016",
+      "C18-chm017",
+      "C18-chm018",
+      "C18-chm019",
+      "C18-chm020",
+      "C18-chm021",
+      "C18-chm022",
+      "C18-chm023",
+      "C18-chm024",
+      "C18-chm025",
+      "C18-chm026",
+      "C18-chm027",
+      "C18-chm028",
+      "C18-chm029",
+      "C18-chm030"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C18-mock-math-phys",
+   "pair": [
+    "Mathematics",
+    "Physics"
+   ],
+   "title": {
+    "en": "State-test mock: Mathematics + Physics",
+    "uz": "DTM sinov testi: Matematika + Fizika",
+    "ru": "Пробный тест ДТМ: Математика + Физика"
+   },
+   "groups": [
+    "uz",
+    "ru"
+   ],
+   "questions": 90,
+   "max_points": 189.0,
+   "blocks": [
+    {
+     "order": 1,
+     "block": "native",
+     "name": {
+      "en": "Native language (compulsory)",
+      "uz": "Ona tili (majburiy)",
+      "ru": "Родной язык (обязательный)"
+     },
+     "questions": 10,
+     "points_each": 1.1,
+     "max": 11.0,
+     "items_by_group": {
+      "uz": [
+       "C18-otm011",
+       "C18-otm012",
+       "C18-otm013",
+       "C18-otm014",
+       "C18-otm015",
+       "C18-otm016",
+       "C18-otm017",
+       "C18-otm018",
+       "C18-otm019",
+       "C18-otm020"
+      ],
+      "ru": [
+       "C18-rtm011",
+       "C18-rtm012",
+       "C18-rtm013",
+       "C18-rtm014",
+       "C18-rtm015",
+       "C18-rtm016",
+       "C18-rtm017",
+       "C18-rtm018",
+       "C18-rtm019",
+       "C18-rtm020"
+      ]
+     },
+     "note": {
+      "en": "uz groups take Uzbek (ona tili); ru groups take Russian.",
+      "uz": "Oʻzbek guruhlari ona tilini, rus guruhlari rus tilini topshiradi.",
+      "ru": "Узбекские группы сдают узбекский язык, русские группы – русский."
+     }
+    },
+    {
+     "order": 2,
+     "block": "math_core",
+     "name": {
+      "en": "Mathematics (compulsory)",
+      "uz": "Matematika (majburiy)",
+      "ru": "Математика (обязательная)"
+     },
+     "questions": 10,
+     "points_each": 1.1,
+     "max": 11.0,
+     "items": [
+      "C18-mcm011",
+      "C18-mcm012",
+      "C18-mcm013",
+      "C18-mcm014",
+      "C18-mcm015",
+      "C18-mcm016",
+      "C18-mcm017",
+      "C18-mcm018",
+      "C18-mcm019",
+      "C18-mcm020"
+     ]
+    },
+    {
+     "order": 3,
+     "block": "history",
+     "name": {
+      "en": "History of Uzbekistan (compulsory)",
+      "uz": "Oʻzbekiston tarixi (majburiy)",
+      "ru": "История Узбекистана (обязательная)"
+     },
+     "questions": 10,
+     "points_each": 1.1,
+     "max": 11.0,
+     "items": [
+      "C18-him011",
+      "C18-him012",
+      "C18-him013",
+      "C18-him014",
+      "C18-him015",
+      "C18-him016",
+      "C18-him017",
+      "C18-him018",
+      "C18-him019",
+      "C18-him020"
+     ]
+    },
+    {
+     "order": 4,
+     "block": "subject_1",
+     "subject": "ms",
+     "name": {
+      "en": "Mathematics",
+      "uz": "Matematika",
+      "ru": "Математика"
+     },
+     "questions": 30,
+     "points_each": 3.1,
+     "max": 93.0,
+     "items": [
+      "C18-msm001",
+      "C18-msm002",
+      "C18-msm003",
+      "C18-msm004",
+      "C18-msm005",
+      "C18-msm006",
+      "C18-msm007",
+      "C18-msm008",
+      "C18-msm009",
+      "C18-msm010",
+      "C18-msm011",
+      "C18-msm012",
+      "C18-msm013",
+      "C18-msm014",
+      "C18-msm015",
+      "C18-msm016",
+      "C18-msm017",
+      "C18-msm018",
+      "C18-msm019",
+      "C18-msm020",
+      "C18-msm021",
+      "C18-msm022",
+      "C18-msm023",
+      "C18-msm024",
+      "C18-msm025",
+      "C18-msm026",
+      "C18-msm027",
+      "C18-msm028",
+      "C18-msm029",
+      "C18-msm030"
+     ]
+    },
+    {
+     "order": 5,
+     "block": "subject_2",
+     "subject": "ph",
+     "name": {
+      "en": "Physics",
+      "uz": "Fizika",
+      "ru": "Физика"
+     },
+     "questions": 30,
+     "points_each": 2.1,
+     "max": 63.0,
+     "items": [
+      "C18-phm001",
+      "C18-phm002",
+      "C18-phm003",
+      "C18-phm004",
+      "C18-phm005",
+      "C18-phm006",
+      "C18-phm007",
+      "C18-phm008",
+      "C18-phm009",
+      "C18-phm010",
+      "C18-phm011",
+      "C18-phm012",
+      "C18-phm013",
+      "C18-phm014",
+      "C18-phm015",
+      "C18-phm016",
+      "C18-phm017",
+      "C18-phm018",
+      "C18-phm019",
+      "C18-phm020",
+      "C18-phm021",
+      "C18-phm022",
+      "C18-phm023",
+      "C18-phm024",
+      "C18-phm025",
+      "C18-phm026",
+      "C18-phm027",
+      "C18-phm028",
+      "C18-phm029",
+      "C18-phm030"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C18-mock-math-eng",
+   "pair": [
+    "Mathematics",
+    "Foreign language (English)"
+   ],
+   "title": {
+    "en": "State-test mock: Mathematics + Foreign language (English)",
+    "uz": "DTM sinov testi: Matematika + Chet tili (ingliz tili)",
+    "ru": "Пробный тест ДТМ: Математика + Иностранный язык (английский)"
+   },
+   "groups": [
+    "uz",
+    "ru"
+   ],
+   "questions": 90,
+   "max_points": 189.0,
+   "blocks": [
+    {
+     "order": 1,
+     "block": "native",
+     "name": {
+      "en": "Native language (compulsory)",
+      "uz": "Ona tili (majburiy)",
+      "ru": "Родной язык (обязательный)"
+     },
+     "questions": 10,
+     "points_each": 1.1,
+     "max": 11.0,
+     "items_by_group": {
+      "uz": [
+       "C18-otm021",
+       "C18-otm022",
+       "C18-otm023",
+       "C18-otm024",
+       "C18-otm025",
+       "C18-otm026",
+       "C18-otm027",
+       "C18-otm028",
+       "C18-otm029",
+       "C18-otm030"
+      ],
+      "ru": [
+       "C18-rtm021",
+       "C18-rtm022",
+       "C18-rtm023",
+       "C18-rtm024",
+       "C18-rtm025",
+       "C18-rtm026",
+       "C18-rtm027",
+       "C18-rtm028",
+       "C18-rtm029",
+       "C18-rtm030"
+      ]
+     },
+     "note": {
+      "en": "uz groups take Uzbek (ona tili); ru groups take Russian.",
+      "uz": "Oʻzbek guruhlari ona tilini, rus guruhlari rus tilini topshiradi.",
+      "ru": "Узбекские группы сдают узбекский язык, русские группы – русский."
+     }
+    },
+    {
+     "order": 2,
+     "block": "math_core",
+     "name": {
+      "en": "Mathematics (compulsory)",
+      "uz": "Matematika (majburiy)",
+      "ru": "Математика (обязательная)"
+     },
+     "questions": 10,
+     "points_each": 1.1,
+     "max": 11.0,
+     "items": [
+      "C18-mcm021",
+      "C18-mcm022",
+      "C18-mcm023",
+      "C18-mcm024",
+      "C18-mcm025",
+      "C18-mcm026",
+      "C18-mcm027",
+      "C18-mcm028",
+      "C18-mcm029",
+      "C18-mcm030"
+     ]
+    },
+    {
+     "order": 3,
+     "block": "history",
+     "name": {
+      "en": "History of Uzbekistan (compulsory)",
+      "uz": "Oʻzbekiston tarixi (majburiy)",
+      "ru": "История Узбекистана (обязательная)"
+     },
+     "questions": 10,
+     "points_each": 1.1,
+     "max": 11.0,
+     "items": [
+      "C18-him021",
+      "C18-him022",
+      "C18-him023",
+      "C18-him024",
+      "C18-him025",
+      "C18-him026",
+      "C18-him027",
+      "C18-him028",
+      "C18-him029",
+      "C18-him030"
+     ]
+    },
+    {
+     "order": 4,
+     "block": "subject_1",
+     "subject": "ms",
+     "name": {
+      "en": "Mathematics",
+      "uz": "Matematika",
+      "ru": "Математика"
+     },
+     "questions": 30,
+     "points_each": 3.1,
+     "max": 93.0,
+     "items": [
+      "C18-msm031",
+      "C18-msm032",
+      "C18-msm033",
+      "C18-msm034",
+      "C18-msm035",
+      "C18-msm036",
+      "C18-msm037",
+      "C18-msm038",
+      "C18-msm039",
+      "C18-msm040",
+      "C18-msm041",
+      "C18-msm042",
+      "C18-msm043",
+      "C18-msm044",
+      "C18-msm045",
+      "C18-msm046",
+      "C18-msm047",
+      "C18-msm048",
+      "C18-msm049",
+      "C18-msm050",
+      "C18-msm051",
+      "C18-msm052",
+      "C18-msm053",
+      "C18-msm054",
+      "C18-msm055",
+      "C18-msm056",
+      "C18-msm057",
+      "C18-msm058",
+      "C18-msm059",
+      "C18-msm060"
+     ]
+    },
+    {
+     "order": 5,
+     "block": "subject_2",
+     "subject": "en",
+     "name": {
+      "en": "Foreign language (English)",
+      "uz": "Chet tili (ingliz tili)",
+      "ru": "Иностранный язык (английский)"
+     },
+     "questions": 30,
+     "points_each": 2.1,
+     "max": 63.0,
+     "items": [
+      "C18-enm001",
+      "C18-enm002",
+      "C18-enm003",
+      "C18-enm004",
+      "C18-enm005",
+      "C18-enm006",
+      "C18-enm007",
+      "C18-enm008",
+      "C18-enm009",
+      "C18-enm010",
+      "C18-enm011",
+      "C18-enm012",
+      "C18-enm013",
+      "C18-enm014",
+      "C18-enm015",
+      "C18-enm016",
+      "C18-enm017",
+      "C18-enm018",
+      "C18-enm019",
+      "C18-enm020",
+      "C18-enm021",
+      "C18-enm022",
+      "C18-enm023",
+      "C18-enm024",
+      "C18-enm025",
+      "C18-enm026",
+      "C18-enm027",
+      "C18-enm028",
+      "C18-enm029",
+      "C18-enm030"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C18-mock-eng-uzlit",
+   "pair": [
+    "Foreign language (English)",
+    "Native language and literature (Uzbek)"
+   ],
+   "title": {
+    "en": "State-test mock: Foreign language (English) + Native language and literature (Uzbek)",
+    "uz": "DTM sinov testi: Chet tili (ingliz tili) + Ona tili va adabiyot",
+    "ru": "Пробный тест ДТМ: Иностранный язык (английский) + Родной язык и литература (узбекский)"
+   },
+   "groups": [
+    "uz"
+   ],
+   "questions": 90,
+   "max_points": 189.0,
+   "blocks": [
+    {
+     "order": 1,
+     "block": "native",
+     "name": {
+      "en": "Native language (compulsory)",
+      "uz": "Ona tili (majburiy)",
+      "ru": "Родной язык (обязательный)"
+     },
+     "questions": 10,
+     "points_each": 1.1,
+     "max": 11.0,
+     "items_by_group": {
+      "uz": [
+       "C18-otm031",
+       "C18-otm032",
+       "C18-otm033",
+       "C18-otm034",
+       "C18-otm035",
+       "C18-otm036",
+       "C18-otm037",
+       "C18-otm038",
+       "C18-otm039",
+       "C18-otm040"
+      ],
+      "ru": [
+       "C18-rtm031",
+       "C18-rtm032",
+       "C18-rtm033",
+       "C18-rtm034",
+       "C18-rtm035",
+       "C18-rtm036",
+       "C18-rtm037",
+       "C18-rtm038",
+       "C18-rtm039",
+       "C18-rtm040"
+      ]
+     },
+     "note": {
+      "en": "uz groups take Uzbek (ona tili); ru groups take Russian.",
+      "uz": "Oʻzbek guruhlari ona tilini, rus guruhlari rus tilini topshiradi.",
+      "ru": "Узбекские группы сдают узбекский язык, русские группы – русский."
+     }
+    },
+    {
+     "order": 2,
+     "block": "math_core",
+     "name": {
+      "en": "Mathematics (compulsory)",
+      "uz": "Matematika (majburiy)",
+      "ru": "Математика (обязательная)"
+     },
+     "questions": 10,
+     "points_each": 1.1,
+     "max": 11.0,
+     "items": [
+      "C18-mcm031",
+      "C18-mcm032",
+      "C18-mcm033",
+      "C18-mcm034",
+      "C18-mcm035",
+      "C18-mcm036",
+      "C18-mcm037",
+      "C18-mcm038",
+      "C18-mcm039",
+      "C18-mcm040"
+     ]
+    },
+    {
+     "order": 3,
+     "block": "history",
+     "name": {
+      "en": "History of Uzbekistan (compulsory)",
+      "uz": "Oʻzbekiston tarixi (majburiy)",
+      "ru": "История Узбекистана (обязательная)"
+     },
+     "questions": 10,
+     "points_each": 1.1,
+     "max": 11.0,
+     "items": [
+      "C18-him031",
+      "C18-him032",
+      "C18-him033",
+      "C18-him034",
+      "C18-him035",
+      "C18-him036",
+      "C18-him037",
+      "C18-him038",
+      "C18-him039",
+      "C18-him040"
+     ]
+    },
+    {
+     "order": 4,
+     "block": "subject_1",
+     "subject": "en",
+     "name": {
+      "en": "Foreign language (English)",
+      "uz": "Chet tili (ingliz tili)",
+      "ru": "Иностранный язык (английский)"
+     },
+     "questions": 30,
+     "points_each": 3.1,
+     "max": 93.0,
+     "items": [
+      "C18-enm031",
+      "C18-enm032",
+      "C18-enm033",
+      "C18-enm034",
+      "C18-enm035",
+      "C18-enm036",
+      "C18-enm037",
+      "C18-enm038",
+      "C18-enm039",
+      "C18-enm040",
+      "C18-enm041",
+      "C18-enm042",
+      "C18-enm043",
+      "C18-enm044",
+      "C18-enm045",
+      "C18-enm046",
+      "C18-enm047",
+      "C18-enm048",
+      "C18-enm049",
+      "C18-enm050",
+      "C18-enm051",
+      "C18-enm052",
+      "C18-enm053",
+      "C18-enm054",
+      "C18-enm055",
+      "C18-enm056",
+      "C18-enm057",
+      "C18-enm058",
+      "C18-enm059",
+      "C18-enm060"
+     ]
+    },
+    {
+     "order": 5,
+     "block": "subject_2",
+     "subject": "ol",
+     "name": {
+      "en": "Native language and literature (Uzbek)",
+      "uz": "Ona tili va adabiyot",
+      "ru": "Родной язык и литература (узбекский)"
+     },
+     "questions": 30,
+     "points_each": 2.1,
+     "max": 63.0,
+     "items": [
+      "C18-olm001",
+      "C18-olm002",
+      "C18-olm003",
+      "C18-olm004",
+      "C18-olm005",
+      "C18-olm006",
+      "C18-olm007",
+      "C18-olm008",
+      "C18-olm009",
+      "C18-olm010",
+      "C18-olm011",
+      "C18-olm012",
+      "C18-olm013",
+      "C18-olm014",
+      "C18-olm015",
+      "C18-olm016",
+      "C18-olm017",
+      "C18-olm018",
+      "C18-olm019",
+      "C18-olm020",
+      "C18-olm021",
+      "C18-olm022",
+      "C18-olm023",
+      "C18-olm024",
+      "C18-olm025",
+      "C18-olm026",
+      "C18-olm027",
+      "C18-olm028",
+      "C18-olm029",
+      "C18-olm030"
+     ]
+    }
+   ],
+   "note": {
+    "en": "Russian-language groups take Russian language and literature as the second subject; that block is not in C18 v1, so this mock is for Uzbek-language groups only.",
+    "uz": "Rus tilidagi guruhlar ikkinchi fan sifatida rus tili va adabiyotini topshiradi; bu blok C18 v1 da yoʻq, shuning uchun bu sinov faqat oʻzbek guruhlari uchun.",
+    "ru": "Русские группы сдают вторым предметом русский язык и литературу; этого блока нет в C18 v1, поэтому пробный тест – только для узбекских групп."
+   }
+  }
+ ]
+}

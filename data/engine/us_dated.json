@@ -1,0 +1,103 @@
+{
+  "note": "Sourced, dated facts of the US route for the 2027 intake: the app's own data, not in the design's SEED. Every fact carries the page it was read on and the day it was read. A page that could not be read is listed in not_read and nothing is written from it.",
+  "destination": "US",
+  "universities": {
+    "nyu": {
+      "name": "New York University",
+      "entry_year": 2027,
+      "page": "NYU 2026-2027 Bulletins, Tisch School of the Arts, Undergraduate Admissions",
+      "year_basis": "The page gives the month and the day and names no year. It is the bulletin of 2026-2027, so an application filed under it is for entry in fall 2027: 1 November is 2026, 1 and 5 January are 2027.",
+      "deadlines": [
+        {
+          "name": "Early Decision I",
+          "month_day": "11-01",
+          "date": "2026-11-01",
+          "says": "We urge you to complete and file your application by November 1 for Early Decision I admission",
+          "source_url": "https://bulletins.nyu.edu/undergraduate/arts/admissions/",
+          "verified_at": "2026-10-11",
+          "needs_verification": false
+        },
+        {
+          "name": "Early Decision II",
+          "month_day": "01-01",
+          "date": "2027-01-01",
+          "says": "by January 1 for Early Decision II",
+          "source_url": "https://bulletins.nyu.edu/undergraduate/arts/admissions/",
+          "verified_at": "2026-10-11",
+          "needs_verification": false
+        },
+        {
+          "name": "Regular Decision",
+          "month_day": "01-05",
+          "date": "2027-01-05",
+          "says": "by January 5 for regular decision",
+          "source_url": "https://bulletins.nyu.edu/undergraduate/arts/admissions/",
+          "verified_at": "2026-10-11",
+          "needs_verification": false
+        }
+      ],
+      "notifications": [
+        {
+          "name": "Early Decision I",
+          "says": "Early decision candidates will be notified of the admission decision starting in the middle of December",
+          "source_url": "https://bulletins.nyu.edu/undergraduate/arts/admissions/",
+          "verified_at": "2026-10-11"
+        },
+        {
+          "name": "Early Decision II",
+          "says": "or after the middle of February for Early Decision II",
+          "source_url": "https://bulletins.nyu.edu/undergraduate/arts/admissions/",
+          "verified_at": "2026-10-11"
+        },
+        {
+          "name": "Regular Decision",
+          "says": "Regular decision candidates will receive notification on or around April 1.",
+          "source_url": "https://bulletins.nyu.edu/undergraduate/arts/admissions/",
+          "verified_at": "2026-10-11"
+        }
+      ],
+      "not_read": [
+        {
+          "what": "NYU's own first-year admissions pages (the deadlines, the testing policy, the English tests)",
+          "urls": [
+            "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+            "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants/early-decision.html",
+            "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/standardized-tests.html",
+            "https://www.nyu.edu/admissions/undergraduate-admissions/high-school-counselors/decision-information.html"
+          ],
+          "tried": "2026-10-11",
+          "got": "an empty page each time: the site answers a program with a browser check (HTTP 302 to the same address with a challenge, then 202 with no text). Nothing is written from these pages."
+        },
+        {
+          "what": "The College of Arts and Science's bulletin page",
+          "urls": ["https://bulletins.nyu.edu/undergraduate/arts-science/admissions/"],
+          "tried": "2026-10-11",
+          "got": "read: it gives no date and sends the reader to the Undergraduate Admissions website."
+        }
+      ]
+    }
+  },
+  "sat_scores": {
+    "label": "SAT Suite Score Release Dates for Students and Educators",
+    "says": "Most scores from weekend tests are released 2–4 weeks after test day.",
+    "source_url": "https://satsuite.collegeboard.org/scores/score-release-dates",
+    "verified_at": "2026-10-11",
+    "releases": [
+      { "test": "SAT", "date": "2026-08-22", "scores_on": "2026-09-04", "source_url": "https://satsuite.collegeboard.org/scores/score-release-dates", "verified_at": "2026-10-11" },
+      { "test": "SAT", "date": "2026-09-12", "scores_on": "2026-09-25", "source_url": "https://satsuite.collegeboard.org/scores/score-release-dates", "verified_at": "2026-10-11" },
+      { "test": "SAT", "date": "2026-10-03", "scores_on": "2026-10-16", "source_url": "https://satsuite.collegeboard.org/scores/score-release-dates", "verified_at": "2026-10-11" },
+      { "test": "SAT", "date": "2026-11-07", "scores_on": "2026-11-20", "source_url": "https://satsuite.collegeboard.org/scores/score-release-dates", "verified_at": "2026-10-11" },
+      { "test": "SAT", "date": "2026-12-05", "scores_on": "2026-12-18", "source_url": "https://satsuite.collegeboard.org/scores/score-release-dates", "verified_at": "2026-10-11" },
+      { "test": "SAT", "date": "2027-03-06", "scores_on": "2027-03-19", "source_url": "https://satsuite.collegeboard.org/scores/score-release-dates", "verified_at": "2026-10-11" },
+      { "test": "SAT", "date": "2027-05-01", "scores_on": "2027-05-14", "source_url": "https://satsuite.collegeboard.org/scores/score-release-dates", "verified_at": "2026-10-11" },
+      { "test": "SAT", "date": "2027-06-05", "scores_on": "2027-06-21", "source_url": "https://satsuite.collegeboard.org/scores/score-release-dates", "verified_at": "2026-10-11" }
+    ],
+    "not_read": [
+      {
+        "urls": ["https://satsuite.collegeboard.org/scores/when-to-expect-scores"],
+        "tried": "2026-10-11",
+        "got": "HTTP 404"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1812 @@
+{
+ "bank": "C1",
+ "batch": 14,
+ "items": [
+  {
+   "id": "C1-ph1101",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "average_acceleration",
+   "family": {
+    "template": "A car speeds up from {u} m/s to {v} m/s in {t} s. What is its average acceleration, in m/s²?",
+    "params": {
+     "k": {
+      "min": 1,
+      "max": 4
+     },
+     "a": {
+      "min": 1,
+      "max": 6
+     },
+     "t": {
+      "min": 2,
+      "max": 6
+     }
+    },
+    "derived": {
+     "u": "k*t",
+     "v": "u + a*t",
+     "dv": "v - u"
+    },
+    "constraints": [
+     "(v - u)/t != v/t",
+     "(v - u)/t != (v + u)/t",
+     "(v - u)/t != (v - u)*t",
+     "v/t != (v + u)/t",
+     "v/t != (v - u)*t",
+     "(v + u)/t != (v - u)*t"
+    ],
+    "answer": "(v - u)/t",
+    "distractors": [
+     "v/t",
+     "(v + u)/t",
+     "(v - u)*t"
+    ],
+    "integer": true,
+    "relation": "{v} = {u} + X*{t}"
+   },
+   "page": "C19-APPH01-1",
+   "lang": "en",
+   "stem": {
+    "en": "A car speeds up from {u} m/s to {v} m/s in {t} s. What is its average acceleration, in m/s²?",
+    "uz": "Avtomobil {t} s ichida tezligini {u} m/s dan {v} m/s gacha oshiradi. Uning oʻrtacha tezlanishi necha m/s²?",
+    "ru": "Автомобиль за {t} с разгоняется с {u} м/с до {v} м/с. Каково его среднее ускорение в м/с²?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "a = Δv ÷ Δt = ({v} − {u}) ÷ {t} = {dv} ÷ {t} = {ANS} m/s².",
+    "uz": "a = Δv ÷ Δt = ({v} − {u}) ÷ {t} = {dv} ÷ {t} = {ANS} m/s².",
+    "ru": "a = Δv ÷ Δt = ({v} − {u}) ÷ {t} = {dv} ÷ {t} = {ANS} м/с²."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.4,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph1102",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "displacement_velocity",
+   "family": {
+    "template": "A runner goes {a} m east and then {b} m west along a straight path in {t} s. What is the size of her average velocity, in m/s?",
+    "params": {
+     "d": {
+      "min": 1,
+      "max": 4
+     },
+     "e": {
+      "min": 1,
+      "max": 4
+     },
+     "t": {
+      "values": [
+       10,
+       20,
+       30,
+       40,
+       50
+      ]
+     }
+    },
+    "derived": {
+     "a": "(d + e)*t",
+     "b": "e*t",
+     "D": "d*t"
+    },
+    "constraints": [
+     "e != d",
+     "(a - b)/t != (a + b)/t",
+     "(a - b)/t != a/t",
+     "(a - b)/t != b/t",
+     "(a + b)/t != a/t",
+     "(a + b)/t != b/t",
+     "a/t != b/t"
+    ],
+    "answer": "(a - b)/t",
+    "distractors": [
+     "(a + b)/t",
+     "a/t",
+     "b/t"
+    ],
+    "integer": true,
+    "relation": "X*{t} = {a} - {b}"
+   },
+   "page": "C19-APPH01-1",
+   "lang": "en",
+   "stem": {
+    "en": "A runner goes {a} m east and then {b} m west along a straight path in {t} s. What is the size of her average velocity, in m/s?",
+    "uz": "Yuguruvchi toʻgʻri yoʻlakda {t} s ichida avval {a} m sharqqa, keyin {b} m gʻarbga yuguradi. Uning oʻrtacha tezligi moduli necha m/s?",
+    "ru": "Бегунья за {t} с пробегает по прямой дорожке {a} м на восток, затем {b} м на запад. Каков модуль её средней скорости в м/с?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Displacement = {a} − {b} = {D} m east; average velocity = {D} ÷ {t} = {ANS} m/s (not the distance ÷ time).",
+    "uz": "Koʻchish = {a} − {b} = {D} m sharqqa; oʻrtacha tezlik = {D} ÷ {t} = {ANS} m/s (yoʻl ÷ vaqt emas).",
+    "ru": "Перемещение = {a} − {b} = {D} м на восток; средняя скорость = {D} ÷ {t} = {ANS} м/с (а не путь ÷ время)."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.6,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph1201",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "free_fall",
+   "family": {
+    "template": "A stone is dropped from rest from the top of a {H} m tower. How high above the ground is it {t} s later, in metres? Use g = 9.8 m/s² and ignore air resistance.",
+    "params": {
+     "H": {
+      "min": 100,
+      "max": 300,
+      "step": 20
+     },
+     "t": {
+      "values": [
+       3,
+       4,
+       5
+      ]
+     }
+    },
+    "derived": {
+     "f": "4.9*t^2"
+    },
+    "constraints": [
+     "H - 4.9*t^2 >= 5",
+     "round(H - 4.9*t^2, 1) != round(H - 9.8*t, 1)",
+     "round(H - 4.9*t^2, 1) != round(4.9*t^2, 1)",
+     "round(H - 4.9*t^2, 1) != round(H - 9.8*t^2, 1)",
+     "round(H - 9.8*t, 1) != round(4.9*t^2, 1)",
+     "round(H - 9.8*t, 1) != round(H - 9.8*t^2, 1)",
+     "round(4.9*t^2, 1) != round(H - 9.8*t^2, 1)"
+    ],
+    "answer": "H - 4.9*t^2",
+    "distractors": [
+     "H - 9.8*t",
+     "4.9*t^2",
+     "H - 9.8*t^2"
+    ],
+    "decimals": 1,
+    "relation": "{t} = sqrt(2*({H} - X)/9.8)"
+   },
+   "page": "C19-APPH01-2",
+   "lang": "en",
+   "stem": {
+    "en": "A stone is dropped from rest from the top of a {H} m tower. How high above the ground is it {t} s later, in metres? Use g = 9.8 m/s² and ignore air resistance.",
+    "uz": "Tosh {H} m balandlikdagi minora tepasidan tinch holatdan qoʻyib yuboriladi. {t} s dan keyin u yerdan necha metr balandlikda boʻladi? g = 9,8 m/s² deb oling, havoning qarshiligini hisobga olmang.",
+    "ru": "Камень отпускают без начальной скорости с вершины башни высотой {H} м. На какой высоте над землёй он будет через {t} с, в метрах? Примите g = 9,8 м/с², сопротивлением воздуха пренебрегите."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Fallen: ½ × 9.8 × {t}² = {f} m; height = {H} − {f} = {ANS} m.",
+    "uz": "Tushgan masofa: ½ × 9,8 × {t}² = {f} m; balandlik = {H} − {f} = {ANS} m.",
+    "ru": "Пролетел: ½ × 9,8 × {t}² = {f} м; высота = {H} − {f} = {ANS} м."
+   },
+   "instructions": {
+    "en": "Type your answer as a number; it may be a decimal.",
+    "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+    "ru": "Введите ответ числом; это может быть десятичная дробь."
+   },
+   "prior_b": 0.7,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph1202",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "constant_acceleration",
+   "family": {
+    "template": "A car moving at {u} m/s brakes with a steady deceleration of {a} m/s² until it stops. How far does it travel while braking, in metres?",
+    "params": {
+     "a": {
+      "values": [
+       3,
+       4,
+       5,
+       6
+      ]
+     },
+     "n": {
+      "min": 2,
+      "max": 7
+     }
+    },
+    "derived": {
+     "u": "a*n",
+     "u2": "u^2",
+     "a2": "2*a"
+    },
+    "constraints": [
+     "(a*n*n) % 2 == 0",
+     "u^2/(2*a) != u/a",
+     "u^2/(2*a) != u^2/a",
+     "u^2/(2*a) != u^2/2",
+     "u/a != u^2/a",
+     "u/a != u^2/2",
+     "u^2/a != u^2/2"
+    ],
+    "answer": "u^2/(2*a)",
+    "distractors": [
+     "u/a",
+     "u^2/a",
+     "u^2/2"
+    ],
+    "integer": true,
+    "relation": "0 = {u}^2 - 2*{a}*X"
+   },
+   "page": "C19-APPH01-2",
+   "lang": "en",
+   "stem": {
+    "en": "A car moving at {u} m/s brakes with a steady deceleration of {a} m/s² until it stops. How far does it travel while braking, in metres?",
+    "uz": "{u} m/s tezlik bilan ketayotgan avtomobil {a} m/s² oʻzgarmas sekinlanish bilan tormozlanib, toʻxtaydi. Tormozlanish davomida u necha metr yoʻl bosadi?",
+    "ru": "Автомобиль, едущий со скоростью {u} м/с, тормозит с постоянным замедлением {a} м/с² до остановки. Какой путь он проходит при торможении, в метрах?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "v² = v₀² − 2ad with v = 0: d = {u}² ÷ (2 × {a}) = {u2} ÷ {a2} = {ANS} m.",
+    "uz": "v² = v₀² − 2ad, bunda v = 0: d = {u}² ÷ (2 × {a}) = {u2} ÷ {a2} = {ANS} m.",
+    "ru": "v² = v₀² − 2ad при v = 0: d = {u}² ÷ (2 × {a}) = {u2} ÷ {a2} = {ANS} м."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.8,
+   "time_s": 70,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph1301",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "projectile_motion",
+   "family": {
+    "template": "A ball rolls horizontally off a cliff {h} m high at {v} m/s. How far from the foot of the cliff does it land, in metres? Use g = 9.8 m/s² and ignore air resistance.",
+    "params": {
+     "t": {
+      "values": [
+       3,
+       4,
+       5,
+       6
+      ]
+     },
+     "v": {
+      "min": 5,
+      "max": 12
+     }
+    },
+    "derived": {
+     "h": "4.9*t^2"
+    },
+    "constraints": [
+     "round(v*t, 1) != round(v*t*t/2, 1)",
+     "round(v*t, 1) != round(v*t*t, 1)",
+     "round(v*t, 1) != round(v*t/2, 1)",
+     "round(v*t*t/2, 1) != round(v*t*t, 1)",
+     "round(v*t*t/2, 1) != round(v*t/2, 1)",
+     "round(v*t*t, 1) != round(v*t/2, 1)"
+    ],
+    "answer": "v*t",
+    "distractors": [
+     "v*t*t/2",
+     "v*t*t",
+     "v*t/2"
+    ],
+    "decimals": 1,
+    "relation": "X = {v}*sqrt(2*{h}/9.8)"
+   },
+   "page": "C19-APPH01-3",
+   "lang": "en",
+   "stem": {
+    "en": "A ball rolls horizontally off a cliff {h} m high at {v} m/s. How far from the foot of the cliff does it land, in metres? Use g = 9.8 m/s² and ignore air resistance.",
+    "uz": "Koptok balandligi {h} m boʻlgan jardan {v} m/s tezlik bilan gorizontal dumalab tushadi. U jar etagidan necha metr uzoqlikka tushadi? g = 9,8 m/s² deb oling, havoning qarshiligini hisobga olmang.",
+    "ru": "Мяч скатывается горизонтально с обрыва высотой {h} м со скоростью {v} м/с. На каком расстоянии от подножия обрыва он упадёт, в метрах? Примите g = 9,8 м/с², сопротивлением воздуха пренебрегите."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Fall time: ½ × 9.8 × t² = {h} gives t = {t} s. Distance: x = {v} × {t} = {ANS} m.",
+    "uz": "Tushish vaqti: ½ × 9,8 × t² = {h} dan t = {t} s. Masofa: x = {v} × {t} = {ANS} m.",
+    "ru": "Время падения: из ½ × 9,8 × t² = {h} получаем t = {t} с. Расстояние: x = {v} × {t} = {ANS} м."
+   },
+   "instructions": {
+    "en": "Type your answer as a number; it may be a decimal.",
+    "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+    "ru": "Введите ответ числом; это может быть десятичная дробь."
+   },
+   "prior_b": 0.8,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph1302",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "relative_velocity",
+   "family": {
+    "template": "Two cyclists ride toward each other on a straight road at {a} m/s and {b} m/s. They start {d} m apart. After how many seconds do they meet?",
+    "params": {
+     "a": {
+      "min": 3,
+      "max": 9
+     },
+     "b": {
+      "min": 2,
+      "max": 8
+     },
+     "k": {
+      "min": 10,
+      "max": 40,
+      "step": 5
+     }
+    },
+    "derived": {
+     "d": "(a + b)*k",
+     "s": "a + b"
+    },
+    "constraints": [
+     "a != b",
+     "round(d/(a + b), 1) != round(d/a, 1)",
+     "round(d/(a + b), 1) != round(d/b, 1)",
+     "round(d/(a + b), 1) != round(d/abs(a - b), 1)",
+     "round(d/a, 1) != round(d/b, 1)",
+     "round(d/a, 1) != round(d/abs(a - b), 1)",
+     "round(d/b, 1) != round(d/abs(a - b), 1)"
+    ],
+    "answer": "d/(a + b)",
+    "distractors": [
+     "d/a",
+     "d/b",
+     "d/abs(a - b)"
+    ],
+    "decimals": 1,
+    "relation": "{a}*X + {b}*X = {d}"
+   },
+   "page": "C19-APPH01-3",
+   "lang": "en",
+   "stem": {
+    "en": "Two cyclists ride toward each other on a straight road at {a} m/s and {b} m/s. They start {d} m apart. After how many seconds do they meet?",
+    "uz": "Ikki velosipedchi toʻgʻri yoʻlda bir-biriga qarab {a} m/s va {b} m/s tezlik bilan harakatlanadi. Dastlab ular orasidagi masofa {d} m. Necha soniyadan keyin ular uchrashadi?",
+    "ru": "Два велосипедиста едут навстречу друг другу по прямой дороге со скоростями {a} м/с и {b} м/с. Вначале между ними {d} м. Через сколько секунд они встретятся?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Seen from one cyclist, the other closes in at {a} + {b} = {s} m/s, so t = {d} ÷ {s} = {ANS} s.",
+    "uz": "Bir velosipedchiga nisbatan ikkinchisi {a} + {b} = {s} m/s tezlik bilan yaqinlashadi, demak t = {d} ÷ {s} = {ANS} s.",
+    "ru": "Относительно одного велосипедиста другой приближается со скоростью {a} + {b} = {s} м/с, значит, t = {d} ÷ {s} = {ANS} с."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.6,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph2101",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "newtons_second_law",
+   "family": {
+    "template": "Two horizontal forces act on a {m} kg cart: {F} N forward and {B} N backward. What is its acceleration, in m/s²?",
+    "params": {
+     "m": {
+      "min": 2,
+      "max": 6
+     },
+     "a": {
+      "min": 1,
+      "max": 8
+     },
+     "j": {
+      "min": 1,
+      "max": 4
+     }
+    },
+    "derived": {
+     "B": "m*j",
+     "F": "m*a + B",
+     "S": "F - B"
+    },
+    "constraints": [
+     "(F - B)/m != F/m",
+     "(F - B)/m != (F + B)/m",
+     "(F - B)/m != (F - B)*m",
+     "F/m != (F + B)/m",
+     "F/m != (F - B)*m",
+     "(F + B)/m != (F - B)*m"
+    ],
+    "answer": "(F - B)/m",
+    "distractors": [
+     "F/m",
+     "(F + B)/m",
+     "(F - B)*m"
+    ],
+    "integer": true,
+    "relation": "{m}*X = {F} - {B}"
+   },
+   "page": "C19-APPH02-1",
+   "lang": "en",
+   "stem": {
+    "en": "Two horizontal forces act on a {m} kg cart: {F} N forward and {B} N backward. What is its acceleration, in m/s²?",
+    "uz": "{m} kg massali aravachaga ikkita gorizontal kuch taʼsir qiladi: oldinga {F} N va orqaga {B} N. Uning tezlanishi necha m/s²?",
+    "ru": "На тележку массой {m} кг действуют две горизонтальные силы — {F} Н вперёд и {B} Н назад. Каково её ускорение в м/с²?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "ΣF = {F} − {B} = {S} N; a = ΣF ÷ m = {S} ÷ {m} = {ANS} m/s².",
+    "uz": "ΣF = {F} − {B} = {S} N; a = ΣF ÷ m = {S} ÷ {m} = {ANS} m/s².",
+    "ru": "ΣF = {F} − {B} = {S} Н; a = ΣF ÷ m = {S} ÷ {m} = {ANS} м/с²."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.5,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph2102",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "newtons_second_law",
+   "family": {
+    "template": "A cart of mass {m} kg speeds up steadily from {u} m/s to {v} m/s in {t} s. What net force acts on it, in newtons?",
+    "params": {
+     "m": {
+      "min": 2,
+      "max": 8
+     },
+     "a": {
+      "min": 1,
+      "max": 5
+     },
+     "t": {
+      "min": 2,
+      "max": 5
+     },
+     "k": {
+      "min": 1,
+      "max": 3
+     }
+    },
+    "derived": {
+     "u": "k*t",
+     "v": "u + a*t"
+    },
+    "constraints": [
+     "m*(v - u)/t != m*v/t",
+     "m*(v - u)/t != (v - u)/t",
+     "m*(v - u)/t != m*(v - u)*t",
+     "m*v/t != (v - u)/t",
+     "m*v/t != m*(v - u)*t",
+     "(v - u)/t != m*(v - u)*t"
+    ],
+    "answer": "m*(v - u)/t",
+    "distractors": [
+     "m*v/t",
+     "(v - u)/t",
+     "m*(v - u)*t"
+    ],
+    "integer": true,
+    "relation": "X = {m}*({v} - {u})/{t}"
+   },
+   "page": "C19-APPH02-1",
+   "lang": "en",
+   "stem": {
+    "en": "A cart of mass {m} kg speeds up steadily from {u} m/s to {v} m/s in {t} s. What net force acts on it, in newtons?",
+    "uz": "{m} kg massali aravacha {t} s ichida tezligini {u} m/s dan {v} m/s gacha bir tekis oshiradi. Unga taʼsir qiluvchi teng taʼsir etuvchi kuch necha nyuton?",
+    "ru": "Тележка массой {m} кг за {t} с равномерно разгоняется с {u} м/с до {v} м/с. Какая равнодействующая сила на неё действует, в ньютонах?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "a = ({v} − {u}) ÷ {t} = {a} m/s²; ΣF = ma = {m} × {a} = {ANS} N.",
+    "uz": "a = ({v} − {u}) ÷ {t} = {a} m/s²; ΣF = ma = {m} × {a} = {ANS} N.",
+    "ru": "a = ({v} − {u}) ÷ {t} = {a} м/с²; ΣF = ma = {m} × {a} = {ANS} Н."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.7,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph2201",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "friction",
+   "family": {
+    "template": "A {m} kg box is pushed across a level floor by a {F} N horizontal force. The coefficient of kinetic friction is {mu}. What is the box’s acceleration, in m/s²? Use g = 9.8 m/s².",
+    "params": {
+     "m": {
+      "values": [
+       2,
+       3,
+       4,
+       6,
+       7,
+       9,
+       10
+      ]
+     },
+     "q": {
+      "min": 4,
+      "max": 12
+     },
+     "mu": {
+      "values": [
+       0.1,
+       0.2,
+       0.25,
+       0.3,
+       0.4,
+       0.5
+      ]
+     }
+    },
+    "derived": {
+     "F": "m*q",
+     "f": "mu*m*9.8"
+    },
+    "constraints": [
+     "q - 9.8*mu >= 0.5",
+     "!(m*q == 8 || m*q == 18 || (m*q >= 80 && m*q < 90))",
+     "round((F - mu*m*9.8)/m, 2) != round(F/m, 2)",
+     "round((F - mu*m*9.8)/m, 2) != round((F + mu*m*9.8)/m, 2)",
+     "round((F - mu*m*9.8)/m, 2) != round((F - mu*m)/m, 2)",
+     "round(F/m, 2) != round((F + mu*m*9.8)/m, 2)",
+     "round(F/m, 2) != round((F - mu*m)/m, 2)",
+     "round((F + mu*m*9.8)/m, 2) != round((F - mu*m)/m, 2)"
+    ],
+    "answer": "(F - mu*m*9.8)/m",
+    "distractors": [
+     "F/m",
+     "(F + mu*m*9.8)/m",
+     "(F - mu*m)/m"
+    ],
+    "decimals": 2,
+    "relation": "{m}*X = {F} - {mu}*{m}*9.8"
+   },
+   "page": "C19-APPH02-2",
+   "lang": "en",
+   "stem": {
+    "en": "A {m} kg box is pushed across a level floor by a {F} N horizontal force. The coefficient of kinetic friction is {mu}. What is the box’s acceleration, in m/s²? Use g = 9.8 m/s².",
+    "uz": "{m} kg massali quti gorizontal pol boʻylab {F} N gorizontal kuch bilan itariladi. Sirpanish ishqalanish koeffitsiyenti {mu}. Qutining tezlanishi necha m/s²? g = 9,8 m/s² deb oling.",
+    "ru": "Ящик массой {m} кг толкают по горизонтальному полу горизонтальной силой {F} Н. Коэффициент трения скольжения {mu}. Каково ускорение ящика в м/с²? Примите g = 9,8 м/с²."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f = μₖmg = {mu} × {m} × 9.8 = {f} N; a = ({F} − {f}) ÷ {m} = {ANS} m/s².",
+    "uz": "f = μₖmg = {mu} × {m} × 9,8 = {f} N; a = ({F} − {f}) ÷ {m} = {ANS} m/s².",
+    "ru": "f = μₖmg = {mu} × {m} × 9,8 = {f} Н; a = ({F} − {f}) ÷ {m} = {ANS} м/с²."
+   },
+   "instructions": {
+    "en": "Type your answer as a number; it may be a decimal.",
+    "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+    "ru": "Введите ответ числом; это может быть десятичная дробь."
+   },
+   "prior_b": 0.8,
+   "time_s": 80,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph2202",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "weight_normal",
+   "family": {
+    "template": "A student of mass {m} kg stands on a scale in a lift whose acceleration is {a} m/s² upward. What does the scale read, in newtons? Use g = 9.8 m/s².",
+    "params": {
+     "m": {
+      "min": 40,
+      "max": 80,
+      "step": 5
+     },
+     "a": {
+      "values": [
+       0.5,
+       1,
+       1.5,
+       2,
+       2.5,
+       3
+      ]
+     }
+    },
+    "derived": {
+     "ga": "9.8 + a"
+    },
+    "constraints": [
+     "round(m*(9.8 + a), 1) != round(m*9.8, 1)",
+     "round(m*(9.8 + a), 1) != round(m*(9.8 - a), 1)",
+     "round(m*(9.8 + a), 1) != round(m*a, 1)",
+     "round(m*9.8, 1) != round(m*(9.8 - a), 1)",
+     "round(m*9.8, 1) != round(m*a, 1)",
+     "round(m*(9.8 - a), 1) != round(m*a, 1)"
+    ],
+    "answer": "m*(9.8 + a)",
+    "distractors": [
+     "m*9.8",
+     "m*(9.8 - a)",
+     "m*a"
+    ],
+    "decimals": 1,
+    "relation": "X - {m}*9.8 = {m}*{a}"
+   },
+   "page": "C19-APPH02-2",
+   "lang": "en",
+   "stem": {
+    "en": "A student of mass {m} kg stands on a scale in a lift whose acceleration is {a} m/s² upward. What does the scale read, in newtons? Use g = 9.8 m/s².",
+    "uz": "{m} kg massali oʻquvchi liftdagi tarozida turibdi; liftning tezlanishi yuqoriga yoʻnalgan va {a} m/s² ga teng. Tarozi necha nyutonni koʻrsatadi? g = 9,8 m/s² deb oling.",
+    "ru": "Ученик массой {m} кг стоит на весах в лифте, ускорение которого направлено вверх и равно {a} м/с². Что покажут весы, в ньютонах? Примите g = 9,8 м/с²."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "The scale pushes up with N: N − mg = ma, so N = m(g + a) = {m} × {ga} = {ANS} N.",
+    "uz": "Tarozi yuqoriga N kuch bilan itaradi: N − mg = ma, demak N = m(g + a) = {m} × {ga} = {ANS} N.",
+    "ru": "Весы действуют на ученика вверх с силой N: N − mg = ma, значит, N = m(g + a) = {m} × {ga} = {ANS} Н."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.8,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph2301",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "circular_motion",
+   "family": {
+    "template": "A {m} kg ball moves in a circle of radius {r} m at a steady {v} m/s. What net force toward the centre does it need, in newtons?",
+    "params": {
+     "m": {
+      "min": 1,
+      "max": 6
+     },
+     "r": {
+      "values": [
+       0.5,
+       2,
+       3,
+       4
+      ]
+     },
+     "v": {
+      "min": 2,
+      "max": 9
+     }
+    },
+    "derived": {
+     "ac": "v^2/r"
+    },
+    "constraints": [
+     "m*v^2/r == floor(m*v^2/r)",
+     "2*m*v/r == floor(2*m*v/r)",
+     "v^2/r == floor(v^2/r)",
+     "!(m == 3 && r == 2 && v == 4)",
+     "m*v^2/r != m*v/r",
+     "m*v^2/r != m*v^2",
+     "m*v^2/r != m*v^2*r",
+     "m*v/r != m*v^2",
+     "m*v/r != m*v^2*r",
+     "m*v^2 != m*v^2*r"
+    ],
+    "answer": "m*v^2/r",
+    "distractors": [
+     "m*v/r",
+     "m*v^2",
+     "m*v^2*r"
+    ],
+    "integer": true,
+    "relation": "X*{r} = {m}*{v}^2"
+   },
+   "page": "C19-APPH02-3",
+   "lang": "en",
+   "stem": {
+    "en": "A {m} kg ball moves in a circle of radius {r} m at a steady {v} m/s. What net force toward the centre does it need, in newtons?",
+    "uz": "{m} kg massali shar radiusi {r} m boʻlgan aylana boʻylab oʻzgarmas {v} m/s tezlik bilan harakatlanadi. Unga markazga yoʻnalgan necha nyuton teng taʼsir etuvchi kuch kerak?",
+    "ru": "Шар массой {m} кг движется по окружности радиусом {r} м с постоянной скоростью {v} м/с. Какая равнодействующая, направленная к центру, ему нужна, в ньютонах?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "a = v² ÷ r = {v}² ÷ {r} = {ac} m/s²; F = ma = {m} × {ac} = {ANS} N.",
+    "uz": "a = v² ÷ r = {v}² ÷ {r} = {ac} m/s²; F = ma = {m} × {ac} = {ANS} N.",
+    "ru": "a = v² ÷ r = {v}² ÷ {r} = {ac} м/с²; F = ma = {m} × {ac} = {ANS} Н."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.7,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph2302",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "spring_force",
+   "family": {
+    "template": "A {m} kg mass hangs at rest from a spring with spring constant {k} N/m. How far is the spring stretched, in centimetres? Use g = 9.8 m/s².",
+    "params": {
+     "m": {
+      "min": 1,
+      "max": 6
+     },
+     "k": {
+      "values": [
+       49,
+       98,
+       196,
+       245,
+       490
+      ]
+     }
+    },
+    "derived": {
+     "w": "m*9.8"
+    },
+    "constraints": [
+     "round(m*9.8/k*100, 1) != round(2*m*9.8/k*100, 1)",
+     "round(m*9.8/k*100, 1) != round(m*9.8/k*50, 1)",
+     "round(m*9.8/k*100, 1) != round(m*100/k, 1)",
+     "round(2*m*9.8/k*100, 1) != round(m*9.8/k*50, 1)",
+     "round(2*m*9.8/k*100, 1) != round(m*100/k, 1)",
+     "round(m*9.8/k*50, 1) != round(m*100/k, 1)"
+    ],
+    "answer": "m*9.8/k*100",
+    "distractors": [
+     "2*m*9.8/k*100",
+     "m*9.8/k*50",
+     "m*100/k"
+    ],
+    "decimals": 1,
+    "relation": "{k}*X/100 = {m}*9.8"
+   },
+   "page": "C19-APPH02-3",
+   "lang": "en",
+   "stem": {
+    "en": "A {m} kg mass hangs at rest from a spring with spring constant {k} N/m. How far is the spring stretched, in centimetres? Use g = 9.8 m/s².",
+    "uz": "Bikrligi {k} N/m boʻlgan prujinaga {m} kg massali yuk osilgan va tinch turibdi. Prujina necha santimetrga choʻzilgan? g = 9,8 m/s² deb oling.",
+    "ru": "Груз массой {m} кг неподвижно висит на пружине жёсткостью {k} Н/м. На сколько сантиметров растянута пружина? Примите g = 9,8 м/с²."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "At rest kx = mg, so x = mg ÷ k = {w} ÷ {k} m = {ANS} cm.",
+    "uz": "Tinch holatda kx = mg, demak x = mg ÷ k = {w} ÷ {k} m = {ANS} sm.",
+    "ru": "В покое kx = mg, значит, x = mg ÷ k = {w} ÷ {k} м = {ANS} см."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.6,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 2,
+   "key_check_2_version": 2
+  },
+  {
+   "id": "C1-ph3101",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "work_energy",
+   "family": {
+    "template": "A {m} kg box at rest is pushed {d} m across frictionless ice by a steady {F} N horizontal force. How fast is it moving then, in m/s?",
+    "params": {
+     "m": {
+      "min": 2,
+      "max": 6
+     },
+     "v": {
+      "min": 2,
+      "max": 8
+     },
+     "d": {
+      "min": 2,
+      "max": 6
+     }
+    },
+    "derived": {
+     "F": "m*v^2/(2*d)",
+     "W": "F*d",
+     "v2": "2*F*d/m"
+    },
+    "constraints": [
+     "F == floor(F)",
+     "F >= 2",
+     "!(m == 3 && d == 6 && v == 4)",
+     "round(sqrt(2*F*d/m), 1) != round(2*F*d/m, 1)",
+     "round(sqrt(2*F*d/m), 1) != round(sqrt(F*d/m), 1)",
+     "round(sqrt(2*F*d/m), 1) != round(F*d/m, 1)",
+     "round(2*F*d/m, 1) != round(sqrt(F*d/m), 1)",
+     "round(2*F*d/m, 1) != round(F*d/m, 1)",
+     "round(sqrt(F*d/m), 1) != round(F*d/m, 1)"
+    ],
+    "answer": "sqrt(2*F*d/m)",
+    "distractors": [
+     "2*F*d/m",
+     "sqrt(F*d/m)",
+     "F*d/m"
+    ],
+    "decimals": 1,
+    "relation": "{F}*{d} = 0.5*{m}*X^2; X > 0"
+   },
+   "page": "C19-APPH03-1",
+   "lang": "en",
+   "stem": {
+    "en": "A {m} kg box at rest is pushed {d} m across frictionless ice by a steady {F} N horizontal force. How fast is it moving then, in m/s?",
+    "uz": "Tinch turgan {m} kg massali quti ishqalanishsiz muz ustida {F} N oʻzgarmas gorizontal kuch bilan {d} m itariladi. Shundan keyin uning tezligi necha m/s?",
+    "ru": "Покоящийся ящик массой {m} кг толкают по льду без трения постоянной горизонтальной силой {F} Н на расстояние {d} м. Какой станет его скорость, в м/с?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "W = Fd = {F} × {d} = {W} J = ½mv², so v² = 2 × {W} ÷ {m} = {v2} and v = {ANS} m/s.",
+    "uz": "W = Fd = {F} × {d} = {W} J = ½mv², demak v² = 2 × {W} ÷ {m} = {v2} va v = {ANS} m/s.",
+    "ru": "W = Fd = {F} × {d} = {W} Дж = ½mv², значит, v² = 2 × {W} ÷ {m} = {v2} и v = {ANS} м/с."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.8,
+   "time_s": 70,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph3102",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "work",
+   "family": {
+    "template": "A horizontal pull of {F} N moves a sled {d} m across snow. Friction on the sled is {f} N. What is the net work done on the sled, in joules?",
+    "params": {
+     "F": {
+      "min": 30,
+      "max": 120,
+      "step": 5
+     },
+     "f": {
+      "min": 10,
+      "max": 60,
+      "step": 5
+     },
+     "d": {
+      "min": 2,
+      "max": 20
+     }
+    },
+    "derived": {
+     "S": "F - f"
+    },
+    "constraints": [
+     "F >= f + 10",
+     "(F - f)*d != F*d",
+     "(F - f)*d != (F + f)*d",
+     "(F - f)*d != f*d",
+     "F*d != (F + f)*d",
+     "F*d != f*d",
+     "(F + f)*d != f*d"
+    ],
+    "answer": "(F - f)*d",
+    "distractors": [
+     "F*d",
+     "(F + f)*d",
+     "f*d"
+    ],
+    "integer": true,
+    "relation": "X = {F}*{d} - {f}*{d}"
+   },
+   "page": "C19-APPH03-1",
+   "lang": "en",
+   "stem": {
+    "en": "A horizontal pull of {F} N moves a sled {d} m across snow. Friction on the sled is {f} N. What is the net work done on the sled, in joules?",
+    "uz": "{F} N gorizontal tortish kuchi chanani qor ustida {d} m siljitadi. Chanaga taʼsir qiluvchi ishqalanish kuchi {f} N. Teng taʼsir etuvchi kuch chana ustida necha joul ish bajaradi?",
+    "ru": "Горизонтальная сила {F} Н тянет санки по снегу на {d} м. Сила трения, действующая на санки, равна {f} Н. Какую работу совершает равнодействующая сила, в джоулях?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "The pull does +{F} × {d} J and friction −{f} × {d} J: W_net = ({F} − {f}) × {d} = {S} × {d} = {ANS} J.",
+    "uz": "Tortish kuchi +{F} × {d} J, ishqalanish −{f} × {d} J ish bajaradi: W_net = ({F} − {f}) × {d} = {S} × {d} = {ANS} J.",
+    "ru": "Сила тяги совершает +{F} × {d} Дж, трение −{f} × {d} Дж: W_net = ({F} − {f}) × {d} = {S} × {d} = {ANS} Дж."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.5,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph3201",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "energy_conservation",
+   "family": {
+    "template": "A sled starts from rest at the top of a frictionless hill {h} m high. How fast is it moving at the bottom, in m/s? Use g = 9.8 m/s².",
+    "params": {
+     "n": {
+      "values": [
+       3,
+       4,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12,
+       13,
+       14
+      ]
+     }
+    },
+    "derived": {
+     "h": "0.1*n^2"
+    },
+    "constraints": [
+     "round(sqrt(2*9.8*h), 1) != round(2*9.8*h, 1)",
+     "round(sqrt(2*9.8*h), 1) != round(9.8*h, 1)",
+     "round(sqrt(2*9.8*h), 1) != round(sqrt(9.8*h), 1)",
+     "round(2*9.8*h, 1) != round(9.8*h, 1)",
+     "round(2*9.8*h, 1) != round(sqrt(9.8*h), 1)",
+     "round(9.8*h, 1) != round(sqrt(9.8*h), 1)"
+    ],
+    "answer": "sqrt(2*9.8*h)",
+    "distractors": [
+     "2*9.8*h",
+     "9.8*h",
+     "sqrt(9.8*h)"
+    ],
+    "decimals": 1,
+    "relation": "9.8*{h} = 0.5*X^2; X > 0"
+   },
+   "page": "C19-APPH03-2",
+   "lang": "en",
+   "stem": {
+    "en": "A sled starts from rest at the top of a frictionless hill {h} m high. How fast is it moving at the bottom, in m/s? Use g = 9.8 m/s².",
+    "uz": "Chana balandligi {h} m boʻlgan ishqalanishsiz tepalik choʻqqisidan tinch holatdan harakat boshlaydi. Pastda uning tezligi necha m/s boʻladi? g = 9,8 m/s² deb oling.",
+    "ru": "Санки начинают движение из состояния покоя с вершины горки высотой {h} м без трения. Какой будет их скорость внизу, в м/с? Примите g = 9,8 м/с²."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "mgh = ½mv², so v = √(2 × 9.8 × {h}) = {ANS} m/s (the mass cancels).",
+    "uz": "mgh = ½mv², demak v = √(2 × 9,8 × {h}) = {ANS} m/s (massa qisqarib ketadi).",
+    "ru": "mgh = ½mv², значит, v = √(2 × 9,8 × {h}) = {ANS} м/с (масса сокращается)."
+   },
+   "instructions": {
+    "en": "Type your answer as a number; it may be a decimal.",
+    "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+    "ru": "Введите ответ числом; это может быть десятичная дробь."
+   },
+   "prior_b": 0.6,
+   "time_s": 55,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 2,
+   "key_check_2_version": 2
+  },
+  {
+   "id": "C1-ph3202",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "potential_energy",
+   "family": {
+    "template": "A spring with spring constant {k} N/m is squeezed {x} m and then launches a {m} kg block across a frictionless floor. How fast does the block leave the spring, in m/s?",
+    "params": {
+     "m": {
+      "min": 1,
+      "max": 4
+     },
+     "s": {
+      "values": [
+       10,
+       20,
+       30,
+       40
+      ]
+     },
+     "x": {
+      "values": [
+       0.1,
+       0.2,
+       0.3,
+       0.4,
+       0.5
+      ]
+     }
+    },
+    "derived": {
+     "k": "m*s^2",
+     "v": "x*s"
+    },
+    "constraints": [
+     "round(x*sqrt(k/m), 1) != round(x*x*k/m, 1)",
+     "round(x*sqrt(k/m), 1) != round(x*sqrt(k/(2*m)), 1)",
+     "round(x*sqrt(k/m), 1) != round(k*x/m, 1)",
+     "round(x*x*k/m, 1) != round(x*sqrt(k/(2*m)), 1)",
+     "round(x*x*k/m, 1) != round(k*x/m, 1)",
+     "round(x*sqrt(k/(2*m)), 1) != round(k*x/m, 1)"
+    ],
+    "answer": "x*sqrt(k/m)",
+    "distractors": [
+     "x*x*k/m",
+     "x*sqrt(k/(2*m))",
+     "k*x/m"
+    ],
+    "decimals": 1,
+    "relation": "{k}*{x}^2 = {m}*X^2; X > 0"
+   },
+   "page": "C19-APPH03-2",
+   "lang": "en",
+   "stem": {
+    "en": "A spring with spring constant {k} N/m is squeezed {x} m and then launches a {m} kg block across a frictionless floor. How fast does the block leave the spring, in m/s?",
+    "uz": "Bikrligi {k} N/m boʻlgan prujina {x} m ga siqilgan, keyin u {m} kg massali brusokni ishqalanishsiz pol boʻylab itarib yuboradi. Brusok prujinadan necha m/s tezlik bilan ajraladi?",
+    "ru": "Пружину жёсткостью {k} Н/м сжали на {x} м, и она выталкивает брусок массой {m} кг по полу без трения. С какой скоростью брусок отрывается от пружины, в м/с?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "½kx² = ½mv², so v = x√(k ÷ m) = {x} × √({k} ÷ {m}) = {ANS} m/s.",
+    "uz": "½kx² = ½mv², demak v = x√(k ÷ m) = {x} × √({k} ÷ {m}) = {ANS} m/s.",
+    "ru": "½kx² = ½mv², значит, v = x√(k ÷ m) = {x} × √({k} ÷ {m}) = {ANS} м/с."
+   },
+   "instructions": {
+    "en": "Type your answer as a number; it may be a decimal.",
+    "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+    "ru": "Введите ответ числом; это может быть десятичная дробь."
+   },
+   "prior_b": 0.9,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 2,
+   "key_check_2_version": 2
+  },
+  {
+   "id": "C1-ph3301",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "power",
+   "family": {
+    "template": "A tractor pulls a log with a steady {F} N force at a steady {v} m/s. What power does it deliver, in watts?",
+    "params": {
+     "F": {
+      "min": 200,
+      "max": 900,
+      "step": 50
+     },
+     "v": {
+      "min": 2,
+      "max": 9
+     }
+    },
+    "constraints": [
+     "!(F == 750 && v == 4)",
+     "round(F*v, 1) != round(F/v, 1)",
+     "round(F*v, 1) != round(2*F*v, 1)",
+     "round(F*v, 1) != round(F*v/2, 1)",
+     "round(F/v, 1) != round(2*F*v, 1)",
+     "round(F/v, 1) != round(F*v/2, 1)",
+     "round(2*F*v, 1) != round(F*v/2, 1)"
+    ],
+    "answer": "F*v",
+    "distractors": [
+     "F/v",
+     "2*F*v",
+     "F*v/2"
+    ],
+    "decimals": 1,
+    "relation": "X/{v} = {F}"
+   },
+   "page": "C19-APPH03-3",
+   "lang": "en",
+   "stem": {
+    "en": "A tractor pulls a log with a steady {F} N force at a steady {v} m/s. What power does it deliver, in watts?",
+    "uz": "Traktor xodani {F} N oʻzgarmas kuch bilan {v} m/s oʻzgarmas tezlikda tortadi. U necha vatt quvvat beradi?",
+    "ru": "Трактор тянет бревно с постоянной силой {F} Н при постоянной скорости {v} м/с. Какую мощность он развивает, в ваттах?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "P = Fv = {F} × {v} = {ANS} W.",
+    "uz": "P = Fv = {F} × {v} = {ANS} Vt.",
+    "ru": "P = Fv = {F} × {v} = {ANS} Вт."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.4,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph3302",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "energy_friction",
+   "family": {
+    "template": "A block of mass {m} kg slides across a rough floor. It starts at {v} m/s and stops after {d} m. Taking the friction force as steady, how large is it, in newtons?",
+    "params": {
+     "m": {
+      "min": 2,
+      "max": 10
+     },
+     "v": {
+      "min": 2,
+      "max": 10
+     },
+     "d": {
+      "min": 2,
+      "max": 10
+     }
+    },
+    "derived": {
+     "K": "m*v^2/2"
+    },
+    "constraints": [
+     "10*m*v^2/(2*d) == floor(10*m*v^2/(2*d))",
+     "round(m*v^2/(2*d), 1) != round(m*v^2/d, 1)",
+     "round(m*v^2/(2*d), 1) != round(m*v/d, 1)",
+     "round(m*v^2/(2*d), 1) != round(m*v^2/2, 1)",
+     "round(m*v^2/d, 1) != round(m*v/d, 1)",
+     "round(m*v^2/d, 1) != round(m*v^2/2, 1)",
+     "round(m*v/d, 1) != round(m*v^2/2, 1)"
+    ],
+    "answer": "m*v^2/(2*d)",
+    "distractors": [
+     "m*v^2/d",
+     "m*v/d",
+     "m*v^2/2"
+    ],
+    "decimals": 1,
+    "relation": "X*{d} = 0.5*{m}*{v}^2"
+   },
+   "page": "C19-APPH03-3",
+   "lang": "en",
+   "stem": {
+    "en": "A block of mass {m} kg slides across a rough floor. It starts at {v} m/s and stops after {d} m. Taking the friction force as steady, how large is it, in newtons?",
+    "uz": "{m} kg massali brusok gʻadir-budur pol boʻylab sirpanadi. U {v} m/s tezlik bilan harakat boshlab, {d} m dan keyin toʻxtaydi. Ishqalanish kuchini oʻzgarmas deb hisoblasak, u necha nyuton?",
+    "ru": "Брусок массой {m} кг скользит по шероховатому полу. Начав со скоростью {v} м/с, он останавливается, пройдя {d} м. Считая силу трения постоянной, найдите её в ньютонах."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Friction’s work takes away all the kinetic energy: f × {d} = ½ × {m} × {v}² = {K} J, so f = {K} ÷ {d} = {ANS} N.",
+    "uz": "Ishqalanish ishi butun kinetik energiyani olib ketadi: f × {d} = ½ × {m} × {v}² = {K} J, demak f = {K} ÷ {d} = {ANS} N.",
+    "ru": "Работа трения забирает всю кинетическую энергию: f × {d} = ½ × {m} × {v}² = {K} Дж, значит, f = {K} ÷ {d} = {ANS} Н."
+   },
+   "instructions": {
+    "en": "Type your answer as a number; it may be a decimal.",
+    "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+    "ru": "Введите ответ числом; это может быть десятичная дробь."
+   },
+   "prior_b": 1.0,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph4101",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "impulse",
+   "family": {
+    "template": "A {m} kg puck sliding at {v} m/s is stopped by a goalie’s pad in {t} s. What is the size of the average force on the puck, in newtons?",
+    "params": {
+     "m": {
+      "values": [
+       0.2,
+       0.25,
+       0.4,
+       0.5
+      ]
+     },
+     "v": {
+      "min": 4,
+      "max": 20
+     },
+     "t": {
+      "values": [
+       0.02,
+       0.05,
+       0.1,
+       0.2
+      ]
+     }
+    },
+    "derived": {
+     "p": "m*v"
+    },
+    "constraints": [
+     "!(m == 0.2 && v == 10 && t == 0.05)",
+     "10*m*v/t == floor(10*m*v/t)",
+     "m*v/t != m*v*t",
+     "m*v/t != v/t",
+     "m*v/t != m*v",
+     "m*v*t != v/t",
+     "m*v*t != m*v",
+     "v/t != m*v"
+    ],
+    "answer": "m*v/t",
+    "distractors": [
+     "m*v*t",
+     "v/t",
+     "m*v"
+    ],
+    "relation": "X*{t} = {m}*{v}"
+   },
+   "page": "C19-APPH04-1",
+   "lang": "en",
+   "stem": {
+    "en": "A {m} kg puck sliding at {v} m/s is stopped by a goalie’s pad in {t} s. What is the size of the average force on the puck, in newtons?",
+    "uz": "{v} m/s tezlik bilan sirpanayotgan {m} kg massali shayba darvozabonning himoya qalqoniga urilib, {t} s da toʻxtaydi. Shaybaga taʼsir qilgan oʻrtacha kuchning moduli necha nyuton?",
+    "ru": "Шайба массой {m} кг, скользящая со скоростью {v} м/с, останавливается о щиток вратаря за {t} с. Каков модуль средней силы, действовавшей на шайбу, в ньютонах?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "|Δp| = {m} × {v} = {p} kg·m/s; F = |Δp| ÷ Δt = {p} ÷ {t} = {ANS} N.",
+    "uz": "|Δp| = {m} × {v} = {p} kg·m/s; F = |Δp| ÷ Δt = {p} ÷ {t} = {ANS} N.",
+    "ru": "|Δp| = {m} × {v} = {p} кг·м/с; F = |Δp| ÷ Δt = {p} ÷ {t} = {ANS} Н."
+   },
+   "instructions": {
+    "en": "Type your answer as a number; it may be a decimal.",
+    "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+    "ru": "Введите ответ числом; это может быть десятичная дробь."
+   },
+   "prior_b": 0.6,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph4102",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "impulse",
+   "family": {
+    "template": "A {m} kg ball hits a wall at {u} m/s and bounces straight back at {w} m/s. What is the size of the impulse on the ball, in N·s?",
+    "params": {
+     "m": {
+      "values": [
+       0.1,
+       0.2,
+       0.4,
+       0.5
+      ]
+     },
+     "u": {
+      "min": 4,
+      "max": 12
+     },
+     "w": {
+      "min": 2,
+      "max": 10
+     }
+    },
+    "derived": {
+     "s": "u + w"
+    },
+    "constraints": [
+     "w < u",
+     "u != 2*w",
+     "m*(u + w) != m*(u - w)",
+     "m*(u + w) != m*u",
+     "m*(u + w) != m*w",
+     "m*(u - w) != m*u",
+     "m*(u - w) != m*w",
+     "m*u != m*w"
+    ],
+    "answer": "m*(u + w)",
+    "distractors": [
+     "m*(u - w)",
+     "m*u",
+     "m*w"
+    ],
+    "relation": "X = abs({m}*(0 - {w}) - {m}*{u})"
+   },
+   "page": "C19-APPH04-1",
+   "lang": "en",
+   "stem": {
+    "en": "A {m} kg ball hits a wall at {u} m/s and bounces straight back at {w} m/s. What is the size of the impulse on the ball, in N·s?",
+    "uz": "{m} kg massali koptok devorga {u} m/s tezlik bilan urilib, {w} m/s tezlik bilan toʻgʻri orqaga qaytadi. Koptokka berilgan kuch impulsining moduli necha N·s?",
+    "ru": "Мяч массой {m} кг ударяется о стену со скоростью {u} м/с и отскакивает прямо назад со скоростью {w} м/с. Каков модуль импульса силы, полученного мячом, в Н·с?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Toward the wall is +: Δp = {m} × (−{w} − {u}) = −{m} × {s}, so the impulse has size {ANS} N·s.",
+    "uz": "Devor tomon +: Δp = {m} × (−{w} − {u}) = −{m} × {s}, demak kuch impulsining moduli {ANS} N·s.",
+    "ru": "К стене — это +: Δp = {m} × (−{w} − {u}) = −{m} × {s}, значит, модуль импульса силы {ANS} Н·с."
+   },
+   "instructions": {
+    "en": "Type your answer as a number; it may be a decimal.",
+    "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+    "ru": "Введите ответ числом; это может быть десятичная дробь."
+   },
+   "prior_b": 0.8,
+   "time_s": 55,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph4201",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "momentum_conservation",
+   "family": {
+    "template": "A {m1} kg cart moving at {u} m/s hits a {m2} kg cart at rest, and they stick together. How fast do they move together, in m/s?",
+    "params": {
+     "m1": {
+      "min": 2,
+      "max": 6
+     },
+     "m2": {
+      "min": 1,
+      "max": 5
+     },
+     "V": {
+      "min": 2,
+      "max": 6
+     }
+    },
+    "derived": {
+     "u": "(m1 + m2)*V/m1",
+     "p": "m1*u",
+     "M": "m1 + m2"
+    },
+    "constraints": [
+     "u == floor(u)",
+     "!(m1 == 2 && m2 == 1 && u == 9)",
+     "round(m1*u/(m1 + m2), 1) != round(u, 1)",
+     "round(m1*u/(m1 + m2), 1) != round(m1*u/m2, 1)",
+     "round(m1*u/(m1 + m2), 1) != round(u/2, 1)",
+     "round(u, 1) != round(m1*u/m2, 1)",
+     "round(u, 1) != round(u/2, 1)",
+     "round(m1*u/m2, 1) != round(u/2, 1)"
+    ],
+    "answer": "m1*u/(m1 + m2)",
+    "distractors": [
+     "u",
+     "m1*u/m2",
+     "u/2"
+    ],
+    "decimals": 1,
+    "relation": "({m1} + {m2})*X = {m1}*{u}"
+   },
+   "page": "C19-APPH04-2",
+   "lang": "en",
+   "stem": {
+    "en": "A {m1} kg cart moving at {u} m/s hits a {m2} kg cart at rest, and they stick together. How fast do they move together, in m/s?",
+    "uz": "{u} m/s tezlik bilan harakatlanayotgan {m1} kg massali aravacha tinch turgan {m2} kg massali aravachaga urilib, ular bir-biriga yopishib qoladi. Ular birgalikda necha m/s tezlik bilan harakatlanadi?",
+    "ru": "Тележка массой {m1} кг, движущаяся со скоростью {u} м/с, налетает на покоящуюся тележку массой {m2} кг, и они сцепляются. С какой скоростью они движутся вместе, в м/с?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "{m1} × {u} = ({m1} + {m2}) × v, so v = {p} ÷ {M} = {ANS} m/s.",
+    "uz": "{m1} × {u} = ({m1} + {m2}) × v, demak v = {p} ÷ {M} = {ANS} m/s.",
+    "ru": "{m1} × {u} = ({m1} + {m2}) × v, значит, v = {p} ÷ {M} = {ANS} м/с."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.6,
+   "time_s": 55,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph4202",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "momentum_conservation",
+   "family": {
+    "template": "A skater of mass {M} kg, standing at rest on ice, throws a {m} kg ball straight forward at {v} m/s. How fast does the skater move backward, in m/s?",
+    "params": {
+     "M": {
+      "min": 40,
+      "max": 80,
+      "step": 5
+     },
+     "m": {
+      "min": 1,
+      "max": 5
+     },
+     "v": {
+      "min": 5,
+      "max": 20
+     }
+    },
+    "derived": {
+     "p": "m*v"
+    },
+    "constraints": [
+     "100*m*v/M == floor(100*m*v/M)",
+     "round(m*v/M, 2) != round(v, 2)",
+     "round(m*v/M, 2) != round(m*v, 2)",
+     "round(m*v/M, 2) != round(m*v/(M + m), 2)",
+     "round(v, 2) != round(m*v, 2)",
+     "round(v, 2) != round(m*v/(M + m), 2)",
+     "round(m*v, 2) != round(m*v/(M + m), 2)"
+    ],
+    "answer": "m*v/M",
+    "distractors": [
+     "v",
+     "m*v",
+     "m*v/(M + m)"
+    ],
+    "decimals": 2,
+    "relation": "{M}*X = {m}*{v}"
+   },
+   "page": "C19-APPH04-2",
+   "lang": "en",
+   "stem": {
+    "en": "A skater of mass {M} kg, standing at rest on ice, throws a {m} kg ball straight forward at {v} m/s. How fast does the skater move backward, in m/s?",
+    "uz": "Muz ustida tinch turgan {M} kg massali konkichi {m} kg massali toʻpni oldinga {v} m/s tezlik bilan otadi. Konkichi orqaga necha m/s tezlik bilan harakatlanadi?",
+    "ru": "Конькобежец массой {M} кг, стоящий на льду, бросает вперёд мяч массой {m} кг со скоростью {v} м/с. С какой скоростью конькобежец откатывается назад, в м/с?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "The total momentum stays 0: {M} × V = {m} × {v} = {p}, so V = {p} ÷ {M} = {ANS} m/s.",
+    "uz": "Umumiy impuls 0 boʻlib qoladi: {M} × V = {m} × {v} = {p}, demak V = {p} ÷ {M} = {ANS} m/s.",
+    "ru": "Полный импульс остаётся 0: {M} × V = {m} × {v} = {p}, значит, V = {p} ÷ {M} = {ANS} м/с."
+   },
+   "instructions": {
+    "en": "Type your answer as a number; it may be a decimal.",
+    "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+    "ru": "Введите ответ числом; это может быть десятичная дробь."
+   },
+   "prior_b": 0.8,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph4301",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "collisions",
+   "family": {
+    "template": "A {m1} kg cart moving at {u} m/s hits a {m2} kg cart at rest, and they stick together. How much kinetic energy is lost in the collision, in joules?",
+    "params": {
+     "m1": {
+      "min": 2,
+      "max": 6
+     },
+     "m2": {
+      "min": 1,
+      "max": 4
+     },
+     "V": {
+      "min": 1,
+      "max": 5
+     }
+    },
+    "derived": {
+     "u": "(m1 + m2)*V/m1",
+     "M": "m1 + m2",
+     "Kb": "m1*u^2/2",
+     "Ka": "(m1 + m2)*V^2/2"
+    },
+    "constraints": [
+     "u == floor(u)",
+     "!(m1 == 2 && m2 == 1 && V == 4)",
+     "round(m1*u^2/2 - (m1 + m2)*V^2/2, 1) != round(m1*u^2/2, 1)",
+     "round(m1*u^2/2 - (m1 + m2)*V^2/2, 1) != round((m1 + m2)*V^2/2, 1)",
+     "round(m1*u^2/2 - (m1 + m2)*V^2/2, 1) != round(m2*V^2/2, 1)",
+     "round(m1*u^2/2, 1) != round((m1 + m2)*V^2/2, 1)",
+     "round(m1*u^2/2, 1) != round(m2*V^2/2, 1)",
+     "round((m1 + m2)*V^2/2, 1) != round(m2*V^2/2, 1)"
+    ],
+    "answer": "m1*u^2/2 - (m1 + m2)*V^2/2",
+    "distractors": [
+     "m1*u^2/2",
+     "(m1 + m2)*V^2/2",
+     "m2*V^2/2"
+    ],
+    "decimals": 1,
+    "relation": "X = 0.5*{m1}*{u}^2 - 0.5*({m1} + {m2})*({m1}*{u}/({m1} + {m2}))^2"
+   },
+   "page": "C19-APPH04-3",
+   "lang": "en",
+   "stem": {
+    "en": "A {m1} kg cart moving at {u} m/s hits a {m2} kg cart at rest, and they stick together. How much kinetic energy is lost in the collision, in joules?",
+    "uz": "{u} m/s tezlik bilan harakatlanayotgan {m1} kg massali aravacha tinch turgan {m2} kg massali aravachaga urilib, ular bir-biriga yopishib qoladi. Toʻqnashuvda necha joul kinetik energiya yoʻqoladi?",
+    "ru": "Тележка массой {m1} кг, движущаяся со скоростью {u} м/с, налетает на покоящуюся тележку массой {m2} кг, и они сцепляются. Сколько кинетической энергии теряется при столкновении, в джоулях?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "v = {m1} × {u} ÷ {M} = {V} m/s. K before = {Kb} J, K after = {Ka} J; lost: {ANS} J.",
+    "uz": "v = {m1} × {u} ÷ {M} = {V} m/s. Oldingi K = {Kb} J, keyingi K = {Ka} J; yoʻqolgani: {ANS} J.",
+    "ru": "v = {m1} × {u} ÷ {M} = {V} м/с. K до = {Kb} Дж, K после = {Ka} Дж; потеряно {ANS} Дж."
+   },
+   "instructions": {
+    "en": "Type your answer as a number; it may be a decimal.",
+    "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+    "ru": "Введите ответ числом; это может быть десятичная дробь."
+   },
+   "prior_b": 0.9,
+   "time_s": 80,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "C1-ph4302",
+   "skill": "math",
+   "rung": "alg2",
+   "subskill": "collisions",
+   "family": {
+    "template": "A {m1} kg ball at {u} m/s hits a {m2} kg ball at rest head-on. After the collision the first ball moves on at {w} m/s in the same direction. How fast does the second ball move, in m/s?",
+    "params": {
+     "m1": {
+      "min": 2,
+      "max": 5
+     },
+     "m2": {
+      "min": 1,
+      "max": 4
+     },
+     "w": {
+      "min": 1,
+      "max": 4
+     },
+     "V2": {
+      "min": 2,
+      "max": 8
+     }
+    },
+    "derived": {
+     "u": "w + m2*V2/m1",
+     "du": "u - w"
+    },
+    "constraints": [
+     "u == floor(u)",
+     "w < V2",
+     "m1*w^2 + m2*V2^2 <= m1*u^2",
+     "round(m1*(u - w)/m2, 1) != round(u - w, 1)",
+     "round(m1*(u - w)/m2, 1) != round(m1*u/m2, 1)",
+     "round(m1*(u - w)/m2, 1) != round(m1*(u + w)/m2, 1)",
+     "round(u - w, 1) != round(m1*u/m2, 1)",
+     "round(u - w, 1) != round(m1*(u + w)/m2, 1)",
+     "round(m1*u/m2, 1) != round(m1*(u + w)/m2, 1)"
+    ],
+    "answer": "m1*(u - w)/m2",
+    "distractors": [
+     "u - w",
+     "m1*u/m2",
+     "m1*(u + w)/m2"
+    ],
+    "decimals": 1,
+    "relation": "{m1}*{u} = {m1}*{w} + {m2}*X"
+   },
+   "page": "C19-APPH04-3",
+   "lang": "en",
+   "stem": {
+    "en": "A {m1} kg ball at {u} m/s hits a {m2} kg ball at rest head-on. After the collision the first ball moves on at {w} m/s in the same direction. How fast does the second ball move, in m/s?",
+    "uz": "{u} m/s tezlikdagi {m1} kg massali shar tinch turgan {m2} kg massali sharga markaziy uriladi. Toʻqnashuvdan keyin birinchi shar oʻsha yoʻnalishda {w} m/s tezlik bilan harakatlanadi. Ikkinchi shar necha m/s tezlik bilan harakatlanadi?",
+    "ru": "Шар массой {m1} кг со скоростью {u} м/с налетает на покоящийся шар массой {m2} кг (центральный удар). После удара первый шар движется в ту же сторону со скоростью {w} м/с. С какой скоростью движется второй шар, в м/с?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Momentum: {m1} × {u} = {m1} × {w} + {m2} × v, so v = {m1} × {du} ÷ {m2} = {ANS} m/s.",
+    "uz": "Impuls: {m1} × {u} = {m1} × {w} + {m2} × v, demak v = {m1} × {du} ÷ {m2} = {ANS} m/s.",
+    "ru": "Импульс: {m1} × {u} = {m1} × {w} + {m2} × v, значит, v = {m1} × {du} ÷ {m2} = {ANS} м/с."
+   },
+   "instructions": {
+    "en": "Type your answer as a number; it may be a decimal.",
+    "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+    "ru": "Введите ответ числом; это может быть десятичная дробь."
+   },
+   "prior_b": 0.8,
+   "time_s": 70,
+   "source": "own",
+   "author": "agent:p15-ap1",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  }
+ ]
+}

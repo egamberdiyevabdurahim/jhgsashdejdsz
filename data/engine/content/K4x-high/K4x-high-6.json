@@ -1,0 +1,1101 @@
+{
+ "bank": "K4x",
+ "batch": 6,
+ "items": [
+  {
+   "id": "K4x-pch38a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "exponential_functions",
+   "family_ref": "K4-pch038",
+   "params": {
+    "a": 2,
+    "b": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = a·bˣ with b > 0, f(1) = 6 and f(3) = 54. What is f(0)?",
+    "uz": "f(x) = a·bˣ (b > 0), f(1) = 6 va f(3) = 54. f(0) ni toping.",
+    "ru": "f(x) = a·bˣ (b > 0), f(1) = 6, f(3) = 54. Найдите f(0)."
+   },
+   "options": [
+    {
+     "en": "2"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "6"
+    },
+    {
+     "en": "−18"
+    }
+   ],
+   "answer_numeric": {
+    "value": 2,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f(3)/f(1) = b² = 9, so b = 3; then f(0) = a = f(1)/b = 6/3 = 2.",
+    "uz": "f(3)/f(1) = b² = 9, demak b = 3; u holda f(0) = a = f(1)/b = 6/3 = 2.",
+    "ru": "f(3)/f(1) = b² = 9, значит b = 3; тогда f(0) = a = f(1)/b = 6/3 = 2."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch38b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "exponential_functions",
+   "family_ref": "K4-pch038",
+   "params": {
+    "a": 5,
+    "b": 2
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = a·bˣ with b > 0, f(1) = 10 and f(3) = 40. What is f(0)?",
+    "uz": "f(x) = a·bˣ (b > 0), f(1) = 10 va f(3) = 40. f(0) ni toping.",
+    "ru": "f(x) = a·bˣ (b > 0), f(1) = 10, f(3) = 40. Найдите f(0)."
+   },
+   "options": [
+    {
+     "en": "5"
+    },
+    {
+     "en": "2"
+    },
+    {
+     "en": "10"
+    },
+    {
+     "en": "−5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 5,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f(3)/f(1) = b² = 4, so b = 2; then f(0) = a = f(1)/b = 10/2 = 5.",
+    "uz": "f(3)/f(1) = b² = 4, demak b = 2; u holda f(0) = a = f(1)/b = 10/2 = 5.",
+    "ru": "f(3)/f(1) = b² = 4, значит b = 2; тогда f(0) = a = f(1)/b = 10/2 = 5."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch39a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "arc_length",
+   "family_ref": "K4-pch039",
+   "params": {
+    "r": 9,
+    "t": [
+     2,
+     3
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A circle has radius 9. An arc of this circle has a central angle of 2π/3 radians. The arc length is kπ. What is k?",
+    "uz": "Aylana radiusi 9. Shu aylana yoyining markaziy burchagi 2π/3 radian. Yoy uzunligi kπ ga teng. k ni toping.",
+    "ru": "Радиус окружности равен 9. Центральный угол дуги этой окружности равен 2π/3 рад. Длина дуги равна kπ. Найдите k."
+   },
+   "options": [
+    {
+     "en": "6"
+    },
+    {
+     "en": "12"
+    },
+    {
+     "en": "27"
+    },
+    {
+     "en": "3"
+    }
+   ],
+   "answer_numeric": {
+    "value": 6,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Arc length = rθ = 9·2π/3 = 6π, so k = 6.",
+    "uz": "Yoy uzunligi = rθ = 9·2π/3 = 6π, demak k = 6.",
+    "ru": "Длина дуги = rθ = 9·2π/3 = 6π, значит k = 6."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch39b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "arc_length",
+   "family_ref": "K4-pch039",
+   "params": {
+    "r": 6,
+    "t": [
+     5,
+     6
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A circle has radius 6. An arc of this circle has a central angle of 5π/6 radians. The arc length is kπ. What is k?",
+    "uz": "Aylana radiusi 6. Shu aylana yoyining markaziy burchagi 5π/6 radian. Yoy uzunligi kπ ga teng. k ni toping.",
+    "ru": "Радиус окружности равен 6. Центральный угол дуги этой окружности равен 5π/6 рад. Длина дуги равна kπ. Найдите k."
+   },
+   "options": [
+    {
+     "en": "5"
+    },
+    {
+     "en": "10"
+    },
+    {
+     "en": "15"
+    },
+    {
+     "en": "2.5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 5,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Arc length = rθ = 6·5π/6 = 5π, so k = 5.",
+    "uz": "Yoy uzunligi = rθ = 6·5π/6 = 5π, demak k = 5.",
+    "ru": "Длина дуги = rθ = 6·5π/6 = 5π, значит k = 5."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch40a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "sector_area",
+   "family_ref": "K4-pch040",
+   "params": {
+    "r": 6,
+    "th": 120
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A sector of a circle with radius 6 has a central angle of 120°. Its area is kπ. What is k?",
+    "uz": "Radiusi 6 boʻlgan doira sektorining markaziy burchagi 120°. Sektor yuzi kπ ga teng. k ni toping.",
+    "ru": "Сектор круга радиуса 6 имеет центральный угол 120°. Его площадь равна kπ. Найдите k."
+   },
+   "options": [
+    {
+     "en": "12"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "36"
+    },
+    {
+     "en": "24"
+    }
+   ],
+   "answer_numeric": {
+    "value": 12,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Area = (120/360)·π·6² = 12π, so k = 12.",
+    "uz": "Yuza = (120/360)·π·6² = 12π, demak k = 12.",
+    "ru": "Площадь = (120/360)·π·6² = 12π, значит k = 12."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-pch40b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "sector_area",
+   "family_ref": "K4-pch040",
+   "params": {
+    "r": 10,
+    "th": 72
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A sector of a circle with radius 10 has a central angle of 72°. Its area is kπ. What is k?",
+    "uz": "Radiusi 10 boʻlgan doira sektorining markaziy burchagi 72°. Sektor yuzi kπ ga teng. k ni toping.",
+    "ru": "Сектор круга радиуса 10 имеет центральный угол 72°. Его площадь равна kπ. Найдите k."
+   },
+   "options": [
+    {
+     "en": "20"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "100"
+    },
+    {
+     "en": "40"
+    }
+   ],
+   "answer_numeric": {
+    "value": 20,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Area = (72/360)·π·10² = 20π, so k = 20.",
+    "uz": "Yuza = (72/360)·π·10² = 20π, demak k = 20.",
+    "ru": "Площадь = (72/360)·π·10² = 20π, значит k = 20."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh01a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits_algebraic",
+   "family_ref": "K4-clh001",
+   "params": {
+    "a": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is lim (x → 3) (x² − 9)/(x − 3)?",
+    "uz": "lim (x → 3) (x² − 9)/(x − 3) ni toping.",
+    "ru": "Найдите lim (x → 3) (x² − 9)/(x − 3)."
+   },
+   "options": [
+    {
+     "en": "6"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "9"
+    }
+   ],
+   "answer_numeric": {
+    "value": 6,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "For x ≠ 3, (x² − 9)/(x − 3) = x + 3, so the limit is 3 + 3 = 6.",
+    "uz": "x ≠ 3 da (x² − 9)/(x − 3) = x + 3, demak limit 3 + 3 = 6.",
+    "ru": "При x ≠ 3 (x² − 9)/(x − 3) = x + 3, поэтому предел равен 3 + 3 = 6."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh01b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits_algebraic",
+   "family_ref": "K4-clh001",
+   "params": {
+    "a": 5
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is lim (x → 5) (x² − 25)/(x − 5)?",
+    "uz": "lim (x → 5) (x² − 25)/(x − 5) ni toping.",
+    "ru": "Найдите lim (x → 5) (x² − 25)/(x − 5)."
+   },
+   "options": [
+    {
+     "en": "10"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "25"
+    }
+   ],
+   "answer_numeric": {
+    "value": 10,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "For x ≠ 5, (x² − 25)/(x − 5) = x + 5, so the limit is 5 + 5 = 10.",
+    "uz": "x ≠ 5 da (x² − 25)/(x − 5) = x + 5, demak limit 5 + 5 = 10.",
+    "ru": "При x ≠ 5 (x² − 25)/(x − 5) = x + 5, поэтому предел равен 5 + 5 = 10."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh02a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits_at_infinity",
+   "family_ref": "K4-clh002",
+   "params": {
+    "a": 3,
+    "b": 2,
+    "c": 1
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is lim (x → ∞) √(9x² + 1)/(2x + 1)?",
+    "uz": "lim (x → ∞) √(9x² + 1)/(2x + 1) ni toping.",
+    "ru": "Найдите lim (x → ∞) √(9x² + 1)/(2x + 1)."
+   },
+   "options": [
+    {
+     "en": "1.5"
+    },
+    {
+     "en": "9/2"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "2/3"
+    }
+   ],
+   "answer_numeric": {
+    "value": 1.5,
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "For large x, √(9x² + 1) ≈ 3x, so the ratio tends to 3/2 = 1.5.",
+    "uz": "Katta x larda √(9x² + 1) ≈ 3x, demak nisbat 3/2 = 1,5 ga intiladi.",
+    "ru": "При больших x √(9x² + 1) ≈ 3x, поэтому отношение стремится к 3/2 = 1,5."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.75,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh02b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits_at_infinity",
+   "family_ref": "K4-clh002",
+   "params": {
+    "a": 8,
+    "b": 5,
+    "c": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is lim (x → ∞) √(64x² + 1)/(5x + 3)?",
+    "uz": "lim (x → ∞) √(64x² + 1)/(5x + 3) ni toping.",
+    "ru": "Найдите lim (x → ∞) √(64x² + 1)/(5x + 3)."
+   },
+   "options": [
+    {
+     "en": "1.6"
+    },
+    {
+     "en": "64/5"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "5/8"
+    }
+   ],
+   "answer_numeric": {
+    "value": 1.6,
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "For large x, √(64x² + 1) ≈ 8x, so the ratio tends to 8/5 = 1.6.",
+    "uz": "Katta x larda √(64x² + 1) ≈ 8x, demak nisbat 8/5 = 1,6 ga intiladi.",
+    "ru": "При больших x √(64x² + 1) ≈ 8x, поэтому отношение стремится к 8/5 = 1,6."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.75,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh03a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits_trig",
+   "family_ref": "K4-clh003",
+   "params": {
+    "k": 5,
+    "m": 1
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is lim (x → 0) sin(5x)/(x)?",
+    "uz": "lim (x → 0) sin(5x)/(x) ni toping.",
+    "ru": "Найдите lim (x → 0) sin(5x)/(x)."
+   },
+   "options": [
+    {
+     "en": "5"
+    },
+    {
+     "en": "1/5"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "1"
+    }
+   ],
+   "answer_numeric": {
+    "value": 5,
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "Near 0, sin(5x) ≈ 5x, so the limit is 5/1 = 5.",
+    "uz": "0 atrofida sin(5x) ≈ 5x, demak limit 5/1 = 5.",
+    "ru": "Вблизи 0 sin(5x) ≈ 5x, поэтому предел равен 5/1 = 5."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.55,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "retired",
+   "version": 1,
+   "quarantine_reason": "an instance of K4-clh003 v1 at m = 1, written \"sin(5x)/(x)\"; v2 draws m from 2 and shows {m}x (P5 content-integrity pass, 7 Oct)"
+  },
+  {
+   "id": "K4x-clh03b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits_trig",
+   "family_ref": "K4-clh003",
+   "params": {
+    "k": 6,
+    "m": 4
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is lim (x → 0) sin(6x)/(4x)?",
+    "uz": "lim (x → 0) sin(6x)/(4x) ni toping.",
+    "ru": "Найдите lim (x → 0) sin(6x)/(4x)."
+   },
+   "options": [
+    {
+     "en": "1.5"
+    },
+    {
+     "en": "4/6"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "1"
+    }
+   ],
+   "answer_numeric": {
+    "value": 1.5,
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "Near 0, sin(6x) ≈ 6x, so the limit is 6/4 = 1.5.",
+    "uz": "0 atrofida sin(6x) ≈ 6x, demak limit 6/4 = 1,5.",
+    "ru": "Вблизи 0 sin(6x) ≈ 6x, поэтому предел равен 6/4 = 1,5."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.55,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh05a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "continuity",
+   "family_ref": "K4-clh005",
+   "params": {
+    "a": 3,
+    "b": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = kx + 3 for x < 3, and f(x) = x² for x ≥ 3. For what value of k is f continuous at x = 3?",
+    "uz": "x < 3 da f(x) = kx + 3, x ≥ 3 da esa f(x) = x². k ning qanday qiymatida f funksiya x = 3 nuqtada uzluksiz boʻladi?",
+    "ru": "f(x) = kx + 3 при x < 3 и f(x) = x² при x ≥ 3. При каком k функция f непрерывна в точке x = 3?"
+   },
+   "options": [
+    {
+     "en": "2"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "6"
+    },
+    {
+     "en": "3"
+    }
+   ],
+   "answer_numeric": {
+    "value": 2,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "The two pieces must meet at x = 3: 3k + 3 = 3² = 9, so k = 2.",
+    "uz": "Ikki boʻlak x = 3 da tutashishi kerak: 3k + 3 = 3² = 9, demak k = 2.",
+    "ru": "Части должны сойтись в x = 3: 3k + 3 = 3² = 9, значит k = 2."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh05b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "continuity",
+   "family_ref": "K4-clh005",
+   "params": {
+    "a": 4,
+    "b": 4
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = kx + 4 for x < 4, and f(x) = x² for x ≥ 4. For what value of k is f continuous at x = 4?",
+    "uz": "x < 4 da f(x) = kx + 4, x ≥ 4 da esa f(x) = x². k ning qanday qiymatida f funksiya x = 4 nuqtada uzluksiz boʻladi?",
+    "ru": "f(x) = kx + 4 при x < 4 и f(x) = x² при x ≥ 4. При каком k функция f непрерывна в точке x = 4?"
+   },
+   "options": [
+    {
+     "en": "3"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "12"
+    },
+    {
+     "en": "4"
+    }
+   ],
+   "answer_numeric": {
+    "value": 3,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "The two pieces must meet at x = 4: 4k + 4 = 4² = 16, so k = 3.",
+    "uz": "Ikki boʻlak x = 4 da tutashishi kerak: 4k + 4 = 4² = 16, demak k = 3.",
+    "ru": "Части должны сойтись в x = 4: 4k + 4 = 4² = 16, значит k = 3."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh06a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "power_rule",
+   "family_ref": "K4-clh006",
+   "params": {
+    "a": 4,
+    "b": 5,
+    "c": 7,
+    "t": 2
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = 4x³ − 5x² + 7. What is f′(2)?",
+    "uz": "f(x) = 4x³ − 5x² + 7. f′(2) ni toping.",
+    "ru": "f(x) = 4x³ − 5x² + 7. Найдите f′(2)."
+   },
+   "options": [
+    {
+     "en": "28"
+    },
+    {
+     "en": "19"
+    },
+    {
+     "en": "35"
+    },
+    {
+     "en": "68"
+    }
+   ],
+   "answer_numeric": {
+    "value": 28,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f′(x) = 12x² − 10x, so f′(2) = 12·4 − 10·2 = 28.",
+    "uz": "f′(x) = 12x² − 10x, demak f′(2) = 12·4 − 10·2 = 28.",
+    "ru": "f′(x) = 12x² − 10x, поэтому f′(2) = 12·4 − 10·2 = 28."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh06b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "power_rule",
+   "family_ref": "K4-clh006",
+   "params": {
+    "a": 2,
+    "b": 3,
+    "c": 1,
+    "t": 3
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = 2x³ − 3x² + 1. What is f′(3)?",
+    "uz": "f(x) = 2x³ − 3x² + 1. f′(3) ni toping.",
+    "ru": "f(x) = 2x³ − 3x² + 1. Найдите f′(3)."
+   },
+   "options": [
+    {
+     "en": "36"
+    },
+    {
+     "en": "28"
+    },
+    {
+     "en": "37"
+    },
+    {
+     "en": "72"
+    }
+   ],
+   "answer_numeric": {
+    "value": 36,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f′(x) = 6x² − 6x, so f′(3) = 6·9 − 6·3 = 36.",
+    "uz": "f′(x) = 6x² − 6x, demak f′(3) = 6·9 − 6·3 = 36.",
+    "ru": "f′(x) = 6x² − 6x, поэтому f′(3) = 6·9 − 6·3 = 36."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh11a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "chain_rule",
+   "family_ref": "K4-clh011",
+   "params": {
+    "a": 2,
+    "b": 3,
+    "n": 5,
+    "t": 2
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = (2x − 3)⁵. What is f′(2)?",
+    "uz": "f(x) = (2x − 3)⁵. f′(2) ni toping.",
+    "ru": "f(x) = (2x − 3)⁵. Найдите f′(2)."
+   },
+   "options": [
+    {
+     "en": "10"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "1"
+    },
+    {
+     "en": "2"
+    }
+   ],
+   "answer_numeric": {
+    "value": 10,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f′(x) = 5·2·(2x − 3)⁴; at x = 2 this is 10·1⁴ = 10.",
+    "uz": "f′(x) = 5·2·(2x − 3)⁴; x = 2 da bu 10·1⁴ = 10.",
+    "ru": "f′(x) = 5·2·(2x − 3)⁴; при x = 2 получаем 10·1⁴ = 10."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh11b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "chain_rule",
+   "family_ref": "K4-clh011",
+   "params": {
+    "a": 3,
+    "b": 4,
+    "n": 4,
+    "t": 2
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = (3x − 4)⁴. What is f′(2)?",
+    "uz": "f(x) = (3x − 4)⁴. f′(2) ni toping.",
+    "ru": "f(x) = (3x − 4)⁴. Найдите f′(2)."
+   },
+   "options": [
+    {
+     "en": "96"
+    },
+    {
+     "en": "32"
+    },
+    {
+     "en": "16"
+    },
+    {
+     "en": "24"
+    }
+   ],
+   "answer_numeric": {
+    "value": 96,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f′(x) = 4·3·(3x − 4)³; at x = 2 this is 12·2³ = 96.",
+    "uz": "f′(x) = 4·3·(3x − 4)³; x = 2 da bu 12·2³ = 96.",
+    "ru": "f′(x) = 4·3·(3x − 4)³; при x = 2 получаем 12·2³ = 96."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh14a",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "exp_derivatives",
+   "family_ref": "K4-clh014",
+   "params": {
+    "a": 5,
+    "k": 2
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = 5e^(2x). What is f′(0)?",
+    "uz": "f(x) = 5e^(2x). f′(0) ni toping.",
+    "ru": "f(x) = 5e^(2x). Найдите f′(0)."
+   },
+   "options": [
+    {
+     "en": "10"
+    },
+    {
+     "en": "5"
+    },
+    {
+     "en": "2"
+    },
+    {
+     "en": "7"
+    }
+   ],
+   "answer_numeric": {
+    "value": 10,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f′(x) = 5·2e^(2x) and e⁰ = 1, so f′(0) = 10.",
+    "uz": "f′(x) = 5·2e^(2x) va e⁰ = 1, demak f′(0) = 10.",
+    "ru": "f′(x) = 5·2e^(2x), а e⁰ = 1, поэтому f′(0) = 10."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4x-clh14b",
+   "bank": "K4x",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "exp_derivatives",
+   "family_ref": "K4-clh014",
+   "params": {
+    "a": 3,
+    "k": 4
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = 3e^(4x). What is f′(0)?",
+    "uz": "f(x) = 3e^(4x). f′(0) ni toping.",
+    "ru": "f(x) = 3e^(4x). Найдите f′(0)."
+   },
+   "options": [
+    {
+     "en": "12"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "4"
+    },
+    {
+     "en": "7"
+    }
+   ],
+   "answer_numeric": {
+    "value": 12,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f′(x) = 3·4e^(4x) and e⁰ = 1, so f′(0) = 12.",
+    "uz": "f′(x) = 3·4e^(4x) va e⁰ = 1, demak f′(0) = 12.",
+    "ru": "f′(x) = 3·4e^(4x), а e⁰ = 1, поэтому f′(0) = 12."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

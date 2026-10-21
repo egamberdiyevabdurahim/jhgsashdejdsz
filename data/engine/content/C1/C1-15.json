@@ -1,0 +1,2680 @@
+{
+  "bank": "C1",
+  "batch": 15,
+  "items": [
+    {
+      "id": "C1-ph5101",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_kinematics",
+      "family": {
+        "template": "A wheel starts from rest and turns with a constant angular acceleration α = {a} rad/s². Through what angle, in radians, does it turn in the first {t} s?",
+        "params": {
+          "a": {
+            "values": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              8
+            ]
+          },
+          "t": {
+            "min": 3,
+            "max": 10
+          }
+        },
+        "constraints": [
+          "(a*t) % 2 == 0",
+          "!(a == 4 && t == 5)",
+          "!(a == 2 && t == 6)"
+        ],
+        "answer": "a*t^2/2",
+        "distractors": [
+          "a*t^2",
+          "a*t",
+          "a*t/2"
+        ],
+        "integer": true,
+        "relation": "X = 0*{t} + 1/2*{a}*{t}^2"
+      },
+      "page": "C19-APPH05-1",
+      "lang": "en",
+      "stem": {
+        "en": "A wheel starts from rest and turns with a constant angular acceleration α = {a} rad/s². Through what angle, in radians, does it turn in the first {t} s?",
+        "uz": "Gʻildirak tinch holatdan α = {a} rad/s² oʻzgarmas burchak tezlanish bilan aylana boshlaydi. Birinchi {t} s ichida u necha radianga buriladi?",
+        "ru": "Колесо начинает вращаться из состояния покоя с постоянным угловым ускорением α = {a} рад/с². На какой угол (в радианах) оно повернётся за первые {t} с?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "From rest, θ = ½αt² = ½ × {a} × {t}² = {ANS} rad.",
+        "uz": "Tinch holatdan: θ = ½αt² = ½ × {a} × {t}² = {ANS} rad.",
+        "ru": "Из состояния покоя: θ = ½αt² = ½ × {a} × {t}² = {ANS} рад."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph5102",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_kinematics",
+      "family": {
+        "template": "A wheel turns at ω₀ = {w0} rad/s and speeds up with a constant angular acceleration α = {a} rad/s². What is its angular velocity, in rad/s, after {t} s?",
+        "params": {
+          "w0": {
+            "min": 2,
+            "max": 12
+          },
+          "a": {
+            "min": 2,
+            "max": 6
+          },
+          "t": {
+            "min": 3,
+            "max": 8
+          }
+        },
+        "constraints": [
+          "(a*t*t) % 2 == 0",
+          "!(w0 == 4 && a == 3 && t == 5)",
+          "w0 + a*t != w0*t + a*t^2/2",
+          "a*t != w0 + a",
+          "a*t != w0*t + a*t^2/2",
+          "w0 + a != w0*t + a*t^2/2"
+        ],
+        "answer": "w0 + a*t",
+        "distractors": [
+          "a*t",
+          "w0 + a",
+          "w0*t + a*t^2/2"
+        ],
+        "integer": true,
+        "relation": "{a} = (X - {w0})/{t}"
+      },
+      "page": "C19-APPH05-1",
+      "lang": "en",
+      "stem": {
+        "en": "A wheel turns at ω₀ = {w0} rad/s and speeds up with a constant angular acceleration α = {a} rad/s². What is its angular velocity, in rad/s, after {t} s?",
+        "uz": "Gʻildirak ω₀ = {w0} rad/s burchak tezlik bilan aylanmoqda va α = {a} rad/s² oʻzgarmas burchak tezlanish bilan tezlashadi. {t} s dan keyin uning burchak tezligi necha rad/s boʻladi?",
+        "ru": "Колесо вращается с угловой скоростью ω₀ = {w0} рад/с и разгоняется с постоянным угловым ускорением α = {a} рад/с². Какой будет его угловая скорость (в рад/с) через {t} с?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "ω = ω₀ + αt = {w0} + {a} × {t} = {ANS} rad/s.",
+        "uz": "ω = ω₀ + αt = {w0} + {a} × {t} = {ANS} rad/s.",
+        "ru": "ω = ω₀ + αt = {w0} + {a} × {t} = {ANS} рад/с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph5103",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "linear_rotational",
+      "family": {
+        "template": "Two children sit on a turning merry-go-round, one {r1} m and the other {r2} m from its centre. The inner child moves at {v1} m/s. How fast, in m/s, does the outer child move?",
+        "params": {
+          "w": {
+            "values": [
+              1,
+              2,
+              3
+            ]
+          },
+          "r1": {
+            "values": [
+              1,
+              2,
+              3
+            ]
+          },
+          "r2": {
+            "values": [
+              4,
+              5,
+              6,
+              8
+            ]
+          }
+        },
+        "derived": {
+          "v1": "w*r1"
+        },
+        "constraints": [
+          "w*r2 != v1 + r2 - r1",
+          "w*r2 != v1*r2",
+          "v1 != v1 + r2 - r1",
+          "v1 != v1*r2",
+          "v1 + r2 - r1 != v1*r2"
+        ],
+        "answer": "w*r2",
+        "distractors": [
+          "v1",
+          "v1 + r2 - r1",
+          "v1*r2"
+        ],
+        "integer": true,
+        "relation": "{v1}/{r1} = X/{r2}"
+      },
+      "page": "C19-APPH05-1",
+      "lang": "en",
+      "stem": {
+        "en": "Two children sit on a turning merry-go-round, one {r1} m and the other {r2} m from its centre. The inner child moves at {v1} m/s. How fast, in m/s, does the outer child move?",
+        "uz": "Ikki bola aylanayotgan karuselda oʻtiribdi: biri markazdan {r1} m, ikkinchisi {r2} m uzoqlikda. Ichkaridagi bola {v1} m/s tezlik bilan harakatlanmoqda. Tashqaridagi bola necha m/s tezlik bilan harakatlanadi?",
+        "ru": "Двое детей сидят на вращающейся карусели: один в {r1} м от центра, другой в {r2} м. Ребёнок ближе к центру движется со скоростью {v1} м/с. С какой скоростью (в м/с) движется второй?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Both turn with the same ω = {v1}/{r1} = {w} rad/s, so v = rω = {r2} × {w} = {ANS} m/s.",
+        "uz": "Ikkalasi ham bir xil ω = {v1}/{r1} = {w} rad/s bilan aylanadi, demak v = rω = {r2} × {w} = {ANS} m/s.",
+        "ru": "Оба вращаются с одной и той же ω = {v1}/{r1} = {w} рад/с, значит, v = rω = {r2} × {w} = {ANS} м/с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph5201",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_equilibrium",
+      "family": {
+        "template": "A seesaw is balanced on a pivot at its middle. A {m1} kg child sits {d1} m from the pivot. How far from the pivot, in metres, must a {m2} kg child sit on the other side to balance it?",
+        "params": {
+          "m1": {
+            "min": 20,
+            "max": 60,
+            "step": 5
+          },
+          "m2": {
+            "min": 20,
+            "max": 60,
+            "step": 5
+          },
+          "d1": {
+            "values": [
+              1,
+              1.5,
+              2,
+              2.5,
+              3
+            ]
+          }
+        },
+        "constraints": [
+          "m1 != m2",
+          "(2*m1*d1) % m2 == 0",
+          "m1*d1/m2 <= 3.5",
+          "m1*d1/m2 >= 0.5",
+          "!(m1 == 30 && d1 == 2 && m2 == 40)",
+          "!(m1 == 20 && d1 == 3 && m2 == 30)",
+          "m2*d1/m1 != d1",
+          "m2*d1/m1 != m1/m2",
+          "d1 != m1/m2",
+          "m1*d1/m2 != m1/m2"
+        ],
+        "answer": "m1*d1/m2",
+        "distractors": [
+          "m2*d1/m1",
+          "d1",
+          "m1/m2"
+        ],
+        "decimals": 2,
+        "relation": "{m1}*9.8*{d1} = {m2}*9.8*X"
+      },
+      "page": "C19-APPH05-2",
+      "lang": "en",
+      "stem": {
+        "en": "A seesaw is balanced on a pivot at its middle. A {m1} kg child sits {d1} m from the pivot. How far from the pivot, in metres, must a {m2} kg child sit on the other side to balance it?",
+        "uz": "Uzun taxta oʻrtasidagi tayanchda muvozanatda turibdi. {m1} kg massali bola tayanchdan {d1} m uzoqlikda oʻtiribdi. Taxtani muvozanatda saqlash uchun {m2} kg massali bola narigi tomonda tayanchdan necha metr uzoqlikda oʻtirishi kerak?",
+        "ru": "Доска-качели уравновешена на опоре посередине. Ребёнок массой {m1} кг сидит в {d1} м от опоры. На каком расстоянии от опоры (в метрах) по другую сторону должен сесть ребёнок массой {m2} кг, чтобы уравновесить доску?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The torques cancel: {m1}g × {d1} = {m2}g × x, so x = {m1} × {d1}/{m2} = {ANS} m.",
+        "uz": "Momentlar bir-birini yoʻqqa chiqaradi: {m1}g × {d1} = {m2}g × x, demak x = {m1} × {d1}/{m2} = {ANS} m.",
+        "ru": "Моменты компенсируют друг друга: {m1}g × {d1} = {m2}g × x, значит, x = {m1} × {d1}/{m2} = {ANS} м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.6,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph5202",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "torque",
+      "family": {
+        "template": "A force F = {F} N pulls on a wrench {r} m from the bolt, at 30° to the handle. What torque, in N·m, does it make about the bolt?",
+        "params": {
+          "F": {
+            "min": 20,
+            "max": 120,
+            "step": 10
+          },
+          "r": {
+            "values": [
+              0.1,
+              0.2,
+              0.25,
+              0.3,
+              0.4,
+              0.5
+            ]
+          }
+        },
+        "constraints": [
+          "!(F == 80 && r == 0.25)",
+          "!(F == 20 && r == 0.5)",
+          "F*r != F/2"
+        ],
+        "answer": "F*r/2",
+        "distractors": [
+          "F*r",
+          "F/2",
+          "F*r*cosd(30)"
+        ],
+        "decimals": 2,
+        "relation": "X = {r}*{F}*1/2"
+      },
+      "page": "C19-APPH05-2",
+      "lang": "en",
+      "stem": {
+        "en": "A force F = {F} N pulls on a wrench {r} m from the bolt, at 30° to the handle. What torque, in N·m, does it make about the bolt?",
+        "uz": "F = {F} N kuch gayka kalitini boltdan {r} m uzoqlikda, dastaga 30° burchak ostida tortadi. U boltga nisbatan necha N·m kuch momenti hosil qiladi?",
+        "ru": "Сила F = {F} Н тянет гаечный ключ на расстоянии {r} м от болта под углом 30° к рукоятке. Какой момент силы (в Н·м) она создаёт относительно болта?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Only the part of F perpendicular to the handle turns it: τ = rF sin 30° = {r} × {F} × 0.5 = {ANS} N·m.",
+        "uz": "Faqat F ning dastaga perpendikulyar qismi buradi: τ = rF sin 30° = {r} × {F} × 0,5 = {ANS} N·m.",
+        "ru": "Поворачивает только составляющая F, перпендикулярная рукоятке: τ = rF sin 30° = {r} × {F} × 0,5 = {ANS} Н·м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.7,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph5203",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_equilibrium",
+      "family": {
+        "template": "A light rod can turn about a pivot at its left end and is held level. A load of weight W = {W} N hangs {d} m from the pivot. What upward force, in N, applied {L} m from the pivot keeps the rod level?",
+        "params": {
+          "W": {
+            "min": 20,
+            "max": 120,
+            "step": 10
+          },
+          "d": {
+            "values": [
+              0.5,
+              1,
+              1.5,
+              2,
+              3
+            ]
+          },
+          "L": {
+            "values": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        },
+        "constraints": [
+          "d != L",
+          "W*d/L == floor(W*d/L)",
+          "W*d/L != W",
+          "W*d/L != W*L/d",
+          "W*d/L != W*d",
+          "W != W*L/d",
+          "W != W*d",
+          "W*L/d != W*d"
+        ],
+        "answer": "W*d/L",
+        "distractors": [
+          "W",
+          "W*L/d",
+          "W*d"
+        ],
+        "decimals": 2,
+        "relation": "X*{L} - {W}*{d} = 0"
+      },
+      "page": "C19-APPH05-2",
+      "lang": "en",
+      "stem": {
+        "en": "A light rod can turn about a pivot at its left end and is held level. A load of weight W = {W} N hangs {d} m from the pivot. What upward force, in N, applied {L} m from the pivot keeps the rod level?",
+        "uz": "Yengil sterjen chap uchidagi tayanch atrofida aylana oladi va gorizontal ushlab turiladi. Tayanchdan {d} m uzoqlikda ogʻirligi W = {W} N boʻlgan yuk osilgan. Sterjenni gorizontal ushlab turish uchun tayanchdan {L} m uzoqlikda yuqoriga necha N kuch qoʻyish kerak?",
+        "ru": "Лёгкий стержень может поворачиваться вокруг оси на левом конце, и его удерживают горизонтально. В {d} м от оси висит груз весом W = {W} Н. Какую силу (в Н), направленную вверх, нужно приложить в {L} м от оси, чтобы стержень оставался горизонтальным?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The net torque about the pivot is zero: F × {L} = {W} × {d}, so F = {ANS} N.",
+        "uz": "Tayanchga nisbatan natijaviy moment nolga teng: F × {L} = {W} × {d}, demak F = {ANS} N.",
+        "ru": "Суммарный момент относительно оси равен нулю: F × {L} = {W} × {d}, значит, F = {ANS} Н."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.7,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph5301",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_second_law",
+      "family": {
+        "template": "Two balls of {m} kg each sit on a light rod, each {r} m from the axis at its middle. A net torque τ = {tau} N·m acts on the rod. What is its angular acceleration, in rad/s²?",
+        "params": {
+          "m": {
+            "values": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "r": {
+            "values": [
+              0.5,
+              1.5,
+              2
+            ]
+          },
+          "al": {
+            "min": 1,
+            "max": 8
+          }
+        },
+        "derived": {
+          "I": "2*m*r^2",
+          "tau": "al*I"
+        },
+        "constraints": [
+          "tau == floor(tau)",
+          "tau <= 200",
+          "!(m == 2 && r == 0.5 && tau == 4)",
+          "tau/(2*m*r) != tau/(2*m)",
+          "tau/(2*m*r^2) != tau/(2*m*r)",
+          "tau/(2*m*r^2) != tau/(2*m)",
+          "tau/(m*r^2) != tau/(2*m*r)",
+          "tau/(m*r^2) != tau/(2*m)"
+        ],
+        "answer": "tau/(2*m*r^2)",
+        "distractors": [
+          "tau/(m*r^2)",
+          "tau/(2*m*r)",
+          "tau/(2*m)"
+        ],
+        "decimals": 2,
+        "relation": "{tau} = (2*{m}*{r}^2)*X"
+      },
+      "page": "C19-APPH05-3",
+      "lang": "en",
+      "stem": {
+        "en": "Two balls of {m} kg each sit on a light rod, each {r} m from the axis at its middle. A net torque τ = {tau} N·m acts on the rod. What is its angular acceleration, in rad/s²?",
+        "uz": "Yengil sterjenda har biri {m} kg boʻlgan ikkita shar bor, ikkalasi ham sterjen oʻrtasidagi oʻqdan {r} m uzoqlikda. Sterjenga τ = {tau} N·m natijaviy kuch momenti taʼsir qiladi. Uning burchak tezlanishi necha rad/s²?",
+        "ru": "На лёгком стержне закреплены два шара массой по {m} кг, каждый в {r} м от оси, проходящей через середину стержня. На стержень действует суммарный момент сил τ = {tau} Н·м. Каково его угловое ускорение (в рад/с²)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "I = 2 × {m} × {r}² = {I} kg·m², so α = Στ/I = {tau}/{I} = {ANS} rad/s².",
+        "uz": "I = 2 × {m} × {r}² = {I} kg·m², demak α = Στ/I = {tau}/{I} = {ANS} rad/s².",
+        "ru": "I = 2 × {m} × {r}² = {I} кг·м², значит, α = Στ/I = {tau}/{I} = {ANS} рад/с²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph5302",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_second_law",
+      "family": {
+        "template": "A string is wrapped around a solid disk (I = ½MR²) of mass M = {M} kg and radius R = {R} m. The disk turns freely on a fixed axle, and the string is pulled with a steady force F = {F} N. What is the disk’s angular acceleration, in rad/s²?",
+        "params": {
+          "M": {
+            "values": [
+              2,
+              4,
+              5,
+              8,
+              10
+            ]
+          },
+          "R": {
+            "values": [
+              0.1,
+              0.2,
+              0.25,
+              0.5
+            ]
+          },
+          "al": {
+            "min": 2,
+            "max": 40
+          }
+        },
+        "derived": {
+          "F": "al*M*R/2"
+        },
+        "constraints": [
+          "F == floor(F)",
+          "F >= 2",
+          "F <= 100",
+          "F/(M*R) != 2*F/M",
+          "F/M != F/(M*R)"
+        ],
+        "answer": "2*F/(M*R)",
+        "distractors": [
+          "F/(M*R)",
+          "F/M",
+          "2*F/M"
+        ],
+        "decimals": 2,
+        "relation": "{F}*{R} = (1/2*{M}*{R}^2)*X"
+      },
+      "page": "C19-APPH05-3",
+      "lang": "en",
+      "stem": {
+        "en": "A string is wrapped around a solid disk (I = ½MR²) of mass M = {M} kg and radius R = {R} m. The disk turns freely on a fixed axle, and the string is pulled with a steady force F = {F} N. What is the disk’s angular acceleration, in rad/s²?",
+        "uz": "Massasi M = {M} kg, radiusi R = {R} m boʻlgan yaxlit disk (I = ½MR²) atrofiga ip oʻralgan. Disk qoʻzgʻalmas oʻq atrofida erkin aylanadi, ip esa F = {F} N oʻzgarmas kuch bilan tortiladi. Diskning burchak tezlanishi necha rad/s²?",
+        "ru": "На сплошной диск (I = ½MR²) массой M = {M} кг и радиусом R = {R} м намотана нить. Диск свободно вращается на неподвижной оси, а нить тянут с постоянной силой F = {F} Н. Каково угловое ускорение диска (в рад/с²)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "τ = FR and I = ½MR², so α = FR/(½MR²) = 2F/(MR) = 2 × {F}/({M} × {R}) = {ANS} rad/s².",
+        "uz": "τ = FR va I = ½MR², demak α = FR/(½MR²) = 2F/(MR) = 2 × {F}/({M} × {R}) = {ANS} rad/s².",
+        "ru": "τ = FR и I = ½MR², значит, α = FR/(½MR²) = 2F/(MR) = 2 × {F}/({M} × {R}) = {ANS} рад/с²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 1.0,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph5303",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_inertia",
+      "family": {
+        "template": "A light rod turns about one end. A {m1} kg mass sits {r1} m from that end and a {m2} kg mass sits {r2} m from it. What is the rod’s rotational inertia about that end, in kg·m²?",
+        "params": {
+          "m1": {
+            "min": 1,
+            "max": 5
+          },
+          "m2": {
+            "min": 1,
+            "max": 5
+          },
+          "r1": {
+            "values": [
+              0.5,
+              1,
+              1.5
+            ]
+          },
+          "r2": {
+            "values": [
+              2,
+              2.5,
+              3
+            ]
+          }
+        },
+        "constraints": [
+          "!(m1 == 2 && r1 == 1 && m2 == 3 && r2 == 2)",
+          "m1*r1^2 + m2*r2^2 != m1*r1 + m2*r2",
+          "m1*r1^2 + m2*r2^2 != (m1 + m2)*((r1 + r2)/2)^2",
+          "m1*r1 + m2*r2 != (m1 + m2)*r2^2",
+          "m1*r1 + m2*r2 != (m1 + m2)*((r1 + r2)/2)^2",
+          "(m1 + m2)*r2^2 != (m1 + m2)*((r1 + r2)/2)^2"
+        ],
+        "answer": "m1*r1^2 + m2*r2^2",
+        "distractors": [
+          "m1*r1 + m2*r2",
+          "(m1 + m2)*r2^2",
+          "(m1 + m2)*((r1 + r2)/2)^2"
+        ],
+        "decimals": 2,
+        "relation": "X = {m1}*{r1}^2 + {m2}*{r2}^2"
+      },
+      "page": "C19-APPH05-3",
+      "lang": "en",
+      "stem": {
+        "en": "A light rod turns about one end. A {m1} kg mass sits {r1} m from that end and a {m2} kg mass sits {r2} m from it. What is the rod’s rotational inertia about that end, in kg·m²?",
+        "uz": "Yengil sterjen bir uchi atrofida aylanadi. Shu uchdan {r1} m uzoqlikda {m1} kg, {r2} m uzoqlikda {m2} kg massali yuk bor. Sterjenning shu uchga nisbatan inersiya momenti necha kg·m²?",
+        "ru": "Лёгкий стержень вращается вокруг оси на одном конце. В {r1} м от этого конца закреплён груз массой {m1} кг, в {r2} м — груз массой {m2} кг. Каков момент инерции стержня относительно этой оси (в кг·м²)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "I = Σmr² = {m1} × {r1}² + {m2} × {r2}² = {ANS} kg·m².",
+        "uz": "I = Σmr² = {m1} × {r1}² + {m2} × {r2}² = {ANS} kg·m².",
+        "ru": "I = Σmr² = {m1} × {r1}² + {m2} × {r2}² = {ANS} кг·м²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.6,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph6101",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rotational_kinetic_energy",
+      "family": {
+        "template": "A flywheel with rotational inertia I = {I} kg·m² spins at ω = {w} rad/s. What is its rotational kinetic energy, in J?",
+        "params": {
+          "I": {
+            "min": 1,
+            "max": 10
+          },
+          "w": {
+            "min": 3,
+            "max": 12
+          }
+        },
+        "constraints": [
+          "(I*w*w) % 2 == 0",
+          "!(I == 2 && w == 5)",
+          "!(I == 4 && w == 3)"
+        ],
+        "answer": "I*w^2/2",
+        "distractors": [
+          "I*w/2",
+          "I*w^2",
+          "I*w"
+        ],
+        "integer": true,
+        "decimals": 1,
+        "relation": "X = 1/2*{I}*{w}^2"
+      },
+      "page": "C19-APPH06-1",
+      "lang": "en",
+      "stem": {
+        "en": "A flywheel with rotational inertia I = {I} kg·m² spins at ω = {w} rad/s. What is its rotational kinetic energy, in J?",
+        "uz": "Inersiya momenti I = {I} kg·m² boʻlgan maxovik ω = {w} rad/s burchak tezlik bilan aylanmoqda. Uning aylanma harakat kinetik energiyasi necha J?",
+        "ru": "Маховик с моментом инерции I = {I} кг·м² вращается с угловой скоростью ω = {w} рад/с. Какова его кинетическая энергия вращения (в Дж)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "K = ½Iω² = ½ × {I} × {w}² = {ANS} J.",
+        "uz": "K = ½Iω² = ½ × {I} × {w}² = {ANS} J.",
+        "ru": "K = ½Iω² = ½ × {I} × {w}² = {ANS} Дж."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph6102",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "torque_work",
+      "family": {
+        "template": "A wheel with rotational inertia I = {I} kg·m² starts from rest. A constant torque τ = {tau} N·m turns it through an angle θ = {th} rad. With no friction, what is its angular velocity then, in rad/s?",
+        "params": {
+          "I": {
+            "values": [
+              1,
+              2,
+              4,
+              5,
+              8,
+              10
+            ]
+          },
+          "w": {
+            "min": 2,
+            "max": 10
+          },
+          "th": {
+            "values": [
+              2,
+              4,
+              5,
+              8,
+              10,
+              16,
+              20,
+              25
+            ]
+          }
+        },
+        "derived": {
+          "tau": "I*w^2/(2*th)",
+          "w2": "2*tau*th/I"
+        },
+        "constraints": [
+          "tau == floor(tau)",
+          "tau >= 1",
+          "tau <= 200",
+          "tau*th/I != w",
+          "tau*th != 2*tau*th/I",
+          "tau*th != tau*th/I",
+          "tau*th != w",
+          "w*w != w"
+        ],
+        "answer": "sqrt(2*tau*th/I)",
+        "distractors": [
+          "2*tau*th/I",
+          "tau*th/I",
+          "tau*th"
+        ],
+        "integer": true,
+        "decimals": 1,
+        "relation": "{tau}*{th} = 1/2*{I}*X^2; X > 0"
+      },
+      "page": "C19-APPH06-1",
+      "lang": "en",
+      "stem": {
+        "en": "A wheel with rotational inertia I = {I} kg·m² starts from rest. A constant torque τ = {tau} N·m turns it through an angle θ = {th} rad. With no friction, what is its angular velocity then, in rad/s?",
+        "uz": "Inersiya momenti I = {I} kg·m² boʻlgan gʻildirak tinch holatdan aylana boshlaydi. τ = {tau} N·m oʻzgarmas kuch momenti uni θ = {th} rad burchakka buradi. Ishqalanish boʻlmasa, shundan keyin uning burchak tezligi necha rad/s?",
+        "ru": "Колесо с моментом инерции I = {I} кг·м² начинает вращаться из состояния покоя. Постоянный момент силы τ = {tau} Н·м поворачивает его на угол θ = {th} рад. Трения нет. Какова теперь его угловая скорость (в рад/с)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Work = ΔK: τθ = ½Iω², so {tau} × {th} = ½ × {I} × ω², ω² = {w2} and ω = {ANS} rad/s.",
+        "uz": "Ish = ΔK: τθ = ½Iω², demak {tau} × {th} = ½ × {I} × ω², ω² = {w2} va ω = {ANS} rad/s.",
+        "ru": "Работа = ΔK: τθ = ½Iω², значит, {tau} × {th} = ½ × {I} × ω², ω² = {w2} и ω = {ANS} рад/с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.0,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph6103",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "torque_work",
+      "family": {
+        "template": "A flywheel with rotational inertia I = {I} kg·m² speeds up from ω₀ = {w1} rad/s to ω = {w2} rad/s. How much work, in J, did the torque on it do?",
+        "params": {
+          "I": {
+            "min": 1,
+            "max": 8
+          },
+          "w1": {
+            "min": 1,
+            "max": 6
+          },
+          "dw": {
+            "min": 2,
+            "max": 6
+          }
+        },
+        "derived": {
+          "w2": "w1 + dw"
+        },
+        "constraints": [
+          "I*(w2 - w1)^2/2 != I*(w2 - w1)/2"
+        ],
+        "answer": "I*(w2^2 - w1^2)/2",
+        "distractors": [
+          "I*(w2 - w1)^2/2",
+          "I*w2^2/2",
+          "I*(w2 - w1)/2"
+        ],
+        "decimals": 1,
+        "relation": "X = 1/2*{I}*{w2}^2 - 1/2*{I}*{w1}^2"
+      },
+      "page": "C19-APPH06-1",
+      "lang": "en",
+      "stem": {
+        "en": "A flywheel with rotational inertia I = {I} kg·m² speeds up from ω₀ = {w1} rad/s to ω = {w2} rad/s. How much work, in J, did the torque on it do?",
+        "uz": "Inersiya momenti I = {I} kg·m² boʻlgan maxovikning burchak tezligi ω₀ = {w1} rad/s dan ω = {w2} rad/s gacha ortadi. Unga taʼsir qilgan kuch momenti necha J ish bajargan?",
+        "ru": "Маховик с моментом инерции I = {I} кг·м² разгоняется от ω₀ = {w1} рад/с до ω = {w2} рад/с. Какую работу (в Дж) совершил действующий на него момент силы?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "W = ΔK = ½Iω² − ½Iω₀² = ½ × {I} × ({w2}² − {w1}²) = {ANS} J.",
+        "uz": "W = ΔK = ½Iω² − ½Iω₀² = ½ × {I} × ({w2}² − {w1}²) = {ANS} J.",
+        "ru": "W = ΔK = ½Iω² − ½Iω₀² = ½ × {I} × ({w2}² − {w1}²) = {ANS} Дж."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph6201",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "angular_momentum_conservation",
+      "family": {
+        "template": "A skater spins at ω₁ = {w1} rad/s with rotational inertia I₁ = {I1} kg·m². She pulls her arms in, and her rotational inertia becomes I₂ = {I2} kg·m². What is her new angular velocity, in rad/s?",
+        "params": {
+          "I1": {
+            "values": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              8
+            ]
+          },
+          "I2": {
+            "values": [
+              1,
+              1.5,
+              2,
+              3,
+              4
+            ]
+          },
+          "w1": {
+            "min": 1,
+            "max": 6
+          }
+        },
+        "constraints": [
+          "I2 < I1",
+          "I1*w1/I2 == floor(I1*w1/I2)",
+          "!(I1 == 4 && I2 == 2 && w1 == 3)",
+          "!(I1 == 6 && I2 == 3 && w1 == 2)",
+          "I1*w1/I2 != I1*w1",
+          "I1*w1/I2 != w1 + I1 - I2",
+          "I1*w1 != w1 + I1 - I2"
+        ],
+        "answer": "I1*w1/I2",
+        "distractors": [
+          "w1",
+          "I1*w1",
+          "w1 + I1 - I2"
+        ],
+        "integer": true,
+        "decimals": 1,
+        "relation": "{I1}*{w1} = {I2}*X"
+      },
+      "page": "C19-APPH06-2",
+      "lang": "en",
+      "stem": {
+        "en": "A skater spins at ω₁ = {w1} rad/s with rotational inertia I₁ = {I1} kg·m². She pulls her arms in, and her rotational inertia becomes I₂ = {I2} kg·m². What is her new angular velocity, in rad/s?",
+        "uz": "Konkichi qiz I₁ = {I1} kg·m² inersiya momenti bilan ω₁ = {w1} rad/s burchak tezlikda aylanmoqda. U qoʻllarini tanasiga yaqinlashtiradi va inersiya momenti I₂ = {I2} kg·m² boʻladi. Endi uning burchak tezligi necha rad/s?",
+        "ru": "Фигуристка вращается с угловой скоростью ω₁ = {w1} рад/с, её момент инерции I₁ = {I1} кг·м². Она прижимает руки к телу, и момент инерции становится I₂ = {I2} кг·м². Какой станет её угловая скорость (в рад/с)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "No torque from outside, so L stays: I₁ω₁ = I₂ω₂, {I1} × {w1} = {I2} × ω₂, ω₂ = {ANS} rad/s.",
+        "uz": "Tashqi moment yoʻq, demak L saqlanadi: I₁ω₁ = I₂ω₂, {I1} × {w1} = {I2} × ω₂, ω₂ = {ANS} rad/s.",
+        "ru": "Внешнего момента нет, значит, L сохраняется: I₁ω₁ = I₂ω₂, {I1} × {w1} = {I2} × ω₂, ω₂ = {ANS} рад/с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph6202",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "angular_momentum",
+      "family": {
+        "template": "A wheel with rotational inertia I = {I} kg·m² is at rest. A constant net torque τ = {tau} N·m acts on it for {t} s. What is its angular velocity then, in rad/s?",
+        "params": {
+          "I": {
+            "values": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              8
+            ]
+          },
+          "k": {
+            "min": 1,
+            "max": 5
+          },
+          "t": {
+            "min": 2,
+            "max": 6
+          }
+        },
+        "derived": {
+          "tau": "k*I"
+        },
+        "constraints": [
+          "!(I == 3 && k == 2 && t == 4)",
+          "tau/I != tau*t/I"
+        ],
+        "answer": "tau*t/I",
+        "distractors": [
+          "tau*t",
+          "tau/I",
+          "tau*t*I"
+        ],
+        "integer": true,
+        "relation": "{tau}*{t} = {I}*X - {I}*0"
+      },
+      "page": "C19-APPH06-2",
+      "lang": "en",
+      "stem": {
+        "en": "A wheel with rotational inertia I = {I} kg·m² is at rest. A constant net torque τ = {tau} N·m acts on it for {t} s. What is its angular velocity then, in rad/s?",
+        "uz": "Inersiya momenti I = {I} kg·m² boʻlgan gʻildirak tinch turibdi. Unga {t} s davomida τ = {tau} N·m oʻzgarmas natijaviy kuch momenti taʼsir qiladi. Shundan keyin uning burchak tezligi necha rad/s?",
+        "ru": "Колесо с моментом инерции I = {I} кг·м² покоится. На него в течение {t} с действует постоянный суммарный момент сил τ = {tau} Н·м. Какой станет его угловая скорость (в рад/с)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Angular impulse = ΔL: τΔt = Iω, {tau} × {t} = {I} × ω, so ω = {ANS} rad/s.",
+        "uz": "Moment impulsi = ΔL: τΔt = Iω, {tau} × {t} = {I} × ω, demak ω = {ANS} rad/s.",
+        "ru": "Импульс момента = ΔL: τΔt = Iω, {tau} × {t} = {I} × ω, значит, ω = {ANS} рад/с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.6,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph6203",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "angular_momentum_conservation",
+      "family": {
+        "template": "A disk with rotational inertia I₁ = {I1} kg·m² spins at ω₁ = {w1} rad/s. A second disk with I₂ = {I2} kg·m², not turning, is dropped onto it, and the two turn together. What is their common angular velocity, in rad/s?",
+        "params": {
+          "I1": {
+            "min": 1,
+            "max": 6
+          },
+          "I2": {
+            "min": 1,
+            "max": 6
+          },
+          "w1": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "constraints": [
+          "I1 != I2",
+          "I1*w1/(I1 + I2) == floor(I1*w1/(I1 + I2))",
+          "I1*w1/I2 != w1",
+          "I1*w1/I2 != w1/2"
+        ],
+        "answer": "I1*w1/(I1 + I2)",
+        "distractors": [
+          "w1/2",
+          "w1",
+          "I1*w1/I2"
+        ],
+        "decimals": 2,
+        "relation": "{I1}*{w1} + {I2}*0 = ({I1} + {I2})*X"
+      },
+      "page": "C19-APPH06-2",
+      "lang": "en",
+      "stem": {
+        "en": "A disk with rotational inertia I₁ = {I1} kg·m² spins at ω₁ = {w1} rad/s. A second disk with I₂ = {I2} kg·m², not turning, is dropped onto it, and the two turn together. What is their common angular velocity, in rad/s?",
+        "uz": "Inersiya momenti I₁ = {I1} kg·m² boʻlgan disk ω₁ = {w1} rad/s burchak tezlik bilan aylanmoqda. Uning ustiga aylanmayotgan, inersiya momenti I₂ = {I2} kg·m² boʻlgan ikkinchi disk tushiriladi va ular birga aylanadi. Ularning umumiy burchak tezligi necha rad/s?",
+        "ru": "Диск с моментом инерции I₁ = {I1} кг·м² вращается с угловой скоростью ω₁ = {w1} рад/с. На него роняют второй, невращающийся диск с моментом инерции I₂ = {I2} кг·м², и они начинают вращаться вместе. Какова их общая угловая скорость (в рад/с)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "L stays the same: {I1} × {w1} = ({I1} + {I2}) × ω, so ω = {ANS} rad/s.",
+        "uz": "L oʻzgarmaydi: {I1} × {w1} = ({I1} + {I2}) × ω, demak ω = {ANS} rad/s.",
+        "ru": "L не меняется: {I1} × {w1} = ({I1} + {I2}) × ω, значит, ω = {ANS} рад/с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph6301",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rolling",
+      "family": {
+        "template": "A {m} kg solid cylinder (I = ½mR²) rolls without slipping at v = {v} m/s. What is its total kinetic energy, in J?",
+        "params": {
+          "m": {
+            "min": 1,
+            "max": 10,
+            "not": [
+              8
+            ]
+          },
+          "v": {
+            "min": 2,
+            "max": 8
+          }
+        },
+        "constraints": [
+          "(3*m*v*v) % 4 == 0",
+          "!(m == 2 && v == 4)",
+          "!(m == 4 && v == 3)"
+        ],
+        "answer": "3*m*v^2/4",
+        "distractors": [
+          "m*v^2/2",
+          "m*v^2/4",
+          "m*v^2"
+        ],
+        "integer": true,
+        "relation": "X = 1/2*{m}*{v}^2 + 1/2*(1/2*{m})*{v}^2"
+      },
+      "page": "C19-APPH06-3",
+      "lang": "en",
+      "stem": {
+        "en": "A {m} kg solid cylinder (I = ½mR²) rolls without slipping at v = {v} m/s. What is its total kinetic energy, in J?",
+        "uz": "{m} kg massali yaxlit silindr (I = ½mR²) sirpanmasdan v = {v} m/s tezlik bilan dumalamoqda. Uning toʻliq kinetik energiyasi necha J?",
+        "ru": "Сплошной цилиндр массой {m} кг (I = ½mR²) катится без проскальзывания со скоростью v = {v} м/с. Какова его полная кинетическая энергия (в Дж)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "K = ½mv² + ½Iω² with ω = v/R: ½mv² + ¼mv² = ¾mv² = ¾ × {m} × {v}² = {ANS} J.",
+        "uz": "ω = v/R bilan K = ½mv² + ½Iω²: ½mv² + ¼mv² = ¾mv² = ¾ × {m} × {v}² = {ANS} J.",
+        "ru": "K = ½mv² + ½Iω², где ω = v/R: ½mv² + ¼mv² = ¾mv² = ¾ × {m} × {v}² = {ANS} Дж."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.8,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph6302",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "rolling",
+      "family": {
+        "template": "A {m} kg hoop (I = mR²) rolls without slipping from rest down a ramp and drops a height h = {h} m. At the bottom, how much of its kinetic energy, in J, is rotational? (Use g = 9.8 m/s².)",
+        "params": {
+          "m": {
+            "min": 1,
+            "max": 7
+          },
+          "h": {
+            "values": [
+              0.5,
+              1,
+              1.5,
+              2,
+              2.5,
+              3,
+              4,
+              5
+            ]
+          }
+        },
+        "derived": {
+          "E": "9.8*m*h"
+        },
+        "constraints": [
+          "9.8*m*h/3 != m*h/2"
+        ],
+        "answer": "9.8*m*h/2",
+        "distractors": [
+          "9.8*m*h",
+          "9.8*m*h/3",
+          "m*h/2"
+        ],
+        "decimals": 2,
+        "relation": "{m}*9.8*{h} = 2*X"
+      },
+      "page": "C19-APPH06-3",
+      "lang": "en",
+      "stem": {
+        "en": "A {m} kg hoop (I = mR²) rolls without slipping from rest down a ramp and drops a height h = {h} m. At the bottom, how much of its kinetic energy, in J, is rotational? (Use g = 9.8 m/s².)",
+        "uz": "{m} kg massali halqa (I = mR²) tinch holatdan qiya tekislik boʻylab sirpanmasdan dumalab tushadi va h = {h} m balandlikka pasayadi. Pastda uning kinetik energiyasining necha J qismi aylanma harakatga toʻgʻri keladi? (g = 9,8 m/s² deb oling.)",
+        "ru": "Обруч массой {m} кг (I = mR²) скатывается из состояния покоя без проскальзывания по наклонной плоскости и опускается на высоту h = {h} м. Сколько джоулей его кинетической энергии внизу приходится на вращение? (Примите g = 9,8 м/с².)"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "For a hoop, ½Iω² = ½mR²(v/R)² = ½mv²: the two parts are equal. So mgh = {m} × 9.8 × {h} = {E} J splits in half, so {ANS} J is rotational.",
+        "uz": "Halqa uchun ½Iω² = ½mR²(v/R)² = ½mv²: ikki qism teng. Demak mgh = {m} × 9,8 × {h} = {E} J teng ikkiga boʻlinadi, aylanma harakatga {ANS} J toʻgʻri keladi.",
+        "ru": "Для обруча ½Iω² = ½mR²(v/R)² = ½mv²: обе части равны. Значит, mgh = {m} × 9,8 × {h} = {E} Дж делится пополам, и на вращение приходится {ANS} Дж."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 1.1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph6303",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "orbits",
+      "family": {
+        "template": "At its farthest point, a satellite on an elliptical orbit is {r1} km from the planet’s centre and moves at {v1} km/s. At its nearest point it is {r2} km from the centre. How fast, in km/s, does it move there?",
+        "params": {
+          "r1": {
+            "values": [
+              8000,
+              9000,
+              10000,
+              12000,
+              15000,
+              16000,
+              18000,
+              20000
+            ]
+          },
+          "r2": {
+            "values": [
+              4000,
+              5000,
+              6000,
+              8000,
+              9000,
+              10000
+            ]
+          },
+          "v1": {
+            "values": [
+              1,
+              1.5,
+              2,
+              2.5,
+              3,
+              4
+            ]
+          }
+        },
+        "constraints": [
+          "r2 < r1",
+          "(100*v1*r1) % r2 == 0",
+          "!(r1 == 9000 && r2 == 6000 && v1 == 2)",
+          "!(r1 == 8000 && r2 == 6000 && v1 == 3)"
+        ],
+        "answer": "v1*r1/r2",
+        "distractors": [
+          "v1",
+          "v1*r2/r1",
+          "v1*(r1/r2)^2"
+        ],
+        "decimals": 2,
+        "relation": "{v1}*{r1} = X*{r2}"
+      },
+      "page": "C19-APPH06-3",
+      "lang": "en",
+      "stem": {
+        "en": "At its farthest point, a satellite on an elliptical orbit is {r1} km from the planet’s centre and moves at {v1} km/s. At its nearest point it is {r2} km from the centre. How fast, in km/s, does it move there?",
+        "uz": "Elliptik orbitadagi sunʼiy yoʻldosh eng uzoq nuqtasida sayyora markazidan {r1} km uzoqlikda boʻlib, {v1} km/s tezlik bilan harakatlanadi. Eng yaqin nuqtasida u markazdan {r2} km uzoqlikda. U yerda yoʻldosh necha km/s tezlik bilan harakatlanadi?",
+        "ru": "В самой дальней точке эллиптической орбиты спутник находится в {r1} км от центра планеты и движется со скоростью {v1} км/с. В самой близкой точке он находится в {r2} км от центра. С какой скоростью (в км/с) он движется там?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Gravity makes no torque about the planet’s centre, so L = mvr stays the same: {v1} × {r1} = v × {r2}, v = {ANS} km/s.",
+        "uz": "Tortishish kuchi sayyora markaziga nisbatan moment hosil qilmaydi, demak L = mvr oʻzgarmaydi: {v1} × {r1} = v × {r2}, v = {ANS} km/s.",
+        "ru": "Сила тяготения не создаёт момента относительно центра планеты, значит, L = mvr не меняется: {v1} × {r1} = v × {r2}, v = {ANS} км/с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.9,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph7101",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "simple_harmonic_motion",
+      "family": {
+        "template": "A {m} kg block on a smooth floor is attached to a spring with k = {k} N/m. It is pulled {x} m from equilibrium and let go. What is the size of its acceleration at that moment, in m/s²?",
+        "params": {
+          "m": {
+            "values": [
+              1,
+              2,
+              4,
+              5
+            ]
+          },
+          "k": {
+            "values": [
+              20,
+              40,
+              50,
+              80,
+              100,
+              200,
+              400,
+              500
+            ]
+          },
+          "x": {
+            "values": [
+              0.05,
+              0.1,
+              0.2,
+              0.25,
+              0.5
+            ]
+          }
+        },
+        "derived": {
+          "F": "k*x"
+        },
+        "constraints": [
+          "k*x/m == floor(k*x/m)",
+          "!(m == 2 && k == 80 && x == 0.1)",
+          "!(m == 4 && k == 200 && x == 0.2)",
+          "k*x/m != k/m",
+          "k*x != k/m",
+          "k/m != k*x*m",
+          "k*x/m != k*x*m"
+        ],
+        "answer": "k*x/m",
+        "distractors": [
+          "k*x",
+          "k/m",
+          "k*x*m"
+        ],
+        "decimals": 2,
+        "relation": "{k}*{x} = {m}*X"
+      },
+      "page": "C19-APPH07-1",
+      "lang": "en",
+      "stem": {
+        "en": "A {m} kg block on a smooth floor is attached to a spring with k = {k} N/m. It is pulled {x} m from equilibrium and let go. What is the size of its acceleration at that moment, in m/s²?",
+        "uz": "Silliq poldagi {m} kg massali brusok bikrligi k = {k} N/m boʻlgan prujinaga biriktirilgan. U muvozanat holatidan {x} m tortiladi va qoʻyib yuboriladi. Shu paytda uning tezlanishi moduli necha m/s²?",
+        "ru": "Брусок массой {m} кг на гладком полу прикреплён к пружине жёсткостью k = {k} Н/м. Его оттягивают на {x} м от положения равновесия и отпускают. Каков модуль его ускорения в этот момент (в м/с²)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "F = kx = {k} × {x} = {F} N, pointing back to equilibrium; a = F/m = {F}/{m} = {ANS} m/s².",
+        "uz": "F = kx = {k} × {x} = {F} N, muvozanat holatiga yoʻnalgan; a = F/m = {F}/{m} = {ANS} m/s².",
+        "ru": "F = kx = {k} × {x} = {F} Н, к положению равновесия; a = F/m = {F}/{m} = {ANS} м/с²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph7102",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "period_frequency",
+      "family": {
+        "template": "A mass on a spring makes {n} full cycles in {t} s. What is the frequency of its motion, in Hz?",
+        "params": {
+          "n": {
+            "min": 6,
+            "max": 60
+          },
+          "t": {
+            "values": [
+              2,
+              4,
+              5,
+              10,
+              12,
+              20,
+              30
+            ]
+          }
+        },
+        "constraints": [
+          "(100*n) % t == 0",
+          "!(n == 30 && t == 12)",
+          "!(n == 20 && t == 10)",
+          "n/t != t/n",
+          "n/t != n"
+        ],
+        "answer": "n/t",
+        "distractors": [
+          "t/n",
+          "n*t",
+          "n"
+        ],
+        "decimals": 2,
+        "relation": "{n} = X*{t}"
+      },
+      "page": "C19-APPH07-1",
+      "lang": "en",
+      "stem": {
+        "en": "A mass on a spring makes {n} full cycles in {t} s. What is the frequency of its motion, in Hz?",
+        "uz": "Prujinadagi yuk {t} s ichida {n} marta toʻliq tebranadi. Uning tebranish chastotasi necha Hz?",
+        "ru": "Груз на пружине совершает {n|полное колебание|полных колебания|полных колебаний} за {t} с. Какова частота его колебаний (в Гц)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "f = cycles/time = {n}/{t} = {ANS} Hz (and T = 1/f).",
+        "uz": "f = tebranishlar soni/vaqt = {n}/{t} = {ANS} Hz (T = 1/f).",
+        "ru": "f = число колебаний/время = {n}/{t} = {ANS} Гц (а T = 1/f)."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.2,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph7103",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "simple_harmonic_motion",
+      "family": {
+        "template": "A {m} kg mass hangs at rest from a spring and stretches it by {x} m. What is the spring constant k, in N/m? (Use g = 9.8 m/s².)",
+        "params": {
+          "m": {
+            "values": [
+              0.5,
+              1,
+              1.5,
+              2,
+              2.5,
+              3,
+              4,
+              5
+            ]
+          },
+          "x": {
+            "values": [
+              0.05,
+              0.1,
+              0.2,
+              0.25,
+              0.4,
+              0.5
+            ]
+          }
+        },
+        "constraints": [
+          "9.8*m/x != m/x",
+          "m/x != 9.8*m",
+          "9.8*m*x != m/x"
+        ],
+        "answer": "9.8*m/x",
+        "distractors": [
+          "m/x",
+          "9.8*m*x",
+          "9.8*m"
+        ],
+        "decimals": 2,
+        "relation": "X*{x} = {m}*9.8"
+      },
+      "page": "C19-APPH07-1",
+      "lang": "en",
+      "stem": {
+        "en": "A {m} kg mass hangs at rest from a spring and stretches it by {x} m. What is the spring constant k, in N/m? (Use g = 9.8 m/s².)",
+        "uz": "{m} kg massali yuk prujinaga osilgan holda tinch turibdi va prujinani {x} m ga choʻzadi. Prujina bikrligi k necha N/m? (g = 9,8 m/s² deb oling.)",
+        "ru": "Груз массой {m} кг неподвижно висит на пружине и растягивает её на {x} м. Какова жёсткость пружины k (в Н/м)? (Примите g = 9,8 м/с².)"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "At rest the spring holds the weight: kx = mg, so k = {m} × 9.8/{x} = {ANS} N/m.",
+        "uz": "Tinch holatda prujina ogʻirlikni ushlab turadi: kx = mg, demak k = {m} × 9,8/{x} = {ANS} N/m.",
+        "ru": "В покое пружина удерживает вес груза: kx = mg, значит, k = {m} × 9,8/{x} = {ANS} Н/м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph7201",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "period_frequency",
+      "family": {
+        "template": "A mass on a spring has a period of {T} s. The mass is made {n} times as large, and the spring stays the same. What is the new period, in s?",
+        "params": {
+          "T": {
+            "values": [
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.8,
+              1,
+              1.2,
+              1.5,
+              2
+            ]
+          },
+          "n": {
+            "values": [
+              4,
+              9,
+              16,
+              25
+            ]
+          }
+        },
+        "derived": {
+          "s": "sqrt(n)"
+        },
+        "constraints": [
+          "!(T == 0.5 && n == 9)",
+          "!(T == 1.2 && n == 4)"
+        ],
+        "answer": "T*sqrt(n)",
+        "distractors": [
+          "T*n",
+          "T/sqrt(n)",
+          "T"
+        ],
+        "decimals": 2,
+        "relation": "X^2 = {n}*{T}^2; X > 0"
+      },
+      "page": "C19-APPH07-2",
+      "lang": "en",
+      "stem": {
+        "en": "A mass on a spring has a period of {T} s. The mass is made {n} times as large, and the spring stays the same. What is the new period, in s?",
+        "uz": "Prujinadagi yukning tebranish davri {T} s. Yuk massasi {n} marta oshiriladi, prujina esa oʻsha-oʻsha. Yangi davr necha s?",
+        "ru": "Период колебаний груза на пружине {T} с. Массу груза увеличивают в {n|раз|раза|раз}, пружина та же. Каким станет период (в с)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "T = 2π√(m/k): {n} times the mass gives √{n} = {s} times the period, so {T} × {s} = {ANS} s.",
+        "uz": "T = 2π√(m/k): massa {n} marta oshsa, davr √{n} = {s} marta ortadi, demak {T} × {s} = {ANS} s.",
+        "ru": "T = 2π√(m/k): при массе в {n|раз|раза|раз} больше период растёт в √{n} = {s|раз|раза|раз}, значит, {T} × {s} = {ANS} с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.7,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph7202",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "period_frequency",
+      "family": {
+        "template": "A simple pendulum is {L} m long. What is its period for small swings, in s? (Use g = 9.8 m/s² and π ≈ 3.14.) Round to the nearest hundredth.",
+        "params": {
+          "L": {
+            "values": [
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.8,
+              0.9,
+              1,
+              1.2,
+              1.5,
+              1.8,
+              2,
+              2.5,
+              3,
+              3.5,
+              4,
+              5
+            ]
+          }
+        },
+        "answer": "2*3.14*sqrt(L/9.8)",
+        "distractors": [
+          "2*3.14*sqrt(9.8/L)",
+          "2*3.14*L/9.8",
+          "sqrt(L/9.8)"
+        ],
+        "decimals": 2,
+        "tolerance": 0.02,
+        "relation": "X = 2*3.14*sqrt({L}/9.8)"
+      },
+      "page": "C19-APPH07-2",
+      "lang": "en",
+      "stem": {
+        "en": "A simple pendulum is {L} m long. What is its period for small swings, in s? (Use g = 9.8 m/s² and π ≈ 3.14.) Round to the nearest hundredth.",
+        "uz": "Oddiy mayatnikning uzunligi {L} m. Kichik tebranishlarda uning davri necha s? (g = 9,8 m/s² va π ≈ 3,14 deb oling.) Yuzdan birlargacha yaxlitlang.",
+        "ru": "Длина математического маятника {L} м. Каков его период при малых колебаниях (в с)? (Примите g = 9,8 м/с² и π ≈ 3,14.) Ответ округлите до сотых."
+      },
+      "answer_numeric": {
+        "tolerance": 0.02
+      },
+      "why": {
+        "en": "T = 2π√(L/g) = 2 × 3.14 × √({L}/9.8) ≈ {ANS} s.",
+        "uz": "T = 2π√(L/g) = 2 × 3,14 × √({L}/9,8) ≈ {ANS} s.",
+        "ru": "T = 2π√(L/g) = 2 × 3,14 × √({L}/9,8) ≈ {ANS} с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number rounded to hundredths.",
+        "uz": "Javobni yuzdan birlargacha yaxlitlab, son bilan kiriting.",
+        "ru": "Введите ответ числом, округлив до сотых."
+      },
+      "prior_b": 0.8,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph7203",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "period_frequency",
+      "family": {
+        "template": "A {m} kg block oscillates on a spring with k = {k} N/m. What is its period, in s? (Use π ≈ 3.14.) Round to the nearest hundredth.",
+        "params": {
+          "m": {
+            "values": [
+              1,
+              2,
+              4,
+              5
+            ]
+          },
+          "s": {
+            "values": [
+              0.1,
+              0.2,
+              0.25,
+              0.5
+            ]
+          }
+        },
+        "derived": {
+          "k": "round(m/(s*s), 6)"
+        },
+        "constraints": [
+          "k == floor(k)",
+          "!(m == 1 && k == 100)"
+        ],
+        "answer": "2*3.14*sqrt(m/k)",
+        "distractors": [
+          "2*3.14*sqrt(k/m)",
+          "2*3.14*m/k",
+          "sqrt(m/k)"
+        ],
+        "decimals": 2,
+        "tolerance": 0.02,
+        "relation": "X = 2*3.14*sqrt({m}/{k})"
+      },
+      "page": "C19-APPH07-2",
+      "lang": "en",
+      "stem": {
+        "en": "A {m} kg block oscillates on a spring with k = {k} N/m. What is its period, in s? (Use π ≈ 3.14.) Round to the nearest hundredth.",
+        "uz": "{m} kg massali brusok bikrligi k = {k} N/m boʻlgan prujinada tebranmoqda. Uning tebranish davri necha s? (π ≈ 3,14 deb oling.) Yuzdan birlargacha yaxlitlang.",
+        "ru": "Брусок массой {m} кг колеблется на пружине жёсткостью k = {k} Н/м. Каков период колебаний (в с)? (Примите π ≈ 3,14.) Ответ округлите до сотых."
+      },
+      "answer_numeric": {
+        "tolerance": 0.02
+      },
+      "why": {
+        "en": "T = 2π√(m/k) = 2 × 3.14 × √({m}/{k}) ≈ {ANS} s.",
+        "uz": "T = 2π√(m/k) = 2 × 3,14 × √({m}/{k}) ≈ {ANS} s.",
+        "ru": "T = 2π√(m/k) = 2 × 3,14 × √({m}/{k}) ≈ {ANS} с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number rounded to hundredths.",
+        "uz": "Javobni yuzdan birlargacha yaxlitlab, son bilan kiriting.",
+        "ru": "Введите ответ числом, округлив до сотых."
+      },
+      "prior_b": 0.8,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph7301",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "shm_energy",
+      "family": {
+        "template": "A {m} kg block on a spring with k = {k} N/m oscillates on a smooth floor with amplitude A = {A} m. What is its largest speed, in m/s?",
+        "params": {
+          "m": {
+            "values": [
+              1,
+              2,
+              4,
+              5
+            ]
+          },
+          "w": {
+            "values": [
+              2,
+              4,
+              5,
+              8,
+              10
+            ]
+          },
+          "A": {
+            "values": [
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5
+            ]
+          }
+        },
+        "derived": {
+          "k": "m*w^2"
+        },
+        "constraints": [
+          "!(m == 2 && w == 10 && A == 0.3)",
+          "!(m == 4 && w == 10 && A == 0.5)",
+          "A*w != k*A^2/m",
+          "A*w != k*A^2/2",
+          "k*A^2/m != k*A^2/2",
+          "A*k/m != k*A^2/2",
+          "A*k/m != k*A^2/m"
+        ],
+        "answer": "A*sqrt(k/m)",
+        "distractors": [
+          "k*A^2/m",
+          "k*A^2/2",
+          "A*k/m"
+        ],
+        "decimals": 2,
+        "relation": "1/2*{k}*{A}^2 = 1/2*{m}*X^2; X > 0"
+      },
+      "page": "C19-APPH07-3",
+      "lang": "en",
+      "stem": {
+        "en": "A {m} kg block on a spring with k = {k} N/m oscillates on a smooth floor with amplitude A = {A} m. What is its largest speed, in m/s?",
+        "uz": "Bikrligi k = {k} N/m boʻlgan prujinadagi {m} kg massali brusok silliq polda A = {A} m amplituda bilan tebranmoqda. Uning eng katta tezligi necha m/s?",
+        "ru": "Брусок массой {m} кг на пружине жёсткостью k = {k} Н/м колеблется на гладком полу с амплитудой A = {A} м. Какова его наибольшая скорость (в м/с)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Energy: ½kA² = ½mv_max², so v_max = A√(k/m) = {A} × √({k}/{m}) = {ANS} m/s.",
+        "uz": "Energiya: ½kA² = ½mv_max², demak v_max = A√(k/m) = {A} × √({k}/{m}) = {ANS} m/s.",
+        "ru": "Энергия: ½kA² = ½mv_max², значит, v_max = A√(k/m) = {A} × √({k}/{m}) = {ANS} м/с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.9,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph7302",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "shm_energy",
+      "family": {
+        "template": "A block on a spring with k = {k} N/m oscillates on a smooth floor with amplitude A = {A} m. What is its kinetic energy, in J, when it is {x} m from equilibrium?",
+        "params": {
+          "k": {
+            "values": [
+              50,
+              100,
+              200,
+              400,
+              500
+            ]
+          },
+          "A": {
+            "values": [
+              0.2,
+              0.3,
+              0.4,
+              0.5
+            ]
+          },
+          "x": {
+            "values": [
+              0.1,
+              0.2,
+              0.3
+            ]
+          }
+        },
+        "derived": {
+          "E": "k*A^2/2",
+          "U": "k*x^2/2"
+        },
+        "constraints": [
+          "x < A",
+          "k*x^2/2 != k*(A - x)^2/2",
+          "k*(A^2 - x^2)/2 != k*x^2/2"
+        ],
+        "answer": "k*(A^2 - x^2)/2",
+        "distractors": [
+          "k*A^2/2",
+          "k*x^2/2",
+          "k*(A - x)^2/2"
+        ],
+        "decimals": 2,
+        "relation": "1/2*{k}*{A}^2 = 1/2*{k}*{x}^2 + X"
+      },
+      "page": "C19-APPH07-3",
+      "lang": "en",
+      "stem": {
+        "en": "A block on a spring with k = {k} N/m oscillates on a smooth floor with amplitude A = {A} m. What is its kinetic energy, in J, when it is {x} m from equilibrium?",
+        "uz": "Bikrligi k = {k} N/m boʻlgan prujinadagi brusok silliq polda A = {A} m amplituda bilan tebranmoqda. Muvozanat holatidan {x} m uzoqlikda uning kinetik energiyasi necha J?",
+        "ru": "Брусок на пружине жёсткостью k = {k} Н/м колеблется на гладком полу с амплитудой A = {A} м. Какова его кинетическая энергия (в Дж), когда он находится в {x} м от положения равновесия?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Total E = ½kA² = {E} J; at x the spring holds ½kx² = {U} J, so K = {E} − {U} = {ANS} J.",
+        "uz": "Toʻliq E = ½kA² = {E} J; x da prujinada ½kx² = {U} J, demak K = {E} − {U} = {ANS} J.",
+        "ru": "Полная E = ½kA² = {E} Дж; при x в пружине ½kx² = {U} Дж, значит, K = {E} − {U} = {ANS} Дж."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 1.0,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph7303",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "shm_energy",
+      "family": {
+        "template": "An oscillator on a spring has a total energy E = {E} J when its amplitude is {A1} cm. With the same spring and block, the amplitude is made {A2} cm. What is the total energy now, in J?",
+        "params": {
+          "E": {
+            "values": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              8,
+              10
+            ]
+          },
+          "A1": {
+            "values": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "A2": {
+            "values": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              8,
+              10
+            ]
+          }
+        },
+        "constraints": [
+          "A1 != A2",
+          "(100*E*A2*A2) % (A1*A1) == 0"
+        ],
+        "answer": "E*(A2/A1)^2",
+        "distractors": [
+          "E*A2/A1",
+          "E",
+          "E*(A1/A2)^2"
+        ],
+        "decimals": 2,
+        "relation": "X/{E} = ({A2}/{A1})^2"
+      },
+      "page": "C19-APPH07-3",
+      "lang": "en",
+      "stem": {
+        "en": "An oscillator on a spring has a total energy E = {E} J when its amplitude is {A1} cm. With the same spring and block, the amplitude is made {A2} cm. What is the total energy now, in J?",
+        "uz": "Prujinali tebrangichning amplitudasi {A1} sm boʻlganda toʻliq energiyasi E = {E} J. Prujina va brusok oʻsha, amplituda {A2} sm qilinadi. Endi toʻliq energiya necha J?",
+        "ru": "Полная энергия пружинного осциллятора E = {E} Дж при амплитуде {A1} см. С той же пружиной и тем же бруском амплитуду делают {A2} см. Какой станет полная энергия (в Дж)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "E = ½kA² grows with A²: ({A2}/{A1})² × {E} = {ANS} J.",
+        "uz": "E = ½kA² A² ga qarab ortadi: ({A2}/{A1})² × {E} = {ANS} J.",
+        "ru": "E = ½kA² растёт как A²: ({A2}/{A1})² × {E} = {ANS} Дж."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph8101",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "density",
+      "family": {
+        "template": "A block has a mass of {m} kg and a volume of {V} m³. What is its density, in kg/m³?",
+        "params": {
+          "V": {
+            "values": [
+              0.001,
+              0.002,
+              0.004,
+              0.005,
+              0.01,
+              0.02
+            ]
+          },
+          "rho": {
+            "values": [
+              500,
+              600,
+              800,
+              900,
+              1200,
+              2000,
+              2500,
+              2700,
+              7800,
+              8900,
+              11300
+            ]
+          }
+        },
+        "derived": {
+          "m": "round(rho*V, 4)"
+        },
+        "constraints": [
+          "!(rho == 2700 && V == 0.002)",
+          "!(rho == 7800 && V == 0.001)"
+        ],
+        "answer": "m/V",
+        "distractors": [
+          "m/V/10",
+          "m/V*10",
+          "m/V/1000"
+        ],
+        "decimals": 5,
+        "relation": "{m} = X*{V}"
+      },
+      "page": "C19-APPH08-1",
+      "lang": "en",
+      "stem": {
+        "en": "A block has a mass of {m} kg and a volume of {V} m³. What is its density, in kg/m³?",
+        "uz": "Brusokning massasi {m} kg, hajmi {V} m³. Uning zichligi necha kg/m³?",
+        "ru": "Масса бруска {m} кг, его объём {V} м³. Какова его плотность (в кг/м³)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "ρ = m/V = {m} ÷ {V} = {ANS} kg/m³.",
+        "uz": "ρ = m/V = {m} ÷ {V} = {ANS} kg/m³.",
+        "ru": "ρ = m/V = {m} ÷ {V} = {ANS} кг/м³."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.2,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph8102",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "pressure",
+      "family": {
+        "template": "A box of weight W = {F} N rests on one flat face of area {A} m². What pressure, in Pa, does it put on the floor?",
+        "params": {
+          "F": {
+            "min": 100,
+            "max": 1200,
+            "step": 50
+          },
+          "A": {
+            "values": [
+              0.05,
+              0.1,
+              0.2,
+              0.25,
+              0.4,
+              0.5
+            ]
+          }
+        },
+        "constraints": [
+          "F/A == floor(F/A)",
+          "F*A != F/A/1000",
+          "F != F/A/1000"
+        ],
+        "answer": "F/A",
+        "distractors": [
+          "F*A",
+          "F",
+          "F/A/1000"
+        ],
+        "integer": true,
+        "decimals": 3,
+        "relation": "{F} = X*{A}"
+      },
+      "page": "C19-APPH08-1",
+      "lang": "en",
+      "stem": {
+        "en": "A box of weight W = {F} N rests on one flat face of area {A} m². What pressure, in Pa, does it put on the floor?",
+        "uz": "Ogʻirligi W = {F} N boʻlgan quti yuzi {A} m² boʻlgan tekis tomoni bilan polda turibdi. U polga necha Pa bosim beradi?",
+        "ru": "Ящик весом W = {F} Н стоит на полу гранью площадью {A} м². Какое давление (в Па) он оказывает на пол?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "P = F/A = {F}/{A} = {ANS} Pa.",
+        "uz": "P = F/A = {F}/{A} = {ANS} Pa.",
+        "ru": "P = F/A = {F}/{A} = {ANS} Па."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.1,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph8103",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "pressure",
+      "family": {
+        "template": "A force F = {F} N presses on an area of {a} cm². What pressure, in Pa, does it make?",
+        "params": {
+          "F": {
+            "values": [
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              80,
+              100
+            ]
+          },
+          "a": {
+            "values": [
+              1,
+              2,
+              4,
+              5,
+              10,
+              20
+            ]
+          }
+        },
+        "derived": {
+          "Am": "a/10000"
+        },
+        "constraints": [
+          "F/(a/10000) == floor(F/(a/10000))",
+          "!(F == 50 && a == 2)",
+          "F/a != F*a",
+          "100*F/a != F*a"
+        ],
+        "answer": "F/(a/10000)",
+        "distractors": [
+          "F/a",
+          "100*F/a",
+          "F*a"
+        ],
+        "integer": true,
+        "relation": "{F} = X*({a}/10000)"
+      },
+      "page": "C19-APPH08-1",
+      "lang": "en",
+      "stem": {
+        "en": "A force F = {F} N presses on an area of {a} cm². What pressure, in Pa, does it make?",
+        "uz": "F = {F} N kuch {a} sm² yuzaga bosadi. U necha Pa bosim hosil qiladi?",
+        "ru": "Сила F = {F} Н давит на площадку площадью {a} см². Какое давление (в Па) она создаёт?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{a} cm² = {a} × 0.0001 m² = {Am} m², so P = F/A = {F} ÷ {Am} = {ANS} Pa.",
+        "uz": "{a} sm² = {a} × 0,0001 m² = {Am} m², demak P = F/A = {F} ÷ {Am} = {ANS} Pa.",
+        "ru": "{a} см² = {a} × 0,0001 м² = {Am} м², значит, P = F/A = {F} ÷ {Am} = {ANS} Па."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.7,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph8201",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "buoyancy",
+      "family": {
+        "template": "A stone with a volume of {V} m³ is held fully under water (ρ = 1,000 kg/m³). What buoyant force, in N, does the water put on it? (Use g = 9.8 m/s².)",
+        "params": {
+          "V": {
+            "values": [
+              0.001,
+              0.0015,
+              0.0025,
+              0.003,
+              0.004,
+              0.006,
+              0.007,
+              0.008,
+              0.009,
+              0.01,
+              0.012,
+              0.015,
+              0.016,
+              0.02,
+              0.025,
+              0.03
+            ]
+          }
+        },
+        "answer": "1000*V*9.8",
+        "distractors": [
+          "1000*V",
+          "round(9.8*V, 2)",
+          "round(1000*V/9.8, 2)"
+        ],
+        "decimals": 4,
+        "relation": "X = 1000*{V}*9.8"
+      },
+      "page": "C19-APPH08-2",
+      "lang": "en",
+      "stem": {
+        "en": "A stone with a volume of {V} m³ is held fully under water (ρ = 1,000 kg/m³). What buoyant force, in N, does the water put on it? (Use g = 9.8 m/s².)",
+        "uz": "Hajmi {V} m³ boʻlgan tosh suvga (ρ = 1000 kg/m³) toʻliq botirilib ushlab turiladi. Suv unga necha N Arximed kuchi bilan taʼsir qiladi? (g = 9,8 m/s² deb oling.)",
+        "ru": "Камень объёмом {V} м³ удерживают полностью погружённым в воду (ρ = 1000 кг/м³). С какой выталкивающей силой (в Н) вода действует на него? (Примите g = 9,8 м/с².)"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "F_b = ρVg = 1,000 × {V} × 9.8 = {ANS} N.",
+        "uz": "F_b = ρVg = 1000 × {V} × 9,8 = {ANS} N.",
+        "ru": "F_b = ρVg = 1000 × {V} × 9,8 = {ANS} Н."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph8202",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "pressure",
+      "family": {
+        "template": "How much greater, in Pa, is the pressure {h} m under the surface of fresh water (ρ = 1,000 kg/m³) than the pressure at the surface? (Use g = 9.8 m/s².)",
+        "params": {
+          "h": {
+            "min": 1,
+            "max": 40
+          }
+        },
+        "constraints": [
+          "h != 5"
+        ],
+        "answer": "1000*9.8*h",
+        "distractors": [
+          "1000*h",
+          "9.8*h",
+          "1000*9.8*h + 101000"
+        ],
+        "integer": true,
+        "decimals": 1,
+        "relation": "X = 1000*9.8*{h}"
+      },
+      "page": "C19-APPH08-2",
+      "lang": "en",
+      "stem": {
+        "en": "How much greater, in Pa, is the pressure {h} m under the surface of fresh water (ρ = 1,000 kg/m³) than the pressure at the surface? (Use g = 9.8 m/s².)",
+        "uz": "Chuchuk suvda (ρ = 1000 kg/m³) sirtdan {h} m chuqurlikdagi bosim sirtdagi bosimdan necha Pa ga ortiq? (g = 9,8 m/s² deb oling.)",
+        "ru": "На сколько паскалей давление на глубине {h} м в пресной воде (ρ = 1000 кг/м³) больше, чем у поверхности? (Примите g = 9,8 м/с².)"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The extra pressure is ρgh = 1,000 × 9.8 × {h} = {ANS} Pa.",
+        "uz": "Ortiqcha bosim ρgh = 1000 × 9,8 × {h} = {ANS} Pa.",
+        "ru": "Избыточное давление ρgh = 1000 × 9,8 × {h} = {ANS} Па."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph8203",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "buoyancy",
+      "family": {
+        "template": "A stone of mass {m} kg and volume {V} m³ hangs from a string, fully under water (ρ = 1,000 kg/m³). What is the tension in the string, in N? (Use g = 9.8 m/s².)",
+        "params": {
+          "m": {
+            "values": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              8,
+              10
+            ]
+          },
+          "V": {
+            "values": [
+              0.001,
+              0.002,
+              0.003,
+              0.004
+            ]
+          }
+        },
+        "derived": {
+          "W": "9.8*m",
+          "B": "9800*V"
+        },
+        "constraints": [
+          "m > 1500*V",
+          "9.8*m - 9800*V != 9800*V"
+        ],
+        "answer": "9.8*m - 9800*V",
+        "distractors": [
+          "9.8*m",
+          "9800*V",
+          "9.8*m + 9800*V"
+        ],
+        "decimals": 3,
+        "relation": "X + 1000*{V}*9.8 = {m}*9.8"
+      },
+      "page": "C19-APPH08-2",
+      "lang": "en",
+      "stem": {
+        "en": "A stone of mass {m} kg and volume {V} m³ hangs from a string, fully under water (ρ = 1,000 kg/m³). What is the tension in the string, in N? (Use g = 9.8 m/s².)",
+        "uz": "Massasi {m} kg, hajmi {V} m³ boʻlgan tosh ipga osilgan holda suvga (ρ = 1000 kg/m³) toʻliq botirilgan. Ipning taranglik kuchi necha N? (g = 9,8 m/s² deb oling.)",
+        "ru": "Камень массой {m} кг и объёмом {V} м³ висит на нити, полностью погружённый в воду (ρ = 1000 кг/м³). Какова сила натяжения нити (в Н)? (Примите g = 9,8 м/с².)"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The forces balance: T + F_b = mg. mg = {m} × 9.8 = {W} N and F_b = 1,000 × {V} × 9.8 = {B} N, so T = {W} − {B} = {ANS} N.",
+        "uz": "Kuchlar muvozanatda: T + F_b = mg. mg = {m} × 9,8 = {W} N, F_b = 1000 × {V} × 9,8 = {B} N, demak T = {W} − {B} = {ANS} N.",
+        "ru": "Силы уравновешены: T + F_b = mg. mg = {m} × 9,8 = {W} Н, F_b = 1000 × {V} × 9,8 = {B} Н, значит, T = {W} − {B} = {ANS} Н."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 1.0,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph8301",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "continuity",
+      "family": {
+        "template": "Water flows at {v1} m/s through a pipe with a cross-section area of {A1} m². The pipe narrows to {A2} m². How fast, in m/s, does the water move in the narrow part?",
+        "params": {
+          "A2": {
+            "values": [
+              0.005,
+              0.01,
+              0.02
+            ]
+          },
+          "kk": {
+            "values": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "v1": {
+            "values": [
+              1,
+              1.5,
+              2,
+              3,
+              4
+            ]
+          }
+        },
+        "derived": {
+          "A1": "round(kk*A2, 6)"
+        },
+        "constraints": [
+          "!(v1 == 2 && kk == 3 && A2 == 0.01)",
+          "!(v1 == 3 && kk == 4 && A2 == 0.01)"
+        ],
+        "answer": "v1*A1/A2",
+        "distractors": [
+          "round(v1*A2/A1, 2)",
+          "v1",
+          "v1*(A1/A2)^2"
+        ],
+        "decimals": 4,
+        "relation": "{A1}*{v1} = {A2}*X"
+      },
+      "page": "C19-APPH08-3",
+      "lang": "en",
+      "stem": {
+        "en": "Water flows at {v1} m/s through a pipe with a cross-section area of {A1} m². The pipe narrows to {A2} m². How fast, in m/s, does the water move in the narrow part?",
+        "uz": "Suv koʻndalang kesim yuzi {A1} m² boʻlgan quvurda {v1} m/s tezlik bilan oqmoqda. Quvur {A2} m² gacha torayadi. Tor qismida suv necha m/s tezlik bilan oqadi?",
+        "ru": "Вода течёт со скоростью {v1} м/с по трубе с площадью поперечного сечения {A1} м². Труба сужается до {A2} м². С какой скоростью (в м/с) вода движется в узкой части?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "A₁v₁ = A₂v₂: {A1} × {v1} = {A2} × v₂, so v₂ = {ANS} m/s.",
+        "uz": "A₁v₁ = A₂v₂: {A1} × {v1} = {A2} × v₂, demak v₂ = {ANS} m/s.",
+        "ru": "A₁v₁ = A₂v₂: {A1} × {v1} = {A2} × v₂, значит, v₂ = {ANS} м/с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 0.5,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph8302",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "bernoulli",
+      "family": {
+        "template": "Water (ρ = 1,000 kg/m³) flows through a level pipe. At a wide part the pressure is P₁ = {P1} Pa and the speed is v₁ = {v1} m/s; at a narrow part the speed is v₂ = {v2} m/s. What is the pressure at the narrow part, in Pa?",
+        "params": {
+          "P1": {
+            "min": 120000,
+            "max": 300000,
+            "step": 10000
+          },
+          "v1": {
+            "values": [
+              1,
+              2,
+              3
+            ]
+          },
+          "v2": {
+            "values": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        },
+        "constraints": [
+          "P1 + 500*(v1 - v2) != P1 - 500*(v2 - v1)^2",
+          "!(P1 == 150000 && v1 == 1 && v2 == 4)",
+          "!(P1 == 200000 && v1 == 2 && v2 == 6)"
+        ],
+        "answer": "P1 + 500*(v1^2 - v2^2)",
+        "distractors": [
+          "P1 - 500*(v1^2 - v2^2)",
+          "P1 + 500*(v1 - v2)",
+          "P1 - 500*(v2 - v1)^2"
+        ],
+        "integer": true,
+        "relation": "{P1} + 1/2*1000*{v1}^2 = X + 1/2*1000*{v2}^2"
+      },
+      "page": "C19-APPH08-3",
+      "lang": "en",
+      "stem": {
+        "en": "Water (ρ = 1,000 kg/m³) flows through a level pipe. At a wide part the pressure is P₁ = {P1} Pa and the speed is v₁ = {v1} m/s; at a narrow part the speed is v₂ = {v2} m/s. What is the pressure at the narrow part, in Pa?",
+        "uz": "Suv (ρ = 1000 kg/m³) gorizontal quvurda oqmoqda. Keng qismida bosim P₁ = {P1} Pa, tezlik v₁ = {v1} m/s; tor qismida tezlik v₂ = {v2} m/s. Tor qismidagi bosim necha Pa?",
+        "ru": "Вода (ρ = 1000 кг/м³) течёт по горизонтальной трубе. В широкой части давление P₁ = {P1} Па, скорость v₁ = {v1} м/с; в узкой части скорость v₂ = {v2} м/с. Каково давление в узкой части (в Па)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Level pipe: P₁ + ½ρv₁² = P₂ + ½ρv₂², so P₂ = {P1} + 500 × ({v1}² − {v2}²) = {ANS} Pa.",
+        "uz": "Gorizontal quvur: P₁ + ½ρv₁² = P₂ + ½ρv₂², demak P₂ = {P1} + 500 × ({v1}² − {v2}²) = {ANS} Pa.",
+        "ru": "Горизонтальная труба: P₁ + ½ρv₁² = P₂ + ½ρv₂², значит, P₂ = {P1} + 500 × ({v1}² − {v2}²) = {ANS} Па."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.1,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-ph8303",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "bernoulli",
+      "family": {
+        "template": "A wide, open tank of water has a small hole {h} m below the water surface. How fast, in m/s, does the water come out of the hole? (Use g = 9.8 m/s².)",
+        "params": {
+          "q": {
+            "min": 1,
+            "max": 12
+          }
+        },
+        "derived": {
+          "h": "round(0.1*q*q, 4)"
+        },
+        "answer": "sqrt(2*9.8*h)",
+        "distractors": [
+          "2*9.8*h",
+          "sqrt(9.8*h)",
+          "sqrt(2*h)"
+        ],
+        "decimals": 2,
+        "relation": "{h}*9.8 = 1/2*X^2; X > 0"
+      },
+      "page": "C19-APPH08-3",
+      "lang": "en",
+      "stem": {
+        "en": "A wide, open tank of water has a small hole {h} m below the water surface. How fast, in m/s, does the water come out of the hole? (Use g = 9.8 m/s².)",
+        "uz": "Keng, ochiq suv idishida suv sirtidan {h} m pastda kichik teshik bor. Suv teshikdan necha m/s tezlik bilan oqib chiqadi? (g = 9,8 m/s² deb oling.)",
+        "ru": "В широком открытом баке с водой есть маленькое отверстие на {h} м ниже поверхности воды. С какой скоростью (в м/с) вода вытекает из отверстия? (Примите g = 9,8 м/с².)"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Bernoulli from the surface (v ≈ 0) to the hole, both open to the air: v = √(2gh) = √(2 × 9.8 × {h}) = {ANS} m/s.",
+        "uz": "Bernulli tenglamasi sirtdan (v ≈ 0) teshikkacha, ikkalasida ham havo bosimi: v = √(2gh) = √(2 × 9,8 × {h}) = {ANS} m/s.",
+        "ru": "Уравнение Бернулли от поверхности (v ≈ 0) до отверстия, в обоих местах атмосферное давление: v = √(2gh) = √(2 × 9,8 × {h}) = {ANS} м/с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; it may be a decimal.",
+        "uz": "Javobni son bilan kiriting; u oʻnli kasr boʻlishi mumkin.",
+        "ru": "Введите ответ числом; это может быть десятичная дробь."
+      },
+      "prior_b": 1.0,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-ap2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

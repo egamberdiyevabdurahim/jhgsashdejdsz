@@ -1,0 +1,877 @@
+{
+  "bank": "K4",
+  "batch": 4,
+  "items": [
+    {
+      "id": "K4-pa0021",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "absolute_value",
+      "family": {
+        "template": "Calculate: |{a} − {b}|",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 15,
+            "step": 1
+          },
+          "b": {
+            "min": 16,
+            "max": 30,
+            "step": 1
+          }
+        },
+        "answer": "abs(a - b)",
+        "variants": 210
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: |{a} − {b}|",
+        "uz": "Hisoblang: |{a} − {b}|",
+        "ru": "Вычислите: |{a} − {b}|"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Absolute value is the distance from zero, so it is never negative.",
+        "uz": "Modul — noldan masofa, shuning uchun u hech qachon manfiy boʻlmaydi.",
+        "ru": "Модуль — это расстояние от нуля, поэтому он не бывает отрицательным."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0022",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "negative_numbers",
+      "family": {
+        "template": "Calculate: (−{p}) ÷ {a}",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 9,
+            "step": 1
+          },
+          "q": {
+            "min": 3,
+            "max": 9,
+            "step": 1
+          }
+        },
+        "derived": {
+          "p": "a * q"
+        },
+        "answer": "-q",
+        "variants": 56
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: (−{p}) ÷ {a}",
+        "uz": "Hisoblang: (−{p}) : {a}",
+        "ru": "Вычислите: (−{p}) : {a}"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "A negative number divided by a positive number is negative.",
+        "uz": "Manfiy sonni musbat songa boʻlsak, natija manfiy boʻladi.",
+        "ru": "Отрицательное число, делённое на положительное, даёт отрицательный результат."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.75,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "solver:stem@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "K4-pa0023",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "fractions",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: 3/4 + 1/6",
+        "uz": "Hisoblang: 3/4 + 1/6",
+        "ru": "Вычислите: 3/4 + 1/6"
+      },
+      "options": [
+        {
+          "en": "11/12",
+          "uz": "11/12",
+          "ru": "11/12"
+        },
+        {
+          "en": "4/10",
+          "uz": "4/10",
+          "ru": "4/10"
+        },
+        {
+          "en": "3/24",
+          "uz": "3/24",
+          "ru": "3/24"
+        },
+        {
+          "en": "11/24",
+          "uz": "11/24",
+          "ru": "11/24"
+        }
+      ],
+      "why": {
+        "en": "Use the common denominator 12: 9/12 + 2/12 = 11/12.",
+        "uz": "Umumiy maxraj 12: 9/12 + 2/12 = 11/12.",
+        "ru": "Общий знаменатель 12: 9/12 + 2/12 = 11/12."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.75,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0024",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "fractions",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: 2/3 × 9/10",
+        "uz": "Hisoblang: 2/3 × 9/10",
+        "ru": "Вычислите: 2/3 × 9/10"
+      },
+      "options": [
+        {
+          "en": "3/5",
+          "uz": "3/5",
+          "ru": "3/5"
+        },
+        {
+          "en": "20/27",
+          "uz": "20/27",
+          "ru": "20/27"
+        },
+        {
+          "en": "11/13",
+          "uz": "11/13",
+          "ru": "11/13"
+        },
+        {
+          "en": "6/5",
+          "uz": "6/5",
+          "ru": "6/5"
+        }
+      ],
+      "why": {
+        "en": "Multiply numerators and denominators: 18/30, which simplifies to 3/5.",
+        "uz": "Suratlarni va maxrajlarni koʻpaytiring: 18/30, qisqartirsak 3/5.",
+        "ru": "Перемножьте числители и знаменатели: 18/30, после сокращения 3/5."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.75,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0025",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "fractions",
+      "lang": "en",
+      "stem": {
+        "en": "Which fraction is the largest?",
+        "uz": "Qaysi kasr eng katta?",
+        "ru": "Какая дробь наибольшая?"
+      },
+      "options": [
+        {
+          "en": "5/8",
+          "uz": "5/8",
+          "ru": "5/8"
+        },
+        {
+          "en": "3/5",
+          "uz": "3/5",
+          "ru": "3/5"
+        },
+        {
+          "en": "4/7",
+          "uz": "4/7",
+          "ru": "4/7"
+        },
+        {
+          "en": "7/12",
+          "uz": "7/12",
+          "ru": "7/12"
+        }
+      ],
+      "why": {
+        "en": "As decimals they are 0.625, 0.6, about 0.571 and about 0.583.",
+        "uz": "Oʻnli kasrda: 0,625; 0,6; taxminan 0,571 va taxminan 0,583.",
+        "ru": "В десятичных дробях: 0,625; 0,6; примерно 0,571 и примерно 0,583."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.75,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0026",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "decimals",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: 0.6 × 0.5",
+        "uz": "Hisoblang: 0,6 × 0,5",
+        "ru": "Вычислите: 0,6 × 0,5"
+      },
+      "answer_numeric": {
+        "value": 0.3,
+        "tolerance": 0.001
+      },
+      "why": {
+        "en": "6 × 5 = 30 and there are two decimal places in total: 0.30 = 0.3.",
+        "uz": "6 × 5 = 30, verguldan keyin jami ikki xona: 0,30 = 0,3.",
+        "ru": "6 × 5 = 30, всего два знака после запятой: 0,30 = 0,3."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; a decimal is allowed (for example 2.5).",
+        "uz": "Javobni son bilan kiriting; oʻnli kasr ham boʻladi (masalan, 2,5).",
+        "ru": "Введите ответ числом; можно десятичной дробью (например, 2,5)."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0027",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "decimals",
+      "lang": "en",
+      "stem": {
+        "en": "Write 3/8 as a decimal.",
+        "uz": "3/8 kasrini oʻnli kasr koʻrinishida yozing.",
+        "ru": "Запишите дробь 3/8 в виде десятичной дроби."
+      },
+      "answer_numeric": {
+        "value": 0.375,
+        "tolerance": 0.0005
+      },
+      "why": {
+        "en": "1/8 = 0.125, so 3/8 = 3 × 0.125 = 0.375.",
+        "uz": "1/8 = 0,125, demak, 3/8 = 3 × 0,125 = 0,375.",
+        "ru": "1/8 = 0,125, значит, 3/8 = 3 × 0,125 = 0,375."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; a decimal is allowed (for example 2.5).",
+        "uz": "Javobni son bilan kiriting; oʻnli kasr ham boʻladi (masalan, 2,5).",
+        "ru": "Введите ответ числом; можно десятичной дробью (например, 2,5)."
+      },
+      "prior_b": -1.75,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0028",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "negative_numbers",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: −8 − (−3)",
+        "uz": "Hisoblang: −8 − (−3)",
+        "ru": "Вычислите: −8 − (−3)"
+      },
+      "answer_numeric": {
+        "value": -5,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Subtracting a negative number is the same as adding: −8 + 3 = −5.",
+        "uz": "Manfiy sonni ayirish uni qoʻshish bilan bir xil: −8 + 3 = −5.",
+        "ru": "Вычесть отрицательное число — то же, что прибавить: −8 + 3 = −5."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.75,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0029",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "exponents",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: 2³ × 3²",
+        "uz": "Hisoblang: 2³ × 3²",
+        "ru": "Вычислите: 2³ × 3²"
+      },
+      "answer_numeric": {
+        "value": 72,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "2³ = 8 and 3² = 9, so 8 × 9 = 72.",
+        "uz": "2³ = 8 va 3² = 9, demak, 8 × 9 = 72.",
+        "ru": "2³ = 8 и 3² = 9, значит, 8 × 9 = 72."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0030",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "exponents",
+      "lang": "en",
+      "stem": {
+        "en": "Calculate: (−2)⁴",
+        "uz": "Hisoblang: (−2)⁴",
+        "ru": "Вычислите: (−2)⁴"
+      },
+      "answer_numeric": {
+        "value": 16,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "An even power of a negative number is positive: (−2) × (−2) × (−2) × (−2) = 16.",
+        "uz": "Manfiy sonning juft darajasi musbat: (−2) × (−2) × (−2) × (−2) = 16.",
+        "ru": "Чётная степень отрицательного числа положительна: (−2) × (−2) × (−2) × (−2) = 16."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.75,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0031",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "After a 20% discount a shirt costs 80 thousand soʻm. What was its price before the discount, in thousands of soʻm?",
+        "uz": "20 foizlik chegirmadan keyin koʻylak 80 ming soʻm turadi. Chegirmadan oldin u necha ming soʻm turgan?",
+        "ru": "После скидки 20% рубашка стоит 80 тыс. сум. Сколько она стоила до скидки (в тыс. сум)?"
+      },
+      "answer_numeric": {
+        "value": 100,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "80 is 80% of the old price, so the old price = 80 ÷ 0.8 = 100.",
+        "uz": "80 eski narxning 80 foizi, demak, eski narx = 80 : 0,8 = 100.",
+        "ru": "80 — это 80% старой цены, значит, старая цена = 80 : 0,8 = 100."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0032",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "exponents",
+      "lang": "en",
+      "stem": {
+        "en": "Which expression is equal to 5 × 5 × 5 × 5?",
+        "uz": "Qaysi ifoda 5 × 5 × 5 × 5 ga teng?",
+        "ru": "Какое выражение равно 5 × 5 × 5 × 5?"
+      },
+      "options": [
+        {
+          "en": "5⁴",
+          "uz": "5⁴",
+          "ru": "5⁴"
+        },
+        {
+          "en": "4⁵",
+          "uz": "4⁵",
+          "ru": "4⁵"
+        },
+        {
+          "en": "5 × 4",
+          "uz": "5 × 4",
+          "ru": "5 × 4"
+        },
+        {
+          "en": "5 + 5 + 5 + 5",
+          "uz": "5 + 5 + 5 + 5",
+          "ru": "5 + 5 + 5 + 5"
+        }
+      ],
+      "why": {
+        "en": "Four equal factors of 5 are written as 5⁴.",
+        "uz": "Toʻrtta bir xil 5 koʻpaytuvchisi 5⁴ koʻrinishida yoziladi.",
+        "ru": "Четыре одинаковых множителя 5 записываются как 5⁴."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.75,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0033",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "decimals",
+      "lang": "en",
+      "stem": {
+        "en": "Round 3.476 to the nearest tenth.",
+        "uz": "3,476 sonini oʻndan birlargacha yaxlitlang.",
+        "ru": "Округлите 3,476 до десятых."
+      },
+      "answer_numeric": {
+        "value": 3.5,
+        "tolerance": 0.001
+      },
+      "why": {
+        "en": "The hundredths digit is 7 (5 or more), so 3.4… rounds up to 3.5.",
+        "uz": "Yuzdan birlar xonasida 7 (5 yoki undan katta), shuning uchun 3,4… soni 3,5 ga yaxlitlanadi.",
+        "ru": "В разряде сотых стоит 7 (это 5 или больше), поэтому 3,4… округляется до 3,5."
+      },
+      "instructions": {
+        "en": "Type your answer as a number; a decimal is allowed (for example 2.5).",
+        "uz": "Javobni son bilan kiriting; oʻnli kasr ham boʻladi (masalan, 2,5).",
+        "ru": "Введите ответ числом; можно десятичной дробью (например, 2,5)."
+      },
+      "prior_b": -1.75,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0034",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is 15% of 240?",
+        "uz": "240 sonining 15 foizini toping.",
+        "ru": "Найдите 15% от 240."
+      },
+      "answer_numeric": {
+        "value": 36,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "10% of 240 is 24 and 5% is 12, so 15% is 36.",
+        "uz": "240 ning 10 foizi 24, 5 foizi 12, demak, 15 foizi 36.",
+        "ru": "10% от 240 — это 24, 5% — 12, значит, 15% — 36."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0035",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "negative_numbers",
+      "lang": "en",
+      "stem": {
+        "en": "Put in order from smallest to largest: −3, 2, −7, 0",
+        "uz": "Kichigidan kattasiga qarab tartiblang: −3, 2, −7, 0",
+        "ru": "Расположите числа в порядке возрастания: −3, 2, −7, 0"
+      },
+      "options": [
+        {
+          "en": "−7, −3, 0, 2",
+          "uz": "−7, −3, 0, 2",
+          "ru": "−7, −3, 0, 2"
+        },
+        {
+          "en": "−3, −7, 0, 2",
+          "uz": "−3, −7, 0, 2",
+          "ru": "−3, −7, 0, 2"
+        },
+        {
+          "en": "0, −3, 2, −7",
+          "uz": "0, −3, 2, −7",
+          "ru": "0, −3, 2, −7"
+        },
+        {
+          "en": "2, 0, −3, −7",
+          "uz": "2, 0, −3, −7",
+          "ru": "2, 0, −3, −7"
+        }
+      ],
+      "why": {
+        "en": "On the number line −7 is furthest to the left, then −3, then 0, then 2.",
+        "uz": "Son oʻqida −7 eng chapda, keyin −3, soʻng 0 va 2 joylashgan.",
+        "ru": "На числовой прямой левее всех −7, затем −3, потом 0 и 2."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0036",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "negative_numbers",
+      "lang": "en",
+      "stem": {
+        "en": "In the morning the temperature was −4 °C. By noon it had risen by 9 degrees. What was the temperature at noon, in °C?",
+        "uz": "Ertalab havo harorati −4 °C edi. Tushga kelib u 9 darajaga koʻtarildi. Tushda harorat necha °C boʻldi?",
+        "ru": "Утром температура была −4 °C. К полудню она поднялась на 9 градусов. Какой стала температура в полдень (в °C)?"
+      },
+      "answer_numeric": {
+        "value": 5,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Rising by 9 means adding 9: −4 + 9 = 5.",
+        "uz": "9 darajaga koʻtarilish 9 ni qoʻshishni bildiradi: −4 + 9 = 5.",
+        "ru": "Подняться на 9 градусов — значит прибавить 9: −4 + 9 = 5."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0037",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "proportion",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A recipe uses 3 cups of flour for 12 cookies. How many cups of flour are needed for 20 cookies?",
+        "uz": "Retsept boʻyicha 12 ta pechenye uchun 3 stakan un kerak. 20 ta pechenye uchun necha stakan un kerak?",
+        "ru": "По рецепту на 12 печений нужно 3 стакана муки. Сколько стаканов муки нужно на 20 печений?"
+      },
+      "answer_numeric": {
+        "value": 5,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "One cup is enough for 12 ÷ 3 = 4 cookies, so 20 cookies need 20 ÷ 4 = 5 cups.",
+        "uz": "Bir stakan un 12 : 3 = 4 ta pechenyega yetadi, demak, 20 ta pechenye uchun 20 : 4 = 5 stakan kerak.",
+        "ru": "Одного стакана хватает на 12 : 3 = 4 печенья, значит, на 20 печений нужно 20 : 4 = 5 стаканов."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.75,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0038",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "fractions",
+      "lang": "en",
+      "stem": {
+        "en": "Simplify the fraction 18/24.",
+        "uz": "18/24 kasrini qisqartiring.",
+        "ru": "Сократите дробь 18/24."
+      },
+      "options": [
+        {
+          "en": "3/4",
+          "uz": "3/4",
+          "ru": "3/4"
+        },
+        {
+          "en": "2/3",
+          "uz": "2/3",
+          "ru": "2/3"
+        },
+        {
+          "en": "4/3",
+          "uz": "4/3",
+          "ru": "4/3"
+        },
+        {
+          "en": "1/6",
+          "uz": "1/6",
+          "ru": "1/6"
+        }
+      ],
+      "why": {
+        "en": "Divide the numerator and the denominator by 6: 18/24 = 3/4.",
+        "uz": "Surat va maxrajni 6 ga boʻling: 18/24 = 3/4.",
+        "ru": "Разделите числитель и знаменатель на 6: 18/24 = 3/4."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.75,
+      "time_s": 10,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0039",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "decimals",
+      "lang": "en",
+      "stem": {
+        "en": "Which number is the largest?",
+        "uz": "Qaysi son eng katta?",
+        "ru": "Какое число наибольшее?"
+      },
+      "options": [
+        {
+          "en": "0.45",
+          "uz": "0,45",
+          "ru": "0,45"
+        },
+        {
+          "en": "0.405",
+          "uz": "0,405",
+          "ru": "0,405"
+        },
+        {
+          "en": "0.4",
+          "uz": "0,4",
+          "ru": "0,4"
+        },
+        {
+          "en": "0.045",
+          "uz": "0,045",
+          "ru": "0,045"
+        }
+      ],
+      "why": {
+        "en": "Compare with the same number of decimal places: 0.450 > 0.405 > 0.400 > 0.045.",
+        "uz": "Verguldan keyingi xonalar sonini tenglab solishtiring: 0,450 > 0,405 > 0,400 > 0,045.",
+        "ru": "Сравните, уравняв число знаков после запятой: 0,450 > 0,405 > 0,400 > 0,045."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "K4-pa0040",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "evaluating_expressions",
+      "lang": "en",
+      "stem": {
+        "en": "Find the value of 2a² when a = −3.",
+        "uz": "a = −3 boʻlganda 2a² ifodaning qiymatini toping.",
+        "ru": "Найдите значение выражения 2a² при a = −3."
+      },
+      "answer_numeric": {
+        "value": 18,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Square first: (−3)² = 9, then multiply: 2 × 9 = 18.",
+        "uz": "Avval kvadratga oshiring: (−3)² = 9, soʻng 2 × 9 = 18.",
+        "ru": "Сначала возведите в квадрат: (−3)² = 9, затем 2 × 9 = 18."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (use the minus sign for a negative number).",
+        "uz": "Javobni son bilan kiriting (manfiy son boʻlsa, minus belgisini qoʻying).",
+        "ru": "Введите ответ числом (для отрицательного числа поставьте знак минус)."
+      },
+      "prior_b": -1.75,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:K4-low",
+      "key_check_1": "author",
+      "key_check_2": "blind:solverD+fresh-k4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

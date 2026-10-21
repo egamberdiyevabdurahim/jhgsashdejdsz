@@ -1,0 +1,932 @@
+{
+ "bank": "C5",
+ "levels": {
+  "en": {
+   "scale": "CEFR A1-C2 (English as a foreign language); skill en_reading",
+   "A1": "80-90 words, present simple, everyday topics",
+   "A2": "125-140 words, past simple, short story or simple facts",
+   "B1": "160-190 words, connected narrative or explanation",
+   "B2": "220-255 words, opinion or explanation with some abstract language",
+   "C1": "250-285 words, argument or literary narrative, implied meaning",
+   "C2": "300-315 words, nuanced essay or literary prose, tone and stance"
+  },
+  "uz": {
+   "scale": "native-language reading levels easy < medium < hard < advanced (the first three use K5's names); skill read_uz. Uzbek is agglutinative, so the same content has fewer words than in ru or en",
+   "easy": "60-70 words, simple everyday story",
+   "medium": "85-105 words, story or short informational text",
+   "hard": "110-120 words, story with implied motives or explanation with cause and effect",
+   "advanced": "135-145 words, essay or literary prose, stance and implied meaning"
+  },
+  "ru": {
+   "scale": "native-language reading levels easy < medium < hard < advanced (the first three use K5's names); skill read_ru",
+   "easy": "80-90 words, simple everyday story",
+   "medium": "85-110 words, story or short informational text",
+   "hard": "125-140 words, story with implied motives or explanation with cause and effect",
+   "advanced": "150-190 words, essay or literary prose, stance and implied meaning"
+  },
+  "subskills": "each passage has 5 questions: 2 literal, 2 inferential, 1 vocab_in_context (a word or phrase whose meaning the passage decides)",
+  "read_s_estimate": "words / an assumed reading rate (en A1 60 ... C2 150 wpm; uz/ru easy 90 ... advanced 150 wpm). An estimate for scheduling only, to be replaced by measured JG medians."
+ },
+ "passages": [
+  {
+   "id": "C5-P-a1p1",
+   "lang": "en",
+   "level": "A1",
+   "kind": "fiction",
+   "title": "Sunday Football",
+   "text": "Sardor is twelve. He lives in a small town with his parents and his sister, Madina. Every Sunday morning, Sardor plays football in the park with his friends. He is the goalkeeper. This Sunday, it is cold and windy. Sardor puts on his warm jacket, but he forgets his gloves. In the park, his hands are very cold. At ten o'clock, Madina comes to the park. She has his gloves in her bag. Sardor smiles and says, “Thank you!” His team wins the game three to one.",
+   "words": 87,
+   "chars": 458,
+   "read_s_estimate": 85,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-a1p2",
+   "lang": "en",
+   "level": "A1",
+   "kind": "fiction",
+   "title": "Lola's Plant",
+   "text": "Lola has a small plant in a red pot. Her aunt gives it to her on her birthday in March. Lola puts the pot on her bedroom window, because the plant likes the sun. She gives it a little water every three days. She does not give it too much water. In April, the plant is bigger. In May, Lola sees a small white flower on it. She takes a photo and sends it to her aunt. Her aunt writes back: “Well done, Lola! You are a good gardener.”",
+   "words": 89,
+   "chars": 431,
+   "read_s_estimate": 90,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-a1p3",
+   "lang": "en",
+   "level": "A1",
+   "kind": "fiction",
+   "title": "The New Neighbours",
+   "text": "A new family lives next to us now. They come from Samarkand. There are four people: a mother, a father, a boy and a girl. The girl's name is Zarina. She is thirteen, like me. On Monday, she comes to my school. She is in my class! She sits next to me in English lessons. Zarina likes drawing, and she has a big brown dog. His name is Bars. After school, we walk Bars in the park together. Now Zarina is my friend.",
+   "words": 83,
+   "chars": 412,
+   "read_s_estimate": 85,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-a2p1",
+   "lang": "en",
+   "level": "A2",
+   "kind": "fiction",
+   "title": "Friday Plov",
+   "text": "Last Friday, Bekzod's mother worked late, so Bekzod and his father decided to cook plov for the family. Bekzod had never cooked it before. His father cut the onions and the meat, and Bekzod cut the carrots into long, thin pieces. It took a long time, and the onions made his eyes hurt. Then they cooked everything in a big pot. When his mother came home at eight o'clock, the family sat down to eat. After the first spoonful, Bekzod's little sister made a face. “It's nice,” she said, “but where is the salt?” Bekzod's father laughed. He had forgotten it! They added some salt at the table, and everyone ate two plates. Bekzod's mother said it was the best plov she had eaten all week. Bekzod knew she was joking, but he was proud anyway.",
+   "words": 136,
+   "chars": 738,
+   "read_s_estimate": 110,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-a2p2",
+   "lang": "en",
+   "level": "A2",
+   "kind": "info",
+   "title": "Three Hearts and Blue Blood",
+   "text": "An octopus is a sea animal with a soft body and eight arms. It is a very unusual animal. First, it has three hearts, not one. The main heart sends blood around the body. The other two hearts send blood through the two gills. Second, its blood is not red like our blood. It is bluish, because it carries oxygen with a protein that has copper in it. Third, an octopus can change the colour of its skin. Its skin has special cells with colours in them, for example yellow, red, brown or black. When it is in danger, an octopus can also make a cloud of black ink in the water. Octopuses are very clever, but they have short lives: they live for four years at most.",
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Octopus",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "An octopus is a soft-bodied, eight-limbed mollusc.",
+      "url": "https://en.wikipedia.org/wiki/Octopus"
+     },
+     {
+      "claim": "Octopuses have three hearts: a systemic (main) heart that circulates blood around the body and two branchial hearts that pump it through the two gills.",
+      "url": "https://en.wikipedia.org/wiki/Octopus"
+     },
+     {
+      "claim": "Octopus blood contains the copper-rich protein haemocyanin, which transports oxygen and gives the blood a bluish colour.",
+      "url": "https://en.wikipedia.org/wiki/Octopus"
+     },
+     {
+      "claim": "Chromatophores in the skin contain yellow, orange, red, brown or black pigments and let octopuses change their appearance.",
+      "url": "https://en.wikipedia.org/wiki/Octopus"
+     },
+     {
+      "claim": "Octopuses eject an ink cloud when threatened; the ink's main pigment, melanin, makes it black.",
+      "url": "https://en.wikipedia.org/wiki/Octopus"
+     },
+     {
+      "claim": "Octopuses are highly intelligent and have short lifespans, living up to four years.",
+      "url": "https://en.wikipedia.org/wiki/Octopus"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "words": 128,
+   "chars": 660,
+   "read_s_estimate": 100,
+   "author": "agent:c5-reading"
+  },
+  {
+   "id": "C5-P-a2p3",
+   "lang": "en",
+   "level": "A2",
+   "kind": "fiction",
+   "title": "The Orange Hat",
+   "text": "On Thursday there was a concert at Nilufar's school. Nilufar was going to play the dutar, a musical instrument with two strings. She had practised her song every evening for a month, but on the day of the concert she felt sick with nerves. Behind the stage, her hands were cold and shaking. “What if I forget the music?” she asked her older brother, Jamshid. He did not answer her question. Instead, he said, “Don't look at all the people. Look at me. I'll sit in the third row and wear my orange hat.” When Nilufar walked onto the stage, she found the orange hat and played only for her brother. She did not make a single mistake. Later, Jamshid told her that he had never worn an orange hat before, and he never would again.",
+   "words": 136,
+   "chars": 726,
+   "read_s_estimate": 110,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-b1p1",
+   "lang": "en",
+   "level": "B1",
+   "kind": "fiction",
+   "title": "The Broken Radio",
+   "text": "Timur's grandfather owned an old radio that had stopped working years ago, but he refused to throw it away. It sat on a shelf in the living room, collecting dust. One spring, Timur's school started a free repair club on Saturday mornings, run by the physics teacher. Timur joined mainly because his best friend did, but after a few weeks he realised that he enjoyed it. He learned how to open small machines safely, test the parts and look for broken wires.\n\nOne Saturday, he asked his grandfather if he could take the radio to the club. His grandfather agreed, but warned him not to expect much. It took Timur three Saturdays to find the problem: a single wire inside had come loose. When he finally fixed it and turned the radio on, the first thing they heard was a man reading the weather forecast. His grandfather did not say anything for a moment. Then he told Timur that he used to listen to the morning news on that radio with his own father. Now the radio stands in the kitchen, and it is on every morning.",
+   "words": 187,
+   "chars": 1014,
+   "read_s_estimate": 125,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-b1p2",
+   "lang": "en",
+   "level": "B1",
+   "kind": "info",
+   "title": "Water Bears",
+   "text": "If you look at a piece of wet moss under a microscope, you may find a tiny animal that looks like a fat bear with eight legs. It is a tardigrade, also called a water bear or a moss piglet. Fully grown, most tardigrades are only about half a millimetre long. They live in many different places on Earth, from mountain tops and tropical rainforests to the deep sea and the Antarctic.\n\nTardigrades are famous for surviving very difficult conditions. When their home dries out, a tardigrade pulls in its legs and becomes a dry little ball called a “tun”. In this state, nothing in its body is active, and it can go for years without food or water. When it gets wet again, it can quickly come back to life.\n\nHowever, scientists point out that tardigrades are not really lovers of extreme places. They are not built to live and grow in such conditions. They only survive them until life becomes normal again.",
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Tardigrade",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Tardigrades, also known as water bears or moss piglets, are eight-legged segmented micro-animals.",
+      "url": "https://en.wikipedia.org/wiki/Tardigrade"
+     },
+     {
+      "claim": "Tardigrades are usually about 0.5 mm long when fully grown.",
+      "url": "https://en.wikipedia.org/wiki/Tardigrade"
+     },
+     {
+      "claim": "They live on mountaintops, in the deep sea, in tropical rainforests and in the Antarctic.",
+      "url": "https://en.wikipedia.org/wiki/Tardigrade"
+     },
+     {
+      "claim": "By drawing their legs in and forming a desiccated 'tun', with no metabolic activity, they can go without food or water for several years.",
+      "url": "https://en.wikipedia.org/wiki/Tardigrade"
+     },
+     {
+      "claim": "Dried tardigrades revive quickly when re-wetted.",
+      "url": "https://en.wikipedia.org/wiki/Cryptobiosis"
+     },
+     {
+      "claim": "Tardigrades are not considered universally extremophilic: they are not adapted to exploit many extreme conditions, only to endure them.",
+      "url": "https://en.wikipedia.org/wiki/Tardigrade"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "words": 164,
+   "chars": 902,
+   "read_s_estimate": 110,
+   "author": "agent:c5-reading"
+  },
+  {
+   "id": "C5-P-b1p3",
+   "lang": "en",
+   "level": "B1",
+   "kind": "fiction",
+   "title": "The Group Project",
+   "text": "Dilnoza's history teacher put the class into groups of four and gave each group two weeks to make a presentation about an old city. Dilnoza's group chose Khiva. At the first meeting nobody wanted to decide anything, so Dilnoza said she would make a plan. By the end of the first week, she had written most of the text, found the pictures and made all the slides herself. The others kept saying they were busy.\n\nOn Sunday night, two days before the presentation, Dilnoza was still awake at midnight, tired and angry. Her older cousin, who was staying with the family, saw the light and asked what was wrong. After listening, he did not offer to help with the slides. Instead, he asked, “What exactly did you ask each of them to do?” Dilnoza opened her mouth to answer and then closed it again.\n\nThe next morning, she sent the group a message with a list: one person would check the facts, one would practise the opening, and one would prepare answers to questions from the class. Everyone replied within an hour.",
+   "words": 182,
+   "chars": 1011,
+   "read_s_estimate": 120,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-b2p1",
+   "lang": "en",
+   "level": "B2",
+   "kind": "info",
+   "title": "A Library of Seeds in the Ice",
+   "text": "In the Arctic, on the Norwegian island of Spitsbergen, a tunnel runs into the side of a frozen mountain. At the end of it lies the Svalbard Global Seed Vault, which officially opened in February 2008. Its purpose is easy to misunderstand, so it is worth explaining carefully.\n\nAround the world, gene banks store the seeds of crop plants so that useful varieties are not lost forever. But a gene bank can be damaged by war, natural disasters or simple accidents. The seed vault acts as a backup: gene banks send duplicates of their seeds to Svalbard, and if their own collections are lost, they can take the copies back. Norway owns the building, but the seeds still belong to the gene banks that sent them.\n\nThe location was chosen with care. The area has no tectonic activity, and the surrounding permafrost helps to keep the seeds cold. In addition, cooling machines keep the storage rooms at −18 °C, the internationally recommended temperature for storing seeds.\n\nThe backup idea has already been tested. In 2015, a research centre that could no longer look after its gene bank in Syria because of the war withdrew some of its seeds from the vault. The seeds were planted in fields in Lebanon and Morocco to produce new seed. The vault has room for 4.5 million seed samples.",
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Svalbard_Global_Seed_Vault",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "The vault is on the Norwegian island of Spitsbergen in the Arctic Svalbard archipelago.",
+      "url": "https://en.wikipedia.org/wiki/Svalbard_Global_Seed_Vault"
+     },
+     {
+      "claim": "It officially opened on 26 February 2008.",
+      "url": "https://en.wikipedia.org/wiki/Svalbard_Global_Seed_Vault"
+     },
+     {
+      "claim": "It stores duplicates of seeds conserved in gene banks; its mission is a backup against accidental loss in traditional gene banks.",
+      "url": "https://en.wikipedia.org/wiki/Svalbard_Global_Seed_Vault"
+     },
+     {
+      "claim": "Norway owns the facility and the depositing gene banks own the seeds they send.",
+      "url": "https://en.wikipedia.org/wiki/Svalbard_Global_Seed_Vault"
+     },
+     {
+      "claim": "Spitsbergen was chosen because it lacked tectonic activity and had permafrost, which aids preservation.",
+      "url": "https://en.wikipedia.org/wiki/Svalbard_Global_Seed_Vault"
+     },
+     {
+      "claim": "Refrigeration keeps the seeds at the internationally recommended −18 °C.",
+      "url": "https://en.wikipedia.org/wiki/Svalbard_Global_Seed_Vault"
+     },
+     {
+      "claim": "In 2015 ICARDA, unable to maintain its gene bank at Tel Hadya, Syria, during the civil war, withdrew samples; they were planted in Lebanon and Morocco and multiplied.",
+      "url": "https://en.wikipedia.org/wiki/Svalbard_Global_Seed_Vault"
+     },
+     {
+      "claim": "Storage capacity is 4.5 million seed samples.",
+      "url": "https://en.wikipedia.org/wiki/Svalbard_Global_Seed_Vault"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "words": 224,
+   "chars": 1277,
+   "read_s_estimate": 120,
+   "author": "agent:c5-reading"
+  },
+  {
+   "id": "C5-P-b2p2",
+   "lang": "en",
+   "level": "B2",
+   "kind": "fiction",
+   "title": "Again, Slower",
+   "text": "When my mother announced at dinner that she was going to learn to drive, my father put down his fork and my little brother laughed. She was forty-five. For twenty years she had gone everywhere by bus, carrying shopping bags, school forms and, for a while, my brother.\n\nShe found an instructor, a calm man with grey hair, and had lessons twice a week. In the evenings she practised with me in the empty car park behind our building, because my father said he did not have the nerves for it. I had passed my own test the year before, and I expected to enjoy being the expert for once. Instead, I found myself biting my tongue. She stalled the engine, she braked too early, and she apologised to every car that passed, even the parked ones.\n\nOne evening she stalled four times in a row and rested her head on the steering wheel. I almost said, “Maybe it's not for you.” Then I remembered her sitting next to me at the kitchen table years earlier, while I cried over long division. She had never once told me that maths was not for me.\n\n“Again,” I said. “Slower with the clutch.”\n\nShe failed her first test because she forgot to check her mirror. She passed the second. The first place she drove to on her own was the market she had walked to for twenty years. She came back with more bags than she could ever have carried.",
+   "words": 248,
+   "chars": 1319,
+   "read_s_estimate": 135,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-b2p3",
+   "lang": "en",
+   "level": "B2",
+   "kind": "essay",
+   "title": "Why I Stopped Counting My Steps",
+   "text": "For about a year, I wore a fitness watch that counted my steps. At first it felt like a small miracle. I walked more, I took the stairs, and every evening I checked my number with real satisfaction. If I was a few hundred steps short of my goal, I would walk around the room until the watch vibrated to congratulate me.\n\nSlowly, though, something changed. I stopped walking to get somewhere and started walking to get a number. A walk with a friend that went too slowly felt like a waste. A day when I was ill felt like a failure, as if the watch were quietly disappointed in me. Worst of all, the walks themselves had become strangely empty: I could tell you how many steps I took on the path along the river, but not what the water looked like.\n\nSo I took the watch off, intending to put it away for a week. That was eight months ago. I probably walk a little less now; honestly, I do not know, which is rather the point. What I do know is that I notice more. I have started taking the longer way home because of a row of old plane trees, not because of a target.\n\nI am not arguing that counting is bad. For some people, numbers are exactly the push they need. But it is worth asking, now and then, whether you are measuring something you care about, or have started caring only about what you measure.",
+   "words": 252,
+   "chars": 1304,
+   "read_s_estimate": 135,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-c1p1",
+   "lang": "en",
+   "level": "C1",
+   "kind": "info",
+   "title": "Why February Sometimes Has 29 Days",
+   "text": "A calendar is an attempt to fit the movement of the Earth into whole numbers, and the Earth does not cooperate. The solar, or tropical, year lasts about 365.2422 days, but a calendar year must contain a whole number of days. If every year had exactly 365, the calendar would slip by almost a quarter of a day each year, and over the centuries the seasons would wander through the months.\n\nThe Julian calendar, proposed by Julius Caesar in 46 BC, dealt with the problem simply: it added a leap day every fourth year, giving an average year of 365.25 days. This was close, but slightly too long, and the small error kept adding up. By the sixteenth century the March equinox, which mattered to the churches because it is used to calculate the date of Easter, was falling well before its official date of 21 March.\n\nThe reform that followed produced the calendar most of the world uses today. Introduced in October 1582 under Pope Gregory XIII, the Gregorian calendar kept the rule of a leap year every four years but added an exception: years divisible by 100 are not leap years unless they are also divisible by 400. So 1700, 1800 and 1900 had no 29 February, while 1600 and 2000 did. This brings the average year to 365.2425 days, remarkably close to the solar year. To repair the damage already done, ten days were simply removed from the calendar: Thursday 4 October 1582 was followed by Friday 15 October.",
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Gregorian_calendar",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "The tropical (solar) year is about 365.2422 days.",
+      "url": "https://en.wikipedia.org/wiki/Gregorian_calendar"
+     },
+     {
+      "claim": "The Julian calendar was proposed in 46 BC by Julius Caesar; a leap day every four years gives an average year of 365.25 days, which gains on the tropical year.",
+      "url": "https://en.wikipedia.org/wiki/Julian_calendar"
+     },
+     {
+      "claim": "The March equinox had drifted well before 21 March; the date mattered to the churches for calculating Easter.",
+      "url": "https://en.wikipedia.org/wiki/Gregorian_calendar"
+     },
+     {
+      "claim": "The Gregorian calendar went into effect in October 1582 following a papal bull of Pope Gregory XIII.",
+      "url": "https://en.wikipedia.org/wiki/Gregorian_calendar"
+     },
+     {
+      "claim": "Years divisible by 100 are not leap years unless divisible by 400; 1700, 1800 and 1900 are not leap years, 1600 and 2000 are.",
+      "url": "https://en.wikipedia.org/wiki/Leap_year"
+     },
+     {
+      "claim": "The Gregorian mean year is 365.2425 days.",
+      "url": "https://en.wikipedia.org/wiki/Gregorian_calendar"
+     },
+     {
+      "claim": "Thursday 4 October 1582 was followed by Friday 15 October 1582.",
+      "url": "https://en.wikipedia.org/wiki/Gregorian_calendar"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "words": 252,
+   "chars": 1408,
+   "read_s_estimate": 115,
+   "author": "agent:c5-reading"
+  },
+  {
+   "id": "C5-P-c1p2",
+   "lang": "en",
+   "level": "C1",
+   "kind": "fiction",
+   "title": "The Night Shift",
+   "text": "My sister Gulnora works nights at the bakery on our street. She leaves the house at ten, when the rest of us are settling in front of the television, and comes back at six in the morning, smelling of yeast and smoke, just as my alarm goes off. For most of last year the only time I saw her properly was on the stairs: she going up to sleep, I going down to school.\n\nI used to think she had chosen the night because she liked it. She had always been the one who read under the blanket with a torch, who said the city sounded more honest after midnight. It did not occur to me to ask. When people asked what my sister did, I said “she's a baker” in the tone you might use for “she's a pilot”.\n\nIt was our grandmother who told me, in the end, almost by accident. The night shift paid more. Gulnora had asked for it in September, the same week our father's working hours were cut, and the same week I had announced at dinner that I wanted to take extra lessons before my exams. Nobody had told me what those lessons cost. I had simply started going.\n\nI did not know what to do with this information. Thanking her seemed too small and too large at the same time. In the end I set my alarm forty minutes earlier. Now, when she comes up the stairs at six, there is tea on the table and the bread she has brought home is already sliced. We have twenty minutes. She usually falls asleep in the middle of a sentence, and I usually let her.",
+   "words": 282,
+   "chars": 1429,
+   "read_s_estimate": 130,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-c1p3",
+   "lang": "en",
+   "level": "C1",
+   "kind": "essay",
+   "title": "The Case for Being Bored",
+   "text": "Few things are treated as urgently as boredom. The moment a queue slows down or a lesson drifts, a hand reaches for a phone, and the empty minutes are filled before anyone has noticed they were empty. It is worth asking whether something is lost in the process.\n\nBoredom is unpleasant, but unpleasant is not the same as useless. Hunger is unpleasant too, and we would be in trouble without it. Boredom, at its best, is a signal: it tells us that what we are doing is not engaging us, and it pushes us to look for something that will. A bored child on a long summer afternoon eventually builds a den out of chairs, invents a game with absurd rules, or takes apart the old clock in the cupboard. The discomfort comes first; the invention comes after.\n\nThe trouble with filling every gap instantly is not that phones are evil. It is that they answer the signal before it has had a chance to work. Scrolling removes the discomfort without producing anything, rather as a sweet removes hunger without nourishing. A mind that is never allowed to be bored never has to find its own way out.\n\nNone of this means that we should seek boredom out, or that every dull hour is secretly valuable. Some boredom is simply the price of waiting for a bus. But we might occasionally let it run a little longer than is comfortable, and see where it leads. The worst that can happen is that we stay bored for ten more minutes. The best is that we think of something no screen would have offered us.",
+   "words": 273,
+   "chars": 1477,
+   "read_s_estimate": 125,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-c2p1",
+   "lang": "en",
+   "level": "C2",
+   "kind": "info",
+   "title": "The Book No One Can Read",
+   "text": "In 1912 a Polish book dealer named Wilfrid Voynich bought a small, strange manuscript, and codebreakers have been arguing about it ever since. The Voynich manuscript, as it is now known, consists of around 240 pages of handwritten text in a script that no one has been able to read, accompanied by illustrations of unidentified plants, human figures and astrological symbols. Since 1969 it has been held at the Beinecke Rare Book and Manuscript Library at Yale University.\n\nFor a long time even its age was a matter of guesswork. That question, at least, has been settled: the vellum on which it is written has been carbon-dated to the early fifteenth century, between 1404 and 1438. Strictly speaking, however, this dates the material rather than the ink upon it; the test tells us when the animal skin was prepared, not when someone wrote on it.\n\nWhat the text says remains entirely open. The proposals fall roughly into three families: that it records a natural or invented language in an unfamiliar script; that it is a cipher concealing a known language; or that it is an elaborate hoax with no meaning at all. Each has had serious defenders, and each faces awkward evidence. Analyses of the text have found that its word frequencies follow Zipf's law, a pattern typical of natural languages, which tells against the idea of mere random scribbling, though not decisively, since a pattern in the shape of a text is not the same thing as a meaning.\n\nPerhaps the most humbling detail is the list of those who have tried and failed. Professional codebreakers, among them William and Elizebeth Friedman, worked on the manuscript without success. Whatever it is, it has so far resisted every method brought against it, and it has never been convincingly deciphered.",
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Voynich_manuscript",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Wilfrid Voynich, a Polish book dealer, purchased it in 1912.",
+      "url": "https://en.wikipedia.org/wiki/Voynich_manuscript"
+     },
+     {
+      "claim": "It is hand-written in an undeciphered script and consists of around 240 pages, with illustrations of unidentified plants, people and astrological symbols.",
+      "url": "https://en.wikipedia.org/wiki/Voynich_manuscript"
+     },
+     {
+      "claim": "Since 1969 it has been held in Yale University's Beinecke Rare Book and Manuscript Library.",
+      "url": "https://en.wikipedia.org/wiki/Voynich_manuscript"
+     },
+     {
+      "claim": "The vellum has been carbon-dated to the early 15th century (1404-1438).",
+      "url": "https://en.wikipedia.org/wiki/Voynich_manuscript"
+     },
+     {
+      "claim": "Hypotheses include a natural or constructed language, a code or cipher, or a hoax.",
+      "url": "https://en.wikipedia.org/wiki/Voynich_manuscript"
+     },
+     {
+      "claim": "The text's word frequencies follow Zipf's law.",
+      "url": "https://en.wikipedia.org/wiki/Voynich_manuscript"
+     },
+     {
+      "claim": "Codebreakers including William Friedman and Elizebeth Friedman were unsuccessful; it has never been demonstrably deciphered.",
+      "url": "https://en.wikipedia.org/wiki/Voynich_manuscript"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "words": 299,
+   "chars": 1764,
+   "read_s_estimate": 120,
+   "author": "agent:c5-reading"
+  },
+  {
+   "id": "C5-P-c2p2",
+   "lang": "en",
+   "level": "C2",
+   "kind": "fiction",
+   "title": "The Workbench",
+   "text": "After my father died, the workbench in the garage became a problem that nobody would name. My mother passed it on her way to the car each morning and did not look at it. My brother, who lives abroad, asked on the phone whether we had “dealt with the garage yet”, in the voice people use for dentists and taxes. I said we had not.\n\nIt was not a remarkable object: two trestles, a thick board scarred by forty years of saws, a vice that only he could tighten without swearing. Above it, the outlines of his tools were drawn on the wall in black marker, so that each hammer and chisel had a shadow to return to. Several of the shadows were empty. He had lent things freely and forgotten to whom.\n\nOn the board lay a half-finished chair leg, clamped in the vice at an angle that made no sense to me. I left it there for months. To remove it would have been to decide that it would never be finished, and I was not yet prepared to be the person who decided that.\n\nIn the spring a neighbour I barely knew knocked on the door holding a plane, the woodworking kind, and apologised for keeping it so long. He hung it, without being asked, on its empty shadow. Then he stood looking at the chair leg. “He was cutting a joint,” he said. “Badly, for him. He must have been tired.” He loosened the vice, turned the leg over in his hands, and asked if he might finish it.\n\nI said yes before I had thought about it, which is perhaps the only way such things ever get said. The chair now stands in my mother's kitchen. She sits on it to drink her tea. She has not asked who made which part, and I have not told her.",
+   "words": 313,
+   "chars": 1599,
+   "read_s_estimate": 125,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-c2p3",
+   "lang": "en",
+   "level": "C2",
+   "kind": "essay",
+   "title": "On Getting Lost",
+   "text": "It has become surprisingly difficult to get lost. A blue dot follows us everywhere, calmly indicating where we are and how long it will take to be somewhere else. For most practical purposes this is an unambiguous good: fewer missed trains, fewer anxious phone calls, fewer evenings spent circling the same block. I have no wish to return to unfolding paper maps in the rain.\n\nAnd yet something has quietly changed in the way many of us move through a city. When the route is supplied, the city becomes a series of instructions, turn left in two hundred metres, rather than a place. One arrives without having travelled. I have walked to the same café a dozen times and could not tell you the name of a single street on the way; I was, in every sense that mattered, following the dot rather than the road.\n\nGetting lost, by contrast, forces a kind of attention that no instruction can. The lost walker reads the shapes of buildings, notices which way the light falls, asks strangers and has to make sense of their answers. Being lost is uncomfortable, and the discomfort is precisely what makes us look. In my experience, what is learned this way stays learned, perhaps because it was paid for.\n\nI am not proposing that anyone throw away their phone on the way to an exam or an airport. Where arriving matters more than the journey, the dot has earned its place. But there is a case for occasionally switching it off on purpose, on a free afternoon, in a neighbourhood one half knows, and accepting the small risk of a wrong turn. The cost is a few minutes. The return, at least sometimes, is a city one actually knows, rather than one through which one has merely been delivered.",
+   "words": 302,
+   "chars": 1680,
+   "read_s_estimate": 120,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-uze1",
+   "lang": "uz",
+   "level": "easy",
+   "kind": "fiction",
+   "title": "Buvimning bogʻi",
+   "text": "Yozgi taʼtilda Malika qishloqqa, buvisinikiga bordi. Buvisining katta bogʻi bor edi. Bogʻda pomidor, bodring va qalampir oʻsardi. Har kuni ertalab Malika buvisi bilan bogʻga suv quyardi. Bir kuni u eng katta pomidorni uzib, nonushtaga olib keldi. Buvisi: «Bu pomidorni oʻzing sugʻorgansan, shuning uchun u eng shirin», dedi. Malika kulib yubordi. Taʼtil tugaganda, u shaharga bir savat pomidor olib qaytdi va ularni dugonalariga ham ulashdi.",
+   "words": 64,
+   "chars": 441,
+   "read_s_estimate": 45,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-uze2",
+   "lang": "uz",
+   "level": "easy",
+   "kind": "fiction",
+   "title": "Yomgʻirdagi oʻyin",
+   "text": "Shanba kuni Javohir va sinfdoshlari maktab maydonida futbol oʻynamoqchi edi. Ertalab osmonni qora bulut qopladi, keyin yomgʻir yogʻa boshladi. Hamma uyiga ketmoqchi boʻldi. Lekin Javohir: «Yomgʻir bizga xalaqit bermaydi!» dedi. Ular oʻyinni boshlashdi. Bir soatdan keyin hammaning kiyimi loy boʻldi, oyoq kiyimlari ham hoʻl edi. Javohir uyga kelganda, onasi uni koʻrib avval qoshlarini chimirdi, keyin kulib yubordi. Kechqurun Javohir issiq choy ichib, oʻyinni dadasiga uzoq gapirib berdi.",
+   "words": 67,
+   "chars": 489,
+   "read_s_estimate": 45,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-uze3",
+   "lang": "uz",
+   "level": "easy",
+   "kind": "fiction",
+   "title": "Singlimga sovgʻa",
+   "text": "Ertaga singlim Oyshaning tugʻilgan kuni. Unga sovgʻa sotib olishga pulim yetmadi. Shuning uchun sovgʻani oʻzim yasashga qaror qildim. Eski karton qutini rangli qogʻoz bilan bezadim. Ichiga Oyshaning sevimli konfetlarini va oʻzim chizgan rasmni soldim. Rasmda ikkalamiz bogʻda velosiped minib yuribmiz. Ertalab Oysha qutini ochib, rasmni uzoq tomosha qildi. Keyin uni oʻz xonasidagi devorga ilib qoʻydi. Konfetlar ikki kunda tugadi, rasm esa hali ham devorda turibdi.",
+   "words": 65,
+   "chars": 466,
+   "read_s_estimate": 45,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-uzm1",
+   "lang": "uz",
+   "level": "medium",
+   "kind": "info",
+   "title": "Registon maydoni",
+   "text": "Registon — Samarqand shahridagi tarixiy maydon. Uning nomi fors tilidan olingan boʻlib, «qumli joy» degan maʼnoni bildiradi. Maydonda uchta madrasa bor. Ulardan eng qadimiysi — Ulugʻbek madrasasi, u 1417–1420-yillarda qurilgan. Qolgan ikkitasi ancha keyin, XVII asrda bunyod etilgan: Sherdor madrasasi 1619–1636-yillarda, Tillakori madrasasi esa 1646–1660-yillarda qurilgan. Sherdor madrasasining bezaklarida orqasida quyosh chiqib turgan yoʻlbarslar tasvirlangan. Tillakori madrasasi ham madrasa, ham masjid boʻlib xizmat qilgan, uning masjid zali moʻl oltin bilan bezatilgan. Qadimda odamlar bu maydonga hukmdorning farmonlarini eshitish uchun yigʻilishgan. 2001-yilda Registon YuNESKOning Butunjahon merosi roʻyxatiga kiritilgan.",
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Registan",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "The Registan is a historic public square in Samarkand, Uzbekistan; the name means 'place of sand' (Persian Rēgistān).",
+      "url": "https://en.wikipedia.org/wiki/Registan"
+     },
+     {
+      "claim": "Its three madrasas are the Ulugh Beg Madrasa (1417-1420), the Sherdor Madrasa (1619-1636) and the Tilya-Kori Madrasa (1646-1660).",
+      "url": "https://en.wikipedia.org/wiki/Registan"
+     },
+     {
+      "claim": "The Sherdor madrasa's mosaics show tigers with a rising sun on their backs.",
+      "url": "https://en.wikipedia.org/wiki/Registan"
+     },
+     {
+      "claim": "Tilya-Kori served as both a residential college and a mosque; the main hall of the mosque is abundantly gilded.",
+      "url": "https://en.wikipedia.org/wiki/Registan"
+     },
+     {
+      "claim": "People gathered on the Registan to hear royal proclamations.",
+      "url": "https://en.wikipedia.org/wiki/Registan"
+     },
+     {
+      "claim": "The Registan is part of a UNESCO World Heritage Site inscribed in 2001.",
+      "url": "https://en.wikipedia.org/wiki/Registan"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "words": 87,
+   "chars": 732,
+   "read_s_estimate": 45,
+   "author": "agent:c5-reading"
+  },
+  {
+   "id": "C5-P-uzm2",
+   "lang": "uz",
+   "level": "medium",
+   "kind": "fiction",
+   "title": "Ukamga dars",
+   "text": "Ukam Sardor birinchi sinfda oʻqiydi. Bir kuni u kitobni stol ustiga otib: «Men hech qachon oʻqishni oʻrganolmayman!» dedi. Har kecha onam unga yordam berardi, lekin oʻsha hafta onam kasal boʻlib qoldi. Shuning uchun bu ishni men oʻz zimmamga oldim. Birinchi kuni sabrim tez tugadi: Sardor bitta soʻzni besh marta notoʻgʻri oʻqidi, men esa ovozimni koʻtardim. U yigʻlab yubordi. Ertasi kuni boshqacha yoʻl tutdim. Kitob oʻrniga koʻchadagi doʻkonlarning yozuvlarini birga oʻqidik: «Non», «Meva», «Dorixona». Sardor har bir soʻzni oʻqib boʻlganda qoʻlimni mahkam siqib qoʻyardi. Bir oydan keyin u menga kichik ertakni oxirigacha oʻqib berdi. Men esa oʻqituvchilarning ishi qanchalik ogʻir ekanini birinchi marta tushundim.",
+   "words": 103,
+   "chars": 719,
+   "read_s_estimate": 55,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-uzm3",
+   "lang": "uz",
+   "level": "medium",
+   "kind": "fiction",
+   "title": "Choʻponning uyi",
+   "text": "Sentyabr oxirida sinfimiz oʻqituvchimiz bilan togʻga sayohatga chiqdi. Ertalab havo ochiq edi, shuning uchun koʻpchilik issiq kiyim olmadi. Tushga yaqin toʻsatdan sovuq shamol turdi va kuchli yomgʻir yogʻa boshladi. Yaqin atrofda faqat bitta kichik uy bor edi. Unda keksa choʻpon yashar ekan. U bizni ichkariga taklif qildi, oʻchoqqa olov yoqib, hammaga issiq choy quyib berdi. Yomgʻir ikki soat davom etdi. Shu vaqt ichida choʻpon bizga qoʻylarini qanday boqishi va qishni qanday oʻtkazishi haqida qiziqarli hikoyalar aytib berdi. Qaytishda hech kim charchoqdan shikoyat qilmadi. Keyingi sayohatlarda esa sinfimizdagi hamma, havo qanday boʻlishidan qatʼi nazar, sumkasiga issiq kurtka solib oladigan boʻldi.",
+   "words": 99,
+   "chars": 708,
+   "read_s_estimate": 55,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-uzh1",
+   "lang": "uz",
+   "level": "hard",
+   "kind": "info",
+   "title": "Teskari termometr",
+   "text": "Bugun biz suv 0 darajada muzlashi va 100 darajada qaynashini oddiy hol deb bilamiz. Ammo bu shkala dastlab teskari boʻlgan. 1742-yilda shved astronomi Anders Selsiy yangi harorat shkalasini taklif qildi. Unda suvning qaynash nuqtasi 0, muzlash nuqtasi esa 100 deb belgilangan edi.\n\nTez orada shkala agʻdarildi. 1743-yilda fransuz fizigi Jan-Pyer Kristen, 1744-yilda, yaʼni Selsiy vafot etgan yili, shved botanigi Karl Linney shkalani teskari tomonga oʻzgartirdi. Shu tariqa biz bugun ishlatadigan tartib paydo boʻldi: muzlash 0, qaynash 100.\n\nUzoq vaqt bu shkala «santigrad», yaʼni «yuz pogʻonali» deb atalgan. Faqat 1948-yilda Xalqaro oʻlchovlar va ogʻirliklar qoʻmitasi uni Selsiy sharafiga rasman qayta nomladi. Shunday qilib, shkala oʻz muallifining nomini oldi, garchi uning bugungi koʻrinishi muallif oʻylab topgan koʻrinishga toʻgʻri kelmasa ham.",
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Celsius",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "In 1742 the Swedish astronomer Anders Celsius (1701-1744) created a temperature scale that was the reverse of today's: 0 for the boiling point and 100 for the freezing point of water.",
+      "url": "https://en.wikipedia.org/wiki/Celsius"
+     },
+     {
+      "claim": "In 1743 the French physicist Jean-Pierre Christin inverted the scale (0 freezing, 100 boiling).",
+      "url": "https://en.wikipedia.org/wiki/Celsius"
+     },
+     {
+      "claim": "In 1744, the year Celsius died, the Swedish botanist Carl Linnaeus reversed Celsius's scale.",
+      "url": "https://en.wikipedia.org/wiki/Celsius"
+     },
+     {
+      "claim": "In 1948 the International Committee for Weights and Measures renamed the centigrade scale in honour of Celsius.",
+      "url": "https://en.wikipedia.org/wiki/Celsius"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "words": 118,
+   "chars": 853,
+   "read_s_estimate": 55,
+   "author": "agent:c5-reading"
+  },
+  {
+   "id": "C5-P-uzh2",
+   "lang": "uz",
+   "level": "hard",
+   "kind": "fiction",
+   "title": "Tanlov",
+   "text": "Doston bir vaqtning oʻzida ikki toʻgarakka qatnasha olmasdi: munozara klubi ham, futbol jamoasi ham seshanba va payshanba kunlari mashgʻulot oʻtkazardi. Dadasi yoshligida viloyat terma jamoasida oʻynagan, shuning uchun uyda futbol haqida gap koʻp boʻlardi. Doston esa soʻnggi oylarda munozara klubida oʻzini boshqacha his qila boshlagan edi: u yerda uni tinglashar, gapini kesishmasdi.\n\nBir kuni kechqurun u dadasiga gapni qanday boshlashni uzoq oʻyladi. Oxiri shunday dedi: «Dada, men futbolni yomon koʻrib qolganim yoʻq. Shunchaki, hozir menga gapirishni oʻrganish koʻproq kerak». Dadasi bir muddat jim qoldi. Keyin televizorni oʻchirdi va: «Unda menga isbotlab ber. Bugun kechqurun men bilan bahslash», dedi. Ular yarim tungacha bahslashishdi.\n\nErtasi kuni ertalab dadasi nonushta paytida Dostondan munozara klubi musobaqasi qaysi kuni boʻlishini soʻradi.",
+   "words": 116,
+   "chars": 858,
+   "read_s_estimate": 55,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-uzh3",
+   "lang": "uz",
+   "level": "hard",
+   "kind": "fiction",
+   "title": "Ovozli xabar",
+   "text": "Bobom telefonni faqat qoʻngʻiroq qilish uchun ishlatardi. Xabar yozish unga qiyin edi: harflar juda mayda, barmoqlari esa yirik. Oʻtgan qishda, Toshkentga oʻqishga ketishimdan oldin, men uni ovozli xabar yuborishga oʻrgatdim. Bu oddiy edi: tugmani bosib turib gapirasan, qoʻyib yuborsang, xabar ketadi. Bobom avvaliga ishonmadi, keyin bir necha marta sinab koʻrdi va kulib qoʻydi.\n\nShaharga kelganimning ertasiga birinchi xabar keldi. Bor-yoʻgʻi oʻn soniya: «Yetib bordingmi? Ovqatni vaqtida ye». Keyingi haftalarda xabarlar uzaya boshladi. Bobom hovlidagi oʻrik gullaganini, qoʻshnining sigiri buzoqlaganini, kechagi yomgʻirni aytib berardi. Baʼzan xabar oʻrtasida jim boʻlib qolar, keyin «Xoʻp, boʻldi», der-u, yana davom etardi.\n\nYaqinda oʻzim sezib qoldim: men endi uning xabarlarini darrov tinglamayman. Kechqurun hamma ishlarni tugatib, choy damlab olaman-da, keyin shoshilmay eshitaman.",
+   "words": 116,
+   "chars": 893,
+   "read_s_estimate": 55,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-uza1",
+   "lang": "uz",
+   "level": "advanced",
+   "kind": "info",
+   "title": "Bir olim va ikki soʻz",
+   "text": "Har kuni telefoningizdagi ilovalar, qidiruv tizimlari va navigatorlar «algoritm»lar asosida ishlaydi. Bu soʻzning tarixi esa IX asrda yashagan bir olimga borib taqaladi. Muhammad ibn Muso al-Xorazmiy taxminan 780-yilda tugʻilgan va 850-yil atrofida vafot etgan. Uning nisbasi — Xorazmiy — u Markaziy Osiyodagi Xorazm hududidan ekanini koʻrsatadi.\n\n820-yil atrofida al-Xorazmiy Abbosiylar xalifaligining poytaxti Bagʻdoddagi «Bayt ul-hikma», yaʼni «Donolik uyi»da ishlagan. Oʻsha davrda yozilgan bir kitobi tenglamalarni yechish usullariga bagʻishlangan edi. Kitob nomidagi «al-jabr» soʻzi tenglamaning ikki tomoniga bir xil miqdorni qoʻshib, manfiy hadlardan qutulish amalini bildirardi. Aynan shu soʻzdan keyinchalik «algebra» atamasi kelib chiqqan.\n\n«Algoritm» soʻzi esa olimning ismidan paydo boʻlgan: lotin tilidagi tarjimalarda uning nomi «Algoritmi» deb yozilgan. XII asrda uning hind arifmetikasiga oid asari lotin tiliga tarjima qilingach, Gʻarbiy Yevropa oʻnlik pozitsion sanoq tizimi bilan tanisha boshladi. Shunday qilib, bitta olimning ismi va bitta kitobining sarlavhasi ikki ilmiy atamaga aylangan.",
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Al-Khwarizmi",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Muhammad ibn Musa al-Khwarizmi (c. 780 - c. 850) came from Khwarazm in Central Asia.",
+      "url": "https://en.wikipedia.org/wiki/Al-Khwarizmi"
+     },
+     {
+      "claim": "Around 820 he worked at the House of Wisdom in Baghdad, the capital of the Abbasid Caliphate.",
+      "url": "https://en.wikipedia.org/wiki/Al-Khwarizmi"
+     },
+     {
+      "claim": "The term algebra comes from al-jabr in the title of his treatise on calculation by completion and balancing.",
+      "url": "https://en.wikipedia.org/wiki/Al-Khwarizmi"
+     },
+     {
+      "claim": "Al-jabr is the process of removing negative units, roots and squares from an equation by adding the same quantity to each side.",
+      "url": "https://en.wikipedia.org/wiki/Al-Khwarizmi"
+     },
+     {
+      "claim": "His name was latinized as Algoritmi, the origin of the word algorithm.",
+      "url": "https://en.wikipedia.org/wiki/Al-Khwarizmi"
+     },
+     {
+      "claim": "In the 12th century, Latin translations of his textbook on Indian arithmetic introduced the decimal positional number system to the Western world.",
+      "url": "https://en.wikipedia.org/wiki/Al-Khwarizmi"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "words": 141,
+   "chars": 1112,
+   "read_s_estimate": 55,
+   "author": "agent:c5-reading"
+  },
+  {
+   "id": "C5-P-uza2",
+   "lang": "uz",
+   "level": "advanced",
+   "kind": "essay",
+   "title": "Xatodan qoʻrqmaslik haqida",
+   "text": "Maktabda koʻpchiligimiz bitta oddiy qoidani oʻrganib olamiz: xato — bu yomon. Daftardagi qizil chiziq, sinfdoshlarning kulgisi, «yana notoʻgʻri» degan nigoh — bularning barchasi bizga xatodan qochishni oʻrgatadi. Natijada koʻpchilik qoʻl koʻtarmaslikni, savol bermaslikni, bilmagan ishiga umuman urinmaslikni afzal koʻradi. Axir xato qilmaslikning eng ishonchli yoʻli — hech narsa qilmaslik.\n\nMen bu qoidaning narxini kech tushundim. Uch yil davomida ingliz tilida gapirishdan qochdim, chunki talaffuzim kulgili chiqishidan qoʻrqardim. Grammatikani yaxshi bilardim, lekin bitta jumlani ham baland ovozda aytolmasdim. Bir yozda amakim ishlaydigan mehmonxonada yordamchi boʻlib, xorijlik sayyohlarga shahar boʻylab yoʻl koʻrsatishimga toʻgʻri keldi. Birinchi kuni oʻnlab xato qildim. Ikkinchi kuni ham. Ammo hech kim kulmadi: sayyohlar meni tushunishdi, men esa ularni.\n\nBu bilan har qanday xato yaxshi demoqchi emasman. Shifokor yoki uchuvchining xatosi qimmatga tushadi. Lekin oʻrganish jarayonidagi xato — boshqa narsa. U qayerda turganingizni koʻrsatadigan xaritadir. Xaritaga qaramay turib esa yoʻlni topib boʻlmaydi.",
+   "words": 143,
+   "chars": 1120,
+   "read_s_estimate": 55,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-uza3",
+   "lang": "uz",
+   "level": "advanced",
+   "kind": "fiction",
+   "title": "Ikki uy oraligʻida",
+   "text": "Toshkentga oʻqishga kelganimga ikki yil boʻldi. Har safar qishloqqa qaytganimda, avtobus bekatidan uyimizgacha boʻlgan yoʻl qisqargandek tuyuladi. Bolaligimda bu yoʻl cheksiz edi: har bir darvoza, har bir it, har bir tut daraxti alohida voqea edi. Endi men uni telefonga qarab, hech narsani sezmasdan bosib oʻtaman.\n\nUyda hamma narsa avvalgidek. Onam dasturxon yozadi, dadam gapni ob-havodan boshlaydi, ukam esa shahardagi hayotim haqida soʻrashga uyaladi. Faqat men oʻzgarganman. Oʻzimni mehmondek his qilaman: qaysi idish qayerda turishini unutibman, ertalabki xoʻroz ovozi meni choʻchitib uygʻotadi.\n\nShaharga qaytganimda esa yotoqxonadagi tor karavotga yotib, qishloqdagi tunlarni, togʻ tomondan esadigan salqin shamolni sogʻinaman. Goʻyo men ikki uy oraligʻida yashaydigan, lekin hech birida toʻliq oʻz joyida boʻlmagan odamga aylanganman.\n\nKecha onam qoʻngʻiroq qilib, bogʻdagi olma birinchi marta hosil berganini aytdi. Oʻsha olmani men maktabni bitirgan yili birga ekkan edik. Negadir shu xabardan keyin koʻnglim biroz yengil tortdi.",
+   "words": 139,
+   "chars": 1041,
+   "read_s_estimate": 55,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-rue1",
+   "lang": "ru",
+   "level": "easy",
+   "kind": "fiction",
+   "title": "Пирог для соседки",
+   "text": "В субботу Лиза с мамой испекли яблочный пирог. Пирог получился большой, и мама сказала: «Давай отнесём кусок Анне Петровне». Анна Петровна — их соседка, она живёт одна на третьем этаже. Лиза положила пирог на красивую тарелку и поднялась по лестнице. Соседка долго не открывала дверь, потому что ходит медленно. Когда она увидела пирог, она улыбнулась и пригласила Лизу на чай. Они пили чай целый час, и Анна Петровна показывала Лизе старые фотографии. Вечером Лиза спросила маму: «Можно я буду ходить к ней каждую субботу?»",
+   "words": 84,
+   "chars": 524,
+   "read_s_estimate": 55,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-rue2",
+   "lang": "ru",
+   "level": "easy",
+   "kind": "fiction",
+   "title": "Мяч в кустах",
+   "text": "Каждое утро Тимур гуляет с собакой Лаймой в парке. Лайма очень любит бегать за мячом. В понедельник Тимур бросил мяч слишком далеко, и мяч упал в густые кусты. Лайма долго искала его, но вернулась без мяча. Тогда Тимур сам полез в кусты. Мяча там не было, зато он увидел маленького ёжика. Ёжик тут же свернулся в колючий шарик. Тимур не стал его трогать и тихо ушёл. Мяч они так и не нашли. Но по дороге домой Тимур рассказывал маме не о мяче, а о ёжике.",
+   "words": 85,
+   "chars": 454,
+   "read_s_estimate": 55,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-rue3",
+   "lang": "ru",
+   "level": "easy",
+   "kind": "fiction",
+   "title": "Первая рыбалка",
+   "text": "Летом дядя Рустам взял меня на рыбалку. Мы встали в пять утра, когда было ещё темно. У реки было тихо и прохладно. Дядя показал мне, как надевать червяка на крючок. Мы сидели на берегу три часа, но рыба не клевала. Я начал скучать, а дядя только улыбался и пил чай из термоса. Вдруг из воды выпрыгнула большая рыба, но не у нашей удочки, а совсем рядом. Мы засмеялись. Домой мы вернулись без рыбы. Мама спросила: «Ну что, рыбаки?» А я ответил: «Поедем ещё в следующую субботу!»",
+   "words": 86,
+   "chars": 477,
+   "read_s_estimate": 55,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-rum1",
+   "lang": "ru",
+   "level": "medium",
+   "kind": "info",
+   "title": "Озеро, которое бьёт рекорды",
+   "text": "Байкал находится на юге Сибири, в России. Это самое глубокое озеро на Земле: в самом глубоком месте глубина достигает 1642 метров. Кроме того, Байкал считается самым древним озером мира: его возраст оценивают в 25–30 миллионов лет. В нём содержится 22–23 % всей пресной воды, которая находится на поверхности планеты.\n\nВ Байкал впадает до 330 рек, а вытекает только одна — Ангара. Зимой озеро покрывается льдом примерно на четыре-пять месяцев, и толщина льда бывает от полуметра почти до полутора метров. Вода в Байкале очень прозрачная: зимой на открытых участках прозрачность может достигать 30–40 метров. Только здесь, и больше нигде на Земле, живёт байкальская нерпа — особый вид тюленя.",
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Lake_Baikal",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Lake Baikal is in southern Siberia, Russia.",
+      "url": "https://en.wikipedia.org/wiki/Lake_Baikal"
+     },
+     {
+      "claim": "It is the deepest lake in the world, with a maximum depth of 1,642 m.",
+      "url": "https://en.wikipedia.org/wiki/Lake_Baikal"
+     },
+     {
+      "claim": "It is the world's oldest lake at 25-30 million years.",
+      "url": "https://en.wikipedia.org/wiki/Lake_Baikal"
+     },
+     {
+      "claim": "It contains 22-23% of the world's fresh surface water.",
+      "url": "https://en.wikipedia.org/wiki/Lake_Baikal"
+     },
+     {
+      "claim": "It is fed by as many as 330 inflowing rivers and drained through a single outlet, the Angara.",
+      "url": "https://en.wikipedia.org/wiki/Lake_Baikal"
+     },
+     {
+      "claim": "The surface freezes for about 4-5 months; the ice reaches 0.5 to 1.4 m.",
+      "url": "https://en.wikipedia.org/wiki/Lake_Baikal"
+     },
+     {
+      "claim": "In winter, water transparency in open sections can be 30-40 m.",
+      "url": "https://en.wikipedia.org/wiki/Lake_Baikal"
+     },
+     {
+      "claim": "The Baikal seal or nerpa is endemic to Lake Baikal.",
+      "url": "https://en.wikipedia.org/wiki/Lake_Baikal"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "words": 107,
+   "chars": 691,
+   "read_s_estimate": 60,
+   "author": "agent:c5-reading"
+  },
+  {
+   "id": "C5-P-rum2",
+   "lang": "ru",
+   "level": "medium",
+   "kind": "fiction",
+   "title": "Честный ответ",
+   "text": "Вера готовилась к школьному конкурсу рисунков две недели. Она нарисовала осенний парк: жёлтые клёны, скамейку и старика с собакой. За день до конкурса она показала рисунок лучшей подруге Кате. Катя долго молчала, а потом сказала: «Деревья очень красивые. Но старик похож на пятно». Вера обиделась и весь вечер не отвечала на Катины сообщения. Поздно ночью она снова посмотрела на рисунок и поняла, что подруга права. Утром Вера встала на час раньше и перерисовала старика. На конкурсе её работу отметили грамотой. Первой, кому Вера об этом написала, была Катя.",
+   "words": 88,
+   "chars": 560,
+   "read_s_estimate": 50,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-rum3",
+   "lang": "ru",
+   "level": "medium",
+   "kind": "fiction",
+   "title": "Яблоки на остановке",
+   "text": "В день контрольной по физике Арслан вышел из дома раньше обычного. На остановке пожилой мужчина уронил пакет, и по тротуару раскатились яблоки. Люди обходили их и спешили к автобусу. Арслан тоже посмотрел на часы, но всё-таки наклонился и стал собирать яблоки. Когда он закончил, автобус уже уехал. Следующий пришёл через пятнадцать минут. В класс Арслан вбежал, когда контрольная уже началась. Учительница строго посмотрела на него, но молча дала ему листок. Он решил всё, кроме последней задачи. Вечером выяснилось, что тот мужчина — дедушка его одноклассника Самира. А на следующий день учительница, проходя мимо его парты, тихо сказала: «Самир мне всё рассказал. Последнюю задачу реши дома — я проверю».",
+   "words": 108,
+   "chars": 707,
+   "read_s_estimate": 60,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-ruh1",
+   "lang": "ru",
+   "level": "hard",
+   "kind": "info",
+   "title": "Открытая чашка",
+   "text": "В 1928 году шотландский врач Александр Флеминг работал в больнице Святой Марии в Лондоне и изучал бактерии стафилококка. Он выращивал их в плоских стеклянных чашках. Однажды, разбирая такие чашки вместе со своим бывшим учеником, он заметил одну, которая стояла с открытой крышкой. В неё попала сине-зелёная плесень, и вокруг плесени бактерии не росли.\n\nИспорченную чашку можно было просто выбросить. Но если вокруг плесени бактерии не растут, похоже, что плесень выделяет какое-то вещество. 7 марта 1929 года Флеминг назвал жидкость, полученную из этой плесени, «пенициллином». Однако выделить чистое вещество тогда не удалось.\n\nТолько в 1939 году в Оксфорде Эрнст Чейн обратил внимание Говарда Флори на почти забытую статью Флеминга. Их работа превратила наблюдение в лекарство, которое во время Второй мировой войны спасло тысячи жизней. В 1945 году Флеминг, Флори и Чейн разделили Нобелевскую премию по физиологии и медицине.",
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/History_of_penicillin",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "In 1928 Alexander Fleming, a Scottish physician, was studying cultures of S. aureus (staphylococcus) at St Mary's Hospital, London.",
+      "url": "https://en.wikipedia.org/wiki/History_of_penicillin"
+     },
+     {
+      "claim": "With his former research student he found a culture plate with an open lid contaminated with a blue-green mould; around the mould the bacteria did not grow.",
+      "url": "https://en.wikipedia.org/wiki/History_of_penicillin"
+     },
+     {
+      "claim": "On 7 March 1929 he called the mould juice 'penicillin'.",
+      "url": "https://en.wikipedia.org/wiki/History_of_penicillin"
+     },
+     {
+      "claim": "Penicillin could not be isolated at that time.",
+      "url": "https://en.wikipedia.org/wiki/History_of_penicillin"
+     },
+     {
+      "claim": "In 1939 at Oxford, Ernst Chain drew Howard Florey's attention to Fleming's largely forgotten 1929 paper.",
+      "url": "https://en.wikipedia.org/wiki/History_of_penicillin"
+     },
+     {
+      "claim": "During the Second World War penicillin saved thousands of lives.",
+      "url": "https://en.wikipedia.org/wiki/History_of_penicillin"
+     },
+     {
+      "claim": "Fleming, Florey and Chain shared the 1945 Nobel Prize in Physiology or Medicine.",
+      "url": "https://en.wikipedia.org/wiki/History_of_penicillin"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "words": 137,
+   "chars": 928,
+   "read_s_estimate": 65,
+   "author": "agent:c5-reading"
+  },
+  {
+   "id": "C5-P-ruh2",
+   "lang": "ru",
+   "level": "hard",
+   "kind": "fiction",
+   "title": "Чужая сторона",
+   "text": "Когда учитель объявил темы дебатов, Мадина надеялась, что ей достанется сторона, с которой она согласна. Тема была «Нужно ли запретить телефоны в школе». Мадина считала, что запрещать ничего не нужно, и, конечно, ей выпало доказывать обратное.\n\nПервые два дня она злилась. Каждый довод в пользу запрета казался ей глупым. Потом, чтобы хоть как-то подготовиться, она начала записывать, сколько раз за урок сама берёт телефон в руки. К концу недели в её тетради были цифры, которые ей совсем не понравились.\n\nНа дебатах Мадина говорила спокойно и уверенно. Она не читала с листа и ни разу не сказала «я считаю». Её команда победила. После игры одноклассник из команды соперников спросил: «Ты правда думаешь, что телефоны надо запретить?» Мадина помолчала. «Я думаю, — ответила она, — что теперь мне сложнее быть уверенной в том, в чём я была уверена неделю назад».",
+   "words": 138,
+   "chars": 862,
+   "read_s_estimate": 65,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-ruh3",
+   "lang": "ru",
+   "level": "hard",
+   "kind": "fiction",
+   "title": "План комнаты",
+   "text": "Брат уезжал учиться в Казань в конце августа. Всё лето я ждал этого дня: наконец-то у меня будет своя комната, и никто не будет включать свет в два часа ночи. Я даже нарисовал план, куда переставлю стол и где повешу полку.\n\nВ день отъезда мы провожали его на вокзале. Мама плакала, папа много шутил, а брат почему-то всё время поправлял мне воротник, как маленькому. Когда поезд ушёл, папа сказал: «Ну вот, теперь ты у нас старший». Я хотел ответить что-нибудь смешное, но не смог.\n\nДома я зашёл в комнату. Стол стоял на прежнем месте, полка тоже. Я лёг на кровать брата и долго смотрел в потолок. План так и остался лежать в ящике. Вечером я написал брату: «Доехал?» — хотя знал, что поезд будет идти ещё сутки.",
+   "words": 127,
+   "chars": 712,
+   "read_s_estimate": 60,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-rua1",
+   "lang": "ru",
+   "level": "advanced",
+   "kind": "info",
+   "title": "Как измеряли метр",
+   "text": "Метр кажется чем-то само собой разумеющимся: вот линейка, вот сантиметры. Но у этой единицы есть своя история, и она сложнее, чем можно подумать.\n\nВ 1791 году во Франции метр определили как одну десятимиллионную долю расстояния от Северного полюса до экватора, если идти по меридиану через Париж. Пройти и измерить всё это расстояние было невозможно, поэтому учёные Деламбр и Мешен измерили его часть — дугу меридиана от Дюнкерка до Барселоны, — а остальное рассчитали. В 1799 году по их результатам изготовили платиновый брусок, который хранили в Национальном архиве и назвали «архивным метром».\n\nПозже выяснилось, что в расчётах была небольшая неточность: метр получился примерно на 0,2 миллиметра короче, чем следовало по первоначальному замыслу. Тем не менее именно этот брусок стал образцом для следующих эталонов: в 1889 году длину новых брусков из сплава платины и иридия сверили с «архивным метром».\n\nВ XX веке от металлических эталонов отказались. В 1960 году метр связали с длиной световой волны, которую излучают атомы криптона-86, и эталон стал доступен любой лаборатории, способной провести такое измерение. С 1983 года метр определяют через скорость света: это расстояние, которое свет проходит в вакууме за 1/299 792 458 долю секунды.",
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/History_of_the_metre",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "The metre was originally defined in 1791 as one ten-millionth of the distance from the equator to the North Pole along a meridian through Paris.",
+      "url": "https://en.wikipedia.org/wiki/Metre"
+     },
+     {
+      "claim": "The meridian arc from Dunkirk to Barcelona was measured (Delambre and Méchain).",
+      "url": "https://en.wikipedia.org/wiki/History_of_the_metre"
+     },
+     {
+      "claim": "A platinum metre bar, kept in the National Archives as the Mètre des Archives, became the standard in 1799.",
+      "url": "https://en.wikipedia.org/wiki/History_of_the_metre"
+     },
+     {
+      "claim": "The metre is 0.197 mm shorter than it should be according to its original proposed definition.",
+      "url": "https://en.wikipedia.org/wiki/History_of_the_metre"
+     },
+     {
+      "claim": "The 1889 prototype bars were made of 90% platinum and 10% iridium; one was found identical in length to the Mètre des Archives.",
+      "url": "https://en.wikipedia.org/wiki/History_of_the_metre"
+     },
+     {
+      "claim": "In 1960 the metre was defined by wavelengths of radiation of the krypton-86 atom, making the standard available by measurement.",
+      "url": "https://en.wikipedia.org/wiki/Metre"
+     },
+     {
+      "claim": "Since 1983 the metre is the length of the path travelled by light in vacuum during 1/299,792,458 of a second.",
+      "url": "https://en.wikipedia.org/wiki/History_of_the_metre"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "words": 188,
+   "chars": 1249,
+   "read_s_estimate": 75,
+   "author": "agent:c5-reading"
+  },
+  {
+   "id": "C5-P-rua2",
+   "lang": "ru",
+   "level": "advanced",
+   "kind": "essay",
+   "title": "О медленном чтении",
+   "text": "Мы читаем больше, чем когда-либо: сообщения, ленты новостей, заголовки, подписи под фотографиями. Но всё чаще я замечаю, что дочитываю страницу до конца и не могу вспомнить, о чём был её первый абзац. Глаза двигались, а мысль была где-то в другом месте.\n\nБыстрое чтение похоже на поездку на скоростном поезде: ты попадаешь из пункта А в пункт Б, но о местности между ними можешь рассказать немногое. Иногда это именно то, что нужно. Расписание автобусов или инструкцию к чайнику незачем смаковать.\n\nОднако есть тексты, которые не раскрываются на скорости. Хорошее стихотворение, сложный рассказ, длинная статья с непростым доводом — всё это требует, чтобы читатель остановился, вернулся к фразе, задал себе вопрос. Медленное чтение — это не недостаток навыка, а другой навык: умение заметить не только, что сказано, но и как это сказано и почему.\n\nЯ не призываю отказаться от быстрого чтения. Я лишь предлагаю иногда сознательно переключать скорость — так же, как водитель переключает передачу перед подъёмом. Попробуйте прочитать один короткий текст дважды: в первый раз — чтобы понять, во второй — чтобы удивиться.",
+   "words": 172,
+   "chars": 1116,
+   "read_s_estimate": 70,
+   "author": "agent:c5-reading",
+   "source": "own"
+  },
+  {
+   "id": "C5-P-rua3",
+   "lang": "ru",
+   "level": "advanced",
+   "kind": "fiction",
+   "title": "Ключ от второго замка",
+   "text": "Летом после девятого класса я устроился помощником в обувную мастерскую у рынка. Хозяин, Ильдар-ака, был невысоким молчаливым человеком с руками, тёмными от клея и ваксы. В первый день он дал мне старый ботинок, нож и сказал: «Сними подошву. Не порежь кожу». Я провозился до вечера и всё-таки порезал.\n\nОн не ругался. Он вообще мало говорил. Он просто брал мою работу, смотрел на неё, переворачивал и откладывал в сторону — туда, где лежали вещи, которые предстояло переделать. Через две недели эта куча стала меньше. Через месяц я заметил, что он перестал перепроверять мои швы.\n\nОднажды пришла женщина с детскими сандалиями, у которых оторвался ремешок. Ильдар-ака кивнул в мою сторону. Я пришил ремешок, проверил его трижды и отдал. Женщина заплатила, поблагодарила и ушла, ни разу не взглянув на меня. Ильдар-ака тоже ничего не сказал. Но вечером, закрывая мастерскую, он протянул мне ключ от второго замка.\n\nТогда я впервые понял, что похвала не всегда звучит вслух.",
+   "words": 153,
+   "chars": 971,
+   "read_s_estimate": 60,
+   "author": "agent:c5-reading",
+   "source": "own"
+  }
+ ]
+}

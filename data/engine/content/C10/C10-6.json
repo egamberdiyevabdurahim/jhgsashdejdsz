@@ -1,0 +1,174 @@
+{
+  "bank": "C10",
+  "batch": 6,
+  "kind": "catalog",
+  "note": "AP Calculus AB units 3 and 4 (SPEC-lessons rev. 2, 12 Oct 2026, §3.5, §12.5; P7 PLAN.md §4, author a4). Catalog records, not quiz items. The unit names are College Board's own, read on AP Students on 12 Oct 2026 (the spec's §3.5); everything else is our own wording. These units carry no practice, study_ref, end_check, stages or sessions: their C19 lessons (C19-APCA03-1 … C19-APCA04-3) name their own C1 families. JG's own content: no JIA AP class is implied (owner, 4 Oct 2026). Fact check (P7 integration, 2026-10-13, C10/FACTCHECK.md \"P7\"): every cited page opened; the records are verified_auto.",
+  "items": [
+    {
+      "kind": "test_prep_unit",
+      "id": "C10-APCA03",
+      "test": "AP",
+      "section": "calculus_ab",
+      "domain": "calculus_ab",
+      "domain_label": {
+        "en": "AP Calculus AB",
+        "uz": "AP Calculus AB",
+        "ru": "AP Calculus AB"
+      },
+      "unit": 3,
+      "units_in_domain": 8,
+      "level_band": "core",
+      "skills": [
+        "chain_rule",
+        "implicit_differentiation",
+        "inverse_derivative",
+        "second_derivative"
+      ],
+      "rungs": [
+        "precalc",
+        "calc"
+      ],
+      "title": {
+        "en": "Differentiation: Composite, Implicit, and Inverse Functions",
+        "uz": "Differentiation: Composite, Implicit, and Inverse Functions (murakkab, oshkormas va teskari funksiyalarni differensiallash)",
+        "ru": "Differentiation: Composite, Implicit, and Inverse Functions (дифференцирование сложных, неявных и обратных функций)"
+      },
+      "goal": {
+        "en": "Differentiate a function inside a function with the chain rule, find dy/dx on a curve given by an equation in x and y, and find the derivative of an inverse function and a second derivative.",
+        "uz": "Funksiya ichidagi funksiyani zanjir qoidasi (chain rule) bilan differensiallang, x va y bogʻlangan tenglama bilan berilgan egri chiziqda dy/dx ni toping, teskari funksiyaning hosilasini va ikkinchi tartibli hosilani toping.",
+        "ru": "Дифференцируйте функцию внутри функции по цепному правилу (chain rule), находите dy/dx на кривой, заданной уравнением с x и y, находите производную обратной функции и вторую производную."
+      },
+      "study": [
+        {
+          "en": "Chain rule: (f(g(x)))′ = f′(g(x)) · g′(x). Differentiate the outside, keep the inside as it is, then multiply by the derivative of the inside: (e^(kx))′ = k·e^(kx), (sin(kx))′ = k·cos(kx).",
+          "uz": "Zanjir qoidasi: (f(g(x)))′ = f′(g(x)) · g′(x). Tashqi funksiyani differensiallang, ichkisini oʻzgartirmang, keyin ichki funksiyaning hosilasiga koʻpaytiring: (e^(kx))′ = k·e^(kx), (sin(kx))′ = k·cos(kx).",
+          "ru": "Цепное правило: (f(g(x)))′ = f′(g(x)) · g′(x). Дифференцируйте внешнюю функцию, не меняя внутреннюю, затем умножьте на производную внутренней: (e^(kx))′ = k·e^(kx), (sin(kx))′ = k·cos(kx)."
+        },
+        {
+          "en": "Implicit differentiation: differentiate both sides of the curve's equation with respect to x; y is a function of x, so (y²)′ = 2y·y′. Then solve for y′.",
+          "uz": "Oshkormas differensiallash: egri chiziq tenglamasining ikkala tomonini x boʻyicha differensiallang; y — x ning funksiyasi, shuning uchun (y²)′ = 2y·y′. Keyin y′ ni toping.",
+          "ru": "Неявное дифференцирование: продифференцируйте обе части уравнения кривой по x; y — функция от x, поэтому (y²)′ = 2y·y′. Затем выразите y′."
+        },
+        {
+          "en": "If g is the inverse of f and f(a) = b, then g′(b) = 1/f′(a). The second derivative f″ is the derivative of f′.",
+          "uz": "Agar g funksiya f ga teskari va f(a) = b boʻlsa, g′(b) = 1/f′(a). Ikkinchi tartibli hosila f″ — bu f′ ning hosilasi.",
+          "ru": "Если g — функция, обратная к f, и f(a) = b, то g′(b) = 1/f′(a). Вторая производная f″ — это производная от f′."
+        }
+      ],
+      "official_links": [
+        {
+          "id": "ap_students_calc_ab",
+          "kind": "course",
+          "url": "https://apstudents.collegeboard.org/courses/ap-calculus-ab",
+          "label": {
+            "en": "AP Students: AP Calculus AB course page",
+            "uz": "AP Students: AP Calculus AB kursi sahifasi",
+            "ru": "AP Students: страница курса AP Calculus AB"
+          },
+          "verified_at": "2026-10-12"
+        }
+      ],
+      "facts": [
+        {
+          "claim": "AP Calculus AB unit 3 is \"Differentiation: Composite, Implicit, and Inverse Functions\".",
+          "url": "https://apstudents.collegeboard.org/courses/ap-calculus-ab",
+          "verified_at": "2026-10-12"
+        }
+      ],
+      "requires": {
+        "math_rung_min": "precalc",
+        "after_units": [
+          "C10-APCA02"
+        ],
+        "basis": "SPEC-lessons §3.2: AP Calculus AB needs the maths rung at least precalculus"
+      },
+      "source": "own",
+      "author": "agent:p7-a4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "test_prep_unit",
+      "id": "C10-APCA04",
+      "test": "AP",
+      "section": "calculus_ab",
+      "domain": "calculus_ab",
+      "domain_label": {
+        "en": "AP Calculus AB",
+        "uz": "AP Calculus AB",
+        "ru": "AP Calculus AB"
+      },
+      "unit": 4,
+      "units_in_domain": 8,
+      "level_band": "core",
+      "skills": [
+        "motion",
+        "related_rates",
+        "linear_approximation",
+        "lhopital"
+      ],
+      "rungs": [
+        "precalc",
+        "calc"
+      ],
+      "title": {
+        "en": "Contextual Applications of Differentiation",
+        "uz": "Contextual Applications of Differentiation (hosilaning amaliy masalalarda qoʻllanishi)",
+        "ru": "Contextual Applications of Differentiation (применение производной в прикладных задачах)"
+      },
+      "goal": {
+        "en": "Read a derivative as a rate with its units, find velocity and acceleration from position, solve related-rates problems, estimate values with a tangent line and find 0/0 limits with L'Hôpital's rule.",
+        "uz": "Hosilani oʻz oʻlchov birligi bilan oʻzgarish tezligi sifatida oʻqing, holatdan tezlik va tezlanishni toping, bogʻliq tezliklar (related rates) masalalarini yeching, urinma yordamida qiymatlarni taxminan hisoblang va 0/0 limitlarni Lopital qoidasi bilan toping.",
+        "ru": "Читайте производную как скорость изменения с её единицами, находите скорость и ускорение по положению, решайте задачи на связанные скорости (related rates), оценивайте значения с помощью касательной и находите пределы вида 0/0 по правилу Лопиталя."
+      },
+      "study": [
+        {
+          "en": "A derivative is a rate: its unit is the output's unit per the input's unit. If s(t) is position, v(t) = s′(t) is velocity and a(t) = v′(t) is acceleration.",
+          "uz": "Hosila — oʻzgarish tezligi: uning birligi natija birligining kirish birligiga nisbati. Agar s(t) — holat boʻlsa, v(t) = s′(t) — tezlik, a(t) = v′(t) — tezlanish.",
+          "ru": "Производная — это скорость изменения: её единица — единица результата на единицу аргумента. Если s(t) — положение, то v(t) = s′(t) — скорость, а a(t) = v′(t) — ускорение."
+        },
+        {
+          "en": "Related rates: write the equation that links the quantities, differentiate both sides with respect to time t, and only then put in the numbers of that moment.",
+          "uz": "Bogʻliq tezliklar: kattaliklarni bogʻlovchi tenglamani yozing, ikkala tomonni vaqt t boʻyicha differensiallang va faqat shundan keyin oʻsha paytdagi sonlarni qoʻying.",
+          "ru": "Связанные скорости: запишите уравнение, связывающее величины, продифференцируйте обе части по времени t и только потом подставьте числа этого момента."
+        },
+        {
+          "en": "Near x = a, f(x) ≈ f(a) + f′(a)(x − a). If putting x = a into a fraction gives 0/0, differentiate the top and the bottom separately and try again (L'Hôpital's rule).",
+          "uz": "x = a yaqinida f(x) ≈ f(a) + f′(a)(x − a). Agar kasrga x = a ni qoʻyganda 0/0 chiqsa, surat va maxrajni alohida differensiallang va yana urinib koʻring (Lopital qoidasi).",
+          "ru": "Вблизи x = a f(x) ≈ f(a) + f′(a)(x − a). Если подстановка x = a в дробь даёт 0/0, продифференцируйте числитель и знаменатель отдельно и попробуйте снова (правило Лопиталя)."
+        }
+      ],
+      "official_links": [
+        {
+          "id": "ap_students_calc_ab",
+          "kind": "course",
+          "url": "https://apstudents.collegeboard.org/courses/ap-calculus-ab",
+          "label": {
+            "en": "AP Students: AP Calculus AB course page",
+            "uz": "AP Students: AP Calculus AB kursi sahifasi",
+            "ru": "AP Students: страница курса AP Calculus AB"
+          },
+          "verified_at": "2026-10-12"
+        }
+      ],
+      "facts": [
+        {
+          "claim": "AP Calculus AB unit 4 is \"Contextual Applications of Differentiation\".",
+          "url": "https://apstudents.collegeboard.org/courses/ap-calculus-ab",
+          "verified_at": "2026-10-12"
+        }
+      ],
+      "requires": {
+        "math_rung_min": "precalc",
+        "after_units": [
+          "C10-APCA03"
+        ],
+        "basis": "SPEC-lessons §3.2: AP Calculus AB needs the maths rung at least precalculus"
+      },
+      "source": "own",
+      "author": "agent:p7-a4",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ]
+}

@@ -1,0 +1,1038 @@
+{
+  "bank": "C19",
+  "batch": 5,
+  "kind": "lessons",
+  "note": "SAT Reading and Writing lesson bodies, phase 1b (SPEC-lessons rev. 2, 12 Oct 2026, §9.4, §11.1, §12.3 B1), author a3: lesson 1 of the C10 units RWEI01-03 and RWII02. `lessons` are the lesson records (fixed-text lessons: test and homework pools null, each `reserve` its 20 items: the C6 items on its subskills plus the new ones in C6/C6-9.json); `items` are their piece questions (the key is options[0]; `page` names the lesson). Our own wording and our own texts, all plainly fictional everyday scenes; no College Board or other official test material was read, adapted or fed to a model. Exam texts and questions stay in English (§3.9); the bodies, instructions and whys are in en, uz and ru. Key check 2 (lane B3, 13 Oct 2026): two blind solvers outside the author's session, B3s1 and B3s2, both chose the key on all 12 piece questions, so they are verified_auto with key_check_2 blind:B3s1+B3s2, and each lesson record with them; the C6 reserve items of this batch likewise (C19/RECONCILE-1b.md, C6/RECONCILE-1b.md). Version 2 of C19-RWEI02-1 and C19-RWEI03-1 (P7 follow-up, 13 Oct 2026): their worked examples list the notes one per line (the bullet rule), the text otherwise unchanged; their piece questions are untouched, so they stay verified_auto (C19/RECONCILE-p7.md part 3). P14 (18 Oct 2026, author agent:p14-content, the open items of P13): version+1 drafts (status draft, key_check_2 null, no key_check_2_version; each needs a fresh key check 2 by two blind solvers outside this session, and while they are drafts the lessons whose reserves or pieces hold them are held): C19-ii21q1 (cue.length: the key 114 characters against 75) (two distractors lengthened with words that keep them wrong). The key is still options[0]; id, subskill, level, difficulty, prior_b, time_s and instructions are kept.",
+  "lessons": [
+    {
+      "kind": "lesson",
+      "id": "C19-RWEI01-1",
+      "course": "sat_rw",
+      "unit": "C10-RWEI01",
+      "seq": 1,
+      "skill": "sat_rw:RWEI01",
+      "requires": {
+        "english_cefr_min": "B1"
+      },
+      "title": {
+        "en": "SAT R&W: Transitions",
+        "uz": "SAT R&W: Transitions — bogʻlovchi soʻzlar",
+        "ru": "SAT R&W: Transitions — связующие слова"
+      },
+      "minutes": 6,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "A transition joins two ideas and shows how they are linked. On the SAT you choose one for a blank.\nName the link before you look at the options. Five links do most of the work:\n• add: In addition, Moreover\n• contrast: However, In contrast, Instead (in place of)\n• result: Therefore, As a result\n• example: For example, For instance\n• time: Next, Finally, Meanwhile (at the same time)\nExample: \"The road was icy. ___, the school bus came an hour late.\" The ice caused the delay, so the link is result: \"As a result,\".",
+            "uz": "Bogʻlovchi (transition) ikki fikrni bogʻlaydi va ular qanday bogʻlanganini koʻrsatadi. SATda boʻsh joyga shunday soʻzni tanlaysiz.\nVariantlarga qarashdan oldin bogʻlanish turini ayting. Koʻp savolda shu beshtasi kerak:\n• qoʻshish: In addition, Moreover\n• qarama-qarshilik: However, In contrast, Instead (oʻrniga)\n• natija: Therefore, As a result\n• misol: For example, For instance\n• vaqt: Next, Finally, Meanwhile (shu paytda)\nMisol: «The road was icy. ___, the school bus came an hour late.» Muz kechikishga sabab boʻlgan, demak bogʻlanish natija: «As a result,».",
+            "ru": "Связующее слово (transition) соединяет две мысли и показывает, как они связаны. На SAT его нужно выбрать для пропуска.\nОпределите тип связи, прежде чем смотреть на варианты. Чаще всего встречаются пять типов:\n• добавление: In addition, Moreover\n• контраст: However, In contrast, Instead (вместо этого)\n• результат: Therefore, As a result\n• пример: For example, For instance\n• время: Next, Finally, Meanwhile (в это же время)\nПример: «The road was icy. ___, the school bus came an hour late.» Лёд стал причиной опоздания, значит, связь — результат: «As a result,»."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ei11q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Worked example: \"The museum is usually crowded on weekends. ___, on Monday morning Aziz had the dinosaur hall almost to himself.\"\n1. Sentence 1: the museum is full.\n2. Sentence 2: the hall is empty.\n3. The link: the ideas are opposite, so contrast.\n4. The answer: a contrast word, \"By contrast,\".\nNow you: \"The bakery sold out of bread by noon every day last week. ___, the owner baked twice as many loaves this week.\"\n1. Sentence 1: the bread ran out.\n2. Sentence 2: she baked more.\n3. The link: running out caused the bigger batch, so result.\n4. The answer: ?",
+            "uz": "Yechilgan misol: «The museum is usually crowded on weekends. ___, on Monday morning Aziz had the dinosaur hall almost to himself.»\n1. 1-gap: muzey odamga toʻla.\n2. 2-gap: zal deyarli boʻsh.\n3. Bogʻlanish: fikrlar qarama-qarshi.\n4. Javob: qarama-qarshilik soʻzi, «By contrast,».\nEndi siz: «The bakery sold out of bread by noon every day last week. ___, the owner baked twice as many loaves this week.»\n1. 1-gap: non tugab qolgan.\n2. 2-gap: egasi koʻproq non yopgan.\n3. Bogʻlanish: non tugagani koʻproq yopishga sabab boʻlgan, demak natija.\n4. Javob: ?",
+            "ru": "Разбор: «The museum is usually crowded on weekends. ___, on Monday morning Aziz had the dinosaur hall almost to himself.»\n1. Предложение 1: в музее много людей.\n2. Предложение 2: зал почти пуст.\n3. Связь: мысли противоположны, это контраст.\n4. Ответ: слово контраста, «By contrast,».\nТеперь попробуйте сами: «The bakery sold out of bread by noon every day last week. ___, the owner baked twice as many loaves this week.»\n1. Предложение 1: хлеб быстро заканчивался.\n2. Предложение 2: хозяйка испекла больше.\n3. Связь: хлеба не хватало, поэтому его стали печь больше — это результат.\n4. Ответ: ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ei11q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out for two traps.\n1. The surprise. If sentence 2 is not what sentence 1 makes you expect, the link is contrast, even when it looks like a result. \"Bobur trained for weeks. ___, he lost the first race.\" Training should help him win, so the answer is \"However,\", not \"Therefore,\".\n2. Twins. If two options do the same job, such as \"Therefore,\" and \"Consequently,\", neither can be the one right answer. Cross both out.",
+            "uz": "Ikki tuzoqdan ehtiyot boʻling.\n1. Kutilmagan natija. Agar 2-gap 1-gapni oʻqib kutganingizdek boʻlmasa, bogʻlanish qarama-qarshilik, garchi natijaga oʻxshasa ham. «Bobur trained for weeks. ___, he lost the first race.» Mashq gʻalabaga yordam berishi kerak edi, shuning uchun javob «However,», «Therefore,» emas.\n2. Egizaklar. Agar ikki variant bir xil ishni qilsa, masalan «Therefore,» va «Consequently,», ulardan hech biri yagona toʻgʻri javob boʻla olmaydi. Ikkalasini ham oʻchiring.",
+            "ru": "Осторожно: две ловушки.\n1. Неожиданность. Если предложение 2 — не то, чего можно ожидать после предложения 1, связь — контраст, даже если похоже на результат. «Bobur trained for weeks. ___, he lost the first race.» Тренировки должны были помочь победить, поэтому ответ «However,», а не «Therefore,».\n2. Близнецы. Если два варианта выполняют одну и ту же роль, например «Therefore,» и «Consequently,», ни один из них не может быть единственным верным ответом. Вычеркните оба."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ei11q3"
+        }
+      ],
+      "test": {
+        "pool": null,
+        "families": [],
+        "n": 3,
+        "first_is_example": false,
+        "test_out": true
+      },
+      "homework": {
+        "pool": null,
+        "families": []
+      },
+      "reserve": [
+        "C6-eie001",
+        "C6-eie002",
+        "C6-eie003",
+        "C6-eie004",
+        "C6-eie005",
+        "C6-eim001",
+        "C6-eim002",
+        "C6-eim003",
+        "C6-eim004",
+        "C6-eim005",
+        "C6-eih001",
+        "C6-eih002",
+        "C6-eih003",
+        "C6-eih004",
+        "C6-eih005",
+        "C6-ei1n01",
+        "C6-ei1n02",
+        "C6-ei1n03",
+        "C6-ei1n04",
+        "C6-ei1n05",
+        "C6-ei1701",
+        "C6-ei1702",
+        "C6-ei1703",
+        "C6-ei1704",
+        "C6-ei1705",
+        "C6-ei1706",
+        "C6-ei1707",
+        "C6-ei1708",
+        "C6-ei1709",
+        "C6-ei1710",
+        "C6-ei1711",
+        "C6-ei1712",
+        "C6-ei1713",
+        "C6-ei1714",
+        "C6-ei1715",
+        "C6-ei1716",
+        "C6-ei1717",
+        "C6-ei1718",
+        "C6-ei1719",
+        "C6-ei1720"
+      ],
+      "extra_link": "C10-RWEI01#official",
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-RWEI02-1",
+      "course": "sat_rw",
+      "unit": "C10-RWEI02",
+      "seq": 1,
+      "skill": "sat_rw:RWEI02",
+      "requires": {
+        "english_cefr_min": "B1"
+      },
+      "title": {
+        "en": "SAT R&W: Rhetorical Synthesis",
+        "uz": "SAT R&W: Rhetorical Synthesis — qaydlardan maqsadli gap",
+        "ru": "SAT R&W: Rhetorical Synthesis — предложение по заметкам"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "In these questions a student has notes and a goal. The goal decides the answer; the notes only give the facts.\nThree steps:\n1. Read the goal first and find its key word: compare, stress a difference or a similarity, explain why, introduce, present a result.\n2. For each option ask: does it do that job? A true sentence that does a different job is wrong.\n3. Check that every fact in the option is in the notes.\nExample goal: \"to stress how long the trip took\". The right sentence names the time (\"The trip took nine days\"), not the place or the price.",
+            "uz": "Bu savollarda oʻquvchining qaydlari va maqsadi bor. Javobni maqsad belgilaydi, qaydlar esa faqat faktlarni beradi.\nUch qadam:\n1. Avval maqsadni oʻqing va kalit soʻzini toping: solishtirish (compare), farq yoki oʻxshashlikni taʼkidlash (stress a difference / a similarity), sababini tushuntirish (explain why), tanishtirish (introduce), natijani koʻrsatish (present a result).\n2. Har bir variantni tekshiring: shu ishni qiladimi? Toʻgʻri, lekin boshqa ishni qiladigan gap notoʻgʻri javob.\n3. Variantdagi har bir fakt qaydlarda borligini tekshiring.\nMaqsadga misol: «to stress how long the trip took». Toʻgʻri gap vaqtni aytadi («The trip took nine days»), joy yoki narxni emas.",
+            "ru": "В этих вопросах у ученика есть заметки и цель. Ответ определяется целью, а заметки только дают факты.\nТри шага:\n1. Сначала прочитайте цель и найдите ключевое слово: сравнить (compare), подчеркнуть различие или сходство (stress a difference / a similarity), объяснить причину (explain why), представить (introduce), показать результат (present a result).\n2. Проверьте каждый вариант: решает ли он эту задачу? Верное по смыслу предложение, которое решает другую задачу, — неверный ответ.\n3. Проверьте, что каждый факт варианта есть в заметках.\nПример цели: «to stress how long the trip took». Верное предложение называет время («The trip took nine days»), а не место или цену."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ei21q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Worked example. Notes:\n• Two classes collected plastic bottles.\n• Class 7A collected 410.\n• Class 7B collected 260.\nGoal: to stress the difference between the two classes.\n1. Key word of the goal: difference.\n2. A sentence about only one class does not compare. Out.\n3. The answer holds both numbers and a comparing word: \"Class 7A collected 410 bottles, far more than the 260 collected by Class 7B.\"\nNow you. Notes:\n• A town held a reading week.\n• Children read 1,200 books.\n• Adults read 700 books.\nGoal: to stress the difference between children and adults.\n1. Key word: difference.\n2. A sentence about only one group is out.\n3. The answer: ?",
+            "uz": "Yechilgan misol. Qaydlar (notes):\n• Two classes collected plastic bottles.\n• Class 7A collected 410.\n• Class 7B collected 260.\nMaqsad (goal): to stress the difference between the two classes.\n1. Maqsadning kalit soʻzi: difference (farq).\n2. Faqat bitta sinf haqidagi gap solishtirmaydi. Uni chiqarib tashlang.\n3. Javobda ikkala son va solishtiruvchi soʻz bor: «Class 7A collected 410 bottles, far more than the 260 collected by Class 7B.»\nEndi siz. Qaydlar (notes):\n• A town held a reading week.\n• Children read 1,200 books.\n• Adults read 700 books.\nMaqsad (goal): to stress the difference between children and adults.\n1. Kalit soʻz: difference (farq).\n2. Faqat bitta guruh haqidagi gapni chiqarib tashlang.\n3. Javob: ?",
+            "ru": "Разбор. Заметки (notes):\n• Two classes collected plastic bottles.\n• Class 7A collected 410.\n• Class 7B collected 260.\nЦель (goal): to stress the difference between the two classes.\n1. Ключевое слово цели: difference (различие).\n2. Предложение только об одном классе не сравнивает. Оно отпадает.\n3. В ответе оба числа и слово сравнения: «Class 7A collected 410 bottles, far more than the 260 collected by Class 7B.»\nТеперь попробуйте сами. Заметки (notes):\n• A town held a reading week.\n• Children read 1,200 books.\n• Adults read 700 books.\nЦель (goal): to stress the difference between children and adults.\n1. Ключевое слово: difference (различие).\n2. Предложение только об одной группе отпадает.\n3. Ответ: ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ei21q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: the option that sounds best is not always the one that meets the goal.\n1. True but off the goal. Often every option is true to the notes. Only one does the job the goal names.\n2. The extra fact. If an option adds something the notes never say (\"the biggest in the country\", \"everyone loved it\"), it is wrong, however good it sounds.\n3. Half the goal. A goal such as \"to present the club and what it has achieved\" has two parts. An option with only one part is wrong.",
+            "uz": "Ehtiyot boʻling: eng chiroyli eshitilgan variant har doim ham maqsadga mos kelavermaydi.\n1. Toʻgʻri, lekin maqsadga mos emas. Koʻpincha hamma variant qaydlarga toʻgʻri keladi. Maqsad aytgan ishni faqat bittasi qiladi.\n2. Ortiqcha fakt. Agar variant qaydlarda yoʻq narsani qoʻshsa («the biggest in the country», «everyone loved it»), qanchalik yaxshi eshitilmasin, u notoʻgʻri.\n3. Maqsadning yarmi. «to present the club and what it has achieved» kabi maqsad ikki qismdan iborat. Faqat bitta qismi bor variant notoʻgʻri.",
+            "ru": "Осторожно: вариант, который звучит лучше всех, не всегда достигает цели.\n1. Верно, но мимо цели. Часто все варианты соответствуют заметкам. Задачу, названную в цели, решает только один.\n2. Лишний факт. Если вариант добавляет то, чего нет в заметках («the biggest in the country», «everyone loved it»), он неверен, как бы хорошо ни звучал.\n3. Половина цели. Цель вроде «to present the club and what it has achieved» состоит из двух частей. Вариант только с одной частью неверен."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ei21q3"
+        }
+      ],
+      "test": {
+        "pool": null,
+        "families": [],
+        "n": 3,
+        "first_is_example": false,
+        "test_out": true
+      },
+      "homework": {
+        "pool": null,
+        "families": []
+      },
+      "reserve": [
+        "C6-eie006",
+        "C6-eie007",
+        "C6-eie008",
+        "C6-eie009",
+        "C6-eie010",
+        "C6-eim006",
+        "C6-eim007",
+        "C6-eim008",
+        "C6-eim009",
+        "C6-eim010",
+        "C6-eih006",
+        "C6-eih007",
+        "C6-eih008",
+        "C6-eih009",
+        "C6-eih010",
+        "C6-ei2n01",
+        "C6-ei2n02",
+        "C6-ei2n03",
+        "C6-ei2n04",
+        "C6-ei2n05",
+        "C6-ei1721",
+        "C6-ei1722",
+        "C6-ei1723",
+        "C6-ei1724",
+        "C6-ei1725",
+        "C6-ei1726",
+        "C6-ei1727",
+        "C6-ei1728",
+        "C6-ei1729",
+        "C6-ei1730",
+        "C6-ei1731",
+        "C6-ei1732",
+        "C6-ei1733",
+        "C6-ei1734",
+        "C6-ei1735",
+        "C6-ei1736",
+        "C6-ei1737",
+        "C6-ei1738",
+        "C6-ei1739",
+        "C6-ei1740"
+      ],
+      "extra_link": "C10-RWEI02#official",
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 2
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-RWEI03-1",
+      "course": "sat_rw",
+      "unit": "C10-RWEI03",
+      "seq": 1,
+      "skill": "sat_rw:RWEI03",
+      "requires": {
+        "english_cefr_min": "B2"
+      },
+      "title": {
+        "en": "SAT R&W: Mixed Expression of Ideas",
+        "uz": "SAT R&W: Aralash Expression of Ideas",
+        "ru": "SAT R&W: Смешанный Expression of Ideas"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Now transitions and notes questions come mixed, and they are harder. Tell them apart at once.\n• A blank inside a text: a transition. Name the link first. Hard sets use more links: similarity (Likewise), going further (In fact), saying it again (In other words), detail (Specifically), despite (Even so, Nonetheless), time (Previously, In the end).\n• Notes and a goal: synthesis. Read the goal first. Hard goals have two parts or name a reader (\"for readers who do not know X\").\nPacing: a module has 27 questions in 32 minutes, and these questions come last, so keep time for them: about 70 seconds each.",
+            "uz": "Endi bogʻlovchi va qaydlar savollari aralash keladi va ular qiyinroq. Ularni darhol ajrating.\n• Matn ichida boʻsh joy: bogʻlovchi. Avval bogʻlanish turini ayting. Qiyin toʻplamlarda turlar koʻproq: oʻxshashlik (Likewise), kuchaytirish (In fact), qayta aytish (In other words), tafsilot (Specifically), shunga qaramay (Even so, Nonetheless), vaqt (Previously, In the end).\n• Qaydlar va maqsad: synthesis. Avval maqsadni oʻqing. Qiyin maqsad ikki qismli boʻladi yoki kim uchun yozilganini aytadi («for readers who do not know X»).\nSurʼat: modulda 32 daqiqada 27 ta savol bor va bu savollar oxirida keladi, shuning uchun ularga vaqt qoldiring: har biriga taxminan 70 soniya.",
+            "ru": "Теперь вопросы на связующие слова и на заметки идут вперемешку, и они сложнее. Различайте их сразу.\n• Пропуск внутри текста: связующее слово. Сначала определите тип связи. В сложных наборах типов больше: сходство (Likewise), усиление (In fact), пересказ (In other words), деталь (Specifically), вопреки (Even so, Nonetheless), время (Previously, In the end).\n• Заметки и цель: synthesis. Сначала прочитайте цель. Сложная цель состоит из двух частей или называет читателя («for readers who do not know X»).\nТемп: в модуле 27 вопросов за 32 минуты, и эти вопросы идут в конце, поэтому оставляйте на них время: около 70 секунд на каждый."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ei31q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Worked example. Notes:\n• A library opened a seed library.\n• Visitors borrow vegetable seeds.\n• In autumn they return seeds from their own plants.\nGoal: to introduce the seed library to readers who do not know what one is.\n1. The reader does not know: say what it is.\n2. \"A seed library opened.\" only names it. Out.\n3. Answer: \"At the seed library, visitors borrow vegetable seeds and return seeds from their own plants in autumn.\"\nNow you. Notes:\n• A school built a silent room.\n• It has soft chairs, and phones are not allowed.\n• Students rest there for ten minutes between exams.\nGoal: to introduce the silent room to parents who have never seen it.\n1. The reader does not know: say what it is and what it is for.\n2. Only naming the room is out.\n3. Answer: ?",
+            "uz": "Yechilgan misol. Qaydlar (notes):\n• A library opened a seed library.\n• Visitors borrow vegetable seeds.\n• In autumn they return seeds from their own plants.\nMaqsad (goal): to introduce the seed library to readers who do not know what one is.\n1. Oʻqiydigan odam buni bilmaydi: u nimaligini ayting.\n2. «A seed library opened.» faqat nomini aytadi. Uni chiqarib tashlang.\n3. Javob: «At the seed library, visitors borrow vegetable seeds and return seeds from their own plants in autumn.»\nEndi siz. Qaydlar (notes):\n• A school built a silent room.\n• It has soft chairs, and phones are not allowed.\n• Students rest there for ten minutes between exams.\nMaqsad (goal): to introduce the silent room to parents who have never seen it.\n1. Oʻqiydigan odam buni bilmaydi: u nima va nima uchun ekanini ayting.\n2. Faqat nomini aytadigan variantni chiqarib tashlang.\n3. Javob: ?",
+            "ru": "Разбор. Заметки (notes):\n• A library opened a seed library.\n• Visitors borrow vegetable seeds.\n• In autumn they return seeds from their own plants.\nЦель (goal): to introduce the seed library to readers who do not know what one is.\n1. Читатель не знает, что это такое: объясните.\n2. «A seed library opened.» только называет её. Отпадает.\n3. Ответ: «At the seed library, visitors borrow vegetable seeds and return seeds from their own plants in autumn.»\nТеперь попробуйте сами. Заметки (notes):\n• A school built a silent room.\n• It has soft chairs, and phones are not allowed.\n• Students rest there for ten minutes between exams.\nЦель (goal): to introduce the silent room to parents who have never seen it.\n1. Читатель не знает, что это такое: объясните, что это и зачем оно нужно.\n2. Только название комнаты — отпадает.\n3. Ответ: ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ei31q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Two hard traps.\n1. The far sentence. In \"A. B. ___ C.\", the blank links B and C, not A and C. \"The robot fell over in every test. The engineers then widened its base. ___, it stood through all ten tests at the fair.\" Falling (A) and standing (C) look opposite, but the blank follows the wider base (B), which caused the success: \"As a result,\", not \"However,\".\n2. Half the goal. If the goal asks for \"the result and a reason to doubt it\", an option with only the result is wrong, even when every word in it is true.",
+            "uz": "Ikki qiyin tuzoq.\n1. Uzoqdagi gap. «A. B. ___ C.» da boʻsh joy A ni emas, B ni C bilan bogʻlaydi. «The robot fell over in every test. The engineers then widened its base. ___, it stood through all ten tests at the fair.» Yiqilish (A) va turish (C) qarama-qarshi koʻrinadi, lekin boʻsh joy kengroq asosdan (B) keyin keladi va muvaffaqiyatga aynan u sabab boʻlgan: «As a result,», «However,» emas.\n2. Maqsadning yarmi. Agar maqsad «the result and a reason to doubt it» ni soʻrasa, faqat natijani bergan variant notoʻgʻri, undagi har bir soʻz toʻgʻri boʻlsa ham.",
+            "ru": "Две сложные ловушки.\n1. Дальнее предложение. В «A. B. ___ C.» пропуск связывает B и C, а не A и C. «The robot fell over in every test. The engineers then widened its base. ___, it stood through all ten tests at the fair.» Падение (A) и устойчивость (C) кажутся противоположными, но пропуск идёт после предложения о более широкой опоре (B), которая и принесла успех: «As a result,», а не «However,».\n2. Половина цели. Если цель — «the result and a reason to doubt it», вариант только с результатом неверен, даже если каждое слово в нём правда."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ei31q3"
+        }
+      ],
+      "test": {
+        "pool": null,
+        "families": [],
+        "n": 3,
+        "first_is_example": false,
+        "test_out": true
+      },
+      "homework": {
+        "pool": null,
+        "families": []
+      },
+      "reserve": [
+        "C6-ei3n01",
+        "C6-ei3n02",
+        "C6-ei3n03",
+        "C6-ei3n04",
+        "C6-ei3n05",
+        "C6-ei3n06",
+        "C6-ei3n07",
+        "C6-ei3n08",
+        "C6-ei3n09",
+        "C6-ei3n10",
+        "C6-ei3n11",
+        "C6-ei3n12",
+        "C6-ei3n13",
+        "C6-ei3n14",
+        "C6-ei3n15",
+        "C6-ei3n16",
+        "C6-ei3n17",
+        "C6-ei3n18",
+        "C6-ei3n19",
+        "C6-ei3n20",
+        "C6-ei1741",
+        "C6-ei1742",
+        "C6-ei1743",
+        "C6-ei1744",
+        "C6-ei1745",
+        "C6-ei1746",
+        "C6-ei1747",
+        "C6-ei1748",
+        "C6-ei1749",
+        "C6-ei1750",
+        "C6-ei1751",
+        "C6-ei1752",
+        "C6-ei1753",
+        "C6-ei1754",
+        "C6-ei1755",
+        "C6-ei1756",
+        "C6-ei1757",
+        "C6-ei1758",
+        "C6-ei1759",
+        "C6-ei1760"
+      ],
+      "extra_link": "C10-RWEI03#official",
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 2
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-RWII02-1",
+      "course": "sat_rw",
+      "unit": "C10-RWII02",
+      "seq": 1,
+      "skill": "sat_rw:RWII02",
+      "requires": {
+        "english_cefr_min": "B1"
+      },
+      "title": {
+        "en": "SAT R&W: Command of Evidence",
+        "uz": "SAT R&W: Command of Evidence — matndagi va raqamli dalillar",
+        "ru": "SAT R&W: Command of Evidence — текстовые и числовые доказательства"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Here a text makes a claim, and you choose the evidence for it (sometimes, against it).\n1. Find the exact claim and its key words. \"Chess helps memory\" is not \"chess is popular\".\n2. Test each option. A finding: if it were true, would the claim look more likely? (For \"weaken\": less likely?) A quotation: does it show exactly the idea named, such as patience or regret?\n3. Evidence about the topic in general is not enough; it must be about the claim.\nNumbers (quantitative): read the title, the labels and the units first, then check every number in the option against the table.",
+            "uz": "Bu yerda matnda daʼvo (claim) bor, siz esa uning foydasiga (baʼzan unga qarshi) dalil tanlaysiz.\n1. Aniq daʼvoni va uning kalit soʻzlarini toping. «Chess helps memory» va «chess is popular» bir xil gap emas.\n2. Har bir variantni tekshiring. Natija (finding): bu rost boʻlsa, daʼvo ishonarliroq boʻladimi? («weaken» savolida: kamroq ishonarli boʻladimi?) Iqtibos (quotation): u aynan aytilgan fikrni, masalan sabr yoki afsusni koʻrsatadimi?\n3. Umuman mavzu haqidagi dalil yetarli emas; u aynan daʼvo haqida boʻlishi kerak.\nRaqamlar (quantitative): avval sarlavha, ustun nomlari va oʻlchov birliklarini oʻqing, keyin variantdagi har bir sonni jadval bilan tekshiring.",
+            "ru": "Здесь в тексте есть утверждение (claim), а вы выбираете доказательство в его пользу (иногда против него).\n1. Найдите точное утверждение и его ключевые слова. «Chess helps memory» и «chess is popular» — не одно и то же.\n2. Проверьте каждый вариант. Результат (finding): если это правда, станет ли утверждение вероятнее? (В вопросе «weaken» — менее вероятным?) Цитата (quotation): показывает ли она именно названную мысль, например терпение или сожаление?\n3. Доказательства, которое касается темы в целом, мало: оно должно касаться именно утверждения.\nЧисла (quantitative): сначала прочитайте заголовок, подписи и единицы, потом сверьте с таблицей каждое число варианта."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii21q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "Worked example. A class counted the cars passing the school gate.\nTime | Cars\n8:00-8:15 | 64\n12:00-12:15 | 21\n16:00-16:15 | 47\nClaim: traffic is heaviest in the morning.\n1. Key words: heaviest, morning.\n2. The morning number: 64.\n3. Compare it with every other number: 64 > 21 and 64 > 47.\n4. Answer: \"More cars passed from 8:00 to 8:15 (64) than in either other period.\"\nNow you. A canteen counted the lunches it sold.\nDay | Lunches sold\nMonday | 120\nWednesday | 95\nFriday | 150\nClaim: the canteen sells the most lunches on Friday.\n1. Key words: most, Friday.\n2. The Friday number: 150.\n3. 150 > 120 and 150 > 95.\n4. Answer: ?",
+            "uz": "Yechilgan misol. Sinf maktab darvozasidan oʻtgan mashinalarni sanadi.\nTime | Cars\n8:00-8:15 | 64\n12:00-12:15 | 21\n16:00-16:15 | 47\nDaʼvo (claim): traffic is heaviest in the morning.\n1. Kalit soʻzlar: heaviest (eng koʻp), morning (ertalab).\n2. Ertalabki son: 64.\n3. Uni qolgan har bir son bilan solishtiring: 64 > 21 va 64 > 47.\n4. Javob: «More cars passed from 8:00 to 8:15 (64) than in either other period.»\nEndi siz. Oshxona sotilgan tushliklarni sanadi.\nDay | Lunches sold\nMonday | 120\nWednesday | 95\nFriday | 150\nDaʼvo (claim): the canteen sells the most lunches on Friday.\n1. Kalit soʻzlar: most (eng koʻp), Friday (juma).\n2. Jumadagi son: 150.\n3. 150 > 120 va 150 > 95.\n4. Javob: ?",
+            "ru": "Разбор. Класс считал машины, проезжавшие мимо ворот школы.\nTime | Cars\n8:00-8:15 | 64\n12:00-12:15 | 21\n16:00-16:15 | 47\nУтверждение (claim): traffic is heaviest in the morning.\n1. Ключевые слова: heaviest (больше всего), morning (утро).\n2. Утреннее число: 64.\n3. Сравните его с каждым другим числом: 64 > 21 и 64 > 47.\n4. Ответ: «More cars passed from 8:00 to 8:15 (64) than in either other period.»\nТеперь попробуйте сами. Столовая посчитала проданные обеды.\nDay | Lunches sold\nMonday | 120\nWednesday | 95\nFriday | 150\nУтверждение (claim): the canteen sells the most lunches on Friday.\n1. Ключевые слова: most (больше всего), Friday (пятница).\n2. Число за пятницу: 150.\n3. 150 > 120 и 150 > 95.\n4. Ответ: ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii21q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out for three traps.\n1. True but off the claim. An option can match the table exactly and still say nothing about the claim. It must be accurate and on the claim.\n2. The wrong row or column. Read the labels: an option may give a real number from the wrong year or the wrong group.\n3. Part of the claim. If the claim says \"in every month\", one month is not enough; the evidence must cover all of them.",
+            "uz": "Uch tuzoqdan ehtiyot boʻling.\n1. Toʻgʻri, lekin daʼvoga aloqasiz. Variant jadvalga aynan mos kelib, daʼvo haqida hech narsa demasligi mumkin. U ham aniq, ham daʼvoga tegishli boʻlishi kerak.\n2. Notoʻgʻri qator yoki ustun. Ustun va qator nomlarini oʻqing: variant haqiqiy sonni boshqa yil yoki boshqa guruhdan olgan boʻlishi mumkin.\n3. Daʼvoning bir qismi. Agar daʼvo «in every month» desa, bitta oy yetmaydi; dalil hammasini qamrashi kerak.",
+            "ru": "Осторожно: три ловушки.\n1. Верно, но не о том. Вариант может точно совпадать с таблицей и ничего не говорить об утверждении. Он должен быть точным и при этом касаться утверждения.\n2. Не та строка или не тот столбец. Читайте подписи: вариант может брать реальное число из таблицы, но из другого года или другой группы.\n3. Часть утверждения. Если в утверждении сказано «in every month», одного месяца мало; доказательство должно охватывать все."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ii21q3"
+        }
+      ],
+      "test": {
+        "pool": null,
+        "families": [],
+        "n": 3,
+        "first_is_example": false,
+        "test_out": true
+      },
+      "homework": {
+        "pool": null,
+        "families": []
+      },
+      "reserve": [
+        "C6-iie004",
+        "C6-iie005",
+        "C6-iie006",
+        "C6-iie007",
+        "C6-iim004",
+        "C6-iim005",
+        "C6-iim006",
+        "C6-iim007",
+        "C6-iih004",
+        "C6-iih005",
+        "C6-iih006",
+        "C6-iih007",
+        "C6-ii2n01",
+        "C6-ii2n02",
+        "C6-ii2n03",
+        "C6-ii2n04",
+        "C6-ii2n05",
+        "C6-ii2n06",
+        "C6-ii2n07",
+        "C6-ii2n08",
+        "C6-ii2601",
+        "C6-ii2602",
+        "C6-ii2603",
+        "C6-ii2604",
+        "C6-ii2605",
+        "C6-ii2606",
+        "C6-ii2607",
+        "C6-ii2608",
+        "C6-ii2609",
+        "C6-ii2610",
+        "C6-ii2611",
+        "C6-ii2612",
+        "C6-ii2613",
+        "C6-ii2614",
+        "C6-ii2615",
+        "C6-ii2616",
+        "C6-ii2617",
+        "C6-ii2618",
+        "C6-ii2619",
+        "C6-ii2620"
+      ],
+      "extra_link": "C10-RWII02#official",
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ],
+  "items": [
+    {
+      "id": "C19-ei11q1",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "page": "C19-RWEI01-1",
+      "lang": "en",
+      "stem": {
+        "en": "Malika practiced her piano piece every evening for a month. ______ she played it at the school concert without a single mistake.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "As a result,"
+        },
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Instead,"
+        }
+      ],
+      "why": {
+        "en": "A month of practice led to a concert with no mistakes. That is a result, so 'As a result,' fits.",
+        "uz": "Bir oylik mashq xatosiz konsertga olib keldi. Bu natija, shuning uchun «As a result,» mos keladi.",
+        "ru": "Месяц занятий привёл к концерту без ошибок. Это результат, поэтому подходит «As a result,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ei11q2",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "page": "C19-RWEI01-1",
+      "lang": "en",
+      "stem": {
+        "en": "The bakery sold out of bread by noon every day last week. ______ the owner baked twice as many loaves this week.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Therefore,"
+        },
+        {
+          "en": "In contrast,"
+        },
+        {
+          "en": "For instance,"
+        },
+        {
+          "en": "Even so,"
+        }
+      ],
+      "why": {
+        "en": "Selling out made the owner bake more. The link is result, and 'Therefore,' is the result word.",
+        "uz": "Non tugab qolgani egasini koʻproq non yopishga undagan. Bogʻlanish natija, natija soʻzi esa «Therefore,».",
+        "ru": "Хлеб заканчивался, поэтому хозяйка испекла больше. Связь — результат, а слово результата — «Therefore,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ei11q3",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "page": "C19-RWEI01-1",
+      "lang": "en",
+      "stem": {
+        "en": "The forecast promised a sunny day for the school picnic. ______ dark clouds rolled in by ten o'clock, and everyone ran back to the bus.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "However,"
+        },
+        {
+          "en": "As a result,"
+        },
+        {
+          "en": "Consequently,"
+        },
+        {
+          "en": "Additionally,"
+        }
+      ],
+      "why": {
+        "en": "Clouds are the opposite of the promised sun, so the link is contrast: 'However,'. 'As a result,' and 'Consequently,' do the same job, so neither is right.",
+        "uz": "Bulutlar vaʼda qilingan quyoshning aksi, demak bogʻlanish qarama-qarshilik: «However,». «As a result,» va «Consequently,» bir xil ishni qiladi, ikkalasi ham notoʻgʻri.",
+        "ru": "Тучи — противоположность обещанному солнцу, значит, связь — контраст: «However,». «As a result,» и «Consequently,» выполняют одну и ту же роль, поэтому оба неверны."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ei21q1",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "page": "C19-RWEI02-1",
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Shahzoda's school opened a small weather station on its roof in March.\n• The station measures temperature, wind speed, and rainfall.\n• Students in the science club read the measurements every morning.\n• The readings are posted on a board in the school hallway.\n\nThe student wants to explain who reads the station's measurements.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Students in the science club read the weather station's measurements every morning."
+        },
+        {
+          "en": "The weather station on the school's roof measures temperature, wind speed, and rainfall."
+        },
+        {
+          "en": "In March, a small weather station was opened on the roof of Shahzoda's school."
+        },
+        {
+          "en": "The station's readings are posted on a board in the school hallway."
+        }
+      ],
+      "why": {
+        "en": "The goal asks who reads the measurements. Only the choice about the science club students names them; the others tell what, when or where.",
+        "uz": "Maqsad oʻlchovlarni kim oʻqishini soʻraydi. Ularni faqat ilmiy toʻgarak oʻquvchilari haqidagi javob aytadi; qolganlari nima, qachon yoki qayerni aytadi.",
+        "ru": "Цель — сказать, кто снимает показания. Этих людей называет только ответ про учеников научного кружка; остальные говорят о том, что, когда или где."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ei21q2",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "page": "C19-RWEI02-1",
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• A town held a reading week.\n• Children read 1,200 books.\n• Adults read 700 books.\n\nThe student wants to stress the difference between children and adults.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "During the reading week, children read 1,200 books, far more than the 700 read by adults."
+        },
+        {
+          "en": "During the town's reading week, children read a total of 1,200 books."
+        },
+        {
+          "en": "The town held a reading week in which both children and adults took part."
+        },
+        {
+          "en": "Adults in the town read 700 books during the reading week."
+        }
+      ],
+      "why": {
+        "en": "The goal is a difference, so the sentence needs both groups and a comparing word. Only 'far more than the 700 read by adults' compares them.",
+        "uz": "Maqsad farq, demak gapda ikkala guruh va solishtiruvchi soʻz kerak. Faqat «far more than the 700 read by adults» deb solishtirgan javob mos.",
+        "ru": "Цель — различие, значит, нужны обе группы и слово сравнения. Сравнивает их только ответ «far more than the 700 read by adults»."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ei21q3",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "page": "C19-RWEI02-1",
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Students at a school started a free bicycle repair corner.\n• It opens every Saturday in the school yard.\n• Volunteers fix flat tires and loose chains for free.\n• In its first two months, it repaired 85 bicycles.\n\nThe student wants to present the repair corner and what it has achieved.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "A free Saturday repair corner in the school yard fixed 85 bicycles in its first two months."
+        },
+        {
+          "en": "Every Saturday, volunteers in the school yard fix flat tires and loose chains for free."
+        },
+        {
+          "en": "In its first two months, the repair corner fixed 85 bicycles and became the most popular club in town."
+        },
+        {
+          "en": "Students at the school have started a free bicycle repair corner in the yard."
+        }
+      ],
+      "why": {
+        "en": "The goal has two parts: the corner and its result. 'A free Saturday repair corner… fixed 85 bicycles' has both; one choice adds a fact not in the notes.",
+        "uz": "Maqsad ikki qismli: ustaxona va uning natijasi. «A free Saturday repair corner… fixed 85 bicycles» ikkalasini beradi; bir variant qaydlarda yoʻq faktni qoʻshgan.",
+        "ru": "У цели две части: мастерская и её результат. Обе есть в «A free Saturday repair corner… fixed 85 bicycles»; один вариант добавляет факт, которого нет в заметках."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ei31q1",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "page": "C19-RWEI03-1",
+      "lang": "en",
+      "stem": {
+        "en": "Rustam's team spent a month building a solar oven from a cardboard box and foil. On the first test day, clouds covered the sky, and the oven barely warmed up. ______ on the second test day, under a clear sky, it baked a tray of flatbread in forty minutes.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "By contrast,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "For this reason,"
+        },
+        {
+          "en": "In other words,"
+        }
+      ],
+      "why": {
+        "en": "The blank links the cloudy day, when the oven failed, to the clear day, when it worked. The results are opposite, so 'By contrast,' fits.",
+        "uz": "Boʻsh joy pech ishlamagan bulutli kunni u ishlagan ochiq kun bilan bogʻlaydi. Natijalar qarama-qarshi, shuning uchun «By contrast,» mos.",
+        "ru": "Пропуск связывает пасмурный день, когда печь не грела, с ясным днём, когда она сработала. Итоги противоположны, поэтому подходит «By contrast,»."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ei31q2",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "page": "C19-RWEI03-1",
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• A school built a silent room.\n• It has soft chairs, and phones are not allowed.\n• Students rest there for ten minutes between exams.\n\nThe student wants to introduce the silent room to parents who have never seen it.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The school's new silent room is a phone-free space with soft chairs where students rest for ten minutes between exams."
+        },
+        {
+          "en": "The school has built a new room, which it has decided to call the silent room."
+        },
+        {
+          "en": "Students say that the silent room has made their exam days far less stressful than before."
+        },
+        {
+          "en": "Phones are not allowed in the silent room, which is furnished with soft chairs."
+        }
+      ],
+      "why": {
+        "en": "Parents who have never seen the room need what it is and what it is for. Only the choice calling it a phone-free space where students rest between exams gives both.",
+        "uz": "Xonani koʻrmagan ota-onalarga u nima ekani va nima uchun kerakligini aytish kerak. Ikkalasini faqat uni imtihonlar orasida dam olinadigan telefonsiz xona deb atagan javob beradi.",
+        "ru": "Родителям, которые не видели комнату, нужно знать, что это и зачем. Обе части есть только в ответе, где она названа комнатой без телефонов для отдыха между экзаменами."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ei31q3",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "page": "C19-RWEI03-1",
+      "lang": "en",
+      "stem": {
+        "en": "For years, the village's only well ran dry every August. Last spring, residents dug a second, deeper well near the river. ______ the village had water through the whole summer for the first time in memory.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "As a result,"
+        },
+        {
+          "en": "Nevertheless,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "For instance,"
+        }
+      ],
+      "why": {
+        "en": "The blank follows the new, deeper well, which gave the summer water. That is a result: 'As a result,'. 'Nevertheless' answers the first sentence, not the one before the blank.",
+        "uz": "Boʻsh joy yangi, chuqurroq quduqdan keyin keladi, yozgi suvni u bergan. Bu natija: «As a result,». «Nevertheless» boʻsh joydan oldingi gapga emas, birinchi gapga javob beradi.",
+        "ru": "Пропуск идёт после нового, более глубокого колодца, который дал воду летом. Это результат: «As a result,». «Nevertheless» относится к первому предложению, а не тому, что перед пропуском."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ii21q1",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "command_of_evidence_textual",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "easy"
+      },
+      "page": "C19-RWII02-1",
+      "lang": "en",
+      "stem": {
+        "en": "Aziza, a member of her town's gardening club, claims that covering soil with a layer of dry leaves helps the soil stay wet longer in hot weather.\n\nWhich finding, if true, would most directly support Aziza's claim?"
+      },
+      "options": [
+        {
+          "en": "During the same hot week, soil under dry leaves stayed wet for four days, while bare soil dried out after one day."
+        },
+        {
+          "en": "Many members of the gardening club collect dry leaves in the autumn and keep them in large bags until spring."
+        },
+        {
+          "en": "In hot weather, plants with large leaves need more water than plants with small leaves do."
+        },
+        {
+          "en": "Soil under a layer of dry leaves looked darker in color than bare soil did."
+        }
+      ],
+      "why": {
+        "en": "The claim is about soil staying wet. Only the finding that soil under leaves stayed wet for four days, against one day for bare soil, tests that.",
+        "uz": "Daʼvo tuproq uzoqroq nam qolishi haqida. Buni faqat barg ostidagi tuproq 4 kun, ochiq tuproq esa 1 kun nam qolgani haqidagi natija tekshiradi.",
+        "ru": "Утверждение — о том, что почва дольше остаётся влажной. Это проверяет только результат: под листьями почва оставалась влажной 4 дня, без них — 1 день."
+      },
+      "instructions": {
+        "en": "Choose the quotation or finding that best supports the claim in the text.",
+        "uz": "Matndagi fikrni eng yaxshi tasdiqlaydigan iqtibos yoki natijani tanlang.",
+        "ru": "Выберите цитату или результат, который лучше всего подтверждает утверждение в тексте."
+      },
+      "prior_b": 0,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p14-content",
+      "key_check_1": "author",
+      "key_check_2": "blind:P14s1+P14s2",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C19-ii21q2",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "command_of_evidence_quantitative",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "easy"
+      },
+      "page": "C19-RWII02-1",
+      "lang": "en",
+      "stem": {
+        "en": "A school canteen counted the lunches it sold on three days of one week.\n\nDay | Lunches sold\nMonday | 120\nWednesday | 95\nFriday | 150\n\nThe canteen manager claims that the canteen sells the most lunches on Friday.\n\nWhich choice most effectively uses data from the table to support the manager's claim?"
+      },
+      "options": [
+        {
+          "en": "The canteen sold 150 lunches on Friday, more than on Monday (120) or Wednesday (95)."
+        },
+        {
+          "en": "The canteen sold 120 lunches on Monday and 95 lunches on Wednesday."
+        },
+        {
+          "en": "The canteen sold fewer lunches on Wednesday than on either of the other two days."
+        },
+        {
+          "en": "The canteen sold 150 lunches on Monday, more than on any other day in the table."
+        }
+      ],
+      "why": {
+        "en": "The claim is that Friday is highest. Only '150 lunches on Friday, more than on Monday (120) or Wednesday (95)' is accurate and about Friday.",
+        "uz": "Daʼvo juma kuni eng koʻp sotilishi haqida. Faqat «150 lunches on Friday, more than on Monday (120) or Wednesday (95)» ham aniq, ham juma haqida.",
+        "ru": "Утверждение — что в пятницу продаж больше всего. Только «150 lunches on Friday, more than on Monday (120) or Wednesday (95)» точен и говорит именно о пятнице."
+      },
+      "instructions": {
+        "en": "Read the text and the table. Choose the answer that uses the data correctly.",
+        "uz": "Matn va jadvalni oʻqing. Maʼlumotlardan toʻgʻri foydalangan javobni tanlang.",
+        "ru": "Прочитайте текст и таблицу. Выберите ответ, в котором данные использованы верно."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ii21q3",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "command_of_evidence_quantitative",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "page": "C19-RWII02-1",
+      "lang": "en",
+      "stem": {
+        "en": "A town pool recorded its number of visitors in three summer months of two years.\n\nMonth | 2024 visitors | 2025 visitors\nJune | 900 | 1,050\nJuly | 1,400 | 1,520\nAugust | 1,200 | 1,310\n\nThe pool's manager claims that in each of the three months, the pool had more visitors in 2025 than in 2024.\n\nWhich choice most effectively uses data from the table to support the manager's claim?"
+      },
+      "options": [
+        {
+          "en": "Visitors rose from 900 to 1,050 in June, from 1,400 to 1,520 in July, and from 1,200 to 1,310 in August."
+        },
+        {
+          "en": "In July, the pool had 1,520 visitors in 2025, up from 1,400 in 2024."
+        },
+        {
+          "en": "July was the pool's busiest month in both 2024 and 2025."
+        },
+        {
+          "en": "In August, the pool had 1,310 visitors in 2024 and 1,200 visitors in 2025."
+        }
+      ],
+      "why": {
+        "en": "The claim covers all three months. Only the choice giving the rise in June, July and August covers them all; another one swaps the August columns.",
+        "uz": "Daʼvo uchala oyni qamraydi. Faqat iyun, iyul va avgustdagi oʻsishni bergan javob hammasini qamraydi; boshqasi avgust ustunlarini almashtirib qoʻygan.",
+        "ru": "Утверждение охватывает все три месяца. Только ответ с ростом в июне, июле и августе охватывает их все; другой путает столбцы августа."
+      },
+      "instructions": {
+        "en": "Read the text and the table. Choose the answer that uses the data correctly.",
+        "uz": "Matn va jadvalni oʻqing. Maʼlumotlardan toʻgʻri foydalangan javobni tanlang.",
+        "ru": "Прочитайте текст и таблицу. Выберите ответ, в котором данные использованы верно."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p6b-a3",
+      "key_check_1": "author",
+      "key_check_2": "blind:B3s1+B3s2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

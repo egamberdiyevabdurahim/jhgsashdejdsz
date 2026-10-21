@@ -1,0 +1,898 @@
+{
+ "bank": "K4",
+ "batch": 9,
+ "items": [
+  {
+   "id": "K4-sal001",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "system_no_solution",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "In the system of equations {a}x + {b}y = {c} and kx + {d}y = {e}, k is a constant. For what value of k does the system have no solution?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 9
+     },
+     "b": {
+      "min": 2,
+      "max": 6
+     },
+     "m": {
+      "min": 2,
+      "max": 4
+     },
+     "c": {
+      "min": 1,
+      "max": 20
+     },
+     "e": {
+      "min": 1,
+      "max": 60
+     }
+    },
+    "derived": {
+     "d": "m * b"
+    },
+    "constraints": [
+     "e != m * c"
+    ],
+    "answer": "a * m",
+    "integer": true,
+    "relation": "{b}*X = {a}*{d}"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In the system of equations {a}x + {b}y = {c} and kx + {d}y = {e}, k is a constant. For what value of k does the system have no solution?",
+    "uz": "{a}x + {b}y = {c} va kx + {d}y = {e} tenglamalar sistemasida k — oʻzgarmas son. k ning qanday qiymatida sistema yechimga ega boʻlmaydi?",
+    "ru": "В системе уравнений {a}x + {b}y = {c} и kx + {d}y = {e} число k — постоянная. При каком значении k система не имеет решений?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "No solution means parallel lines: the x- and y-coefficients are in the same ratio (k/a = d/b), but the constants are not.",
+    "uz": "Yechim yoʻq — chiziqlar parallel: x va y koeffitsientlari bir xil nisbatda (k/a = d/b), ozod hadlar esa bu nisbatda emas.",
+    "ru": "Решений нет — прямые параллельны: коэффициенты при x и y пропорциональны (k/a = d/b), а свободные члены — нет."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.2,
+   "time_s": 90,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sal002",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "infinitely_many_solutions",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "In the equation {a}(x − {b}) + {c}x = {d}x + k, k is a constant. The equation has infinitely many solutions. What is the value of k?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 9
+     },
+     "b": {
+      "min": 1,
+      "max": 9
+     },
+     "c": {
+      "min": 1,
+      "max": 9
+     }
+    },
+    "derived": {
+     "d": "a + c"
+    },
+    "answer": "-a * b",
+    "integer": true,
+    "relation": "{a}*(0 - {b}) + {c}*0 = {d}*0 + X"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In the equation {a}(x − {b}) + {c}x = {d}x + k, k is a constant. The equation has infinitely many solutions. What is the value of k?",
+    "uz": "{a}(x − {b}) + {c}x = {d}x + k tenglamada k — oʻzgarmas son. Tenglama cheksiz koʻp yechimga ega. k ning qiymati nechaga teng?",
+    "ru": "В уравнении {a}(x − {b}) + {c}x = {d}x + k число k — постоянная. Уравнение имеет бесконечно много решений. Чему равно k?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Infinitely many solutions: the two sides are the same expression. Expand the brackets and match the constant terms.",
+    "uz": "Cheksiz koʻp yechim — ikki tomon bir xil ifoda. Qavslarni oching va ozod hadlarni tenglang.",
+    "ru": "Бесконечно много решений — обе части совпадают. Раскройте скобки и приравняйте свободные члены."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.2,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sal003",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "parallel_lines_intercept",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "Line ℓ passes through the points ({x1}, {y1}) and ({x2}, {y2}). Line m is parallel to line ℓ and passes through the point (0, {b}). At what x-coordinate does line m cross the x-axis?",
+    "params": {
+     "x1": {
+      "min": -5,
+      "max": 5
+     },
+     "dx": {
+      "min": 1,
+      "max": 4
+     },
+     "sl": [
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3
+     ],
+     "y1": {
+      "min": -6,
+      "max": 6
+     },
+     "b": {
+      "min": -12,
+      "max": 12,
+      "not": [
+       0
+      ]
+     }
+    },
+    "derived": {
+     "x2": "x1 + dx",
+     "y2": "y1 + sl * dx"
+    },
+    "constraints": [
+     "b % sl == 0"
+    ],
+    "answer": "-b / sl",
+    "integer": true,
+    "relation": "(({y2} - {y1})/({x2} - {x1}))*X + {b} = 0"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "Line ℓ passes through the points ({x1}, {y1}) and ({x2}, {y2}). Line m is parallel to line ℓ and passes through the point (0, {b}). At what x-coordinate does line m cross the x-axis?",
+    "uz": "ℓ toʻgʻri chiziq ({x1}; {y1}) va ({x2}; {y2}) nuqtalardan oʻtadi. m toʻgʻri chiziq ℓ ga parallel va (0; {b}) nuqtadan oʻtadi. m toʻgʻri chiziq x oʻqini qaysi abssissada kesib oʻtadi?",
+    "ru": "Прямая ℓ проходит через точки ({x1}; {y1}) и ({x2}; {y2}). Прямая m параллельна прямой ℓ и проходит через точку (0; {b}). Найдите абсциссу точки, в которой прямая m пересекает ось x."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Parallel lines have the same slope: find it from the two points, then solve slope × x + b = 0.",
+    "uz": "Parallel toʻgʻri chiziqlarning burchak koeffitsienti bir xil: uni ikki nuqtadan toping, soʻng k·x + b = 0 ni yeching.",
+    "ru": "У параллельных прямых один угловой коэффициент: найдите его по двум точкам, затем решите k·x + b = 0."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.2,
+   "time_s": 90,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sal004",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "system_combination",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "If {a}x + {b}y = {c} and {b}x + {a}y = {d}, what is the value of x + y?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 9
+     },
+     "b": {
+      "min": 2,
+      "max": 9
+     },
+     "x": {
+      "min": -6,
+      "max": 9
+     },
+     "y": {
+      "min": -6,
+      "max": 9
+     }
+    },
+    "derived": {
+     "c": "a * x + b * y",
+     "d": "b * x + a * y"
+    },
+    "constraints": [
+     "a != b"
+    ],
+    "answer": "x + y",
+    "integer": true,
+    "relation": "({a} + {b})*X = {c} + {d}"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "If {a}x + {b}y = {c} and {b}x + {a}y = {d}, what is the value of x + y?",
+    "uz": "Agar {a}x + {b}y = {c} va {b}x + {a}y = {d} boʻlsa, x + y ning qiymati nechaga teng?",
+    "ru": "Если {a}x + {b}y = {c} и {b}x + {a}y = {d}, то чему равно x + y?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Add the two equations: (a + b)x + (a + b)y = c + d, so x + y = (c + d) ÷ (a + b).",
+    "uz": "Ikki tenglamani qoʻshing: (a + b)x + (a + b)y = c + d, demak x + y = (c + d) : (a + b).",
+    "ru": "Сложите уравнения: (a + b)x + (a + b)y = c + d, значит x + y = (c + d) : (a + b)."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.2,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sal005",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "linear_model_intercept",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "A gym charges a one-time joining fee plus the same fee every month. A membership for {m1} months costs {c1} thousand soʻm in total, and a membership for {m2} months costs {c2} thousand soʻm in total. What is the joining fee, in thousands of soʻm?",
+    "params": {
+     "m1": [
+      2,
+      3
+     ],
+     "dm": [
+      3,
+      6,
+      9
+     ],
+     "F": {
+      "min": 50,
+      "max": 300,
+      "step": 10
+     },
+     "R": {
+      "min": 80,
+      "max": 400,
+      "step": 10
+     }
+    },
+    "derived": {
+     "m2": "m1 + dm",
+     "c1": "F + R * m1",
+     "c2": "F + R * (m1 + dm)"
+    },
+    "answer": "F",
+    "integer": true,
+    "relation": "{c1} - X = {m1}*(({c2} - {c1})/({m2} - {m1}))"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A gym charges a one-time joining fee plus the same fee every month. A membership for {m1} months costs {c1} thousand soʻm in total, and a membership for {m2} months costs {c2} thousand soʻm in total. What is the joining fee, in thousands of soʻm?",
+    "uz": "Sport zalida bir martalik aʼzolik toʻlovi va har oy bir xil oylik toʻlov olinadi. {m1} oylik aʼzolik jami {c1} ming soʻm, {m2} oylik aʼzolik esa jami {c2} ming soʻm turadi. Bir martalik toʻlov necha ming soʻm?",
+    "ru": "В спортзале берут разовый вступительный взнос и одинаковую плату каждый месяц. Абонемент на {m1} мес. стоит всего {c1} тыс. сумов, а на {m2} мес. — всего {c2} тыс. сумов. Каков вступительный взнос в тысячах сумов?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Monthly fee = difference in cost ÷ difference in months; joining fee = total − months × monthly fee.",
+    "uz": "Oylik toʻlov = narxlar farqi : oylar farqi; bir martalik toʻlov = jami − oylar soni × oylik toʻlov.",
+    "ru": "Ежемесячная плата = разность цен : разность месяцев; вступительный взнос = итог − месяцы × плата."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.2,
+   "time_s": 105,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sal006",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "intersection_of_lines",
+   "sat": {
+    "domain": "algebra",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "In the xy-plane, the lines y = {m1}x + {b1} and y = {m2}x + {b2} intersect at the point (p, q). What is the value of q?",
+    "params": {
+     "p": {
+      "min": -5,
+      "max": 5
+     },
+     "m1": {
+      "min": 2,
+      "max": 6
+     },
+     "m2": [
+      -4,
+      -3,
+      -2,
+      -1,
+      1
+     ],
+     "b1": {
+      "min": 1,
+      "max": 15
+     }
+    },
+    "derived": {
+     "q": "m1 * p + b1",
+     "b2": "m1 * p + b1 - m2 * p"
+    },
+    "constraints": [
+     "m1 * p + b1 - m2 * p >= 1"
+    ],
+    "answer": "m1 * p + b1",
+    "integer": true,
+    "relation": "(X - {b1})/{m1} = (X - {b2})/{m2}"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In the xy-plane, the lines y = {m1}x + {b1} and y = {m2}x + {b2} intersect at the point (p, q). What is the value of q?",
+    "uz": "Koordinatalar tekisligida y = {m1}x + {b1} va y = {m2}x + {b2} toʻgʻri chiziqlar (p; q) nuqtada kesishadi. q ning qiymati nechaga teng?",
+    "ru": "На координатной плоскости прямые y = {m1}x + {b1} и y = {m2}x + {b2} пересекаются в точке (p; q). Найдите q."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "At the intersection both lines give the same y: solve m1·x + b1 = m2·x + b2 for x, then put x into either equation.",
+    "uz": "Kesishish nuqtasida ikkala chiziq bir xil y beradi: m1·x + b1 = m2·x + b2 dan x ni toping, soʻng y ni hisoblang.",
+    "ru": "В точке пересечения y одинаков: решите m1·x + b1 = m2·x + b2 относительно x, затем найдите y."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.2,
+   "time_s": 90,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sap001",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "mean_after_adding",
+   "sat": {
+    "domain": "psda",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "The mean of {n} numbers is {m}. When one more number is added, the mean of all the numbers becomes {m2}. What number was added?",
+    "params": {
+     "n": {
+      "min": 4,
+      "max": 12
+     },
+     "m": {
+      "min": 10,
+      "max": 60
+     },
+     "dm": [
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "derived": {
+     "m2": "m + dm"
+    },
+    "constraints": [
+     "(n + 1) * (m + dm) - n * m > 0"
+    ],
+    "answer": "(n + 1) * (m + dm) - n * m",
+    "integer": true,
+    "relation": "({n}*{m} + X)/({n} + 1) = {m2}"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The mean of {n} numbers is {m}. When one more number is added, the mean of all the numbers becomes {m2}. What number was added?",
+    "uz": "{n} ta sonning oʻrta arifmetigi {m} ga teng. Yana bitta son qoʻshilgach, barcha sonlarning oʻrta arifmetigi {m2} ga teng boʻldi. Qaysi son qoʻshilgan?",
+    "ru": "Среднее арифметическое {n} чисел равно {m}. Когда добавили ещё одно число, среднее всех чисел стало равно {m2}. Какое число добавили?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Sum before = n × mean; sum after = (n + 1) × new mean; the added number is the difference.",
+    "uz": "Avvalgi yigʻindi = n × oʻrta qiymat; keyingi yigʻindi = (n + 1) × yangi oʻrta qiymat; qoʻshilgan son — ularning farqi.",
+    "ru": "Сумма до = n × среднее; сумма после = (n + 1) × новое среднее; добавленное число — их разность."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.6,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sap002",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "weighted_mean",
+   "sat": {
+    "domain": "psda",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "In a class, {a} students scored an average of {p} points on a test. The other {b} students scored an average of x points. The average for the whole class was {m} points. What is x?",
+    "params": {
+     "a": {
+      "min": 6,
+      "max": 20
+     },
+     "b": {
+      "min": 6,
+      "max": 20
+     },
+     "p": {
+      "min": 50,
+      "max": 90
+     },
+     "x0": {
+      "min": 40,
+      "max": 95
+     }
+    },
+    "derived": {
+     "m": "(a * p + b * x0) / (a + b)"
+    },
+    "constraints": [
+     "(a * p + b * x0) % (a + b) == 0",
+     "x0 != p"
+    ],
+    "answer": "x0",
+    "integer": true,
+    "relation": "{a}*{p} + {b}*X = ({a} + {b})*{m}"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In a class, {a} students scored an average of {p} points on a test. The other {b} students scored an average of x points. The average for the whole class was {m} points. What is x?",
+    "uz": "Sinfda {a} nafar oʻquvchi testdan oʻrtacha {p} ball toʻpladi. Qolgan {b} nafar oʻquvchi oʻrtacha x ball toʻpladi. Butun sinfning oʻrtacha bali {m} ga teng boʻldi. x ni toping.",
+    "ru": "В классе средний балл {a} учеников за тест равен {p}. Средний балл остальных {b} учеников равен x. Средний балл всего класса равен {m}. Найдите x."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Total points = average × number of students, for each group and for the class: a·p + b·x = (a + b)·m.",
+    "uz": "Jami ball = oʻrtacha ball × oʻquvchilar soni, har bir guruh va butun sinf uchun: a·p + b·x = (a + b)·m.",
+    "ru": "Сумма баллов = среднее × число учеников, для каждой группы и для класса: a·p + b·x = (a + b)·m."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.2,
+   "time_s": 90,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sap003",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "successive_percent_change",
+   "sat": {
+    "domain": "psda",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "The price of a phone rose by {p}%, and then the new price fell by {q}%. The final price was {F} thousand soʻm. What was the original price, in thousands of soʻm?",
+    "params": {
+     "p": [
+      10,
+      20,
+      25,
+      50
+     ],
+     "q": [
+      10,
+      20,
+      25,
+      40,
+      50
+     ],
+     "P": {
+      "min": 1000,
+      "max": 5000,
+      "step": 200
+     }
+    },
+    "derived": {
+     "F": "P * (100 + p) * (100 - q) / 10000"
+    },
+    "constraints": [
+     "(P * (100 + p) * (100 - q)) % 10000 == 0"
+    ],
+    "answer": "P",
+    "integer": true,
+    "relation": "X*(1 + {p}/100)*(1 - {q}/100) = {F}"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The price of a phone rose by {p}%, and then the new price fell by {q}%. The final price was {F} thousand soʻm. What was the original price, in thousands of soʻm?",
+    "uz": "Telefon narxi {p} foizga oshdi, keyin yangi narx {q} foizga kamaydi. Yakuniy narx {F} ming soʻm boʻldi. Dastlabki narx necha ming soʻm boʻlgan?",
+    "ru": "Цена телефона выросла на {p}%, а затем новая цена снизилась на {q}%. Итоговая цена — {F} тыс. сумов. Какой была исходная цена в тысячах сумов?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Each change multiplies the price: original × (1 + p/100) × (1 − q/100) = final, so divide the final price by both factors.",
+    "uz": "Har bir oʻzgarish narxni koʻpaytiradi: dastlabki × (1 + p/100) × (1 − q/100) = yakuniy; yakuniy narxni ikkala koʻpaytuvchiga boʻling.",
+    "ru": "Каждое изменение умножает цену: исходная × (1 + p/100) × (1 − q/100) = итоговая; разделите итоговую на оба множителя."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.2,
+   "time_s": 90,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sap004",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "conditional_probability",
+   "sat": {
+    "domain": "psda",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "In a survey of {N} students, {a} play football, {b} play chess, and {c} play both. One of the students who play chess is chosen at random. What is the probability that this student also plays football?",
+    "params": {
+     "b": [
+      10,
+      20,
+      25,
+      40,
+      50
+     ],
+     "c": {
+      "min": 2,
+      "max": 20
+     },
+     "a": {
+      "min": 15,
+      "max": 60
+     },
+     "N": {
+      "min": 80,
+      "max": 200,
+      "step": 10
+     }
+    },
+    "constraints": [
+     "c < b",
+     "c < a",
+     "a + b - c <= N",
+     "(100 * c) % b == 0"
+    ],
+    "answer": "c / b",
+    "relation": "{b}*X = {c}"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In a survey of {N} students, {a} play football, {b} play chess, and {c} play both. One of the students who play chess is chosen at random. What is the probability that this student also plays football?",
+    "uz": "{N} nafar oʻquvchi orasida oʻtkazilgan soʻrovda {a} nafari futbol, {b} nafari shaxmat, {c} nafari esa ikkalasini ham oʻynashi maʼlum boʻldi. Shaxmat oʻynaydigan oʻquvchilardan biri tasodifan tanlandi. Uning futbol ham oʻynashi ehtimolligi qancha?",
+    "ru": "В опросе участвовали {N} учеников. В футбол играют {a} из них, в шахматы — {b}, в футбол и в шахматы — {c}. Случайно выбирают одного из учеников, играющих в шахматы. Какова вероятность, что он играет и в футбол?"
+   },
+   "answer_numeric": {
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "Only the chess players count: probability = (number who play both) ÷ (number who play chess).",
+    "uz": "Faqat shaxmat oʻynaydiganlar hisobga olinadi: ehtimollik = ikkalasini oʻynaydiganlar : shaxmat oʻynaydiganlar.",
+    "ru": "Учитываются только шахматисты: вероятность = (играют в оба) : (играют в шахматы)."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.2,
+   "time_s": 90,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sap005",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "percent_of_percent",
+   "sat": {
+    "domain": "psda",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "In a school, {p}% of the students are in the upper grades, and {q}% of the upper-grade students take a chemistry course. {N} students take the chemistry course. How many students are in the school?",
+    "params": {
+     "p": [
+      20,
+      25,
+      40,
+      50,
+      60
+     ],
+     "q": [
+      10,
+      20,
+      25,
+      50
+     ],
+     "S": {
+      "min": 400,
+      "max": 1600,
+      "step": 100
+     }
+    },
+    "derived": {
+     "N": "S * p * q / 10000"
+    },
+    "constraints": [
+     "(S * p * q) % 10000 == 0"
+    ],
+    "answer": "S",
+    "integer": true,
+    "relation": "X*{p}/100*{q}/100 = {N}"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In a school, {p}% of the students are in the upper grades, and {q}% of the upper-grade students take a chemistry course. {N} students take the chemistry course. How many students are in the school?",
+    "uz": "Maktab oʻquvchilarining {p} foizi yuqori sinflarda oʻqiydi, yuqori sinf oʻquvchilarining {q} foizi esa kimyo kursiga qatnashadi. Kimyo kursiga {N} nafar oʻquvchi qatnashadi. Maktabda jami nechta oʻquvchi bor?",
+    "ru": "В школе {p}% учеников учатся в старших классах, а {q}% старшеклассников посещают курс химии. Число учеников, посещающих курс химии, — {N}. Сколько всего учеников в школе?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "The chemistry students are q% of p% of the school: total × p/100 × q/100 = N.",
+    "uz": "Kimyo kursidagilar maktabning p foizining q foizi: jami × p/100 × q/100 = N.",
+    "ru": "Курс химии посещают q% от p% школы: всего × p/100 × q/100 = N."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.2,
+   "time_s": 90,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sap006",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "ratio_change",
+   "sat": {
+    "domain": "psda",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "In a club, the ratio of boys to girls is {a} : {b}. After {k} more girls join, the ratio of boys to girls becomes {c} : {d}. No one leaves. How many boys are in the club?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 5
+     },
+     "b": {
+      "min": 2,
+      "max": 5
+     },
+     "t": {
+      "min": 2,
+      "max": 6
+     },
+     "k": {
+      "min": 2,
+      "max": 12
+     }
+    },
+    "derived": {
+     "g": "gcd(a * t, b * t + k)",
+     "c": "a * t / gcd(a * t, b * t + k)",
+     "d": "(b * t + k) / gcd(a * t, b * t + k)"
+    },
+    "constraints": [
+     "gcd(a, b) == 1"
+    ],
+    "answer": "a * t",
+    "integer": true,
+    "relation": "{d}*X = {c}*({b}*X/{a} + {k})"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In a club, the ratio of boys to girls is {a} : {b}. After {k} more girls join, the ratio of boys to girls becomes {c} : {d}. No one leaves. How many boys are in the club?",
+    "uz": "Toʻgarakdagi oʻgʻil bolalar va qiz bolalar soni nisbati {a} : {b} ga teng. Yana {k} nafar qiz bola qoʻshilgach, bu nisbat {c} : {d} boʻldi. Hech kim ketmadi. Toʻgarakda nechta oʻgʻil bola bor?",
+    "ru": "В кружке отношение числа мальчиков к числу девочек равно {a} : {b}. Затем в кружок вступили новые девочки, всего {k}, и это отношение стало {c} : {d}. Никто не ушёл. Сколько мальчиков в кружке?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Write boys = a·t and girls = b·t; after the new girls join, a·t : (b·t + k) = c : d. Solve for t.",
+    "uz": "Oʻgʻil bolalar = a·t, qiz bolalar = b·t deb oling; yangi qizlar qoʻshilgach a·t : (b·t + k) = c : d. t ni toping.",
+    "ru": "Пусть мальчиков a·t, девочек b·t; после прихода девочек a·t : (b·t + k) = c : d. Найдите t."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.2,
+   "time_s": 105,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K4-sap007",
+   "skill": "math",
+   "rung": "alg1",
+   "subskill": "mean_linear_transform",
+   "sat": {
+    "domain": "psda",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "A data set has {n} values with a mean of {m}. Each value is multiplied by {k}, and then {c} is added to each result. What is the mean of the new data set?",
+    "params": {
+     "n": {
+      "min": 5,
+      "max": 30
+     },
+     "m": {
+      "min": 4,
+      "max": 40
+     },
+     "k": {
+      "min": 2,
+      "max": 6
+     },
+     "c": {
+      "min": 1,
+      "max": 20
+     }
+    },
+    "answer": "k * m + c",
+    "integer": true,
+    "relation": "(X - {c})/{k} = {m}"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A data set has {n} values with a mean of {m}. Each value is multiplied by {k}, and then {c} is added to each result. What is the mean of the new data set?",
+    "uz": "Maʼlumotlar toʻplamida {n} ta qiymat bor, ularning oʻrta arifmetigi {m} ga teng. Har bir qiymat {k} ga koʻpaytirildi, soʻng har bir natijaga {c} qoʻshildi. Yangi toʻplamning oʻrta arifmetigi nechaga teng?",
+    "ru": "Количество значений в наборе данных — {n}, их среднее равно {m}. Каждое значение умножили на {k}, а затем к каждому результату прибавили {c}. Чему равно среднее нового набора?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Multiplying every value by k multiplies the mean by k; adding c to every value adds c to the mean.",
+    "uz": "Har bir qiymatni k ga koʻpaytirish oʻrta qiymatni k marta oshiradi; har biriga c qoʻshish oʻrta qiymatga c qoʻshadi.",
+    "ru": "Умножение каждого значения на k умножает среднее на k; прибавление c к каждому значению прибавляет c к среднему."
+   },
+   "instructions": {
+    "en": "Type your answer as a number.",
+    "uz": "Javobni son bilan kiriting.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": -0.2,
+   "time_s": 75,
+   "source": "own",
+   "author": "agent:p5int-sat",
+   "key_check_1": "author",
+   "key_check_2": "solver:relation@50",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

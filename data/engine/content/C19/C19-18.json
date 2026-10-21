@@ -1,0 +1,2435 @@
+{
+  "bank": "C19",
+  "batch": 18,
+  "kind": "lessons",
+  "note": "AP Calculus AB lesson bodies, phase 3a (SPEC-lessons rev. 2, 12 Oct 2026, §3.5, §11.1, §12.6; P8 PLAN.md §3, author a4, agent:p8-a4, 14 Oct 2026): lessons 1-3 of the C10 units APCA05 (Analytical Applications of Differentiation), APCA06 (Integration and Accumulation of Change), APCA07 (Differential Equations) and APCA08 (Applications of Integration). `lessons` are the lesson records; `items` are their piece questions (the key is options[0]; `page` names the lesson). Template lessons: test and homework draw the C1 families each record names (C1-ap5001 … ap5023 in C1/C1-11.json, written for these lessons, and C1-clp005, clp006, clp008, clp010). AB only: no Euler's method, logistic model, arc length, integration by parts, partial fractions or improper integrals. Our own wording and numbers, written to the public unit list only; no College Board item or text was used. Every worked line and key is checked by sympy (.superpowers/p8/a4/sympy_check.py). JG's own content: no AP class of the academy is implied (owner, 4 Oct 2026). Key check 2 by P8 blind checkers 3 and 4 (14 Oct 2026, blind:P8s3+P8s4; C19/RECONCILE-p8.md part 2): the 36 piece questions and the 12 lessons are verified_auto; the 23 families C1-ap5001 … ap5023 are verified_auto by the 50-instance solver (C1/RECONCILE-p8.md).",
+  "lessons": [
+    {
+      "kind": "lesson",
+      "id": "C19-APCA05-1",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA05",
+      "seq": 1,
+      "skill": "ap_calc_ab:APCA05",
+      "requires": {
+        "math_rung_min": "precalc"
+      },
+      "title": {
+        "en": "AP Calculus AB: Extreme values and the Mean Value Theorem",
+        "uz": "AP Calculus AB: Eng katta va eng kichik qiymatlar, oʻrta qiymat teoremasi (Mean Value Theorem)",
+        "ru": "AP Calculus AB: Наибольшее и наименьшее значения, теорема о среднем (Mean Value Theorem)"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "A critical point of f is an x inside the domain where f′(x) = 0 or f′(x) does not exist.\nExtreme Value Theorem: if f is continuous on a closed interval [a, b], f has an absolute maximum and an absolute minimum on it.\nClosed-interval test: find the critical points inside [a, b]. Then compare f at those points and at a and b.\n• The largest value is the absolute maximum.\n• The smallest value is the absolute minimum.\nExample: f(x) = x³ − 3x on [0, 3]. f′(x) = 3x² − 3 = 0 at x = 1 (x = −1 is outside).\nf(0) = 0, f(1) = −2, f(3) = 18: the minimum is −2, the maximum is 18.",
+            "uz": "f funksiyaning kritik nuqtasi — aniqlanish sohasi ichidagi shunday x ki, unda f′(x) = 0 yoki f′(x) mavjud emas.\nEkstremal qiymat teoremasi (Extreme Value Theorem): agar f yopiq [a, b] kesmada uzluksiz boʻlsa, unda f ning eng katta va eng kichik qiymati bor.\nYopiq kesma usuli: [a, b] ichidagi kritik nuqtalarni toping. Keyin f ning shu nuqtalardagi hamda a va b dagi qiymatlarini solishtiring.\n• Eng kattasi — eng katta qiymat (absolute maximum).\n• Eng kichigi — eng kichik qiymat (absolute minimum).\nMisol: f(x) = x³ − 3x, [0, 3] kesmada. f′(x) = 3x² − 3 = 0, x = 1 da (x = −1 kesmadan tashqarida).\nf(0) = 0, f(1) = −2, f(3) = 18: eng kichigi −2, eng kattasi 18.",
+            "ru": "Критическая точка функции f — это x внутри области определения, где f′(x) = 0 или f′(x) не существует.\nТеорема Вейерштрасса о наибольшем и наименьшем значениях (Extreme Value Theorem): если f непрерывна на отрезке [a, b], то на нём у f есть наибольшее и наименьшее значения.\nПроверка на отрезке: найдите критические точки внутри [a, b]. Затем сравните значения f в этих точках и в a и b.\n• Самое большое — наибольшее значение (absolute maximum).\n• Самое маленькое — наименьшее значение (absolute minimum).\nПример: f(x) = x³ − 3x на [0, 3]. f′(x) = 3x² − 3 = 0 при x = 1 (x = −1 вне отрезка).\nf(0) = 0, f(1) = −2, f(3) = 18: наименьшее −2, наибольшее 18."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca51q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "f(x) = x³ − 12x on the closed interval [−3, 5]. f′(x) = 3x² − 12 = 0 at x = −2 and x = 2.\nf(−3) = 9, f(−2) = 16, f(2) = −16, f(5) = 65.\nThe largest is 65: the absolute maximum is at the end x = 5.\nNow you: f(x) = x³ − 48x on the closed interval [−5, 6]. f′(x) = 3x² − 48 = 0 at x = −4 and x = 4.\nf(−5) = 115, f(−4) = 128, f(4) = −128, f(6) = −72 → absolute maximum = ?",
+            "uz": "f(x) = x³ − 12x, yopiq [−3, 5] kesmada. f′(x) = 3x² − 12 = 0, x = −2 va x = 2 da.\nf(−3) = 9, f(−2) = 16, f(2) = −16, f(5) = 65.\nEng kattasi 65: eng katta qiymat x = 5 chetida.\nEndi siz: f(x) = x³ − 48x, yopiq [−5, 6] kesmada. f′(x) = 3x² − 48 = 0, x = −4 va x = 4 da.\nf(−5) = 115, f(−4) = 128, f(4) = −128, f(6) = −72 → eng katta qiymat = ?",
+            "ru": "f(x) = x³ − 12x на отрезке [−3, 5]. f′(x) = 3x² − 12 = 0 при x = −2 и x = 2.\nf(−3) = 9, f(−2) = 16, f(2) = −16, f(5) = 65.\nСамое большое — 65: наибольшее значение на конце x = 5.\nТеперь попробуйте сами: f(x) = x³ − 48x на отрезке [−5, 6]. f′(x) = 3x² − 48 = 0 при x = −4 и x = 4.\nf(−5) = 115, f(−4) = 128, f(4) = −128, f(6) = −72 → наибольшее значение = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca51q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: the Mean Value Theorem gives an x, not a slope.\nIf f is continuous on [a, b] and differentiable on (a, b), there is a c in (a, b) with\nf′(c) = (f(b) − f(a))/(b − a).\nExample: f(x) = x² − 4x on [1, 5]. Secant slope: (f(5) − f(1))/(5 − 1) = (5 − (−3))/4 = 2.\nf′(c) = 2c − 4 = 2, so c = 3.\nThe answer is c = 3, not the slope 2.",
+            "uz": "Ehtiyot boʻling: oʻrta qiymat teoremasi qiyalikni emas, x ni beradi.\nAgar f [a, b] da uzluksiz va (a, b) da differensiallanuvchi boʻlsa, (a, b) ichida shunday c bor ki,\nf′(c) = (f(b) − f(a))/(b − a).\nMisol: f(x) = x² − 4x, [1, 5] da. Kesuvchining qiyaligi: (f(5) − f(1))/(5 − 1) = (5 − (−3))/4 = 2.\nf′(c) = 2c − 4 = 2, demak c = 3.\nJavob — c = 3, qiyalik 2 emas.",
+            "ru": "Осторожно: теорема о среднем даёт x, а не наклон.\nЕсли f непрерывна на [a, b] и дифференцируема на (a, b), то внутри (a, b) есть c, для которого\nf′(c) = (f(b) − f(a))/(b − a).\nПример: f(x) = x² − 4x на [1, 5]. Наклон секущей: (f(5) − f(1))/(5 − 1) = (5 − (−3))/4 = 2.\nf′(c) = 2c − 4 = 2, значит, c = 3.\nОтвет — c = 3, а не наклон 2."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca51q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5001",
+          "C1-ap5002"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5001",
+          "C1-ap5002",
+          "C1-r3a009"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APCA05#official",
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA05-2",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA05",
+      "seq": 2,
+      "skill": "ap_calc_ab:APCA05",
+      "requires": {
+        "math_rung_min": "precalc"
+      },
+      "title": {
+        "en": "AP Calculus AB: Increasing, decreasing and concavity",
+        "uz": "AP Calculus AB: Oʻsish, kamayish va egilish (concavity)",
+        "ru": "AP Calculus AB: Возрастание, убывание и выпуклость (concavity)"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "The sign of f′ tells you where f goes up or down.\n• f′(x) > 0 on an interval: f is increasing there.\n• f′(x) < 0 on an interval: f is decreasing there.\nFirst derivative test at a critical point c: f′ changes from + to − → local maximum; from − to + → local minimum; no change → neither.\nExample: f(x) = x³ − 6x² + 9x + 1. f′(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3).\nf′ is + before 1, − between 1 and 3, + after 3: a local maximum at x = 1 and a local minimum at x = 3.",
+            "uz": "f′ ning ishorasi f qayerda oʻsishini yoki kamayishini koʻrsatadi.\n• Oraliqda f′(x) > 0 boʻlsa, f u yerda oʻsadi.\n• Oraliqda f′(x) < 0 boʻlsa, f u yerda kamayadi.\nKritik nuqta c da birinchi hosila testi: f′ ishorasi + dan − ga oʻtsa — lokal maksimum; − dan + ga oʻtsa — lokal minimum; oʻzgarmasa — hech biri emas.\nMisol: f(x) = x³ − 6x² + 9x + 1. f′(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3).\nf′ 1 dan oldin +, 1 va 3 orasida −, 3 dan keyin +: x = 1 da lokal maksimum, x = 3 da lokal minimum.",
+            "ru": "Знак f′ показывает, где f растёт, а где убывает.\n• Если f′(x) > 0 на промежутке, f там возрастает.\n• Если f′(x) < 0 на промежутке, f там убывает.\nПризнак по первой производной в критической точке c: f′ меняет знак с + на − → локальный максимум; с − на + → локальный минимум; не меняет → ни то ни другое.\nПример: f(x) = x³ − 6x² + 9x + 1. f′(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3).\nf′ положительна до 1, отрицательна между 1 и 3, положительна после 3: локальный максимум при x = 1, локальный минимум при x = 3."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca52q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "f(x) = x³ − 9x² + 24x + 5. Where is its local minimum?\nf′(x) = 3x² − 18x + 24 = 3(x − 2)(x − 4).\nf′ is + before 2, − between 2 and 4, + after 4.\nFrom − to + at x = 4: the local minimum is at x = 4 (x = 2 is the local maximum).\nNow you: f(x) = x³ − 15x² + 27x + 2.\nf′(x) = 3x² − 30x + 27 = 3(x − 1)(x − 9) → from − to + at x = ?",
+            "uz": "f(x) = x³ − 9x² + 24x + 5. Uning lokal minimumi qayerda?\nf′(x) = 3x² − 18x + 24 = 3(x − 2)(x − 4).\nf′ 2 dan oldin +, 2 va 4 orasida −, 4 dan keyin +.\nx = 4 da − dan + ga oʻtadi: lokal minimum x = 4 da (x = 2 — lokal maksimum).\nEndi siz: f(x) = x³ − 15x² + 27x + 2.\nf′(x) = 3x² − 30x + 27 = 3(x − 1)(x − 9) → − dan + ga oʻtish x = ?",
+            "ru": "f(x) = x³ − 9x² + 24x + 5. Где её локальный минимум?\nf′(x) = 3x² − 18x + 24 = 3(x − 2)(x − 4).\nf′ положительна до 2, отрицательна между 2 и 4, положительна после 4.\nПри x = 4 знак меняется с − на +: локальный минимум при x = 4 (x = 2 — локальный максимум).\nТеперь попробуйте сами: f(x) = x³ − 15x² + 27x + 2.\nf′(x) = 3x² − 30x + 27 = 3(x − 1)(x − 9) → знак меняется с − на + при x = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca52q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: f″(x) = 0 does not by itself make an inflection point; f″ must change sign there.\n• f″ > 0: the graph is concave up (it bends upwards).\n• f″ < 0: the graph is concave down.\nf(x) = x⁴: f″(x) = 12x² is 0 at x = 0 but never negative, so there is no inflection point at 0.\nf(x) = x³ − 6x² + 5: f″(x) = 6x − 12 changes sign at x = 2, so (2, f(2)) is an inflection point.\nSecond derivative test: f′(c) = 0 and f″(c) > 0 → local minimum; f″(c) < 0 → local maximum.",
+            "uz": "Ehtiyot boʻling: f″(x) = 0 ning oʻzi egilish nuqtasini (inflection point) bermaydi; u yerda f″ ishorasini oʻzgartirishi kerak.\n• f″ > 0: grafik yuqoriga egilgan (concave up).\n• f″ < 0: grafik pastga egilgan (concave down).\nf(x) = x⁴: f″(x) = 12x² boʻlib, x = 0 da 0 ga teng, lekin hech qachon manfiy emas, shuning uchun 0 da egilish nuqtasi yoʻq.\nf(x) = x³ − 6x² + 5: f″(x) = 6x − 12 ishorasi x = 2 da oʻzgaradi, demak (2, f(2)) — egilish nuqtasi.\nIkkinchi hosila testi: f′(c) = 0 va f″(c) > 0 → lokal minimum; f″(c) < 0 → lokal maksimum.",
+            "ru": "Осторожно: одно лишь f″(x) = 0 ещё не даёт точку перегиба (inflection point); там f″ должна сменить знак.\n• f″ > 0: график выпуклый вниз (concave up).\n• f″ < 0: график выпуклый вверх (concave down).\nf(x) = x⁴: f″(x) = 12x² равна 0 при x = 0, но нигде не отрицательна, поэтому в 0 перегиба нет.\nf(x) = x³ − 6x² + 5: f″(x) = 6x − 12 меняет знак при x = 2, значит, (2, f(2)) — точка перегиба.\nПризнак по второй производной: f′(c) = 0 и f″(c) > 0 → локальный минимум; f″(c) < 0 → локальный максимум."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca52q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5003",
+          "C1-ap5004"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5003",
+          "C1-ap5004",
+          "C1-r3a010"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APCA05#official",
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA05-3",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA05",
+      "seq": 3,
+      "skill": "ap_calc_ab:APCA05",
+      "requires": {
+        "math_rung_min": "precalc"
+      },
+      "title": {
+        "en": "AP Calculus AB: Optimization",
+        "uz": "AP Calculus AB: Optimallashtirish masalalari (optimization)",
+        "ru": "AP Calculus AB: Задачи на оптимизацию (optimization)"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "To make a quantity as large or as small as possible:\n1. Write the quantity as a function of one variable.\n2. Write its domain: the values that make sense.\n3. Solve f′(x) = 0 inside the domain.\n4. Compare with the ends of the domain.\nExample: two positive numbers add up to 20, and their product is as large as possible.\nP(x) = x(20 − x) = 20x − x², 0 < x < 20.\nP′(x) = 20 − 2x = 0 → x = 10. The numbers are 10 and 10, and the product is 100.",
+            "uz": "Kattalikni iloji boricha katta yoki kichik qilish uchun:\n1. Kattalikni bitta oʻzgaruvchining funksiyasi sifatida yozing.\n2. Uning aniqlanish sohasini yozing: maʼnoga ega qiymatlar.\n3. Soha ichida f′(x) = 0 ni yeching.\n4. Soha chetlaridagi qiymatlar bilan solishtiring.\nMisol: ikki musbat sonning yigʻindisi 20 ga teng, koʻpaytmasi esa iloji boricha katta.\nP(x) = x(20 − x) = 20x − x², 0 < x < 20.\nP′(x) = 20 − 2x = 0 → x = 10. Sonlar 10 va 10, koʻpaytma 100.",
+            "ru": "Чтобы сделать величину как можно больше или меньше:\n1. Запишите величину как функцию одной переменной.\n2. Запишите её область определения: значения, которые имеют смысл.\n3. Решите f′(x) = 0 внутри области.\n4. Сравните со значениями на концах области.\nПример: сумма двух положительных чисел равна 20, а их произведение должно быть наибольшим.\nP(x) = x(20 − x) = 20x − x², 0 < x < 20.\nP′(x) = 20 − 2x = 0 → x = 10. Числа 10 и 10, произведение 100."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca53q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A rectangular pen is built along a straight wall, so the fence covers only three sides. There are 40 m of fence.\nLet x be each side that meets the wall; the side along the wall is 40 − 2x.\nA(x) = x(40 − 2x) = 40x − 2x², 0 < x < 20.\nA′(x) = 40 − 4x = 0 → x = 10, so A = 10 · 20 = 200 m².\nNow you: 68 m of fence. A(x) = x(68 − 2x), A′(x) = 68 − 4x = 0 → x = 17.\nA = 17 · 34 = ?",
+            "uz": "Toʻgʻri devor boʻylab toʻgʻri toʻrtburchak shaklidagi qoʻra quriladi, shuning uchun panjara faqat uch tomonni oʻraydi. 40 m panjara bor.\nDevorga tutashgan har bir tomon x boʻlsin; devor boʻylab ketgan tomon 40 − 2x boʻladi.\nA(x) = x(40 − 2x) = 40x − 2x², 0 < x < 20.\nA′(x) = 40 − 4x = 0 → x = 10, demak A = 10 · 20 = 200 m².\nEndi siz: 68 m panjara. A(x) = x(68 − 2x), A′(x) = 68 − 4x = 0 → x = 17.\nA = 17 · 34 = ?",
+            "ru": "Вдоль прямой стены строят прямоугольный загон, поэтому забор ставят только с трёх сторон. Всего есть 40 м забора.\nПусть x — длина каждой из сторон, примыкающих к стене; сторона вдоль стены равна 40 − 2x.\nA(x) = x(40 − 2x) = 40x − 2x², 0 < x < 20.\nA′(x) = 40 − 4x = 0 → x = 10, значит, A = 10 · 20 = 200 м².\nТеперь попробуйте сами: 68 м забора. A(x) = x(68 − 2x), A′(x) = 68 − 4x = 0 → x = 17.\nA = 17 · 34 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca53q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out for roots of f′ at the ends of the domain.\nAn open box from a square sheet with side 12 cm: cut squares of side x from the corners.\nV(x) = x(12 − 2x)², and the domain is 0 < x < 6.\nV′(x) = (12 − 2x)(12 − 6x) = 0 → x = 6 or x = 2.\nx = 6 is the end of the domain: the box is flat, V = 0. The greatest volume is at x = 2: V = 2 · 8² = 128 cm³.",
+            "uz": "Aniqlanish sohasi chetidagi f′ ildizlaridan ehtiyot boʻling.\nTomoni 12 sm boʻlgan kvadrat varaqdan usti ochiq quti: burchaklaridan tomoni x boʻlgan kvadratlar kesiladi.\nV(x) = x(12 − 2x)², soha esa 0 < x < 6.\nV′(x) = (12 − 2x)(12 − 6x) = 0 → x = 6 yoki x = 2.\nx = 6 — soha cheti: quti yassi, V = 0. Eng katta hajm x = 2 da: V = 2 · 8² = 128 sm³.",
+            "ru": "Осторожно с корнями f′ на концах области.\nОткрытая коробка из квадратного листа со стороной 12 см: из углов вырезают квадраты со стороной x.\nV(x) = x(12 − 2x)², область 0 < x < 6.\nV′(x) = (12 − 2x)(12 − 6x) = 0 → x = 6 или x = 2.\nx = 6 — конец области: коробка плоская, V = 0. Наибольший объём при x = 2: V = 2 · 8² = 128 см³."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca53q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5005",
+          "C1-clp005"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5005",
+          "C1-clp005",
+          "C1-r3a011"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APCA05#official",
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA06-1",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA06",
+      "seq": 1,
+      "skill": "ap_calc_ab:APCA06",
+      "requires": {
+        "math_rung_min": "precalc"
+      },
+      "title": {
+        "en": "AP Calculus AB: Riemann sums and accumulation",
+        "uz": "AP Calculus AB: Riman yigʻindilari (Riemann sums) va toʻplanish",
+        "ru": "AP Calculus AB: Суммы Римана (Riemann sums) и накопление"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "For a rate r(t), the area under its graph from a to b is the total change: ∫ₐᵇ r(t) dt = amount at b − amount at a.\nTo estimate it, cut [a, b] into pieces and add width × height.\n• Left Riemann sum: each height is the value at its piece's left end.\n• Right Riemann sum: the value at the right end.\n• Midpoint sum: the value in the middle.\nExample: v(0) = 2, v(2) = 5, v(4) = 6, v(6) = 9 (m/s). Pieces of width 2:\nleft sum = 2 · 2 + 2 · 5 + 2 · 6 = 26 m; right sum = 2 · 5 + 2 · 6 + 2 · 9 = 40 m.",
+            "uz": "Agar r(t) — oʻzgarish tezligi boʻlsa, a dan b gacha uning grafigi ostidagi yuza umumiy oʻzgarishga teng: ∫ₐᵇ r(t) dt = b dagi miqdor − a dagi miqdor.\nYuzani taxminan hisoblash uchun [a, b] ni boʻlaklarga boʻling va eni × balandlik koʻpaytmalarini qoʻshing.\n• Chap Riman yigʻindisi (left Riemann sum): har bir balandlik — boʻlakning chap uchidagi qiymat.\n• Oʻng Riman yigʻindisi (right): oʻng uchidagi qiymat.\n• Oʻrta nuqta yigʻindisi (midpoint): oʻrtasidagi qiymat.\nMisol: v(0) = 2, v(2) = 5, v(4) = 6, v(6) = 9 (m/s). Eni 2 boʻlgan boʻlaklar:\nchap yigʻindi = 2 · 2 + 2 · 5 + 2 · 6 = 26 m; oʻng yigʻindi = 2 · 5 + 2 · 6 + 2 · 9 = 40 m.",
+            "ru": "Если r(t) — скорость изменения, то площадь под её графиком от a до b равна полному изменению: ∫ₐᵇ r(t) dt = количество в b − количество в a.\nЧтобы оценить площадь, разбейте [a, b] на части и сложите произведения «ширина × высота».\n• Левая сумма Римана (left Riemann sum): высота каждой части — значение на её левом конце.\n• Правая (right): значение на правом конце.\n• Сумма по серединам (midpoint): значение в середине.\nПример: v(0) = 2, v(2) = 5, v(4) = 6, v(6) = 9 (м/с). Части шириной 2:\nлевая сумма = 2 · 2 + 2 · 5 + 2 · 6 = 26 м; правая сумма = 2 · 5 + 2 · 6 + 2 · 9 = 40 м."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca61q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A runner's speed v(t), in metres per second, is measured every 4 seconds: v(0) = 3, v(4) = 5, v(8) = 6, v(12) = 4.\nLeft Riemann sum: the heights are v(0), v(4), v(8), each piece 4 s wide.\nDistance ≈ 4 · 3 + 4 · 5 + 4 · 6 = 4 · 14 = 56 m.\nNow you: every 10 seconds, v(0) = 2, v(10) = 3, v(20) = 5, v(30) = 4.\nLeft sum ≈ 10 · 2 + 10 · 3 + 10 · 5 = 10 · 10 = ?",
+            "uz": "Yuguruvchining tezligi v(t) (m/s) har 4 soniyada oʻlchanadi: v(0) = 3, v(4) = 5, v(8) = 6, v(12) = 4.\nChap Riman yigʻindisi: balandliklar v(0), v(4), v(8), har bir boʻlakning eni 4 s.\nMasofa ≈ 4 · 3 + 4 · 5 + 4 · 6 = 4 · 14 = 56 m.\nEndi siz: har 10 soniyada, v(0) = 2, v(10) = 3, v(20) = 5, v(30) = 4.\nChap yigʻindi ≈ 10 · 2 + 10 · 3 + 10 · 5 = 10 · 10 = ?",
+            "ru": "Скорость бегуна v(t) в м/с измеряют каждые 4 секунды: v(0) = 3, v(4) = 5, v(8) = 6, v(12) = 4.\nЛевая сумма Римана: высоты v(0), v(4), v(8), ширина каждой части 4 с.\nПуть ≈ 4 · 3 + 4 · 5 + 4 · 6 = 4 · 14 = 56 м.\nТеперь попробуйте сами: каждые 10 секунд, v(0) = 2, v(10) = 3, v(20) = 5, v(30) = 4.\nЛевая сумма ≈ 10 · 2 + 10 · 3 + 10 · 5 = 10 · 10 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca61q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: a trapezoidal sum averages the two ends of each piece, so the inside values count twice and the end values once.\nT = (width/2) · (f₀ + 2f₁ + 2f₂ + f₃) for three equal pieces.\nWith v(0) = 3, v(4) = 5, v(8) = 6, v(12) = 4:\nT = (4/2) · (3 + 2 · 5 + 2 · 6 + 4) = 2 · 29 = 58 m.\nIt is the average of the left sum 56 and the right sum 4 · (5 + 6 + 4) = 60.",
+            "uz": "Ehtiyot boʻling: trapetsiya yigʻindisi (trapezoidal sum) har bir boʻlakning ikki uchidagi qiymatlarning oʻrtachasini oladi, shuning uchun ichki qiymatlar ikki marta, chetdagilar bir marta hisoblanadi.\nUchta teng boʻlak uchun T = (eni/2) · (f₀ + 2f₁ + 2f₂ + f₃).\nv(0) = 3, v(4) = 5, v(8) = 6, v(12) = 4 boʻlsa:\nT = (4/2) · (3 + 2 · 5 + 2 · 6 + 4) = 2 · 29 = 58 m.\nBu chap yigʻindi 56 va oʻng yigʻindi 4 · (5 + 6 + 4) = 60 ning oʻrtachasi.",
+            "ru": "Осторожно: сумма трапеций (trapezoidal sum) берёт среднее двух концов каждой части, поэтому внутренние значения входят дважды, а крайние — один раз.\nДля трёх равных частей T = (ширина/2) · (f₀ + 2f₁ + 2f₂ + f₃).\nПри v(0) = 3, v(4) = 5, v(8) = 6, v(12) = 4:\nT = (4/2) · (3 + 2 · 5 + 2 · 6 + 4) = 2 · 29 = 58 м.\nЭто среднее левой суммы 56 и правой суммы 4 · (5 + 6 + 4) = 60."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca61q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5006",
+          "C1-ap5007"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5006",
+          "C1-ap5007",
+          "C1-r3a012"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APCA06#official",
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA06-2",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA06",
+      "seq": 2,
+      "skill": "ap_calc_ab:APCA06",
+      "requires": {
+        "math_rung_min": "precalc"
+      },
+      "title": {
+        "en": "AP Calculus AB: The Fundamental Theorem of Calculus",
+        "uz": "AP Calculus AB: Integral hisobning asosiy teoremasi (Fundamental Theorem of Calculus)",
+        "ru": "AP Calculus AB: Основная теорема анализа (Fundamental Theorem of Calculus)"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "An antiderivative of f is a function F with F′ = f. Run the power rule backwards:\n• ∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C (n ≠ −1)\n• ∫ k dx = kx + C\nThe Fundamental Theorem: if F′ = f, then ∫ₐᵇ f(x) dx = F(b) − F(a).\nA starting value fixes C. Example: F′(x) = 6x² + 2 and F(0) = 5.\nF(x) = 2x³ + 2x + C, and F(0) = C = 5.\nSo F(2) = 16 + 4 + 5 = 25.",
+            "uz": "f ning boshlangʻich funksiyasi (antiderivative) — F′ = f boʻlgan F funksiya. Daraja qoidasini teskari ishlating:\n• ∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C (n ≠ −1)\n• ∫ k dx = kx + C\nAsosiy teorema: agar F′ = f boʻlsa, ∫ₐᵇ f(x) dx = F(b) − F(a).\nBoshlangʻich qiymat C ni aniqlaydi. Misol: F′(x) = 6x² + 2 va F(0) = 5.\nF(x) = 2x³ + 2x + C, F(0) = C = 5.\nDemak F(2) = 16 + 4 + 5 = 25.",
+            "ru": "Первообразная функции f — это функция F, у которой F′ = f. Примените правило степени в обратную сторону:\n• ∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C (n ≠ −1)\n• ∫ k dx = kx + C\nОсновная теорема: если F′ = f, то ∫ₐᵇ f(x) dx = F(b) − F(a).\nНачальное значение позволяет найти C. Пример: F′(x) = 6x² + 2 и F(0) = 5.\nF(x) = 2x³ + 2x + C, и F(0) = C = 5.\nЗначит, F(2) = 16 + 4 + 5 = 25."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca62q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "What is the value of ∫₁³ (6x² + 4x) dx? An antiderivative is F(x) = 2x³ + 2x².\nF(3) = 54 + 18 = 72 and F(1) = 2 + 2 = 4.\n∫₁³ (6x² + 4x) dx = F(3) − F(1) = 72 − 4 = 68.\nNow you: ∫₂⁶ (3x² + 2x) dx, with F(x) = x³ + x².\nF(6) = 216 + 36 = 252, F(2) = 8 + 4 = 12 → F(6) − F(2) = ?",
+            "uz": "∫₁³ (6x² + 4x) dx ning qiymati nechaga teng? Boshlangʻich funksiya F(x) = 2x³ + 2x².\nF(3) = 54 + 18 = 72 va F(1) = 2 + 2 = 4.\n∫₁³ (6x² + 4x) dx = F(3) − F(1) = 72 − 4 = 68.\nEndi siz: ∫₂⁶ (3x² + 2x) dx, bunda F(x) = x³ + x².\nF(6) = 216 + 36 = 252, F(2) = 8 + 4 = 12 → F(6) − F(2) = ?",
+            "ru": "Найдите значение ∫₁³ (6x² + 4x) dx. Первообразная F(x) = 2x³ + 2x².\nF(3) = 54 + 18 = 72 и F(1) = 2 + 2 = 4.\n∫₁³ (6x² + 4x) dx = F(3) − F(1) = 72 − 4 = 68.\nТеперь попробуйте сами: ∫₂⁶ (3x² + 2x) dx, где F(x) = x³ + x².\nF(6) = 216 + 36 = 252, F(2) = 8 + 4 = 12 → F(6) − F(2) = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca62q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out with an accumulation function g(x) = ∫ₐˣ f(t) dt.\nIts derivative is the integrand at the upper limit: g′(x) = f(x).\nDo not differentiate f, and the lower limit a does not matter.\nExample: g(x) = ∫₂ˣ (t² + 3t) dt.\ng′(4) = 4² + 3 · 4 = 28, not (2t + 3) at t = 4, which is 11.",
+            "uz": "Toʻplovchi funksiya (accumulation function) g(x) = ∫ₐˣ f(t) dt bilan ishlaganda ehtiyot boʻling.\nUning hosilasi — yuqori chegaradagi integral ostidagi funksiya: g′(x) = f(x).\nf ni differensiallamang, quyi chegara a esa ahamiyatga ega emas.\nMisol: g(x) = ∫₂ˣ (t² + 3t) dt.\ng′(4) = 4² + 3 · 4 = 28; t = 4 dagi (2t + 3), yaʼni 11 emas.",
+            "ru": "Осторожно с функцией накопления (accumulation function) g(x) = ∫ₐˣ f(t) dt.\nЕё производная — подынтегральная функция на верхнем пределе: g′(x) = f(x).\nНе дифференцируйте f, а нижний предел a не важен.\nПример: g(x) = ∫₂ˣ (t² + 3t) dt.\ng′(4) = 4² + 3 · 4 = 28, а не (2t + 3) при t = 4, то есть не 11."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca62q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5008",
+          "C1-ap5009"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5008",
+          "C1-ap5009",
+          "C1-clp010",
+          "C1-clp008"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APCA06#official",
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA06-3",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA06",
+      "seq": 3,
+      "skill": "ap_calc_ab:APCA06",
+      "requires": {
+        "math_rung_min": "precalc"
+      },
+      "title": {
+        "en": "AP Calculus AB: Substitution, and the integrals of eˣ, 1/x, sin x, cos x",
+        "uz": "AP Calculus AB: Oʻrniga qoʻyish usuli (u-substitution) va eˣ, 1/x, sin x, cos x integrallari",
+        "ru": "AP Calculus AB: Замена переменной (u-substitution) и интегралы eˣ, 1/x, sin x, cos x"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Four integrals to know:\n• ∫ eˣ dx = eˣ + C\n• ∫ (1/x) dx = ln|x| + C\n• ∫ cos x dx = sin x + C\n• ∫ sin x dx = −cos x + C\nEach one is a derivative read backwards: (ln x)′ = 1/x and (−cos x)′ = sin x.\nExample: from x = 0 to x = ln 3, ∫ eˣ dx = e^(ln 3) − e⁰ = 3 − 1 = 2.\nExample: from x = 1 to x = e², ∫ (1/x) dx = ln(e²) − ln 1 = 2 − 0 = 2.",
+            "uz": "Bilish kerak boʻlgan toʻrtta integral:\n• ∫ eˣ dx = eˣ + C\n• ∫ (1/x) dx = ln|x| + C\n• ∫ cos x dx = sin x + C\n• ∫ sin x dx = −cos x + C\nHar biri — teskari oʻqilgan hosila: (ln x)′ = 1/x va (−cos x)′ = sin x.\nMisol: x = 0 dan x = ln 3 gacha ∫ eˣ dx = e^(ln 3) − e⁰ = 3 − 1 = 2.\nMisol: x = 1 dan x = e² gacha ∫ (1/x) dx = ln(e²) − ln 1 = 2 − 0 = 2.",
+            "ru": "Четыре интеграла, которые нужно знать:\n• ∫ eˣ dx = eˣ + C\n• ∫ (1/x) dx = ln|x| + C\n• ∫ cos x dx = sin x + C\n• ∫ sin x dx = −cos x + C\nКаждый — это производная, прочитанная наоборот: (ln x)′ = 1/x и (−cos x)′ = sin x.\nПример: от x = 0 до x = ln 3 ∫ eˣ dx = e^(ln 3) − e⁰ = 3 − 1 = 2.\nПример: от x = 1 до x = e² ∫ (1/x) dx = ln(e²) − ln 1 = 2 − 0 = 2."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca63q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "What is the value of ∫₀¹ 6x(x² + 1)² dx? Let u = x² + 1; then du = 2x dx, so 6x dx = 3 du.\nNew limits: x = 0 gives u = 1, x = 1 gives u = 2.\n∫₁² 3u² du = [u³] from 1 to 2 = 8 − 1 = 7.\nNow you: ∫₀¹ 6x(x² + 8)² dx. Here u = x² + 8 runs from 8 to 9.\n∫₈⁹ 3u² du = 9³ − 8³ = 729 − 512 = ?",
+            "uz": "∫₀¹ 6x(x² + 1)² dx ning qiymati nechaga teng? u = x² + 1 deb olamiz; u holda du = 2x dx, demak 6x dx = 3 du.\nYangi chegaralar: x = 0 da u = 1, x = 1 da u = 2.\n∫₁² 3u² du = 1 dan 2 gacha [u³] = 8 − 1 = 7.\nEndi siz: ∫₀¹ 6x(x² + 8)² dx. Bu yerda u = x² + 8, u 8 dan 9 gacha oʻzgaradi.\n∫₈⁹ 3u² du = 9³ − 8³ = 729 − 512 = ?",
+            "ru": "Найдите значение ∫₀¹ 6x(x² + 1)² dx. Пусть u = x² + 1; тогда du = 2x dx, значит, 6x dx = 3 du.\nНовые пределы: x = 0 даёт u = 1, x = 1 даёт u = 2.\n∫₁² 3u² du = [u³] от 1 до 2 = 8 − 1 = 7.\nТеперь попробуйте сами: ∫₀¹ 6x(x² + 8)² dx. Здесь u = x² + 8 меняется от 8 до 9.\n∫₈⁹ 3u² du = 9³ − 8³ = 729 − 512 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca63q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out for two slips.\n1. The sign: ∫ sin x dx = −cos x + C, because (cos x)′ = −sin x.\nFrom x = 0 to x = π: ∫ sin x dx = −cos π + cos 0 = 1 + 1 = 2, not 0 and not −2.\n2. The limits: after u = g(x), change the limits to u-values too, or go back to x before you put numbers in. Never mix x-limits with a u-integral.",
+            "uz": "Ikki xatodan ehtiyot boʻling.\n1. Ishora: ∫ sin x dx = −cos x + C, chunki (cos x)′ = −sin x.\nx = 0 dan x = π gacha: ∫ sin x dx = −cos π + cos 0 = 1 + 1 = 2; 0 ham, −2 ham emas.\n2. Chegaralar: u = g(x) dan keyin chegaralarni ham u qiymatlariga oʻtkazing yoki sonlarni qoʻyishdan oldin x ga qayting. u boʻyicha integralga x chegaralarini aralashtirmang.",
+            "ru": "Осторожно с двумя ошибками.\n1. Знак: ∫ sin x dx = −cos x + C, потому что (cos x)′ = −sin x.\nОт x = 0 до x = π: ∫ sin x dx = −cos π + cos 0 = 1 + 1 = 2, а не 0 и не −2.\n2. Пределы: после u = g(x) переведите и пределы в значения u или вернитесь к x, прежде чем подставлять числа. Не смешивайте пределы по x с интегралом по u."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca63q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5010",
+          "C1-ap5011"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5010",
+          "C1-ap5011",
+          "C1-r3a013"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APCA06#official",
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA07-1",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA07",
+      "seq": 1,
+      "skill": "ap_calc_ab:APCA07",
+      "requires": {
+        "math_rung_min": "precalc"
+      },
+      "title": {
+        "en": "AP Calculus AB: What a differential equation says",
+        "uz": "AP Calculus AB: Differensial tenglama nimani bildiradi",
+        "ru": "AP Calculus AB: Что говорит дифференциальное уравнение"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "A differential equation links a function with its derivatives, for example dy/dx = 2y.\nA solution is a function that makes the equation true for every x.\nTo check one: find its derivatives, put them in, and see if both sides are the same.\nExample: y = 5e^(2x). Then dy/dx = 10e^(2x) = 2 · 5e^(2x) = 2y, so it is a solution.\nThe equation also gives the slope of a solution curve at any point: if dy/dx = x + y, the curve through (1, 2) has slope 1 + 2 = 3 there. A slope field draws these slopes as short dashes.",
+            "uz": "Differensial tenglama funksiyani uning hosilalari bilan bogʻlaydi, masalan dy/dx = 2y.\nYechim — har bir x da tenglamani toʻgʻri tenglikka aylantiradigan funksiya.\nTekshirish uchun: hosilalarini toping, tenglamaga qoʻying va ikki tomon tengligini koʻring.\nMisol: y = 5e^(2x). U holda dy/dx = 10e^(2x) = 2 · 5e^(2x) = 2y, demak bu yechim.\nTenglama yechim egri chizigʻining istalgan nuqtadagi qiyaligini ham beradi: agar dy/dx = x + y boʻlsa, (1, 2) nuqtadan oʻtuvchi egri chiziqning u yerdagi qiyaligi 1 + 2 = 3. Yoʻnalishlar maydoni (slope field) bu qiyaliklarni qisqa chiziqchalar bilan chizadi.",
+            "ru": "Дифференциальное уравнение связывает функцию с её производными, например dy/dx = 2y.\nРешение — это функция, при которой уравнение верно для всех x.\nЧтобы проверить: найдите производные, подставьте их и сравните обе части.\nПример: y = 5e^(2x). Тогда dy/dx = 10e^(2x) = 2 · 5e^(2x) = 2y, значит, это решение.\nУравнение даёт и наклон кривой-решения в любой точке: если dy/dx = x + y, то кривая, проходящая через (1, 2), имеет там наклон 1 + 2 = 3. Поле направлений (slope field) рисует эти наклоны короткими штрихами."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca71q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A solution curve of dy/dx = 2x² − 3y passes through the point (2, 1).\nIts slope there is the value of dy/dx at x = 2, y = 1:\ndy/dx = 2 · 2² − 3 · 1 = 8 − 3 = 5.\nNow you: dy/dx = 6x² − 7y, through the point (3, 5).\ndy/dx = 6 · 3² − 7 · 5 = 54 − 35 = ?",
+            "uz": "dy/dx = 2x² − 3y tenglamaning yechim egri chizigʻi (2, 1) nuqtadan oʻtadi.\nU yerdagi qiyalik — x = 2, y = 1 dagi dy/dx qiymati:\ndy/dx = 2 · 2² − 3 · 1 = 8 − 3 = 5.\nEndi siz: dy/dx = 6x² − 7y, (3, 5) nuqtadan oʻtadi.\ndy/dx = 6 · 3² − 7 · 5 = 54 − 35 = ?",
+            "ru": "Кривая-решение уравнения dy/dx = 2x² − 3y проходит через точку (2, 1).\nЕё наклон там — значение dy/dx при x = 2, y = 1:\ndy/dx = 2 · 2² − 3 · 1 = 8 − 3 = 5.\nТеперь попробуйте сами: dy/dx = 6x² − 7y, через точку (3, 5).\ndy/dx = 6 · 3² − 7 · 5 = 54 − 35 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca71q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: a solution must work for every x, not just at one point. Check it with the derivatives, not with one number.\nFor y = e^(kx): y′ = k·e^(kx) and y″ = k²·e^(kx).\nExample: which k make y = e^(kx) a solution of y″ + y′ = 6y?\nk²e^(kx) + ke^(kx) = 6e^(kx) → k² + k − 6 = 0 → (k + 3)(k − 2) = 0.\nSo k = 2 or k = −3: both work, because e^(kx) is never 0.",
+            "uz": "Ehtiyot boʻling: yechim faqat bitta nuqtada emas, har bir x uchun bajarilishi kerak. Uni bitta son bilan emas, hosilalar bilan tekshiring.\ny = e^(kx) uchun: y′ = k·e^(kx) va y″ = k²·e^(kx).\nMisol: qaysi k larda y = e^(kx) funksiya y″ + y′ = 6y tenglamaning yechimi boʻladi?\nk²e^(kx) + ke^(kx) = 6e^(kx) → k² + k − 6 = 0 → (k + 3)(k − 2) = 0.\nDemak k = 2 yoki k = −3: ikkalasi ham toʻgʻri, chunki e^(kx) hech qachon 0 boʻlmaydi.",
+            "ru": "Осторожно: решение должно работать при всех x, а не в одной точке. Проверяйте производными, а не одним числом.\nДля y = e^(kx): y′ = k·e^(kx) и y″ = k²·e^(kx).\nПример: при каких k функция y = e^(kx) — решение y″ + y′ = 6y?\nk²e^(kx) + ke^(kx) = 6e^(kx) → k² + k − 6 = 0 → (k + 3)(k − 2) = 0.\nЗначит, k = 2 или k = −3: подходят оба, потому что e^(kx) никогда не равно 0."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca71q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5012",
+          "C1-ap5013"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5012",
+          "C1-ap5013",
+          "C1-r3a014"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APCA07#official",
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA07-2",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA07",
+      "seq": 2,
+      "skill": "ap_calc_ab:APCA07",
+      "requires": {
+        "math_rung_min": "precalc"
+      },
+      "title": {
+        "en": "AP Calculus AB: Separation of variables",
+        "uz": "AP Calculus AB: Oʻzgaruvchilarni ajratish (separation of variables)",
+        "ru": "AP Calculus AB: Разделение переменных (separation of variables)"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Separation of variables solves dy/dx = (x-part) · (y-part):\n1. Move every y to the side of dy and every x to the side of dx.\n2. Integrate both sides; write one constant C.\n3. Use the starting value to find C, then solve for y.\nExample: dy/dx = x/y, y(0) = 3, y > 0.\ny dy = x dx → y²/2 = x²/2 + C → y² = x² + 2C.\ny(0) = 3 gives 2C = 9, so y² = x² + 9.\ny(4) = √(16 + 9) = √25 = 5.",
+            "uz": "Oʻzgaruvchilarni ajratish usuli dy/dx = (x qismi) · (y qismi) koʻrinishidagi tenglamani yechadi:\n1. Barcha y larni dy tomonga, barcha x larni dx tomonga oʻtkazing.\n2. Ikkala tomonni integrallang; bitta oʻzgarmas C yozing.\n3. Boshlangʻich qiymatdan C ni toping, keyin y ni ifodalang.\nMisol: dy/dx = x/y, y(0) = 3, y > 0.\ny dy = x dx → y²/2 = x²/2 + C → y² = x² + 2C.\ny(0) = 3 dan 2C = 9, demak y² = x² + 9.\ny(4) = √(16 + 9) = √25 = 5.",
+            "ru": "Методом разделения переменных решают уравнения вида dy/dx = (часть с x) · (часть с y):\n1. Перенесите все y к dy, а все x к dx.\n2. Проинтегрируйте обе части; запишите одну константу C.\n3. По начальному значению найдите C, затем выразите y.\nПример: dy/dx = x/y, y(0) = 3, y > 0.\ny dy = x dx → y²/2 = x²/2 + C → y² = x² + 2C.\ny(0) = 3 даёт 2C = 9, значит, y² = x² + 9.\ny(4) = √(16 + 9) = √25 = 5."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca72q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "dy/dt = 4√y and y(0) = 9.\nSeparate: dy/√y = 4 dt. Integrate: 2√y = 4t + C.\nAt t = 0: 2 · 3 = C, so C = 6 and √y = 2t + 3.\ny(2) = (2 · 2 + 3)² = 7² = 49.\nNow you: dy/dt = 10√y and y(0) = 1. Then 2√y = 10t + 2, so √y = 5t + 1.\ny(1) = (5 + 1)² = ?",
+            "uz": "dy/dt = 4√y va y(0) = 9.\nAjrating: dy/√y = 4 dt. Integrallang: 2√y = 4t + C.\nt = 0 da: 2 · 3 = C, demak C = 6 va √y = 2t + 3.\ny(2) = (2 · 2 + 3)² = 7² = 49.\nEndi siz: dy/dt = 10√y va y(0) = 1. U holda 2√y = 10t + 2, demak √y = 5t + 1.\ny(1) = (5 + 1)² = ?",
+            "ru": "dy/dt = 4√y и y(0) = 9.\nРазделите: dy/√y = 4 dt. Проинтегрируйте: 2√y = 4t + C.\nПри t = 0: 2 · 3 = C, значит, C = 6 и √y = 2t + 3.\ny(2) = (2 · 2 + 3)² = 7² = 49.\nТеперь попробуйте сами: dy/dt = 10√y и y(0) = 1. Тогда 2√y = 10t + 2, значит, √y = 5t + 1.\ny(1) = (5 + 1)² = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca72q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: put C in when you integrate, and find it before you take the square root.\ndy/dx = x/y with y(0) = 5 and y > 0:\ny² = x² + C, and y(0) = 5 gives C = 25.\nSo y = √(x² + 25) and y(12) = √169 = 13.\nWrong: y = x + C. A square root does not split a sum: √(x² + 25) is not x + 5, and 12 + 5 = 17 is not the answer.",
+            "uz": "Ehtiyot boʻling: C ni integrallash paytida yozing va uni kvadrat ildiz olishdan oldin toping.\ndy/dx = x/y, y(0) = 5 va y > 0:\ny² = x² + C, y(0) = 5 dan C = 25.\nDemak y = √(x² + 25) va y(12) = √169 = 13.\nNotoʻgʻri: y = x + C. Yigʻindining kvadrat ildizini qoʻshiluvchilarga boʻlib olib boʻlmaydi: √(x² + 25) — bu x + 5 emas, 12 + 5 = 17 esa javob emas.",
+            "ru": "Осторожно: пишите C сразу при интегрировании и находите её до извлечения корня.\ndy/dx = x/y, y(0) = 5 и y > 0:\ny² = x² + C, а y(0) = 5 даёт C = 25.\nЗначит, y = √(x² + 25) и y(12) = √169 = 13.\nНеверно: y = x + C. Корень из суммы не равен сумме корней: √(x² + 25) — это не x + 5, и 12 + 5 = 17 — не ответ."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca72q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5014",
+          "C1-ap5015"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5014",
+          "C1-ap5015",
+          "C1-r3a015"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APCA07#official",
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA07-3",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA07",
+      "seq": 3,
+      "skill": "ap_calc_ab:APCA07",
+      "requires": {
+        "math_rung_min": "precalc"
+      },
+      "title": {
+        "en": "AP Calculus AB: Exponential growth and decay",
+        "uz": "AP Calculus AB: Eksponensial oʻsish va kamayish",
+        "ru": "AP Calculus AB: Экспоненциальный рост и убывание"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "If a quantity changes at a rate proportional to itself, dy/dt = ky, then y = y₀e^(kt), where y₀ = y(0).\n• k > 0: exponential growth.\n• k < 0: exponential decay.\nGrowth multiplies; it does not add. If y doubles every D hours, then e^(kD) = 2, so k = ln 2 / D, and after n doubling times y = y₀ · 2ⁿ.\nExample: 40 cells that double every 3 hours. After 9 hours (3 doubling times): 40 · 2³ = 320.",
+            "uz": "Agar kattalik oʻziga proporsional tezlikda oʻzgarsa, dy/dt = ky, unda y = y₀e^(kt), bunda y₀ = y(0).\n• k > 0: eksponensial oʻsish.\n• k < 0: eksponensial kamayish.\nOʻsish koʻpaytiradi, qoʻshmaydi. Agar y har D soatda ikki baravar oshsa, e^(kD) = 2, demak k = ln 2 / D, n ta ikkilanish vaqtidan keyin esa y = y₀ · 2ⁿ.\nMisol: har 3 soatda ikki baravar koʻpayadigan 40 ta hujayra. 9 soatdan keyin (3 ta ikkilanish vaqti): 40 · 2³ = 320.",
+            "ru": "Если величина меняется со скоростью, пропорциональной ей самой, dy/dt = ky, то y = y₀e^(kt), где y₀ = y(0).\n• k > 0: экспоненциальный рост.\n• k < 0: экспоненциальное убывание.\nРост умножает, а не прибавляет. Если y удваивается каждые D часов, то e^(kD) = 2, значит, k = ln 2 / D, а через n периодов удвоения y = y₀ · 2ⁿ.\nПример: 40 клеток удваиваются каждые 3 ч. Через 9 ч (3 удвоения): 40 · 2³ = 320."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca73q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "A colony of bacteria grows so that dP/dt = kP, and it doubles every 4 hours. P(0) = 30.\nAfter 12 hours: 12/4 = 3 doubling times, so P = 30 · 2³ = 240.\nNow you: P(0) = 15 and it doubles every 6 hours.\nAfter 30 hours: 30/6 = 5 doubling times, so P = 15 · 2⁵ = ?",
+            "uz": "Bakteriyalar koloniyasi dP/dt = kP qonuni boʻyicha oʻsadi va har 4 soatda ikki baravar koʻpayadi. P(0) = 30.\n12 soatdan keyin: 12/4 = 3 ta ikkilanish vaqti, demak P = 30 · 2³ = 240.\nEndi siz: P(0) = 15 va u har 6 soatda ikki baravar koʻpayadi.\n30 soatdan keyin: 30/6 = 5 ta ikkilanish vaqti, demak P = 15 · 2⁵ = ?",
+            "ru": "Колония бактерий растёт по закону dP/dt = kP и удваивается каждые 4 ч. P(0) = 30.\nЧерез 12 ч: 12/4 = 3 удвоения, значит, P = 30 · 2³ = 240.\nТеперь попробуйте сами: P(0) = 15, удвоение каждые 6 ч.\nЧерез 30 ч: 30/6 = 5 удвоений, значит, P = 15 · 2⁵ = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca73q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: a half-life is a time, and decay halves the amount again and again; it does not take away the same amount each time.\nAfter n half-lives, 1/2ⁿ of it is left.\nExample: the half-life is 5 years. 1/16 = 1/2⁴, so 1/16 is left after 4 half-lives: 4 · 5 = 20 years, not 16 · 5 = 80 years.\nIn y = y₀e^(kt) the half-life h gives k = −ln 2 / h.",
+            "uz": "Ehtiyot boʻling: yarim yemirilish davri (half-life) — bu vaqt; yemirilish miqdorni qayta-qayta ikkiga boʻladi, har safar bir xil miqdorni ayirmaydi.\nn ta yarim yemirilish davridan keyin uning 1/2ⁿ qismi qoladi.\nMisol: yarim yemirilish davri 5 yil. 1/16 = 1/2⁴, demak 1/16 qismi 4 ta davrdan keyin qoladi: 4 · 5 = 20 yil, 16 · 5 = 80 yil emas.\ny = y₀e^(kt) da yarim yemirilish davri h boʻlsa, k = −ln 2 / h.",
+            "ru": "Осторожно: период полураспада (half-life) — это время; распад снова и снова делит количество пополам, а не отнимает каждый раз одно и то же.\nЧерез n периодов полураспада остаётся 1/2ⁿ часть.\nПример: период полураспада 5 лет. 1/16 = 1/2⁴, значит, 1/16 остаётся через 4 периода: 4 · 5 = 20 лет, а не 16 · 5 = 80 лет.\nВ y = y₀e^(kt) период полураспада h даёт k = −ln 2 / h."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca73q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5016",
+          "C1-ap5017"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5016",
+          "C1-ap5017",
+          "C1-r3a016"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APCA07#official",
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA08-1",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA08",
+      "seq": 1,
+      "skill": "ap_calc_ab:APCA08",
+      "requires": {
+        "math_rung_min": "precalc"
+      },
+      "title": {
+        "en": "AP Calculus AB: Average value, displacement and distance",
+        "uz": "AP Calculus AB: Oʻrtacha qiymat, koʻchish va yoʻl",
+        "ru": "AP Calculus AB: Среднее значение, перемещение и путь"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "The average value of f on [a, b] is\n(1/(b − a)) · ∫ₐᵇ f(x) dx.\nIt is the height of the rectangle on [a, b] with the same area as the region under f.\nExample: f(x) = 6x on [0, 4]. ∫₀⁴ 6x dx = 3 · 4² = 48, and 48/4 = 12.\nIt is not the average of the two end values unless f is a straight line: for f(x) = x² on [0, 3], ∫₀³ x² dx = 9, so the average value is 9/3 = 3, but (0 + 9)/2 = 4.5.",
+            "uz": "f ning [a, b] dagi oʻrtacha qiymati:\n(1/(b − a)) · ∫ₐᵇ f(x) dx.\nBu — [a, b] ustidagi, f ostidagi soha bilan bir xil yuzali toʻgʻri toʻrtburchakning balandligi.\nMisol: f(x) = 6x, [0, 4] da. ∫₀⁴ 6x dx = 3 · 4² = 48 va 48/4 = 12.\nf toʻgʻri chiziq boʻlmasa, bu ikki chetdagi qiymatlarning oʻrtachasi emas: f(x) = x² uchun [0, 3] da ∫₀³ x² dx = 9, oʻrtacha qiymat 9/3 = 3, lekin (0 + 9)/2 = 4,5.",
+            "ru": "Среднее значение f на [a, b] равно\n(1/(b − a)) · ∫ₐᵇ f(x) dx.\nЭто высота прямоугольника на [a, b] с той же площадью, что и область под f.\nПример: f(x) = 6x на [0, 4]. ∫₀⁴ 6x dx = 3 · 4² = 48, и 48/4 = 12.\nЭто не среднее двух крайних значений, если f не прямая: для f(x) = x² на [0, 3] ∫₀³ x² dx = 9, среднее значение 9/3 = 3, а (0 + 9)/2 = 4,5."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca81q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "The average value of f(x) = 3x² + 1 on the interval [0, 2]:\n∫₀² (3x² + 1) dx = 2³ + 2 = 10.\nAverage value = 10/(2 − 0) = 5.\nNow you: f(x) = 2x² + 5 on the interval [0, 9].\n∫₀⁹ (2x² + 5) dx = 486 + 45 = 531 → average value = 531/9 = ?",
+            "uz": "f(x) = 3x² + 1 funksiyaning [0, 2] oraliqdagi oʻrtacha qiymati:\n∫₀² (3x² + 1) dx = 2³ + 2 = 10.\nOʻrtacha qiymat = 10/(2 − 0) = 5.\nEndi siz: f(x) = 2x² + 5 funksiyaning [0, 9] oraliqdagi oʻrtacha qiymati.\n∫₀⁹ (2x² + 5) dx = 486 + 45 = 531 → oʻrtacha qiymat = 531/9 = ?",
+            "ru": "Среднее значение f(x) = 3x² + 1 на отрезке [0, 2]:\n∫₀² (3x² + 1) dx = 2³ + 2 = 10.\nСреднее значение = 10/(2 − 0) = 5.\nТеперь попробуйте сами: f(x) = 2x² + 5 на отрезке [0, 9].\n∫₀⁹ (2x² + 5) dx = 486 + 45 = 531 → среднее значение = 531/9 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca81q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: ∫ v(t) dt is the displacement, and it can be negative. The total distance is ∫ |v(t)| dt: split the time where v changes sign.\nExample: v(t) = 2t − 4 on 0 ≤ t ≤ 5. v < 0 before t = 2.\n∫₀² (2t − 4) dt = −4 and ∫₂⁵ (2t − 4) dt = 9.\nDisplacement = −4 + 9 = 5 m. Distance = 4 + 9 = 13 m.",
+            "uz": "Ehtiyot boʻling: ∫ v(t) dt — koʻchish, u manfiy boʻlishi mumkin. Umumiy yoʻl esa ∫ |v(t)| dt: vaqtni v ishorasini oʻzgartiradigan joyda boʻling.\nMisol: v(t) = 2t − 4, 0 ≤ t ≤ 5. t = 2 gacha v < 0.\n∫₀² (2t − 4) dt = −4 va ∫₂⁵ (2t − 4) dt = 9.\nKoʻchish = −4 + 9 = 5 m. Yoʻl = 4 + 9 = 13 m.",
+            "ru": "Осторожно: ∫ v(t) dt — это перемещение, оно может быть отрицательным. Полный путь — это ∫ |v(t)| dt: разбейте промежуток времени в точках, где v меняет знак.\nПример: v(t) = 2t − 4 при 0 ≤ t ≤ 5. До t = 2 скорость v < 0.\n∫₀² (2t − 4) dt = −4 и ∫₂⁵ (2t − 4) dt = 9.\nПеремещение = −4 + 9 = 5 м. Путь = 4 + 9 = 13 м."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca81q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5018",
+          "C1-ap5019"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5018",
+          "C1-ap5019",
+          "C1-clp006"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APCA08#official",
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA08-2",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA08",
+      "seq": 2,
+      "skill": "ap_calc_ab:APCA08",
+      "requires": {
+        "math_rung_min": "precalc"
+      },
+      "title": {
+        "en": "AP Calculus AB: Area between curves",
+        "uz": "AP Calculus AB: Egri chiziqlar orasidagi yuza",
+        "ru": "AP Calculus AB: Площадь между кривыми"
+      },
+      "minutes": 7,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "The area between two curves from x = a to x = b is\n∫ₐᵇ (top − bottom) dx.\n1. Find where the curves meet: these are the limits a and b.\n2. Check which curve is on top between them.\n3. Integrate top minus bottom.\nExample: y = 6x and y = x² meet where x² = 6x, at x = 0 and x = 6. Between them 6x is on top.\nArea = ∫₀⁶ (6x − x²) dx = 108 − 72 = 36.",
+            "uz": "x = a dan x = b gacha ikki egri chiziq orasidagi yuza:\n∫ₐᵇ (yuqoridagi − pastdagi) dx.\n1. Egri chiziqlar kesishadigan nuqtalarni toping: ular a va b chegaralar.\n2. Ular orasida qaysi egri chiziq yuqorida ekanini tekshiring.\n3. Yuqoridagidan pastdagini ayirib integrallang.\nMisol: y = 6x va y = x² egri chiziqlari x² = 6x boʻlganda, yaʼni x = 0 va x = 6 da kesishadi. Ular orasida 6x yuqorida.\nYuza = ∫₀⁶ (6x − x²) dx = 108 − 72 = 36.",
+            "ru": "Площадь между двумя кривыми от x = a до x = b равна\n∫ₐᵇ (верхняя − нижняя) dx.\n1. Найдите, где кривые пересекаются: это пределы a и b.\n2. Проверьте, какая кривая между ними выше.\n3. Проинтегрируйте разность верхней и нижней.\nПример: y = 6x и y = x² пересекаются, где x² = 6x, то есть при x = 0 и x = 6. Между ними график 6x выше.\nПлощадь = ∫₀⁶ (6x − x²) dx = 108 − 72 = 36."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca82q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "What is the area of the region between y = 7 − 3x² and y = 4?\nThey meet where 7 − 3x² = 4: x² = 1, so x = −1 and x = 1. The parabola is on top.\nArea = ∫₋₁¹ (3 − 3x²) dx = [3x − x³] from −1 to 1 = 2 − (−2) = 4.\nNow you: the region between y = 80 − 3x² and y = 5. They meet at x = ±5.\nArea = ∫₋₅⁵ (75 − 3x²) dx = [75x − x³] from −5 to 5 = 250 − (−250) = ?",
+            "uz": "y = 7 − 3x² va y = 4 orasidagi soha yuzi nechaga teng?\nUlar 7 − 3x² = 4 boʻlganda kesishadi: x² = 1, demak x = −1 va x = 1. Parabola yuqorida.\nYuza = ∫₋₁¹ (3 − 3x²) dx = −1 dan 1 gacha [3x − x³] = 2 − (−2) = 4.\nEndi siz: y = 80 − 3x² va y = 5 orasidagi soha. Ular x = ±5 da kesishadi.\nYuza = ∫₋₅⁵ (75 − 3x²) dx = −5 dan 5 gacha [75x − x³] = 250 − (−250) = ?",
+            "ru": "Найдите площадь области между y = 7 − 3x² и y = 4.\nОни пересекаются, где 7 − 3x² = 4: x² = 1, значит, x = −1 и x = 1. Парабола выше.\nПлощадь = ∫₋₁¹ (3 − 3x²) dx = [3x − x³] от −1 до 1 = 2 − (−2) = 4.\nТеперь попробуйте сами: область между y = 80 − 3x² и y = 5. Они пересекаются при x = ±5.\nПлощадь = ∫₋₅⁵ (75 − 3x²) dx = [75x − x³] от −5 до 5 = 250 − (−250) = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca82q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: an area is never negative. Subtract bottom from top; if you get a negative number, you swapped them.\nAnd find every meeting point, including x = 0.\nExample: y = 3x² and y = 6x meet where 3x² = 6x, at x = 0 and x = 2. At x = 1: 6 > 3, so 6x is on top.\nArea = ∫₀² (6x − 3x²) dx = 12 − 8 = 4.\nThe other order gives ∫₀² (3x² − 6x) dx = −4: not an area.",
+            "uz": "Ehtiyot boʻling: yuza hech qachon manfiy boʻlmaydi. Yuqoridagidan pastdagini ayiring; manfiy son chiqsa, ularni almashtirib yuborgansiz.\nBarcha kesishish nuqtalarini, jumladan x = 0 ni ham toping.\nMisol: y = 3x² va y = 6x egri chiziqlari 3x² = 6x boʻlganda, x = 0 va x = 2 da kesishadi. x = 1 da 6 > 3, demak 6x yuqorida.\nYuza = ∫₀² (6x − 3x²) dx = 12 − 8 = 4.\nTeskari tartib ∫₀² (3x² − 6x) dx = −4 beradi: bu yuza emas.",
+            "ru": "Осторожно: площадь не бывает отрицательной. Вычитайте нижнюю из верхней; если вышло отрицательное число, вы их перепутали.\nИ найдите все точки пересечения, включая x = 0.\nПример: y = 3x² и y = 6x пересекаются, где 3x² = 6x, при x = 0 и x = 2. При x = 1: 6 > 3, значит, 6x выше.\nПлощадь = ∫₀² (6x − 3x²) dx = 12 − 8 = 4.\nОбратный порядок даёт ∫₀² (3x² − 6x) dx = −4: это не площадь."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca82q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5020",
+          "C1-ap5021"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5020",
+          "C1-ap5021",
+          "C1-r3a017"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APCA08#official",
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "kind": "lesson",
+      "id": "C19-APCA08-3",
+      "course": "ap_calc_ab",
+      "unit": "C10-APCA08",
+      "seq": 3,
+      "skill": "ap_calc_ab:APCA08",
+      "requires": {
+        "math_rung_min": "precalc"
+      },
+      "title": {
+        "en": "AP Calculus AB: Volumes by cross sections and discs",
+        "uz": "AP Calculus AB: Kesimlar va disklar yordamida hajm",
+        "ru": "AP Calculus AB: Объём тела — метод сечений и метод дисков"
+      },
+      "minutes": 8,
+      "format": "text",
+      "pieces": [
+        {
+          "role": "idea",
+          "body": {
+            "en": "Cut a solid into thin slices. If the slice at x has area A(x), the volume is\nV = ∫ₐᵇ A(x) dx.\n• Square cross sections with side s(x): A(x) = s(x)².\n• Discs of radius r(x), when a region turns about the x-axis: A(x) = π · r(x)².\nExample: the base is the region under y = x from x = 0 to x = 3, and each cross section perpendicular to the x-axis is a square with side x.\nV = ∫₀³ x² dx = 27/3 = 9.",
+            "uz": "Jismni yupqa qatlamlarga kesing. x dagi kesim yuzi A(x) boʻlsa, hajm\nV = ∫ₐᵇ A(x) dx.\n• Tomoni s(x) boʻlgan kvadrat kesimlar: A(x) = s(x)².\n• Soha x oʻqi atrofida aylanganda radiusi r(x) boʻlgan disklar: A(x) = π · r(x)².\nMisol: asos — x = 0 dan x = 3 gacha y = x ostidagi soha, x oʻqiga perpendikulyar har bir kesim — tomoni x boʻlgan kvadrat.\nV = ∫₀³ x² dx = 27/3 = 9.",
+            "ru": "Разрежьте тело на тонкие слои. Если площадь сечения в точке x равна A(x), то объём\nV = ∫ₐᵇ A(x) dx.\n• Квадратные сечения со стороной s(x): A(x) = s(x)².\n• Диски радиуса r(x), когда область вращается вокруг оси x: A(x) = π · r(x)².\nПример: основание — область под y = x от x = 0 до x = 3, каждое сечение, перпендикулярное оси x, — квадрат со стороной x.\nV = ∫₀³ x² dx = 27/3 = 9."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca83q1"
+        },
+        {
+          "role": "example",
+          "body": {
+            "en": "The region under y = 2x from x = 0 to x = 3 turns about the x-axis.\nThe slice at x is a disc of radius 2x, so A(x) = π(2x)² = 4πx².\nV = ∫₀³ 4πx² dx = 4π · 27/3 = 36π, so k = 36.\nNow you: the region under y = 9x from x = 0 to x = 2.\nV = ∫₀² 81πx² dx = 81π · 8/3 = kπ → k = 27 · 8 = ?",
+            "uz": "x = 0 dan x = 3 gacha y = 2x ostidagi soha x oʻqi atrofida aylanadi.\nx dagi qatlam — radiusi 2x boʻlgan disk, demak A(x) = π(2x)² = 4πx².\nV = ∫₀³ 4πx² dx = 4π · 27/3 = 36π, demak k = 36.\nEndi siz: x = 0 dan x = 2 gacha y = 9x ostidagi soha.\nV = ∫₀² 81πx² dx = 81π · 8/3 = kπ → k = 27 · 8 = ?",
+            "ru": "Область под y = 2x от x = 0 до x = 3 вращается вокруг оси x.\nСлой в точке x — диск радиуса 2x, значит, A(x) = π(2x)² = 4πx².\nV = ∫₀³ 4πx² dx = 4π · 27/3 = 36π, значит, k = 36.\nТеперь попробуйте сами: область под y = 9x от x = 0 до x = 2.\nV = ∫₀² 81πx² dx = 81π · 8/3 = kπ → k = 27 · 8 = ?"
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca83q2"
+        },
+        {
+          "role": "trap",
+          "body": {
+            "en": "Watch out: square the whole radius or side, never part by part.\nWashers: when the slice has a hole, A(x) = π(R² − r²), not π(R − r)².\nExample: the region between y = 2x and y = x for 0 ≤ x ≤ 3 turns about the x-axis.\nV = π∫₀³ ((2x)² − x²) dx = π∫₀³ 3x² dx = 27π, not π∫₀³ x² dx = 9π.\nSquares: the side 6 − 2x gives A(x) = (6 − 2x)² = 36 − 24x + 4x², not 36 − 4x².",
+            "uz": "Ehtiyot boʻling: radius yoki tomonni butunligicha kvadratga oshiring, boʻlakma-boʻlak emas.\nShaybalar (washers): qatlamda teshik boʻlsa, A(x) = π(R² − r²), π(R − r)² emas.\nMisol: 0 ≤ x ≤ 3 da y = 2x va y = x orasidagi soha x oʻqi atrofida aylanadi.\nV = π∫₀³ ((2x)² − x²) dx = π∫₀³ 3x² dx = 27π; π∫₀³ x² dx = 9π emas.\nKvadratlar: 6 − 2x tomon A(x) = (6 − 2x)² = 36 − 24x + 4x² beradi, 36 − 4x² emas.",
+            "ru": "Осторожно: возводите в квадрат весь радиус или всю сторону, а не по частям.\nШайбы (washers): если в слое есть отверстие, A(x) = π(R² − r²), а не π(R − r)².\nПример: область между y = 2x и y = x при 0 ≤ x ≤ 3 вращается вокруг оси x.\nV = π∫₀³ ((2x)² − x²) dx = π∫₀³ 3x² dx = 27π, а не π∫₀³ x² dx = 9π.\nКвадраты: сторона 6 − 2x даёт A(x) = (6 − 2x)² = 36 − 24x + 4x², а не 36 − 4x²."
+          },
+          "figure": null,
+          "video": null,
+          "check": "C19-ca83q3"
+        }
+      ],
+      "test": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5022",
+          "C1-ap5023"
+        ],
+        "n": 3,
+        "first_is_example": true,
+        "test_out": true
+      },
+      "homework": {
+        "pool": "C1",
+        "families": [
+          "C1-ap5022",
+          "C1-ap5023",
+          "C1-r3a018"
+        ]
+      },
+      "reserve": null,
+      "extra_link": "C10-APCA08#official",
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ],
+  "items": [
+    {
+      "id": "C19-ca51q1",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "extrema",
+      "page": "C19-APCA05-1",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = x³ − 12x on the closed interval [0, 3]. What is the absolute minimum value of f on this interval?",
+        "uz": "f(x) = x³ − 12x, yopiq [0, 3] kesmada. f ning bu kesmadagi eng kichik qiymati nechaga teng?",
+        "ru": "f(x) = x³ − 12x на отрезке [0, 3]. Найдите наименьшее значение f на этом отрезке."
+      },
+      "options": [
+        {
+          "en": "−16"
+        },
+        {
+          "en": "−9"
+        },
+        {
+          "en": "0"
+        },
+        {
+          "en": "2"
+        }
+      ],
+      "why": {
+        "en": "f′(x) = 3x² − 12 = 0 at x = 2. f(0) = 0, f(2) = −16, f(3) = −9. The smallest is −16.",
+        "uz": "f′(x) = 3x² − 12 = 0, x = 2 da. f(0) = 0, f(2) = −16, f(3) = −9. Eng kichigi −16.",
+        "ru": "f′(x) = 3x² − 12 = 0 при x = 2. f(0) = 0, f(2) = −16, f(3) = −9. Наименьшее −16."
+      },
+      "prior_b": 1.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca51q2",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "extrema",
+      "page": "C19-APCA05-1",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = x³ − 48x on the closed interval [−5, 6]. What is the absolute maximum value of f on this interval?",
+        "uz": "f(x) = x³ − 48x, yopiq [−5, 6] kesmada. f ning bu kesmadagi eng katta qiymati nechaga teng?",
+        "ru": "f(x) = x³ − 48x на отрезке [−5, 6]. Найдите наибольшее значение f на этом отрезке."
+      },
+      "options": [
+        {
+          "en": "128"
+        },
+        {
+          "en": "115"
+        },
+        {
+          "en": "−72"
+        },
+        {
+          "en": "−4"
+        }
+      ],
+      "why": {
+        "en": "f′(x) = 3x² − 48 = 0 at x = ±4. f(−5) = 115, f(−4) = 128, f(4) = −128, f(6) = −72. The largest is 128.",
+        "uz": "f′(x) = 3x² − 48 = 0, x = ±4 da. f(−5) = 115, f(−4) = 128, f(4) = −128, f(6) = −72. Eng kattasi 128.",
+        "ru": "f′(x) = 3x² − 48 = 0 при x = ±4. f(−5) = 115, f(−4) = 128, f(4) = −128, f(6) = −72. Наибольшее 128."
+      },
+      "prior_b": 1.4,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca51q3",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "mean_value_theorem",
+      "page": "C19-APCA05-1",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = 3x² − 5x on [2, 8]. By the Mean Value Theorem, at what c in (2, 8) does f′(c) equal the slope of the secant line from x = 2 to x = 8?",
+        "uz": "f(x) = 3x² − 5x, [2, 8] da. Oʻrta qiymat teoremasiga koʻra, (2, 8) oraligʻidagi qaysi c da f′(c) x = 2 va x = 8 nuqtalardan oʻtuvchi kesuvchining qiyaligiga teng?",
+        "ru": "f(x) = 3x² − 5x на [2, 8]. По теореме о среднем при каком c из (2, 8) значение f′(c) равно наклону секущей от x = 2 до x = 8?"
+      },
+      "options": [
+        {
+          "en": "5"
+        },
+        {
+          "en": "25"
+        },
+        {
+          "en": "50"
+        },
+        {
+          "en": "6"
+        }
+      ],
+      "why": {
+        "en": "Secant slope: (f(8) − f(2))/(8 − 2) = (152 − 2)/6 = 25. f′(c) = 6c − 5 = 25, so c = 5.",
+        "uz": "Kesuvchining qiyaligi: (f(8) − f(2))/(8 − 2) = (152 − 2)/6 = 25. f′(c) = 6c − 5 = 25, demak c = 5.",
+        "ru": "Наклон секущей: (f(8) − f(2))/(8 − 2) = (152 − 2)/6 = 25. f′(c) = 6c − 5 = 25, значит, c = 5."
+      },
+      "prior_b": 1.4,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca52q1",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "increasing_decreasing",
+      "page": "C19-APCA05-2",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = x³ − 3x² − 9x + 4. At what x does f have a local maximum?",
+        "uz": "f(x) = x³ − 3x² − 9x + 4. f qaysi x da lokal maksimumga ega?",
+        "ru": "f(x) = x³ − 3x² − 9x + 4. При каком x у f локальный максимум?"
+      },
+      "options": [
+        {
+          "en": "−1"
+        },
+        {
+          "en": "3"
+        },
+        {
+          "en": "9"
+        },
+        {
+          "en": "1"
+        }
+      ],
+      "why": {
+        "en": "f′(x) = 3x² − 6x − 9 = 3(x + 1)(x − 3). f′ changes from + to − at x = −1, so the local maximum is at x = −1.",
+        "uz": "f′(x) = 3x² − 6x − 9 = 3(x + 1)(x − 3). x = −1 da f′ ishorasi + dan − ga oʻtadi, demak lokal maksimum x = −1 da.",
+        "ru": "f′(x) = 3x² − 6x − 9 = 3(x + 1)(x − 3). При x = −1 f′ меняет знак с + на −, значит, локальный максимум при x = −1."
+      },
+      "prior_b": 1.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca52q2",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "increasing_decreasing",
+      "page": "C19-APCA05-2",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = x³ − 15x² + 27x + 2. At what x does f have a local minimum?",
+        "uz": "f(x) = x³ − 15x² + 27x + 2. f qaysi x da lokal minimumga ega?",
+        "ru": "f(x) = x³ − 15x² + 27x + 2. При каком x у f локальный минимум?"
+      },
+      "options": [
+        {
+          "en": "9"
+        },
+        {
+          "en": "1"
+        },
+        {
+          "en": "5"
+        },
+        {
+          "en": "10"
+        }
+      ],
+      "why": {
+        "en": "f′(x) = 3x² − 30x + 27 = 3(x − 1)(x − 9). f′ changes from − to + at x = 9, so the local minimum is at x = 9.",
+        "uz": "f′(x) = 3x² − 30x + 27 = 3(x − 1)(x − 9). x = 9 da f′ ishorasi − dan + ga oʻtadi, demak lokal minimum x = 9 da.",
+        "ru": "f′(x) = 3x² − 30x + 27 = 3(x − 1)(x − 9). При x = 9 f′ меняет знак с − на +, значит, локальный минимум при x = 9."
+      },
+      "prior_b": 1.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca52q3",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "concavity",
+      "page": "C19-APCA05-2",
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = 2x³ − 18x² + 7x. At what x does the graph of f have its point of inflection?",
+        "uz": "f(x) = 2x³ − 18x² + 7x. f grafigining egilish nuqtasi qaysi x da?",
+        "ru": "f(x) = 2x³ − 18x² + 7x. При каком x у графика f точка перегиба?"
+      },
+      "options": [
+        {
+          "en": "3"
+        },
+        {
+          "en": "9"
+        },
+        {
+          "en": "6"
+        },
+        {
+          "en": "−3"
+        }
+      ],
+      "why": {
+        "en": "f′(x) = 6x² − 36x + 7 and f″(x) = 12x − 36. f″ changes sign at x = 3, so the inflection point is at x = 3.",
+        "uz": "f′(x) = 6x² − 36x + 7 va f″(x) = 12x − 36. f″ ishorasi x = 3 da oʻzgaradi, demak egilish nuqtasi x = 3 da.",
+        "ru": "f′(x) = 6x² − 36x + 7 и f″(x) = 12x − 36. f″ меняет знак при x = 3, значит, точка перегиба при x = 3."
+      },
+      "prior_b": 1.4,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca53q1",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "optimization",
+      "page": "C19-APCA05-3",
+      "lang": "en",
+      "stem": {
+        "en": "Two positive numbers add up to 30. What is the largest possible value of their product?",
+        "uz": "Ikki musbat sonning yigʻindisi 30 ga teng. Ularning koʻpaytmasi eng koʻpi bilan nechaga teng boʻlishi mumkin?",
+        "ru": "Сумма двух положительных чисел равна 30. Какое наибольшее значение может принимать их произведение?"
+      },
+      "options": [
+        {
+          "en": "225"
+        },
+        {
+          "en": "15"
+        },
+        {
+          "en": "900"
+        },
+        {
+          "en": "216"
+        }
+      ],
+      "why": {
+        "en": "P(x) = x(30 − x), P′(x) = 30 − 2x = 0 → x = 15. The product is 15 · 15 = 225.",
+        "uz": "P(x) = x(30 − x), P′(x) = 30 − 2x = 0 → x = 15. Koʻpaytma 15 · 15 = 225.",
+        "ru": "P(x) = x(30 − x), P′(x) = 30 − 2x = 0 → x = 15. Произведение 15 · 15 = 225."
+      },
+      "prior_b": 1.2,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca53q2",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "optimization",
+      "page": "C19-APCA05-3",
+      "lang": "en",
+      "stem": {
+        "en": "A rectangular pen is built along a straight wall, so the fence covers only three sides. There are 68 m of fence. What is the largest area, in m², the pen can have?",
+        "uz": "Toʻgʻri devor boʻylab toʻgʻri toʻrtburchak shaklidagi qoʻra quriladi, shuning uchun panjara faqat uch tomonni oʻraydi. 68 m panjara bor. Qoʻraning yuzi eng koʻpi bilan necha m² boʻlishi mumkin?",
+        "ru": "Вдоль прямой стены строят прямоугольный загон, поэтому забор ставят только с трёх сторон. Всего есть 68 м забора. Какую наибольшую площадь (в м²) может иметь загон?"
+      },
+      "options": [
+        {
+          "en": "578"
+        },
+        {
+          "en": "289"
+        },
+        {
+          "en": "867"
+        },
+        {
+          "en": "34"
+        }
+      ],
+      "why": {
+        "en": "A(x) = x(68 − 2x), A′(x) = 68 − 4x = 0 → x = 17. The largest area is 17 · 34 = 578 m².",
+        "uz": "A(x) = x(68 − 2x), A′(x) = 68 − 4x = 0 → x = 17. Eng katta yuza 17 · 34 = 578 m².",
+        "ru": "A(x) = x(68 − 2x), A′(x) = 68 − 4x = 0 → x = 17. Наибольшая площадь 17 · 34 = 578 м²."
+      },
+      "prior_b": 1.5,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca53q3",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "optimization",
+      "page": "C19-APCA05-3",
+      "lang": "en",
+      "stem": {
+        "en": "An open box is made from a square sheet with side 84 cm by cutting equal squares of side x cm from the corners. V′(x) = (84 − 2x)(84 − 6x). For what x is the volume greatest?",
+        "uz": "Tomoni 84 sm boʻlgan kvadrat varaqning burchaklaridan tomoni x sm boʻlgan teng kvadratlar kesilib, usti ochiq quti yasaladi. V′(x) = (84 − 2x)(84 − 6x). x ning qanday qiymatida hajm eng katta boʻladi?",
+        "ru": "Из квадратного листа со стороной 84 см вырезают в углах равные квадраты со стороной x см и делают открытую коробку. V′(x) = (84 − 2x)(84 − 6x). При каком x объём наибольший?"
+      },
+      "options": [
+        {
+          "en": "14"
+        },
+        {
+          "en": "42"
+        },
+        {
+          "en": "21"
+        },
+        {
+          "en": "28"
+        }
+      ],
+      "why": {
+        "en": "V(x) = x(84 − 2x)², 0 < x < 42. V′ = 0 at x = 42 (the end: a flat box) and at x = 14. The greatest volume is at x = 14.",
+        "uz": "V(x) = x(84 − 2x)², 0 < x < 42. V′ = 0 tenglik x = 42 da (soha cheti: yassi quti) va x = 14 da bajariladi. Eng katta hajm x = 14 da.",
+        "ru": "V(x) = x(84 − 2x)², 0 < x < 42. V′ = 0 при x = 42 (конец области: плоская коробка) и при x = 14. Наибольший объём при x = 14."
+      },
+      "prior_b": 1.5,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca61q1",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "riemann_sums",
+      "page": "C19-APCA06-1",
+      "lang": "en",
+      "stem": {
+        "en": "f(0) = 4, f(3) = 7, f(6) = 9 and f(9) = 10. Using the three intervals of width 3, what is the right Riemann sum for the integral of f from 0 to 9?",
+        "uz": "f(0) = 4, f(3) = 7, f(6) = 9 va f(9) = 10. Eni 3 boʻlgan uchta oraliqdan foydalanib, f ning 0 dan 9 gacha integrali uchun oʻng Riman yigʻindisini toping.",
+        "ru": "f(0) = 4, f(3) = 7, f(6) = 9 и f(9) = 10. По трём промежуткам шириной 3 найдите правую сумму Римана для интеграла функции f от 0 до 9."
+      },
+      "options": [
+        {
+          "en": "78"
+        },
+        {
+          "en": "60"
+        },
+        {
+          "en": "26"
+        },
+        {
+          "en": "90"
+        }
+      ],
+      "why": {
+        "en": "Right ends: f(3), f(6), f(9). Right sum = 3 · 7 + 3 · 9 + 3 · 10 = 3 · 26 = 78.",
+        "uz": "Oʻng uchlar: f(3), f(6), f(9). Oʻng yigʻindi = 3 · 7 + 3 · 9 + 3 · 10 = 3 · 26 = 78.",
+        "ru": "Правые концы: f(3), f(6), f(9). Правая сумма = 3 · 7 + 3 · 9 + 3 · 10 = 3 · 26 = 78."
+      },
+      "prior_b": 1.1,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca61q2",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "riemann_sums",
+      "page": "C19-APCA06-1",
+      "lang": "en",
+      "stem": {
+        "en": "A runner's speed v(t), in metres per second, is measured every 10 seconds: v(0) = 2, v(10) = 3, v(20) = 5, v(30) = 4. Use a left Riemann sum with these three intervals to estimate how many metres the runner covers from t = 0 to t = 30.",
+        "uz": "Yuguruvchining tezligi v(t) (m/s) har 10 soniyada oʻlchanadi: v(0) = 2, v(10) = 3, v(20) = 5, v(30) = 4. Shu uchta oraliq boʻyicha chap Riman yigʻindisi bilan yuguruvchi t = 0 dan t = 30 gacha necha metr yugurganini taxminan toping.",
+        "ru": "Скорость бегуна v(t) в м/с измеряют каждые 10 секунд: v(0) = 2, v(10) = 3, v(20) = 5, v(30) = 4. С помощью левой суммы Римана по этим трём промежуткам оцените, сколько метров пробегает бегун от t = 0 до t = 30."
+      },
+      "options": [
+        {
+          "en": "100"
+        },
+        {
+          "en": "120"
+        },
+        {
+          "en": "10"
+        },
+        {
+          "en": "140"
+        }
+      ],
+      "why": {
+        "en": "Left ends: v(0), v(10), v(20). Distance ≈ 10 · (2 + 3 + 5) = 100 m.",
+        "uz": "Chap uchlar: v(0), v(10), v(20). Masofa ≈ 10 · (2 + 3 + 5) = 100 m.",
+        "ru": "Левые концы: v(0), v(10), v(20). Путь ≈ 10 · (2 + 3 + 5) = 100 м."
+      },
+      "prior_b": 1.2,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca61q3",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "riemann_sums",
+      "page": "C19-APCA06-1",
+      "lang": "en",
+      "stem": {
+        "en": "g(0) = 6, g(2) = 8, g(4) = 11 and g(6) = 7. Using the three intervals of width 2, what is the trapezoidal sum for the integral of g from 0 to 6?",
+        "uz": "g(0) = 6, g(2) = 8, g(4) = 11 va g(6) = 7. Eni 2 boʻlgan uchta oraliqdan foydalanib, g ning 0 dan 6 gacha integrali uchun trapetsiya yigʻindisini toping.",
+        "ru": "g(0) = 6, g(2) = 8, g(4) = 11 и g(6) = 7. По трём промежуткам шириной 2 найдите сумму трапеций для интеграла функции g от 0 до 6."
+      },
+      "options": [
+        {
+          "en": "51"
+        },
+        {
+          "en": "50"
+        },
+        {
+          "en": "52"
+        },
+        {
+          "en": "102"
+        }
+      ],
+      "why": {
+        "en": "T = (2/2) · (6 + 2 · 8 + 2 · 11 + 7) = 6 + 16 + 22 + 7 = 51.",
+        "uz": "T = (2/2) · (6 + 2 · 8 + 2 · 11 + 7) = 6 + 16 + 22 + 7 = 51.",
+        "ru": "T = (2/2) · (6 + 2 · 8 + 2 · 11 + 7) = 6 + 16 + 22 + 7 = 51."
+      },
+      "prior_b": 1.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca62q1",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "antiderivatives",
+      "page": "C19-APCA06-2",
+      "lang": "en",
+      "stem": {
+        "en": "Which function is an antiderivative of f(x) = 12x³ − 4x?",
+        "uz": "Qaysi funksiya f(x) = 12x³ − 4x ning boshlangʻich funksiyasi?",
+        "ru": "Какая функция является первообразной для f(x) = 12x³ − 4x?"
+      },
+      "options": [
+        {
+          "en": "3x⁴ − 2x²"
+        },
+        {
+          "en": "36x² − 4"
+        },
+        {
+          "en": "12x⁴ − 4x²"
+        },
+        {
+          "en": "4x⁴ − 2x²"
+        }
+      ],
+      "why": {
+        "en": "Divide by the new power: 12x⁴/4 − 4x²/2 = 3x⁴ − 2x². Check: (3x⁴ − 2x²)′ = 12x³ − 4x.",
+        "uz": "Yangi darajaga boʻling: 12x⁴/4 − 4x²/2 = 3x⁴ − 2x². Tekshiruv: (3x⁴ − 2x²)′ = 12x³ − 4x.",
+        "ru": "Разделите на новый показатель степени: 12x⁴/4 − 4x²/2 = 3x⁴ − 2x². Проверка: (3x⁴ − 2x²)′ = 12x³ − 4x."
+      },
+      "prior_b": 1.2,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca62q2",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "definite_integral",
+      "page": "C19-APCA06-2",
+      "lang": "en",
+      "stem": {
+        "en": "What is the value of ∫₂⁶ (3x² + 2x) dx?",
+        "uz": "∫₂⁶ (3x² + 2x) dx ning qiymati nechaga teng?",
+        "ru": "Найдите значение ∫₂⁶ (3x² + 2x) dx."
+      },
+      "options": [
+        {
+          "en": "240"
+        },
+        {
+          "en": "252"
+        },
+        {
+          "en": "264"
+        },
+        {
+          "en": "104"
+        }
+      ],
+      "why": {
+        "en": "F(x) = x³ + x². F(6) − F(2) = 252 − 12 = 240.",
+        "uz": "F(x) = x³ + x². F(6) − F(2) = 252 − 12 = 240.",
+        "ru": "F(x) = x³ + x². F(6) − F(2) = 252 − 12 = 240."
+      },
+      "prior_b": 1.4,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca62q3",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "fundamental_theorem",
+      "page": "C19-APCA06-2",
+      "lang": "en",
+      "stem": {
+        "en": "g(x) = ∫₁ˣ (t³ − 2t) dt. What is g′(3)?",
+        "uz": "g(x) = ∫₁ˣ (t³ − 2t) dt. g′(3) nechaga teng?",
+        "ru": "g(x) = ∫₁ˣ (t³ − 2t) dt. Найдите g′(3)."
+      },
+      "options": [
+        {
+          "en": "21"
+        },
+        {
+          "en": "25"
+        },
+        {
+          "en": "22"
+        },
+        {
+          "en": "−1"
+        }
+      ],
+      "why": {
+        "en": "By the Fundamental Theorem, g′(x) = x³ − 2x, so g′(3) = 27 − 6 = 21.",
+        "uz": "Asosiy teoremaga koʻra g′(x) = x³ − 2x, demak g′(3) = 27 − 6 = 21.",
+        "ru": "По основной теореме g′(x) = x³ − 2x, значит, g′(3) = 27 − 6 = 21."
+      },
+      "prior_b": 1.4,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca63q1",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "integral_rules",
+      "page": "C19-APCA06-3",
+      "lang": "en",
+      "stem": {
+        "en": "What is the value of the integral of 2/x from x = 1 to x = e³?",
+        "uz": "2/x ning x = 1 dan x = e³ gacha integrali nechaga teng?",
+        "ru": "Чему равен интеграл функции 2/x от x = 1 до x = e³?"
+      },
+      "options": [
+        {
+          "en": "6"
+        },
+        {
+          "en": "3"
+        },
+        {
+          "en": "2/3"
+        },
+        {
+          "en": "2e³ − 2"
+        }
+      ],
+      "why": {
+        "en": "∫ (2/x) dx = 2 ln|x|. 2 ln(e³) − 2 ln 1 = 2 · 3 − 0 = 6.",
+        "uz": "∫ (2/x) dx = 2 ln|x|. 2 ln(e³) − 2 ln 1 = 2 · 3 − 0 = 6.",
+        "ru": "∫ (2/x) dx = 2 ln|x|. 2 ln(e³) − 2 ln 1 = 2 · 3 − 0 = 6."
+      },
+      "prior_b": 1.3,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca63q2",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "u_substitution",
+      "page": "C19-APCA06-3",
+      "lang": "en",
+      "stem": {
+        "en": "What is the value of ∫₀¹ 6x(x² + 8)² dx?",
+        "uz": "∫₀¹ 6x(x² + 8)² dx ning qiymati nechaga teng?",
+        "ru": "Найдите значение ∫₀¹ 6x(x² + 8)² dx."
+      },
+      "options": [
+        {
+          "en": "217"
+        },
+        {
+          "en": "729"
+        },
+        {
+          "en": "1"
+        },
+        {
+          "en": "434"
+        }
+      ],
+      "why": {
+        "en": "u = x² + 8 runs from 8 to 9 and 6x dx = 3 du. ∫₈⁹ 3u² du = 9³ − 8³ = 729 − 512 = 217.",
+        "uz": "u = x² + 8 qiymati 8 dan 9 gacha oʻzgaradi va 6x dx = 3 du. ∫₈⁹ 3u² du = 9³ − 8³ = 729 − 512 = 217.",
+        "ru": "u = x² + 8 меняется от 8 до 9, и 6x dx = 3 du. ∫₈⁹ 3u² du = 9³ − 8³ = 729 − 512 = 217."
+      },
+      "prior_b": 1.7,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca63q3",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "integral_rules",
+      "page": "C19-APCA06-3",
+      "lang": "en",
+      "stem": {
+        "en": "What is the value of the integral of 4 sin x from x = 0 to x = π/2?",
+        "uz": "4 sin x ning x = 0 dan x = π/2 gacha integrali nechaga teng?",
+        "ru": "Чему равен интеграл функции 4 sin x от x = 0 до x = π/2?"
+      },
+      "options": [
+        {
+          "en": "4"
+        },
+        {
+          "en": "−4"
+        },
+        {
+          "en": "0"
+        },
+        {
+          "en": "8"
+        }
+      ],
+      "why": {
+        "en": "∫ 4 sin x dx = −4 cos x. −4 cos(π/2) + 4 cos 0 = 0 + 4 = 4.",
+        "uz": "∫ 4 sin x dx = −4 cos x. −4 cos(π/2) + 4 cos 0 = 0 + 4 = 4.",
+        "ru": "∫ 4 sin x dx = −4 cos x. −4 cos(π/2) + 4 cos 0 = 0 + 4 = 4."
+      },
+      "prior_b": 1.3,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca71q1",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "differential_equations",
+      "page": "C19-APCA07-1",
+      "lang": "en",
+      "stem": {
+        "en": "Which function is a solution of the differential equation dy/dx = 3y?",
+        "uz": "Qaysi funksiya dy/dx = 3y differensial tenglamaning yechimi?",
+        "ru": "Какая функция является решением дифференциального уравнения dy/dx = 3y?"
+      },
+      "options": [
+        {
+          "en": "y = 4e^(3x)"
+        },
+        {
+          "en": "y = 3e^(4x)"
+        },
+        {
+          "en": "y = e^(3x) + 1"
+        },
+        {
+          "en": "y = 3x²"
+        }
+      ],
+      "why": {
+        "en": "For y = 4e^(3x): dy/dx = 12e^(3x) = 3 · 4e^(3x) = 3y. The other three fail the check.",
+        "uz": "y = 4e^(3x) uchun: dy/dx = 12e^(3x) = 3 · 4e^(3x) = 3y. Qolgan uchtasi tekshiruvdan oʻtmaydi.",
+        "ru": "Для y = 4e^(3x): dy/dx = 12e^(3x) = 3 · 4e^(3x) = 3y. Остальные три проверку не проходят."
+      },
+      "prior_b": 1.2,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca71q2",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "slope_fields",
+      "page": "C19-APCA07-1",
+      "lang": "en",
+      "stem": {
+        "en": "A solution curve of dy/dx = 6x² − 7y passes through the point (3, 5). What is the slope of the curve at that point?",
+        "uz": "dy/dx = 6x² − 7y tenglamaning yechim egri chizigʻi (3, 5) nuqtadan oʻtadi. Egri chiziqning shu nuqtadagi qiyaligi nechaga teng?",
+        "ru": "Кривая-решение уравнения dy/dx = 6x² − 7y проходит через точку (3, 5). Чему равен наклон кривой в этой точке?"
+      },
+      "options": [
+        {
+          "en": "19"
+        },
+        {
+          "en": "129"
+        },
+        {
+          "en": "−17"
+        },
+        {
+          "en": "89"
+        }
+      ],
+      "why": {
+        "en": "Put x = 3 and y = 5 into the equation: dy/dx = 6 · 3² − 7 · 5 = 54 − 35 = 19.",
+        "uz": "Tenglamaga x = 3 va y = 5 ni qoʻying: dy/dx = 6 · 3² − 7 · 5 = 54 − 35 = 19.",
+        "ru": "Подставьте x = 3 и y = 5: dy/dx = 6 · 3² − 7 · 5 = 54 − 35 = 19."
+      },
+      "prior_b": 1.2,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca71q3",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "differential_equations",
+      "page": "C19-APCA07-1",
+      "lang": "en",
+      "stem": {
+        "en": "y = e^(kx) is a solution of y″ + 2y′ = 8y. What is the positive value of k?",
+        "uz": "y = e^(kx) funksiya y″ + 2y′ = 8y tenglamaning yechimi. k ning musbat qiymati nechaga teng?",
+        "ru": "y = e^(kx) — решение уравнения y″ + 2y′ = 8y. Найдите положительное значение k."
+      },
+      "options": [
+        {
+          "en": "2"
+        },
+        {
+          "en": "−4"
+        },
+        {
+          "en": "4"
+        },
+        {
+          "en": "8"
+        }
+      ],
+      "why": {
+        "en": "k² + 2k = 8 → k² + 2k − 8 = (k + 4)(k − 2) = 0. The positive value is k = 2.",
+        "uz": "k² + 2k = 8 → k² + 2k − 8 = (k + 4)(k − 2) = 0. Musbat qiymat k = 2.",
+        "ru": "k² + 2k = 8 → k² + 2k − 8 = (k + 4)(k − 2) = 0. Положительное значение k = 2."
+      },
+      "prior_b": 1.6,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca72q1",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "separation_of_variables",
+      "page": "C19-APCA07-2",
+      "lang": "en",
+      "stem": {
+        "en": "dy/dx = 3x²/(2y), y(0) = 1 and y > 0. What is y(2)?",
+        "uz": "dy/dx = 3x²/(2y), y(0) = 1 va y > 0. y(2) nechaga teng?",
+        "ru": "dy/dx = 3x²/(2y), y(0) = 1 и y > 0. Найдите y(2)."
+      },
+      "options": [
+        {
+          "en": "3"
+        },
+        {
+          "en": "9"
+        },
+        {
+          "en": "1"
+        },
+        {
+          "en": "8"
+        }
+      ],
+      "why": {
+        "en": "2y dy = 3x² dx → y² = x³ + C. y(0) = 1 gives C = 1, so y(2) = √(8 + 1) = 3.",
+        "uz": "2y dy = 3x² dx → y² = x³ + C. y(0) = 1 dan C = 1, demak y(2) = √(8 + 1) = 3.",
+        "ru": "2y dy = 3x² dx → y² = x³ + C. y(0) = 1 даёт C = 1, значит, y(2) = √(8 + 1) = 3."
+      },
+      "prior_b": 1.5,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca72q2",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "separation_of_variables",
+      "page": "C19-APCA07-2",
+      "lang": "en",
+      "stem": {
+        "en": "dy/dt = 10√y and y(0) = 1. Solve by separating the variables. What is y(1)?",
+        "uz": "dy/dt = 10√y va y(0) = 1. Oʻzgaruvchilarni ajratib yeching. y(1) nechaga teng?",
+        "ru": "dy/dt = 10√y и y(0) = 1. Решите, разделив переменные. Найдите y(1)."
+      },
+      "options": [
+        {
+          "en": "36"
+        },
+        {
+          "en": "121"
+        },
+        {
+          "en": "11"
+        },
+        {
+          "en": "6"
+        }
+      ],
+      "why": {
+        "en": "dy/√y = 10 dt → 2√y = 10t + 2, so √y = 5t + 1 and y(1) = 6² = 36.",
+        "uz": "dy/√y = 10 dt → 2√y = 10t + 2, demak √y = 5t + 1 va y(1) = 6² = 36.",
+        "ru": "dy/√y = 10 dt → 2√y = 10t + 2, значит, √y = 5t + 1 и y(1) = 6² = 36."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca72q3",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "separation_of_variables",
+      "page": "C19-APCA07-2",
+      "lang": "en",
+      "stem": {
+        "en": "dy/dx = x/y, y(0) = 8 and y > 0. What is y(15)?",
+        "uz": "dy/dx = x/y, y(0) = 8 va y > 0. y(15) nechaga teng?",
+        "ru": "dy/dx = x/y, y(0) = 8 и y > 0. Найдите y(15)."
+      },
+      "options": [
+        {
+          "en": "17"
+        },
+        {
+          "en": "23"
+        },
+        {
+          "en": "289"
+        },
+        {
+          "en": "8"
+        }
+      ],
+      "why": {
+        "en": "y dy = x dx → y² = x² + C, and y(0) = 8 gives C = 64. y(15) = √(225 + 64) = √289 = 17.",
+        "uz": "y dy = x dx → y² = x² + C, y(0) = 8 dan C = 64. y(15) = √(225 + 64) = √289 = 17.",
+        "ru": "y dy = x dx → y² = x² + C, а y(0) = 8 даёт C = 64. y(15) = √(225 + 64) = √289 = 17."
+      },
+      "prior_b": 1.6,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca73q1",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "exponential_models",
+      "page": "C19-APCA07-3",
+      "lang": "en",
+      "stem": {
+        "en": "A quantity satisfies dy/dt = ky. y(0) = 12 and y(4) = 48. What is y(8)?",
+        "uz": "Kattalik dy/dt = ky tenglamani qanoatlantiradi. y(0) = 12 va y(4) = 48. y(8) nechaga teng?",
+        "ru": "Величина удовлетворяет уравнению dy/dt = ky. y(0) = 12 и y(4) = 48. Найдите y(8)."
+      },
+      "options": [
+        {
+          "en": "192"
+        },
+        {
+          "en": "84"
+        },
+        {
+          "en": "96"
+        },
+        {
+          "en": "144"
+        }
+      ],
+      "why": {
+        "en": "y = 12e^(kt) and e^(4k) = 48/12 = 4. So y(8) = 12 · (e^(4k))² = 12 · 16 = 192.",
+        "uz": "y = 12e^(kt) va e^(4k) = 48/12 = 4. Demak y(8) = 12 · (e^(4k))² = 12 · 16 = 192.",
+        "ru": "y = 12e^(kt) и e^(4k) = 48/12 = 4. Значит, y(8) = 12 · (e^(4k))² = 12 · 16 = 192."
+      },
+      "prior_b": 1.4,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca73q2",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "exponential_models",
+      "page": "C19-APCA07-3",
+      "lang": "en",
+      "stem": {
+        "en": "A colony of bacteria grows so that dP/dt = kP, and it doubles every 6 hours. P(0) = 15. How many bacteria are there after 30 hours?",
+        "uz": "Bakteriyalar koloniyasi dP/dt = kP qonuni boʻyicha oʻsadi va har 6 soatda ikki baravar koʻpayadi. P(0) = 15. 30 soatdan keyin nechta bakteriya boʻladi?",
+        "ru": "Колония бактерий растёт по закону dP/dt = kP и удваивается каждые 6 ч. P(0) = 15. Сколько бактерий будет через 30 ч?"
+      },
+      "options": [
+        {
+          "en": "480"
+        },
+        {
+          "en": "150"
+        },
+        {
+          "en": "90"
+        },
+        {
+          "en": "960"
+        }
+      ],
+      "why": {
+        "en": "30 hours are 30/6 = 5 doubling times, so P = 15 · 2⁵ = 480.",
+        "uz": "30 soat — bu 30/6 = 5 ta ikkilanish vaqti, demak P = 15 · 2⁵ = 480.",
+        "ru": "Число удвоений: 30/6 = 5, значит, P = 15 · 2⁵ = 480."
+      },
+      "prior_b": 1.4,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca73q3",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "exponential_models",
+      "page": "C19-APCA07-3",
+      "lang": "en",
+      "stem": {
+        "en": "A sample decays so that dy/dt = ky, and its half-life is 9 days. After how many days does 1/8 of the sample remain?",
+        "uz": "Namuna dy/dt = ky qonuni boʻyicha yemiriladi, yarim yemirilish davri 9 kun. Necha kundan keyin namunaning 1/8 qismi qoladi?",
+        "ru": "Образец распадается по закону dy/dt = ky, период полураспада 9 дней. Через сколько дней останется 1/8 образца?"
+      },
+      "options": [
+        {
+          "en": "27"
+        },
+        {
+          "en": "72"
+        },
+        {
+          "en": "18"
+        },
+        {
+          "en": "36"
+        }
+      ],
+      "why": {
+        "en": "1/8 = 1/2³: three half-lives. 3 · 9 = 27 days.",
+        "uz": "1/8 = 1/2³: uchta yarim yemirilish davri. 3 · 9 = 27 kun.",
+        "ru": "1/8 = 1/2³: три периода полураспада. 3 · 9 = 27 дней."
+      },
+      "prior_b": 1.3,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca81q1",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "average_value",
+      "page": "C19-APCA08-1",
+      "lang": "en",
+      "stem": {
+        "en": "A car's velocity is v(t) = 4t³ m/s. What is its average velocity, in m/s, from t = 0 to t = 2 s?",
+        "uz": "Mashinaning tezligi v(t) = 4t³ m/s. t = 0 dan t = 2 s gacha uning oʻrtacha tezligi necha m/s?",
+        "ru": "Скорость машины v(t) = 4t³ м/с. Какова её средняя скорость (в м/с) от t = 0 до t = 2 с?"
+      },
+      "options": [
+        {
+          "en": "8"
+        },
+        {
+          "en": "16"
+        },
+        {
+          "en": "32"
+        },
+        {
+          "en": "4"
+        }
+      ],
+      "why": {
+        "en": "Average of v = (1/2) · ∫₀² 4t³ dt = (1/2) · 2⁴ = 16/2 = 8 m/s.",
+        "uz": "v ning oʻrtachasi = (1/2) · ∫₀² 4t³ dt = (1/2) · 2⁴ = 16/2 = 8 m/s.",
+        "ru": "Среднее v = (1/2) · ∫₀² 4t³ dt = (1/2) · 2⁴ = 16/2 = 8 м/с."
+      },
+      "prior_b": 1.3,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca81q2",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "average_value",
+      "page": "C19-APCA08-1",
+      "lang": "en",
+      "stem": {
+        "en": "What is the average value of f(x) = 2x² + 5 on the interval [0, 9]?",
+        "uz": "f(x) = 2x² + 5 funksiyaning [0, 9] oraliqdagi oʻrtacha qiymati nechaga teng?",
+        "ru": "Найдите среднее значение f(x) = 2x² + 5 на отрезке [0, 9]."
+      },
+      "options": [
+        {
+          "en": "59"
+        },
+        {
+          "en": "531"
+        },
+        {
+          "en": "86"
+        },
+        {
+          "en": "167"
+        }
+      ],
+      "why": {
+        "en": "∫₀⁹ (2x² + 5) dx = 486 + 45 = 531, and 531/9 = 59.",
+        "uz": "∫₀⁹ (2x² + 5) dx = 486 + 45 = 531 va 531/9 = 59.",
+        "ru": "∫₀⁹ (2x² + 5) dx = 486 + 45 = 531, и 531/9 = 59."
+      },
+      "prior_b": 1.4,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca81q3",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "distance_displacement",
+      "page": "C19-APCA08-1",
+      "lang": "en",
+      "stem": {
+        "en": "A toy car on a straight track has velocity v(t) = 8t − 8 metres per second for 0 ≤ t ≤ 4. How many metres does it travel in total, forwards and backwards?",
+        "uz": "Toʻgʻri yoʻldagi oʻyinchoq mashinaning tezligi 0 ≤ t ≤ 4 da v(t) = 8t − 8 metr/soniya. U jami (oldinga va orqaga) necha metr yoʻl bosadi?",
+        "ru": "Игрушечная машинка на прямой дорожке движется со скоростью v(t) = 8t − 8 м/с при 0 ≤ t ≤ 4. Какой путь (в метрах) она проходит всего, вперёд и назад?"
+      },
+      "options": [
+        {
+          "en": "40"
+        },
+        {
+          "en": "32"
+        },
+        {
+          "en": "36"
+        },
+        {
+          "en": "4"
+        }
+      ],
+      "why": {
+        "en": "v < 0 before t = 1. |∫₀¹ (8t − 8) dt| = 4 and ∫₁⁴ (8t − 8) dt = 36, so the distance is 4 + 36 = 40 m.",
+        "uz": "t = 1 gacha v < 0. |∫₀¹ (8t − 8) dt| = 4 va ∫₁⁴ (8t − 8) dt = 36, demak yoʻl 4 + 36 = 40 m.",
+        "ru": "До t = 1 скорость v < 0. |∫₀¹ (8t − 8) dt| = 4 и ∫₁⁴ (8t − 8) dt = 36, значит, путь 4 + 36 = 40 м."
+      },
+      "prior_b": 1.7,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca82q1",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "area_between_curves",
+      "page": "C19-APCA08-2",
+      "lang": "en",
+      "stem": {
+        "en": "Which integral gives the area of the region between y = x + 2 and y = x²?",
+        "uz": "Qaysi integral y = x + 2 va y = x² orasidagi soha yuzini beradi?",
+        "ru": "Какой интеграл даёт площадь области между y = x + 2 и y = x²?"
+      },
+      "options": [
+        {
+          "en": "∫₋₁² (x + 2 − x²) dx"
+        },
+        {
+          "en": "∫₋₁² (x² − x − 2) dx"
+        },
+        {
+          "en": "∫₀² (x + 2 − x²) dx"
+        },
+        {
+          "en": "∫₋₂¹ (x + 2 − x²) dx"
+        }
+      ],
+      "why": {
+        "en": "x² = x + 2 at x = −1 and x = 2, and between them the line is on top: ∫₋₁² (x + 2 − x²) dx.",
+        "uz": "x = −1 va x = 2 da x² = x + 2, ular orasida toʻgʻri chiziq yuqorida: ∫₋₁² (x + 2 − x²) dx.",
+        "ru": "x² = x + 2 при x = −1 и x = 2, и между ними прямая выше: ∫₋₁² (x + 2 − x²) dx."
+      },
+      "prior_b": 1.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca82q2",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "area_between_curves",
+      "page": "C19-APCA08-2",
+      "lang": "en",
+      "stem": {
+        "en": "What is the area of the region between y = 80 − 3x² and y = 5?",
+        "uz": "y = 80 − 3x² va y = 5 orasidagi soha yuzi nechaga teng?",
+        "ru": "Найдите площадь области между y = 80 − 3x² и y = 5."
+      },
+      "options": [
+        {
+          "en": "500"
+        },
+        {
+          "en": "250"
+        },
+        {
+          "en": "750"
+        },
+        {
+          "en": "550"
+        }
+      ],
+      "why": {
+        "en": "80 − 3x² = 5 at x = ±5. Area = ∫₋₅⁵ (75 − 3x²) dx = 250 − (−250) = 500.",
+        "uz": "80 − 3x² = 5, x = ±5 da. Yuza = ∫₋₅⁵ (75 − 3x²) dx = 250 − (−250) = 500.",
+        "ru": "80 − 3x² = 5 при x = ±5. Площадь = ∫₋₅⁵ (75 − 3x²) dx = 250 − (−250) = 500."
+      },
+      "prior_b": 1.6,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca82q3",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "area_between_curves",
+      "page": "C19-APCA08-2",
+      "lang": "en",
+      "stem": {
+        "en": "y = 7x² and y = 42x enclose a region. What is its area?",
+        "uz": "y = 7x² va y = 42x chiziqlari soha hosil qiladi. Uning yuzi nechaga teng?",
+        "ru": "Кривые y = 7x² и y = 42x ограничивают область. Найдите её площадь."
+      },
+      "options": [
+        {
+          "en": "252"
+        },
+        {
+          "en": "−252"
+        },
+        {
+          "en": "756"
+        },
+        {
+          "en": "504"
+        }
+      ],
+      "why": {
+        "en": "7x² = 42x at x = 0 and x = 6, and 42x is on top. Area = ∫₀⁶ (42x − 7x²) dx = 756 − 504 = 252.",
+        "uz": "x = 0 va x = 6 da 7x² = 42x, 42x yuqorida. Yuza = ∫₀⁶ (42x − 7x²) dx = 756 − 504 = 252.",
+        "ru": "7x² = 42x при x = 0 и x = 6, и между ними график 42x выше. Площадь = ∫₀⁶ (42x − 7x²) dx = 756 − 504 = 252."
+      },
+      "prior_b": 1.5,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca83q1",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "volume",
+      "page": "C19-APCA08-3",
+      "lang": "en",
+      "stem": {
+        "en": "The base of a solid is the region under y = √x from x = 0 to x = 4. Each cross section perpendicular to the x-axis is a square. What is the volume?",
+        "uz": "Jismning asosi — x = 0 dan x = 4 gacha y = √x ostidagi soha. x oʻqiga perpendikulyar har bir kesim — kvadrat. Hajm nechaga teng?",
+        "ru": "Основание тела — область под y = √x от x = 0 до x = 4. Каждое сечение, перпендикулярное оси x, — квадрат. Найдите объём."
+      },
+      "options": [
+        {
+          "en": "8"
+        },
+        {
+          "en": "16/3"
+        },
+        {
+          "en": "16"
+        },
+        {
+          "en": "8π"
+        }
+      ],
+      "why": {
+        "en": "The side is √x, so A(x) = x. V = ∫₀⁴ x dx = 16/2 = 8.",
+        "uz": "Tomon √x, demak A(x) = x. V = ∫₀⁴ x dx = 16/2 = 8.",
+        "ru": "Сторона √x, значит, A(x) = x. V = ∫₀⁴ x dx = 16/2 = 8."
+      },
+      "prior_b": 1.4,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca83q2",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "volume",
+      "page": "C19-APCA08-3",
+      "lang": "en",
+      "stem": {
+        "en": "The region under y = 9x from x = 0 to x = 2 turns about the x-axis. The volume of the solid is kπ. What is k?",
+        "uz": "x = 0 dan x = 2 gacha y = 9x ostidagi soha x oʻqi atrofida aylanadi. Hosil boʻlgan jismning hajmi kπ. k nechaga teng?",
+        "ru": "Область под y = 9x от x = 0 до x = 2 вращается вокруг оси x. Объём тела равен kπ. Найдите k."
+      },
+      "options": [
+        {
+          "en": "216"
+        },
+        {
+          "en": "648"
+        },
+        {
+          "en": "18"
+        },
+        {
+          "en": "24"
+        }
+      ],
+      "why": {
+        "en": "Discs of radius 9x: V = π∫₀² 81x² dx = π · 81 · 8/3 = 216π, so k = 216.",
+        "uz": "Radiusi 9x boʻlgan disklar: V = π∫₀² 81x² dx = π · 81 · 8/3 = 216π, demak k = 216.",
+        "ru": "Диски радиуса 9x: V = π∫₀² 81x² dx = π · 81 · 8/3 = 216π, значит, k = 216."
+      },
+      "prior_b": 1.6,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C19-ca83q3",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "volume",
+      "page": "C19-APCA08-3",
+      "lang": "en",
+      "stem": {
+        "en": "The region between y = 3x and y = x for 0 ≤ x ≤ 3 turns about the x-axis. The volume of the solid is kπ. What is k?",
+        "uz": "0 ≤ x ≤ 3 da y = 3x va y = x orasidagi soha x oʻqi atrofida aylanadi. Hosil boʻlgan jismning hajmi kπ. k nechaga teng?",
+        "ru": "Область между y = 3x и y = x при 0 ≤ x ≤ 3 вращается вокруг оси x. Объём тела равен kπ. Найдите k."
+      },
+      "options": [
+        {
+          "en": "72"
+        },
+        {
+          "en": "36"
+        },
+        {
+          "en": "81"
+        },
+        {
+          "en": "90"
+        }
+      ],
+      "why": {
+        "en": "Washers: V = π∫₀³ ((3x)² − x²) dx = π∫₀³ 8x² dx = 72π, so k = 72.",
+        "uz": "Shaybalar: V = π∫₀³ ((3x)² − x²) dx = π∫₀³ 8x² dx = 72π, demak k = 72.",
+        "ru": "Шайбы: V = π∫₀³ ((3x)² − x²) dx = π∫₀³ 8x² dx = 72π, значит, k = 72."
+      },
+      "prior_b": 1.7,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:p8-a4",
+      "key_check_1": "author",
+      "key_check_2": "blind:P8s3+P8s4",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

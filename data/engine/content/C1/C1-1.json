@@ -1,0 +1,1416 @@
+{
+  "bank": "C1",
+  "batch": 1,
+  "items": [
+    {
+      "id": "C1-arp001",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "addition",
+      "family": {
+        "template": "A school library had {a} books. It received {b} new books. How many books does it have now?",
+        "params": {
+          "a": {
+            "min": 150,
+            "max": 699
+          },
+          "b": {
+            "min": 120,
+            "max": 299
+          }
+        },
+        "derived": {
+          "nc": "(a % 10 + b % 10) % 10 + 10*(((a // 10) % 10 + (b // 10) % 10) % 10) + 100*(a // 100 + b // 100)"
+        },
+        "constraints": [
+          "a % 10 + b % 10 >= 10",
+          "a > b"
+        ],
+        "answer": "a + b",
+        "distractors": [
+          "(a % 10 + b % 10) % 10 + 10*(((a // 10) % 10 + (b // 10) % 10) % 10) + 100*(a // 100 + b // 100)",
+          "a + b + 10",
+          "a - b"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: carry_slip | carry_slip | wrong_operation (C1/error_rules.json).",
+        "relation": "X - {b} = {a}",
+        "variants": 39450
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A school library had {a} books. It received {b} new books. How many books does it have now?",
+        "uz": "Maktab kutubxonasida {a} ta kitob bor edi. Unga yana {b} ta yangi kitob keltirildi. Endi kutubxonada nechta kitob bor?",
+        "ru": "В школьной библиотеке {a|книга|книги|книг}. Привезли ещё {b|новую книгу|новые книги|новых книг}. Сколько книг стало в библиотеке?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Add column by column and carry the extra ten: {a} + {b} = {ANS}.",
+        "uz": "Xonama-xona qoʻshing va ortgan oʻnlikni keyingi xonaga oʻtkazing: {a} + {b} = {ANS}.",
+        "ru": "Складываем поразрядно и переносим лишний десяток: {a} + {b} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.6,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-arp002",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "subtraction",
+      "family": {
+        "template": "There are {a} students in a school. {b} of them are boys. How many girls are there?",
+        "params": {
+          "a": {
+            "min": 301,
+            "max": 900
+          },
+          "b": {
+            "min": 105,
+            "max": 290
+          }
+        },
+        "derived": {
+          "bug": "abs(a % 10 - b % 10) + 10*abs((a // 10) % 10 - (b // 10) % 10) + 100*abs(a // 100 - b // 100)"
+        },
+        "constraints": [
+          "a % 10 < b % 10",
+          "bug != a - b",
+          "bug != a - b + 10"
+        ],
+        "answer": "a - b",
+        "distractors": [
+          "abs(a % 10 - b % 10) + 10*abs((a // 10) % 10 - (b // 10) % 10) + 100*abs(a // 100 - b // 100)",
+          "a + b",
+          "a - b + 10"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: borrow_slip | wrong_operation | borrow_slip (C1/error_rules.json).",
+        "relation": "X + {b} = {a}",
+        "variants": 47430
+      },
+      "lang": "en",
+      "stem": {
+        "en": "There are {a} students in a school. {b} of them are boys. How many girls are there?",
+        "uz": "Maktabda {a} nafar oʻquvchi bor. Ulardan {b} nafari oʻgʻil bola. Maktabda nechta qiz bola bor?",
+        "ru": "В школе {a|ученик|ученика|учеников}, из них {b|мальчик|мальчика|мальчиков}. Сколько в школе девочек?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Borrow a ten when the ones digit is too small: {a} − {b} = {ANS}.",
+        "uz": "Birliklar yetmasa, oʻnliklardan bittasini olib birliklarga qoʻshing: {a} − {b} = {ANS}.",
+        "ru": "Если единиц не хватает, занимаем десяток: {a} − {b} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.6,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-arp003",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "times_table",
+      "family": {
+        "template": "You know that {a} × {b} = {p}. Use this to find {a} × {c}.",
+        "params": {
+          "a": {
+            "min": 3,
+            "max": 9
+          },
+          "b": {
+            "min": 4,
+            "max": 11
+          }
+        },
+        "derived": {
+          "p": "a*b",
+          "c": "b + 1"
+        },
+        "constraints": [
+          "a != b"
+        ],
+        "answer": "a*(b + 1)",
+        "distractors": [
+          "a*b + 1",
+          "a*b + b",
+          "a*b - a"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: additive_reasoning | wrong_formula | sign_slip (C1/error_rules.json).",
+        "relation": "X = {a}*{c}",
+        "variants": 50
+      },
+      "lang": "en",
+      "stem": {
+        "en": "You know that {a} × {b} = {p}. Use this to find {a} × {c}.",
+        "uz": "{a} × {b} = {p} ekanini bilasiz. Shundan foydalanib {a} × {c} ni toping.",
+        "ru": "Известно, что {a} × {b} = {p}. Пользуясь этим, найдите {a} × {c}."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{a} × {c} is one more group of {a} than {a} × {b}: {p} + {a} = {ANS}.",
+        "uz": "{a} × {c} da {a} × {b} ga qaraganda yana bitta {a} bor: {p} + {a} = {ANS}.",
+        "ru": "В {a} × {c} на одну группу по {a} больше, чем в {a} × {b}: {p} + {a} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.7,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-arp004",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "division_remainder",
+      "family": {
+        "template": "A box holds {k} pencils. What is the smallest number of boxes needed to pack {n} pencils?",
+        "params": {
+          "k": {
+            "min": 6,
+            "max": 12
+          },
+          "n": {
+            "min": 40,
+            "max": 150
+          }
+        },
+        "derived": {
+          "q": "n // k",
+          "r": "n % k"
+        },
+        "constraints": [
+          "n % k != 0",
+          "n % k != n // k",
+          "n % k != n // k + 1",
+          "n % k != n // k + 2"
+        ],
+        "answer": "n // k + 1",
+        "distractors": [
+          "n // k",
+          "n % k",
+          "n // k + 2"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: rounding_slip | partial_answer | off_by_one (C1/error_rules.json).",
+        "relation": "X = ceil({n}/{k})",
+        "variants": 608
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A box holds {k} pencils. What is the smallest number of boxes needed to pack {n} pencils?",
+        "uz": "Bitta qutiga {k} ta qalam sigʻadi. {n} ta qalamni joylash uchun eng kamida nechta quti kerak?",
+        "ru": "В одну коробку помещается {k} карандашей. Всего {n|карандаш|карандаша|карандашей}. Какое наименьшее число коробок понадобится?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{n} ÷ {k} = {q} remainder {r}; the {r|extra pencil needs|extra pencils need} one more box, so {ANS} boxes.",
+        "uz": "{n} ÷ {k} = {q} (qoldiq {r}); qolgan {r} ta qalam uchun yana bitta quti kerak, demak {ANS} ta quti.",
+        "ru": "{n} ÷ {k} = {q} (остаток {r}); для {r|оставшегося карандаша|оставшихся карандашей|оставшихся карандашей} нужна ещё одна коробка, итого {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.2,
+      "time_s": 25,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-arp005",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "order_of_operations",
+      "family": {
+        "template": "What is the value of {a} × ({b} − {c}) + {d}?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 9
+          },
+          "b": {
+            "min": 6,
+            "max": 15
+          },
+          "c": {
+            "min": 1,
+            "max": 5
+          },
+          "d": {
+            "min": 2,
+            "max": 20
+          }
+        },
+        "derived": {
+          "e": "b - c",
+          "f": "a*(b - c)"
+        },
+        "constraints": [
+          "b > c",
+          "a*b - c + d != a*(b - c) - d"
+        ],
+        "answer": "a*(b - c) + d",
+        "distractors": [
+          "a*b - c + d",
+          "a*(b - c) - d",
+          "a*(b - c)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: order_of_operations | sign_slip | partial_answer (C1/error_rules.json).",
+        "relation": "X = {a}*({b} - {c}) + {d}",
+        "variants": 7600
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is the value of {a} × ({b} − {c}) + {d}?",
+        "uz": "{a} × ({b} − {c}) + {d} ifodaning qiymati nechaga teng?",
+        "ru": "Чему равно значение выражения {a} × ({b} − {c}) + {d}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Brackets first: {b} − {c} = {e}; then {a} × {e} = {f}; then {f} + {d} = {ANS}.",
+        "uz": "Avval qavs: {b} − {c} = {e}; keyin {a} × {e} = {f}; soʻng {f} + {d} = {ANS}.",
+        "ru": "Сначала скобки: {b} − {c} = {e}; затем {a} × {e} = {f}; потом {f} + {d} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.5,
+      "time_s": 15,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-arp006",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "order_of_operations",
+      "family": {
+        "template": "Work out {a} − {b} + {c}, doing the steps in the right order.",
+        "params": {
+          "a": {
+            "min": 20,
+            "max": 60
+          },
+          "b": {
+            "min": 5,
+            "max": 19
+          },
+          "c": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "derived": {
+          "s": "a - b"
+        },
+        "constraints": [
+          "a - b - c != a - b + c"
+        ],
+        "answer": "a - b + c",
+        "distractors": [
+          "a - (b + c)",
+          "a + b + c",
+          "a - b"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: order_of_operations | sign_slip | partial_answer (C1/error_rules.json).",
+        "relation": "X = {a} - {b} + {c}",
+        "variants": 6765
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Work out {a} − {b} + {c}, doing the steps in the right order.",
+        "uz": "{a} − {b} + {c} ni amallarni toʻgʻri tartibda bajarib hisoblang.",
+        "ru": "Найдите значение {a} − {b} + {c}, выполняя действия в правильном порядке."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Addition and subtraction go from left to right: {a} − {b} = {s}, then {s} + {c} = {ANS}.",
+        "uz": "Qoʻshish va ayirish chapdan oʻngga bajariladi: {a} − {b} = {s}, keyin {s} + {c} = {ANS}.",
+        "ru": "Сложение и вычитание выполняются слева направо: {a} − {b} = {s}, затем {s} + {c} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2.4,
+      "time_s": 12,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-arp007",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "gcd_lcm",
+      "family": {
+        "template": "Two buses leave the station at the same time. One comes back every {p} minutes, the other every {q} minutes. After how many minutes will they next leave together?",
+        "params": {
+          "p": {
+            "min": 4,
+            "max": 20
+          },
+          "q": {
+            "min": 4,
+            "max": 20
+          }
+        },
+        "constraints": [
+          "p < q",
+          "gcd(p, q) > 1",
+          "q % p != 0"
+        ],
+        "answer": "lcm(p, q)",
+        "distractors": [
+          "p*q",
+          "gcd(p, q)",
+          "p + q"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | wrong_formula | wrong_operation (C1/error_rules.json).",
+        "relation": "X = lcm({p}, {q})",
+        "variants": 36
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Two buses leave the station at the same time. One comes back every {p} minutes, the other every {q} minutes. After how many minutes will they next leave together?",
+        "uz": "Ikki avtobus bekatdan bir vaqtda joʻnaydi. Biri har {p} daqiqada, ikkinchisi har {q} daqiqada qaytib keladi. Necha daqiqadan keyin ular yana birga joʻnaydi?",
+        "ru": "Два автобуса одновременно отправляются со станции. Один возвращается каждые {p} мин, другой — каждые {q} мин. Через сколько минут они снова отправятся вместе?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "You need the least common multiple: LCM({p}, {q}) = {ANS}.",
+        "uz": "Eng kichik umumiy karrali kerak: EKUK({p}, {q}) = {ANS}.",
+        "ru": "Нужно наименьшее общее кратное: НОК({p}, {q}) = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -2,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-arp008",
+      "skill": "math",
+      "rung": "arith",
+      "subskill": "gcd_lcm",
+      "family": {
+        "template": "Nodira has {a} red tulips and {b} white tulips. She makes identical bouquets and uses every flower. What is the greatest number of bouquets she can make?",
+        "params": {
+          "g": {
+            "values": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "m": {
+            "min": 2,
+            "max": 7
+          },
+          "n": {
+            "min": 3,
+            "max": 9
+          }
+        },
+        "derived": {
+          "a": "g*m",
+          "b": "g*n"
+        },
+        "constraints": [
+          "m < n",
+          "gcd(m, n) == 1",
+          "m + n != g",
+          "m + n != g*m"
+        ],
+        "answer": "gcd(a, b)",
+        "distractors": [
+          "lcm(a, b)",
+          "m + n",
+          "min(a, b)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | wrong_formula (C1/error_rules.json).",
+        "relation": "X = gcd({a}, {b})",
+        "variants": 89
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Nodira has {a} red tulips and {b} white tulips. She makes identical bouquets and uses every flower. What is the greatest number of bouquets she can make?",
+        "uz": "Nodirada {a} ta qizil va {b} ta oq lola bor. U barcha gullarni ishlatib, bir xil guldastalar tuzadi. U eng koʻpi bilan nechta guldasta tuza oladi?",
+        "ru": "У Нодиры {a|красный|красных|красных} и {b|белый тюльпан|белых тюльпана|белых тюльпанов}. Она составляет одинаковые букеты и использует все цветы. Какое наибольшее число букетов она может составить?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The number of bouquets must divide both {a} and {b}; the greatest common divisor is {ANS} (each bouquet: {m} red, {n} white).",
+        "uz": "Guldastalar soni {a} ni ham, {b} ni ham boʻlishi kerak; EKUB = {ANS} (har birida {m} ta qizil, {n} ta oq).",
+        "ru": "Число букетов должно делить и {a}, и {b}; НОД = {ANS} (в каждом букете {m|красный|красных|красных} и {n|белый тюльпан|белых тюльпана|белых тюльпанов})."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.9,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pap001",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "negative_numbers",
+      "family": {
+        "template": "A diver is at −{d} m (below the water surface). She rises {u} m and then goes down {v} m. At what level, in metres, is she now?",
+        "params": {
+          "d": {
+            "min": 5,
+            "max": 40
+          },
+          "u": {
+            "min": 2,
+            "max": 15
+          },
+          "v": {
+            "min": 3,
+            "max": 20
+          }
+        },
+        "constraints": [
+          "u < d",
+          "u != v",
+          "v != 2*u",
+          "v - u != d",
+          "v != 2*d"
+        ],
+        "answer": "-d + u - v",
+        "distractors": [
+          "-d - u + v",
+          "-d + u",
+          "d + u - v"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | partial_answer | sign_slip (C1/error_rules.json).",
+        "relation": "X = -{d} + {u} - {v}",
+        "variants": 7077
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A diver is at −{d} m (below the water surface). She rises {u} m and then goes down {v} m. At what level, in metres, is she now?",
+        "uz": "Gʻavvos −{d} m belgisida turibdi (suv sathidan pastda). U {u} m yuqoriga koʻtarildi, soʻng {v} m pastga tushdi. Endi u qaysi belgida (metrda)?",
+        "ru": "Водолаз находится на отметке −{d} м (ниже поверхности воды). Он поднялся на {u} м, а затем опустился на {v} м. На какой отметке (в метрах) он сейчас?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Up is +, down is −: −{d} + {u} − {v} = {ANS}.",
+        "uz": "Yuqoriga +, pastga −: −{d} + {u} − {v} = {ANS}.",
+        "ru": "Вверх — плюс, вниз — минус: −{d} + {u} − {v} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -1.9,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pap002",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "fraction",
+      "family": {
+        "template": "Kamola had {n} soʻm. She spent {p}/{q} of it on books. How many soʻm does she have left?",
+        "params": {
+          "q": {
+            "values": [
+              5,
+              7,
+              8,
+              9
+            ]
+          },
+          "p": {
+            "min": 2,
+            "max": 7
+          },
+          "k": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "derived": {
+          "n": "q*k*1000",
+          "s": "n*p/q"
+        },
+        "constraints": [
+          "p <= q - 2",
+          "gcd(p, q) == 1"
+        ],
+        "answer": "n - n*p/q",
+        "distractors": [
+          "n*p/q",
+          "n - n/q",
+          "n + n*p/q"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | wrong_formula | sign_slip (C1/error_rules.json).",
+        "relation": "X + {p}/{q}*{n} = {n}",
+        "variants": 132
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Kamola had {n} soʻm. She spent {p}/{q} of it on books. How many soʻm does she have left?",
+        "uz": "Kamolada {n} soʻm bor edi. U bu pulning {p}/{q} qismini kitoblarga sarfladi. Unda necha soʻm qoldi?",
+        "ru": "У Камолы было {n} сум. На книги она потратила {p}/{q} этой суммы. Сколько сумов у неё осталось?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "She spent {n} ÷ {q} × {p} = {s} soʻm, so {n} − {s} = {ANS} soʻm is left.",
+        "uz": "U {n} ÷ {q} × {p} = {s} soʻm sarfladi, demak {n} − {s} = {ANS} soʻm qoldi.",
+        "ru": "Она потратила {n} ÷ {q} × {p} = {s} сум, значит, осталось {n} − {s} = {ANS} сум."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.7,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pap003",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "decimals",
+      "family": {
+        "template": "Laylo has {m} kg of rice. She pours it into bags of {q} kg each. How many bags can she fill?",
+        "params": {
+          "m": {
+            "min": 2,
+            "max": 12
+          },
+          "q": {
+            "values": [
+              0.2,
+              0.25,
+              0.4,
+              0.5
+            ]
+          }
+        },
+        "constraints": [
+          "abs(m/q - round(m/q)) < 0.000001"
+        ],
+        "answer": "m/q",
+        "distractors": [
+          "floor(10*m*q)",
+          "max(1, floor(m/(q*10)))",
+          "10*m/q"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_operation | place_value | place_value (C1/error_rules.json).",
+        "relation": "{q}*X = {m}",
+        "decimals": 2,
+        "variants": 39
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Laylo has {m} kg of rice. She pours it into bags of {q} kg each. How many bags can she fill?",
+        "uz": "Layloda {m} kg guruch bor. U guruchni xaltalarga {q} kg dan solmoqda. U nechta xaltani toʻldira oladi?",
+        "ru": "У Лейлы {m} кг риса. Она раскладывает его в пакеты по {q} кг. Сколько пакетов она наполнит?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{m} ÷ {q} = {ANS}: count how many times {q} fits into {m}.",
+        "uz": "{m} ÷ {q} = {ANS}: {q} soni {m} ning ichiga necha marta sigʻishini sanang.",
+        "ru": "{m} ÷ {q} = {ANS}: считаем, сколько раз {q} помещается в {m}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.6,
+      "time_s": 25,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C1-pap004",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "family": {
+        "template": "{k} students in a class wear glasses. This is {p}% of the class. How many students are in the class?",
+        "params": {
+          "n": {
+            "min": 20,
+            "max": 40
+          },
+          "p": {
+            "values": [
+              10,
+              20,
+              25,
+              40,
+              60,
+              75
+            ]
+          }
+        },
+        "derived": {
+          "k": "n*p/100"
+        },
+        "constraints": [
+          "(n*p) % 100 == 0",
+          "k + p != n"
+        ],
+        "answer": "k*100/p",
+        "distractors": [
+          "ceil(k*p/100)",
+          "k + p",
+          "round(k*100/(100 - p))"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: percent_base | wrong_operation | percent_base (C1/error_rules.json).",
+        "relation": "{p}/100*X = {k}",
+        "decimals": 2,
+        "variants": 29
+      },
+      "lang": "en",
+      "stem": {
+        "en": "{k} students in a class wear glasses. This is {p}% of the class. How many students are in the class?",
+        "uz": "Sinfdagi {k} nafar oʻquvchi koʻzoynak taqadi. Bu — sinfdagi oʻquvchilarning {p} foizi. Sinfda nechta oʻquvchi bor?",
+        "ru": "Число учеников класса, которые носят очки, — {k}. Это {p}% всего класса. Сколько учеников в классе?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{p}% of the class is {k}, so 1% is {k} ÷ {p} and 100% is {k} ÷ {p} × 100 = {ANS}.",
+        "uz": "Sinfning {p} foizi {k} ga teng, demak 1 foizi {k} ÷ {p}, 100 foizi esa {k} ÷ {p} × 100 = {ANS}.",
+        "ru": "{p}% класса — это {k}, значит, 1% — это {k} ÷ {p}, а 100% — {k} ÷ {p} × 100 = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.5,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C1-pap005",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "proportion",
+      "family": {
+        "template": "In a plov recipe, rice and carrots are used in the ratio {p} : {q} by mass. Jasur uses {r} kg of rice. How many kilograms of carrots does he need?",
+        "params": {
+          "p": {
+            "min": 2,
+            "max": 4
+          },
+          "q": {
+            "min": 2,
+            "max": 5
+          },
+          "j": {
+            "min": 1,
+            "max": 4
+          }
+        },
+        "derived": {
+          "r": "p*j"
+        },
+        "constraints": [
+          "p != q",
+          "gcd(p, q) == 1",
+          "r + q - p != q*j"
+        ],
+        "answer": "r*q/p",
+        "distractors": [
+          "r*p/q",
+          "r + q - p",
+          "r*q"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: inverse_slip | additive_reasoning | partial_answer (C1/error_rules.json).",
+        "relation": "X/{r} = {q}/{p}",
+        "decimals": 2,
+        "variants": 21
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In a plov recipe, rice and carrots are used in the ratio {p} : {q} by mass. Jasur uses {r} kg of rice. How many kilograms of carrots does he need?",
+        "uz": "Palov retseptida guruch va sabzi massalari {p} : {q} nisbatda olinadi. Jasur {r} kg guruch ishlatmoqda. Unga necha kilogramm sabzi kerak?",
+        "ru": "В рецепте плова рис и морковь берут в отношении {p} : {q} по массе. Жасур берёт {r} кг риса. Сколько килограммов моркови ему нужно?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{r} kg of rice is {j} × {p}, so the carrots are {j} × {q} = {ANS} kg.",
+        "uz": "{r} kg guruch = {j} × {p}, demak sabzi {j} × {q} = {ANS} kg.",
+        "ru": "{r} кг риса — это {j} × {p}, значит, моркови нужно {j} × {q} = {ANS} кг."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.6,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pap006",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "square_roots",
+      "family": {
+        "template": "√{n} lies between two consecutive whole numbers. What is the smaller of them?",
+        "params": {
+          "n": {
+            "min": 10,
+            "max": 150
+          }
+        },
+        "derived": {
+          "k": "floor(sqrt(n))",
+          "k1": "floor(sqrt(n)) + 1",
+          "kk": "floor(sqrt(n))^2",
+          "kk1": "(floor(sqrt(n)) + 1)^2"
+        },
+        "constraints": [
+          "floor(sqrt(n))^2 != n"
+        ],
+        "answer": "floor(sqrt(n))",
+        "distractors": [
+          "floor(sqrt(n)) + 1",
+          "n // 2",
+          "floor(sqrt(n))^2"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: rounding_slip | wrong_formula | partial_answer (C1/error_rules.json).",
+        "relation": "X = floor(sqrt({n}))",
+        "variants": 132
+      },
+      "lang": "en",
+      "stem": {
+        "en": "√{n} lies between two consecutive whole numbers. What is the smaller of them?",
+        "uz": "√{n} ikki ketma-ket butun son orasida joylashgan. Ulardan kichigi qaysi?",
+        "ru": "Число √{n} лежит между двумя последовательными целыми числами. Назовите меньшее из них."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{kk} < {n} < {kk1}, so {k} < √{n} < {k1}; the smaller number is {ANS}.",
+        "uz": "{kk} < {n} < {kk1}, demak {k} < √{n} < {k1}; kichigi {ANS}.",
+        "ru": "{kk} < {n} < {kk1}, поэтому {k} < √{n} < {k1}; меньшее — {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.5,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pap007",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "exponents",
+      "family": {
+        "template": "x = −{a}. What is the value of x² − {b}x?",
+        "params": {
+          "a": {
+            "min": 3,
+            "max": 9
+          },
+          "b": {
+            "min": 2,
+            "max": 9
+          }
+        },
+        "derived": {
+          "sq": "a*a",
+          "bx": "a*b"
+        },
+        "constraints": [
+          "a != b",
+          "a + 2 != 2*b"
+        ],
+        "answer": "a*a + a*b",
+        "distractors": [
+          "-a*a + a*b",
+          "a*a - a*b",
+          "-2*a + a*b"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | sign_slip | exponent_slip (C1/error_rules.json).",
+        "relation": "X = (-{a})^2 - {b}*(-{a})",
+        "variants": 46
+      },
+      "lang": "en",
+      "stem": {
+        "en": "x = −{a}. What is the value of x² − {b}x?",
+        "uz": "x = −{a}. x² − {b}x ifodaning qiymati nechaga teng?",
+        "ru": "x = −{a}. Чему равно значение выражения x² − {b}x?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "x² = (−{a})² = {sq} and −{b}x = −{b} × (−{a}) = +{bx}; together {ANS}.",
+        "uz": "x² = (−{a})² = {sq}, −{b}x = −{b} × (−{a}) = +{bx}; jami {ANS}.",
+        "ru": "x² = (−{a})² = {sq}, −{b}x = −{b} × (−{a}) = +{bx}; итого {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.6,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pap008",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "mean",
+      "family": {
+        "template": "Jasur’s mean mark on four tests is {m}. Three of the marks are {x}, {y} and {z}. What is the fourth mark?",
+        "params": {
+          "m": {
+            "min": 60,
+            "max": 90
+          },
+          "x": {
+            "min": 50,
+            "max": 100
+          },
+          "y": {
+            "min": 50,
+            "max": 100
+          },
+          "z": {
+            "min": 50,
+            "max": 100
+          }
+        },
+        "derived": {
+          "T": "4*m",
+          "S": "x + y + z"
+        },
+        "constraints": [
+          "4*m - S >= 40",
+          "4*m - S <= 100",
+          "S != 3*m",
+          "S/3 != 4*m - S",
+          "S - 3*m != 4*m - S",
+          "S - 3*m > 0",
+          "S - 3*m != m",
+          "S/3 != S - 3*m"
+        ],
+        "answer": "4*m - x - y - z",
+        "distractors": [
+          "S/3",
+          "m",
+          "S - 3*m"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | wrong_formula | sign_slip (C1/error_rules.json).",
+        "relation": "({x} + {y} + {z} + X)/4 = {m}",
+        "decimals": 2,
+        "variants": 5288
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Jasur’s mean mark on four tests is {m}. Three of the marks are {x}, {y} and {z}. What is the fourth mark?",
+        "uz": "Jasurning toʻrtta test boʻyicha oʻrtacha bahosi {m} ball. Ulardan uchtasi {x}, {y} va {z} ball. Toʻrtinchi test bahosi necha ball?",
+        "ru": "Средний балл Жасура за четыре теста равен {m}. Три балла известны: {x}, {y} и {z}. Каков балл за четвёртый тест?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The four marks add up to 4 × {m} = {T}; {T} − {S} = {ANS}.",
+        "uz": "Toʻrtta baho yigʻindisi 4 × {m} = {T}; {T} − {S} = {ANS}.",
+        "ru": "Сумма четырёх баллов 4 × {m} = {T}; {T} − {S} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.4,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a1p001",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equation",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "(x + {a})/{b} = (x − {c})/{d}. What is x?",
+        "params": {
+          "d": {
+            "min": 2,
+            "max": 4
+          },
+          "b": {
+            "min": 3,
+            "max": 7
+          },
+          "k": {
+            "min": 1,
+            "max": 5
+          },
+          "x0": {
+            "min": 2,
+            "max": 30
+          }
+        },
+        "derived": {
+          "a": "b*k - x0",
+          "c": "x0 - d*k",
+          "da": "d*a",
+          "bc": "b*c"
+        },
+        "constraints": [
+          "b > d",
+          "a > 0",
+          "c > 0",
+          "round((d*a - b*c)/(b - d), 2) != round((d*a + b*c)/(b + d), 2)",
+          "round((d*a - b*c)/(b - d), 2) != round((a + c)/(b - d), 2)",
+          "round((d*a + b*c)/(b + d), 2) != round((a + c)/(b - d), 2)"
+        ],
+        "answer": "(d*a + b*c)/(b - d)",
+        "distractors": [
+          "(d*a - b*c)/(b - d)",
+          "(d*a + b*c)/(b + d)",
+          "(a + c)/(b - d)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | sign_slip | wrong_formula (C1/error_rules.json).",
+        "relation": "(X + {a})/{b} = (X - {c})/{d}",
+        "decimals": 2,
+        "variants": 364
+      },
+      "lang": "en",
+      "stem": {
+        "en": "(x + {a})/{b} = (x − {c})/{d}. What is x?",
+        "uz": "(x + {a})/{b} = (x − {c})/{d}. x nechaga teng?",
+        "ru": "(x + {a})/{b} = (x − {c})/{d}. Найдите x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Cross-multiply: {d}(x + {a}) = {b}(x − {c}), so {d}x + {da} = {b}x − {bc} and x = {ANS}.",
+        "uz": "Proporsiya xossasi: {d}(x + {a}) = {b}(x − {c}), yaʼni {d}x + {da} = {b}x − {bc}, demak x = {ANS}.",
+        "ru": "По свойству пропорции {d}(x + {a}) = {b}(x − {c}), то есть {d}x + {da} = {b}x − {bc}, откуда x = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a1p002",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_inequalities",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "{a} − {b}x ≥ {c}. What is the greatest possible value of x?",
+        "params": {
+          "b": {
+            "min": 2,
+            "max": 6
+          },
+          "g": {
+            "min": -5,
+            "max": 8,
+            "not": [
+              0
+            ]
+          },
+          "c": {
+            "min": 1,
+            "max": 20
+          }
+        },
+        "derived": {
+          "a": "c + b*g"
+        },
+        "constraints": [
+          "a > 0",
+          "-g != (a + c)/b",
+          "a - c != -g",
+          "(a + c)/b != a - c"
+        ],
+        "answer": "(a - c)/b",
+        "distractors": [
+          "(c - a)/b",
+          "(a + c)/b",
+          "a - c"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | sign_slip | partial_answer (C1/error_rules.json).",
+        "relation": "{a} - {b}*X = {c}",
+        "decimals": 2,
+        "variants": 999
+      },
+      "lang": "en",
+      "stem": {
+        "en": "{a} − {b}x ≥ {c}. What is the greatest possible value of x?",
+        "uz": "{a} − {b}x ≥ {c}. x ning eng katta mumkin boʻlgan qiymati nechaga teng?",
+        "ru": "{a} − {b}x ≥ {c}. Найдите наибольшее возможное значение x."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "−{b}x ≥ {c} − {a}; dividing by −{b} flips the sign: x ≤ {ANS}.",
+        "uz": "−{b}x ≥ {c} − {a}; −{b} ga boʻlganda tengsizlik belgisi teskarisiga oʻzgaradi: x ≤ {ANS}.",
+        "ru": "−{b}x ≥ {c} − {a}; при делении на −{b} знак неравенства меняется: x ≤ {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -0.9,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a1p003",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "A line has slope {m} and passes through the point ({x1}, {y1}). What is y on this line when x = {x2}?",
+        "params": {
+          "m": {
+            "min": -4,
+            "max": 5,
+            "not": [
+              0
+            ]
+          },
+          "x1": {
+            "min": -5,
+            "max": 6,
+            "not": [
+              0
+            ]
+          },
+          "y1": {
+            "min": -8,
+            "max": 10
+          },
+          "x2": {
+            "min": -6,
+            "max": 10,
+            "not": [
+              0
+            ]
+          }
+        },
+        "derived": {
+          "dx": "x2 - x1",
+          "dy": "m*(x2 - x1)"
+        },
+        "constraints": [
+          "x2 > x1",
+          "2*x2 != x1"
+        ],
+        "answer": "y1 + m*(x2 - x1)",
+        "distractors": [
+          "y1 + m*(x2 + x1)",
+          "y1 + m*x2",
+          "y1 - m*(x2 - x1)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | wrong_formula | sign_slip (C1/error_rules.json).",
+        "relation": "X - {y1} = {m}*({x2} - {x1})",
+        "variants": 16587
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A line has slope {m} and passes through the point ({x1}, {y1}). What is y on this line when x = {x2}?",
+        "uz": "Toʻgʻri chiziqning burchak koeffitsiyenti {m} ga teng va u ({x1}, {y1}) nuqtadan oʻtadi. Bu chiziqda x = {x2} boʻlganda y nechaga teng?",
+        "ru": "Прямая имеет угловой коэффициент {m} и проходит через точку ({x1}, {y1}). Чему равно y на этой прямой при x = {x2}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "From x = {x1} to x = {x2} is a step of {dx}; y changes by {m} × {dx} = {dy}, so y = {ANS}.",
+        "uz": "x = {x1} dan x = {x2} gacha qadam {dx}; y {m} × {dx} = {dy} ga oʻzgaradi, demak y = {ANS}.",
+        "ru": "От x = {x1} до x = {x2} шаг равен {dx}; y меняется на {m} × {dx} = {dy}, значит, y = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -1,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a1p004",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "system_of_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family": {
+        "template": "{a} notebooks and {b} pens cost {P} soʻm. {c} notebooks and {b} pens cost {Q} soʻm. How many soʻm does one notebook cost?",
+        "params": {
+          "n": {
+            "min": 2000,
+            "max": 8000,
+            "step": 500
+          },
+          "p": {
+            "min": 1000,
+            "max": 4000,
+            "step": 500
+          },
+          "a": {
+            "min": 4,
+            "max": 7
+          },
+          "c": {
+            "min": 2,
+            "max": 4
+          },
+          "b": {
+            "min": 2,
+            "max": 4
+          }
+        },
+        "derived": {
+          "P": "a*n + b*p",
+          "Q": "c*n + b*p",
+          "e": "a - c",
+          "D": "(a - c)*n"
+        },
+        "constraints": [
+          "a - c >= 2",
+          "n != p",
+          "round(P - Q, 0) != round(P/a, 0)",
+          "round((P + Q)/(a + c), 0) != round(P - Q, 0)"
+        ],
+        "answer": "(P - Q)/(a - c)",
+        "distractors": [
+          "(P + Q)/(a + c)",
+          "P - Q",
+          "P/a"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | wrong_formula (C1/error_rules.json).",
+        "relation": "{a}*X + {b}*(({Q} - {c}*X)/{b}) = {P}",
+        "decimals": 0,
+        "variants": 2310
+      },
+      "lang": "en",
+      "stem": {
+        "en": "{a} notebooks and {b} pens cost {P} soʻm. {c} notebooks and {b} pens cost {Q} soʻm. How many soʻm does one notebook cost?",
+        "uz": "{a} ta daftar va {b} ta ruchka {P} soʻm turadi. {c} ta daftar va {b} ta ruchka esa {Q} soʻm turadi. Bitta daftar necha soʻm turadi?",
+        "ru": "{a|тетрадь|тетради|тетрадей} и {b|ручка|ручки|ручек} вместе стоят {P} сум. {c|тетрадь|тетради|тетрадей} и {b|ручка|ручки|ручек} вместе стоят {Q} сум. Сколько сумов стоит одна тетрадь?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The second set has {e} fewer notebooks and the same pens, so {e} notebooks cost {P} − {Q} = {D} soʻm; one costs {ANS} soʻm.",
+        "uz": "Ikkinchi toʻplamda daftar {e} ta kam, ruchkalar bir xil, demak {e} ta daftar {P} − {Q} = {D} soʻm; bittasi {ANS} soʻm.",
+        "ru": "Разница {P} − {Q} = {D} сум — это цена {e|тетради|тетрадей|тетрадей}, значит, одна тетрадь стоит {ANS} сум."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ]
+}

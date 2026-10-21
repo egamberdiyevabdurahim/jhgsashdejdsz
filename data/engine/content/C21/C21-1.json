@@ -1,0 +1,3818 @@
+{
+  "bank": "C21",
+  "batch": 1,
+  "note": "SAT practice test, form 1, Reading and Writing (P15, the owner's \"add\" of 18 Oct 2026: a full timed SAT practice test; SPEC-lessons rev. 2 §10.2; the code lane p15-sat-test's format note .superpowers/p15/sat-form-format.md), author sat-rw (agent:p15-sat-rw), 18 Oct 2026: the 81 Reading and Writing items of C21/form-1.json, module 1 (C21-rw1a01..rw1a27, 9 easy, 9 medium, 9 hard), module 2 easier (rw2e01..rw2e27, 14 / 10 / 3) and module 2 harder (rw2h01..rw2h27, 3 / 10 / 14), in the order the form shows them. Domain mix from the College Board's published specification (satsuite.collegeboard.org/k12-educators/about/alignment/reading, read 18 Oct 2026: Craft and Structure ~28 %, Information and Ideas ~26 %, Standard English Conventions ~26 %, Expression of Ideas ~20 %): module 1 8/7/7/5, each module 2 7/7/7/6, so a full test (module 1 + either module 2) is 15/14/14/11 of 54; inside a module the questions of one skill stand together, easiest to hardest (satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing). Every text is our own (25-150 words), everyday, plainly fictional or general knowledge; no Bluebook, official practice-test or Question Bank material, no real statistic or named person's claim; no topic of C6 or C19 repeated (searched). The key is options[0]. The SAT tag is sat {domain, difficulty} only (the schema's sat object is strict); the skill is the subskill. C21 is a mock bank: no practice pool or lesson draws it (the code lane's MOCK_BANKS). All 81 are drafts: key check 2 by two blind solvers outside this session is still to come, and the form is offered only when every item of it is served. Version 2 (19 Oct 2026, agent:p15-sat-rw) of the four items key check 2 quarantined as answerable without their text (RECONCILE-p15-rw.md): rw1a10, rw1a15, rw2e08, rw2e10, drafts until two blind solvers key them again. Version 3 (19 Oct 2026, agent:p15-q2) of rw1a10, which key check 2 quarantined again at version 2 (answerable without its text: only its key gave a lesson): every option a reason about learning; a draft until two blind solvers key it.",
+  "items": [
+    {
+      "id": "C21-rw1a01",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A bell maker pours melted bronze into a clay mold and then leaves the new bell buried in sand for several days. If the metal cools too ______, she explains, the bell may crack or ring out of tune.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "quickly"
+        },
+        {
+          "en": "gently"
+        },
+        {
+          "en": "evenly"
+        },
+        {
+          "en": "loudly"
+        }
+      ],
+      "why": {
+        "en": "Burying the bell in sand for days makes it cool slowly; the warning is against the opposite, cooling too quickly. Cooling \"gently\" or \"evenly\" is no danger, and \"loudly\" does not describe cooling.",
+        "uz": "Qoʻngʻiroqni bir necha kun qumga koʻmish uni sekin sovitadi; ogohlantirish buning aksi — juda tez sovishdan. «Gently» yoki «evenly» sovish xavfli emas, «loudly» esa sovishni tasvirlamaydi.",
+        "ru": "Колокол днями лежит в песке, чтобы остывать медленно; опасно обратное — остыть слишком быстро. Остывать «gently» или «evenly» не опасно, а «loudly» к остыванию не подходит."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a02",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "After the earthquake, rocks from the cliffs fell across the canyon road, making it ______ for nearly a month. During that time, food and medicine reached the town only by helicopter.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "impassable"
+        },
+        {
+          "en": "comfortable"
+        },
+        {
+          "en": "crowded"
+        },
+        {
+          "en": "shorter"
+        }
+      ],
+      "why": {
+        "en": "Rocks across the road and supplies arriving only by helicopter show that no one could travel the road: it was impassable. Fallen rocks would not make it comfortable, crowded or shorter.",
+        "uz": "Yoʻlni toʻsgan toshlar va yuklarning faqat vertolyotda kelgani yoʻldan hech kim oʻtolmaganini koʻrsatadi: u oʻtib boʻlmas edi. Toshlar yoʻlni qulay, gavjum yoki qisqa qilmaydi.",
+        "ru": "Камни на дороге и грузы, доставляемые лишь вертолётом, показывают, что проехать было нельзя: дорога стала непроходимой. Обвал не сделал бы её удобной, людной или короче."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a03",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Travelers crossing the dry plain are often surprised to find green villages there. The villages depend on an ______ system of underground channels, some of them many kilometers long, that carries water by gravity alone from the foot of the mountains to the fields.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "ingenious"
+        },
+        {
+          "en": "obvious"
+        },
+        {
+          "en": "ornamental"
+        },
+        {
+          "en": "unreliable"
+        }
+      ],
+      "why": {
+        "en": "Kilometers of channels that carry water by gravity alone and keep villages green on a dry plain are a clever solution: hidden, not obvious; useful, not ornamental; and they clearly work.",
+        "uz": "Suvni faqat oʻz ogʻirligi bilan oqizib, quruq tekislikda qishloqlarni yashil saqlaydigan uzun kanallar — topqir yechim: ular yashirin, bezak emas, foydali va ishonchli ishlaydi.",
+        "ru": "Длинные каналы, которые ведут воду одной силой тяжести и сохраняют деревни зелёными на сухой равнине, — остроумное решение: они скрыты, полезны, а не декоративны, и надёжно работают."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a04",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In the story, the old mapmaker Rustam is known throughout his town for his ______. When a visitor praises a map that took him a whole year to draw, he only nods, rolls the map up, and goes back to his desk without a word.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "reticence"
+        },
+        {
+          "en": "eloquence"
+        },
+        {
+          "en": "candor"
+        },
+        {
+          "en": "extravagance"
+        }
+      ],
+      "why": {
+        "en": "Rustam meets praise with a nod and no words: he is known for saying little. Eloquence is skill with words, candor is frankness, and extravagance is excess; the scene shows none of them.",
+        "uz": "Rustam maqtovga soʻzsiz bosh irgʻab javob beradi: u kamgapligi bilan tanilgan. «Eloquence» — notiqlik, «candor» — ochiqlik, «extravagance» — isrofgarchilik; sahnada ulardan hech biri yoʻq.",
+        "ru": "На похвалу Рустам лишь кивает и молчит: он известен немногословностью. «Eloquence» — красноречие, «candor» — откровенность, «extravagance» — излишество; в сцене нет ни одного из них."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a05",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Critics who call the abacus outdated tend to ______ its strengths. In trained hands it is fast, it needs no battery, and it keeps every step of a calculation in view, so a mistake can be found and corrected at once.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "underestimate"
+        },
+        {
+          "en": "exaggerate"
+        },
+        {
+          "en": "acknowledge"
+        },
+        {
+          "en": "imitate"
+        }
+      ],
+      "why": {
+        "en": "The text lists strengths that critics who call the abacus outdated fail to credit: they underestimate them. Critics who exaggerated or acknowledged them would not call it outdated.",
+        "uz": "Matn choʻtni eskirgan deydigan tanqidchilar tan olmaydigan afzalliklarni sanaydi: ular bu afzalliklarni kam baholaydi. Ularni boʻrttirgan yoki tan olgan odam choʻtni eskirgan demasdi.",
+        "ru": "Текст перечисляет достоинства, которые критики, считающие счёты устаревшими, недооценивают. Кто преувеличивал или признавал их достоинства, не назвал бы счёты устаревшими."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a06",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Every spring, one mountain village holds an unusual race in which teams carry a full jug of water up a steep hill. The winner is not the fastest team but the team whose jug is fullest at the top. As a result, the best teams climb at a steady, careful pace, while teams that rush usually reach the top with half-empty jugs.\n\nWhich choice best describes the function of the second sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It gives the rule that explains how the teams behave in the rest of the text."
+        },
+        {
+          "en": "It argues that the race would be fairer if the fastest team were named the winner."
+        },
+        {
+          "en": "It describes the steep hill that every team must climb."
+        },
+        {
+          "en": "It names the village where the race is held each spring."
+        }
+      ],
+      "why": {
+        "en": "The second sentence gives the rule, the fullest jug wins, and the third follows from it (\"As a result\"). It makes no argument, does not describe the hill, and names no village.",
+        "uz": "Ikkinchi gap qoidani beradi — koʻzasi eng toʻla jamoa yutadi, uchinchi gap shundan kelib chiqadi («As a result»). U daʼvo qilmaydi, tepalikni tasvirlamaydi, qishloq nomini aytmaydi.",
+        "ru": "Второе предложение даёт правило — побеждает самый полный кувшин, а третье из него вытекает («As a result»). Оно ничего не доказывает, не описывает холм и не называет деревню."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a07",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Many people imagine that a weather forecaster simply reads tomorrow's weather from a computer screen. In fact, the computer produces several possible forecasts, and they often disagree. The forecaster's real work is to judge which of them best fits what she knows about the local hills, winds, and lakes, and then to explain her choice in plain words.\n\nWhich choice best describes the overall structure of the text?"
+      },
+      "options": [
+        {
+          "en": "It presents a common belief about a job and then describes what the job actually involves."
+        },
+        {
+          "en": "It describes a method of forecasting, lists its faults, and then recommends a newer method instead."
+        },
+        {
+          "en": "It compares two forecasters who disagree about how far computers can be trusted."
+        },
+        {
+          "en": "It explains how computers produce forecasts and why their forecasts never disagree."
+        }
+      ],
+      "why": {
+        "en": "The first sentence gives a common belief; \"In fact\" turns to the real work: choosing among disagreeing forecasts and explaining the choice. No method is rejected and no two forecasters appear.",
+        "uz": "Birinchi gapda keng tarqalgan fikr beriladi; «In fact» dan keyin asl ish keladi: bir-biriga zid prognozlardan birini tanlash va tushuntirish. Usul rad etilmaydi, ikki sinoptik yoʻq.",
+        "ru": "Первое предложение даёт распространённое мнение; после «In fact» — настоящая работа: выбрать из расходящихся прогнозов и объяснить выбор. Метод не отвергается, двух синоптиков нет."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a08",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "cross_text_connections",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Text 1\nIn several river valleys, people want to bring back beavers, which once lived there. Supporters point to the ponds that beavers build with their dams: the ponds slow floods, store water for the dry months, and give fish and birds new places to live.\n\nText 2\nThe benefits of beaver ponds are real, but they are not free. Where farms now line a river, the same ponds can flood fields and block the ditches that drain them. Bringing beavers back works best in valleys with room for the water to spread, or where farmers are paid for the land the ponds take.\n\nBased on the texts, how would the author of Text 2 most likely respond to the supporters described in Text 1?"
+      },
+      "options": [
+        {
+          "en": "By agreeing that beaver ponds have benefits while warning that they can harm farms in some valleys"
+        },
+        {
+          "en": "By arguing that beaver ponds make floods worse instead of slowing them, as the supporters claim"
+        },
+        {
+          "en": "By denying that beavers ever lived in the river valleys where people now want to bring them back"
+        },
+        {
+          "en": "By insisting that farmers be paid for every beaver pond in every valley before any beavers are allowed to return"
+        }
+      ],
+      "why": {
+        "en": "Text 2 calls the benefits \"real\" but warns that ponds can flood fields where farms line a river, so the plan suits some valleys only. It denies nothing, and payment is one option, not a demand.",
+        "uz": "2-matn foydalarni «real» deydi, lekin fermalar bor joyda hovuzlar dalani suv bostirishi mumkinligini aytadi: reja faqat baʼzi vodiylarga mos. U hech narsani inkor etmaydi, toʻlov esa talab emas.",
+        "ru": "Text 2 называет пользу «real», но предупреждает: где вдоль реки фермы, пруды топят поля, так что план годится не везде. Он ничего не отрицает, а оплата — один из вариантов, а не требование."
+      },
+      "instructions": {
+        "en": "Read both texts. Decide how the ideas in them relate to each other.",
+        "uz": "Ikkala matnni oʻqing. Ulardagi gʻoyalar bir-biri bilan qanday bogʻlanishini aniqlang.",
+        "ru": "Прочитайте оба текста. Определите, как связаны их идеи."
+      },
+      "prior_b": 1.8,
+      "time_s": 105,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a09",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "central_ideas_details",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Nodira had never repaired anything more complicated than a bicycle chain, but when her grandmother's old sewing machine jammed, she decided to try. She borrowed a repair guide from the library, laid out every screw on a clean cloth in the order she removed it, and spent three evenings cleaning and testing each part. On the fourth evening, the needle moved smoothly again.\n\nWhich choice best states the main idea of the text?"
+      },
+      "options": [
+        {
+          "en": "Through patient, careful work, Nodira succeeds at a repair that is new to her."
+        },
+        {
+          "en": "Nodira's grandmother teaches her how to repair an old sewing machine."
+        },
+        {
+          "en": "Nodira finds that the library has no guide that can help her with the repair."
+        },
+        {
+          "en": "Nodira gives up on the sewing machine and goes back to repairing bicycles."
+        }
+      ],
+      "why": {
+        "en": "Nodira, new to such repairs, works slowly and carefully for three evenings, and on the fourth the machine works. She uses a library guide, not her grandmother's lessons, and she does not give up.",
+        "uz": "Bunday taʼmirni birinchi qilayotgan Nodira uch oqshom sabr bilan ishlaydi, toʻrtinchisida mashina ishlaydi. U buvisidan emas, kutubxona qoʻllanmasidan oʻrganadi va taslim boʻlmaydi.",
+        "ru": "Нодира, впервые взявшаяся за такой ремонт, три вечера работает терпеливо и аккуратно, и на четвёртый машинка снова шьёт. Она пользуется руководством из библиотеки, а не уроками бабушки, и не сдаётся."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the answer that best states its main idea or a key detail.",
+        "uz": "Matnni oʻqing. Asosiy gʻoyani yoki muhim tafsilotni eng yaxshi ifodalagan javobni tanlang.",
+        "ru": "Прочитайте текст. Выберите ответ, который лучше всего передаёт главную мысль или важную деталь."
+      },
+      "prior_b": 0,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a10",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "central_ideas_details",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Visitors to Zarina's calligraphy class are often surprised that she has beginners write with a reed pen for their whole first month, although a steel nib would give them neater letters from the first day. The reed, she explains, punishes every careless angle with a blot, so students learn to feel the right angle in their fingers. Once they have that feeling, she says, any better pen makes them better at once.\n\nWhich choice best states the main idea of the text?"
+      },
+      "options": [
+        {
+          "en": "Zarina starts beginners on a reed pen because it shows each wrong angle at once, which trains a feel for the pen that a neater nib would hide."
+        },
+        {
+          "en": "Zarina starts beginners on a reed pen because its slow, scratchy strokes teach them a patience that a faster pen would never ask of them."
+        },
+        {
+          "en": "Zarina starts beginners on a reed pen because learning on the tool of the old masters gives them a respect for the craft that a modern pen would not."
+        },
+        {
+          "en": "Zarina starts beginners on a reed pen because a month with a poor pen makes them grateful for the better pens that come after it."
+        }
+      ],
+      "why": {
+        "en": "Each careless angle leaves a blot, so beginners learn to feel the right angle, which a neater steel nib would hide. Patience, the old masters and gratitude are never mentioned.",
+        "uz": "Har bir beparvo burchak bir dogʻ qoldiradi: yangi oʻquvchilar toʻgʻri burchakni his qilishni oʻrganadi, poʻlat pero esa buni yashirardi. Sabr, qadimgi ustalar va minnatdorlik tilga olinmagan.",
+        "ru": "Каждый небрежный угол оставляет кляксу, и новички учатся чувствовать верный угол; аккуратное стальное перо это скрыло бы. О терпении, старых мастерах и благодарности — ни слова."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the answer that best states its main idea or a key detail.",
+        "uz": "Matnni oʻqing. Asosiy gʻoyani yoki muhim tafsilotni eng yaxshi ifodalagan javobni tanlang.",
+        "ru": "Прочитайте текст. Выберите ответ, который лучше всего передаёт главную мысль или важную деталь."
+      },
+      "prior_b": 0.9,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15q2s1+P15q2s2",
+      "status": "verified_auto",
+      "version": 3,
+      "quarantine_reason": "version 2, answerable without its text (spec §5.5 step 4; the P15 brief: it must not be): P15rws1 flagged no_passage_needed: of the four options only the key gives a lesson (a reason about learning to write); the other two \"starts beginners on a reed pen because\" options give bare circumstantial motives with no anchor in the text (cost, her own teacher's pen) and the fourth is a belief in a different form, so a test-wise solver who never sees the text picks the key. P15rws2, without a flag, had guessed the key before reading the text (about 40%) on the same ground. Both solvers chose the key (blind:P15rws1+P15rws2) and neither found a second correct option. A version 3 needs distractors that are themselves reasons about learning (ones the text does not give, or misreads of it), so that only the text decides.; v3 (agent:p15-q2, 19 Oct 2026): the same text (both solvers read it with one defensible option); every option now gives a reason about learning in the same frame (\"Zarina starts beginners on a reed pen because\"), so the key is no longer the only lesson: the key (the reed shows each wrong angle at once and trains a feel a neater nib would hide), patience from slow strokes, respect for the old masters' craft, and gratitude for the better pens that follow (a misreading of the last sentence); general knowledge rules none of them out, only the text decides; the key options[0], neither the longest nor the shortest option; the id, form slot, subskill, level, difficulty, prior_b, time_s and instruction line as in v2",
+      "key_check_2_version": 3
+    },
+    {
+      "id": "C21-rw1a11",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "command_of_evidence_quantitative",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "An aquarium recorded its visitors over one weekend.\n\nDay | Morning | Afternoon\nSaturday | 340 | 520\nSunday | 410 | 290\n\nThe aquarium's manager noticed that on Saturday more people visited in the afternoon than in the morning, but on Sunday ______\n\nWhich choice most effectively uses data from the table to complete the statement?"
+      },
+      "options": [
+        {
+          "en": "the morning was busier, with 410 visitors against 290."
+        },
+        {
+          "en": "the afternoon was busier, with 410 against 290."
+        },
+        {
+          "en": "the afternoon had 520 visitors, the most of any half-day."
+        },
+        {
+          "en": "the morning had 340 visitors, fewer than the afternoon."
+        }
+      ],
+      "why": {
+        "en": "On Sunday the morning had 410 visitors and the afternoon 290, the reverse of Saturday's pattern. 520 and 340 are Saturday's figures, and on Sunday the afternoon was not the busier half.",
+        "uz": "Yakshanba kuni ertalab 410, tushdan keyin 290 kishi kelgan — shanbaning teskarisi. 520 va 340 shanbaga tegishli, yakshanba kuni esa tushdan keyingi vaqt gavjumroq boʻlmagan.",
+        "ru": "В воскресенье утром пришло 410 человек, а днём 290 — наоборот по сравнению с субботой. 520 и 340 — субботние числа, а в воскресенье вторая половина дня не была многолюднее."
+      },
+      "instructions": {
+        "en": "Read the text and the table. Choose the answer that uses the data correctly.",
+        "uz": "Matn va jadvalni oʻqing. Maʼlumotlardan toʻgʻri foydalangan javobni tanlang.",
+        "ru": "Прочитайте текст и таблицу. Выберите ответ, в котором данные использованы верно."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a12",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "command_of_evidence_quantitative",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A student measured how much electricity the small solar panel on her family's roof produced on four days in May. A bar graph shows the results in watt-hours: Monday (sunny) 410, Tuesday (cloudy) 160, Wednesday (sunny) 395 and Thursday (partly cloudy) 270.\n\nThe student concluded that cloud cover sharply reduces how much electricity the panel produces.\n\nWhich choice most effectively uses data from the graph to support the student's conclusion?"
+      },
+      "options": [
+        {
+          "en": "On cloudy Tuesday the panel produced 160 watt-hours, less than half of the 410 it produced on sunny Monday."
+        },
+        {
+          "en": "On sunny Wednesday the panel produced 395 watt-hours, almost as much as the 410 it produced on Monday."
+        },
+        {
+          "en": "On partly cloudy Thursday the panel produced 270 watt-hours, more than it produced on sunny Wednesday."
+        },
+        {
+          "en": "On cloudy Tuesday the panel produced 160 watt-hours, more than it produced on any of the other three days."
+        }
+      ],
+      "why": {
+        "en": "A cloudy day set against a sunny one shows the clouds' effect: 160 against 410, less than half. Two sunny days say nothing of clouds, 270 is less than 395, and 160 is the lowest value.",
+        "uz": "Bulutli kunni quyoshli kun bilan solishtirish bulut taʼsirini koʻrsatadi: 160 ga qarshi 410, yarmidan kam. Ikki quyoshli kun bulutni koʻrsatmaydi, 270 esa 395 dan kam, 160 — eng past qiymat.",
+        "ru": "Облачный день против солнечного показывает влияние облаков: 160 против 410, меньше половины. Два солнечных дня об облаках молчат, 270 меньше 395, а 160 — наименьшее значение."
+      },
+      "instructions": {
+        "en": "Read the text and the description of the graph. Choose the answer that uses the data correctly.",
+        "uz": "Matnni va grafik tavsifini oʻqing. Maʼlumotlardan toʻgʻri foydalangan javobni tanlang.",
+        "ru": "Прочитайте текст и описание графика. Выберите ответ, в котором данные использованы верно."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a13",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "command_of_evidence_textual",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Students noticed that great tits nesting in boxes in a city park seemed to raise more chicks in the boxes on the quiet east side of the park than in those on the west side, which runs along a busy road. They hypothesized that traffic noise reduces the number of chicks the birds raise.\n\nWhich finding, if true, would most directly support the students' hypothesis?"
+      },
+      "options": [
+        {
+          "en": "In another park, where the busy road runs along the east side, the birds raised more chicks in the boxes on the quiet west side."
+        },
+        {
+          "en": "In a year when the road was closed for repairs, the birds in the west-side boxes still raised fewer chicks than those in the east."
+        },
+        {
+          "en": "The birds in the west-side boxes started building their nests a few days earlier each spring than those on the east side."
+        },
+        {
+          "en": "Most of the chicks raised on both sides of the park left their boxes during the first weeks of summer."
+        }
+      ],
+      "why": {
+        "en": "If the gap moves with the road to whichever side it runs along, noise, not the side of the park, explains it. Fewer chicks in the west even with the road closed would point away from noise.",
+        "uz": "Agar farq yoʻl bilan birga u qaysi tomonda boʻlsa, oʻsha tomonga koʻchsa, sabab bogʻning tomoni emas, shovqin. Yoʻl yopiq paytda ham gʻarbda jojalar kam boʻlsa, sabab shovqin boʻlmasdi.",
+        "ru": "Если разница переходит вместе с дорогой на ту сторону, где она идёт, дело в шуме, а не в стороне парка. Меньше птенцов на западе при закрытой дороге говорило бы против шума."
+      },
+      "instructions": {
+        "en": "Choose the quotation or finding that best supports the claim in the text.",
+        "uz": "Matndagi fikrni eng yaxshi tasdiqlaydigan iqtibos yoki natijani tanlang.",
+        "ru": "Выберите цитату или результат, который лучше всего подтверждает утверждение в тексте."
+      },
+      "prior_b": 1.8,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a14",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "inferences",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "For a month, the main exit of the city's train station was closed for repairs, and passengers had to leave by a side exit on the far side of the building. Kiosks near the side exit had their busiest month of the year, while kiosks by the main exit had their quietest. Since the main exit reopened, sales at both groups of kiosks have returned to their usual levels. This pattern suggests that ______\n\nWhich choice most logically completes the text?"
+      },
+      "options": [
+        {
+          "en": "much of the kiosks' business depends on which way passengers leave the station."
+        },
+        {
+          "en": "the repairs made the main exit much less popular with passengers than it had been before."
+        },
+        {
+          "en": "passengers spent more money at the station during the month the main exit was closed."
+        },
+        {
+          "en": "kiosks near the side exit sell goods that passengers cannot find anywhere else nearby."
+        }
+      ],
+      "why": {
+        "en": "Sales rose where passengers now left, fell where they no longer passed, and returned to normal with the exit: business follows the route. No total spending is given.",
+        "uz": "Savdo yoʻlovchilar endi chiqadigan joyda oshgan, ular oʻtmay qoʻygan joyda kamaygan, asosiy chiqish ochilgach odatiy holga qaytgan: savdo yoʻnalishga bogʻliq. Umumiy xarajat berilmagan.",
+        "ru": "Продажи выросли там, где теперь выходили пассажиры, упали там, где они не проходили, и вернулись вместе с выходом: торговля зависит от пути. Общих трат в тексте нет."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the ending that follows most logically from it.",
+        "uz": "Matnni oʻqing. Undan mantiqan eng toʻgʻri kelib chiqadigan davomni tanlang.",
+        "ru": "Прочитайте текст. Выберите окончание, которое логичнее всего из него следует."
+      },
+      "prior_b": 0.9,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a15",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "inferences",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A seed bank tested two common ways of keeping stored wheat seeds alive: drying them before storage and keeping them cold. Seeds from a single harvest were divided into four groups: dried and kept cold, dried and kept at room temperature, not dried and kept cold, and not dried and kept at room temperature. After ten years, the two dried groups sprouted almost equally often, and each sprouted far more often than either group that had not been dried. These results suggest that, for stored wheat seeds, ______\n\nWhich choice most logically completes the text?"
+      },
+      "options": [
+        {
+          "en": "drying does more than cold storage to keep them able to sprout."
+        },
+        {
+          "en": "cold storage does more than drying to keep them able to sprout."
+        },
+        {
+          "en": "drying makes little difference to seeds that are kept cold."
+        },
+        {
+          "en": "dried seeds sprout far more often when they are also kept cold."
+        }
+      ],
+      "why": {
+        "en": "Cold or warm, dried seeds did about equally well, and both far better than undried ones: drying made the big difference, cold little. So cold did not do more, and dried seeds gained little from it.",
+        "uz": "Quritilgan urugʻlar sovuqda ham, iliqda ham deyarli teng va quritilmaganlardan ancha koʻp unib chiqdi: katta farqni quritish bergan, sovuq emas. Quritilgan urugʻlarga sovuq deyarli foyda bermagan.",
+        "ru": "Высушенные семена всходили почти одинаково в холоде и в тепле и намного лучше невысушенных: главное — сушка, а не холод. Холод не важнее, и сушёным семенам он почти не помог."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the ending that follows most logically from it.",
+        "uz": "Matnni oʻqing. Undan mantiqan eng toʻgʻri kelib chiqadigan davomni tanlang.",
+        "ru": "Прочитайте текст. Выберите окончание, которое логичнее всего из него следует."
+      },
+      "prior_b": 1.8,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 2,
+      "quarantine_reason": "answerable without its passage (spec §5.5 step 4; the P15 brief: it must not be): P15rws2 flagged no_passage_needed: that colder storage keeps seeds able to sprout longer is common knowledge (seed banks freeze them), and the other three completions are each false as a general claim, so the key is reachable without the results; P15rws1 judged it needs the text. Both solvers chose the key (blind:P15rws1+P15rws2). A rewrite needs completions that are each plausible in general, so that only the results decide.; v2 (agent:p15-sat-rw, 19 Oct 2026): a four-group test (dried or not, cold or not) whose result general knowledge does not give: every completion is plausible without the results (seed banks both dry and chill seeds), and only the results show that drying made the difference and cold made little; the key options[0], the subskill, level, difficulty, prior_b, time_s and instruction line as in v1",
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C21-rw1a16",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "boundaries",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The glacier above the village has shrunk every year for a ______ lower edge now sits almost a kilometer higher up the valley than it does in the oldest photographs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "century. Its"
+        },
+        {
+          "en": "century, its"
+        },
+        {
+          "en": "century its"
+        },
+        {
+          "en": "century, and, its"
+        }
+      ],
+      "why": {
+        "en": "Each side is a complete sentence, so a full stop goes between them. A comma alone makes a comma splice, no mark makes a run-on, and no comma follows \"and\".",
+        "uz": "Ikkala qism ham toʻliq gap, shuning uchun ular orasiga nuqta qoʻyiladi. Yolgʻiz vergul xato, belgisiz gaplar qoʻshilib ketadi, «and» dan keyin esa vergul qoʻyilmaydi.",
+        "ru": "Обе части — полные предложения, поэтому между ними ставится точка. Одна запятая — ошибка, без знака предложения сливаются, а после «and» запятая не ставится."
+      },
+      "instructions": {
+        "en": "Choose the punctuation that correctly joins or separates the parts of the sentence.",
+        "uz": "Gap qismlarini toʻgʻri bogʻlaydigan yoki ajratadigan tinish belgisini tanlang.",
+        "ru": "Выберите знаки препинания, которые правильно соединяют или разделяют части предложения."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a17",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "form_structure_sense",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Each autumn, a flock of several hundred cranes ______ for a week at the lake before continuing its long flight south. Birdwatchers from the nearby towns gather on the shore at dawn to count the birds.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "rests"
+        },
+        {
+          "en": "are resting"
+        },
+        {
+          "en": "have rested"
+        },
+        {
+          "en": "were resting"
+        }
+      ],
+      "why": {
+        "en": "The subject is \"a flock\", singular (\"its\" flight), so the verb is \"rests\". \"Are resting\", \"have rested\" and \"were resting\" are plural forms that agree with \"cranes\", not with the subject.",
+        "uz": "Ega — «a flock», birlikda (parvoz ham «its»), shuning uchun kesim «rests». «Are resting», «have rested» va «were resting» koʻplik shakllari: ular egaga emas, «cranes» ga moslashgan.",
+        "ru": "Подлежащее — «a flock», единственное число (и полёт «its»), поэтому «rests». «Are resting», «have rested» и «were resting» — множественное число, согласованное с «cranes»."
+      },
+      "instructions": {
+        "en": "Choose the option that follows the rules of standard written English.",
+        "uz": "Standart yozma ingliz tili qoidalariga mos keladigan variantni tanlang.",
+        "ru": "Выберите вариант, который соответствует нормам письменного английского языка."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a18",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "boundaries",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Students in the geometry club built a sundial from a wooden board and a metal rod. Its shadow was hard to read on cloudy ______ on sunny days, it kept time to within a few minutes of the school clock.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "mornings; however,"
+        },
+        {
+          "en": "mornings, however,"
+        },
+        {
+          "en": "mornings however,"
+        },
+        {
+          "en": "mornings however"
+        }
+      ],
+      "why": {
+        "en": "Two complete sentences meet here, joined by \"however\", so a semicolon goes before it and a comma after. A comma before \"however\" makes a comma splice, and no mark there makes a run-on.",
+        "uz": "Bu yerda ikki toʻliq gap «however» orqali tutashadi: undan oldin nuqtali vergul, keyin vergul qoʻyiladi. «However» oldidagi vergul xato, belgisiz esa gaplar qoʻshilib ketadi.",
+        "ru": "Здесь встречаются два полных предложения, связанных словом «however»: перед ним точка с запятой, после — запятая. Запятая перед «however» — ошибка, а без знака предложения сливаются."
+      },
+      "instructions": {
+        "en": "Choose the punctuation that correctly joins or separates the parts of the sentence.",
+        "uz": "Gap qismlarini toʻgʻri bogʻlaydigan yoki ajratadigan tinish belgisini tanlang.",
+        "ru": "Выберите знаки препинания, которые правильно соединяют или разделяют части предложения."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a19",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "form_structure_sense",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "By the time the rescue team reached the pass, the avalanche ______ the road under three meters of snow, and the team had to dig its way through.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "had already buried"
+        },
+        {
+          "en": "already buries"
+        },
+        {
+          "en": "will bury"
+        },
+        {
+          "en": "will already bury"
+        }
+      ],
+      "why": {
+        "en": "The burying happened before the team arrived (\"By the time … reached\"), so the past perfect \"had already buried\" fits. Present and future forms clash with \"reached\" and \"had to dig\".",
+        "uz": "Koʻmilish jamoa yetib kelishidan oldin boʻlgan («By the time … reached»), shuning uchun «had already buried» mos. Hozirgi va kelasi zamon shakllari «reached» va «had to dig» ga zid.",
+        "ru": "Завал случился до прихода спасателей («By the time … reached»), поэтому подходит предпрошедшее «had already buried». Формы настоящего и будущего времени расходятся с «reached» и «had to dig»."
+      },
+      "instructions": {
+        "en": "Choose the option that follows the rules of standard written English.",
+        "uz": "Standart yozma ingliz tili qoidalariga mos keladigan variantni tanlang.",
+        "ru": "Выберите вариант, который соответствует нормам письменного английского языка."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a20",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "boundaries",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The instrument maker's newest lute—carved from a single block of walnut and fitted with silk ______ her almost a year to finish. She plans to play it for the first time at the spring festival in her town.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "strings—took"
+        },
+        {
+          "en": "strings, took"
+        },
+        {
+          "en": "strings took"
+        },
+        {
+          "en": "strings; took"
+        }
+      ],
+      "why": {
+        "en": "The words between the dashes describe the lute, so a second dash must close them before the verb \"took\". A comma cannot close a dash, and no mark or a semicolon breaks the subject from its verb.",
+        "uz": "Tirelar orasidagi soʻzlar lyutnyani tasvirlaydi, shuning uchun «took» kesimidan oldin ularni ikkinchi tire yopishi kerak. Tireni vergul yopolmaydi, nuqtali vergul esa egani kesimdan uzadi.",
+        "ru": "Слова между тире описывают лютню, поэтому перед сказуемым «took» их закрывает второе тире. Запятая тире не закрывает, а точка с запятой отрывает подлежащее от сказуемого."
+      },
+      "instructions": {
+        "en": "Choose the punctuation that correctly joins or separates the parts of the sentence.",
+        "uz": "Gap qismlarini toʻgʻri bogʻlaydigan yoki ajratadigan tinish belgisini tanlang.",
+        "ru": "Выберите знаки препинания, которые правильно соединяют или разделяют части предложения."
+      },
+      "prior_b": 1.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a21",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "form_structure_sense",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The restorers had worked on the damaged painting for most of the year, cleaning it one small square at a time. Having removed the last layer of old varnish, ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "the restorers could finally see the true colors of the old painting."
+        },
+        {
+          "en": "the painting's true colors could finally be seen by the restorers."
+        },
+        {
+          "en": "the true colors of the painting were finally visible to the restorers."
+        },
+        {
+          "en": "seeing the painting's true colors was finally possible for them."
+        }
+      ],
+      "why": {
+        "en": "The opening phrase describes whoever removed the varnish, so \"the restorers\" must follow the comma. In the other choices the colors, or the seeing, would have removed it.",
+        "uz": "Kirish ibora lakni olib tashlagan kishini tasvirlaydi, shuning uchun verguldan keyin «the restorers» kelishi kerak. Aks holda lakni ranglar yoki koʻrish olib tashlagan boʻlib chiqadi.",
+        "ru": "Вводный оборот описывает того, кто снял лак, поэтому сразу после запятой должны стоять «the restorers». Иначе лак сняли бы цвета или само «видение»."
+      },
+      "instructions": {
+        "en": "Choose the option that follows the rules of standard written English.",
+        "uz": "Standart yozma ingliz tili qoidalariga mos keladigan variantni tanlang.",
+        "ru": "Выберите вариант, который соответствует нормам письменного английского языка."
+      },
+      "prior_b": 1.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a22",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "boundaries",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The old ship's handbook gives its crew one rule above all ______ a lookout at the bow whenever fog rolls in, however calm the sea may be.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "others: keeping"
+        },
+        {
+          "en": "others; keeping"
+        },
+        {
+          "en": "others. Keeping"
+        },
+        {
+          "en": "others keeping"
+        }
+      ],
+      "why": {
+        "en": "What follows names the rule but is not a complete sentence, so a colon introduces it. A semicolon or a full stop needs a full sentence after it, and no mark runs \"others keeping\" together.",
+        "uz": "Davomi qoidani nomlaydi, lekin toʻliq gap emas, shuning uchun uni ikki nuqta kiritadi. Nuqtali vergul yoki nuqtadan keyin toʻliq gap kerak, belgisiz esa soʻzlar qoʻshilib ketadi.",
+        "ru": "После пропуска названо правило, но это не полное предложение, поэтому его вводит двоеточие. После точки с запятой или точки нужно полное предложение, а без знака «others keeping» сливаются."
+      },
+      "instructions": {
+        "en": "Choose the punctuation that correctly joins or separates the parts of the sentence.",
+        "uz": "Gap qismlarini toʻgʻri bogʻlaydigan yoki ajratadigan tinish belgisini tanlang.",
+        "ru": "Выберите знаки препинания, которые правильно соединяют или разделяют части предложения."
+      },
+      "prior_b": 1.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a23",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Most frogs lay their eggs in ponds or streams. ______ some frogs that live in rainforests lay their eggs on leaves that hang over a stream, and when the tadpoles hatch, they drop into the water below.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "However,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Thus,"
+        },
+        {
+          "en": "Similarly,"
+        }
+      ],
+      "why": {
+        "en": "Laying eggs on leaves above a stream differs from laying them in water, so a contrast is needed: \"However\". It is not an example, a result or a similar case.",
+        "uz": "Tuxumni oqim ustidagi barglarga qoʻyish suvga qoʻyishdan farq qiladi, shuning uchun qarama-qarshilik kerak: «However». Bu misol ham, natija ham, oʻxshash holat ham emas.",
+        "ru": "Откладывать икру на листья над ручьём — не то же, что в пруды и ручьи, поэтому нужно противопоставление: «However». Это не пример к первому предложению, не его следствие и не сходный случай."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a24",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The first printed maps of the valley showed its river as a single winding line. Later surveyors, who walked the river's whole length, found that each spring it split into dozens of shallow channels spread across a wide bed of gravel. ______ the newer maps show the river as a broad band of braided channels rather than as one line.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Accordingly,"
+        },
+        {
+          "en": "Still,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "Meanwhile,"
+        }
+      ],
+      "why": {
+        "en": "The newer maps follow from what the surveyors found, so a word of consequence fits: \"Accordingly\". \"Still\" signals a contrast, \"Meanwhile\" only timing, and the maps are not a similar case.",
+        "uz": "Yangi xaritalar oʻlchovchilar topgan narsadan kelib chiqadi, shuning uchun «Accordingly» mos. «Still» qarama-qarshilikni, «Meanwhile» faqat vaqtni bildiradi, xaritalar oʻxshash holat ham emas.",
+        "ru": "Новые карты следуют из того, что нашли топографы, поэтому подходит слово следствия: «Accordingly». «Still» вводит противопоставление, «Meanwhile» — лишь время, а карты — не сходный случай."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a25",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• A mountain town runs a free shuttle bus for hikers in summer.\n• The shuttle runs from June to September.\n• It leaves the train station every 30 minutes between 7 a.m. and 7 p.m.\n• It stops at the three most popular trailheads.\n• The town started the service after the trailhead parking lots kept filling up.\n\nThe student wants to tell hikers when they can catch the shuttle.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "From June to September, the shuttle leaves the train station every 30 minutes from 7 a.m. to 7 p.m."
+        },
+        {
+          "en": "The free shuttle, which leaves from the train station, stops at the three most popular trailheads near the town."
+        },
+        {
+          "en": "The town started its shuttle after the parking lots at the trailheads kept filling up."
+        },
+        {
+          "en": "The mountain town runs a free shuttle bus for hikers during the summer months."
+        }
+      ],
+      "why": {
+        "en": "Only this choice gives the times: the months, the hours and how often the shuttle leaves. The others give its stops, how the service began, or only that it exists.",
+        "uz": "Faqat shu javob vaqtni beradi: oylar, soatlar va avtobus qanchalik tez-tez joʻnashi. Qolganlari bekatlar, xizmat qanday boshlangani yoki faqat uning borligini aytadi.",
+        "ru": "Только этот вариант называет время: месяцы, часы и как часто отходит автобус. Остальные говорят об остановках, о том, как появилась служба, или лишь о том, что она есть."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a26",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• A publisher has printed two editions of its school dictionary.\n• The first edition, from 1998, has 30,000 entries.\n• The second edition, from 2021, has 52,000 entries.\n• Both editions were prepared by the same team of eight editors.\n• Both are printed on thin paper so that they fit in a school bag.\n\nThe student wants to emphasize how the two editions differ.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The second edition, with 52,000 entries, is far larger than the first, which has 30,000."
+        },
+        {
+          "en": "Both editions were prepared by the same team of eight editors and fit in a school bag."
+        },
+        {
+          "en": "The first edition of the dictionary, printed in 1998, has 30,000 entries."
+        },
+        {
+          "en": "Both editions of the dictionary are printed on thin paper so that they fit in a school bag."
+        }
+      ],
+      "why": {
+        "en": "The goal is a difference between the editions: 52,000 entries against 30,000. The other choices give what the editions share, or one edition's figure alone.",
+        "uz": "Maqsad — nashrlar orasidagi farq: 30 000 taga qarshi 52 000 ta soʻz maqolasi. Qolgan javoblar nashrlarning umumiy jihatini yoki faqat bittasining raqamini beradi.",
+        "ru": "Цель — различие изданий: 52 000 статей против 30 000. Остальные варианты называют общее у изданий или цифру только одного из них."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw1a27",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Many flowers that open at night are pollinated by moths.\n• Students counted moth visits to evening primrose plants in two fields.\n• One field was next to a parking lot lit all night; the other was dark.\n• In the lit field, moths made 40% fewer visits, and the plants produced fewer seeds.\n• The students concluded that light at night may reduce how many seeds such plants produce.\n\nThe student wants to present the study's conclusion to an audience unfamiliar with how moths help plants.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Because moths pollinate many night-blooming flowers, light that keeps moths away at night may leave such plants with fewer seeds."
+        },
+        {
+          "en": "In a field beside a parking lot lit all night, moths made 40% fewer visits to evening primrose plants, which produced fewer seeds there."
+        },
+        {
+          "en": "Light at night may reduce how many seeds evening primrose plants produce, the students concluded."
+        },
+        {
+          "en": "Students counted moth visits to evening primrose plants in two fields, one beside a lit parking lot and one that stayed dark all night."
+        }
+      ],
+      "why": {
+        "en": "This audience must first learn that moths pollinate night-blooming flowers; only this choice says so and then gives the conclusion. The others give results or method, or skip the moths' role.",
+        "uz": "Bu tinglovchilar avval kuyalar tungi gullarni changlatishini bilishi kerak; faqat shu javob buni aytib, xulosani beradi. Qolganlari natija yoki usulni beradi yoki kuyalar rolini aytmaydi.",
+        "ru": "Этой аудитории нужно сначала узнать, что ночные цветы опыляют мотыльки; только этот вариант говорит об этом и затем даёт вывод. Остальные дают результаты или метод либо вывод без роли мотыльков."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e01",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The yurt camp's dining tent is warm and bright, with a fire in the stove and soft cushions along every wall. It is so ______ that travelers who planned to stay one night often stay three.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "inviting"
+        },
+        {
+          "en": "crowded"
+        },
+        {
+          "en": "distant"
+        },
+        {
+          "en": "expensive"
+        }
+      ],
+      "why": {
+        "en": "Warmth, light and soft cushions keep travelers longer than they planned, so the place is inviting. Being crowded, distant or expensive would not make them stay.",
+        "uz": "Issiqlik, yorugʻlik va yumshoq yostiqlar sayohatchilarni rejalaganidan uzoqroq ushlab qoladi: joy oʻziga tortadi. Gavjum, uzoq yoki qimmat boʻlish ularni qoldirmas edi.",
+        "ru": "Тепло, свет и мягкие подушки удерживают путешественников дольше, чем они собирались: место манит. Если бы там было тесно, далеко или дорого, они бы не задерживались."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e02",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Before posting the new tide table on the harbor wall, the harbor master ______ every time in it twice, because a single wrong number could leave a boat stuck in the mud.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "checked"
+        },
+        {
+          "en": "overlooked"
+        },
+        {
+          "en": "misplaced"
+        },
+        {
+          "en": "invented"
+        }
+      ],
+      "why": {
+        "en": "A wrong number could strand a boat, so the harbor master made sure of every time: he checked each one twice. Overlooking, misplacing or inventing the times would cause exactly that danger.",
+        "uz": "Bitta xato raqam qayiqni loyda qoldirishi mumkin, shuning uchun port boshligʻi har bir vaqtni ikki marta tekshirgan. Vaqtni eʼtiborsiz qoldirish, yoʻqotish yoki toʻqish aynan shu xavfni tugʻdirardi.",
+        "ru": "Одна ошибка могла оставить лодку в иле, поэтому начальник порта проверил каждое время дважды. Пропустить, потерять или выдумать время значило бы создать именно эту опасность."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e03",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The trail to the waterfall is short, but parts of it are ______: in several places, walkers must hold on to a rope to climb over wet rocks.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "steep"
+        },
+        {
+          "en": "flat"
+        },
+        {
+          "en": "crowded"
+        },
+        {
+          "en": "paved"
+        }
+      ],
+      "why": {
+        "en": "Holding a rope to climb over rocks shows that parts of the trail are steep. A flat or paved trail would need no rope, and nothing mentions crowds.",
+        "uz": "Toshlardan arqonga tayanib chiqish soʻqmoqning baʼzi joylari tik ekanini koʻrsatadi. Tekis yoki asfaltlangan yoʻlda arqon kerak boʻlmasdi, olomon haqida esa gap yoʻq.",
+        "ru": "Если по камням приходится лезть, держась за верёвку, значит, местами тропа крутая. На ровной или мощёной тропе верёвка не нужна, а о толпе ничего не сказано."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e04",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "At first, the new railway station seemed to change little in the small town. Within two years, however, its effect was ______: three hotels had opened near the platform, and the quiet road to the station had become the busiest street in town.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "unmistakable"
+        },
+        {
+          "en": "insignificant"
+        },
+        {
+          "en": "temporary"
+        },
+        {
+          "en": "doubtful"
+        }
+      ],
+      "why": {
+        "en": "\"However\" turns from \"seemed to change little\" to clear change, new hotels and a busy street: the effect was unmistakable. The other words repeat the first impression or say the change ended.",
+        "uz": "«However» «deyarli oʻzgartirmadi» taassurotidan aniq oʻzgarishga — mehmonxonalar va gavjum koʻchaga oʻtadi: taʼsir yaqqol. Qolganlari birinchi taassurotni takrorlaydi yoki oʻzgarish tugadi deydi.",
+        "ru": "«However» ведёт от «почти ничего не изменилось» к явной перемене — гостиницам и оживлённой улице: эффект несомненен. Остальные слова повторяют первое впечатление или говорят, что всё кончилось."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e05",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Every evening at six, the old man on the third floor opens his window and plays the same short tune on his flute. When he first began, his neighbors found the habit strange. Now, on the rare evenings when he is ill or away, the whole courtyard seems to notice the silence.\n\nWhich choice best describes the overall structure of the text?"
+      },
+      "options": [
+        {
+          "en": "It describes a habit and then shows how the neighbors' feelings about it have changed."
+        },
+        {
+          "en": "It describes a tune and then explains how the old man first learned to play it."
+        },
+        {
+          "en": "It compares two neighbors who disagree about whether the old man's music is too loud."
+        },
+        {
+          "en": "It explains why the old man has stopped playing his flute in the evenings."
+        }
+      ],
+      "why": {
+        "en": "The text describes a daily tune, then moves from finding it \"strange\" to missing it when it stops: the neighbors' feelings changed. He has not stopped, and no two neighbors disagree.",
+        "uz": "Matn har kungi kuyni tasvirlaydi, soʻng qoʻshnilar uni «gʻalati» deganidan uni sogʻinishgacha oʻtadi: munosabat oʻzgargan. U chalishni toʻxtatmagan, bahslashgan qoʻshnilar ham yoʻq.",
+        "ru": "Текст описывает ежедневную мелодию, а затем переходит от «странной привычки» к тому, что без неё скучают: отношение соседей изменилось. Он не перестал играть, и соседи не спорят."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e06",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Most people picture the deep sea as completely dark. Sunlight does fade away a few hundred meters below the surface, but many of the animals that live deeper make light of their own. Some flash to find a mate, some to confuse a hunter, and some dangle a glowing lure to draw small fish close.\n\nWhich choice best describes the function of the first sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It presents a common picture that the rest of the text shows to be incomplete."
+        },
+        {
+          "en": "It states a conclusion that the rest of the text supports with scientific measurements."
+        },
+        {
+          "en": "It describes how far sunlight reaches below the surface of the sea."
+        },
+        {
+          "en": "It introduces a deep-sea fish that the rest of the text describes in detail."
+        }
+      ],
+      "why": {
+        "en": "The first sentence gives the usual picture, total darkness; the rest adds what it misses, animals that make their own light. It is not a proven conclusion, and no single fish is described.",
+        "uz": "Birinchi gap odatiy tasavvurni — toʻliq qorongʻilikni beradi; qolgan qism undagi kamchilikni toʻldiradi: oʻzi nur chiqaradigan hayvonlar. Bu isbotlangan xulosa emas, bitta baliq tasvirlanmaydi.",
+        "ru": "Первое предложение даёт привычную картину — полную тьму; остальное добавляет упущенное: животных, которые светятся сами. Это не доказанный вывод, и ни одна рыба не описана подробно."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e07",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "cross_text_connections",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Text 1\nSome cities clean away every piece of graffiti within a day of its appearance. Officials in these cities argue that if any graffiti is left on the walls, it invites more, and soon whole streets are covered.\n\nText 2\nRemoving everything at once is expensive, and painters often return to the same walls the next night. A few cities have tried another approach: they set aside certain walls where artists may paint freely. In those cities, unwanted graffiti on other walls has fallen.\n\nBased on the texts, how would the author of Text 2 most likely respond to the officials in Text 1?"
+      },
+      "options": [
+        {
+          "en": "By suggesting that walls set aside for artists may reduce graffiti more than removing it all"
+        },
+        {
+          "en": "By agreeing that every piece of graffiti should be cleaned away within a day of appearing"
+        },
+        {
+          "en": "By arguing that graffiti on city walls does no real harm and should simply be left where it is"
+        },
+        {
+          "en": "By claiming that cleaning away graffiti has never cost the cities any money at all"
+        }
+      ],
+      "why": {
+        "en": "Text 2 calls removing everything costly and often useless, and reports less unwanted graffiti where cities set aside walls for artists. It neither backs total removal nor calls graffiti harmless.",
+        "uz": "2-matn hammasini oʻchirishni qimmat va koʻpincha foydasiz deydi, rassomlarga devor ajratilgan shaharlarda keraksiz graffiti kamayganini aytadi. U toʻliq oʻchirishni ham, graffitini ham oqlamaydi.",
+        "ru": "Text 2 называет полную очистку дорогой и часто бесполезной и сообщает, что там, где художникам дали стены, лишних граффити меньше. Он не за полную очистку и не называет граффити безвредными."
+      },
+      "instructions": {
+        "en": "Read both texts. Decide how the ideas in them relate to each other.",
+        "uz": "Ikkala matnni oʻqing. Ulardagi gʻoyalar bir-biri bilan qanday bogʻlanishini aniqlang.",
+        "ru": "Прочитайте оба текста. Определите, как связаны их идеи."
+      },
+      "prior_b": 0.9,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e08",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "central_ideas_details",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Every spring, Behruz's family raises silkworms in a shed behind the house. Each morning Behruz cuts fresh mulberry branches from the trees along the canal and carries them home for the worms. He never cuts from the row of mulberries beside the family's own field: his father keeps those leaves for the last week before the worms spin their cocoons, when they eat the most.\n\nAccording to the text, why does Behruz not cut branches from the mulberries beside the family's field?"
+      },
+      "options": [
+        {
+          "en": "Their leaves are kept for the last week, when the worms eat the most."
+        },
+        {
+          "en": "Their leaves are kept for the newly hatched worms, which need the softest leaves."
+        },
+        {
+          "en": "Their leaves are sold to a neighbor who also raises silkworms."
+        },
+        {
+          "en": "Their branches are too high for Behruz to reach safely."
+        }
+      ],
+      "why": {
+        "en": "His father keeps those leaves \"for the last week before the worms spin their cocoons, when they eat the most.\" The text says nothing about newly hatched worms, a neighbor or the height of the trees.",
+        "uz": "Otasi bu barglarni qurtlar pilla oʻrashidan oldingi oxirgi haftaga, ular eng koʻp yeydigan paytga saqlaydi. Yangi chiqqan qurtlar, qoʻshni yoki daraxtlar balandligi haqida gap yoʻq.",
+        "ru": "Отец бережёт эти листья на последнюю неделю перед коконами, когда черви едят больше всего. О только что вылупившихся червях, соседе или высоте деревьев в тексте ничего нет."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the answer that best states its main idea or a key detail.",
+        "uz": "Matnni oʻqing. Asosiy gʻoyani yoki muhim tafsilotni eng yaxshi ifodalagan javobni tanlang.",
+        "ru": "Прочитайте текст. Выберите ответ, который лучше всего передаёт главную мысль или важную деталь."
+      },
+      "prior_b": 0,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 2,
+      "quarantine_reason": "answerable without its passage (spec §5.5 step 4; the P15 brief: it must not be): P15rws1 and P15rws2 both flagged no_passage_needed: the question names the mulberry branches cut each morning, and that silkworms eat only mulberry leaves is common knowledge (above all in Uzbekistan), while the other three options are arbitrary. Both solvers chose the key (blind:P15rws1+P15rws2).; v2 (agent:p15-sat-rw, 19 Oct 2026): the question now asks why Behruz leaves the family's own mulberries alone, a detail only the text gives: all four options are plausible reasons, two of them (the last week, the newly hatched worms) the same kind of reason, so that knowing what silkworms eat decides nothing; the key options[0], the subskill, level, difficulty, prior_b, time_s and instruction line as in v1",
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C21-rw2e09",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "central_ideas_details",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "On a group of small islands, only the largest island has a school. Each morning, a boat collects the children from the other islands and carries them across to it. On stormy days, when the boat cannot sail, the children study at home from lessons their teachers have prepared for such days.\n\nWhich choice best states the main idea of the text?"
+      },
+      "options": [
+        {
+          "en": "Island children reach the only school by boat, and on stormy days they study at home."
+        },
+        {
+          "en": "Each island in the group has its own small school, so none of the children ever needs to travel."
+        },
+        {
+          "en": "The children enjoy their stormy days at home more than their days at school."
+        },
+        {
+          "en": "The boat that carries the children sails even in the worst storms."
+        }
+      ],
+      "why": {
+        "en": "The text tells how children from islands without a school reach the one school, by boat, and what they do when storms stop it. Only the largest island has a school.",
+        "uz": "Matn maktabsiz orollardagi bolalar yagona maktabga qayiqda qanday borishini va boʻronda nima qilishini aytadi. Maktab faqat eng katta orolda bor, qayiq esa boʻronda suzmaydi.",
+        "ru": "Текст рассказывает, как дети с островов без школы добираются в единственную школу на лодке и что делают в шторм. Школа есть лишь на самом большом острове, а в шторм лодка не ходит."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the answer that best states its main idea or a key detail.",
+        "uz": "Matnni oʻqing. Asosiy gʻoyani yoki muhim tafsilotni eng yaxshi ifodalagan javobni tanlang.",
+        "ru": "Прочитайте текст. Выберите ответ, который лучше всего передаёт главную мысль или важную деталь."
+      },
+      "prior_b": 0,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e10",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "command_of_evidence_textual",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Rustam has refereed youth football matches in his district for twelve years. He claims that players argue with his calls more often in the second half of a match than in the first, whether their team is winning or losing.\n\nWhich finding, if true, would most directly support Rustam's claim?"
+      },
+      "options": [
+        {
+          "en": "In the matches Rustam refereed last season, players argued with more of his calls after half time than before it."
+        },
+        {
+          "en": "In the matches Rustam refereed last season, players argued with fewer of his calls after half time than before it."
+        },
+        {
+          "en": "In the matches Rustam refereed last season, players on the losing team argued with his calls more often than players on the winning team."
+        },
+        {
+          "en": "Most of the calls that players argued with last season were for fouls rather than for offside."
+        }
+      ],
+      "why": {
+        "en": "Rustam claims players argue with his calls more in the second half; more calls argued after half time supports that. Fewer would weaken it; the losing team and kinds of calls are not his claim.",
+        "uz": "Rustam oʻyinchilar ikkinchi taymda koʻproq bahslashadi deydi; tanaffusdan keyin koʻproq qaror bilan bahslashilgani buni tasdiqlaydi. Kamroq boʻlsa, zid; yutqazayotgan jamoa va qaror turi aloqasiz.",
+        "ru": "Рустам утверждает, что во втором тайме спорят с его решениями чаще; больше оспоренных решений после перерыва это подтверждает. Меньше — опровергло бы; проигрывающая команда и виды решений ни при чём."
+      },
+      "instructions": {
+        "en": "Choose the quotation or finding that best supports the claim in the text.",
+        "uz": "Matndagi fikrni eng yaxshi tasdiqlaydigan iqtibos yoki natijani tanlang.",
+        "ru": "Выберите цитату или результат, который лучше всего подтверждает утверждение в тексте."
+      },
+      "prior_b": 0,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 2,
+      "quarantine_reason": "answerable without its passage (spec §5.5 step 4; the P15 brief: it must not be): P15rws1 flagged no_passage_needed: by elimination, the key is the only option that names Shahlo and reports a before/after change, and the other three bear on no claim; P15rws2 judged the distractors weak (guessable) without a flag. Both solvers chose the key (blind:P15rws1+P15rws2). A rewrite needs distractors that are findings about the signs and the desk as well.; v2 (agent:p15-sat-rw, 19 Oct 2026): a new text on a new topic (a youth football referee; v1's new signs and a before/after count are also in C19-ii22q2): every option is a finding about the calls players argue with, the key and its mirror (fewer after half time) and a third claim one could guess (the losing team), so only the claim in the text decides; the key options[0], the subskill, level, difficulty, prior_b, time_s and instruction line as in v1",
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C21-rw2e11",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "command_of_evidence_quantitative",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A ski school recorded how many lessons were booked at each level in December and January.\n\nLevel | December | January\nBeginner | 120 | 150\nIntermediate | 40 | 95\nAdvanced | 60 | 45\n\nThe school's report notes that intermediate lessons grew the most from December to January, ______\n\nWhich choice most effectively uses data from the table to complete the statement?"
+      },
+      "options": [
+        {
+          "en": "rising from 40 bookings to 95."
+        },
+        {
+          "en": "falling from 95 bookings to 40."
+        },
+        {
+          "en": "rising from 120 bookings to 150."
+        },
+        {
+          "en": "falling from 60 bookings to 45."
+        }
+      ],
+      "why": {
+        "en": "Intermediate bookings went from 40 in December to 95 in January, a rise of 55, the largest. The second choice reverses the months; 120 to 150 is the beginner level and 60 to 45 the advanced.",
+        "uz": "Oʻrta daraja dekabrda 40, yanvarda 95 — 55 taga oshgan, bu eng katta oʻsish. Ikkinchi javob oylarni almashtirib yuboradi; 120 dan 150 gacha — boshlangʻich, 60 dan 45 gacha — yuqori daraja.",
+        "ru": "Средний уровень: 40 в декабре и 95 в январе, рост на 55 — самый большой. Второй вариант путает месяцы; 120 → 150 — начинающие, 60 → 45 — продвинутые."
+      },
+      "instructions": {
+        "en": "Read the text and the table. Choose the answer that uses the data correctly.",
+        "uz": "Matn va jadvalni oʻqing. Maʼlumotlardan toʻgʻri foydalangan javobni tanlang.",
+        "ru": "Прочитайте текст и таблицу. Выберите ответ, в котором данные использованы верно."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e12",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "command_of_evidence_textual",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A student claims that in a poem about a frozen river in January, the speaker finds signs of the coming spring even in the coldest month.\n\nWhich quotation from the poem most effectively illustrates the claim?"
+      },
+      "options": [
+        {
+          "en": "\"Under the ice I hear the water run, / already whispering of the April sun.\""
+        },
+        {
+          "en": "\"The ice lies thick from bank to bank, / and every reed stands stiff and blank.\""
+        },
+        {
+          "en": "\"The wind comes down the valley, sharp and white, / and wraps the willows in the longest night.\""
+        },
+        {
+          "en": "\"The boats are dragged ashore and turned to sleep / until the snow along the road is deep.\""
+        }
+      ],
+      "why": {
+        "en": "Water still running under the ice and \"whispering of the April sun\" looks ahead to spring. The other lines show only winter: thick ice, a cold wind, and boats put away until the snow is deep.",
+        "uz": "Muz ostida hamon oqib, «April sun» haqida «shivirlayotgan» suv bahorga ishora qiladi. Qolgan satrlarda faqat qish bor: qalin muz, sovuq shamol va qirgʻoqqa tortilgan qayiqlar.",
+        "ru": "Вода, которая всё ещё бежит подо льдом и «шепчет» об «April sun», указывает на весну. Остальные строки показывают только зиму: толстый лёд, холодный ветер и лодки, убранные до глубокого снега."
+      },
+      "instructions": {
+        "en": "Choose the quotation or finding that best supports the claim in the text.",
+        "uz": "Matndagi fikrni eng yaxshi tasdiqlaydigan iqtibos yoki natijani tanlang.",
+        "ru": "Выберите цитату или результат, который лучше всего подтверждает утверждение в тексте."
+      },
+      "prior_b": 0.9,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e13",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "inferences",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A city park replaced half of its lawns with wildflower meadows that are mowed only once a year instead of every week. Since then, the park's gardeners have spent far fewer hours mowing, and volunteers have counted three times as many butterflies in the meadows as on the lawns that remain. If the park turns its remaining lawns into meadow as well, it is reasonable to expect that ______\n\nWhich choice most logically completes the text?"
+      },
+      "options": [
+        {
+          "en": "the gardeners will spend even fewer hours mowing than they do now."
+        },
+        {
+          "en": "the butterflies now in the meadows will leave the park altogether."
+        },
+        {
+          "en": "the meadows will need to be mowed every week, just as the lawns were."
+        },
+        {
+          "en": "the volunteers will stop counting the butterflies in the park."
+        }
+      ],
+      "why": {
+        "en": "Meadows are mowed once a year and lawns weekly, so turning the rest into meadow cuts mowing further. Nothing suggests the butterflies would leave, meadows need weekly mowing, or counts would stop.",
+        "uz": "Oʻtloq yiliga bir marta, maysazor har hafta oʻriladi, demak qolganini ham oʻtloqqa aylantirish oʻrishni yana kamaytiradi. Kapalaklar ketishi yoki sanash toʻxtashi haqida gap yoʻq.",
+        "ru": "Луга косят раз в год, газоны — каждую неделю, так что, если и остальное станет лугом, косить придётся ещё меньше. Об уходе бабочек или конце подсчёта ничего не сказано."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the ending that follows most logically from it.",
+        "uz": "Matnni oʻqing. Undan mantiqan eng toʻgʻri kelib chiqadigan davomni tanlang.",
+        "ru": "Прочитайте текст. Выберите окончание, которое логичнее всего из него следует."
+      },
+      "prior_b": 0.9,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e14",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "inferences",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "In a study of one lake, students found that the water was clearest in the years when the lake held many water fleas, tiny animals that eat algae. In years when a fish that feeds on water fleas was common, the fleas were few and the water turned green and cloudy with algae. The students concluded that the fish may affect the clarity of the lake indirectly: ______\n\nWhich choice most logically completes the text?"
+      },
+      "options": [
+        {
+          "en": "by eating water fleas, the fish leave more of the algae uneaten."
+        },
+        {
+          "en": "the fish eat the algae that make the water green and cloudy."
+        },
+        {
+          "en": "water fleas make the lake green and cloudy in years when they are common."
+        },
+        {
+          "en": "clear water makes it harder for the fish to find water fleas."
+        }
+      ],
+      "why": {
+        "en": "\"Indirectly\" means through something else: the fish eat the fleas, fewer fleas eat less algae, and the algae cloud the water. Fish eating algae would be a direct effect.",
+        "uz": "«Indirectly» — boshqa narsa orqali: baliq burgachalarni yeydi, burgachalar kamaygach suvoʻt kam yeyiladi va suvni loyqalatadi. Baliq suvoʻtni yesa, taʼsir bevosita boʻlardi.",
+        "ru": "«Indirectly» — через что-то другое: рыба ест дафний, дафний меньше, водоросли съедаются хуже и мутят воду. Если бы рыба ела водоросли, влияние было бы прямым."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the ending that follows most logically from it.",
+        "uz": "Matnni oʻqing. Undan mantiqan eng toʻgʻri kelib chiqadigan davomni tanlang.",
+        "ru": "Прочитайте текст. Выберите окончание, которое логичнее всего из него следует."
+      },
+      "prior_b": 1.8,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e15",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "form_structure_sense",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Every one of the cups on these shelves ______ painted by hand in the village workshop, so no two of them are exactly alike. Most are sold to visitors at the Sunday market.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "was"
+        },
+        {
+          "en": "were"
+        },
+        {
+          "en": "are being"
+        },
+        {
+          "en": "have been"
+        }
+      ],
+      "why": {
+        "en": "The subject is \"Every one\", which is singular, so the verb is \"was\". \"Were\", \"are being\" and \"have been\" are plural and agree with \"cups\", which is not the subject.",
+        "uz": "Ega — «Every one», u birlikda, shuning uchun kesim «was». «Were», «are being» va «have been» koʻplikda: ular ega boʻlmagan «cups» ga moslashgan.",
+        "ru": "Подлежащее — «Every one», единственное число, поэтому глагол «was». «Were», «are being» и «have been» — множественное число, они согласованы с «cups», а это не подлежащее."
+      },
+      "instructions": {
+        "en": "Choose the option that follows the rules of standard written English.",
+        "uz": "Standart yozma ingliz tili qoidalariga mos keladigan variantni tanlang.",
+        "ru": "Выберите вариант, который соответствует нормам письменного английского языка."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e16",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "boundaries",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Every evening in spring, a small bus takes visitors from the town out to the sand dunes to watch the sunset. The tour guide lists three things that visitors should ______ wide hat, two liters of water, and a scarf to keep sand out of their eyes.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "bring: a"
+        },
+        {
+          "en": "bring; a"
+        },
+        {
+          "en": "bring. A"
+        },
+        {
+          "en": "bring, a"
+        }
+      ],
+      "why": {
+        "en": "A complete clause introduces a list, so a colon goes before it. A semicolon or a full stop would leave the list as a fragment, and a comma cannot separate the verb \"bring\" from what is brought.",
+        "uz": "Toʻliq gap roʻyxatni boshlaydi, shuning uchun undan oldin ikki nuqta qoʻyiladi. Nuqtali vergul yoki nuqta roʻyxatni chala gapga aylantiradi, vergul esa «bring» ni toʻldiruvchidan ajratadi.",
+        "ru": "Полное предложение вводит перечень, поэтому перед ним ставится двоеточие. Точка с запятой или точка оставят перечень неполным предложением, а запятая не может отделять глагол «bring» от дополнений."
+      },
+      "instructions": {
+        "en": "Choose the punctuation that correctly joins or separates the parts of the sentence.",
+        "uz": "Gap qismlarini toʻgʻri bogʻlaydigan yoki ajratadigan tinish belgisini tanlang.",
+        "ru": "Выберите знаки препинания, которые правильно соединяют или разделяют части предложения."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e17",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "form_structure_sense",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The members of the rowing team voted to hold ______ spring race on the river in May instead of in March, when the water is often too high and fast for safe rowing.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "their"
+        },
+        {
+          "en": "them"
+        },
+        {
+          "en": "there"
+        },
+        {
+          "en": "they're"
+        }
+      ],
+      "why": {
+        "en": "The race belongs to the members, so the plural possessive \"their\" fits. \"Them\" is not a possessive, \"there\" names a place, and \"they're\" means \"they are\".",
+        "uz": "Poyga aʼzolarga tegishli, shuning uchun koʻplikdagi egalik olmoshi «their» mos. «Them» egalik bildirmaydi, «there» joyni bildiradi, «they’re» esa «they are» degani.",
+        "ru": "Гонка принадлежит участникам, поэтому подходит притяжательное «their». «Them» не притяжательное, «there» обозначает место, а «they’re» значит «they are»."
+      },
+      "instructions": {
+        "en": "Choose the option that follows the rules of standard written English.",
+        "uz": "Standart yozma ingliz tili qoidalariga mos keladigan variantni tanlang.",
+        "ru": "Выберите вариант, который соответствует нормам письменного английского языка."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e18",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "boundaries",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Fresh plaster on a wall must dry for at least a ______ it will crack when the painter covers it with paint. In damp weather, builders often wait even longer before they start.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "week; otherwise,"
+        },
+        {
+          "en": "week, otherwise,"
+        },
+        {
+          "en": "week otherwise,"
+        },
+        {
+          "en": "week, otherwise"
+        }
+      ],
+      "why": {
+        "en": "Two complete sentences are joined by \"otherwise\", so a semicolon goes before it and a comma after. A comma before \"otherwise\" makes a comma splice, and no mark before it makes a run-on.",
+        "uz": "Ikki toʻliq gap «otherwise» orqali tutashgan: undan oldin nuqtali vergul, keyin vergul qoʻyiladi. «Otherwise» oldidagi vergul xato, undan oldin belgi boʻlmasa, gaplar qoʻshilib ketadi.",
+        "ru": "Два полных предложения связаны словом «otherwise»: перед ним точка с запятой, после — запятая. Запятая перед «otherwise» — ошибка, а без знака перед ним предложения сливаются."
+      },
+      "instructions": {
+        "en": "Choose the punctuation that correctly joins or separates the parts of the sentence.",
+        "uz": "Gap qismlarini toʻgʻri bogʻlaydigan yoki ajratadigan tinish belgisini tanlang.",
+        "ru": "Выберите знаки препинания, которые правильно соединяют или разделяют части предложения."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e19",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "form_structure_sense",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The new guide to the national park, given free to every visitor at the entrance, explains how to reach the trailheads, where to refill water bottles, and ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "when the park gates close each evening."
+        },
+        {
+          "en": "the closing of the gates each evening."
+        },
+        {
+          "en": "closing the park gates each evening."
+        },
+        {
+          "en": "the park gates, which close at night."
+        }
+      ],
+      "why": {
+        "en": "The list runs \"how to reach …, where to refill …\", so the third item must also begin with a question word: \"when the park gates close\". The other choices break the parallel pattern.",
+        "uz": "Roʻyxat «how to reach …, where to refill …» tarzida, shuning uchun uchinchi band ham soʻroq soʻzi bilan boshlanadi: «when the park gates close». Qolganlari bir xil tuzilishni buzadi.",
+        "ru": "Перечень строится как «how to reach …, where to refill …», поэтому третий пункт тоже должен начинаться с вопросительного слова: «when the park gates close». Остальные варианты нарушают параллелизм."
+      },
+      "instructions": {
+        "en": "Choose the option that follows the rules of standard written English.",
+        "uz": "Standart yozma ingliz tili qoidalariga mos keladigan variantni tanlang.",
+        "ru": "Выберите вариант, который соответствует нормам письменного английского языка."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e20",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "form_structure_sense",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Along the river below the old mill, the banks are steep and sandy. The three ______ burrows were dug into the same bank, only a short distance apart, and each held a nest of young birds.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "kingfishers'"
+        },
+        {
+          "en": "kingfisher's"
+        },
+        {
+          "en": "kingfishers"
+        },
+        {
+          "en": "kingfishers's"
+        }
+      ],
+      "why": {
+        "en": "The burrows belong to three birds, so the plural possessive \"kingfishers'\" is needed. \"Kingfisher's\" is one bird, \"kingfishers\" is not possessive, and \"kingfishers's\" is not a standard form.",
+        "uz": "Inlar uchta qushga tegishli, shuning uchun koʻplikdagi qaratqich shakli «kingfishers’» kerak. «Kingfisher’s» — bitta qush, «kingfishers» egalik bildirmaydi, «kingfishers’s» esa toʻgʻri shakl emas.",
+        "ru": "Норы принадлежат трём птицам, поэтому нужна притяжательная форма множественного числа «kingfishers’». «Kingfisher’s» — одна птица, «kingfishers» — не притяжательная форма, а «kingfishers’s» неверна."
+      },
+      "instructions": {
+        "en": "Choose the option that follows the rules of standard written English.",
+        "uz": "Standart yozma ingliz tili qoidalariga mos keladigan variantni tanlang.",
+        "ru": "Выберите вариант, который соответствует нормам письменного английского языка."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e21",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "boundaries",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The old bridge's central arch, built of stone without any mortar more than five centuries ______ still carries carts, cars, and the occasional flock of sheep across the gorge.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "ago,"
+        },
+        {
+          "en": "ago"
+        },
+        {
+          "en": "ago;"
+        },
+        {
+          "en": "ago—"
+        }
+      ],
+      "why": {
+        "en": "The phrase after \"arch,\" describes it and opens with a comma, so a comma must close it before the verb \"carries\". A semicolon or no mark breaks it, and a dash cannot close a comma.",
+        "uz": "«arch,» dan keyingi ibora uni tasvirlaydi va vergul bilan ochilgan, demak «carries» oldidan uni vergul yopadi. Nuqtali vergul yoki belgisizlik xato, tire esa vergulni yopolmaydi.",
+        "ru": "Оборот после «arch,» описывает арку и открыт запятой, поэтому перед «carries» его закрывает запятая. Точка с запятой или отсутствие знака — ошибка, а тире запятую не закрывает."
+      },
+      "instructions": {
+        "en": "Choose the punctuation that correctly joins or separates the parts of the sentence.",
+        "uz": "Gap qismlarini toʻgʻri bogʻlaydigan yoki ajratadigan tinish belgisini tanlang.",
+        "ru": "Выберите знаки препинания, которые правильно соединяют или разделяют части предложения."
+      },
+      "prior_b": 1.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e22",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Most birds build their nests and raise their young in spring. ______ crossbills, which feed on the seeds inside pine cones, sometimes nest in the middle of winter, when the cones are full of seeds.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "However,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Thus,"
+        },
+        {
+          "en": "Similarly,"
+        }
+      ],
+      "why": {
+        "en": "Nesting in winter differs from the usual spring nesting, so a contrast is needed: \"However\". Crossbills are an exception, not an example, a result or a similar case.",
+        "uz": "Qishda uya qurish odatdagi bahorgi uya qurishdan farq qiladi, shuning uchun qarama-qarshilik kerak: «However». Bu qushlar istisno: misol, natija yoki oʻxshash holat emas.",
+        "ru": "Гнездование зимой отличается от обычного весеннего, поэтому нужно противопоставление: «However». Клесты — исключение, а не пример, следствие или сходный случай."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e23",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The museum had planned to build a new wing for its growing collection of fossils. ______ it turned two unused storerooms into galleries and spent the money it saved on cleaning and repairing its oldest fossils.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Instead,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Thus,"
+        },
+        {
+          "en": "Likewise,"
+        }
+      ],
+      "why": {
+        "en": "The museum planned a new wing but used its storerooms: it did something in place of its plan, so \"Instead\" fits. Using the storerooms is not an example, a result or a similar action.",
+        "uz": "Muzey yangi qanot qurmoqchi edi, lekin omborlarni ishlatdi: rejasi oʻrniga boshqa ish qildi, shuning uchun «Instead» mos. Bu misol, natija yoki oʻxshash harakat emas.",
+        "ru": "Музей собирался строить новое крыло, но занял кладовые: сделал другое вместо задуманного, поэтому подходит «Instead». Это не пример, не следствие и не похожее действие."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e24",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Many people believe that bats are blind. ______ most bats can see quite well, and many of them also find their way in the dark by listening to the echoes of their own calls.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "In reality,"
+        },
+        {
+          "en": "For this reason,"
+        },
+        {
+          "en": "In addition,"
+        },
+        {
+          "en": "In other words,"
+        }
+      ],
+      "why": {
+        "en": "The second sentence corrects the belief in the first, so \"In reality\" fits. It does not follow from the belief, it does not add to it, and it does not restate the belief in other words.",
+        "uz": "Ikkinchi gap birinchi gapdagi qarashni tuzatadi, shuning uchun «In reality» mos. U bu qarashdan kelib chiqmaydi, unga qoʻshimcha emas va uni boshqa soʻzlar bilan takrorlamaydi.",
+        "ru": "Второе предложение исправляет мнение из первого, поэтому подходит «In reality». Оно не вытекает из этого мнения, не дополняет его и не пересказывает другими словами."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e25",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• The Quince Fair is held each October in a small hill town.\n• Growers bring more than fifteen kinds of quince.\n• Visitors can taste quince jam for free.\n• A prize goes to the largest quince of the year.\n\nThe student wants to tell readers when and where the fair takes place.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The Quince Fair takes place each October in a small hill town."
+        },
+        {
+          "en": "At the Quince Fair, growers bring more than fifteen kinds of quince."
+        },
+        {
+          "en": "Visitors to the Quince Fair can taste the growers' quince jam for free."
+        },
+        {
+          "en": "At the fair, a prize goes to the grower of the largest quince of the year."
+        }
+      ],
+      "why": {
+        "en": "Only this choice gives both the time, each October, and the place, a small hill town. The others describe what happens at the fair.",
+        "uz": "Faqat shu javob ham vaqtni — har oktyabr, ham joyni — tepalikdagi kichik shaharchani beradi. Qolganlari yarmarkada nima boʻlishini tasvirlaydi.",
+        "ru": "Только этот вариант называет и время — каждый октябрь, и место — городок на холмах. Остальные описывают, что происходит на ярмарке."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e26",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Two hot springs lie in the same mountain valley.\n• The water of the North Spring is 38°C; that of the South Spring is 52°C.\n• The North Spring is next to the road; the South Spring is a two-hour walk away.\n• Both springs stay warm through the winter.\n• At both springs, the water smells faintly of sulfur.\n\nThe student wants to emphasize a similarity between the two springs.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Both springs stay warm through the winter, and at each the water smells faintly of sulfur."
+        },
+        {
+          "en": "The water of the South Spring, at 52°C, is far hotter than the 38°C water of the North Spring."
+        },
+        {
+          "en": "The North Spring is next to the road, while the South Spring is a two-hour walk away."
+        },
+        {
+          "en": "The South Spring, a two-hour walk from the road, has water as hot as 52°C."
+        }
+      ],
+      "why": {
+        "en": "A similarity is something both springs share: they stay warm all winter and smell faintly of sulfur. The other choices give differences in heat and distance, or describe one spring only.",
+        "uz": "Oʻxshashlik — ikkala buloqda ham bor narsa: qishda ham iliq qoladi va suvidan oltingugurt hidi keladi. Qolganlari harorat va masofadagi farqni beradi yoki faqat bitta buloqni tasvirlaydi.",
+        "ru": "Сходство — то, что есть у обоих источников: они тёплые всю зиму, и вода слегка пахнет серой. Остальные варианты называют различия в температуре и расстоянии или описывают один источник."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2e27",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• A scout troop tested three kinds of tinder for lighting a fire in damp weather.\n• Grass caught fire after an average of 40 seconds.\n• Pine needles caught fire after an average of 25 seconds.\n• Birch bark caught fire after an average of 8 seconds.\n• The troop concluded that birch bark is the best tinder to carry on wet days.\n\nThe student wants to present the troop's conclusion and the evidence for it.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Birch bark caught fire in 8 seconds on average, far sooner than pine needles or grass, so the troop judged it the best tinder for wet days."
+        },
+        {
+          "en": "The troop tested three kinds of tinder, grass, pine needles and birch bark, to see which lights fastest in damp weather."
+        },
+        {
+          "en": "The troop concluded that birch bark is the best kind of tinder for scouts to carry with them on wet days."
+        },
+        {
+          "en": "Grass took an average of 40 seconds to catch fire, while pine needles took an average of 25 seconds."
+        }
+      ],
+      "why": {
+        "en": "Only this choice gives both the conclusion, birch bark is best, and the evidence, 8 seconds against 25 and 40. The others give only the method, only the conclusion, or only the slower results.",
+        "uz": "Faqat shu javob ham xulosani — qayin poʻstlogʻi eng yaxshisi, ham dalilni — 25 va 40 ga qarshi 8 soniyani beradi. Qolganlari faqat usulni, faqat xulosani yoki faqat sekinroq natijalarni beradi.",
+        "ru": "Только этот вариант даёт и вывод — берёста лучше всего, и доказательство — 8 секунд против 25 и 40. Остальные дают лишь метод, лишь вывод или лишь более медленные результаты."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h01",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The engineers' report on the town's new water system was ______: it described every pump, pipe, and storage tank in such detail that another team could have rebuilt the whole system from the report alone.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "exhaustive"
+        },
+        {
+          "en": "biased"
+        },
+        {
+          "en": "hasty"
+        },
+        {
+          "en": "vague"
+        }
+      ],
+      "why": {
+        "en": "A report detailed enough to rebuild the whole system from covers everything: it is exhaustive. Nothing suggests it took sides, and \"hasty\" and \"vague\" contradict its detail.",
+        "uz": "Butun tizimni qayta qurishga yetadigan batafsil hisobot hamma narsani qamraydi: u mukammal. Uning kimningdir tarafini olgani aytilmagan, «hasty» va «vague» esa batafsillikka zid.",
+        "ru": "Отчёт, по которому можно заново построить всю систему, охватывает всё: он исчерпывающий. О пристрастности («biased») ничего не сказано, а «hasty» и «vague» противоречат описанной подробности."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h02",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Although the two dialects share most of their words, speakers of one often find the other ______ at first, since the same words are pronounced so differently that even a familiar phrase can sound entirely new.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "baffling"
+        },
+        {
+          "en": "identical"
+        },
+        {
+          "en": "monotonous"
+        },
+        {
+          "en": "offensive"
+        }
+      ],
+      "why": {
+        "en": "Familiar phrases that \"sound entirely new\" confuse a listener at first, so \"baffling\" fits. \"Identical\" contradicts the different sounds, and nothing calls the dialect dull or rude.",
+        "uz": "«Butunlay yangi» eshitiladigan tanish iboralar avvaliga tinglovchini dovdiratadi: «baffling». «Identical» turli talaffuzga zid, sheva zerikarli yoki qoʻpol ekani esa aytilmagan.",
+        "ru": "Знакомые фразы, которые «звучат совсем по-новому», поначалу сбивают с толку: «baffling». «Identical» противоречит разному произношению, а скучным или грубым диалект не назван."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 0.9,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h03",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The composer's early pieces were admired for their rich harmonies but faulted for melodies that seemed ______; listeners complained that the tunes never surprised them, moving through the expected notes in the expected order.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "formulaic"
+        },
+        {
+          "en": "erratic"
+        },
+        {
+          "en": "haunting"
+        },
+        {
+          "en": "unfinished"
+        }
+      ],
+      "why": {
+        "en": "Tunes that never surprise and move through \"the expected notes in the expected order\" follow a set pattern: formulaic. \"Erratic\" is the opposite, and \"haunting\" is praise.",
+        "uz": "Hech qachon hayratlantirmaydigan, «kutilgan notalarni kutilgan tartibda» chaladigan kuylar qolipga tushgan: «formulaic». «Erratic» buning aksi, «haunting» esa maqtov.",
+        "ru": "Мелодии, которые никогда не удивляют и идут «ожидаемыми нотами в ожидаемом порядке», шаблонны: «formulaic». «Erratic» — противоположность, «haunting» — похвала, а о незаконченности мелодий не сказано."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h04",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "words_in_context",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Far from being a ______ addition to the old village, the new school was designed around it: its walls are built of the same pale stone as the houses, its roof follows the slope of the hill, and its gate opens onto the village square.\n\nWhich choice completes the text with the most logical and precise word or phrase?"
+      },
+      "options": [
+        {
+          "en": "jarring"
+        },
+        {
+          "en": "harmonious"
+        },
+        {
+          "en": "suitable"
+        },
+        {
+          "en": "costly"
+        }
+      ],
+      "why": {
+        "en": "\"Far from being\" introduces the opposite of what follows: the school was built to fit the village, so it was far from jarring. \"Harmonious\" and \"suitable\" describe what it is.",
+        "uz": "«Far from being» keyingi fikrga zid narsani kiritadi: maktab qishloqqa moslab qurilgan, demak u «jarring» emas. «Harmonious» va «suitable» uning aslida qandayligini bildiradi.",
+        "ru": "«Far from being» вводит противоположность тому, что дальше: школу вписали в деревню, значит, она не «jarring». «Harmonious» и «suitable» описывают, какова она на самом деле."
+      },
+      "instructions": {
+        "en": "Read the short text. Choose the word or phrase that fits the meaning most precisely.",
+        "uz": "Qisqa matnni oʻqing. Maʼnoga eng aniq mos keladigan soʻz yoki iborani tanlang.",
+        "ru": "Прочитайте короткий текст. Выберите слово или выражение, точнее всего подходящее по смыслу."
+      },
+      "prior_b": 1.8,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h05",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "For years, the fishermen on one lake blamed cormorants, birds that dive for fish, for their shrinking catch. To test the idea, a group of fishermen kept the birds away from one bay for a whole season using nets and noise. The catch in that bay fell just as much as in the rest of the lake, so the fishermen began looking for another cause, and they eventually traced the problem to the water's rising temperature.\n\nWhich choice best describes the overall structure of the text?"
+      },
+      "options": [
+        {
+          "en": "It presents an explanation, describes a test of it, and reports that the test pointed to another cause."
+        },
+        {
+          "en": "It describes a problem, proposes two possible solutions to it, and then argues that neither of them would work."
+        },
+        {
+          "en": "It explains how cormorants catch fish and then describes how the fishermen catch them."
+        },
+        {
+          "en": "It compares two groups of fishermen who disagree about why their catch has been shrinking."
+        }
+      ],
+      "why": {
+        "en": "The text gives an explanation (the birds), a test of it (keeping them away) and a result that led to a new cause (warmer water). No solutions are weighed and no two groups disagree.",
+        "uz": "Matn tushuntirishni (qushlar), uning sinovini (qushlarni haydash) va yangi sababga (iliqroq suv) olib kelgan natijani beradi. Yechimlar tortishilmaydi, bahslashgan guruhlar yoʻq.",
+        "ru": "Текст даёт объяснение рыбаков (птицы), проверку (птиц отгоняли) и результат, который привёл к новой причине (тёплая вода). Решения не взвешиваются, способы ловли не сравниваются, спорящих групп нет."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h06",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "text_structure_purpose",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The following text is from a story. Dilbar has come home after five years abroad.\n\nThe street had not changed, or so it seemed at first. The same plane trees leaned over the same blue gate, and the same smell of fresh bread drifted from the bakery on the corner. Only when she reached the gate did Dilbar notice that the bench beside it, where her father had sat every evening, was gone.\n\nWhich choice best describes the function of the final sentence in the text as a whole?"
+      },
+      "options": [
+        {
+          "en": "It reveals a change that undercuts the sense of sameness built up in the earlier sentences."
+        },
+        {
+          "en": "It explains why Dilbar has decided to come home after five years abroad."
+        },
+        {
+          "en": "It introduces a new character who is waiting for Dilbar at the gate."
+        },
+        {
+          "en": "It adds one more detail to the list of familiar things on the street that have stayed exactly the same."
+        }
+      ],
+      "why": {
+        "en": "The earlier sentences stress sameness (\"the same\" three times); the last reveals a loss, her father's bench, foreshadowed by \"or so it seemed at first\". It shows change, not sameness.",
+        "uz": "Oldingi gaplar oʻzgarmaganlikni taʼkidlaydi (uch marta «the same»); oxirgisi yoʻqotishni — otasining oʻrindigʻini ochadi, buni «or so it seemed at first» sezdiradi.",
+        "ru": "Предыдущие предложения подчёркивают неизменность (трижды «the same»); последнее открывает потерю — скамейку отца, что предвещает «or so it seemed at first». Это перемена, а не сходство."
+      },
+      "instructions": {
+        "en": "Read the text. Decide what the text, or one part of it, is doing.",
+        "uz": "Matnni oʻqing. Matn yoki uning bir qismi qanday vazifani bajarayotganini aniqlang.",
+        "ru": "Прочитайте текст. Определите, какую роль играет текст или его часть."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h07",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "cross_text_connections",
+      "sat": {
+        "domain": "craft_structure",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Text 1\nHistorians long assumed that the small stone fort above the mountain pass was built to guard a trade route. But a recent dig there found no coins, seals, or merchants' goods, only weapons and grain jars. The fort, the diggers concluded, must have served a purely military purpose.\n\nText 2\nAn absence of merchants' goods at a fort does not show that traders never passed it. Guards at such a post would have inspected goods, not kept them, and any coins taken as tolls would have been sent on to the city's treasury. A fort that guarded a trade route might leave behind little more than what its soldiers needed: weapons and food.\n\nBased on the texts, how would the author of Text 2 most likely respond to the diggers' conclusion in Text 1?"
+      },
+      "options": [
+        {
+          "en": "By arguing that the dig's finds are just what a fort guarding a trade route might leave behind"
+        },
+        {
+          "en": "By agreeing that the weapons and grain jars show that the fort had nothing to do with trade"
+        },
+        {
+          "en": "By suggesting that more digging will uncover the coins and seals still buried at the fort"
+        },
+        {
+          "en": "By questioning whether the weapons and grain jars really date from the time the fort was built"
+        }
+      ],
+      "why": {
+        "en": "Text 2 explains why a fort on a trade route would keep no goods or coins and leave only weapons and food, just what was found. It rejects the conclusion and predicts no new finds.",
+        "uz": "2-matn savdo yoʻlidagi qalʼada nega mol va tanga qolmasligini, faqat qurol va oziq qolishini tushuntiradi — aynan topilganlar. U xulosani rad etadi, yangi topilma kutmaydi.",
+        "ru": "Text 2 объясняет, почему крепость на торговом пути не хранила товаров и монет и оставила лишь оружие и еду — то, что нашли. Он отвергает вывод и не ждёт новых находок."
+      },
+      "instructions": {
+        "en": "Read both texts. Decide how the ideas in them relate to each other.",
+        "uz": "Ikkala matnni oʻqing. Ulardagi gʻoyalar bir-biri bilan qanday bogʻlanishini aniqlang.",
+        "ru": "Прочитайте оба текста. Определите, как связаны их идеи."
+      },
+      "prior_b": 1.8,
+      "time_s": 105,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h08",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "central_ideas_details",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Each spring, the households along one village's irrigation canal clean it together before the water is let in. The work is shared by length: every household clears the stretch of canal in front of its own land, and households with no land along the canal bring food for the workers.\n\nAccording to the text, how is the cleaning of the canal shared out?"
+      },
+      "options": [
+        {
+          "en": "Each household clears the stretch of canal in front of its own land."
+        },
+        {
+          "en": "Only the households with no land along the canal do the cleaning."
+        },
+        {
+          "en": "The households hire workers and divide the cost among themselves."
+        },
+        {
+          "en": "Each household cleans the whole canal once every few years, in turn."
+        }
+      ],
+      "why": {
+        "en": "The text says \"every household clears the stretch of canal in front of its own land\". Households without land bring food rather than clean, no one is hired, and no one cleans the whole canal.",
+        "uz": "Matnda «har bir xonadon oʻz yeri roʻparasidagi kanal qismini tozalaydi», deyilgan. Yeri yoʻq xonadonlar tozalamaydi, ovqat olib keladi, hech kim yollanmaydi, butun kanalni ham hech kim tozalamaydi.",
+        "ru": "В тексте сказано, что каждый двор чистит участок канала напротив своей земли. Дворы без земли не чистят, а приносят еду, никого не нанимают, и весь канал никто не чистит."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the answer that best states its main idea or a key detail.",
+        "uz": "Matnni oʻqing. Asosiy gʻoyani yoki muhim tafsilotni eng yaxshi ifodalagan javobni tanlang.",
+        "ru": "Прочитайте текст. Выберите ответ, который лучше всего передаёт главную мысль или важную деталь."
+      },
+      "prior_b": 0,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h09",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "central_ideas_details",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "When one city cut its bus fares in half, officials expected far more people to ride. Ridership rose, but by less than a tenth. Surveys found that most people who drove did so not because of the fare but because the buses came only twice an hour, while those who already rode the bus simply paid less. When the city later added enough buses for them to come every ten minutes, ridership rose by a third, even though fares had returned to their old level.\n\nWhich choice best states the main idea of the text?"
+      },
+      "options": [
+        {
+          "en": "For this city's potential riders, how often buses came mattered more than what a ride cost."
+        },
+        {
+          "en": "Cutting bus fares in half caused the number of bus riders in the city to double."
+        },
+        {
+          "en": "Most drivers in the city said in the surveys that they would never ride a bus, whatever the fare or schedule."
+        },
+        {
+          "en": "Running buses more often costs a city more than lowering its bus fares does."
+        }
+      ],
+      "why": {
+        "en": "Halving fares added under a tenth more riders; buses every ten minutes added a third at the old fares. So frequency mattered more than price. Ridership did not double, and no costs are compared.",
+        "uz": "Narxni yarmiga tushirish yoʻlovchini oʻndan birdan kam koʻpaytirdi; har oʻn daqiqada avtobus esa eski narxda uchdan birga oshirdi. Demak qatnov narxdan muhimroq.",
+        "ru": "Цена вдвое ниже дала меньше десятой части новых пассажиров, а автобус каждые десять минут при старой цене — треть. Значит, частота важнее цены; затраты не сравниваются."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the answer that best states its main idea or a key detail.",
+        "uz": "Matnni oʻqing. Asosiy gʻoyani yoki muhim tafsilotni eng yaxshi ifodalagan javobni tanlang.",
+        "ru": "Прочитайте текст. Выберите ответ, который лучше всего передаёт главную мысль или важную деталь."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h10",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "command_of_evidence_textual",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Dilshod argues that the new signs warning drivers about deer on the mountain road have reduced the number of collisions between cars and deer there.\n\nWhich finding, if true, would most directly weaken Dilshod's argument?"
+      },
+      "options": [
+        {
+          "en": "In the year after the signs went up, collisions with deer on the road were as frequent as in the year before."
+        },
+        {
+          "en": "The new signs are bright yellow and stand at both ends of the stretch of road where deer most often cross it."
+        },
+        {
+          "en": "Collisions with deer on other mountain roads in the region, which have no signs, did not change over the same year."
+        },
+        {
+          "en": "More drivers now use the mountain road in summer than in winter, when snow often closes it for days."
+        }
+      ],
+      "why": {
+        "en": "If collisions were as frequent after the signs as before, the signs did not reduce them. Unchanged collisions on roads without signs would support Dilshod, and the rest is beside the point.",
+        "uz": "Agar belgilardan keyin toʻqnashuvlar avvalgidek koʻp boʻlsa, belgilar ularni kamaytirmagan. Belgisiz yoʻllardagi oʻzgarmagan holat Dilshodni quvvatlardi, qolganlari aloqasiz.",
+        "ru": "Если после знаков столкновений столько же, сколько до, знаки их не сократили. Неизменность на дорогах без знаков поддержала бы Дилшода, а остальное к делу не относится."
+      },
+      "instructions": {
+        "en": "Choose the finding that most weakens the claim in the text.",
+        "uz": "Matndagi daʼvoni eng koʻp zaiflashtiradigan natijani tanlang.",
+        "ru": "Выберите результат, который сильнее всего ослабляет утверждение в тексте."
+      },
+      "prior_b": 0.9,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h11",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "command_of_evidence_textual",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Some ecologists have suggested that foxes living in cities are bolder around people than foxes in the countryside because city foxes grow used to people, not because they are born bolder. To test this, a team raised fox cubs born to city parents and cubs born to country parents in the same quiet enclosure, far from people.\n\nWhich finding, if true, would most directly support the ecologists' suggestion?"
+      },
+      "options": [
+        {
+          "en": "As adults, the foxes born to city parents and those born to country parents approached a stranger with the same caution."
+        },
+        {
+          "en": "As adults, the foxes born to city parents approached a stranger far sooner than those born to country parents."
+        },
+        {
+          "en": "The cubs born to city parents grew larger than the cubs born to country parents."
+        },
+        {
+          "en": "Wild foxes in the city were seen near houses far more often than wild foxes in the countryside."
+        }
+      ],
+      "why": {
+        "en": "If foxes raised alike, far from people, are equally cautious whatever their parents, boldness is learned, not inborn. Bolder city-born foxes would point to birth instead.",
+        "uz": "Odamlardan uzoqda bir xil oʻstirilgan tulkilar ota-onasidan qatʼi nazar bir xil ehtiyotkor boʻlsa, jasurlik tugʻma emas, orttirilgan. Shahar zotlari jasurroq boʻlsa, sabab tugʻilishda boʻlardi.",
+        "ru": "Если лисы, выросшие одинаково вдали от людей, одинаково осторожны при любых родителях, смелость приобретена, а не врождённая. Более смелые городские потомки указывали бы на рождение."
+      },
+      "instructions": {
+        "en": "Choose the quotation or finding that best supports the claim in the text.",
+        "uz": "Matndagi fikrni eng yaxshi tasdiqlaydigan iqtibos yoki natijani tanlang.",
+        "ru": "Выберите цитату или результат, который лучше всего подтверждает утверждение в тексте."
+      },
+      "prior_b": 1.8,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h12",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "command_of_evidence_quantitative",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A student recorded the share of seeds that sprouted for three crops, each planted at three depths.\n\nCrop | 1 cm deep | 3 cm deep | 5 cm deep\nLentil | 62% | 48% | 81%\nChickpea | 55% | 70% | 74%\nPea | 40% | 66% | 58%\n\nThe student claims that no single planting depth was the best for all three crops.\n\nWhich choice most effectively uses data from the table to support the student's claim?"
+      },
+      "options": [
+        {
+          "en": "Lentils and chickpeas did best at 5 cm, but peas did best at 3 cm, 66% against 58% at 5 cm."
+        },
+        {
+          "en": "All three crops sprouted less often at 1 cm than at 5 cm, by at least 18 percentage points."
+        },
+        {
+          "en": "Lentils planted at 5 cm sprouted 81% of the time, the highest share recorded anywhere in the table."
+        },
+        {
+          "en": "Chickpeas sprouted best at 3 cm, at 70%, compared with only 55% at 1 cm."
+        }
+      ],
+      "why": {
+        "en": "The claim needs a crop with a different best depth: lentils and chickpeas peaked at 5 cm, peas at 3 cm. The other facts do not bear on it, and chickpeas did better at 5 cm (74%) than at 3 cm (70%).",
+        "uz": "Daʼvo uchun eng yaxshi chuqurligi boshqacha ekin kerak: yasmiq va noʻxat 5 sm da, koʻk noʻxat 3 sm da eng yaxshi unib chiqqan. Noʻxat esa 5 sm da (74%) 3 sm dagidan (70%) yaxshiroq.",
+        "ru": "Нужна культура с другой лучшей глубиной: чечевица и нут лучше всего взошли на 5 см, горох — на 3 см. Остальное к утверждению не относится, а нут на 5 см (74%) взошёл лучше, чем на 3 см (70%)."
+      },
+      "instructions": {
+        "en": "Read the text and the table. Choose the answer that uses the data correctly.",
+        "uz": "Matn va jadvalni oʻqing. Maʼlumotlardan toʻgʻri foydalangan javobni tanlang.",
+        "ru": "Прочитайте текст и таблицу. Выберите ответ, в котором данные использованы верно."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h13",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "inferences",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A concert hall sells most of its tickets online. Last season, it began adding a small fee to tickets bought online but not to tickets bought at its box office. Online sales fell slightly, box-office sales rose by about the same number, and total ticket sales did not change. The hall can most reasonably conclude that the fee ______\n\nWhich choice most logically completes the text?"
+      },
+      "options": [
+        {
+          "en": "moved some buyers from online to the box office without reducing total sales."
+        },
+        {
+          "en": "led many people who once bought tickets online to stop going to concerts at the hall."
+        },
+        {
+          "en": "made the hall's concerts more popular than they had been before."
+        },
+        {
+          "en": "was too small for any of the hall's ticket buyers to notice or care about."
+        }
+      ],
+      "why": {
+        "en": "Online sales fell, box-office sales rose by about as many, and the total held: buyers switched where they bought. The steady total rules out lost or new audiences; the online drop shows they noticed.",
+        "uz": "Onlayn savdo kamaydi, kassada taxminan shuncha oshdi, jami oʻzgarmadi: xaridorlar xarid joyini almashtirgan. Jami oʻzgarmagani tomoshabin kamaygani yoki koʻpayganini istisno qiladi.",
+        "ru": "Онлайн-продажи упали, в кассе выросли примерно на столько же, итог тот же: покупатели сменили место покупки. Неизменный итог исключает и уход, и прилив зрителей."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the ending that follows most logically from it.",
+        "uz": "Matnni oʻqing. Undan mantiqan eng toʻgʻri kelib chiqadigan davomni tanlang.",
+        "ru": "Прочитайте текст. Выберите окончание, которое логичнее всего из него следует."
+      },
+      "prior_b": 0.9,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h14",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "inferences",
+      "sat": {
+        "domain": "information_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Pollen preserved in the layers of mud at the bottom of a lake shows which plants grew nearby in each period. In the layers from about 2,000 years ago, pollen from wheat and barley suddenly appears, while pollen from oak trees becomes scarce. Since wheat and barley do not grow wild in the region, and since farmers of that era often cleared forests to make fields, these layers suggest that ______\n\nWhich choice most logically completes the text?"
+      },
+      "options": [
+        {
+          "en": "people began farming near the lake at about that time, clearing much of the oak forest."
+        },
+        {
+          "en": "the climate around the lake turned too cold for oak trees to survive."
+        },
+        {
+          "en": "wheat and barley had grown wild around the lake for thousands of years before."
+        },
+        {
+          "en": "oak trees spread across the area as farmers abandoned their fields beside the lake."
+        }
+      ],
+      "why": {
+        "en": "Crops that do not grow wild appear as the oaks fade, and farmers then cleared forests for fields: people began farming and cut the oaks. No cold is mentioned, and the oaks did not spread.",
+        "uz": "Yovvoyi oʻsmaydigan ekinlar paydo boʻlib, eman kamaygan, dehqonlar esa dala uchun oʻrmon kesgan: odamlar dehqonchilik boshlab, emanni kesgan. Sovuq aytilmagan, emanlar koʻpaymagan.",
+        "ru": "Дико не растущие здесь культуры появляются, когда исчезают дубы, а земледельцы сводили лес под поля: люди начали пахать и рубить дубы. О холоде не сказано, и дубов стало меньше."
+      },
+      "instructions": {
+        "en": "Read the text. Choose the ending that follows most logically from it.",
+        "uz": "Matnni oʻqing. Undan mantiqan eng toʻgʻri kelib chiqadigan davomni tanlang.",
+        "ru": "Прочитайте текст. Выберите окончание, которое логичнее всего из него следует."
+      },
+      "prior_b": 1.8,
+      "time_s": 85,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h15",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "form_structure_sense",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Two years ago, the village ______ a small museum of musical instruments in its old schoolhouse, and visitors now come from all over the region to see it.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "opened"
+        },
+        {
+          "en": "opens"
+        },
+        {
+          "en": "will open"
+        },
+        {
+          "en": "is opening"
+        }
+      ],
+      "why": {
+        "en": "\"Two years ago\" places the action in the past, so the simple past \"opened\" fits. \"Opens\", \"will open\" and \"is opening\" are present or future forms.",
+        "uz": "«Two years ago» harakatni oʻtmishga joylaydi, shuning uchun oddiy oʻtgan zamon «opened» mos. «Opens», «will open» va «is opening» — hozirgi yoki kelasi zamon shakllari.",
+        "ru": "«Two years ago» относит действие к прошлому, поэтому подходит простое прошедшее «opened». «Opens», «will open» и «is opening» — формы настоящего или будущего времени."
+      },
+      "instructions": {
+        "en": "Choose the option that follows the rules of standard written English.",
+        "uz": "Standart yozma ingliz tili qoidalariga mos keladigan variantni tanlang.",
+        "ru": "Выберите вариант, который соответствует нормам письменного английского языка."
+      },
+      "prior_b": 0,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h16",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "boundaries",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A barometer measures the pressure of the ______ falling pressure often means that a storm is on its way. Sailors and farmers have relied on this simple sign for centuries.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "air; steadily"
+        },
+        {
+          "en": "air, steadily"
+        },
+        {
+          "en": "air steadily"
+        },
+        {
+          "en": "air, and, steadily"
+        }
+      ],
+      "why": {
+        "en": "Two complete sentences meet here, so a semicolon joins them. A comma alone makes a comma splice, no mark makes a run-on, and no comma follows \"and\".",
+        "uz": "Bu yerda ikki toʻliq gap tutashadi, shuning uchun ularni nuqtali vergul bogʻlaydi. Yolgʻiz vergul xato, belgisiz gaplar qoʻshilib ketadi, «and» dan keyin esa vergul qoʻyilmaydi.",
+        "ru": "Здесь встречаются два полных предложения, поэтому их соединяет точка с запятой. Одна запятая — ошибка, без знака предложения сливаются, а после «and» запятая не ставится."
+      },
+      "instructions": {
+        "en": "Choose the punctuation that correctly joins or separates the parts of the sentence.",
+        "uz": "Gap qismlarini toʻgʻri bogʻlaydigan yoki ajratadigan tinish belgisini tanlang.",
+        "ru": "Выберите знаки препинания, которые правильно соединяют или разделяют части предложения."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h17",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "form_structure_sense",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The small guesthouse stands at the edge of a cliff above the sea. The sound of the waves breaking on the rocks below it ______ its guests to sleep every night.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "lulls"
+        },
+        {
+          "en": "lull"
+        },
+        {
+          "en": "have lulled"
+        },
+        {
+          "en": "are lulling"
+        }
+      ],
+      "why": {
+        "en": "The subject is \"The sound\", singular, so the verb is \"lulls\". \"Waves\" and \"rocks\" sit inside phrases that describe the sound; the plural forms agree with them, not with the subject.",
+        "uz": "Ega — «The sound», birlikda, shuning uchun kesim «lulls». «Waves» va «rocks» tovushni tasvirlaydigan iboralar ichida; koʻplik shakllari egaga emas, ularga moslashgan.",
+        "ru": "Подлежащее — «The sound», единственное число, поэтому глагол «lulls». «Waves» и «rocks» стоят в оборотах, описывающих звук; формы множественного числа согласованы с ними, а не с подлежащим."
+      },
+      "instructions": {
+        "en": "Choose the option that follows the rules of standard written English.",
+        "uz": "Standart yozma ingliz tili qoidalariga mos keladigan variantni tanlang.",
+        "ru": "Выберите вариант, который соответствует нормам письменного английского языка."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h18",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "boundaries",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The tour visits three cities: Bukhara, known for its old trading ______ Samarkand, famous for its squares of blue tile; and Khiva, whose inner town is still enclosed by high walls.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "domes;"
+        },
+        {
+          "en": "domes,"
+        },
+        {
+          "en": "domes:"
+        },
+        {
+          "en": "domes"
+        }
+      ],
+      "why": {
+        "en": "The list's items contain commas, so semicolons separate them, as the one after \"tile\" shows. A comma blurs where an item ends, a colon does not separate items, and no mark runs two together.",
+        "uz": "Roʻyxat bandlari ichida vergul bor, shuning uchun ularni nuqtali vergul ajratadi, «tile» dan keyingisi kabi. Vergul chegarani xiralashtiradi, ikki nuqta bandlarni ajratmaydi.",
+        "ru": "В пунктах перечня есть запятые, поэтому их разделяют точки с запятой, как после «tile». Запятая размоет границу, двоеточие пункты не разделяет, а без знака пункты сольются."
+      },
+      "instructions": {
+        "en": "Choose the punctuation that correctly joins or separates the parts of the sentence.",
+        "uz": "Gap qismlarini toʻgʻri bogʻlaydigan yoki ajratadigan tinish belgisini tanlang.",
+        "ru": "Выберите знаки препинания, которые правильно соединяют или разделяют части предложения."
+      },
+      "prior_b": 0.9,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h19",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "boundaries",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The divers who spent the summer mapping the ancient ______ found that its cargo of clay jars had barely moved in more than a thousand years.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "shipwreck"
+        },
+        {
+          "en": "shipwreck,"
+        },
+        {
+          "en": "shipwreck;"
+        },
+        {
+          "en": "shipwreck—"
+        }
+      ],
+      "why": {
+        "en": "\"The divers who spent the summer mapping the ancient shipwreck\" is the whole subject, and \"found\" is its verb; no punctuation goes between a subject and its verb.",
+        "uz": "«The divers who spent the summer mapping the ancient shipwreck» — butun ega, «found» esa uning kesimi; ega bilan kesim orasiga tinish belgisi qoʻyilmaydi.",
+        "ru": "«The divers who spent the summer mapping the ancient shipwreck» — всё подлежащее, а «found» — его сказуемое; между подлежащим и сказуемым знак не ставится."
+      },
+      "instructions": {
+        "en": "Choose the punctuation that correctly joins or separates the parts of the sentence.",
+        "uz": "Gap qismlarini toʻgʻri bogʻlaydigan yoki ajratadigan tinish belgisini tanlang.",
+        "ru": "Выберите знаки препинания, которые правильно соединяют или разделяют части предложения."
+      },
+      "prior_b": 1.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h20",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "form_structure_sense",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Rain clouds blowing in from the sea to the east drop most of their water before they cross the mountains, so the yearly rainfall in the eastern valley is almost three times ______ in the western valley, where farmers depend on canals.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "that"
+        },
+        {
+          "en": "those"
+        },
+        {
+          "en": "it"
+        },
+        {
+          "en": "them"
+        }
+      ],
+      "why": {
+        "en": "\"Rainfall\" is singular, and rainfall must be compared with rainfall, so the singular \"that\" fits. \"Those\" and \"them\" are plural, and \"it\" cannot take \"in the western valley\".",
+        "uz": "«Rainfall» birlikda, taqqoslash esa yogʻinni yogʻin bilan solishtirishi kerak, shuning uchun birlikdagi «that» mos. «Those» va «them» koʻplikda, «it» dan keyin esa «in the western valley» kelolmaydi.",
+        "ru": "«Rainfall» в единственном числе, и сравнивать нужно осадки с осадками, поэтому подходит «that». «Those» и «them» — множественное число, а после «it» не может стоять «in the western valley»."
+      },
+      "instructions": {
+        "en": "Choose the option that follows the rules of standard written English.",
+        "uz": "Standart yozma ingliz tili qoidalariga mos keladigan variantni tanlang.",
+        "ru": "Выберите вариант, который соответствует нормам письменного английского языка."
+      },
+      "prior_b": 1.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h21",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "boundaries",
+      "sat": {
+        "domain": "standard_english_conventions",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "When the hailstorm crossed the valley that June, the vineyards on the eastern slope lost nearly all their ______ vineyards on the western slope, which the storm missed, were left untouched.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?"
+      },
+      "options": [
+        {
+          "en": "grapes; the"
+        },
+        {
+          "en": "grapes, the"
+        },
+        {
+          "en": "grapes the"
+        },
+        {
+          "en": "grapes, whereas, the"
+        }
+      ],
+      "why": {
+        "en": "Both parts are complete sentences, so a semicolon joins them. A comma alone makes a comma splice, no mark makes a run-on, and \"whereas\" takes no comma after it.",
+        "uz": "Ikkala qism ham toʻliq gap, shuning uchun ularni nuqtali vergul bogʻlaydi. Yolgʻiz vergul xato, belgisiz gaplar qoʻshilib ketadi, «whereas» dan keyin esa vergul qoʻyilmaydi.",
+        "ru": "Обе части — полные предложения, поэтому их соединяет точка с запятой. Одна запятая — ошибка, без знака предложения сливаются, а после «whereas» запятая не ставится."
+      },
+      "instructions": {
+        "en": "Choose the punctuation that correctly joins or separates the parts of the sentence.",
+        "uz": "Gap qismlarini toʻgʻri bogʻlaydigan yoki ajratadigan tinish belgisini tanlang.",
+        "ru": "Выберите знаки препинания, которые правильно соединяют или разделяют части предложения."
+      },
+      "prior_b": 1.8,
+      "time_s": 65,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h22",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Most of the town's folk musicians still learn their songs by ear, copying older players note by note. ______ a growing number now learn from written music, which a local teacher has begun printing in small booklets.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "However,"
+        },
+        {
+          "en": "Indeed,"
+        },
+        {
+          "en": "For example,"
+        },
+        {
+          "en": "Likewise,"
+        }
+      ],
+      "why": {
+        "en": "The second sentence turns from the usual way of learning to a move away from it, so a contrast is needed: \"However\". It does not confirm the first sentence, give an example, or show a similar case.",
+        "uz": "Ikkinchi gap odatiy oʻrganish usulidan undan uzoqlashishga oʻtadi, shuning uchun qarama-qarshilik kerak: «However». U birinchi gapni tasdiqlamaydi, misol ham, oʻxshash holat ham emas.",
+        "ru": "Второе предложение переходит от обычного способа учиться к отходу от него, поэтому нужно противопоставление: «However». Оно не подтверждает первое, не пример и не сходный случай."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 0.9,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h23",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Early telescopes made distant objects look larger, but they also surrounded them with fringes of color, because a glass lens bends light of different colors by slightly different amounts. A curved mirror, by contrast, reflects every color in the same way. ______ many astronomers came to prefer telescopes that gathered light with a mirror rather than a lens.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "Thus,"
+        },
+        {
+          "en": "Nevertheless,"
+        },
+        {
+          "en": "Meanwhile,"
+        },
+        {
+          "en": "Similarly,"
+        }
+      ],
+      "why": {
+        "en": "Mirrors avoid the color fringes that lenses cause, so the astronomers' preference follows from that: \"Thus\". \"Nevertheless\" signals contrast, and \"Meanwhile\" only timing.",
+        "uz": "Oyna linzadagi rangli hoshiyalarni bermaydi, astronomlarning uni afzal koʻrishi shundan kelib chiqadi: «Thus». «Nevertheless» qarama-qarshilikni, «Meanwhile» faqat vaqtni bildiradi.",
+        "ru": "Зеркало не даёт цветной каймы, как линза, и предпочтение астрономов из этого следует: «Thus». «Nevertheless» вводит противопоставление, а «Meanwhile» — лишь время."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h24",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "transitions",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "For centuries, sailors could work out their latitude, how far north or south they were, from the height of the sun at noon. Longitude was far harder to find: it required knowing the exact time at a home port, and no clock of the period could keep accurate time on a rolling ship. ______ ships often sailed for weeks unsure of how far east or west they had traveled.\n\nWhich choice completes the text with the most logical transition?"
+      },
+      "options": [
+        {
+          "en": "As a result,"
+        },
+        {
+          "en": "Even so,"
+        },
+        {
+          "en": "Similarly,"
+        },
+        {
+          "en": "Meanwhile,"
+        }
+      ],
+      "why": {
+        "en": "Ships could not tell their east–west position because longitude could not be found, so a word of result fits: \"As a result\". \"Even so\" signals contrast and \"Meanwhile\" only timing.",
+        "uz": "Uzunlikni aniqlab boʻlmagani uchun kemalar sharq–gʻarb boʻyicha qayerdaligini bilmagan: natija soʻzi kerak, «As a result». «Even so» qarama-qarshilik, «Meanwhile» faqat vaqt.",
+        "ru": "Корабли не знали положения по линии восток–запад, потому что долготу не могли определить: нужно слово следствия, «As a result». «Even so» — противопоставление, «Meanwhile» — время."
+      },
+      "instructions": {
+        "en": "Choose the linking word or phrase that fits the logic between the ideas.",
+        "uz": "Fikrlar orasidagi mantiqqa mos keladigan bogʻlovchi soʻz yoki iborani tanlang.",
+        "ru": "Выберите связующее слово или выражение, которое передаёт логическую связь между мыслями."
+      },
+      "prior_b": 1.8,
+      "time_s": 65,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h25",
+      "skill": "sat_rw",
+      "level": "B1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "easy"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• A hospital planted a vegetable garden on its flat roof last spring.\n• The garden has 24 raised beds.\n• Patients and staff look after the beds together.\n• The vegetables are used in the hospital's kitchen.\n\nThe student wants to explain what happens to the vegetables grown in the garden.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The hospital's kitchen uses the vegetables from the rooftop garden."
+        },
+        {
+          "en": "The hospital's rooftop garden, planted last spring, has 24 raised beds."
+        },
+        {
+          "en": "Patients and staff work together to look after the raised beds on the roof."
+        },
+        {
+          "en": "A hospital planted a vegetable garden on its roof."
+        }
+      ],
+      "why": {
+        "en": "Only this choice says what happens to the vegetables: the hospital's kitchen uses them. The others give the garden's size, who looks after it, and when it was planted.",
+        "uz": "Faqat shu javob sabzavotlar nima boʻlishini aytadi: ularni shifoxona oshxonasi ishlatadi. Qolganlari bogʻning kattaligi, unga kim qarashi va qachon ekilganini aytadi.",
+        "ru": "Только этот вариант говорит, что происходит с овощами: их использует кухня больницы. Остальные называют размер огорода, кто за ним ухаживает и когда его разбили."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h26",
+      "skill": "sat_rw",
+      "level": "B2",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "medium"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• Violin strings can be made of gut or of nylon.\n• Gut strings give a warm, rich sound.\n• Gut strings go out of tune quickly when the air turns damp.\n• Nylon strings sound slightly brighter.\n• Nylon strings stay in tune in damp air.\n\nThe student wants to emphasize a disadvantage of gut strings compared with nylon strings.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "Unlike nylon strings, gut strings go out of tune quickly when the air turns damp."
+        },
+        {
+          "en": "Gut strings give a warm, rich sound, while nylon strings sound slightly brighter."
+        },
+        {
+          "en": "Violin strings can be made of either gut or nylon, two materials that sound slightly different."
+        },
+        {
+          "en": "Gut strings, which give a warm and rich sound, are one of two kinds of violin strings."
+        }
+      ],
+      "why": {
+        "en": "The goal is a weakness of gut set against nylon: gut goes out of tune in damp air, and nylon does not. The others give a difference in sound, which is no disadvantage, or only the materials.",
+        "uz": "Maqsad — ichak torning neylonga nisbatan kamchiligi: nam havoda u sozdan chiqadi, neylon esa chiqmaydi. Qolganlari kamchilik boʻlmagan ovoz farqini yoki faqat materialni beradi.",
+        "ru": "Цель — недостаток жильных струн рядом с нейлоновыми: во влажном воздухе они расстраиваются, а нейлоновые нет. Остальные дают разницу в звучании, а это не недостаток, или лишь материал."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 0.9,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C21-rw2h27",
+      "skill": "sat_rw",
+      "level": "C1",
+      "subskill": "rhetorical_synthesis",
+      "sat": {
+        "domain": "expression_ideas",
+        "difficulty": "hard"
+      },
+      "lang": "en",
+      "stem": {
+        "en": "While researching a topic, a student has taken the following notes:\n\n• A pot-in-pot cooler is made of two clay pots, one inside the other, with wet sand between them.\n• As water in the sand evaporates through the outer pot, it draws heat away from the inner pot.\n• In hot, dry weather, food in the inner pot can stay several degrees cooler than the air.\n• The cooler needs no electricity.\n• It works poorly in humid weather, when water evaporates slowly.\n\nThe student wants to explain why the cooler works better in some climates than in others.\n\nWhich choice most effectively uses relevant information from the notes to accomplish this goal?"
+      },
+      "options": [
+        {
+          "en": "The cooler relies on evaporation, so it works well in dry heat but poorly in humid air, where water evaporates slowly."
+        },
+        {
+          "en": "A pot-in-pot cooler, which needs no electricity, can keep food several degrees cooler than the air around it."
+        },
+        {
+          "en": "The cooler is made of two clay pots, one inside the other, with a layer of wet sand packed between them."
+        },
+        {
+          "en": "In hot, dry weather, food kept in the inner pot of the cooler can stay several degrees cooler than the air around it."
+        }
+      ],
+      "why": {
+        "en": "Only this choice gives the reason, evaporation, and links it to both kinds of climate. The others describe the cooler or its results in dry weather without saying why humid weather is different.",
+        "uz": "Faqat shu javob sababni — bugʻlanishni aytib, uni ikkala iqlim bilan bogʻlaydi. Qolganlari sovutgichni yoki quruq havodagi natijani tasvirlaydi, nam havo farqini tushuntirmaydi.",
+        "ru": "Только этот вариант называет причину — испарение — и связывает её с обоими типами климата. Остальные описывают охладитель или его результат в сухую погоду, но не объясняют, чем отличается влажная."
+      },
+      "instructions": {
+        "en": "Read the student's notes. Choose the sentence that best meets the stated goal.",
+        "uz": "Oʻquvchining qaydlarini oʻqing. Koʻrsatilgan maqsadga eng yaxshi erishadigan gapni tanlang.",
+        "ru": "Прочитайте заметки ученика. Выберите предложение, которое лучше всего достигает указанной цели."
+      },
+      "prior_b": 1.8,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:p15-sat-rw",
+      "key_check_1": "author",
+      "key_check_2": "blind:P15rws1+P15rws2",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

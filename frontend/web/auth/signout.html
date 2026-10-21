@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#123a29">
+<title>Sign out · Jamals Global</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runtime/jg-uz-marks.css?v=1" data-jg-uz-marks>
+<style>
+  /* A screen the design does not have, drawn in its style: JIA Jade tokens, Raleway, the student profile's
+     "bowl" header, the design's card radius and shadow, its mascot entrance (mcIn) and float (mcFloat).
+     signin.html, welcome.html, link.html and signout.html carry the same <style>; change all four together. */
+  :root {
+    --forest: #123a29; --forest-2: #19553c; --mint: #66c69a; --accent: #207251;
+    --ink: #10271e; --ink-2: #4b6559; --muted: #587066; --page: #eef4f1; --line: #e4ece7;
+    --jade-300: #91dab6; --jade-600: #2b9067;
+    --edge: #d4e0d8; --soft: #e8f7ee; --danger: #b0402f;
+    --font: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --shadow: 0 16px 36px rgba(18, 58, 40, .10), 0 1px 3px rgba(18, 58, 40, .06);
+  }
+  /* P15 fixes lane (18 Oct 2026): in Uzbek (auth.js sets <html lang="uz-Latn">) U+02BB/U+02BC are drawn with Raleway's own turned comma
+     and apostrophe ("JG Uz Marks", public/runtime/jg-uz-marks.css; Raleway's U+02BC is its acute), first in the stack, word for word after it */
+  html[lang="uz-Latn"] { --font: "JG Uz Marks", "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    min-height: 100vh; min-height: 100dvh; background: var(--page);
+    font-family: var(--font); color: var(--ink); -webkit-font-smoothing: antialiased;
+    font-feature-settings: "lnum" 1; font-variant-numeric: lining-nums;
+  }
+  button, input { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--jade-600); outline-offset: 3px; }
+
+  /* ---------- phone: the bowl header, the card overlapping its curve by 40px ---------- */
+  .frame { position: relative; }
+  .hero { position: relative; height: calc(220px + env(safe-area-inset-top)); color: #fff; }
+  .bowl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .hero h1 {
+    position: absolute; left: 24px; right: 150px; top: calc(64px + env(safe-area-inset-top));
+    font-size: 22px; font-weight: 700; line-height: 1.22; letter-spacing: .005em; text-wrap: balance;
+  }
+  .mascot {
+    position: absolute; z-index: 3; right: 18px; bottom: 32px; width: 116px; height: 134px;
+    animation: mcIn .85s cubic-bezier(.3, 1.5, .5, 1) .15s both;
+  }
+  .mascot img {
+    display: block; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%;
+    filter: drop-shadow(0 4px 6px rgba(11, 40, 27, .16)); animation: mcFloat 3.2s ease-in-out 1s infinite;
+    -webkit-user-drag: none; user-select: none;
+  }
+  .langs {
+    position: absolute; z-index: 5; top: calc(10px + env(safe-area-inset-top)); right: 12px; display: flex;
+    border-radius: 999px; background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2);
+  }
+  .langs button {
+    min-width: 44px; height: 44px; padding: 0 10px; border: 0; border-radius: 999px; background: none;
+    color: #d6ebe0; font-size: 12.5px; font-weight: 700; letter-spacing: .06em; cursor: pointer; transition: background .2s, color .2s;
+  }
+  .langs button[aria-pressed="true"] { background: #fff; color: var(--forest); }
+  .card {
+    position: relative; z-index: 2; display: grid; gap: 16px; align-content: start;
+    margin: -40px 16px calc(24px + env(safe-area-inset-bottom)); padding: 22px 18px 24px;
+    background: #fff; border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow);
+    animation: rise .9s cubic-bezier(.2, .8, .2, 1) both;
+  }
+
+  /* ---------- the card's parts ---------- */
+  .tabs { display: grid; grid-template-columns: 1fr 1fr; padding: 4px; border-radius: 16px; background: #e9efec; }
+  .tabs button {
+    min-height: 44px; padding: 6px 8px; border: 0; border-radius: 12px; background: none; line-height: 1.2;
+    color: var(--ink-2); font-size: 14px; font-weight: 700; cursor: pointer; transition: background .25s, color .25s, box-shadow .25s;
+  }
+  .tabs button[aria-selected="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 4px rgba(16, 39, 30, .1); }
+  .err { padding: 12px 14px; border-radius: 14px; background: #fbeae6; color: var(--danger); font-size: 14px; font-weight: 600; line-height: 1.4; }
+  .social { display: grid; gap: 10px; }
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; height: 52px; padding: 0 18px;
+    border: 0; border-radius: 15px; font-size: 15px; font-weight: 700; text-decoration: none; cursor: pointer;
+    transition: background .2s, transform .12s, opacity .2s;
+  }
+  .btn:active { transform: scale(.985); }
+  .btn svg { flex: none; width: 22px; height: 22px; }
+  .btn[aria-busy="true"] { opacity: .72; cursor: progress; }
+  .btn-primary { background: var(--forest); color: #fff; }
+  .btn-primary:hover { background: var(--forest-2); }
+  .btn-social { background: #fff; color: var(--ink); box-shadow: inset 0 0 0 1px var(--edge); }
+  .btn-social:hover { background: #f4f8f6; }
+  .or { display: flex; align-items: center; gap: 12px; margin-top: 4px; color: var(--muted); font-size: 13px; font-weight: 600; }
+  .or::before, .or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .form { display: grid; gap: 14px; }
+  .field { display: grid; gap: 6px; }
+  .field > span { color: var(--ink-2); font-size: 13px; font-weight: 600; }
+  .field input {
+    width: 100%; height: 52px; padding: 0 16px; border: 1px solid var(--edge); border-radius: 15px; background: #f8fbf9;
+    color: var(--ink); font-size: 16px; font-weight: 500; transition: border-color .2s, background .2s;
+  }
+  .field input:focus { border-color: #9fdcbd; background: #fff; }
+  /* the teen walk of 10 Oct 2026 (the owner's delegated call): the password field's eye (the design's own roadmap eye, student shell .eye) and the
+     password rule under the field, said before the button is pressed; .pitch: the sign-in page's one sentence about the app */
+  .pw { position: relative; display: block; }
+  .pw input { padding-right: 56px; }
+  .pw-eye {
+    position: absolute; top: 4px; right: 4px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0;
+    border: 0; border-radius: 12px; background: none; color: var(--muted); cursor: pointer; transition: color .2s, background .2s;
+  }
+  .pw-eye:hover { color: var(--ink); background: #eef4f1; }
+  .pw-eye svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .pw-eye .off, .pw-eye[aria-pressed="true"] .on { display: none; }
+  .pw-eye[aria-pressed="true"] .off { display: block; }
+  .field .hint { color: var(--muted); font-size: 13px; font-weight: 500; line-height: 1.4; }
+  .pitch { color: var(--ink-2); font-size: 15px; font-weight: 600; line-height: 1.45; text-wrap: balance; }
+  .form .btn-primary { margin-top: 4px; }
+  .roles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .role {
+    position: relative; display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 10px 12px;
+    border-radius: 15px; box-shadow: inset 0 0 0 1px var(--edge); color: var(--ink-2);
+    font-size: 14px; font-weight: 700; line-height: 1.25; cursor: pointer; transition: background .2s, box-shadow .2s, color .2s;
+  }
+  .role input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+  .role i { flex: none; width: 20px; height: 20px; border-radius: 50%; background: #fff; box-shadow: inset 0 0 0 2px var(--edge); transition: box-shadow .2s; }
+  .role:has(input:checked) { background: var(--soft); color: var(--forest); box-shadow: inset 0 0 0 1.5px var(--jade-600); }
+  .role:has(input:checked) i { box-shadow: inset 0 0 0 6px var(--jade-600); }
+  .role:has(input:focus-visible) { outline: 2px solid var(--jade-600); outline-offset: 3px; }
+  .lead { color: var(--ink-2); font-size: 15px; font-weight: 500; line-height: 1.5; }
+  .field .code-in { font-size: 18px; font-weight: 700; letter-spacing: .12em; }
+  .out {
+    display: flex; align-items: center; justify-content: center; min-height: 44px; margin-top: -4px;
+    color: var(--muted); font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px;
+  }
+  .out:hover { color: var(--ink); }
+  /* owner 5 Oct 2026: the line that opens the AI notice (/runtime/jg-ai-notice.js), under Create account */
+  .ai-link {
+    display: block; width: 100%; min-height: 44px; margin-top: -6px; padding: 12px 8px;
+    border: 0; background: none; color: var(--muted); font-size: 13.5px; font-weight: 600; line-height: 1.45; text-align: center; text-wrap: balance;
+    text-decoration: underline; text-underline-offset: 3px; cursor: pointer; transition: color .2s;
+  }
+  .ai-link::before {
+    content: ""; display: inline-block; width: 15px; height: 15px; margin-right: 6px; vertical-align: -2px; background: var(--jade-600);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9zM18.5 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z'/%3E%3C/svg%3E") center / contain no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9zM18.5 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+  .ai-link:hover { color: var(--ink); }
+
+  @keyframes rise { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+  @keyframes mcIn { 0% { opacity: 0; transform: translateY(26px) scale(.55); } 55% { opacity: 1; } 100% { opacity: 1; transform: none; } }
+  @keyframes mcFloat { 50% { transform: translateY(-3.5px); } }
+
+  /* ---------- desktop: a centred card with the forest panel on its left ---------- */
+  @media (min-width: 768px) {
+    body { display: grid; place-items: center; padding: 88px 24px 48px; }
+    .langs { position: fixed; top: 24px; right: 24px; background: #fff; box-shadow: inset 0 0 0 1px var(--edge), 0 1px 3px rgba(18, 58, 40, .06); }
+    .langs button { color: var(--ink-2); }
+    .langs button[aria-pressed="true"] { background: var(--forest); color: #fff; }
+    .frame {
+      display: grid; grid-template-columns: 9fr 11fr; width: min(800px, 100%);
+      border-radius: 28px; overflow: hidden; background: #fff; box-shadow: var(--shadow);
+      animation: rise .9s cubic-bezier(.2, .8, .2, 1) both;
+    }
+    .hero {
+      height: auto; min-height: 580px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 28px; padding: 48px 36px; background: linear-gradient(180deg, #0f3323 0%, #19553c 100%);
+    }
+    .bowl { display: none; }
+    .hero h1 { position: static; font-size: 26px; text-align: center; }
+    .mascot { position: static; width: 184px; height: 212px; }
+    .card { margin: 0; padding: 48px 40px; border: 0; border-radius: 0; box-shadow: none; align-content: center; animation: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card, .frame, .mascot, .mascot img { animation: none; }
+    .btn, .role, .tabs button, .langs button { transition: none; }
+  }
+</style>
+<body data-role="{{ROLE}}">
+<!-- outside .frame: the frame's rise animation would otherwise contain the fixed desktop switch -->
+<div class="langs" role="group" data-t-aria="lang" aria-label="Language">
+  <button type="button" data-lang="uz" lang="uz-Latn" aria-label="Oʻzbekcha" aria-pressed="false">UZ</button>
+  <button type="button" data-lang="ru" lang="ru" aria-label="Русский" aria-pressed="false">RU</button>
+  <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+</div>
+<main class="frame">
+  <header class="hero">
+    <svg class="bowl" viewBox="0 0 375 260" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0f3323"/>
+          <stop offset="1" stop-color="#19553c"/>
+        </linearGradient>
+      </defs>
+      <path d="M0 0H375V168Q187.5 336 0 168Z" fill="url(#g)"/>
+    </svg>
+    <div class="mascot"><img src="/d/student-mobile/media/c5b64f4480cda475.webp" width="365" height="420" alt="" draggable="false"></div>
+    <h1 data-t="title">Sign out of Jamals Global?</h1>
+  </header>
+
+  <!-- No form: GET /signout changes nothing, and the button signs out with a POST that carries the CSRF token. -->
+  <section class="card">
+    <p class="lead" data-t="lead">You can sign in again at any time.</p>
+    <p class="err" id="err" role="alert" hidden></p>
+    <button type="button" class="btn btn-primary" id="btn-signout" data-t="signOut">Sign out</button>
+    <a class="out" href="/" data-t="cancel">Cancel</a>
+  </section>
+</main>
+
+<script src="/runtime/auth.js"></script>
+<script>
+(() => {
+  const STR = {
+    en: {
+      docTitle: 'Sign out · Jamals Global', lang: 'Language', title: 'Sign out of Jamals Global?',
+      lead: 'You can sign in again at any time.', signOut: 'Sign out', cancel: 'Cancel',
+      failed: 'Something went wrong. Please try again.',
+    },
+    uz: {
+      docTitle: 'Chiqish · Jamals Global', lang: 'Til', title: 'Jamals Globaldan chiqasizmi?',
+      lead: 'Istalgan vaqtda qaytadan kirishingiz mumkin.', signOut: 'Chiqish', cancel: 'Bekor qilish',
+      failed: 'Nimadir xato ketdi. Qaytadan urinib koʻring.',
+    },
+    ru: {
+      docTitle: 'Выход · Jamals Global', lang: 'Язык', title: 'Выйти из Jamals Global?',
+      lead: 'Вы сможете снова войти в любое время.', signOut: 'Выйти', cancel: 'Отмена',
+      failed: 'Что-то пошло не так. Попробуйте ещё раз.',
+    },
+  };
+  const A = window.JGAuth, $ = (id) => document.getElementById(id);
+  const role = document.body.dataset.role === 'parent' ? 'parent' : 'student';
+  const err = $('err'), btn = $('btn-signout');
+  let shown = '';
+  const L = A.i18n(STR, role, (lang) => { if (shown) err.textContent = STR[lang][shown]; });
+  function show(key) { shown = key || ''; err.textContent = shown ? L.t(shown) : ''; err.hidden = !shown; }
+
+  // Auth.js checks the CSRF token and ends the session, then the browser lands on /signin.
+  btn.addEventListener('click', () => {
+    show(''); A.busy(btn, true);
+    A.signOut().catch(() => { A.busy(btn, false); show('failed'); });
+  });
+})();
+</script>
+</body>
+</html>

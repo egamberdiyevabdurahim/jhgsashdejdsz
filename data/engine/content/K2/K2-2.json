@@ -1,0 +1,698 @@
+{
+ "bank": "K2",
+ "batch": 2,
+ "items": [
+  {
+   "id": "K2-b1p1q1",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "literal",
+   "passage_id": "K2-P-b1p1",
+   "lang": "en",
+   "stem": {
+    "en": "What did Kamola notice at the stall?"
+   },
+   "options": [
+    {
+     "en": "Some customers wanted only a little fruit, but it was sold by the kilo."
+    },
+    {
+     "en": "Many customers thought that the fruit at the stall was not fresh enough."
+    },
+    {
+     "en": "There were too few customers at the stall on Saturday mornings."
+    },
+    {
+     "en": "The paper bags that her uncle used were too expensive for him."
+    }
+   ],
+   "why": {
+    "en": "She saw that older customers wanted only a few pieces of fruit, while her uncle sold everything by the kilo.",
+    "uz": "U keksa xaridorlar bir-ikki dona meva olmoqchi boʻlganini, togʻasi esa hammasini kilolab sotishini payqadi.",
+    "ru": "Она заметила, что пожилые покупатели хотели взять всего несколько фруктов, а дядя продавал всё на килограммы."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-b1p1q2",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "literal",
+   "passage_id": "K2-P-b1p1",
+   "lang": "en",
+   "stem": {
+    "en": "Why was Uncle Rustam unsure about the idea at first?"
+   },
+   "options": [
+    {
+     "en": "He believed customers wanted to choose their own fruit."
+    },
+    {
+     "en": "He thought the paper bags would cost him too much money."
+    },
+    {
+     "en": "He thought Kamola was too young to work at the stall."
+    },
+    {
+     "en": "He did not have enough fruit to fill thirty bags."
+    }
+   ],
+   "why": {
+    "en": "He said, 'People come to the market to choose their own fruit.'",
+    "uz": "U: «Odamlar bozorga mevani oʻzi tanlash uchun keladi», degan.",
+    "ru": "Он сказал: «Люди приходят на рынок, чтобы самим выбирать фрукты»."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-b1p1q3",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "inferential",
+   "passage_id": "K2-P-b1p1",
+   "lang": "en",
+   "stem": {
+    "en": "What does the passage suggest about the uncle on Sunday?"
+   },
+   "options": [
+    {
+     "en": "He now believed in the idea, though he did not say so."
+    },
+    {
+     "en": "He now believed in the idea and told Kamola she was right."
+    },
+    {
+     "en": "He liked the idea but wanted to charge more for each bag."
+    },
+    {
+     "en": "He liked the idea and asked Kamola to run the stall alone."
+    }
+   ],
+   "why": {
+    "en": "On Sunday he bought a hundred paper bags and asked for a sign, so he believed in the idea, but he 'didn't say much'. He did not tell Kamola she was right, change the price or give her the stall.",
+    "uz": "Yakshanba kuni u yuzta qogʻoz xalta sotib oldi va yozuv tayyorlashni soʻradi, demak gʻoyaga ishondi, lekin 'koʻp gapirmadi'. U Kamolaga haq ekanini aytmadi, narxni oshirmadi va rastani unga topshirmadi.",
+    "ru": "В воскресенье он купил сто бумажных пакетов и попросил сделать вывеску, значит, поверил в идею, но «почти ничего не сказал». Он не говорил Камоле, что она права, не поднимал цену и не отдавал ей прилавок."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverC+solverD",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 2/2 on the key, but solver A flagged no_passage_needed: q2's 'unsure ... at first' and q4's option 'Kamola's idea changed the way her uncle sold fruit' show that the idea worked, and v1's other options were extreme. In v2 every option accepts that he came round; they differ only in details ('didn't say much', no new price, no handing over the stall) that the text decides. Needs a fresh blind check."
+  },
+  {
+   "id": "K2-b1p1q4",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "inferential",
+   "passage_id": "K2-P-b1p1",
+   "lang": "en",
+   "stem": {
+    "en": "What is the passage mainly about?"
+   },
+   "options": [
+    {
+     "en": "How Kamola saw what some customers needed and found a way to sell to them"
+    },
+    {
+     "en": "How Kamola persuaded her uncle to sell his fruit more cheaply than other stalls"
+    },
+    {
+     "en": "How Kamola learned that customers prefer to choose their own fruit"
+    },
+    {
+     "en": "How Kamola started her own small fruit stall next to her uncle's"
+    }
+   ],
+   "why": {
+    "en": "The story follows Kamola from noticing that some customers wanted only a little fruit to the bags that sold out. Choosing your own fruit was the uncle's worry, which the sales proved wrong; nothing is said about cheaper prices or a stall of her own.",
+    "uz": "Hikoya Kamola baʼzi xaridorlar ozgina meva olishni xohlashini payqaganidan boshlab, xaltalar sotilib tugaguncha boʻlgan voqeani kuzatadi. Mevani oʻzi tanlash amakining xavotiri edi, savdo buni rad etdi; arzonroq narx yoki Kamolaning oʻz rastasi haqida hech narsa deyilmagan.",
+    "ru": "Рассказ прослеживает путь Камолы: она замечает, что некоторым покупателям нужно совсем немного фруктов, и в итоге пакеты раскупают. Выбирать фрукты самим — это опасение дяди, которое продажи опровергли; о более низких ценах или собственном прилавке Камолы ничего не сказано."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverC+solverD",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 2/2 on the key, but solver A flagged no_passage_needed: q2's and q3's stems ('the idea', 'at first') pointed straight to v1's key, and the other options were about other topics. In v2 every option is about something Kamola did or learned at the market; cheaper prices, her own stall and 'customers prefer to choose' are each ruled out only by the text. Needs a fresh blind check."
+  },
+  {
+   "id": "K2-b1p2q1",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "literal",
+   "passage_id": "K2-P-b1p2",
+   "lang": "en",
+   "stem": {
+    "en": "Where did the writer leave the phone every evening?"
+   },
+   "options": [
+    {
+     "en": "On the kitchen table"
+    },
+    {
+     "en": "Under the pillow in bed"
+    },
+    {
+     "en": "In a bag by the front door"
+    },
+    {
+     "en": "In the sister's bedroom"
+    }
+   ],
+   "why": {
+    "en": "Every evening at ten, the writer put the phone 'on the kitchen table, far from my bedroom'.",
+    "uz": "Muallif har kuni kechqurun soat oʻnda telefonini yotoqxonadan uzoqda, oshxona stoliga qoʻyib qoʻygan.",
+    "ru": "Каждый вечер в десять автор оставлял телефон на кухонном столе, подальше от спальни."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-b1p2q2",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "literal",
+   "passage_id": "K2-P-b1p2",
+   "lang": "en",
+   "stem": {
+    "en": "What was difficult for the writer during the first few nights?"
+   },
+   "options": [
+    {
+     "en": "The feeling of missing something important"
+    },
+    {
+     "en": "Falling asleep without any music on"
+    },
+    {
+     "en": "Waking up in the morning without an alarm"
+    },
+    {
+     "en": "Reading a book with the light turned off"
+    }
+   ],
+   "why": {
+    "en": "The writer 'kept thinking that I was missing something important'.",
+    "uz": "Muallif doim «nimadir muhim narsani oʻtkazib yuboryapman» deb oʻylagan.",
+    "ru": "Автора не покидала мысль, что он пропускает что-то важное."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-b1p2q3",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "inferential",
+   "passage_id": "K2-P-b1p2",
+   "lang": "en",
+   "stem": {
+    "en": "What is the writer's opinion of phones?"
+   },
+   "options": [
+    {
+     "en": "They are useful in the day, but not in the hour before sleep."
+    },
+    {
+     "en": "They are fine for messages, but watching videos is a waste of time."
+    },
+    {
+     "en": "They make it hard to concentrate, so the writer now uses one less in the day."
+    },
+    {
+     "en": "They are fine before sleep if you only check your messages."
+    }
+   ],
+   "why": {
+    "en": "The writer says 'I'm not saying phones are bad' and still uses one 'a lot during the day', but keeps the hour before sleep 'for books, not screens'. 'Just checking messages' at night was the old excuse that ended in videos.",
+    "uz": "Muallif telefonlarni yomon demayotganini aytadi va kunduzi undan hamon koʻp foydalanadi, lekin uxlashdan oldingi bir soatni ekranlarga emas, kitoblarga ajratadi. Kechasi 'faqat xabarlarni koʻrish' videolar bilan tugaydigan eski bahona edi.",
+    "ru": "Автор пишет: «Я не говорю, что телефоны — это плохо», и днём по-прежнему часто им пользуется, но час перед сном отдаёт «книгам, а не экранам». «Только проверить сообщения» ночью — старая отговорка, которая заканчивалась видео."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverC+solverD",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 2/2 on the key, but solver A flagged no_passage_needed (weak): q1 (the phone left out every evening) and v1's balanced wording made the key the obvious pick against less likely distractors. In v2 every option is a sensible view that fits leaving the phone out at night; only the text ('not saying phones are bad', 'a lot during the day', the old messages excuse) rules out three. Needs a fresh blind check."
+  },
+  {
+   "id": "K2-b1p2q4",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "inferential",
+   "passage_id": "K2-P-b1p2",
+   "lang": "en",
+   "stem": {
+    "en": "What can we infer about the novel from the writer's sister?"
+   },
+   "options": [
+    {
+     "en": "The writer had ignored the book until the experiment."
+    },
+    {
+     "en": "The writer's sister wanted the book back after two years."
+    },
+    {
+     "en": "It was too difficult for the writer to finish."
+    },
+    {
+     "en": "The writer had bought it a month before the experiment."
+    }
+   ],
+   "why": {
+    "en": "The book was a gift from two years earlier that the writer 'had never even opened' before the experiment.",
+    "uz": "Kitob ikki yil oldin sovgʻa qilingan, lekin muallif tajribagacha uni hatto ochib ham koʻrmagan.",
+    "ru": "Книгу подарили два года назад, но до эксперимента автор её даже не открывал."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-b1p3q1",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "literal",
+   "passage_id": "K2-P-b1p3",
+   "lang": "en",
+   "stem": {
+    "en": "What were Dilshod and his sister told when they paid for the course?"
+   },
+   "options": [
+    {
+     "en": "There would be no more than ten students in a group."
+    },
+    {
+     "en": "There would be a free extra lesson every Saturday."
+    },
+    {
+     "en": "Each group would have two teachers in the pool."
+    },
+    {
+     "en": "Lessons would last about forty minutes each."
+    }
+   ],
+   "why": {
+    "en": "They were told there would be 'no more than ten students in each group' and that lessons would last one hour.",
+    "uz": "Ularga har bir guruhda oʻntadan koʻp oʻquvchi boʻlmasligi va dars bir soat davom etishi aytilgan.",
+    "ru": "Им обещали, что в группе будет не больше десяти человек, а занятие будет длиться час."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-b1p3q2",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "literal",
+   "passage_id": "K2-P-b1p3",
+   "lang": "en",
+   "stem": {
+    "en": "Why do the lessons usually finish early?"
+   },
+   "options": [
+    {
+     "en": "The pool is shared with another class."
+    },
+    {
+     "en": "The teacher has to leave for another job."
+    },
+    {
+     "en": "The students get tired after forty minutes."
+    },
+    {
+     "en": "The centre closes early from September."
+    }
+   ],
+   "why": {
+    "en": "The writer explains that 'the pool is shared with another class'.",
+    "uz": "Muallif basseyn boshqa guruh bilan birga ishlatilishini tushuntiradi.",
+    "ru": "Автор объясняет, что бассейн делят с другой группой."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-b1p3q3",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "inferential",
+   "passage_id": "K2-P-b1p3",
+   "lang": "en",
+   "stem": {
+    "en": "What is Dilshod's opinion of the teacher?"
+   },
+   "options": [
+    {
+     "en": "The teacher is good but has too many students."
+    },
+    {
+     "en": "The teacher is friendly but not very experienced."
+    },
+    {
+     "en": "The teacher is strict and too fast for beginners."
+    },
+    {
+     "en": "The teacher is good, but his lessons are too long."
+    }
+   ],
+   "why": {
+    "en": "He calls Mr Karimov 'excellent' but says that with so many students he cannot watch everyone.",
+    "uz": "U Karimovni «aʼlo» deb ataydi, lekin oʻquvchilar koʻpligi sababli hammani kuzata olmasligini aytadi.",
+    "ru": "Он называет Каримова «отличным», но пишет, что при таком числе учеников тот не может следить за всеми."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-b1p3q4",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "inferential",
+   "passage_id": "K2-P-b1p3",
+   "lang": "en",
+   "stem": {
+    "en": "What is the main purpose of the letter?"
+   },
+   "options": [
+    {
+     "en": "To ask for the group to be divided, or for some money back"
+    },
+    {
+     "en": "To ask the centre to give the group a different teacher"
+    },
+    {
+     "en": "To say that he and his sister will leave unless they get all their money back"
+    },
+    {
+     "en": "To ask for an extra Saturday lesson so that the course can finish sooner"
+    }
+   ],
+   "why": {
+    "en": "Dilshod complains that the group is too big and asks for two smaller groups, perhaps with a Saturday lesson, or for 'part of our money back'. He praises the teacher, does not say they will leave and does not want the course to end sooner.",
+    "uz": "Dilshod guruh juda kattaligidan shikoyat qiladi va uni ikkita kichik guruhga boʻlishni, balki shanba kuni dars qoʻshishni, yoki pulning bir qismini qaytarishni soʻraydi. U oʻqituvchini maqtaydi, kursni tashlab ketishlarini aytmaydi va kurs tezroq tugashini soʻramaydi.",
+    "ru": "Дильшод жалуется, что группа слишком большая, и просит разделить её на две, возможно добавив занятие в субботу, или вернуть «часть денег». Учителя он хвалит, не пишет, что они уйдут, и не просит закончить курс раньше."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverC+solverD",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 2/2 on the key, but solver A flagged no_passage_needed (weak): q1's option (no more than ten students) and q3's option (too many students) signal a complaint about group size, and v1's other purposes were thanks, a new course or leaving. In v2 every option is a complaint-style request (a new teacher, leaving with a full refund, a Saturday lesson to finish sooner); only the letter's actual requests decide it. Needs a fresh blind check."
+  },
+  {
+   "id": "K2-b1p4q1",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "literal",
+   "passage_id": "K2-P-b1p4",
+   "lang": "en",
+   "stem": {
+    "en": "How did Sevara prepare for the interview?"
+   },
+   "options": [
+    {
+     "en": "She practised answers with her older brother."
+    },
+    {
+     "en": "She worked at the café for one day as a test."
+    },
+    {
+     "en": "She asked a friend who already worked at the café."
+    },
+    {
+     "en": "She wrote a list of questions for the manager."
+    }
+   ],
+   "why": {
+    "en": "She 'practised answers to common questions with her older brother'.",
+    "uz": "U koʻp beriladigan savollarga javoblarni akasi bilan mashq qilgan.",
+    "ru": "Она отрепетировала ответы на обычные вопросы со старшим братом."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-b1p4q2",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "literal",
+   "passage_id": "K2-P-b1p4",
+   "lang": "en",
+   "stem": {
+    "en": "Why did Sevara stop suddenly?"
+   },
+   "options": [
+    {
+     "en": "A little boy ran in front of her."
+    },
+    {
+     "en": "The tray was too heavy for her to carry."
+    },
+    {
+     "en": "The manager called her name from the office."
+    },
+    {
+     "en": "She did not know which table to go to."
+    }
+   ],
+   "why": {
+    "en": "Halfway across the room, 'a little boy ran in front of her'.",
+    "uz": "Xonaning yarmiga yetganda uning oldidan kichkina bola yugurib oʻtib qoldi.",
+    "ru": "На полпути перед ней пробежал маленький мальчик."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-b1p4q3",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "inferential",
+   "passage_id": "K2-P-b1p4",
+   "lang": "en",
+   "stem": {
+    "en": "What did Mrs Nazarova think about the broken glass?"
+   },
+   "options": [
+    {
+     "en": "It was not a serious problem."
+    },
+    {
+     "en": "It was a very expensive mistake."
+    },
+    {
+     "en": "It showed Sevara was not ready for the job."
+    },
+    {
+     "en": "It was the little boy's fault, not Sevara's."
+    }
+   ],
+   "why": {
+    "en": "She said 'Everyone drops a glass sometimes', so the glass itself did not matter to her.",
+    "uz": "U «Hamma ham baʼzan stakan tushirib yuboradi», dedi; demak, stakanning oʻzi uning uchun muhim emas edi.",
+    "ru": "Она сказала: «Все иногда роняют стакан», — значит, сам стакан для неё был не важен."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "K2-b1p4q4",
+   "skill": "en_reading",
+   "level": "B1",
+   "subskill": "inferential",
+   "passage_id": "K2-P-b1p4",
+   "lang": "en",
+   "stem": {
+    "en": "Which of Sevara's actions most likely impressed the manager?"
+   },
+   "options": [
+    {
+     "en": "She cleaned up the broken glass without being asked."
+    },
+    {
+     "en": "She arrived early and was dressed very neatly."
+    },
+    {
+     "en": "She gave good answers to the questions she had practised."
+    },
+    {
+     "en": "She knew a lot about the café from its website."
+    }
+   ],
+   "why": {
+    "en": "The manager wanted to see 'what you would do next', and Sevara cleaned up before anyone asked her to.",
+    "uz": "Menejer «keyin nima qilishingni» koʻrmoqchi edi, Sevara esa hech kim aytmasdan hammasini tozalab qoʻydi.",
+    "ru": "Управляющая хотела увидеть, «что ты сделаешь дальше», а Севара сама всё убрала, хотя её никто не просил."
+   },
+   "instructions": {
+    "en": "Read the text. Then choose the best answer.",
+    "uz": "Matnni oʻqing. Soʻng eng toʻgʻri javobni tanlang.",
+    "ru": "Прочитайте текст. Затем выберите лучший ответ."
+   },
+   "prior_b": 0,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K2",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

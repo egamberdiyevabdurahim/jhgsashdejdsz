@@ -1,0 +1,1437 @@
+{
+  "bank": "C1",
+  "batch": 3,
+  "items": [
+    {
+      "id": "C1-a2p007",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "radical_functions",
+      "family": {
+        "template": "f(x) = √({a} − {b}x). What is the greatest number in the domain of f?",
+        "params": {
+          "b": {
+            "min": 2,
+            "max": 6
+          },
+          "q": {
+            "min": -5,
+            "max": 9,
+            "not": [
+              -1,
+              0,
+              1
+            ]
+          }
+        },
+        "derived": {
+          "a": "b*q"
+        },
+        "answer": "a/b",
+        "distractors": [
+          "-a/b",
+          "b/a",
+          "a"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | inverse_slip | partial_answer (C1/error_rules.json).",
+        "relation": "{a} - {b}*X = 0",
+        "decimals": 2,
+        "variants": 60
+      },
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = √({a} − {b}x). What is the greatest number in the domain of f?",
+        "uz": "f(x) = √({a} − {b}x). f funksiyaning aniqlanish sohasidagi eng katta son qaysi?",
+        "ru": "f(x) = √({a} − {b}x). Какое наибольшее число входит в область определения f?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "We need {a} − {b}x ≥ 0, so {b}x ≤ {a} and x ≤ {ANS}.",
+        "uz": "{a} − {b}x ≥ 0 boʻlishi kerak, demak {b}x ≤ {a} va x ≤ {ANS}.",
+        "ru": "Нужно {a} − {b}x ≥ 0, то есть {b}x ≤ {a}, откуда x ≤ {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 0.2,
+      "time_s": 25,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a2p008",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "inverse_variation",
+      "sat": {
+        "domain": "advanced_math",
+        "difficulty": "easy"
+      },
+      "family": {
+        "template": "y is inversely proportional to x. When x = {x1}, y = {y1}. What is y when x = {x2}?",
+        "params": {
+          "x1": {
+            "min": 2,
+            "max": 12
+          },
+          "y1": {
+            "min": 2,
+            "max": 12
+          },
+          "x2": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "derived": {
+          "k": "x1*y1"
+        },
+        "constraints": [
+          "(x1*y1) % x2 == 0",
+          "x1 != x2",
+          "y1 + x1 - x2 != x1*y1/x2",
+          "round(y1*x2/x1, 2) != round(x1*y1, 2)"
+        ],
+        "answer": "x1*y1/x2",
+        "distractors": [
+          "y1*x2/x1",
+          "y1 + x1 - x2",
+          "x1*y1"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | additive_reasoning | partial_answer (C1/error_rules.json).",
+        "relation": "{x2}*X = {x1}*{y1}",
+        "decimals": 2,
+        "variants": 269
+      },
+      "lang": "en",
+      "stem": {
+        "en": "y is inversely proportional to x. When x = {x1}, y = {y1}. What is y when x = {x2}?",
+        "uz": "y miqdor x ga teskari proporsional. x = {x1} boʻlganda y = {y1}. x = {x2} boʻlganda y nechaga teng?",
+        "ru": "Величина y обратно пропорциональна x. При x = {x1} значение y = {y1}. Чему равно y при x = {x2}?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "xy stays the same: {x1} × {y1} = {k}, so y = {k} ÷ {x2} = {ANS}.",
+        "uz": "xy oʻzgarmaydi: {x1} × {y1} = {k}, demak y = {k} ÷ {x2} = {ANS}.",
+        "ru": "Произведение xy постоянно: {x1} × {y1} = {k}, поэтому y = {k} ÷ {x2} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.2,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-a2p009",
+      "skill": "math",
+      "rung": "alg2",
+      "subskill": "series",
+      "family": {
+        "template": "1 + 2 + 3 + … + n = {S}. What is n?",
+        "params": {
+          "n": {
+            "min": 5,
+            "max": 30
+          }
+        },
+        "derived": {
+          "S": "n*(n + 1)/2",
+          "S2": "n*(n + 1)",
+          "n1": "n + 1"
+        },
+        "answer": "(sqrt(8*S + 1) - 1)/2",
+        "distractors": [
+          "ceil(S/2)",
+          "floor(sqrt(S))",
+          "n + 1"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | wrong_formula | off_by_one (C1/error_rules.json).",
+        "relation": "X*(X + 1)/2 = {S}; X > 0",
+        "decimals": 1,
+        "variants": 26
+      },
+      "lang": "en",
+      "stem": {
+        "en": "1 + 2 + 3 + … + n = {S}. What is n?",
+        "uz": "1 + 2 + 3 + … + n = {S}. n nechaga teng?",
+        "ru": "1 + 2 + 3 + … + n = {S}. Найдите n."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "1 + 2 + … + n = n(n + 1)/2, so n(n + 1) = {S2} = {n} × {n1} and n = {ANS}.",
+        "uz": "1 + 2 + … + n = n(n + 1)/2, demak n(n + 1) = {S2} = {n} × {n1} va n = {ANS}.",
+        "ru": "1 + 2 + … + n = n(n + 1)/2, поэтому n(n + 1) = {S2} = {n} × {n1}, n = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.2,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 2,
+      "key_check_2_version": 2
+    },
+    {
+      "id": "C1-pcp001",
+      "skill": "math",
+      "rung": "precalc",
+      "subskill": "unit_circle",
+      "family": {
+        "template": "An angle of {d}° is in standard position. What is its reference angle (the acute angle between its terminal side and the x-axis), in degrees?",
+        "params": {
+          "d": {
+            "min": 181,
+            "max": 269,
+            "not": [
+              225
+            ]
+          }
+        },
+        "answer": "d - 180",
+        "distractors": [
+          "360 - d",
+          "270 - d",
+          "d - 90"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | wrong_formula | wrong_formula (C1/error_rules.json).",
+        "relation": "X = abs(atand(tand({d})))",
+        "variants": 88
+      },
+      "lang": "en",
+      "stem": {
+        "en": "An angle of {d}° is in standard position. What is its reference angle (the acute angle between its terminal side and the x-axis), in degrees?",
+        "uz": "{d}° li burchak standart holatda chizilgan. Uning oxirgi tomoni x oʻqi bilan hosil qiladigan oʻtkir burchak (tayanch burchak) necha gradus?",
+        "ru": "Угол {d}° отложен от положительного направления оси x. Чему равен острый угол между его конечной стороной и осью x (опорный угол), в градусах?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{d}° is in quadrant III (between 180° and 270°), so the reference angle is {d}° − 180° = {ANS}°.",
+        "uz": "{d}° III chorakda (180° va 270° orasida), demak tayanch burchak {d}° − 180° = {ANS}°.",
+        "ru": "{d}° лежит в III четверти (между 180° и 270°), поэтому опорный угол {d}° − 180° = {ANS}°."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.7,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pcp002",
+      "skill": "math",
+      "rung": "precalc",
+      "subskill": "trig_graphs",
+      "family": {
+        "template": "What is the greatest value of y = {A} sin({B}x) + {D}?",
+        "params": {
+          "A": {
+            "min": 2,
+            "max": 9
+          },
+          "B": {
+            "min": 2,
+            "max": 5
+          },
+          "D": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "constraints": [
+          "A != D",
+          "D != 2*A",
+          "D - A != A*D",
+          "A*D != A + D"
+        ],
+        "answer": "A + D",
+        "distractors": [
+          "A",
+          "D - A",
+          "A*D"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | wrong_formula | wrong_operation (C1/error_rules.json).",
+        "relation": "X = {A}*sin(pi/2) + {D}",
+        "variants": 300
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is the greatest value of y = {A} sin({B}x) + {D}?",
+        "uz": "y = {A} sin({B}x) + {D} funksiyaning eng katta qiymati nechaga teng?",
+        "ru": "Найдите наибольшее значение функции y = {A} sin({B}x) + {D}."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "sin({B}x) is at most 1, so y is at most {A} × 1 + {D} = {ANS}.",
+        "uz": "sin({B}x) ning eng katta qiymati 1, demak y ≤ {A} × 1 + {D} = {ANS}.",
+        "ru": "sin({B}x) не больше 1, поэтому y не больше {A} × 1 + {D} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.9,
+      "time_s": 20,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pcp003",
+      "skill": "math",
+      "rung": "precalc",
+      "subskill": "combinations",
+      "family": {
+        "template": "{n} identical red flags and {m} identical blue flags are hung in a row. How many different rows are possible?",
+        "params": {
+          "n": {
+            "min": 2,
+            "max": 6
+          },
+          "m": {
+            "min": 2,
+            "max": 5
+          }
+        },
+        "derived": {
+          "s": "n + m"
+        },
+        "answer": "comb(n + m, n)",
+        "distractors": [
+          "fact(n + m)",
+          "n*m",
+          "perm(n + m, n)"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | wrong_operation | wrong_formula (C1/error_rules.json).",
+        "relation": "X = fact({n} + {m})/(fact({n})*fact({m}))",
+        "variants": 20
+      },
+      "lang": "en",
+      "stem": {
+        "en": "{n} identical red flags and {m} identical blue flags are hung in a row. How many different rows are possible?",
+        "uz": "{n} ta bir xil qizil va {m} ta bir xil koʻk bayroqcha bir qatorga osiladi. Nechta turli qator hosil qilish mumkin?",
+        "ru": "В ряд вешают {n|одинаковый красный флажок|одинаковых красных флажка|одинаковых красных флажков} и {m|одинаковый синий флажок|одинаковых синих флажка|одинаковых синих флажков}. Сколько различных рядов можно получить?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Choose which {n} of the {s} places are red: C({s}, {n}) = {ANS}.",
+        "uz": "{s} ta oʻrindan qaysi {n} tasi qizil boʻlishini tanlaymiz: C({s}, {n}) = {ANS}.",
+        "ru": "Выбираем, какие {n} из {s|места|мест|мест} займут красные: C({s}, {n}) = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pcp004",
+      "skill": "math",
+      "rung": "precalc",
+      "subskill": "probability",
+      "sat": {
+        "domain": "psda",
+        "difficulty": "hard"
+      },
+      "family": {
+        "template": "A bag has {r} red and {g} green balls. Two balls are taken out at random, one after the other, without putting the first back. What is the probability that both are red?",
+        "params": {
+          "r": {
+            "min": 2,
+            "max": 6
+          },
+          "g": {
+            "min": 2,
+            "max": 8
+          }
+        },
+        "derived": {
+          "N": "r + g",
+          "rm": "r - 1",
+          "Nm": "r + g - 1",
+          "G1": "gcd(r*(r - 1), N*(N - 1))",
+          "p1": "r*(r - 1)/G1",
+          "q1": "N*(N - 1)/G1",
+          "G2": "gcd(r*r, N*N)",
+          "p2": "r*r/G2",
+          "q2": "N*N/G2",
+          "G3": "gcd(r, N)",
+          "p3": "r/G3",
+          "q3": "N/G3",
+          "G4": "gcd(r*(r - 1), N*N)",
+          "p4": "r*(r - 1)/G4",
+          "q4": "N*N/G4"
+        },
+        "answer": "r*(r - 1)/(N*(N - 1))",
+        "option_templates": [
+          "{p1}/{q1}",
+          "{p2}/{q2}",
+          "{p3}/{q3}",
+          "{p4}/{q4}"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | wrong_formula (C1/error_rules.json).",
+        "relation": "X = {r}/({r} + {g}) * ({r} - 1)/({r} + {g} - 1)",
+        "variants": 35
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A bag has {r} red and {g} green balls. Two balls are taken out at random, one after the other, without putting the first back. What is the probability that both are red?",
+        "uz": "Xaltada {r} ta qizil va {g} ta yashil shar bor. Tavakkaliga ketma-ket ikkita shar olinadi, birinchisi qaytarib solinmaydi. Ikkalasi ham qizil boʻlish ehtimoli qancha?",
+        "ru": "В мешке лежат шары: красных — {r}, зелёных — {g}. Наугад по очереди вынимают два шара, не возвращая первый. Какова вероятность, что оба шара красные?"
+      },
+      "why": {
+        "en": "P = {r}/{N} × {rm}/{Nm} = {p1}/{q1}.",
+        "uz": "P = {r}/{N} × {rm}/{Nm} = {p1}/{q1}.",
+        "ru": "P = {r}/{N} × {rm}/{Nm} = {p1}/{q1}."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 1.1,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pcp005",
+      "skill": "math",
+      "rung": "precalc",
+      "subskill": "vectors",
+      "family": {
+        "template": "The vectors u = ({a}, {b}) and v = ({c}, k) are perpendicular. What is k?",
+        "params": {
+          "a": {
+            "min": 1,
+            "max": 6
+          },
+          "b": {
+            "min": 2,
+            "max": 6
+          },
+          "c": {
+            "min": -6,
+            "max": 6,
+            "not": [
+              0
+            ]
+          }
+        },
+        "constraints": [
+          "(a*c) % b == 0",
+          "a != b",
+          "round(-b*c/a, 2) != round(-a*c, 2)"
+        ],
+        "answer": "-a*c/b",
+        "distractors": [
+          "a*c/b",
+          "-b*c/a",
+          "-a*c"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | inverse_slip | partial_answer (C1/error_rules.json).",
+        "relation": "{a}*{c} + {b}*X = 0",
+        "decimals": 2,
+        "variants": 110
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The vectors u = ({a}, {b}) and v = ({c}, k) are perpendicular. What is k?",
+        "uz": "u = ({a}, {b}) va v = ({c}, k) vektorlar perpendikulyar. k nechaga teng?",
+        "ru": "Векторы u = ({a}, {b}) и v = ({c}, k) перпендикулярны. Найдите k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Perpendicular means u · v = 0: {a} · ({c}) + {b}k = 0, so k = {ANS}.",
+        "uz": "Perpendikulyar boʻlsa u · v = 0: {a} · ({c}) + {b}k = 0, demak k = {ANS}.",
+        "ru": "Перпендикулярность означает u · v = 0: {a} · ({c}) + {b}k = 0, значит, k = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 1,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pcp006",
+      "skill": "math",
+      "rung": "precalc",
+      "subskill": "sigma_notation",
+      "family": {
+        "template": "What is the sum of the values of {a}k + {b} for k = 1, 2, …, {n}?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 6
+          },
+          "b": {
+            "min": 1,
+            "max": 9
+          },
+          "n": {
+            "min": 5,
+            "max": 20
+          }
+        },
+        "derived": {
+          "S1": "n*(n + 1)/2",
+          "bn": "b*n"
+        },
+        "answer": "a*n*(n + 1)/2 + b*n",
+        "distractors": [
+          "a*n*(n + 1)/2 + b",
+          "a*n*n + b*n",
+          "a*n + b"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | wrong_formula | partial_answer (C1/error_rules.json).",
+        "relation": "X = {n}*(({a} + {b}) + ({a}*{n} + {b}))/2",
+        "variants": 720
+      },
+      "lang": "en",
+      "stem": {
+        "en": "What is the sum of the values of {a}k + {b} for k = 1, 2, …, {n}?",
+        "uz": "k = 1, 2, …, {n} boʻlganda {a}k + {b} qiymatlarining yigʻindisi nechaga teng?",
+        "ru": "Найдите сумму значений {a}k + {b} при k = 1, 2, …, {n}."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "{a}(1 + 2 + … + {n}) + {b} × {n} = {a} × {S1} + {bn} = {ANS}.",
+        "uz": "{a}(1 + 2 + … + {n}) + {b} × {n} = {a} × {S1} + {bn} = {ANS}.",
+        "ru": "{a}(1 + 2 + … + {n}) + {b} × {n} = {a} × {S1} + {bn} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pcp007",
+      "skill": "math",
+      "rung": "precalc",
+      "subskill": "conic_sections",
+      "family": {
+        "template": "The hyperbola x²/{A} − y²/{B} = 1 has two asymptotes. What is the slope of the one with positive slope?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 7
+          },
+          "b": {
+            "min": 2,
+            "max": 9
+          }
+        },
+        "derived": {
+          "A": "a*a",
+          "B": "b*b"
+        },
+        "constraints": [
+          "gcd(a, b) == 1"
+        ],
+        "answer": "b/a",
+        "option_templates": [
+          "{b}/{a}",
+          "{a}/{b}",
+          "{B}/{A}",
+          "−{b}/{a}"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: inverse_slip | partial_answer | sign_slip (C1/error_rules.json).",
+        "relation": "X = sqrt({B})/sqrt({A})",
+        "variants": 29
+      },
+      "lang": "en",
+      "stem": {
+        "en": "The hyperbola x²/{A} − y²/{B} = 1 has two asymptotes. What is the slope of the one with positive slope?",
+        "uz": "x²/{A} − y²/{B} = 1 giperbolaning ikkita asimptotasi bor. Ulardan burchak koeffitsiyenti musbat boʻlganining koeffitsiyenti nechaga teng?",
+        "ru": "Гипербола x²/{A} − y²/{B} = 1 имеет две асимптоты. Чему равен угловой коэффициент той из них, у которой он положителен?"
+      },
+      "why": {
+        "en": "The asymptotes are y = ±(b/a)x with a = √{A} = {a} and b = √{B} = {b}, so the slope is {b}/{a}.",
+        "uz": "Asimptotalar y = ±(b/a)x, bunda a = √{A} = {a}, b = √{B} = {b}, demak koeffitsiyent {b}/{a}.",
+        "ru": "Асимптоты y = ±(b/a)x, где a = √{A} = {a}, b = √{B} = {b}, поэтому коэффициент равен {b}/{a}."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 1.2,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pcp008",
+      "skill": "math",
+      "rung": "precalc",
+      "subskill": "radians",
+      "family": {
+        "template": "A wheel makes {n} full turns per minute. Through how many radians does it turn in {t} seconds? The answer is kπ; what is k?",
+        "params": {
+          "n": {
+            "min": 10,
+            "max": 120,
+            "step": 10
+          },
+          "t": {
+            "min": 3,
+            "max": 30,
+            "step": 3
+          }
+        },
+        "derived": {
+          "rev": "n*t/60"
+        },
+        "constraints": [
+          "(n*t) % 30 == 0"
+        ],
+        "answer": "2*n*t/60",
+        "distractors": [
+          "n*t/60",
+          "2*n*t",
+          "360*n*t/60"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | unit_slip | unit_slip (C1/error_rules.json).",
+        "relation": "X*pi = 2*pi*{n}*{t}/60",
+        "decimals": 1,
+        "variants": 120
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A wheel makes {n} full turns per minute. Through how many radians does it turn in {t} seconds? The answer is kπ; what is k?",
+        "uz": "Gʻildirak daqiqasiga {n} marta toʻliq aylanadi. {t} soniyada u necha radianga buriladi? Javob kπ koʻrinishida; k nechaga teng?",
+        "ru": "Колесо делает {n} полных оборотов в минуту. На сколько радиан оно повернётся за {t} с? Ответ имеет вид kπ; найдите k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "In {t} s it makes {n} × {t} ÷ 60 = {rev} turns, and each turn is 2π: {rev} × 2π = {ANS}π.",
+        "uz": "{t} soniyada u {n} × {t} ÷ 60 = {rev} marta aylanadi, har bir aylanish 2π: {rev} × 2π = {ANS}π.",
+        "ru": "За {t} с число оборотов равно {n} × {t} ÷ 60 = {rev}, каждый оборот — 2π: {rev} × 2π = {ANS}π."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pcp009",
+      "skill": "math",
+      "rung": "precalc",
+      "subskill": "inverse_function",
+      "family": {
+        "template": "f(x) = ({a}x + {b})/{c}. What is f⁻¹({y})?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 5
+          },
+          "b": {
+            "min": 1,
+            "max": 9
+          },
+          "c": {
+            "min": 2,
+            "max": 4
+          },
+          "x0": {
+            "min": -5,
+            "max": 9
+          }
+        },
+        "derived": {
+          "y": "(a*x0 + b)/c",
+          "cy": "(a*x0 + b)"
+        },
+        "constraints": [
+          "(a*x0 + b) % c == 0",
+          "a*y + b != 0",
+          "(a*y + b)/c != x0",
+          "y != x0",
+          "round((a*y + b)/c, 2) != round((c*y + b)/a, 2)",
+          "round((a*y + b)/c, 2) != round(c/(a*y + b), 2)",
+          "round(c/(a*y + b), 2) != round((c*y + b)/a, 2)",
+          "round((c*y - b)/a, 2) != round(c/(a*y + b), 2)"
+        ],
+        "answer": "(c*y - b)/a",
+        "distractors": [
+          "(a*y + b)/c",
+          "c/(a*y + b)",
+          "(c*y + b)/a"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | inverse_slip | sign_slip (C1/error_rules.json).",
+        "relation": "({a}*X + {b})/{c} = {y}",
+        "decimals": 2,
+        "variants": 371
+      },
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = ({a}x + {b})/{c}. What is f⁻¹({y})?",
+        "uz": "f(x) = ({a}x + {b})/{c}. f⁻¹({y}) nechaga teng?",
+        "ru": "f(x) = ({a}x + {b})/{c}. Найдите f⁻¹({y})."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "f⁻¹({y}) is the x with f(x) = {y}: {a}x + {b} = {cy}, so x = {ANS}.",
+        "uz": "f⁻¹({y}) — bu f(x) = {y} boʻladigan x: {a}x + {b} = {cy}, demak x = {ANS}.",
+        "ru": "f⁻¹({y}) — это x, при котором f(x) = {y}: {a}x + {b} = {cy}, откуда x = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 0.8,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-pcp010",
+      "skill": "math",
+      "rung": "precalc",
+      "subskill": "trig_identity",
+      "family": {
+        "template": "x is an acute angle and sin x + cos x = {s}/{c}. What is sin x · cos x?",
+        "params": {
+          "t": {
+            "values": [
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                5,
+                12,
+                13
+              ],
+              [
+                8,
+                15,
+                17
+              ],
+              [
+                7,
+                24,
+                25
+              ],
+              [
+                20,
+                21,
+                29
+              ],
+              [
+                12,
+                35,
+                37
+              ],
+              [
+                9,
+                40,
+                41
+              ],
+              [
+                28,
+                45,
+                53
+              ],
+              [
+                11,
+                60,
+                61
+              ],
+              [
+                33,
+                56,
+                65
+              ],
+              [
+                16,
+                63,
+                65
+              ],
+              [
+                48,
+                55,
+                73
+              ]
+            ]
+          }
+        },
+        "derived": {
+          "a": "t[0]",
+          "b": "t[1]",
+          "c": "t[2]",
+          "s": "t[0] + t[1]",
+          "s2": "s*s",
+          "c2": "c*c",
+          "p": "a*b",
+          "d2": "2*a*b"
+        },
+        "answer": "a*b/(c*c)",
+        "option_templates": [
+          "{p}/{c2}",
+          "{s2}/{c2}",
+          "{d2}/{c2}",
+          "1/2"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: partial_answer | wrong_formula | wrong_formula (C1/error_rules.json).",
+        "relation": "X = (({s}/{c})^2 - 1)/2",
+        "variants": 12
+      },
+      "lang": "en",
+      "stem": {
+        "en": "x is an acute angle and sin x + cos x = {s}/{c}. What is sin x · cos x?",
+        "uz": "x — oʻtkir burchak va sin x + cos x = {s}/{c}. sin x · cos x nechaga teng?",
+        "ru": "x — острый угол, и sin x + cos x = {s}/{c}. Найдите sin x · cos x."
+      },
+      "why": {
+        "en": "Square both sides: 1 + 2 sin x cos x = {s2}/{c2}, so sin x cos x = ({s2}/{c2} − 1) ÷ 2 = {p}/{c2}.",
+        "uz": "Ikkala tomonni kvadratga oshiramiz: 1 + 2 sin x cos x = {s2}/{c2}, demak sin x cos x = ({s2}/{c2} − 1) ÷ 2 = {p}/{c2}.",
+        "ru": "Возводим в квадрат: 1 + 2 sin x cos x = {s2}/{c2}, поэтому sin x cos x = ({s2}/{c2} − 1) ÷ 2 = {p}/{c2}."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": 1.2,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-clp001",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "limits",
+      "family": {
+        "template": "f(x) = {a}x + {b} when x < {c}, and f(x) = {d} − x when x ≥ {c}. What is the limit of f(x) as x approaches {c} from the left?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 6
+          },
+          "b": {
+            "min": 1,
+            "max": 8
+          },
+          "c": {
+            "min": 1,
+            "max": 5
+          },
+          "d": {
+            "min": 5,
+            "max": 20
+          }
+        },
+        "constraints": [
+          "d - c != a*c + b",
+          "d - c != a*c",
+          "d - c != (a*c + b + d - c)/2",
+          "round(a*c, 1) != round((a*c + b + d - c)/2, 1)"
+        ],
+        "answer": "a*c + b",
+        "distractors": [
+          "d - c",
+          "a*c",
+          "(a*c + b + d - c)/2"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | wrong_formula (C1/error_rules.json).",
+        "relation": "X = {a}*({c} - 0.000000001) + {b}",
+        "decimals": 1,
+        "variants": 2836
+      },
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = {a}x + {b} when x < {c}, and f(x) = {d} − x when x ≥ {c}. What is the limit of f(x) as x approaches {c} from the left?",
+        "uz": "x < {c} boʻlganda f(x) = {a}x + {b}, x ≥ {c} boʻlganda esa f(x) = {d} − x. x chapdan {c} ga intilganda f(x) ning limiti nechaga teng?",
+        "ru": "f(x) = {a}x + {b} при x < {c} и f(x) = {d} − x при x ≥ {c}. Чему равен предел f(x) при x → {c} слева?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "From the left only the first rule applies: {a} × {c} + {b} = {ANS}.",
+        "uz": "Chap tomondan faqat birinchi ifoda ishlaydi: {a} × {c} + {b} = {ANS}.",
+        "ru": "Слева действует только первая формула: {a} × {c} + {b} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.6,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-clp002",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "power_rule",
+      "family": {
+        "template": "f(x) = {a}x^{n} − {b}/x. What is f′(1)?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 6
+          },
+          "n": {
+            "min": 3,
+            "max": 5
+          },
+          "b": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        "derived": {
+          "an": "a*n",
+          "nm": "n - 1"
+        },
+        "constraints": [
+          "a != 2*b",
+          "a != b"
+        ],
+        "answer": "a*n + b",
+        "distractors": [
+          "a*n - b",
+          "a*n",
+          "a*(n - 1) + b"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: sign_slip | partial_answer | exponent_slip (C1/error_rules.json).",
+        "relation": "X = (({a}*1.000001^{n} - {b}/1.000001) - ({a}*0.999999^{n} - {b}/0.999999))/0.000002",
+        "variants": 111
+      },
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = {a}x^{n} − {b}/x. What is f′(1)?",
+        "uz": "f(x) = {a}x^{n} − {b}/x. f′(1) nechaga teng?",
+        "ru": "f(x) = {a}x^{n} − {b}/x. Найдите f′(1)."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "f′(x) = {an}x^{nm} + {b}/x², so f′(1) = {an} + {b} = {ANS}.",
+        "uz": "f′(x) = {an}x^{nm} + {b}/x², demak f′(1) = {an} + {b} = {ANS}.",
+        "ru": "f′(x) = {an}x^{nm} + {b}/x², значит, f′(1) = {an} + {b} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.7,
+      "time_s": 30,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-clp003",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "product_rule",
+      "family": {
+        "template": "f(x) = (x² + {a})(x − {b}). What is f′({t})?",
+        "params": {
+          "a": {
+            "min": 1,
+            "max": 9
+          },
+          "b": {
+            "min": 1,
+            "max": 6
+          },
+          "t": {
+            "min": -3,
+            "max": 4,
+            "not": [
+              0
+            ]
+          }
+        },
+        "derived": {
+          "p1": "2*t*(t - b)",
+          "p2": "t*t + a"
+        },
+        "constraints": [
+          "t != b",
+          "2*t != 2*t*(t - b) + t*t + a",
+          "2*t != 2*t*(t - b)",
+          "2*t != 2*t*(t - b) - t*t - a",
+          "2*t*(t - b) != 2*t*(t - b) + t*t + a"
+        ],
+        "answer": "2*t*(t - b) + t*t + a",
+        "distractors": [
+          "2*t",
+          "2*t*(t - b)",
+          "2*t*(t - b) - t*t - a"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | sign_slip (C1/error_rules.json).",
+        "relation": "X = ((({t}+0.000001)^2 + {a})*(({t}+0.000001) - {b}) - (({t}-0.000001)^2 + {a})*(({t}-0.000001) - {b}))/0.000002",
+        "variants": 303
+      },
+      "lang": "en",
+      "stem": {
+        "en": "f(x) = (x² + {a})(x − {b}). What is f′({t})?",
+        "uz": "f(x) = (x² + {a})(x − {b}). f′({t}) nechaga teng?",
+        "ru": "f(x) = (x² + {a})(x − {b}). Найдите f′({t})."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Product rule: f′(x) = 2x(x − {b}) + (x² + {a}); at x = {t} this is {p1} + {p2} = {ANS}.",
+        "uz": "Koʻpaytmaning hosilasi: f′(x) = 2x(x − {b}) + (x² + {a}); x = {t} da {p1} + {p2} = {ANS}.",
+        "ru": "Производная произведения: f′(x) = 2x(x − {b}) + (x² + {a}); при x = {t} получаем {p1} + {p2} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 1.7,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-clp004",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "average_rate",
+      "family": {
+        "template": "A car’s position after t seconds is s(t) = {a}t² + {b}t metres. What is its average velocity between t = {t1} s and t = {t2} s, in m/s?",
+        "params": {
+          "a": {
+            "min": 2,
+            "max": 5
+          },
+          "b": {
+            "min": 2,
+            "max": 10
+          },
+          "t1": {
+            "min": 1,
+            "max": 4
+          },
+          "t2": {
+            "min": 3,
+            "max": 8
+          }
+        },
+        "derived": {
+          "s1": "a*t1^2 + b*t1",
+          "s2": "a*t2^2 + b*t2",
+          "dt": "t2 - t1"
+        },
+        "constraints": [
+          "t2 > t1 + 1",
+          "s2 - s1 != 2*a*t2 + b",
+          "s2/t2 != s2 - s1"
+        ],
+        "answer": "(s2 - s1)/(t2 - t1)",
+        "distractors": [
+          "2*a*t2 + b",
+          "s2 - s1",
+          "s2/t2"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | wrong_formula (C1/error_rules.json).",
+        "relation": "X*({t2} - {t1}) = ({a}*{t2}^2 + {b}*{t2}) - ({a}*{t1}^2 + {b}*{t1})",
+        "decimals": 2,
+        "variants": 648
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A car’s position after t seconds is s(t) = {a}t² + {b}t metres. What is its average velocity between t = {t1} s and t = {t2} s, in m/s?",
+        "uz": "Avtomobilning t soniyadagi joylashuvi (koordinatasi) s(t) = {a}t² + {b}t metr. t = {t1} s dan t = {t2} s gacha uning oʻrtacha tezligi necha m/s?",
+        "ru": "Положение автомобиля через t секунд равно s(t) = {a}t² + {b}t метров. Какова его средняя скорость на промежутке от t = {t1} с до t = {t2} с (в м/с)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Average velocity = (s({t2}) − s({t1})) ÷ ({t2} − {t1}) = ({s2} − {s1}) ÷ {dt} = {ANS} m/s.",
+        "uz": "Oʻrtacha tezlik = (s({t2}) − s({t1})) ÷ ({t2} − {t1}) = ({s2} − {s1}) ÷ {dt} = {ANS} m/s.",
+        "ru": "Средняя скорость = (s({t2}) − s({t1})) ÷ ({t2} − {t1}) = ({s2} − {s1}) ÷ {dt} = {ANS} м/с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.4,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-clp005",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "optimization",
+      "family": {
+        "template": "From a square sheet of tin with side {s} cm, equal squares with side x cm are cut from the four corners, and the sides are folded up to make an open box. For what x is the volume of the box the greatest?",
+        "params": {
+          "k": {
+            "min": 2,
+            "max": 12
+          }
+        },
+        "derived": {
+          "s": "6*k",
+          "h": "3*k"
+        },
+        "answer": "s/6",
+        "distractors": [
+          "s/4",
+          "s/2",
+          "s/3"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | extraneous_root | wrong_formula (C1/error_rules.json).",
+        "relation": "({s} - 2*X)^2 - 4*X*({s} - 2*X) = 0; X < {s}/2",
+        "decimals": 1,
+        "variants": 11
+      },
+      "lang": "en",
+      "stem": {
+        "en": "From a square sheet of tin with side {s} cm, equal squares with side x cm are cut from the four corners, and the sides are folded up to make an open box. For what x is the volume of the box the greatest?",
+        "uz": "Tomoni {s} sm boʻlgan kvadrat tunuka varaqning toʻrt burchagidan tomoni x sm boʻlgan teng kvadratlar kesib olinadi va chetlari bukilib, usti ochiq quti yasaladi. x ning qanday qiymatida qutining hajmi eng katta boʻladi?",
+        "ru": "Из квадратного листа жести со стороной {s} см в четырёх углах вырезают равные квадраты со стороной x см и загибают края, получая открытую коробку. При каком x объём коробки наибольший?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "V = x({s} − 2x)²; V′ = ({s} − 2x)({s} − 6x) = 0 gives x = {ANS} (x = {h} would make the box flat).",
+        "uz": "V = x({s} − 2x)²; V′ = ({s} − 2x)({s} − 6x) = 0 dan x = {ANS} (x = {h} da quti yassi boʻlib qoladi).",
+        "ru": "V = x({s} − 2x)²; V′ = ({s} − 2x)({s} − 6x) = 0 даёт x = {ANS} (при x = {h} коробка становится плоской)."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.9,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-clp006",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "definite_integral",
+      "family": {
+        "template": "A car brakes: its velocity is v(t) = {a} − {b}t m/s (t in seconds) until it stops. How many metres does it travel while braking?",
+        "params": {
+          "b": {
+            "min": 2,
+            "max": 6
+          },
+          "T": {
+            "min": 3,
+            "max": 10
+          }
+        },
+        "derived": {
+          "a": "b*T"
+        },
+        "constraints": [
+          "(b*T*T) % 2 == 0"
+        ],
+        "answer": "a*a/(2*b)",
+        "distractors": [
+          "a*T",
+          "a",
+          "T"
+        ],
+        "integer": true,
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: wrong_formula | partial_answer | partial_answer (C1/error_rules.json).",
+        "relation": "X = {a}*({a}/{b}) - {b}*({a}/{b})^2/2",
+        "variants": 32
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A car brakes: its velocity is v(t) = {a} − {b}t m/s (t in seconds) until it stops. How many metres does it travel while braking?",
+        "uz": "Avtomobil tormozlanmoqda: toʻxtaguncha uning tezligi v(t) = {a} − {b}t m/s (t — soniyalarda). Tormozlanish davomida u necha metr yoʻl bosadi?",
+        "ru": "Автомобиль тормозит: до полной остановки его скорость равна v(t) = {a} − {b}t м/с (t в секундах). Какой путь (в метрах) он проходит при торможении?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "It stops when {a} − {b}t = 0, at t = {T}; the distance is ∫₀^{T} ({a} − {b}t) dt = {a} × {T} − {b} × {T}²/2 = {ANS} m.",
+        "uz": "{a} − {b}t = 0 da, yaʼni t = {T} da toʻxtaydi; yoʻl ∫₀^{T} ({a} − {b}t) dt = {a} × {T} − {b} × {T}²/2 = {ANS} m.",
+        "ru": "Остановка при {a} − {b}t = 0, то есть при t = {T}; путь ∫₀^{T} ({a} − {b}t) dt = {a} × {T} − {b} × {T}²/2 = {ANS} м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 1.8,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1-clp007",
+      "skill": "math",
+      "rung": "calc",
+      "subskill": "related_rates",
+      "family": {
+        "template": "A {L} m ladder leans against a wall. Its foot slides away from the wall at {v} m/s. How fast, in m/s, is the top sliding down when the foot is {x} m from the wall? Round to the nearest hundredth.",
+        "params": {
+          "t": {
+            "values": [
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                4,
+                3,
+                5
+              ],
+              [
+                6,
+                8,
+                10
+              ],
+              [
+                8,
+                6,
+                10
+              ],
+              [
+                5,
+                12,
+                13
+              ],
+              [
+                12,
+                5,
+                13
+              ],
+              [
+                9,
+                12,
+                15
+              ],
+              [
+                12,
+                9,
+                15
+              ],
+              [
+                8,
+                15,
+                17
+              ],
+              [
+                15,
+                8,
+                17
+              ]
+            ]
+          },
+          "v": {
+            "values": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        },
+        "derived": {
+          "x": "t[0]",
+          "y": "t[1]",
+          "L": "t[2]"
+        },
+        "answer": "v*x/y",
+        "distractors": [
+          "v*y/x",
+          "v",
+          "v*x/L"
+        ],
+        "notation": "Python-style formulas over params (src/engine/content/formula.ts); {p} = value of p, ^{p} = superscript, _{p} = subscript, {ANS} = the key; options = [answer] + distractors (or option_templates, key first). Distractor error rules, in order: inverse_slip | wrong_formula | wrong_formula (C1/error_rules.json).",
+        "relation": "{x}*{v} + sqrt({L}^2 - {x}^2)*(-X) = 0",
+        "tolerance": 0.01,
+        "decimals": 2,
+        "variants": 40
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A {L} m ladder leans against a wall. Its foot slides away from the wall at {v} m/s. How fast, in m/s, is the top sliding down when the foot is {x} m from the wall? Round to the nearest hundredth.",
+        "uz": "Uzunligi {L} m boʻlgan narvon devorga suyab qoʻyilgan. Uning pastki uchi devordan {v} m/s tezlikda uzoqlashmoqda. Pastki uch devordan {x} m uzoqlikda boʻlganda, yuqori uchi qanday tezlikda (m/s) pastga sirpanadi? Yuzdan birlargacha yaxlitlang.",
+        "ru": "Лестница длиной {L} м прислонена к стене. Её нижний конец отъезжает от стены со скоростью {v} м/с. С какой скоростью (в м/с) опускается верхний конец, когда нижний находится в {x} м от стены? Ответ округлите до сотых."
+      },
+      "answer_numeric": {
+        "tolerance": 0.01
+      },
+      "why": {
+        "en": "x² + y² = {L}², so x·x′ + y·y′ = 0; with y = {y}: y′ = −{x} × {v} ÷ {y}, so the top falls at ≈ {ANS} m/s.",
+        "uz": "x² + y² = {L}², demak x·x′ + y·y′ = 0; y = {y} da y′ = −{x} × {v} ÷ {y}, yaʼni yuqori uch ≈ {ANS} m/s tezlikda tushadi.",
+        "ru": "x² + y² = {L}², поэтому x·x′ + y·y′ = 0; при y = {y}: y′ = −{x} × {v} ÷ {y}, то есть верх опускается со скоростью ≈ {ANS} м/с."
+      },
+      "instructions": {
+        "en": "Type your answer as a number rounded to hundredths.",
+        "uz": "Javobni yuzdan birlargacha yaxlitlab, son bilan kiriting.",
+        "ru": "Введите ответ числом, округлив до сотых."
+      },
+      "prior_b": 2,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ]
+}

@@ -1,0 +1,894 @@
+{
+  "bank": "C1",
+  "batch": 8,
+  "items": [
+    {
+      "id": "C1-m2b001",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "family": {
+        "template": "A shop raises the price of a {P} soʻm bag by {a}%. A month later it lowers the new price by {b}%. What is the final price, in soʻm?",
+        "params": {
+          "k": {
+            "min": 10,
+            "max": 90,
+            "step": 5
+          },
+          "a": {
+            "values": [
+              10,
+              20,
+              25,
+              30,
+              40,
+              50
+            ]
+          },
+          "b": {
+            "values": [
+              10,
+              20,
+              25,
+              30,
+              40
+            ]
+          }
+        },
+        "derived": {
+          "P": "k*10000",
+          "u": "(100 + a)/100",
+          "d": "(100 - b)/100",
+          "M": "k*10000*(100 + a)/100"
+        },
+        "answer": "P*(100 + a)*(100 - b)/10000",
+        "distractors": [
+          "P + P*(a - b)/100",
+          "P*(100 + a)/100",
+          "P*(100 - b)/100"
+        ],
+        "integer": true,
+        "relation": "X = {P}*(1 + {a}/100)*(1 - {b}/100)"
+      },
+      "page": "C19-MAPS01-2",
+      "lang": "en",
+      "stem": {
+        "en": "A shop raises the price of a {P} soʻm bag by {a}%. A month later it lowers the new price by {b}%. What is the final price, in soʻm?",
+        "uz": "Doʻkon {P} soʻmlik sumkaning narxini {a}% ga oshirdi. Bir oydan keyin yangi narxni {b}% ga tushirdi. Oxirgi narx necha soʻm?",
+        "ru": "Магазин поднял цену сумки стоимостью {P} сум на {a}%. Через месяц новую цену снизили на {b}%. Какова итоговая цена, в сумах?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Up {a}% is × {u}, down {b}% is × {d}: {P} × {u} = {M}, then {M} × {d} = {ANS} soʻm.",
+        "uz": "{a}% ga oshish — × {u}, {b}% ga tushish — × {d}: {P} × {u} = {M}, keyin {M} × {d} = {ANS} soʻm.",
+        "ru": "Рост на {a}% — это × {u}, снижение на {b}% — × {d}: {P} × {u} = {M}, затем {M} × {d} = {ANS} сум."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.8,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-m2b002",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "percent",
+      "family": {
+        "template": "After its price went up by {r}%, a ticket costs {N} soʻm. What was the price before the rise, in soʻm?",
+        "params": {
+          "o": {
+            "min": 20,
+            "max": 90
+          },
+          "r": {
+            "values": [
+              10,
+              20,
+              30,
+              40
+            ]
+          }
+        },
+        "derived": {
+          "N": "o*10*(100 + r)",
+          "u": "(100 + r)/100"
+        },
+        "answer": "N*100/(100 + r)",
+        "distractors": [
+          "N*(100 - r)/100",
+          "N*(100 + r)/100",
+          "N*r/100"
+        ],
+        "integer": true,
+        "relation": "X*(1 + {r}/100) = {N}"
+      },
+      "page": "C19-MAPS01-2",
+      "lang": "en",
+      "stem": {
+        "en": "After its price went up by {r}%, a ticket costs {N} soʻm. What was the price before the rise, in soʻm?",
+        "uz": "Narxi {r}% ga oshgach, chipta {N} soʻm turadi. Oshishdan oldin uning narxi necha soʻm edi?",
+        "ru": "После роста цены на {r}% билет стоит {N} сум. Сколько он стоил до роста, в сумах?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Old price × {u} = {N}, so the old price = {N} ÷ {u} = {ANS} soʻm.",
+        "uz": "Eski narx × {u} = {N}, demak eski narx = {N} ÷ {u} = {ANS} soʻm.",
+        "ru": "Старая цена × {u} = {N}, значит, старая цена = {N} ÷ {u} = {ANS} сум."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.9,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-m2b003",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "mean",
+      "family": {
+        "template": "The mean age of the {n} players in a team is {m} years. Their {a}-year-old coach joins them. What is the mean age of the whole group now, in years?",
+        "params": {
+          "n": {
+            "min": 8,
+            "max": 14
+          },
+          "m": {
+            "min": 14,
+            "max": 17
+          },
+          "d": {
+            "min": 1,
+            "max": 3
+          }
+        },
+        "derived": {
+          "a": "m + (n + 1)*d",
+          "S": "n*m",
+          "S2": "n*m + m + (n + 1)*d",
+          "n2": "n + 1"
+        },
+        "answer": "(n*m + a)/(n + 1)",
+        "distractors": [
+          "(m + a)/2",
+          "round((n*m + a)/n, 1)",
+          "m"
+        ],
+        "integer": true,
+        "relation": "X*({n} + 1) = {n}*{m} + {a}"
+      },
+      "page": "C19-MAPS02-2",
+      "lang": "en",
+      "stem": {
+        "en": "The mean age of the {n} players in a team is {m} years. Their {a}-year-old coach joins them. What is the mean age of the whole group now, in years?",
+        "uz": "Jamoadagi {n} nafar oʻyinchining oʻrtacha yoshi {m} yosh. Ularga {a} yoshli murabbiy qoʻshildi. Endi butun guruhning oʻrtacha yoshi necha yosh?",
+        "ru": "Средний возраст {n} игроков команды равен {m} годам. К ним присоединился их {a}-летний тренер. Каков теперь средний возраст всей группы (в годах)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Players' sum: {n} × {m} = {S}. With the coach: {S} + {a} = {S2}, for {n2} people: {S2} ÷ {n2} = {ANS} years.",
+        "uz": "Oʻyinchilar yigʻindisi: {n} × {m} = {S}. Murabbiy bilan: {S} + {a} = {S2}, {n2} kishi: {S2} ÷ {n2} = {ANS} yosh.",
+        "ru": "Сумма игроков: {n} × {m} = {S}. С тренером: {S} + {a} = {S2}, людей {n2}: {S2} ÷ {n2} = {ANS} лет."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.9,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-m2b004",
+      "skill": "math",
+      "rung": "prealg",
+      "subskill": "statistics",
+      "family": {
+        "template": "Six students' scores on a quiz are {p}, {lo}, {q}, {hi}, {s} and {t}. What is the range of the scores?",
+        "params": {
+          "lo": {
+            "min": 40,
+            "max": 60
+          },
+          "R": {
+            "min": 15,
+            "max": 35
+          },
+          "u1": {
+            "min": 1,
+            "max": 4
+          },
+          "u2": {
+            "min": 1,
+            "max": 4
+          },
+          "v1": {
+            "min": 5,
+            "max": 10
+          },
+          "v2": {
+            "min": 5,
+            "max": 10
+          }
+        },
+        "derived": {
+          "hi": "lo + R",
+          "p": "lo + u1",
+          "t": "lo + R - u2",
+          "q": "lo + v1",
+          "s": "lo + R - v2"
+        },
+        "answer": "max(p, lo, q, hi, s, t) - min(p, lo, q, hi, s, t)",
+        "distractors": [
+          "t - p",
+          "hi - p",
+          "hi"
+        ],
+        "integer": true,
+        "relation": "X = max(max({p}, {lo}, {q}), max({hi}, {s}, {t})) - min(min({p}, {lo}, {q}), min({hi}, {s}, {t}))"
+      },
+      "page": "C19-MAPS02-3",
+      "lang": "en",
+      "stem": {
+        "en": "Six students' scores on a quiz are {p}, {lo}, {q}, {hi}, {s} and {t}. What is the range of the scores?",
+        "uz": "Oltita oʻquvchining testdagi ballari: {p}, {lo}, {q}, {hi}, {s} va {t}. Ballar qulochi (range) nechaga teng?",
+        "ru": "Баллы шести учеников за тест: {p}, {lo}, {q}, {hi}, {s} и {t}. Каков размах (range) этих баллов?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Largest {hi}, smallest {lo}: range = {hi} − {lo} = {ANS}.",
+        "uz": "Eng kattasi {hi}, eng kichigi {lo}: quloch = {hi} − {lo} = {ANS}.",
+        "ru": "Наибольшее {hi}, наименьшее {lo}: размах = {hi} − {lo} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.0,
+      "time_s": 40,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-m2b005",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "statistics",
+      "family": {
+        "template": "For a class, the line of best fit for test score y and hours studied x is y = {m}x + {b}. What score does the line predict for a student who studied {h} hours?",
+        "params": {
+          "m": {
+            "values": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "b": {
+            "min": 40,
+            "max": 60
+          },
+          "h": {
+            "min": 2,
+            "max": 8
+          }
+        },
+        "derived": {
+          "mh": "m*h"
+        },
+        "constraints": [
+          "m*h + b <= 100",
+          "m*h != b + h"
+        ],
+        "answer": "m*h + b",
+        "distractors": [
+          "m*h",
+          "b + h",
+          "m*(h + 1) + b"
+        ],
+        "integer": true,
+        "relation": "X = {m}*{h} + {b}"
+      },
+      "page": "C19-MAPS02-3",
+      "lang": "en",
+      "stem": {
+        "en": "For a class, the line of best fit for test score y and hours studied x is y = {m}x + {b}. What score does the line predict for a student who studied {h} hours?",
+        "uz": "Bir sinf uchun test bali y va oʻqishga sarflangan soatlar x boʻyicha eng mos chiziq y = {m}x + {b}. Chiziq {h} soat oʻqigan oʻquvchi uchun qanday ball bashorat qiladi?",
+        "ru": "Для класса построена линия тренда, связывающая балл за тест y и часы подготовки x: y = {m}x + {b}. Какой балл предсказывает эта линия для ученика, который готовился {h} ч?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Put x = {h}: y = {m} × {h} + {b} = {mh} + {b} = {ANS}.",
+        "uz": "x = {h} ni qoʻying: y = {m} × {h} + {b} = {mh} + {b} = {ANS}.",
+        "ru": "Подставим x = {h}: y = {m} × {h} + {b} = {mh} + {b} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.7,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-m2b006",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "probability",
+      "family": {
+        "template": "Girls: {g1} walk to school and {g2} go by bus. Boys: {b1} walk to school and {b2} go by bus. One of the students who go by bus is chosen at random. What is the probability that this student is a girl?",
+        "params": {
+          "g1": {
+            "min": 8,
+            "max": 20
+          },
+          "g2": {
+            "min": 6,
+            "max": 20
+          },
+          "b1": {
+            "min": 8,
+            "max": 20
+          },
+          "b2": {
+            "min": 6,
+            "max": 20
+          }
+        },
+        "derived": {
+          "W": "g2 + b2",
+          "G": "g1 + g2",
+          "T": "g1 + g2 + b1 + b2",
+          "G1": "gcd(g2, g2 + b2)",
+          "k1": "g2/G1",
+          "d1": "(g2 + b2)/G1",
+          "G2": "gcd(g2, g1 + g2)",
+          "k2": "g2/G2",
+          "d2": "(g1 + g2)/G2",
+          "G3": "gcd(g2, g1 + g2 + b1 + b2)",
+          "k3": "g2/G3",
+          "d3": "(g1 + g2 + b1 + b2)/G3",
+          "G4": "gcd(b2, g2 + b2)",
+          "k4": "b2/G4",
+          "d4": "(g2 + b2)/G4"
+        },
+        "constraints": [
+          "g2 != b2",
+          "g1 != b2",
+          "g2*(g2 + b2) != b2*(g1 + g2 + b1 + b2)",
+          "b2*(g1 + g2) != g2*(g2 + b2)"
+        ],
+        "answer": "g2/(g2 + b2)",
+        "option_templates": [
+          "{k1}/{d1}",
+          "{k2}/{d2}",
+          "{k3}/{d3}",
+          "{k4}/{d4}"
+        ],
+        "relation": "X = {g2}/({g2} + {b2})"
+      },
+      "page": "C19-MAPS03-2",
+      "lang": "en",
+      "stem": {
+        "en": "Girls: {g1} walk to school and {g2} go by bus. Boys: {b1} walk to school and {b2} go by bus. One of the students who go by bus is chosen at random. What is the probability that this student is a girl?",
+        "uz": "Qizlar: {g1} nafari maktabga piyoda boradi, {g2} nafari avtobusda. Oʻgʻil bolalar: {b1} nafari piyoda boradi, {b2} nafari avtobusda. Avtobusda boradiganlardan biri tasodifan tanlandi. Uning qiz boʻlish ehtimoli qancha?",
+        "ru": "Девочки: пешком в школу ходят {g1}, на автобусе ездят {g2}. Мальчики: пешком ходят {b1}, на автобусе ездят {b2}. Случайно выбирают одного из тех, кто ездит на автобусе. Какова вероятность, что это девочка?"
+      },
+      "why": {
+        "en": "Keep only the bus column: {g2} + {b2} = {W}. Girls among them: {g2}. P = {g2} ÷ {W}, that is {k1}/{d1}.",
+        "uz": "Faqat avtobus ustuni: {g2} + {b2} = {W}. Ulardan {g2} nafari qiz. P = {g2} ÷ {W}, yaʼni {k1}/{d1}.",
+        "ru": "Только столбец «автобус»: {g2} + {b2} = {W}. Из них девочек {g2}. P = {g2} ÷ {W}, то есть {k1}/{d1}."
+      },
+      "instructions": {
+        "en": "Choose the correct answer.",
+        "uz": "Toʻgʻri javobni tanlang.",
+        "ru": "Выберите правильный ответ."
+      },
+      "prior_b": -0.3,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-m2b007",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "statistics",
+      "family": {
+        "template": "A school has {N} students. In a random sample of {n} of them, {k} said they read every day. Based on the sample, about how many students in the whole school read every day?",
+        "params": {
+          "n": {
+            "values": [
+              40,
+              50,
+              80,
+              200
+            ]
+          },
+          "j": {
+            "min": 5,
+            "max": 20
+          },
+          "k": {
+            "min": 4,
+            "max": 36
+          }
+        },
+        "derived": {
+          "N": "n*j"
+        },
+        "constraints": [
+          "2*k != n",
+          "k*(2*j + 1) != n*j",
+          "k*(1 + j) != n*j"
+        ],
+        "answer": "n*j*k/n",
+        "distractors": [
+          "k",
+          "n*j - j*k",
+          "(n*j + n)*k/n"
+        ],
+        "integer": true,
+        "relation": "X*{n} = {N}*{k}"
+      },
+      "page": "C19-MAPS03-3",
+      "lang": "en",
+      "stem": {
+        "en": "A school has {N} students. In a random sample of {n} of them, {k} said they read every day. Based on the sample, about how many students in the whole school read every day?",
+        "uz": "Maktabda {N} nafar oʻquvchi bor. Ulardan tasodifan tanlangan {n} nafarining {k} nafari har kuni kitob oʻqishini aytdi. Tanlanma boʻyicha butun maktabda taxminan nechta oʻquvchi har kuni kitob oʻqiydi?",
+        "ru": "В школе {N} учеников. В случайной выборке из {n} учеников число тех, кто сказал, что читает каждый день, равно {k}. Сколько примерно учеников всей школы читают каждый день, если судить по выборке?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "In the sample {k} of {n} read every day, so in the school about {N} × {k} ÷ {n} = {ANS}.",
+        "uz": "Tanlanmada {n} tadan {k} tasi har kuni oʻqiydi, demak maktabda taxminan {N} × {k} ÷ {n} = {ANS}.",
+        "ru": "В выборке каждый день читают {k} из {n}, значит, в школе примерно {N} × {k} ÷ {n} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.6,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-m2b008",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "statistics",
+      "family": {
+        "template": "A survey of a random sample of students estimates that {p}% of all the students in a city have a library card, with a margin of error of {e}%. What is the smallest plausible percent of all the city's students who have a library card?",
+        "params": {
+          "p": {
+            "min": 20,
+            "max": 80
+          },
+          "e": {
+            "values": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        },
+        "derived": {
+          "hi": "p + e"
+        },
+        "answer": "p - e",
+        "distractors": [
+          "p + e",
+          "p - 2*e",
+          "p"
+        ],
+        "integer": true,
+        "relation": "X = {p} - {e}"
+      },
+      "page": "C19-MAPS03-3",
+      "lang": "en",
+      "stem": {
+        "en": "A survey of a random sample of students estimates that {p}% of all the students in a city have a library card, with a margin of error of {e}%. What is the smallest plausible percent of all the city's students who have a library card?",
+        "uz": "Tasodifiy tanlangan oʻquvchilar orasidagi soʻrovnoma shahardagi barcha oʻquvchilarning {p} foizida kutubxona kartasi borligini koʻrsatdi, xatolik chegarasi {e}%. Kartasi bor oʻquvchilar foizining ehtimoliy eng kichik qiymati nechaga teng?",
+        "ru": "Опрос случайной выборки учеников показал, что у {p}% всех учеников города есть читательский билет; погрешность — {e}%. Каков наименьший правдоподобный процент учеников города с читательским билетом?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The plausible values run from {p} − {e} to {p} + {e}, that is from {ANS}% to {hi}%; the smallest is {ANS}%.",
+        "uz": "Ehtimoliy qiymatlar {p} − {e} dan {p} + {e} gacha, yaʼni {ANS}% dan {hi}% gacha; eng kichigi {ANS}%.",
+        "ru": "Правдоподобные значения — от {p} − {e} до {p} + {e}, то есть от {ANS}% до {hi}%; наименьшее — {ANS}%."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.4,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-m2b009",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "volume",
+      "family": {
+        "template": "Two jars have the same shape. The small jar is {a} cm tall and holds {V} mL. The large jar is {b} cm tall. How many millilitres does the large jar hold?",
+        "params": {
+          "a": {
+            "values": [
+              3,
+              4,
+              5,
+              6,
+              8,
+              10
+            ]
+          },
+          "k": {
+            "values": [
+              2,
+              3
+            ]
+          },
+          "V": {
+            "min": 20,
+            "max": 400,
+            "step": 10
+          }
+        },
+        "derived": {
+          "b": "k*a",
+          "kkk": "k*k*k"
+        },
+        "answer": "V*(k*a/a)^3",
+        "distractors": [
+          "V*k",
+          "V*k*k",
+          "V*(k*k*k - 1)"
+        ],
+        "integer": true,
+        "relation": "X = {V}*({b}/{a})^3"
+      },
+      "page": "C19-MAGT01-2",
+      "lang": "en",
+      "stem": {
+        "en": "Two jars have the same shape. The small jar is {a} cm tall and holds {V} mL. The large jar is {b} cm tall. How many millilitres does the large jar hold?",
+        "uz": "Ikki banka bir xil shaklda. Kichik banka balandligi {a} sm, unga {V} mL sigʻadi. Katta banka balandligi {b} sm. Katta bankaga necha millilitr sigʻadi?",
+        "ru": "Две банки одинаковой формы. Маленькая банка высотой {a} см вмещает {V} мл. Большая банка имеет высоту {b} см. Сколько миллилитров вмещает большая банка?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "k = {b} ÷ {a} = {k}, and volume grows by k³ = {kkk}: {V} × {kkk} = {ANS} mL.",
+        "uz": "k = {b} ÷ {a} = {k}, hajm k³ = {kkk} marta oshadi: {V} × {kkk} = {ANS} mL.",
+        "ru": "k = {b} ÷ {a} = {k}, объём растёт в k³ = {kkk} раз: {V} × {kkk} = {ANS} мл."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.3,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-m2b010",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "right_triangle_trig",
+      "family": {
+        "template": "A kite's string is {L} m long and pulled straight. The string makes an angle of x° with the ground, and sin x° = {a}/{c}. How high is the kite above the ground, in metres?",
+        "params": {
+          "tri": {
+            "values": [
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                4,
+                3,
+                5
+              ],
+              [
+                5,
+                12,
+                13
+              ],
+              [
+                12,
+                5,
+                13
+              ],
+              [
+                8,
+                15,
+                17
+              ],
+              [
+                15,
+                8,
+                17
+              ]
+            ]
+          },
+          "j": {
+            "min": 2,
+            "max": 8
+          }
+        },
+        "derived": {
+          "a": "tri[0]",
+          "b": "tri[1]",
+          "c": "tri[2]",
+          "L": "tri[2]*j"
+        },
+        "constraints": [
+          "tri[2]*j <= 80"
+        ],
+        "answer": "L*a/c",
+        "distractors": [
+          "L*b/c",
+          "a",
+          "round(L*c/a, 1)"
+        ],
+        "integer": true,
+        "relation": "X = {L}*{a}/{c}"
+      },
+      "page": "C19-MAGT03-2",
+      "lang": "en",
+      "stem": {
+        "en": "A kite's string is {L} m long and pulled straight. The string makes an angle of x° with the ground, and sin x° = {a}/{c}. How high is the kite above the ground, in metres?",
+        "uz": "Varrakning ipi {L} m uzunlikda va tarang tortilgan. Ip yer bilan x° burchak hosil qiladi, sin x° = {a}/{c}. Varrak yerdan necha metr balandlikda?",
+        "ru": "Нить воздушного змея длиной {L} м натянута. Она образует с землёй угол x°, и sin x° = {a}/{c}. На какой высоте над землёй змей (в метрах)?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The height is opposite x°, and the string is the hypotenuse: height = {L} × {a}/{c} = {ANS} m.",
+        "uz": "Balandlik x° qarshisida, ip — gipotenuza: balandlik = {L} × {a}/{c} = {ANS} m.",
+        "ru": "Высота лежит против угла x°, нить — гипотенуза: высота = {L} × {a}/{c} = {ANS} м."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.3,
+      "time_s": 50,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-m2b011",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "right_triangle_trig",
+      "family": {
+        "template": "An equilateral triangle has sides of {s} cm. Its area is k√3 cm². What is k?",
+        "params": {
+          "s": {
+            "values": [
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              18,
+              20,
+              22,
+              24
+            ]
+          }
+        },
+        "derived": {
+          "h": "s/2"
+        },
+        "answer": "s*s/4",
+        "distractors": [
+          "s*s/2",
+          "s/2",
+          "s*s"
+        ],
+        "integer": true,
+        "relation": "X*sqrt(3) = sqrt(3)/4*{s}^2"
+      },
+      "page": "C19-MAGT03-2",
+      "lang": "en",
+      "stem": {
+        "en": "An equilateral triangle has sides of {s} cm. Its area is k√3 cm². What is k?",
+        "uz": "Teng tomonli uchburchakning tomonlari {s} sm. Uning yuzasi k√3 sm². k nechaga teng?",
+        "ru": "Стороны равностороннего треугольника равны {s} см. Его площадь равна k√3 см². Найдите k."
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The height is {h}√3 (half of {s}, times √3), so the area is (1/2) × {s} × {h}√3 = {ANS}√3 cm².",
+        "uz": "Balandlik {h}√3 ({s} ning yarmi, √3 ga koʻpaytirilgan), demak yuza (1/2) × {s} × {h}√3 = {ANS}√3 sm².",
+        "ru": "Высота {h}√3 (половина {s}, умноженная на √3), поэтому площадь (1/2) × {s} × {h}√3 = {ANS}√3 см²."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.0,
+      "time_s": 55,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    },
+    {
+      "id": "C1-m2b012",
+      "skill": "math",
+      "rung": "geom",
+      "subskill": "circles",
+      "family": {
+        "template": "The equation x² + y² − {A}x + {B}y = {C} describes a circle in the xy-plane. What is the radius of the circle?",
+        "params": {
+          "h": {
+            "min": 1,
+            "max": 6
+          },
+          "k": {
+            "min": 1,
+            "max": 6
+          },
+          "r": {
+            "min": 3,
+            "max": 12
+          }
+        },
+        "derived": {
+          "A": "2*h",
+          "B": "2*k",
+          "C": "r*r - h*h - k*k",
+          "hh": "h*h",
+          "kk": "k*k",
+          "rr": "r*r"
+        },
+        "constraints": [
+          "r*r > h*h + k*k",
+          "r*r != 2*(h*h + k*k)",
+          "r*r - h*h - k*k != r",
+          "h*h + k*k != r"
+        ],
+        "answer": "r",
+        "distractors": [
+          "r*r",
+          "r*r - h*h - k*k",
+          "h*h + k*k"
+        ],
+        "integer": true,
+        "relation": "X = sqrt({C} + ({A}/2)^2 + ({B}/2)^2)"
+      },
+      "page": "C19-MAGT03-3",
+      "lang": "en",
+      "stem": {
+        "en": "The equation x² + y² − {A}x + {B}y = {C} describes a circle in the xy-plane. What is the radius of the circle?",
+        "uz": "xy tekisligida x² + y² − {A}x + {B}y = {C} tenglama aylanani ifodalaydi. Aylananing radiusi nechaga teng?",
+        "ru": "Уравнение x² + y² − {A}x + {B}y = {C} задаёт окружность на плоскости xy. Чему равен радиус окружности?"
+      },
+      "answer_numeric": {
+        "tolerance": 0
+      },
+      "why": {
+        "en": "(x − {h})² + (y + {k})² = {C} + {hh} + {kk} = {rr}, so the radius is √{rr} = {ANS}.",
+        "uz": "(x − {h})² + (y + {k})² = {C} + {hh} + {kk} = {rr}, demak radius √{rr} = {ANS}.",
+        "ru": "(x − {h})² + (y + {k})² = {C} + {hh} + {kk} = {rr}, значит, радиус √{rr} = {ANS}."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 0.3,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:p7-a2",
+      "key_check_1": "author",
+      "key_check_2": "solver:relation@50",
+      "status": "verified_auto",
+      "version": 1,
+      "key_check_2_version": 1
+    }
+  ]
+}

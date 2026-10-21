@@ -1,0 +1,1047 @@
+{
+ "bank": "C18",
+ "batch": 12,
+ "items": [
+  {
+   "id": "C18-chp021",
+   "skill": "dtm_chemistry",
+   "level": "hard",
+   "subskill": "organik.izomeriya",
+   "lang": "uz",
+   "stem": {
+    "uz": "Pentan (C₅H₁₂) ning nechta tuzilish izomeri bor?",
+    "ru": "Сколько структурных изомеров у пентана C₅H₁₂?"
+   },
+   "options": [
+    {
+     "uz": "3",
+     "ru": "3"
+    },
+    {
+     "uz": "2",
+     "ru": "2"
+    },
+    {
+     "uz": "4",
+     "ru": "4"
+    },
+    {
+     "uz": "5",
+     "ru": "5"
+    }
+   ],
+   "why": {
+    "en": "n-pentane, isopentane (2-methylbutane) and neopentane (2,2-dimethylpropane).",
+    "uz": "n-pentan, izopentan (2-metilbutan), neopentan (2,2-dimetilpropan).",
+    "ru": "н-пентан, изопентан (2-метилбутан), неопентан (2,2-диметилпропан)."
+   },
+   "prior_b": 0.9,
+   "time_s": 45,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Alkane",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Alkanes are CnH2n+2; butane has 2 structural isomers and pentane 3.",
+      "url": "https://en.wikipedia.org/wiki/Alkane"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp022",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "hisob.yonish",
+   "lang": "uz",
+   "stem": {
+    "uz": "1 mol metan toʻliq yonishi uchun (CH₄ + 2O₂ → CO₂ + 2H₂O) normal sharoitda necha litr kislorod kerak?",
+    "ru": "Сколько литров кислорода (н. у.) нужно для полного сгорания 1 моль метана (CH₄ + 2O₂ → CO₂ + 2H₂O)?"
+   },
+   "options": [
+    {
+     "uz": "44,8",
+     "ru": "44,8"
+    },
+    {
+     "uz": "22,4",
+     "ru": "22,4"
+    },
+    {
+     "uz": "11,2",
+     "ru": "11,2"
+    },
+    {
+     "uz": "67,2",
+     "ru": "67,2"
+    }
+   ],
+   "why": {
+    "en": "1 mol CH4 needs 2 mol O2 = 2 x 22.4 = 44.8 L.",
+    "uz": "1 mol CH₄ ga 2 mol O₂ = 2 · 22,4 = 44,8 l.",
+    "ru": "На 1 моль CH₄ – 2 моль O₂ = 2 · 22,4 = 44,8 л."
+   },
+   "prior_b": 0.0,
+   "time_s": 45,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Molar_volume",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "At 0 C and 1 atm the molar volume of an ideal gas is about 22.4 L/mol.",
+      "url": "https://en.wikipedia.org/wiki/Molar_volume"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp023",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "asosiy_tushunchalar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Avogadro doimiysining taxminiy qiymati qaysi?",
+    "ru": "Каково приблизительное значение постоянной Авогадро?"
+   },
+   "options": [
+    {
+     "uz": "6,02 · 10²³ mol⁻¹",
+     "ru": "6,02 · 10²³ моль⁻¹"
+    },
+    {
+     "uz": "3 · 10⁸ mol⁻¹",
+     "ru": "3 · 10⁸ моль⁻¹"
+    },
+    {
+     "uz": "1,6 · 10⁻¹⁹ mol⁻¹",
+     "ru": "1,6 · 10⁻¹⁹ моль⁻¹"
+    },
+    {
+     "uz": "22,4 mol⁻¹",
+     "ru": "22,4 моль⁻¹"
+    }
+   ],
+   "why": {
+    "en": "N_A is about 6.02 x 10^23 particles per mole.",
+    "uz": "N_A ≈ 6,02 · 10²³ zarracha/mol.",
+    "ru": "N_A ≈ 6,02 · 10²³ частиц на моль."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Avogadro_constant",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "The Avogadro constant is exactly 6.02214076 x 10^23 per mole.",
+      "url": "https://en.wikipedia.org/wiki/Avogadro_constant"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp024",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "davriy_qonun",
+   "lang": "uz",
+   "stem": {
+    "uz": "D. I. Mendeleyev davriy jadvalini qaysi yili eʼlon qilgan?",
+    "ru": "В каком году Д. И. Менделеев опубликовал периодическую таблицу?"
+   },
+   "options": [
+    {
+     "uz": "1869-yilda",
+     "ru": "в 1869 году"
+    },
+    {
+     "uz": "1789-yilda",
+     "ru": "в 1789 году"
+    },
+    {
+     "uz": "1911-yilda",
+     "ru": "в 1911 году"
+    },
+    {
+     "uz": "1905-yilda",
+     "ru": "в 1905 году"
+    }
+   ],
+   "why": {
+    "en": "Mendeleev's table appeared in 1869.",
+    "uz": "Mendeleyev jadvali 1869-yilda eʼlon qilingan.",
+    "ru": "Таблица Менделеева опубликована в 1869 году."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Periodic_table",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Mendeleev published the first generally accepted periodic table in 1869.",
+      "url": "https://en.wikipedia.org/wiki/Periodic_table"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp025",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "davriy_qonun",
+   "lang": "uz",
+   "stem": {
+    "uz": "Eng elektromanfiy element qaysi?",
+    "ru": "Какой элемент самый электроотрицательный?"
+   },
+   "options": [
+    {
+     "uz": "ftor",
+     "ru": "фтор"
+    },
+    {
+     "uz": "kislorod",
+     "ru": "кислород"
+    },
+    {
+     "uz": "xlor",
+     "ru": "хлор"
+    },
+    {
+     "uz": "seziy",
+     "ru": "цезий"
+    }
+   ],
+   "why": {
+    "en": "Fluorine has the highest electronegativity (3.98); caesium the lowest.",
+    "uz": "Ftorning elektromanfiyligi eng yuqori (3,98); seziyniki eng past.",
+    "ru": "У фтора наибольшая электроотрицательность (3,98), у цезия – наименьшая."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Electronegativity",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Fluorine is the most electronegative element (3.98 on the Pauling scale).",
+      "url": "https://en.wikipedia.org/wiki/Electronegativity"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp026",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "metallar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Natriy suv bilan reaksiyaga kirishganda qaysi gaz ajraladi?",
+    "ru": "Какой газ выделяется при реакции натрия с водой?"
+   },
+   "options": [
+    {
+     "uz": "vodorod",
+     "ru": "водород"
+    },
+    {
+     "uz": "kislorod",
+     "ru": "кислород"
+    },
+    {
+     "uz": "xlor",
+     "ru": "хлор"
+    },
+    {
+     "uz": "karbonat angidrid",
+     "ru": "углекислый газ"
+    }
+   ],
+   "why": {
+    "en": "2Na + 2H2O = 2NaOH + H2.",
+    "uz": "2Na + 2H₂O → 2NaOH + H₂↑.",
+    "ru": "2Na + 2H₂O → 2NaOH + H₂↑."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Sodium",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Sodium reacts with water to give sodium hydroxide and hydrogen gas.",
+      "url": "https://en.wikipedia.org/wiki/Sodium"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp027",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "tabiatda",
+   "lang": "uz",
+   "stem": {
+    "uz": "Yer poʻstida massa boʻyicha eng koʻp tarqalgan element qaysi?",
+    "ru": "Какой элемент самый распространённый по массе в земной коре?"
+   },
+   "options": [
+    {
+     "uz": "kislorod",
+     "ru": "кислород"
+    },
+    {
+     "uz": "kremniy",
+     "ru": "кремний"
+    },
+    {
+     "uz": "alyuminiy",
+     "ru": "алюминий"
+    },
+    {
+     "uz": "temir",
+     "ru": "железо"
+    }
+   ],
+   "why": {
+    "en": "Oxygen is first (about 46 %), silicon second.",
+    "uz": "Kislorod birinchi (taxminan 46 %), kremniy ikkinchi.",
+    "ru": "Кислород – первый (около 46 %), кремний – второй."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Abundance_of_elements_in_Earth%27s_crust",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Oxygen is the most abundant element by mass in Earth's crust, silicon second.",
+      "url": "https://en.wikipedia.org/wiki/Abundance_of_elements_in_Earth%27s_crust"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp028",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "tabiatda",
+   "lang": "uz",
+   "stem": {
+    "uz": "Havoda hajm boʻyicha eng koʻp boʻlgan gaz qaysi?",
+    "ru": "Какого газа больше всего в воздухе по объёму?"
+   },
+   "options": [
+    {
+     "uz": "azot",
+     "ru": "азота"
+    },
+    {
+     "uz": "kislorod",
+     "ru": "кислорода"
+    },
+    {
+     "uz": "argon",
+     "ru": "аргона"
+    },
+    {
+     "uz": "karbonat angidrid",
+     "ru": "углекислого газа"
+    }
+   ],
+   "why": {
+    "en": "Dry air is about 78 % nitrogen and 21 % oxygen.",
+    "uz": "Quruq havoning ~78 % i azot, ~21 % i kislorod.",
+    "ru": "Сухой воздух – около 78 % азота и 21 % кислорода."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Atmosphere_of_Earth",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Dry air is 78.08% nitrogen, 20.95% oxygen and 0.93% argon by volume.",
+      "url": "https://en.wikipedia.org/wiki/Atmosphere_of_Earth"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp029",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "allotropiya",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi juftlik uglerodning allotropik shakllari?",
+    "ru": "Какая пара – аллотропные модификации углерода?"
+   },
+   "options": [
+    {
+     "uz": "olmos va grafit",
+     "ru": "алмаз и графит"
+    },
+    {
+     "uz": "kislorod va ozon",
+     "ru": "кислород и озон"
+    },
+    {
+     "uz": "suv va muz",
+     "ru": "вода и лёд"
+    },
+    {
+     "uz": "metan va etan",
+     "ru": "метан и этан"
+    }
+   ],
+   "why": {
+    "en": "Diamond and graphite are both pure carbon; O2 and O3 are oxygen allotropes.",
+    "uz": "Olmos va grafit – sof uglerod; O₂ va O₃ – kislorod allotroplari.",
+    "ru": "Алмаз и графит – чистый углерод; O₂ и O₃ – аллотропы кислорода."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Allotropes_of_carbon",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Diamond and graphite are allotropes of carbon; graphite conducts electricity.",
+      "url": "https://en.wikipedia.org/wiki/Allotropes_of_carbon"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp030",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "kimyoviy_bog",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi moddada ion bogʻ mavjud?",
+    "ru": "В каком веществе ионная связь?"
+   },
+   "options": [
+    {
+     "uz": "NaCl",
+     "ru": "NaCl"
+    },
+    {
+     "uz": "HCl",
+     "ru": "HCl"
+    },
+    {
+     "uz": "Cl₂",
+     "ru": "Cl₂"
+    },
+    {
+     "uz": "H₂O",
+     "ru": "H₂O"
+    }
+   ],
+   "why": {
+    "en": "A metal and a non-metal form an ionic bond: Na+ Cl-.",
+    "uz": "Metall va metallmas ion bogʻ hosil qiladi: Na⁺Cl⁻.",
+    "ru": "Металл и неметалл образуют ионную связь: Na⁺Cl⁻."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ionic_bonding",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Sodium chloride is a typical ionic compound.",
+      "url": "https://en.wikipedia.org/wiki/Ionic_bonding"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp031",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "amfoterlik",
+   "lang": "uz",
+   "stem": {
+    "uz": "Qaysi gidroksid amfoter xossaga ega?",
+    "ru": "Какой гидроксид обладает амфотерными свойствами?"
+   },
+   "options": [
+    {
+     "uz": "Al(OH)₃",
+     "ru": "Al(OH)₃"
+    },
+    {
+     "uz": "NaOH",
+     "ru": "NaOH"
+    },
+    {
+     "uz": "KOH",
+     "ru": "KOH"
+    },
+    {
+     "uz": "Ca(OH)₂",
+     "ru": "Ca(OH)₂"
+    }
+   ],
+   "why": {
+    "en": "Al(OH)3 reacts with both acids and alkalis.",
+    "uz": "Al(OH)₃ ham kislota, ham ishqor bilan reaksiyaga kirishadi.",
+    "ru": "Al(OH)₃ реагирует и с кислотами, и со щелочами."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Amphoterism",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Aluminium hydroxide is amphoteric: it reacts with both acids and bases.",
+      "url": "https://en.wikipedia.org/wiki/Amphoterism"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp032",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "indikatorlar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Fenolftalein ishqoriy eritmada qanday rangga kiradi?",
+    "ru": "Какой цвет приобретает фенолфталеин в щелочном растворе?"
+   },
+   "options": [
+    {
+     "uz": "pushti (malina rang)",
+     "ru": "малиновый (розовый)"
+    },
+    {
+     "uz": "rangsiz",
+     "ru": "бесцветный"
+    },
+    {
+     "uz": "koʻk",
+     "ru": "синий"
+    },
+    {
+     "uz": "sariq",
+     "ru": "жёлтый"
+    }
+   ],
+   "why": {
+    "en": "Phenolphthalein is colourless in acid and pink in alkali.",
+    "uz": "Fenolftalein kislotada rangsiz, ishqorda pushti.",
+    "ru": "Фенолфталеин бесцветен в кислоте, малиновый в щёлочи."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Phenolphthalein",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Phenolphthalein is colourless in acidic solutions and pink in basic solutions.",
+      "url": "https://en.wikipedia.org/wiki/Phenolphthalein"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp033",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "suv",
+   "lang": "uz",
+   "stem": {
+    "uz": "Suvning qattiqligi asosan qaysi ionlar bilan bogʻliq?",
+    "ru": "Какие ионы в основном обусловливают жёсткость воды?"
+   },
+   "options": [
+    {
+     "uz": "Ca²⁺ va Mg²⁺",
+     "ru": "Ca²⁺ и Mg²⁺"
+    },
+    {
+     "uz": "Na⁺ va K⁺",
+     "ru": "Na⁺ и K⁺"
+    },
+    {
+     "uz": "H⁺ va OH⁻",
+     "ru": "H⁺ и OH⁻"
+    },
+    {
+     "uz": "Cl⁻ va NO₃⁻",
+     "ru": "Cl⁻ и NO₃⁻"
+    }
+   ],
+   "why": {
+    "en": "Hardness comes mainly from calcium and magnesium ions.",
+    "uz": "Qattiqlik asosan kalsiy va magniy ionlariga bogʻliq.",
+    "ru": "Жёсткость обусловлена в основном ионами кальция и магния."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Hard_water",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Hard water contains mainly calcium and magnesium ions.",
+      "url": "https://en.wikipedia.org/wiki/Hard_water"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp034",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "atom_tuzilishi",
+   "lang": "uz",
+   "stem": {
+    "uz": "Izotoplar bir-biridan nima bilan farq qiladi?",
+    "ru": "Чем изотопы одного элемента отличаются друг от друга?"
+   },
+   "options": [
+    {
+     "uz": "neytronlar soni bilan",
+     "ru": "числом нейтронов"
+    },
+    {
+     "uz": "protonlar soni bilan",
+     "ru": "числом протонов"
+    },
+    {
+     "uz": "elektronlar soni bilan",
+     "ru": "числом электронов"
+    },
+    {
+     "uz": "yadro zaryadi bilan",
+     "ru": "зарядом ядра"
+    }
+   ],
+   "why": {
+    "en": "Same protons (same element), different neutrons.",
+    "uz": "Protonlar soni bir xil, neytronlar soni har xil.",
+    "ru": "Число протонов одинаковое, нейтронов – разное."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Isotope",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Isotopes of an element have the same number of protons and different numbers of neutrons.",
+      "url": "https://en.wikipedia.org/wiki/Isotope"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp035",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "kimyoviy_muvozanat",
+   "lang": "uz",
+   "stem": {
+    "uz": "N₂ + 3H₂ ⇌ 2NH₃ muvozanat sistemasida bosim oshirilsa, muvozanat qaysi tomonga siljiydi?",
+    "ru": "Куда сместится равновесие N₂ + 3H₂ ⇌ 2NH₃ при повышении давления?"
+   },
+   "options": [
+    {
+     "uz": "ammiak hosil boʻlish tomoniga (oʻngga)",
+     "ru": "в сторону образования аммиака (вправо)"
+    },
+    {
+     "uz": "chapga",
+     "ru": "влево"
+    },
+    {
+     "uz": "siljimaydi",
+     "ru": "не сместится"
+    },
+    {
+     "uz": "avval chapga, keyin oʻngga",
+     "ru": "сначала влево, потом вправо"
+    }
+   ],
+   "why": {
+    "en": "4 mol of gas become 2 mol; higher pressure favours fewer moles.",
+    "uz": "4 mol gazdan 2 mol hosil boʻladi; bosim oshsa, kamroq mol tomonga siljiydi.",
+    "ru": "4 моль газа дают 2 моль; давление смещает к меньшему числу молей."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Le_Chatelier%27s_principle",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Raising pressure shifts N2 + 3H2 = 2NH3 to the right (fewer moles of gas).",
+      "url": "https://en.wikipedia.org/wiki/Le_Chatelier%27s_principle"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp036",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "kinetika",
+   "lang": "uz",
+   "stem": {
+    "uz": "Katalizator kimyoviy reaksiyaga qanday taʼsir qiladi?",
+    "ru": "Как катализатор влияет на химическую реакцию?"
+   },
+   "options": [
+    {
+     "uz": "reaksiyani tezlashtiradi va oʻzi sarflanmaydi",
+     "ru": "ускоряет реакцию и сам не расходуется"
+    },
+    {
+     "uz": "reaksiya mahsulotiga aylanadi va sarflanadi",
+     "ru": "превращается в продукт реакции и расходуется"
+    },
+    {
+     "uz": "muvozanatni oʻngga siljitadi va unumni oshiradi",
+     "ru": "смещает равновесие вправо и повышает выход"
+    },
+    {
+     "uz": "reaksiyaning issiqlik effektini oshiradi",
+     "ru": "увеличивает тепловой эффект реакции"
+    }
+   ],
+   "why": {
+    "en": "A catalyst speeds a reaction and is not used up; it does not shift equilibrium.",
+    "uz": "Katalizator reaksiyani tezlashtiradi, sarflanmaydi va muvozanatni siljitmaydi.",
+    "ru": "Катализатор ускоряет реакцию, не расходуется и не смещает равновесие."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Catalysis",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "A catalyst speeds up a reaction without being consumed.",
+      "url": "https://en.wikipedia.org/wiki/Catalysis"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:p14-content",
+   "key_check_1": "author",
+   "key_check_2": "blind:P14s1+P14s2",
+   "status": "verified_auto",
+   "version": 2,
+   "key_check_2_version": 2
+  },
+  {
+   "id": "C18-chp037",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "organik.polimerlar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Polietilen qaysi moddaning polimerlanishidan olinadi?",
+    "ru": "Полимеризацией какого вещества получают полиэтилен?"
+   },
+   "options": [
+    {
+     "uz": "etilen (eten)",
+     "ru": "этилена (этена)"
+    },
+    {
+     "uz": "etan",
+     "ru": "этана"
+    },
+    {
+     "uz": "metan",
+     "ru": "метана"
+    },
+    {
+     "uz": "benzol",
+     "ru": "бензола"
+    }
+   ],
+   "why": {
+    "en": "n CH2=CH2 gives (-CH2-CH2-)n.",
+    "uz": "n CH₂=CH₂ → (−CH₂−CH₂−)ₙ.",
+    "ru": "n CH₂=CH₂ → (−CH₂−CH₂−)ₙ."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Polyethylene",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "Polyethylene is made by polymerising ethylene.",
+      "url": "https://en.wikipedia.org/wiki/Polyethylene"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp038",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "organik.efirlar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Karbon kislota va spirt oʻzaro taʼsirlashganda qanday birikma hosil boʻladi?",
+    "ru": "Какое соединение образуется при взаимодействии карбоновой кислоты со спиртом?"
+   },
+   "options": [
+    {
+     "uz": "murakkab efir",
+     "ru": "сложный эфир"
+    },
+    {
+     "uz": "aldegid",
+     "ru": "альдегид"
+    },
+    {
+     "uz": "alkan",
+     "ru": "алкан"
+    },
+    {
+     "uz": "aminokislota",
+     "ru": "аминокислота"
+    }
+   ],
+   "why": {
+    "en": "Esterification: acid + alcohol gives an ester + water.",
+    "uz": "Eterifikatsiya: kislota + spirt → murakkab efir + suv.",
+    "ru": "Этерификация: кислота + спирт → сложный эфир + вода."
+   },
+   "prior_b": 0.0,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Fischer%E2%80%93Speier_esterification",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "A carboxylic acid and an alcohol form an ester and water.",
+      "url": "https://en.wikipedia.org/wiki/Fischer%E2%80%93Speier_esterification"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp039",
+   "skill": "dtm_chemistry",
+   "level": "easy",
+   "subskill": "reaksiya_turlari",
+   "lang": "uz",
+   "stem": {
+    "uz": "NaOH + HCl → ? Neytrallanish reaksiyasi mahsulotlarini toping.",
+    "ru": "NaOH + HCl → ? Найдите продукты реакции нейтрализации."
+   },
+   "options": [
+    {
+     "uz": "NaCl + H₂O",
+     "ru": "NaCl + H₂O"
+    },
+    {
+     "uz": "NaH + HClO",
+     "ru": "NaH + HClO"
+    },
+    {
+     "uz": "Na₂O + HCl",
+     "ru": "Na₂O + HCl"
+    },
+    {
+     "uz": "NaCl + H₂",
+     "ru": "NaCl + H₂"
+    }
+   ],
+   "why": {
+    "en": "A base and an acid give a salt and water.",
+    "uz": "Asos va kislota tuz va suv hosil qiladi.",
+    "ru": "Основание и кислота дают соль и воду."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Neutralization_(chemistry)",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "acid + base -> salt + water (HCl + NaOH -> NaCl + H2O).",
+      "url": "https://en.wikipedia.org/wiki/Neutralization_(chemistry)"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-chp040",
+   "skill": "dtm_chemistry",
+   "level": "medium",
+   "subskill": "atom_tuzilishi",
+   "lang": "uz",
+   "stem": {
+    "uz": "Mg²⁺ ionida nechta elektron bor? (Z(Mg) = 12)",
+    "ru": "Сколько электронов в ионе Mg²⁺? (Z(Mg) = 12)"
+   },
+   "options": [
+    {
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "uz": "12",
+     "ru": "12"
+    },
+    {
+     "uz": "14",
+     "ru": "14"
+    },
+    {
+     "uz": "2",
+     "ru": "2"
+    }
+   ],
+   "why": {
+    "en": "The atom has 12 electrons and loses 2: 10.",
+    "uz": "Atomda 12 elektron, 2 tasini beradi: 10.",
+    "ru": "У атома 12 электронов, отдаёт 2: 10."
+   },
+   "prior_b": 0.0,
+   "time_s": 25,
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ion",
+    "licence": "text is our own; only facts are taken, each checked against the cited page",
+    "facts": [
+     {
+      "claim": "A cation has fewer electrons than protons.",
+      "url": "https://en.wikipedia.org/wiki/Ion"
+     }
+    ],
+    "verified_at": "2026-10-07"
+   },
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+/*
+ * Owner 6 Oct 2026, P4h H1: the student app in Uzbek and Russian (public/runtime/jg-i18n.js). Uzbek and Russian run longer than the design's
+ * English; the overflow fixes they need live here, every rule scoped to html[lang="uz"] or html[lang="ru"] so English and the demo family
+ * never see them. Loaded by src/server/pages.ts for a live student whose UI language is uz or ru, and by jg-i18n.js when the language changes
+ * on the page. The smallest CSS only (a wrap, an ellipsis, a box that grows to hold its words), never the design's English sizes.
+ * Fitted 7 Oct 2026 by the QA pass (tools/ui-strings/qa.mjs): what did not fit was shortened in the dictionaries (uz.json, ru.json). The
+ * owner-style walk the same night (phone 390 px with a classic scrollbar, so 375 px of page) found five places still spilling; each rule
+ * below names its finding (W1-W5, "owner 6 Oct P4h fix"). What still cuts at an ellipsis is the design's own (Today's rows, the clubs'
+ * one-line descriptions): English cuts there too.
+ */
+
+/* W1: Settings' segmented choices (Daily study goal, Who can message you, App language) are a third of the card each, 34 px high. A choice
+   that wraps ("Учителя и мои подписки", «Ustozlar va obunalarim») takes two lines inside the pill instead of spilling out of it; a third
+   line, should one ever come, makes the pill grow rather than overflow. One line still reads at the design's 34 px. */
+html[lang="uz"] .set-seg button, html[lang="ru"] .set-seg button { height: auto; min-height: 34px; padding-top: 2px; padding-bottom: 2px; line-height: 1.15; }
+
+/* W2: the Notifications header's "Mark all read" (the phone's .ly-top .txt pill, 34 px high, beside the screen's title): «Hammasi oʻqildi»
+   is one line, «Отметить все прочитанными» two; either stays inside its pill, which grows rather than spills should a phone be narrower. */
+html[lang="uz"] .ly-top .txt, html[lang="ru"] .ly-top .txt { height: auto; min-height: 34px; padding-top: 2px; padding-bottom: 2px; line-height: 1.15; }
+
+/* W3: Home's roadmap card. On a narrow card the design keeps its title on one line (M css .rm h2 nowrap, @container max-width 320px), and
+   «Дорожная карта: Stanford» ran under the readiness chip, cut at "Sta" with no ellipsis. In uz and ru the title wraps instead, two lines
+   at most (the goal's name on the second), so it always ends before the chip. */
+html[lang="uz"] .rm h2, html[lang="ru"] .rm h2 { white-space: normal; overflow-wrap: break-word; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+
+/* W5: Settings' own card (photo, name, grade and school, "Open profile"). The school line is the engine's («9 класс, государственная
+   школа»), and «государственная» is wider than what the button leaves it on a phone: it ran 5 px into «Открыть профиль». In uz and ru a word
+   that does not fit there breaks (hyphenated where the browser hyphenates the page's language), so the text ends before the button. */
+html[lang="uz"] .set-me div, html[lang="ru"] .set-me div { overflow-wrap: anywhere; -webkit-hyphens: auto; hyphens: auto; }
+
+/* W4: the phone's tab bar. Each tab is a fifth of the bar and the glowing lens under the active one is 4 px narrower: 60 px on a 360 px
+   phone, 63 px at 375, 66 px at 390, less at the label's line where its corners curve in. The design's widest label, "Community", is 55 px.
+   Russian's «Возможности» (68 px) and «Сообщество» (62 px) spilled out of it; they are «Каталог» and «Общение» now (ru.json). Uzbek's
+   «Imkoniyatlar» (59 px) and «Hamjamiyat» (57 px) touched its edges: in Uzbek the labels are half a pixel smaller, 56 and 54 px. */
+html[lang="uz"] .tb-item span { font-size: 9.5px; }
+
+/* The P5 fix (owner 7 Oct 2026; the wave-2 walk): Home's map tag "You're here" is «Siz shu yerdasiz» in Uzbek, 66 units wide in the phone's
+   64-unit pill (its words at 8.6) and 76 in the desktop's 80 (at 10): it touched both edges of its pill. In Uzbek those words are a size
+   smaller, 7.4 on the phone and 9.2 on the desktop (57 and 70 units), so 3.7 and 5 units stay clear on each side. The tag's own number
+   under them (#tipA) and every other language stay as drawn. The two rules are told apart by the design's own sizes on each app. */
+html[lang="uz"] #tip text[font-size="8.6"] { font-size: 7.4px; }
+html[lang="uz"] #tip text[font-size="10"] { font-size: 9.2px; }
+
+/* P14 glyph lane (18 Oct 2026; P13's open item "U+02BC drawn like an accent by the app font"): Uzbek's two marks in Raleway's own
+   quote shapes. Raleway (Google's latin file, the app's font) draws U+02BC, the tutuq belgisi of «maʼno», «taʼsir», «yaʼni», with its acute
+   accent (uni02BC is `acute`: one outline, advance and bounds), so a lesson read «ya´ni» and the tab «ma´nosi»; and U+02BB, the oʻ/gʻ mark,
+   with a short tick that stays thin in bold and is nearly a dot at body size. "JG Uz Marks" (public/runtime/fonts, OFL, built by
+   tools/fonts/build-uz-marks.py) is Raleway itself cut down to two glyphs, its turned comma (quoteleft) answering U+02BB and its
+   apostrophe (quoteright) U+02BC, every weight. Listed before Raleway with a unicode-range of those two code points, so the browser asks
+   it for them alone: every other letter is Raleway's as before, and a page with neither mark never fetches it. Only the stack's first
+   name changes; the rest is the design's --font (00.css of both student apps), word for word (tests/unit/uz-marks.test.ts).
+   Uzbek only: the stored text keeps U+02BB/U+02BC; English and the demo family never load this file; Russian keeps "Raleway" first,
+   which jg-stress.js reads.
+   P15 fixes lane (18 Oct 2026): the face itself is declared once, in public/runtime/jg-uz-marks.css, for every Uzbek surface (the AI
+   notice, sign-in, the parent and staff pages too); src/server/pages.ts links it beside this file on an Uzbek page, and jg-i18n.js
+   when the page turns Uzbek. */
+html[lang="uz"] { --font: "JG Uz Marks", "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }

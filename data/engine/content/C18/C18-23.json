@@ -1,0 +1,848 @@
+{
+ "bank": "C18",
+ "batch": 23,
+ "items": [
+  {
+   "id": "C18-rtm001",
+   "skill": "dtm_native_ru",
+   "level": "medium",
+   "subskill": "orfoepiya.udarenie",
+   "lang": "ru",
+   "stem": {
+    "uz": "Qaysi soʻzda urgʻu toʻgʻri qoʻyilgan?",
+    "ru": "В каком слове ударение поставлено верно?"
+   },
+   "options": [
+    {
+     "uz": "кварта́л",
+     "ru": "кварта́л"
+    },
+    {
+     "uz": "це́мент",
+     "ru": "це́мент"
+    },
+    {
+     "uz": "водопро́вод",
+     "ru": "водопро́вод"
+    },
+    {
+     "uz": "до́кумент",
+     "ru": "до́кумент"
+    }
+   ],
+   "why": {
+    "en": "The norm is kvartAl; the others are stressed tsemEnt, vodoprovOd, dokumEnt.",
+    "uz": "Meʼyor: кварта́л; toʻgʻri urgʻu: цеме́нт, водопрово́д, докуме́нт.",
+    "ru": "Норма: кварта́л; правильно цеме́нт, водопрово́д, докуме́нт."
+   },
+   "prior_b": 0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-c18",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "Blind check 1 (2026-10-07): 0/2. Both solvers chose красиве́е. The v1 key краси́вее is the dictionary norm (ru.wiktionary marks красиве́е as incorrect), so the key was right, but two blind solvers could not confirm it, and ru.wiktionary lists the distractor ба́ловать as permissible. v2: four words whose norms are not contested. Key кварта́л; distractors це́мент, водопро́вод, до́кумент (norms цеме́нт, водопрово́д, докуме́нт, checked on ru.wiktionary 2026-10-07). The краси́вее norm can come back after teacher review (LG1). Needs a fresh blind check.",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "C18-rtm002",
+   "skill": "dtm_native_ru",
+   "level": "easy",
+   "subskill": "orfografiya.bezudarnye",
+   "lang": "ru",
+   "stem": {
+    "uz": "Qaysi soʻzda «о» harfi tushib qolgan?",
+    "ru": "В каком слове пропущена буква «о»?"
+   },
+   "options": [
+    {
+     "uz": "в..дяной",
+     "ru": "в..дяной"
+    },
+    {
+     "uz": "з..мля",
+     "ru": "з..мля"
+    },
+    {
+     "uz": "л..сник",
+     "ru": "л..сник"
+    },
+    {
+     "uz": "т..пло",
+     "ru": "т..пло"
+    }
+   ],
+   "why": {
+    "en": "Check by stress: voda - vodyanoy; zemli, les, tyoplyy take e.",
+    "uz": "Urgʻu bilan tekshiriladi: вода – водяной.",
+    "ru": "Проверка: вода – водяной; земли, лес, тёплый – е."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm003",
+   "skill": "dtm_native_ru",
+   "level": "easy",
+   "subskill": "leksika.sinonim",
+   "lang": "ru",
+   "stem": {
+    "uz": "«Огромный» soʻziga sinonim tanlang.",
+    "ru": "Подберите синоним к слову «огромный»."
+   },
+   "options": [
+    {
+     "uz": "громадный",
+     "ru": "громадный"
+    },
+    {
+     "uz": "крошечный",
+     "ru": "крошечный"
+    },
+    {
+     "uz": "узкий",
+     "ru": "узкий"
+    },
+    {
+     "uz": "лёгкий",
+     "ru": "лёгкий"
+    }
+   ],
+   "why": {
+    "en": "Gromadnyy means the same: huge.",
+    "uz": "«Громадный» – «огромный» (ulkan) bilan maʼnodosh.",
+    "ru": "«Громадный» – синоним слова «огромный»."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm004",
+   "skill": "dtm_native_ru",
+   "level": "easy",
+   "subskill": "leksika.antonim",
+   "lang": "ru",
+   "stem": {
+    "uz": "«Весёлый» soʻziga antonim tanlang.",
+    "ru": "Подберите антоним к слову «весёлый»."
+   },
+   "options": [
+    {
+     "uz": "грустный",
+     "ru": "грустный"
+    },
+    {
+     "uz": "смешной",
+     "ru": "смешной"
+    },
+    {
+     "uz": "громкий",
+     "ru": "громкий"
+    },
+    {
+     "uz": "быстрый",
+     "ru": "быстрый"
+    }
+   ],
+   "why": {
+    "en": "Cheerful - sad are opposites.",
+    "uz": "«Весёлый» (quvnoq) – «грустный» (gʻamgin).",
+    "ru": "Весёлый – грустный: антонимы."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm005",
+   "skill": "dtm_native_ru",
+   "level": "medium",
+   "subskill": "leksika.frazeologizm",
+   "lang": "ru",
+   "stem": {
+    "uz": "«Водить за нос» iborasi nimani bildiradi?",
+    "ru": "Что значит фразеологизм «водить за нос»?"
+   },
+   "options": [
+    {
+     "uz": "обманывать",
+     "ru": "обманывать"
+    },
+    {
+     "uz": "помогать",
+     "ru": "помогать"
+    },
+    {
+     "uz": "лечить",
+     "ru": "лечить"
+    },
+    {
+     "uz": "ругать",
+     "ru": "ругать"
+    }
+   ],
+   "why": {
+    "en": "To lead someone by the nose means to deceive them.",
+    "uz": "Ibora «aldamoq» maʼnosida.",
+    "ru": "«Водить за нос» – обманывать."
+   },
+   "prior_b": 0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm006",
+   "skill": "dtm_native_ru",
+   "level": "easy",
+   "subskill": "morfologiya.sushchestvitelnoe",
+   "lang": "ru",
+   "stem": {
+    "uz": "Qaysi soʻz ot (существительное)?",
+    "ru": "Какое слово является существительным?"
+   },
+   "options": [
+    {
+     "uz": "бег",
+     "ru": "бег"
+    },
+    {
+     "uz": "бегать",
+     "ru": "бегать"
+    },
+    {
+     "uz": "беглый",
+     "ru": "беглый"
+    },
+    {
+     "uz": "бегом",
+     "ru": "бегом"
+    }
+   ],
+   "why": {
+    "en": "Beg names an action as a thing (what?); begom is an adverb.",
+    "uz": "«Бег» – «что?» soʻrogʻiga javob beradi; «бегом» – ravish.",
+    "ru": "«Бег» отвечает на «что?»; «бегом» – наречие."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm007",
+   "skill": "dtm_native_ru",
+   "level": "medium",
+   "subskill": "morfologiya.chislitelnoe",
+   "lang": "ru",
+   "stem": {
+    "uz": "Qaysi son jamlovchi son (собирательное)?",
+    "ru": "Какое числительное является собирательным?"
+   },
+   "options": [
+    {
+     "uz": "трое",
+     "ru": "трое"
+    },
+    {
+     "uz": "три",
+     "ru": "три"
+    },
+    {
+     "uz": "третий",
+     "ru": "третий"
+    },
+    {
+     "uz": "тридцать",
+     "ru": "тридцать"
+    }
+   ],
+   "why": {
+    "en": "Troe counts a group: collective numeral.",
+    "uz": "«Трое» – jamlovchi son.",
+    "ru": "«Трое» – собирательное числительное."
+   },
+   "prior_b": 0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm008",
+   "skill": "dtm_native_ru",
+   "level": "easy",
+   "subskill": "morfologiya.mestoimenie",
+   "lang": "ru",
+   "stem": {
+    "uz": "Qaysi olmosh egalik olmoshi (притяжательное)?",
+    "ru": "Какое местоимение является притяжательным?"
+   },
+   "options": [
+    {
+     "uz": "мой",
+     "ru": "мой"
+    },
+    {
+     "uz": "я",
+     "ru": "я"
+    },
+    {
+     "uz": "себя",
+     "ru": "себя"
+    },
+    {
+     "uz": "кто",
+     "ru": "кто"
+    }
+   ],
+   "why": {
+    "en": "Moy answers 'whose?'.",
+    "uz": "«Мой» «чей?» soʻrogʻiga javob beradi.",
+    "ru": "«Мой» отвечает на вопрос «чей?»."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm009",
+   "skill": "dtm_native_ru",
+   "level": "easy",
+   "subskill": "sintaksis.podlezhashchee",
+   "lang": "ru",
+   "stem": {
+    "uz": "Egani toping: «Утром в саду запели птицы.»",
+    "ru": "Найдите подлежащее: «Утром в саду запели птицы.»"
+   },
+   "options": [
+    {
+     "uz": "птицы",
+     "ru": "птицы"
+    },
+    {
+     "uz": "утром",
+     "ru": "утром"
+    },
+    {
+     "uz": "в саду",
+     "ru": "в саду"
+    },
+    {
+     "uz": "запели",
+     "ru": "запели"
+    }
+   ],
+   "why": {
+    "en": "Ptitsy answers 'who?' and names who sang.",
+    "uz": "«Птицы» «кто?» soʻrogʻiga javob beradi.",
+    "ru": "«Птицы» отвечает на вопрос «кто?»."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm010",
+   "skill": "dtm_native_ru",
+   "level": "medium",
+   "subskill": "punktuatsiya.zapyataya",
+   "lang": "ru",
+   "stem": {
+    "uz": "Qaysi gapda vergul tushib qolgan?",
+    "ru": "В каком предложении пропущена запятая?"
+   },
+   "options": [
+    {
+     "uz": "Это не река а озеро.",
+     "ru": "Это не река а озеро."
+    },
+    {
+     "uz": "Это река и озеро.",
+     "ru": "Это река и озеро."
+    },
+    {
+     "uz": "Мы видели реку и озеро.",
+     "ru": "Мы видели реку и озеро."
+    },
+    {
+     "uz": "На берегу озера росли ивы.",
+     "ru": "На берегу озера росли ивы."
+    }
+   ],
+   "why": {
+    "en": "A comma goes before the contrasting conjunction a.",
+    "uz": "Zidlov bogʻlovchisi «а» oldidan vergul qoʻyiladi.",
+    "ru": "Перед противительным союзом «а» ставится запятая."
+   },
+   "prior_b": 0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm011",
+   "skill": "dtm_native_ru",
+   "level": "medium",
+   "subskill": "orfoepiya.udarenie",
+   "lang": "ru",
+   "stem": {
+    "uz": "Qaysi soʻzda urgʻu toʻgʻri qoʻyilgan?",
+    "ru": "В каком слове ударение поставлено верно?"
+   },
+   "options": [
+    {
+     "uz": "катало́г",
+     "ru": "катало́г"
+    },
+    {
+     "uz": "ката́лог",
+     "ru": "ката́лог"
+    },
+    {
+     "uz": "до́говор",
+     "ru": "до́говор"
+    },
+    {
+     "uz": "кра́сивее",
+     "ru": "кра́сивее"
+    }
+   ],
+   "why": {
+    "en": "The norm is katalOg.",
+    "uz": "Meʼyor: катало́г.",
+    "ru": "Норма: катало́г."
+   },
+   "prior_b": 0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm012",
+   "skill": "dtm_native_ru",
+   "level": "medium",
+   "subskill": "orfografiya.z_s",
+   "lang": "ru",
+   "stem": {
+    "uz": "Qaysi soʻzda РАС- old qoʻshimchasi yoziladi?",
+    "ru": "В каком слове пишется приставка РАС-?"
+   },
+   "options": [
+    {
+     "uz": "ра..казать",
+     "ru": "ра..казать"
+    },
+    {
+     "uz": "ра..бить",
+     "ru": "ра..бить"
+    },
+    {
+     "uz": "ра..давать",
+     "ru": "ра..давать"
+    },
+    {
+     "uz": "ра..гадать",
+     "ru": "ра..гадать"
+    }
+   ],
+   "why": {
+    "en": "Before a voiceless consonant (s) the prefix is ras-: rasskazat'.",
+    "uz": "Jarangsiz undosh oldidan РАС-: рассказать.",
+    "ru": "Перед глухим согласным – РАС-: рассказать."
+   },
+   "prior_b": 0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm013",
+   "skill": "dtm_native_ru",
+   "level": "hard",
+   "subskill": "leksika.paronimy",
+   "lang": "ru",
+   "stem": {
+    "uz": "Qaysi gapda soʻz toʻgʻri qoʻllangan?",
+    "ru": "В каком предложении слово употреблено правильно?"
+   },
+   "options": [
+    {
+     "uz": "Он надел пальто.",
+     "ru": "Он надел пальто."
+    },
+    {
+     "uz": "Он одел пальто.",
+     "ru": "Он одел пальто."
+    },
+    {
+     "uz": "Он одел шапку.",
+     "ru": "Он одел шапку."
+    },
+    {
+     "uz": "Мама надела ребёнка.",
+     "ru": "Мама надела ребёнка."
+    }
+   ],
+   "why": {
+    "en": "You nadet' clothes on yourself and odet' another person.",
+    "uz": "Kiyimni oʻziga «надеть», boshqa odamni «одеть».",
+    "ru": "Надеть что-то на себя; одеть кого-то."
+   },
+   "prior_b": 0.9,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm014",
+   "skill": "dtm_native_ru",
+   "level": "medium",
+   "subskill": "leksika.frazeologizm",
+   "lang": "ru",
+   "stem": {
+    "uz": "«Спустя рукава» iborasi nimani bildiradi?",
+    "ru": "Что значит фразеологизм «спустя рукава»?"
+   },
+   "options": [
+    {
+     "uz": "небрежно",
+     "ru": "небрежно"
+    },
+    {
+     "uz": "быстро",
+     "ru": "быстро"
+    },
+    {
+     "uz": "старательно",
+     "ru": "старательно"
+    },
+    {
+     "uz": "весело",
+     "ru": "весело"
+    }
+   ],
+   "why": {
+    "en": "'With sleeves down' means carelessly.",
+    "uz": "Ibora «palapartish, beparvolik bilan» maʼnosida.",
+    "ru": "«Спустя рукава» – небрежно."
+   },
+   "prior_b": 0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm015",
+   "skill": "dtm_native_ru",
+   "level": "medium",
+   "subskill": "morfologiya.spryazhenie",
+   "lang": "ru",
+   "stem": {
+    "uz": "Qaysi feʼl I tuslanishga kiradi?",
+    "ru": "Какой глагол относится к I спряжению?"
+   },
+   "options": [
+    {
+     "uz": "писать",
+     "ru": "писать"
+    },
+    {
+     "uz": "строить",
+     "ru": "строить"
+    },
+    {
+     "uz": "держать",
+     "ru": "держать"
+    },
+    {
+     "uz": "видеть",
+     "ru": "видеть"
+    }
+   ],
+   "why": {
+    "en": "Pisat' is conjugation I; derzhat' and videt' are conjugation II exceptions.",
+    "uz": "«Писать» – I tuslanish; «держать», «видеть» – II tuslanish istisnolari.",
+    "ru": "«Писать» – I спряжение; «держать», «видеть» – исключения II спряжения."
+   },
+   "prior_b": 0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm016",
+   "skill": "dtm_native_ru",
+   "level": "easy",
+   "subskill": "morfologiya.padezh",
+   "lang": "ru",
+   "stem": {
+    "uz": "«Я гулял с другом» gapida «другом» soʻzi qaysi kelishikda?",
+    "ru": "В каком падеже стоит слово «другом» в предложении «Я гулял с другом»?"
+   },
+   "options": [
+    {
+     "uz": "в творительном",
+     "ru": "в творительном"
+    },
+    {
+     "uz": "в дательном",
+     "ru": "в дательном"
+    },
+    {
+     "uz": "в предложном",
+     "ru": "в предложном"
+    },
+    {
+     "uz": "в родительном",
+     "ru": "в родительном"
+    }
+   ],
+   "why": {
+    "en": "S + kem? - instrumental case.",
+    "uz": "С кем? – творительный kelishik.",
+    "ru": "С кем? – творительный падеж."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm017",
+   "skill": "dtm_native_ru",
+   "level": "medium",
+   "subskill": "morfologiya.kratkoe",
+   "lang": "ru",
+   "stem": {
+    "uz": "Qaysi sifat qisqa shaklda (краткое)?",
+    "ru": "Какое прилагательное является кратким?"
+   },
+   "options": [
+    {
+     "uz": "весел",
+     "ru": "весел"
+    },
+    {
+     "uz": "весёлый",
+     "ru": "весёлый"
+    },
+    {
+     "uz": "веселее",
+     "ru": "веселее"
+    },
+    {
+     "uz": "веселье",
+     "ru": "веселье"
+    }
+   ],
+   "why": {
+    "en": "Vesel is the short form of vesyolyy.",
+    "uz": "«Весел» – «весёлый»ning qisqa shakli.",
+    "ru": "«Весел» – краткая форма от «весёлый»."
+   },
+   "prior_b": 0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm018",
+   "skill": "dtm_native_ru",
+   "level": "easy",
+   "subskill": "sintaksis.skazuemoe",
+   "lang": "ru",
+   "stem": {
+    "uz": "Kesimni toping: «Ветер сорвал с дерева последние листья.»",
+    "ru": "Найдите сказуемое: «Ветер сорвал с дерева последние листья.»"
+   },
+   "options": [
+    {
+     "uz": "сорвал",
+     "ru": "сорвал"
+    },
+    {
+     "uz": "ветер",
+     "ru": "ветер"
+    },
+    {
+     "uz": "листья",
+     "ru": "листья"
+    },
+    {
+     "uz": "последние",
+     "ru": "последние"
+    }
+   ],
+   "why": {
+    "en": "Sorval tells what the wind did.",
+    "uz": "«Сорвал» shamolning harakatini bildiradi.",
+    "ru": "«Сорвал» – действие подлежащего."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm019",
+   "skill": "dtm_native_ru",
+   "level": "easy",
+   "subskill": "sintaksis.obstoyatelstvo",
+   "lang": "ru",
+   "stem": {
+    "uz": "«Вчера мы ходили в театр» gapida «вчера» qaysi gap boʻlagi?",
+    "ru": "Каким членом предложения является слово «вчера» в предложении «Вчера мы ходили в театр»?"
+   },
+   "options": [
+    {
+     "uz": "обстоятельством",
+     "ru": "обстоятельством"
+    },
+    {
+     "uz": "дополнением",
+     "ru": "дополнением"
+    },
+    {
+     "uz": "определением",
+     "ru": "определением"
+    },
+    {
+     "uz": "подлежащим",
+     "ru": "подлежащим"
+    }
+   ],
+   "why": {
+    "en": "Vchera answers 'when?': an adverbial of time.",
+    "uz": "«Вчера» «когда?» soʻrogʻiga javob beradi: hol.",
+    "ru": "«Вчера» отвечает на «когда?» – обстоятельство."
+   },
+   "prior_b": -0.8,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-rtm020",
+   "skill": "dtm_native_ru",
+   "level": "medium",
+   "subskill": "sintaksis.spp",
+   "lang": "ru",
+   "stem": {
+    "uz": "Qaysi gap ergash gapli qoʻshma gap (сложноподчинённое)?",
+    "ru": "Какое предложение является сложноподчинённым?"
+   },
+   "options": [
+    {
+     "uz": "Я знаю, что ты прав.",
+     "ru": "Я знаю, что ты прав."
+    },
+    {
+     "uz": "Я знаю и верю тебе.",
+     "ru": "Я знаю и верю тебе."
+    },
+    {
+     "uz": "Ты прав, и я согласен.",
+     "ru": "Ты прав, и я согласен."
+    },
+    {
+     "uz": "Я знаю тебя давно.",
+     "ru": "Я знаю тебя давно."
+    }
+   ],
+   "why": {
+    "en": "Chto ty prav depends on znayu: a subordinate clause.",
+    "uz": "«Что ты прав» bosh gapga tobe.",
+    "ru": "Часть «что ты прав» зависит от главной."
+   },
+   "prior_b": 0,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

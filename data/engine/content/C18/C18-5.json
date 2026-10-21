@@ -1,0 +1,846 @@
+{
+ "bank": "C18",
+ "batch": 5,
+ "items": [
+  {
+   "id": "C18-mcp001",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "foiz",
+   "lang": "uz",
+   "stem": {
+    "uz": "240 ning 15 % ini toping.",
+    "ru": "Найдите 15 % от 240."
+   },
+   "options": [
+    {
+     "uz": "36",
+     "ru": "36"
+    },
+    {
+     "uz": "24",
+     "ru": "24"
+    },
+    {
+     "uz": "32",
+     "ru": "32"
+    },
+    {
+     "uz": "40",
+     "ru": "40"
+    }
+   ],
+   "why": {
+    "en": "240 x 0.15 = 36.",
+    "uz": "240 · 0,15 = 36.",
+    "ru": "240 · 0,15 = 36."
+   },
+   "prior_b": -0.8,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp002",
+   "skill": "dtm_math_core",
+   "level": "medium",
+   "subskill": "foiz",
+   "lang": "uz",
+   "stem": {
+    "uz": "Mahsulot narxi 20 % oshirilgach, 6000 soʻm boʻldi. Dastlabki narx necha soʻm edi?",
+    "ru": "После повышения на 20 % цена товара стала 6000 сумов. Какой была первоначальная цена?"
+   },
+   "options": [
+    {
+     "uz": "5000",
+     "ru": "5000"
+    },
+    {
+     "uz": "4800",
+     "ru": "4800"
+    },
+    {
+     "uz": "4500",
+     "ru": "4500"
+    },
+    {
+     "uz": "5200",
+     "ru": "5200"
+    }
+   ],
+   "why": {
+    "en": "New price = 1.2 x old, so old = 6000 / 1.2 = 5000 (not 6000 - 20 %).",
+    "uz": "Yangi narx = 1,2 · eski; eski = 6000 : 1,2 = 5000.",
+    "ru": "Новая цена = 1,2 · старая; старая = 6000 : 1,2 = 5000."
+   },
+   "prior_b": 0.0,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp003",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "kasrlar",
+   "lang": "uz",
+   "stem": {
+    "uz": "Hisoblang: 3/4 + 5/6.",
+    "ru": "Вычислите: 3/4 + 5/6."
+   },
+   "options": [
+    {
+     "uz": "19/12",
+     "ru": "19/12"
+    },
+    {
+     "uz": "8/10",
+     "ru": "8/10"
+    },
+    {
+     "uz": "4/5",
+     "ru": "4/5"
+    },
+    {
+     "uz": "15/24",
+     "ru": "15/24"
+    }
+   ],
+   "why": {
+    "en": "Common denominator 12: 9/12 + 10/12 = 19/12.",
+    "uz": "Umumiy maxraj 12: 9/12 + 10/12 = 19/12.",
+    "ru": "Общий знаменатель 12: 9/12 + 10/12 = 19/12."
+   },
+   "prior_b": -0.8,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp004",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "onli_kasr",
+   "lang": "uz",
+   "stem": {
+    "uz": "Hisoblang: 2,5 · 0,4.",
+    "ru": "Вычислите: 2,5 · 0,4."
+   },
+   "options": [
+    {
+     "uz": "1",
+     "ru": "1"
+    },
+    {
+     "uz": "0,1",
+     "ru": "0,1"
+    },
+    {
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "uz": "2,9",
+     "ru": "2,9"
+    }
+   ],
+   "why": {
+    "en": "25 x 4 = 100, with two decimal places: 1.00.",
+    "uz": "25 · 4 = 100, ikki xona vergul: 1,00.",
+    "ru": "25 · 4 = 100, два знака после запятой: 1,00."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp005",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "chiziqli_tenglama",
+   "lang": "uz",
+   "stem": {
+    "uz": "Tenglamani yeching: 3x − 7 = 11.",
+    "ru": "Решите уравнение: 3x − 7 = 11."
+   },
+   "options": [
+    {
+     "uz": "6",
+     "ru": "6"
+    },
+    {
+     "uz": "4",
+     "ru": "4"
+    },
+    {
+     "uz": "18",
+     "ru": "18"
+    },
+    {
+     "uz": "−6",
+     "ru": "−6"
+    }
+   ],
+   "why": {
+    "en": "3x = 18, so x = 6.",
+    "uz": "3x = 18, demak x = 6.",
+    "ru": "3x = 18, значит x = 6."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp006",
+   "skill": "dtm_math_core",
+   "level": "medium",
+   "subskill": "chiziqli_tenglama",
+   "lang": "uz",
+   "stem": {
+    "uz": "Tenglamani yeching: 5(x − 2) = 2x + 11.",
+    "ru": "Решите уравнение: 5(x − 2) = 2x + 11."
+   },
+   "options": [
+    {
+     "uz": "7",
+     "ru": "7"
+    },
+    {
+     "uz": "3",
+     "ru": "3"
+    },
+    {
+     "uz": "9",
+     "ru": "9"
+    },
+    {
+     "uz": "1",
+     "ru": "1"
+    }
+   ],
+   "why": {
+    "en": "5x - 10 = 2x + 11, so 3x = 21 and x = 7.",
+    "uz": "5x − 10 = 2x + 11, 3x = 21, x = 7.",
+    "ru": "5x − 10 = 2x + 11, 3x = 21, x = 7."
+   },
+   "prior_b": 0.0,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp007",
+   "skill": "dtm_math_core",
+   "level": "medium",
+   "subskill": "tenglamalar_sistemasi",
+   "lang": "uz",
+   "stem": {
+    "uz": "x + y = 10 va x − y = 4 boʻlsa, x · y ni toping.",
+    "ru": "Если x + y = 10 и x − y = 4, найдите x · y."
+   },
+   "options": [
+    {
+     "uz": "21",
+     "ru": "21"
+    },
+    {
+     "uz": "24",
+     "ru": "24"
+    },
+    {
+     "uz": "16",
+     "ru": "16"
+    },
+    {
+     "uz": "30",
+     "ru": "30"
+    }
+   ],
+   "why": {
+    "en": "Adding gives 2x = 14: x = 7, y = 3, product 21.",
+    "uz": "Qoʻshsak 2x = 14: x = 7, y = 3, koʻpaytma 21.",
+    "ru": "Сложив, 2x = 14: x = 7, y = 3, произведение 21."
+   },
+   "prior_b": 0.0,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp008",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "kvadrat_tenglama",
+   "lang": "uz",
+   "stem": {
+    "uz": "x² − 5x + 6 = 0 tenglama ildizlarining yigʻindisini toping.",
+    "ru": "Найдите сумму корней уравнения x² − 5x + 6 = 0."
+   },
+   "options": [
+    {
+     "uz": "5",
+     "ru": "5"
+    },
+    {
+     "uz": "−5",
+     "ru": "−5"
+    },
+    {
+     "uz": "6",
+     "ru": "6"
+    },
+    {
+     "uz": "−6",
+     "ru": "−6"
+    }
+   ],
+   "why": {
+    "en": "By Vieta, the sum of roots is -b/a = 5 (roots 2 and 3).",
+    "uz": "Viyet teoremasi: yigʻindi −b/a = 5 (ildizlar 2 va 3).",
+    "ru": "По теореме Виета сумма корней −b/a = 5 (корни 2 и 3)."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp009",
+   "skill": "dtm_math_core",
+   "level": "medium",
+   "subskill": "kvadrat_tenglama",
+   "lang": "uz",
+   "stem": {
+    "uz": "x² − 2x − 15 = 0 tenglamaning katta ildizini toping.",
+    "ru": "Найдите больший корень уравнения x² − 2x − 15 = 0."
+   },
+   "options": [
+    {
+     "uz": "5",
+     "ru": "5"
+    },
+    {
+     "uz": "3",
+     "ru": "3"
+    },
+    {
+     "uz": "−3",
+     "ru": "−3"
+    },
+    {
+     "uz": "15",
+     "ru": "15"
+    }
+   ],
+   "why": {
+    "en": "(x - 5)(x + 3) = 0, roots 5 and -3; the larger is 5.",
+    "uz": "(x − 5)(x + 3) = 0, ildizlar 5 va −3; kattasi 5.",
+    "ru": "(x − 5)(x + 3) = 0, корни 5 и −3; больший 5."
+   },
+   "prior_b": 0.0,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp010",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "daraja",
+   "lang": "uz",
+   "stem": {
+    "uz": "Hisoblang: 2⁵ · 2³.",
+    "ru": "Вычислите: 2⁵ · 2³."
+   },
+   "options": [
+    {
+     "uz": "256",
+     "ru": "256"
+    },
+    {
+     "uz": "64",
+     "ru": "64"
+    },
+    {
+     "uz": "128",
+     "ru": "128"
+    },
+    {
+     "uz": "512",
+     "ru": "512"
+    }
+   ],
+   "why": {
+    "en": "Add exponents: 2^8 = 256.",
+    "uz": "Daraja koʻrsatkichlari qoʻshiladi: 2⁸ = 256.",
+    "ru": "Показатели складываются: 2⁸ = 256."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp011",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "ildiz",
+   "lang": "uz",
+   "stem": {
+    "uz": "Hisoblang: √144 + √25.",
+    "ru": "Вычислите: √144 + √25."
+   },
+   "options": [
+    {
+     "uz": "17",
+     "ru": "17"
+    },
+    {
+     "uz": "13",
+     "ru": "13"
+    },
+    {
+     "uz": "169",
+     "ru": "169"
+    },
+    {
+     "uz": "7",
+     "ru": "7"
+    }
+   ],
+   "why": {
+    "en": "12 + 5 = 17; the root of a sum is not the sum of roots.",
+    "uz": "12 + 5 = 17.",
+    "ru": "12 + 5 = 17."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp012",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "daraja",
+   "lang": "uz",
+   "stem": {
+    "uz": "Hisoblang: (−3)³.",
+    "ru": "Вычислите: (−3)³."
+   },
+   "options": [
+    {
+     "uz": "−27",
+     "ru": "−27"
+    },
+    {
+     "uz": "27",
+     "ru": "27"
+    },
+    {
+     "uz": "−9",
+     "ru": "−9"
+    },
+    {
+     "uz": "9",
+     "ru": "9"
+    }
+   ],
+   "why": {
+    "en": "An odd power of a negative number is negative: -27.",
+    "uz": "Manfiy sonning toq darajasi manfiy: −27.",
+    "ru": "Нечётная степень отрицательного числа отрицательна: −27."
+   },
+   "prior_b": -0.8,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp013",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "arifmetik_progressiya",
+   "lang": "uz",
+   "stem": {
+    "uz": "Arifmetik progressiyada a₁ = 3, d = 4. a₁₀ ni toping.",
+    "ru": "В арифметической прогрессии a₁ = 3, d = 4. Найдите a₁₀."
+   },
+   "options": [
+    {
+     "uz": "39",
+     "ru": "39"
+    },
+    {
+     "uz": "43",
+     "ru": "43"
+    },
+    {
+     "uz": "40",
+     "ru": "40"
+    },
+    {
+     "uz": "35",
+     "ru": "35"
+    }
+   ],
+   "why": {
+    "en": "a10 = a1 + 9d = 3 + 36 = 39.",
+    "uz": "a₁₀ = a₁ + 9d = 3 + 36 = 39.",
+    "ru": "a₁₀ = a₁ + 9d = 3 + 36 = 39."
+   },
+   "prior_b": -0.8,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp014",
+   "skill": "dtm_math_core",
+   "level": "medium",
+   "subskill": "arifmetik_progressiya",
+   "lang": "uz",
+   "stem": {
+    "uz": "1 dan 50 gacha boʻlgan barcha natural sonlar yigʻindisini toping.",
+    "ru": "Найдите сумму всех натуральных чисел от 1 до 50."
+   },
+   "options": [
+    {
+     "uz": "1275",
+     "ru": "1275"
+    },
+    {
+     "uz": "1250",
+     "ru": "1250"
+    },
+    {
+     "uz": "1300",
+     "ru": "1300"
+    },
+    {
+     "uz": "2550",
+     "ru": "2550"
+    }
+   ],
+   "why": {
+    "en": "S = 50 x 51 / 2 = 1275.",
+    "uz": "S = 50 · 51 : 2 = 1275.",
+    "ru": "S = 50 · 51 : 2 = 1275."
+   },
+   "prior_b": 0.0,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp015",
+   "skill": "dtm_math_core",
+   "level": "medium",
+   "subskill": "geometrik_progressiya",
+   "lang": "uz",
+   "stem": {
+    "uz": "Geometrik progressiyada b₁ = 2, q = 3. b₅ ni toping.",
+    "ru": "В геометрической прогрессии b₁ = 2, q = 3. Найдите b₅."
+   },
+   "options": [
+    {
+     "uz": "162",
+     "ru": "162"
+    },
+    {
+     "uz": "54",
+     "ru": "54"
+    },
+    {
+     "uz": "486",
+     "ru": "486"
+    },
+    {
+     "uz": "30",
+     "ru": "30"
+    }
+   ],
+   "why": {
+    "en": "b5 = b1 x q^4 = 2 x 81 = 162.",
+    "uz": "b₅ = b₁ · q⁴ = 2 · 81 = 162.",
+    "ru": "b₅ = b₁ · q⁴ = 2 · 81 = 162."
+   },
+   "prior_b": 0.0,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp016",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "geometriya.uchburchak",
+   "lang": "uz",
+   "stem": {
+    "uz": "Uchburchakning ikki burchagi 50° va 60°. Uchinchi burchagini toping (gradusda).",
+    "ru": "Два угла треугольника равны 50° и 60°. Найдите третий угол (в градусах)."
+   },
+   "options": [
+    {
+     "uz": "70",
+     "ru": "70"
+    },
+    {
+     "uz": "80",
+     "ru": "80"
+    },
+    {
+     "uz": "60",
+     "ru": "60"
+    },
+    {
+     "uz": "90",
+     "ru": "90"
+    }
+   ],
+   "why": {
+    "en": "The angles of a triangle add up to 180: 180 - 110 = 70.",
+    "uz": "Burchaklar yigʻindisi 180°: 180 − 110 = 70.",
+    "ru": "Сумма углов 180°: 180 − 110 = 70."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp017",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "geometriya.pifagor",
+   "lang": "uz",
+   "stem": {
+    "uz": "Toʻgʻri burchakli uchburchakning katetlari 6 va 8. Gipotenuzani toping.",
+    "ru": "Катеты прямоугольного треугольника равны 6 и 8. Найдите гипотенузу."
+   },
+   "options": [
+    {
+     "uz": "10",
+     "ru": "10"
+    },
+    {
+     "uz": "14",
+     "ru": "14"
+    },
+    {
+     "uz": "12",
+     "ru": "12"
+    },
+    {
+     "uz": "9",
+     "ru": "9"
+    }
+   ],
+   "why": {
+    "en": "36 + 64 = 100, so the hypotenuse is 10.",
+    "uz": "36 + 64 = 100, gipotenuza 10.",
+    "ru": "36 + 64 = 100, гипотенуза 10."
+   },
+   "prior_b": -0.8,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp018",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "geometriya.perimetr",
+   "lang": "uz",
+   "stem": {
+    "uz": "Toʻgʻri toʻrtburchakning tomonlari 7 va 4. Perimetrini toping.",
+    "ru": "Стороны прямоугольника 7 и 4. Найдите периметр."
+   },
+   "options": [
+    {
+     "uz": "22",
+     "ru": "22"
+    },
+    {
+     "uz": "28",
+     "ru": "28"
+    },
+    {
+     "uz": "11",
+     "ru": "11"
+    },
+    {
+     "uz": "18",
+     "ru": "18"
+    }
+   ],
+   "why": {
+    "en": "P = 2(7 + 4) = 22; 28 is the area.",
+    "uz": "P = 2(7 + 4) = 22; 28 – yuzi.",
+    "ru": "P = 2(7 + 4) = 22; 28 – это площадь."
+   },
+   "prior_b": -0.8,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp019",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "geometriya.doira",
+   "lang": "uz",
+   "stem": {
+    "uz": "Radiusi 5 ga teng doiraning yuzini toping.",
+    "ru": "Найдите площадь круга радиуса 5."
+   },
+   "options": [
+    {
+     "uz": "25π",
+     "ru": "25π"
+    },
+    {
+     "uz": "10π",
+     "ru": "10π"
+    },
+    {
+     "uz": "5π",
+     "ru": "5π"
+    },
+    {
+     "uz": "50π",
+     "ru": "50π"
+    }
+   ],
+   "why": {
+    "en": "S = pi r^2 = 25 pi; 10 pi is the circumference.",
+    "uz": "S = πr² = 25π; 10π – aylana uzunligi.",
+    "ru": "S = πr² = 25π; 10π – длина окружности."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  },
+  {
+   "id": "C18-mcp020",
+   "skill": "dtm_math_core",
+   "level": "easy",
+   "subskill": "geometriya.kvadrat",
+   "lang": "uz",
+   "stem": {
+    "uz": "Kvadratning yuzi 49 ga teng. Uning perimetrini toping.",
+    "ru": "Площадь квадрата равна 49. Найдите его периметр."
+   },
+   "options": [
+    {
+     "uz": "28",
+     "ru": "28"
+    },
+    {
+     "uz": "49",
+     "ru": "49"
+    },
+    {
+     "uz": "14",
+     "ru": "14"
+    },
+    {
+     "uz": "7",
+     "ru": "7"
+    }
+   ],
+   "why": {
+    "en": "Side = 7, perimeter = 4 x 7 = 28.",
+    "uz": "Tomoni 7, perimetri 4 · 7 = 28.",
+    "ru": "Сторона 7, периметр 4 · 7 = 28."
+   },
+   "prior_b": -0.8,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:c18-v1",
+   "key_check_1": "author",
+   "key_check_2": "blind:2/2",
+   "status": "verified_auto",
+   "version": 1
+  }
+ ]
+}

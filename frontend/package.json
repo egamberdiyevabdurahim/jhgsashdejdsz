@@ -1,0 +1,31 @@
+{
+  "name": "jamals-global-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "sync": "node scripts/sync-design.mjs",
+    "dev": "next dev -p 3235",
+    "build": "next build",
+    "start": "next start -p 3235",
+    "typecheck": "tsc --noEmit",
+    "shell:jsx": "node scripts/html2jsx.mjs",
+    "fidelity": "tsx tests/fidelity-react.ts"
+  },
+  "dependencies": {
+    "next": "15.5.26",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "^19.0.0",
+    "playwright-core": "1.63.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}

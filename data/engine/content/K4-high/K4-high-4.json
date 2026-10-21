@@ -1,0 +1,1324 @@
+{
+ "bank": "K4",
+ "batch": 4,
+ "items": [
+  {
+   "id": "K4-pch021",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "end_behavior",
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = −2x⁵ + 3x² − 1. What happens to f(x) as x → ∞?",
+    "uz": "f(x) = −2x⁵ + 3x² − 1. x → ∞ da f(x) qanday oʻzgaradi?",
+    "ru": "f(x) = −2x⁵ + 3x² − 1. Как ведёт себя f(x) при x → ∞?"
+   },
+   "options": [
+    {
+     "en": "f(x) → −∞"
+    },
+    {
+     "en": "f(x) → ∞"
+    },
+    {
+     "en": "f(x) → 0"
+    },
+    {
+     "en": "f(x) → −2"
+    }
+   ],
+   "why": {
+    "en": "The leading term −2x⁵ dominates and is negative for large x, so f(x) → −∞.",
+    "uz": "Bosh had −2x⁵ ustunlik qiladi va katta x larda manfiy, demak f(x) → −∞.",
+    "ru": "Старший член −2x⁵ определяет поведение и при больших x отрицателен, поэтому f(x) → −∞."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 0.85,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch022",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "exponential_equations_ln",
+   "lang": "en",
+   "stem": {
+    "en": "e^(2x) = 7. What is x?",
+    "uz": "e^(2x) = 7. x ni toping.",
+    "ru": "e^(2x) = 7. Найдите x."
+   },
+   "options": [
+    {
+     "en": "(ln 7)/2"
+    },
+    {
+     "en": "ln(7/2)"
+    },
+    {
+     "en": "2 ln 7"
+    },
+    {
+     "en": "e^(7/2)"
+    }
+   ],
+   "why": {
+    "en": "Take ln of both sides: 2x = ln 7, so x = (ln 7)/2.",
+    "uz": "Ikkala tomonning natural logarifmini oling: 2x = ln 7, demak x = (ln 7)/2.",
+    "ru": "Прологарифмируем обе части: 2x = ln 7, значит x = (ln 7)/2."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch023",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "logarithmic_equations",
+   "family": {
+    "template": "log_{b} x + log_{b}(x − {k}) = {n}. What is x?",
+    "params": {
+     "b": {
+      "values": [
+       2,
+       3
+      ]
+     },
+     "k": {
+      "min": 1,
+      "max": 31
+     },
+     "n": {
+      "min": 1,
+      "max": 7
+     }
+    },
+    "derived": {
+     "D": "k * k + 4 * b**n",
+     "p2": "b**n",
+     "neg": "(k - sqrt(k * k + 4 * b**n)) / 2"
+    },
+    "constraints": [
+     "round(sqrt(D))**2 == D",
+     "(k + round(sqrt(D))) % 2 == 0",
+     "((k + sqrt(D)) / 2) != ((k - sqrt(D)) / 2)",
+     "((k + sqrt(D)) / 2) != (b**n)",
+     "((k + sqrt(D)) / 2) != (n + k)",
+     "((k - sqrt(D)) / 2) != (b**n)",
+     "((k - sqrt(D)) / 2) != (n + k)",
+     "(b**n) != (n + k)"
+    ],
+    "answer": "(k + sqrt(D)) / 2",
+    "distractors": [
+     "(k - sqrt(D)) / 2",
+     "b**n",
+     "n + k"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 10
+   },
+   "lang": "en",
+   "stem": {
+    "en": "log_{b} x + log_{b}(x − {k}) = {n}. What is x?",
+    "uz": "log_{b} x + log_{b}(x − {k}) = {n}. x ni toping.",
+    "ru": "log_{b} x + log_{b}(x − {k}) = {n}. Найдите x."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "log_{b}(x(x − {k})) = {n}, so x² − {k}x − {p2} = 0 and x = {ANS} or x = {neg}; the logs need x > {k}, so x = {ANS}.",
+    "uz": "log_{b}(x(x − {k})) = {n}, demak x² − {k}x − {p2} = 0, x = {ANS} yoki x = {neg}; logarifmlar uchun x > {k}, shuning uchun x = {ANS}.",
+    "ru": "log_{b}(x(x − {k})) = {n}, значит x² − {k}x − {p2} = 0, x = {ANS} или x = {neg}; для логарифмов нужно x > {k}, поэтому x = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 60,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "solver:stem@50",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 8 | −1 | 8 | 10 (seed check:1)"
+  },
+  {
+   "id": "K4-pch024",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "exponential_equations_ln",
+   "lang": "en",
+   "stem": {
+    "en": "2ˣ = 3^(x − 1). Which expression equals x?",
+    "uz": "2ˣ = 3^(x − 1). x qaysi ifodaga teng?",
+    "ru": "2ˣ = 3^(x − 1). Какое выражение равно x?"
+   },
+   "options": [
+    {
+     "en": "ln 3/(ln 3 − ln 2)"
+    },
+    {
+     "en": "ln 3/(ln 2 − ln 3)"
+    },
+    {
+     "en": "ln 2/(ln 3 − ln 2)"
+    },
+    {
+     "en": "1/(ln 3 − ln 2)"
+    }
+   ],
+   "why": {
+    "en": "Take ln: x ln 2 = (x − 1) ln 3, so x(ln 3 − ln 2) = ln 3 and x = ln 3/(ln 3 − ln 2).",
+    "uz": "ln oling: x ln 2 = (x − 1) ln 3, x(ln 3 − ln 2) = ln 3, demak x = ln 3/(ln 3 − ln 2).",
+    "ru": "Прологарифмируем: x ln 2 = (x − 1) ln 3, x(ln 3 − ln 2) = ln 3, откуда x = ln 3/(ln 3 − ln 2)."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.25,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch025",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "infinite_geometric_series",
+   "family": {
+    "template": "{a} + {a2} + {a3} + … is an infinite geometric series. What is its sum?",
+    "params": {
+     "k": {
+      "min": 2,
+      "max": 4
+     },
+     "m": {
+      "min": 1,
+      "max": 6
+     }
+    },
+    "derived": {
+     "a": "k * k * m",
+     "a2": "k * m",
+     "a3": "m"
+    },
+    "answer": "a * k / (k - 1)",
+    "distractors": [
+     "a + a2 + a3",
+     "a * k / (k + 1)",
+     "a * (k - 1) / k"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 11,
+    "constraints": [
+     "(k**3 * m) % (k - 1) == 0"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "{a} + {a2} + {a3} + … is an infinite geometric series. What is its sum?",
+    "uz": "{a} + {a2} + {a3} + … cheksiz kamayuvchi geometrik progressiya. Uning yigʻindisini toping.",
+    "ru": "{a} + {a2} + {a3} + … — бесконечно убывающая геометрическая прогрессия. Найдите её сумму."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "q = 1/{k}, so S = a₁/(1 − q) = {a}/(1 − 1/{k}) = {ANS}.",
+    "uz": "q = 1/{k}, demak S = a₁/(1 − q) = {a}/(1 − 1/{k}) = {ANS}.",
+    "ru": "q = 1/{k}, поэтому S = a₁/(1 − q) = {a}/(1 − 1/{k}) = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.integer: integer is set but the key is 21.333333333333332 (seed check:0)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-pch026",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "binomial_theorem",
+   "family": {
+    "template": "What is the coefficient of x^{j} in the expansion of (x + {c})^{n}?",
+    "params": {
+     "n": {
+      "min": 4,
+      "max": 6
+     },
+     "j": {
+      "min": 1,
+      "max": 5
+     },
+     "c": {
+      "min": 2,
+      "max": 3
+     }
+    },
+    "derived": {
+     "nj": "n - j",
+     "cn": "comb(n, j)",
+     "cp": "c**(n - j)"
+    },
+    "constraints": [
+     "j < n",
+     "(comb(n, j) * c**(n - j)) != (comb(n, j))",
+     "(comb(n, j) * c**(n - j)) != (comb(n, j) * c**j)",
+     "(comb(n, j) * c**(n - j)) != (c**(n - j))",
+     "(comb(n, j)) != (comb(n, j) * c**j)",
+     "(comb(n, j)) != (c**(n - j))",
+     "(comb(n, j) * c**j) != (c**(n - j))"
+    ],
+    "answer": "comb(n, j) * c**(n - j)",
+    "distractors": [
+     "comb(n, j)",
+     "comb(n, j) * c**j",
+     "c**(n - j)"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 19
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the coefficient of x^{j} in the expansion of (x + {c})^{n}?",
+    "uz": "(x + {c})^{n} yoyilmasida x^{j} oldidagi koeffitsiyentni toping.",
+    "ru": "Найдите коэффициент при x^{j} в разложении (x + {c})^{n}."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "The term with x^{j} is C({n}, {j})·x^{j}·{c}^{nj}, so the coefficient is {cn}·{cp} = {ANS}.",
+    "uz": "x^{j} qatnashgan had: C({n}, {j})·x^{j}·{c}^{nj}, demak koeffitsiyent {cn}·{cp} = {ANS}.",
+    "ru": "Член с x^{j}: C({n}, {j})·x^{j}·{c}^{nj}, поэтому коэффициент равен {cn}·{cp} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 54 | 6 | 54 | 9 (seed check:0)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-pch027",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "permutations",
+   "family": {
+    "template": "A team of {n} students chooses a captain and a vice-captain (two different people). In how many ways can this be done?",
+    "params": {
+     "n": {
+      "min": 5,
+      "max": 20
+     }
+    },
+    "derived": {
+     "n1": "n - 1"
+    },
+    "answer": "n * (n - 1)",
+    "distractors": [
+     "n * (n - 1) / 2",
+     "n * n",
+     "2 * n"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 15,
+    "constraints": [
+     "(n * (n - 1)) != (n * (n - 1) / 2)",
+     "(n * (n - 1)) != (n * n)",
+     "(n * (n - 1)) != (2 * n)",
+     "(n * (n - 1) / 2) != (n * n)",
+     "(n * (n - 1) / 2) != (2 * n)",
+     "(n * n) != (2 * n)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A team of {n} students chooses a captain and a vice-captain (two different people). In how many ways can this be done?",
+    "uz": "{n} nafar oʻquvchidan iborat jamoa sardor va sardor oʻrinbosarini tanlaydi (ikki xil odam). Buni necha usulda qilish mumkin?",
+    "ru": "Команда из {n} учеников выбирает капитана и заместителя капитана (двух разных людей). Сколькими способами это можно сделать?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "{n} choices for captain, then {n1} for vice-captain: {n}·{n1} = {ANS}.",
+    "uz": "Sardor uchun {n} ta, oʻrinbosar uchun {n1} ta tanlov bor: {n}·{n1} = {ANS}.",
+    "ru": "{n} вариантов для капитана, затем {n1} для заместителя: {n}·{n1} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.85,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 20 | 10 | 25 | 10 (seed check:20)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-pch028",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "combinations",
+   "family": {
+    "template": "In how many ways can {k} books be chosen from {n} different books, if the order does not matter?",
+    "params": {
+     "n": {
+      "min": 6,
+      "max": 12
+     },
+     "k": {
+      "min": 2,
+      "max": 4
+     }
+    },
+    "derived": {
+     "nk": "n - k"
+    },
+    "answer": "comb(n, k)",
+    "distractors": [
+     "perm(n, k)",
+     "n * k",
+     "comb(n, k + 1)"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 18,
+    "constraints": [
+     "(comb(n, k)) != (perm(n, k))",
+     "(comb(n, k)) != (n * k)",
+     "(comb(n, k)) != (comb(n, k + 1))",
+     "(perm(n, k)) != (n * k)",
+     "(perm(n, k)) != (comb(n, k + 1))",
+     "(n * k) != (comb(n, k + 1))"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "In how many ways can {k} books be chosen from {n} different books, if the order does not matter?",
+    "uz": "{n} ta har xil kitobdan {k} tasini necha usulda tanlash mumkin (tartib muhim emas)?",
+    "ru": "Сколькими способами можно выбрать {k} книги из {n} разных книг, если порядок не важен?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Order does not matter, so count combinations: C({n}, {k}) = {n}!/({k}!·{nk}!) = {ANS}.",
+    "uz": "Tartib muhim emas, shuning uchun guruhlashlar soni: C({n}, {k}) = {n}!/({k}!·{nk}!) = {ANS}.",
+    "ru": "Порядок не важен, поэтому считаем сочетания: C({n}, {k}) = {n}!/({k}!·{nk}!) = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 28 | 56 | 16 | 56 (seed check:1)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-pch029",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "probability",
+   "sat": {
+    "domain": "psda",
+    "difficulty": "medium"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "Two fair six-sided dice are rolled. What is the probability that the sum of the two numbers is 8?",
+    "uz": "Ikkita oʻyin soqqasi tashlandi. Tushgan sonlar yigʻindisi 8 ga teng boʻlish ehtimolligi qancha?",
+    "ru": "Бросают две игральные кости. Какова вероятность того, что сумма выпавших очков равна 8?"
+   },
+   "options": [
+    {
+     "en": "5/36"
+    },
+    {
+     "en": "1/6"
+    },
+    {
+     "en": "1/9"
+    },
+    {
+     "en": "8/36"
+    }
+   ],
+   "why": {
+    "en": "Of 36 equally likely outcomes, 5 give 8: (2, 6), (3, 5), (4, 4), (5, 3), (6, 2); P = 5/36.",
+    "uz": "36 ta teng imkoniyatli natijadan 5 tasi 8 beradi: (2, 6), (3, 5), (4, 4), (5, 3), (6, 2); P = 5/36.",
+    "ru": "Из 36 равновозможных исходов сумму 8 дают 5: (2, 6), (3, 5), (4, 4), (5, 3), (6, 2); P = 5/36."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch030",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "vectors",
+   "family": {
+    "template": "u = ({a}, {b}) and v = ({c}, {d}). What is the dot product u · v?",
+    "params": {
+     "a": {
+      "min": -3,
+      "max": 5
+     },
+     "b": {
+      "min": -3,
+      "max": 5
+     },
+     "c": {
+      "min": -3,
+      "max": 5
+     },
+     "d": {
+      "min": -3,
+      "max": 5
+     }
+    },
+    "constraints": [
+     "a * b * c * d != 0",
+     "(a * c + b * d) != (a * d + b * c)",
+     "(a * c + b * d) != (a * c - b * d)",
+     "(a * c + b * d) != (a * b + c * d)",
+     "(a * d + b * c) != (a * c - b * d)",
+     "(a * d + b * c) != (a * b + c * d)",
+     "(a * c - b * d) != (a * b + c * d)"
+    ],
+    "answer": "a * c + b * d",
+    "distractors": [
+     "a * d + b * c",
+     "a * c - b * d",
+     "a * b + c * d"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 1568
+   },
+   "lang": "en",
+   "stem": {
+    "en": "u = ({a}, {b}) and v = ({c}, {d}). What is the dot product u · v?",
+    "uz": "u = ({a}, {b}) va v = ({c}, {d}). u · v skalyar koʻpaytmani toping.",
+    "ru": "u = ({a}, {b}), v = ({c}, {d}). Найдите скалярное произведение u · v."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "u · v = {a}·{(c)} + {(b)}·{(d)} = {ANS}.",
+    "uz": "u · v = {a}·{(c)} + {(b)}·{(d)} = {ANS}.",
+    "ru": "u · v = {a}·{(c)} + {(b)}·{(d)} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.85,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 5 | 4 | −3 | 4 (seed check:0)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-pch031",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "vectors",
+   "lang": "en",
+   "stem": {
+    "en": "u = (1, 2) and v = (−1, 1). What is the length of the vector 2u − v?",
+    "uz": "u = (1, 2) va v = (−1, 1). 2u − v vektorning uzunligini toping.",
+    "ru": "u = (1, 2), v = (−1, 1). Найдите длину вектора 2u − v."
+   },
+   "options": [
+    {
+     "en": "3√2"
+    },
+    {
+     "en": "√26"
+    },
+    {
+     "en": "18"
+    },
+    {
+     "en": "6"
+    }
+   ],
+   "why": {
+    "en": "2u − v = (2 + 1, 4 − 1) = (3, 3), and its length is √(9 + 9) = 3√2.",
+    "uz": "2u − v = (2 + 1, 4 − 1) = (3, 3), uning uzunligi √(9 + 9) = 3√2.",
+    "ru": "2u − v = (2 + 1, 4 − 1) = (3, 3), его длина √(9 + 9) = 3√2."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch032",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "matrices",
+   "family": {
+    "template": "A is the 2×2 matrix with first row ({a}, {b}) and second row ({c}, {d}). What is det A?",
+    "params": {
+     "a": {
+      "min": 1,
+      "max": 9
+     },
+     "b": {
+      "min": 1,
+      "max": 9
+     },
+     "c": {
+      "min": 1,
+      "max": 9
+     },
+     "d": {
+      "min": 1,
+      "max": 9
+     }
+    },
+    "derived": {
+     "ad": "a * d",
+     "bc": "b * c"
+    },
+    "constraints": [
+     "a * d != b * c",
+     "(a * d - b * c) != (a * d + b * c)",
+     "(a * d - b * c) != (b * c - a * d)",
+     "(a * d - b * c) != (a * c - b * d)",
+     "(a * d + b * c) != (b * c - a * d)",
+     "(a * d + b * c) != (a * c - b * d)",
+     "(b * c - a * d) != (a * c - b * d)"
+    ],
+    "answer": "a * d - b * c",
+    "distractors": [
+     "a * d + b * c",
+     "b * c - a * d",
+     "a * c - b * d"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 5008
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A is the 2×2 matrix with first row ({a}, {b}) and second row ({c}, {d}). What is det A?",
+    "uz": "A — birinchi qatori ({a}, {b}), ikkinchi qatori ({c}, {d}) boʻlgan 2×2 matritsa. det A ni toping.",
+    "ru": "A — матрица 2×2 с первой строкой ({a}, {b}) и второй строкой ({c}, {d}). Найдите det A."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "det A = {a}·{d} − {b}·{c} = {ad} − {bc} = {ANS}.",
+    "uz": "det A = {a}·{d} − {b}·{c} = {ad} − {bc} = {ANS}.",
+    "ru": "det A = {a}·{d} − {b}·{c} = {ad} − {bc} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.85,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: −40 | 72 | 40 | 40 (seed check:3)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-pch033",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "matrices",
+   "family": {
+    "template": "A has rows ({a}, {b}) and ({c}, {d}); B has rows ({e}, {f}) and ({g}, {h}). What is the entry in row 1, column 2 of the product AB?",
+    "params": {
+     "a": {
+      "min": 1,
+      "max": 4
+     },
+     "b": {
+      "min": 1,
+      "max": 4
+     },
+     "c": {
+      "min": 1,
+      "max": 3
+     },
+     "d": {
+      "min": 1,
+      "max": 3
+     },
+     "e": {
+      "min": 1,
+      "max": 3
+     },
+     "f": {
+      "min": 1,
+      "max": 4
+     },
+     "g": {
+      "min": 1,
+      "max": 3
+     },
+     "h": {
+      "min": 1,
+      "max": 4
+     }
+    },
+    "answer": "a * f + b * h",
+    "distractors": [
+     "a * e + b * g",
+     "e * b + f * d",
+     "a * e + b * f"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 8760,
+    "constraints": [
+     "(a * f + b * h) != (a * e + b * g)",
+     "(a * f + b * h) != (e * b + f * d)",
+     "(a * f + b * h) != (a * e + b * f)",
+     "(a * e + b * g) != (e * b + f * d)",
+     "(a * e + b * g) != (a * e + b * f)",
+     "(e * b + f * d) != (a * e + b * f)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A has rows ({a}, {b}) and ({c}, {d}); B has rows ({e}, {f}) and ({g}, {h}). What is the entry in row 1, column 2 of the product AB?",
+    "uz": "A matritsaning qatorlari ({a}, {b}) va ({c}, {d}); B matritsaning qatorlari ({e}, {f}) va ({g}, {h}). AB koʻpaytmaning 1-qator, 2-ustundagi elementini toping.",
+    "ru": "Строки матрицы A: ({a}, {b}) и ({c}, {d}); строки матрицы B: ({e}, {f}) и ({g}, {h}). Найдите элемент произведения AB в 1-й строке и 2-м столбце."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Row 1 of A times column 2 of B: {a}·{f} + {b}·{h} = {ANS}.",
+    "uz": "A ning 1-qatorini B ning 2-ustuniga koʻpaytiramiz: {a}·{f} + {b}·{h} = {ANS}.",
+    "ru": "1-я строка A умножается на 2-й столбец B: {a}·{f} + {b}·{h} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 8 | 11 | 8 | 8 (seed check:0)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-pch034",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "conic_sections",
+   "family": {
+    "template": "What is the distance from the center of the ellipse x²/{A} + y²/{B} = 1 to each of its foci?",
+    "params": {
+     "a": {
+      "min": 3,
+      "max": 25
+     },
+     "b": {
+      "min": 2,
+      "max": 24
+     }
+    },
+    "derived": {
+     "A": "a * a",
+     "B": "b * b",
+     "cc": "a * a - b * b"
+    },
+    "constraints": [
+     "a > b",
+     "round(sqrt(a * a - b * b))**2 == a * a - b * b"
+    ],
+    "answer": "sqrt(a * a - b * b)",
+    "distractors": [
+     "A - B",
+     "a - b",
+     "a"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 16
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the distance from the center of the ellipse x²/{A} + y²/{B} = 1 to each of its foci?",
+    "uz": "x²/{A} + y²/{B} = 1 ellipsning markazidan fokuslarigacha boʻlgan masofani toping.",
+    "ru": "Найдите расстояние от центра эллипса x²/{A} + y²/{B} = 1 до каждого из его фокусов."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "c² = a² − b² = {A} − {B} = {cc}, so c = {ANS}.",
+    "uz": "c² = a² − b² = {A} − {B} = {cc}, demak c = {ANS}.",
+    "ru": "c² = a² − b² = {A} − {B} = {cc}, значит c = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch035",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "polar_coordinates",
+   "family": {
+    "template": "A point has polar coordinates (r, θ) = ({r}, π/3). What is its x-coordinate?",
+    "params": {
+     "r": {
+      "min": 2,
+      "max": 20,
+      "step": 2
+     }
+    },
+    "derived": {
+     "h": "r // 2"
+    },
+    "answer": "r / 2",
+    "option_templates": [
+     "{h}",
+     "{h}√3",
+     "{r}",
+     "{r}√3"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 10
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A point has polar coordinates (r, θ) = ({r}, π/3). What is its x-coordinate?",
+    "uz": "Nuqtaning qutb koordinatalari (r, θ) = ({r}, π/3). Uning x koordinatasini toping.",
+    "ru": "Точка имеет полярные координаты (r, θ) = ({r}, π/3). Найдите её абсциссу x."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "x = r cos θ = {r}·cos(π/3) = {r}·½ = {ANS}.",
+    "uz": "x = r cos θ = {r}·cos(π/3) = {r}·½ = {ANS}.",
+    "ru": "x = r cos θ = {r}·cos(π/3) = {r}·½ = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 0.85,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch036",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "function_transformations",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "g(x) = {a}·f(x − {h}) + {k}, and f({t}) = {v}. What is g({th})?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 4
+     },
+     "h": {
+      "min": 1,
+      "max": 4
+     },
+     "k": {
+      "min": 1,
+      "max": 6
+     },
+     "t": {
+      "min": 1,
+      "max": 5
+     },
+     "v": {
+      "min": 1,
+      "max": 6
+     }
+    },
+    "derived": {
+     "th": "t + h"
+    },
+    "answer": "a * v + k",
+    "distractors": [
+     "a * (v + k)",
+     "v + k",
+     "a * v - k"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 1940,
+    "constraints": [
+     "(a * v + k) != (a * (v + k))",
+     "(a * v + k) != (v + k)",
+     "(a * v + k) != (a * v - k)",
+     "(a * (v + k)) != (v + k)",
+     "(a * (v + k)) != (a * v - k)",
+     "(v + k) != (a * v - k)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "g(x) = {a}·f(x − {h}) + {k}, and f({t}) = {v}. What is g({th})?",
+    "uz": "g(x) = {a}·f(x − {h}) + {k} va f({t}) = {v}. g({th}) ni toping.",
+    "ru": "g(x) = {a}·f(x − {h}) + {k}, f({t}) = {v}. Найдите g({th})."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "g({th}) = {a}·f({th} − {h}) + {k} = {a}·f({t}) + {k} = {a}·{v} + {k} = {ANS}.",
+    "uz": "g({th}) = {a}·f({th} − {h}) + {k} = {a}·f({t}) + {k} = {a}·{v} + {k} = {ANS}.",
+    "ru": "g({th}) = {a}·f({th} − {h}) + {k} = {a}·f({t}) + {k} = {a}·{v} + {k} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 12 | 18 | 6 | 6 (seed check:6)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-pch037",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "function_composition",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "medium"
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = x² + 1 and g(x) = 2x − 3. Which expression is f(g(x))?",
+    "uz": "f(x) = x² + 1 va g(x) = 2x − 3. f(g(x)) qaysi ifodaga teng?",
+    "ru": "f(x) = x² + 1, g(x) = 2x − 3. Какое выражение равно f(g(x))?"
+   },
+   "options": [
+    {
+     "en": "4x² − 12x + 10"
+    },
+    {
+     "en": "2x² − 1"
+    },
+    {
+     "en": "4x² + 10"
+    },
+    {
+     "en": "4x² − 12x + 9"
+    }
+   ],
+   "why": {
+    "en": "f(g(x)) = (2x − 3)² + 1 = 4x² − 12x + 9 + 1 = 4x² − 12x + 10.",
+    "uz": "f(g(x)) = (2x − 3)² + 1 = 4x² − 12x + 9 + 1 = 4x² − 12x + 10.",
+    "ru": "f(g(x)) = (2x − 3)² + 1 = 4x² − 12x + 9 + 1 = 4x² − 12x + 10."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.05,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-pch038",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "exponential_functions",
+   "sat": {
+    "domain": "advanced_math",
+    "difficulty": "hard"
+   },
+   "family": {
+    "template": "f(x) = a·bˣ with b > 0, f(1) = {y1} and f(3) = {y3}. What is f(0)?",
+    "params": {
+     "a": {
+      "min": 1,
+      "max": 6
+     },
+     "b": {
+      "min": 2,
+      "max": 4
+     }
+    },
+    "derived": {
+     "y1": "a * b",
+     "y3": "a * b**3",
+     "b2": "b * b"
+    },
+    "answer": "a",
+    "distractors": [
+     "b",
+     "y1",
+     "y1 - (y3 - y1) / 2"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 12,
+    "constraints": [
+     "(a) != (b)",
+     "(a) != (y1)",
+     "(a) != (y1 - (y3 - y1) / 2)",
+     "(b) != (y1)",
+     "(b) != (y1 - (y3 - y1) / 2)",
+     "(y1) != (y1 - (y3 - y1) / 2)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = a·bˣ with b > 0, f(1) = {y1} and f(3) = {y3}. What is f(0)?",
+    "uz": "f(x) = a·bˣ (b > 0), f(1) = {y1} va f(3) = {y3}. f(0) ni toping.",
+    "ru": "f(x) = a·bˣ (b > 0), f(1) = {y1}, f(3) = {y3}. Найдите f(0)."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f(3)/f(1) = b² = {b2}, so b = {b}; then f(0) = a = f(1)/b = {y1}/{b} = {ANS}.",
+    "uz": "f(3)/f(1) = b² = {b2}, demak b = {b}; u holda f(0) = a = f(1)/b = {y1}/{b} = {ANS}.",
+    "ru": "f(3)/f(1) = b² = {b2}, значит b = {b}; тогда f(0) = a = f(1)/b = {y1}/{b} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.25,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 1 | 4 | 4 | −26 (seed check:5)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-pch039",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "arc_length",
+   "sat": {
+    "domain": "geometry_trig",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "A circle has radius {r}. An arc of this circle has a central angle of {p}π/{q} radians. The arc length is kπ. What is k?",
+    "params": {
+     "r": {
+      "min": 2,
+      "max": 12
+     },
+     "t": {
+      "values": [
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        5,
+        6
+       ],
+       [
+        4,
+        3
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        5,
+        3
+       ]
+      ]
+     }
+    },
+    "derived": {
+     "p": "t[0]",
+     "q": "t[1]"
+    },
+    "constraints": [
+     "(r * p) % q == 0",
+     "(r * p / q) != (2 * r * p / q)",
+     "(r * p / q) != (r * r * p / (2 * q))",
+     "(r * p / q) != (r * p / (2 * q))",
+     "(2 * r * p / q) != (r * r * p / (2 * q))",
+     "(2 * r * p / q) != (r * p / (2 * q))",
+     "(r * r * p / (2 * q)) != (r * p / (2 * q))"
+    ],
+    "answer": "r * p / q",
+    "distractors": [
+     "2 * r * p / q",
+     "r * r * p / (2 * q)",
+     "r * p / (2 * q)"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 32
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A circle has radius {r}. An arc of this circle has a central angle of {p}π/{q} radians. The arc length is kπ. What is k?",
+    "uz": "Aylana radiusi {r}. Shu aylana yoyining markaziy burchagi {p}π/{q} radian. Yoy uzunligi kπ ga teng. k ni toping.",
+    "ru": "Радиус окружности равен {r}. Центральный угол дуги этой окружности равен {p}π/{q} рад. Длина дуги равна kπ. Найдите k."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Arc length = rθ = {r}·{p}π/{q} = {ANS}π, so k = {ANS}.",
+    "uz": "Yoy uzunligi = rθ = {r}·{p}π/{q} = {ANS}π, demak k = {ANS}.",
+    "ru": "Длина дуги = rθ = {r}·{p}π/{q} = {ANS}π, значит k = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:p5int-rewrite",
+   "key_check_1": "author",
+   "key_check_2": null,
+   "status": "draft",
+   "version": 2,
+   "quarantine_reason": "family.formula: unexpected \"if\" in \"'' if t[0] == 1 else str(t[0])\""
+  },
+  {
+   "id": "K4-pch040",
+   "skill": "math",
+   "rung": "precalc",
+   "subskill": "sector_area",
+   "sat": {
+    "domain": "geometry_trig",
+    "difficulty": "medium"
+   },
+   "family": {
+    "template": "A sector of a circle with radius {r} has a central angle of {th}°. Its area is kπ. What is k?",
+    "params": {
+     "r": {
+      "min": 2,
+      "max": 12
+     },
+     "th": {
+      "values": [
+       30,
+       45,
+       60,
+       72,
+       90,
+       120,
+       135,
+       150,
+       240,
+       270
+      ]
+     }
+    },
+    "constraints": [
+     "(th * r * r) % 360 == 0"
+    ],
+    "answer": "th * r * r / 360",
+    "distractors": [
+     "th * 2 * r / 360",
+     "r * r",
+     "th * r * r / 180"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 32
+   },
+   "lang": "en",
+   "stem": {
+    "en": "A sector of a circle with radius {r} has a central angle of {th}°. Its area is kπ. What is k?",
+    "uz": "Radiusi {r} boʻlgan doira sektorining markaziy burchagi {th}°. Sektor yuzi kπ ga teng. k ni toping.",
+    "ru": "Сектор круга радиуса {r} имеет центральный угол {th}°. Его площадь равна kπ. Найдите k."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "Area = ({th}/360)·π·{r}² = {ANS}π, so k = {ANS}.",
+    "uz": "Yuza = ({th}/360)·π·{r}² = {ANS}π, demak k = {ANS}.",
+    "ru": "Площадь = ({th}/360)·π·{r}² = {ANS}π, значит k = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.05,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  }
+ ]
+}

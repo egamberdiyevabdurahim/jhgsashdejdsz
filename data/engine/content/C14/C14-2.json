@@ -1,0 +1,2046 @@
+{
+  "bank": "C14",
+  "batch": 2,
+  "kind": "catalog",
+  "note": "Reflection and MCII prompts, batch 2: the energy check, rest-day prompts (optional, never counted against the streak), event prompts (restart day, after a check, after a mock, after a milestone, after a setback), the when-and-where micro-prompt and the monthly review. Same conventions as C14-1.json; chips in option_sets.json. Answers never reach the AI (D14 (5)). `engine_hints` are proposals for the integrator, not built behaviour. Status draft; counselor review is launch gate LG1.",
+  "sources": [
+    {
+      "id": "DUCK2011",
+      "url": "https://kops.uni-konstanz.de/entities/publication/b80e704b-09c4-4e23-a3d5-e9c731be2f7b",
+      "title": "Duckworth, Grant, Loew, Oettingen & Gollwitzer (2011), Self-regulation strategies improve self-discipline in adolescents: benefits of mental contrasting and implementation intentions, Educational Psychology 31(1), 17-26",
+      "used_for": "why the weekly plan is an MCII prompt: 66 second-year high-school students preparing for a high-stakes exam; the abstract says the intervention group completed more than 60 % more practice questions than the control group",
+      "verified_at": "2026-10-07",
+      "doi": "10.1080/01443410.2010.506003"
+    },
+    {
+      "id": "GOLL2006",
+      "url": "https://kops.uni-konstanz.de/entities/publication/2e749bfb-8533-437c-8203-7e788c910c5f",
+      "title": "Gollwitzer & Sheeran (2006), Implementation intentions and goal achievement: a meta-analysis of effects and processes, Advances in Experimental Social Psychology 38, 69-119",
+      "used_for": "the if-then plan format",
+      "note": "url moved to the Konstanz repository record, which shows the abstract (the socmot page in alt_url lists the paper without one). The abstract confirms 94 independent tests and d = .65 on goal attainment, and describes plans that say when, where and how; the effect size is not used in any student-facing text",
+      "verified_at": "2026-10-07",
+      "alt_url": "https://www.socmot.uni-konstanz.de/publications/implementation-intentions-and-goal-achievement-meta-analysis-effects-and-processes",
+      "doi": "10.1016/S0065-2601(06)38002-1"
+    },
+    {
+      "id": "WOOP-PRACTICE",
+      "url": "https://woopmylife.org/en/practice",
+      "title": "WOOP my life: practice page (Oettingen)",
+      "used_for": "step order (wish, outcome, obstacle, plan); name an inner obstacle (habit, feeling, belief) rather than an outside barrier; a wish that is somewhat challenging but feasible; a short, concrete if-then action",
+      "note": "the WOOP name is not used in student-facing text; the steps are written in our own words",
+      "verified_at": "2026-10-07"
+    },
+    {
+      "id": "CDC-SLEEP",
+      "url": "https://www.cdc.gov/sleep/about/index.html",
+      "title": "CDC, About Sleep: recommended daily sleep by age (page last reviewed 15 May 2024)",
+      "used_for": "the sleep line in C14-ref-energy and C14-mcii-final-weeks: school age 6-12 years 9-12 hours; teen 13-17 years 8-10 hours; adult 18-60 years 7 or more hours",
+      "verified_at": "2026-10-07"
+    },
+    {
+      "id": "ICO13",
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/childrens-information/childrens-code-guidance-and-resources/age-appropriate-design-a-code-of-practice-for-online-services/13-nudge-techniques/",
+      "title": "ICO, Age appropriate design: a code of practice for online services, Standard 13 \"Nudge techniques\" (UK)",
+      "used_for": "the C14-ref-energy basis note: the code says to \"nudge towards wellbeing enhancing behaviours (such as taking breaks)\"; UK law, not Uzbek, used as a design bar only",
+      "verified_at": "2026-10-07"
+    },
+    {
+      "id": "SPEC",
+      "url": null,
+      "title": "P5 spec v2 (7 Oct 2026) §4.5 floor 4 (weekly MCII plan, ≤ 5 min), rest days 0 required tasks, \"never miss twice\", load changes offered not forced; §4.6 verification ladder; §4.7 streak repair, no streak pressure, quiet hours; R5 §5.2 reflect row and §5.7",
+      "used_for": "slots, cadence, verification levels, the restart day and the wellbeing rules",
+      "verified_at": "2026-10-07",
+      "path": "C:/Users/PC/jg-p4d/.superpowers/sdd/2026-10-07-p5/P5-spec.md and R5-daily-tasks-ai.md (internal design documents, no public URL)",
+      "note": "internal source: every section cited in C14 (§2.6, §4.1, §4.4, §4.5 floor 4 and the adaptation table, §4.6, §4.7, §5.3 C14, D14 (5); R5 §3 rows, §5.2 reflect row, §5.7) was re-read in the local files on 2026-10-07 and matches"
+    }
+  ],
+  "items": [
+    {
+      "id": "C14-ref-energy",
+      "kind": "reflection_prompt",
+      "prompt_type": "wellbeing_check",
+      "task": {
+        "type": "reflect",
+        "template": "c14:ref-energy",
+        "slot": "floor4"
+      },
+      "cadence": "every_2_weeks",
+      "trigger": {
+        "when": "a light day (no dated step), every second week; also after two weeks with c7 < 0.6"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 2,
+      "optional": false,
+      "title": {
+        "en": "Energy and sleep: a quick check",
+        "uz": "Kuch va uyqu: qisqa tekshiruv",
+        "ru": "Силы и сон: короткая проверка"
+      },
+      "intro": {
+        "en": "Two minutes, to notice how you are doing.",
+        "uz": "Ikki daqiqa — oʻzingizni qanday his qilayotganingizni bilish uchun.",
+        "ru": "Две минуты, чтобы заметить, как вы себя чувствуете."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "energy",
+          "prompt": {
+            "en": "How much energy have you had this week?",
+            "uz": "Bu hafta kuch-quvvatingiz qanchalik boʻldi?",
+            "ru": "Сколько сил у вас было на этой неделе?"
+          },
+          "input": {
+            "type": "scale",
+            "min": 1,
+            "max": 5,
+            "labels_ref": "energy_scale",
+            "required": true
+          }
+        },
+        {
+          "n": 2,
+          "key": "sleep",
+          "prompt": {
+            "en": "On most school nights, how long did you sleep?",
+            "uz": "Maktab kunlari koʻpincha necha soat uxladingiz?",
+            "ru": "Сколько вы спали в большинство учебных ночей?"
+          },
+          "hint": {
+            "en": "Health guidance (CDC): 9-12 hours a day at ages 6-12, 8-10 hours at 13-17, and 7 hours or more from 18.",
+            "uz": "Sogʻliq boʻyicha tavsiya (CDC): 6–12 yoshda kuniga 9–12 soat, 13–17 yoshda 8–10 soat, 18 yoshdan esa 7 soat va undan koʻp.",
+            "ru": "Рекомендация по здоровью (CDC): в 6–12 лет — 9–12 часов в сутки, в 13–17 лет — 8–10 часов, с 18 лет — 7 часов и больше."
+          },
+          "hint_by_age": {
+            "6-12": "school age row",
+            "13-17": "teen row",
+            "18+": "adult 18-60 row",
+            "note": "code may show only the row for the student's age"
+          },
+          "input": {
+            "type": "choice",
+            "options_ref": "sleep_hours",
+            "required": true
+          }
+        },
+        {
+          "n": 3,
+          "key": "load",
+          "prompt": {
+            "en": "How did this week's tasks feel?",
+            "uz": "Bu haftaning vazifalari qanday tuyuldi?",
+            "ru": "Какими вам показались задачи этой недели?"
+          },
+          "input": {
+            "type": "choice",
+            "options_ref": "load_feel",
+            "required": true
+          }
+        }
+      ],
+      "responses": [
+        {
+          "if": "energy <= 2 or load = too_much",
+          "text": {
+            "en": "Thank you for telling us. You can choose a lighter week. If you have been feeling low for a while, talk to someone you trust: a parent, a teacher or your Jamals mentor.",
+            "uz": "Aytganingiz uchun rahmat. Yengilroq haftani tanlashingiz mumkin. Agar anchadan beri kayfiyatingiz tushkun boʻlsa, ishonadigan odamingiz bilan gaplashing: ota-onangiz, oʻqituvchingiz yoki Jamals mentoringiz.",
+            "ru": "Спасибо, что рассказали. Можно выбрать более лёгкую неделю. Если вам уже давно тяжело, поговорите с тем, кому доверяете: с родителем, учителем или ментором Jamals."
+          },
+          "action": {
+            "id": "offer_lighter_week",
+            "label": {
+              "en": "Make next week lighter",
+              "uz": "Keyingi haftani yengilroq qilish",
+              "ru": "Сделать следующую неделю легче"
+            },
+            "kind": "offer"
+          }
+        },
+        {
+          "if": "load = too_little and energy >= 4",
+          "text": {
+            "en": "Good to hear. If you want more, you can ask for a slightly fuller week.",
+            "uz": "Buni eshitish yoqimli. Xohlasangiz, biroz toʻliqroq hafta soʻrashingiz mumkin.",
+            "ru": "Рады это слышать. Если хотите, можно попросить чуть более насыщенную неделю."
+          },
+          "action": {
+            "id": "offer_fuller_week",
+            "label": {
+              "en": "Add a little more next week",
+              "uz": "Keyingi haftaga biroz qoʻshish",
+              "ru": "Добавить немного на следующей неделе"
+            },
+            "kind": "offer"
+          }
+        },
+        {
+          "if": "otherwise",
+          "text": {
+            "en": "Saved. Thank you.",
+            "uz": "Saqlandi. Rahmat.",
+            "ru": "Сохранено. Спасибо."
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. Thank you.",
+        "uz": "Saqlandi. Rahmat.",
+        "ru": "Сохранено. Спасибо."
+      },
+      "safety_note": "not a clinical screen and never labelled one; it diagnoses nothing. The low-energy line points to trusted adults only; no helpline number is shown because none was verified for Uzbekistan in this round (add one only with an official source). Rechecked 2026-10-07: no official page for a national child or youth helpline in Uzbekistan was found, so none is shown.",
+      "engine_hints": [
+        "offer_lighter_week / offer_fuller_week map onto the spec §4.5 load rules (−15 % / +10 %), always as an offer the student accepts, never automatic; integrator decides",
+        "the answers stay out of the parent view and the AI (privacy below)"
+      ],
+      "facts": [
+        {
+          "claim": "recommended daily sleep: 6-12 years 9-12 hours; 13-17 years 8-10 hours; 18-60 years 7 or more hours",
+          "url": "https://www.cdc.gov/sleep/about/index.html",
+          "verified_at": "2026-10-07",
+          "page_last_reviewed": "2024-05-15"
+        }
+      ],
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "energy",
+            "sleep",
+            "load"
+          ]
+        }
+      },
+      "basis": [
+        "CDC-SLEEP",
+        "ICO13",
+        "SPEC"
+      ],
+      "basis_note": "R5 §3 wellbeing row (sleep, ICO Standard 13 \"nudge towards wellbeing\", taking breaks); spec §4.5 load offers",
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true,
+      "factcheck": {
+        "verified_at": "2026-10-07",
+        "note": "CDC sleep line re-read (6-12 years 9-12 h, 13-17 years 8-10 h, 18-60 years 7 or more; matches in en, uz and ru); ICO Standard 13 added to basis for the wellbeing note; helpline search repeated, none shown"
+      }
+    },
+    {
+      "id": "C14-rest-good",
+      "kind": "reflection_prompt",
+      "prompt_type": "rest_day",
+      "task": {
+        "type": "reflect",
+        "template": "c14:rest-good",
+        "slot": "rest_optional"
+      },
+      "cadence": "rest_day",
+      "trigger": {
+        "when": "rest day",
+        "rotation_group": "rest",
+        "rule": "one at most per rest day; no verbatim repeat within 14 days (tasks.ts rule); never a reminder for it"
+      },
+      "stages": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 2,
+      "optional": true,
+      "title": {
+        "en": "One good thing this week",
+        "uz": "Bu haftadagi bitta yaxshi narsa",
+        "ru": "Одна хорошая вещь этой недели"
+      },
+      "intro": {
+        "en": "Rest day. This is optional; skip it if you like.",
+        "uz": "Dam olish kuni. Bu ixtiyoriy — xohlasangiz, oʻtkazib yuboring.",
+        "ru": "День отдыха. Это по желанию: можно пропустить."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "good",
+          "prompt": {
+            "en": "What is one good thing that happened this week, big or small?",
+            "uz": "Bu hafta yuz bergan bitta yaxshi narsa nima boʻldi — katta yoki kichik?",
+            "ru": "Что хорошего случилось на этой неделе, большое или маленькое?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": false
+          }
+        },
+        {
+          "n": 2,
+          "key": "my_part",
+          "prompt": {
+            "en": "Did you play a part in it? How?",
+            "uz": "Bunda sizning ham hissangiz bormi? Qanday?",
+            "ru": "Была ли в этом ваша роль? Какая?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 120,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Enjoy the rest of your day.",
+        "uz": "Kuningizning qolgan qismi yaxshi oʻtsin.",
+        "ru": "Хорошего вам отдыха."
+      },
+      "evidence": {
+        "level": "L0",
+        "method": "self_report",
+        "check": null,
+        "note": "optional; a tick is enough; never affects the streak (rest days are neutral, spec §4.5, §4.7)"
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-rest-recharge",
+      "kind": "reflection_prompt",
+      "prompt_type": "rest_day",
+      "task": {
+        "type": "reflect",
+        "template": "c14:rest-recharge",
+        "slot": "rest_optional"
+      },
+      "cadence": "rest_day",
+      "trigger": {
+        "when": "rest day",
+        "rotation_group": "rest",
+        "rule": "one at most per rest day; no verbatim repeat within 14 days (tasks.ts rule); never a reminder for it"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 1,
+      "optional": true,
+      "title": {
+        "en": "What recharges you?",
+        "uz": "Sizga nima kuch beradi?",
+        "ru": "Что вас восстанавливает?"
+      },
+      "intro": {
+        "en": "Rest day. This is optional; skip it if you like.",
+        "uz": "Dam olish kuni. Bu ixtiyoriy — xohlasangiz, oʻtkazib yuboring.",
+        "ru": "День отдыха. Это по желанию: можно пропустить."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "recharge",
+          "prompt": {
+            "en": "What helped you rest and recharge this week? Pick any.",
+            "uz": "Bu hafta dam olishingiz va kuch yigʻishingizga nima yordam berdi? Istalganini tanlang.",
+            "ru": "Что помогло вам отдохнуть и набраться сил на этой неделе? Выберите что угодно."
+          },
+          "input": {
+            "type": "multi_choice",
+            "options_ref": "recharge",
+            "other_text_max": 60,
+            "required": false
+          }
+        },
+        {
+          "n": 2,
+          "key": "more",
+          "prompt": {
+            "en": "Which of these would you like more of next week?",
+            "uz": "Keyingi hafta ulardan qaysi biri koʻproq boʻlishini xohlaysiz?",
+            "ru": "Чего из этого вам хотелось бы больше на следующей неделе?"
+          },
+          "input": {
+            "type": "pick_items",
+            "source": "answer:recharge",
+            "min": 0,
+            "max": 1,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Rest is part of the plan.",
+        "uz": "Dam olish ham rejaning bir qismi.",
+        "ru": "Отдых — тоже часть плана."
+      },
+      "evidence": {
+        "level": "L0",
+        "method": "self_report",
+        "check": null,
+        "note": "optional; a tick is enough; never affects the streak (rest days are neutral, spec §4.5, §4.7)"
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-rest-thanks",
+      "kind": "reflection_prompt",
+      "prompt_type": "rest_day",
+      "task": {
+        "type": "reflect",
+        "template": "c14:rest-thanks",
+        "slot": "rest_optional"
+      },
+      "cadence": "rest_day",
+      "trigger": {
+        "when": "rest day",
+        "rotation_group": "rest",
+        "rule": "one at most per rest day; no verbatim repeat within 14 days (tasks.ts rule); never a reminder for it"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 2,
+      "optional": true,
+      "title": {
+        "en": "Someone who helped you",
+        "uz": "Sizga yordam bergan inson",
+        "ru": "Человек, который вам помог"
+      },
+      "intro": {
+        "en": "Rest day. This is optional; skip it if you like.",
+        "uz": "Dam olish kuni. Bu ixtiyoriy — xohlasangiz, oʻtkazib yuboring.",
+        "ru": "День отдыха. Это по желанию: можно пропустить."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "who",
+          "prompt": {
+            "en": "Who helped you this week, even a little? What did they do?",
+            "uz": "Bu hafta sizga kim, hatto ozgina boʻlsa ham, yordam berdi? U nima qildi?",
+            "ru": "Кто помог вам на этой неделе, хотя бы немного? Что он сделал?"
+          },
+          "hint": {
+            "en": "A first name or \"my sister\", \"my teacher\" is enough.",
+            "uz": "Ismi yoki «opam», «ustozim» deb yozish kifoya.",
+            "ru": "Достаточно имени или «моя сестра», «мой учитель»."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 140,
+            "required": false
+          }
+        },
+        {
+          "n": 2,
+          "key": "thank",
+          "prompt": {
+            "en": "If you like, tell them thank you today. A few words are enough.",
+            "uz": "Xohlasangiz, bugun unga rahmat ayting. Bir necha soʻz kifoya.",
+            "ru": "Если хотите, скажите ему спасибо сегодня. Хватит нескольких слов."
+          },
+          "input": {
+            "type": "choice",
+            "required": false,
+            "options": [
+              {
+                "id": "will",
+                "en": "I will",
+                "uz": "Aytaman",
+                "ru": "Скажу"
+              },
+              {
+                "id": "done",
+                "en": "Already did",
+                "uz": "Aytib boʻldim",
+                "ru": "Уже сказал(а)"
+              },
+              {
+                "id": "not_now",
+                "en": "Not now",
+                "uz": "Hozir emas",
+                "ru": "Не сейчас"
+              }
+            ]
+          }
+        }
+      ],
+      "closing": {
+        "en": "Enjoy your rest day.",
+        "uz": "Dam olish kuningiz yaxshi oʻtsin.",
+        "ru": "Хорошего дня отдыха."
+      },
+      "privacy_note": "the name the student types is a third party's; it stays with the student's own answers, never in analytics, the parent view or the AI",
+      "evidence": {
+        "level": "L0",
+        "method": "self_report",
+        "check": null,
+        "note": "optional; a tick is enough; never affects the streak (rest days are neutral, spec §4.5, §4.7)"
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-rest-curious",
+      "kind": "reflection_prompt",
+      "prompt_type": "rest_day",
+      "task": {
+        "type": "reflect",
+        "template": "c14:rest-curious",
+        "slot": "rest_optional"
+      },
+      "cadence": "rest_day",
+      "trigger": {
+        "when": "rest day",
+        "rotation_group": "rest",
+        "rule": "one at most per rest day; no verbatim repeat within 14 days (tasks.ts rule); never a reminder for it"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 2,
+      "optional": true,
+      "title": {
+        "en": "Something you wondered about",
+        "uz": "Sizni qiziqtirgan narsa",
+        "ru": "То, что вас заинтересовало"
+      },
+      "intro": {
+        "en": "Rest day. This is optional; skip it if you like.",
+        "uz": "Dam olish kuni. Bu ixtiyoriy — xohlasangiz, oʻtkazib yuboring.",
+        "ru": "День отдыха. Это по желанию: можно пропустить."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "wonder",
+          "prompt": {
+            "en": "What made you curious this week, outside of school tasks?",
+            "uz": "Bu hafta maktab vazifalaridan tashqari nima sizni qiziqtirdi?",
+            "ru": "Что вас заинтересовало на этой неделе, помимо школьных заданий?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 140,
+            "required": false
+          }
+        },
+        {
+          "n": 2,
+          "key": "find_out",
+          "prompt": {
+            "en": "Where could you find out more, just for fun?",
+            "uz": "Shunchaki qiziqish uchun bu haqda qayerdan koʻproq bilib olishingiz mumkin?",
+            "ru": "Где можно узнать об этом больше, просто для интереса?"
+          },
+          "hint": {
+            "en": "A book, a video, a museum, or someone who knows about it.",
+            "uz": "Kitob, video, muzey yoki bu haqda biladigan odam.",
+            "ru": "Книга, видео, музей или человек, который в этом разбирается."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 120,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Curiosity needs no deadline.",
+        "uz": "Qiziquvchanlikka muddat kerak emas.",
+        "ru": "Любопытству не нужны сроки."
+      },
+      "evidence": {
+        "level": "L0",
+        "method": "self_report",
+        "check": null,
+        "note": "optional; a tick is enough; never affects the streak (rest days are neutral, spec §4.5, §4.7)"
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "basis_note": "no coins for interests the student follows for fun (R5 §3 rewards row, Deci et al.)",
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-rest-proud",
+      "kind": "reflection_prompt",
+      "prompt_type": "rest_day",
+      "task": {
+        "type": "reflect",
+        "template": "c14:rest-proud",
+        "slot": "rest_optional"
+      },
+      "cadence": "rest_day",
+      "trigger": {
+        "when": "rest day",
+        "rotation_group": "rest",
+        "rule": "one at most per rest day; no verbatim repeat within 14 days (tasks.ts rule); never a reminder for it"
+      },
+      "stages": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 2,
+      "optional": true,
+      "title": {
+        "en": "Something you are proud of",
+        "uz": "Faxrlanadigan narsangiz",
+        "ru": "То, чем вы гордитесь"
+      },
+      "intro": {
+        "en": "Rest day. This is optional; skip it if you like.",
+        "uz": "Dam olish kuni. Bu ixtiyoriy — xohlasangiz, oʻtkazib yuboring.",
+        "ru": "День отдыха. Это по желанию: можно пропустить."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "proud",
+          "prompt": {
+            "en": "What did you do this week that you are proud of? It does not have to be about school.",
+            "uz": "Bu hafta qilgan qaysi ishingiz bilan faxrlanasiz? U maktabga oid boʻlishi shart emas.",
+            "ru": "Чем из сделанного на этой неделе вы гордитесь? Это не обязательно связано с учёбой."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": false
+          }
+        },
+        {
+          "n": 2,
+          "key": "strength",
+          "prompt": {
+            "en": "What does it say about you?",
+            "uz": "Bu siz haqingizda nimani koʻrsatadi?",
+            "ru": "Что это говорит о вас?"
+          },
+          "hint": {
+            "en": "For example: \"I keep going\", \"I help people\", \"I notice details\".",
+            "uz": "Masalan: «Men toʻxtab qolmayman», «Odamlarga yordam beraman», «Mayda narsalarni sezaman».",
+            "ru": "Например: «я не сдаюсь», «я помогаю людям», «я замечаю детали»."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 100,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Worth remembering.",
+        "uz": "Buni eslab qolishga arziydi.",
+        "ru": "Это стоит запомнить."
+      },
+      "evidence": {
+        "level": "L0",
+        "method": "self_report",
+        "check": null,
+        "note": "optional; a tick is enough; never affects the streak (rest days are neutral, spec §4.5, §4.7)"
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "basis_note": "S3/S4 answers may be offered back later as story-bank seeds for C12 essays, only if the student chooses (proposed)",
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-rest-notice",
+      "kind": "reflection_prompt",
+      "prompt_type": "rest_day",
+      "task": {
+        "type": "reflect",
+        "template": "c14:rest-notice",
+        "slot": "rest_optional"
+      },
+      "cadence": "rest_day",
+      "trigger": {
+        "when": "rest day",
+        "rotation_group": "rest",
+        "rule": "one at most per rest day; no verbatim repeat within 14 days (tasks.ts rule); never a reminder for it"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 2,
+      "optional": true,
+      "title": {
+        "en": "Three small things",
+        "uz": "Uchta kichik narsa",
+        "ru": "Три маленькие вещи"
+      },
+      "intro": {
+        "en": "Rest day. This is optional; skip it if you like.",
+        "uz": "Dam olish kuni. Bu ixtiyoriy — xohlasangiz, oʻtkazib yuboring.",
+        "ru": "День отдыха. Это по желанию: можно пропустить."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "saw",
+          "prompt": {
+            "en": "Something nice you saw today",
+            "uz": "Bugun koʻrgan yoqimli narsangiz",
+            "ru": "Что-то приятное, что вы сегодня увидели"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 80,
+            "required": false
+          }
+        },
+        {
+          "n": 2,
+          "key": "heard",
+          "prompt": {
+            "en": "Something you heard that made you smile",
+            "uz": "Sizni jilmaytirgan biror eshitgan narsangiz",
+            "ru": "Что-то услышанное, что вызвало у вас улыбку"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 80,
+            "required": false
+          }
+        },
+        {
+          "n": 3,
+          "key": "enjoyed",
+          "prompt": {
+            "en": "Something you enjoyed: a taste, a smell, a walk",
+            "uz": "Sizga yoqqan narsa: taʼm, hid yoki sayr",
+            "ru": "Что-то, что вам понравилось: вкус, запах, прогулка"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 80,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Small things add up.",
+        "uz": "Kichik narsalar ham yigʻilib boradi.",
+        "ru": "Из мелочей складывается многое."
+      },
+      "evidence": {
+        "level": "L0",
+        "method": "self_report",
+        "check": null,
+        "note": "optional; a tick is enough; never affects the streak (rest days are neutral, spec §4.5, §4.7)"
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-rest-kid",
+      "kind": "reflection_prompt",
+      "prompt_type": "rest_day",
+      "task": {
+        "type": "reflect",
+        "template": "c14:rest-kid",
+        "slot": "rest_optional"
+      },
+      "cadence": "rest_day",
+      "trigger": {
+        "when": "rest day",
+        "rotation_group": "rest",
+        "rule": "one at most per rest day; no verbatim repeat within 14 days (tasks.ts rule); never a reminder for it"
+      },
+      "stages": [
+        "S1"
+      ],
+      "age_note": "ages about 10-13: one tap and one optional line",
+      "minutes": 1,
+      "optional": true,
+      "title": {
+        "en": "Best moment of the week",
+        "uz": "Haftaning eng yaxshi lahzasi",
+        "ru": "Лучший момент недели"
+      },
+      "intro": {
+        "en": "Rest day! This is just for fun, and you can skip it.",
+        "uz": "Dam olish kuni! Bu shunchaki qiziqish uchun, oʻtkazib yuborsangiz ham boʻladi.",
+        "ru": "День отдыха! Это просто для удовольствия, можно пропустить."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "kind",
+          "prompt": {
+            "en": "What was your best moment about?",
+            "uz": "Eng yaxshi lahzangiz nima bilan bogʻliq edi?",
+            "ru": "С чем был связан ваш лучший момент?"
+          },
+          "input": {
+            "type": "choice",
+            "required": false,
+            "other_text_max": 60,
+            "options": [
+              {
+                "id": "play",
+                "en": "Playing or sport",
+                "uz": "Oʻyin yoki sport",
+                "ru": "Игра или спорт"
+              },
+              {
+                "id": "friends",
+                "en": "Friends",
+                "uz": "Doʻstlar",
+                "ru": "Друзья"
+              },
+              {
+                "id": "family",
+                "en": "Family",
+                "uz": "Oila",
+                "ru": "Семья"
+              },
+              {
+                "id": "made",
+                "en": "Something I made",
+                "uz": "Oʻzim yasagan narsa",
+                "ru": "То, что я сделал(а) сам(а)"
+              },
+              {
+                "id": "learned",
+                "en": "Something I learned",
+                "uz": "Oʻrgangan narsam",
+                "ru": "То, что я узнал(а)"
+              },
+              {
+                "id": "outside",
+                "en": "Being outside",
+                "uz": "Ochiq havoda boʻlish",
+                "ru": "Прогулка на улице"
+              },
+              {
+                "id": "other",
+                "en": "Something else",
+                "uz": "Boshqa narsa",
+                "ru": "Другое"
+              }
+            ]
+          }
+        },
+        {
+          "n": 2,
+          "key": "line",
+          "prompt": {
+            "en": "Tell us in a few words, if you like.",
+            "uz": "Xohlasangiz, bir necha soʻz bilan aytib bering.",
+            "ru": "Если хотите, расскажите в нескольких словах."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 80,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Have a great rest day!",
+        "uz": "Dam olish kuningiz ajoyib oʻtsin!",
+        "ru": "Отличного дня отдыха!"
+      },
+      "evidence": {
+        "level": "L0",
+        "method": "self_report",
+        "check": null,
+        "note": "optional; a tick is enough; never affects the streak (rest days are neutral, spec §4.5, §4.7)"
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-rest-fun",
+      "kind": "reflection_prompt",
+      "prompt_type": "rest_day",
+      "task": {
+        "type": "reflect",
+        "template": "c14:rest-fun",
+        "slot": "rest_optional"
+      },
+      "cadence": "rest_day",
+      "trigger": {
+        "when": "rest day",
+        "rotation_group": "rest",
+        "rule": "one at most per rest day; no verbatim repeat within 14 days (tasks.ts rule); never a reminder for it"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 1,
+      "optional": true,
+      "title": {
+        "en": "Something to try just for fun",
+        "uz": "Shunchaki zavq uchun sinab koʻradigan narsa",
+        "ru": "Что-то, что можно попробовать просто так"
+      },
+      "intro": {
+        "en": "Rest day. This is optional; skip it if you like.",
+        "uz": "Dam olish kuni. Bu ixtiyoriy — xohlasangiz, oʻtkazib yuboring.",
+        "ru": "День отдыха. Это по желанию: можно пропустить."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "try",
+          "prompt": {
+            "en": "What would you like to try next week, just because you enjoy it?",
+            "uz": "Keyingi hafta shunchaki yoqqani uchun nimani sinab koʻrmoqchisiz?",
+            "ru": "Что бы вы хотели попробовать на следующей неделе просто потому, что вам это нравится?"
+          },
+          "hint": {
+            "en": "A recipe, a song to learn, a new route for a walk, a game with friends.",
+            "uz": "Yangi taom retsepti, oʻrganiladigan qoʻshiq, sayr uchun yangi yoʻl, doʻstlar bilan oʻyin.",
+            "ru": "Новый рецепт, песня, которую хочется разучить, новый маршрут для прогулки, игра с друзьями."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 100,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "It is not a task. Enjoy it.",
+        "uz": "Bu vazifa emas. Zavqlaning.",
+        "ru": "Это не задание. Просто получайте удовольствие."
+      },
+      "evidence": {
+        "level": "L0",
+        "method": "self_report",
+        "check": null,
+        "note": "optional; a tick is enough; never affects the streak (rest days are neutral, spec §4.5, §4.7)"
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "basis_note": "never turned into a scheduled task and never earns coins (R5 §3 rewards row)",
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-evt-restart",
+      "kind": "reflection_prompt",
+      "prompt_type": "restart",
+      "task": {
+        "type": "reflect",
+        "template": "c14:evt-restart",
+        "slot": "floor4"
+      },
+      "cadence": "event",
+      "trigger": {
+        "when": "the first scheduled day after a missed scheduled day (\"never miss twice\": a 2-task restart day, spec §4.5)"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 2,
+      "optional": false,
+      "title": {
+        "en": "Welcome back: a fresh start today",
+        "uz": "Xush kelibsiz: bugun yangidan boshlaymiz",
+        "ru": "С возвращением: начнём сегодня заново"
+      },
+      "intro": {
+        "en": "Missing a day is normal. What matters is today. Today's list is short.",
+        "uz": "Bir kun qoldirib ketish — tabiiy hol. Muhimi — bugun. Bugungi roʻyxat qisqa.",
+        "ru": "Пропустить день — нормально. Важно то, что сегодня. Сегодня список короткий."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "reason",
+          "prompt": {
+            "en": "What got in the way? You can skip this.",
+            "uz": "Nima xalaqit berdi? Buni oʻtkazib yuborishingiz mumkin.",
+            "ru": "Что помешало? Этот вопрос можно пропустить."
+          },
+          "hint": {
+            "en": "No need to explain. It only helps plan around it next time.",
+            "uz": "Tushuntirish shart emas. Bu faqat keyingi safar shuni hisobga olib rejalashtirishga yordam beradi.",
+            "ru": "Объяснять не нужно. Это лишь поможет учесть это в следующий раз."
+          },
+          "input": {
+            "type": "choice",
+            "options_ref": "restart_reason",
+            "other_text_max": 80,
+            "required": false
+          }
+        },
+        {
+          "n": 2,
+          "key": "first_task",
+          "prompt": {
+            "en": "Which of today's two tasks will you do first?",
+            "uz": "Bugungi ikki vazifadan qaysi birini birinchi bajarasiz?",
+            "ru": "Какую из двух сегодняшних задач вы сделаете первой?"
+          },
+          "input": {
+            "type": "pick_items",
+            "source": "today_tasks",
+            "min": 1,
+            "max": 1,
+            "required": true
+          }
+        },
+        {
+          "n": 3,
+          "key": "plan",
+          "show_if": "reason in (school, forgot, no_mood, other)",
+          "prompt": {
+            "en": "If it happens again: If ___, then I will ___.",
+            "uz": "Agar yana takrorlansa: Agar ___, unda men ___.",
+            "ru": "Если это повторится: Если ___, то я ___."
+          },
+          "hint": {
+            "en": "Example: If I forget, then I will set a reminder for after dinner.",
+            "uz": "Misol: Agar esimdan chiqsa, unda men kechki ovqatdan keyinga eslatma qoʻyaman.",
+            "ru": "Пример: Если я забуду, то я поставлю напоминание на время после ужина."
+          },
+          "input": {
+            "type": "if_then",
+            "render_ref": "option_sets.if_then_render",
+            "fields": {
+              "if": {
+                "label": {
+                  "en": "If…",
+                  "uz": "Agar…",
+                  "ru": "Если…"
+                },
+                "max_chars": 100,
+                "prefill_from": null,
+                "required": true
+              },
+              "then": {
+                "label": {
+                  "en": "…then I will",
+                  "uz": "…unda men",
+                  "ru": "…то я"
+                },
+                "max_chars": 100,
+                "required": true
+              }
+            }
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. Welcome back.",
+        "uz": "Saqlandi. Qaytganingizdan xursandmiz.",
+        "ru": "Сохранено. Рады, что вы вернулись."
+      },
+      "closing_if": [
+        {
+          "if": "streak repair available (spec §4.7: 48 h repair)",
+          "text": {
+            "en": "Finish one task today and your streak is repaired.",
+            "uz": "Bugun bitta vazifani bajarsangiz, seriyangiz tiklanadi.",
+            "ru": "Выполните сегодня одну задачу, и ваша серия восстановится."
+          }
+        }
+      ],
+      "tone_rules": "no blame, no loss framing (\"you lost…\"), no streak counts in the title (R5 §5.7)",
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "first_task"
+          ]
+        }
+      },
+      "basis": [
+        "GOLL2006",
+        "SPEC"
+      ],
+      "basis_note": "spec §4.5 \"missed day: never miss twice: a 2-task restart day; 48 h streak repair\"; R5 §3 streak row (a repairable break hurts less; never shame a broken streak)",
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-evt-after-check",
+      "kind": "reflection_prompt",
+      "prompt_type": "after_event",
+      "task": {
+        "type": "reflect",
+        "template": "c14:evt-after-check",
+        "slot": "attached"
+      },
+      "cadence": "event",
+      "trigger": {
+        "when": "right after a check set or end-of-unit check is finished (L6 auto_event)",
+        "rule": "at most once a day; skipped if the student closes it"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 1,
+      "optional": true,
+      "title": {
+        "en": "Check finished: two quick questions",
+        "uz": "Tekshiruv tugadi: ikkita qisqa savol",
+        "ru": "Проверка завершена: два коротких вопроса"
+      },
+      "intro": {
+        "en": "Well done for finishing.",
+        "uz": "Yakunlaganingiz bilan tabriklaymiz.",
+        "ru": "Отлично, что вы дошли до конца."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "vs_expected",
+          "prompt": {
+            "en": "Compared with what you expected, how did it go?",
+            "uz": "Kutganingizga nisbatan qanday oʻtdi?",
+            "ru": "Как всё прошло по сравнению с ожиданиями?"
+          },
+          "input": {
+            "type": "choice",
+            "required": false,
+            "options": [
+              {
+                "id": "better",
+                "en": "Better than I expected",
+                "uz": "Kutganimdan yaxshiroq",
+                "ru": "Лучше ожиданий"
+              },
+              {
+                "id": "same",
+                "en": "As I expected",
+                "uz": "Kutganimdek",
+                "ru": "Как и ожидалось"
+              },
+              {
+                "id": "worse",
+                "en": "Harder than I expected",
+                "uz": "Kutganimdan qiyinroq",
+                "ru": "Труднее, чем ожидалось"
+              }
+            ]
+          }
+        },
+        {
+          "n": 2,
+          "key": "next",
+          "prompt": {
+            "en": "What is one thing you want to practise next because of it?",
+            "uz": "Shundan kelib chiqib, keyin nimani mashq qilmoqchisiz?",
+            "ru": "Что вы хотите потренировать дальше после этой проверки?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 100,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. One check is a snapshot; your level is measured again as you practise.",
+        "uz": "Saqlandi. Bitta tekshiruv — faqat bir lahzalik surat; mashq qilganingiz sari darajangiz yana oʻlchanadi.",
+        "ru": "Сохранено. Одна проверка — лишь снимок момента; по мере практики ваш уровень будет измеряться снова."
+      },
+      "evidence": {
+        "level": "L0",
+        "method": "self_report",
+        "check": null
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "basis_note": "matches the spec §2.6 \"provisional\" reporting: a check result is shown with its uncertainty and refined by later practice",
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-evt-after-mock",
+      "kind": "reflection_prompt",
+      "prompt_type": "after_event",
+      "task": {
+        "type": "reflect",
+        "template": "c14:evt-after-mock",
+        "slot": "floor4"
+      },
+      "cadence": "event",
+      "trigger": {
+        "when": "the day after a timed mock or full practice test is logged (C10 mock weeks, C18 mocks)"
+      },
+      "stages": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 5,
+      "optional": false,
+      "title": {
+        "en": "After your mock test",
+        "uz": "Sinov testidan soʻng",
+        "ru": "После пробного экзамена"
+      },
+      "intro": {
+        "en": "Five minutes while it is fresh. A mock test is for finding what to fix before the real one.",
+        "uz": "Esingizda yangi turganida besh daqiqa ajrating. Sinov testi haqiqiy imtihondan oldin nimani tuzatish kerakligini topish uchun.",
+        "ru": "Пять минут, пока всё свежо в памяти. Пробный экзамен нужен, чтобы найти, что исправить до настоящего."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "time",
+          "prompt": {
+            "en": "Did you run out of time?",
+            "uz": "Vaqtingiz yetmay qoldimi?",
+            "ru": "Вам не хватило времени?"
+          },
+          "input": {
+            "type": "choice",
+            "required": true,
+            "options": [
+              {
+                "id": "no",
+                "en": "No, I finished in time",
+                "uz": "Yoʻq, vaqtida tugatdim",
+                "ru": "Нет, времени хватило"
+              },
+              {
+                "id": "one",
+                "en": "Yes, in one section",
+                "uz": "Ha, bitta boʻlimda",
+                "ru": "Да, в одной секции"
+              },
+              {
+                "id": "several",
+                "en": "Yes, in several sections",
+                "uz": "Ha, bir nechta boʻlimda",
+                "ru": "Да, в нескольких секциях"
+              }
+            ]
+          }
+        },
+        {
+          "n": 2,
+          "key": "hardest",
+          "prompt": {
+            "en": "Which part was hardest, and why?",
+            "uz": "Qaysi qism eng qiyin boʻldi va nega?",
+            "ru": "Какая часть была самой трудной и почему?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": true
+          }
+        },
+        {
+          "n": 3,
+          "key": "change",
+          "prompt": {
+            "en": "One change for your next practice test:",
+            "uz": "Keyingi sinov testi uchun bitta oʻzgarish:",
+            "ru": "Одно изменение к следующему пробному экзамену:"
+          },
+          "hint": {
+            "en": "For example: skip and return to long questions, check the clock at the halfway point, or review one topic first.",
+            "uz": "Masalan: uzun savollarni oʻtkazib, keyin ularga qaytish, yarim yoʻlda soatga qarash yoki avval bitta mavzuni takrorlash.",
+            "ru": "Например: пропускать длинные вопросы и возвращаться к ним, смотреть на часы на середине или сначала повторить одну тему."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 140,
+            "required": true
+          }
+        },
+        {
+          "n": 4,
+          "key": "test_day_plan",
+          "prompt": {
+            "en": "Plan for the real test day: If ___, then I will ___.",
+            "uz": "Haqiqiy imtihon kuni uchun reja: Agar ___, unda men ___.",
+            "ru": "План на день настоящего экзамена: Если ___, то я ___."
+          },
+          "hint": {
+            "en": "Example: If I get stuck on a question, then I will mark it, move on and come back if there is time left.",
+            "uz": "Misol: Agar bitta savolda qotib qolsam, unda men uni belgilab, keyingisiga oʻtaman va vaqt qolsa, qaytaman.",
+            "ru": "Пример: Если я застряну на вопросе, то я отмечу его, пойду дальше и вернусь, если останется время."
+          },
+          "input": {
+            "type": "if_then",
+            "render_ref": "option_sets.if_then_render",
+            "fields": {
+              "if": {
+                "label": {
+                  "en": "If…",
+                  "uz": "Agar…",
+                  "ru": "Если…"
+                },
+                "max_chars": 100,
+                "required": true
+              },
+              "then": {
+                "label": {
+                  "en": "…then I will",
+                  "uz": "…unda men",
+                  "ru": "…то я"
+                },
+                "max_chars": 120,
+                "required": true
+              }
+            }
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. Read this plan again before your next mock.",
+        "uz": "Saqlandi. Keyingi sinov testidan oldin bu rejani yana bir bor oʻqib chiqing.",
+        "ru": "Сохранено. Перечитайте этот план перед следующим пробным экзаменом."
+      },
+      "engine_hints": [
+        "show test_day_plan again on the day before the next mock and before the real sitting (proposed; integrator decides)"
+      ],
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "time",
+            "hardest",
+            "change"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        }
+      },
+      "basis": [
+        "GOLL2006",
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-evt-after-milestone",
+      "kind": "reflection_prompt",
+      "prompt_type": "after_event",
+      "task": {
+        "type": "reflect",
+        "template": "c14:evt-after-milestone",
+        "slot": "attached"
+      },
+      "cadence": "event",
+      "trigger": {
+        "when": "a milestone or dated step is verified done (L4-L7), e.g. a test registration or an application submitted"
+      },
+      "stages": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 2,
+      "optional": true,
+      "tokens": {
+        "title": "the milestone title in the student's language (code)"
+      },
+      "title": {
+        "en": "You did it: {title}",
+        "uz": "Uddaladingiz: {title}",
+        "ru": "Готово: {title}"
+      },
+      "intro": {
+        "en": "Take a moment to notice this.",
+        "uz": "Bir lahza toʻxtab, buni his qiling.",
+        "ru": "Остановитесь на минуту и отметьте это."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "helped",
+          "prompt": {
+            "en": "What helped you get this done?",
+            "uz": "Buni bajarishingizga nima yordam berdi?",
+            "ru": "Что помогло вам это сделать?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 140,
+            "required": false
+          }
+        },
+        {
+          "n": 2,
+          "key": "carry",
+          "prompt": {
+            "en": "What will you take from this into your next step?",
+            "uz": "Shundan keyingi qadamingizga nimani olib oʻtasiz?",
+            "ru": "Что из этого вы возьмёте в следующий шаг?"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 140,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Well done.",
+        "uz": "Barakalla.",
+        "ru": "Молодец."
+      },
+      "tone_rules": "name the real progress only (R5 §5.7); never a chance, rank or result claim",
+      "evidence": {
+        "level": "L0",
+        "method": "self_report",
+        "check": null
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-evt-setback",
+      "kind": "reflection_prompt",
+      "prompt_type": "after_event",
+      "task": {
+        "type": "reflect",
+        "template": "c14:evt-setback",
+        "slot": "floor4"
+      },
+      "cadence": "event",
+      "trigger": {
+        "when": "the student enters an official score below the roadmap's step, a decision they mark as not admitted, or an olympiad stage not passed; or opens it themselves",
+        "rule": "offered the next day, not the same minute; optional; never repeated within 14 days"
+      },
+      "stages": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 4,
+      "optional": true,
+      "title": {
+        "en": "A hard result: what comes next",
+        "uz": "Ogʻir natija: keyin nima qilamiz",
+        "ru": "Тяжёлый результат: что дальше"
+      },
+      "intro": {
+        "en": "Feeling disappointed after a result is a normal reaction. Take your time; you can come back to this later.",
+        "uz": "Natijadan keyin hafsalangiz pir boʻlishi — tabiiy holat. Shoshilmang; bunga keyinroq qaytishingiz mumkin.",
+        "ru": "Разочарование после результата — нормальная реакция. Не торопитесь: к этому можно вернуться позже."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "feel",
+          "prompt": {
+            "en": "How are you feeling about it right now? You can skip this.",
+            "uz": "Hozir bu haqda oʻzingizni qanday his qilyapsiz? Buni oʻtkazib yuborishingiz mumkin.",
+            "ru": "Что вы сейчас чувствуете по этому поводу? Этот вопрос можно пропустить."
+          },
+          "input": {
+            "type": "choice",
+            "required": false,
+            "other_text_max": 80,
+            "options": [
+              {
+                "id": "sad",
+                "en": "Sad",
+                "uz": "Xafaman",
+                "ru": "Грустно"
+              },
+              {
+                "id": "angry",
+                "en": "Angry",
+                "uz": "Jahlim chiqyapti",
+                "ru": "Злюсь"
+              },
+              {
+                "id": "worried",
+                "en": "Worried about what comes next",
+                "uz": "Keyin nima boʻlishidan xavotirdaman",
+                "ru": "Тревожусь о том, что дальше"
+              },
+              {
+                "id": "ok",
+                "en": "Okay, ready to plan",
+                "uz": "Yaxshi, rejalashtirishga tayyorman",
+                "ru": "Нормально, можно планировать"
+              },
+              {
+                "id": "other",
+                "en": "Something else (write it)",
+                "uz": "Boshqa narsa (yozing)",
+                "ru": "Другое (напишите)"
+              }
+            ]
+          }
+        },
+        {
+          "n": 2,
+          "key": "talk",
+          "prompt": {
+            "en": "Who could you talk this through with?",
+            "uz": "Bu haqda kim bilan gaplashishingiz mumkin?",
+            "ru": "С кем вы могли бы это обсудить?"
+          },
+          "hint": {
+            "en": "If you feel very low for more than a few days, please tell a parent, a teacher or your mentor.",
+            "uz": "Agar bir necha kundan ortiq kayfiyatingiz juda tushkun boʻlsa, iltimos, ota-onangizga, oʻqituvchingizga yoki mentoringizga ayting.",
+            "ru": "Если вам очень плохо дольше нескольких дней, пожалуйста, скажите об этом родителю, учителю или ментору."
+          },
+          "input": {
+            "type": "choice",
+            "options_ref": "talk_to",
+            "required": false
+          }
+        },
+        {
+          "n": 3,
+          "key": "control",
+          "show_if": "feel != skipped or the student continues",
+          "prompt": {
+            "en": "What part of the next step is in your control?",
+            "uz": "Keyingi qadamning qaysi qismi sizning qoʻlingizda?",
+            "ru": "Какая часть следующего шага зависит от вас?"
+          },
+          "hint": {
+            "en": "For example: your practice time, when you try again, which skills to work on.",
+            "uz": "Masalan: mashq vaqtingiz, qachon qayta urinishingiz, qaysi koʻnikmalar ustida ishlashingiz.",
+            "ru": "Например: время на практику, когда вы попробуете снова, над какими навыками работать."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 160,
+            "required": false
+          }
+        },
+        {
+          "n": 4,
+          "key": "one_step",
+          "prompt": {
+            "en": "One small step for this week:",
+            "uz": "Bu hafta uchun bitta kichik qadam:",
+            "ru": "Один маленький шаг на эту неделю:"
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 120,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. When you are ready, your mentor can help you look at the plan again.",
+        "uz": "Saqlandi. Tayyor boʻlganingizda, mentoringiz rejani qayta koʻrib chiqishga yordam beradi.",
+        "ru": "Сохранено. Когда будете готовы, ментор поможет вам пересмотреть план."
+      },
+      "tone_rules": "no \"it will be fine\", no promise of a later result, no comparison with others; a result is a fact about one sitting or one decision, not about the student",
+      "safety_note": "not a clinical screen. If the student chooses talk_to = not_now and a sad/worried feeling twice within 30 days, the mentor queue may get a neutral \"check in\" flag with no answer text (proposed; needs owner and counselor review before it is built)",
+      "engine_hints": [
+        "a new official score or decision already triggers a re-plan through the engine (spec §4.4, §4.5); this prompt does not change the roadmap by itself"
+      ],
+      "evidence": {
+        "level": "L0",
+        "method": "self_report",
+        "check": null
+      },
+      "basis": [
+        "WOOP-PRACTICE",
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true,
+      "factcheck": {
+        "verified_at": "2026-10-07",
+        "note": "ru hint said \"already several days\"; en and uz say \"more than a few days\"; ru now \"дольше нескольких дней\""
+      }
+    },
+    {
+      "id": "C14-when-where",
+      "kind": "reflection_prompt",
+      "prompt_type": "implementation_intention",
+      "task": {
+        "type": "reflect",
+        "template": "c14:when-where",
+        "slot": "attached"
+      },
+      "cadence": "event",
+      "trigger": {
+        "when": "shown on a task of 20 minutes or more when the student opens it before its day, or schedules it",
+        "rule": "one tap to skip; remembers the last answer as the default"
+      },
+      "stages": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 1,
+      "optional": true,
+      "title": {
+        "en": "When and where?",
+        "uz": "Qachon va qayerda?",
+        "ru": "Когда и где?"
+      },
+      "intro": {
+        "en": "Choose when and where you will do this task. It takes ten seconds.",
+        "uz": "Bu vazifani qachon va qayerda bajarishingizni tanlang. Oʻn soniya vaqt oladi.",
+        "ru": "Выберите, когда и где вы сделаете эту задачу. Это займёт десять секунд."
+      },
+      "steps": [
+        {
+          "n": 1,
+          "key": "when_where",
+          "prompt": {
+            "en": "When and where?",
+            "uz": "Qachon va qayerda?",
+            "ru": "Когда и где?"
+          },
+          "input": {
+            "type": "time_place",
+            "time_ref": "time",
+            "place_ref": "place",
+            "required": false
+          }
+        },
+        {
+          "n": 2,
+          "key": "backup",
+          "prompt": {
+            "en": "If that time does not work out, then I will do it…",
+            "uz": "Agar oʻsha vaqtda imkon boʻlmasa, unda men uni…",
+            "ru": "Если в это время не получится, то я сделаю это…"
+          },
+          "input": {
+            "type": "choice",
+            "options_ref": "time",
+            "other_text_max": 60,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved.",
+        "uz": "Saqlandi.",
+        "ru": "Сохранено."
+      },
+      "engine_hints": [
+        "the chosen time may set the single daily reminder for this task, inside the student's quiet-hours window (spec §4.7: at most one reminder a day, from the mentor's name, never in sleep hours); proposed"
+      ],
+      "evidence": {
+        "level": "L0",
+        "method": "self_report",
+        "check": null
+      },
+      "basis": [
+        "GOLL2006",
+        "SPEC"
+      ],
+      "basis_note": "R5 §3: \"Each heavy task carries a when and where choice\"",
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    },
+    {
+      "id": "C14-ref-month",
+      "kind": "reflection_prompt",
+      "prompt_type": "reflect_month",
+      "task": {
+        "type": "reflect",
+        "template": "c14:ref-month",
+        "slot": "floor4"
+      },
+      "cadence": "every_4_weeks",
+      "trigger": {
+        "when": "the last scheduled day of every fourth week of Phase X; replaces that week's look-back"
+      },
+      "stages": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "minutes": 6,
+      "optional": false,
+      "tokens": {
+        "last_note": "the student's own note from the previous month's step 3, if any"
+      },
+      "title": {
+        "en": "Your month in review",
+        "uz": "Oyingizga nazar",
+        "ru": "Итоги вашего месяца"
+      },
+      "intro": {
+        "en": "Six minutes to look at the last four weeks as a whole.",
+        "uz": "Soʻnggi toʻrt haftaga bir butun sifatida qarash uchun olti daqiqa.",
+        "ru": "Шесть минут, чтобы взглянуть на последние четыре недели целиком."
+      },
+      "intro_if": [
+        {
+          "if": "last_note exists",
+          "text": {
+            "en": "Last month you wrote to yourself: \"{last_note}\"",
+            "uz": "Oʻtgan oy oʻzingizga shunday yozgan edingiz: «{last_note}»",
+            "ru": "В прошлом месяце вы написали себе: «{last_note}»"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "key": "progress",
+          "prompt": {
+            "en": "What is the biggest progress you made this month?",
+            "uz": "Bu oy erishgan eng katta yutugʻingiz nima?",
+            "ru": "Какой самый большой прогресс за этот месяц?"
+          },
+          "hint": {
+            "en": "Think of skills, finished steps or habits, not only scores.",
+            "uz": "Faqat ballar emas, koʻnikmalar, bajarilgan qadamlar yoki odatlar haqida ham oʻylang.",
+            "ru": "Думайте о навыках, завершённых шагах или привычках, а не только о баллах."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 200,
+            "required": true
+          }
+        },
+        {
+          "n": 2,
+          "key": "goal_same",
+          "prompt": {
+            "en": "Is your main goal still the same?",
+            "uz": "Asosiy maqsadingiz hali ham oʻshami?",
+            "ru": "Ваша главная цель осталась прежней?"
+          },
+          "input": {
+            "type": "choice",
+            "required": true,
+            "options": [
+              {
+                "id": "same",
+                "en": "Yes, the same",
+                "uz": "Ha, oʻsha",
+                "ru": "Да, та же"
+              },
+              {
+                "id": "unsure",
+                "en": "I am not sure any more",
+                "uz": "Endi aniq bilmayman",
+                "ru": "Уже не уверен(а)"
+              },
+              {
+                "id": "changed",
+                "en": "It has changed",
+                "uz": "U oʻzgardi",
+                "ru": "Она изменилась"
+              }
+            ]
+          }
+        },
+        {
+          "n": 3,
+          "key": "goal_note",
+          "show_if": "goal_same in (unsure, changed)",
+          "prompt": {
+            "en": "What has changed? You can talk it over with your mentor.",
+            "uz": "Nima oʻzgardi? Bu haqda mentoringiz bilan gaplashishingiz mumkin.",
+            "ru": "Что изменилось? Это можно обсудить с ментором."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 200,
+            "required": false
+          }
+        },
+        {
+          "n": 4,
+          "key": "note_to_self",
+          "prompt": {
+            "en": "Write one line to yourself to read next month.",
+            "uz": "Keyingi oy oʻqish uchun oʻzingizga bitta jumla yozing.",
+            "ru": "Напишите себе одну строчку, чтобы прочитать её в следующем месяце."
+          },
+          "input": {
+            "type": "text",
+            "max_chars": 140,
+            "required": false
+          }
+        }
+      ],
+      "closing": {
+        "en": "Saved. See you in four weeks.",
+        "uz": "Saqlandi. Toʻrt haftadan keyin koʻrishamiz.",
+        "ru": "Сохранено. Увидимся через четыре недели."
+      },
+      "engine_hints": [
+        "goal_same = changed or unsure may queue a mentor conversation; a new destination re-plans only when it is entered in the profile (spec §4.1 [X] → [R]); the free text never reaches the AI. Proposed; integrator decides"
+      ],
+      "evidence": {
+        "level": "L1",
+        "method": "self_report",
+        "check": {
+          "required_steps": [
+            "progress",
+            "goal_same"
+          ],
+          "not_blank": true,
+          "not_prompt": true
+        }
+      },
+      "basis": [
+        "SPEC"
+      ],
+      "privacy": {
+        "ai_input": false,
+        "rule": "D14 (5): no free-text, family or sensitive answers reach the AI; the AI tasks step may word the task title only, never read the answers",
+        "shown_to_parent": false,
+        "shown_to_parent_basis": "design default for a teen reflection, for owner review (not a ruling)"
+      },
+      "source": "own",
+      "author": "agent:C14",
+      "status": "verified_auto",
+      "version": 1,
+      "review": {
+        "required": "counselor",
+        "gate": "LG1"
+      },
+      "test_content": true
+    }
+  ]
+}

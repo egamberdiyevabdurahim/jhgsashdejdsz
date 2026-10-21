@@ -1,0 +1,1047 @@
+{
+ "bank": "C12",
+ "batch": 5,
+ "note": "C12 brainstorm micro-prompts 1-15: 5-minute, any-language prompts that feed the private story bank. maps_to lists the Common App prompts (1-7) and UCAS questions (1-3) each one can feed. Also the 5-minute variant for skipped story-bank and exploration tasks.",
+ "items": [
+  {
+   "id": "C12-bmp001",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): a changed mind",
+    "uz": "Gʻoyalar (5 daqiqa): oʻzgargan fikr",
+    "ru": "Идеи (5 минут): изменившееся мнение"
+   },
+   "prompt": {
+    "en": "Write about something you were sure of a year ago and now see differently. What changed your mind?",
+    "uz": "Bir yil oldin ishonchingiz komil boʻlgan, endi esa boshqacha koʻradigan narsangiz haqida yozing. Fikringizni nima oʻzgartirdi?",
+    "ru": "Напишите о том, в чём вы были уверены год назад, а теперь видите иначе. Что изменило ваше мнение?"
+   },
+   "nudge": {
+    "en": "Add the exact moment you first doubted it.",
+    "uz": "Unga birinchi marta shubha qilgan aniq lahzani qoʻshing.",
+    "ru": "Добавьте точный момент, когда вы впервые в этом усомнились."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     3,
+     5
+    ],
+    "ucas": []
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp002",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): something you taught yourself",
+    "uz": "Gʻoyalar (5 daqiqa): oʻzingiz oʻrgangan narsa",
+    "ru": "Идеи (5 минут): чему вы научились сами"
+   },
+   "prompt": {
+    "en": "Name something you can do that nobody taught you. How did you learn it?",
+    "uz": "Hech kim oʻrgatmagan, lekin qila oladigan bir ishingizni ayting. Uni qanday oʻrgandingiz?",
+    "ru": "Назовите то, что вы умеете, хотя никто вас этому не учил. Как вы этому научились?"
+   },
+   "nudge": {
+    "en": "Describe your first attempt that failed.",
+    "uz": "Muvaffaqiyatsiz chiqqan birinchi urinishingizni tasvirlab bering.",
+    "ru": "Опишите свою первую неудачную попытку."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     1,
+     6
+    ],
+    "ucas": [
+     3
+    ]
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp003",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): a small kindness",
+    "uz": "Gʻoyalar (5 daqiqa): kichik yaxshilik",
+    "ru": "Идеи (5 минут): маленькая доброта"
+   },
+   "prompt": {
+    "en": "Describe a small thing someone did for you that you still remember. Why did it stay with you?",
+    "uz": "Kimdir siz uchun qilgan va hali ham yodingizda turgan kichik bir ishni tasvirlab bering. Nega u yodingizda qoldi?",
+    "ru": "Опишите мелочь, которую кто-то сделал для вас и которую вы до сих пор помните. Почему она запомнилась?"
+   },
+   "nudge": {
+    "en": "Write what you have done for someone else since then.",
+    "uz": "Shundan beri oʻzingiz boshqa birov uchun nima qilganingizni yozing.",
+    "ru": "Напишите, что вы с тех пор сделали для кого-то другого."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     4
+    ],
+    "ucas": []
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp004",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): practice that went wrong",
+    "uz": "Gʻoyalar (5 daqiqa): kutilganidek boʻlmagan tayyorgarlik",
+    "ru": "Идеи (5 минут): подготовка, которая не помогла"
+   },
+   "prompt": {
+    "en": "Recall a time you practised for something and it still went wrong. What did you do the next day?",
+    "uz": "Biror narsaga tayyorlangan, lekin baribir ish kutilganidek boʻlmagan paytni eslang. Ertasi kuni nima qildingiz?",
+    "ru": "Вспомните, как вы готовились к чему-то, а всё равно не получилось. Что вы сделали на следующий день?"
+   },
+   "nudge": {
+    "en": "Add one sentence you said to yourself that day.",
+    "uz": "Oʻsha kuni oʻzingizga aytgan bitta gapni qoʻshing.",
+    "ru": "Добавьте одну фразу, которую вы сказали себе в тот день."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     2
+    ],
+    "ucas": []
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp005",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): a curious search",
+    "uz": "Gʻoyalar (5 daqiqa): qiziqib qidirgan narsangiz",
+    "ru": "Идеи (5 минут): поиск из любопытства"
+   },
+   "prompt": {
+    "en": "What is the last thing you looked up only because you were curious? Where did it lead you?",
+    "uz": "Faqat qiziqqaningiz uchun oxirgi marta nimani qidirib koʻrdingiz? U sizni qayerga olib bordi?",
+    "ru": "Что вы последний раз искали только из любопытства? Куда это вас привело?"
+   },
+   "nudge": {
+    "en": "Write the question you still have about it.",
+    "uz": "U haqda hali ham javobsiz qolgan savolingizni yozing.",
+    "ru": "Запишите вопрос, который у вас всё ещё остался."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     6
+    ],
+    "ucas": [
+     1
+    ]
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp006",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): your place",
+    "uz": "Gʻoyalar (5 daqiqa): sizning joyingiz",
+    "ru": "Идеи (5 минут): ваше место"
+   },
+   "prompt": {
+    "en": "Describe a place where you feel most at ease and most yourself. Give three details: something you see, hear and smell there.",
+    "uz": "Oʻzingizni eng qulay va tabiiy his qiladigan joyni tasvirlab bering. Uchta tafsilot keltiring: u yerda nimani koʻrasiz, nimani eshitasiz va qanday hid sezasiz.",
+    "ru": "Опишите место, где вам спокойнее всего и где вы больше всего чувствуете себя собой. Три детали: что вы там видите, слышите и чем там пахнет."
+   },
+   "nudge": {
+    "en": "Write why you go there.",
+    "uz": "U yerga nega borishingizni yozing.",
+    "ru": "Напишите, зачем вы туда ходите."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     1,
+     7
+    ],
+    "ucas": []
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp007",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): an object with a story",
+    "uz": "Gʻoyalar (5 daqiqa): tarixi bor buyum",
+    "ru": "Идеи (5 минут): предмет с историей"
+   },
+   "prompt": {
+    "en": "Choose one object in your home that has a story. Who brought it, and what does it mean to your family?",
+    "uz": "Uyingizdagi tarixi bor bitta buyumni tanlang. Uni kim olib kelgan va u oilangiz uchun nimani anglatadi?",
+    "ru": "Выберите дома один предмет с историей. Кто его принёс и что он значит для вашей семьи?"
+   },
+   "nudge": {
+    "en": "Write what it means to you; that may be something different.",
+    "uz": "Uning siz uchun nimani anglatishini yozing; bu boshqacha boʻlishi mumkin.",
+    "ru": "Напишите, что он значит для вас; это может быть что-то другое."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     1,
+     7
+    ],
+    "ucas": []
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp008",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): a rule you followed",
+    "uz": "Gʻoyalar (5 daqiqa): amal qilgan qoidangiz",
+    "ru": "Идеи (5 минут): правило, которому вы следовали"
+   },
+   "prompt": {
+    "en": "Think of a rule at home or at school that you followed without thinking. Do you still agree with it? Why or why not?",
+    "uz": "Uyda yoki maktabda oʻylamasdan amal qilgan biror qoidani eslang. Hali ham unga qoʻshilasizmi? Nega?",
+    "ru": "Вспомните правило дома или в школе, которому вы следовали не задумываясь. Вы всё ещё с ним согласны? Почему?"
+   },
+   "nudge": {
+    "en": "Write one respectful question you could ask about it.",
+    "uz": "U haqda bera oladigan bitta hurmatli savolni yozing.",
+    "ru": "Напишите один уважительный вопрос, который можно о нём задать."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     3
+    ],
+    "ucas": []
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp009",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): your languages",
+    "uz": "Gʻoyalar (5 daqiqa): tillaringiz",
+    "ru": "Идеи (5 минут): ваши языки"
+   },
+   "prompt": {
+    "en": "Which language do you think in when you are angry, when you count, when you dream? What is it like to switch between languages?",
+    "uz": "Jahlingiz chiqqanda, sanaganingizda, tush koʻrganingizda qaysi tilda fikrlaysiz? Bir tildan boshqasiga oʻtish sizga qanday tuyuladi?",
+    "ru": "На каком языке вы думаете, когда злитесь, когда считаете, когда видите сны? Каково это, переключаться между языками?"
+   },
+   "nudge": {
+    "en": "Write one word that has no good translation.",
+    "uz": "Yaxshi tarjimasi yoʻq bitta soʻzni yozing.",
+    "ru": "Напишите одно слово, у которого нет хорошего перевода."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     1,
+     6
+    ],
+    "ucas": []
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp010",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): an unseen job at home",
+    "uz": "Gʻoyalar (5 daqiqa): uydagi koʻzga koʻrinmas ish",
+    "ru": "Идеи (5 минут): незаметная работа дома"
+   },
+   "prompt": {
+    "en": "What job do you do for your family that nobody really notices? What has it taught you?",
+    "uz": "Oilangiz uchun deyarli hech kim sezmaydigan qanday ishni bajarasiz? U sizga nimani oʻrgatdi?",
+    "ru": "Какую работу вы делаете для семьи, которую почти никто не замечает? Чему она вас научила?"
+   },
+   "nudge": {
+    "en": "Describe one ordinary morning of doing it.",
+    "uz": "Uni bajaradigan oddiy bir tongni tasvirlab bering.",
+    "ru": "Опишите одно обычное утро, когда вы её делаете."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     1,
+     5
+    ],
+    "ucas": [
+     3
+    ]
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp011",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): teaching someone",
+    "uz": "Gʻoyalar (5 daqiqa): kimgadir oʻrgatish",
+    "ru": "Идеи (5 минут): когда вы учили другого"
+   },
+   "prompt": {
+    "en": "When did you teach someone something? What was harder than you expected?",
+    "uz": "Qachon kimgadir biror narsani oʻrgatgansiz? Nima kutganingizdan qiyinroq boʻldi?",
+    "ru": "Когда вы кого-то чему-то учили? Что оказалось сложнее, чем вы ожидали?"
+   },
+   "nudge": {
+    "en": "Write what you changed in your explanation.",
+    "uz": "Tushuntirishingizda nimani oʻzgartirganingizni yozing.",
+    "ru": "Напишите, что вы изменили в своём объяснении."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     5
+    ],
+    "ucas": [
+     3
+    ]
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp012",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): words of an older relative",
+    "uz": "Gʻoyalar (5 daqiqa): katta qarindoshingizning soʻzlari",
+    "ru": "Идеи (5 минут): слова старшего родственника"
+   },
+   "prompt": {
+    "en": "Recall a conversation with an older relative that stayed with you. What did they say, and why do you remember it?",
+    "uz": "Yodingizda qolgan, katta yoshdagi qarindoshingiz bilan boʻlgan suhbatni eslang. U nima dedi va nega buni eslaysiz?",
+    "ru": "Вспомните разговор со старшим родственником, который вам запомнился. Что он сказал и почему вы это помните?"
+   },
+   "nudge": {
+    "en": "Write their words as exactly as you can.",
+    "uz": "Uning soʻzlarini iloji boricha aynan yozing.",
+    "ru": "Запишите его слова как можно точнее."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     1,
+     4
+    ],
+    "ucas": []
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp013",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): something you made",
+    "uz": "Gʻoyalar (5 daqiqa): oʻzingiz yasagan narsa",
+    "ru": "Идеи (5 минут): то, что вы сделали сами"
+   },
+   "prompt": {
+    "en": "Think of something you made: code, a drawing, a meal, a repair. What went wrong first, and how did you fix it?",
+    "uz": "Oʻzingiz yasagan biror narsani eslang: kod, rasm, taom yoki taʼmirlangan buyum. Avval nima notoʻgʻri ketdi va uni qanday tuzatdingiz?",
+    "ru": "Вспомните то, что вы сделали сами: код, рисунок, блюдо, ремонт. Что сначала пошло не так и как вы это исправили?"
+   },
+   "nudge": {
+    "en": "Write what you would do differently next time.",
+    "uz": "Keyingi safar nimani boshqacha qilishingizni yozing.",
+    "ru": "Напишите, что вы сделали бы иначе в следующий раз."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     2,
+     5
+    ],
+    "ucas": [
+     3
+    ]
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp014",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): an hour-long topic",
+    "uz": "Gʻoyalar (5 daqiqa): bir soatlik mavzu",
+    "ru": "Идеи (5 минут): тема на целый час"
+   },
+   "prompt": {
+    "en": "Name a topic you could talk about for an hour. Write the first minute of that talk.",
+    "uz": "Bir soat gapira oladigan mavzuingizni ayting. Oʻsha suhbatning birinchi daqiqasini yozing.",
+    "ru": "Назовите тему, о которой вы могли бы говорить час. Напишите первую минуту этого разговора."
+   },
+   "nudge": {
+    "en": "Write who you usually talk to about it.",
+    "uz": "U haqda odatda kim bilan gaplashishingizni yozing.",
+    "ru": "Напишите, с кем вы обычно об этом говорите."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     6
+    ],
+    "ucas": [
+     1
+    ]
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  },
+  {
+   "id": "C12-bmp015",
+   "kind": "brainstorm_micro",
+   "type": "create",
+   "minutes": 5,
+   "floor_hint": 4,
+   "stages": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "routes": [
+    "any"
+   ],
+   "essay_lang": "any",
+   "title": {
+    "en": "Brainstorm (5 min): being the newest",
+    "uz": "Gʻoyalar (5 daqiqa): eng yangi boʻlish",
+    "ru": "Идеи (5 минут): когда вы были новичком"
+   },
+   "prompt": {
+    "en": "Remember a time you were the newest or youngest person in a group. What did you do to find your place?",
+    "uz": "Biror guruhda eng yangi yoki eng yosh boʻlgan paytingizni eslang. Oʻz oʻrningizni topish uchun nima qildingiz?",
+    "ru": "Вспомните, как вы были самым новым или самым младшим в группе. Что вы сделали, чтобы найти своё место?"
+   },
+   "nudge": {
+    "en": "Write what you would tell the next newcomer.",
+    "uz": "Keyingi yangi kelgan odamga nima deyishingizni yozing.",
+    "ru": "Напишите, что бы вы сказали следующему новичку."
+   },
+   "instructions": {
+    "en": "5 minutes. Answer in a few sentences, in whichever language you think in. Your answer goes into your private story bank.",
+    "uz": "5 daqiqa. Qaysi tilda fikrlasangiz, shu tilda bir necha gap bilan javob bering. Javobingiz shaxsiy hikoyalar bankingizga qoʻshiladi.",
+    "ru": "5 минут. Ответьте несколькими предложениями на том языке, на котором думаете. Ответ попадёт в ваш личный банк историй."
+   },
+   "maps_to": {
+    "common_app": [
+     5
+    ],
+    "ucas": []
+   },
+   "sensitive": false,
+   "skippable": true,
+   "adds_to": "story_bank",
+   "evidence": {
+    "level": "L3",
+    "method": "artifact",
+    "check": {
+     "lang": "any",
+     "min_words": 15,
+     "max_words": 250,
+     "not_prompt": true
+    }
+   },
+   "facts": [],
+   "needs_verification": false,
+   "parent_view": "completion_only",
+   "source": "own",
+   "author": "agent:p5-C12",
+   "status": "verified_auto",
+   "version": 1,
+   "review": {
+    "required": "counselor",
+    "gate": "LG1"
+   },
+   "test_content": true
+  }
+ ]
+}

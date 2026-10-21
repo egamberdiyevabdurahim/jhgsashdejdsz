@@ -1,0 +1,1235 @@
+{
+ "bank": "K4",
+ "batch": 5,
+ "items": [
+  {
+   "id": "K4-clh001",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits_algebraic",
+   "family": {
+    "template": "What is lim (x → {a}) (x² − {aa})/(x − {a})?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 12
+     }
+    },
+    "derived": {
+     "aa": "a * a"
+    },
+    "answer": "2 * a",
+    "distractors": [
+     "0",
+     "a",
+     "a * a"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 10,
+    "constraints": [
+     "(2 * a) != (0)",
+     "(2 * a) != (a)",
+     "(2 * a) != (a * a)",
+     "(0) != (a)",
+     "(0) != (a * a)",
+     "(a) != (a * a)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is lim (x → {a}) (x² − {aa})/(x − {a})?",
+    "uz": "lim (x → {a}) (x² − {aa})/(x − {a}) ni toping.",
+    "ru": "Найдите lim (x → {a}) (x² − {aa})/(x − {a})."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "For x ≠ {a}, (x² − {aa})/(x − {a}) = x + {a}, so the limit is {a} + {a} = {ANS}.",
+    "uz": "x ≠ {a} da (x² − {aa})/(x − {a}) = x + {a}, demak limit {a} + {a} = {ANS}.",
+    "ru": "При x ≠ {a} (x² − {aa})/(x − {a}) = x + {a}, поэтому предел равен {a} + {a} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 4 | 0 | 2 | 4 (seed check:4)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-clh002",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits_at_infinity",
+   "family": {
+    "template": "What is lim (x → ∞) √({a2}x² + 1)/({b}x + {c})?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 9
+     },
+     "b": {
+      "min": 2,
+      "max": 5
+     },
+     "c": {
+      "min": 1,
+      "max": 9
+     }
+    },
+    "derived": {
+     "a2": "a * a"
+    },
+    "constraints": [
+     "(100 * a) % b == 0",
+     "a != b"
+    ],
+    "answer": "a / b",
+    "option_templates": [
+     "{ANS}",
+     "{a2}/{b}",
+     "0",
+     "{b}/{a}"
+    ],
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 207
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is lim (x → ∞) √({a2}x² + 1)/({b}x + {c})?",
+    "uz": "lim (x → ∞) √({a2}x² + 1)/({b}x + {c}) ni toping.",
+    "ru": "Найдите lim (x → ∞) √({a2}x² + 1)/({b}x + {c})."
+   },
+   "answer_numeric": {
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "For large x, √({a2}x² + 1) ≈ {a}x, so the ratio tends to {a}/{b} = {ANS}.",
+    "uz": "Katta x larda √({a2}x² + 1) ≈ {a}x, demak nisbat {a}/{b} = {ANS} ga intiladi.",
+    "ru": "При больших x √({a2}x² + 1) ≈ {a}x, поэтому отношение стремится к {a}/{b} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.75,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": null,
+   "status": "draft",
+   "version": 2,
+   "quarantine_reason": "family.distractor: a distractor equals the key 1: {__ANS} | 9/3 | 0 | 3/3 (seed check:14)"
+  },
+  {
+   "id": "K4-clh003",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits_trig",
+   "family": {
+    "template": "What is lim (x → 0) sin({k}x)/({m}x)?",
+    "params": {
+     "k": {
+      "min": 2,
+      "max": 9
+     },
+     "m": {
+      "min": 2,
+      "max": 5
+     }
+    },
+    "constraints": [
+     "(100 * k) % m == 0",
+     "k != m"
+    ],
+    "answer": "k / m",
+    "option_templates": [
+     "{ANS}",
+     "{m}/{k}",
+     "0",
+     "1"
+    ],
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 31
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is lim (x → 0) sin({k}x)/({m}x)?",
+    "uz": "lim (x → 0) sin({k}x)/({m}x) ni toping.",
+    "ru": "Найдите lim (x → 0) sin({k}x)/({m}x)."
+   },
+   "answer_numeric": {
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "Near 0, sin({k}x) ≈ {k}x, so the limit is {k}/{m} = {ANS}.",
+    "uz": "0 atrofida sin({k}x) ≈ {k}x, demak limit {k}/{m} = {ANS}.",
+    "ru": "Вблизи 0 sin({k}x) ≈ {k}x, поэтому предел равен {k}/{m} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.55,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:p5int-rewrite",
+   "key_check_1": "author",
+   "key_check_2": null,
+   "status": "draft",
+   "version": 2,
+   "quarantine_reason": "family.formula: unexpected \"if\" in \"'' if m == 1 else str(m)\""
+  },
+  {
+   "id": "K4-clh004",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "limits_trig",
+   "lang": "en",
+   "stem": {
+    "en": "What is lim (x → 0) (1 − cos x)/x²?",
+    "uz": "lim (x → 0) (1 − cos x)/x² ni toping.",
+    "ru": "Найдите lim (x → 0) (1 − cos x)/x²."
+   },
+   "options": [
+    {
+     "en": "0.5"
+    },
+    {
+     "en": "0"
+    },
+    {
+     "en": "1"
+    },
+    {
+     "en": "2"
+    }
+   ],
+   "answer_numeric": {
+    "value": 0.5,
+    "tolerance": 0.001
+   },
+   "why": {
+    "en": "1 − cos x = 2 sin²(x/2) ≈ x²/2 near 0, so the limit is 1/2.",
+    "uz": "1 − cos x = 2 sin²(x/2) ≈ x²/2 (0 atrofida), demak limit 1/2.",
+    "ru": "1 − cos x = 2 sin²(x/2) ≈ x²/2 вблизи 0, поэтому предел равен 1/2."
+   },
+   "instructions": {
+    "en": "Type the answer as a number; a decimal is fine.",
+    "uz": "Javobni son bilan yozing; oʻnli kasr ham boʻladi.",
+    "ru": "Введите ответ числом; можно десятичной дробью."
+   },
+   "prior_b": 1.95,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh005",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "continuity",
+   "family": {
+    "template": "f(x) = kx + {b} for x < {a}, and f(x) = x² for x ≥ {a}. For what value of k is f continuous at x = {a}?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 6
+     },
+     "b": {
+      "min": 1,
+      "max": 20
+     }
+    },
+    "derived": {
+     "aa": "a * a"
+    },
+    "constraints": [
+     "(a * a - b) % a == 0",
+     "b != a * a",
+     "((a * a - b) / a) != ((a * a + b) / a)",
+     "((a * a - b) / a) != (a * a - b)",
+     "((a * a - b) / a) != (a)",
+     "((a * a + b) / a) != (a * a - b)",
+     "((a * a + b) / a) != (a)",
+     "(a * a - b) != (a)"
+    ],
+    "answer": "(a * a - b) / a",
+    "distractors": [
+     "(a * a + b) / a",
+     "a * a - b",
+     "a"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 21
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = kx + {b} for x < {a}, and f(x) = x² for x ≥ {a}. For what value of k is f continuous at x = {a}?",
+    "uz": "x < {a} da f(x) = kx + {b}, x ≥ {a} da esa f(x) = x². k ning qanday qiymatida f funksiya x = {a} nuqtada uzluksiz boʻladi?",
+    "ru": "f(x) = kx + {b} при x < {a} и f(x) = x² при x ≥ {a}. При каком k функция f непрерывна в точке x = {a}?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "The two pieces must meet at x = {a}: {a}k + {b} = {a}² = {aa}, so k = {ANS}.",
+    "uz": "Ikki boʻlak x = {a} da tutashishi kerak: {a}k + {b} = {a}² = {aa}, demak k = {ANS}.",
+    "ru": "Части должны сойтись в x = {a}: {a}k + {b} = {a}² = {aa}, значит k = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 35,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 1 | 7 | 4 | 4 (seed check:7)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-clh006",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "power_rule",
+   "family": {
+    "template": "f(x) = {a}x³ − {b}x² + {c}. What is f′({t})?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 5
+     },
+     "b": {
+      "min": 2,
+      "max": 6
+     },
+     "c": {
+      "min": 1,
+      "max": 9
+     },
+     "t": {
+      "min": 1,
+      "max": 3
+     }
+    },
+    "derived": {
+     "a3": "3 * a",
+     "b2": "2 * b",
+     "tt": "t * t"
+    },
+    "answer": "3 * a * t * t - 2 * b * t",
+    "distractors": [
+     "a * t**3 - b * t * t + c",
+     "3 * a * t * t - 2 * b * t + c",
+     "3 * a * t * t + 2 * b * t"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 490,
+    "constraints": [
+     "(3 * a * t * t - 2 * b * t) != (a * t**3 - b * t * t + c)",
+     "(3 * a * t * t - 2 * b * t) != (3 * a * t * t - 2 * b * t + c)",
+     "(3 * a * t * t - 2 * b * t) != (3 * a * t * t + 2 * b * t)",
+     "(a * t**3 - b * t * t + c) != (3 * a * t * t - 2 * b * t + c)",
+     "(a * t**3 - b * t * t + c) != (3 * a * t * t + 2 * b * t)",
+     "(3 * a * t * t - 2 * b * t + c) != (3 * a * t * t + 2 * b * t)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = {a}x³ − {b}x² + {c}. What is f′({t})?",
+    "uz": "f(x) = {a}x³ − {b}x² + {c}. f′({t}) ni toping.",
+    "ru": "f(x) = {a}x³ − {b}x² + {c}. Найдите f′({t})."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f′(x) = {a3}x² − {b2}x, so f′({t}) = {a3}·{tt} − {b2}·{t} = {ANS}.",
+    "uz": "f′(x) = {a3}x² − {b2}x, demak f′({t}) = {a3}·{tt} − {b2}·{t} = {ANS}.",
+    "ru": "f′(x) = {a3}x² − {b2}x, поэтому f′({t}) = {a3}·{tt} − {b2}·{t} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 63 | 63 | 72 | 99 (seed check:2)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-clh007",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "power_rule",
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = √x. What is f′(9)?",
+    "uz": "f(x) = √x. f′(9) ni toping.",
+    "ru": "f(x) = √x. Найдите f′(9)."
+   },
+   "options": [
+    {
+     "en": "1/6"
+    },
+    {
+     "en": "1/3"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "1/18"
+    }
+   ],
+   "why": {
+    "en": "f′(x) = 1/(2√x), so f′(9) = 1/(2·3) = 1/6.",
+    "uz": "f′(x) = 1/(2√x), demak f′(9) = 1/(2·3) = 1/6.",
+    "ru": "f′(x) = 1/(2√x), поэтому f′(9) = 1/(2·3) = 1/6."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.55,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh008",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "product_rule",
+   "lang": "en",
+   "stem": {
+    "en": "What is the derivative of x²eˣ?",
+    "uz": "x²eˣ funksiyaning hosilasini toping.",
+    "ru": "Найдите производную функции x²eˣ."
+   },
+   "options": [
+    {
+     "en": "eˣ(x² + 2x)"
+    },
+    {
+     "en": "2x eˣ"
+    },
+    {
+     "en": "x²eˣ"
+    },
+    {
+     "en": "eˣ(x² + 2)"
+    }
+   ],
+   "why": {
+    "en": "Product rule: (x²)′eˣ + x²(eˣ)′ = 2x eˣ + x²eˣ = eˣ(x² + 2x).",
+    "uz": "Koʻpaytmaning hosilasi: (x²)′eˣ + x²(eˣ)′ = 2x eˣ + x²eˣ = eˣ(x² + 2x).",
+    "ru": "Производная произведения: (x²)′eˣ + x²(eˣ)′ = 2x eˣ + x²eˣ = eˣ(x² + 2x)."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.55,
+   "time_s": 25,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh009",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "quotient_rule",
+   "lang": "en",
+   "stem": {
+    "en": "What is the derivative of x/(x + 1)?",
+    "uz": "x/(x + 1) funksiyaning hosilasini toping.",
+    "ru": "Найдите производную функции x/(x + 1)."
+   },
+   "options": [
+    {
+     "en": "1/(x + 1)²"
+    },
+    {
+     "en": "−1/(x + 1)²"
+    },
+    {
+     "en": "1"
+    },
+    {
+     "en": "(2x + 1)/(x + 1)²"
+    }
+   ],
+   "why": {
+    "en": "Quotient rule: ((x + 1) − x)/(x + 1)² = 1/(x + 1)².",
+    "uz": "Boʻlinmaning hosilasi: ((x + 1) − x)/(x + 1)² = 1/(x + 1)².",
+    "ru": "Производная частного: ((x + 1) − x)/(x + 1)² = 1/(x + 1)²."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.75,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh010",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "chain_rule",
+   "lang": "en",
+   "stem": {
+    "en": "What is the derivative of (3x² + 1)⁴?",
+    "uz": "(3x² + 1)⁴ funksiyaning hosilasini toping.",
+    "ru": "Найдите производную функции (3x² + 1)⁴."
+   },
+   "options": [
+    {
+     "en": "24x(3x² + 1)³"
+    },
+    {
+     "en": "4(3x² + 1)³"
+    },
+    {
+     "en": "6x(3x² + 1)³"
+    },
+    {
+     "en": "4(6x)³"
+    }
+   ],
+   "why": {
+    "en": "Chain rule: 4(3x² + 1)³·(3x² + 1)′ = 4(3x² + 1)³·6x = 24x(3x² + 1)³.",
+    "uz": "Murakkab funksiya hosilasi: 4(3x² + 1)³·(3x² + 1)′ = 4(3x² + 1)³·6x = 24x(3x² + 1)³.",
+    "ru": "Производная сложной функции: 4(3x² + 1)³·(3x² + 1)′ = 4(3x² + 1)³·6x = 24x(3x² + 1)³."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.75,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh011",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "chain_rule",
+   "family": {
+    "template": "f(x) = ({a}x − {b})^{n}. What is f′({t})?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 4
+     },
+     "b": {
+      "min": 1,
+      "max": 9
+     },
+     "n": {
+      "min": 3,
+      "max": 5
+     },
+     "t": {
+      "min": 1,
+      "max": 4
+     }
+    },
+    "derived": {
+     "u": "a * t - b",
+     "n1": "n - 1",
+     "na": "n * a"
+    },
+    "constraints": [
+     "abs(a * t - b) <= 3",
+     "a * t - b != 0",
+     "(n * a * (a * t - b)**(n - 1)) != (n * (a * t - b)**(n - 1))",
+     "(n * a * (a * t - b)**(n - 1)) != ((a * t - b)**n)",
+     "(n * a * (a * t - b)**(n - 1)) != (a * (a * t - b)**(n - 1))",
+     "(n * (a * t - b)**(n - 1)) != ((a * t - b)**n)",
+     "(n * (a * t - b)**(n - 1)) != (a * (a * t - b)**(n - 1))",
+     "((a * t - b)**n) != (a * (a * t - b)**(n - 1))"
+    ],
+    "answer": "n * a * (a * t - b)**(n - 1)",
+    "distractors": [
+     "n * (a * t - b)**(n - 1)",
+     "(a * t - b)**n",
+     "a * (a * t - b)**(n - 1)"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 91
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = ({a}x − {b})^{n}. What is f′({t})?",
+    "uz": "f(x) = ({a}x − {b})^{n}. f′({t}) ni toping.",
+    "ru": "f(x) = ({a}x − {b})^{n}. Найдите f′({t})."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f′(x) = {n}·{a}·({a}x − {b})^{n1}; at x = {t} this is {na}·{(u)}^{n1} = {ANS}.",
+    "uz": "f′(x) = {n}·{a}·({a}x − {b})^{n1}; x = {t} da bu {na}·{(u)}^{n1} = {ANS}.",
+    "ru": "f′(x) = {n}·{a}·({a}x − {b})^{n1}; при x = {t} получаем {na}·{(u)}^{n1} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 54 | 27 | 27 | 18 (seed check:4)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-clh012",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "trig_derivatives",
+   "lang": "en",
+   "stem": {
+    "en": "What is the derivative of sin x · cos x?",
+    "uz": "sin x · cos x funksiyaning hosilasini toping.",
+    "ru": "Найдите производную функции sin x · cos x."
+   },
+   "options": [
+    {
+     "en": "cos(2x)"
+    },
+    {
+     "en": "−sin(2x)"
+    },
+    {
+     "en": "1"
+    },
+    {
+     "en": "sin(2x)"
+    }
+   ],
+   "why": {
+    "en": "Product rule: cos x·cos x + sin x·(−sin x) = cos²x − sin²x = cos(2x).",
+    "uz": "Koʻpaytmaning hosilasi: cos x·cos x + sin x·(−sin x) = cos²x − sin²x = cos(2x).",
+    "ru": "Производная произведения: cos x·cos x + sin x·(−sin x) = cos²x − sin²x = cos(2x)."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.75,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh013",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "log_derivatives",
+   "lang": "en",
+   "stem": {
+    "en": "What is the derivative of ln(x² + 1)?",
+    "uz": "ln(x² + 1) funksiyaning hosilasini toping.",
+    "ru": "Найдите производную функции ln(x² + 1)."
+   },
+   "options": [
+    {
+     "en": "2x/(x² + 1)"
+    },
+    {
+     "en": "1/(x² + 1)"
+    },
+    {
+     "en": "2x"
+    },
+    {
+     "en": "1/(2x)"
+    }
+   ],
+   "why": {
+    "en": "(ln u)′ = u′/u with u = x² + 1, so the derivative is 2x/(x² + 1).",
+    "uz": "(ln u)′ = u′/u, bu yerda u = x² + 1, demak hosila 2x/(x² + 1).",
+    "ru": "(ln u)′ = u′/u, где u = x² + 1, поэтому производная равна 2x/(x² + 1)."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.55,
+   "time_s": 20,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh014",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "exp_derivatives",
+   "family": {
+    "template": "f(x) = {a}e^({k}x). What is f′(0)?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 9
+     },
+     "k": {
+      "min": 2,
+      "max": 6
+     }
+    },
+    "answer": "a * k",
+    "distractors": [
+     "a",
+     "k",
+     "a + k"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 35,
+    "constraints": [
+     "(a * k) != (a)",
+     "(a * k) != (k)",
+     "(a * k) != (a + k)",
+     "(a) != (k)",
+     "(a) != (a + k)",
+     "(k) != (a + k)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = {a}e^({k}x). What is f′(0)?",
+    "uz": "f(x) = {a}e^({k}x). f′(0) ni toping.",
+    "ru": "f(x) = {a}e^({k}x). Найдите f′(0)."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f′(x) = {a}·{k}e^({k}x) and e⁰ = 1, so f′(0) = {ANS}.",
+    "uz": "f′(x) = {a}·{k}e^({k}x) va e⁰ = 1, demak f′(0) = {ANS}.",
+    "ru": "f′(x) = {a}·{k}e^({k}x), а e⁰ = 1, поэтому f′(0) = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 36 | 6 | 6 | 12 (seed check:5)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-clh015",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "tangent_lines",
+   "family": {
+    "template": "The tangent line to y = x² − {b}x + {c} at x = {t} is y = mx + n. What is n?",
+    "params": {
+     "b": {
+      "min": 2,
+      "max": 8
+     },
+     "c": {
+      "min": 1,
+      "max": 20
+     },
+     "t": {
+      "min": 1,
+      "max": 5
+     }
+    },
+    "derived": {
+     "yt": "t * t - b * t + c",
+     "m": "2 * t - b"
+    },
+    "answer": "c - t * t",
+    "distractors": [
+     "t * t - b * t + c",
+     "2 * t - b",
+     "c + t * t"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 577,
+    "constraints": [
+     "(c - t * t) != (t * t - b * t + c)",
+     "(c - t * t) != (2 * t - b)",
+     "(c - t * t) != (c + t * t)",
+     "(t * t - b * t + c) != (2 * t - b)",
+     "(t * t - b * t + c) != (c + t * t)",
+     "(2 * t - b) != (c + t * t)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "The tangent line to y = x² − {b}x + {c} at x = {t} is y = mx + n. What is n?",
+    "uz": "y = x² − {b}x + {c} egri chiziqqa x = {t} nuqtada oʻtkazilgan urinma y = mx + n. n ni toping.",
+    "ru": "Касательная к графику y = x² − {b}x + {c} в точке x = {t} имеет уравнение y = mx + n. Найдите n."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "y({t}) = {yt} and m = 2·{t} − {b} = {m}, so n = y({t}) − m·{t} = {yt} − {(m)}·{t} = {ANS}.",
+    "uz": "y({t}) = {yt} va m = 2·{t} − {b} = {m}, demak n = y({t}) − m·{t} = {yt} − {(m)}·{t} = {ANS}.",
+    "ru": "y({t}) = {yt}, m = 2·{t} − {b} = {m}, значит n = y({t}) − m·{t} = {yt} − {(m)}·{t} = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 50,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: −9 | 3 | 3 | 23 (seed check:23)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-clh016",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "tangent_lines",
+   "family": {
+    "template": "What is the slope of the tangent line to y = x³ at x = −{a}?",
+    "params": {
+     "a": {
+      "min": 2,
+      "max": 13
+     }
+    },
+    "answer": "3 * a * a",
+    "distractors": [
+     "-3 * a * a",
+     "-a**3",
+     "3 * a"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 11,
+    "constraints": [
+     "(3 * a * a) != (-3 * a * a)",
+     "(3 * a * a) != (-a**3)",
+     "(3 * a * a) != (3 * a)",
+     "(-3 * a * a) != (-a**3)",
+     "(-3 * a * a) != (3 * a)",
+     "(-a**3) != (3 * a)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "What is the slope of the tangent line to y = x³ at x = −{a}?",
+    "uz": "y = x³ egri chiziqqa x = −{a} nuqtada oʻtkazilgan urinmaning burchak koeffitsiyentini toping.",
+    "ru": "Найдите угловой коэффициент касательной к графику y = x³ в точке x = −{a}."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "y′ = 3x², so the slope is 3·(−{a})² = {ANS}.",
+    "uz": "y′ = 3x², demak burchak koeffitsiyenti 3·(−{a})² = {ANS}.",
+    "ru": "y′ = 3x², поэтому угловой коэффициент равен 3·(−{a})² = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 15,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 27 | −27 | −27 | 9 (seed check:2)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-clh017",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "implicit_differentiation",
+   "family": {
+    "template": "x² + y² = {cc}. What is dy/dx at the point ({a}, {b})?",
+    "params": {
+     "t": {
+      "values": [
+       [
+        3,
+        4,
+        5
+       ],
+       [
+        4,
+        3,
+        5
+       ],
+       [
+        5,
+        12,
+        13
+       ],
+       [
+        12,
+        5,
+        13
+       ],
+       [
+        8,
+        15,
+        17
+       ],
+       [
+        15,
+        8,
+        17
+       ],
+       [
+        7,
+        24,
+        25
+       ],
+       [
+        24,
+        7,
+        25
+       ],
+       [
+        20,
+        21,
+        29
+       ],
+       [
+        21,
+        20,
+        29
+       ],
+       [
+        9,
+        40,
+        41
+       ],
+       [
+        40,
+        9,
+        41
+       ]
+      ]
+     }
+    },
+    "derived": {
+     "a": "t[0]",
+     "b": "t[1]",
+     "c": "t[2]",
+     "cc": "t[2] * t[2]"
+    },
+    "answer": "-a / b",
+    "option_templates": [
+     "−{a}/{b}",
+     "{a}/{b}",
+     "−{b}/{a}",
+     "{b}/{a}"
+    ],
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 12
+   },
+   "lang": "en",
+   "stem": {
+    "en": "x² + y² = {cc}. What is dy/dx at the point ({a}, {b})?",
+    "uz": "x² + y² = {cc}. ({a}, {b}) nuqtada dy/dx ni toping.",
+    "ru": "x² + y² = {cc}. Найдите dy/dx в точке ({a}, {b})."
+   },
+   "why": {
+    "en": "2x + 2y·y′ = 0, so y′ = −x/y = −{a}/{b}.",
+    "uz": "2x + 2y·y′ = 0, demak y′ = −x/y = −{a}/{b}.",
+    "ru": "2x + 2y·y′ = 0, откуда y′ = −x/y = −{a}/{b}."
+   },
+   "instructions": {
+    "en": "Choose the correct answer.",
+    "uz": "Toʻgʻri javobni tanlang.",
+    "ru": "Выберите правильный ответ."
+   },
+   "prior_b": 1.75,
+   "time_s": 40,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh018",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "extrema",
+   "family": {
+    "template": "f(x) = x³ − {B}x + {c}. What is the local maximum value of f?",
+    "params": {
+     "a": {
+      "min": 1,
+      "max": 4
+     },
+     "c": {
+      "min": 1,
+      "max": 9
+     }
+    },
+    "derived": {
+     "B": "3 * a * a"
+    },
+    "answer": "2 * a**3 + c",
+    "distractors": [
+     "-a",
+     "c - 2 * a**3",
+     "c"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 35,
+    "constraints": [
+     "(2 * a**3 + c) != (-a)",
+     "(2 * a**3 + c) != (c - 2 * a**3)",
+     "(2 * a**3 + c) != (c)",
+     "(-a) != (c - 2 * a**3)",
+     "(-a) != (c)",
+     "(c - 2 * a**3) != (c)"
+    ]
+   },
+   "lang": "en",
+   "stem": {
+    "en": "f(x) = x³ − {B}x + {c}. What is the local maximum value of f?",
+    "uz": "f(x) = x³ − {B}x + {c}. f funksiyaning lokal maksimum qiymatini toping.",
+    "ru": "f(x) = x³ − {B}x + {c}. Найдите значение функции f в точке локального максимума."
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f′(x) = 3x² − {B} = 0 at x = ±{a}; the maximum is at x = −{a}, and f(−{a}) = {ANS}.",
+    "uz": "f′(x) = 3x² − {B} = 0 boʻlganda x = ±{a}; maksimum x = −{a} da, f(−{a}) = {ANS}.",
+    "ru": "f′(x) = 3x² − {B} = 0 при x = ±{a}; максимум в точке x = −{a}, f(−{a}) = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 45,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 2,
+   "quarantine_reason": "family.options: two options read the same: 3 | −1 | −1 | 1 (seed check:18)",
+   "key_check_2_version": 2
+  },
+  {
+   "id": "K4-clh019",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "concavity",
+   "family": {
+    "template": "At what value of x does the graph of f(x) = x³ − {B}x² + {c}x have an inflection point?",
+    "params": {
+     "h": {
+      "min": 1,
+      "max": 6
+     },
+     "c": {
+      "min": 2,
+      "max": 9
+     }
+    },
+    "derived": {
+     "B": "3 * h",
+     "B2": "6 * h"
+    },
+    "answer": "h",
+    "distractors": [
+     "2 * h",
+     "3 * h",
+     "0"
+    ],
+    "integer": true,
+    "notation": "Python-style expressions over params; {p} = value of p, {(p)} = value in brackets if negative, ^{p} = superscript, _{p} = subscript, {ANS} = the key; minus shown as U+2212; options = [answer] + distractors (or option_templates, key first); variants = valid instances",
+    "variants": 48
+   },
+   "lang": "en",
+   "stem": {
+    "en": "At what value of x does the graph of f(x) = x³ − {B}x² + {c}x have an inflection point?",
+    "uz": "f(x) = x³ − {B}x² + {c}x funksiya grafigining egilish nuqtasi x ning qaysi qiymatida?",
+    "ru": "При каком x график функции f(x) = x³ − {B}x² + {c}x имеет точку перегиба?"
+   },
+   "answer_numeric": {
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f″(x) = 6x − {B2} changes sign at x = {B2}/6 = {ANS}.",
+    "uz": "f″(x) = 6x − {B2} ishorasi x = {B2}/6 = {ANS} da oʻzgaradi.",
+    "ru": "f″(x) = 6x − {B2} меняет знак при x = {B2}/6 = {ANS}."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.55,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind-instances:3",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  },
+  {
+   "id": "K4-clh020",
+   "skill": "math",
+   "rung": "calc",
+   "subskill": "extrema",
+   "lang": "en",
+   "stem": {
+    "en": "f′(x) = (x − 1)(x − 5). At what value of x does f have a local minimum?",
+    "uz": "f′(x) = (x − 1)(x − 5). f funksiya x ning qaysi qiymatida lokal minimumga ega?",
+    "ru": "f′(x) = (x − 1)(x − 5). При каком x функция f имеет локальный минимум?"
+   },
+   "options": [
+    {
+     "en": "5"
+    },
+    {
+     "en": "1"
+    },
+    {
+     "en": "3"
+    },
+    {
+     "en": "−5"
+    }
+   ],
+   "answer_numeric": {
+    "value": 5,
+    "tolerance": 0
+   },
+   "why": {
+    "en": "f′ changes from negative to positive at x = 5 (and from positive to negative at x = 1), so the minimum is at x = 5.",
+    "uz": "x = 5 da f′ manfiydan musbatga oʻtadi (x = 1 da esa musbatdan manfiyga), demak minimum x = 5 da.",
+    "ru": "В точке x = 5 f′ меняет знак с минуса на плюс (а в x = 1 — с плюса на минус), значит минимум при x = 5."
+   },
+   "instructions": {
+    "en": "Type the answer as a number.",
+    "uz": "Javobni son bilan yozing.",
+    "ru": "Введите ответ числом."
+   },
+   "prior_b": 1.75,
+   "time_s": 30,
+   "source": "own",
+   "author": "agent:K4-high",
+   "key_check_1": "author",
+   "key_check_2": "blind:solverD+fresh-k4",
+   "status": "verified_auto",
+   "version": 1,
+   "key_check_2_version": 1
+  }
+ ]
+}

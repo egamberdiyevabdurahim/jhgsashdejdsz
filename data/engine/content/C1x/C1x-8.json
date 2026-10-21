@@ -1,0 +1,1330 @@
+{
+  "bank": "C1x",
+  "batch": 8,
+  "items": [
+    {
+      "id": "C1x-bcp08a",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "graph_theory",
+      "family_ref": "C1-bcp008",
+      "params": {
+        "n": 18,
+        "d": 3
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A graph has 18 vertices, and every vertex has degree 3. How many edges does the graph have?",
+        "uz": "Grafda 18 ta uch bor va har bir uchning darajasi 3 ga teng. Grafda nechta qirra bor?",
+        "ru": "В графе 18 вершин, и степень каждой вершины равна 3. Сколько в графе рёбер?"
+      },
+      "options": [
+        {
+          "en": "27",
+          "uz": "27",
+          "ru": "27"
+        },
+        {
+          "en": "54",
+          "uz": "54",
+          "ru": "54"
+        },
+        {
+          "en": "21",
+          "uz": "21",
+          "ru": "21"
+        },
+        {
+          "en": "153",
+          "uz": "153",
+          "ru": "153"
+        }
+      ],
+      "answer_numeric": {
+        "value": 27,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Each edge has two ends, so the degree sum 18 × 3 = 54 counts every edge twice: 54 ÷ 2 = 27.",
+        "uz": "Har bir qirraning ikki uchi bor, shuning uchun darajalar yigʻindisi 18 × 3 = 54 har bir qirrani ikki marta sanaydi: 54 ÷ 2 = 27.",
+        "ru": "У каждого ребра два конца, поэтому сумма степеней 18 × 3 = 54 учитывает каждое ребро дважды: 54 ÷ 2 = 27."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 2,
+      "time_s": 25,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-bcp08b",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "graph_theory",
+      "family_ref": "C1-bcp008",
+      "params": {
+        "n": 20,
+        "d": 4
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A graph has 20 vertices, and every vertex has degree 4. How many edges does the graph have?",
+        "uz": "Grafda 20 ta uch bor va har bir uchning darajasi 4 ga teng. Grafda nechta qirra bor?",
+        "ru": "В графе 20 вершин, и степень каждой вершины равна 4. Сколько в графе рёбер?"
+      },
+      "options": [
+        {
+          "en": "40",
+          "uz": "40",
+          "ru": "40"
+        },
+        {
+          "en": "80",
+          "uz": "80",
+          "ru": "80"
+        },
+        {
+          "en": "24",
+          "uz": "24",
+          "ru": "24"
+        },
+        {
+          "en": "190",
+          "uz": "190",
+          "ru": "190"
+        }
+      ],
+      "answer_numeric": {
+        "value": 40,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Each edge has two ends, so the degree sum 20 × 4 = 80 counts every edge twice: 80 ÷ 2 = 40.",
+        "uz": "Har bir qirraning ikki uchi bor, shuning uchun darajalar yigʻindisi 20 × 4 = 80 har bir qirrani ikki marta sanaydi: 80 ÷ 2 = 40.",
+        "ru": "У каждого ребра два конца, поэтому сумма степеней 20 × 4 = 80 учитывает каждое ребро дважды: 80 ÷ 2 = 40."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 2,
+      "time_s": 25,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-bcp09a",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "partial_derivative",
+      "family_ref": "C1-bcp009",
+      "params": {
+        "a": 2,
+        "b": 4,
+        "p": -1,
+        "q": -1
+      },
+      "lang": "en",
+      "stem": {
+        "en": "f(x, y) = 2x²y + 4y³. What is ∂f/∂y at the point (−1, −1)?",
+        "uz": "f(x, y) = 2x²y + 4y³. (−1, −1) nuqtada ∂f/∂y nechaga teng?",
+        "ru": "f(x, y) = 2x²y + 4y³. Найдите ∂f/∂y в точке (−1, −1)."
+      },
+      "options": [
+        {
+          "en": "14",
+          "uz": "14",
+          "ru": "14"
+        },
+        {
+          "en": "4",
+          "uz": "4",
+          "ru": "4"
+        },
+        {
+          "en": "10",
+          "uz": "10",
+          "ru": "10"
+        },
+        {
+          "en": "−10",
+          "uz": "−10",
+          "ru": "−10"
+        }
+      ],
+      "answer_numeric": {
+        "value": 14,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Treat x as a constant: ∂f/∂y = 2x² + 12y², so at (−1, −1) it is 2 + 12 = 14.",
+        "uz": "x ni oʻzgarmas deb olamiz: ∂f/∂y = 2x² + 12y², demak (−1, −1) nuqtada 2 + 12 = 14.",
+        "ru": "Считаем x постоянным: ∂f/∂y = 2x² + 12y², поэтому в точке (−1, −1) получаем 2 + 12 = 14."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 2.2,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-bcp09b",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "partial_derivative",
+      "family_ref": "C1-bcp009",
+      "params": {
+        "a": 2,
+        "b": 2,
+        "p": -1,
+        "q": 3
+      },
+      "lang": "en",
+      "stem": {
+        "en": "f(x, y) = 2x²y + 2y³. What is ∂f/∂y at the point (−1, 3)?",
+        "uz": "f(x, y) = 2x²y + 2y³. (−1, 3) nuqtada ∂f/∂y nechaga teng?",
+        "ru": "f(x, y) = 2x²y + 2y³. Найдите ∂f/∂y в точке (−1, 3)."
+      },
+      "options": [
+        {
+          "en": "56",
+          "uz": "56",
+          "ru": "56"
+        },
+        {
+          "en": "−12",
+          "uz": "−12",
+          "ru": "−12"
+        },
+        {
+          "en": "60",
+          "uz": "60",
+          "ru": "60"
+        },
+        {
+          "en": "20",
+          "uz": "20",
+          "ru": "20"
+        }
+      ],
+      "answer_numeric": {
+        "value": 56,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Treat x as a constant: ∂f/∂y = 2x² + 6y², so at (−1, 3) it is 2 + 54 = 56.",
+        "uz": "x ni oʻzgarmas deb olamiz: ∂f/∂y = 2x² + 6y², demak (−1, 3) nuqtada 2 + 54 = 56.",
+        "ru": "Считаем x постоянным: ∂f/∂y = 2x² + 6y², поэтому в точке (−1, 3) получаем 2 + 54 = 56."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 2.2,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-bcp10a",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "double_integral",
+      "family_ref": "C1-bcp010",
+      "params": {
+        "a": 7,
+        "b": 8,
+        "k": 3
+      },
+      "lang": "en",
+      "stem": {
+        "en": "R is the triangle with vertices (0, 0), (7, 0) and (0, 8). What is ∬_R 3 dA?",
+        "uz": "R — uchlari (0, 0), (7, 0) va (0, 8) nuqtalarda boʻlgan uchburchak. ∬_R 3 dA nechaga teng?",
+        "ru": "R — треугольник с вершинами (0, 0), (7, 0) и (0, 8). Найдите ∬_R 3 dA."
+      },
+      "options": [
+        {
+          "en": "84",
+          "uz": "84",
+          "ru": "84"
+        },
+        {
+          "en": "168",
+          "uz": "168",
+          "ru": "168"
+        },
+        {
+          "en": "28",
+          "uz": "28",
+          "ru": "28"
+        },
+        {
+          "en": "22.5",
+          "uz": "22,5",
+          "ru": "22,5"
+        }
+      ],
+      "answer_numeric": {
+        "value": 84,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "A constant integrand gives the constant times the area: 3 × (7 × 8 ÷ 2) = 84.",
+        "uz": "Oʻzgarmas funksiya integrali = oʻzgarmas × yuza: 3 × (7 × 8 ÷ 2) = 84.",
+        "ru": "Интеграл от постоянной равен постоянной, умноженной на площадь: 3 × (7 × 8 ÷ 2) = 84."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 2,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-bcp10b",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "double_integral",
+      "family_ref": "C1-bcp010",
+      "params": {
+        "a": 9,
+        "b": 4,
+        "k": 5
+      },
+      "lang": "en",
+      "stem": {
+        "en": "R is the triangle with vertices (0, 0), (9, 0) and (0, 4). What is ∬_R 5 dA?",
+        "uz": "R — uchlari (0, 0), (9, 0) va (0, 4) nuqtalarda boʻlgan uchburchak. ∬_R 5 dA nechaga teng?",
+        "ru": "R — треугольник с вершинами (0, 0), (9, 0) и (0, 4). Найдите ∬_R 5 dA."
+      },
+      "options": [
+        {
+          "en": "90",
+          "uz": "90",
+          "ru": "90"
+        },
+        {
+          "en": "180",
+          "uz": "180",
+          "ru": "180"
+        },
+        {
+          "en": "18",
+          "uz": "18",
+          "ru": "18"
+        },
+        {
+          "en": "32.5",
+          "uz": "32,5",
+          "ru": "32,5"
+        }
+      ],
+      "answer_numeric": {
+        "value": 90,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "A constant integrand gives the constant times the area: 5 × (9 × 4 ÷ 2) = 90.",
+        "uz": "Oʻzgarmas funksiya integrali = oʻzgarmas × yuza: 5 × (9 × 4 ÷ 2) = 90.",
+        "ru": "Интеграл от постоянной равен постоянной, умноженной на площадь: 5 × (9 × 4 ÷ 2) = 90."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": 2,
+      "time_s": 35,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-bcp11a",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "integration_by_parts",
+      "family_ref": "C1-bcp011",
+      "params": {
+        "f0": -3,
+        "f1": 1,
+        "g0": 1,
+        "g1": 3,
+        "I": -7
+      },
+      "lang": "en",
+      "stem": {
+        "en": "f(0) = −3, f(1) = 1, g(0) = 1, g(1) = 3 and ∫₀¹ f′(x)g(x) dx = −7. What is ∫₀¹ f(x)g′(x) dx?",
+        "uz": "f(0) = −3, f(1) = 1, g(0) = 1, g(1) = 3 va ∫₀¹ f′(x)g(x) dx = −7. ∫₀¹ f(x)g′(x) dx nechaga teng?",
+        "ru": "f(0) = −3, f(1) = 1, g(0) = 1, g(1) = 3 и ∫₀¹ f′(x)g(x) dx = −7. Найдите ∫₀¹ f(x)g′(x) dx."
+      },
+      "options": [
+        {
+          "en": "13",
+          "uz": "13",
+          "ru": "13"
+        },
+        {
+          "en": "−1",
+          "uz": "−1",
+          "ru": "−1"
+        },
+        {
+          "en": "7",
+          "uz": "7",
+          "ru": "7"
+        },
+        {
+          "en": "10",
+          "uz": "10",
+          "ru": "10"
+        }
+      ],
+      "answer_numeric": {
+        "value": 13,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "By parts: ∫₀¹ fg′ dx = [fg]₀¹ − ∫₀¹ f′g dx = (1)(3) − (−3)(1) − (−7) = 13.",
+        "uz": "Boʻlaklab integrallash: ∫₀¹ fg′ dx = [fg]₀¹ − ∫₀¹ f′g dx = (1)(3) − (−3)(1) − (−7) = 13.",
+        "ru": "Интегрирование по частям: ∫₀¹ fg′ dx = [fg]₀¹ − ∫₀¹ f′g dx = (1)(3) − (−3)(1) − (−7) = 13."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 2.1,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-bcp11b",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "beyond",
+      "subskill": "integration_by_parts",
+      "family_ref": "C1-bcp011",
+      "params": {
+        "f0": -2,
+        "f1": 5,
+        "g0": -2,
+        "g1": 1,
+        "I": -4
+      },
+      "lang": "en",
+      "stem": {
+        "en": "f(0) = −2, f(1) = 5, g(0) = −2, g(1) = 1 and ∫₀¹ f′(x)g(x) dx = −4. What is ∫₀¹ f(x)g′(x) dx?",
+        "uz": "f(0) = −2, f(1) = 5, g(0) = −2, g(1) = 1 va ∫₀¹ f′(x)g(x) dx = −4. ∫₀¹ f(x)g′(x) dx nechaga teng?",
+        "ru": "f(0) = −2, f(1) = 5, g(0) = −2, g(1) = 1 и ∫₀¹ f′(x)g(x) dx = −4. Найдите ∫₀¹ f(x)g′(x) dx."
+      },
+      "options": [
+        {
+          "en": "5",
+          "uz": "5",
+          "ru": "5"
+        },
+        {
+          "en": "−3",
+          "uz": "−3",
+          "ru": "−3"
+        },
+        {
+          "en": "4",
+          "uz": "4",
+          "ru": "4"
+        },
+        {
+          "en": "9",
+          "uz": "9",
+          "ru": "9"
+        }
+      ],
+      "answer_numeric": {
+        "value": 5,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "By parts: ∫₀¹ fg′ dx = [fg]₀¹ − ∫₀¹ f′g dx = (5)(1) − (−2)(−2) − (−4) = 5.",
+        "uz": "Boʻlaklab integrallash: ∫₀¹ fg′ dx = [fg]₀¹ − ∫₀¹ f′g dx = (5)(1) − (−2)(−2) − (−4) = 5.",
+        "ru": "Интегрирование по частям: ∫₀¹ fg′ dx = [fg]₀¹ − ∫₀¹ f′g dx = (5)(1) − (−2)(−2) − (−4) = 5."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": 2.1,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-sat01a",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equation",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family_ref": "C1-sat001",
+      "params": {
+        "a": 3,
+        "b": 14,
+        "c": 59,
+        "k": 3
+      },
+      "lang": "en",
+      "stem": {
+        "en": "If 3x + 14 = 59, what is the value of 9x + 42?",
+        "uz": "Agar 3x + 14 = 59 boʻlsa, 9x + 42 ning qiymati nechaga teng?",
+        "ru": "Если 3x + 14 = 59, то чему равно значение 9x + 42?"
+      },
+      "options": [
+        {
+          "en": "177",
+          "uz": "177",
+          "ru": "177"
+        },
+        {
+          "en": "15",
+          "uz": "15",
+          "ru": "15"
+        },
+        {
+          "en": "135",
+          "uz": "135",
+          "ru": "135"
+        },
+        {
+          "en": "62",
+          "uz": "62",
+          "ru": "62"
+        }
+      ],
+      "answer_numeric": {
+        "value": 177,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "9x + 42 = 3(3x + 14) = 3 × 59 = 177; there is no need to find x.",
+        "uz": "9x + 42 = 3(3x + 14) = 3 × 59 = 177; x ni topish shart emas.",
+        "ru": "9x + 42 = 3(3x + 14) = 3 × 59 = 177; находить x не нужно."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.2,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-sat01b",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equation",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family_ref": "C1-sat001",
+      "params": {
+        "a": 6,
+        "b": 12,
+        "c": 54,
+        "k": 2
+      },
+      "lang": "en",
+      "stem": {
+        "en": "If 6x + 12 = 54, what is the value of 12x + 24?",
+        "uz": "Agar 6x + 12 = 54 boʻlsa, 12x + 24 ning qiymati nechaga teng?",
+        "ru": "Если 6x + 12 = 54, то чему равно значение 12x + 24?"
+      },
+      "options": [
+        {
+          "en": "108",
+          "uz": "108",
+          "ru": "108"
+        },
+        {
+          "en": "7",
+          "uz": "7",
+          "ru": "7"
+        },
+        {
+          "en": "84",
+          "uz": "84",
+          "ru": "84"
+        },
+        {
+          "en": "56",
+          "uz": "56",
+          "ru": "56"
+        }
+      ],
+      "answer_numeric": {
+        "value": 108,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "12x + 24 = 2(6x + 12) = 2 × 54 = 108; there is no need to find x.",
+        "uz": "12x + 24 = 2(6x + 12) = 2 × 54 = 108; x ni topish shart emas.",
+        "ru": "12x + 24 = 2(6x + 12) = 2 × 54 = 108; находить x не нужно."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.2,
+      "time_s": 45,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-sat02a",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_inequalities",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family_ref": "C1-sat002",
+      "params": {
+        "W": 800,
+        "w": 95,
+        "b": 30
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A lift can carry at most 800 kg. A worker who weighs 95 kg rides in it with boxes of 30 kg each. What is the greatest number of boxes he can take in one trip?",
+        "uz": "Lift koʻpi bilan 800 kg yuk koʻtara oladi. Vazni 95 kg boʻlgan ishchi liftda har biri 30 kg boʻlgan qutilar bilan chiqmoqda. U bir martada eng koʻpi bilan nechta quti olib chiqa oladi?",
+        "ru": "Лифт поднимает не более 800 кг. Рабочий массой 95 кг едет в нём с ящиками по 30 кг. Какое наибольшее число ящиков он может взять за один раз?"
+      },
+      "options": [
+        {
+          "en": "23",
+          "uz": "23",
+          "ru": "23"
+        },
+        {
+          "en": "24",
+          "uz": "24",
+          "ru": "24"
+        },
+        {
+          "en": "26",
+          "uz": "26",
+          "ru": "26"
+        },
+        {
+          "en": "29",
+          "uz": "29",
+          "ru": "29"
+        }
+      ],
+      "answer_numeric": {
+        "value": 23,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "95 + 30n ≤ 800 gives n ≤ (800 − 95) ÷ 30 ≈ 23.5; the greatest whole number is 23.",
+        "uz": "95 + 30n ≤ 800 dan n ≤ (800 − 95) ÷ 30 ≈ 23,5; bundan oshmaydigan eng katta butun son 23.",
+        "ru": "Из 95 + 30n ≤ 800 следует n ≤ (800 − 95) ÷ 30 ≈ 23,5; наибольшее целое — 23."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.1,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-sat02b",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_inequalities",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "easy"
+      },
+      "family_ref": "C1-sat002",
+      "params": {
+        "W": 400,
+        "w": 85,
+        "b": 20
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A lift can carry at most 400 kg. A worker who weighs 85 kg rides in it with boxes of 20 kg each. What is the greatest number of boxes he can take in one trip?",
+        "uz": "Lift koʻpi bilan 400 kg yuk koʻtara oladi. Vazni 85 kg boʻlgan ishchi liftda har biri 20 kg boʻlgan qutilar bilan chiqmoqda. U bir martada eng koʻpi bilan nechta quti olib chiqa oladi?",
+        "ru": "Лифт поднимает не более 400 кг. Рабочий массой 85 кг едет в нём с ящиками по 20 кг. Какое наибольшее число ящиков он может взять за один раз?"
+      },
+      "options": [
+        {
+          "en": "15",
+          "uz": "15",
+          "ru": "15"
+        },
+        {
+          "en": "16",
+          "uz": "16",
+          "ru": "16"
+        },
+        {
+          "en": "20",
+          "uz": "20",
+          "ru": "20"
+        },
+        {
+          "en": "24",
+          "uz": "24",
+          "ru": "24"
+        }
+      ],
+      "answer_numeric": {
+        "value": 15,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "85 + 20n ≤ 400 gives n ≤ (400 − 85) ÷ 20 ≈ 15.75; the greatest whole number is 15.",
+        "uz": "85 + 20n ≤ 400 dan n ≤ (400 − 85) ÷ 20 ≈ 15,75; bundan oshmaydigan eng katta butun son 15.",
+        "ru": "Из 85 + 20n ≤ 400 следует n ≤ (400 − 85) ÷ 20 ≈ 15,75; наибольшее целое — 15."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -1.1,
+      "time_s": 60,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-sat03a",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "system_of_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family_ref": "C1-sat003",
+      "params": {
+        "x0": 2,
+        "y0": -2,
+        "a": 5,
+        "b": 4,
+        "d": 3,
+        "e": 5
+      },
+      "lang": "en",
+      "stem": {
+        "en": "(x, y) is the solution of the system 5x + 4y = 2 and 3x − 5y = 16. What is x + y?",
+        "uz": "(x, y) — 5x + 4y = 2 va 3x − 5y = 16 tenglamalar sistemasining yechimi. x + y nechaga teng?",
+        "ru": "(x, y) — решение системы 5x + 4y = 2 и 3x − 5y = 16. Чему равно x + y?"
+      },
+      "options": [
+        {
+          "en": "0",
+          "uz": "0",
+          "ru": "0"
+        },
+        {
+          "en": "2",
+          "uz": "2",
+          "ru": "2"
+        },
+        {
+          "en": "4",
+          "uz": "4",
+          "ru": "4"
+        },
+        {
+          "en": "−4",
+          "uz": "−4",
+          "ru": "−4"
+        }
+      ],
+      "answer_numeric": {
+        "value": 0,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Eliminating one unknown gives x = 2 and y = −2, so x + y = 0.",
+        "uz": "Nomaʼlumlardan birini yoʻqotib, x = 2 va y = −2 topiladi, demak x + y = 0.",
+        "ru": "Исключая одну переменную, получаем x = 2, y = −2, значит, x + y = 0."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -0.7,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-sat03b",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "system_of_equations",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family_ref": "C1-sat003",
+      "params": {
+        "x0": -5,
+        "y0": 7,
+        "a": 2,
+        "b": 5,
+        "d": 3,
+        "e": 5
+      },
+      "lang": "en",
+      "stem": {
+        "en": "(x, y) is the solution of the system 2x + 5y = 25 and 3x − 5y = −50. What is x + y?",
+        "uz": "(x, y) — 2x + 5y = 25 va 3x − 5y = −50 tenglamalar sistemasining yechimi. x + y nechaga teng?",
+        "ru": "(x, y) — решение системы 2x + 5y = 25 и 3x − 5y = −50. Чему равно x + y?"
+      },
+      "options": [
+        {
+          "en": "2",
+          "uz": "2",
+          "ru": "2"
+        },
+        {
+          "en": "−5",
+          "uz": "−5",
+          "ru": "−5"
+        },
+        {
+          "en": "−12",
+          "uz": "−12",
+          "ru": "−12"
+        },
+        {
+          "en": "−35",
+          "uz": "−35",
+          "ru": "−35"
+        }
+      ],
+      "answer_numeric": {
+        "value": 2,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "Eliminating one unknown gives x = −5 and y = 7, so x + y = 2.",
+        "uz": "Nomaʼlumlardan birini yoʻqotib, x = −5 va y = 7 topiladi, demak x + y = 2.",
+        "ru": "Исключая одну переменную, получаем x = −5, y = 7, значит, x + y = 2."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -0.7,
+      "time_s": 75,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-sat04a",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family_ref": "C1-sat004",
+      "params": {
+        "h0": 35,
+        "r": 4,
+        "t1": 2,
+        "t2": 6
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A candle burns at a constant rate. After 2 hours it is 27 cm tall, and after 6 hours it is 11 cm tall. How tall was it at the start, in cm?",
+        "uz": "Sham bir xil tezlikda yonadi. 2 soatdan keyin uning balandligi 27 sm, 6 soatdan keyin esa 11 sm. Dastlab shamning balandligi necha sm boʻlgan?",
+        "ru": "Свеча сгорает с постоянной скоростью. Через 2 ч её высота 27 см, а через 6 ч — 11 см. Какой была её высота вначале (в см)?"
+      },
+      "options": [
+        {
+          "en": "35",
+          "uz": "35",
+          "ru": "35"
+        },
+        {
+          "en": "43",
+          "uz": "43",
+          "ru": "43"
+        },
+        {
+          "en": "19",
+          "uz": "19",
+          "ru": "19"
+        },
+        {
+          "en": "4",
+          "uz": "4",
+          "ru": "4"
+        }
+      ],
+      "answer_numeric": {
+        "value": 35,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "It loses (27 − 11) ÷ (6 − 2) = 4 cm an hour, so at the start it was 27 + 4 × 2 = 35 cm.",
+        "uz": "U soatiga (27 − 11) ÷ (6 − 2) = 4 sm qisqaradi, demak dastlab 27 + 4 × 2 = 35 sm boʻlgan.",
+        "ru": "За час свеча укорачивается на (27 − 11) ÷ (6 − 2) = 4 см, значит, вначале было 27 + 4 × 2 = 35 см."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.6,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-sat04b",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "medium"
+      },
+      "family_ref": "C1-sat004",
+      "params": {
+        "h0": 27,
+        "r": 3,
+        "t1": 2,
+        "t2": 7
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A candle burns at a constant rate. After 2 hours it is 21 cm tall, and after 7 hours it is 6 cm tall. How tall was it at the start, in cm?",
+        "uz": "Sham bir xil tezlikda yonadi. 2 soatdan keyin uning balandligi 21 sm, 7 soatdan keyin esa 6 sm. Dastlab shamning balandligi necha sm boʻlgan?",
+        "ru": "Свеча сгорает с постоянной скоростью. Через 2 ч её высота 21 см, а через 7 ч — 6 см. Какой была её высота вначале (в см)?"
+      },
+      "options": [
+        {
+          "en": "27",
+          "uz": "27",
+          "ru": "27"
+        },
+        {
+          "en": "36",
+          "uz": "36",
+          "ru": "36"
+        },
+        {
+          "en": "15",
+          "uz": "15",
+          "ru": "15"
+        },
+        {
+          "en": "3",
+          "uz": "3",
+          "ru": "3"
+        }
+      ],
+      "answer_numeric": {
+        "value": 27,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "It loses (21 − 6) ÷ (7 − 2) = 3 cm an hour, so at the start it was 21 + 3 × 2 = 27 cm.",
+        "uz": "U soatiga (21 − 6) ÷ (7 − 2) = 3 sm qisqaradi, demak dastlab 21 + 3 × 2 = 27 sm boʻlgan.",
+        "ru": "За час свеча укорачивается на (21 − 6) ÷ (7 − 2) = 3 см, значит, вначале было 21 + 3 × 2 = 27 см."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.6,
+      "time_s": 70,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-sat05a",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "hard"
+      },
+      "family_ref": "C1-sat005",
+      "params": {
+        "m": 3,
+        "p": 6,
+        "q": -2,
+        "b0": 8
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Line ℓ passes through the point (6, −2) and is perpendicular to the line y = 3x + 8. What is the y-intercept of ℓ?",
+        "uz": "ℓ toʻgʻri chiziq (6, −2) nuqtadan oʻtadi va y = 3x + 8 toʻgʻri chiziqqa perpendikulyar. ℓ chiziq y oʻqini qaysi ordinatada kesadi?",
+        "ru": "Прямая ℓ проходит через точку (6, −2) и перпендикулярна прямой y = 3x + 8. Чему равна ордината точки пересечения ℓ с осью y?"
+      },
+      "options": [
+        {
+          "en": "0",
+          "uz": "0",
+          "ru": "0"
+        },
+        {
+          "en": "−4",
+          "uz": "−4",
+          "ru": "−4"
+        },
+        {
+          "en": "−20",
+          "uz": "−20",
+          "ru": "−20"
+        },
+        {
+          "en": "16",
+          "uz": "16",
+          "ru": "16"
+        }
+      ],
+      "answer_numeric": {
+        "value": 0,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The slope of ℓ is −1/m with m = 3, so its y-intercept is −2 + (6) ÷ (3) = 0.",
+        "uz": "ℓ ning burchak koeffitsiyenti −1/m (m = 3), shuning uchun u y oʻqini −2 + (6) ÷ (3) = 0 da kesadi.",
+        "ru": "Угловой коэффициент ℓ равен −1/m (m = 3), поэтому ордината точки пересечения с осью y равна −2 + (6) ÷ (3) = 0."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -0.3,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-sat05b",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_functions",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "hard"
+      },
+      "family_ref": "C1-sat005",
+      "params": {
+        "m": -3,
+        "p": -6,
+        "q": -5,
+        "b0": 7
+      },
+      "lang": "en",
+      "stem": {
+        "en": "Line ℓ passes through the point (−6, −5) and is perpendicular to the line y = −3x + 7. What is the y-intercept of ℓ?",
+        "uz": "ℓ toʻgʻri chiziq (−6, −5) nuqtadan oʻtadi va y = −3x + 7 toʻgʻri chiziqqa perpendikulyar. ℓ chiziq y oʻqini qaysi ordinatada kesadi?",
+        "ru": "Прямая ℓ проходит через точку (−6, −5) и перпендикулярна прямой y = −3x + 7. Чему равна ордината точки пересечения ℓ с осью y?"
+      },
+      "options": [
+        {
+          "en": "−3",
+          "uz": "−3",
+          "ru": "−3"
+        },
+        {
+          "en": "−7",
+          "uz": "−7",
+          "ru": "−7"
+        },
+        {
+          "en": "−23",
+          "uz": "−23",
+          "ru": "−23"
+        },
+        {
+          "en": "13",
+          "uz": "13",
+          "ru": "13"
+        }
+      ],
+      "answer_numeric": {
+        "value": -3,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The slope of ℓ is −1/m with m = −3, so its y-intercept is −5 + (−6) ÷ (−3) = −3.",
+        "uz": "ℓ ning burchak koeffitsiyenti −1/m (m = −3), shuning uchun u y oʻqini −5 + (−6) ÷ (−3) = −3 da kesadi.",
+        "ru": "Угловой коэффициент ℓ равен −1/m (m = −3), поэтому ордината точки пересечения с осью y равна −5 + (−6) ÷ (−3) = −3."
+      },
+      "instructions": {
+        "en": "Type your answer as a number (it may be negative).",
+        "uz": "Javobni son bilan kiriting (u manfiy boʻlishi mumkin).",
+        "ru": "Введите ответ числом (оно может быть отрицательным)."
+      },
+      "prior_b": -0.3,
+      "time_s": 80,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-sat06a",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equation",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "hard"
+      },
+      "family_ref": "C1-sat006",
+      "params": {
+        "V": 2,
+        "p": 25,
+        "q": 10
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A 2 L salt solution is 25% salt. How many litres of pure water must be added to make it 10% salt?",
+        "uz": "2 litr tuzli eritmaning 25 foizi tuz. Tuz 10 foiz boʻlishi uchun eritmaga necha litr toza suv qoʻshish kerak?",
+        "ru": "В 2 л солевого раствора соли 25%. Сколько литров чистой воды нужно добавить, чтобы соли стало 10%?"
+      },
+      "options": [
+        {
+          "en": "3",
+          "uz": "3",
+          "ru": "3"
+        },
+        {
+          "en": "1.2",
+          "uz": "1,2",
+          "ru": "1,2"
+        },
+        {
+          "en": "0.3",
+          "uz": "0,3",
+          "ru": "0,3"
+        },
+        {
+          "en": "5",
+          "uz": "5",
+          "ru": "5"
+        }
+      ],
+      "answer_numeric": {
+        "value": 3,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The salt stays 0.5 L: it must be 10% of the new volume 5 L, so add 5 − 2 = 3 L.",
+        "uz": "Tuz miqdori 0,5 litr boʻlib qoladi: u yangi hajmning (5 litr) 10 foizi boʻlishi kerak, demak 5 − 2 = 3 litr qoʻshiladi.",
+        "ru": "Соли по-прежнему 0,5 л: это 10% нового объёма 5 л, поэтому добавить нужно 5 − 2 = 3 л."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.2,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    },
+    {
+      "id": "C1x-sat06b",
+      "bank": "C1x",
+      "skill": "math",
+      "rung": "alg1",
+      "subskill": "linear_equation",
+      "sat": {
+        "domain": "algebra",
+        "difficulty": "hard"
+      },
+      "family_ref": "C1-sat006",
+      "params": {
+        "V": 10,
+        "p": 24,
+        "q": 15
+      },
+      "lang": "en",
+      "stem": {
+        "en": "A 10 L salt solution is 24% salt. How many litres of pure water must be added to make it 15% salt?",
+        "uz": "10 litr tuzli eritmaning 24 foizi tuz. Tuz 15 foiz boʻlishi uchun eritmaga necha litr toza suv qoʻshish kerak?",
+        "ru": "В 10 л солевого раствора соли 24%. Сколько литров чистой воды нужно добавить, чтобы соли стало 15%?"
+      },
+      "options": [
+        {
+          "en": "6",
+          "uz": "6",
+          "ru": "6"
+        },
+        {
+          "en": "3.75",
+          "uz": "3,75",
+          "ru": "3,75"
+        },
+        {
+          "en": "0.9",
+          "uz": "0,9",
+          "ru": "0,9"
+        },
+        {
+          "en": "16",
+          "uz": "16",
+          "ru": "16"
+        }
+      ],
+      "answer_numeric": {
+        "value": 6,
+        "tolerance": 0
+      },
+      "why": {
+        "en": "The salt stays 2.4 L: it must be 15% of the new volume 16 L, so add 16 − 10 = 6 L.",
+        "uz": "Tuz miqdori 2,4 litr boʻlib qoladi: u yangi hajmning (16 litr) 15 foizi boʻlishi kerak, demak 16 − 10 = 6 litr qoʻshiladi.",
+        "ru": "Соли по-прежнему 2,4 л: это 15% нового объёма 16 л, поэтому добавить нужно 16 − 10 = 6 л."
+      },
+      "instructions": {
+        "en": "Type your answer as a number.",
+        "uz": "Javobni son bilan kiriting.",
+        "ru": "Введите ответ числом."
+      },
+      "prior_b": -0.2,
+      "time_s": 90,
+      "source": "own",
+      "author": "agent:C1",
+      "key_check_1": "author",
+      "key_check_2": "blind:2/2",
+      "status": "verified_auto",
+      "version": 1
+    }
+  ]
+}
